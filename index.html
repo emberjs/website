@@ -15,6 +15,9 @@
     <!-- Le styles -->
     <link href="/styles/bootstrap.min.css" rel="stylesheet">
     <link href="/styles/main.css" rel="stylesheet">
+    <link href="/prettify/prettify.css" rel="stylesheet">
+
+    <script src="/prettify/prettify.js"></script>
 
     <!-- Le fav and touch icons -->
     <!--
@@ -25,41 +28,86 @@
     -->
   </head>
 
-  <body class="home">
-
+  <body onload="prettyPrint()" class="home">
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit" style="position: relative;">
         <h1>Amber.js</h1>
-        <a class="btn primary large" style="position: absolute; top: 45px; right: 60px;">Download now &raquo;</a>
-        <p>A lightweight JavaScript App Framework for Mobile and Desktop.</p>
-        <div class="well" style="height: 300px; width: 533px; margin: 10px auto;">VIDEO HERE</div>
-        <p style="text-align: center"></p>
+        <a class="btn primary large" style="position: absolute; top: 45px; right: 60px;">Download Now &raquo;</a>
+        <p>The JavaScript Application Framework for Ambitious Apps</p>
+        <!--<div class="well" style="height: 300px; width: 533px; margin: 10px auto;">VIDEO HERE</div>-->
+        <!--<p style="text-align: center"></p>-->
       </div>
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span4">
-          <h2>MVC</h2>
-          <p>A Model-View-Controller setup keeps your app well organized and easy to extend.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+        <div class="span12">
+          <h2>Learn Amber Now</h2>
+          <div class="alert-message info block-message">
+            <a class="close" href="#">×</a>
+            <div>
+            <p><strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial.</p>
+            </div>
+            <div>
+            <span class="label">Implementation Note</span>
+            <p>The sequence of events will be:</p>
+            <ol>
+              <li>Create a model (App.Person)</li>
+              <li>Create an Array (App.people)</li>
+              <li>Create a view and append it</li>
+              <li>Get a shell, add yourself to the Array → watch the right side update live</li>
+              <li>Add someone else to the Array → watch the right side update live</li>
+              <li>Modify yourself → watch the right side update live</li>
+            </ol>
+            </div>
+            <div>
+            As the user moves through the steps, the copy above and button below will change.
+            </div>
+            <div class="alert-actions">
+              <a class="btn small" href="#">Get Started</a>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 15px">
+          <input type="text" placeholder="enter code (this appears as needed)" style="width: 100%; height: 25px; box-sizing: border-box">
+          </div>
+
+          <ul class="tabs">
+            <li class="active"><a href="#">JavaScript</a></li>
+            <li><a href="#">Templates</a></li>
+          </ul>
+<pre class="prettyprint lang-js" style="clear: both">
+ // model
+ App.Person = SC.Object.extend({
+   firstName: null,
+   lastName: null
+ });
+
+ // controller
+ App.people = []
+
+ // do:
+ App.people.pushObject(App.Person.create({
+   firstName: "Yehuda",
+   lastName: "Katz"
+ });
+</pre>
+
+<pre class="prettyprint lang-html" style="display: none">
+ &lt;!-- view --&gt;
+ &lt;ul&gt;
+   {{#each App.peopleController}}
+     &lt;li&gt;{{firstName}} {{lastName}}&lt;/li&gt;
+   {{/each}}
+ &lt;/ul&gt;
+</pre>
         </div>
         <div class="span4">
-          <h2>Mobile</h2>
-           <p>Keep a lightweight footprint for quick loading and first-class touch support.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <h2>Output</h2>
+          <span class="label notice">Notice</span>
+          <p>As you work through the tutorial, you will see the output here.</p>
        </div>
-        <div class="span4">
-          <h2>Bindings</h2>
-          <p>Bind your app data to the UI and keep everything in sync.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Templating</h2>
-          <p>Quickly write your views in HTML and CSS with full Handlebars.js integration.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
       </div>
 
       <footer>
