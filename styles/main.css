@@ -1,4 +1,8 @@
-body { padding-top: 30px; }
+body {
+  padding-top: 60px;
+}
+
+body.home { padding-top: 30px; }
 
 .hero-unit {
   padding: 30px 60px;
