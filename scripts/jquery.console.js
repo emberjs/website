@@ -479,7 +479,7 @@
             updatePromptDisplay();
             if (typeof msg === 'string') {
                 message(msg,className);
-            } else {
+            } else if (typeof msg === 'object') {
                 if (msg.constructor === Array) {
                   for (var idx=0,len=msg.length; idx < len; idx++) {
                       var ret = msg[idx];

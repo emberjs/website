@@ -149,7 +149,7 @@ SC.View.create({
             <div class="tutorial-step" id="tutorial-step5" style="display:none">
               <strong>Step 5:</strong> Add yourself to the array
 <pre class="prettyprint lang-js">
-var me = App.Person.create({
+me = App.Person.create({
   firstName: "Yehuda",
   lastName: "Katz"
 });
@@ -158,7 +158,7 @@ App.people.pushObject(me);</pre>
             <div class="tutorial-step" id="tutorial-step6" style="display:none">
               <strong>Step 6:</strong> Add someone else to the array
 <pre class="prettyprint lang-js">
-var tom = App.Person.create({
+tom = App.Person.create({
   firstName: "Tom",
   lastName: "Dale"
 });
@@ -167,7 +167,7 @@ App.people.pushObject(tom);</pre>
             <div class="tutorial-step" id="tutorial-step7" style="display:none">
               <strong>Step 7:</strong> Modify yourself
 <pre class="prettyprint lang-js">
-me.set({ firstName: 'Peter', lastName: 'Wagenet' });</pre>
+me.set('firstName', 'Brohuda');</pre>
             </div>
             <div>
               <a class="btn small" id="tutorial-previous-step" href="#" onclick="tutorial.previousStep(); return false">Previous Step</a>

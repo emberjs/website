@@ -1689,6 +1689,7 @@ SC.Logger = window.console;
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
 /**
   @class
 
@@ -1827,6 +1828,8 @@ if (!platform.defineProperty) {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 // ..........................................................
 // GUIDS
 // 
@@ -2157,6 +2160,9 @@ SC.makeArray = function(obj) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
+
+
 var USE_ACCESSORS = SC.platform.hasPropertyAccessors && SC.ENV.USE_ACCESSORS;
 SC.USE_ACCESSORS = !!USE_ACCESSORS;
 
@@ -2577,6 +2583,10 @@ if (!Array.prototype.indexOf) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
+
+
+
 var AFTER_OBSERVERS = ':change';
 var BEFORE_OBSERVERS = ':before';
 var guidFor = SC.guidFor;
@@ -2763,6 +2773,10 @@ SC.notifyBeforeObservers = function(obj, keyName) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
+
+
+
 var USE_ACCESSORS = SC.USE_ACCESSORS;
 var GUID_KEY = SC.GUID_KEY;
 var META_KEY = SC.META_KEY;
@@ -3168,6 +3182,12 @@ SC.destroy = function(obj) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
+
+
+
+
+
 var guidFor = SC.guidFor;
 var meta    = SC.meta;
 var get = SC.get, set = SC.set;
@@ -3673,10 +3693,11 @@ SC.propertyDidChange = function(obj, keyName) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
-// SC.Logger
-// SC.watch.flushPending
-// SC.beginPropertyChanges, SC.endPropertyChanges
-// SC.guidFor
+
+require('sproutcore-metal/core'); // SC.Logger
+require('sproutcore-metal/watching'); // SC.watch.flushPending
+require('sproutcore-metal/observer'); // SC.beginPropertyChanges, SC.endPropertyChanges
+require('sproutcore-metal/utils'); // SC.guidFor
 
 // ..........................................................
 // HELPERS
@@ -4177,11 +4198,12 @@ SC.RunLoop.end = SC.run.end;
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
-// SC.Logger
-// get, getPath, setPath, trySetPath
-// guidFor, isArray, meta
-// addObserver, removeObserver
-// SC.run.schedule
+
+require('sproutcore-metal/core'); // SC.Logger
+require('sproutcore-metal/accessors'); // get, getPath, setPath, trySetPath
+require('sproutcore-metal/utils'); // guidFor, isArray, meta
+require('sproutcore-metal/observer'); // addObserver, removeObserver
+require('sproutcore-metal/run_loop'); // SC.run.schedule
 
 // ..........................................................
 // CONSTANTS
@@ -5031,6 +5053,10 @@ SC.oneWay = function(obj, to, from) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
+
+
+
 var meta = SC.meta;
 var guidFor = SC.guidFor;
 var USE_ACCESSORS = SC.USE_ACCESSORS;
@@ -5295,6 +5321,9 @@ SC.computed = function(func) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
+
+
 var o_create = SC.platform.create;
 var meta = SC.meta;
 var guidFor = SC.guidFor;
@@ -5525,6 +5554,13 @@ SC.listenersFor = listenersFor;
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
+
 var Mixin, MixinDelegate, REQUIRED, Alias;
 var classToString, superClassString;
 
@@ -6013,6 +6049,18 @@ SC.beforeObserver = function(func) {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
+
+
+
+
+
+
 })({});
 
 (function(exports) {
@@ -6769,6 +6817,7 @@ SC.Enumerable = SC.Mixin.create( /** @lends SC.Enumerable */ {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 // ..........................................................
 // HELPERS
 // 
@@ -7104,6 +7153,7 @@ SC.Array = SC.Mixin.create(SC.Enumerable, /** @scope SC.Array.prototype */ {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 /**
   @class
 
@@ -7219,6 +7269,8 @@ SC.MutableEnumerable = SC.Mixin.create(SC.Enumerable,
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 // ..........................................................
 // CONSTANTS
 // 
@@ -7966,6 +8018,7 @@ SC.CoreObject = CoreObject;
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals ENV sc_assert */
+
 // ........................................
 // GLOBAL CONSTANTS
 //
@@ -8523,6 +8576,7 @@ SC.String = {
 //            Portions ©2008-2010 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var get = SC.get, set = SC.set;
 
 /**
@@ -8686,6 +8740,11 @@ SC.FROZEN_ERROR = "Frozen object cannot be modified.";
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
 var get = SC.get, set = SC.set, guidFor = SC.guidFor, none = SC.none;
 
 /**
@@ -9057,6 +9116,9 @@ SC.Set.create = function(items) {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
 SC.CoreObject.subclasses = new SC.Set();
 SC.Object = SC.CoreObject.extend(SC.Observable);
 
@@ -9072,6 +9134,8 @@ SC.Object = SC.CoreObject.extend(SC.Observable);
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 var get = SC.get, set = SC.set;
 
 /**
@@ -9200,6 +9264,7 @@ SC.ArrayProxy = SC.Object.extend(SC.MutableArray, {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 /**
   @class
 
@@ -9237,6 +9302,7 @@ SC.ArrayController = SC.ArrayProxy.extend();
 
 
 (function(exports) {
+
 })({});
 
 
@@ -9247,6 +9313,8 @@ SC.ArrayController = SC.ArrayProxy.extend();
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 var fmt = SC.String.fmt,
     w   = SC.String.w,
     loc = SC.String.loc,
@@ -9304,6 +9372,7 @@ if (SC.EXTEND_PROTOTYPES) {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 if (SC.EXTEND_PROTOTYPES) {
 
   Function.prototype.property = function() {
@@ -9334,6 +9403,7 @@ if (SC.EXTEND_PROTOTYPES) {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var IS_BINDING = SC.IS_BINDING = /^.+Binding$/;
 
 SC._mixinBindings = function(obj, key, value, m) {
@@ -9370,6 +9440,9 @@ SC._mixinBindings = function(obj, key, value, m) {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
 })({});
 
 
@@ -9414,6 +9487,7 @@ SC._mixinBindings = function(obj, key, value, m) {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 /**
   @namespace
 
@@ -9463,6 +9537,14 @@ SC.Comparable = SC.Mixin.create( /** @scope SC.Comparable.prototype */{
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
+
+
 })({});
 
 
@@ -9472,6 +9554,7 @@ SC.Comparable = SC.Mixin.create( /** @scope SC.Comparable.prototype */{
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 /**
   @private
   A Namespace is an object usually used to contain other objects or methods 
@@ -9496,6 +9579,7 @@ SC.Namespace = SC.Object.extend();
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 /**
   @private
 
@@ -9531,6 +9615,8 @@ SC.Application = SC.Namespace.extend();
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 var set = SC.set, get = SC.get, guidFor = SC.guidFor;
 
 var EachArray = SC.Object.extend(SC.Array, {
@@ -9749,6 +9835,9 @@ SC.EachProxy = SC.Object.extend({
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
 var get = SC.get, set = SC.set;
   
 // Add SC.Array to Array.prototype.  Remove methods with native 
@@ -9883,6 +9972,14 @@ if (SC.EXTEND_PROTOTYPES) SC.NativeArray.activate();
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
+
+
 })({});
 
 
@@ -9892,6 +9989,12 @@ if (SC.EXTEND_PROTOTYPES) SC.NativeArray.activate();
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
 })({});
 
 (function(exports) {
@@ -10428,6 +10531,7 @@ SC.EventDispatcher = SC.Object.extend(
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var get = SC.get, set = SC.set;
 
 /**
@@ -10537,6 +10641,10 @@ queues.insertAt(queues.indexOf('actions')+1, 'render');
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
 })({});
 
 
@@ -10548,6 +10656,7 @@ queues.insertAt(queues.indexOf('actions')+1, 'render');
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals sc_assert */
+
 var get = SC.get, set = SC.set, addObserver = SC.addObserver;
 var getPath = SC.getPath, meta = SC.meta, fmt = SC.String.fmt;
 
@@ -10832,13 +10941,13 @@ SC.View = SC.Object.extend(
 
   invokeForState: function(name) {
     var parent = this, states = parent.states;
+    var stateName = get(this, 'state'), state;
 
     while (states) {
-      var stateName = get(this, 'state'),
-          state     = states[stateName];
+      state = states[stateName];
 
-      if (state) {
-        var fn = state[name] || states["default"][name];
+      while (state) {
+        var fn = state[name];
 
         if (fn) {
           var args = Array.prototype.slice.call(arguments, 1);
@@ -10846,6 +10955,8 @@ SC.View = SC.Object.extend(
 
           return fn.apply(this, args);
         }
+
+        state = state.parentState;
       }
 
       states = states.parent;
@@ -11053,7 +11164,7 @@ SC.View = SC.Object.extend(
     } else {
       return this.invokeForState('getElement');
     }
-  }.property('_parentView', 'state').cacheable(),
+  }.property('_parentView').cacheable(),
 
   /**
     Returns a jQuery object for this view's element. If you pass in a selector
@@ -11760,6 +11871,24 @@ SC.View.reopen({
   domManagerClass: SC.Object.extend({
     view: this,
 
+    prepend: function(childView) {
+      var view = get(this, 'view');
+
+      childView._insertElementLater(function() {
+        var element = view.$();
+        element.prepend(childView.$());
+      });
+    },
+
+    after: function(nextView) {
+      var view = get(this, 'view');
+
+      nextView._insertElementLater(function() {
+        var element = view.$();
+        element.after(nextView.$());
+      });
+    },
+
     replace: function() {
       var view = get(this, 'view');
       var element = get(view, 'element');
@@ -11802,6 +11931,7 @@ SC.View.childViewsProperty = childViewsProperty;
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var get = SC.get, set = SC.set;
 
 SC.View.states = {
@@ -11817,17 +11947,6 @@ SC.View.states = {
 
     getElement: function() {
       return null;
-    },
-
-    setElement: function(value) {
-      if (value) {
-        view.clearBuffer();
-        view.transitionTo('inDOM');
-      } else {
-        throw "You can't set an element to null when the view has not yet been inserted into the DOM";
-      }
-
-      return value;
     }
   }
 };
@@ -11846,7 +11965,10 @@ SC.View.reopen({
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 SC.View.states.preRender = {
+  parentState: SC.View.states.default,
+
   // a view leaves the preRender state once its element has been
   // created (createElement).
   insertElement: function(view, fn) {
@@ -11854,8 +11976,11 @@ SC.View.states.preRender = {
     // invoking the willInsertElement event.
     view.createElement();
 
+    // after createElement, the view will be in the hasElement state.
+
     view._notifyWillInsertElement();
     fn.call(view);
+    view.transitionTo('inDOM');
     view._notifyDidInsertElement();
   },
 
@@ -11864,14 +11989,14 @@ SC.View.states.preRender = {
     view.invalidateRecursively('element');
 
     if (value !== null) {
-      view.transitionTo('inDOM');
+      view.transitionTo('hasElement');
     }
 
     view.endPropertyChanges();
 
     return value;
   }
-}
+};
 
 })({});
 
@@ -11883,9 +12008,12 @@ SC.View.states.preRender = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var get = SC.get, set = SC.set, meta = SC.meta;
 
 SC.View.states.inBuffer = {
+  parentState: SC.View.states.default,
+
   $: function(view, sel) {
     // if we don't have an element yet, someone calling this.$() is
     // trying to update an element that isn't in the DOM. Instead,
@@ -11940,7 +12068,7 @@ SC.View.states.inBuffer = {
       view.transitionTo('preRender');
     } else {
       view.clearBuffer();
-      view.transitionTo('inDOM');
+      view.transitionTo('hasElement');
     }
 
     return value;
@@ -11958,9 +12086,11 @@ SC.View.states.inBuffer = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var get = SC.get, set = SC.set, meta = SC.meta;
 
-SC.View.states.inDOM = {
+SC.View.states.hasElement = {
+  parentState: SC.View.states.default,
 
   $: function(view, sel) {
     var elem = get(view, 'element');
@@ -11971,10 +12101,10 @@ SC.View.states.inDOM = {
     var parent = get(view, 'parentView');
     if (parent) { parent = get(parent, 'element'); }
     if (parent) { return view.findElementInParentElement(parent); }
+    return SC.$("#" + get(view, 'elementId'))[0];
   },
 
   setElement: function(view, value) {
-
     if (value === null) {
       view.invalidateRecursively('element');
       view.transitionTo('preRender');
@@ -12004,10 +12134,12 @@ SC.View.states.inDOM = {
 
     get(view, 'domManager').remove();
     return view;
-  },
+  }
+};
 
-  // You shouldn't insert an element into the DOM that was already
-  // inserted into the DOM.
+SC.View.states.inDOM = {
+  parentState: SC.View.states.hasElement,
+
   insertElement: function() {
     throw "You can't insert an element into the DOM that has already been inserted";
   }
@@ -12023,9 +12155,12 @@ SC.View.states.inDOM = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var destroyedError = "You can't call %@ on a destroyed view", fmt = SC.String.fmt;
 
 SC.View.states.destroyed = {
+  parentState: SC.View.states.default,
+
   appendChild: function() {
     throw fmt(destroyedError, ['appendChild']);
   },
@@ -12056,6 +12191,11 @@ SC.View.states.destroyed = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
 })({});
 
 
@@ -12066,6 +12206,7 @@ SC.View.states.destroyed = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 var get = SC.get, set = SC.set, meta = SC.meta;
 
 var childViewsProperty = SC.computed(function() {
@@ -12198,15 +12339,11 @@ SC.ContainerView = SC.View.extend({
     @private
   */
   _scheduleInsertion: function(view, prev) {
-    var parent = this;
-
-    view._insertElementLater(function() {
-      if (prev) {
-        prev.$().after(view.$());
-      } else {
-        parent.$().prepend(view.$());
-      }
-    });
+    if (prev) {
+      prev.get('domManager').after(view);
+    } else {
+      this.get('domManager').prepend(view);
+    }
   }
 });
 
@@ -12214,8 +12351,6 @@ SC.ContainerView = SC.View.extend({
 // behavior for childViewsWillChange and childViewsDidChange.
 SC.ContainerView.states = {
   parent: SC.View.states,
-
-  "default": {},
 
   inBuffer: {
     childViewsDidChange: function(parentView, views, start, added) {
@@ -12247,7 +12382,7 @@ SC.ContainerView.states = {
     }
   },
 
-  inDOM: {
+  hasElement: {
     childViewsWillChange: function(view, views, start, removed) {
       for (var i=start; i<start+removed; i++) {
         views[i].destroyElement();
@@ -12269,6 +12404,10 @@ SC.ContainerView.states = {
   }
 };
 
+SC.ContainerView.states.inDOM = {
+  parentState: SC.ContainerView.states.hasElement
+}
+
 SC.ContainerView.reopen({
   states: SC.ContainerView.states
 });
@@ -12283,6 +12422,8 @@ SC.ContainerView.reopen({
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 var get = SC.get, set = SC.set, fmt = SC.String.fmt;
 
 /**
@@ -12429,9 +12570,9 @@ SC.CollectionView = SC.ContainerView.extend(
     var view = this._super(view, attrs);
 
     var itemTagName = get(view, 'tagName');
-    var tagName = itemTagName || SC.CollectionView.CONTAINER_MAP[get(this, 'tagName')];
+    var tagName = itemTagName == null ? SC.CollectionView.CONTAINER_MAP[get(this, 'tagName')] : itemTagName;
 
-    set(view, 'tagName', tagName || null);
+    set(view, 'tagName', tagName);
 
     return view;
   }
@@ -12468,6 +12609,10 @@ SC.CollectionView.CONTAINER_MAP = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
 })({});
 
 
@@ -12478,7 +12623,10 @@ SC.CollectionView.CONTAINER_MAP = {
 //            Portions ©2008-2011 Apple Inc. All rights reserved.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
 SC.$ = jQuery;
+
+
 })({});
 
 (function(exports) {
@@ -12840,6 +12988,7 @@ SC.$ = jQuery;
   Note that you won't usually need to use SC.Handlebars yourself. Instead, use
   SC.View, which takes care of integration into the view layer for you.
 */
+
 /**
   @namespace
 
@@ -12962,6 +13111,8 @@ Handlebars.registerHelper('helperMissing', function(path, options) {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 var set = SC.set, get = SC.get;
 
 // TODO: Be explicit in the class documentation that you
@@ -12998,6 +13149,8 @@ SC.Checkbox = SC.View.extend({
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 /** @class */
 
 var get = SC.get, set = SC.set;
@@ -13148,6 +13301,8 @@ SC.Button = SC.View.extend({
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 /** @class */
 
 var get = SC.get, set = SC.set;
@@ -13217,13 +13372,19 @@ SC.TextArea.KEY_EVENTS = {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
 })({});
 
 
 (function(exports) {
+
+
 var set = SC.set, get = SC.get, getPath = SC.getPath;
 
-SC.MetamorphView = SC.View.extend({
+SC.Metamorph = SC.Mixin.create({
   isVirtual: true,
   tagName: '',
 
@@ -13242,10 +13403,38 @@ SC.MetamorphView = SC.View.extend({
     buffer.push(morph.endTag());
   },
 
+  createElement: function() {
+    var buffer = this.renderToBuffer();
+    set(this, 'outerHTML', buffer.string());
+    this.clearBuffer();
+  },
+
   domManagerClass: SC.Object.extend({
     // It is not possible for a user to directly remove
     // a metamorph view as it is not in the view hierarchy.
     remove: SC.K,
+
+    prepend: function(childView) {
+      var view = get(this, 'view');
+
+      childView._insertElementLater(function() {
+        var morph = get(view, 'morph');
+        var script = SC.$("#" + morph.start);
+        script.after(get(childView, 'outerHTML'));
+        childView.set('outerHTML', null);
+      });
+    },
+
+    after: function(nextView) {
+      var view = get(this, 'view');
+
+      nextView._insertElementLater(function() {
+        var morph = get(view, 'morph');
+        var script = SC.$("#" + morph.end);
+        script.after(get(nextView, 'outerHTML'));
+        nextView.set('outerHTML', null);
+      });
+    },
 
     replace: function() {
       var view = get(this, 'view');
@@ -13276,6 +13465,8 @@ SC.MetamorphView = SC.View.extend({
 /*globals Handlebars */
 
 var get = SC.get, set = SC.set, getPath = SC.getPath;
+
+
 /**
   @ignore
   @private
@@ -13289,7 +13480,7 @@ var get = SC.get, set = SC.set, getPath = SC.getPath;
   context set up. When the associated property changes, just the template for 
   this view will re-render.
 */
-SC._BindableSpanView = SC.MetamorphView.extend(
+SC._BindableSpanView = SC.View.extend(SC.Metamorph,
 /** @scope SC._BindableSpanView.prototype */{
 
   /**
@@ -13375,7 +13566,16 @@ SC._BindableSpanView = SC.MetamorphView.extend(
     var inverseTemplate = get(this, 'inverseTemplate'),
         displayTemplate = get(this, 'displayTemplate');
 
-    var result = getPath(context, property);
+    var result;
+
+
+    // Use the current context as the result if no
+    // property is provided.
+    if (property === '') {
+      result = context;
+    } else {
+      result = getPath(context, property);
+    }
 
     // First, test the conditional to see if we should
     // render the template or not.
@@ -13433,6 +13633,9 @@ SC._BindableSpanView = SC.MetamorphView.extend(
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals Handlebars */
+
+
+
 var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
 
 (function() {
@@ -13471,8 +13674,12 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
       });
 
       // Observes the given property on the context and
-      // tells the SC._BindableSpan to re-render.
-      SC.addObserver(ctx, property, observer);
+      // tells the SC._BindableSpan to re-render. If property
+      // is an empty string, we are printing the current context
+      // object ({{this}}) so updating it is not our responsibility.
+      if (property !== '') {
+        SC.addObserver(ctx, property, observer);
+      }
     } else {
       // The object is not observable, so just render it out and
       // be done with it.
@@ -13813,6 +14020,7 @@ SC.Handlebars.bindClasses = function(context, classBindings, view, id) {
 /*globals Handlebars sc_assert */
 
 // TODO: Don't require the entire module
+
 var get = SC.get, set = SC.set;
 var PARENT_VIEW_PATH = /^parentView\./;
 
@@ -13941,6 +14149,8 @@ Handlebars.registerHelper('view', function(path, options) {
 /*globals Handlebars sc_assert */
 
 // TODO: Don't require all of this module
+
+
 var get = SC.get;
 
 /**
@@ -14020,17 +14230,6 @@ Handlebars.registerHelper('collection', function(path, options) {
   return Handlebars.helpers.view.call(this, collectionClass, options);
 });
 
-/**
-  @name Handlebars.helpers.each
-  @param {String} path
-  @param {Hash} options
-  @returns {String} HTML string
-*/
-Handlebars.registerHelper('each', function(path, options) {
-  options.hash.contentBinding = SC.Binding.from('parentView.'+path).oneWay();
-  options.hash.preserveContext = true;
-  return Handlebars.helpers.collection.call(this, null, options);
-});
 
 
 
@@ -14044,6 +14243,7 @@ Handlebars.registerHelper('each', function(path, options) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals Handlebars */
+
 var getPath = SC.getPath;
 
 /**
@@ -14070,6 +14270,7 @@ Handlebars.registerHelper('unbound', function(property) {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals Handlebars */
+
 var getPath = SC.getPath;
 
 /**
@@ -14102,11 +14303,34 @@ Handlebars.registerHelper('debugger', function() {
 
 
 (function(exports) {
+
+
+
+SC.Handlebars.EachView = SC.CollectionView.extend(SC.Metamorph, {
+  itemViewClass: SC.View.extend(SC.Metamorph)
+});
+
+Handlebars.registerHelper('each', function(path, options) {
+  options.hash.contentBinding = path;
+  options.hash.preserveContext = true;
+  return Handlebars.helpers.collection.call(this, 'SC.Handlebars.EachView', options);
+});
+
+})({});
+
+
+(function(exports) {
 // ==========================================================================
 // Project:   SproutCore Handlebar Views
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
 })({});
 
 
@@ -14117,6 +14341,7 @@ Handlebars.registerHelper('debugger', function() {
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 /*globals Handlebars */
+
 // Find templates stored in the head tag as script tags and make them available
 // to SC.CoreView in the global SC.TEMPLATES object. This will be run as as
 // jQuery DOM-ready callback.
@@ -14180,6 +14405,8 @@ SC.$(document).ready(SC.Handlebars.bootstrap);
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
 })({});
 
 
@@ -14189,4 +14416,11 @@ SC.$(document).ready(SC.Handlebars.bootstrap);
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+
+
+
+
+
+
+
 })({});
