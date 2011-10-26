@@ -19,6 +19,69 @@
 
     <script src="/prettify/prettify.js"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="/scripts/jquery.console.js"></script>
+    <script src="/scripts/sproutcore.js"></script>
+    <script>
+      var jsConsole, tutorial;
+
+      $(document).ready(function(){
+        jsConsole = $('.jsconsole').console({
+          promptLabel: '> ',
+          commandValidate:function(line){
+            if (line == "") return false;
+            else return true;
+          },
+          commandHandle:function(line){
+            try {
+              var ret = eval(line);
+              return (typeof ret != 'undefined') ? ret.toString() : true;
+            } catch (e) {
+              return { msg: e.toString(), className: "jquery-console-message-error" };
+            }
+          },
+          animateScroll:true,
+          promptHistory:true,
+          welcomeMessage:'Start writing your application code here:'
+        });
+
+        tutorial = (function(){
+          var currentStep = 0,
+              totalSteps = $('.tutorial-step').length - 1; // Don't count intro
+
+          function hideAllSteps(){
+            $('.tutorial-step').hide();
+          }
+
+          function showStep(number){
+            if (number > totalSteps || number < 0) { return };
+
+            currentStep = number;
+            hideAllSteps();
+            $('#tutorial-step'+number).show();
+          }
+
+          function nextStep(){
+            showStep(currentStep + 1);
+          }
+
+          function previousStep(){
+            showStep(currentStep - 1);
+          }
+
+          function reset(){
+            showStep(0);
+          }
+
+          return {
+            nextStep:     nextStep,
+            previousStep: previousStep,
+            reset:        reset
+          };
+        })();
+      });
+    </script>
+
     <!-- Le fav and touch icons -->
     <!--
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -45,32 +108,75 @@
         <div class="span12">
           <h2>Learn Amber Now</h2>
           <div class="alert-message info block-message">
-            <a class="close" href="#">×</a>
-            <div>
-            <p><strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial.</p>
+            <div class="tutorial-step" id="tutorial-step0">
+              <strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial.
+            </div>
+            <div class="tutorial-step" id="tutorial-step1" style="display:none">
+              <strong>Step 1:</strong> Create your app
+              <pre class="prettyprint lang-js">
+App = SC.Application.create({
+  rootElement: $('#tutorial-app')
+});</pre>
+            </div>
+            <div class="tutorial-step" id="tutorial-step2" style="display:none">
+              <strong>Step 2:</strong> Create a model
+<pre class="prettyprint lang-js">
+App.Person = SC.Object.extend({
+  firstName: null,
+  lastName: null
+});</pre>
+            </div>
+            <div class="tutorial-step" id="tutorial-step3" style="display:none">
+              <strong>Step 3:</strong> Create an array
+<pre class="prettyprint lang-js">
+App.people = [];
+</pre>
+            </div>
+            <div class="tutorial-step" id="tutorial-step4" style="display:none">
+              <strong>Step 4:</strong> Create a view and append it
+<pre class="prettyprint lang-js">
+SC.View.create({
+  template: SC.Handlebars.compile(
+    "People: " +
+    "&lt;ul&gt;" +
+      "{{#each App.people}}" +
+        "&lt;li&gt;{{firstName}} {{lastName}}&lt;/li&gt;" +
+      "{{/each}}" +
+    "&lt;/ul&gt;")
+}).appendTo(App.rootElement);
+</pre>
+            </div>
+            <div class="tutorial-step" id="tutorial-step5" style="display:none">
+              <strong>Step 5:</strong> Add yourself to the array
+<pre class="prettyprint lang-js">
+var me = App.Person.create({
+  firstName: "Yehuda",
+  lastName: "Katz"
+});
+App.people.pushObject(me);</pre>
+            </div>
+            <div class="tutorial-step" id="tutorial-step6" style="display:none">
+              <strong>Step 6:</strong> Add someone else to the array
+<pre class="prettyprint lang-js">
+var tom = App.Person.create({
+  firstName: "Tom",
+  lastName: "Dale"
+});
+App.people.pushObject(tom);</pre>
+            </div>
+            <div class="tutorial-step" id="tutorial-step7" style="display:none">
+              <strong>Step 7:</strong> Modify yourself
+<pre class="prettyprint lang-js">
+me.set({ firstName: 'Peter', lastName: 'Wagenet' });</pre>
             </div>
             <div>
-            <span class="label">Implementation Note</span>
-            <p>The sequence of events will be:</p>
-            <ol>
-              <li>Create a model (App.Person)</li>
-              <li>Create an Array (App.people)</li>
-              <li>Create a view and append it</li>
-              <li>Get a shell, add yourself to the Array → watch the right side update live</li>
-              <li>Add someone else to the Array → watch the right side update live</li>
-              <li>Modify yourself → watch the right side update live</li>
-            </ol>
-            </div>
-            <div>
-            As the user moves through the steps, the copy above and button below will change.
-            </div>
-            <div class="alert-actions">
-              <a class="btn small" href="#">Get Started</a>
+              <a class="btn small" id="tutorial-previous-step" href="#" onclick="tutorial.previousStep(); return false">Previous Step</a>
+              <a class="btn small" id="tutorial-next-step" href="#" onclick="tutorial.nextStep(); return false">Next Step</a>
             </div>
           </div>
 
           <div style="margin-bottom: 15px">
-          <input type="text" placeholder="enter code (this appears as needed)" style="width: 100%; height: 25px; box-sizing: border-box">
+            <div class="jsconsole"></div>
           </div>
 
           <ul class="tabs">
@@ -107,6 +213,7 @@
           <h2>Output</h2>
           <span class="label notice">Notice</span>
           <p>As you work through the tutorial, you will see the output here.</p>
+          <div id="tutorial-app"></div>
        </div>
       </div>
 

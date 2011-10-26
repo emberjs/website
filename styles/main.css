@@ -7,3 +7,11 @@ body.home { padding-top: 30px; }
 .hero-unit {
   padding: 30px 60px;
 }
+
+div.jsconsole { font-size: 14px; margin-top:1em; background:#efefef; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; }
+div.jsconsole div.jquery-console-inner { position: relative; height:200px; padding:0.5em; overflow:auto }
+div.jsconsole div.jquery-console-prompt-box { color:#444; font-family:monospace; }
+div.jsconsole div.jquery-console-focus span.jquery-console-cursor  { background:#333; color:#eee; font-weight:bold }
+div.jsconsole div.jquery-console-message-error { color:#ef0505; font-family:sans-serif; font-weight:bold; padding:0.1em; }
+div.jsconsole div.jquery-console-message-success { color:#187718; font-family:monospace; padding:0.1em; }
+div.jsconsole span.jquery-console-prompt-label { font-weight:bold }
