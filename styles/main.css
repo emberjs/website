@@ -15,3 +15,26 @@ div.jsconsole div.jquery-console-focus span.jquery-console-cursor  { background:
 div.jsconsole div.jquery-console-message-error { color:#ef0505; font-family:sans-serif; font-weight:bold; padding:0.1em; }
 div.jsconsole div.jquery-console-message-success { color:#187718; font-family:monospace; padding:0.1em; }
 div.jsconsole span.jquery-console-prompt-label { font-weight:bold }
+
+#editor-tabs {
+  height: 200px;
+  position: relative;
+  clear: both;
+}
+
+div.editor {
+  height: 200px;
+  width: 700px;
+  position: absolute;
+}
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after { clear:both; }
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf { zoom:1; }

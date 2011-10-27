@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Amber.js - A JavaScript App Framework</title>
+    <title>Amber.js - A JavaScript Application Framework</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -17,70 +17,13 @@
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/prettify/prettify.css" rel="stylesheet">
 
-    <script src="/prettify/prettify.js"></script>
-
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
     <script src="/scripts/jquery.console.js"></script>
+    <script src="/scripts/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/ace/src/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/scripts/ace/src/mode-html.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/sproutcore.js"></script>
-    <script>
-      var jsConsole, tutorial;
-
-      $(document).ready(function(){
-        jsConsole = $('.jsconsole').console({
-          promptLabel: '> ',
-          commandValidate:function(line){
-            if (line == "") return false;
-            else return true;
-          },
-          commandHandle:function(line){
-            try {
-              var ret = eval(line);
-              return (typeof ret != 'undefined') ? ret.toString() : true;
-            } catch (e) {
-              return { msg: e.toString(), className: "jquery-console-message-error" };
-            }
-          },
-          animateScroll:true,
-          promptHistory:true,
-          welcomeMessage:'Start writing your application code here:'
-        });
-
-        tutorial = (function(){
-          var currentStep = 0,
-              totalSteps = $('.tutorial-step').length - 1; // Don't count intro
-
-          function hideAllSteps(){
-            $('.tutorial-step').hide();
-          }
-
-          function showStep(number){
-            if (number > totalSteps || number < 0) { return };
-
-            currentStep = number;
-            hideAllSteps();
-            $('#tutorial-step'+number).show();
-          }
-
-          function nextStep(){
-            showStep(currentStep + 1);
-          }
-
-          function previousStep(){
-            showStep(currentStep - 1);
-          }
-
-          function reset(){
-            showStep(0);
-          }
-
-          return {
-            nextStep:     nextStep,
-            previousStep: previousStep,
-            reset:        reset
-          };
-        })();
-      });
-    </script>
+    <script src="/scripts/sproutcore-extras.js"></script>
 
     <!-- Le fav and touch icons -->
     <!--
@@ -105,116 +48,145 @@
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span12">
-          <h2>Learn Amber Now</h2>
-          <div class="alert-message info block-message">
-            <div class="tutorial-step" id="tutorial-step0">
-              <strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial.
-            </div>
-            <div class="tutorial-step" id="tutorial-step1" style="display:none">
-              <strong>Step 1:</strong> Create your app
-              <pre class="prettyprint lang-js">
-App = SC.Application.create({
+        <div class="span12" id="tutorial">
+          <script type="text/x-handlebars">
+            <h2>Learn Amber Now</h2>
+            <div class="alert-message info block-message">
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step0"}}
+                <strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial.
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step1"}}
+                <strong>Step 1:</strong> Create your app
+<pre class="prettyprint lang-js">
+MyApp = SC.Application.create({
   rootElement: $('#tutorial-app')
 });</pre>
-            </div>
-            <div class="tutorial-step" id="tutorial-step2" style="display:none">
-              <strong>Step 2:</strong> Create a model
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step2"}}
+                <strong>Step 2:</strong> Create a model
 <pre class="prettyprint lang-js">
-App.Person = SC.Object.extend({
+// model
+MyApp.Person = SC.Object.extend({
   firstName: null,
   lastName: null
 });</pre>
-            </div>
-            <div class="tutorial-step" id="tutorial-step3" style="display:none">
-              <strong>Step 3:</strong> Create an array
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step3"}}
+                <strong>Step 3:</strong> Create an array
 <pre class="prettyprint lang-js">
-App.people = [];
-</pre>
-            </div>
-            <div class="tutorial-step" id="tutorial-step4" style="display:none">
-              <strong>Step 4:</strong> Create a view and append it
+// controller
+MyApp.people = [];</pre>
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step4"}}
+                <strong>Step 4:</strong> Create a view and append it
 <pre class="prettyprint lang-js">
-SC.View.create({
-  template: SC.Handlebars.compile(
-    "People: " +
-    "&lt;ul&gt;" +
-      "{{#each App.people}}" +
-        "&lt;li&gt;{{firstName}} {{lastName}}&lt;/li&gt;" +
-      "{{/each}}" +
-    "&lt;/ul&gt;")
-}).appendTo(App.rootElement);
-</pre>
-            </div>
-            <div class="tutorial-step" id="tutorial-step5" style="display:none">
-              <strong>Step 5:</strong> Add yourself to the array
+&lt;!-- view --&gt;
+People:
+&lt;ul&gt;
+&#123;&#123;#each MyApp.people&#125;&#125;
+  &lt;li&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125;&lt;/li&gt;
+&#123;&#123;/each&#125;&#125;
+&lt;/ul&gt;</pre>
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step5"}}
+                <strong>Step 5:</strong> You've written the code. Now boot your app.
+                {{#view SC.Button classNames="btn small"
+                    target="Tutorial.tutorialController"
+                    action="boot"}}
+                  Boot
+                {{/view}}
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step6"}}
+                <strong>Step 6:</strong> Add yourself to the array
 <pre class="prettyprint lang-js">
-me = App.Person.create({
+me = MyApp.Person.create({
   firstName: "Yehuda",
   lastName: "Katz"
 });
-App.people.pushObject(me);</pre>
-            </div>
-            <div class="tutorial-step" id="tutorial-step6" style="display:none">
-              <strong>Step 6:</strong> Add someone else to the array
+MyApp.people.pushObject(me);</pre>
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step7"}}
+                <strong>Step 7:</strong> Add someone else to the array
 <pre class="prettyprint lang-js">
-tom = App.Person.create({
+tom = MyApp.Person.create({
   firstName: "Tom",
   lastName: "Dale"
 });
-App.people.pushObject(tom);</pre>
-            </div>
-            <div class="tutorial-step" id="tutorial-step7" style="display:none">
-              <strong>Step 7:</strong> Modify yourself
+MyApp.people.pushObject(tom);</pre>
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.stepsController"
+                  tabName="step8"}}
+                <strong>Step 8:</strong> Modify yourself
 <pre class="prettyprint lang-js">
 me.set('firstName', 'Brohuda');</pre>
+              {{/view}}
+              <div class="cf">
+                {{#view SC.Button classNames="btn small pull-left"
+                    target="Tutorial.stepsController" action="previousTab"
+                    isVisibleBinding="Tutorial.stepsController.hasPrevious"}}
+                  Previous Step
+                {{/view}}
+                {{#view SC.Button classNames="btn small pull-right"
+                    target="Tutorial.stepsController" action="nextTab"
+                    isVisibleBinding="Tutorial.stepsController.hasNext"}}
+                  Next Step
+                {{/view}}
+              </div>
             </div>
-            <div>
-              <a class="btn small" id="tutorial-previous-step" href="#" onclick="tutorial.previousStep(); return false">Previous Step</a>
-              <a class="btn small" id="tutorial-next-step" href="#" onclick="tutorial.nextStep(); return false">Next Step</a>
+
+            <ul class="tabs">
+              {{view Tutorial.TabView title="JavaScript"
+                  tabController="Tutorial.editorTabController"
+                  tabName="jsTab"}}
+              {{view Tutorial.TabView title="Template"
+                  tabController="Tutorial.editorTabController"
+                  tabName="templateTab"}}
+            </ul>
+            <div id="editor-tabs">
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.editorTabController"
+                  tabName="jsTab"}}
+                {{view Tutorial.AceEditorView language="javascript"
+                    valueBinding="Tutorial.tutorialController.javascript"}}
+              {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.editorTabController"
+                  tabName="templateTab"}}
+                {{view Tutorial.AceEditorView language="html"
+                    valueBinding="Tutorial.tutorialController.template"}}}
+              {{/view}}
             </div>
-          </div>
 
-          <div style="margin-bottom: 15px">
-            <div class="jsconsole"></div>
-          </div>
-
-          <ul class="tabs">
-            <li class="active"><a href="#">JavaScript</a></li>
-            <li><a href="#">Templates</a></li>
-          </ul>
-<pre class="prettyprint lang-js" style="clear: both">
- // model
- App.Person = SC.Object.extend({
-   firstName: null,
-   lastName: null
- });
-
- // controller
- App.people = []
-
- // do:
- App.people.pushObject(App.Person.create({
-   firstName: "Yehuda",
-   lastName: "Katz"
- });
-</pre>
-
-<pre class="prettyprint lang-html" style="display: none">
- &lt;!-- view --&gt;
- &lt;ul&gt;
-   {{#each App.peopleController}}
-     &lt;li&gt;{{firstName}} {{lastName}}&lt;/li&gt;
-   {{/each}}
- &lt;/ul&gt;
-</pre>
+            <div style="margin-bottom: 15px">
+              {{view Tutorial.JSConsoleView classNames="jsconsole"}}
+            </div>
+          </script>
+          <script src="/scripts/tutorial.js"></script>
         </div>
+
         <div class="span4">
           <h2>Output</h2>
           <span class="label notice">Notice</span>
           <p>As you work through the tutorial, you will see the output here.</p>
           <div id="tutorial-app"></div>
-       </div>
+        </div>
       </div>
 
       <footer>
@@ -223,6 +195,7 @@ me.set('firstName', 'Brohuda');</pre>
 
     </div> <!-- /container -->
 
+    <script src="/prettify/prettify.js"></script>
   </body>
 </html>
 

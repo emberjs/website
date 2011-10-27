@@ -2908,14 +2908,18 @@ Dp.val = function(obj, keyName) {
 
 if (!USE_ACCESSORS) {
   SC.Descriptor.MUST_USE_GETTER = function() {
-    sc_assert('Must use SC.get() to access this property', false);
+    if (this instanceof SC.Object) { 
+      sc_assert('Must use SC.get() to access this property', false);
+    }
   };
 
   SC.Descriptor.MUST_USE_SETTER = function() {
-    if (this.isDestroyed) {
-      sc_assert('You cannot set observed properties on destroyed objects', false);
-    } else {
-      sc_assert('Must use SC.set() to access this property', false);
+    if (this instanceof SC.Object) { 
+      if (this.isDestroyed) {
+        sc_assert('You cannot set observed properties on destroyed objects', false);
+      } else {
+        sc_assert('Must use SC.set() to access this property', false);
+      }
     }
   };
 }
