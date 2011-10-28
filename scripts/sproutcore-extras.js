@@ -94,72 +94,223 @@ SC.AceEditorView = SC.View.extend({
   }.observes('isVisible')
 });
 
-SC.ConsoleView = SC.View.extend({
 
-  promptLabel: '> ',
-
-  animateScroll: true,
-
-  promptHistory: true,
-
-  welcomeMessage: 'Run code against your app',
-
-  commandValidate: function(line){
-    return line !== "";
+SC.ConsoleInputView = SC.TextField.extend({
+  /**
+  * Handle up and down key for use in history
+  */
+  keyDown: function(evt){
+    if (evt.keyCode === 38) { // Up
+      this._delegateToParent('historyPrevious');
+      evt.preventDefault();
+    } else if (evt.keyCode === 40) { // Down
+      this._delegateToParent('historyNext');
+      evt.preventDefault();
+    }
   },
 
-  preprocessLine: function(line){
+  /**
+  * Run command with enter key
+  */
+  insertNewline: function(){
+    this._delegateToParent('runCommand');
+  },
+
+  /**
+  * Helper to delegate commands to parent
+  */
+  _delegateToParent: function(cmd){
+    var parentView = this.get('parentView'),
+        func       = parentView && parentView[cmd];
+    if (func){ return func.apply(parentView, Array.prototype.slice.call(arguments, 1)); }
+  }
+});
+
+SC.ConsoleView = SC.View.extend({
+  template: SC.Handlebars.compile(
+    '<ul class="history">'+
+      '{{#each history}}'+
+        '<li class="command">{{../promptLabel}} {{command}}</li>'+
+        '{{#each results}}'+
+          '<li {{bindAttr class="type"}}>{{value}}</li>'+
+        '{{/each}}'+
+      '{{/each}}'+
+    '</ul>'+
+    '{{view SC.ConsoleInputView valueBinding="value" placeholderBinding="promptPlaceholder"}}'
+  ),
+
+  /**
+  * The prompt
+  */
+  promptLabel:    '> ',
+ 
+  /**
+  * Placeholder text for prompt
+  */
+  promptPlaceholder: 'Type a command',
+
+  /**
+  * The current value typed at the prompt
+  */ 
+  value: null,
+
+  /**
+  * Command history
+  *
+  * Format:
+  *
+  *   [
+  *     {
+  *       command: '...',
+  *       results: [
+  *         { value: '...', type: '...' },
+  *         ...
+  *       ],
+  *     },
+  *     ...
+  *   ]
+  */ 
+  history: [],
+
+
+  /**
+  * Check to see if input should be run
+  */
+  validateInput: function(input){
+    return input !== "";
+  },
+
+  /**
+  * Prepare input to be run
+  */
+  preprocessInput: function(input){
     if (this._incompleteCommand) {
-      line = this._incompleteCommand+"\n"+line;
+      input = this._incompleteCommand + "\n" + input;
       this._incompleteCommand = null;
     }
-    return line;
+    return input;
   },
 
-  commandEval: function(line){
-    return eval(line);
+  /**
+  * Run input
+  */ 
+  processInput: function(input){
+    return eval(input);
   },
 
-  commandRun: function(line){
-    var ret = this.commandEval(line);
-    return (ret != null) ? ret.toString() : true;
+  /**
+  * Format result for output
+  */ 
+  postprocessResult: function(ret){
+    return ret != null ? ret.toString() : null;
   },
 
-  commandError: function(line, error) {
+  /**
+  * Process errors in running
+  */ 
+  processError: function(input, error){
     if (error.constructor === SyntaxError && error.message === "Unexpected end of input") {
-      this._incompleteCommand = line;
-      return true;
+      this._incompleteCommand = input;
+      return null;
+    } else {
+      return {
+        value: error.toString(),
+        type: 'error'
+      }
     }
-
-    return {
-      msg: error.toString(),
-      className: "jquery-console-message-error"
-    };
   },
 
-  commandHandle: function(line){
-    var line = this.preprocessLine(line);
+  /**
+  * Handle input, running through processors, etc.
+  */
+  handleInput: function(input){
+    var result;
+
+    input = this.preprocessInput(input);
+
     try {
-      return this.commandRun(line);
+      result = this.processInput(input);
     } catch (error) {
-      return this.commandError(line, error);
+      return this.processError(input, error);
+    }
+
+    return this.postprocessResult(result);
+  },
+
+  // Internal
+
+  /**
+  * @private
+  * Run command, normalize output, add to history
+  */
+  runCommand: function(){
+    var value = this.get('value');
+
+    if (this.validateInput(value)) {
+      this.set('value', '');
+
+      results = this.handleInput(value);
+
+      if (results) {
+        if (typeof results !== 'object') {
+          results = {
+            value: results,
+            type:  'success'
+          };
+        }
+
+        if (results.constructor !== Array) {
+          results = [results];
+        }
+      }
+
+      this.pushHistory({
+        command: value,
+        results: results
+      });
+    }
+  },
+ 
+   
+  _currentHistoryPos: null,
+
+  /**
+  * Push item to history.
+  */
+  pushHistory: function(item){
+    var history = this.get('history');
+    history.pushObject(item);
+    this._currentHistoryPos = history.get('length');
+  },
+
+  /**
+  * Get previous item from history, storing current value
+  */
+  historyPrevious: function(){
+    var history = this.get('history');
+    if (this._currentHistoryPos > 0) {
+      if (this._currentHistoryPos === history.get('length')){
+        this._currentValue = this.get('value');
+      }
+      this._currentHistoryPos--;
+      this.set('value', history.objectAt(this._currentHistoryPos).command);
     }
   },
 
-  didInsertElement: function(){
-    var self = this;
-    var console = this.$().console({
-      promptLabel: this.get('promptLabel'),
-      commandValidate: function(line){
-        return self.commandValidate(line);
-      },
-      commandHandle: function(line){
-        return self.commandHandle(line);
-      },
-      animateScroll:  this.get('animateScroll'),
-      promptHistory:  this.get('promptHistory'),
-      welcomeMessage: this.get('welcomeMessage')
-    });
-    this.set('console', console);
+  /**
+  * Get next item from history, or load original value
+  */
+  historyNext: function(){
+    var history = this.get('history'),
+        length = history.get('length');
+    if (this._currentHistoryPos < length) {
+      this._currentHistoryPos++;
+      if (this._currentHistoryPos === length) {
+        this.set('value', this._currentValue);
+      } else {
+        this.set('value', history.objectAt(this._currentHistoryPos).command);
+      }
+    }
   }
+
 });
