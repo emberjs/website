@@ -32,8 +32,8 @@ Tutorial.tutorialController = SC.Object.create({
     target.eval(this.get('javascript'));
     if (!target.MyApp){ throw "No app created!"; }
 
-    target.MyApp.rootView = SC.View.create({
-      template: SC.Handlebars.compile(this.get('template'))
+    target.MyApp.rootView = target.SC.View.create({
+      template: target.SC.Handlebars.compile(this.get('template'))
     });
     target.MyApp.rootView.appendTo(target.document.body);
   }
@@ -116,8 +116,12 @@ Tutorial.AceEditorView = SC.AceEditorView.extend({
 });
 
 Tutorial.ConsoleView = SC.SandboxedConsoleView.extend({
+  // TODO: Don't hardlink
+  iframeDidChange: function(){
+    this._iframe = Tutorial.tutorialController.get('iframe');
+  }.observes('Tutorial.tutorialController.iframe'),
+
   resetSandbox: function(){
-    // TODO: Don't hardlink
-    this._iframe = Tutorial.tutorialController.resetIframe();
+    Tutorial.tutorialController.resetIframe();
   }
 });
