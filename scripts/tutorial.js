@@ -75,7 +75,7 @@ Tutorial.tutorialController = SC.Object.create({
   resetIframe: function(){
     var current = this.get('iframe');
     if (current){ SC.$(current).remove(); }
-    
+
     var iframe = SC.$('<iframe></iframe>').appendTo(this.get('iframeContainer'))[0];
     iframe.contentWindow.document.write(
       '<html><head>'+
@@ -189,7 +189,7 @@ Tutorial.stepsController = SC.TabController.create({
   hasPrevious: function(){
     return this.get('currentStepIndex') > 0;
   }.property('currentStepIndex').cacheable(),
-  
+
   hasNext: function(){
     return this.get('currentStepIndex') < this.getPath('steps.length')-1;
   }.property('currentStepIndex', 'steps.length').cacheable(),
@@ -197,13 +197,13 @@ Tutorial.stepsController = SC.TabController.create({
   previousTab: function(){
     if (this.get('hasPrevious')) {
       this.set('currentStepIndex', this.get('currentStepIndex') - 1);
-    }  
+    }
   },
 
   nextTab: function(){
     if (this.get('hasNext')) {
       this.set('currentStepIndex', this.get('currentStepIndex') + 1);
-    }      
+    }
   }
 
 });
@@ -232,7 +232,7 @@ Tutorial.StepsView = SC.View.extend({
   step: null,
 
   tabController: null,
-  
+
   template: function(){
     return this.getPath('step.templateObject');
   }.property('step.templateObject').cacheable(),
@@ -268,7 +268,7 @@ Tutorial.TabView = SC.Button.extend({
   targetObject: function() {
     return SC.stringToObject(this, this.get('controller'));
   }.property('controller').cacheable(),
-  
+
   action: 'changeTabTo',
 
   active: function(){

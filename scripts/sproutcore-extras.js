@@ -29,10 +29,10 @@ SC.TabPaneView = SC.View.extend({
 
 SC.AceEditorView = SC.View.extend({
   classNames: ['editor'],
- 
+
   /**
   * Current value of the editor
-  */ 
+  */
   value: null,
 
   /**
@@ -71,7 +71,7 @@ SC.AceEditorView = SC.View.extend({
   * Editor language for syntax highlighting.
   * Any language available to Ace.
   * JavaScript file must already be loaded and available.
-  */ 
+  */
   language: null,
 
   /**
@@ -87,7 +87,7 @@ SC.AceEditorView = SC.View.extend({
 
   /**
   * Ace editor session
-  */ 
+  */
   session: function(){
     var editor = this.get('editor');
     return editor ? editor.getSession() : null;
@@ -95,7 +95,7 @@ SC.AceEditorView = SC.View.extend({
 
   /**
   * Initialize Ace editor on element creation
-  */ 
+  */
   didInsertElement: function(){
     var editor = ace.edit(this.get('element'));
     if (editor) {
@@ -119,7 +119,7 @@ SC.AceEditorView = SC.View.extend({
 
   /**
   * Hack to fix size on Ace editor when it's been hidden
-  */ 
+  */
   _fixSize: function(){
     if (this.get('isVisible')) {
       var editor = this.get('editor');
@@ -136,7 +136,7 @@ SC.AceEditorView = SC.View.extend({
 SC.ConsoleController = SC.Object.extend({
   /**
   * The current value typed at the prompt
-  */ 
+  */
   value: null,
 
   /**
@@ -160,7 +160,7 @@ SC.ConsoleController = SC.Object.extend({
   *     },
   *     ...
   *   ]
-  */ 
+  */
   history: [],
 
 
@@ -184,21 +184,21 @@ SC.ConsoleController = SC.Object.extend({
 
   /**
   * Run input
-  */ 
+  */
   processInput: function(input){
     return eval(input);
   },
 
   /**
   * Format result for output
-  */ 
+  */
   postprocessResult: function(ret){
     return ret != null ? ret.toString() : null;
   },
 
   /**
   * Process errors in running
-  */ 
+  */
   processError: function(input, error){
     if (error.constructor === SyntaxError && error.message === "Unexpected end of input") {
       this._incompleteCommand = input;
@@ -262,8 +262,8 @@ SC.ConsoleController = SC.Object.extend({
       });
     }
   },
- 
-   
+
+
   _currentHistoryPos: null,
 
   /**
