@@ -81,23 +81,30 @@
                   tabName="console"}}
             </ul>
             <div id="editor-tabs">
-              {{#view SC.TabPaneView
+              {{#view SC.TabPaneView classNames="tab"
                   tabController="Tutorial.editorTabController"
                   tabName="javascript"}}
                 {{view Tutorial.AceEditorView language="javascript"
                     valueBinding="Tutorial.tutorialController.javascript"}}
+                {{#view SC.Button classNames="small btn"
+                    target="Tutorial.tutorialController"
+                    action="evalApp"}}Try{{/view}}
               {{/view}}
-              {{#view SC.TabPaneView
+              {{#view SC.TabPaneView classNames="tab"
                   tabController="Tutorial.editorTabController"
                   tabName="template"}}
                 {{view Tutorial.AceEditorView language="html"
                     valueBinding="Tutorial.tutorialController.template"}}}
+                {{#view SC.Button classNames="small btn"
+                    target="Tutorial.tutorialController"
+                    action="evalApp"}}Try{{/view}}
               {{/view}}
-              {{#view SC.TabPaneView
+              {{#view SC.TabPaneView classNames="tab"
                   tabController="Tutorial.editorTabController"
                   tabName="console"}}
                 {{view Tutorial.ConsoleView classNames="jsconsole"
-                    valueBinding="Tutorial.tutorialController.console"}}
+                    valueBinding="Tutorial.tutorialController.console"
+                    needsEvalBinding="Tutorial.tutorialController.consoleNeedsEval"}}
               {{/view}}
             </div>
           </script>

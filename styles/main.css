@@ -50,9 +50,19 @@ div.jsconsole input:-moz-placeholder {
 }
 
 #editor-tabs {
-  height: 200px;
-  position: relative;
+  height: 250px;
   clear: both;
+}
+
+#editor-tabs .tab {
+  height: 250px;
+  position: relative;
+}
+
+#editor-tabs .tab button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 div.editor {

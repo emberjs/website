@@ -6,6 +6,7 @@ Tutorial.tutorialController = SC.Object.create({
   javascript: null,
   template: null,
   console: null,
+  consoleNeedsEval: false,
 
   iframeContainer: SC.$('#tutorial-output'),
   iframe: null,
@@ -26,24 +27,35 @@ Tutorial.tutorialController = SC.Object.create({
     return iframe;
   },
 
-  boot: function(){
+  evalApp: function(){
+    this.resetIframe();
+
     var iframe = this.get('iframe') || this.resetIframe(),
         target = iframe.contentWindow;
 
     target.eval(this.get('javascript'));
-    if (!target.MyApp){ throw "No app created!"; }
+    if (target.MyApp){
+      var template = this.get('template');
+      if (template) {
+        target.MyApp.rootView = target.SC.View.create({
+          template: target.SC.Handlebars.compile(template)
+        });
+        target.MyApp.rootView.appendTo(target.document.body);
+      }
+    }
+  },
 
-    target.MyApp.rootView = target.SC.View.create({
-      template: target.SC.Handlebars.compile(this.get('template'))
-    });
-    target.MyApp.rootView.appendTo(target.document.body);
+  setAndEval: function(key, value){
+    this.set(key, value);
+    if (key === 'console') {
+      this.set('consoleNeedsEval', true);
+    } else {
+      this.evalApp();
+    }
   }
 });
 
 Tutorial.Step = SC.Object.extend({
-  // Step index
-  index: null,
-
   // Template to show in view
   template: null,
 
@@ -62,11 +74,11 @@ Tutorial.Step = SC.Object.extend({
         codeController = this.get('codeController');
     if (codeTarget && code && codeController) {
       var current = '';
-      if (codeTarget === 'javascript' || codeTarget === 'template') {
+      if (codeTarget !== 'console') {
         current = codeController.get(codeTarget) || '';
         if (current) { current = current + "\n\n"; }
       }
-      codeController.set(codeTarget, current+code);
+      codeController.setAndEval(codeTarget, current+code);
     }
   }
 });
@@ -74,13 +86,11 @@ Tutorial.Step = SC.Object.extend({
 Tutorial.stepsController = SC.TabController.create({
   steps: [
     Tutorial.Step.create({
-      index: 0,
       template: SC.Handlebars.compile(
         "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
       )
     }),
     Tutorial.Step.create({
-      index: 1,
       template: SC.Handlebars.compile(
         "<strong>Step 1:</strong> Create your app\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
@@ -90,7 +100,6 @@ Tutorial.stepsController = SC.TabController.create({
       code: "MyApp = SC.Application.create();"
     }),
     Tutorial.Step.create({
-      index: 2,
       template: SC.Handlebars.compile(
         "<strong>Step 2:</strong> Create a model\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
@@ -104,7 +113,6 @@ Tutorial.stepsController = SC.TabController.create({
             "});"
     }),
     Tutorial.Step.create({
-      index: 3,
       template: SC.Handlebars.compile(
         "<strong>Step 3:</strong> Create an array\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
@@ -115,7 +123,6 @@ Tutorial.stepsController = SC.TabController.create({
             "MyApp.people = [];"
     }),
     Tutorial.Step.create({
-      index: 4,
       template: SC.Handlebars.compile(
         "<strong>Step 4:</strong> Create a view and append it\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
@@ -131,16 +138,8 @@ Tutorial.stepsController = SC.TabController.create({
             "</ul>"
     }),
     Tutorial.Step.create({
-      index: 5,
       template: SC.Handlebars.compile(
-        "<strong>Step 5:</strong> You've written the code. Now boot your app.\n"+
-        "{{#view SC.Button classNames=\"btn small\" target=\"Tutorial.tutorialController\" action=\"boot\"}}Boot{{/view}}"
-      )
-    }),
-    Tutorial.Step.create({
-      index: 6,
-      template: SC.Handlebars.compile(
-        "<strong>Step 6:</strong> Add yourself to the array\n"+
+        "<strong>Step 5:</strong> Add yourself to the array\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
         "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
       ),
@@ -152,9 +151,8 @@ Tutorial.stepsController = SC.TabController.create({
             "MyApp.people.pushObject(me);"
     }),
     Tutorial.Step.create({
-      index: 7,
       template: SC.Handlebars.compile(
-        "<strong>Step 7:</strong> Add someone else to the array\n"+
+        "<strong>Step 6:</strong> Add someone else to the array\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
         "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
       ),
@@ -166,9 +164,8 @@ Tutorial.stepsController = SC.TabController.create({
             "MyApp.people.pushObject(tom);"
     }),
     Tutorial.Step.create({
-      index: 8,
       template: SC.Handlebars.compile(
-        "<strong>Step 8:</strong> Modify yourself\n"+
+        "<strong>Step 7:</strong> Modify yourself\n"+
         "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
         "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
       ),
@@ -176,7 +173,6 @@ Tutorial.stepsController = SC.TabController.create({
       code: "me.set('firstName', 'Brohuda');"
     }),
     Tutorial.Step.create({
-      index: 9,
       template: SC.Handlebars.compile(
         "<strong>Congratulations!</strong> You've just created your first Amber application!"
       )
@@ -282,5 +278,14 @@ Tutorial.ConsoleView = SC.SandboxedConsoleView.extend({
 
   resetSandbox: function(){
     Tutorial.tutorialController.resetIframe();
-  }
+  },
+
+  needsEval: false,
+
+  needsEvalDidChange: function(){
+    if (this.get('needsEval')) {
+      this.runCommand();
+      this.set('needsEval', false);
+    }
+  }.observes('needsEval')
 });
