@@ -1,3 +1,9 @@
+SC.stringToObject = function(target, str){
+  return (typeof str === 'string') ? SC.getPath(target, str) : str;
+}
+
+/******** TABS ********/
+
 SC.TabController = SC.Object.extend({
   currentTab: null,
 
@@ -7,26 +13,32 @@ SC.TabController = SC.Object.extend({
 });
 
 SC.TabPaneView = SC.View.extend({
-  tabControllerObject: function() {
-    var tabController = this.get('tabController');
+  controller: null,
 
-    if (SC.typeOf(tabController) === "string") {
-      return this.getPath(tabController);
-    } else {
-      return tabController;
-    }
-  }.property('tabController').cacheable(),
+  controllerObject: function() {
+    return SC.stringToObject(this, this.get('controller'));
+  }.property('controller').cacheable(),
 
   isVisible: function() {
-    return this.get('tabName') === this.getPath('tabControllerObject.currentTab');
-  }.property('tabName', 'tabControllerObject.currentTab').cacheable()
+    return this.get('tabName') === this.getPath('controllerObject.currentTab');
+  }.property('tabName', 'controllerObject.currentTab').cacheable()
 });
+
+
+/*********** ACE ***********/
 
 SC.AceEditorView = SC.View.extend({
   classNames: ['editor'],
  
+  /**
+  * Current value of the editor
+  */ 
   value: null,
 
+  /**
+  * @private
+  * Updates editor to reflect value
+  */
   valueDidChange: function(){
     var session = this.get('session');
     if (session) {
@@ -36,6 +48,10 @@ SC.AceEditorView = SC.View.extend({
     }
   }.observes('value'),
 
+  /**
+  * @private
+  * Updates value property to reflect editor
+  */
   editorValueDidChange: function(){
     var session = this.get('session');
     if (session){
@@ -51,8 +67,16 @@ SC.AceEditorView = SC.View.extend({
     }
   },
 
+  /**
+  * Editor language for syntax highlighting.
+  * Any language available to Ace.
+  * JavaScript file must already be loaded and available.
+  */ 
   language: null,
 
+  /**
+  * Language Mode object for use by Ace
+  */
   languageMode: function(){
     var language = this.get('language');
     if (!language) { return null; }
@@ -61,11 +85,17 @@ SC.AceEditorView = SC.View.extend({
     return require("ace/mode/"+language).Mode;
   }.property('language').cacheable(),
 
+  /**
+  * Ace editor session
+  */ 
   session: function(){
     var editor = this.get('editor');
     return editor ? editor.getSession() : null;
   }.property('editor').cacheable(),
 
+  /**
+  * Initialize Ace editor on element creation
+  */ 
   didInsertElement: function(){
     var editor = ace.edit(this.get('element'));
     if (editor) {
@@ -78,12 +108,18 @@ SC.AceEditorView = SC.View.extend({
     }
   },
 
+  /**
+  * Update editor language mode accordingly
+  */
   languageModeDidChange: function(){
     var session = this.get('session'),
         languageMode = this.get('languageMode');
     if (session && languageMode) { session.setMode(new languageMode); }
   }.observes('languageMode'),
 
+  /**
+  * Hack to fix size on Ace editor when it's been hidden
+  */ 
   _fixSize: function(){
     if (this.get('isVisible')) {
       var editor = this.get('editor');
@@ -95,64 +131,18 @@ SC.AceEditorView = SC.View.extend({
 });
 
 
-SC.ConsoleInputView = SC.TextField.extend({
-  /**
-  * Handle up and down key for use in history
-  */
-  keyDown: function(evt){
-    if (evt.keyCode === 38) { // Up
-      this._delegateToParent('historyPrevious');
-      evt.preventDefault();
-    } else if (evt.keyCode === 40) { // Down
-      this._delegateToParent('historyNext');
-      evt.preventDefault();
-    }
-  },
+/*********** CONSOLE **************/
 
-  /**
-  * Run command with enter key
-  */
-  insertNewline: function(){
-    this._delegateToParent('runCommand');
-  },
-
-  /**
-  * Helper to delegate commands to parent
-  */
-  _delegateToParent: function(cmd){
-    var parentView = this.get('parentView'),
-        func       = parentView && parentView[cmd];
-    if (func){ return func.apply(parentView, Array.prototype.slice.call(arguments, 1)); }
-  }
-});
-
-SC.ConsoleView = SC.View.extend({
-  template: SC.Handlebars.compile(
-    '<ul class="history">'+
-      '{{#each history}}'+
-        '<li class="command">{{../promptLabel}} {{command}}</li>'+
-        '{{#each results}}'+
-          '<li {{bindAttr class="type"}}>{{value}}</li>'+
-        '{{/each}}'+
-      '{{/each}}'+
-    '</ul>'+
-    '{{view SC.ConsoleInputView valueBinding="value" placeholderBinding="promptPlaceholder"}}'
-  ),
-
-  /**
-  * The prompt
-  */
-  promptLabel:    '> ',
- 
-  /**
-  * Placeholder text for prompt
-  */
-  promptPlaceholder: 'Type a command',
-
+SC.ConsoleController = SC.Object.extend({
   /**
   * The current value typed at the prompt
   */ 
   value: null,
+
+  /**
+  * The current prompt
+  */
+  prompt: '> ',
 
   /**
   * Command history
@@ -161,6 +151,7 @@ SC.ConsoleView = SC.View.extend({
   *
   *   [
   *     {
+  *       prompt:  '...',
   *       command: '...',
   *       results: [
   *         { value: '...', type: '...' },
@@ -265,6 +256,7 @@ SC.ConsoleView = SC.View.extend({
       }
 
       this.pushHistory({
+        prompt:  this.get('prompt'),
         command: value,
         results: results
       });
@@ -315,10 +307,10 @@ SC.ConsoleView = SC.View.extend({
 
 });
 
-SC.SandboxedConsoleView = SC.ConsoleView.extend({
+SC.SandboxedConsoleController = SC.ConsoleController.extend({
 
   createIframe: function(){
-    return $('<iframe style="display:none;"></iframe>').appendTo(this.$())[0];
+    return $('<iframe style="display:none;"></iframe>').appendTo(document)[0];
   },
 
   resetSandbox: function(){
@@ -330,8 +322,70 @@ SC.SandboxedConsoleView = SC.ConsoleView.extend({
     return this._iframe.contentWindow.eval(input);
   },
 
-  didInsertElement: function(){
+  init: function(){
+    return this._super();
     this.resetSandbox();
   }
+
+});
+
+SC.ConsoleInputView = SC.TextField.extend({
+
+  controller: null,
+
+  controllerObject: function() {
+    return SC.stringToObject(this, this.get('controller'));
+  }.property('controller').cacheable(),
+
+  valueBinding: 'controllerObject.value',
+
+  /**
+  * Handle up and down key for use in history
+  */
+  keyDown: function(evt){
+    if (evt.keyCode === 38) { // Up
+      this._delegateToController('historyPrevious');
+      evt.preventDefault();
+    } else if (evt.keyCode === 40) { // Down
+      this._delegateToController('historyNext');
+      evt.preventDefault();
+    }
+  },
+
+  /**
+  * Run command with enter key
+  */
+  insertNewline: function(){
+    this._delegateToController('runCommand');
+  },
+
+  /**
+  * Helper to delegate commands to controller
+  */
+  _delegateToController: function(cmd){
+    var controller = this.get('controllerObject'),
+        func       = controller && controller[cmd];
+    if (func){ return func.apply(controller, Array.prototype.slice.call(arguments, 1)); }
+  }
+
+});
+
+SC.ConsoleHistoryView = SC.View.extend({
+  template: SC.Handlebars.compile(
+    '<ul class="history">'+
+      '{{#each controllerObject.history}}'+
+        '<li class="command">{{prompt}} {{command}}</li>'+
+        '{{#each results}}'+
+          '<li {{bindAttr class="type"}}>{{value}}</li>'+
+        '{{/each}}'+
+      '{{/each}}'+
+    '</ul>'
+  ),
+
+  controller: null,
+
+  controllerObject: function() {
+    return SC.stringToObject(this, this.get('controller'));
+  }.property('controller').cacheable(),
 
 });

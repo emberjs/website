@@ -71,18 +71,18 @@
 
             <ul class="tabs">
               {{view Tutorial.TabView title="JavaScript"
-                  tabController="Tutorial.editorTabController"
+                  controller="Tutorial.editorTabController"
                   tabName="javascript"}}
               {{view Tutorial.TabView title="Template"
-                  tabController="Tutorial.editorTabController"
+                  controller="Tutorial.editorTabController"
                   tabName="template"}}
               {{view Tutorial.TabView title="Console"
-                  tabController="Tutorial.editorTabController"
+                  controller="Tutorial.editorTabController"
                   tabName="console"}}
             </ul>
             <div id="editor-tabs">
               {{#view SC.TabPaneView classNames="tab"
-                  tabController="Tutorial.editorTabController"
+                  controller="Tutorial.editorTabController"
                   tabName="javascript"}}
                 {{view Tutorial.AceEditorView language="javascript"
                     valueBinding="Tutorial.tutorialController.javascript"}}
@@ -91,7 +91,7 @@
                     action="evalApp"}}Try{{/view}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
-                  tabController="Tutorial.editorTabController"
+                  controller="Tutorial.editorTabController"
                   tabName="template"}}
                 {{view Tutorial.AceEditorView language="html"
                     valueBinding="Tutorial.tutorialController.template"}}}
@@ -100,11 +100,15 @@
                     action="evalApp"}}Try{{/view}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
-                  tabController="Tutorial.editorTabController"
+                  controller="Tutorial.editorTabController"
                   tabName="console"}}
-                {{view Tutorial.ConsoleView classNames="jsconsole"
-                    valueBinding="Tutorial.tutorialController.console"
-                    needsEvalBinding="Tutorial.tutorialController.consoleNeedsEval"}}
+                <div class="jsconsole">
+                  {{view SC.ConsoleHistoryView
+                      controller="Tutorial.consoleController"}}
+                  {{view SC.ConsoleInputView
+                      controller="Tutorial.consoleController"
+                      placeholder="Type a command"}}
+                </div>
               {{/view}}
             </div>
           </script>
