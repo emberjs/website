@@ -157,6 +157,9 @@ me.set('firstName', 'Brohuda');</pre>
               {{view Tutorial.TabView title="Template"
                   tabController="Tutorial.editorTabController"
                   tabName="templateTab"}}
+              {{view Tutorial.TabView title="Console"
+                  tabController="Tutorial.editorTabController"
+                  tabName="consoleTab"}}
             </ul>
             <div id="editor-tabs">
               {{#view SC.TabPaneView
@@ -171,10 +174,14 @@ me.set('firstName', 'Brohuda');</pre>
                 {{view Tutorial.AceEditorView language="html"
                     valueBinding="Tutorial.tutorialController.template"}}}
               {{/view}}
+              {{#view SC.TabPaneView
+                  tabController="Tutorial.editorTabController"
+                  tabName="consoleTab"}}
+                {{view Tutorial.JSConsoleView classNames="jsconsole"}}
+              {{/view}}
             </div>
 
             <div style="margin-bottom: 15px">
-              {{view Tutorial.JSConsoleView classNames="jsconsole"}}
             </div>
           </script>
           <script src="/scripts/tutorial.js"></script>
