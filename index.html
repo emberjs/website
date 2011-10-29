@@ -52,89 +52,9 @@
           <script type="text/x-handlebars">
             <h2>Learn Amber Now</h2>
             <div class="alert-message info block-message">
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step0"}}
-                <strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial.
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step1"}}
-                <strong>Step 1:</strong> Create your app
-<pre class="prettyprint lang-js">
-MyApp = SC.Application.create();</pre>
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step2"}}
-                <strong>Step 2:</strong> Create a model
-<pre class="prettyprint lang-js">
-// model
-MyApp.Person = SC.Object.extend({
-  firstName: null,
-  lastName: null
-});</pre>
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step3"}}
-                <strong>Step 3:</strong> Create an array
-<pre class="prettyprint lang-js">
-// controller
-MyApp.people = [];</pre>
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step4"}}
-                <strong>Step 4:</strong> Create a view and append it
-<pre class="prettyprint lang-js">
-&lt;!-- view --&gt;
-People:
-&lt;ul&gt;
-&#123;&#123;#each MyApp.people&#125;&#125;
-  &lt;li&gt;&#123;&#123;firstName&#125;&#125; &#123;&#123;lastName&#125;&#125;&lt;/li&gt;
-&#123;&#123;/each&#125;&#125;
-&lt;/ul&gt;</pre>
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step5"}}
-                <strong>Step 5:</strong> You've written the code. Now boot your app.
-                {{#view SC.Button classNames="btn small"
-                    target="Tutorial.tutorialController"
-                    action="boot"}}
-                  Boot
-                {{/view}}
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step6"}}
-                <strong>Step 6:</strong> Add yourself to the array
-<pre class="prettyprint lang-js">
-me = MyApp.Person.create({
-  firstName: "Yehuda",
-  lastName: "Katz"
-});
-MyApp.people.pushObject(me);</pre>
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step7"}}
-                <strong>Step 7:</strong> Add someone else to the array
-<pre class="prettyprint lang-js">
-tom = MyApp.Person.create({
-  firstName: "Tom",
-  lastName: "Dale"
-});
-MyApp.people.pushObject(tom);</pre>
-              {{/view}}
-              {{#view SC.TabPaneView
-                  tabController="Tutorial.stepsController"
-                  tabName="step8"}}
-                <strong>Step 8:</strong> Modify yourself
-<pre class="prettyprint lang-js">
-me.set('firstName', 'Brohuda');</pre>
-              {{/view}}
+              {{view Tutorial.StepsView
+                  stepBinding="Tutorial.stepsController.currentStep"
+                  tabControllerBinding="Tutorial.editorTabController"}}
               <div class="cf">
                 {{#view SC.Button classNames="btn small pull-left"
                     target="Tutorial.stepsController" action="previousTab"
@@ -152,31 +72,32 @@ me.set('firstName', 'Brohuda');</pre>
             <ul class="tabs">
               {{view Tutorial.TabView title="JavaScript"
                   tabController="Tutorial.editorTabController"
-                  tabName="jsTab"}}
+                  tabName="javascript"}}
               {{view Tutorial.TabView title="Template"
                   tabController="Tutorial.editorTabController"
-                  tabName="templateTab"}}
+                  tabName="template"}}
               {{view Tutorial.TabView title="Console"
                   tabController="Tutorial.editorTabController"
-                  tabName="consoleTab"}}
+                  tabName="console"}}
             </ul>
             <div id="editor-tabs">
               {{#view SC.TabPaneView
                   tabController="Tutorial.editorTabController"
-                  tabName="jsTab"}}
+                  tabName="javascript"}}
                 {{view Tutorial.AceEditorView language="javascript"
                     valueBinding="Tutorial.tutorialController.javascript"}}
               {{/view}}
               {{#view SC.TabPaneView
                   tabController="Tutorial.editorTabController"
-                  tabName="templateTab"}}
+                  tabName="template"}}
                 {{view Tutorial.AceEditorView language="html"
                     valueBinding="Tutorial.tutorialController.template"}}}
               {{/view}}
               {{#view SC.TabPaneView
                   tabController="Tutorial.editorTabController"
-                  tabName="consoleTab"}}
-                {{view Tutorial.ConsoleView classNames="jsconsole"}}
+                  tabName="console"}}
+                {{view Tutorial.ConsoleView classNames="jsconsole"
+                    valueBinding="Tutorial.tutorialController.console"}}
               {{/view}}
             </div>
           </script>

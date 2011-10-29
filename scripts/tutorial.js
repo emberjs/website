@@ -5,6 +5,7 @@ Tutorial = SC.Application.create({
 Tutorial.tutorialController = SC.Object.create({
   javascript: null,
   template: null,
+  console: null,
 
   iframeContainer: SC.$('#tutorial-output'),
   iframe: null,
@@ -39,46 +40,204 @@ Tutorial.tutorialController = SC.Object.create({
   }
 });
 
-Tutorial.stepsController = SC.TabController.create({
-  stepNumber: 0,
-  stepCount: 8, // Not including intro
+Tutorial.Step = SC.Object.extend({
+  // Step index
+  index: null,
 
-  currentTab: function(){
-    var stepNumber = this.get('stepNumber') || 0;
-    return "step"+stepNumber;
-  }.property('stepNumber').cacheable(),
+  // Template to show in view
+  template: null,
+
+  // 'javascript', 'template', 'console'
+  codeTarget: null,
+
+  // Code to insert
+  code: null,
+
+  // TODO: Don't hardcode this
+  codeController: Tutorial.tutorialController,
+
+  copyCode: function(){
+    var codeTarget = this.get('codeTarget'),
+        code = this.get('code'),
+        codeController = this.get('codeController');
+    if (codeTarget && code && codeController) {
+      var current = '';
+      if (codeTarget === 'javascript' || codeTarget === 'template') {
+        current = codeController.get(codeTarget) || '';
+        if (current) { current = current + "\n\n"; }
+      }
+      codeController.set(codeTarget, current+code);
+    }
+  }
+});
+
+Tutorial.stepsController = SC.TabController.create({
+  steps: [
+    Tutorial.Step.create({
+      index: 0,
+      template: SC.Handlebars.compile(
+        "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
+      )
+    }),
+    Tutorial.Step.create({
+      index: 1,
+      template: SC.Handlebars.compile(
+        "<strong>Step 1:</strong> Create your app\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'javascript',
+      code: "MyApp = SC.Application.create();"
+    }),
+    Tutorial.Step.create({
+      index: 2,
+      template: SC.Handlebars.compile(
+        "<strong>Step 2:</strong> Create a model\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'javascript',
+      code: "// model\n"+
+            "MyApp.Person = SC.Object.extend({\n"+
+            "  firstName: null,\n"+
+            "  lastName: null\n"+
+            "});"
+    }),
+    Tutorial.Step.create({
+      index: 3,
+      template: SC.Handlebars.compile(
+        "<strong>Step 3:</strong> Create an array\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'javascript',
+      code: "// controller\n"+
+            "MyApp.people = [];"
+    }),
+    Tutorial.Step.create({
+      index: 4,
+      template: SC.Handlebars.compile(
+        "<strong>Step 4:</strong> Create a view and append it\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'template',
+      code: "<!-- view -->\n"+
+            "People:\n"+
+            "<ul>\n"+
+            "{{#each MyApp.people}}\n"+
+            "  <li>{{firstName}} {{lastName}}</li>\n"+
+            "{{/each}}\n"+
+            "</ul>"
+    }),
+    Tutorial.Step.create({
+      index: 5,
+      template: SC.Handlebars.compile(
+        "<strong>Step 5:</strong> You've written the code. Now boot your app.\n"+
+        "{{#view SC.Button classNames=\"btn small\" target=\"Tutorial.tutorialController\" action=\"boot\"}}Boot{{/view}}"
+      )
+    }),
+    Tutorial.Step.create({
+      index: 6,
+      template: SC.Handlebars.compile(
+        "<strong>Step 6:</strong> Add yourself to the array\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'console',
+      code: "me = MyApp.Person.create({\n"+
+            "  firstName: \"Yehuda\",\n"+
+            "  lastName: \"Katz\"\n"+
+            "});\n"+
+            "MyApp.people.pushObject(me);"
+    }),
+    Tutorial.Step.create({
+      index: 7,
+      template: SC.Handlebars.compile(
+        "<strong>Step 7:</strong> Add someone else to the array\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'console',
+      code: "tom = MyApp.Person.create({\n"+
+            "  firstName: \"Tom\",\n"+
+            "  lastName: \"Dale\",\n"+
+            "});\n"+
+            "MyApp.people.pushObject(tom);"
+    }),
+    Tutorial.Step.create({
+      index: 8,
+      template: SC.Handlebars.compile(
+        "<strong>Step 8:</strong> Modify yourself\n"+
+        "<pre class=\"prettyprint lang-js\">{{step.code}}</pre>\n"+
+        "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+      ),
+      codeTarget: 'console',
+      code: "me.set('firstName', 'Brohuda');"
+    }),
+    Tutorial.Step.create({
+      index: 9,
+      template: SC.Handlebars.compile(
+        "<strong>Congratulations!</strong> You've just created your first Amber application!"
+      )
+    })
+  ],
+
+  currentStepIndex: 0,
+
+  currentStep: function(){
+    return this.get('steps').objectAt(this.get('currentStepIndex'));
+  }.property('currentStepIndex').cacheable(),
 
   hasPrevious: function(){
-    return this.get('stepNumber') > 0;
-  }.property('stepNumber').cacheable(),
+    return this.get('currentStepIndex') > 0;
+  }.property('currentStepIndex').cacheable(),
   
   hasNext: function(){
-    return this.get('stepNumber') < this.get('stepCount');
-  }.property('stepNumber', 'stepCount').cacheable(),
+    return this.get('currentStepIndex') < this.getPath('steps.length')-1;
+  }.property('currentStepIndex', 'steps.length').cacheable(),
 
   previousTab: function(){
     if (this.get('hasPrevious')) {
-      this.set('stepNumber', this.get('stepNumber') - 1);
+      this.set('currentStepIndex', this.get('currentStepIndex') - 1);
     }  
   },
 
   nextTab: function(){
     if (this.get('hasNext')) {
-      this.set('stepNumber', this.get('stepNumber') + 1);
+      this.set('currentStepIndex', this.get('currentStepIndex') + 1);
     }      
-  },
+  }
 
-  /** HAX, body onload gets called too soon **/
-  _currentTabDidChange: function(){
-    if (!this._didPrettyPrint) {
-      prettyPrint();
-      this._didPrettyPrint = true;
+});
+
+Tutorial.StepsView = SC.View.extend({
+  step: null,
+
+  tabController: null,
+  
+  template: function(){
+    return this.getPath('step.template');
+  }.property('step').cacheable(),
+
+  // This shouldn't be necessary
+  templateDidChange: function(){
+    this.rerender();
+    SC.run.schedule('render', this, function(){ prettyPrint(); });
+  }.observes('template'),
+
+  codeTargetDidChange: function(){
+    var tabController = this.get('tabController'),
+        codeTarget = this.getPath('step.codeTarget');
+    if (tabController && codeTarget) {
+      tabController.set('currentTab', codeTarget);
     }
-  }.observes('currentTab') 
+  }.observes('step.codeTarget')
+
 });
 
 Tutorial.editorTabController = SC.TabController.create({
-  currentTab: 'jsTab'
+  currentTab: 'javascript'
 });
 
 Tutorial.TabView = SC.Button.extend({
