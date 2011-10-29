@@ -71,6 +71,10 @@ div.editor {
   position: absolute;
 }
 
+#tutorial-output iframe {
+  border: 0;
+}
+
 /* For modern browsers */
 .cf:before,
 .cf:after {
