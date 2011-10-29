@@ -18,6 +18,7 @@
     <link href="/prettify/prettify.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="/prettify/prettify.js"></script>
     <script src="/scripts/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/ace/src/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/ace/src/mode-html.js" type="text/javascript" charset="utf-8"></script>
@@ -61,9 +62,7 @@
                   tabName="step1"}}
                 <strong>Step 1:</strong> Create your app
 <pre class="prettyprint lang-js">
-MyApp = SC.Application.create({
-  rootElement: $('#tutorial-app')
-});</pre>
+MyApp = SC.Application.create();</pre>
               {{/view}}
               {{#view SC.TabPaneView
                   tabController="Tutorial.stepsController"
@@ -180,18 +179,15 @@ me.set('firstName', 'Brohuda');</pre>
                 {{view Tutorial.JSConsoleView classNames="jsconsole"}}
               {{/view}}
             </div>
-
-            <div style="margin-bottom: 15px">
-            </div>
           </script>
-          <script src="/scripts/tutorial.js"></script>
         </div>
 
         <div class="span4">
           <h2>Output</h2>
           <span class="label notice">Notice</span>
           <p>As you work through the tutorial, you will see the output here.</p>
-          <div id="tutorial-app"></div>
+          <div id="tutorial-output">
+          </div>
         </div>
       </div>
 
@@ -201,7 +197,7 @@ me.set('firstName', 'Brohuda');</pre>
 
     </div> <!-- /container -->
 
-    <script src="/prettify/prettify.js"></script>
+    <script src="/scripts/tutorial.js"></script>
   </body>
 </html>
 

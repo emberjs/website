@@ -1,14 +1,3 @@
-// Simple little hack to track new apps we create
-SC.Application.applications = {};
-SC.Application.reopen({
-  init: function(){
-    this._super();
-    var rootElement = SC.$(this.get('rootElement')),
-        id = rootElement.selector || rootElement[0].tagName;
-    SC.Application.applications[id] = this;
-  }
-});  
-
 Tutorial = SC.Application.create({
   rootElement: $('#tutorial')
 });
@@ -17,18 +6,36 @@ Tutorial.tutorialController = SC.Object.create({
   javascript: null,
   template: null,
 
+  iframeContainer: SC.$('#tutorial-output'),
+  iframe: null,
+
+  resetIframe: function(){
+    var current = this.get('iframe');
+    if (current){ SC.$(current).remove(); }
+    
+    var iframe = SC.$('<iframe></iframe>').appendTo(this.get('iframeContainer'))[0];
+    iframe.contentWindow.document.write(
+      '<html><head>'+
+        '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>'+
+        '<script src="/scripts/sproutcore.js"></script></head>'+
+      '<body></body></html>'
+    );
+
+    this.set('iframe', iframe);
+    return iframe;
+  },
+
   boot: function(){
-    // Free up the div if we've run this before
-    var existing = SC.Application.applications['#tutorial-app'];
-    if (existing) { existing.destroy(); }
+    var iframe = this.get('iframe') || this.resetIframe(),
+        target = iframe.contentWindow;
 
-    var MyApp = eval("(function(){ "+this.get('javascript')+"; window.MyApp = MyApp; return MyApp; })()");
-    if (!MyApp){ throw "No app created!"; }
+    target.eval(this.get('javascript'));
+    if (!target.MyApp){ throw "No app created!"; }
 
-    MyApp.rootView = SC.View.create({
+    target.MyApp.rootView = SC.View.create({
       template: SC.Handlebars.compile(this.get('template'))
     });
-    MyApp.rootView.appendTo(MyApp.get('rootElement'));
+    target.MyApp.rootView.appendTo(target.document.body);
   }
 });
 
@@ -108,5 +115,9 @@ Tutorial.AceEditorView = SC.AceEditorView.extend({
   }.observes('isVisible', 'parentView.isVisible')
 });
 
-Tutorial.JSConsoleView = SC.ConsoleView.extend({
+Tutorial.ConsoleView = SC.SandboxedConsoleView.extend({
+  resetSandbox: function(){
+    // TODO: Don't hardlink
+    this._iframe = Tutorial.tutorialController.resetIframe();
+  }
 });

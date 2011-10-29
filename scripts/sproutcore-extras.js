@@ -314,3 +314,24 @@ SC.ConsoleView = SC.View.extend({
   }
 
 });
+
+SC.SandboxedConsoleView = SC.ConsoleView.extend({
+
+  createIframe: function(){
+    return $('<iframe style="display:none;"></iframe>').appendTo(this.$())[0];
+  },
+
+  resetSandbox: function(){
+    if (this._iframe) { SC.$(this._iframe).remove(); }
+    this._iframe = this.createIframe();
+  },
+
+  processInput: function(input){
+    return this._iframe.contentWindow.eval(input);
+  },
+
+  didInsertElement: function(){
+    this.resetSandbox();
+  }
+
+});
