@@ -1,6 +1,24 @@
 Tutorial = SC.Application.create({
   rootElement: $('#tutorial'),
 
+  scrollBodyToElement: function(element){
+    element = SC.$(element);
+    if (element.length === 0) { return; }
+
+    var body = SC.$('body'),
+        elementHeight = element.height(),
+        windowHeight = SC.$(window).height(),
+        currentOffset = body.scrollTop(),
+        maximumOffset = element.offset().top - 10,
+        minimumOffset = maximumOffset + elementHeight - windowHeight + 20;
+
+    if (currentOffset > maximumOffset || elementHeight > windowHeight) {
+      body.animate({ scrollTop: maximumOffset  }, 200);
+    } else if (currentOffset < minimumOffset) {
+      body.animate({ scrollTop: minimumOffset }, 200);
+    }
+  },
+
   ready: function(){
     this._super();
     Tutorial.tutorialController.resetIframe();
@@ -47,6 +65,9 @@ Tutorial.Step = SC.Object.extend({
   codeControllerBinding: 'Tutorial.tutorialController',
 
   copyCode: function(){
+    // FIXME: Not the ideal place to put this
+    Tutorial.scrollBodyToElement('#editor-tabs');
+
     var codeTarget = this.get('codeTarget'),
         code = this.get('code'),
         codeController = this.get('codeController');
@@ -242,10 +263,12 @@ Tutorial.StepsView = SC.View.extend({
   templateDidChange: function(){
     this.rerender();
 
-    if (this.getPath('step.code')) {
+    SC.run.schedule('render', this, function(){
       // Run prettyPrint again now that code is visible
-      SC.run.schedule('render', this, function(){ prettyPrint(); });
-    }
+      if (this.getPath('step.code')){ prettyPrint(); }
+
+      Tutorial.scrollBodyToElement(this.$());
+    });
   }.observes('template'),
 
   codeTargetDidChange: function(){
