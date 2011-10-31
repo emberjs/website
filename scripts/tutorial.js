@@ -114,7 +114,7 @@ Tutorial.tutorialController = SC.Object.create({
   evalApp: function(){
     this.set('error', null);
 
-    var iframe = this.get('iframe') || this.resetIframe(),
+    var iframe = this.resetIframe(),
         target = iframe.contentWindow;
 
     try {
