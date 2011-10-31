@@ -1091,6 +1091,8 @@ Handlebars.JavaScriptCompiler = function() {};
     initializeBuffer: function() {
       return this.quotedString("");
     },
+
+    namespace: "Handlebars",
     // END PUBLIC API
 
     compile: function(environment, options, context, asObject) {
@@ -1161,8 +1163,9 @@ Handlebars.JavaScriptCompiler = function() {};
       var out = [];
 
       if (!this.isChild) {
-        var copies = "helpers = helpers || Handlebars.helpers;";
-        if(this.environment.usePartial) { copies = copies + " partials = partials || Handlebars.partials;"; }
+        var namespace = this.namespace;
+        var copies = "helpers = helpers || " + namespace + ".helpers;";
+        if(this.environment.usePartial) { copies = copies + " partials = partials || " + namespace + ".partials;"; }
         out.push(copies);
       } else {
         out.push('');
@@ -1276,7 +1279,7 @@ Handlebars.JavaScriptCompiler = function() {};
               + " || "
               + this.nameLookup('depth' + this.lastContext, name, 'context');
         }
-        
+
         toPush += ';';
         this.source.push(toPush);
       } else {
@@ -1481,7 +1484,7 @@ Handlebars.JavaScriptCompiler = function() {};
   };
 
   var reservedWords = ("break case catch continue default delete do else finally " +
-                       "for function if in instanceof new return switch this throw " + 
+                       "for function if in instanceof new return switch this throw " +
                        "try typeof var void while with null true false").split(" ");
 
   var compilerWords = JavaScriptCompiler.RESERVED_WORDS = {};
@@ -1589,6 +1592,7 @@ Handlebars.VM = {
 
 Handlebars.template = Handlebars.VM.template;
 ;
+
 
 })({});
 
@@ -2680,6 +2684,24 @@ SC.endPropertyChanges = function() {
   if (suspended<=0) flushObserverQueue();
 };
 
+/**
+  Make a series of property changes together in an
+  exception-safe way.
+
+      SC.changeProperties(function() {
+        obj1.set('foo', mayBlowUpWhenSet);
+        obj2.set('bar', baz);
+      });
+*/
+SC.changeProperties = function(cb){
+  SC.beginPropertyChanges();
+  try {
+    cb()
+  } finally {
+    SC.endPropertyChanges();
+  }
+}
+
 function changeEvent(keyName) {
   return keyName+AFTER_OBSERVERS;
 }
@@ -2921,9 +2943,17 @@ Dp.val = function(obj, keyName) {
 // testing on browsers that do support accessors.  It will throw an exception
 // if you do foo.bar instead of SC.get(foo, 'bar')
 
+// The exception to this is that any objects managed by SC but not a descendant
+// of SC.Object will not throw an exception, instead failing silently. This
+// prevent errors with other libraries that may attempt to access special
+// properties on standard objects like Array. Usually this happens when copying
+// an object by looping over all properties.
+
 if (!USE_ACCESSORS) {
   SC.Descriptor.MUST_USE_GETTER = function() {
-    sc_assert('Must use SC.get() to access this property', false);
+    if (this instanceof SC.Object) {
+      sc_assert('Must use SC.get() to access this property', false);
+    }
   };
 
   SC.Descriptor.MUST_USE_SETTER = function() {
@@ -7371,9 +7401,7 @@ SC.MutableArray = SC.Mixin.create(SC.Array, SC.MutableEnumerable,
     @returns {SC.Array} receiver
   */
   pushObjects: function(objects) {
-    this.beginPropertyChanges();
-    objects.forEach(function(obj) { this.pushObject(obj); }, this);
-    this.endPropertyChanges();
+    this.replace(get(this, 'length'), 0, objects);
     return this;
   },
 
@@ -7517,6 +7545,23 @@ SC.Observable = SC.Mixin.create(/** @scope SC.Observable.prototype */ {
   */
   get: function(keyName) {
     return get(this, keyName);
+  },
+
+  /**
+    To get multiple properties at once, call getProperties
+    with a list of strings:
+
+          record.getProperties('firstName', 'lastName', 'zipCode');
+
+    @param {String...} list of keys to get
+    @returns {Hash}
+  */
+  getProperties: function() {
+    var ret = {};
+    for(var i = 0; i < arguments.length; i++) {
+      ret[arguments[i]] = get(this, arguments[i]);
+    }
+    return ret;
   },
   
   /**
@@ -7975,6 +8020,10 @@ var ClassMixin = SC.Mixin.create({
       obj = obj.superclass;
     }
     return false;
+  },
+
+  detectInstance: function(obj) {
+    return this.PrototypeMixin.detect(obj);
   }
 
 });
@@ -8282,7 +8331,7 @@ SC.copy = function(obj, deep) {
   Convenience method to inspect an object. This method will attempt to
   convert the object into a useful string description.
 
-  @param {Object} obj The object you want to inspec.
+  @param {Object} obj The object you want to inspect.
   @returns {String} A description of the object
 */
 SC.inspect = function(obj) {
@@ -8291,7 +8340,7 @@ SC.inspect = function(obj) {
     if (obj.hasOwnProperty(key)) {
       v = obj[key];
       if (v === 'toString') { continue; } // ignore useless items
-      if (SC.typeOf(v) === SC.T_FUNCTION) { v = "function() { ... }"; }
+      if (SC.typeOf(v) === 'function') { v = "function() { ... }"; }
       ret.push(key + ": " + v);
     }
   }
@@ -10335,7 +10384,14 @@ SC.EventDispatcher = SC.Object.extend(
       mouseenter  : 'mouseEnter',
       mouseleave  : 'mouseLeave',
       submit      : 'submit',
-      change      : 'change'
+      change      : 'change',
+      dragstart   : 'dragStart',
+      drag        : 'drag',
+      dragenter   : 'dragEnter',
+      dragleave   : 'dragLeave',
+      dragover    : 'dragOver',
+      drop        : 'drop',
+      dragend     : 'dragEnd'
     };
 
     jQuery.extend(events, addedEvents || {});
@@ -11119,8 +11175,11 @@ SC.View = SC.Object.extend(
 
   /** @private */
   forEachChildView: function(callback) {
-    var childViews = get(this, '_childViews'),
-        len = get(childViews, 'length'),
+    var childViews = get(this, '_childViews');
+
+    if (!childViews) { return this; }
+
+    var len = get(childViews, 'length'),
         view, idx;
 
     for(idx = 0; idx < len; idx++) {
@@ -11693,17 +11752,19 @@ SC.View = SC.Object.extend(
 
     // destroy the element -- this will avoid each child view destroying
     // the element over and over again...
-    this.destroyElement();
+    if (!this.removedFromDOM) { this.destroyElement(); }
 
     // remove from parent if found. Don't call removeFromParent,
     // as removeFromParent will try to remove the element from
     // the DOM again.
     if (parent) { parent.removeChild(this); }
+
     SC.Descriptor.setup(this, 'state', 'destroyed');
 
     this._super();
 
     for (var i=childLen-1; i>=0; i--) {
+      childViews[i].removedFromDOM = true;
       childViews[i].destroy();
     }
 
@@ -12896,7 +12957,9 @@ SC.$ = jQuery;
   SproutCore Handlebars is an extension to Handlebars that makes the built-in
   Handlebars helpers and {{mustaches}} binding-aware.
 */
-SC.Handlebars = {};
+SC.Handlebars = SC.create(Handlebars);
+
+SC.Handlebars.helpers = SC.create(Handlebars.helpers);
 
 /**
   Override the the opcode compiler and JavaScript compiler for Handlebars.
@@ -12908,6 +12971,7 @@ SC.Handlebars.Compiler.prototype.compiler = SC.Handlebars.Compiler;
 SC.Handlebars.JavaScriptCompiler = function() {};
 SC.Handlebars.JavaScriptCompiler.prototype = SC.create(Handlebars.JavaScriptCompiler.prototype);
 SC.Handlebars.JavaScriptCompiler.prototype.compiler = SC.Handlebars.JavaScriptCompiler;
+SC.Handlebars.JavaScriptCompiler.prototype.namespace = "SC.Handlebars";
 
 
 SC.Handlebars.JavaScriptCompiler.prototype.initializeBuffer = function() {
@@ -12977,7 +13041,7 @@ SC.Handlebars.compile = function(string) {
   @param {String} path
   @param {Hash} options
 */
-Handlebars.registerHelper('helperMissing', function(path, options) {
+SC.Handlebars.registerHelper('helperMissing', function(path, options) {
   var error, view = "";
 
   error = "%@ Handlebars error: Could not find property '%@' on object %@.";
@@ -13007,10 +13071,11 @@ var set = SC.set, get = SC.get;
 SC.Checkbox = SC.View.extend({
   title: null,
   value: false,
+  disabled: false,
 
   classNames: ['sc-checkbox'],
 
-  defaultTemplate: SC.Handlebars.compile('<label><input type="checkbox" {{bindAttr checked="value"}}>{{title}}</label>'),
+  defaultTemplate: SC.Handlebars.compile('<label><input type="checkbox" {{bindAttr checked="value" disabled="disabled"}}>{{title}}</label>'),
 
   change: function() {
     SC.run.once(this, this._updateElementValue);
@@ -13046,10 +13111,11 @@ SC.TextField = SC.View.extend(
   cancel: SC.K,
 
   tagName: "input",
-  attributeBindings: ['type', 'placeholder', 'value'],
+  attributeBindings: ['type', 'placeholder', 'value', 'disabled'],
   type: "text",
   value: "",
   placeholder: null,
+  disabled: false,
 
   focusOut: function(event) {
     this._elementValueDidChange();
@@ -13109,9 +13175,10 @@ SC.Button = SC.View.extend({
   classNameBindings: ['isActive'],
 
   tagName: 'button',
-  attributeBindings: ['type'],
+  attributeBindings: ['type', 'disabled'],
   type: 'button',
-  
+  disabled: false,
+
   targetObject: function() {
     var target = get(this, 'target');
 
@@ -13193,8 +13260,9 @@ SC.TextArea = SC.View.extend({
 
   tagName: "textarea",
   value: "",
-  attributeBindings: ['placeholder'],
+  attributeBindings: ['placeholder', 'disabled'],
   placeholder: null,
+  disabled: false,
 
   insertNewline: SC.K,
   cancel: SC.K,
@@ -13284,9 +13352,11 @@ SC.Metamorph = SC.Mixin.create({
   },
 
   domManagerClass: SC.Object.extend({
-    // It is not possible for a user to directly remove
-    // a metamorph view as it is not in the view hierarchy.
-    remove: SC.K,
+    remove: function(view) {
+      var morph = getPath(this, 'view.morph');
+      if (morph.isRemoved()) { return; }
+      getPath(this, 'view.morph').remove();
+    },
 
     prepend: function(childView) {
       var view = get(this, 'view');
@@ -13319,8 +13389,10 @@ SC.Metamorph = SC.Mixin.create({
       var buffer = view.renderToBuffer();
 
       SC.run.schedule('render', this, function() {
+        view._notifyWillInsertElement();
         morph.replaceWith(buffer.string());
         view.transitionTo('inDOM');
+        view._notifyDidInsertElement();
       });
     }
   })
@@ -13535,7 +13607,10 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
       view.appendChild(bindView);
 
       var observer = function() {
-        SC.run.once(function() { bindView.rerender(); });
+        SC.run.once(function() {
+          // Double check since sometimes the view gets destroyed after this observer is already queued
+          if (!get(bindView, 'isDestroyed')) { bindView.rerender(); }
+        });
       };
 
       set(bindView, 'removeObserver', function() {
@@ -13576,7 +13651,7 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
     @param {Function} fn Context to provide for rendering
     @returns {String} HTML string
   */
-  Handlebars.registerHelper('bind', function(property, fn) {
+  SC.Handlebars.registerHelper('bind', function(property, fn) {
     sc_assert("You cannot pass more than one argument to the bind helper", arguments.length <= 2);
 
     var context = (fn.contexts && fn.contexts[0]) || this;
@@ -13600,8 +13675,10 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
     @param {Function} fn Context to provide for rendering
     @returns {String} HTML string
   */
-  Handlebars.registerHelper('boundIf', function(property, fn) {
-    return bind.call(this, property, fn, true, function(result) {
+  SC.Handlebars.registerHelper('boundIf', function(property, fn) {
+    var context = (fn.contexts && fn.contexts[0]) || this;
+
+    return bind.call(context, property, fn, true, function(result) {
       if (SC.typeOf(result) === 'array') {
         return get(result, 'length') !== 0;
       } else {
@@ -13617,11 +13694,11 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
   @param {Hash} options
   @returns {String} HTML string
 */
-Handlebars.registerHelper('with', function(context, options) {
+SC.Handlebars.registerHelper('with', function(context, options) {
   sc_assert("You must pass exactly one argument to the with helper", arguments.length == 2);
   sc_assert("You must pass a block to the with helper", options.fn && options.fn !== Handlebars.VM.noop);
 
-  return Handlebars.helpers.bind.call(options.contexts[0], context, options);
+  return SC.Handlebars.helpers.bind.call(options.contexts[0], context, options);
 });
 
 
@@ -13631,11 +13708,11 @@ Handlebars.registerHelper('with', function(context, options) {
   @param {Hash} options
   @returns {String} HTML string
 */
-Handlebars.registerHelper('if', function(context, options) {
+SC.Handlebars.registerHelper('if', function(context, options) {
   sc_assert("You must pass exactly one argument to the if helper", arguments.length == 2);
   sc_assert("You must pass a block to the if helper", options.fn && options.fn !== Handlebars.VM.noop);
 
-  return Handlebars.helpers.boundIf.call(options.contexts[0], context, options);
+  return SC.Handlebars.helpers.boundIf.call(options.contexts[0], context, options);
 });
 
 /**
@@ -13644,7 +13721,7 @@ Handlebars.registerHelper('if', function(context, options) {
   @param {Hash} options
   @returns {String} HTML string
 */
-Handlebars.registerHelper('unless', function(context, options) {
+SC.Handlebars.registerHelper('unless', function(context, options) {
   sc_assert("You must pass exactly one argument to the unless helper", arguments.length == 2);
   sc_assert("You must pass a block to the unless helper", options.fn && options.fn !== Handlebars.VM.noop);
 
@@ -13653,7 +13730,7 @@ Handlebars.registerHelper('unless', function(context, options) {
   options.fn = inverse;
   options.inverse = fn;
 
-  return Handlebars.helpers.boundIf.call(options.contexts[0], context, options);
+  return SC.Handlebars.helpers.boundIf.call(options.contexts[0], context, options);
 });
 
 /**
@@ -13666,7 +13743,7 @@ Handlebars.registerHelper('unless', function(context, options) {
   @param {Hash} options
   @returns {String} HTML string
 */
-Handlebars.registerHelper('bindAttr', function(options) {
+SC.Handlebars.registerHelper('bindAttr', function(options) {
 
   var attrs = options.hash;
 
@@ -13759,7 +13836,7 @@ Handlebars.registerHelper('bindAttr', function(options) {
 
   // Add the unique identifier
   ret.push('data-handlebars-id="' + dataId + '"');
-  return new Handlebars.SafeString(ret.join(' '));
+  return new SC.Handlebars.SafeString(ret.join(' '));
 });
 
 /**
@@ -13994,7 +14071,7 @@ SC.Handlebars.ViewHelper = SC.Object.create({
   @param {Hash} options
   @returns {String} HTML string
 */
-Handlebars.registerHelper('view', function(path, options) {
+SC.Handlebars.registerHelper('view', function(path, options) {
   sc_assert("The view helper only takes a single argument", arguments.length <= 2);
 
   // If no path is provided, treat path param as options.
@@ -14027,7 +14104,7 @@ var get = SC.get;
   @param {Hash} options
   @returns {String} HTML string
 */
-Handlebars.registerHelper('collection', function(path, options) {
+SC.Handlebars.registerHelper('collection', function(path, options) {
   // If no path is provided, treat path param as options.
   if (path && path.data && path.data.isRenderData) {
     options = path;
@@ -14095,7 +14172,7 @@ Handlebars.registerHelper('collection', function(path, options) {
 
   hash.itemViewClass = SC.Handlebars.ViewHelper.viewClassFromHTMLOptions(itemViewClass, itemHash);
 
-  return Handlebars.helpers.view.call(this, collectionClass, options);
+  return SC.Handlebars.helpers.view.call(this, collectionClass, options);
 });
 
 
@@ -14123,8 +14200,9 @@ var getPath = SC.getPath;
   @param {String} property
   @returns {String} HTML string
 */
-Handlebars.registerHelper('unbound', function(property) {
-  return getPath(this, property);
+SC.Handlebars.registerHelper('unbound', function(property, fn) {
+  var context = (fn.contexts && fn.contexts[0]) || this;
+  return getPath(context, property);
 });
 
 })({});
@@ -14148,8 +14226,9 @@ var getPath = SC.getPath;
   @name Handlebars.helpers.log
   @param {String} property
 */
-Handlebars.registerHelper('log', function(property) {
-  console.log(getPath(this, property));
+SC.Handlebars.registerHelper('log', function(property, fn) {
+  var context = (fn.contexts && fn.contexts[0]) || this;
+  SC.Logger.log(getPath(context, property));
 });
 
 /**
@@ -14161,7 +14240,7 @@ Handlebars.registerHelper('log', function(property) {
   @name Handlebars.helpers.debugger
   @param {String} property
 */
-Handlebars.registerHelper('debugger', function() {
+SC.Handlebars.registerHelper('debugger', function() {
   debugger;
 });
 
@@ -14173,10 +14252,10 @@ SC.Handlebars.EachView = SC.CollectionView.extend(SC.Metamorph, {
   itemViewClass: SC.View.extend(SC.Metamorph)
 });
 
-Handlebars.registerHelper('each', function(path, options) {
+SC.Handlebars.registerHelper('each', function(path, options) {
   options.hash.contentBinding = path;
   options.hash.preserveContext = true;
-  return Handlebars.helpers.collection.call(this, 'SC.Handlebars.EachView', options);
+  return SC.Handlebars.helpers.collection.call(this, 'SC.Handlebars.EachView', options);
 });
 
 })({});
