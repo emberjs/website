@@ -56,7 +56,7 @@ SC.AceEditorView = SC.View.extend({
     var session = this.get('session');
     if (session){
       // Need a delay here to make sure we get the updated value
-      SC.run.schedule('render', this, function(){
+      SC.run.schedule('sync', this, function(){
         var value = this.get('value'),
             newValue = session.getValue();
         if (value !== newValue) {
