@@ -197,10 +197,17 @@ SC.ConsoleController = SC.Object.extend({
   },
 
   /**
+  * Returns true if error is related to an incomplete command
+  */
+  isIncompleteCommandError: function(error) {
+    return error.constructor === SyntaxError && error.message === "Unexpected end of input";
+  },
+
+  /**
   * Process errors in running
   */
   processError: function(input, error){
-    if (error.constructor === SyntaxError && error.message === "Unexpected end of input") {
+    if (this.isIncompleteCommandError(error)) {
       this._incompleteCommand = input;
       return null;
     } else {
@@ -320,6 +327,10 @@ SC.SandboxedConsoleController = SC.ConsoleController.extend({
 
   processInput: function(input){
     return this._iframe.contentWindow.eval(input);
+  },
+
+  isIncompleteCommandError: function(error) {
+    return error.constructor === this._iframe.contentWindow.SyntaxError && error.message === "Unexpected end of input";
   },
 
   init: function(){
