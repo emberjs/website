@@ -89,6 +89,7 @@ Tutorial.tutorialController = SC.Object.create({
   javascript: null,
   template: null,
   console: null,
+  error: null,
 
   iframeContainer: SC.$('#tutorial-output'),
   iframe: null,
@@ -111,17 +112,30 @@ Tutorial.tutorialController = SC.Object.create({
   },
 
   evalApp: function(){
+    this.set('error', null);
+
     var iframe = this.get('iframe') || this.resetIframe(),
         target = iframe.contentWindow;
 
-    target.eval(this.get('javascript'));
+    try {
+      target.eval(this.get('javascript'));
+    } catch (error) {
+      this.set('error', "JavaScript Error: "+error.toString());
+      return;
+    }
+
     if (target.MyApp){
-      var template = this.get('template');
-      if (template) {
-        target.MyApp.rootView = target.SC.View.create({
-          template: target.SC.Handlebars.compile(template)
-        });
-        target.MyApp.rootView.appendTo(target.document.body);
+      try {
+        var template = this.get('template');
+        if (template) {
+          target.MyApp.rootView = target.SC.View.create({
+            template: target.SC.Handlebars.compile(template)
+          });
+          target.MyApp.rootView.appendTo(target.document.body);
+        }
+      } catch (error) {
+        this.set('error', "Template Error: "+error.toString());
+        return;
       }
     }
   },

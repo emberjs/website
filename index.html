@@ -68,6 +68,12 @@
                 {{/view}}
               </div>
             </div>
+          {{#if Tutorial.tutorialController.error}}
+            <div class="alert-message error">
+              {{Tutorial.tutorialController.error}}
+            </div>
+          {{/if}}
+
 
             <ul class="tabs">
               {{view Tutorial.TabView title="JavaScript"
