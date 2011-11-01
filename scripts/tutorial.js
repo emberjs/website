@@ -96,22 +96,38 @@ Tutorial.Step = SC.Object.extend({
   javascriptState: null,
   templateState: null,
 
-  validator: null,
-
   error: null,
 
+  validator: null,
+
+  hasValidations: function(){
+    return this.get('validator') || this.getPath('previousStep.hasValidations');
+  }.property('validator', 'previousStep.hasValidations'),
+
+  runValidations: function(javascript, template){
+    var previousStep = this.get('previousStep');
+
+    javascript = javascript || this.get('javascriptState');
+    template = template || this.get('templateState');
+
+    var result = previousStep ? previousStep.runValidations(javascript, template) : true;
+    if (result === true) {
+      var validator = this.get('validator');
+      if (validator) { result = validator(this.getPath('codeController.evalContext')); }
+    }
+
+    return result;
+  },
+  
   validate: function(){
-    var validator = this.get('validator');
-    if (!validator) { return true; }
+    if (!this.get('hasValidations')) { return true; }
 
     var codeController = this.get('codeController'),
         javascript = this.get('javascriptState'),
         template = this.get('templateState');
 
     var result = codeController.evalApp();
-    if (result === true) {
-      result = validator(codeController.get('evalContext'));
-    }
+    if (result === true) { result = this.runValidations(); }
 
     if (result === true) {
       return true;
@@ -299,7 +315,6 @@ Tutorial.stepsController.add({
         "</ul>",
   validator: function(context){
     var eachView = context.MyApp.rootView.get('_childViews').find(function(v){
-          console.log(v, v.constructor, v.getPath('contentBinding._from'));
           return ((v instanceof context.SC.CollectionView) &&
                   (v.getPath('contentBinding._from') === 'MyApp.people'));
         });
