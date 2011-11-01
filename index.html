@@ -53,24 +53,24 @@
             <h2>Learn Amber Now</h2>
             <div id="steps" class="alert-message info block-message">
               {{view Tutorial.StepsView
-                  stepBinding="Tutorial.stepsController.currentStep"
+                  stepBinding="Tutorial.stepsController.current"
                   tabControllerBinding="Tutorial.editorTabController"}}
               <div class="cf">
                 {{#view SC.Button classNames="btn small pull-left"
-                    target="Tutorial.stepsController" action="previousTab"
+                    target="Tutorial.stepsController" action="gotoPrevious"
                     isVisibleBinding="Tutorial.stepsController.hasPrevious"}}
                   Previous Step
                 {{/view}}
                 {{#view SC.Button classNames="btn small pull-right"
-                    target="Tutorial.stepsController" action="nextTab"
+                    target="Tutorial.stepsController" action="gotoNext"
                     isVisibleBinding="Tutorial.stepsController.hasNext"}}
                   Next Step
                 {{/view}}
               </div>
             </div>
-          {{#if Tutorial.tutorialController.error}}
+          {{#if Tutorial.stepsController.current.error}}
             <div class="alert-message error">
-              {{Tutorial.tutorialController.error}}
+              {{Tutorial.stepsController.current.error}}
             </div>
           {{/if}}
 
@@ -91,19 +91,13 @@
                   controller="Tutorial.editorTabController"
                   tabName="javascript"}}
                 {{view Tutorial.AceEditorView language="javascript"
-                    valueBinding="Tutorial.tutorialController.javascript"}}
-                {{#view SC.Button classNames="small btn"
-                    target="Tutorial.tutorialController"
-                    action="evalApp"}}Try{{/view}}
+                    valueBinding="Tutorial.stepsController.current.javascriptState"}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"
                   tabName="template"}}
                 {{view Tutorial.AceEditorView language="html"
-                    valueBinding="Tutorial.tutorialController.template"}}}
-                {{#view SC.Button classNames="small btn"
-                    target="Tutorial.tutorialController"
-                    action="evalApp"}}Try{{/view}}
+                    valueBinding="Tutorial.stepsController.current.templateState"}}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"

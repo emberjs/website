@@ -28,6 +28,10 @@ Tutorial = SC.Application.create({
 /************ MODELS ***************/
 
 Tutorial.Step = SC.Object.extend({
+  // Linked List
+  nextStep: null,
+  previousStep: null,
+
   // Template string
   template: '',
 
@@ -74,23 +78,68 @@ Tutorial.Step = SC.Object.extend({
     if (codeTarget && code && codeController) {
       var current = '';
       if (codeTarget !== 'console') {
-        current = codeController.get(codeTarget) || '';
+        current = this.get(codeTarget+'State') || '';
         if (current) { current = current + "\n\n"; }
       }
-      codeController.setAndEval(codeTarget, current+code);
+      if (codeTarget === 'console') {
+        codeController.set('console', current+code);
+        codeController.evalConsole();
+      } else {
+        this.set(codeTarget+'State', current+code);
+        //codeController.evalApp();
+      }
+    }
+  },
+
+  // State tracking
+
+  javascriptState: null,
+  templateState: null,
+
+  validator: null,
+
+  error: null,
+
+  validate: function(){
+    var validator = this.get('validator');
+    if (!validator) { return true; }
+
+    var codeController = this.get('codeController'),
+        javascript = this.get('javascriptState'),
+        template = this.get('templateState');
+
+    var result = codeController.evalApp();
+    if (result === true) {
+      result = validator(codeController.get('evalContext'));
+    }
+
+    if (result === true) {
+      return true;
+    } else {
+      this.set('error', result || 'Unknown error');
+      return false;
+    }
+  },
+
+  didBecomeCurrent: function(){
+    var previous = this.get('previousStep');
+    if (previous) {
+      if (!this.getPath('javascriptState')) {
+        this.set('javascriptState', previous.get('javascriptState'));
+      }
+      if (!this.get('templateState')) {
+        this.set('templateState', previous.get('templateState'));
+      }
     }
   }
+
 });
 
 
 /************ CONTROLLERS ***********/
 
 Tutorial.tutorialController = SC.Object.create({
-  javascript: null,
-  template: null,
   console: null,
-  error: null,
-
   iframeContainer: SC.$('#tutorial-output'),
   iframe: null,
 
@@ -111,138 +160,188 @@ Tutorial.tutorialController = SC.Object.create({
     return iframe;
   },
 
+  evalContext: function(){
+    return this.get('iframe').contentWindow;
+  }.property('iframe').cacheable(),
+
   evalApp: function(){
-    this.set('error', null);
+    this.resetIframe();
+    var evalContext = this.get('evalContext'),
+        step = Tutorial.stepsController.get('current');
 
-    var iframe = this.resetIframe(),
-        target = iframe.contentWindow;
-
-    try {
-      target.eval(this.get('javascript'));
-    } catch (error) {
-      this.set('error', "JavaScript Error: "+error.toString());
-      return;
-    }
-
-    if (target.MyApp){
+    evalContext.SC.run(function(){
       try {
-        var template = this.get('template');
-        if (template) {
-          target.MyApp.rootView = target.SC.View.create({
-            template: target.SC.Handlebars.compile(template)
-          });
-          target.MyApp.rootView.appendTo(target.document.body);
-        }
+        evalContext.eval(step.get('javascriptState'));
       } catch (error) {
-        this.set('error', "Template Error: "+error.toString());
-        return;
+        return "JavaScript Error: "+error.toString();
       }
-    }
+
+      if (evalContext.MyApp){
+        try {
+          var template = step.get('templateState');
+          if (template) {
+            evalContext.MyApp.rootView = evalContext.SC.View.create({
+              template: evalContext.SC.Handlebars.compile(template)
+            });
+            evalContext.MyApp.rootView.appendTo(evalContext.document.body);
+          }
+        } catch (error) {
+          return "Template Error: "+error.toString();
+        }
+      }
+    });
+
+    return true;
   },
 
-  setAndEval: function(key, value){
-    this.set(key, value);
-    if (key === 'console') {
-      // Make sure binding has updated
-      SC.run.schedule('sync', Tutorial.consoleController, 'runCommand');
+  evalConsole: function(){
+    // Make sure binding has updated
+    SC.run.schedule('sync', Tutorial.consoleController, 'runCommand');
+  }
+});
+
+Tutorial.stepsController = SC.Object.create({
+
+  current: null,
+  first: null,
+  last: null,
+
+  add: function(step){
+    if (!(step instanceof Tutorial.Step)) {
+      step = Tutorial.Step.create(step);
+    }
+
+    var current = this.get('current'),
+        first = this.get('first'),
+        last = this.get('last');
+
+    if (last){
+      last.set('nextStep', step);
+      step.set('previousStep', last);
+    }
+
+    if (!current) { this.set('current', step); }
+    if (!first) { this.set('first', step); }
+    this.set('last', step);
+  },
+
+  // Convenience
+  previousBinding: 'current.previousStep',
+  nextBinding: 'current.nextStep',
+  hasPreviousBinding: SC.Binding.from('previous').bool(),
+  hasNextBinding: SC.Binding.from('next').bool(),
+
+  gotoPrevious: function(){
+    var previous = this.get('previous');
+    if (previous) { this.set('current', previous); }
+  },
+
+  gotoNext: function(){
+    var current = this.get('current'),
+        next = this.get('next');
+    if (current.validate() && next) {
+      this.set('current', next);
+      next.didBecomeCurrent();
+    }
+  }
+
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Step 1:</strong> Create your app",
+  codeTarget: 'javascript',
+  code: "MyApp = SC.Application.create();",
+  validator: function(context){
+    if (context.MyApp instanceof context.SC.Application) { return true; }
+    return "Couldn't find valid MyApp instance";
+  }
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Step 2:</strong> Create a model",
+  codeTarget: 'javascript',
+  code: "// model\n"+
+        "MyApp.Person = SC.Object.extend({\n"+
+        "  firstName: null,\n"+
+        "  lastName: null\n"+
+        "});",
+  validator: function(context){
+    if (context.MyApp.Person && context.MyApp.Person.superclass === context.SC.Object) { return true; }
+    return "Couldn't find valid MyApp.Person class";
+  }
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Step 3:</strong> Create an array",
+  codeTarget: 'javascript',
+  code: "// controller\n"+
+        "MyApp.people = [];",
+  validator: function(context){
+    if (context.MyApp.people && context.MyApp.people.constructor === context.Array) { return true; }
+    return "Couldn't find Array named MyApp.people";
+  }
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Step 4:</strong> Create a view and append it",
+  codeTarget: 'template',
+  codeLanguage: 'html',
+  code: "<!-- view -->\n"+
+        "People:\n"+
+        "<ul>\n"+
+        "{{#each MyApp.people}}\n"+
+        "  <li>{{firstName}} {{lastName}}</li>\n"+
+        "{{/each}}\n"+
+        "</ul>",
+  validator: function(context){
+    var eachView = context.MyApp.rootView.get('_childViews').find(function(v){
+          console.log(v, v.constructor, v.getPath('contentBinding._from'));
+          return ((v instanceof context.SC.CollectionView) &&
+                  (v.getPath('contentBinding._from') === 'MyApp.people'));
+        });
+
+    if (eachView) {
+      return true;
     } else {
-      this.evalApp();
+      return "No {{#each MyApp.people}} helper found";
     }
   }
 });
 
-Tutorial.stepsController = SC.TabController.create({
-  steps: [
-    Tutorial.Step.create({
-      template: "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 1:</strong> Create your app",
-      codeTarget: 'javascript',
-      code: "MyApp = SC.Application.create();"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 2:</strong> Create a model",
-      codeTarget: 'javascript',
-      code: "// model\n"+
-            "MyApp.Person = SC.Object.extend({\n"+
-            "  firstName: null,\n"+
-            "  lastName: null\n"+
-            "});"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 3:</strong> Create an array",
-      codeTarget: 'javascript',
-      code: "// controller\n"+
-            "MyApp.people = [];"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 4:</strong> Create a view and append it",
-      codeTarget: 'template',
-      codeLanguage: 'html',
-      code: "<!-- view -->\n"+
-            "People:\n"+
-            "<ul>\n"+
-            "{{#each MyApp.people}}\n"+
-            "  <li>{{firstName}} {{lastName}}</li>\n"+
-            "{{/each}}\n"+
-            "</ul>"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 5:</strong> Add yourself to the array",
-      codeTarget: 'console',
-      code: "me = MyApp.Person.create({\n"+
-            "  firstName: \"Yehuda\",\n"+
-            "  lastName: \"Katz\"\n"+
-            "});\n"+
-            "MyApp.people.pushObject(me);"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 6:</strong> Add someone else to the array",
-      codeTarget: 'console',
-      code: "tom = MyApp.Person.create({\n"+
-            "  firstName: \"Tom\",\n"+
-            "  lastName: \"Dale\",\n"+
-            "});\n"+
-            "MyApp.people.pushObject(tom);"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Step 7:</strong> Modify yourself",
-      codeTarget: 'console',
-      code: "me.set('firstName', 'Brohuda');"
-    }),
-    Tutorial.Step.create({
-      template: "<strong>Congratulations!</strong> You've just created your first Amber application!"
-    })
-  ],
-
-  currentStepIndex: 0,
-
-  currentStep: function(){
-    return this.get('steps').objectAt(this.get('currentStepIndex'));
-  }.property('currentStepIndex').cacheable(),
-
-  hasPrevious: function(){
-    return this.get('currentStepIndex') > 0;
-  }.property('currentStepIndex').cacheable(),
-
-  hasNext: function(){
-    return this.get('currentStepIndex') < this.getPath('steps.length')-1;
-  }.property('currentStepIndex', 'steps.length').cacheable(),
-
-  previousTab: function(){
-    if (this.get('hasPrevious')) {
-      this.set('currentStepIndex', this.get('currentStepIndex') - 1);
-    }
-  },
-
-  nextTab: function(){
-    if (this.get('hasNext')) {
-      this.set('currentStepIndex', this.get('currentStepIndex') + 1);
-    }
-  }
-
+Tutorial.stepsController.add({
+  template: "<strong>Step 5:</strong> Add yourself to the array",
+  codeTarget: 'console',
+  code: "me = MyApp.Person.create({\n"+
+        "  firstName: \"Yehuda\",\n"+
+        "  lastName: \"Katz\"\n"+
+        "});\n"+
+        "MyApp.people.pushObject(me);"
 });
+
+Tutorial.stepsController.add({
+  template: "<strong>Step 6:</strong> Add someone else to the array",
+  codeTarget: 'console',
+  code: "tom = MyApp.Person.create({\n"+
+        "  firstName: \"Tom\",\n"+
+        "  lastName: \"Dale\",\n"+
+        "});\n"+
+        "MyApp.people.pushObject(tom);"
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Step 7:</strong> Modify yourself",
+  codeTarget: 'console',
+  code: "me.set('firstName', 'Brohuda');"
+});
+
+Tutorial.stepsController.add({
+  template: "<strong>Congratulations!</strong> You've just created your first Amber application!"
+});
+
 
 Tutorial.editorTabController = SC.TabController.create({
   currentTab: 'javascript'

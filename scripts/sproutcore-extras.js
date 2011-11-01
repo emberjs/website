@@ -43,7 +43,7 @@ SC.AceEditorView = SC.View.extend({
     var session = this.get('session');
     if (session) {
       var value = this.get('value');
-      if (!this._valueSetInternally) { session.setValue(value); }
+      if (!this._valueSetInternally) { session.setValue(value || ''); }
       this._valueSetInternally = false;
     }
   }.observes('value'),
