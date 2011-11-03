@@ -45,7 +45,7 @@ Tutorial.Step = SC.Object.extend({
       var escapedCode = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
                             .replace(/{/g, "&#123;").replace(/}/g, "&#125;");
       template += "<pre class=\"prettyprint lang-"+codeLanguage+"\">"+escapedCode+"</pre>\n"+
-                  "{{#view SC.Button classNames=\"small btn\" target=\"parentView.step\" action=\"copyCode\"}}Do it for me{{/view}}"
+                  "{{#view SC.Button classNames=\"small btn\" target=\"Tutorial.stepsController\" action=\"copyAndGotoNext\"}}Do it for me{{/view}}"
     }
 
     return template;
@@ -68,9 +68,9 @@ Tutorial.Step = SC.Object.extend({
   // TODO: Don't hardcode this
   codeControllerBinding: 'Tutorial.tutorialController',
 
-  copyCode: function(){
+  copyCode: function(skipScroll){
     // FIXME: Not the ideal place to put this
-    Tutorial.scrollBodyToElement('#editor-tabs');
+    if (!skipScroll) { Tutorial.scrollBodyToElement('#editor-tabs'); }
 
     var codeTarget = this.get('codeTarget'),
         code = this.get('code'),
@@ -104,13 +104,9 @@ Tutorial.Step = SC.Object.extend({
     return this.get('validator') || this.getPath('previousStep.hasValidations');
   }.property('validator', 'previousStep.hasValidations'),
 
-  runValidations: function(javascript, template){
+  runValidations: function(){
     var previousStep = this.get('previousStep');
-
-    javascript = javascript || this.get('javascriptState');
-    template = template || this.get('templateState');
-
-    var result = previousStep ? previousStep.runValidations(javascript, template) : true;
+        result = previousStep ? previousStep.runValidations() : true;
     if (result === true) {
       var validator = this.get('validator');
       if (validator) { result = validator(this.getPath('codeController.evalContext')); }
@@ -118,15 +114,14 @@ Tutorial.Step = SC.Object.extend({
 
     return result;
   },
-  
+
   validate: function(){
     if (!this.get('hasValidations')) { return true; }
 
     var codeController = this.get('codeController'),
-        javascript = this.get('javascriptState'),
-        template = this.get('templateState');
+        result;
 
-    var result = codeController.evalApp();
+    result = codeController.evalApp();
     if (result === true) { result = this.runValidations(); }
 
     if (result === true) {
@@ -259,6 +254,11 @@ Tutorial.stepsController = SC.Object.create({
       this.set('current', next);
       next.didBecomeCurrent();
     }
+  },
+
+  copyAndGotoNext: function(){
+    this.get('current').copyCode(true);
+    this.gotoNext();
   }
 
 });
