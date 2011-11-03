@@ -168,7 +168,7 @@ SC.ConsoleController = SC.Object.extend({
   * Check to see if input should be run
   */
   validateInput: function(input){
-    return input !== "";
+    return !!input;
   },
 
   /**
@@ -278,7 +278,14 @@ SC.ConsoleController = SC.Object.extend({
   */
   pushHistory: function(item){
     var history = this.get('history');
+
+    if (!history) {
+      history = [];
+      this.set('history', history);
+    }
+
     history.pushObject(item);
+
     this._currentHistoryPos = history.get('length');
   },
 
