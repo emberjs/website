@@ -45,7 +45,7 @@ Tutorial.Step = SC.Object.extend({
       var escapedCode = code.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
                             .replace(/{/g, "&#123;").replace(/}/g, "&#125;");
       template += "<pre class=\"prettyprint lang-"+codeLanguage+"\">"+escapedCode+"</pre>\n"+
-                  "{{#view SC.Button classNames=\"small btn\" target=\"Tutorial.stepsController\" action=\"copyAndGotoNext\"}}Do it for me{{/view}}"
+                  "{{#view SC.Button classNames=\"small btn\" target=\"Tutorial.tutorialController\" action=\"copyAndGotoNextStep\"}}Do it for me{{/view}}"
     }
 
     return template;
@@ -133,13 +133,13 @@ Tutorial.Step = SC.Object.extend({
   },
 
   didBecomeCurrent: function(){
-    var previous = this.get('previousStep');
-    if (previous) {
+    var previousStep = this.get('previousStep');
+    if (previousStep) {
       if (!this.getPath('javascriptState')) {
-        this.set('javascriptState', previous.get('javascriptState'));
+        this.set('javascriptState', previousStep.get('javascriptState'));
       }
       if (!this.get('templateState')) {
-        this.set('templateState', previous.get('templateState'));
+        this.set('templateState', previousStep.get('templateState'));
       }
     }
   }
@@ -178,7 +178,7 @@ Tutorial.tutorialController = SC.Object.create({
   evalApp: function(){
     this.resetIframe();
     var evalContext = this.get('evalContext'),
-        step = Tutorial.stepsController.get('current');
+        step = this.get('currentStep');
 
     evalContext.SC.run(function(){
       try {
@@ -208,66 +208,64 @@ Tutorial.tutorialController = SC.Object.create({
   evalConsole: function(){
     // Make sure binding has updated
     SC.run.schedule('sync', Tutorial.consoleController, 'runCommand');
-  }
-});
+  },
 
-Tutorial.stepsController = SC.Object.create({
+  currentStep: null,
+  firstStep: null,
+  lastStep: null,
 
-  current: null,
-  first: null,
-  last: null,
-
-  add: function(step){
+  addStep: function(step){
     if (!(step instanceof Tutorial.Step)) {
       step = Tutorial.Step.create(step);
     }
 
-    var current = this.get('current'),
-        first = this.get('first'),
-        last = this.get('last');
+    var currentStep = this.get('currentStep'),
+        firstStep = this.get('firstStep'),
+        lastStep = this.get('lastStep');
 
-    if (last){
-      last.set('nextStep', step);
-      step.set('previousStep', last);
+    if (lastStep){
+      lastStep.set('nextStep', step);
+      step.set('previousStep', lastStep);
     }
 
-    if (!current) { this.set('current', step); }
-    if (!first) { this.set('first', step); }
-    this.set('last', step);
+    if (!currentStep) { this.set('currentStep', step); }
+    if (!firstStep) { this.set('firstStep', step); }
+    this.set('lastStep', step);
   },
 
   // Convenience
-  previousBinding: 'current.previousStep',
-  nextBinding: 'current.nextStep',
-  hasPreviousBinding: SC.Binding.from('previous').bool(),
-  hasNextBinding: SC.Binding.from('next').bool(),
+  previousStepBinding: 'currentStep.previousStep',
+  nextStepBinding: 'currentStep.nextStep',
+  hasPreviousStepBinding: SC.Binding.from('previousStep').bool(),
+  hasNextStepBinding: SC.Binding.from('nextStep').bool(),
 
-  gotoPrevious: function(){
-    var previous = this.get('previous');
-    if (previous) { this.set('current', previous); }
+  gotoPreviousStep: function(){
+    var previousStep = this.get('previousStep');
+    if (previousStep) { this.set('currentStep', previousStep); }
   },
 
-  gotoNext: function(){
-    var current = this.get('current'),
-        next = this.get('next');
-    if (current.validate() && next) {
-      this.set('current', next);
-      next.didBecomeCurrent();
+  gotoNextStep: function(){
+    var currentStep = this.get('currentStep'),
+        nextStep = this.get('nextStep');
+
+    if (currentStep.validate() && nextStep) {
+      this.set('currentStep', nextStep);
+      nextStep.didBecomeCurrent();
     }
   },
 
-  copyAndGotoNext: function(){
-    this.get('current').copyCode(true);
-    this.gotoNext();
+  copyAndGotoNextStep: function(){
+    this.get('currentStep').copyCode(true);
+    this.gotoNextStep();
   }
 
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 1:</strong> Create your app",
   codeTarget: 'javascript',
   code: "MyApp = SC.Application.create();",
@@ -277,7 +275,7 @@ Tutorial.stepsController.add({
   }
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 2:</strong> Create a model",
   codeTarget: 'javascript',
   code: "// model\n"+
@@ -291,7 +289,7 @@ Tutorial.stepsController.add({
   }
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 3:</strong> Create an array",
   codeTarget: 'javascript',
   code: "// controller\n"+
@@ -302,7 +300,7 @@ Tutorial.stepsController.add({
   }
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 4:</strong> Create a view and append it",
   codeTarget: 'template',
   codeLanguage: 'html',
@@ -328,7 +326,7 @@ Tutorial.stepsController.add({
   }
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 5:</strong> Add yourself to the array",
   codeTarget: 'console',
   code: "me = MyApp.Person.create({\n"+
@@ -338,7 +336,7 @@ Tutorial.stepsController.add({
         "MyApp.people.pushObject(me);"
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 6:</strong> Add someone else to the array",
   codeTarget: 'console',
   code: "tom = MyApp.Person.create({\n"+
@@ -348,13 +346,13 @@ Tutorial.stepsController.add({
         "MyApp.people.pushObject(tom);"
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Step 7:</strong> Modify yourself",
   codeTarget: 'console',
   code: "me.set('firstName', 'Brohuda');"
 });
 
-Tutorial.stepsController.add({
+Tutorial.tutorialController.addStep({
   template: "<strong>Congratulations!</strong> You've just created your first Amber application!"
 });
 
