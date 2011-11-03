@@ -314,7 +314,8 @@ Tutorial.stepsController.add({
         "{{/each}}\n"+
         "</ul>",
   validator: function(context){
-    var eachView = context.MyApp.rootView.get('_childViews').find(function(v){
+    var rootView = context.MyApp && context.MyApp.rootView,
+        eachView = rootView && context.MyApp.rootView.get('_childViews').find(function(v){
           return ((v instanceof context.SC.CollectionView) &&
                   (v.getPath('contentBinding._from') === 'MyApp.people'));
         });
