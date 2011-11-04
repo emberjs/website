@@ -27,6 +27,49 @@ Tutorial = SC.Application.create({
 
 /************ MODELS ***************/
 
+Tutorial.State = SC.Object.extend(SC.Copyable, {
+
+  javascript: null,
+  template: null,
+  console: null,
+  consoleHistory: null,
+
+  errors: [],
+
+  hasErrors: function(){
+    return this.get('errors').length > 0;
+  }.property('errors.[]').cacheable(),
+
+  dirty: false,
+
+  _gotDirty: function(){
+    this.set('dirty', true);
+  }.observes('javascript', 'template', 'console', 'consoleHistory.[]'),
+
+  copy: function(deep){
+    var basicAttrs = Tutorial.State.BASIC_ATTRIBUTES,
+        deepAttrs = Tutorial.State.DEEP_ATTRIBUTES,
+        data = {};
+
+    if (deep) {
+      deepAttrs.forEach(function(attr){
+        data[attr] = JSON.parse(JSON.stringify(this.get(attr)));
+      }, this);
+    } else {
+      basicAttrs = basicAttrs.concat(deepAttrs);
+    }
+
+    basicAttrs.forEach(function(attr){ data[attr] = this.get(attr); }, this);
+
+    return this.constructor.create(data);
+  }
+
+});
+
+Tutorial.State.BASIC_ATTRIBUTES = ['javascript', 'template', 'console', 'dirty'];
+Tutorial.State.DEEP_ATTRIBUTES  = ['consoleHistory', 'errors'];
+
+
 Tutorial.Step = SC.Object.extend({
   // Linked List
   nextStep: null,
@@ -65,82 +108,13 @@ Tutorial.Step = SC.Object.extend({
   // Code to insert
   code: null,
 
-  // TODO: Don't hardcode this
-  codeControllerBinding: 'Tutorial.tutorialController',
-
-  copyCode: function(skipScroll){
-    // FIXME: Not the ideal place to put this
-    if (!skipScroll) { Tutorial.scrollBodyToElement('#editor-tabs'); }
-
-    var codeTarget = this.get('codeTarget'),
-        code = this.get('code'),
-        codeController = this.get('codeController');
-    if (codeTarget && code && codeController) {
-      var current = '';
-      if (codeTarget !== 'console') {
-        current = this.get(codeTarget+'State') || '';
-        if (current) { current = current + "\n\n"; }
-      }
-      if (codeTarget === 'console') {
-        codeController.set('console', current+code);
-        codeController.evalConsole();
-      } else {
-        this.set(codeTarget+'State', current+code);
-        //codeController.evalApp();
-      }
-    }
-  },
-
-  // State tracking
-
-  javascriptState: null,
-  templateState: null,
-
-  error: null,
-
-  validator: null,
-
-  hasValidations: function(){
-    return this.get('validator') || this.getPath('previousStep.hasValidations');
-  }.property('validator', 'previousStep.hasValidations'),
-
-  runValidations: function(){
-    var previousStep = this.get('previousStep');
-        result = previousStep ? previousStep.runValidations() : true;
-    if (result === true) {
-      var validator = this.get('validator');
-      if (validator) { result = validator(this.getPath('codeController.evalContext')); }
-    }
-
-    return result;
-  },
-
-  validate: function(){
-    if (!this.get('hasValidations')) { return true; }
-
-    var codeController = this.get('codeController'),
-        result;
-
-    result = codeController.evalApp();
-    if (result === true) { result = this.runValidations(); }
-
-    if (result === true) {
-      return true;
-    } else {
-      this.set('error', result || 'Unknown error');
-      return false;
-    }
-  },
+  state: null,
 
   didBecomeCurrent: function(){
-    var previousStep = this.get('previousStep');
-    if (previousStep) {
-      if (!this.getPath('javascriptState')) {
-        this.set('javascriptState', previousStep.get('javascriptState'));
-      }
-      if (!this.get('templateState')) {
-        this.set('templateState', previousStep.get('templateState'));
-      }
+    if (!this.get('state')) {
+      var previousState = this.getPath('previousStep.state'),
+          state = previousState ? SC.copy(previousState, true) : Tutorial.State.create();
+      this.set('state', state);
     }
   }
 
@@ -150,7 +124,6 @@ Tutorial.Step = SC.Object.extend({
 /************ CONTROLLERS ***********/
 
 Tutorial.tutorialController = SC.Object.create({
-  console: null,
   iframeContainer: SC.$('#tutorial-output'),
   iframe: null,
 
@@ -160,11 +133,14 @@ Tutorial.tutorialController = SC.Object.create({
 
     var iframe = SC.$('<iframe></iframe>').appendTo(this.get('iframeContainer'))[0];
     iframe.contentWindow.document.write(
-      '<html><head>'+
-        '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>'+
-        '<script src="/scripts/sproutcore.js"></script></head>'+
-        '<link href="/styles/iframe.css" rel="stylesheet">'+
-      '<body></body></html>'
+      '<html>'+
+        '<head>'+
+          '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>'+
+          '<script src="/scripts/sproutcore.js"></script>'+
+          '<link href="/styles/iframe.css" rel="stylesheet">'+
+        '</head>'+
+        '<body></body>'+
+      '</html>'
     );
 
     this.set('iframe', iframe);
@@ -178,18 +154,18 @@ Tutorial.tutorialController = SC.Object.create({
   evalApp: function(){
     this.resetIframe();
     var evalContext = this.get('evalContext'),
-        step = this.get('currentStep');
+        state = this.get('state');
 
     evalContext.SC.run(function(){
       try {
-        evalContext.eval(step.get('javascriptState'));
+        evalContext.eval(state.get('javascript'));
       } catch (error) {
         return "JavaScript Error: "+error.toString();
       }
 
       if (evalContext.MyApp){
         try {
-          var template = step.get('templateState');
+          var template = state.get('template');
           if (template) {
             evalContext.MyApp.rootView = evalContext.SC.View.create({
               template: evalContext.SC.Handlebars.compile(template)
@@ -206,13 +182,56 @@ Tutorial.tutorialController = SC.Object.create({
   },
 
   evalConsole: function(){
-    // Make sure binding has updated
-    SC.run.schedule('sync', Tutorial.consoleController, 'runCommand');
+    var evalContext = this.get('evalContext'),
+        history = this.getPath('state.consoleHistory');
+
+    // Playback
+    if (history) {
+      history.forEach(function(item){
+        var success = item.results.some(function(r){ return r.type === 'success'; });
+        if (success) {
+          try {
+            evalContext.eval(item.command);
+          } catch(error) {
+            console.warn("Unable to play back command:", item.command, error);
+          }
+        }
+      });
+    }
+
+    // Run any un-run commands
+    Tutorial.consoleController.runCommand();
+
+    return true;
+  },
+
+  evalState: function(force){
+    var state = this.get('state');
+
+    //if (state.get('dirty') || force) {
+      state.set('errors', []);
+
+      var result = this.evalApp();
+      if (result === true) { result = this.evalConsole(); }
+
+      if (result !== true) {
+        state.set('errors', [result]);
+      }
+
+      this.set('dirty', false);
+    //}
   },
 
   currentStep: null,
   firstStep: null,
   lastStep: null,
+
+  // Convenience
+  stateBinding: 'currentStep.state',
+  previousStepBinding: 'currentStep.previousStep',
+  nextStepBinding: 'currentStep.nextStep',
+  hasPreviousStepBinding: SC.Binding.from('previousStep').bool(),
+  hasNextStepBinding: SC.Binding.from('nextStep').bool(),
 
   addStep: function(step){
     if (!(step instanceof Tutorial.Step)) {
@@ -228,35 +247,99 @@ Tutorial.tutorialController = SC.Object.create({
       step.set('previousStep', lastStep);
     }
 
-    if (!currentStep) { this.set('currentStep', step); }
+    if (!currentStep) {
+      this.set('currentStep', step);
+      step.didBecomeCurrent();
+    }
+
     if (!firstStep) { this.set('firstStep', step); }
+
     this.set('lastStep', step);
   },
 
-  // Convenience
-  previousStepBinding: 'currentStep.previousStep',
-  nextStepBinding: 'currentStep.nextStep',
-  hasPreviousStepBinding: SC.Binding.from('previousStep').bool(),
-  hasNextStepBinding: SC.Binding.from('nextStep').bool(),
-
   gotoPreviousStep: function(){
     var previousStep = this.get('previousStep');
-    if (previousStep) { this.set('currentStep', previousStep); }
+    if (previousStep) {
+      this.set('currentStep', previousStep);
+      SC.run.schedule('sync', this, this.evalState);
+    }
   },
 
   gotoNextStep: function(){
     var currentStep = this.get('currentStep'),
         nextStep = this.get('nextStep');
 
-    if (currentStep.validate() && nextStep) {
-      this.set('currentStep', nextStep);
-      nextStep.didBecomeCurrent();
+    if (!nextStep) { return };
+
+    // TODO: All of this SC.run stuff seems bad, but stuff doesn't run properly otherwise :(
+    SC.run.next(this, function(){
+      if (this.validate()) {
+        SC.run.schedule('sync', this, function(){
+          this.set('currentStep', nextStep);
+          nextStep.didBecomeCurrent();
+          SC.run.schedule('sync', this, this.evalState);
+        });
+      }
+    });
+  },
+
+  copyCode: function(){
+    var step = this.get('currentStep'),
+        state = step.get('state'),
+        codeTarget = step.get('codeTarget'),
+        code = step.get('code')
+    if (codeTarget && code) {
+      if (codeTarget !== 'console') {
+        var current = state.get(codeTarget);
+        if (current) { code = current + "\n\n" + code; }
+      }
+      state.set(codeTarget, code);
     }
   },
 
   copyAndGotoNextStep: function(){
-    this.get('currentStep').copyCode(true);
+    this.copyCode();
     this.gotoNextStep();
+  },
+
+  // Validation
+
+  errors: [],
+
+  hasErrors: function(){
+    return this.get('errors').length > 0;
+  }.property('errors.[]').cacheable(),
+
+  validator: null,
+
+  validateStep: function(step){
+    var previous = step.get('previousStep'),
+        result = previous ? this.validateStep(previous) : true;
+
+    if (result === true) {
+      var validator = step.get('validator');
+      if (validator) { result = validator(this.get('evalContext')); }
+    }
+
+    return result;
+  },
+
+  validate: function(){
+    var state = this.get('state'),
+        errors = [];
+
+    this.evalState();
+
+    if (state.get('hasErrors')) {
+      errors = errors.concat(state.get('errors'));
+    } else {
+      var result = this.validateStep(this.get('currentStep'));
+      if (result !== true) { errors.push(result); }
+    }
+
+    this.set('errors', errors);
+
+    return errors.length === 0;
   }
 
 });
@@ -362,7 +445,8 @@ Tutorial.editorTabController = SC.TabController.create({
 });
 
 Tutorial.consoleController = SC.SandboxedConsoleController.create({
-  valueBinding: "Tutorial.tutorialController.console",
+  valueBinding: "Tutorial.tutorialController.state.console",
+  historyBinding: "Tutorial.tutorialController.state.consoleHistory",
 
   iframeDidChange: function(){
     this._iframe = Tutorial.tutorialController.get('iframe');

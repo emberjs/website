@@ -8,6 +8,14 @@ body.home { padding-top: 30px; }
   padding: 30px 60px;
 }
 
+.alert-message ul {
+  margin-bottom: 0;
+}
+
+.alert-message li {
+  color: white;
+}
+
 div.jsconsole {
   font-size: 14px;
   font-family: monospace;

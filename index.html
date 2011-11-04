@@ -68,9 +68,13 @@
                 {{/view}}
               </div>
             </div>
-          {{#if Tutorial.tutorialController.currentStep.error}}
+          {{#if Tutorial.tutorialController.hasErrors}}
             <div class="alert-message error">
-              {{Tutorial.tutorialController.currentStep.error}}
+              <ul>
+              {{#each Tutorial.tutorialController.errors}}
+                <li>{{this}}</li>
+              {{/each}}
+              </ul>
             </div>
           {{/if}}
 
@@ -91,13 +95,13 @@
                   controller="Tutorial.editorTabController"
                   tabName="javascript"}}
                 {{view Tutorial.AceEditorView language="javascript"
-                    valueBinding="Tutorial.tutorialController.currentStep.javascriptState"}}
+                    valueBinding="Tutorial.tutorialController.state.javascript"}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"
                   tabName="template"}}
                 {{view Tutorial.AceEditorView language="html"
-                    valueBinding="Tutorial.tutorialController.currentStep.templateState"}}}
+                    valueBinding="Tutorial.tutorialController.state.template"}}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"
