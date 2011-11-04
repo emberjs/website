@@ -271,9 +271,10 @@ Tutorial.tutorialController = SC.Object.create({
 
     if (!nextStep) { return };
 
-    // TODO: All of this SC.run stuff seems bad, but stuff doesn't run properly otherwise :(
+    // Without this SC.run.next, the iframe may not be ready
     SC.run.next(this, function(){
       if (this.validate()) {
+        // Without this SC.run.schedule, the console won't be up to date and won't get run
         SC.run.schedule('sync', this, function(){
           this.set('currentStep', nextStep);
           nextStep.didBecomeCurrent();
