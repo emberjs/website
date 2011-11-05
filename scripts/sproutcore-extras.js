@@ -13,6 +13,8 @@ SC.TabController = SC.Object.extend({
 });
 
 SC.TabPaneView = SC.View.extend({
+  tabName: null,
+
   controller: null,
 
   controllerObject: function() {
