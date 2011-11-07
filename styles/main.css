@@ -73,7 +73,7 @@ div.jsconsole input:-moz-placeholder {
   right: 0;
 }
 
-div.editor {
+div.sc-ace-editor {
   height: 200px;
   width: 700px;
   position: absolute;

@@ -30,7 +30,7 @@ SC.TabPaneView = SC.View.extend({
 /*********** ACE ***********/
 
 SC.AceEditorView = SC.View.extend({
-  classNames: ['editor'],
+  classNames: ['sc-ace-editor'],
 
   /**
   * Current value of the editor
