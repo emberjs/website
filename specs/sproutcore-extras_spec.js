@@ -188,6 +188,7 @@ describe("SproutCore Extras", function(){
 
       waitForRender();
       runs(function(){
+        // Whether this fails or succeeds seems to depend on caching
         expect(view.$('.ace_content').width()).toBe(150);
       });
     });
