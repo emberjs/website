@@ -163,8 +163,12 @@ SC.ConsoleController = SC.Object.extend({
   *     ...
   *   ]
   */
-  history: [],
+  history: null, // Will be set to an array
 
+  /**
+  * The following batch of functions may be overwritten to tweak
+  * controller behavior for different languages.
+  */
 
   /**
   * Check to see if input should be run
@@ -247,7 +251,7 @@ SC.ConsoleController = SC.Object.extend({
     var value = this.get('value');
 
     if (this.validateInput(value)) {
-      this.set('value', '');
+      this.set('value', null);
 
       results = this.handleInput(value);
 
@@ -326,11 +330,18 @@ SC.ConsoleController = SC.Object.extend({
 SC.SandboxedConsoleController = SC.ConsoleController.extend({
 
   createIframe: function(){
-    return $('<iframe style="display:none;"></iframe>').appendTo(document)[0];
+    return $('<iframe style="display:none;"></iframe>').appendTo(document.body)[0];
+  },
+
+  removeIframe: function(){
+    if (this._iframe) {
+      SC.$(this._iframe).remove();
+      this._iframe = null;
+    }
   },
 
   resetSandbox: function(){
-    if (this._iframe) { SC.$(this._iframe).remove(); }
+    this.removeIframe();
     this._iframe = this.createIframe();
   },
 
@@ -343,8 +354,13 @@ SC.SandboxedConsoleController = SC.ConsoleController.extend({
   },
 
   init: function(){
-    return this._super();
+    this._super();
     this.resetSandbox();
+  },
+
+  destroy: function(){
+    this.removeIframe();
+    this._super();
   }
 
 });
@@ -394,7 +410,7 @@ SC.ConsoleHistoryView = SC.View.extend({
   template: SC.Handlebars.compile(
     '<ul class="history">'+
       '{{#each controllerObject.history}}'+
-        '<li class="command">{{prompt}} {{command}}</li>'+
+        '<li class="command">{{prompt}}{{command}}</li>'+
         '{{#each results}}'+
           '<li {{bindAttr class="type"}}>{{value}}</li>'+
         '{{/each}}'+
