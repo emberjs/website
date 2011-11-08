@@ -381,13 +381,14 @@ describe("SproutCore Extras", function(){
         waitForRender();
         runs(function(){
           expect(controller._iframe).toBeDefined();
-          expect(controller._iframe).toBe($('iframe')[0]);
+          expect($.contains($('iframe'), controller._iframe)).toBe(true);
         });
       });
 
       it("should remove iframe upon destroy", function(){
+        var len = $('iframe').length;
         controller.destroy();
-        expect($('iframe').length).toBe(0);
+        expect($('iframe').length).toBe(len-1);
       });
 
       it("should eval in iframe", function(){
