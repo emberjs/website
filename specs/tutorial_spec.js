@@ -76,4 +76,45 @@ describe("Tutorial", function(){
       state2.destroy();
     });
   });
+
+  describe("Step", function(){
+    var step;
+
+    beforeEach(function(){
+      step = Tutorial.Step.create({
+        template: 'TEMPLATE',
+        code:     'a = 1'
+      });
+    });
+
+    afterEach(function(){
+      step.destroy();
+    });
+
+    it("should create template body", function(){
+      expect(step.get('templateBody')).toMatch('TEMPLATE');
+      expect(step.get('templateBody')).toMatch('<pre class="prettyprint lang-js">a = 1</pre>');
+      expect(step.get('templateBody')).toMatch('Do it for me');
+
+      SC.run(function(){ step.set('code', null); });
+
+      expect(step.get('templateBody')).not.toMatch('<pre class="prettyprint lang-js">');
+      expect(step.get('templateBody')).not.toMatch('Do it for me');
+    });
+
+    it("should set state when current", function(){
+      var state = Tutorial.State.create({ javascript: 'JAVASCRIPT' }),
+          previous = Tutorial.Step.create({ state: state });
+
+      SC.run(function(){ step.set('previousStep', previous); });
+
+      expect(step.get('state')).toBeNull();
+
+      step.didBecomeCurrent();
+
+      var newState = step.get('state');
+      expect(newState.get('javascript')).toBe(state.get('javascript'));
+      expect(newState).not.toBe(state);
+    });
+  });
 });

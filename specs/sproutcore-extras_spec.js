@@ -186,9 +186,10 @@ describe("SproutCore Extras", function(){
 
       SC.run(function(){ view.set('isVisible', true); });
 
-      waitForRender();
+      // FIXME: Figure out why waitForRender isn't working
+      //waitForRender();
+      waits(1000);
       runs(function(){
-        // Whether this fails or succeeds seems to depend on caching
         expect(view.$('.ace_content').width()).toBe(150);
       });
     });
