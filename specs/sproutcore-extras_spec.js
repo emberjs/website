@@ -116,6 +116,15 @@ describe("SproutCore Extras", function(){
     it("should update value when user types in editor");
     it("should update editor when value is changed");
 
+    it("should handle disabling", function(){
+      view = SC.AceEditorView.create();
+      appendView();
+      SC.run(function(){ view.set('disabled', true); });
+      expect(view.get('editor').getReadOnly()).toBe(true);
+      SC.run(function(){ view.set('disabled', false); });
+      expect(view.get('editor').getReadOnly()).toBe(false);
+    });
+
     it("should return current session", function(){
       view = SC.AceEditorView.create();
       appendView();
@@ -316,6 +325,16 @@ describe("SproutCore Extras", function(){
 
           expect(controller.getPath('history.0.results')).toEqual(results);
         });
+
+        it("should not run commands if disabled", function(){
+          SC.run(function(){
+            controller.set('disabled', true);
+            controller.set('value', 'test');
+          });
+          controller.runCommand();
+          expect(controller.get('value')).toBe('test');
+          expect(controller.get('history')).toBeNull();
+        });
       });
 
       describe("push history", function(){
@@ -439,6 +458,16 @@ describe("SproutCore Extras", function(){
 
         SC.run(function(){ controller.set('value', 'value2'); });
         expect(view.get('value')).toBe('value2');
+      });
+
+      it("should be disabled if controller is", function(){
+        SC.run(function(){ view = SC.ConsoleInputView.create({ controllerObject: controller }); });
+
+        expect(view.get('disabled')).toBe(false);
+
+        SC.run(function(){ controller.set('disabled', true); });
+
+        expect(view.get('disabled')).toBe(true);
       });
 
       it("should change history on up and down arrow", function(){

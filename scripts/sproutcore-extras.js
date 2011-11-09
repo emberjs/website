@@ -70,6 +70,16 @@ SC.AceEditorView = SC.View.extend({
   },
 
   /**
+  * If disabled, view becomes readOnly
+  */
+  disabled: false,
+
+  disabledDidChange: function(){
+    var editor = this.get('editor');
+    if (editor) { editor.setReadOnly(this.get('disabled')); }
+  }.observes('disabled'),
+
+  /**
   * Editor language for syntax highlighting.
   * Any language available to Ace.
   * JavaScript file must already be loaded and available.
@@ -102,6 +112,7 @@ SC.AceEditorView = SC.View.extend({
     var editor = ace.edit(this.get('element'));
     if (editor) {
       this.set('editor', editor);
+      this.disabledDidChange();
       this.languageModeDidChange();
 
       var session = editor.getSession(), self = this;
@@ -140,6 +151,11 @@ SC.ConsoleController = SC.Object.extend({
   * The current value typed at the prompt
   */
   value: null,
+
+  /**
+  * Set to true to prevent code execution
+  */
+  disabled: false,
 
   /**
   * The current prompt
@@ -248,6 +264,8 @@ SC.ConsoleController = SC.Object.extend({
   * Run command, normalize output, add to history
   */
   runCommand: function(){
+    if (this.get('disabled')) { return; }
+
     var value = this.get('value');
 
     if (this.validateInput(value)) {
@@ -374,6 +392,8 @@ SC.ConsoleInputView = SC.TextField.extend({
   }.property('controller').cacheable(),
 
   valueBinding: 'controllerObject.value',
+
+  disabledBinding: 'controllerObject.disabled',
 
   /**
   * Handle up and down key for use in history
