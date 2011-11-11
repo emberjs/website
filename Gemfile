@@ -1,6 +1,8 @@
-# A sample Gemfile
-source "http://rubygems.org"
+source :rubygems
 
-gem "asdf"
+gem 'rack'
+gem 'rack-rewrite'
 
-# gem "rails"
+group :development do
+  gem 'shotgun'
+end
