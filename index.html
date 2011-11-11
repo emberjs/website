@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,7 +16,7 @@
     <link href="/styles/main.css" rel="stylesheet">
     <link href="/prettify/prettify.css" rel="stylesheet">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.7.min.js"></script>
     <script src="/prettify/prettify.js"></script>
     <script src="/scripts/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
     <script src="/scripts/ace/src/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
@@ -52,9 +51,21 @@
           <script type="text/x-handlebars">
             <h2>Learn Amber Now</h2>
             <div id="steps" class="alert-message info block-message">
-              {{view Tutorial.StepsView
-                  stepBinding="Tutorial.tutorialController.currentStep"
-                  tabControllerBinding="Tutorial.editorTabController"}}
+              {{{Tutorial.tutorialController.currentStep.body}}}
+
+              {{#if Tutorial.tutorialController.currentStep.code}}
+                {{#view Tutorial.PrettyPrintView
+                    languageBinding="Tutorial.tutorialController.currentStep.codeLanguage"
+                  }}{{Tutorial.tutorialController.currentStep.code}}{{/view}}
+
+                <div class="cf">
+                  {{#view SC.Button classNames="btn small pull-right"
+                      target="Tutorial.tutorialController" action="copyStepCode"}}
+                    Copy Code
+                  {{/view}}
+                </div>
+              {{/if}}
+
               <div class="cf">
                 {{#view SC.Button classNames="btn small pull-left"
                     target="Tutorial.tutorialController" action="gotoPreviousStep"
@@ -68,16 +79,20 @@
                 {{/view}}
               </div>
             </div>
-          {{#if Tutorial.tutorialController.hasErrors}}
-            <div class="alert-message error">
-              <ul>
-              {{#each Tutorial.tutorialController.errors}}
-                <li>{{this}}</li>
-              {{/each}}
-              </ul>
-            </div>
-          {{/if}}
 
+            {{#if Tutorial.tutorialController.currentStep.errors.length}}
+              <div class="alert-message error">
+                <ul>
+                {{#each Tutorial.tutorialController.currentStep.errors}}
+                  <li>{{this}}</li>
+                {{/each}}
+                </ul>
+                {{#view SC.Button classNames="btn small"
+                    target="Tutorial.tutorialController" action="resetStep"}}
+                  Reset Step
+                {{/view}}
+              </div>
+            {{/if}}
 
             <ul class="tabs">
               {{view Tutorial.TabView title="JavaScript"
@@ -90,18 +105,19 @@
                   controller="Tutorial.editorTabController"
                   tabName="console"}}
             </ul>
+
             <div id="editor-tabs">
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"
                   tabName="javascript"}}
                 {{view Tutorial.AceEditorView language="javascript"
-                    valueBinding="Tutorial.tutorialController.state.javascript"}}
+                    valueBinding="Tutorial.tutorialController.javascript"}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"
                   tabName="template"}}
                 {{view Tutorial.AceEditorView language="html"
-                    valueBinding="Tutorial.tutorialController.state.template"}}}
+                    valueBinding="Tutorial.tutorialController.template"}}
               {{/view}}
               {{#view SC.TabPaneView classNames="tab"
                   controller="Tutorial.editorTabController"
@@ -134,6 +150,6 @@
     </div> <!-- /container -->
 
     <script src="/scripts/tutorial.js"></script>
+    <script>Tutorial.loadSteps();</script>
   </body>
 </html>
-

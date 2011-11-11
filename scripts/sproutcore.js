@@ -11064,11 +11064,11 @@ SC.View = SC.Object.extend(
 
         type = typeof attributeValue;
 
-        if ((type === 'string' || type === 'number') && attributeValue !== currentValue) {
+        if ((type === 'string' || (type === 'number' && !isNaN(attributeValue))) && attributeValue !== currentValue) {
           elem.attr(attribute, attributeValue);
         } else if (attributeValue && type === 'boolean') {
           elem.attr(attribute, attribute);
-        } else if (attributeValue === NO) {
+        } else if (!attributeValue) {
           elem.removeAttr(attribute);
         }
       };
@@ -11948,7 +11948,7 @@ SC.View.reopen({
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
 SC.View.states.preRender = {
-  parentState: SC.View.states.default,
+  parentState: SC.View.states['default'],
 
   // a view leaves the preRender state once its element has been
   // created (createElement).
@@ -11992,7 +11992,7 @@ SC.View.states.preRender = {
 var get = SC.get, set = SC.set, meta = SC.meta;
 
 SC.View.states.inBuffer = {
-  parentState: SC.View.states.default,
+  parentState: SC.View.states['default'],
 
   $: function(view, sel) {
     // if we don't have an element yet, someone calling this.$() is
@@ -12069,7 +12069,7 @@ SC.View.states.inBuffer = {
 var get = SC.get, set = SC.set, meta = SC.meta;
 
 SC.View.states.hasElement = {
-  parentState: SC.View.states.default,
+  parentState: SC.View.states['default'],
 
   $: function(view, sel) {
     var elem = get(view, 'element');
@@ -12137,7 +12137,7 @@ SC.View.states.inDOM = {
 var destroyedError = "You can't call %@ on a destroyed view", fmt = SC.String.fmt;
 
 SC.View.states.destroyed = {
-  parentState: SC.View.states.default,
+  parentState: SC.View.states['default'],
 
   appendChild: function() {
     throw fmt(destroyedError, ['appendChild']);
@@ -12452,7 +12452,7 @@ SC.CollectionView = SC.ContainerView.extend(
     var content = get(this, 'content');
 
     if (content) {
-      sc_assert(fmt("an ArrayController's content must implement SC.Array. You passed %@", [content]), content.addArrayObserver != null);
+      sc_assert(fmt("an SC.CollectionView's content must implement SC.Array. You passed %@", [content]), content.addArrayObserver != null);
       content.addArrayObserver(this);
     }
 
@@ -13389,6 +13389,7 @@ SC.Metamorph = SC.Mixin.create({
       var buffer = view.renderToBuffer();
 
       SC.run.schedule('render', this, function() {
+        if (get(view, 'isDestroyed')) { return; }
         view._notifyWillInsertElement();
         morph.replaceWith(buffer.string());
         view.transitionTo('inDOM');
@@ -13599,11 +13600,15 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
 
       view.appendChild(bindView);
 
-      var observer = function() {
-        SC.run.once(function() {
-          // Double check since sometimes the view gets destroyed after this observer is already queued
-          if (!get(bindView, 'isDestroyed')) { bindView.rerender(); }
-        });
+      var observer, invoker;
+
+      observer = function(){
+        // Double check since sometimes the view gets destroyed after this observer is already queued
+        if (!get(bindView, 'isDestroyed')) { bindView.rerender(); }
+      };
+
+      invoker = function() {
+        SC.run.once(observer);
       };
 
       // Observes the given property on the context and
@@ -13612,10 +13617,10 @@ var get = SC.get, getPath = SC.getPath, set = SC.set, fmt = SC.String.fmt;
       // object ({{this}}) so updating it is not our responsibility.
       if (property !== '') {
         set(bindView, 'removeObserver', function() {
-          SC.removeObserver(ctx, property, observer);
+          SC.removeObserver(ctx, property, invoker);
         });
 
-        SC.addObserver(ctx, property, observer);
+        SC.addObserver(ctx, property, invoker);
       }
     } else {
       // The object is not observable, so just render it out and
