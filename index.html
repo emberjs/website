@@ -59,9 +59,13 @@
                   }}{{Tutorial.tutorialController.currentStep.code}}{{/view}}
 
                 <div class="cf">
-                  {{#view SC.Button classNames="btn small pull-right"
+                  {{#view SC.Button classNames="btn small pull-left"
                       target="Tutorial.tutorialController" action="copyStepCode"}}
                     Copy Code
+                  {{/view}}
+                  {{#view SC.Button classNames="btn small pull-right"
+                      target="Tutorial.tutorialController" action="copyStepCodeAndAdvance"}}
+                    Do it for me
                   {{/view}}
                 </div>
               {{/if}}

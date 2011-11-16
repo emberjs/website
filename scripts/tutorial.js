@@ -90,6 +90,10 @@
       if (nextStep) {
         this.evalCode();
 
+        if (currentStep.get('codeTarget') === 'console') {
+          Tutorial.consoleController.runCommand();
+        }
+
         var iframe = this.get('iframe'),
             context = iframe ? iframe.contentWindow : null;
 
@@ -146,6 +150,12 @@
         if (current){ current += "\n\n"; }
         this.set(codeTarget, current+code);
       }
+    },
+
+    copyStepCodeAndAdvance: function(){
+      // Runloop is necessary for the console commands to get run properly
+      SC.run(this, this.copyStepCode);
+      this.gotoNextStep();
     },
 
     iframeContainer: '#tutorial-output',
