@@ -9538,6 +9538,43 @@ SC.Comparable = SC.Mixin.create( /** @scope SC.Comparable.prototype */{
 
 
 (function(exports) {
+var get = SC.get, set = SC.set;
+
+SC.TargetActionSupport = SC.Mixin.create({
+  target: null,
+  action: null,
+
+  targetObject: function() {
+    var target = get(this, 'target');
+
+    if (SC.typeOf(target) === "string") {
+      return SC.getPath(this, target);
+    } else {
+      return target;
+    }
+  }.property('target').cacheable(),
+
+  triggerAction: function() {
+    var action = get(this, 'action'),
+        target = get(this, 'targetObject');
+
+    if (target && action) {
+      if (typeof target.send === 'function') {
+        target.send(action, this);
+      } else {
+        if (typeof action === 'string') {
+          action = target[action];
+        }
+        action.call(target, this);
+      }
+    }
+  }
+});
+
+})({});
+
+
+(function(exports) {
 // ==========================================================================
 // Project:  SproutCore Runtime
 // Copyright: ©2011 Strobe Inc. and contributors.
@@ -13102,20 +13139,16 @@ SC.Checkbox = SC.View.extend({
 
 var get = SC.get, set = SC.set;
 
-SC.TextField = SC.View.extend(
-  /** @scope SC.TextField.prototype */ {
+SC.TextSupport = SC.Mixin.create({
 
-  classNames: ['sc-text-field'],
+  value: "",
+
+  attributeBindings: ['placeholder', 'disabled'],
+  placeholder: null,
+  disabled: false,
 
   insertNewline: SC.K,
   cancel: SC.K,
-
-  tagName: "input",
-  attributeBindings: ['type', 'placeholder', 'value', 'disabled'],
-  type: "text",
-  value: "",
-  placeholder: null,
-  disabled: false,
 
   focusOut: function(event) {
     this._elementValueDidChange();
@@ -13136,27 +13169,23 @@ SC.TextField = SC.View.extend(
     @private
   */
   interpretKeyEvents: function(event) {
-    var map = SC.TextField.KEY_EVENTS;
+    var map = SC.TextSupport.KEY_EVENTS;
     var method = map[event.keyCode];
 
+    this._elementValueDidChange();
     if (method) { return this[method](event); }
-    else { this._elementValueDidChange(); }
   },
 
   _elementValueDidChange: function() {
-    set(this, 'value', this.$().val());
-  },
-
-  _updateElementValue: function() {
-    this.$().val(get(this, 'value'));
+    set(this, 'value', this.$().val() || null);
   }
+
 });
 
-SC.TextField.KEY_EVENTS = {
+SC.TextSupport.KEY_EVENTS = {
   13: 'insertNewline',
   27: 'cancel'
 };
-
 
 })({});
 
@@ -13167,10 +13196,40 @@ SC.TextField.KEY_EVENTS = {
 // Copyright: ©2011 Strobe Inc. and contributors.
 // License:   Licensed under MIT license (see license.js)
 // ==========================================================================
+/** @class */
 
 var get = SC.get, set = SC.set;
 
-SC.Button = SC.View.extend({
+SC.TextField = SC.View.extend(SC.TextSupport,
+  /** @scope SC.TextField.prototype */ {
+
+  classNames: ['sc-text-field'],
+
+  tagName: "input",
+  attributeBindings: ['type', 'value'],
+  type: "text",
+
+  /**
+    @private
+  */
+  _updateElementValue: function() {
+    this.$().val(get(this, 'value'));
+  }
+
+});
+
+})({});
+
+
+(function(exports) {
+// ==========================================================================
+// Project:   SproutCore Handlebar Views
+// Copyright: ©2011 Strobe Inc. and contributors.
+// License:   Licensed under MIT license (see license.js)
+// ==========================================================================
+var get = SC.get, set = SC.set;
+
+SC.Button = SC.View.extend(SC.TargetActionSupport, {
   classNames: ['sc-button'],
   classNameBindings: ['isActive'],
 
@@ -13179,15 +13238,6 @@ SC.Button = SC.View.extend({
   type: 'button',
   disabled: false,
 
-  targetObject: function() {
-    var target = get(this, 'target');
-
-    if (SC.typeOf(target) === "string") {
-      return SC.getPath(this, target);
-    } else {
-      return target;
-    }
-  }.property('target').cacheable(),
 
   mouseDown: function() {
     set(this, 'isActive', true);
@@ -13211,16 +13261,10 @@ SC.Button = SC.View.extend({
 
   mouseUp: function(event) {
     if (get(this, 'isActive')) {
-      var action = get(this, 'action'),
-          target = get(this, 'targetObject');
 
-      if (target && action) {
-        if (typeof action === 'string') {
-          action = target[action];
-        }
-        action.call(target, this);
-      }
-
+      // Actually invoke the button's target and action.
+      // This method comes from the SC.TargetActionSupport mixin.
+      this.triggerAction();
       set(this, 'isActive', false);
     }
 
@@ -13254,33 +13298,11 @@ SC.Button = SC.View.extend({
 
 var get = SC.get, set = SC.set;
 
-SC.TextArea = SC.View.extend({
+SC.TextArea = SC.View.extend(SC.TextSupport, {
 
   classNames: ['sc-text-area'],
 
   tagName: "textarea",
-  value: "",
-  attributeBindings: ['placeholder', 'disabled'],
-  placeholder: null,
-  disabled: false,
-
-  insertNewline: SC.K,
-  cancel: SC.K,
-  
-  focusOut: function(event) {
-    this._elementValueDidChange();
-    return false;
-  },
-
-  change: function(event) {
-    this._elementValueDidChange();
-    return false;
-  },
-
-  keyUp: function(event) {
-    this.interpretKeyEvents(event);
-    return false;
-  },
 
   /**
     @private
@@ -13289,27 +13311,11 @@ SC.TextArea = SC.View.extend({
     this._updateElementValue();
   },
 
-  interpretKeyEvents: function(event) {
-    var map = SC.TextArea.KEY_EVENTS;
-    var method = map[event.keyCode];
-
-    this._elementValueDidChange();
-    if (method) { return this[method](event); }
-  },
-
-  _elementValueDidChange: function() {
-    set(this, 'value', this.$().val() || null);
-  },
-
   _updateElementValue: function() {
     this.$().val(get(this, 'value'));
   }.observes('value')
-});
 
-SC.TextArea.KEY_EVENTS = {
-  13: 'insertNewline',
-  27: 'cancel'
-};
+});
 
 })({});
 
@@ -13754,7 +13760,7 @@ SC.Handlebars.registerHelper('bindAttr', function(options) {
   // Generate a unique id for this element. This will be added as a
   // data attribute to the element so it can be looked up when
   // the bound property changes.
-  var dataId = jQuery.uuid++;
+  var dataId = ++jQuery.uuid;
 
   // Handle classes differently, as we can bind multiple classes
   var classBindings = attrs['class'];
