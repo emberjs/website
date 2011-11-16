@@ -383,7 +383,7 @@ SC.SandboxedConsoleController = SC.ConsoleController.extend({
 
 });
 
-SC.ConsoleInputView = SC.TextField.extend({
+SC.ConsoleInputView = SC.TextArea.extend({
 
   controller: null,
 
@@ -394,6 +394,8 @@ SC.ConsoleInputView = SC.TextField.extend({
   valueBinding: 'controllerObject.value',
 
   disabledBinding: 'controllerObject.disabled',
+
+  classNameBindings: ['multiline'],
 
   /**
   * Handle up and down key for use in history
@@ -411,8 +413,10 @@ SC.ConsoleInputView = SC.TextField.extend({
   /**
   * Run command with enter key
   */
-  insertNewline: function(){
-    this._delegateToController('runCommand');
+  insertNewline: function(evt){
+    if (!evt.shiftKey && !evt.altKey) {
+      this._delegateToController('runCommand');
+    }
   },
 
   /**
@@ -422,7 +426,15 @@ SC.ConsoleInputView = SC.TextField.extend({
     var controller = this.get('controllerObject'),
         func       = controller && controller[cmd];
     if (func){ return func.apply(controller, Array.prototype.slice.call(arguments, 1)); }
-  }
+  },
+
+  /**
+  * Switch to textarea if multi-line
+  */
+  multiline: function(){
+    var value = this.get('value');
+    return value && value.indexOf("\n") > -1;
+  }.property('value').cacheable()
 
 });
 

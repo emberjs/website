@@ -41,19 +41,24 @@ div.jsconsole ul.history li.success {
   color: #187718;
 }
 
-div.jsconsole input {
+div.jsconsole textarea {
   width: 100%;
   border: 0;
   padding: 0;
   background-color: #ccc;
   font-family: monospace;
   font-size: 14px;
+  height: 20px;
 }
 
-div.jsconsole input::-webkit-input-placeholder {
+div.jsconsole textarea.multiline {
+  height: 50px;
+}
+
+div.jsconsole textarea::-webkit-input-placeholder {
   color: #eee;
 }
-div.jsconsole input:-moz-placeholder {
+div.jsconsole textarea:-moz-placeholder {
   color: #eee;
 }
 
