@@ -373,7 +373,9 @@ SC.SandboxedConsoleController = SC.ConsoleController.extend({
 
   init: function(){
     this._super();
-    this.resetSandbox();
+
+    var self = this;
+    SC.$.ready(function(){ self.resetSandbox(); });
   },
 
   destroy: function(){

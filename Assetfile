@@ -1,0 +1,38 @@
+require 'yaml'
+require 'json'
+require 'rake-pipeline-web-filters/ordering_concat_filter'
+
+WebFilters = Rake::Pipeline::Web::Filters
+
+input "assets"
+output "output"
+
+class StepFilter < Rake::Pipeline::Filter
+  def generate_output(inputs, output)
+    inputs.each do |input|
+      yaml = YAML.load(input.read)
+      code = "Tutorial.tutorialController.addStep({\n"
+      code << yaml.map do |key,value|
+        value = value.sub(/\n+$/,'')
+        value = (key == "validator") ? "function(context){\n#{value}\n}" : value.to_json
+        "  #{key}: #{value}"
+      end.join(",\n")
+      code << "\n});"
+      output.write(code)
+    end
+  end
+end
+
+match "tutorial/steps/*.yml" do
+  filter StepFilter do |path|
+    path.sub(/\.yml$/, '.js')
+  end
+end
+
+match "tutorial/**/*.js" do
+  filter WebFilters::OrderingConcatFilter, ['tutorial/tutorial.js'], 'tutorial.js'
+end
+
+filter Rake::Pipeline::ConcatFilter
+
+# vim: filetype=ruby
