@@ -38,18 +38,24 @@
   <body onload="prettyPrint()" class="home">
     <div class="container">
 
-      <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit" style="position: relative;">
         <h1>Amber.js</h1>
         <a class="btn primary large" style="position: absolute; top: 45px; right: 60px;">Download Now &raquo;</a>
         <p>The JavaScript Application Framework for Ambitious Apps</p>
-        <!--<div class="well" style="height: 300px; width: 533px; margin: 10px auto;">VIDEO HERE</div>-->
-        <!--<p style="text-align: center"></p>-->
       </div>
 
-      <!-- Example row of columns -->
       <div class="row">
-        <div class="span12" id="tutorial">
+        <div class="span16">
+          <h2>Output</h2>
+          <span class="label notice">Notice</span>
+          <p>As you work through the tutorial, you will see the output here.</p>
+          <div id="tutorial-output">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span16" id="tutorial">
           <script type="text/x-handlebars">
             <h2>Learn Amber Now</h2>
             <div id="steps" class="alert-message info block-message">
@@ -138,14 +144,6 @@
               {{/view}}
             </div>
           </script>
-        </div>
-
-        <div class="span4">
-          <h2>Output</h2>
-          <span class="label notice">Notice</span>
-          <p>As you work through the tutorial, you will see the output here.</p>
-          <div id="tutorial-output">
-          </div>
         </div>
       </div>
 

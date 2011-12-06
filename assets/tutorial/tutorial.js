@@ -184,7 +184,7 @@ Tutorial.tutorialController = SC.Object.create({
         '<head>'+
           '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>'+
           '<script src="/scripts/sproutcore.js"></script>'+
-          '<link href="/styles/iframe.css" rel="stylesheet">'+
+          '<link href="/tutorial/todos.css" rel="stylesheet">'+
         '</head>'+
         '<body></body>'+
       '</html>'
