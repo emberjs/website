@@ -13,8 +13,6 @@ body: >
 codeTarget: 'template'
 
 code: |
-  <h1>Todos</h1>
-
   {{view SC.TextField id="new-todo" placeholder="What needs to be done?"}}
 
 validator: |
