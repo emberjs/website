@@ -21,11 +21,11 @@ Tutorial.Step = SC.Object.extend({
 
   errors: null,
 
-  addError: function(error){
+  addError: function(error) {
     this.get('errors').pushObject(error);
   },
 
-  validate: function(context){
+  validate: function(context) {
     var previousStep = this.get('previousStep'),
         errors = [];
 
@@ -54,7 +54,7 @@ Tutorial.tutorialController = SC.Object.create({
   currentStep: null,
   lastStep: null,
 
-  addStep: function(step){
+  addStep: function(step) {
     if (!(step instanceof Tutorial.Step)) {
       step = Tutorial.Step.create(step);
     }
@@ -62,7 +62,7 @@ Tutorial.tutorialController = SC.Object.create({
     var currentStep = this.get('currentStep'),
         lastStep = this.get('lastStep');
 
-    if (lastStep){
+    if (lastStep) {
       lastStep.set('nextStep', step);
       step.set('previousStep', lastStep);
     }
@@ -74,15 +74,15 @@ Tutorial.tutorialController = SC.Object.create({
     return step;
   },
 
-  hasNextStep: function(){
+  hasNextStep: function() {
     return !!this.getPath('currentStep.nextStep');
   }.property('currentStep.nextStep').cacheable(),
 
-  hasPreviousStep: function(){
+  hasPreviousStep: function() {
     return !!this.getPath('currentStep.previousStep');
   }.property('currentStep.previousStep').cacheable(),
 
-  gotoNextStep: function(){
+  gotoNextStep: function() {
     var currentStep = this.get('currentStep'),
         nextStep = currentStep.get('nextStep');
     if (nextStep) {
@@ -107,7 +107,7 @@ Tutorial.tutorialController = SC.Object.create({
     }
   },
 
-  gotoPreviousStep: function(){
+  gotoPreviousStep: function() {
     var previousStep = this.getPath('currentStep.previousStep');
     if (previousStep) {
       this.beginPropertyChanges();
@@ -121,7 +121,7 @@ Tutorial.tutorialController = SC.Object.create({
     }
   },
 
-  resetStep: function(){
+  resetStep: function() {
     var currentStep = this.get('currentStep');
     if (currentStep) {
       this.beginPropertyChanges();
@@ -135,12 +135,12 @@ Tutorial.tutorialController = SC.Object.create({
     }
   },
 
-  currentStepDidChange: function(){
+  currentStepDidChange: function() {
     var codeTarget = this.getPath('currentStep.codeTarget');
     if (codeTarget) { Tutorial.editorTabController.set('currentTab', codeTarget); }
   }.observes('currentStep'),
 
-  copyStepCode: function(){
+  copyStepCode: function() {
     var codeTarget = this.getPath('currentStep.codeTarget'),
         code = this.getPath('currentStep.code');
     if (codeTarget && code) {
@@ -173,7 +173,7 @@ Tutorial.tutorialController = SC.Object.create({
     return true;
   },
 
-  copyStepCodeAndAdvance: function(){
+  copyStepCodeAndAdvance: function() {
     // Runloop is necessary for the console commands to get run properly
     var copied = SC.run(this, this.copyStepCode);
     if (copied) { this.gotoNextStep(); }
@@ -183,7 +183,7 @@ Tutorial.tutorialController = SC.Object.create({
 
   iframe: null,
 
-  resetIframe: function(){
+  resetIframe: function() {
     var current = this.get('iframe');
     if (current){ SC.$(current).remove(); }
 
@@ -205,7 +205,7 @@ Tutorial.tutorialController = SC.Object.create({
     return iframe;
   },
 
-  evalCode: function(iframeNeedsReset){
+  evalCode: function(iframeNeedsReset) {
     var iframe = this.get('iframe');
     if (!iframe) { iframeNeedsReset = true; }
 
@@ -249,12 +249,12 @@ Tutorial.tutorialController = SC.Object.create({
       // Run Template
       var template = this.get('template');
       if (context.Todos.rootView) {
-        context.SC.run(function(){
+        context.SC.run(function() {
           context.Todos.rootView.set('template', template ? context.SC.Handlebars.compile(template) : null);
           context.Todos.rootView.rerender();
         });
       } else if (template) {
-        context.SC.run(function(){
+        context.SC.run(function() {
           context.Todos.rootView = context.SC.View.create({
             template: context.SC.Handlebars.compile(template)
           });
@@ -266,7 +266,7 @@ Tutorial.tutorialController = SC.Object.create({
     // Playback previous console if needed
     var consoleHistory = this.get('consoleHistory');
     if (consoleHistory && iframeNeedsReset) {
-      consoleHistory.forEach(function(item){
+      consoleHistory.forEach(function(item) {
         var success = item.results && item.results.some(function(r){ return r.type === 'success'; });
         if (success) {
           try {
@@ -289,11 +289,11 @@ Tutorial.consoleController = SC.SandboxedConsoleController.create({
   valueBinding: "Tutorial.tutorialController.console",
   historyBinding: "Tutorial.tutorialController.consoleHistory",
 
-  iframeDidChange: function(){
+  iframeDidChange: function() {
     this._iframe = Tutorial.tutorialController.get('iframe');
   }.observes('Tutorial.tutorialController.iframe'),
 
-  resetSandbox: function(){
+  resetSandbox: function() {
     Tutorial.tutorialController.resetIframe();
   }
 });
@@ -314,7 +314,7 @@ Tutorial.TabView = SC.Button.extend({
 
   action: 'changeTabTo',
 
-  active: function(){
+  active: function() {
     return this.get('tabName') === this.getPath('targetObject.currentTab');
   }.property('tabName', 'targetObject.currentTab').cacheable()
 });
@@ -327,9 +327,9 @@ Tutorial.PrettyPrintView = SC.View.extend({
 
   language: null,
 
-  languageClass: function(){
+  languageClass: function() {
     var language = this.get('language');
-    switch(language){
+    switch(language) {
       case 'javascript':
         return 'lang-js';
       case 'template':
@@ -339,14 +339,14 @@ Tutorial.PrettyPrintView = SC.View.extend({
     }
   }.property('language').cacheable(),
 
-  didInsertElement: function(){
+  didInsertElement: function() {
     prettyPrint();
   }
 });
 
 Tutorial.AceEditorView = SC.AceEditorView.extend({
   // Also observe parent visibility
-  _fixSize: function(){
+  _fixSize: function() {
     if (this.get('isVisible') && this.getPath('parentView.isVisible')) {
       var editor = this.get('editor');
       if (editor) { setTimeout(function(){ editor.resize(); }, 1); }
@@ -357,7 +357,7 @@ Tutorial.AceEditorView = SC.AceEditorView.extend({
 /**** MOAR ****/
 
 /*
-Tutorial.loadSteps = function(){
+Tutorial.loadSteps = function() {
   Tutorial.tutorialController.addStep({
     body: "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
   });
@@ -366,7 +366,7 @@ Tutorial.loadSteps = function(){
     body: "<strong>Create your app</strong>",
     codeTarget: 'javascript',
     code: "MyApp = SC.Application.create();",
-    validator: function(context){
+    validator: function(context) {
       if (!(context.MyApp instanceof context.SC.Application)) {
         this.addError("Couldn't find valid MyApp instance");
       }
@@ -381,7 +381,7 @@ Tutorial.loadSteps = function(){
           "  firstName: null,\n"+
           "  lastName: null\n"+
           "});",
-    validator: function(context){
+    validator: function(context) {
       if (!context.MyApp.Person || context.MyApp.Person.superclass !== context.SC.Object) {
         this.addError("Couldn't find valid MyApp.Person class");
       }
@@ -393,7 +393,7 @@ Tutorial.loadSteps = function(){
     codeTarget: 'javascript',
     code: "// controller\n"+
           "MyApp.people = [];",
-    validator: function(context){
+    validator: function(context) {
       if (!context.MyApp.people || context.MyApp.people.constructor !== context.Array) {
         this.addError("Couldn't find Array named MyApp.people");
       }
@@ -411,9 +411,9 @@ Tutorial.loadSteps = function(){
           "  <li>{{firstName}} {{lastName}}</li>\n"+
           "{{/each}}\n"+
           "</ul>",
-    validator: function(context){
+    validator: function(context) {
       var rootView = context.MyApp && context.MyApp.rootView,
-          eachView = rootView && context.MyApp.rootView.get('_childViews').find(function(v){
+          eachView = rootView && context.MyApp.rootView.get('_childViews').find(function(v) {
             return ((v instanceof context.SC.CollectionView) &&
                     (v.getPath('contentBinding._from') === 'MyApp.people'));
           });
@@ -432,7 +432,7 @@ Tutorial.loadSteps = function(){
           "  lastName: \"Katz\"\n"+
           "});\n"+
           "MyApp.people.pushObject(me);",
-    validator: function(context){
+    validator: function(context) {
       if (!(context.me instanceof context.MyApp.Person)) {
         this.addError("Expected 'me' to be an instance of MyApp.Person");
       } else if (!context.MyApp.people.contains(context.me)) {
@@ -449,7 +449,7 @@ Tutorial.loadSteps = function(){
           "  lastName: \"Dale\",\n"+
           "});\n"+
           "MyApp.people.pushObject(friend);",
-    validator: function(context){
+    validator: function(context) {
       if (!(context.friend instanceof context.MyApp.Person)) {
         this.addError("Expected 'friend' to be an instance of MyApp.Person");
       } else if (!context.MyApp.people.contains(context.friend)) {
