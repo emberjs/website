@@ -145,14 +145,24 @@ Tutorial.tutorialController = SC.Object.create({
         code = this.getPath('currentStep.code');
     if (codeTarget && code) {
       var replacesCode = this.getPath('currentStep.replacesCode'),
+          afterCode = this.getPath('currentStep.afterCode'),
           current = this.get(codeTarget) || '';
 
       if (replacesCode) {
-        if (current.indexOf(replacesCode)) {
+        if (current.indexOf(replacesCode) > -1) {
           code = current.replace(replacesCode, code);
         } else {
           alert("Unable to do this step for you. Sorry!");
-          return;
+          return false;
+        }
+      } else if (afterCode) {
+        var matchIdx = current.indexOf(afterCode)
+        if (matchIdx > -1) {
+          var beforeLen = matchIdx+afterCode.length;
+          code = current.slice(0, beforeLen)+"\n"+code+"\n"+current.slice(beforeLen);
+        } else {
+          alert("Unabled to do this step for you. Sorry!");
+          return false;
         }
       } else {
         if (current){ current += "\n\n"; }
@@ -160,12 +170,13 @@ Tutorial.tutorialController = SC.Object.create({
       }
       this.set(codeTarget, code);
     }
+    return true;
   },
 
   copyStepCodeAndAdvance: function(){
     // Runloop is necessary for the console commands to get run properly
-    SC.run(this, this.copyStepCode);
-    this.gotoNextStep();
+    var copied = SC.run(this, this.copyStepCode);
+    if (copied) { this.gotoNextStep(); }
   },
 
   iframeContainer: '#tutorial-output',
