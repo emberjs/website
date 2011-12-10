@@ -19,5 +19,5 @@ end
 end
 
 map "/" do
-  run Rack::Directory.new('.')
+  run Rack::Directory.new('./assets')
 end
