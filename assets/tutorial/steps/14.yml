@@ -3,14 +3,14 @@ body: >
 
   <p>We can now create todos and mark them as being complete. While 76% of all statistics are made up, let’s see if we
   can display more accurate information from the data we have. At the top of our list, let’s display the number of
-  todos remaining.</p>
+  todos we have.</p>
 
 codeTarget: 'template'
 
 code: |
-  {{#view Todos.StatsView id="stats"}}
-    {{remainingString}} remaining
-  {{/view}}
+  <div id="stats">
+    {{Todos.todosController.length}} items
+  </div>
 
 afterCode: |
   {{view Todos.CreateTodoView id="new-todo" placeholder="What needs to be done?"}}

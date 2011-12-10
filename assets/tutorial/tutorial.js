@@ -141,11 +141,19 @@ Tutorial.tutorialController = SC.Object.create({
   }.observes('currentStep'),
 
   copyStepCode: function() {
-    var codeTarget = this.getPath('currentStep.codeTarget'),
-        code = this.getPath('currentStep.code');
+    var currentStep = this.get('currentStep'),
+        codeTarget = currentStep.get('codeTarget'),
+        code = currentStep.get('code');
+
     if (codeTarget && code) {
-      var replacesCode = this.getPath('currentStep.replacesCode'),
-          afterCode = this.getPath('currentStep.afterCode'),
+      var codeBefore = currentStep.get('codeBefore'),
+          codeAfter  = currentStep.get('codeAfter');
+
+      if (codeBefore) { code = codeBefore+code; }
+      if (codeAfter)  { code = code+codeAfter; }
+
+      var replacesCode = currentStep.get('replacesCode'),
+          afterCode = currentStep.get('afterCode'),
           current = this.get(codeTarget) || '';
 
       if (replacesCode) {
@@ -177,6 +185,16 @@ Tutorial.tutorialController = SC.Object.create({
     // Runloop is necessary for the console commands to get run properly
     var copied = SC.run(this, this.copyStepCode);
     if (copied) { this.gotoNextStep(); }
+  },
+
+  // For development use only
+  _fastForwardSteps: function(amount) {
+    if (amount < 1) { return; }
+    var self = this;
+    SC.run.later(function(){
+      self.copyStepCodeAndAdvance();
+      self._fastForwardSteps(amount-1);
+    }, 1000);
   },
 
   iframeContainer: '#tutorial-output',
