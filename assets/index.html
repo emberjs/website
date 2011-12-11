@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
 <title>Ember.js - A JavaScript Application Framework</title>
 <link rel=stylesheet href=styles/style.css />
+<link href="/prettify/prettify.css" rel="stylesheet">
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -16,9 +18,20 @@
   })();
 
 </script>
+
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="/prettify/prettify.js"></script>
+<script src="/scripts/ace/src/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="/scripts/ace/src/mode-javascript.js" type="text/javascript" charset="utf-8"></script>
+<script src="/scripts/ace/src/mode-html.js" type="text/javascript" charset="utf-8"></script>
+<script src="/scripts/sproutcore.js"></script>
+<script src="/scripts/sproutcore-extras.js"></script>
+
+<script src="/tutorial.js"></script>
+
 </head>
 
-<body>
+<body onload="prettyPrint()">
 <div id="wrap">
 <div id="about">
   <div id="logo">&nbsp;</div>
@@ -33,40 +46,52 @@
 </div>
 
 <div id="content">
-  <div id="output">output</div>
-  <div id="instructions">
-    <div class="step active">
-    <h2>step 1</h2>
-    <p>this is the step detail</p>
-    </div>
-    <div class="step">
-    <h2>step 2</h2>
-    <p>this is the step detail</p>
-    </div>
-    <div class="step">
-    <h2>step 3</h2>
-    <p>this is the step detail</p>
-    </div>
-    <div class="step">
-    <h2>step 4</h2>
-    <p>this is the step detail</p>
-    </div>
-  </div>
+  <script type="text/x-handlebars">
+    <div id="tutorial-output">output</div>
+    {{#view Tutorial.InstructionsView scrollLeftBinding="Tutorial.tutorialController.scrollPosition"}}
+      {{#view Tutorial.StepsContainerView widthBinding="Tutorial.tutorialController.containerWidth"}}
+        {{#each Tutorial.tutorialController.steps}}
+          {{#view Tutorial.StepView stepBinding="this"}}
+            {{{step.body}}}
 
-<div id="tabsView">
-  <ul id="tabs">
-      <li id="current"><a href="#" title="JavaScript">JavaScript</a></li>
-      <li><a href="#" title="Template">Template</a></li>
-      <li><a href="#" title="Console">Console</a></li>
-  </ul>
-  <div id="editorHead">&nbsp;</div>
-  <div class="section">
-      <div id="tab1">javascript tab content</div>
-      <div id="tab2">template tab content</div>
-      <div id="tab3">console tab content</div>
-  </div>
-</div>
+            {{#if step.code}}
+              {{#view Tutorial.PrettyPrintView languageBinding="codeLanguage"}}{{../step.code}}{{/view}}
 
+              {{#view SC.Button target="Tutorial.tutorialController" action="copyStepCode"}}
+                Copy Code
+              {{/view}}
+              {{#view SC.Button target="Tutorial.tutorialController" action="copyStepCodeAndAdvance"}}
+                Do it for me
+              {{/view}}
+            {{/if}}
+
+            {{#view SC.Button target="Tutorial.tutorialController" action="gotoPreviousStep"
+                isVisibleBinding="Tutorial.tutorialController.hasPreviousStep"}}
+              Previous Step
+            {{/view}}
+            {{#view SC.Button target="Tutorial.tutorialController" action="gotoNextStep"
+                isVisibleBinding="Tutorial.tutorialController.hasNextStep"}}
+              Next Step
+            {{/view}}
+          {{/view}}
+        {{/each}}
+      {{/view}}
+    {{/view}}
+
+    <div id="tabsView">
+      <ul id="tabs">
+          <li id="current"><a href="#" title="JavaScript">JavaScript</a></li>
+          <li><a href="#" title="Template">Template</a></li>
+          <li><a href="#" title="Console">Console</a></li>
+      </ul>
+      <div id="editorHead">&nbsp;</div>
+      <div class="section">
+          <div id="tab1">javascript tab content</div>
+          <div id="tab2">template tab content</div>
+          <div id="tab3">console tab content</div>
+      </div>
+    </div>
+  </script>
 </div>
 </body>
 </html>

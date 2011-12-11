@@ -153,7 +153,7 @@ a {
 /* TUTORIAL */
 /****************************************************************************/
 
-#output {
+#tutorial-output {
    height: 433px;
    width:  608px;
    background-image: url(../images/outputScreen.png);
@@ -161,13 +161,20 @@ a {
    margin-bottom: 20px;
  }
 
- #instructions {
+ .instructions {
    padding: 30px 0;
-   overflow: auto;
+   overflow: hidden;
+ }
+
+ .steps-container {
+   padding-left: 104px;
  }
 
  .step {
    background: rgba(255, 255, 255, 0.7);
+   width: 500px;
+   height: 200px;
+   overflow: auto;
    padding: 10px;
    margin: 0 20px 0 0;
    float:  left;

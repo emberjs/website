@@ -1,12 +1,11 @@
 window.Tutorial = SC.Application.create({
-  rootElement: '#tutorial'
+  rootElement: '#content'
 });
 
 /**** MODELS ****/
 
 Tutorial.Step = SC.Object.extend({
-  previousStep: null,
-  nextStep: null,
+  controller: null,
 
   body: null,
 
@@ -19,6 +18,10 @@ Tutorial.Step = SC.Object.extend({
   startingTemplate: null,
   startingConsoleHistory: null,
 
+  isCurrent: function(){
+    return Tutorial.tutorialController.get('currentStep') === this;
+  }.property('Tutorial.tutorialController.currentStep').cacheable(),
+
   errors: null,
 
   addError: function(error) {
@@ -26,7 +29,10 @@ Tutorial.Step = SC.Object.extend({
   },
 
   validate: function(context) {
-    var previousStep = this.get('previousStep'),
+    // TODO: Clean this up
+    var steps = Tutorial.tutorialController.get('steps'),
+        stepIndex = steps.indexOf(this),
+        previousStep = stepIndex > 0 ? steps.objectAt(stepIndex-1) : null,
         errors = [];
 
     this.set('errors', errors);
@@ -51,41 +57,56 @@ Tutorial.tutorialController = SC.Object.create({
   template: null,
   consoleHistory: null,
 
-  currentStep: null,
-  lastStep: null,
+  steps: [],
+  currentIndex: -1,
+
+  stepWidth: 540, // Including padding and margin
+
+  containerWidth: function(){
+    return this.get('stepWidth') * this.getPath('steps.length');
+  }.property('stepWidth', 'steps.length').cacheable(),
+
+  scrollPosition: function(){
+    var index = this.get('currentIndex'),
+        stepWidth = this.get('stepWidth');
+    if (index < 0) { index = 0; }
+    return index * stepWidth;
+  }.property('stepWidth', 'currentIndex').cacheable(),
+
+  currentStep: function(){
+    var steps = this.get('steps'),
+        currentIndex = this.get('currentIndex');
+    if (currentIndex > -1) { return steps.objectAt(currentIndex); }
+  }.property('steps.[]', 'currentIndex').cacheable(),
 
   addStep: function(step) {
     if (!(step instanceof Tutorial.Step)) {
       step = Tutorial.Step.create(step);
     }
 
-    var currentStep = this.get('currentStep'),
-        lastStep = this.get('lastStep');
+    var steps = this.get('steps'),
+        currentIndex = this.get('currentIndex');
 
-    if (lastStep) {
-      lastStep.set('nextStep', step);
-      step.set('previousStep', lastStep);
-    }
+    steps.addObject(step);
 
-    if (!currentStep) { this.set('currentStep', step); }
-
-    this.set('lastStep', step);
+    if (currentIndex < 0) { this.set('currentIndex', 0); }
 
     return step;
   },
 
   hasNextStep: function() {
-    return !!this.getPath('currentStep.nextStep');
-  }.property('currentStep.nextStep').cacheable(),
+    return this.get('currentIndex') < this.getPath('steps.length') - 1;
+  }.property('steps.length', 'currentIndex').cacheable(),
 
   hasPreviousStep: function() {
-    return !!this.getPath('currentStep.previousStep');
-  }.property('currentStep.previousStep').cacheable(),
+    return this.get('currentIndex') > 0;
+  }.property('currentIndex').cacheable(),
 
   gotoNextStep: function() {
-    var currentStep = this.get('currentStep'),
-        nextStep = currentStep.get('nextStep');
-    if (nextStep) {
+    console.log('gotoNextStep');
+    if (this.get('hasNextStep')) {
+      var currentStep = this.get('currentStep');
+
       this.evalCode();
 
       if (currentStep.get('codeTarget') === 'console') {
@@ -96,22 +117,25 @@ Tutorial.tutorialController = SC.Object.create({
           context = iframe ? iframe.contentWindow : null;
 
       if (currentStep.validate(context)) {
-        this.beginPropertyChanges();
-        this.set('currentStep', nextStep);
+        this.incrementProperty('currentIndex');
+        var nextStep = this.get('currentStep');
+        nextStep.beginPropertyChanges();
         nextStep.set('startingJavascript', this.get('javascript'));
         nextStep.set('startingTemplate', this.get('template'));
         nextStep.set('startingConsoleHistory', SC.copy(this.get('consoleHistory')));
         nextStep.set('errors', []);
-        this.endPropertyChanges();
+        nextStep.endPropertyChanges();
       }
     }
   },
 
   gotoPreviousStep: function() {
-    var previousStep = this.getPath('currentStep.previousStep');
-    if (previousStep) {
+    if (this.get('hasPreviousStep')) {
+      this.decrementProperty('currentIndex');
+
+      var previousStep = this.get('currentStep');
+
       this.beginPropertyChanges();
-      this.set('currentStep', previousStep);
       this.set('javascript', previousStep.get('startingJavascript'));
       this.set('template', previousStep.get('startingTemplate'));
       this.set('consoleHistory', SC.copy(previousStep.get('startingConsoleHistory')));
@@ -317,6 +341,35 @@ Tutorial.consoleController = SC.SandboxedConsoleController.create({
 });
 
 /**** VIEWS ****/
+
+Tutorial.InstructionsView = SC.View.extend({
+  classNames: ['instructions'],
+
+  scrollLeft: 0,
+
+  scrollLeftDidChange: function(){
+    console.log('scrollLeftDidChange', this.get('scrollLeft'));
+    this.$().scrollLeft(this.get('scrollLeft'));
+  }.observes('scrollLeft')
+});
+
+Tutorial.StepsContainerView = SC.View.extend({
+  classNames: ['steps-container'],
+  attributeBindings: ['style'],
+
+  width: 0,
+
+  style: function(){
+    return "width: %@px".fmt(this.get('width'));
+  }.property('width').cacheable()
+});
+
+Tutorial.StepView = SC.View.extend({
+  classNames: ['step'],
+  classNameBindings: ['step.isCurrent:active'],
+
+  step: null
+});
 
 // The main purpose of this is styling
 Tutorial.TabView = SC.Button.extend({
