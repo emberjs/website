@@ -115,19 +115,19 @@ pattern, then rest easy knowing that data will always flow correctly from layer 
 Computed properties allow you to treat a function like a property:
 
 ```javascript
-    MyApp.president = SC.Object.create({
-firstName: "Barack",
-lastName: "Obama",
+MyApp.president = SC.Object.create({
+  firstName: "Barack",
+  lastName: "Obama",
 
-fullName: function() {
-  return this.get('firstName') + ' ' + this.get('lastName');
-
+  fullName: function() {
+    return this.get('firstName') + ' ' + this.get('lastName');
+  
   // Call this flag to mark the function as a property
-}.property()
-    });
+  }.property()
+});
 
-    MyApp.president.get('fullName');
-    // "Barack Obama"
+MyApp.president.get('fullName');
+// "Barack Obama"
 ```
 
 Computed properties are useful because they can work with bindings, just
@@ -145,8 +145,8 @@ MyApp.president = SC.Object.create({
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
 
-    // Tell Ember that this computed property depends on firstName
-    // and lastName
+  // Tell Ember that this computed property depends on firstName
+  // and lastName
   }.property('firstName', 'lastName')
 });
 ```
