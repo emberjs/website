@@ -98,7 +98,7 @@ MyApp.president = SC.Object.create({
 });
 
 MyApp.country = SC.Object.create({
-  // Ending a property with 'Binding' tells SproutCore to
+  // Ending a property with 'Binding' tells Ember to
   // create a binding to the presidentName property.
   presidentNameBinding: 'MyApp.president.name'
 });
@@ -145,7 +145,7 @@ MyApp.president = SC.Object.create({
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
 
-    // Tell SproutCore that this computed property depends on firstName
+    // Tell Ember that this computed property depends on firstName
     // and lastName
   }.property('firstName', 'lastName')
 });
@@ -530,9 +530,9 @@ With Amber, you describe your interface using a template. The framework takes ca
 
 ### Handlebars
 
-SproutCore comes bundled with [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
+Ember comes bundled with [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
 
-You should store your Handlebars templates inside your application's HTML file. At runtime, SproutCore will compile these templates so they are available for you to use in your views.
+You should store your Handlebars templates inside your application's HTML file. At runtime, Ember will compile these templates so they are available for you to use in your views.
 
 To immediately insert a template into your document, place it inside a `<script>` tag within your `<body>` tag:
 
@@ -728,7 +728,7 @@ This generates the following HTML:
 </div>
 ```
 
-If you use `{{bindAttr}}` with a Boolean value, it will add or remove the specified attribute. For example, given this SproutCore view:
+If you use `{{bindAttr}}` with a Boolean value, it will add or remove the specified attribute. For example, given this Ember view:
 
 ```javascript
 App.InputView = Am.View.extend({
@@ -797,7 +797,7 @@ Unlike other attributes, you can also bind multiple classes:
 
 #### Localized Strings with {{loc}}
 
-SproutCore has built-in support for localized applications. To emit a localized version of a string, use the `{{loc}}` helper:
+Ember has built-in support for localized applications. To emit a localized version of a string, use the `{{loc}}` helper:
 
 ```html
 {{loc myLocalizedString}}
