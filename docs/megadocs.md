@@ -28,13 +28,16 @@ that will automatically update the DOM when the underlying objects change.
 
 For a simple example, consider this template of a Person:
 
-    {{person.name}} is {{person.age}}.
+```html
+{{person.name}} is {{person.age}}.
+```
 
-Obviously, when the template is initially rendered, it will reflect the
-current state of the person. To avoid boilerplate, Ember.js will also
-update the view automatically for you if the person's name or age changes.
+As with any templating system, when the template is initially rendered, it
+will reflect the current state of the person. To avoid boilerplate, though,
+Ember.js will also update the DOM automatically for you if the person's name
+or age changes.
 
-You specify your template once, and we make sure it's always up to date.
+You specify your template once, and Ember.js makes sure it's always up to date.
 
 #### Provides Architecture
 
@@ -48,7 +51,7 @@ callback spaghetti are over.
 
 Ember also supplies built-in support for state management, so you'll have
 a way to describe how your application moves through various nested states
-(like logged out, logged in, viewing post, viewing comment) out of the box.
+(like signed-out, signed-in, viewing-post, and viewing-comment) out of the box.
 
 <we will eventually want a paragraph about data here>
 
@@ -56,7 +59,7 @@ a way to describe how your application moves through various nested states
 
 Traditional web applications make the user to download a new page every time
 they interact with the server. This means that every interaction is never faster
-than the latency between you and the user, and usually slower. Using Ajax to
+than the latency between you and the user, and usually slower. Using AJAX to
 replace only parts of the page helps somewhat, but still requires a roundtrip to
 your server every time your UI needs to update. And if multiple parts of the
 page need to update all at once, most developers just resort to loading the page
@@ -65,12 +68,12 @@ over again, since keeping everything in sync is tricky.
 Ember.js, like some other modern JavaScript frameworks, works a little differently.
 Instead of the majority of your application's logic living on the server, an
 Ember.js application downloads everything it needs to run in the initial page
-load. That means that while your user is using your app, they never have to load
+load. That means that while your user is using your app, she never has to load
 a new page and your UI responds quickly to their interaction.
 
 One advantage of this architecture is that your web application uses the same
 REST API as your native apps or third-party clients. Back-end developers can
-focus on building a fast, reliable and secure API server and don't have to be
+focus on building a fast, reliable, and secure API server, and don't have to be
 front-end experts, too.
 
 ### Ember.js at a Glance
@@ -89,18 +92,20 @@ direction.
 
 Here's how you create a binding between two objects:
 
-    MyApp.president = SC.Object.create({
-      name: "Barack Obama"
-    });
+```javascript
+MyApp.president = SC.Object.create({
+  name: "Barack Obama"
+});
 
-    MyApp.country = SC.Object.create({
-      // Ending a property with 'Binding' tells SproutCore to
-      // create a binding to the presidentName property.
-      presidentNameBinding: 'MyApp.president.name'
-    });
+MyApp.country = SC.Object.create({
+  // Ending a property with 'Binding' tells SproutCore to
+  // create a binding to the presidentName property.
+  presidentNameBinding: 'MyApp.president.name'
+});
 
-    MyApp.country.get('presidentName');
-    // "Barack Obama"
+MyApp.country.get('presidentName');
+// "Barack Obama"
+```
 
 Bindings allow you to architect your application using the MVC (Model-View-Controller)
 pattern, then rest easy knowing that data will always flow correctly from layer to layer.
@@ -109,38 +114,42 @@ pattern, then rest easy knowing that data will always flow correctly from layer 
 
 Computed properties allow you to treat a function like a property:
 
+```javascript
     MyApp.president = SC.Object.create({
-      firstName: "Barack",
-      lastName: "Obama",
+firstName: "Barack",
+lastName: "Obama",
 
-      fullName: function() {
-        return this.get('firstName') + ' ' + this.get('lastName');
+fullName: function() {
+  return this.get('firstName') + ' ' + this.get('lastName');
 
-        // Call this flag to mark the function as a property
-      }.property()
+  // Call this flag to mark the function as a property
+}.property()
     });
 
     MyApp.president.get('fullName');
     // "Barack Obama"
+```
 
-Treating a function like a property is useful because they can work with bindings, just
+Computed properties are useful because they can work with bindings, just
 like any other property.
 
 Many computed properties have dependencies on other properties. For example, in the above
 example, the `fullName` property depends on `firstName` and `lastName` to determine its value.
 You can tell Ember about these dependencies like this:
 
-    MyApp.president = SC.Object.create({
-      firstName: "Barack",
-      lastName: "Obama",
+```javascript
+MyApp.president = SC.Object.create({
+  firstName: "Barack",
+  lastName: "Obama",
 
-      fullName: function() {
-        return this.get('firstName') + ' ' + this.get('lastName');
+  fullName: function() {
+    return this.get('firstName') + ' ' + this.get('lastName');
 
-        // Tell SproutCore that this computed property depends on firstName
-        // and lastName
-      }.property('firstName', 'lastName')
-    });
+    // Tell SproutCore that this computed property depends on firstName
+    // and lastName
+  }.property('firstName', 'lastName')
+});
+```
 
 Make sure you list these dependencies so Ember knows when to update bindings that connect
 to a computed property.
@@ -151,9 +160,11 @@ Ember uses Handlebars, a semantic templating library. To take data from your Jav
 and put it into the DOM, create a `<script>` tag and put it into your HTML, wherever you'd like the
 value to appear:
 
-    <script type="text/x-handlebars">
-      The President of the United States is {{MyApp.president.fullName}}.
-    </script>
+```html
+<script type="text/x-handlebars">
+  The President of the United States is {{MyApp.president.fullName}}.
+</script>
+```
 
 Here's the best part: templates are bindings-aware. That means that if you ever change the value of
 the property that you told us to display, we'll update it for you automatically. And because you've
@@ -166,7 +177,7 @@ takes care of the rest. It doesn't matter how the underlying data changes, wheth
 or the user performing an action; your user interface always stays up-to-date. This eliminates entire
 categories of edge cases that developers struggle with every day.
 
-3.    Understanding MVC Architecture
+## Understanding MVC Architecture
   1.	What is MVC?
   2.	The Model Layer
   3.	The View Layer
@@ -182,31 +193,37 @@ approach to code sharing.
 At its most basic, you create a new Ember class by using the `extend`
 method on `SC.Object`.
 
-    Person = SC.Object.extend({
-      say: function(thing) {
-        alert(thing);
-      }
-    });
+```javascript
+Person = SC.Object.extend({
+  say: function(thing) {
+    alert(thing);
+ }
+});
+```
 
 Once you have built a new class, you can create new instances of the
 class by using the `create` method. Any properties defined on the class
 will be available to instances.
 
-    var person = Person.create();
-    person.say("Hello") // alerts "Hello"
+```javascript
+var person = Person.create();
+person.say("Hello") // alerts "Hello"
+```
 
 When creating an instance, you can also add additional properties to the
 class by passing in an object.
 
-    var tom = Person.create({
-      name: "Tom Dale",
+```javascript
+var tom = Person.create({
+  name: "Tom Dale",
 
-      helloWorld: function() {
-        alert("Hi my name is " + this.get('name'));
-      }
-    });
+  helloWorld: function() {
+    this.say("Hi my name is " + this.get('name'));
+  }
+});
 
-    tom.helloWorld() // alerts "Hi my name is Tom Dale"
+tom.helloWorld() // alerts "Hi my name is Tom Dale"
+```
 
 Because of Ember's support for bindings and observers, you will always
 access properties using the `get` method, and set properties using the
@@ -216,15 +233,17 @@ When creating a new instance of an object, you can also override any
 properties or methods defined on the class. For instance, in this case,
 you could override the `say` method from the `Person` class.
 
-    var yehuda = Person.create({
-      name: "Yehuda Katz",
+```javascript
+var yehuda = Person.create({
+  name: "Yehuda Katz",
 
-      say: function(thing) {
-        var name = this.get('name');
+  say: function(thing) {
+    var name = this.get('name');
 
-        this._super(name + " says: " + thing);
-      }
-    });
+    this._super(name + " says: " + thing);
+  }
+});
+```
 
 You can use the `_super` method on the object (`super` is a reserved
 word in JavaScript) to call the original method you overrode.
@@ -235,11 +254,13 @@ You can also create subclasses of classes you create by using the
 `extend` method. In fact, when we created a new class above by calling
 `extend` on `SC.Object`, we were **subclassing** `SC.Object`.
 
-    var LoudPerson = Person.extend({
-      say: function(thing) {
-        this._super(thing.toUpperCase());
-      }
-    });
+```javascript
+var LoudPerson = Person.extend({
+  say: function(thing) {
+    this._super(thing.toUpperCase());
+  }
+});
+```
 
 When subclassing, you can use `this._super` to invoke methods you are
 overriding.
@@ -249,21 +270,25 @@ overriding.
 You don't need to define a class all at once. You can reopen a class and
 define new properties using the `reopenClass` method.
 
-    Person.reopenClass({
-      isPerson: true
-    });
+```javascript
+Person.reopenClass({
+  isPerson: true
+});
 
-    Person.create().get('isPerson') // true
+Person.create().get('isPerson') // true
+```
 
 When using `reopenClass`, you can also override existing methods and
 call `this._super`.
 
-    Person.reopenClass({
-      // override `say` to add an ! at the end
-      say: function(thing) {
-        this._super(thing + "!");
-      }
-    });
+```javascript
+Person.reopenClass({
+  // override `say` to add an ! at the end
+  say: function(thing) {
+    this._super(thing + "!");
+  }
+});
+```
 
 ### Computed Properties (Getters)
 
@@ -271,41 +296,45 @@ Often, you will want a property that is computed based on other
 properties. Ember's object model allows you to define computed
 properties easily in a normal class definition.
 
-    Person = SC.Object.extend({
-      // these will be supplied by `create`
-      firstName: null,
-      lastName: null,
+```javascript
+Person = SC.Object.extend({
+  // these will be supplied by `create`
+  firstName: null,
+  lastName: null,
 
-      fullName: function() {
-        var firstName = this.get('firstName');
-        var lastName = this.get('lastName');
+  fullName: function() {
+    var firstName = this.get('firstName');
+    var lastName = this.get('lastName');
 
-        return firstName + ' ' + lastName;
-      }.property('firstName', 'lastName')
-    });
+   return firstName + ' ' + lastName;
+  }.property('firstName', 'lastName')
+});
 
-    var tom = Person.create({
-      firstName: "Tom",
-      lastName: "Dale"
-    })
+var tom = Person.create({
+  firstName: "Tom",
+  lastName: "Dale"
+});
 
-    tom.get('fullName') // "Tom Dale"
+tom.get('fullName') // "Tom Dale"
+```
 
-If you aren't using Ember's prototype extension, you can use a slightly
+If you aren't using Ember's prototype extensions, you can use a slightly
 more verbose version, wrapping the function in a call to `SC.computed`:
 
-    Person = SC.Object.extend({
-      // these will be supplied by `create`
-      firstName: null,
-      lastName: null,
+```javascript
+Person = SC.Object.extend({
+  // these will be supplied by `create`
+  firstName: null,
+  lastName: null,
 
-      fullName: SC.computed(function() {
-        var firstName = this.get('firstName');
-        var lastName = this.get('lastName');
+  fullName: SC.computed(function() {
+    var firstName = this.get('firstName');
+    var lastName = this.get('lastName');
 
-        return firstName + ' ' + lastName;
-      }).property('firstName', 'lastName')
-    });
+    return firstName + ' ' + lastName;
+  }).property('firstName', 'lastName')
+});
+```
 
 The `property` method defines the function as a computed property, and
 defines its dependencies. Those dependencies will come into play later
@@ -320,39 +349,41 @@ You can also define what Ember should do when setting a computed
 property. If you try to set a computed property, it will be invoked with
 the key and value you want to set it to.
 
-    Person = SC.Object.extend({
-      // these will be supplied by `create`
-      firstName: null,
-      lastName: null,
+```javascript
+Person = SC.Object.extend({
+  // these will be supplied by `create`
+  firstName: null,
+  lastName: null,
 
-      fullName: SC.computed(function(key, value) {
-        // getter
-        if (value === undefined) {
-          var firstName = this.get('firstName');
-          var lastName = this.get('lastName');
+  fullName: SC.computed(function(key, value) {
+    // getter
+    if (arguments.length === 1) {
+      var firstName = this.get('firstName');
+      var lastName = this.get('lastName');
 
-          return firstName + ' ' + lastName;
+      return firstName + ' ' + lastName;
 
-        // setter
-        } else {
-          var name = value.split(" ");
+    // setter
+    } else {
+      var name = value.split(" ");
 
-          this.set('firstName', name[0]);
-          this.set('lastName', name[1]);
+      this.set('firstName', name[0]);
+      this.set('lastName', name[1]);
 
-          return value;
-        }
-      }).property('firstName', 'lastName')
-    });
+      return value;
+    }
+  }).property('firstName', 'lastName')
+});
 
-    var person = Person.create();
-    person.set('name', "Peter Wagenet");
-    person.get('firstName') // Peter
-    person.get('lastName') // Wagenet
+var person = Person.create();
+person.set('name', "Peter Wagenet");
+person.get('firstName') // Peter
+person.get('lastName') // Wagenet
+```
 
 Ember will call the computed property for both setters and getters, and
-you can check the `value` to determine whether it is being called as a
-getter or a setter.
+you can check the number of arguments to determine whether it is being called
+as a getter or a setter.
 
 ### Observers
 
@@ -360,29 +391,31 @@ Ember supports observing any property, including computed properties.
 You can set up an observer on an object by using the `addObserver`
 method.
 
-    Person = SC.Object.extend({
-      // these will be supplied by `create`
-      firstName: null,
-      lastName: null,
+```javascript
+Person = SC.Object.extend({
+  // these will be supplied by `create`
+  firstName: null,
+  lastName: null,
 
-      fullName: SC.computed(function() {
-        var firstName = this.get('firstName');
-        var lastName = this.get('lastName');
+  fullName: SC.computed(function() {
+    var firstName = this.get('firstName');
+    var lastName = this.get('lastName');
 
-        return firstName + ' ' + lastName;
-      }).property('firstName', 'lastName')
-    });
+    return firstName + ' ' + lastName;
+  }).property('firstName', 'lastName')
+});
 
-    var person = Person.create
-      firstName: "Yehuda",
-      lastName: "Katz"
-    });
+var person = Person.create
+  firstName: "Yehuda",
+  lastName: "Katz"
+});
 
-    person.addObserver('fullName', function() {
-      // deal with the change
-    });
+person.addObserver('fullName', function() {
+  // deal with the change
+});
 
-    person.set('firstName', "Brohuda"); // observer will fire
+person.set('firstName', "Brohuda"); // observer will fire
+```
 
 Because the `fullName` computed property depends on `firstName`,
 updating `firstName` will fire observers on `fullName` as well.
@@ -390,20 +423,24 @@ updating `firstName` will fire observers on `fullName` as well.
 Because observers are so common, Ember provides a way to define
 observers inline in class definitions.
 
-    Person.reopenClass({
-      fullNameChanged: function() {
-        // this is an inline version of .addObserver
-      }.observes('fullName')
-    });
+```javascript
+Person.reopenClass({
+  fullNameChanged: function() {
+    // this is an inline version of .addObserver
+  }.observes('fullName')
+});
+```
 
 You can define inline observers by using the `SC.observer` method if you
 are using Ember without prototype extensions:
 
-    Person.reopenClass({
-      fullNameChanged: SC.observer(function() {
-        // this is an inline version of .addObserver
-      }, 'fullName')
-    });
+```javascript
+Person.reopenClass({
+  fullNameChanged: SC.observer(function() {
+    // this is an inline version of .addObserver
+  }, 'fullName')
+});
+```
 
 ### Bindings
 
@@ -416,26 +453,26 @@ Ember.js can be used with any object, not just between views and models.
 The easiest way to create a two-way binding is by creating a new property
 with the string `Binding` at the end, then specifying a path from the global scope:
 
-    App.wife = SC.Object.create({
-      householdIncome: 80000
-    });
-    
-    App.husband = SC.Object.create({
-      householdIncomeBinding: 'App.wife.householdIncome'
-    });
-    
-    App.husband.get('householdIncome'); // 80000
-    
-    // Someone gets raise.
-    App.husband.set('householdIncome', 90000);
-    App.wife.get('householdIncome'); // 90000
-  App.user = SC.Object.create({
-    fullName: "Kara Gates"
-  });
+```javascript
+App.wife = SC.Object.create({
+  householdIncome: 80000
+});
+
+App.husband = SC.Object.create({
+  householdIncomeBinding: 'App.wife.householdIncome'
+});
+
+App.husband.get('householdIncome'); // 80000
+
+// Someone gets raise.
+App.husband.set('householdIncome', 90000);
+App.wife.get('householdIncome'); // 90000
+```
 
 Note that bindings don't update immediately. Ember waits until all of your
-application code has finished running before synchronizing changes, so you can change a bound property as many times as you'd like without worrying about the overhead of syncing bindings
-when values are transient.
+application code has finished running before synchronizing changes, so you can
+change a bound property as many times as you'd like without worrying about the
+overhead of syncing bindings when values are transient.
 
 #### One-Way Bindings
 
@@ -444,23 +481,25 @@ bindings are just a performance optimization and you can safely use
 the more concise two-way binding syntax (as, of course, two-way bindings are
 de facto one-way bindings if you only ever change one side).
 
-    App.user = SC.Object.create({
-      fullName: "Kara Gates"
-    });
+```javascript
+App.user = SC.Object.create({
+  fullName: "Kara Gates"
+});
 
-    App.userView = SC.View.create({
-      userNameBinding: SC.Binding.oneWay('App.user.fullName')
-    });
-  
-    // Changing the name of the user object changes
-    // the value on the view.
-    App.user.set('fullName', "Krang Gates");
-    // App.userView.fullName will become "Krang Gates"
-  
-    // ...but changes to the view don't make it back to
-    // the object.
-    App.userView.set('fullName', "Truckasaurus Gates");
-    // App.user.fullName will still be "Krang Gates"
+App.userView = SC.View.create({
+  userNameBinding: SC.Binding.oneWay('App.user.fullName')
+});
+
+// Changing the name of the user object changes
+// the value on the view.
+App.user.set('fullName', "Krang Gates");
+// App.userView.fullName will become "Krang Gates"
+
+// ...but changes to the view don't make it back to
+// the object.
+App.userView.set('fullName', "Truckasaurus Gates");
+App.user.get('fullName'); // "Krang Gates"
+```
 
 ### What Do I Use When?
 
@@ -496,35 +535,36 @@ SproutCore comes bundled with [Handlebars](http://www.handlebarsjs.com), a seman
 You should store your Handlebars templates inside your application's HTML file. At runtime, SproutCore will compile these templates so they are available for you to use in your views.
 
 To immediately insert a template into your document, place it inside a `<script>` tag within your `<body>` tag:
-  
-<pre>
-&lt;html>
-	&lt;body>
- 		&lt;script type="text/x-handlebars">
-   			Hello, &lt;b>{{MyApp.name}}&gt;/b>
- 		&lt;/script>
-	&lt;/body>
-&lt;/html>
-</pre>
+
+```html
+<html>
+  <body>
+    <script type="text/x-handlebars">
+      Hello, <b>{{MyApp.name}}</b>
+    </script>
+  </body>
+</html>
+```
 
 To make a template available to be used later, give the `<script>` tag a name attribute:
 
-<pre>
-&lt;html>
- 	&lt;head>
- 		&lt;script type="text/x-handlebars" data-template-name="say-hello">
-   			Hello, &lt;b>{{MyApp.name}}&gt;/b>
- 		&lt;/script>
- 	&lt;/head>
-&lt;/html>
-</pre>
+```html
+<html>
+  <head>
+    <script type="text/x-handlebars" data-template-name="say-hello">
+      Hello, <b>{{MyApp.name}}</b>
+    </script>
+  </head>
+</html>
+```
 
 ### Am.View
 
 You can use Am.View to render a Handlebars template and insert it into the DOM.
 
-To tell the view which template to use, set its +templateName+ property. For example, if I had a +<script>+ tag like this:
+To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:
 
+```html
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">
@@ -532,234 +572,246 @@ To tell the view which template to use, set its +templateName+ property. For exa
     </script>
   </head>
 </html>
- 
-I would set the +templateName+ property to +"say-hello"+.
+```
 
-<javascript>
+I would set the `templateName` property to `"say-hello"`.
+
+```html
 var view = Am.TemplateView.create({
   templateName: 'say-hello',
   name: "Bob"
 });
-</javascript>
+```
 
-NOTE: For the remainder of the guide, the +templateName+ property will be omitted from most examples. You can assume that if we show a code sample that includes an Am.View and a Handlebars template, the view has been configured to display that template via the +templateName+ property.
+NOTE: For the remainder of the guide, the `templateName` property will be omitted from most examples. You can assume that if we show a code sample that includes an Am.View and a Handlebars template, the view has been configured to display that template via the `templateName` property.
 
-h3. Handlebars Basics
+### Handlebars Basics
 
 As you've already seen, you can print the value of a property by enclosing it in a Handlebars expression, or a series of braces, like this:
 
-<html>
+```html
 My new car is {{color}}.
-</html>
+```
 
-This will look up and print the TemplateView's +color+ property. For example, if your view looks like this:
+This will look up and print the TemplateView's `color` property. For example, if your view looks like this:
 
-<javascript>
+```javascript
 App.CarView = Am.View.extend({
   color: 'blue'
-});
-</javascript>
+`});
+```
 
 Your view would appear in the browser like this:
 
-<html>
+```html
 My new car is blue.
-</html>
+```
 
 All of the features described in this guide are __bindings aware__. That means that if the values used by your templates ever change, your HTML will be updated automatically. It's like magic.
 
 In order to know which part of your HTML to update when an underlying property changes, Handlebars will insert marker elements with a unique ID. If you look at your application while it's running, you might notice these extra elements:
 
-<html>
+```html
 My new car is <span id="sc232">blue</span>.
-</html>
+```
 
 Because all Handlebars expressions are wrapped in these markers, make sure each HTML tag stays inside the same block. For example, you shouldn't do this:
 
-<html>
+```html
 <!-- Don't do it! -->
-
 <div {{#if isUrgent}}class="urgent"{{/if}}>
-</html>
+```
 
-If you want to avoid your property output getting wrapped in these markers, use the +unbound+ helper:
+If you want to avoid your property output getting wrapped in these markers, use the `unbound` helper:
 
-<html>
+```html
 My new car is {{unbound color}}.
-</html>
+```
 
 Your output will be free of markers, but be careful, because the output won't be automatically updated!
 
-<html>
+```html
 My new car is blue.
-</html>
+```
 
+#### {{#if}}, {{else}}, and {{#unless}}
 
-h4. {{#if}}, {{else}}, and {{#unless}}
+Sometimes you may only want to display part of your template if a property
+exists. For example, let's say we have a view with a `person` property that
+contains an object with `firstName` and `lastName` fields:
 
-Sometimes you may only want to display part of your template if a property exists. For example, let's say we have a view with a +person+ property that contains an object with +firstName+ and +lastName+ fields:
-
-<javascript>
+```javascript
 App.SayHelloView = Am.View.extend({
   person: Am.Object.create({
     firstName: "Joy",
     lastName: "Clojure"
   })
 });
-</javascript>
+```
 
-In order to display part of the template only if the +person+ object exists, we can use the +{{#if}}+ helper to conditionally render a block:
+In order to display part of the template only if the `person` object exists, we
+can use the `{{#if}}` helper to conditionally render a block:
 
-<html>
+```html
 {{#if person}}
   Welcome back, <b>{{person.firstName}} {{person.lastName}}</b>!
 {{/if}}
-</html>
+```
 
-NOTE: Handlebars will not render the block if the argument passed evaluates to +false+, +undefined+, +null+ or +[]+ (i.e., any "falsy" value).
+NOTE: Handlebars will not render the block if the argument passed evaluates to
+`false`, `undefined`, `null` or `[]` (i.e., any "falsy" value).
 
-If the expression evaluates to falsy, we can also display an alternate template using +{{else}}+:
+If the expression evaluates to falsy, we can also display an alternate template
+using `{{else}}`:
 
-<html>
+```html
 {{#if person}}
   Welcome back, <b>{{person.firstName}} {{person.lastName}}</b>!
 {{else}}
   Please log in.
 {{/if}}
-</html>
+```
 
-To only render a block if a value is falsy, use +{{#unless}}+:
+To only render a block if a value is falsy, use `{{#unless}}`:
 
-<html>
+```html
 {{#unless hasPaid}}
   You owe: ${{total}}
 {{/unless}}
-</html>
+```
 
-+{{#if}}+ and +{{#unless}}+ are examples of block expressions. These allow you to invoke a helper with a portion of your template. Block expressions look like normal expressions except that they contain a hash (#) before the helper name, and require a closing expression.
+`{{#if}}` and `{{#unless}}` are examples of block expressions. These allow you
+to invoke a helper with a portion of your template. Block expressions look like
+normal expressions except that they contain a hash (#) before the helper name,
+and require a closing expression.
 
-h4. {{#with}}
+#### {{#with}}
 
-Sometimes you may want to invoke a section of your template with a context different than the Am.View. For example, we can clean up the above template by using the +{{#with}}+ helper:
+Sometimes you may want to invoke a section of your template with a context
+different than the Am.View. For example, we can clean up the above template by
+using the `{{#with}}` helper:
 
-<html>
+```html
 {{#with person}}
   Welcome back, <b>{{firstName}} {{lastName}}</b>!
 {{/with}}
-</html>
+```
 
-NOTE: {{#with}} changes the _context_ of the block you pass to it. The context is the object on which properties are looked up. By default, the context is the Am.View to which the template belongs.
+NOTE: {{#with}} changes the _context_ of the block you pass to it. The context
+is the object on which properties are looked up. By default, the context is the
+Am.View to which the template belongs.
 
-h4. Binding Element Attributes with {{bindAttr}}
+#### Binding Element Attributes with {{bindAttr}}
 
-In addition to text, you may also want your templates to dictate the attributes of your HTML elements. For example, imagine a view that contains a URL:
+In addition to text, you may also want your templates to dictate the attributes
+of your HTML elements. For example, imagine a view that contains a URL:
 
-<javascript>
+```javascript
 App.LogoView = Am.View.extend({
   logoUrl: 'http://www.mycorp.com/images/logo.png'
 });
-</javascript>
+```
 
 The best way to display the URL as an image in Handlebars is like this:
 
-<html>
+```html
 <div id="logo">
   <img {{bindAttr src="logoUrl"}} alt="Logo">
 </div>
-</html>
+```
 
 This generates the following HTML:
-<html>
+
+```html
 <div id="logo">
   <img src="http://www.mycorp.com/images/logo.png" alt="Logo">
 </div>
-</html>
+```
 
-If you use +{{bindAttr}}+ with a Boolean value, it will add or remove the specified attribute. For example, given this SproutCore view:
+If you use `{{bindAttr}}` with a Boolean value, it will add or remove the specified attribute. For example, given this SproutCore view:
 
-<javascript>
+```javascript
 App.InputView = Am.View.extend({
   isSelected: true
 });
-</javascript>
+```
 
 And this template:
-<html>
+
+```html
 <input type="checkbox" {{bindAttr checked="isSelected"}}>
-</html>
+```
 
 Handlebars will produce the following HTML element:
 
-<html>
+```html
 <input type="checkbox" checked>
-</html>
+```
 
-h4. Binding Class Names with {{bindAttr}}
+#### Binding Class Names with {{bindAttr}}
 
-The +class+ attribute can be bound like any other attribute, but it also has some additional special behavior. The default behavior works like you'd expect:
+The `class` attribute can be bound like any other attribute, but it also has some additional special behavior. The default behavior works like you'd expect:
 
-<javascript>
+```javascript
 App.AlertView = Am.View.extend({
   priority: "p4",
   isUrgent: true
 });
-</javascript>
 
-<html>
 <div {{bindAttr class="priority"}}>
   Warning!
 </div>
-</html>
+```
 
 This template will emit the following HTML:
 
-<html>
+```html
 <div class="p4">
   Warning!
 </div>
-</html>
+```
 
 If the value to which you bind is a Boolean, however, the dasherized version of that property will be applied as a class:
 
-<html>
+```html
 <div {{bindAttr class="isUrgent"}}>
   Warning!
 </div>
-</html>
+```
 
 This emits the following HTML:
 
-<html>
+```html
 <div class="is-urgent">
   Warning!
 </div>
-</html>
+```
 
 Unlike other attributes, you can also bind multiple classes:
 
-<html>
+```html
 <div {{bindAttr class="isUrgent priority"}}>
   Warning!
 </div>
-</html>
+```
 
-h4. Localized Strings with {{loc}}
+#### Localized Strings with {{loc}}
 
-SproutCore has built-in support for localized applications. To emit a localized version of a string, use the +{{loc}}+ helper:
+SproutCore has built-in support for localized applications. To emit a localized version of a string, use the `{{loc}}` helper:
 
-<html>
+```html
 {{loc myLocalizedString}}
-</html>
+```
 
-h3. Building a View Hierarchy
+#### Building a View Hierarchy
 
 So far, we've discussed writing templates for a single view. However, as your application grows, you will often want to create a hierarchy of views to encapsulate different areas on the page. Each view is responsible for handling events and maintaining the properties needed to display it.
 
-h4. {{view}}
+#### {{view}}
 
-To add a child view to a parent, use the +{{view}}+ helper, which takes a path to a view class.
+To add a child view to a parent, use the `{{view}}` helper, which takes a path to a view class.
 
-<javascript>
+```javascript
 // Define parent view
 App.UserView = Am.View.extend({
   templateName: 'user',
@@ -775,35 +827,38 @@ App.InfoView = Am.View.extend({
   posts: 25,
   hobbies: "Riding bicycles"
 });
-</javascript>
+```
 
-<html filename="user.handlebars">
+```html
 User: {{firstName}} {{lastName}}
 {{view App.InfoView}}
-</html>
+```
 
-<html filename="info.handlebars">
+```html
 <b>Posts:</b> {{posts}}
 <br>
 <b>Hobbies:</b> {{hobbies}}
-</html>
+```
 
-If we were to create an instance of <code>App.UserView</code> and render it, we would get a DOM representation like this:
+If we were to create an instance of `App.UserView` and render it, we would get
+a DOM representation like this:
 
-<html>
+```html
 User: Albert Hofmann
 <div>
   <b>Posts:</b> 25
   <br>
   <b>Hobbies:</b> Riding bicycles
 </div>
-</html>
+```
 
-h4. Relative Paths
+#### Relative Paths
 
-Instead of specifying an absolute path, you can also specify which view class to use relative to the parent view. For example, we could nest the above view hierarchy like this:
+Instead of specifying an absolute path, you can also specify which view class
+to use relative to the parent view. For example, we could nest the above view
+hierarchy like this:
 
-<javascript>
+```javascript
 App.UserView = Am.View.extend({
   templateName: 'user',
 
@@ -817,18 +872,20 @@ App.UserView = Am.View.extend({
     hobbies: "Riding bicycles"
   })
 });
-</javascript>
+```
 
-<html filename="user.handlebars">
+```html
 User: {{firstName}} {{lastName}}
 {{view InfoView}}
-</html>
+```
 
-h4. Setting Child View Templates
+#### Setting Child View Templates
 
-If you'd like to specify the template your child views use (instead of having to place them in a separate Handlebars file), you can use the block form of the +{{view}}+ helper. We might rewrite the above example like this:
+If you'd like to specify the template your child views use (instead of having
+to place them in a separate Handlebars file), you can use the block form of the
+`{{view}}` helper. We might rewrite the above example like this:
 
-<javascript>
+```javascript
 App.UserView = Am.View.extend({
   templateName: 'user',
 
@@ -840,26 +897,29 @@ App.InfoView = Am.View.extend({
   posts: 25,
   hobbies: "Riding bicycles"
 });
-</javascript>
+```
 
-<html filename="user.handlebars">
+```html
 User: {{firstName}} {{lastName}}
 {{#view App.InfoView}}
   <b>Posts:</b> {{posts}}
   <br>
   <b>Hobbies:</b> {{hobbies}}
 {{/view}}
-</html>
 
-When you do this, it may be helpful to think of it as assigning views to portions of the page. This allows you to encapsulate event handling for just that part of the page.
+When you do this, it may be helpful to think of it as assigning views to
+portions of the page. This allows you to encapsulate event handling for just
+that part of the page.
 
-h4. Setting Up Bindings
+#### Setting Up Bindings
 
-So far in our examples, we have been setting static values directly on the views. But to best implement an MVC architecture, we should actually be binding the properties of our views to the controller layer.
+So far in our examples, we have been setting static values directly on the
+views. But to best implement an MVC architecture, we should actually be binding
+the properties of our views to the controller layer.
 
 Let's set up a controller to represent our user data:
 
-<javascript>
+```javascript
 App.userController = Am.Object.create({
   content: Am.Object.create({
     firstName: "Albert",
@@ -868,22 +928,26 @@ App.userController = Am.Object.create({
     hobbies: "Riding bicycles"
   })
 });
-</javascript>
+```
 
-Now let's update <code>App.UserView</code> to bind to <code>App.userController</code>:
+Now let's update `App.UserView` to bind to `App.userController`:
 
-<javascript>
+```javascript
 App.UserView = Am.View.extend({
   templateName: 'user',
 
   firstNameBinding: 'App.userController.content.firstName',
   lastNameBinding: 'App.userController.content.lastName'
 });
-</javascript>
+```
 
-When we only have a few bindings to configure, like with <code>App.InfoView</code>, it is sometimes useful to be able to declare those bindings in the template. You can do that by passing additional arguments to the +{{#view}}+ helper. If all you're doing is configuring bindings, this often allows you to bypass having to create a new subclass.
+When we only have a few bindings to configure, like with `App.InfoView`, it is
+sometimes useful to be able to declare those bindings in the template. You can
+do that by passing additional arguments to the `{{#view}}` helper. If all
+you're doing is configuring bindings, this often allows you to bypass having to
+create a new subclass.
 
-<html filename="user.handlebars">
+```html
 User: {{firstName}} {{lastName}}
 {{#view App.InfoView postsBinding="App.userController.content.posts"
         hobbiesBinding="App.userController.content.hobbies"}}
@@ -891,109 +955,114 @@ User: {{firstName}} {{lastName}}
   <br>
   <b>Hobbies:</b> {{hobbies}}
 {{/view}}
-</html>
+```
 
-NOTE: You can actually pass __any__ property as a parameter to {{view}}, not just bindings. However, if you are doing anything other than setting up bindings, it is generally a good idea to create a new subclass.
+NOTE: You can actually pass __any__ property as a parameter to {{view}}, not
+just bindings. However, if you are doing anything other than setting up
+bindings, it is generally a good idea to create a new subclass.
 
-h4. Modifying a View's HTML
+#### Modifying a View's HTML
 
-When you append a view, it creates a new HTML element that holds its content. If your view has any child views, they will also be displayed as child nodes of the parent's HTML element.
+When you append a view, it creates a new HTML element that holds its content.
+If your view has any child views, they will also be displayed as child nodes
+of the parent's HTML element.
 
-By default, new instances of <code>SC.View</code> create a +<div>+ element. You can override this by passing a +tagName+ parameter:
+By default, new instances of `SC.View` create a `<div>` element. You can
+override this by passing a `tagName` parameter:
 
-<html>
+```html
 {{view App.InfoView tagName="span"}}
-</html>
+```
 
-You can also assign an ID attribute to the view's HTML element by passing an +id+ parameter:
+You can also assign an ID attribute to the view's HTML element by passing an `id` parameter:
 
-<html>
+```html
 {{view App.InfoView id="info-view"}}
-</html>
+```
 
 This makes it easy to style using CSS ID selectors:
 
-<css>
+```css
 /** Give the view a red background. **/
 #info-view {
   background-color: red;
 }
-</css>
+```
 
 You can assign class names similarly:
 
-<html>
+```html
 {{view App.InfoView class="info urgent"}}
-</html>
+```
 
-You can bind class names to a property of the view by using +classBinding+ instead of +class+. The same behavior as described in +bindAttr+ applies:
+You can bind class names to a property of the view by using `classBinding` instead of `class`. The same behavior as described in `bindAttr` applies:
 
-<javascript>
+```javascript
 App.AlertView = SC.View.extend({
   priority: "p4",
   isUrgent: true
 });
-</javascript>
+```
 
-<html>
+```html
 {{view App.AlertView classBinding="isUrgent priority"}}
-</html>
+```
 
 This yields a view wrapper that will look something like this:
 
-<html>
+```html
 <div id="sc420" class="sc-view is-urgent p4"></div>
-</html>
+```
 
-h3. Displaying a List of Items
+### Displaying a List of Items
 
-If you need to display a basic list of items, use Handlebar's +{{#each}}+ helper:
+If you need to display a basic list of items, use Handlebar's `{{#each}}` helper:
 
-<javascript>
+```javascript
 App.PeopleView = SC.View.extend({
   people: [ SC.Object.create({ name: 'Steph' }),
             SC.Object.create({ name: 'Tom' }) ]
 });
-</javascript>
+```
 
-<html>
+```html
 {{#each people}}
   Hello, {{name}}!
 {{/each}}
-</html>
+```
 
 This will print a list like this:
 
-<html>
+```html
 <ul>
   <li>Hello, Steph!</li>
   <li>Hello, Tom!</li>
 </ul>
-</html>
+```
 
-h4. SC.CollectionView
+#### SC.CollectionView
 
-Sometimes you will need each item in your list to handle events. In that case, you will need more sophistication than what +{{#each}}+ can provide. You can use the +{{#collection}}+ helper to create a new <code>SC.CollectionView</code>. You can bind the instance of <code>SC.CollectionView</code> to an array, and it will create a new <code>SC.View</code> for each item.
+Sometimes you will need each item in your list to handle events. In that case, you will need more sophistication than what `{{#each}}` can provide. You can use the `{{#collection}}` helper to create a new `SC.CollectionView`. You can bind the instance of `SC.CollectionView` to an array, and it will create a new `SC.View` for each item.
 
-Usually, you will bind the collection to an <code>SC.ArrayProxy</code>, like this:
+Usually, you will bind the collection to an `SC.ArrayProxy`, like this:
 
-<javascript>
+```javascript
 App.peopleController = SC.ArrayProxy.create({
   content: ['Steph', 'Tom', 'Ryan', 'Chris', 'Jill']
 });
-</javascript>
+```
 
-<html>
+```html
 {{#collection contentBinding="App.peopleController"}}
   Hi, {{content}}!
 {{/collection}}
-</html>
+```
 
-NOTE: The template you pass to the block helper will look up properties relative to each child view. To access the item in the array that the view should represent, refer to the +content+ property via {{content}}.
+NOTE: The template you pass to the block helper will look up properties relative to each child view. To access the item in the array that the view should represent, refer to the `content` property via {{content}}.
 
-Remember that under the hood, <code>SC.CollectionView</code> creates a new view for each item in the bound array. By default, each new view will be an instance of <code>SC.View</code>. You can tell the collection which type of view to create instances of by subclassing <code>SC.CollectionView</code> and supplying a custom class:
+Remember that under the hood, `SC.CollectionView` creates a new view for each item in the bound array. By default, each new view will be an instance of `SC.View`. You can tell the collection which type of view to create instances of by subclassing `SC.CollectionView` and supplying a custom class:
 
-<javascript>
+```javascript
 App.PeopleCollectionView = SC.CollectionView.extend({
   itemViewClass: SC.View.extend({
     mouseDown: function(evt) {
@@ -1001,56 +1070,56 @@ App.PeopleCollectionView = SC.CollectionView.extend({
     }
   })
 });
-</javascript>
+```
 
-<html>
+```html
 {{#collection App.PeopleCollectionView contentBinding="App.peopleController"}}
   Hi, {{content}}!
 {{/collection}}
-</html>
+```
 
 If you run this code, you should see an alert every time you click on one of the items.
 
-The +{{#collection}}+ helper takes the same options as +{{#view}}+, as described above. For example, you can set an HTML +id+ attribute on the container of <code>SC.CollectionView</code> like this:
+The `{{#collection}}` helper takes the same options as `{{#view}}`, as described above. For example, you can set an HTML `id` attribute on the container of `SC.CollectionView` like this:
 
-<html>
+```html
 {{collection App.MyCollectionView id="my-collection"}}
-</html>
+```
 
-What if you want to set the class name of every child view, though? If you prepend an option with +item+, that option will instead be set on the child. For example, let's say you wanted to set a class name on each item in your collection:
+What if you want to set the class name of every child view, though? If you prepend an option with `item`, that option will instead be set on the child. For example, let's say you wanted to set a class name on each item in your collection:
 
-<html>
+```html
 {{collection App.MyCollectionView itemClass="collection-item"}}
-</html>
+```
 
-h3. Writing Custom Helpers
+### Writing Custom Helpers
 
 Sometimes, you may use the same HTML in your application multiple times. In those case, you can register a custom helper that can be invoked from any Handlebars template.
 
-For example, imagine you are frequently wrapping certain values in a +<span>+ tag with a custom class. You can register a helper from your JavaScript like this:
-  
-<javascript>
+For example, imagine you are frequently wrapping certain values in a `<span>` tag with a custom class. You can register a helper from your JavaScript like this:
+
+```javascript
 Handlebars.registerHelper('highlight', function(property) {
   var value = SC.getPath(this, property);
   return '<span class="highlight">"+value+'</span>';
 });
-</javascript>
+```
 
 Anywhere in your Handlebars templates, you can now invoke this helper:
 
-<html>
+```html
 {{highlight name}}
-</html>
+```
 
 and it will output the following:
 
-<html>
+```html
 <span class="highlight">Peter</span>
-</html>
+```
 
 NOTE: Parameters to helper functions are passed as names, not their current values. This allows you to optionally set up observers on the values. To get the current value of the parameter, use SC.getPath, as shown above.
 
-h3. Changelog
+### Changelog
 
 * May 5, 2011: Initial version by "Tom Dale":credits.html#tomdale
 * July 21, 2011: Corrections made for SC2 by "Erik Bryn":credits.html#ebryn
