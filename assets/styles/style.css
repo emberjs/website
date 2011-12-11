@@ -1,70 +1,70 @@
 html {
-	min-height: 100%;
+  min-height: 100%;
 }
 body {
-	background: url(../images/diagonalTexture.png), #544B4B;
-	margin: 0;
-	font-family:  trebuchet MS;
-	font-size: 14px;
-	line-height: 20px;
+  background: url(../images/diagonalTexture.png), #544B4B;
+  margin: 0;
+  font-family:  trebuchet MS;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 #wrap {
-	width:  1024px;
-	margin:  0 auto;
+  width:  1024px;
+  margin:  0 auto;
 
 }
 #about {
-	color: #544B4B;
-	width:  246px;
-	background: rgba(255, 255, 255, 0.7);
-	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  color: #544B4B;
+  width:  246px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
   position: fixed;
 }
 
 #logo {
-	background-image: url(../images/logo.png);
-	height: 31px;
-	width: 108px;
-	margin:  20px auto;
+  background-image: url(../images/logo.png);
+  height: 31px;
+  width: 108px;
+  margin:  20px auto;
 }
 
 #about p {
-	border-top: 6px double #ddd;
-	margin: 20px;
-	padding-top: 20px;
+  border-top: 6px double #ddd;
+  margin: 20px;
+  padding-top: 20px;
 }
 
 #nav {
-	list-style-type: none;
-	padding:0;
-	font-size: 16px;
+  list-style-type: none;
+  padding:0;
+  font-size: 16px;
 }
 #nav li {
-	display: block;
-	padding: 15px 20px;
+  display: block;
+  padding: 15px 20px;
 }
 
 #nav li.active{
-	display: block;
-	border-top: 1px solid #777;
-	border-bottom: 1px solid white;
-	background:#9b9b9b;
+  display: block;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid white;
+  background:#9b9b9b;
 }
 
 .active a{
   color: #fff;
 }
 
-#content { 
+#content {
   float:right;
-	padding: 85px 20px 0;
-	height: 100%;
-	width: 728px;
+  padding: 85px 20px 0;
+  height: 100%;
+  width: 728px;
 }
 
 h1 {
-	margin: 0;
+  margin: 0;
 }
 
 h1 {
@@ -75,11 +75,11 @@ h1 {
 }
 
 h2 {
-	margin-top:  -28px;
-	font-weight: lighter;
-	margin-bottom: 0;
-	color: #fff;
-	text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.4);
+  margin-top:  -28px;
+  font-weight: lighter;
+  margin-bottom: 0;
+  color: #fff;
+  text-shadow: 0px 1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .section h2{
@@ -133,15 +133,15 @@ a {
    border-top-color: #d1661e;
    background: #d1661e;
    }
-   
+
 .section {
   color: #544B4B;
-	background: rgba(255, 255, 255, 0.7);
-	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
-	float: left;
-	width: 668px;
-	padding: 30px;
-	margin-bottom:65px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+  float: left;
+  width: 668px;
+  padding: 30px;
+  margin-bottom:65px;
 }
 
 .section p {
@@ -152,13 +152,13 @@ a {
 
 /* TUTORIAL */
 /****************************************************************************/
- 
+
 #output {
- 	height: 433px;
- 	width:  608px;
- 	background-image: url(../images/outputScreen.png);
- 	margin:  0 auto;
- 	margin-bottom: 20px;
+   height: 433px;
+   width:  608px;
+   background-image: url(../images/outputScreen.png);
+   margin:  0 auto;
+   margin-bottom: 20px;
  }
 
  #instructions {
@@ -167,16 +167,16 @@ a {
  }
 
  .step {
- 	background: rgba(255, 255, 255, 0.7);
- 	padding: 10px;
- 	margin: 0 20px 0 0;
- 	float:  left;
- 	opacity: .5;
- 	position: relative;
+   background: rgba(255, 255, 255, 0.7);
+   padding: 10px;
+   margin: 0 20px 0 0;
+   float:  left;
+   opacity: .5;
+   position: relative;
  }
 
  .step.active {
- 	opacity: 1;
+   opacity: 1;
  }
 
 
