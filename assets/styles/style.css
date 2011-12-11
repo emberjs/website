@@ -161,6 +161,13 @@ a {
    margin-bottom: 20px;
  }
 
+#tutorial-output iframe {
+  margin: 23px 0 0 21px;
+  width: 565px;
+  height: 312px;
+  border: 0;
+}
+
  .instructions {
    padding: 30px 0;
    overflow: hidden;
@@ -232,7 +239,7 @@ a {
     outline: 0;
 }
 
-#tabs #current a {
+#tabs .current a {
     background: #B13127;
     text-shadow: none;
     color: #fff;
@@ -247,4 +254,60 @@ a {
     margin-top: -12px;
     z-index: 2;
     position: relative;
+}
+
+.tab {
+  height: 200px;
+}
+
+.tab .sc-ace-editor {
+  height: 200px;
+  width: 668px;
+  position: absolute;
+}
+
+.tab .jsconsole {
+  font-size: 14px;
+  font-family: monospace;
+  color: #444;
+  margin-top:1em;
+  background:#efefef;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
+.tab .jsconsole ul.history {
+  list-style: none;
+  margin-left: 5px;
+}
+
+.tab .jsconsole ul.history li.error {
+  color: #ef0505;
+  font-family: sans-serif;
+}
+
+.tab .jsconsole ul.history li.success {
+  color: #187718;
+}
+
+.tab .jsconsole textarea {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background-color: #888;
+  font-family: monospace;
+  font-size: 14px;
+  height: 20px;
+}
+
+.tab .jsconsole textarea.multiline {
+  height: 50px;
+}
+
+.tab .jsconsole textarea::-webkit-input-placeholder {
+  color: #eee;
+}
+.tab .jsconsole textarea:-moz-placeholder {
+  color: #eee;
 }

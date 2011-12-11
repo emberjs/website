@@ -1,5 +1,12 @@
 window.Tutorial = SC.Application.create({
-  rootElement: '#content'
+  rootElement: '#content',
+
+  ready: function(){
+    this._super();
+    SC.run.schedule('render', function(){
+      Tutorial.tutorialController.resetIframe();
+    });
+  }
 });
 
 /**** MODELS ****/
@@ -103,7 +110,6 @@ Tutorial.tutorialController = SC.Object.create({
   }.property('currentIndex').cacheable(),
 
   gotoNextStep: function() {
-    console.log('gotoNextStep');
     if (this.get('hasNextStep')) {
       var currentStep = this.get('currentStep');
 
@@ -348,7 +354,6 @@ Tutorial.InstructionsView = SC.View.extend({
   scrollLeft: 0,
 
   scrollLeftDidChange: function(){
-    console.log('scrollLeftDidChange', this.get('scrollLeft'));
     this.$().scrollLeft(this.get('scrollLeft'));
   }.observes('scrollLeft')
 });
@@ -373,7 +378,7 @@ Tutorial.StepView = SC.View.extend({
 
 // The main purpose of this is styling
 Tutorial.TabView = SC.Button.extend({
-  classNameBindings: ['active'],
+  classNameBindings: ['current'],
 
   tagName: 'li',
   template: SC.Handlebars.compile("<a href='#' onclick='return false;'>{{title}}</a>"),
@@ -385,7 +390,7 @@ Tutorial.TabView = SC.Button.extend({
 
   action: 'changeTabTo',
 
-  active: function() {
+  current: function() {
     return this.get('tabName') === this.getPath('targetObject.currentTab');
   }.property('tabName', 'targetObject.currentTab').cacheable()
 });

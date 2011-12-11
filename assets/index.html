@@ -47,7 +47,7 @@
 
 <div id="content">
   <script type="text/x-handlebars">
-    <div id="tutorial-output">output</div>
+    <div id="tutorial-output"></div>
     {{#view Tutorial.InstructionsView scrollLeftBinding="Tutorial.tutorialController.scrollPosition"}}
       {{#view Tutorial.StepsContainerView widthBinding="Tutorial.tutorialController.containerWidth"}}
         {{#each Tutorial.tutorialController.steps}}
@@ -80,15 +80,41 @@
 
     <div id="tabsView">
       <ul id="tabs">
-          <li id="current"><a href="#" title="JavaScript">JavaScript</a></li>
-          <li><a href="#" title="Template">Template</a></li>
-          <li><a href="#" title="Console">Console</a></li>
+        {{view Tutorial.TabView title="JavaScript"
+            controller="Tutorial.editorTabController"
+            tabName="javascript"}}
+        {{view Tutorial.TabView title="Template"
+            controller="Tutorial.editorTabController"
+            tabName="template"}}
+        {{view Tutorial.TabView title="Console"
+            controller="Tutorial.editorTabController"
+            tabName="console"}}
       </ul>
       <div id="editorHead">&nbsp;</div>
       <div class="section">
-          <div id="tab1">javascript tab content</div>
-          <div id="tab2">template tab content</div>
-          <div id="tab3">console tab content</div>
+        {{#view SC.TabPaneView classNames="tab"
+            controller="Tutorial.editorTabController"
+            tabName="javascript"}}
+          {{view Tutorial.AceEditorView language="javascript"
+              valueBinding="Tutorial.tutorialController.javascript"}}
+        {{/view}}
+        {{#view SC.TabPaneView classNames="tab"
+            controller="Tutorial.editorTabController"
+            tabName="template"}}
+          {{view Tutorial.AceEditorView language="html"
+              valueBinding="Tutorial.tutorialController.template"}}
+        {{/view}}
+        {{#view SC.TabPaneView classNames="tab"
+            controller="Tutorial.editorTabController"
+            tabName="console"}}
+          <div class="jsconsole">
+            {{view SC.ConsoleHistoryView
+                controller="Tutorial.consoleController"}}
+            {{view SC.ConsoleInputView
+                controller="Tutorial.consoleController"
+                placeholder="Type a command"}}
+          </div>
+        {{/view}}
       </div>
     </div>
   </script>
