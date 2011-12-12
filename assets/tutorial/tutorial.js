@@ -199,7 +199,7 @@ Tutorial.tutorialController = SC.Object.create({
           var beforeLen = matchIdx+afterCode.length;
           code = current.slice(0, beforeLen)+"\n"+code+"\n"+current.slice(beforeLen);
         } else {
-          alert("Unabled to do this step for you. Sorry!");
+          alert("Unable to do this step for you. Sorry!");
           return false;
         }
       } else {
