@@ -53,13 +53,25 @@ child views. If you create an instance of `Ember.ContainerView`, the `childViews
 are rendered to the page, and views that you remove are removed from the DOM.
 
 <pre class="brush: js;">
-var container = Ember.View.create();
+var container = Ember.ContainerView.create();
 container.append();
 
 var coolView = App.CoolView.create(),
     childViews = container.get('childViews');
 
 childViews.pushObject(coolView);
+</pre>
+
+As a shorthand, you can specify the child views as properties and the child views as a list of keys. When the
+container view is created, these views will be instantiated and added to the child views array:
+
+<pre class="brush: js;">
+var container = Ember.ContainerView.create({
+  childViews: ['firstView', 'secondView'],
+  
+  firstView: App.FirstView,
+  secondView: App.SecondView
+});
 </pre>
 
 ### Render Pipeline
@@ -80,3 +92,60 @@ App.CoolView = Ember.View.create({
 
 This makes it easy to support template engines other than Handlebars; though do note that if you override rendering,
 values will not update automatically. Any updates will be your responsibility.
+
+### Customizing the HTML Element
+
+A view is represented by a single DOM element on the page. You can change what kind of element is created by
+changing the `tagName` property.
+
+<pre class="brush: js;">
+App.MyView = Ember.View.extend({
+  tagName: 'span'
+});
+</pre>
+
+You can also specify which class names are applied to the view by setting its `classNames` property to an array of strings:
+
+<pre class="brush: js;">
+App.MyView = Ember.View.extend({
+  classNames: ['my-view']
+});
+</pre>
+
+If you want class names to be determined by the state of properties on the view, you can use class name bindings. If you bind to
+a Boolean property, the class name will be added or removed depending on the value:
+
+<pre class="brush: js;">
+App.MyView = Ember.View.extend({
+  classNameBindings: ['isUrgent'],
+  isUrgent: true
+});
+</pre>
+
+This would render a view like this:
+
+<pre class="brush: xml;">
+&lt;div class="sc-view is-urgent">
+</pre>
+
+If priority is changed to false, then the `priority` class name will be removed.
+
+By default, the name of the Boolean property is dasherized. You can customize the class name
+applied by delimiting it with a colon:
+
+<pre class="brush: js;">
+App.MyView = Ember.View.extend({
+  classNameBindings: ['isUrgent:urgent'],
+  isUrgent: true
+});
+</pre>
+
+This would render this HTML:
+
+<pre class="brush: xml;">
+&lt;div class="sc-view urgent">
+</pre>
+
+If the bound value is a string, that value will be added as a class name without
+modification.
+
