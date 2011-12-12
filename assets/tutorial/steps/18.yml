@@ -2,10 +2,10 @@ body: >
   <h3>Clearing Completed Todos</h3>
 
   <p>As we populate our list with todos, we may want to periodically clear out those we’ve completed. As you have
-  learned, we will want to make that change to the todosController, and let Ember automatically propagate those
-  changes to the DOM.</p>
+  learned, we will want to make that change to the <code>todosController</code>
+  and let Ember automatically propagate those changes to the DOM.</p>
 
-  <p>Let’s add a new clearCompletedTodos method to the controller.</p>
+  <p>Let’s add a new <code>clearCompletedTodos</code> method to the controller.</p>
 
 codeTarget: 'javascript'
 

@@ -1,8 +1,8 @@
 body: >
   <h3>Clearing Completed Todos (cont)</h3>
 
-  <p>Next, let's add a button to our template. Open <code>index.html</code>
-  and add a button inside the HTML for <code>StatsView</code> as shown here:</p>
+  <p>Next, let's add a button to our template inside the
+  <code>StatsView</code>:</p>
 
 codeTarget: 'template'
 

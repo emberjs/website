@@ -5,15 +5,15 @@ body: >
   called with the property key as the first parameter and the new value as the
   second. To determine if Ember is asking for the value or trying to set
   it, we examine the <code>value</code> parameter. If it is defined, we iterate
-  through each <code>Todo</code> and set its <code>isDone</code> property to
-  the new value.</p>
+  through the <code>Todo</code>s and set each one's <code>isDone</code> property
+  to the new value.</p>
 
   <p>Because bindings are bi-directional, Ember will set
   <code>allAreDone</code> to <code>true</code> when the user clicks the
   "Mark All as Done" checkbox. Conversely, unchecking it will make Ember
   set <code>allAreDone</code> to <code>false</code>, unchecking all todos.</p>
 
-  <p>Reload the app and add some todos. Click "Mark All as Done". Wow! Each of
+  <p>Add some todos and click "Mark All as Done". Wow! Each of
   the individual check boxes gets checked off. If you uncheck one of them, the
   "Mark All as Done" checkbox un-checks itself.</p>
 

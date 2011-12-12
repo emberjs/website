@@ -12,8 +12,7 @@ body: >
   the process of being clicked. This allows us to display a visual cue to the
   user that they have hit the right target.</p>
 
-  <p>Go back to your browser and try it out. Add some todos, then mark them
-  done and clear them. Because we previously bound the visual list to the
-  <code>todosController</code>, making a change through new means has the
-  expected effect.</p>
+  <p>Try it out: add some todos, then mark them done and clear them. Because we
+  previously bound the visual list to the <code>todosController</code>, making
+  a change through the action has the expected effect.</p>
 
