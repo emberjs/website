@@ -49,13 +49,31 @@ To tell the view which template to use, set its `templateName` property. For exa
 I would set the `templateName` property to `"say-hello"`.
 
 <pre class="brush: js;">
-var view = Em.TemplateView.create({
+var view = Ember.View.create({
   templateName: 'say-hello',
   name: "Bob"
 });
 </pre>
 
-NOTE: For the remainder of the guide, the `templateName` property will be omitted from most examples. You can assume that if we show a code sample that includes an Ember.View and a Handlebars template, the view has been configured to display that template via the `templateName` property.
+Note: For the remainder of the guide, the `templateName` property will be omitted from most examples. You can assume that if we show a code sample that includes an Ember.View and a Handlebars template, the view has been configured to display that template via the `templateName` property.
+
+You can append views to the document by calling `appendTo`:
+
+<pre class="brush: js;">
+  view.appendTo('#container');
+</pre>
+
+As a shorthand, you can append a view to the document body by calling `append`:
+
+<pre class="brush: js;">
+  view.append();
+</pre>
+
+To remove a view from the document, call `remove`:
+
+<pre class="brush: js;">
+  view.remove();
+</pre>
 
 ### Handlebars Basics
 
@@ -65,7 +83,7 @@ As you've already seen, you can print the value of a property by enclosing it in
 My new car is {{color}}.
 </pre>
 
-This will look up and print the TemplateView's `color` property. For example, if your view looks like this:
+This will look up and print the View's `color` property. For example, if your view looks like this:
 
 <pre class="brush: js;">
 App.CarView = Ember.View.extend({
@@ -79,19 +97,28 @@ Your view would appear in the browser like this:
 My new car is blue.
 </pre>
 
+You can also specify global paths:
+
+<pre class="brush: xml;">
+My new car is {{App.carController.color}}.
+</pre>
+
+(Ember determines whether a path is global or relative to the view by checking whether the first letter is capitalized,
+which is why your `Ember.Application` instance should start with a capital letter.)
+
 All of the features described in this guide are __bindings aware__. That means that if the values used by your templates ever change, your HTML will be updated automatically. It's like magic.
 
 In order to know which part of your HTML to update when an underlying property changes, Handlebars will insert marker elements with a unique ID. If you look at your application while it's running, you might notice these extra elements:
 
 <pre class="brush: xml;">
-My new car is <span id="sc232">blue</span>.
+My new car is &lt;script id="metamorph-0-start" type="text/x-placeholder"></script>blue&lt;script id="metamorph-0-end" type="text/x-placeholder"></script></span>.
 </pre>
 
 Because all Handlebars expressions are wrapped in these markers, make sure each HTML tag stays inside the same block. For example, you shouldn't do this:
 
 <pre class="brush: xml;">
 <!-- Don't do it! -->
-<div {{#if isUrgent}}class="urgent"{{/if}}>
+&lt;div {{#if isUrgent}}class="urgent"{{/if}}>
 </pre>
 
 If you want to avoid your property output getting wrapped in these markers, use the `unbound` helper:
@@ -130,7 +157,7 @@ can use the `{{#if}}` helper to conditionally render a block:
 {{/if}}
 </pre>
 
-NOTE: Handlebars will not render the block if the argument passed evaluates to
+Handlebars will not render the block if the argument passed evaluates to
 `false`, `undefined`, `null` or `[]` (i.e., any "falsy" value).
 
 If the expression evaluates to falsy, we can also display an alternate template
@@ -160,7 +187,7 @@ and require a closing expression.
 ### {{#with}}
 
 Sometimes you may want to invoke a section of your template with a context
-different than the Em.View. For example, we can clean up the above template by
+different than the Ember.View. For example, we can clean up the above template by
 using the `{{#with}}` helper:
 
 <pre class="brush: xml;">
@@ -169,9 +196,9 @@ using the `{{#with}}` helper:
 {{/with}}
 </pre>
 
-NOTE: {{#with}} changes the _context_ of the block you pass to it. The context
+`{{#with}}` changes the _context_ of the block you pass to it. The context
 is the object on which properties are looked up. By default, the context is the
-Em.View to which the template belongs.
+Ember.View to which the template belongs.
 
 ### Binding Element Attributes with {{bindAttr}}
 
@@ -188,7 +215,7 @@ The best way to display the URL as an image in Handlebars is like this:
 
 <pre class="brush: xml;">
 <div id="logo">
-  <img {{bindAttr src="logoUrl"}} alt="Logo">
+  &lt;img {{bindAttr src="logoUrl"}} alt="Logo">
 </div>
 </pre>
 
@@ -196,7 +223,7 @@ This generates the following HTML:
 
 <pre class="brush: xml;">
 <div id="logo">
-  <img src="http://www.mycorp.com/images/logo.png" alt="Logo">
+  &lt;img src="http://www.mycorp.com/images/logo.png" alt="Logo">
 </div>
 </pre>
 
@@ -211,13 +238,13 @@ App.InputView = Ember.View.extend({
 And this template:
 
 <pre class="brush: xml;">
-<input type="checkbox" {{bindAttr checked="isSelected"}}>
+&lt;input type="checkbox" {{bindAttr checked="isSelected"}}>
 </pre>
 
 Handlebars will produce the following HTML element:
 
 <pre class="brush: xml;">
-<input type="checkbox" checked>
+&lt;input type="checkbox" checked>
 </pre>
 
 ### Binding Class Names with {{bindAttr}}
@@ -267,11 +294,11 @@ Unlike other attributes, you can also bind multiple classes:
 </div>
 </pre>
 
-#### Building a View Hierarchy
+### Building a View Hierarchy
 
 So far, we've discussed writing templates for a single view. However, as your application grows, you will often want to create a hierarchy of views to encapsulate different areas on the page. Each view is responsible for handling events and maintaining the properties needed to display it.
 
-#### {{view}}
+### {{view}}
 
 To add a child view to a parent, use the `{{view}}` helper, which takes a path to a view class.
 
@@ -343,10 +370,9 @@ User: {{firstName}} {{lastName}}
 {{view InfoView}}
 </pre>
 
-#### Setting Child View Templates
+### Setting Child View Templates
 
-If you'd like to specify the template your child views use (instead of having
-to place them in a separate Handlebars file), you can use the block form of the
+If you'd like to specify the template your child views use inline, you can use the block form of the
 `{{view}}` helper. We might rewrite the above example like this:
 
 <pre class="brush: js;">
@@ -376,7 +402,7 @@ When you do this, it may be helpful to think of it as assigning views to
 portions of the page. This allows you to encapsulate event handling for just
 that part of the page.
 
-#### Setting Up Bindings
+### Setting Up Bindings
 
 So far in our examples, we have been setting static values directly on the
 views. But to best implement an MVC architecture, we should actually be binding
@@ -426,7 +452,7 @@ NOTE: You can actually pass __any__ property as a parameter to {{view}}, not
 just bindings. However, if you are doing anything other than setting up
 bindings, it is generally a good idea to create a new subclass.
 
-#### Modifying a View's HTML
+### Modifying a View's HTML
 
 When you append a view, it creates a new HTML element that holds its content.
 If your view has any child views, they will also be displayed as child nodes
@@ -447,7 +473,7 @@ You can also assign an ID attribute to the view's HTML element by passing an `id
 
 This makes it easy to style using CSS ID selectors:
 
-</pre>css
+<pre class="brush: css;">
 /** Give the view a red background. **/
 #info-view {
   background-color: red;
@@ -507,56 +533,16 @@ This will print a list like this:
 </ul>
 </pre>
 
-#### Ember.CollectionView
-
-Sometimes you will need each item in your list to handle events. In that case, you will need more sophistication than what `{{#each}}` can provide. You can use the `{{#collection}}` helper to create a new `Ember.CollectionView`. You can bind the instance of `Ember.CollectionView` to an array, and it will create a new `Ember.View` for each item.
-
-Usually, you will bind the collection to an `Ember.ArrayController`, like this:
-
-<pre class="brush: js;">
-App.peopleController = Ember.ArrayProxy.create({
-  content: ['Steph', 'Tom', 'Ryan', 'Chris', 'Jill']
-});
-</pre>
+If you want to create a view for every item in a list, you can bind a property of the view to
+the current context. For example, this example creates a view for every item in a list and sets
+the `content` property to that item:
 
 <pre class="brush: xml;">
-{{#collection contentBinding="App.peopleController"}}
-  Hi, {{content}}!
-{{/collection}}
-</pre>
-
-NOTE: The template you pass to the block helper will look up properties relative to each child view. To access the item in the array that the view should represent, refer to the `content` property via {{content}}.
-
-Remember that under the hood, `Ember.CollectionView` creates a new view for each item in the bound array. By default, each new view will be an instance of `Ember.View`. You can tell the collection which type of view to create instances of by subclassing `Ember.CollectionView` and supplying a custom class:
-
-<pre class="brush: js;">
-App.PeopleCollectionView = Ember.CollectionView.extend({
-  itemViewClass: Ember.View.extend({
-    mouseDown: function(evt) {
-      window.alert('You clicked on ' + this.get('content'));
-    }
-  })
-});
-</pre>
-
-<pre class="brush: xml;">
-{{#collection App.PeopleCollectionView contentBinding="App.peopleController"}}
-  Hi, {{content}}!
-{{/collection}}
-</pre>
-
-If you run this code, you should see an alert every time you click on one of the items.
-
-The `{{#collection}}` helper takes the same options as `{{#view}}`, as described above. For example, you can set an HTML `id` attribute on the container of `Ember.CollectionView` like this:
-
-<pre class="brush: xml;">
-{{collection App.MyCollectionView id="my-collection"}}
-</pre>
-
-What if you want to set the class name of every child view, though? If you prepend an option with `item`, that option will instead be set on the child. For example, let's say you wanted to set a class name on each item in your collection:
-
-<pre class="brush: xml;">
-{{collection App.MyCollectionView itemClass="collection-item"}}
+{{#each App.peopleController}}
+  {{#view App.PersonView contentBinding="this"}}
+    {{content.firstName}} {{content.lastName}}
+  {{/view}}
+{{/each}}
 </pre>
 
 ### Writing Custom Helpers
