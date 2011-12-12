@@ -29,6 +29,17 @@ SC.TabPaneView = SC.View.extend({
 
 /*********** ACE ***********/
 
+// Fix for multiple editors
+// https://github.com/ajaxorg/ace/pull/525
+require("ace/renderloop").RenderLoop.prototype.setTimeoutZero = (
+  window.requestAnimationFrame ||
+  window.webkitRequestAnimationFrame ||
+  window.mozRequestAnimationFrame ||
+  window.oRequestAnimationFrame ||
+  window.msRequestAnimationFrame ||
+  window.setTimeout
+).bind(window);
+
 SC.AceEditorView = SC.View.extend({
   classNames: ['sc-ace-editor'],
 
