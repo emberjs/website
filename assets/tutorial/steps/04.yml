@@ -4,7 +4,7 @@ body: >
   <p>Now that we know what our data looks like, let’s create a controller to manage it. Since we want to maintain an
   ordered list of todos, we’ll use an instance of <code>SC.ArrayProxy</code>.</p>
 
-  <p>In MVC frameworks, like SproutCore, the controller layer bridges the model layer, which is only concerned with a
+  <p>In MVC frameworks like Ember, the controller layer bridges the model layer, which is only concerned with a
   pure-data representation of objects, and the view layer, which is only concerned with representing those objects.</p>
 
 codeTarget: 'javascript'

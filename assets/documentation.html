@@ -139,7 +139,7 @@
  });
 
  MyApp.country = SC.Object.create({
-   // Ending a property with 'Binding' tells SproutCore to
+   // Ending a property with 'Binding' tells Ember to
    // create a binding to the presidentName property.
    presidentNameBinding: 'MyApp.president.name'
  });
@@ -184,7 +184,7 @@
    fullName: function() {
      return this.get('firstName') + ' ' + this.get('lastName');
 
-     // Tell SproutCore that this computed property depends on firstName
+     // Tell Ember that this computed property depends on firstName
      // and lastName
    }.property('firstName', 'lastName')
  });
@@ -573,9 +573,9 @@
 
  <h3>Handlebars</h3>
 
- <p>SproutCore comes bundled with <a href="http://www.handlebarsjs.com">Handlebars</a>, a semantic templating language. These templates look like regular HTML, with embedded expressions.</p>
+ <p>Ember comes bundled with <a href="http://www.handlebarsjs.com">Handlebars</a>, a semantic templating language. These templates look like regular HTML, with embedded expressions.</p>
 
- <p>You should store your Handlebars templates inside your application&rsquo;s HTML file. At runtime, SproutCore will compile these templates so they are available for you to use in your views.</p>
+ <p>You should store your Handlebars templates inside your application&rsquo;s HTML file. At runtime, Ember will compile these templates so they are available for you to use in your views.</p>
 
  <p>To immediately insert a template into your document, place it inside a <code>&lt;script&gt;</code> tag within your <code>&lt;body&gt;</code> tag:</p>
 

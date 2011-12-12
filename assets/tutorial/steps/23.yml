@@ -1,7 +1,7 @@
 body: >
   <h3>Marking All as Done (cont)</h3>
 
-  <p>SproutCore has many enumerable helpers.
+  <p>Ember has many enumerable helpers.
   <code>everyProperty('isDone', true)</code> returns <code>true</code> if every
   item in the array has an <code>isDone</code> property that evaluates to
   <code>true</code>. You can find out more in the

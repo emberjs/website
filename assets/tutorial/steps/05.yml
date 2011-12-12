@@ -4,7 +4,7 @@ body: >
   <p>Now we have an array controller with no content. Let’s add a method to create a new todo. The following code
   replaces the code we added in our last step.</p>
 
-  <p>NOTE: SC.ArrayProxy acts as a proxy onto its content Array. SproutCore will propagate any modifications made to
+  <p>NOTE: SC.ArrayProxy acts as a proxy onto its content Array. Ember will propagate any modifications made to
   the ArrayProxy to the content Array.</p>
 
 codeTarget: 'javascript'

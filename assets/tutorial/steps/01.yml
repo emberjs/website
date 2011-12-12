@@ -1,7 +1,7 @@
 body: >
   <h3>Core Concepts</h3>
 
-  <p><strong>Here are the two key features that make SproutCore so powerful:</strong></p>
+  <p><strong>Here are the two key features that make Ember so powerful:</strong></p>
 
   <p><strong>Bindings:</strong> Bindings create a bidirectional link between two properties. If the property of one
   object changes, the property on the other object updates automatically.</p>

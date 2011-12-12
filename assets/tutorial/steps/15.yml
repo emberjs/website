@@ -8,7 +8,7 @@ body: >
   this case, we want to update the remaining property any time isDone changes on a Todo. We'll also be notified when an
   item is added to or removed from the array.</p>
 
-  <p>It’s important to declare dependent keys because SproutCore uses this information to know when to update bindings.
+  <p>It’s important to declare dependent keys because Ember uses this information to know when to update bindings.
   In our case, our StatsView updates any time todosController’s remaining property changes.</p>
 
   <p>We'll add the following to our todosController after the <code>content: []</code> line.</p>

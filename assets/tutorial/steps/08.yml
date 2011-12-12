@@ -1,7 +1,7 @@
 body: >
   <h3>Creating New Todos with a Text Field (cont)</h3>
 
-  <p>Now it’s time to tell SproutCore how to handle events for your &lt;input&gt; tag. When the user types in the field and
+  <p>Now it’s time to tell Ember how to handle events for your &lt;input&gt; tag. When the user types in the field and
   presses the return key, we will create a new Todo and have it inserted into the content of the array controller.</p>
 
   <p>Since CreateTodoView will handle events for a text field, we create a subclass of SC.TextField, which provides

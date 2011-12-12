@@ -4,7 +4,7 @@ body: >
   <p>The following code creates a namespace for your application (called Todos), which is also an instance of
   SC.Application.</p>
 
-  <p>It is important that every SproutCore app creates an instance of SC.Application, because it is responsible for
+  <p>It is important that every Ember app creates an instance of SC.Application, because it is responsible for
   routing browser events to your views.</p>
 
 codeTarget: 'javascript'
