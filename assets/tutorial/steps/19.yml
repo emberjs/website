@@ -16,8 +16,8 @@ code: |
     {{remainingString}} remaining.
   {{/view}}
 
-codeBefore: "\n\n"
-
-afterCode: |
-  </ul>
+replacesCode: |
+  {{#view Todos.StatsView id="stats"}}
+    {{remainingString}} remaining
+  {{/view}}
 
