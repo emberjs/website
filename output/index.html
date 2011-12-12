@@ -78,6 +78,20 @@
       {{/view}}
     {{/view}}
 
+    {{#if Tutorial.tutorialController.currentStep.errors.length}}
+      <div class="alert-message error">
+        <ul>
+        {{#each Tutorial.tutorialController.currentStep.errors}}
+          <li>{{this}}</li>
+        {{/each}}
+        </ul>
+        {{#view SC.Button classNames="btn small"
+            target="Tutorial.tutorialController" action="resetStep"}}
+          Reset Step
+        {{/view}}
+      </div>
+    {{/if}}
+
     <div id="tabsView">
       <ul id="tabs">
         {{view Tutorial.TabView title="JavaScript"
