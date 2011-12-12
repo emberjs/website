@@ -1,6 +1,8 @@
 require 'yaml'
 require 'json'
+require 'erb'
 require 'rake-pipeline-web-filters/ordering_concat_filter'
+require 'rake-pipeline-web-filters/markdown_compiler'
 
 WebFilters = Rake::Pipeline::Web::Filters
 
@@ -23,6 +25,35 @@ class StepFilter < Rake::Pipeline::Filter
   end
 end
 
+class HTMLWrapperFilter < Rake::Pipeline::Filter
+  def initialize(options={})
+    @options = options
+    super()
+  end
+
+  def generate_output(inputs, output)
+    template = @template || create_template
+    inputs.each do |input|
+      output.write render_template {
+        input.read
+      }
+
+      puts render_template {
+        input.read
+      }
+    end
+  end
+
+  def create_template
+    template = File.read(@options[:template])
+    @template = ERB.new(template)
+  end
+
+  def render_template
+    @template.result(binding)
+  end
+end
+
 match "tutorial/steps/*.yml" do
   filter StepFilter do |path|
     path.sub(/\.yml$/, '.js')
@@ -31,6 +62,14 @@ end
 
 match "tutorial/**/*.js" do
   filter WebFilters::OrderingConcatFilter, ['tutorial/tutorial.js'], 'tutorial.js'
+end
+
+match "docs/**/*.md" do
+  filter WebFilters::MarkdownCompiler
+  filter HTMLWrapperFilter, :template => 'assets/docs/_section.erb'
+  filter Rake::Pipeline::ConcatFilter, "documention.html"
+  filter HTMLWrapperFilter, :template => 'assets/docs/_documentation.erb'
+  filter Rake::Pipeline::ConcatFilter, "documentation/index.html"
 end
 
 filter Rake::Pipeline::ConcatFilter
