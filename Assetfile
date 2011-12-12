@@ -61,9 +61,12 @@ match "tutorial/**/*.js" do
 end
 
 match "docs/**/*.md" do
+  sections = ['introduction.html', 'object_model.html']
+
   filter WebFilters::MarkdownCompiler
   filter HTMLWrapperFilter, :template => 'assets/docs/_section.erb'
-  filter Rake::Pipeline::ConcatFilter, "documention.html"
+
+  filter WebFilters::OrderingConcatFilter, sections, "documention.html"
   filter HTMLWrapperFilter, :template => 'assets/docs/_documentation.erb'
   filter Rake::Pipeline::ConcatFilter, "documentation/index.html"
 end
