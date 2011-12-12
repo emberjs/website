@@ -116,27 +116,33 @@ Tutorial.tutorialController = SC.Object.create({
 
   gotoNextStep: function() {
     if (this.get('hasNextStep')) {
-      var currentStep = this.get('currentStep');
+      var currentStep = this.get('currentStep'),
+          self = this;
 
-      this.evalCode();
+      this.evalCode({
+        success: function(){
+          if (currentStep.get('codeTarget') === 'console') {
+            Tutorial.consoleController.runCommand();
+          }
 
-      if (currentStep.get('codeTarget') === 'console') {
-        Tutorial.consoleController.runCommand();
-      }
+          var iframe = self.get('iframe'),
+              context = iframe ? iframe.contentWindow : null;
 
-      var iframe = this.get('iframe'),
-          context = iframe ? iframe.contentWindow : null;
-
-      if (currentStep.validate(context)) {
-        this.incrementProperty('currentIndex');
-        var nextStep = this.get('currentStep');
-        nextStep.beginPropertyChanges();
-        nextStep.set('startingJavascript', this.get('javascript'));
-        nextStep.set('startingTemplate', this.get('template'));
-        nextStep.set('startingConsoleHistory', SC.copy(this.get('consoleHistory')));
-        nextStep.set('errors', []);
-        nextStep.endPropertyChanges();
-      }
+          if (currentStep.validate(context)) {
+            self.incrementProperty('currentIndex');
+            var nextStep = self.get('currentStep');
+            nextStep.beginPropertyChanges();
+            nextStep.set('startingJavascript', self.get('javascript'));
+            nextStep.set('startingTemplate', self.get('template'));
+            nextStep.set('startingConsoleHistory', SC.copy(self.get('consoleHistory')));
+            nextStep.set('errors', []);
+            nextStep.endPropertyChanges();
+          }
+        },
+        error: function(){
+          currentStep.addError("Unable to run code.");
+        }
+      });
     }
   },
 
@@ -152,7 +158,7 @@ Tutorial.tutorialController = SC.Object.create({
       this.set('consoleHistory', SC.copy(previousStep.get('startingConsoleHistory')));
       this.endPropertyChanges();
 
-      this.evalCode(true);
+      this.evalCode({ reset: true });
     }
   },
 
@@ -166,7 +172,7 @@ Tutorial.tutorialController = SC.Object.create({
       currentStep.set('errors', []);
       this.endPropertyChanges();
 
-      this.evalCode(true);
+      this.evalCode({ reset: true });
     }
   },
 
@@ -258,8 +264,11 @@ Tutorial.tutorialController = SC.Object.create({
     return iframe;
   },
 
-  evalCode: function(iframeNeedsReset) {
-    var iframe = this.get('iframe');
+  evalCode: function(options) {
+    options = options || {};
+
+    var iframe = this.get('iframe'),
+        iframeNeedsReset = options.reset;
     if (!iframe) { iframeNeedsReset = true; }
 
     // Prep Javascript
@@ -280,56 +289,76 @@ Tutorial.tutorialController = SC.Object.create({
     // Reset if needed
     if (iframeNeedsReset) { iframe = this.resetIframe(); }
 
-    var context = iframe.contentWindow;
+    var context = iframe.contentWindow,
+        timeout = 0,
+        self = this;
 
-    // Run Javascript
-    if (javascriptForEval) {
-      try {
-        context.eval(javascriptForEval);
-      } catch (e) {
-        console.error(e);
+    var run = function() {
+      // Upon resetting the iFrame, SC isn't always immediately accessible
+      if (!context.SC) {
+        if (timeout >= 1000) {
+          if (options.error) { options.error("Timed out."); }
+          return;
+        }
+        setTimeout(run, 100);
+        timeout += 100;
         return;
       }
-    }
 
-    if (context.Todos) {
-      // Hack since this doesn't get called correctly
-      if (!context.Todos.isReady) {
-        context.Todos.ready();
-        context.Todos.isReady = true;
-      }
-
-      // Run Template
-      var template = this.get('template');
-      if (context.Todos.rootView) {
-        context.SC.run(function() {
-          context.Todos.rootView.set('template', template ? context.SC.Handlebars.compile(template) : null);
-          context.Todos.rootView.rerender();
-        });
-      } else if (template) {
-        context.SC.run(function() {
-          context.Todos.rootView = context.SC.View.create({
-            template: context.SC.Handlebars.compile(template)
-          });
-          context.Todos.rootView.appendTo(context.document.body);
-        });
-      }
-    }
-
-    // Playback previous console if needed
-    var consoleHistory = this.get('consoleHistory');
-    if (consoleHistory && iframeNeedsReset) {
-      consoleHistory.forEach(function(item) {
-        var success = item.results && item.results.some(function(r){ return r.type === 'success'; });
-        if (success) {
-          try {
-            context.eval(item.command);
-          } catch(error) {
-            console.warn("Unable to play back command:", item.command, error);
+      // Run Javascript
+      if (javascriptForEval) {
+        try {
+          context.eval(javascriptForEval);
+        } catch (e) {
+          if (options.error) {
+            options.error(e);
           }
+          return;
         }
-      });
-    }
+      }
+
+      if (context.Todos) {
+        // Hack since this doesn't get called correctly
+        if (!context.Todos.isReady) {
+          context.Todos.ready();
+          context.Todos.isReady = true;
+        }
+
+        // Run Template
+        var template = self.get('template');
+        if (context.Todos.rootView) {
+          context.SC.run(function() {
+            context.Todos.rootView.set('template', template ? context.SC.Handlebars.compile(template) : null);
+            context.Todos.rootView.rerender();
+          });
+        } else if (template) {
+          context.SC.run(function() {
+            context.Todos.rootView = context.SC.View.create({
+              template: context.SC.Handlebars.compile(template)
+            });
+            context.Todos.rootView.appendTo(context.document.body);
+          });
+        }
+      }
+
+      // Playback previous console if needed
+      var consoleHistory = self.get('consoleHistory');
+      if (consoleHistory && iframeNeedsReset) {
+        consoleHistory.forEach(function(item) {
+          var success = item.results && item.results.some(function(r){ return r.type === 'success'; });
+          if (success) {
+            try {
+              context.eval(item.command);
+            } catch(error) {
+              console.warn("Unable to play back command:", item.command, error);
+            }
+          }
+        });
+      }
+
+      if (options.success) { options.success(); }
+    };
+    run();
   }
 
 });
