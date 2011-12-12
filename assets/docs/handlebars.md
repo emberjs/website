@@ -1,8 +1,8 @@
 ## Describing Your UI with Handlebars
 
-Unlike other frameworks that require you to have separate code paths for first generating your user interface and then updating it when parts change, Amber.js augments the Handlebars templating library to perform all of these updates for you.
+Unlike other frameworks that require you to have separate code paths for first generating your user interface and then updating it when parts change, Ember.js augments the Handlebars templating library to perform all of these updates for you.
 
-With Amber, you describe your interface using a template. The framework takes care of ensuring that the template is converted to HTML and placed in the DOM. And, because the templates are bindings-aware, if any of the data underlying your template changes, your template will re-render just the changed portion and update the DOM automatically, without you having to write a single line of code.
+With Ember, you describe your interface using a template. The framework takes care of ensuring that the template is converted to HTML and placed in the DOM. And, because the templates are bindings-aware, if any of the data underlying your template changes, your template will re-render just the changed portion and update the DOM automatically, without you having to write a single line of code.
 
 ### Handlebars
 
@@ -34,9 +34,9 @@ To make a template available to be used later, give the `<script>` tag a name at
 </html>
 </pre>
 
-### Am.View
+### Ember.View
 
-You can use Am.View to render a Handlebars template and insert it into the DOM.
+You can use Ember.View to render a Handlebars template and insert it into the DOM.
 
 To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:
 
@@ -53,13 +53,13 @@ To tell the view which template to use, set its `templateName` property. For exa
 I would set the `templateName` property to `"say-hello"`.
 
 <pre class="brush: xml;">
-var view = Am.TemplateView.create({
+var view = Ember.TemplateView.create({
   templateName: 'say-hello',
   name: "Bob"
 });
 </pre>
 
-NOTE: For the remainder of the guide, the `templateName` property will be omitted from most examples. You can assume that if we show a code sample that includes an Am.View and a Handlebars template, the view has been configured to display that template via the `templateName` property.
+NOTE: For the remainder of the guide, the `templateName` property will be omitted from most examples. You can assume that if we show a code sample that includes an Ember.View and a Handlebars template, the view has been configured to display that template via the `templateName` property.
 
 ### Handlebars Basics
 
@@ -72,7 +72,7 @@ My new car is {{color}}.
 This will look up and print the TemplateView's `color` property. For example, if your view looks like this:
 
 <pre class="brush: js;">
-App.CarView = Am.View.extend({
+App.CarView = Ember.View.extend({
   color: 'blue'
 `});
 </pre>
@@ -117,8 +117,8 @@ exists. For example, let's say we have a view with a `person` property that
 contains an object with `firstName` and `lastName` fields:
 
 <pre class="brush: js;">
-App.SayHelloView = Am.View.extend({
-  person: Am.Object.create({
+App.SayHelloView = Ember.View.extend({
+  person: Ember.Object.create({
     firstName: "Joy",
     lastName: "Clojure"
   })
@@ -183,7 +183,7 @@ In addition to text, you may also want your templates to dictate the attributes
 of your HTML elements. For example, imagine a view that contains a URL:
 
 <pre class="brush: js;">
-App.LogoView = Am.View.extend({
+App.LogoView = Ember.View.extend({
   logoUrl: 'http://www.mycorp.com/images/logo.png'
 });
 </pre>
@@ -207,7 +207,7 @@ This generates the following HTML:
 If you use `{{bindAttr}}` with a Boolean value, it will add or remove the specified attribute. For example, given this Ember view:
 
 <pre class="brush: js;">
-App.InputView = Am.View.extend({
+App.InputView = Ember.View.extend({
   isSelected: true
 });
 </pre>
@@ -229,7 +229,7 @@ Handlebars will produce the following HTML element:
 The `class` attribute can be bound like any other attribute, but it also has some additional special behavior. The default behavior works like you'd expect:
 
 <pre class="brush: js;">
-App.AlertView = Am.View.extend({
+App.AlertView = Ember.View.extend({
   priority: "p4",
   isUrgent: true
 });
@@ -289,7 +289,7 @@ To add a child view to a parent, use the `{{view}}` helper, which takes a path t
 
 <pre class="brush: js;">
 // Define parent view
-App.UserView = Am.View.extend({
+App.UserView = Ember.View.extend({
   templateName: 'user',
 
   firstName: "Albert",
@@ -297,7 +297,7 @@ App.UserView = Am.View.extend({
 });
 
 // Define child view
-App.InfoView = Am.View.extend({
+App.InfoView = Ember.View.extend({
   templateName: 'info',
 
   posts: 25,
@@ -335,13 +335,13 @@ to use relative to the parent view. For example, we could nest the above view
 hierarchy like this:
 
 <pre class="brush: js;">
-App.UserView = Am.View.extend({
+App.UserView = Ember.View.extend({
   templateName: 'user',
 
   firstName: "Albert",
   lastName: "Hofmann",
 
-  InfoView: Am.View.extend({
+  InfoView: Ember.View.extend({
     templateName: 'info',
 
     posts: 25,
@@ -362,14 +362,14 @@ to place them in a separate Handlebars file), you can use the block form of the
 `{{view}}` helper. We might rewrite the above example like this:
 
 <pre class="brush: js;">
-App.UserView = Am.View.extend({
+App.UserView = Ember.View.extend({
   templateName: 'user',
 
   firstName: "Albert",
   lastName: "Hofmann"
 });
 
-App.InfoView = Am.View.extend({
+App.InfoView = Ember.View.extend({
   posts: 25,
   hobbies: "Riding bicycles"
 });
@@ -397,8 +397,8 @@ the properties of our views to the controller layer.
 Let's set up a controller to represent our user data:
 
 <pre class="brush: js;">
-App.userController = Am.Object.create({
-  content: Am.Object.create({
+App.userController = Ember.Object.create({
+  content: Ember.Object.create({
     firstName: "Albert",
     lastName: "Hofmann",
     posts: 25,
@@ -410,7 +410,7 @@ App.userController = Am.Object.create({
 Now let's update `App.UserView` to bind to `App.userController`:
 
 <pre class="brush: js;">
-App.UserView = Am.View.extend({
+App.UserView = Ember.View.extend({
   templateName: 'user',
 
   firstNameBinding: 'App.userController.content.firstName',
@@ -444,7 +444,7 @@ When you append a view, it creates a new HTML element that holds its content.
 If your view has any child views, they will also be displayed as child nodes
 of the parent's HTML element.
 
-By default, new instances of `SC.View` create a `<div>` element. You can
+By default, new instances of `Ember.View` create a `<div>` element. You can
 override this by passing a `tagName` parameter:
 
 <pre class="brush: xml;">
@@ -475,7 +475,7 @@ You can assign class names similarly:
 You can bind class names to a property of the view by using `classBinding` instead of `class`. The same behavior as described in `bindAttr` applies:
 
 <pre class="brush: js;">
-App.AlertView = SC.View.extend({
+App.AlertView = Ember.View.extend({
   priority: "p4",
   isUrgent: true
 });
@@ -496,9 +496,9 @@ This yields a view wrapper that will look something like this:
 If you need to display a basic list of items, use Handlebar's `{{#each}}` helper:
 
 <pre class="brush: js;">
-App.PeopleView = SC.View.extend({
-  people: [ SC.Object.create({ name: 'Steph' }),
-            SC.Object.create({ name: 'Tom' }) ]
+App.PeopleView = Ember.View.extend({
+  people: [ Ember.Object.create({ name: 'Steph' }),
+            Ember.Object.create({ name: 'Tom' }) ]
 });
 </pre>
 
@@ -517,14 +517,14 @@ This will print a list like this:
 </ul>
 </pre>
 
-#### SC.CollectionView
+#### Ember.CollectionView
 
-Sometimes you will need each item in your list to handle events. In that case, you will need more sophistication than what `{{#each}}` can provide. You can use the `{{#collection}}` helper to create a new `SC.CollectionView`. You can bind the instance of `SC.CollectionView` to an array, and it will create a new `SC.View` for each item.
+Sometimes you will need each item in your list to handle events. In that case, you will need more sophistication than what `{{#each}}` can provide. You can use the `{{#collection}}` helper to create a new `Ember.CollectionView`. You can bind the instance of `Ember.CollectionView` to an array, and it will create a new `Ember.View` for each item.
 
-Usually, you will bind the collection to an `SC.ArrayProxy`, like this:
+Usually, you will bind the collection to an `Ember.ArrayProxy`, like this:
 
 <pre class="brush: js;">
-App.peopleController = SC.ArrayProxy.create({
+App.peopleController = Ember.ArrayProxy.create({
   content: ['Steph', 'Tom', 'Ryan', 'Chris', 'Jill']
 });
 </pre>
@@ -537,11 +537,11 @@ App.peopleController = SC.ArrayProxy.create({
 
 NOTE: The template you pass to the block helper will look up properties relative to each child view. To access the item in the array that the view should represent, refer to the `content` property via {{content}}.
 
-Remember that under the hood, `SC.CollectionView` creates a new view for each item in the bound array. By default, each new view will be an instance of `SC.View`. You can tell the collection which type of view to create instances of by subclassing `SC.CollectionView` and supplying a custom class:
+Remember that under the hood, `Ember.CollectionView` creates a new view for each item in the bound array. By default, each new view will be an instance of `Ember.View`. You can tell the collection which type of view to create instances of by subclassing `Ember.CollectionView` and supplying a custom class:
 
 <pre class="brush: js;">
-App.PeopleCollectionView = SC.CollectionView.extend({
-  itemViewClass: SC.View.extend({
+App.PeopleCollectionView = Ember.CollectionView.extend({
+  itemViewClass: Ember.View.extend({
     mouseDown: function(evt) {
       window.alert('You clicked on ' + this.get('content'));
     }
@@ -557,7 +557,7 @@ App.PeopleCollectionView = SC.CollectionView.extend({
 
 If you run this code, you should see an alert every time you click on one of the items.
 
-The `{{#collection}}` helper takes the same options as `{{#view}}`, as described above. For example, you can set an HTML `id` attribute on the container of `SC.CollectionView` like this:
+The `{{#collection}}` helper takes the same options as `{{#view}}`, as described above. For example, you can set an HTML `id` attribute on the container of `Ember.CollectionView` like this:
 
 <pre class="brush: xml;">
 {{collection App.MyCollectionView id="my-collection"}}
@@ -577,7 +577,7 @@ For example, imagine you are frequently wrapping certain values in a `<span>` ta
 
 <pre class="brush: js;">
 Handlebars.registerHelper('highlight', function(property) {
-  var value = SC.getPath(this, property);
+  var value = Ember.getPath(this, property);
   return '<span class="highlight">"+value+'</span>';
 });
 </pre>
@@ -594,4 +594,4 @@ and it will output the following:
 <span class="highlight">Peter</span>
 </pre>
 
-NOTE: Parameters to helper functions are passed as names, not their current values. This allows you to optionally set up observers on the values. To get the current value of the parameter, use SC.getPath, as shown above.
+NOTE: Parameters to helper functions are passed as names, not their current values. This allows you to optionally set up observers on the values. To get the current value of the parameter, use Ember.getPath, as shown above.

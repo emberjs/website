@@ -91,11 +91,11 @@ direction.
 Here's how you create a binding between two objects:
 
 <pre class="brush: js;">
-MyApp.president = SC.Object.create({
+MyApp.president = Ember.Object.create({
   name: "Barack Obama"
 });
 
-MyApp.country = SC.Object.create({
+MyApp.country = Ember.Object.create({
   // Ending a property with 'Binding' tells Ember to
   // create a binding to the presidentName property.
   presidentNameBinding: 'MyApp.president.name'
@@ -113,7 +113,7 @@ pattern, then rest easy knowing that data will always flow correctly from layer 
 Computed properties allow you to treat a function like a property:
 
 <pre class="brush: js;">
-MyApp.president = SC.Object.create({
+MyApp.president = Ember.Object.create({
   firstName: "Barack",
   lastName: "Obama",
 
@@ -136,7 +136,7 @@ example, the `fullName` property depends on `firstName` and `lastName` to determ
 You can tell Ember about these dependencies like this:
 
 <pre class="brush: js;">
-MyApp.president = SC.Object.create({
+MyApp.president = Ember.Object.create({
   firstName: "Barack",
   lastName: "Obama",
 

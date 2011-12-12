@@ -5,10 +5,10 @@ and observers, as well as to support a more powerful mixin-based
 approach to code sharing.
 
 At its most basic, you create a new Ember class by using the `extend`
-method on `SC.Object`.
+method on `Ember.Object`.
 
 <pre class="brush: js;">
-Person = SC.Object.extend({
+Person = Ember.Object.extend({
   say: function(thing) {
     alert(thing);
  }
@@ -66,7 +66,7 @@ word in JavaScript) to call the original method you overrode.
 
 You can also create subclasses of classes you create by using the
 `extend` method. In fact, when we created a new class above by calling
-`extend` on `SC.Object`, we were **subclassing** `SC.Object`.
+`extend` on `Ember.Object`, we were **subclassing** `Ember.Object`.
 
 <pre class="brush: js;">
 var LoudPerson = Person.extend({
@@ -111,7 +111,7 @@ properties. Ember's object model allows you to define computed
 properties easily in a normal class definition.
 
 <pre class="brush: js;">
-Person = SC.Object.extend({
+Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
@@ -133,15 +133,15 @@ tom.get('fullName') // "Tom Dale"
 </pre>
 
 If you aren't using Ember's prototype extensions, you can use a slightly
-more verbose version, wrapping the function in a call to `SC.computed`:
+more verbose version, wrapping the function in a call to `Ember.computed`:
 
 <pre class="brush: js;">
-Person = SC.Object.extend({
+Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
 
-  fullName: SC.computed(function() {
+  fullName: Ember.computed(function() {
     var firstName = this.get('firstName');
     var lastName = this.get('lastName');
 
@@ -164,12 +164,12 @@ property. If you try to set a computed property, it will be invoked with
 the key and value you want to set it to.
 
 <pre class="brush: js;">
-Person = SC.Object.extend({
+Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
 
-  fullName: SC.computed(function(key, value) {
+  fullName: Ember.computed(function(key, value) {
     // getter
     if (arguments.length === 1) {
       var firstName = this.get('firstName');
@@ -206,12 +206,12 @@ You can set up an observer on an object by using the `addObserver`
 method.
 
 <pre class="brush: js;">
-Person = SC.Object.extend({
+Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
 
-  fullName: SC.computed(function() {
+  fullName: Ember.computed(function() {
     var firstName = this.get('firstName');
     var lastName = this.get('lastName');
 
@@ -245,12 +245,12 @@ Person.reopenClass({
 });
 </pre>
 
-You can define inline observers by using the `SC.observer` method if you
+You can define inline observers by using the `Ember.observer` method if you
 are using Ember without prototype extensions:
 
 <pre class="brush: js;">
 Person.reopenClass({
-  fullNameChanged: SC.observer(function() {
+  fullNameChanged: Ember.observer(function() {
     // this is an inline version of .addObserver
   }, 'fullName')
 });
@@ -268,11 +268,11 @@ The easiest way to create a two-way binding is by creating a new property
 with the string `Binding` at the end, then specifying a path from the global scope:
 
 <pre class="brush: js;">
-App.wife = SC.Object.create({
+App.wife = Ember.Object.create({
   householdIncome: 80000
 });
 
-App.husband = SC.Object.create({
+App.husband = Ember.Object.create({
   householdIncomeBinding: 'App.wife.householdIncome'
 });
 
@@ -296,12 +296,12 @@ the more concise two-way binding syntax (as, of course, two-way bindings are
 de facto one-way bindings if you only ever change one side).
 
 <pre class="brush: js;">
-App.user = SC.Object.create({
+App.user = Ember.Object.create({
   fullName: "Kara Gates"
 });
 
-App.userView = SC.View.create({
-  userNameBinding: SC.Binding.oneWay('App.user.fullName')
+App.userView = Ember.View.create({
+  userNameBinding: Ember.Binding.oneWay('App.user.fullName')
 });
 
 // Changing the name of the user object changes

@@ -14,14 +14,14 @@
   1.	What is Handlebars?
   2.	Displaying Templates
   3.	Handlebars In-Depth
-  4.	Am.View
+  4.	Ember.View
   5.	The View Rendering Pipeline
   6.	Form Helpers
 6.	Handling User Events
   1.	Implementing Handlers on Views
   2.	Event Bubbling
   3.	Registering Custom Events
-  4.	Customizing Am.Application
+  4.	Customizing Ember.Application
 7.	Testing
   1.	What is unit testing?
   2.	What is integration testing?
