@@ -638,22 +638,28 @@ if (!context.Todos.CreateTodoView || context.Todos.CreateTodoView.superclass !==
   code: "<li {{bindAttr class=\"isDone\"}}>\n  {{view SC.Checkbox titleBinding=\"title\" valueBinding=\"isDone\"}}\n</li>",
   replacesCode: "<li>{{view SC.Checkbox titleBinding=\"title\" valueBinding=\"isDone\"}}</li>"
 });Tutorial.tutorialController.addStep({
-  afterCode: "{{view Todos.CreateTodoView id=\"new-todo\" placeholder=\"What needs to be done?\"}}",
-  code: "<div id=\"stats\">\n  {{Todos.todosController.length}} items\n</div>",
   body: "<h3>The More You Know</h3>\n<p>We can now create todos and mark them as being complete. While 76% of all statistics are made up, let’s see if we can display more accurate information from the data we have. At the top of our list, let’s display the number of todos we have.</p>",
-  codeTarget: "template"
+  codeTarget: "template",
+  code: "<div id=\"stats\">\n  {{Todos.todosController.length}} items\n</div>",
+  afterCode: "{{view Todos.CreateTodoView id=\"new-todo\" placeholder=\"What needs to be done?\"}}"
 });Tutorial.tutorialController.addStep({
-  afterCode: "content: [],",
-  code: "remaining: function() {\n  return this.filterProperty('isDone', false).get('length');\n}.property('@each.isDone'),",
   body: "<h3>The More You Know (cont)</h3>\n<p>Ok, that works, but it would be more useful to know how many items we have left, not just how many we have total. Let's add a property called 'remaining' to our controller to tell us how many undone items there are.</p>\n<p>Here, we specify our dependent key using @each. This allows us to depend on properties of the array’s items. In this case, we want to update the remaining property any time isDone changes on a Todo. We'll also be notified when an item is added to or removed from the array.</p>\n<p>It’s important to declare dependent keys because SproutCore uses this information to know when to update bindings. In our case, our StatsView updates any time todosController’s remaining property changes.</p>\n<p>We'll add the following to our todosController after the <code>content: []</code> line.</p>",
-  codeTarget: "javascript"
+  codeTarget: "javascript",
+  code: "remaining: function() {\n  return this.filterProperty('isDone', false).get('length');\n}.property('@each.isDone'),",
+  afterCode: "content: [],"
 });Tutorial.tutorialController.addStep({
-  code: "Todos.StatsView = SC.View.extend({\n  remainingBinding: 'Todos.todosController.remaining',\n  remainingString: function() {\n    var remaining = this.get('remaining');\n    return remaining + (remaining === 1 ? \" item\" : \" items\");\n  }.property('remaining')\n});\n",
   body: "<h3>The More You Know (cont)</h3>\n<p>Now lets change set up our view to use this new property.</p>\n<p>While we're at it, lets also fix pluralization. Right now, if you only have one item, it will say \"1 items\", not so polished. To handle this, we'll create a new view that handles pluralization.</p>",
-  codeTarget: "javascript"
+  codeTarget: "javascript",
+  code: "Todos.StatsView = SC.View.extend({\n  remainingBinding: 'Todos.todosController.remaining',\n  remainingString: function() {\n    var remaining = this.get('remaining');\n    return remaining + (remaining === 1 ? \" item\" : \" items\");\n  }.property('remaining')\n});\n"
 });Tutorial.tutorialController.addStep({
-  replacesCode: "<div id=\"stats\">\n  {{Todos.todosController.length}} items\n</div>",
-  code: "{{#view Todos.StatsView id=\"stats\"}}\n  {{remainingString}} remaining\n{{/view}}",
   body: "<h3>The More You Know (cont)</h3>\n<p>Finally, we'll add our new view to the template.</p>",
-  codeTarget: "template"
+  codeTarget: "template",
+  code: "{{#view Todos.StatsView id=\"stats\"}}\n  {{remainingString}} remaining\n{{/view}}",
+  replacesCode: "<div id=\"stats\">\n  {{Todos.todosController.length}} items\n</div>"
+});Tutorial.tutorialController.addStep({
+  body: "<h3>Clearing Completed Todos</h3>\n<p>As we populate our list with todos, we may want to periodically clear out those we’ve completed. As you have learned, we will want to make that change to the todosController, and let SproutCore automatically propagate those changes to the DOM.</p>\n<p>Let’s add a new clearCompletedTodos method to the controller.</p>",
+  codeTarget: "javascript",
+  code: "clearCompletedTodos: function() {\n  this.filterProperty('isDone', true).forEach(this.removeObject, this);\n}",
+  codeBefore: ",",
+  afterCode: "createTodo: function(title) {\n  var todo = Todos.Todo.create({ title: title });\n  this.pushObject(todo);\n}"
 });
