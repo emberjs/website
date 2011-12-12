@@ -69,7 +69,7 @@ match "docs/**/*.md" do
 
   filter WebFilters::OrderingConcatFilter, sections, "documention.html"
   filter HTMLWrapperFilter, :template => 'assets/docs/_documentation.erb'
-  filter Rake::Pipeline::ConcatFilter, "documentation/index.html"
+  filter Rake::Pipeline::ConcatFilter, "index.html" #"documentation/index.html"
 end
 
 filter Rake::Pipeline::ConcatFilter
