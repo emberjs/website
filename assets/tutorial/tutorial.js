@@ -32,7 +32,12 @@ Tutorial.Step = SC.Object.extend({
   errors: null,
 
   addError: function(error) {
-    this.get('errors').pushObject(error);
+    var errors = this.get('errors');
+    if (!errors) {
+      errors = [];
+      this.set('errors', errors);
+    }
+    errors.pushObject(error);
   },
 
   validate: function(context) {
