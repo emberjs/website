@@ -13,7 +13,4 @@ code: |
 
 codeBefore: "\n\n"
 
-afterCode: |
-    {{remainingString}} remaining.
-  {{/view}}
-
+afterCode: "  {{remainingString}} remaining.\n{{/view}}"
