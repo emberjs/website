@@ -9,7 +9,7 @@ WebFilters = Rake::Pipeline::Web::Filters
 input "assets"
 output "output"
 
-class StepFilter < Rake::Pipeline::Filter
+class StepFilter < Filter
   def generate_output(inputs, output)
     inputs.each do |input|
       yaml = YAML.load(input.read)
@@ -25,7 +25,7 @@ class StepFilter < Rake::Pipeline::Filter
   end
 end
 
-class HTMLWrapperFilter < Rake::Pipeline::Filter
+class HTMLWrapperFilter < Filter
   def initialize(options={})
     @options = options
     super()
@@ -69,7 +69,7 @@ match "docs/**/*.md" do
 
   filter WebFilters::OrderingConcatFilter, sections, "documention.html"
   filter HTMLWrapperFilter, :template => 'assets/docs/_documentation.erb'
-  filter Rake::Pipeline::ConcatFilter, "index.html" #"documentation/index.html"
+  filter ConcatFilter, "index.html" #"documentation/index.html"
 end
 
 filter Rake::Pipeline::ConcatFilter
