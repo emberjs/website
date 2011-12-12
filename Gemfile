@@ -1,6 +1,7 @@
 source :rubygems
 
 gem 'rack'
+gem 'rack-rewrite'
 gem 'json'
 gem 'rack-cache'
 gem 'dalli'

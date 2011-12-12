@@ -1,31 +1,14 @@
-require "dalli"
-require "rack"
-require "rack/cache"
-
-class Static
-  def initialize
-    @file_server = Rack::File.new(File.expand_path("../output", __FILE__))
-  end
-
-  def call(env)
-    path = env["PATH_INFO"]
-
-    case path
-    when "/"
-      env["PATH_INFO"] = "/index.html"
-      call(env)
-    else
-      @file_server.call(env)
-    end
-  end
+unless ENV['RACK_ENV'] == 'production'
+  puts "For use on Heroku only. For development run `bundle exec rakep`"
+  abort
 end
 
-if ENV["RACK_ENV"] == "development"
-  require "rake-pipeline"
-  require "rake-pipeline/middleware"
-  use Rake::Pipeline::Middleware, "Assetfile"
+require 'rubygems'
+require 'rack-rewrite'
+
+use Rack::Rewrite do
+  rewrite /^(.*)\/$/, '$1/index.html'
+  r301    /^(.*)\/index.html$/, '$1/'
 end
 
-$cache = Dalli::Client.new
-use Rack::Cache, :metastore => $cache, :entitystore => 'file:tmp/cache/entity'
-run Static.new
+run Rack::Directory.new('./output')

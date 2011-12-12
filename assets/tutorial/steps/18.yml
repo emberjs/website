@@ -16,7 +16,7 @@ code: |
 
 codeBefore: ",\n\n"
 
-afterCode: !ruby/regexp '/createTodo:\s*function\s*\(\)\s*\{[.\n]+\}/'
+afterCode: |
     createTodo: function(title) {
       var todo = Todos.Todo.create({ title: title });
       this.pushObject(todo);
