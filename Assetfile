@@ -61,7 +61,7 @@ match "tutorial/**/*.js" do
 end
 
 match "docs/**/*.md" do
-  sections = [ 'introduction', 'object_model', 'handlebars' ]
+  sections = [ 'introduction', 'application', 'object_model', 'handlebars' ]
   sections.map! { |file| "docs/#{file}.html" }
 
   filter WebFilters::MarkdownCompiler
