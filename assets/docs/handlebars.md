@@ -1,9 +1,5 @@
 ## Describing Your UI with Handlebars
 
-Unlike other frameworks that require you to have separate code paths for first generating your user interface and then updating it when parts change, Ember.js augments the Handlebars templating library to perform all of these updates for you.
-
-With Ember, you describe your interface using a template. The framework takes care of ensuring that the template is converted to HTML and placed in the DOM. And, because the templates are bindings-aware, if any of the data underlying your template changes, your template will re-render just the changed portion and update the DOM automatically, without you having to write a single line of code.
-
 ### Handlebars
 
 Ember comes bundled with [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
@@ -13,25 +9,25 @@ You should store your Handlebars templates inside your application's HTML file. 
 To immediately insert a template into your document, place it inside a `<script>` tag within your `<body>` tag:
 
 <pre class="brush: xml;">
-<html>
-  <body>
-    <script type="text/x-handlebars">
+&lt;html>
+  &lt;body>
+    &lt;script type="text/x-handlebars">
       Hello, <b>{{MyApp.name}}</b>
-    </script>
-  </body>
-</html>
+    &lt;/script>
+  &lt;/body>
+&lt;/html>
 </pre>
 
 To make a template available to be used later, give the `<script>` tag a name attribute:
 
 <pre class="brush: xml;">
-<html>
-  <head>
-    <script type="text/x-handlebars" data-template-name="say-hello">
+&lt;html>
+  &lt;head>
+    &lt;script type="text/x-handlebars" data-template-name="say-hello">
       Hello, <b>{{MyApp.name}}</b>
-    </script>
-  </head>
-</html>
+    &lt;/script>
+  &lt;/head>
+&lt;/html>
 </pre>
 
 ### Ember.View
@@ -41,19 +37,19 @@ You can use Ember.View to render a Handlebars template and insert it into the DO
 To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:
 
 <pre class="brush: xml;">
-<html>
-  <head>
-    <script type="text/x-handlebars" data-template-name="say-hello">
+&lt;html>
+  &lt;head>
+    &lt;script type="text/x-handlebars" data-template-name="say-hello">
       Hello, <b>{{name}}</b>
-    </script>
-  </head>
-</html>
+    &lt;/script>
+  &lt;/head>
+&lt;/html>
 </pre>
 
 I would set the `templateName` property to `"say-hello"`.
 
-<pre class="brush: xml;">
-var view = Ember.TemplateView.create({
+<pre class="brush: js;">
+var view = Em.TemplateView.create({
   templateName: 'say-hello',
   name: "Bob"
 });
@@ -74,7 +70,7 @@ This will look up and print the TemplateView's `color` property. For example, if
 <pre class="brush: js;">
 App.CarView = Ember.View.extend({
   color: 'blue'
-`});
+});
 </pre>
 
 Your view would appear in the browser like this:
@@ -110,7 +106,7 @@ Your output will be free of markers, but be careful, because the output won't be
 My new car is blue.
 </pre>
 
-#### {{#if}}, {{else}}, and {{#unless}}
+### {{#if}}, {{else}}, and {{#unless}}
 
 Sometimes you may only want to display part of your template if a property
 exists. For example, let's say we have a view with a `person` property that
@@ -161,10 +157,10 @@ to invoke a helper with a portion of your template. Block expressions look like
 normal expressions except that they contain a hash (#) before the helper name,
 and require a closing expression.
 
-#### {{#with}}
+### {{#with}}
 
 Sometimes you may want to invoke a section of your template with a context
-different than the Am.View. For example, we can clean up the above template by
+different than the Em.View. For example, we can clean up the above template by
 using the `{{#with}}` helper:
 
 <pre class="brush: xml;">
@@ -175,9 +171,9 @@ using the `{{#with}}` helper:
 
 NOTE: {{#with}} changes the _context_ of the block you pass to it. The context
 is the object on which properties are looked up. By default, the context is the
-Am.View to which the template belongs.
+Em.View to which the template belongs.
 
-#### Binding Element Attributes with {{bindAttr}}
+### Binding Element Attributes with {{bindAttr}}
 
 In addition to text, you may also want your templates to dictate the attributes
 of your HTML elements. For example, imagine a view that contains a URL:
@@ -224,7 +220,7 @@ Handlebars will produce the following HTML element:
 <input type="checkbox" checked>
 </pre>
 
-#### Binding Class Names with {{bindAttr}}
+### Binding Class Names with {{bindAttr}}
 
 The `class` attribute can be bound like any other attribute, but it also has some additional special behavior. The default behavior works like you'd expect:
 
@@ -257,7 +253,7 @@ If the value to which you bind is a Boolean, however, the dasherized version of 
 
 This emits the following HTML:
 
-<pre class="brush: xml;">
+<pre class="brush: js;">
 <div class="is-urgent">
   Warning!
 </div>
@@ -265,18 +261,10 @@ This emits the following HTML:
 
 Unlike other attributes, you can also bind multiple classes:
 
-<pre class="brush: xml;">
+<pre class="brush: js;">
 <div {{bindAttr class="isUrgent priority"}}>
   Warning!
 </div>
-</pre>
-
-#### Localized Strings with {{loc}}
-
-Ember has built-in support for localized applications. To emit a localized version of a string, use the `{{loc}}` helper:
-
-<pre class="brush: xml;">
-{{loc myLocalizedString}}
 </pre>
 
 #### Building a View Hierarchy
@@ -493,26 +481,28 @@ This yields a view wrapper that will look something like this:
 
 ### Displaying a List of Items
 
-If you need to display a basic list of items, use Handlebar's `{{#each}}` helper:
+If you need to enumerate over a list of objects, use Handlebar's `{{#each}}` helper:
 
 <pre class="brush: js;">
 App.PeopleView = Ember.View.extend({
-  people: [ Ember.Object.create({ name: 'Steph' }),
-            Ember.Object.create({ name: 'Tom' }) ]
+  people: [ { name: 'Yehuda' },
+            { name: 'Tom' } ]
 });
 </pre>
 
 <pre class="brush: xml;">
-{{#each people}}
-  Hello, {{name}}!
-{{/each}}
+<ul>
+  {{#each people}}
+    <li>Hello, {{name}}!</li>
+  {{/each}}
+</ul>
 </pre>
 
 This will print a list like this:
 
 <pre class="brush: xml;">
 <ul>
-  <li>Hello, Steph!</li>
+  <li>Hello, Yehuda!</li>
   <li>Hello, Tom!</li>
 </ul>
 </pre>
@@ -521,7 +511,7 @@ This will print a list like this:
 
 Sometimes you will need each item in your list to handle events. In that case, you will need more sophistication than what `{{#each}}` can provide. You can use the `{{#collection}}` helper to create a new `Ember.CollectionView`. You can bind the instance of `Ember.CollectionView` to an array, and it will create a new `Ember.View` for each item.
 
-Usually, you will bind the collection to an `Ember.ArrayProxy`, like this:
+Usually, you will bind the collection to an `Ember.ArrayController`, like this:
 
 <pre class="brush: js;">
 App.peopleController = Ember.ArrayProxy.create({
