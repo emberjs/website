@@ -5,8 +5,8 @@ body {
 	background: url(../images/diagonalTexture.png), #544B4B;
 	margin: 0;
 	font-family:  trebuchet MS;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 16px;
+	line-height: 24px;
 }
 
 #wrap {
@@ -131,11 +131,23 @@ a {
    border-top-color: #b13027;
    background: #cf4e1f;
    color: #ffffff;
+   cursor: pointer;
    }
 .button:active {
    border-top-color: #d1661e;
    background: #d1661e;
    }
+
+.button + small {
+  color: #b13027;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -18px;
+}
    
 .section {
   color: #544B4B;
@@ -251,3 +263,6 @@ a {
     position: relative;
 }
 
+.syntaxhighlighter {
+  padding: 1em 0;
+}

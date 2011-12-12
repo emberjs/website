@@ -2,8 +2,9 @@
 
 ### What is Ember.js?
 
-Ember is a JavaScript framework that helps developers be more productive
-by eliminating boilerplate and providing a strong MVC architecture.
+Ember is a JavaScript framework for creating ambitious web applications
+by eliminating boilerplate and providing a standard application
+architecture.
 
 #### Eliminate Boilerplate
 
@@ -50,8 +51,6 @@ callback spaghetti are over.
 Ember also supplies built-in support for state management, so you'll have
 a way to describe how your application moves through various nested states
 (like signed-out, signed-in, viewing-post, and viewing-comment) out of the box.
-
-<we will eventually want a paragraph about data here>
 
 ### How is Ember.js Different from Server-Side Frameworks?
 

@@ -18,9 +18,9 @@ To immediately insert a template into your document, place it inside a `<script>
 &lt;/html>
 </pre>
 
-To make a template available to be used later, give the `<script>` tag a name attribute:
+To make a template available to be used later, give the `<script>` tag a `data-template-name` attribute:
 
-<pre class="brush: xml;">
+<pre class="brush: xml; highlight: 3;">
 &lt;html>
   &lt;head>
     &lt;script type="text/x-handlebars" data-template-name="say-hello">
@@ -32,7 +32,7 @@ To make a template available to be used later, give the `<script>` tag a name at
 
 ### Ember.View
 
-You can use Ember.View to render a Handlebars template and insert it into the DOM.
+You can use `Ember.View` to render a Handlebars template and insert it into the DOM.
 
 To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:
 
@@ -48,7 +48,7 @@ To tell the view which template to use, set its `templateName` property. For exa
 
 I would set the `templateName` property to `"say-hello"`.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: 2;">
 var view = Ember.View.create({
   templateName: 'say-hello',
   name: "Bob"
@@ -139,7 +139,7 @@ Sometimes you may only want to display part of your template if a property
 exists. For example, let's say we have a view with a `person` property that
 contains an object with `firstName` and `lastName` fields:
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [3,4];">
 App.SayHelloView = Ember.View.extend({
   person: Ember.Object.create({
     firstName: "Joy",
@@ -163,7 +163,7 @@ Handlebars will not render the block if the argument passed evaluates to
 If the expression evaluates to falsy, we can also display an alternate template
 using `{{else}}`:
 
-<pre class="brush: xml;">
+<pre class="brush: xml; highlight: 3;">
 {{#if person}}
   Welcome back, <b>{{person.firstName}} {{person.lastName}}</b>!
 {{else}}
@@ -256,10 +256,12 @@ App.AlertView = Ember.View.extend({
   priority: "p4",
   isUrgent: true
 });
+</pre>
 
-<div {{bindAttr class="priority"}}>
+<pre class="brush: xml;">
+&lt;div {{bindAttr class="priority"}}>
   Warning!
-</div>
+&lt;/div>
 </pre>
 
 This template will emit the following HTML:
@@ -273,26 +275,38 @@ This template will emit the following HTML:
 If the value to which you bind is a Boolean, however, the dasherized version of that property will be applied as a class:
 
 <pre class="brush: xml;">
-<div {{bindAttr class="isUrgent"}}>
+&lt;div {{bindAttr class="isUrgent"}}>
   Warning!
-</div>
+&lt;/div>
 </pre>
 
 This emits the following HTML:
 
-<pre class="brush: js;">
-<div class="is-urgent">
+<pre class="brush: xml;">
+&lt;div class="is-urgent">
   Warning!
-</div>
+&lt;/div>
 </pre>
 
 Unlike other attributes, you can also bind multiple classes:
 
 <pre class="brush: js;">
-<div {{bindAttr class="isUrgent priority"}}>
+&lt;div {{bindAttr class="isUrgent priority"}}>
   Warning!
-</div>
+&lt;/div>
 </pre>
+
+You can also specify an alternate class name to use, instead of just
+dasherizing.
+
+<pre class="brush: js;">
+&lt;div {{bindAttr class="isUrgent:urgent"}}>
+  Warning!
+&lt;/div>
+</pre>
+
+In this case, if the `isUrgent` property is true, the `urgent` class
+will be added. If it is false, the `urgent` class will be removed.
 
 ### Building a View Hierarchy
 
@@ -356,7 +370,7 @@ App.UserView = Ember.View.extend({
   firstName: "Albert",
   lastName: "Hofmann",
 
-  InfoView: Ember.View.extend({
+  infoView: Ember.View.extend({
     templateName: 'info',
 
     posts: 25,
@@ -367,13 +381,18 @@ App.UserView = Ember.View.extend({
 
 <pre class="brush: xml;">
 User: {{firstName}} {{lastName}}
-{{view InfoView}}
+{{view infoView}}
 </pre>
+
+When nesting a view class like this, make sure to use a lowercase
+letter, as Ember will interpret a property with a capital letter as a
+global property.
 
 ### Setting Child View Templates
 
-If you'd like to specify the template your child views use inline, you can use the block form of the
-`{{view}}` helper. We might rewrite the above example like this:
+If you'd like to specify the template your child views uses inline in
+the main template, you can use the block form of the `{{view}}` helper.
+We might rewrite the above example like this:
 
 <pre class="brush: js;">
 App.UserView = Ember.View.extend({
@@ -389,7 +408,7 @@ App.InfoView = Ember.View.extend({
 });
 </pre>
 
-<pre class="brush: xml;">
+<pre class="brush: xml; highlight: 2;">
 User: {{firstName}} {{lastName}}
 {{#view App.InfoView}}
   <b>Posts:</b> {{posts}}
@@ -438,7 +457,7 @@ do that by passing additional arguments to the `{{#view}}` helper. If all
 you're doing is configuring bindings, this often allows you to bypass having to
 create a new subclass.
 
-<pre class="brush: xml;">
+<pre class="brush: xml; highlight: [2,3];">
 User: {{firstName}} {{lastName}}
 {{#view App.InfoView postsBinding="App.userController.content.posts"
         hobbiesBinding="App.userController.content.hobbies"}}
@@ -502,7 +521,7 @@ App.AlertView = Ember.View.extend({
 This yields a view wrapper that will look something like this:
 
 <pre class="brush: xml;">
-<div id="sc420" class="sc-view is-urgent p4"></div>
+&lt;div id="sc420" class="sc-view is-urgent p4"&gt;&lt;/div&gt;
 </pre>
 
 ### Displaying a List of Items
@@ -517,20 +536,20 @@ App.PeopleView = Ember.View.extend({
 </pre>
 
 <pre class="brush: xml;">
-<ul>
+&lt;ul>
   {{#each people}}
     <li>Hello, {{name}}!</li>
   {{/each}}
-</ul>
+&lt;/ul>
 </pre>
 
 This will print a list like this:
 
 <pre class="brush: xml;">
-<ul>
-  <li>Hello, Yehuda!</li>
-  <li>Hello, Tom!</li>
-</ul>
+&lt;ul>
+  &lt;li&gt;Hello, Yehuda!&lt;/li>
+  &lt;li&gt;Hello, Tom!&lt;/li>
+&lt;/ul>
 </pre>
 
 If you want to create a view for every item in a list, you can bind a property of the view to
@@ -554,9 +573,12 @@ For example, imagine you are frequently wrapping certain values in a `<span>` ta
 <pre class="brush: js;">
 Handlebars.registerHelper('highlight', function(property) {
   var value = Ember.getPath(this, property);
-  return '<span class="highlight">"+value+'</span>';
+  return new Handlebars.SafeString('<span class="highlight">"+value+'</span>');
 });
 </pre>
+
+If you return HTML from a helper, and you don't want it to be escaped,
+make sure to return a new `SafeString`.
 
 Anywhere in your Handlebars templates, you can now invoke this helper:
 

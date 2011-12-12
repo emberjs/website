@@ -47,7 +47,7 @@ When creating a new instance of an object, you can also override any
 properties or methods defined on the class. For instance, in this case,
 you could override the `say` method from the `Person` class.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [4,5,6,7,8];">
 var yehuda = Person.create({
   name: "Yehuda Katz",
 
@@ -84,7 +84,7 @@ overriding.
 You don't need to define a class all at once. You can reopen a class and
 define new properties using the `reopenClass` method.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: 1">
 Person.reopenClass({
   isPerson: true
 });
@@ -95,7 +95,7 @@ Person.create().get('isPerson') // true
 When using `reopenClass`, you can also override existing methods and
 call `this._super`.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [3,4,5];">
 Person.reopenClass({
   // override `say` to add an ! at the end
   say: function(thing) {
@@ -110,7 +110,7 @@ Often, you will want a property that is computed based on other
 properties. Ember's object model allows you to define computed
 properties easily in a normal class definition.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [6,7,8,9,10,11];">
 Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
@@ -135,7 +135,7 @@ tom.get('fullName') // "Tom Dale"
 If you aren't using Ember's prototype extensions, you can use a slightly
 more verbose version, wrapping the function in a call to `Ember.computed`:
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [6,11];">
 Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
@@ -163,7 +163,7 @@ You can also define what Ember should do when setting a computed
 property. If you try to set a computed property, it will be invoked with
 the key and value you want to set it to.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [8,15,16,17,18,19,20,21,22];">
 Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
@@ -205,7 +205,7 @@ Ember supports observing any property, including computed properties.
 You can set up an observer on an object by using the `addObserver`
 method.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [19,20,21];">
 Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
@@ -237,7 +237,7 @@ updating `firstName` will fire observers on `fullName` as well.
 Because observers are so common, Ember provides a way to define
 observers inline in class definitions.
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: 4;">
 Person.reopenClass({
   fullNameChanged: function() {
     // this is an inline version of .addObserver
@@ -248,7 +248,7 @@ Person.reopenClass({
 You can define inline observers by using the `Ember.observer` method if you
 are using Ember without prototype extensions:
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: [2,4];">
 Person.reopenClass({
   fullNameChanged: Ember.observer(function() {
     // this is an inline version of .addObserver
@@ -267,7 +267,7 @@ Ember.js can be used with any object, not just between views and models.
 The easiest way to create a two-way binding is by creating a new property
 with the string `Binding` at the end, then specifying a path from the global scope:
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: 6;">
 App.wife = Ember.Object.create({
   householdIncome: 80000
 });
@@ -295,7 +295,7 @@ bindings are just a performance optimization and you can safely use
 the more concise two-way binding syntax (as, of course, two-way bindings are
 de facto one-way bindings if you only ever change one side).
 
-<pre class="brush: js;">
+<pre class="brush: js; highlight: 6;">
 App.user = Ember.Object.create({
   fullName: "Kara Gates"
 });
