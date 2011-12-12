@@ -72,6 +72,9 @@ match "docs/**/*.md" do
   filter ConcatFilter, "index.html" #"documentation/index.html"
 end
 
-filter Rake::Pipeline::ConcatFilter
+# Hide for now
+match "tutorial.html" do
+  filter ConcatFilter, ".hidden"
+end
 
 # vim: filetype=ruby
