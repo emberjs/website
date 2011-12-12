@@ -4,7 +4,6 @@ gem 'rack'
 gem 'rack-rewrite'
 gem 'json'
 gem 'rack-cache'
-gem 'dalli'
 
 group :development do
   gem 'rake-pipeline', :git => "https://github.com/livingsocial/rake-pipeline.git"

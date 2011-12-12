@@ -15,7 +15,6 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    dalli (1.1.4)
     json (1.6.3)
     rack (1.3.5)
     rack-cache (1.1)
@@ -28,7 +27,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  dalli
   json
   rack
   rack-cache
