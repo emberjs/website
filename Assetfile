@@ -37,10 +37,6 @@ class HTMLWrapperFilter < Rake::Pipeline::Filter
       output.write render_template {
         input.read
       }
-
-      puts render_template {
-        input.read
-      }
     end
   end
 
