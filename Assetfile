@@ -61,7 +61,8 @@ match "tutorial/**/*.js" do
 end
 
 match "docs/**/*.md" do
-  sections = ['introduction.html', 'object_model.html']
+  sections = [ 'introduction', 'object_model', 'handlebars' ]
+  sections.map! { |file| "docs/#{file}.html" }
 
   filter WebFilters::MarkdownCompiler
   filter HTMLWrapperFilter, :template => 'assets/docs/_section.erb'
