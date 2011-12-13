@@ -469,7 +469,7 @@ Tutorial.AceEditorView = SC.AceEditorView.extend({
 /*
 Tutorial.loadSteps = function() {
   Tutorial.tutorialController.addStep({
-    body: "<strong>Welcome.</strong> To get a feel for Amber, follow along this quick tutorial."
+    body: "<strong>Welcome.</strong> To get a feel for Ember, follow along this quick tutorial."
   });
 
   Tutorial.tutorialController.addStep({
@@ -576,7 +576,7 @@ Tutorial.loadSteps = function() {
   });
 
   Tutorial.tutorialController.addStep({
-    body: "<strong>Congratulations!</strong> You've just created your first Amber application!"
+    body: "<strong>Congratulations!</strong> You've just created your first Ember application!"
   });
 };
 */

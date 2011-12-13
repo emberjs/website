@@ -5,7 +5,7 @@ body: >
 
   <p>For this we can use the <code>bindAttr</code> helper which will automatically update an elements attributes based
   on the value of a binding. Here, we bind the class attribute. If <code>isDone</code> is true then the class will be
-  added. Amber automatically dasherizes class names for us.</p>
+  added. Ember automatically dasherizes class names for us.</p>
 
 codeTarget: 'template'
 
