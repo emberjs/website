@@ -219,7 +219,7 @@ Person = Ember.Object.extend({
   }).property('firstName', 'lastName')
 });
 
-var person = Person.create
+var person = Person.create({
   firstName: "Yehuda",
   lastName: "Katz"
 });
