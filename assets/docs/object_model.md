@@ -190,7 +190,7 @@ Person = Ember.Object.extend({
 });
 
 var person = Person.create();
-person.set('name', "Peter Wagenet");
+person.set('fullName', "Peter Wagenet");
 person.get('firstName') // Peter
 person.get('lastName') // Wagenet
 </pre>
