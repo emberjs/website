@@ -125,7 +125,7 @@ App.MyView = Ember.View.extend({
 This would render a view like this:
 
 <pre class="brush: xml;">
-&lt;div class="sc-view is-urgent">
+&lt;div class="ember-view is-urgent">
 </pre>
 
 If priority is changed to false, then the `priority` class name will be removed.
@@ -143,7 +143,7 @@ App.MyView = Ember.View.extend({
 This would render this HTML:
 
 <pre class="brush: xml;">
-&lt;div class="sc-view urgent">
+&lt;div class="ember-view urgent">
 </pre>
 
 If the bound value is a string, that value will be added as a class name without
