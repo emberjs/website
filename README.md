@@ -6,8 +6,8 @@ The website for the Ember.js project.
 
 To get started:
 
-    $ git clone git@github.com:amberjs/amber-website.git
-    $ cd amber-website
+    $ git clone git://github.com/emberjs/website.git
+    $ cd website
     $ bundle
     $ bundle exec rakep
 
