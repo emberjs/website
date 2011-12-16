@@ -74,7 +74,7 @@ App.contactsController = SC.ArrayController.create({
       success: function(data) {
         var contacts = data.contacts;
 
-        // Turn JSON objects into bindable Amber
+        // Turn JSON objects into bindable Ember
         // objects.
         contacts = contacts.map(function(item) {
           return self.createContactFromJSON(item);
