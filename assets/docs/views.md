@@ -128,7 +128,7 @@ This would render a view like this:
 &lt;div class="ember-view is-urgent">
 </pre>
 
-If priority is changed to false, then the `priority` class name will be removed.
+If isUrgent is changed to false, then the `is-urgent` class name will be removed.
 
 By default, the name of the Boolean property is dasherized. You can customize the class name
 applied by delimiting it with a colon:
