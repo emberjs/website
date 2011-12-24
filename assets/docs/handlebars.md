@@ -573,7 +573,7 @@ For example, imagine you are frequently wrapping certain values in a `<span>` ta
 <pre class="brush: js;">
 Handlebars.registerHelper('highlight', function(property) {
   var value = Ember.getPath(this, property);
-  return new Handlebars.SafeString('<span class="highlight">"+value+'</span>');
+  return new Handlebars.SafeString('<span class="highlight">'+value+'</span>');
 });
 </pre>
 
