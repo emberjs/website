@@ -390,7 +390,7 @@ global property.
 
 ### Setting Child View Templates
 
-If you'd like to specify the template your child views uses inline in
+If you'd like to specify the template your child views use inline in
 the main template, you can use the block form of the `{{view}}` helper.
 We might rewrite the above example like this:
 
