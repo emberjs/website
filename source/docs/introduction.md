@@ -27,9 +27,9 @@ that will automatically update the DOM when the underlying objects change.
 
 For a simple example, consider this template of a Person:
 
-<pre class="brush: xml">
+```html
 {{person.name}} is {{person.age}}.
-</pre>
+```
 
 As with any templating system, when the template is initially rendered, it
 will reflect the current state of the person. To avoid boilerplate, though,
@@ -89,7 +89,7 @@ direction.
 
 Here's how you create a binding between two objects:
 
-<pre class="brush: js;">
+```javascript
 MyApp.president = Ember.Object.create({
   name: "Barack Obama"
 });
@@ -102,7 +102,7 @@ MyApp.country = Ember.Object.create({
 
 MyApp.country.get('presidentName');
 // "Barack Obama"
-</pre>
+```
 
 Bindings allow you to architect your application using the MVC (Model-View-Controller)
 pattern, then rest easy knowing that data will always flow correctly from layer to layer.
@@ -111,7 +111,7 @@ pattern, then rest easy knowing that data will always flow correctly from layer 
 
 Computed properties allow you to treat a function like a property:
 
-<pre class="brush: js;">
+```javascript
 MyApp.president = Ember.Object.create({
   firstName: "Barack",
   lastName: "Obama",
@@ -125,7 +125,7 @@ MyApp.president = Ember.Object.create({
 
 MyApp.president.get('fullName');
 // "Barack Obama"
-</pre>
+```
 
 Computed properties are useful because they can work with bindings, just
 like any other property.
@@ -134,7 +134,7 @@ Many computed properties have dependencies on other properties. For example, in 
 example, the `fullName` property depends on `firstName` and `lastName` to determine its value.
 You can tell Ember about these dependencies like this:
 
-<pre class="brush: js;">
+```javascript
 MyApp.president = Ember.Object.create({
   firstName: "Barack",
   lastName: "Obama",
@@ -146,7 +146,7 @@ MyApp.president = Ember.Object.create({
   // and lastName
   }.property('firstName', 'lastName')
 });
-</pre>
+```
 
 Make sure you list these dependencies so Ember knows when to update bindings that connect
 to a computed property.
@@ -157,11 +157,11 @@ Ember uses Handlebars, a semantic templating library. To take data from your Jav
 and put it into the DOM, create a `<script>` tag and put it into your HTML, wherever you'd like the
 value to appear:
 
-<pre class="brush: xml">
-&lt;script type="text/x-handlebars">
+```html
+<script type="text/x-handlebars">
   The President of the United States is {{MyApp.president.fullName}}.
-&lt;/script>
-</pre>
+</script>
+```
 
 Here's the best part: templates are bindings-aware. That means that if you ever change the value of
 the property that you told us to display, we'll update it for you automatically. And because you've

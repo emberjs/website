@@ -1,0 +1,123 @@
+@import "compass/reset";
+@import "compass";
+@import "base";
+
+body {
+  background: url(/images/groovepaper.png);
+  margin: 150px 0 0 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 65px;
+  background: url(/images/black_linen_v2.png);
+  @include single-box-shadow(rgba(0,0,0,0.5), 0, 2px, 2px, 0);
+
+  #wrapper {
+    width: 937px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+#logo {
+  position: absolute;
+  top: 13px;
+  width: 108px;
+  height: 31px;
+  background: url(/images/logo.png);
+}
+
+ul#nav {
+  width: 310px;
+  margin: 0 auto;
+  text-align: center;
+
+  li {
+    line-height: 67px;
+    margin: 0 7px;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    display: inline;
+  }
+
+  li.active a {
+    color: #666;
+  }
+}
+
+#content {
+  width: 707px;
+  padding-right: 230px;
+  margin: 0 auto;
+}
+
+.section {
+  margin: 40px 5px;
+}
+
+h2 {
+  margin: 22px 0;
+  color: $base_color;
+  font-size: 36px;
+  font-weight: bold
+}
+
+h3 {
+  font-size: 30px;
+  margin: 22px 0;
+  color: $dark_base_color;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+  margin: 22px 0;
+  line-height: 30px;
+}
+
+a {
+  color: $complement_support_color;
+}
+
+.toc {
+  a {
+    font-size: 22px;
+    text-decoration: none;
+    border-bottom: 1px dotted black;
+
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+    margin-left: 60px;
+
+    li {
+      margin: 7px 0;
+    }
+  }
+}
+
+.highlight {
+  padding: 13px;
+  @include border-radius(4px);
+  background-color: rgba(50,50,50,0.1);
+  font-family: Menlo, monospace;
+}

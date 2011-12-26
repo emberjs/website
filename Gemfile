@@ -1,12 +1,7 @@
 source :rubygems
 
-gem 'rack'
-gem 'rack-rewrite'
-gem 'json'
-gem 'rack-cache'
-
-group :development do
-  gem 'rake-pipeline', :git => "https://github.com/livingsocial/rake-pipeline.git"
-  gem 'rake-pipeline-web-filters', :git => "https://github.com/wycats/rake-pipeline-web-filters.git"
-  gem 'redcarpet'
-end
+gem "redcarpet"
+gem "rack-codehighlighter", :git => "git://github.com/wbzyl/rack-codehighlighter.git"
+gem "pygments.rb"
+gem "activesupport"
+gem "middleman", :path => "~/Code/middleman"

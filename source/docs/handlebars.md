@@ -213,19 +213,19 @@ App.LogoView = Ember.View.extend({
 
 The best way to display the URL as an image in Handlebars is like this:
 
-<pre class="brush: xml;">
+```html
 <div id="logo">
-  &lt;img {{bindAttr src="logoUrl"}} alt="Logo">
+  <img {{bindAttr src="logoUrl"}} alt="Logo">
 </div>
-</pre>
+```
 
 This generates the following HTML:
 
-<pre class="brush: xml;">
+```html
 <div id="logo">
   &lt;img src="http://www.mycorp.com/images/logo.png" alt="Logo">
 </div>
-</pre>
+```
 
 If you use `{{bindAttr}}` with a Boolean value, it will add or remove the specified attribute. For example, given this Ember view:
 
