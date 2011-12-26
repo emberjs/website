@@ -68,26 +68,38 @@ ul#nav {
 h2 {
   margin: 22px 0;
   color: $base_color;
-  font-size: 36px;
+  font-size: 30px;
   font-weight: bold
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 22px;
   margin: 22px 0;
   color: $dark_base_color;
   font-weight: bold;
 }
 
 h4 {
-  font-size: 20px;
   font-weight: bold;
+  font-size: 15px;
+  margin: 20px 0;
 }
 
 p {
-  font-size: 20px;
+  font-size: 14px;
   margin: 22px 0;
-  line-height: 30px;
+  line-height: 23px;
+}
+
+ol {
+  font-size: 14px;
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-left: 32px;
+
+  li {
+    margin: 7px 0;
+  }
 }
 
 a {
@@ -96,7 +108,7 @@ a {
 
 .toc {
   a {
-    font-size: 22px;
+    font-size: 14px;
     text-decoration: none;
     border-bottom: 1px dotted black;
 
