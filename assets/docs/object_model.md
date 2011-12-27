@@ -82,29 +82,41 @@ overriding.
 ### Reopening Classes and Instances
 
 You don't need to define a class all at once. You can reopen a class and
-define new properties using the `reopenClass` method.
+define new properties using the `reopen` method.
 
 <pre class="brush: js; highlight: 1">
-Person.reopenClass({
+Person.reopen({
   isPerson: true
 });
 
 Person.create().get('isPerson') // true
 </pre>
 
-When using `reopenClass`, you can also override existing methods and
+When using `reopen`, you can also override existing methods and
 call `this._super`.
 
 <pre class="brush: js; highlight: [3,4,5];">
-Person.reopenClass({
+Person.reopen({
   // override `say` to add an ! at the end
   say: function(thing) {
     this._super(thing + "!");
   }
 });
+
 </pre>
 
-`reopenClass` adds the properties to the class itself. Use `reopen` to add properties and methods to an instance.
+As you can see, `reopen` is used to add properties and methods to an instance.
+But when you need to create class method or add the properties to the class itself you can use `reopenClass`.
+
+<pre class="brush: js; highlight: 1;">
+Person.reopenClass({
+  createMan: function() {
+    return Person.create({isMan: true})
+  }
+});
+
+Person.createMan().get('isMan') // true
+</pre>
 
 ### Computed Properties (Getters)
 
