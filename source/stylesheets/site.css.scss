@@ -77,9 +77,13 @@ h2 {
 
 h3 {
   font-size: 22px;
-  margin: 22px 0;
+  margin: 40px 0 14px 0;
   color: $dark_base_color;
   font-weight: bold;
+}
+
+h2 + h3 {
+  margin-top: -10px;
 }
 
 h4 {
@@ -90,7 +94,7 @@ h4 {
 
 p {
   font-size: 14px;
-  margin: 22px 0;
+  margin: 14px 0 22px 0;
   line-height: 23px;
 }
 

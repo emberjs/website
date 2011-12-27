@@ -1,53 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Ember.js - <%= data.page.title %></title>
-  <%= stylesheet_link_tag "site" %>
-  <%= stylesheet_link_tag "highlight" %>
+  <head>
+    <title>Ember.js - <%= data.page.title %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= stylesheet_link_tag "highlight" %>
 
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-27675533-1']);
-    _gaq.push(['_trackPageview']);
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27675533-1']);
+      _gaq.push(['_trackPageview']);
 
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-  </script>
-</head>
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
 
-<body>
-<div id="header">
-  <div id="wrapper">
-    <div id="logo">&nbsp;</div>
-    <ul id="nav">
-      <%= link_to_page "docs", "/documentation" %>
-      <%= link_to_page "examples", "/examples" %>
-    </ul>
-  </div>
-</div> 
+  <body>
+    <div id="header">
+      <div id="wrapper">
+        <div id="logo">&nbsp;</div>
+        <ul id="nav">
+          <%= link_to_page "docs", "/documentation" %>
+          <%= link_to_page "examples", "/examples" %>
+        </ul>
+      </div>
+    </div> 
 
-<%# <div id="about">%>
-<%#   <p>%>
-<%#     Ember is a JavaScript framework for creating ambitious web applications%>
-<%#   </p>%>
-<%#   <a class="button" href="https://github.com/downloads/emberjs/ember.js/ember-0.9.3.min.js">download</a>%>
-<%#   <small>35k min + gzip | <a href="https://github.com/downloads/emberjs/ember.js/ember-0.9.3.js">debug build</a></small>%>
+  <%# <div id="about">%>
+  <%#   <p>%>
+  <%#     Ember is a JavaScript framework for creating ambitious web applications%>
+  <%#   </p>%>
+  <%#   <a class="button" href="https://github.com/downloads/emberjs/ember.js/ember-0.9.3.min.js">download</a>%>
+  <%#   <small>35k min + gzip | <a href="https://github.com/downloads/emberjs/ember.js/ember-0.9.3.js">debug build</a></small>%>
 
-<%#   <a class="button" href="https://github.com/downloads/emberjs/starter-kit/starter-kit.0.9.3.zip">starter kit</a>%>
-<%# </div>%>
-<div id="github">
-  <a href="https://github.com/emberjs/ember.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
-</div>
-<div id="content">
-  <%= yield %>
-</div>
-<script type="text/javascript" src="/scripts/shCore.js"></script>
-<script type="text/javascript" src="/scripts/shBrushJScript.js"></script>
-<script type="text/javascript" src="/scripts/shBrushXml.js"></script>
-<script type="text/javascript" src="/scripts/shBrushCss.js"></script>
-</body>
+  <%#   <a class="button" href="https://github.com/downloads/emberjs/starter-kit/starter-kit.0.9.3.zip">starter kit</a>%>
+  <%# </div>%>
+    <div id="github">
+      <a href="https://github.com/emberjs/ember.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
+  </body>
 </html>
 
