@@ -320,11 +320,11 @@ App.userView = Ember.View.create({
 // Changing the name of the user object changes
 // the value on the view.
 App.user.set('fullName', "Krang Gates");
-// App.userView.fullName will become "Krang Gates"
+// App.userView.userName will become "Krang Gates"
 
 // ...but changes to the view don't make it back to
 // the object.
-App.userView.set('fullName', "Truckasaurus Gates");
+App.userView.set('userName', "Truckasaurus Gates");
 App.user.get('fullName'); // "Krang Gates"
 ```
 
