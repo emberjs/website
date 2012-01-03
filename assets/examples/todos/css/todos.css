@@ -239,3 +239,12 @@ body {
         text-decoration: line-through; }
     body ul li:nth-child(odd) {
       background-color: #F7F7F7; }
+
+label > input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.ember-button {
+  padding: 8px;
+  margin: 5px 5px 5px 0;
+}
