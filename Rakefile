@@ -19,10 +19,13 @@ task :deploy do |t, args|
   system "rakep build"
 
   Dir.chdir "output" do
-    unless File.exist?(".git")
+    if File.exist?(".git")
+      system "git checkout master"
+    else
       system "git init"
       system "git remote add origin git@github.com:emberjs/emberjs.github.com.git"
     end
+    system "git pull origin master"
     system "git add -A"
     system "git commit -m '#{message.gsub("'", "\\'")}'"
     system "git push origin master"
