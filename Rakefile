@@ -7,14 +7,13 @@ namespace :assets do
 end
 
 desc "Deploy the website to github pages"
-task :deploy do |t, args|
+task :deploy do
   require "highline/import"
   message = ask("Provide a deployment message:  ") do |q|
     q.validate = /\w/
     q.responses[:not_valid] = "Can't be empty."
   end
 
-  # Cleaning may not be necessary
   system "rakep clean"
   system "rakep build"
 
@@ -28,6 +27,6 @@ task :deploy do |t, args|
     system "git pull origin master"
     system "git add -A"
     system "git commit -m '#{message.gsub("'", "\\'")}'"
-    system "git push origin master"
+    system "git push origin master" unless ENV['NODEPLOY']
   end
 end

@@ -1,8 +1,7 @@
 require 'yaml'
 require 'json'
 require 'erb'
-require 'rake-pipeline-web-filters/ordering_concat_filter'
-require 'rake-pipeline-web-filters/markdown_compiler'
+require 'rake-pipeline-web-filters/markdown_filter'
 
 WebFilters = Rake::Pipeline::Web::Filters
 
@@ -57,17 +56,17 @@ match "tutorial/steps/*.yml" do
 end
 
 match "tutorial/**/*.js" do
-  filter WebFilters::OrderingConcatFilter, ['tutorial/tutorial.js'], 'tutorial.js'
+  filter OrderingConcatFilter, ['tutorial/tutorial.js'], 'tutorial.js'
 end
 
 match "docs/**/*.md" do
   sections = [ 'introduction', 'application', 'object_model', 'handlebars', 'views' ]
   sections.map! { |file| "docs/#{file}.html" }
 
-  filter WebFilters::MarkdownCompiler
+  filter WebFilters::MarkdownFilter
   filter HTMLWrapperFilter, :template => 'assets/docs/_section.erb'
 
-  filter WebFilters::OrderingConcatFilter, sections, "documention.html"
+  filter OrderingConcatFilter, sections, "documention.html"
   filter HTMLWrapperFilter, :template => 'assets/docs/_documentation.erb'
   filter ConcatFilter, "index.html" #"documentation/index.html"
 end
