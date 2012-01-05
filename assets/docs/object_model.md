@@ -79,7 +79,7 @@ var LoudPerson = Person.extend({
 When subclassing, you can use `this._super` to invoke methods you are
 overriding.
 
-### Reopening Classes
+### Reopening Classes and Instances
 
 You don't need to define a class all at once. You can reopen a class and
 define new properties using the `reopen` method.
@@ -102,6 +102,20 @@ Person.reopen({
     this._super(thing + "!");
   }
 });
+
+</pre>
+
+As you can see, `reopen` is used to add properties and methods to an instance.
+But when you need to create class method or add the properties to the class itself you can use `reopenClass`.
+
+<pre class="brush: js; highlight: 1;">
+Person.reopenClass({
+  createMan: function() {
+    return Person.create({isMan: true})
+  }
+});
+
+Person.createMan().get('isMan') // true
 </pre>
 
 ### Computed Properties (Getters)
