@@ -69,14 +69,14 @@ ul#nav {
 }
 
 h2 {
-  margin: 22px 0;
+  margin: 28px 0;
   color: $base_color;
   font-size: 30px;
   font-weight: bold
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 24px;
   margin: 40px 0 14px 0;
   color: $dark_base_color;
   font-weight: bold;
@@ -88,7 +88,7 @@ h2 + h3 {
 
 h4 {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   margin: 20px 0;
 }
 
@@ -115,9 +115,8 @@ a {
 
 .toc {
   a {
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
-    border-bottom: 1px dotted black;
 
     &:hover {
       border-bottom: 1px solid black;
@@ -125,8 +124,8 @@ a {
   }
 
   ul {
-    list-style-type: disc;
-    margin-left: 60px;
+    list-style-type: none;
+    margin-left: 0px;
 
     li {
       margin: 7px 0;
@@ -138,5 +137,7 @@ a {
   padding: 13px;
   @include border-radius(4px);
   background-color: rgba(50,50,50,0.1);
+  font-size: 12px;
   font-family: Menlo, monospace;
+  line-height: 16px;
 }
