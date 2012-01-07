@@ -57,7 +57,7 @@ ul#nav {
 
 #content {
   background-color: #fff;
-  padding-top: 65px;
+  margin-top: 65px;
   width: 692px;
   padding-left: 15px;
   padding-right: 230px;
@@ -111,6 +111,32 @@ ol {
 
 a {
   color: $complement_support_color;
+}
+
+.download {
+  padding-top: 65px;
+  width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+
+  .info {
+    margin-top: 4px;
+    color: #888;
+  }
+
+  .debug {
+    color: $base-color;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .starter-kit img {
+    margin-top: 20px;
+  }
 }
 
 .toc {
