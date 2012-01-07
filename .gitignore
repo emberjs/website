@@ -4,3 +4,4 @@ bin/
 .bundle/
 output
 .sass-cache
+build/
