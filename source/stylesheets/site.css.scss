@@ -62,6 +62,8 @@ ul#nav {
   padding-left: 15px;
   padding-right: 230px;
   margin: 0 auto;
+
+  @include box-shadow(rgba(0,0,0,0.3) 0 0 3px 1px);
 }
 
 .section {
