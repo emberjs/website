@@ -77,7 +77,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  margin: 40px 0 14px 0;
+  margin: 20px 0 14px 0;
   color: $dark_base_color;
   font-weight: bold;
 }
@@ -140,6 +140,8 @@ a {
 }
 
 .toc {
+  padding-top: 1px;
+
   a {
     font-size: 18px;
     text-decoration: none;
