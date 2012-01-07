@@ -6,7 +6,8 @@ title: Examples
 
 As required by law, our JavaScript framework includes a Todos demo.
 
-<a href="/examples/todos/">Visit Todos
+<a href="/examples/todos/">Visit Todos</a>
+<a href="/examples/todos/">
 <img src="/images/screenshots/todos.png">
 </a>
 
@@ -14,7 +15,8 @@ As required by law, our JavaScript framework includes a Todos demo.
 This demo contains an example a simple view bound to a controller.
 
 <a href="/examples/simple_bindings/">
-Visit Simple Bindings
+Visit Simple Bindings</a>
+<a href="/examples/simple_bindings/">
 <img src="/images/screenshots/simple_bindings.png">
 </a>
 
@@ -29,5 +31,7 @@ into a controller.
 
 <a href="/examples/contacts/">
 Visit Contacts
+</a>
+<a href="/examples/contacts/">
 <img src="/images/screenshots/contacts.png">
 </a>
