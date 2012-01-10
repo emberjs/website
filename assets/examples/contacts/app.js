@@ -143,6 +143,16 @@ App.EditField = SC.View.extend({
 App.TextField = SC.TextField.extend({
   didInsertElement: function() {
     this.$().focus();
+  },
+
+  focusOut: function() {
+    this.set('isEditing', false);
+  },
+
+  keyUp: function(evt) {
+    if (evt.keyCode === 13) {
+      this.set('isEditing', false);
+    }
   }
 });
 
