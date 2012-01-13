@@ -118,6 +118,8 @@ Person.reopenClass({
 Person.createMan().get('isMan') // true
 </pre>
 
+`reopenClass` adds the properties to the class itself. Use `reopen` to add properties and methods to an instance.
+
 ### Computed Properties (Getters)
 
 Often, you will want a property that is computed based on other
