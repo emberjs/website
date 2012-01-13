@@ -149,3 +149,16 @@ This would render this HTML:
 If the bound value is a string, that value will be added as a class name without
 modification.
 
+### Attribute Bindings on a View
+
+You can bind attributes to the DOM element that represents a view by using `attributeBindings`:
+
+<pre class="brush: js;">
+App.MyView = Ember.View.extend({
+  tagName: 'a',
+  attributeBindings: ['href'],
+  href: "http://emberjs.com"
+});
+</pre>
+
+
