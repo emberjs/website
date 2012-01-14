@@ -127,24 +127,16 @@ App.EditField = SC.View.extend({
   doubleClick: function() {
     this.set('isEditing', true);
     return false;
-  },
-
-  focusOut: function() {
-    this.set('isEditing', false);
-  },
-
-  keyUp: function(evt) {
-    if (evt.keyCode === 13) {
-      this.set('isEditing', false);
-    }
   }
 });
 
 App.TextField = SC.TextField.extend({
   didInsertElement: function() {
     this.$().focus();
-  },
+  }
+});
 
+App.NonEditableField = SC.Mixin.create({
   focusOut: function() {
     this.set('isEditing', false);
   },
@@ -155,6 +147,9 @@ App.TextField = SC.TextField.extend({
     }
   }
 });
+
+App.EditField.reopen(App.NonEditableField);
+App.TextField.reopen(App.NonEditableField);
 
 SC.Handlebars.registerHelper('editable', function(path, options) {
   options.hash.valueBinding = path;
