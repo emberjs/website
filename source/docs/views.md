@@ -29,21 +29,7 @@ App.ClickableView = Ember.View.extend({
 ```
 
 Events bubble up from the target view to each parent view in
-succession, until the root view is reached. At any point you can stop propagation by returning `false`:
-
-```javascript
-doubleClick: function(evt) {
-  alert("Double clicked!");
-  return false;
-}
-```
-
-### Hierarchy
-
-You can construct hierarchies of views arbitrarily deep. A view can access its parent view by retrieving
-the `parentView` property, and can access an array of its child views via the `childViews` property.
-
-Note that both of these values are read-only. If you want to manually manage views in JavaScript (instead of creating them
+succession, until the root viewth of these values are read-only. If you want to manually manage views in JavaScript (instead of creating them
 using the {{view}} helper in Handlebars), see the Ember.ContainerView documentation below.
 
 ### Manually Managed Views with Ember.ContainerView
@@ -149,3 +135,14 @@ This would render this HTML:
 If the bound value is a string, that value will be added as a class name without
 modification.
 
+### Attribute Bindings on a View
+
+You can bind attributes to the DOM element that represents a view by using `attributeBindings`:
+
+```javascript
+App.MyView = Ember.View.extend({
+  tagName: 'a',
+  attributeBindings: ['href'],
+  href: "http://emberjs.com"
+});
+```

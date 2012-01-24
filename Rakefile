@@ -13,13 +13,13 @@ task :deploy => :build do |t, args|
     q.responses[:not_valid] = "Can't be empty."
   end
 
-  Dir.chdir "output" do
+  Dir.chdir "build" do
     unless File.exist?(".git")
       system "git init"
       system "git remote add origin git@github.com:emberjs/emberjs.github.com.git"
     end
     system "git add -A"
     system "git commit -m '#{message.gsub("'", "\\'")}'"
-    system "git push origin master"
+    system "git push origin master" unless ENV['NODEPLOY']
   end
 end

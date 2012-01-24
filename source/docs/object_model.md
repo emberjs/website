@@ -79,29 +79,42 @@ var LoudPerson = Person.extend({
 When subclassing, you can use `this._super` to invoke methods you are
 overriding.
 
-### Reopening Classes
+### Reopening Classes and Instances
 
 You don't need to define a class all at once. You can reopen a class and
-define new properties using the `reopenClass` method.
+define new properties using the `reopen` method.
 
 ```javascript
-Person.reopenClass({
+Person.reopen({
   isPerson: true
 });
 
 Person.create().get('isPerson') // true
 ```
 
-When using `reopenClass`, you can also override existing methods and
+When using `reopen`, you can also override existing methods and
 call `this._super`.
 
 ```javascript
-Person.reopenClass({
+Person.reopen({
   // override `say` to add an ! at the end
   say: function(thing) {
     this._super(thing + "!");
   }
 });
+```
+
+As you can see, `reopen` is used to add properties and methods to an instance.
+But when you need to create class method or add the properties to the class itself you can use `reopenClass`.
+
+```javascript
+Person.reopenClass({
+  createMan: function() {
+    return Person.create({isMan: true})
+  }
+});
+
+Person.createMan().get('isMan') // true
 ```
 
 ### Computed Properties (Getters)
@@ -238,7 +251,7 @@ Because observers are so common, Ember provides a way to define
 observers inline in class definitions.
 
 ```javascript
-Person.reopenClass({
+Person.reopen({
   fullNameChanged: function() {
     // this is an inline version of .addObserver
   }.observes('fullName')
@@ -249,7 +262,7 @@ You can define inline observers by using the `Ember.observer` method if you
 are using Ember without prototype extensions:
 
 ```javascript
-Person.reopenClass({
+Person.reopen({
   fullNameChanged: Ember.observer(function() {
     // this is an inline version of .addObserver
   }, 'fullName')

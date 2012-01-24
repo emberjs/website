@@ -156,27 +156,6 @@ todos.filterProperty('isDone', true);
 
 If you want to return just the first matched value, rather than an Array containing all of the matched values, you can use `find` and `findProperty`, which work just like `filter` and `filterProperty`, but return only one item.
 
-#### Sorting
-
-You can sort an Enumerable based on the value of some property or list of properties using `sortProperty`. If you pass in multiple properties, Ember will sort items with the same value for the first property by the value of the second parameter, and so on.
-
-```javascript
-var todos = [
-  Todo.create({ title: 'Write code', isDone: true }),
-  Todo.create({ title: 'Go to sleep' }),
-  Todo.create({ title: 'Eat lunch', isDone: true })
-];
-
-todos.sortProperty('isDone', 'title');
-
-// returns an Array containing
-// * Go to sleep
-// * Eat lunch
-// * Write code
-```
-
-Internally, the `sortProperty` method uses `Ember.compare`, which uses Ember's comparable semantics. You can override the default comparison behavior for a custom object by using the `Ember.Comparable` mixin.
-
 #### Aggregate Information (All or Any)
 
 If you want to find out whether every item in an Enumerable matches some condition, you can use the `every` method:

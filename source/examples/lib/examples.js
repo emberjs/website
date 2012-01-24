@@ -35,7 +35,7 @@ Examples.exampleController = SC.Object.create({
         iframeBody = iframeDocument.body,
         iframeWindow = iframe.contentWindow;
 
-    var libraries = ['https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js', 'lib/sproutcore.js'];
+    var libraries = ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js', 'lib/sproutcore.js'];
     var script;
 
     libraries.forEach(function(url) {
