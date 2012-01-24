@@ -118,10 +118,16 @@ a {
 
 .download {
   padding-top: 65px;
-  width: 220px;
+  width: 463px;
   margin: 0 auto;
   text-align: center;
   font-size: 12px;
+
+  .button {
+    display: inline-block;
+    height: 59px;
+    margin: 0 7px;
+  }
 
   .info {
     margin-top: 4px;
@@ -138,12 +144,15 @@ a {
   }
 
   .starter-kit img {
-    margin-top: 20px;
+    margin-top: -20px;
   }
+
 }
 
 .toc {
-  padding-top: 1px;
+  width: 320px;
+  margin: 0 0 0 -270px;
+  position: absolute;
 
   a {
     font-size: 18px;
