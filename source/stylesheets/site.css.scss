@@ -44,7 +44,6 @@ ul#nav {
     float: left;
 
     a {
-      color: white;
       color: #666;
       display: block;
       border-radius: 5px;
@@ -59,13 +58,9 @@ ul#nav {
   }
 
   li.active a, li a:hover {
-    color: #666;
+    color: white;
     border: 1px solid black;
     background: rgba(0, 0, 0, 0.4);
-  }
-
-  li a:hover {
-    color: #EEE;
   }
 }
 
