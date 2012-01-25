@@ -205,6 +205,10 @@ a {
 
     &:hover {
       border-bottom: 1px solid black;
+      color: black;
+    }
+    &.active {
+      color: black;
     }
   }
 
