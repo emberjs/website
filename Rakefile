@@ -18,6 +18,7 @@ task :deploy => :build do |t, args|
       system "git init"
       system "git remote add origin git@github.com:emberjs/emberjs.github.com.git"
     end
+    system "git pull origin master"
     system "git add -A"
     system "git commit -m '#{message.gsub("'", "\\'")}'"
     system "git push origin master" unless ENV['NODEPLOY']
