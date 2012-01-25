@@ -55,15 +55,27 @@ ul#nav {
   }
 }
 
+#content-wrapper {
+  width: 937px;
+  margin: 0 auto;
+  position: relative;
+}
+
 #content {
   background-color: #fff;
   margin-top: 65px;
-  width: 692px;
-  padding-left: 30px;
-  padding-right: 30px;
+  width: 520px;
+  padding: 1px 45px;
   margin: 0 auto;
 
   @include box-shadow(rgba(0,0,0,0.3) 0 0 3px 1px);
+}
+
+#sidebar {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .section {
@@ -98,7 +110,7 @@ h4 {
 p {
   font-size: 14px;
   margin: 14px 0 22px 0;
-  line-height: 23px;
+  line-height: 20px;
 }
 
 ol {
@@ -116,17 +128,26 @@ a {
   color: $complement_support_color;
 }
 
-.download {
-  padding-top: 65px;
-  width: 463px;
+#download {
+  width: 460px;
+  height: 200px;
   margin: 0 auto;
-  text-align: center;
   font-size: 12px;
+  position: relative;
 
-  .button {
-    display: inline-block;
-    height: 59px;
-    margin: 0 7px;
+  #download-ember, #download-starter-kit {
+    position: absolute;
+    width: 220px;
+    top: 80px;
+    text-align: center;
+  }
+
+  #download-ember {
+    left: 0;
+  }
+
+  #download-starter-kit {
+    right: 0;
   }
 
   .info {
@@ -142,21 +163,25 @@ a {
       text-decoration: underline;
     }
   }
-
-  .starter-kit img {
-    margin-top: -20px;
-  }
-
 }
 
 .toc {
-  width: 320px;
-  margin: 0 0 0 -270px;
-  position: absolute;
+  margin-right: 15px;
+  text-align: right;
+  padding-top: 1px;
+
+  h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
 
   a {
-    font-size: 18px;
+    font-size: 16px;
     text-decoration: none;
+    color: #888;
+    line-height: 21px;
 
     &:hover {
       border-bottom: 1px solid black;
@@ -180,4 +205,5 @@ a {
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;
+  margin-bottom: 22px;
 }
