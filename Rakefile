@@ -19,7 +19,7 @@ task :deploy do |t, args|
       system "git init"
       system "git remote add origin git@github.com:emberjs/emberjs.github.com.git"
     end
-    system "git pull origin master"
+    system "git fetch origin"
     system "git reset --hard origin/master"
 
     Rake::Task["build"].invoke
