@@ -165,6 +165,13 @@ a {
   }
 }
 
+.sticky {
+  top: 0px;
+  position: fixed;
+  margin-left: -15px;
+  width: 150px;
+}
+
 .toc {
   margin-right: 15px;
   text-align: right;
