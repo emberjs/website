@@ -7,11 +7,38 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <%= javascript_include_tag 'waypoints.min.js' %>
     <script type="text/javascript">
-      $(function(){
-        $('#sidebar').waypoint(function(event,direction){ 
-          $('.toc').toggleClass('sticky', direction === "down");
+      (function($){
+        $.fn.anchorScroll = function(){
+          this.click(function(event){
+            event.preventDefault();
+            var parts = this.href.split("#"),
+               target = parts[1],
+               offset = $('#'+target).offset(),
+                  top = offset.top;
+
+            $('html, body').animate({scrollTop: top}, 500);
+          });
+        };
+
+        $(function(){
+          $('.toc a').anchorScroll();
+          $('#sidebar').waypoint(function(event,direction){
+            $('.toc').toggleClass('sticky', direction === "down");
+            }, {offset: '0'});
+
+
+          $('.section').waypoint(function(element,direction){
+            var element = $(this),
+                     id = element.attr('id'),
+                 anchor = $('a[href=#'+id+']'),
+            previousAnchor =  anchor.closest('li').prev().find('a'),
+            activeAnchor   = direction === 'down' ? anchor : previousAnchor;
+
+            $('.toc a').removeClass('active');
+            activeAnchor.addClass('active');
+          });
         });
-       });
+      })($)
 
     </script>
     <script type="text/javascript">
@@ -36,7 +63,7 @@
           <%= link_to_page "examples", "/examples" %>
         </ul>
       </div>
-    </div> 
+    </div>
 
   <%# <div id="about">%>
   <%#   <p>%>
