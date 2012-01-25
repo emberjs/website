@@ -7,11 +7,27 @@
     <%= javascript_include_tag 'jquery-1.7.1.min.js' %>
     <%= javascript_include_tag 'waypoints.min.js' %>
     <script type="text/javascript">
-      $(function(){
-        $('#sidebar').waypoint(function(event,direction){ 
-          $('.toc').toggleClass('sticky', direction === "down");
+      (function($){
+        $.fn.anchorScroll = function(){
+          this.click(function(event){
+            event.preventDefault();
+            var parts = this.href.split("#"),
+               target = parts[1],
+               offset = $('#'+target).offset(),
+                  top = offset.top;
+
+            $('html, body').animate({scrollTop: top}, 500);
         });
+       };
+
+       $(function(){
+         $('.toc a').anchorScroll();
+         $('#sidebar').waypoint(function(event,direction){
+           $('.toc').toggleClass('sticky', direction === "down");
+         });
        });
+
+      })($)
 
     </script>
     <script type="text/javascript">
@@ -36,7 +52,7 @@
           <%= link_to_page "examples", "/examples" %>
         </ul>
       </div>
-    </div> 
+    </div>
 
   <%# <div id="about">%>
   <%#   <p>%>
