@@ -17,16 +17,27 @@
                   top = offset.top;
 
             $('html, body').animate({scrollTop: top}, 500);
+          });
+        };
+
+        $(function(){
+          $('.toc a').anchorScroll();
+          $('#sidebar').waypoint(function(event,direction){
+            $('.toc').toggleClass('sticky', direction === "down");
+            }, {offset: '14'});
+
+
+          $('.section').waypoint(function(element,direction){
+            var element = $(this),
+                     id = element.attr('id'),
+                 anchor = $('a[href=#'+id+']'),
+            previousAnchor =  anchor.closest('li').prev().find('a'),
+            activeAnchor   = direction === 'down' ? anchor : previousAnchor;
+
+            $('.toc a').removeClass('active');
+            activeAnchor.addClass('active');
+          });
         });
-       };
-
-       $(function(){
-         $('.toc a').anchorScroll();
-         $('#sidebar').waypoint(function(event,direction){
-           $('.toc').toggleClass('sticky', direction === "down");
-           }, {offset: '14'});
-       });
-
       })($)
 
     </script>
