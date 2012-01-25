@@ -34,24 +34,38 @@ body {
 }
 
 ul#nav {
-  width: 310px;
+  width: 210px;
   margin: 0 auto;
   text-align: center;
 
   li {
-    line-height: 67px;
-    margin: 0 7px;
+    line-height: 26px;
+    margin: 20px 7px;
+    float: left;
 
     a {
       color: white;
+      color: #666;
+      display: block;
+      border-radius: 5px;
+      padding: 0px 1em;
+      height: 26px;
+      line-height: 26px;
       text-decoration: none;
+      border: 1px solid transparent;
     }
 
     display: inline;
   }
 
-  li.active a {
+  li.active a, li a:hover {
     color: #666;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  li a:hover {
+    color: #EEE;
   }
 }
 
