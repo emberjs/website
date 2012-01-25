@@ -24,7 +24,7 @@
          $('.toc a').anchorScroll();
          $('#sidebar').waypoint(function(event,direction){
            $('.toc').toggleClass('sticky', direction === "down");
-         });
+           }, {offset: '14'});
        });
 
       })($)
