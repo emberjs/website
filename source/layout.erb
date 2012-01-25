@@ -4,7 +4,16 @@
     <title>Ember.js - <%= data.page.title %></title>
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "highlight" %>
+    <%= javascript_include_tag 'jquery-1.7.1.min.js' %>
+    <%= javascript_include_tag 'waypoints.min.js' %>
+    <script type="text/javascript">
+      $(function(){
+        $('#sidebar').waypoint(function(event,direction){ 
+          $('.toc').toggleClass('sticky', direction === "down");
+        });
+       });
 
+    </script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-27675533-1']);
