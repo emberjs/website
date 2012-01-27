@@ -111,7 +111,10 @@ All of the features described in this guide are __bindings aware__. That means t
 In order to know which part of your HTML to update when an underlying property changes, Handlebars will insert marker elements with a unique ID. If you look at your application while it's running, you might notice these extra elements:
 
 ```html
-My new car is <script id="metamorph-0-start" type="text/x-placeholder"></script>blue<script id="metamorph-0-end" type="text/x-placeholder"></script></span>.
+My new car is
+<script id="metamorph-0-start" type="text/x-placeholder"></script>
+blue
+<script id="metamorph-0-end" type="text/x-placeholder"></script>.
 ```
 
 Because all Handlebars expressions are wrapped in these markers, make sure each HTML tag stays inside the same block. For example, you shouldn't do this:
@@ -307,6 +310,50 @@ dasherizing.
 
 In this case, if the `isUrgent` property is true, the `urgent` class
 will be added. If it is false, the `urgent` class will be removed.
+
+### Handling Events with {{action}}
+
+Use the `{{action}}` helper to attach a handler in your view class to an event triggered on an element.
+
+To attach an element's `click` event to the `edit()` handler in the current view:
+
+```javascript
+<a href="#" {{action "edit" on="click"}}>Edit</a>
+```
+
+Because the default event is `click`, this could be written more concisely as:
+
+```javascript
+<a href="#" {{action "edit"}}>Edit</a>
+```
+
+Although the view containing the `{{action}}` helper will be targeted by default, it is possible to target a different view:
+
+```javascript
+<a href="#" {{action "edit" target="parentView"}}>Edit</a>
+```
+
+The view's event handler can optionally accept an `eventObject`:
+
+```javascript
+App.ShowView = Ember.View.extend({
+  templateName: 'show',
+
+  edit: function(event) {
+    event.preventDefault();
+    this.set('isEditing', true);
+  }
+});
+```
+
+The template discussed above will produce an HTML element like this:
+
+```html
+<a href="#" data-ember-action="3">Edit</a>
+```
+
+Ember will delegate the event you specified to your target view's handler based upon the internally assigned `data-ember-action` id.
+
 
 ### Building a View Hierarchy
 
