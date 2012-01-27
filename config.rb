@@ -45,6 +45,10 @@ page "documentation.html" do
   @chapters = data.docs.chapters
 end
 
+page "community.html" do
+  @chapters = data.community.chapters
+end
+
 page "examples/*", :directory_index => false
 
 page "index.html", :proxy => "documentation.html"
