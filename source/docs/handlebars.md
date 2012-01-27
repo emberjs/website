@@ -311,6 +311,50 @@ dasherizing.
 In this case, if the `isUrgent` property is true, the `urgent` class
 will be added. If it is false, the `urgent` class will be removed.
 
+### Handling Events with {{action}}
+
+Use the `{{action}}` helper to attach a handler in your view class to an event triggered on an element.
+
+To attach an element's `click` event to the `edit()` handler in the current view:
+
+```javascript
+<a href="#" {{action "edit" on="click"}}>Edit</a>
+```
+
+Because the default event is `click`, this could be written more concisely as:
+
+```javascript
+<a href="#" {{action "edit"}}>Edit</a>
+```
+
+Although the view containing the `{{action}}` helper will be targeted by default, it is possible to target a different view:
+
+```javascript
+<a href="#" {{action "edit" target="parentView"}}>Edit</a>
+```
+
+The view's event handler can optionally accept an `eventObject`:
+
+```javascript
+App.ShowView = Ember.View.extend({
+  templateName: 'show',
+
+  edit: function(event) {
+    event.preventDefault();
+    this.set('isEditing', true);
+  }
+});
+```
+
+The template discussed above will produce an HTML element like this:
+
+```html
+<a href="#" data-ember-action="3">Edit</a>
+```
+
+Ember will delegate the event you specified to your target view's handler based upon the internally assigned `data-ember-action` id.
+
+
 ### Building a View Hierarchy
 
 So far, we've discussed writing templates for a single view. However, as your application grows, you will often want to create a hierarchy of views to encapsulate different areas on the page. Each view is responsible for handling events and maintaining the properties needed to display it.
