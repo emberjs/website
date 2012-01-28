@@ -122,7 +122,7 @@ arr.getEach('name') // ['unknown', 'unknown']
 
 #### Filtering
 
-Another common task to perform on an Enumerable is to take the Enumerable as input, and return an Array after sorting or filtering it based on some criteria.
+Another common task to perform on an Enumerable is to take the Enumerable as input, and return an Array after filtering it based on some criteria.
 
 For arbitrary filtering, use the (you guessed it) `filter` method. The filter method expects the callback to return `true` if Ember should include it in the final Array, and `false` or `undefined` if Ember should not.
 
