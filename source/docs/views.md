@@ -65,13 +65,13 @@ var container = Ember.ContainerView.create({
 Before your views are turned into DOM elements, they first exist as a string representation. As views render, they turn
 each of their child views into strings and concatenate them together.
 
-If you'd like to use something other than Handlebars, you can override a view's `render` method to return a custom
+If you'd like to use something other than Handlebars, you can override a view's `render` method to generate a custom
 string of HTML.
 
 ```javascript
 App.CoolView = Ember.View.create({
-  render: function() {
-    return "<b>This view is so cool!</b>";
+  render: function(buffer) {
+    buffer.push("<b>This view is so cool!</b>");
   }
 });
 ```
