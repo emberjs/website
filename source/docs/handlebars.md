@@ -234,20 +234,20 @@ If you use `{{bindAttr}}` with a Boolean value, it will add or remove the specif
 
 ```javascript
 App.InputView = Ember.View.extend({
-  isSelected: true
+  isDisabled: true
 });
 ```
 
 And this template:
 
 ```html
-<input type="checkbox" {{bindAttr checked="isSelected"}}>
+<input type="checkbox" {{bindAttr disabled="isDisabled"}}>
 ```
 
 Handlebars will produce the following HTML element:
 
 ```html
-<input type="checkbox" checked>
+<input type="checkbox" disabled>
 ```
 
 ### Binding Class Names with {{bindAttr}}
