@@ -117,6 +117,10 @@ App.DeleteNumberView = SC.View.extend({
     var contact = this.getPath('contentView.content');
 
     contact.get('phoneNumbers').removeObject(phoneNumber);
+  },
+
+  touchEnd: function() {
+    this.click();
   }
 });
 
@@ -126,6 +130,20 @@ App.EditField = SC.View.extend({
 
   doubleClick: function() {
     this.set('isEditing', true);
+    return false;
+  },
+
+  touchEnd: function() {
+    // Rudimentary double tap support, could be improved
+    var touchTime = new Date();
+    if (this._lastTouchTime && touchTime - this._lastTouchTime < 250) {
+      this.doubleClick();
+      this._lastTouchTime = null;
+    } else {
+      this._lastTouchTime = touchTime;
+    }
+
+    // Prevent zooming
     return false;
   },
 
@@ -167,6 +185,10 @@ App.ContactListView = SC.View.extend({
     var content = this.get('content');
 
     App.selectedContactController.set('content', content);
+  },
+
+  touchEnd: function() {
+    this.click();
   },
 
   isSelected: function() {
