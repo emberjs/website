@@ -13,14 +13,18 @@
         <script type="text/x-handlebars">
           <h2>My Contacts</h2>
           <ul>
-            {{#each App.contactsController.sortedContacts}}
+            {{#each App.contactsController}}
               {{#view App.ContactListView contentBinding="this"}}
                 {{#with content}}
                   <li>
                   {{#if hasName}}
-                  <b>{{firstName}}</b> {{#if firstName}}{{lastName}}{{else}}<b>{{lastName}}</b>{{/if}}
+                    {{#if lastName}}
+                      {{firstName}} <b>{{lastName}}</b>
+                    {{else}}
+                      <b>{{firstName}}</b>
+                    {{/if}}
                   {{else}}
-                  <span class="no-name">no name</span>
+                    <span class="no-name">no name</span>
                   {{/if}}
                 {{/with}}
               {{/view}}

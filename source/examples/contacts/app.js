@@ -6,6 +6,11 @@ App = SC.Application.create();
 
 */
 
+var names = ["Adam", "Bert", "Charlie", "Dave", "Ernie", "Frances",
+  "Gary", "Isabelle", "John", "Kyle", "Lyla", "Matt", "Nancy", "Ophelia",
+  "Peter", "Quentin", "Rachel", "Stan", "Tom", "Uma", "Veronica", "Wilson",
+  "Xander", "Yehuda", "Zora"];
+
 App.Contact = SC.Object.extend({
   firstName: '',
   lastName: '',
@@ -15,6 +20,14 @@ App.Contact = SC.Object.extend({
         lastName = this.get('lastName');
 
     return firstName !== '' || lastName !== '';
+  }.property('firstName', 'lastName'),
+
+  // This value is used to determine how the contact
+  // should be sorted in the contacts list. By default
+  // we sort by last name, but we use the first name if
+  // no last name is provided.
+  sortValue: function() {
+    return this.get('lastName') || this.get('firstName');
   }.property('firstName', 'lastName')
 });
 
@@ -28,40 +41,62 @@ App.contactsController = SC.ArrayController.create({
   // The array of Contact objects that backs the array controller.
   content: [],
 
-  // The content array, sorted by first name, or last
-  // name if no first name is provided.
-  sortedContacts: function() {
-    var content = this.get('content');
+  // Adds a new contact to the list and ensures it is
+  // sorted correctly.
+  add: function(contact) {
+    var length = this.get('length'), idx;
 
-    return content.slice().sort(function(a, b) {
-      var firstNameA = a.get('firstName'),
-          firstNameB = b.get('firstName');
+    idx = this.binarySearch(contact.get('sortValue'), 0, length);
 
-      if (!firstNameA) {
-        firstNameA = a.get('lastName');
-      }
+    this.insertAt(idx, contact);
 
-      if (!firstNameB) {
-        firstNameB = b.get('lastName');
-      }
+    // If the value by which we've sorted the contact
+    // changes, we need to re-insert it at the correct
+    // location in the list.
+    contact.addObserver('sortValue', this, 'contactSortValueDidChange');
+  },
 
-      if (!firstNameA && firstNameB) { return 1; }
-      if (!firstNameB && firstNameA) { return -1; }
-      if (firstNameA < firstNameB) { return -1; }
-      if (firstNameA > firstNameB) { return 1; }
-      return 0;
-    });
+  // Binary search implementation that finds the index
+  // where a contact should be inserted.
+  binarySearch: function(value, low, high) {
+    var mid, midValue;
 
-    // Every time a contact's first name or last name changes,
-    // recompute the order. Since this is a somewhat expensive
-    // operation, the cacheable() flag means that the computed
-    // value will be automatically memoized.
-  }.property('@each.firstName', '@each.lastName').cacheable(),
+    if (low === high) {
+      return low;
+    }
+
+    mid = low + Math.floor((high - low) / 2);
+    midValue = this.objectAt(mid).get('sortValue');
+
+    if (value > midValue) {
+      return this.binarySearch(value, mid+1, high);
+    } else if (value < midValue) {
+      return this.binarySearch(value, low, mid);
+    }
+
+    return mid;
+  },
+
+  remove: function(contact) {
+    this.removeObject(contact);
+    contact.removeObserver('sortValue', this, 'contactSortValueDidChange');
+  },
+
+  contactSortValueDidChange: function(contact) {
+    this.remove(contact);
+    this.add(contact);
+  },
 
   // Creates a new, empty Contact object and adds it to the
   // array controller.
   newContact: function() {
-    this.pushObject(App.Contact.create({
+    var firstName = Math.floor(Math.random()*names.length),
+        lastName = Math.floor(Math.random()*names.length),
+        hasLastName = Math.random();
+
+    this.add(App.Contact.create({
+      firstName: names[firstName],
+      lastName: hasLastName < 0.9 ? names[lastName] : null,
       phoneNumbers: []
     }));
   },
