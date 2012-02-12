@@ -1,12 +1,4 @@
 GIT
-  remote: git://github.com/wbzyl/rack-codehighlighter.git
-  revision: 64bf50520cb1d563432832ae30d85bbd94cec5bd
-  specs:
-    rack-codehighlighter (0.5.0)
-      nokogiri (>= 1.4.1)
-      rack (>= 1.0.0)
-
-GIT
   remote: https://github.com/middleman/middleman.git
   revision: 75fba6aa54899ce69c3709dadb0080dce086a465
   ref: 75fba6aa54899ce69c3709dadb0080dce086a465
@@ -59,7 +51,6 @@ GEM
     hike (1.2.1)
     i18n (0.6.0)
     multi_json (1.0.4)
-    nokogiri (1.5.0)
     pygments.rb (0.2.4)
       rubypython (~> 0.5.3)
     rack (1.3.5)
@@ -96,6 +87,5 @@ DEPENDENCIES
   highline
   middleman!
   pygments.rb
-  rack-codehighlighter!
   rake
   redcarpet
