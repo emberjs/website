@@ -5,3 +5,4 @@ bin/
 output
 .sass-cache
 build/
+source/examples
