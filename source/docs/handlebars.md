@@ -498,7 +498,7 @@ App.UserView = Ember.View.extend({
 });
 ```
 
-When we only have a few bindings to configure, like with `App.InfoView`, it is
+When we only have a few bindings to configure, like with `App.UserView`, it is
 sometimes useful to be able to declare those bindings in the template. You can
 do that by passing additional arguments to the `{{#view}}` helper. If all
 you're doing is configuring bindings, this often allows you to bypass having to
@@ -506,7 +506,7 @@ create a new subclass.
 
 ```html
 User: {{firstName}} {{lastName}}
-{{#view App.InfoView postsBinding="App.userController.content.posts"
+{{#view App.UserView postsBinding="App.userController.content.posts"
         hobbiesBinding="App.userController.content.hobbies"}}
   <b>Posts:</b> {{posts}}
   <br>
