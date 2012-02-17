@@ -646,49 +646,50 @@ NOTE: Parameters to helper functions are passed as names, not their current valu
 Ember comes pre-packaged with a set of views for building a few basic controls like text inputs, check boxes, and select lists.
 
 They are:
-	Ember.Button
+
+####Ember.Button
 	
-	```javascript
+```javascript
 	var button = Ember.Button.create({
     		target: 'MyApp.myActionObject',
     		action: 'myAction'
   	});
-  	```
-	Ember.Checkbox
+```
+####Ember.Checkbox
 	
-	```html
+```html
 		{{view Ember.Checkbox titleBinding="content.title" valueBinding="content.isDone"}}
-	```
+```
 	
-	Ember.TextField
+####Ember.TextField
 	
-	```javascript
+```javascript
 	App.myText = Ember.TextField.extend({
 	    formBlurredBinding: 'App.adminController.formBlurred',
 	    change: function(evt) {
 	      this.set('formBlurred', true);
 	    }
 	  });
-	```
+```
 	
-	Ember.Select
+####Ember.Select
 	
-	```html
+```html
 	{{view Ember.Select viewName="select"
                           contentBinding="app.peopleController"
                           optionLabelPath="content.fullName"
                           optionValuePath="content.id"
                           prompt="Pick a person:"
                           selectionBinding="app.selectedPersonController.person"}}
-	```
+```
 	
-	Ember.TextArea
+####Ember.TextArea
 	
-	```javascript
+```javascript
 	var textArea = Ember.TextArea.create({
       		valueBinding: 'TestObject.value'
     		});
-	```
+```
 	
 
 If you would like to add one of these controls to your view, you are encouraged to extend from these controls.
