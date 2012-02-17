@@ -1,0 +1,1 @@
+This guide will walk you through writing documentation for the ember project.

@@ -1,0 +1,16 @@
+---
+title: "Guides"
+---
+
+<% content_for :sidebar do %>
+  <div class="section toc">
+    <h3>Guides</h2>
+    <ul>
+    <% @guides.each do |guide| %>
+      <li><a href="/guides/<%= guide.title %>"><%= guide.title.humanize.titleize %></a></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= render :markdown, "guides/guides.md" %>
