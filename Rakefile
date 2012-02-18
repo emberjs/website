@@ -15,7 +15,7 @@ end
 desc "Build the website"
 task :build => 'examples:update' do
   system "middleman build"
-  File.open("build/CNAME", 'w') do |f|
+  File.open("CNAME", 'w') do |f|
     f.write "emberjs.com"
   end
 end
