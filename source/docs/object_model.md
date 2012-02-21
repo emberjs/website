@@ -278,7 +278,7 @@ To recompute based on a change to an object in the array use the 'myArray.@each'
 
 ```javascript
 firstItem: function () {
-  	return App.myController.myArray[0];
+  	return App.myController.get('myArray')[0];
 	}.property('myArray.@each').cacheable()
 ```
 
