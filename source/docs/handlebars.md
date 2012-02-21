@@ -640,3 +640,89 @@ and it will output the following:
 ```
 
 NOTE: Parameters to helper functions are passed as names, not their current values. This allows you to optionally set up observers on the values. To get the current value of the parameter, use Ember.getPath, as shown above.
+
+### Included Views
+
+Ember comes pre-packaged with a set of views for building a few basic controls like text inputs, check boxes, and select lists.
+
+They are:
+
+####Ember.Button
+	
+```javascript
+	var button = Ember.Button.create({
+    		target: 'MyApp.myActionObject',
+    		action: 'myAction'
+  	});
+```
+####Ember.Checkbox
+	
+```html
+		{{view Ember.Checkbox titleBinding="content.title" valueBinding="content.isDone"}}
+```
+	
+####Ember.TextField
+	
+```javascript
+	App.myText = Ember.TextField.extend({
+	    formBlurredBinding: 'App.adminController.formBlurred',
+	    change: function(evt) {
+	      this.set('formBlurred', true);
+	    }
+	  });
+```
+	
+####Ember.Select
+	
+```html
+	{{view Ember.Select viewName="select"
+                          contentBinding="app.peopleController"
+                          optionLabelPath="content.fullName"
+                          optionValuePath="content.id"
+                          prompt="Pick a person:"
+                          selectionBinding="app.selectedPersonController.person"}}
+```
+	
+####Ember.TextArea
+	
+```javascript
+	var textArea = Ember.TextArea.create({
+      		valueBinding: 'TestObject.value'
+    		});
+```
+	
+
+If you would like to add one of these controls to your view, you are encouraged to extend from these controls.
+
+Events do not bubble from a subview to a parent view so extending these views is the only way to capture those events.
+
+Example:
+
+```javascript
+App.myText = Ember.TextField.extend({
+    formBlurredBinding: 'App.adminController.formBlurred',
+    change: function(evt) {
+      this.set('formBlurred', true);
+    }
+  });
+```
+
+You can then use this view as a sub view and capture the events.  In the following example, a change to the Name input would blurr the form and cause the save button to appear.
+
+```html
+<script id="formDetail" data-template-name='formDetail' type="text/x-handlebars">
+    <form>
+        <fieldset>
+           <legend>Info:</legend>                 
+           
+                   {{view App.myText name="Name" id="Name"  valueBinding="myObj.Name"}} 
+	               <label for="Name">Name</label><br/>
+                   
+                   {{#if formBlurred}}
+                    <a href="#" {{action "syncData" on="click"}}>Save</a>
+                    {{/if}}
+               
+        </fieldset>
+    </form>
+</script>
+```
