@@ -1,0 +1,5 @@
+guides:
+    - title: documentation
+      sections:
+          - intro
+          - new_guide

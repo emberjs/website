@@ -9,6 +9,7 @@ body {
   margin: 65px 0 0 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
 }
 
 #header {
@@ -36,7 +37,7 @@ body {
 }
 
 ul#nav {
-  width: 400px;
+  width: 480px;
   margin: 0 auto;
   text-align: center;
 

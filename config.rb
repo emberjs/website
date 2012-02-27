@@ -45,6 +45,17 @@ page "documentation.html" do
   @chapters = data.docs.chapters
 end
 
+page "guides.html" do
+  @guides = data.guides.guides  
+end
+page "guides/index.html", :proxy => "guides.html"
+
+data.guides.guides.each do |guide|
+  page "guides/#{guide.title}.html", :proxy => "guides/guide_template.html", :ignore => true do
+    @guide = guide
+  end
+end
+
 page "community.html" do
   @chapters = data.community.chapters
 end

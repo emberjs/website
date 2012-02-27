@@ -21,7 +21,7 @@
         };
 
         $(function(){
-          $('.toc a').anchorScroll();
+          $('.toc a[href^="#"]').anchorScroll();
           $('#sidebar').waypoint(function(event,direction){
             $('.toc').toggleClass('sticky', direction === "down");
             }, {offset: '0'});
@@ -60,6 +60,7 @@
         <div id="logo">&nbsp;</div>
         <ul id="nav">
           <%= link_to_page "docs", "/documentation" %>
+          <%= link_to_page "guides", "/guides" %>
           <%= link_to_page "community", "/community" %>
           <%= link_to_page "examples", "/examples" %>
         </ul>
