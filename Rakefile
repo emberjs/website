@@ -15,9 +15,6 @@ end
 desc "Build the website"
 task :build => 'examples:update' do
   system "middleman build"
-  File.open("CNAME", 'w') do |f|
-    f.write "emberjs.com"
-  end
 end
 
 namespace :examples do
@@ -47,6 +44,10 @@ task :deploy do |t, args|
     git_update
 
     Rake::Task["build"].invoke
+
+    File.open("CNAME", 'w') do |f|
+      f.write "emberjs.com"
+    end
 
     system "git add -A"
     system "git commit -m '#{message.gsub("'", "\\'")}'"
