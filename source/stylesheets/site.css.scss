@@ -2,6 +2,8 @@
 @import "compass";
 @import "base";
 
+$code_background: #f2f2f2;
+
 body {
   background: url(/images/groovepaper.png);
   margin: 65px 0 0 0;
@@ -136,6 +138,13 @@ a {
   color: $complement_support_color;
 }
 
+code {
+  font-family: "Menlo", "Courier", monospace;
+  background-color: $code_background;
+  padding: 2px 3px;
+  @include border-radius(4px);
+}
+
 #download {
   width: 460px;
   height: 125px;
@@ -220,7 +229,7 @@ a {
 .highlight {
   padding: 13px;
   @include border-radius(4px);
-  background-color: rgba(50,50,50,0.1);
+  background-color: $code_background;
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;

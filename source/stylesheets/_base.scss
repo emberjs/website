@@ -1,4 +1,4 @@
-$base-color: #cd4f1a;
+$base_color: #cd4f1a;
 
 $complement_support_color : adjust_hue($base_color, 180 + 30);
 $complement_accent_color  : adjust_hue($base_color, 180 - 30);
