@@ -269,6 +269,19 @@ Person.reopen({
 });
 ```
 
+#### Observing and Computing on Arrays
+
+Often, you will want a property that is computed based on an array.  Ember provides the Ember.A([]) construct to create
+an observable array.
+
+To recompute based on a change to an object in the array use the 'myArray.@each' binding hint.
+
+```javascript
+firstItem: function () {
+  	return App.myController.get('myArray')[0];
+	}.property('myArray.@each').cacheable()
+```
+
 ### Bindings
 
 A binding creates a link between two properties such that when one changes, the
