@@ -2,19 +2,13 @@
 title: "Documentation"
 ---
 
-<% content_for :sidebar do %>
-  <div class="section toc">
-    <h3>Table of Contents</h2>
-    <ul>
-    <% @chapters.each do |chapter| %>
-      <li><a href="#<%= chapter %>"><%= chapter.humanize.titleize %></a></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
+<div class="section toc">
+  <h3>Table of Contents</h2>
+  <%= table_of_contents %>
+</div>
 
 <% @chapters.each do |chapter| %>
-<div class="section" id="<%= chapter %>">
+<div class="section margin" id="<%= chapter %>">
   <%= render :markdown, "docs/#{chapter}.md" %>
 </div>
 <% end %>

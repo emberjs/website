@@ -75,8 +75,7 @@ ul#nav {
 #content {
   background-color: #fff;
   margin-top: 65px;
-  width: 520px;
-  padding: 1px 45px;
+  width: 1000px;
   margin: 0 auto;
 
   @include box-shadow(rgba(0,0,0,0.3) 0 0 3px 1px);
@@ -89,7 +88,8 @@ ul#nav {
   left: 0;
 }
 
-.section {
+.section.margin {
+  margin-left: 300px;
 }
 
 h2 {
@@ -190,9 +190,12 @@ code {
 }
 
 .toc {
+  position: absolute;
+  width: 300px;
   margin-right: 15px;
-  text-align: right;
+  text-align: left;
   padding-top: 1px;
+  padding: 10px 0 10px 10px;
 
   h3 {
     font-size: 15px;
@@ -218,7 +221,7 @@ code {
 
   ul {
     list-style-type: none;
-    margin-left: 0px;
+    margin-left: 15px;
 
     li {
       margin: 7px 0;
