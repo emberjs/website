@@ -52,7 +52,7 @@ Ember also supplies built-in support for state management, so you'll have
 a way to describe how your application moves through various nested states
 (like signed-out, signed-in, viewing-post, and viewing-comment) out of the box.
 
-### How is Ember.js Different from Server-Side Frameworks?
+### How is Ember.js Different?
 
 Traditional web applications make the user to download a new page every time
 they interact with the server. This means that every interaction is never faster
@@ -152,7 +152,7 @@ MyApp.president = Ember.Object.create({
 Make sure you list these dependencies so Ember knows when to update bindings that connect
 to a computed property.
 
-### Auto-updating Templates
+#### Auto-updating Templates
 
 Ember uses Handlebars, a semantic templating library. To take data from your JavaScript application
 and put it into the DOM, create a `<script>` tag and put it into your HTML, wherever you'd like the

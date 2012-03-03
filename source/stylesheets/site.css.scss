@@ -2,15 +2,41 @@
 @import "compass";
 @import "base";
 
+/* Defines the color for blocks of code or text
+that should be displayed in a monospace font. */
 $code_background: #f2f2f2;
+
+/* Calculated page dimensions. */
+$page_width: 960px;
+$content_width: $page_width / 1.4;
+$sidebar_width: $page_width - $content_width;
+$padding: 20px;
+
+/* Calculate typography sizes. */
+$ratio: 1.4;
+$extra_small_font: 12px;
+$small_font: $extra_small_font * $ratio;
+$medium_font: $small_font * $ratio;
+$large_font: $medium_font * $ratio;
+$extra_large_font: $large_font * $ratio;
 
 body {
   background: url(/images/groovepaper.png);
   margin: 65px 0 0 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
+  font-size: $extra_small_font;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+/**
+
+  HEADER
+
+**/
 #header {
   position: absolute;
   left: 0;
@@ -21,135 +47,138 @@ body {
   @include single-box-shadow(rgba(0,0,0,0.5), 0, 2px, 2px, 0);
 
   #wrapper {
-    width: 937px;
+    width: $page_width;
     margin: 0 auto;
     position: relative;
   }
-}
 
-#logo {
-  position: absolute;
-  top: 13px;
-  width: 108px;
-  height: 31px;
-  background: url(/images/logo.png);
-}
-
-ul#nav {
-  width: 400px;
-  margin: 0 auto;
-  text-align: center;
-
-  li {
-    line-height: 26px;
-    margin: 20px 7px;
-    float: left;
-
-    a {
-      color: #666;
-      display: block;
-      border-radius: 5px;
-      padding: 0px 1em;
-      height: 26px;
-      line-height: 26px;
-      text-decoration: none;
-      border: 1px solid transparent;
-    }
-
-    display: inline;
+  #logo {
+    position: absolute;
+    top: 13px;
+    width: 108px;
+    height: 31px;
+    background: url(/images/logo.png);
   }
 
-  li.active a, li a:hover {
-    color: white;
-    border: 1px solid black;
-    background: rgba(0, 0, 0, 0.4);
+  #nav {
+    width: 400px;
+    height: 65px;
+    margin: 0 auto;
+
+    text-align: center;
+
+    li {
+      line-height: 26px;
+      margin: 20px 7px;
+
+      a {
+        color: #666;
+        display: block;
+        border-radius: 5px;
+        padding: 0px 1em;
+        height: 26px;
+        line-height: 26px;
+        text-decoration: none;
+        border: 1px solid transparent;
+      }
+
+      display: inline-block;
+    }
+
+    li.active a, li a:hover {
+      color: white;
+      border: 1px solid black;
+      background: rgba(0, 0, 0, 0.4);
+    }
   }
 }
 
 #content-wrapper {
-  width: 937px;
-  margin: 0 auto;
+  width: $page_width;
+  margin: 0 auto 40px auto;
+  padding: 20px;
   position: relative;
-}
-
-#content {
   background-color: #fff;
-  margin-top: 65px;
-  width: 1000px;
-  margin: 0 auto;
 
   @include box-shadow(rgba(0,0,0,0.3) 0 0 3px 1px);
 }
 
-#sidebar {
-  width: 150px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+#content {
+  width: $page_width;
 
-.section.margin {
-  margin-left: 300px;
-}
-
-h2 {
-  margin: 28px 0;
-  color: $base_color;
-  font-size: 30px;
-  font-weight: bold;
-  padding-top: 13px;
-}
-
-h3 {
-  font-size: 24px;
-  margin: 20px 0 14px 0;
-  color: $dark_base_color;
-  font-weight: bold;
-}
-
-h2 + h3 {
-  margin-top: -10px;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: 20px;
-  margin: 20px 0;
-}
-
-p {
-  font-size: 14px;
-  margin: 14px 0 22px 0;
-  line-height: 20px;
-}
-
-ol {
-  font-size: 14px;
-  list-style-type: decimal;
-  list-style-position: inside;
-  margin-left: 32px;
-
-  li {
-    margin: 7px 0;
+  &.has-sidebar {
+    width: $content_width - $padding * 2;
   }
 }
 
-a {
-  color: $complement_support_color;
-}
+#sidebar {
+  position: absolute;
+  width: $sidebar_width - $padding;
+  margin-left: $content_width - $padding;
+  text-align: left;
+  color: #aaa;
 
-code {
-  font-family: "Menlo", "Courier", monospace;
-  background-color: $code_background;
-  padding: 2px 3px;
-  @include border-radius(4px);
+  &:hover {
+    color: #000;
+
+    a {
+      @include single-transition(color, 0.1s);
+      color: #000;
+    }
+
+  }
+
+  h3 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+
+  a {
+    font-size: 16px;
+    text-decoration: none;
+    color: #888;
+    line-height: 21px;
+
+    &:hover {
+      border-bottom: 1px solid black;
+      color: black;
+    }
+    &.active {
+      color: black;
+    }
+  }
+
+  & > ul {
+    margin: 0px;
+
+    ul {
+      margin-left: 15px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    font-size: $extra_small_font;
+
+    li {
+      margin: 7px 0;
+
+      a {
+        color: #aaa;
+        font-size: $extra_small_font;
+        @include single-transition(color, 0.4s);
+      }
+    }
+  }
 }
 
 #download {
   width: 460px;
   height: 125px;
   margin: 0 auto;
-  font-size: 12px;
+  font-size: $extra_small_font;
   position: relative;
 
   #download-ember, #download-starter-kit {
@@ -182,6 +211,70 @@ code {
   }
 }
 
+/**
+  Typography styles.
+**/
+h2 {
+  margin-bottom: 28px;
+  color: $base_color;
+  font-size: $extra_large_font;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: $large_font;
+  margin-bottom: 18px;
+  color: $dark_base_color;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: $medium_font;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 18px;
+  line-height: 18px;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol, ul {
+  font-size: $medium_font;
+  list-style-position: inside;
+  margin-left: 32px;
+  margin-bottom: 18px;
+
+  li {
+    font-size: $extra_small_font;
+    margin: 7px 0;
+  }
+}
+
+.section {
+  margin-bottom: 28px;
+}
+
+a {
+  color: $complement_support_color;
+}
+
+code {
+  font-family: "Menlo", "Courier", monospace;
+  background-color: $code_background;
+  padding: 2px 3px;
+  @include border-radius(4px);
+}
+
+
 .sticky {
   top: 0px;
   position: fixed;
@@ -189,45 +282,6 @@ code {
   width: 150px;
 }
 
-.toc {
-  position: absolute;
-  width: 300px;
-  margin-right: 15px;
-  text-align: left;
-  padding-top: 1px;
-  padding: 10px 0 10px 10px;
-
-  h3 {
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 20px;
-  }
-
-  a {
-    font-size: 16px;
-    text-decoration: none;
-    color: #888;
-    line-height: 21px;
-
-    &:hover {
-      border-bottom: 1px solid black;
-      color: black;
-    }
-    &.active {
-      color: black;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    margin-left: 15px;
-
-    li {
-      margin: 7px 0;
-    }
-  }
-}
 
 .highlight {
   padding: 13px;

@@ -2,13 +2,13 @@
 title: "Documentation"
 ---
 
-<div class="section toc">
+<% content_for :sidebar do %>
   <h3>Table of Contents</h2>
   <%= table_of_contents %>
-</div>
+<% end %>
 
 <% @chapters.each do |chapter| %>
-<div class="section margin" id="<%= chapter %>">
+<div class="section" id="<%= chapter %>">
   <%= render :markdown, "docs/#{chapter}.md" %>
 </div>
 <% end %>

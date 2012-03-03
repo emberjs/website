@@ -16,11 +16,14 @@ require "active_support/core_ext"
 class TableOfContents < Redcarpet::Render::Base
   def initialize
     @current_level = 0
+    @toc_count = 0
     @result = []
     super
   end
 
   def header(text, level)
+    @toc_count += 1
+
     return if level > 3
 
     result = @result
@@ -28,14 +31,14 @@ class TableOfContents < Redcarpet::Render::Base
     if level > @current_level
       while level > @current_level
         result << "<ul>\n<li>\n"
-        @current_level = @current_level+1
+        @current_level += 1
       end
     elsif level < @current_level
       result << "</li>\n"
 
       while level < @current_level
         result << "</ul>\n</li>\n"
-        @current_level = @current_level-1
+        @current_level -= 1
       end
 
       result << "<li>\n"
@@ -43,7 +46,7 @@ class TableOfContents < Redcarpet::Render::Base
       result << "</li>\n<li>\n"
     end
 
-    result << text
+    result << "<a href=\"#toc_#{@toc_count-1}\">#{text}</a>"
 
     ""
   end
