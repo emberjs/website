@@ -3,14 +3,8 @@ title: "Documentation"
 ---
 
 <% content_for :sidebar do %>
-  <div class="section toc">
-    <h3>Table of Contents</h2>
-    <ul>
-    <% @chapters.each do |chapter| %>
-      <li><a href="#<%= chapter %>"><%= chapter.humanize.titleize %></a></li>
-    <% end %>
-    </ul>
-  </div>
+  <h3>Table of Contents</h2>
+  <%= table_of_contents %>
 <% end %>
 
 <% @chapters.each do |chapter| %>

@@ -13,6 +13,49 @@ require "active_support/core_ext"
 #   end
 # end
 
+class TableOfContents < Redcarpet::Render::Base
+  def initialize
+    @current_level = 0
+    @toc_count = 0
+    @result = []
+    super
+  end
+
+  def header(text, level)
+    @toc_count += 1
+
+    return if level > 3
+
+    result = @result
+
+    if level > @current_level
+      while level > @current_level
+        result << "<ul>\n<li>\n"
+        @current_level += 1
+      end
+    elsif level < @current_level
+      result << "</li>\n"
+
+      while level < @current_level
+        result << "</ul>\n</li>\n"
+        @current_level -= 1
+      end
+
+      result << "<li>\n"
+    else
+      result << "</li>\n<li>\n"
+    end
+
+    result << "<a href=\"#toc_#{@toc_count-1}\">#{text}</a>"
+
+    ""
+  end
+
+  def postprocess(text)
+    @result.join("")
+  end
+end
+
 helpers do
   def link_to_page name, url
     path = request.path
@@ -25,6 +68,19 @@ helpers do
     class_name = current ? ' class="active"' : ''
 
     "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
+  end
+
+  def table_of_contents
+    chapters = data.docs.chapters
+
+    chapters = chapters.collect_concat do |file|
+      File.read("source/docs/#{file}.md")
+    end
+
+    toc = TableOfContents.new()
+    markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
+
+    markdown.render(chapters.join(''))
   end
 end
 
