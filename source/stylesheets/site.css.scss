@@ -61,7 +61,7 @@ body {
   }
 
   #nav {
-    width: 400px;
+    width: 450px;
     height: 65px;
     margin: 0 auto;
 
@@ -295,4 +295,8 @@ code {
 
 .screenshot {
   margin-left: -60px;
+}
+.resources li p {
+  margin-left: 11px;
+  color: #aaaaaa;	
 }
