@@ -19,6 +19,10 @@
 <h4>Videos</h4>
 <ul class="resources">
 	<li>
+		<a href="http://vimeo.com/37539737">Tom Dale - Debugging Ember</a>
+		<p>Ember.js - February 27, 2012</p>
+	</li>
+	<li>
 		<a href="http://vimeo.com/36992934">Tom Dale presentation at Carbon Five</a>
 		<p>Christian Nelson - February 17, 2012</p>
 	</li>
