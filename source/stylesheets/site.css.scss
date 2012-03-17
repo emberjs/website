@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "compass";
 @import "base";
+@import "fonts";
 
 /* Defines the color for blocks of code or text
 that should be displayed in a monospace font. */
@@ -21,7 +22,7 @@ $large_font: $medium_font * $ratio;
 $extra_large_font: $large_font * $ratio;
 
 body {
-  background: url(/images/groovepaper.png);
+  background: url(/images/background.png);
   margin: 65px 0 0 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
@@ -42,9 +43,9 @@ body {
   left: 0;
   top: 0;
   right: 0;
-  height: 65px;
-  background: url(/images/black_linen_v2.png);
-  @include single-box-shadow(rgba(0,0,0,0.5), 0, 2px, 2px, 0);
+  height: 60px;
+  background: url(/images/navigation_background.png);
+  @include box-shadow(rgba(0,0,0,0.2) 0 2px 4px);
 
   #wrapper {
     width: $page_width;
@@ -54,10 +55,10 @@ body {
 
   #logo {
     position: absolute;
-    top: 13px;
-    width: 108px;
-    height: 31px;
-    background: url(/images/logo.png);
+    top: 6px;
+    width: 103px;
+    height: 40px;
+    background: url(/images/ember_logo.png);
   }
 
   #nav {
@@ -69,12 +70,16 @@ body {
 
     li {
       line-height: 26px;
-      margin: 20px 7px;
+      margin: 20px 0;
 
       a {
-        color: #666;
+        font-family: "MavenProBold";
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #faf2ee;
+
+        @include text-shadow(rgba(0,0,0,0.3), 0px, 1px, 0px);
         display: block;
-        border-radius: 5px;
         padding: 0px 1em;
         height: 26px;
         line-height: 26px;
@@ -85,10 +90,19 @@ body {
       display: inline-block;
     }
 
-    li.active a, li a:hover {
-      color: white;
-      border: 1px solid black;
-      background: rgba(0, 0, 0, 0.4);
+    li.active a {
+      color: #6f1b0b;
+      @include text-shadow(rgba(255,255,255,0.16), 0, 1px, 0px);
+      background-color: #bf4737;
+      @include border-radius(3px);
+      @include box-shadow(
+        rgba(255, 255, 255, 0.15) 0 1px 0px,
+        inset rgba(0, 0, 0, 0.17) 0 1px 1px
+      );
+    }
+
+    li a:hover {
+      color: #fff;
     }
   }
 }
@@ -98,9 +112,6 @@ body {
   margin: 0 auto 40px auto;
   padding: 20px;
   position: relative;
-  background-color: #fff;
-
-  @include box-shadow(rgba(0,0,0,0.3) 0 0 3px 1px);
 }
 
 #content {
@@ -295,4 +306,50 @@ code {
 
 .screenshot {
   margin-left: -60px;
+}
+
+/**
+  Buttons
+*/
+
+.button {
+  display: block;
+  width: 226px;
+  height: 46px;
+  font-family: "MavenProBold";
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 47px;
+  font-size: 14px;
+  @include text-shadow(rgba(0,0,0,0.3) 0 1px 0);
+
+  &.orange {
+    color: #f6ece8;
+    background-image: url(/images/orange_buttons.png);
+
+    &:hover {
+      background-position: 0 -46px;
+    }
+
+    &:active {
+      background-position: 0 -92px;
+      @include text-shadow(rgba(0,0,0,0.3) 0 -1px 0);
+    }
+  }
+
+  &:hover {
+    background-position: 0 -46px;
+  }
+
+  &:active {
+  }
+}
+
+/**
+  About Page
+*/
+
+.about-header-text {
+  display: block;
+  margin: 60px auto 0 auto;
 }
