@@ -25,6 +25,8 @@ namespace :examples do
     Dir.chdir "source/examples" do
       git_initialize("examples")
       git_update
+      `ls .git`
+      FileUtils.rm_rf(".git")
     end
   end
 

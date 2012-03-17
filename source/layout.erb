@@ -7,41 +7,6 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <%= javascript_include_tag 'waypoints.min.js' %>
     <script type="text/javascript">
-      (function($){
-        $.fn.anchorScroll = function(){
-          this.click(function(event){
-            event.preventDefault();
-            var parts = this.href.split("#"),
-               target = parts[1],
-               offset = $('#'+target).offset(),
-                  top = offset.top;
-
-            $('html, body').animate({scrollTop: top}, 500);
-          });
-        };
-
-        $(function(){
-          $('.toc a').anchorScroll();
-          $('#sidebar').waypoint(function(event,direction){
-            $('.toc').toggleClass('sticky', direction === "down");
-            }, {offset: '0'});
-
-
-          $('.section').waypoint(function(element,direction){
-            var element = $(this),
-                     id = element.attr('id'),
-                 anchor = $('a[href=#'+id+']'),
-            previousAnchor =  anchor.closest('li').prev().find('a'),
-            activeAnchor   = direction === 'down' ? anchor : previousAnchor;
-
-            $('.toc a').removeClass('active');
-            activeAnchor.addClass('active');
-          });
-        });
-      })($)
-
-    </script>
-    <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-27675533-1']);
       _gaq.push(['_trackPageview']);
@@ -59,6 +24,7 @@
       <div id="wrapper">
         <div id="logo">&nbsp;</div>
         <ul id="nav">
+          <%= link_to_page "about", "/about" %>
           <%= link_to_page "docs", "/documentation" %>
           <%= link_to_page "community", "/community" %>
           <%= link_to_page "examples", "/examples" %>
@@ -69,23 +35,6 @@
 
     <div id="github">
       <a href="https://github.com/emberjs/ember.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/camo.github.com/e6bef7a091f5f3138b8cd40bc3e114258dd68ddf/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub"></a>
-    </div>
-    <div id="download">
-      <div id="download-ember">
-        <a href="https://github.com/downloads/emberjs/ember.js/ember-0.9.7.1.min.js">
-          <img src="/images/download_button.png">
-        </a>
-        <div class="info">40k min+gzip |
-          <a class="debug" href="https://github.com/downloads/emberjs/ember.js/ember-0.9.7.1.js">
-            debug build
-          </a>
-        </div>
-      </div>
-      <div id="download-starter-kit">
-        <a href="https://github.com/downloads/emberjs/starter-kit/starter-kit.0.9.7.1.zip">
-          <img src="/images/download_starter_kit_button.png">
-        </a>
-      </div>
     </div>
     <div id="content-wrapper">
       <% if content_for?(:sidebar) %>
