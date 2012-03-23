@@ -78,7 +78,7 @@ body {
         text-transform: uppercase;
         color: #faf2ee;
 
-        @include text-shadow(rgba(0,0,0,0.3), 0px, 1px, 0px);
+        @include text-shadow(rgba(0,0,0,0.3) 0px 1px 0px);
         display: block;
         padding: 0px 1em;
         height: 26px;
@@ -92,7 +92,7 @@ body {
 
     li.active a {
       color: #6f1b0b;
-      @include text-shadow(rgba(255,255,255,0.16), 0, 1px, 0px);
+      @include text-shadow(rgba(255,255,255,0.16) 0 1px 0px);
       background-color: #bf4737;
       @include border-radius(3px);
       @include box-shadow(
@@ -321,11 +321,24 @@ code {
   text-decoration: none;
   line-height: 47px;
   font-size: 14px;
+  color: #f6ece8;
   @include text-shadow(rgba(0,0,0,0.3) 0 1px 0);
 
   &.orange {
-    color: #f6ece8;
     background-image: url(/images/orange_buttons.png);
+
+    &:hover {
+      background-position: 0 -46px;
+    }
+
+    &:active {
+      background-position: 0 -92px;
+      @include text-shadow(rgba(0,0,0,0.3) 0 -1px 0);
+    }
+  }
+
+  &.black {
+    background-image: url(/images/black_buttons.png);
 
     &:hover {
       background-position: 0 -46px;
