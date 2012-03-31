@@ -14,6 +14,13 @@ require "active_support/core_ext"
 # end
 
 class TableOfContents < Redcarpet::Render::Base
+
+  def self.anchorify(text)
+    res = text.gsub(/&#?\w+;/, '-').gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase
+    puts "#{text.inspect} -- #{res.inspect}"
+    res
+  end
+
   def initialize
     @current_level = 0
     @result = []
@@ -43,7 +50,7 @@ class TableOfContents < Redcarpet::Render::Base
       result << "</li>\n<li>\n"
     end
 
-    result << "<a href=\"##{text.gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase}\">#{text}</a>"
+    result << "<a href=\"#toc_#{TableOfContents.anchorify(text)}\">#{text}</a>"
 
     ""
   end
@@ -82,7 +89,7 @@ end
 
 class HighlightedHTML < Redcarpet::Render::HTML
   def header(text, level)
-    "<h#{level} id='#{text.gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase}'>#{text}</h#{level}>"
+    "<h#{level} id='toc_#{TableOfContents.anchorify(text)}'>#{text}</h#{level}>"
   end
 
   def block_code(code, language)
