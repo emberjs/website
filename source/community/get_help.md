@@ -8,4 +8,4 @@ If you have a code specific question be sure to add a JSFiddle which helps to lo
 
 #### IRC Channel
 
-There is an IRC Channel available which can be found at ```#emberjs```.
+There is an IRC Channel available which can be found at [#emberjs@chat.freenode.net](http://webchat.freenode.net?channels=emberjs).
