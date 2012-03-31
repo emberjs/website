@@ -45,6 +45,9 @@ task :deploy do |t, args|
 
     Rake::Task["build"].invoke
 
+    # This screws up the build and isn't necessary
+    rm_r "source/examples"
+
     File.open("CNAME", 'w') do |f|
       f.write "emberjs.com"
     end
