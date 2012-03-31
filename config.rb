@@ -16,9 +16,7 @@ require "active_support/core_ext"
 class TableOfContents < Redcarpet::Render::Base
 
   def self.anchorify(text)
-    res = text.gsub(/&#?\w+;/, '-').gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase
-    puts "#{text.inspect} -- #{res.inspect}"
-    res
+    text.gsub(/&#?\w+;/, '-').gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase
   end
 
   def initialize
