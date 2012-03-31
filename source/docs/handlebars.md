@@ -333,20 +333,19 @@ Although the view containing the `{{action}}` helper will be targeted by default
 <a href="#" {{action "edit" target="parentView"}}>Edit</a>
 ```
 
-The view's event handler can optionally accept an `eventObject`:
+The action handler can optionally accept a jQuery event object, which will be extended to include `view` and `context` properties. These properties can be useful when targeting a different view with your action. For instance:
 
 ```javascript
-App.ShowView = Ember.View.extend({
-  templateName: 'show',
+App.ListingView = Ember.View.extend({
+  templateName: 'listing',
 
   edit: function(event) {
-    event.preventDefault();
-    this.set('isEditing', true);
+    event.view.set('isEditing', true);
   }
 });
 ```
 
-The template discussed above will produce an HTML element like this:
+Any of the templates discussed above will produce an HTML element like this:
 
 ```html
 <a href="#" data-ember-action="3">Edit</a>
