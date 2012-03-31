@@ -467,6 +467,89 @@ When you do this, it may be helpful to think of it as assigning views to
 portions of the page. This allows you to encapsulate event handling for just
 that part of the page.
 
+### Blocks
+Template blocks enable containers to be created with no immediate knowledge 
+of children. You could use blocks to create generic reusable containers.
+
+Here's an example of what blocks could possibly do,
+
+A generic container called alert.handlebars could be created as follows. Note 
+that alert template is written without any explicit understanding of what
+alert messages will show up in there.
+
+```html
+<div class="alert">
+  <h1>{{title}}</h1>
+  <div class="alert-body">
+    {{yield}}
+  </div>
+</div>
+```
+
+Along comes a user, who uses alert template as such,
+
+```html
+{{#view Ember.View templateName="alert" title="Errors"}}
+  User name already exists
+{{/view}}
+```
+
+The yield helper in the alerts template is used to embed the contained block,
+in this case the span stating that the user already exists will be embedded in 
+place of the yield. This would result in,
+
+```html
+<div class="alert">
+  <h1>Errors</h1>
+  <div class="alert-body">
+    User name already exists
+  </div>
+</div>
+```
+
+And another user might use the same alert template as,
+
+```html
+{{#view Ember.View templateName="alert" title="My Colors"}}
+  {{#each content.colors}}
+    {{content}}
+  {{/each}}
+{{/view}}
+```
+
+resulting in,
+
+```html
+<div class="alert">
+  <h1>My Colors</h1>
+  <div class="alert-body">
+    <ul>
+      <li>Red</li>
+      <li>Blue</li>
+      <li>Green</li>
+    </ul>
+  </div>  
+</div>
+```
+
+Note that {{content.colors}} binding path will use the calling view (not the alert View) 
+as the template context.
+
+When you yield rendering to a block, you can also pass parameters. The parameters will be 
+bound to the calling view context.
+
+```html
+<div>
+  <div class="name">{{content.name}}</div>
+  <div class="address">
+    {{#each person.addresses tagName="ul"}}
+      {{yield address=this}}
+    {{/each}}
+  </div>
+</div>
+```
+
+
 ### Setting Up Bindings
 
 So far in our examples, we have been setting static values directly on the
