@@ -16,14 +16,11 @@ require "active_support/core_ext"
 class TableOfContents < Redcarpet::Render::Base
   def initialize
     @current_level = 0
-    @toc_count = 0
     @result = []
     super
   end
 
   def header(text, level)
-    @toc_count += 1
-
     return if level > 3
 
     result = @result
@@ -46,7 +43,7 @@ class TableOfContents < Redcarpet::Render::Base
       result << "</li>\n<li>\n"
     end
 
-    result << "<a href=\"#toc_#{@toc_count-1}\">#{text}</a>"
+    result << "<a href=\"##{text.gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase}\">#{text}</a>"
 
     ""
   end
@@ -79,12 +76,15 @@ helpers do
 
     toc = TableOfContents.new()
     markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
-
     markdown.render(chapters.join(''))
   end
 end
 
 class HighlightedHTML < Redcarpet::Render::HTML
+  def header(text, level)
+    "<h#{level} id='#{text.gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase}'>#{text}</h#{level}>"
+  end
+
   def block_code(code, language)
     Pygments.highlight(code, :lexer => language)
   end
@@ -93,7 +93,7 @@ end
 set :md, :layout_engine => :erb,
          :fenced_code_blocks => true,
          :lax_html_blocks => true,
-         :renderer => HighlightedHTML.new(:with_toc_data => true)
+         :renderer => HighlightedHTML.new()
 
 activate :directory_indexes
 
