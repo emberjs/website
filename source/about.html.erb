@@ -1,3 +1,7 @@
+---
+title: "About"
+---
+
 <img class="about-header-text" src="images/about_header_text.png" alt="A framework for creating ambitious web applications.">
 <div id="download">
   <div id="download-ember">
@@ -17,3 +21,22 @@
   </div>
 </div>
  
+<div class="about-section">
+  <h2>Getting Started with Ember.js is Easy</h2>
+
+  <% highlight :html, :left do %>
+    test<h1>
+  <% end %>
+
+  <% highlight :javascript, :right do %>
+    MyApp.president = Ember.Object.create({
+      firstName: "Barack",
+      lastName: "Obama",
+
+      fullName: function() {
+        return this.get('firstName') + " " + this.get('lastName');
+      }.property('firstName', 'lastName')
+    });
+  <% end %>
+</div>
+

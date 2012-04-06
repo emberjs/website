@@ -8,10 +8,13 @@ that should be displayed in a monospace font. */
 $code_background: #f2f2f2;
 
 /* Calculated page dimensions. */
-$page_width: 960px;
+$page_width: 940px;
 $content_width: $page_width / 1.4;
 $sidebar_width: $page_width - $content_width;
 $padding: 20px;
+
+$col_width: 40px;
+$col_spacing: 20px;
 
 /* Calculate typography sizes. */
 $ratio: 1.4;
@@ -110,8 +113,12 @@ body {
 #content-wrapper {
   width: $page_width;
   margin: 0 auto 40px auto;
-  padding: 20px;
+  padding: 20px 0px;
   position: relative;
+
+  &.grid {
+    background-image: url(/images/grid.png);
+  }
 }
 
 #content {
@@ -186,7 +193,7 @@ body {
 }
 
 #download {
-  width: 460px;
+  width: 465px;
   height: 125px;
   margin: 0 auto;
   font-size: $extra_small_font;
@@ -204,7 +211,7 @@ body {
   }
 
   #download-starter-kit {
-    right: 0;
+    left: 240px;
   }
 
   .info {
@@ -218,6 +225,33 @@ body {
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+}
+
+.about-section {
+  margin: 90px 0;
+
+  h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    font-family: "MavenProBold";
+  }
+
+  .highlight {
+    float: left;
+    width: $col_width * 7 + $col_spacing * 6;
+
+    &.right {
+      margin-left: $col_width * 2 + $col_spacing * 3;
+    }
+
+    &.right:after {
+      content: "";
+      break: both;
     }
   }
 }

@@ -82,6 +82,12 @@ helpers do
 
     markdown.render(chapters.join(''))
   end
+
+  def highlight(language, class_name, &block)
+    concat %Q{<div class="highlight #{class_name}">}
+    concat Pygments.highlight capture(&block), :lexer => language
+    concat %Q{</div>}
+  end
 end
 
 class HighlightedHTML < Redcarpet::Render::HTML
