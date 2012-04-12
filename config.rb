@@ -36,35 +36,15 @@ class TableOfContents < Redcarpet::Render::Base
   def header(text, level)
     @toc_count += 1
 
-    return if level > 3
-
-    result = @result
-
-    if level > @current_level
-      while level > @current_level
-        result << "<ul>\n<li>\n"
-        @current_level += 1
-      end
-    elsif level < @current_level
-      result << "</li>\n"
-
-      while level < @current_level
-        result << "</ul>\n</li>\n"
-        @current_level -= 1
-      end
-
-      result << "<li>\n"
-    else
-      result << "</li>\n<li>\n"
-    end
-
-    result << "<a href=\"#toc_#{@toc_count-1}\">#{text}</a>"
+    return "" if level > 3
+    link = "<a href=\"#toc_#{@toc_count-1}\">#{text}</a>"
+    @result << %Q{<li class="level-#{level}">#{link}</li>}
 
     ""
   end
 
   def postprocess(text)
-    @result.join("")
+    "<ol>" + @result.join("") + "</ol>"
   end
 end
 
@@ -151,7 +131,7 @@ set :md, :layout_engine => :erb,
 
 activate :directory_indexes
 
-page "documentation.html" do
+page "/doc*" do
   @chapters = data.docs.chapters
 end
 

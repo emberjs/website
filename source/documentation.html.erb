@@ -3,11 +3,10 @@ title: "Documentation"
 ---
 
 <% content_for :sidebar do %>
-  <h3>Table of Contents</h2>
   <%= table_of_contents %>
 <% end %>
 
-<% @chapters.each do |chapter| %>
+<% data.docs.chapters.each do |chapter| %>
 <div class="chapter" id="<%= chapter %>">
   <%= render :markdown, "docs/#{chapter}.md" %>
 </div>

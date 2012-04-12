@@ -132,42 +132,26 @@ body {
   }
 }
 
+$sidebar-width: $col_width * 4 + $col_spacing * 3;
+
 #content {
   width: $page_width;
 
   &.has-sidebar {
-    width: $content_width - $padding * 2;
+    margin-left: $sidebar-width + $col_spacing;
+    width: $page_width - $sidebar-width - $col_spacing;
   }
 }
 
 #sidebar {
+  width: $sidebar-width;
+  margin-top: 43px;
   position: absolute;
-  width: $sidebar_width - $padding;
-  margin-left: $content_width - $padding;
-  text-align: left;
-  color: #aaa;
-
-  &:hover {
-    color: #000;
-
-    a {
-      @include single-transition(color, 0.1s);
-      color: #000;
-    }
-
-  }
-
-  h3 {
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 20px;
-  }
+  font-family: "MavenProMedium";
+  font-size: 14px;
 
   a {
-    font-size: 16px;
     text-decoration: none;
-    color: #888;
     line-height: 21px;
 
     &:hover {
@@ -180,25 +164,38 @@ body {
     }
   }
 
-  & > ul {
-    margin: 0px;
-
-    ul {
-      margin-left: 15px;
-    }
-  }
-
-  ul {
+  ol {
     list-style-type: none;
-    font-size: $extra_small_font;
+    border-left: 3px solid #e3dddb;
 
     li {
-      margin: 7px 0;
+      margin: 14px 0;
+      padding-left: 8px;
+      text-transform: uppercase;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &.level-3, &.level-4 {
+        text-transform: none;
+        padding-left: 20px;
+        margin: 3px 0;
+      }
+
+      &:hover {
+        border-left: 3px solid #491500;
+        margin-left: -3px;
+
+        a {
+          border-bottom: none;
+          color: #491500;
+        }
+      }
 
       a {
-        color: #aaa;
-        font-size: $extra_small_font;
-        @include single-transition(color, 0.4s);
+        display: block;
+        color: #e1563f;
       }
     }
   }
@@ -351,7 +348,7 @@ body {
 **/
 
 .chapter {
-  margin: 90px 0;
+  margin: 43px 0 90px 0;
 
   $h3-indent: 32px;
   $body-indent: $h3-indent + 24px;
