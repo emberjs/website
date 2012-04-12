@@ -33,6 +33,7 @@ body {
   margin: 65px 0 0 0;
   padding: 0;
   font-family: Lato, Arial, sans-serif;
+  line-height: 23px;
   font-size: $extra_small_font;
 }
 
@@ -203,6 +204,9 @@ body {
   }
 }
 
+/**
+  About Page
+**/
 #download {
   width: 465px;
   height: 125px;
@@ -250,6 +254,7 @@ body {
     color: black;
     text-transform: uppercase;
     font-family: "MavenProBold";
+    margin-bottom: 28px;
   }
 }
 
@@ -265,6 +270,7 @@ body {
 
   p {
     text-align: center;
+    line-height: 20px;
     color: #222;
     font-size: 13px;
   }
@@ -340,6 +346,62 @@ body {
   }
 }
 
+/**
+  Documentation Page
+**/
+
+.chapter {
+  margin: 90px 0;
+
+  $h3-indent: 32px;
+  $body-indent: $h3-indent + 24px;
+
+  h2 {
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    font-family: "MavenProBold";
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 30px 0;
+    text-transform: uppercase;
+    padding-left: $h3-indent;
+  }
+
+  h4 {
+    font-size: 16px;
+    padding-left: $body-indent;
+    margin: 24px 0;
+    line-height: 23px;
+  }
+
+  p {
+    color: #222;
+    padding-left: $body-indent;
+    font-size: 15px;
+    margin: 24px 0;
+    line-height: 23px;
+  }
+
+  .highlight {
+    margin-left: $body-indent;
+  }
+
+  ul, ol {
+    margin-left: $body-indent;
+    list-style-type: disc;
+    margin-bottom: 28px;
+
+    li {
+      font-size: 15px;
+      margin: 10px 0 10px $body-indent+20px;
+    }
+  }
+}
+
 #footer {
   width: 940px;
   height: 41px;
@@ -369,67 +431,8 @@ body {
   }
 }
 
-/**
-  Typography styles.
-**/
-h2 {
-  margin-bottom: 28px;
-  color: $base_color;
-  font-size: $extra_large_font;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: $large_font;
-  margin-bottom: 18px;
-  color: $dark_base_color;
-  font-weight: bold;
-}
-
-h4 {
-  font-weight: bold;
-  font-size: $medium_font;
-  margin-bottom: 20px;
-}
-
-p {
-  margin-bottom: 18px;
-  line-height: 18px;
-}
-
-ol {
-  list-style-type: decimal;
-}
-
-ul {
-  list-style-type: disc;
-}
-
-ol, ul {
-  font-size: $medium_font;
-  list-style-position: inside;
-  margin-left: 32px;
-  margin-bottom: 18px;
-
-  li {
-    font-size: $extra_small_font;
-    margin: 7px 0;
-  }
-}
-
-.section {
-  margin-bottom: 28px;
-}
-
 a {
   color: $complement_support_color;
-}
-
-code {
-  font-family: "Menlo", "Courier", monospace;
-  background-color: $code_background;
-  padding: 2px 3px;
-  @include border-radius(4px);
 }
 
 .screenshot {

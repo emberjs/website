@@ -6,7 +6,7 @@ Ember is a JavaScript framework for creating ambitious web applications
 that eliminates boilerplate and provides a standard application
 architecture.
 
-#### Eliminate Boilerplate
+### Eliminate Boilerplate
 
 There are some tasks that are common to every web application. For example,
 taking data from the server, rendering it to the screen, then updating that
@@ -38,7 +38,7 @@ or age changes.
 
 You specify your template once, and Ember.js makes sure it's always up to date.
 
-#### Provides Architecture
+### Provides Architecture
 
 Since web applications evolved from web pages, which were nothing more than
 static documents, browsers give you just enough rope to hang yourself with.
@@ -81,7 +81,7 @@ These are the three features that make Ember a joy to use:
 2. Computed properties
 3. Auto-updating templates
 
-#### Bindings
+### Bindings
 
 Use bindings to keep properties between two different objects in sync. You just
 declare a binding once, and Ember will make sure changes get propagated in either
@@ -108,7 +108,7 @@ MyApp.country.get('presidentName');
 Bindings allow you to architect your application using the MVC (Model-View-Controller)
 pattern, then rest easy knowing that data will always flow correctly from layer to layer.
 
-#### Computed Properties
+### Computed Properties
 
 Computed properties allow you to treat a function like a property:
 
@@ -152,7 +152,7 @@ MyApp.president = Ember.Object.create({
 Make sure you list these dependencies so Ember knows when to update bindings that connect
 to a computed property.
 
-#### Auto-updating Templates
+### Auto-updating Templates
 
 Ember uses Handlebars, a semantic templating library. To take data from your JavaScript application
 and put it into the DOM, create a `<script>` tag and put it into your HTML, wherever you'd like the

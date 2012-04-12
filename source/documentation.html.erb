@@ -8,7 +8,7 @@ title: "Documentation"
 <% end %>
 
 <% @chapters.each do |chapter| %>
-<div class="section" id="<%= chapter %>">
+<div class="chapter" id="<%= chapter %>">
   <%= render :markdown, "docs/#{chapter}.md" %>
 </div>
 <% end %>
