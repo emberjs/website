@@ -1,0 +1,5 @@
+<% wrap_layout :layout do %>
+  <div id="content">
+    <%= partial :post, :locals => { :article => current_article, :show_comments => true } %>
+  </div>
+<% end %>
