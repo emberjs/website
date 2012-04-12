@@ -150,12 +150,19 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
   font-family: "MavenProMedium";
   font-size: 14px;
 
+  #back-to-top {
+    text-align: center;
+    opacity: 0;
+    @include transition(opacity 0.05s linear);
+  }
+
   a {
     text-decoration: none;
     line-height: 21px;
+    border-bottom: none;
+    color: #e1563f;
 
     &:hover {
-      border-bottom: 1px solid black;
       color: black;
     }
 
@@ -188,14 +195,12 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
         margin-left: -3px;
 
         a {
-          border-bottom: none;
           color: #491500;
         }
       }
 
       a {
         display: block;
-        color: #e1563f;
       }
     }
   }
