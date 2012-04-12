@@ -11,6 +11,18 @@
 }
 
 @font-face {
+    font-family: 'MavenProMedium';
+    src: url('/fonts/maven_pro_medium-webfont.eot');
+    src: url('/fonts/maven_pro_medium-webfont.eot?#iefix') format('eot'),
+         url('/fonts/maven_pro_medium-webfont.woff') format('woff'),
+         url('/fonts/maven_pro_medium-webfont.ttf') format('truetype'),
+         url('/fonts/maven_pro_medium-webfont.svg#webfontNj5iy4Dl') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
