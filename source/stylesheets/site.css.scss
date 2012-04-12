@@ -282,6 +282,7 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
 
     p {
       text-align: center;
+      font-size: $extra_small_font + 1;
     }
   }
 }
