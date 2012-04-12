@@ -173,7 +173,7 @@ body {
       border-bottom: 1px solid black;
       color: black;
     }
-    
+
     &.active {
       color: black;
     }
@@ -336,6 +336,35 @@ body {
 
     &:hover .info {
       opacity: 1;
+    }
+  }
+}
+
+#footer {
+  width: 940px;
+  height: 41px;
+  margin: 100px auto 60px auto;
+  background-image: url(/images/footer.png);
+
+  .info {
+    font-family: "MavenProBold";
+    text-align: center;
+    width: 184px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding-top: 5px;
+
+    .links {
+      a {
+        color: #e1563f;
+        text-decoration: none;
+        margin: 0 7px;
+      }
+    }
+
+    .copyright {
+      margin: 12px 0;
     }
   }
 }
