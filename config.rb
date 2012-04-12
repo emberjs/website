@@ -130,8 +130,17 @@ end
 
 class HighlightedHTML < Redcarpet::Render::HTML
   def block_code(code, language)
-    code
-    # Pygments.highlight(code, :lexer => language)
+    result = %Q{<div class="highlight #{language}">}
+    result += '<div class="ribbon"></div>'
+    code.gsub!(/^\n+/, '')
+    code.rstrip!
+    code = CodeRay.scan(code, language)
+    result += code.div css: :class,
+                    line_numbers: :table,
+                    line_number_anchors: false
+
+    result += %Q{</div>}
+    result
   end
 end
 
