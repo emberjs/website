@@ -7,7 +7,6 @@
          url('/fonts/maven_pro_bold-webfont.svg#webfontNOU7iUTL') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -19,12 +18,15 @@
          url('/fonts/maven_pro_medium-webfont.svg#webfontNj5iy4Dl') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url('/fonts/Lato-Regular.woff') format('woff');
+    font-family: 'LatoRegular';
+    src: url('lato-regular-webfont.eot');
+    src: url('lato-regular-webfont.eot?#iefix') format('eot'),
+         url('lato-regular-webfont.woff') format('woff'),
+         url('lato-regular-webfont.ttf') format('truetype'),
+         url('lato-regular-webfont.svg#LatoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
