@@ -5,7 +5,6 @@
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "highlight" %>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <%= javascript_include_tag 'waypoints.min.js' %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-27675533-1']);
@@ -23,6 +22,36 @@
         $('#logo').on('click', function() {
           $('#content-wrapper').toggleClass('grid');
         });
+
+        var backToTop = $('#back-to-top');
+        var doc = $(document);
+        var offset = backToTop.offset();
+        var marginTop = 90;
+        var showing = false;
+
+        if (backToTop.length) {
+          backToTop.on('click', function(evt) {
+            $('html,body').animate({scrollTop: 0}, 200);
+            return false;
+          });
+
+          doc.on('scroll', function() {
+            if (!showing && doc.scrollTop() > offset.top+200) {
+              showing = true;
+              backToTop.css({
+                opacity: 1,
+                position: 'fixed',
+                top: 20,
+                left: offset.left
+              });
+            } else if (showing && doc.scrollTop() <= offset.top+200) {
+              showing = false;
+              backToTop.css({
+                opacity: 0
+              });
+            }
+          });
+        }
       });
     </script>
   </head>
@@ -48,6 +77,7 @@
       <% if content_for?(:sidebar) %>
         <div id="sidebar">
           <%= yield_content :sidebar %>
+          <div id="back-to-top"><a href="#">&#11014; Back to Top</a></div>
         </div>
       <% end %>
       <div id="content" <% if content_for?(:sidebar) %>class="has-sidebar"<% end %>>
