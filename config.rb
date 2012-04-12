@@ -1,6 +1,6 @@
 require "redcarpet"
-require "pygments"
 require "active_support/core_ext"
+require "coderay"
 
 ###
 # Helpers
@@ -85,8 +85,16 @@ helpers do
   end
 
   def highlight(language, class_name, &block)
-    concat %Q{<div class="highlight #{class_name}">}
-    concat Pygments.highlight capture(&block), :lexer => language
+    concat %Q{<div class="highlight #{class_name} #{language}">}
+    concat '<div class="ribbon"></div>'
+    code = capture(&block)
+    code.gsub!(/^\n+/, '')
+    code.rstrip!
+    code = CodeRay.scan(code, language)
+    concat code.div css: :class,
+                    line_numbers: :table,
+                    line_number_anchors: false
+
     concat %Q{</div>}
   end
 end
@@ -97,7 +105,8 @@ class HighlightedHTML < Redcarpet::Render::HTML
   end
 
   def block_code(code, language)
-    Pygments.highlight(code, :lexer => language)
+    code
+    # Pygments.highlight(code, :lexer => language)
   end
 end
 

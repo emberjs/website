@@ -25,18 +25,28 @@ title: "About"
   <h2>Getting Started with Ember.js is Easy</h2>
 
   <% highlight :html, :left do %>
-    test<h1>
+<html>
+  <body>
+    <script type="text/x-handlebars">
+      Hello, <b>{{MyApp.name}}</b>!
+      Happy {{MyApp.dayOfWeek}}.
+    </script>
+  </body>
+</html>
   <% end %>
 
   <% highlight :javascript, :right do %>
-    MyApp.president = Ember.Object.create({
-      firstName: "Barack",
-      lastName: "Obama",
+MyApp.president = Ember.Object.create({
+  firstName: "Barack",
+  lastName: "Obama",
 
-      fullName: function() {
-        return this.get('firstName') + " " + this.get('lastName');
-      }.property('firstName', 'lastName')
-    });
+  fullName: function() {
+    return this.get('firstName') +
+           " " + this.get('lastName');
+  }.property('firstName', 'lastName')
+});
   <% end %>
+  <p class="left">Handlebars templates update automatically when their underlying values change. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
+  <p class="right">Describe your application in terms of computed properties. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
 </div>
 
