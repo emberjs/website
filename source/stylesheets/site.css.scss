@@ -28,12 +28,12 @@ body {
   background: url(/images/background.png);
   margin: 65px 0 0 0;
   padding: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Lato, Arial, sans-serif;
   font-size: $extra_small_font;
 }
 
 * {
-  box-sizing: border-box;
+  @include box-sizing(border-box);
 }
 
 /**
@@ -241,7 +241,7 @@ body {
     font-family: "MavenProBold";
   }
 
-  .highlight {
+  .highlight, p {
     float: left;
     width: $col_width * 7 + $col_spacing * 6;
 
@@ -253,6 +253,12 @@ body {
       content: "";
       break: both;
     }
+  }
+
+  p {
+    text-align: center;
+    color: #222;
+    font-size: 13px;
   }
 }
 
@@ -325,17 +331,6 @@ code {
   position: fixed;
   margin-left: -15px;
   width: 150px;
-}
-
-
-.highlight {
-  padding: 13px;
-  @include border-radius(4px);
-  background-color: $code_background;
-  font-size: 12px;
-  font-family: Menlo, monospace;
-  line-height: 16px;
-  margin-bottom: 22px;
 }
 
 .screenshot {

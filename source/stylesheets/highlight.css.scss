@@ -1,0 +1,81 @@
+@import "compass";
+
+$border-radius: 5px;
+
+.highlight {
+	background-image: url(/images/code_background.gif);
+	border: 1px solid #d1d1d1;
+	@include border-radius($border-radius);
+  font-size: 12px;
+  font-family: Menlo, monospace;
+  line-height: 16px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  position: relative;
+  @include box-shadow(0 1px #fff, inset -1px 1px 4px rgba(0,0,0,0.1));
+
+	.ribbon {
+		position: absolute;
+		right: 0;
+		bottom: 12px;
+		width: 52px;
+		height: 20px;
+	}
+
+	&.javascript .ribbon {
+		background-image: url(/images/js-ribbon.png);
+	}
+
+	&.html .ribbon {
+		background-image: url(/images/html-ribbon.png);
+	}
+}
+
+.CodeRay {
+	td {
+		padding: 14px 0;
+	}
+
+	.line-numbers {
+		width: 38px;
+		text-align: center;
+		border-right: 1px solid #d1d1d1;
+		background-color: #f6f6f6;
+		color: #b4b4b4;
+		@include border-top-left-radius($border-radius);
+		@include border-bottom-left-radius($border-radius);
+	}
+
+	td.code {
+		padding-left: 13px;
+	}
+}
+
+/* HTML */
+.CodeRay {
+	.tag {
+		color: red;
+	}
+
+	.attribute-name {
+		color: #1f58ce;
+	}
+
+	.string {
+		color: #1f58ce;
+	}
+}
+
+.CodeRay {
+	.keyword {
+		color: #ce791f;
+	}
+
+	.key, .function {
+		color: #2b1fce;
+	}
+
+	.local-variable {
+		color: #1f58ce;
+	}
+}
