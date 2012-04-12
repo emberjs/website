@@ -16,6 +16,10 @@ $padding: 20px;
 $col_width: 40px;
 $col_spacing: 20px;
 
+@mixin width-for-columns($cols) {
+  width: $cols * $col_width + ($cols - 1) * $col_spacing;
+}
+
 /* Calculate typography sizes. */
 $ratio: 1.4;
 $extra_small_font: 12px;
@@ -34,6 +38,12 @@ body {
 
 * {
   @include box-sizing(border-box);
+}
+
+.clearfix {
+  clear: both;
+  line-height: 0;
+  height: 0;
 }
 
 /**
@@ -163,6 +173,7 @@ body {
       border-bottom: 1px solid black;
       color: black;
     }
+    
     &.active {
       color: black;
     }
@@ -229,7 +240,7 @@ body {
   }
 }
 
-.about-section {
+.section {
   margin: 90px 0;
 
   h2 {
@@ -240,7 +251,9 @@ body {
     text-transform: uppercase;
     font-family: "MavenProBold";
   }
+}
 
+.getting-started.section {
   .highlight, p {
     float: left;
     width: $col_width * 7 + $col_spacing * 6;
@@ -248,17 +261,82 @@ body {
     &.right {
       margin-left: $col_width * 2 + $col_spacing * 3;
     }
-
-    &.right:after {
-      content: "";
-      break: both;
-    }
   }
 
   p {
     text-align: center;
     color: #222;
     font-size: 13px;
+  }
+}
+
+.features.section {
+  .feature {
+    @include width-for-columns(4);
+    float: left;
+    margin-left: $col_width + $col_spacing;
+    margin-right: $col_spacing;
+
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.samples.section {
+  .sample {
+    float: left;
+    position: relative;
+    margin-left: $col_spacing;
+    border: 1px solid rgba(0,0,0,0.1);
+    overflow: hidden;
+    @include box-shadow(rgba(0,0,0,0.1) 0 2px 3px);
+    @include border-radius(6px);
+    @include width-for-columns(4);
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+
+    .info {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      background-color: rgba(0,0,0,0.85);
+      -webkit-font-smoothing: antialiased;
+      @include transition(opacity 0.1s linear);
+      @include border-radius(6px);
+
+      .name {
+        text-align: center;
+        color: white;
+        font-family: MavenProMedium;
+        font-size: 18px;
+        margin-top: 55px;
+        text-transform: uppercase;
+      }
+
+      .actions {
+        text-align: center;
+        margin-top: 16px;
+
+        > div {
+          display: inline-block;
+          margin: 0 3px;
+        }
+      }
+    }
+
+    img {
+      @include border-radius(6px);
+    }
+
+    &:hover .info {
+      opacity: 1;
+    }
   }
 }
 
@@ -325,14 +403,6 @@ code {
   @include border-radius(4px);
 }
 
-
-.sticky {
-  top: 0px;
-  position: fixed;
-  margin-left: -15px;
-  width: 150px;
-}
-
 .screenshot {
   margin-left: -60px;
 }
@@ -384,6 +454,25 @@ code {
   }
 
   &:active {
+  }
+}
+
+.small-button {
+  width: 74px;
+  height: 22px;
+
+  font-family: "MavenProMedium";
+  color: #fff;
+  line-height: 24px;
+  text-transform: uppercase;
+  @include text-shadow(rgba(0,0,0,0.3) 0 1px 0);
+
+  &.orange {
+    background-image: url(/images/small-orange-button.png);
+  }
+
+  &.black {
+    background-image: url(/images/small-black-button.png);
   }
 }
 
