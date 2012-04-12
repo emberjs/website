@@ -1,0 +1,15 @@
+---
+title: Blog
+---
+
+<div id="content">
+<% blog.articles[0...5].each do |article| %>
+  <div class="section">
+    <%= partial :post_header, :locals => { :article => article } %>
+
+    <%= article.summary %>
+
+    <a href="<%= article.url %>">Read more</a>
+  </div>
+<% end %>
+</div>

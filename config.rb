@@ -2,6 +2,18 @@ require "redcarpet"
 require "active_support/core_ext"
 require "coderay"
 
+# Debugging
+set(:logging, ENV['RACK_ENV'] != 'production')
+
+###
+# Blog
+###
+
+activate :blog
+set :blog_sources, "blog/:year-:month-:day-:title.html"
+set :blog_permalink, "blog/:year/:month/:day/:title.html"
+set :blog_layout, 'blog'
+
 ###
 # Helpers
 ###
@@ -83,7 +95,6 @@ helpers do
     markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
     markdown.render(chapters.join(''))
   end
-
   def highlight(language, class_name, &block)
     concat %Q{<div class="highlight #{class_name} #{language}">}
     concat '<div class="ribbon"></div>'
@@ -96,6 +107,25 @@ helpers do
                     line_number_anchors: false
 
     concat %Q{</div>}
+  end
+
+  # The default one is buggy as of beta 2
+  def wrap_layout(layout_name, &block)
+    # Save current buffer for later
+    @_out_buf, _buf_was = "", @_out_buf
+    begin
+      content = capture(&block) if block_given?
+    ensure
+      # Reset stored buffer
+      @_out_buf = _buf_was
+    end
+    layout_path = locate_layout(layout_name, current_engine)
+
+    if !@_out_buf
+      raise "wrap_layout is currently broken for this templating system"
+    end
+
+    @_out_buf.concat render_individual_file(layout_path, @current_locs || {}, @current_opts || {}, self) { content }
   end
 end
 
