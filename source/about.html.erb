@@ -20,36 +20,6 @@ title: "About"
     </a>
   </div>
 </div>
- 
-<div class="getting-started section">
-  <h2>Getting Started with Ember.js is Easy</h2>
-
-  <% highlight :html, :left do %>
-<html>
-  <body>
-    <script type="text/x-handlebars">
-      Hello, <b>{{MyApp.name}}</b>!
-      Happy {{MyApp.dayOfWeek}}.
-    </script>
-  </body>
-</html>
-  <% end %>
-
-  <% highlight :javascript, :right do %>
-MyApp.president = Ember.Object.create({
-  firstName: "Barack",
-  lastName: "Obama",
-
-  fullName: function() {
-    return this.get('firstName') +
-           " " + this.get('lastName');
-  }.property('firstName', 'lastName')
-});
-  <% end %>
-  <p class="left">Handlebars templates update automatically when their underlying values change. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
-  <p class="right">Describe your application in terms of computed properties. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
-  <div class="clearfix"></div>
-</div>
 
 <div class="features section">
   <h2>Features Tailored for the Ambitious Web Developer.</h2>
@@ -66,7 +36,41 @@ MyApp.president = Ember.Object.create({
     <p>Improve responsiveness, performance, and reduce server load by moving the heavy lifting to the client.</p>
   </div>
   <div class="clearfix"></div>
+</div> 
+
+<div class="getting-started section">
+  <h2>Getting Started with Ember.js is Easy</h2>
+
+<% highlight :javascript, :left do %>
+MyApp.president = Ember.Object.create({
+  firstName: "Barack",
+  lastName: "Obama",
+
+  fullName: function() {
+    return this.get('firstName') +
+           " " + this.get('lastName');
+  }.property('firstName', 'lastName')
+});
+  <% end %>
+
+  <% highlight :html, :right do %>
+<html>
+  <body>
+    <script type="text/x-handlebars">
+      Hello, <b>{{MyApp.name}}</b>!
+      Happy {{MyApp.dayOfWeek}}.
+    </script>
+  </body>
+</html>
+  <% end %>
+
+  <p class="left">Describe your application in terms of computed properties. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
+
+  <p class="right">Handlebars templates update automatically when their underlying values change. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
+
+  <div class="clearfix"></div>
 </div>
+
 
 <div class="samples section">
   <h2>Check Out Our Sample Applications.</h2>
