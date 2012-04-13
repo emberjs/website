@@ -1,32 +1,18 @@
 @import "compass/reset";
 @import "compass";
-@import "base";
 @import "fonts";
 
-/* Defines the color for blocks of code or text
-that should be displayed in a monospace font. */
-$code_background: #f2f2f2;
-
 /* Calculated page dimensions. */
-$page_width: 940px;
-$content_width: $page_width / 1.4;
-$sidebar_width: $page_width - $content_width;
-$padding: 20px;
+$page-width: 940px;
 
-$col_width: 40px;
-$col_spacing: 20px;
+$col-width: 40px;
+$col-spacing: 20px;
+
+$orange-color: #e1563f;
 
 @mixin width-for-columns($cols) {
-  width: $cols * $col_width + ($cols - 1) * $col_spacing;
+  width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
-
-/* Calculate typography sizes. */
-$ratio: 1.4;
-$extra_small_font: 12px;
-$small_font: $extra_small_font * $ratio;
-$medium_font: $small_font * $ratio;
-$large_font: $medium_font * $ratio;
-$extra_large_font: $large_font * $ratio;
 
 body {
   background: url(/images/background.png);
@@ -34,11 +20,26 @@ body {
   padding: 0;
   font-family: Lato, Arial, sans-serif;
   line-height: 23px;
-  font-size: $extra_small_font;
+  font-size: 13px;
+  line-height: 20px;
+
 }
 
 * {
   @include box-sizing(border-box);
+}
+
+a {
+  color: $orange-color;
+  text-decoration: none;
+}
+
+p {
+  margin: 24px 0;
+}
+
+code {
+  font-family: Menlo, Courier, monospace;
 }
 
 .clearfix {
@@ -48,9 +49,7 @@ body {
 }
 
 /**
-
-  HEADER
-
+  Header
 **/
 #header {
   position: absolute;
@@ -62,7 +61,7 @@ body {
   @include box-shadow(rgba(0,0,0,0.2) 0 2px 4px);
 
   #wrapper {
-    width: $page_width;
+    width: $page-width;
     margin: 0 auto;
     position: relative;
   }
@@ -122,7 +121,7 @@ body {
 }
 
 #content-wrapper {
-  width: $page_width;
+  width: $page-width;
   margin: 0 auto 40px auto;
   padding: 20px 0px;
   position: relative;
@@ -132,14 +131,14 @@ body {
   }
 }
 
-$sidebar-width: $col_width * 4 + $col_spacing * 3;
+$sidebar-width: $col-width * 4 + $col-spacing * 3;
 
 #content {
-  width: $page_width;
+  width: $page-width;
 
   &.has-sidebar {
-    margin-left: $sidebar-width + $col_spacing;
-    width: $page_width - $sidebar-width - $col_spacing;
+    margin-left: $sidebar-width + $col-spacing;
+    width: $page-width - $sidebar-width - $col-spacing;
   }
 }
 
@@ -160,7 +159,7 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
     text-decoration: none;
     line-height: 21px;
     border-bottom: none;
-    color: #e1563f;
+    color: $orange-color;
 
     &:hover {
       color: black;
@@ -209,11 +208,15 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
 /**
   About Page
 **/
+.about-header-text {
+  display: block;
+  margin: 60px auto 0 auto;
+}
+
 #download {
   width: 465px;
   height: 125px;
   margin: 0 auto;
-  font-size: $extra_small_font;
   position: relative;
 
   #download-ember, #download-starter-kit {
@@ -235,15 +238,6 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
     margin-top: 4px;
     color: #888;
   }
-
-  .debug {
-    color: $base-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 
 .section {
@@ -263,18 +257,16 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
 .getting-started.section {
   .highlight, p {
     float: left;
-    width: $col_width * 7 + $col_spacing * 6;
+    width: $col-width * 7 + $col-spacing * 6;
 
     &.right {
-      margin-left: $col_width * 2 + $col_spacing * 3;
+      margin-left: $col-width * 2 + $col-spacing * 3;
     }
   }
 
   p {
     text-align: center;
-    line-height: 20px;
     color: #222;
-    font-size: 13px;
   }
 }
 
@@ -282,8 +274,8 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
   .feature {
     @include width-for-columns(4);
     float: left;
-    margin-left: $col_width + $col_spacing;
-    margin-right: $col_spacing;
+    margin-left: $col-width + $col-spacing;
+    margin-right: $col-spacing;
 
     p {
       text-align: center;
@@ -295,7 +287,7 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
   .sample {
     float: left;
     position: relative;
-    margin-left: $col_spacing;
+    margin-left: $col-spacing;
     border: 1px solid rgba(0,0,0,0.1);
     overflow: hidden;
     @include box-shadow(rgba(0,0,0,0.1) 0 2px 3px);
@@ -384,7 +376,6 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
     color: #222;
     padding-left: $body-indent;
     font-size: 15px;
-    margin: 24px 0;
     line-height: 23px;
   }
 
@@ -404,6 +395,15 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
   }
 }
 
+/**
+  Community Page
+**/
+
+.community.section {
+  margin-left: ($col-width * 3 + $col-spacing * 3);
+  margin-right: ($col-width * 3 + $col-spacing * 3);
+}
+
 #footer {
   width: 940px;
   height: 41px;
@@ -417,24 +417,19 @@ $sidebar-width: $col_width * 4 + $col_spacing * 3;
     margin: 0 auto;
     text-transform: uppercase;
     font-size: 10px;
-    padding-top: 5px;
 
     .links {
       a {
-        color: #e1563f;
+        color: $orange-color;
         text-decoration: none;
         margin: 0 7px;
       }
     }
 
     .copyright {
-      margin: 12px 0;
+      margin-top: 6px;
     }
   }
-}
-
-a {
-  color: $complement_support_color;
 }
 
 .screenshot {
@@ -510,11 +505,4 @@ a {
   }
 }
 
-/**
-  About Page
-*/
 
-.about-header-text {
-  display: block;
-  margin: 60px auto 0 auto;
-}
