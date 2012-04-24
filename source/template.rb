@@ -15,6 +15,8 @@ gem_group :assets do
   gem "ember-rails"
 end
 
+run "bundle install"
+
 # Configure the app to serve Ember.js and app assets from an AssetsController
 generate "ember:bootstrap"
 generate :controller, "Assets", "index"
