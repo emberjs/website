@@ -1,0 +1,44 @@
+## Getting Started with Ember.js and Ruby on Rails
+
+Before getting started with Ember.js, you should have the latest version of Ruby on Rails installed
+(which is 3.2.3 at the time of writing). If you don't already have Ruby on Rails, you can follow
+the instructions available on the [Rails website](http://rubyonrails.org/download).
+
+In this guide, we'll show you how to build a simple, personal photoblog application using Ember.js and Ruby on Rails.
+
+### Creating a New Project
+
+Use the `rails` command to generate a new project:
+
+```
+rails new photoblog -m http://emberjs.com/template.rb
+```
+
+The -m option specifies a template on which to base your new project. We have provided one for Ember.js apps which does the following:
+
+* Loads the ember-rails and active_model_serializers gems
+* Runs `bundle install`
+* Generates an appropriate ember directory structure inside app/assets/javascripts/ember
+* Generates an AssetsController and supplies an appropriate route in order to serve your application
+* Generates an appropirate ApplicationSerializer for your applications data models.
+  
+When rails has finished creating your application it will reside in the `photoblog` directory. Switch to this newly created directory:
+
+```
+cd photoblog
+```
+
+### Creating our First Controller
+
+Controllers serve as a mediator between your views and models. You can create a new controller using the `ember:controller` generator.
+
+If your controller will be representing multiple objects, you should create an `Ember.ArrayController`. Let's create a new array controller to manage our photos by invoking the generator with the `--array` option:
+
+```
+rails g ember:controller photos --array
+```
+
+This will generate a new array controller called `Photoblog.photosController` inside the `app/assets/javascripts/ember/controllers/photos_controller.js` file. Note that this file also creates a class called `Photoblog.PhotosController`. This allows you to easily create new instances of the controller for unit testing without having to reset singletons to their original state.
+
+
+

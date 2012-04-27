@@ -70,7 +70,7 @@ helpers do
     chapters = data.docs.chapters
 
     chapters = chapters.collect_concat do |file|
-      File.read("source/docs/#{file}.md")
+      File.read("source/docs/#{file}.md")+"\n"
     end
 
     toc = TableOfContents.new()

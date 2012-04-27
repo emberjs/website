@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/middleman/middleman.git
-  revision: 7c78b20f6537960a63a971d4f1290434b38edeaa
+  revision: 6cebb15b2720d8697dab79f559167f53938ee701
   specs:
     middleman (3.0.0.beta.2)
       middleman-core (= 3.0.0.beta.2)
