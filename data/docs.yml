@@ -1,5 +1,6 @@
 chapters:
   - introduction
+  - getting_started
   - object_model
   - application
   - handlebars
