@@ -1,10 +1,21 @@
 ## Getting Started with Ember.js and Ruby on Rails
 
-Before getting started with Ember.js, you should have the latest version of Ruby on Rails installed
+Before getting started with this guide, you should have the latest version of Ruby on Rails installed
 (which is 3.2.3 at the time of writing). If you don't already have Ruby on Rails, you can follow
 the instructions available on the [Rails website](http://rubyonrails.org/download).
 
 In this guide, we'll show you how to build a simple, personal photoblog application using Ember.js and Ruby on Rails.
+
+### Concepts
+
+Ember.js is a front-end javascript model-view-controller framework. It is designed to help you create ambitious web applications which run inside the browser. These applications can use AJAX as their primary mechanism for communicating with an API, much like a desktop or mobile application.
+
+Ruby on Rails is a Ruby-based full stack web framework. It also uses the model-view-controller paradigm to architect applications built on top of it, but in a much different way than Ember.js. The differences are beyond the scope of this guide, but you can read about them in [Gregory Moeck's excellent "Sproutcore MVC vs Rails MVC"](http://gmoeck.github.com/2011/03/10/sproutcore-mvc-vs-rails-mvc.html). What is critical to understand is that Ruby on Rails runs on the server, not the client, and is an excellent platform to build websites and APIs.
+
+In the next few steps, we'll create a Ruby on Rails application which does two distinct but equally important things: It acts as a host for the Ember.js application we will write, and it acts as an API with which the application will communicate. 
+
+It's worth noting that it's not at all necessary to host an Ember.js application using Ruby on Rails. It can be served from any standard web server (or a local file.)
+
 
 ### Creating a New Project
 
@@ -28,6 +39,47 @@ When rails has finished creating your application it will reside in the `photobl
 cd photoblog
 ```
 
+### Creating the Server-Side Models
+
+This part will be familiar to anyone who has done Ruby on Rails development before. We'll create two new models, Photo and Comment. We start by asking Rails to generate the scaffolding for a Photo object.
+
+```
+rails generate scaffold Photo title:string url:string
+```
+
+Rails will generate a database migration, model, controller, resource routes, and other helpful files for us to start using. It will actually create more than we need: By default, rails scaffolding will generate standard CRUD (Create/Retrieve/Update/Destroy) views for our new model. Since our Ember.js application is going to be providing these views, we can safely remove them.
+
+```
+rm -rf app/views/photos
+```
+
+We should also ask Rails to generate our comment object and remove its views as well.
+
+```
+rails generate scaffold Comment text:string
+rm -rf app/views/comments
+```
+
+We should now describe the accessible fields and the relationship of our models to Rails. In app/models/photo.rb, add the appropriate lines below:
+
+
+```ruby
+class Photo < ActiveRecord::Base
+  attr_accessible :title, :url
+  has_many :comments
+end
+```
+
+And in app/models/comment.rb:
+
+```ruby
+class Comment < ActiveRecord::Base
+  attr_accessible :text, :photo_id
+  belongs_to :photo
+end
+```
+
+
 ### Creating our First Controller
 
 Controllers serve as a mediator between your views and models. You can create a new controller using the `ember:controller` generator.
@@ -35,7 +87,7 @@ Controllers serve as a mediator between your views and models. You can create a 
 If your controller will be representing multiple objects, you should create an `Ember.ArrayController`. Let's create a new array controller to manage our photos by invoking the generator with the `--array` option:
 
 ```
-rails g ember:controller photos --array
+rails generate ember:controller photos --array
 ```
 
 This will generate a new array controller called `Photoblog.photosController` inside the `app/assets/javascripts/ember/controllers/photos_controller.js` file. Note that this file also creates a class called `Photoblog.PhotosController`. This allows you to easily create new instances of the controller for unit testing without having to reset singletons to their original state.
