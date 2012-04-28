@@ -241,7 +241,7 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 }
 
 .section {
-  margin: 90px 0;
+  margin: 60px 0;
 
   h2 {
     width: 100%;
@@ -282,6 +282,21 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
     }
   }
 }
+
+.users.section {
+  .user {
+    @include width-for-columns(4);
+    float: left;
+	margin-left: $col-spacing;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    p {
+      text-align: center;
+    }
+  }
+}
+
 
 .samples.section {
   .sample {
@@ -463,7 +478,7 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 #footer {
   width: 940px;
   height: 41px;
-  margin: 100px auto 60px auto;
+  margin: 60px auto 60px auto;
   background-image: url(/images/footer.png);
 
   .info {
