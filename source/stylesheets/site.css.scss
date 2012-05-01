@@ -396,6 +396,62 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 }
 
 /**
+  Guide Pages
+**/
+
+.guide {
+  margin: 43px 0 90px 0;
+
+  $h3-indent: 32px;
+  $body-indent: $h3-indent + 24px;
+
+  h2 {
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    font-family: "MavenProBold";
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 30px 0;
+    text-transform: uppercase;
+    padding-left: $h3-indent;
+  }
+
+  h4 {
+    font-size: 16px;
+    padding-left: $body-indent;
+    margin: 24px 0;
+    line-height: 23px;
+  }
+
+  p {
+    color: #222;
+    padding-left: $body-indent;
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .highlight {
+    margin-left: $body-indent;
+  }
+
+  ul, ol {
+    margin-left: $body-indent;
+    list-style-type: disc;
+    margin-bottom: 28px;
+
+    li {
+      font-size: 15px;
+      margin: 10px 0 10px $body-indent+20px;
+    }
+  }
+}
+
+
+/**
   Community Page
 **/
 
