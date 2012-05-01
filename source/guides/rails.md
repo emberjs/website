@@ -10,7 +10,7 @@ In this guide, we'll show you how to build a simple, personal photoblog applicat
 
 Ember.js is a front-end javascript model-view-controller framework. It is designed to help you create ambitious web applications which run inside the browser. These applications can use AJAX as their primary mechanism for communicating with an API, much like a desktop or mobile application.
 
-Ruby on Rails is a Ruby-based full stack web framework. It also uses the model-view-controller paradigm to architect applications built on top of it, but in a much different way than Ember.js. The differences are beyond the scope of this guide, but you can read about them in [Gregory Moeck's excellent "Sproutcore MVC vs Rails MVC"](http://gmoeck.github.com/2011/03/10/sproutcore-mvc-vs-rails-mvc.html). What is critical to understand is that Ruby on Rails runs on the server, not the client, and is an excellent platform to build websites and APIs.
+Ruby on Rails is a Ruby-based full stack web framework. It also uses a model-view-controller paradigm to architect applications built on top of it, but in a much different way than Ember.js. The differences are beyond the scope of this guide, but you can read about them in [Gregory Moeck's excellent "Sproutcore MVC vs Rails MVC"](http://gmoeck.github.com/2011/03/10/sproutcore-mvc-vs-rails-mvc.html). What is critical to understand is that Ruby on Rails runs on the server, not the client, and is an excellent platform to build websites and APIs.
 
 In the next few steps, we'll create a Ruby on Rails application which does two distinct but equally important things: It acts as a host for the Ember.js application we will write, and it acts as an API with which the application will communicate. 
 
@@ -39,7 +39,7 @@ When rails has finished creating your application it will reside in the `photobl
 cd photoblog
 ```
 
-### Creating the Server-Side Models
+### Creating the Server-side Models
 
 This part will be familiar to anyone who has done Ruby on Rails development before. We'll create two new models, Photo and Comment. We start by asking Rails to generate the scaffolding for a Photo object.
 
@@ -79,8 +79,70 @@ class Comment < ActiveRecord::Base
 end
 ```
 
+If we look inside `db/migrate`, you'll see the database migrations that have been generated for us. We'll need to modify the `<datetime>_create_comments.rb` file to reference our photo model. 
 
-### Creating our First Controller
+```ruby
+class CreateComments < ActiveRecord::Migration
+  def change
+    create_table :comments do |t|
+      t.string :text
+      t.references :photo
+
+      t.timestamps
+    end
+  end
+end
+```
+
+We can now run `rake db:migrate` to run these migrations and set up our database.
+
+```
+→ rake db:migrate
+==  CreatePhotos: migrating ===================================================
+-- create_table(:photos)
+   -> 0.0184s
+==  CreatePhotos: migrated (0.0185s) ==========================================
+
+==  CreateComments: migrating =================================================
+-- create_table(:comments)
+   -> 0.0015s
+==  CreateComments: migrated (0.0016s) ========================================
+```
+
+Our server-side models are now setup and ready for use!
+
+### Creating our Client-side Models
+
+Now that we have models set up to persist our data on the server, we need to describe them to Ember. ember-rails, included with our project template, provides generators to help us with this.
+
+```
+rails generate ember:model Photo title:string url:string
+```
+
+```
+rails generate ember:model Comment text:string
+```
+
+This creates the appropriate Ember.js models in `app/assets/javascripts/ember/models`. We'll need to describe the relationship between them by hand. To do this, we can use `DS.hasMany` and `DS.belongsTo`. We pass string which represent the path of the model class, in this case, `Photoblog.Comment` and `Photoblog.Photo`, respectively.
+
+```js
+Photoblog.Photo = DS.Model.extend({
+  title: DS.attr('string'),
+  url: DS.attr('string'),
+  comments: DS.hasMany('Photoblog.Comment')
+});
+```
+
+```js
+Photoblog.Comment = DS.Model.extend({
+  text: DS.attr('string'),
+  photo: DS.belongsTo('Photoblog.Photo')
+});
+```
+
+
+
+### Creating our Client-side Controller
 
 Controllers serve as a mediator between your views and models. You can create a new controller using the `ember:controller` generator.
 
@@ -93,4 +155,6 @@ rails generate ember:controller photos --array
 This will generate a new array controller called `Photoblog.photosController` inside the `app/assets/javascripts/ember/controllers/photos_controller.js` file. Note that this file also creates a class called `Photoblog.PhotosController`. This allows you to easily create new instances of the controller for unit testing without having to reset singletons to their original state.
 
 
+### Troubleshooting
 
+We'll update this page with common issues as they come up. In the mean time, see our [Ember.js community](/community) page for more info on how to get help.

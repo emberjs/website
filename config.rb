@@ -68,15 +68,15 @@ helpers do
 
   def table_of_contents
     chapters = data.docs.chapters
-
     chapters = chapters.collect_concat do |file|
-      File.read("source/docs/#{file}.md")+"\n"
+       File.read("source/docs/#{file}.md")+"\n"
     end
-
+    
     toc = TableOfContents.new()
     markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
     markdown.render(chapters.join(''))
   end
+  
   def highlight(language, class_name, &block)
     concat %Q{<div class="highlight #{class_name} #{language}">}
     concat '<div class="ribbon"></div>'
@@ -140,6 +140,12 @@ activate :directory_indexes
 
 page "/doc*" do
   @chapters = data.docs.chapters
+end
+
+data.guides.guides.each do |guide|
+  page "/guides/#{guide}", :proxy => "guides.html" do
+    @guide = guide
+  end
 end
 
 page "community.html" do
