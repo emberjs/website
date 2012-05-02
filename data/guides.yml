@@ -1,6 +1,7 @@
-guides:
-  - ember_mvc
-  - rails
+ember_mvc: 
+  name: "Ember MVC"
+rails:
+  name: "Getting Started with Ember.js and Ruby on Rails"
 
 
 
