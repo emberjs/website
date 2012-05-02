@@ -27,11 +27,11 @@ rails new photoblog -m http://emberjs.com/template.rb
 
 The -m option specifies a template on which to base your new project. We have provided one for Ember.js apps which does the following:
 
-* Loads the ember-rails and active_model_serializers gems
+* Loads the `ember-rails` and `active_model_serializers` gems
 * Runs `bundle install`
-* Generates an appropriate ember directory structure inside app/assets/javascripts/ember
-* Generates an AssetsController and supplies an appropriate route in order to serve your application
-* Generates an appropirate ApplicationSerializer for your applications data models.
+* Generates an appropriate `ember` directory structure inside `app/assets/javascripts/ember`
+* Generates an `AssetsController` and supplies an appropriate route in order to serve your application
+* Generates an appropirate `ApplicationSerializer` for your applications data models.
   
 When rails has finished creating your application it will reside in the `photoblog` directory. Switch to this newly created directory:
 
@@ -87,7 +87,6 @@ class CreateComments < ActiveRecord::Migration
     create_table :comments do |t|
       t.string :text
       t.references :photo
-
       t.timestamps
     end
   end
@@ -109,7 +108,7 @@ We can now run `rake db:migrate` to run these migrations and set up our database
 ==  CreateComments: migrated (0.0016s) ========================================
 ```
 
-Our server-side models are now setup and ready for use!
+Our server-side models are now setup and ready for use! What we've done here is basically create a  API server that allows basic CRUD actions for our photo and comment models.
 
 ### Creating our Client-side Models
 
@@ -125,7 +124,7 @@ rails generate ember:model Comment text:string
 
 This creates the appropriate Ember.js models in `app/assets/javascripts/ember/models`. We'll need to describe the relationship between them by hand. To do this, we can use `DS.hasMany` and `DS.belongsTo`. We pass string which represent the path of the model class, in this case, `Photoblog.Comment` and `Photoblog.Photo`, respectively.
 
-```js
+```javascript
 Photoblog.Photo = DS.Model.extend({
   title: DS.attr('string'),
   url: DS.attr('string'),
@@ -133,26 +132,199 @@ Photoblog.Photo = DS.Model.extend({
 });
 ```
 
-```js
+```javascript
 Photoblog.Comment = DS.Model.extend({
   text: DS.attr('string'),
   photo: DS.belongsTo('Photoblog.Photo')
 });
 ```
 
+That's it! ember-data now knows about the structure of our data.
 
+### Configure the Data Store
+
+Next, we should configure our Ember.js app's data store, which will handle saving and updating our data models for us. We do when the application is created in the user's browser. The code that does this was generated automatically by our template, and is stored in `app/assets/javascripts/ember/photoblog.js`. We'll modify it to look like this:
+
+```javascript
+//= require_self
+//= require_tree ./models
+//= require_tree ./controllers
+//= require_tree ./views
+//= require_tree ./helpers
+//= require_tree ./templates
+
+Photoblog = Ember.Application.create({
+  store: DS.Store.create({
+    revision: 4,
+    adapter: DS.RESTAdapter.create({
+      bulkCommit: false,
+    })
+  })
+});
+```
+
+Here, we're telling our application that when created, it should set the store property to a new DS.Store configured with the latest revision and a new DS.RESTAdapter, with bulkCommit turned off. You can read more about these options in the [ember-data readme](https://github.com/emberjs/data).
+
+### Creating the State Manager
+
+Our Ember.js application will be managed by a state manager. The state manger handles what view is currently being displayed, as well as some other application login. It should be created at `app/assets/javascripts/ember/states/photo_states.js` and it will look like this:
+
+```javascript
+Photoblog.stateManager = Ember.StateManager.create({
+  initialState: 'photos',
+
+  states: {
+    photos: Ember.State.create({
+      initialState: 'index',
+
+      index: Ember.State.create({
+        view: Photoblog.IndexView.create()
+	  })
+    })
+  }
+  
+});
+```
+
+Here, we're defining a state manager for our application. We set up our states object and include a single state, `photos`, which we also set set as the initial application state. The `photos` state itself has a single substate, called `index`. This substate is set as the initial substate for the `photos` parent state. The `index` substate has a single property, called 'view' which we are going to set to an index view. We haven't written that yet, so lets do that.
+
+### Creating the Index View
+
+To see all our photos, we need an write an index view which shows them. To do this, we'll create two new files, one at `app/assets/javascripts/ember/templates/photos/index.handlebars` and one at `app/assets/javascripts/ember/views/photos/index_view.js`. First, let's look at the the `app/assets/javascripts/ember/views/photos/index_view.js`, as it is much simpler.
+
+```javascript
+Photoblog.IndexView = Ember.View.extend({
+  templateName: 'ember/templates/photos/index',
+  controller: Photoblog.photosController
+});
+```
+
+This is where we define the Ember.js object which manages the view. We simply provide it with a `templateName` property, which points to our handlebars template, and a `controller` property, which manages the view. Here's the template that defines what the index view looks like.
+
+```
+<h1>My Photoblog</h1>
+
+{{#each controller}}
+  {{#view contentBinding="this"}}
+    <div class="photo">
+      <h2>{{content.title}}</h2>
+      <img {{bindAttr src="content.url"}}>
+      <br>
+	  
+      {{#if content.comments.length}}
+        <h3>Comments</h3>
+        <ul>
+          {{#each content.comments}}
+            <li>{{text}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
+  {{/view}}
+{{/each}}
+```
+
+Let's go break this down and explain what's gong on.
+
+```
+<h1>My Photoblog</h1>
+
+{{#each controller}}
+```
+
+Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an array controller, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlerbars experssion.
+
+```
+{{#view contentBinding="this"}}
+```
+
+For each photo managed by the photosController, we will create a subview with the following contents, and have its `content` property be bound to the photo object.
+
+```
+    <div class="photo">
+      <h2>{{content.title}}</h2>
+      <img {{bindAttr src="content.url"}}>
+      <br>
+```
+
+Here, we reference our photo to get its title, and user bindAttr to set the `<img>` tag's `src` attribute to the photo's url.
+
+```
+      {{#if content.comments.length}}
+        <h3>Comments</h3>
+        <ul>
+          {{#each content.comments}}
+            <li>{{text}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+```
+
+Next, we see if there are any comments on the photo. If there are, we create a section and list for comments, and iterate through them. Note that in this `{{#each}}` expression, we aren't binding the comment object to the content property, so the context is automatically set to it. We create a new `<li>` for each comment with the comments text, and close out our `{{#each}}` iteration, list, and {{#if}}.
+
+```
+  {{/view}}
+{{/each}}
+```
+
+Now that we're done, we close out the subview and our iteration block. Our view is complete.
 
 ### Creating our Client-side Controller
 
-Controllers serve as a mediator between your views and models. You can create a new controller using the `ember:controller` generator.
-
-If your controller will be representing multiple objects, you should create an `Ember.ArrayController`. Let's create a new array controller to manage our photos by invoking the generator with the `--array` option:
+Controllers serve as a mediator between your views and models. We've already discussed that we're going to need an `Ember.ArrayController` to manage our photo objects, so let's create it. You can create a new controller using the `ember:controller` generator. We can also create a new array controller by invoking the generator with the `--array` option:
 
 ```
 rails generate ember:controller photos --array
 ```
 
 This will generate a new array controller called `Photoblog.photosController` inside the `app/assets/javascripts/ember/controllers/photos_controller.js` file. Note that this file also creates a class called `Photoblog.PhotosController`. This allows you to easily create new instances of the controller for unit testing without having to reset singletons to their original state.
+
+The `Ember.ArrayController` provides us with all the functionality we need for now, so no extra code is needed.
+
+### Loading the App
+
+We've now gone through the process of describe out models, views, and controllers to Ember and Rails. Let's get things off the ground by viewing our application!
+
+The Rails template that we based out application off of came with a Rails controller called AssetsController and an associated view and route. This is designed to simply serve our application content, which is basically an empty page with the javascript code which will launch and run our app.
+
+The last thing for us to do is to add the bootstraping code for our app. In `assets/javascripts/application.js`, we should add the following:
+
+```javascript
+$(function() {
+  var photos = Photoblog.store.find(Photoblog.Photo);
+  Photoblog.photosController.set('content', photos);
+
+  Photoblog.getPath('store.adapter').mappings = {
+    comments: Photoblog.Comment
+  };
+
+  Photoblog.stateManager.goToState('photos.index');
+
+  Photoblog.photosView = Ember.ContainerView.create({
+    currentViewBinding: 'Photoblog.stateManager.currentState.view'
+  });
+
+  Photoblog.photosView.append();
+});
+```
+
+We're doing a few things here. First, we're getting all the photos in our data store, and setting the content of our `photosController` to the results array. Next, we set the data store's adapter mappings so that it knows comments are `Photoblog.Comments`. We then move to our initial state, and create an `Ember.ContainerView` with a `currentView` property that is bound to our current state's `view` property. Finally, add the `photosView` to the page.
+
+You can now view the app in your browser by running `rails server` going to `http://localhost:3000`. You should see something like this:
+
+![First site screenshot](/images/rails_site_1.png)
+
+There's our title, but there's no content! We need to add some photos first, of course.
+
+### Adding Photos
+
+We need to add the ability to add photos to our application in order to see some on the index page. First, let's verify everything is working as expected by sending a POST request to our API with a new photo object. Run the following command:
+
+```
+curl 
+```
+
+Now ensure the server is running and reload the page. You should see the photo with it's title listed on the comments page. You'll also see the logs in the console where your server is running, showing the request being handled.
 
 
 ### Troubleshooting
