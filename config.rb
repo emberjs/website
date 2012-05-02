@@ -140,11 +140,11 @@ activate :directory_indexes
 
 page "/doc*" do
   @chapters = data.docs.chapters
-end
+end 
 
-data.guides.guides.each do |guide|
-  page "/guides/#{guide}", :proxy => "guides.html" do
-    @guide = guide
+data.guides.each do |guide_name, properties|
+  page "/guides/#{guide_name}", :proxy => "guide.html" do
+    @guide = guide_name
   end
 end
 

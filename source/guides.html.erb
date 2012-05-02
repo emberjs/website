@@ -1,7 +1,15 @@
 ---
-title: "Guide"
+title: "Guides"
 ---
 
+
 <div class="guide">
-  <%= render :markdown, "guides/#{@guide}.md" %>
+	<h2>Guides</h2>
+	
+	The following Ember.js guides are currently available:
+    <ul id='guide_list'>
+		<% data.guides.each do |guide_name, properties| %>
+		<%= link_to_page properties[:name], "/guides/#{guide_name}" %>
+		<% end %>
+    </ul>	
 </div>
