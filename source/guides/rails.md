@@ -344,9 +344,6 @@ Next, create the template for the view in `app/assets/javascripts/ember/template
 ```
 <h1>Add a New Photo</h1>
 {{template "ember/templates/photos/_form"}}
-
-<button {{action save target="Photoblog.stateManager"}}>Save</button>
-<button {{action cancel target="Photoblog.stateManager"}}>Cancel</button>
 ```
 
 We use the handlebars expression `template` to refer to another template we'd like to load, in this case, the _form template. This should be very familiar to rails users. You'll see why this is important later.
@@ -358,6 +355,10 @@ Let's create our _form template in `app/assets/javascripts/ember/templates/photo
 ```
 <label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.content.title"}}
 <label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.content.url"}}
+
+
+<button {{action save target="Photoblog.stateManager"}}>Save</button>
+<button {{action cancel target="Photoblog.stateManager"}}>Cancel</button>
 ```
 
 We create two Ember.TextField views, and we bind the value property (which will be the text in the text field) to that of our controllers' contents' title and url objects, repesctively. The controller is is the PhotoController, which we created above. Its content will be a photo object.
@@ -458,7 +459,81 @@ Finally, we will add a button to the index template, at the very bottom, which t
 <button {{action showCreate target="Photoblog.stateManager"}}>Add Photo</button>
 ```
 
-With all of this in place, ensure your server is running, and reload the index page.
+With all of this in place, ensure your server is running, and reload the index page. You should see a button at the bottom which takes you to our new create view and lets you add photos!
+
+### Add an Edit Photo View
+
+We should have an edit view to let us modify photo titles at URLs. Creating this will be very similar to the previous step. We will add a view, a template, and modify the state manager. We can use the same photo controller we used in the previous step.
+
+First, lets add the new view at `app/assets/javascripts/ember/views/photos/edit_view.js`
+
+```javascript
+Photoblog.EditView = Ember.View.extend({
+  templateName: 'ember/templates/photos/edit',
+  controller: Photoblog.photoController
+});
+```
+
+Now, we'll add the template for it at `app/assets/javascripts/ember/templates/photos/edit.handlebars`.
+
+```
+<h1>Edit a Photo</h1>
+{{template "ember/templates/photos/_form"}}
+```
+
+Note that we can reuse our form elements from the previous step. The only thing that is different is the header text.
+
+Now, the bulk of our change is in the state manager. Below our create substate, lets add a new substate called `edit`:
+
+```javascript
+edit: Ember.State.create({
+	view: Photoblog.EditView.create(),
+
+	enter: function(manager) {
+	  var transaction = Photoblog.store.transaction();
+	  var photo = Photoblog.photoController.get('content');
+	  transaction.add(photo);
+
+	  manager.set('transaction', transaction);
+	},
+
+	save: function(manager) {
+	  var transaction = manager.get('transaction');
+	  transaction.commit();
+
+	  manager.goToState('index');
+	},
+
+	cancel: function(manager) {
+	  var transaction = manager.get('transaction');
+	  transaction.rollback();
+
+	  manager.goToState('index');
+	}
+})
+```
+
+Much like in the previous step, we set a view property which is a new `Photoblog.EditView`.  The `save` and `cancel` actions are the same, but the `enter` action is a little bit different. Here, instead of creating a new record, we get the existing one from the `photoController`, and add it to our transaction.
+
+Further up, in the state manager, we should add a function which lets us go from the index state to the edit state. In the index substate, add the following after `showCreate`:
+
+```javascript
+showEdit: function(manager, evt) {
+  var photo = evt.context;
+  Photoblog.photoController.set('content', photo);
+  manager.goToState('edit');
+}
+```
+
+Ensure that you add a comma to the previous `showCreate`. In this action, we're grabbing the photo from the event context and setting it to the content of our `photoController`.
+
+Lastly, lets add an edit button to each photo on the page. Below the `<img>` tag, add the following button, which targets our state manager's new `showEdit` action.
+
+```
+<a href="#" {{action showEdit target="Photoblog.stateManager"}}>Edit Photo</a>
+```
+
+Reload the page. There should now be an "Edit Photo" link below each photo that will take you to our new Edit Photo view.
 
 ### Troubleshooting
 
