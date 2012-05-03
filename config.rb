@@ -57,7 +57,7 @@ helpers do
     path = request.path
     current = path =~ Regexp.new(url)
 
-    if path == '/index.html' and name == 'docs'
+    if path == '/index.html' and name == 'about'
       current = true
     end
 
@@ -154,7 +154,7 @@ end
 
 page "examples/*", :directory_index => false
 
-page "index.html", :proxy => "documentation.html"
+page "index.html", :proxy => "about.html"
 
 # Build-specific configuration
 configure :build do
