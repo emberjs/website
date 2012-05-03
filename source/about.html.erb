@@ -22,7 +22,7 @@ title: "About"
 </div>
 
 <div class="features section">
-  <h2>Features Tailored for the Ambitious Web Developer.</h2>
+  <h2>More Productive Out of the Box.</h2>
   <div class="feature">
     <img src="/images/about/fpo.png" alt="Handlebars logo">
 	<p>Ember.js is a web application framework built for productivity. Designed with developer ergonomics in mind, its friendly APIs and extensive features allow you to unlock the power of the browser.</p>
@@ -39,34 +39,43 @@ title: "About"
 </div> 
 
 <div class="getting-started section">
-  <h2>Getting Started with Ember.js is Easy</h2>
+  <h2>Getting Started with Ember.js is Easy.</h2>
 
 <% highlight :javascript, :left do %>
-MyApp.president = Ember.Object.create({
-  firstName: "Barack",
-  lastName: "Obama",
+App.Person = DS.Model.extend({
+  firstName: DS.attr('string'),
+  lastName: DS.attr('string'),
 
   fullName: function() {
     return this.get('firstName') +
            " " + this.get('lastName');
   }.property('firstName', 'lastName')
 });
+
+App.peopleController = Em.ArrayController.create({
+  content: App.Person.findAll()
+});
   <% end %>
 
   <% highlight :html, :right do %>
-<html>
-  <body>
-    <script type="text/x-handlebars">
-      Hello, <b>{{MyApp.name}}</b>!
-      Happy {{MyApp.dayOfWeek}}.
-    </script>
-  </body>
-</html>
+<h1>People</h1>
+<ul>
+{{#each controller}}
+  <li>Hello, <b>{{fullName}}</b>!
+{{/each}}
+</ul>
+.
+.
+.
+.
+.
   <% end %>
 
-  <p class="left">Describe your application in terms of computed properties. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
+  <p class="left">
+    
+  </p>
 
-  <p class="right">Handlebars templates update automatically when their underlying values change. Whatever PBR portland velit mcsweeney's quis cliche qui nesciunt, pop-up artisan. Sriracha small batch vegan mustache, assumenda beard VHS sartorial magna direct trade banksy nihil brunch. Vinyl anim fanny pack, godard before they sold out pickled you probably haven't heard of them proident eiusmod banh mi.</p>
+  <p class="right"></p>
 
   <div class="clearfix"></div>
 </div>

@@ -257,10 +257,10 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 .getting-started.section {
   .highlight, p {
     float: left;
-    width: $col-width * 7 + $col-spacing * 6;
+    width: $col-width * 8 + $col-spacing * 6;
 
     &.right {
-      margin-left: $col-width * 2 + $col-spacing * 3;
+      margin-left: $col-width * 1 + $col-spacing * 1;
     }
   }
 
