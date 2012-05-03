@@ -318,14 +318,147 @@ There's our title, but there's no content! We need to add some photos first, of 
 
 ### Adding Photos
 
-We need to add the ability to add photos to our application in order to see some on the index page. First, let's verify everything is working as expected by sending a POST request to our API with a new photo object. Run the following command:
+We need to add the ability to add photos to our application in order to see some on the index page. First, let's verify everything is working as expected by sending a POST request to our API with a new photo object. Ensure the server is running, and execute the following command:
 
 ```
-curl 
+curl -H "Content-Type: application/json" -X POST -d '{"photo":{"url":"http://farm8.staticflickr.com/7101/7007178689_9cd571
+fa10.jpg", "title":"Books"}}' http://localhost:3000/photos
 ```
 
-Now ensure the server is running and reload the page. You should see the photo with it's title listed on the comments page. You'll also see the logs in the console where your server is running, showing the request being handled.
+This sends a json payload to our server with data for a new photo. Reload the page. You should see a new photo with its title listed on the index page. You'll also see the logs in the console where your server is running, showing the request being handled. If you don't see the photo, jump down to the troubleshooting section below.
 
+Now that we're sure everything is working, we want to be able to add photos through our Ember.js app. To do this, we'll write a new view.
+
+### Add the New Photo View
+
+We want to add a button at the bottom of of our index view that lets us create a new photo. To do so, we'll write a new view, a template and controller for it, and add a new state to the state manager to represent the user being in the add photo state.
+
+First create the controller. A standard controller will work fine, we don't need an array controller in this case.
+
+```
+rails generate ember:controller photo
+```
+
+Next, create the template for the view in `app/assets/javascripts/ember/templates/photos/create.handlebars`. It should look like this:
+
+```
+<h1>Add a New Photo</h1>
+{{template "ember/templates/photos/_form"}}
+
+<button {{action save target="Photoblog.stateManager"}}>Save</button>
+<button {{action cancel target="Photoblog.stateManager"}}>Cancel</button>
+```
+
+We use the handlebars expression `template` to refer to another template we'd like to load, in this case, the _form template. This should be very familiar to rails users. You'll see why this is important later.
+
+We then have a save button and cancel button, both of which target our state manager.
+
+Let's create our _form template in `app/assets/javascripts/ember/templates/photos/_form.handlebars`. It will include only the form elements for our photo, like so:
+
+```
+<label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.content.title"}}
+<label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.content.url"}}
+```
+
+We create two Ember.TextField views, and we bind the value property (which will be the text in the text field) to that of our controllers' contents' title and url objects, repesctively. The controller is is the PhotoController, which we created above. Its content will be a photo object.
+
+Next, create the view in `app/assets/javascripts/ember/views/photos/create_view.js`. It should reference both the template and the controller we just created.
+
+```javascript
+Photoblog.CreateView = Ember.View.extend({
+  templateName: 'ember/templates/photos/create',
+  controller: Photoblog.photoController
+});
+```
+
+Let us now make the changes to our state manager to hook up all of these components together.
+
+Inside our main index state, we should add a new action, which tells our manager to go to the `create` state.
+
+```javascript
+showCreate: function(manager) {
+  manager.goToState('create');
+}
+```
+
+Note that you should always have actions within states that send the state manager to another state, as opposed to having other objects control the state manager. This allows for better encapsulation and more reusable code.
+
+Now, inside our `photos` parent state, we should add a new substate, called `create`.
+
+```javascript
+create: Ember.State.create({
+view: Photoblog.CreateView.create(),
+
+enter: function(manager) {
+  var transaction = Photoblog.store.transaction();
+  var photo = transaction.createRecord(Photoblog.Photo);
+
+  Photoblog.photoController.set('content', photo);
+  manager.set('transaction', transaction);
+},
+
+save: function(manager) {
+  var transaction = manager.get('transaction');
+  transaction.commit();
+
+  manager.goToState('index');
+},
+
+cancel: function(manager) {
+  var transaction = manager.get('transaction');
+  transaction.rollback();
+
+  manager.goToState('index');
+}
+})
+```
+
+Let's go through this and explain what's going on.
+
+```javascript
+create: Ember.State.create({
+	view: Photoblog.CreateView.create(),
+```
+
+Create a new state called `create`, which uses a new Photoblog.CreateView as it's view.
+
+```javascript
+enter: function(manager) {
+  var transaction = Photoblog.store.transaction();
+  var photo = transaction.createRecord(Photoblog.Photo);
+
+  Photoblog.photoController.set('content', photo);
+  manager.set('transaction', transaction);
+},
+```
+
+Here, we define the `enter` action of this state. `enter` and `exit` are special actions that are automatically called whenever the state manager enters or exits that particular state. Here, we set up a new transaction with our store, and create a new `photo` object from that transaction. We set it to be the content of our `photoController`, and save off the `transaction` for later use.
+
+```javascript
+save: function(manager) {
+  var transaction = manager.get('transaction');
+  transaction.commit();
+
+  manager.goToState('index');
+},
+
+cancel: function(manager) {
+  var transaction = manager.get('transaction');
+  transaction.rollback();
+
+  manager.goToState('index');
+}
+```
+
+Now we define the `save` and `cancel` actions we referenced in our create view template earlier. Both of them get the current transaction, and the save action calls `commit()` where as the cancel action calls `rollback()`. `commit()` saves our photo object to the data store, which takes care of making the API request to save the data on our backend for us. `rollback()` undos any changes made in the transaction. Both actions then tell the manager to go back to the index state.
+
+Finally, we will add a button to the index template, at the very bottom, which tells our state manager to show the create view.
+
+```
+<button {{action showCreate target="Photoblog.stateManager"}}>Add Photo</button>
+```
+
+With all of this in place, ensure your server is running, and reload the index page.
 
 ### Troubleshooting
 
