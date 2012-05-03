@@ -19,8 +19,11 @@
 
     <script type="text/javascript">
       $(function() {
-        $('#logo').on('click', function() {
-          $('#content-wrapper').toggleClass('grid');
+        $('#logo').on('click', function(evt) {
+          if (evt.shiftKey) {
+            $('#content-wrapper').toggleClass('grid');
+            return false;
+          }
         });
 
         var backToTop = $('#back-to-top');
@@ -59,7 +62,7 @@
   <body>
     <div id="header">
       <div id="wrapper">
-        <div id="logo">&nbsp;</div>
+        <a id="logo" href="/">&nbsp;</a>
         <ul id="nav">
           <%= link_to_page "about", "/about" %>
           <%= link_to_page "docs", "/documentation" %>
