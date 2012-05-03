@@ -20,7 +20,21 @@ run "bundle install"
 # Configure the app to serve Ember.js and app assets from an AssetsController
 generate "ember:bootstrap"
 generate :controller, "Assets", "index"
-
+run "rm app/views/assets/index.html.erb"
+file 'app/views/assets/index.html.erb', <<-CODE
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photoblog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <%= javascript_include_tag "application" %>
+</body>
+</html>
+CODE
+run "rm -rf app/views/layouts"
 route "root :to => 'assets#index'"
 
 # Generate a default serializer that is compatible with ember-data
