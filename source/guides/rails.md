@@ -201,7 +201,7 @@ Photoblog.IndexView = Ember.View.extend({
 
 This is where we define the Ember.js object which manages the view. We simply provide it with a `templateName` property, which points to our handlebars template, and a `controller` property, which manages the view. Here's the template that defines what the index view looks like.
 
-```
+```html
 <h1>My Photoblog</h1>
 
 {{#each controller}}
@@ -226,7 +226,7 @@ This is where we define the Ember.js object which manages the view. We simply pr
 
 Let's go break this down and explain what's gong on.
 
-```
+```html
 <h1>My Photoblog</h1>
 
 {{#each controller}}
@@ -234,13 +234,13 @@ Let's go break this down and explain what's gong on.
 
 Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an array controller, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlerbars experssion.
 
-```
+```html
 {{#view contentBinding="this"}}
 ```
 
 For each photo managed by the photosController, we will create a subview with the following contents, and have its `content` property be bound to the photo object.
 
-```
+```html
     <div class="photo">
       <h2>{{content.title}}</h2>
       <img {{bindAttr src="content.url"}}>
@@ -249,7 +249,7 @@ For each photo managed by the photosController, we will create a subview with th
 
 Here, we reference our photo to get its title, and user bindAttr to set the `<img>` tag's `src` attribute to the photo's url.
 
-```
+```html
       {{#if content.comments.length}}
         <h3>Comments</h3>
         <ul>
@@ -262,7 +262,7 @@ Here, we reference our photo to get its title, and user bindAttr to set the `<im
 
 Next, we see if there are any comments on the photo. If there are, we create a section and list for comments, and iterate through them. Note that in this `{{#each}}` expression, we aren't binding the comment object to the content property, so the context is automatically set to it. We create a new `<li>` for each comment with the comments text, and close out our `{{#each}}` iteration, list, and {{#if}}.
 
-```
+```html
   {{/view}}
 {{/each}}
 ```
@@ -321,8 +321,7 @@ There's our title, but there's no content! We need to add some photos first, of 
 We need to add the ability to add photos to our application in order to see some on the index page. First, let's verify everything is working as expected by sending a POST request to our API with a new photo object. Ensure the server is running, and execute the following command:
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"photo":{"url":"http://farm8.staticflickr.com/7101/7007178689_9cd571
-fa10.jpg", "title":"Books"}}' http://localhost:3000/photos
+curl -H "Content-Type: application/json" -X POST -d '{"photo":{"url":"http://farm8.staticflickr.com/7101/7007178689_9cd571fa10.jpg", "title":"Books"}}' http://localhost:3000/photos
 ```
 
 This sends a json payload to our server with data for a new photo. Reload the page. You should see a new photo with its title listed on the index page. You'll also see the logs in the console where your server is running, showing the request being handled. If you don't see the photo, jump down to the troubleshooting section below.
@@ -341,7 +340,7 @@ rails generate ember:controller photo
 
 Next, create the template for the view in `app/assets/javascripts/ember/templates/photos/create.handlebars`. It should look like this:
 
-```
+```html
 <h1>Add a New Photo</h1>
 {{template "ember/templates/photos/_form"}}
 ```
@@ -352,7 +351,7 @@ We then have a save button and cancel button, both of which target our state man
 
 Let's create our _form template in `app/assets/javascripts/ember/templates/photos/_form.handlebars`. It will include only the form elements for our photo, like so:
 
-```
+```html
 <label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.content.title"}}
 <label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.content.url"}}
 
@@ -455,7 +454,7 @@ Now we define the `save` and `cancel` actions we referenced in our create view t
 
 Finally, we will add a button to the index template, at the very bottom, which tells our state manager to show the create view.
 
-```
+```html
 <button {{action showCreate target="Photoblog.stateManager"}}>Add Photo</button>
 ```
 
@@ -476,7 +475,7 @@ Photoblog.EditView = Ember.View.extend({
 
 Now, we'll add the template for it at `app/assets/javascripts/ember/templates/photos/edit.handlebars`.
 
-```
+```html
 <h1>Edit a Photo</h1>
 {{template "ember/templates/photos/_form"}}
 ```
@@ -529,7 +528,7 @@ Ensure that you add a comma to the previous `showCreate`. In this action, we're 
 
 Lastly, lets add an edit button to each photo on the page. Below the `<img>` tag, add the following button, which targets our state manager's new `showEdit` action.
 
-```
+```html
 <a href="#" {{action showEdit target="Photoblog.stateManager"}}>Edit Photo</a>
 ```
 
