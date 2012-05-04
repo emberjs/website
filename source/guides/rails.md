@@ -141,39 +141,28 @@ Photoblog.Comment = DS.Model.extend({
 
 That's it! ember-data now knows about the structure of our data.
 
-### Configure the Data Store
+### Setting up the State Manager
 
-Next, we should configure our Ember.js app's data store, which will handle saving and updating our data models for us. We do when the application is created in the user's browser. The code that does this was generated automatically by our template, and is stored in `app/assets/javascripts/ember/photoblog.js`. We'll modify it to look like this:
-
-```javascript
-//= require_self
-//= require_tree ./models
-//= require_tree ./controllers
-//= require_tree ./views
-//= require_tree ./helpers
-//= require_tree ./templates
-
-Photoblog = Ember.Application.create({
-  store: DS.Store.create({
-    revision: 4,
-    adapter: DS.RESTAdapter.create({
-      bulkCommit: false,
-    })
-  })
-});
-```
-
-Here, we're telling our application that when created, it should set the store property to a new DS.Store configured with the latest revision and a new DS.RESTAdapter, with bulkCommit turned off. You can read more about these options in the [ember-data readme](https://github.com/emberjs/data).
-
-### Creating the State Manager
-
-Our Ember.js application will be managed by a state manager. The state manger handles what view is currently being displayed, as well as some other application login. It should be created at `app/assets/javascripts/ember/states/photo_states.js` and it will look like this:
+Our Ember.js application will be managed by a state manager. The state manger handles what view is currently being displayed, as well as some other application login. Our default template will have created one for us at `app/assets/javascripts/ember/states/app_states.js`. We'll want to modify it to look like this:
 
 ```javascript
-Photoblog.stateManager = Ember.StateManager.create({
-  initialState: 'photos',
+Photoblog.StateManager = Ember.StateManager.extend({
+  initialState: 'bootstrap',
 
   states: {
+    bootstrap: Ember.State.extend({
+      ready: function(manager) {
+        // put your bootstrap logic here
+        var store = DS.Store.create({
+          adapter: 'DS.RESTAdapter'
+        });
+
+        manager.set('store', store);
+		
+		manager.goToState('photos');
+      }
+    }),
+	
     photos: Ember.State.create({
       initialState: 'index',
 
@@ -181,12 +170,13 @@ Photoblog.stateManager = Ember.StateManager.create({
         view: Photoblog.IndexView.create()
 	  })
     })
-  }
+	
+  } // End States
   
 });
 ```
 
-Here, we're defining a state manager for our application. We set up our states object and include a single state, `photos`, which we also set set as the initial application state. The `photos` state itself has a single substate, called `index`. This substate is set as the initial substate for the `photos` parent state. The `index` substate has a single property, called 'view' which we are going to set to an index view. We haven't written that yet, so lets do that.
+Here, we're defining a state manager for our application. We set up our states object and include two states, `bootstrap` and `photos`. `bootstrap` is set as the initial state, and it handles creating and setting up our data store, and then it goes to the `photos` state. The `photos` state itself has a single substate, called `index`. This state is set as the initial substate for the `photos` parent state. The `index` substate has a single property, called 'view' which we are going to set to an index view. We haven't written that yet, so lets do that.
 
 ### Creating the Index View
 
