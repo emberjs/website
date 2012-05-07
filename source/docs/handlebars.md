@@ -657,7 +657,10 @@ They are:
 ####Ember.Checkbox
 	
 ```html
-		{{view Ember.Checkbox titleBinding="content.title" valueBinding="content.isDone"}}
+    <label>
+      {{view Ember.Checkbox checkedBinding="content.isDone"}}
+      {{content.title}}
+    </label>
 ```
 	
 ####Ember.TextField
