@@ -6,3 +6,4 @@ output
 .sass-cache
 build/
 source/examples
+.mm-pid-*
