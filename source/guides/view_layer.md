@@ -1,5 +1,9 @@
 # The Ember.js View Layer
 
+This guide goes into extreme detail about the Ember.js view layer. It is
+intended for an experienced Ember developer, and includes details that
+are unnecessary for getting started with Ember.
+
 Ember.js has a sophisticated system for creating, managing and rendering a hierarchy of views that connect to the browser's DOM. Views are responsible for responding to user events, like clicks, drags, and scrolls, as well as updating the contents of the DOM when the data underlying the view changes.
 
 View hierarchies are usually created by evaluating a Handlebars template. As the template is evaluated, child views are added. As the templates for _those_ child views are evaluated, they may have child views added, and so on, until an entire hierarchy is created.
