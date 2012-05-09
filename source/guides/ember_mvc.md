@@ -23,6 +23,8 @@ Ember.View encasulates templates of HTML, letting you write reusable and maintab
 
 Ember.ArrayController makes it easy to manage lists of objects, with convenience methods for iterating through the contents.
 
+Ember.js also adds a new peice of important architecture: A state manager which can mediate between the views, controllers, and data store. It can act as a map of your application and handle transitions as a user moves through it.
+
 All of these objects descend from Ember.Object, which provide great features like binding support, observers, computed properties, and subclassing.
 
 
