@@ -2,6 +2,10 @@
 title: "Guides"
 ---
 
+<% content_for :sidebar do %>
+  <%= table_of_contents_for "guides/#{@guide}.md" %>
+<% end %>
+
 <div class="guide">
   <%= render :markdown, "guides/#{@guide}.md" %>	
 </div>
