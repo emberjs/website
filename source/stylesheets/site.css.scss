@@ -9,6 +9,7 @@ $col-width: 40px;
 $col-spacing: 20px;
 
 $orange-color: #e1563f;
+$blue-color: #1f58ce;
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
@@ -38,8 +39,17 @@ p {
   margin: 24px 0;
 }
 
+em {
+  font-style: italic;
+}
+
 code {
   font-family: Menlo, Courier, monospace;
+  font-size: 90%;
+  color: #666;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 3px;
+  @include border-radius(5px);
 }
 
 .clearfix {
@@ -417,19 +427,56 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 .guide {
   margin: 43px 0 90px 0;
 
-  $h3-indent: 32px;
-  $body-indent: $h3-indent + 24px;
+  $h3-indent: 0;
+  $body-indent: $h3-indent;
+
+  table.figure {
+    float: left;
+    margin-bottom: 20px;
+
+    & + table.figure {
+      margin-left: 20px;
+    }
+
+    & + table.figure + * {
+      clear: left;
+    }
+
+    th, td {
+      padding: 5px 10px;
+    }
+
+    thead th {
+      font-weight: bold;
+      border-bottom: 2px solid $orange-color;
+    }
+
+    tbody td {
+      border-bottom: 1px solid lighten($orange-color, 20%);
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
 
   h2 {
+    margin: 50px 0 0 0;
     width: 100%;
-    font-size: 18px;
+    font-size: 24px;
     color: black;
     text-transform: uppercase;
     font-family: "MavenProBold";
   }
 
+  :not(h2) + h3 {
+    margin-top: 50px;
+  }
+
   h3 {
     font-size: 16px;
+    font-weight: bold;
     margin: 30px 0;
     text-transform: uppercase;
     padding-left: $h3-indent;
@@ -462,6 +509,14 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
       font-size: 15px;
       margin: 10px 0 10px $body-indent+20px;
     }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
   }
 }
 

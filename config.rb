@@ -76,7 +76,16 @@ helpers do
     markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
     markdown.render(chapters.join(''))
   end
-  
+
+  def table_of_contents_for(file)
+    document = File.read("source/#{file}")
+
+    toc = TableOfContents.new()
+    markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
+
+    markdown.render(document)
+  end
+
   def highlight(language, class_name, &block)
     concat %Q{<div class="highlight #{class_name} #{language}">}
     concat '<div class="ribbon"></div>'
@@ -131,7 +140,8 @@ class HighlightedHTML < Redcarpet::Render::HTML
   end
 end
 
-set :md, :layout_engine => :erb,
+set :markdown_engine, :redcarpet
+set :markdown, :layout_engine => :erb,
          :fenced_code_blocks => true,
          :lax_html_blocks => true,
          :renderer => HighlightedHTML.new()

@@ -103,7 +103,7 @@ After the view inserts itself into the DOM, either Ember or the application may 
 Rerendering will repeat steps 2 and 3 above, with two exceptions:
 
 * Instead of inserting the element into an explicitly specified location, `rerender` replaces the existing element with the new element.
-* In addition to rendering a new element, it also removes the old element and destroys its children. This allows Ember to automatically handle unregistering appropriate bindings and observers when re-rendering a view. This makes observers on a path more viable, because the process of registering and unregistering all of the nested observers automatic.
+* In addition to rendering a new element, it also removes the old element and destroys its children. This allows Ember to automatically handle unregistering appropriate bindings and observers when re-rendering a view. This makes observers on a path more viable, because the process of registering and unregistering all of the nested observers is automatic.
 
 The most common cause of a view re-render is when the value bound to a Handlebars expression (`{{foo}}`) changes. Internally, Ember creates a simple view for each expression, and registers an observer on the path. When the path changes, Ember updates the area of the DOM with the new value.
 
@@ -119,18 +119,18 @@ The process looks something like:
 
 ## The View Hierarchy
 
-### `parentView` and `childViews`
+### Parent and Child Views
 
 As Ember renders a templated view, it will generate a view hierarchy. Let's assume we have a template `form`.
 
-```
+```html
 {{view App.Search placeholder="Search"}}
 {{#view Ember.Button}}Go!{{/view}}
-````
+```
 
 And we insert it into the DOM like this:
 
-```
+```javascript
 var view = Ember.View.create({
   templateName: 'form'
 }).append();
@@ -142,14 +142,14 @@ This will create a small view hierarchy that looks like this:
 
 You can move around in the view hierarchy using the `parentView` and `childViews` properties.
 
-```
+```javascript
 var children = view.get('childViews') // [ <App.Search>, <Ember.Button> ]
 children.objectAt(0).get('parentView') // view
 ```
 
 One common use of the `parentView` method is inside of an instance of a child view.
 
-```
+```javascript
 App.Search = Ember.View.extend({
   didInsertElement: function() {
     // this.get('parentView') in here references `view`
@@ -170,7 +170,7 @@ In order to make it easy to take action at different points during your view's l
 
 Apps can implement these hooks by defining a method by the hook's name on the view. Alternatively, it is possible to register a listener for the hook on a view:
 
-```
+```javascript
 view.on('willRerender', function() {
   // do something with view
 });
@@ -178,7 +178,240 @@ view.on('willRerender', function() {
 
 ### Virtual Views
 
+As described above, Handlebars creates views in the view hierarchy to
+represent bound values. Every time you use a Handlebars expression,
+whether it's a simple value or a block helper like `{{#with}}` or
+`{{#if}}`, Handlebars creates a new view.
+
+Because Ember uses these views for internal bookkeeping only,
+they are hidden from the view's public `parentView` and `childViews`
+API. The public view hierarchy reflects only views created using the
+`{{view}}` helper or through `ContainerView` (see below).
+
+For example, consider the following Handlebars template:
+
+```
+<h1>Joe's Lamprey Shack</h1>
+{{controller.restaurantHours}}
+
+{{#view App.FDAContactForm}}
+  If you are experiencing discomfort from eating at Joe's Lamprey Shack,
+please use the form below to submit a complaint to the FDA.
+
+  {{#if controller.allowComplaints}}
+    {{view Ember.TextArea valueBinding="controller.complaint"}}
+    <button {{action submitComplaint}}>Submit</button>
+  {{/if}}
+{{/view}}
+```
+
+Rendering this template would create a hierarchy like this:
+
+<img src="/images/view-guide/public-view-hierarchy.png">
+
+Behind the scenes, Ember tracks additional virtual views for the
+Handlebars expressions:
+
+<img src="/images/view-guide/virtual-view-hierarchy.png">
+
+From inside of the `TextArea`, the `parentView` would point to the
+`FDAContactForm` and the `FDAContactForm`'s `childViews` would be an
+array of the single `TextArea` view.
+
+You can see the internal view hierarchy by asking for the `_parentView`
+or `_childViews`, which will include virtual views:
+
+```javascript
+var _childViews = view.get('_childViews');
+console.log(_childViews.objectAt(0).toString());
+//> <Ember._HandlebarsBoundView:ember1234>
+```
+
+**Warning!** You may not rely on these internal APIs in application code.
+They may change at any time and have no public contract. The return
+value may not be observable or bindable. It may not be an Ember object.
+If you feel the need to use them, please contact us so we can expose a better 
+public API for your use-case.
+
+Bottom line: This API is like XML. If you think you have a use for it,
+you may not yet understand the problem enough. Reconsider!
+
 ### Event Bubbling
+
+One responsibility of views is to respond to primitive user events
+and translate them into events that have semantic meaning for your
+application.
+
+For example, a delete button translates the primitive `click` event into
+the application-specific "remove this item from an array."
+
+In order to respond to user events, create a new view subclass that
+implements that event as a method:
+
+```javascript
+App.DeleteButton = Ember.View.create({
+  click: function(event) {
+    var stateManager = this.getPath('controller.stateManager');
+    var item = this.get('content');
+
+    stateManager.send('deleteItem', item);
+  }
+});
+```
+
+When you create a new `Ember.Application` instance, it registers an event
+handler for each native browser event using jQuery's event delegation
+API. When the user triggers an event, the application's event dispatcher
+will find the view nearest to the event target that implements the
+event.
+
+A view implements an event by defining a method corresponding to the
+event name. When the event name is made up of multiple words (like
+`mouseup`) the method name should be the camelized form of the event
+name (`mouseUp`).
+
+Events will bubble up the view hierarchy until the event reaches the
+root view. An event handler can stop propagation using the same
+techniques as normal jQuery event handlers:
+
+* `return false` from the method
+* `event.stopPropagation`
+
+For example, imagine you defined the following view classes:
+
+```javascript
+App.GrandparentView = Ember.View.extend({
+  click: function() {
+    console.log('Grandparent!');
+  }
+});
+
+App.ParentView = Ember.View.extend({
+  click: function() {
+    console.log('Parent!');
+    return false;
+  }
+});
+
+App.ChildView = Ember.View.extend({
+  click: function() {
+    console.log('Child!');
+  }
+});
+```
+
+And here's the Handlebars template that uses them:
+
+```
+{{#view App.GrandparentView}}
+  {{#view App.ParentView}}
+    {{#view App.ChildView}}
+      <h1>Click me!</h1>
+    {{/view}}
+  {{/view}}
+{{/view}}
+```
+
+If you clicked on the `<h1>`, you'd see the following output in your
+browser's console:
+
+```
+Child!
+Parent!
+```
+
+You can see that Ember invokes the handler on the child-most view that
+received the event. The event continues to bubble to the `ParentView`,
+but does not reach the `GrandparentView` because `ParentView` returns
+false from its event handler.
+
+You can use normal event bubbling techniques to implement familiar
+patterns. For example, you could implement a `FormView` that defines a
+`submit` method. Because the browser triggers the `submit` event when
+the user hits enter in a text field, defining a `submit` method on the
+form view will "just work".
+
+```javascript
+App.FormView = Ember.View.extend({
+  tagName: "form",
+
+  submit: function(event) {
+    // will be invoked whenever the user triggers
+    // the browser's `submit` method
+  }
+});
+```
+
+```
+{{#view App.FormView}}
+  {{view Ember.TextFieldView valueBinding="controller.firstName"}}
+  {{view Ember.TextFieldView valueBinding="controller.lastName"}}
+  <button type="submit">Done</button>
+{{/view}}
+```
+
+### Adding New Events
+
+Ember comes with built-in support for the following native browser
+events:
+
+<table class="figure">
+  <thead>
+    <tr><th>Event Name</th><th>Method Name</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>touchstart</td><td>touchStart</td></tr>
+    <tr><td>touchmove</td><td>touchMove</td></tr>
+    <tr><td>touchend</td><td>touchEnd</td></tr>
+    <tr><td>touchcancel</td><td>touchCancel</td></tr>
+    <tr><td>keydown</td><td>keyDown</td></tr>
+    <tr><td>keyup</td><td>keyUp</td></tr>
+    <tr><td>keypress</td><td>keyPress</td></tr>
+    <tr><td>mousedown</td><td>mouseDown</td></tr>
+    <tr><td>mouseup</td><td>mouseUp</td></tr>
+    <tr><td>contextmenu</td><td>contextMenu</td></tr>
+    <tr><td>click</td><td>click</td></tr>
+    <tr><td>dblclick</td><td>doubleClick</td></tr>
+    <tr><td>mousemove</td><td>mouseMove</td></tr>
+  </tbody>
+</table>
+<table class="figure">
+  <thead>
+    <tr><th>Event Name</th><th>Method Name</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>focusin</td><td>focusIn</td></tr>
+    <tr><td>focusout</td><td>focusOut</td></tr>
+    <tr><td>mouseenter</td><td>mouseEnter</td></tr>
+    <tr><td>mouseleave</td><td>mouseLeave</td></tr>
+    <tr><td>submit</td><td>submit</td></tr>
+    <tr><td>change</td><td>change</td></tr>
+    <tr><td>dragstart</td><td>dragStart</td></tr>
+    <tr><td>drag</td><td>drag</td></tr>
+    <tr><td>dragenter</td><td>dragEnter</td></tr>
+    <tr><td>dragleave</td><td>dragLeave</td></tr>
+    <tr><td>dragover</td><td>dragOver</td></tr>
+    <tr><td>drop</td><td>drop</td></tr>
+    <tr><td>dragend</td><td>dragEnd</td></tr>
+  </tbody>
+</table>
+
+You can add additional events to the event dispatcher when you create a
+new application:
+
+```javascript
+App = Ember.Application.create({
+  customEvents: {
+    // add support for the loadedmetadata media
+    // player event
+    'loadedmetadata': "loadedMetadata"
+  }
+});
+```
+
+In order for this to work for a custom event, the HTML5 spec must define
+the event as "bubbling", or jQuery must have provided an event
+delegation shim for the event.
 
 ## Templated views
 
