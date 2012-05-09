@@ -413,10 +413,252 @@ In order for this to work for a custom event, the HTML5 spec must define
 the event as "bubbling", or jQuery must have provided an event
 delegation shim for the event.
 
-## Templated views
+## Templated Views
 
-## Programmatic views (Container views)
+As you've seen so far in this guide, the majority of views that you will
+use in your application are backed by a template. When using templates,
+you do not need to programmatically create your view hierarchy because
+the template creates it for you.
 
-## Template scopes
+While rendering, the view's template can append views to its child views
+array. Internally, the template's `{{view}}` helper calls the view's
+`appendChild` method.
 
-## Template variables
+Calling `appendChild` does two things:
+
+1. Adds the child view to the `childViews` array.
+2. Immediately renders the child view and adds it to the parent's render
+   buffer.
+
+<img src="/images/view-guide/template-appendChild-interaction.png">
+
+You may not call `appendChild` on a view after it has left the rendering
+state. A template renders "mixed content" (both views and plain text) so
+the parent view does not know exactly where to insert the new child view
+once the rendering process has completed.
+
+In the example above, imagine trying to insert a new view inside of
+the parent view's `childViews` array. Should it go immediately
+after the closing `</div>` of `App.MyView`? Or should it go after the
+closing `</div>` of the entire view? There is no good answer that will
+always be correct.
+
+Because of this ambiguity, the only way to create a view hierarchy using
+templates is via the `{{view}}` helper, which always inserts views
+in the right place relative to any plain text.
+
+While this works for most situations, occasionally you may want to have
+direct, programmatic control of a view's children. In that case, you can
+use `Ember.ContainerView`, which explicitly exposes a public API for
+doing so.
+
+## Container Views
+
+Container views contain no plain text. They are composed entirely of
+their child views (which may themselves be template-backed).
+
+`ContainerView` exposes two public APIs for changing its contents:
+
+1. A writable `childViews` array into which you can insert `Ember.View`
+   instances.
+2. A `currentView` property that, when set, inserts the new value into
+   the child views array. If there was a previous value of
+   `currentView`, it is removed from the `childViews` array.
+
+Here is an example of using the `childViews` API to create a view that
+starts with a hypothetical `DescriptionView` and can add a new button at
+any time by calling the `addButton` method:
+
+```javascript
+App.ToolbarView = Ember.ContainerView.create({
+  init: function() {
+    var childViews = this.get('childViews');
+    var descriptionView = App.DescriptionView.create();
+
+    childViews.pushObject(descriptionView);
+    this.addButton();
+
+    return this._super();
+  },
+
+  addButton: function() {
+    var childViews = this.get('childViews');
+    var button = Ember.ButtonView.create();
+
+    childViews.pushObject(button);
+  }
+});
+```
+
+As you can see in the example above, we initialize the `ContainerView`
+with two views, and can add additional views during runtime. There is a
+convenient shorthand for doing this view setup without having to
+override the `init` method:
+
+```javascript
+App.ToolbarView = Ember.ContainerView.create({
+  childViews: ['descriptionView', 'buttonView'],
+
+  descriptionView: App.DescriptionView,
+  buttonView: Ember.ButtonView,
+
+  addButton: function() {
+    var childViews = this.get('childViews');
+    var button = Ember.ButtonView.create();
+
+    childViews.pushObject(button);
+  }
+});
+```
+
+As you can see above, when using this shorthand, you specify the
+`childViews` as an array of strings. At initialization time, each of the
+strings is used as a key to look up a view instance or class. That view
+is automatically instantiated, if necessary, and added to the
+`childViews` array.
+
+<img src="/images/view-guide/container-view-shorthand.png">
+
+## Template Scopes
+
+Standard Handlebars templates have the concept of a *context*--the
+object from which expressions will be looked up.
+
+Some helpers, like `{{#with}}`, change the context inside their block.
+Others, like `{{#if}}`, preserve the context. These are called
+"context-preserving helpers."
+
+When a Handlebars template in an Ember app uses an expression
+(`{{#if foo.bar}}`), Ember will automatically set up an
+observer for that path on the current context.
+
+If the object referenced by the path changes, Ember will automatically
+re-render the block with the appropriate context. In the case of a
+context-preserving helper, Ember will re-use the original context when
+re-rendering the block. Otherwise, Ember will use the new value of the
+path as the context.
+
+```
+{{#if controller.isAuthenticated}}
+  <h1>Welcome {{controller.name}}</h1>
+{{/if}}
+
+{{#with controller.user}}
+  <p>You have {{notificationCount}} notifications.</p>
+{{/with}}
+```
+
+In the above template, when the `isAuthenticated` property changes from
+false to true, Ember will render the block, using the original outer
+scope as its context.
+
+The `{{#with}}` helper changes the context of its block to the `user`
+property on the current controller. When the `user` property changes,
+Ember re-renders the block, using the new value of `controller.user` as
+its context.
+
+### View Scope
+
+In addition to the Handlebars context, templates in Ember also have the
+notion of the current view. No matter what the current context is, the
+`view` property always references the closest view.
+
+Note that the `view` property never references the internal views
+created for block expressions like `{{#if}}`. This allows you to
+differentiate between Handlebars contexts, which always work the way
+they do in vanilla Handlebars, and the view hierarchy.
+
+Because `view` points to an `Ember.View` instance, you can access any
+properties on the view by using an expression like `view.propertyName`.
+You can get access to a view's parent using `view.parentView`.
+
+For example, imagine you had a view with the following properties:
+
+```javascript
+App.MenuItemView = Ember.View.create({
+  templateName: 'menu_item_view',
+  bulletText: '*'
+});
+```
+
+…and the following template:
+
+```
+{{#with controller}}
+  {{view.bulletText}} {{name}}
+{{/with}}
+```
+
+Even though the Handlebars context has changed to the current
+controller, you can still access the view's `bulletText` by referencing
+`view.bulletText`.
+
+## Template Variables
+
+So far in this guide, we've been handwaving around the use of the
+`controller` property in our Handlebars templates. Where does it come
+from?
+
+Handlebars contexts in Ember can inherit variables from their parent
+contexts. Before Ember looks up a variable in the current context, it
+first checks in its template variables. As a template creates new
+Handlebars scope, they automatically inherit the variables from their
+parent scope.
+
+Ember defines these `view` and `controller` variables, so they are
+always found first when an expression uses the `view` or `controller`
+names.
+
+As described above, Ember sets the `view` variable on the Handlebars
+context whenever a template uses the `{{#view}}` helper. Initially,
+Ember sets the `view` variable to the view rendering the template.
+
+Ember sets the `controller` variable on the Handlebars context whenever
+a rendered view has a `controller` property. If a view has no
+`controller` property, it inherits the `controller` variable from the
+most recent view with one.
+
+### Other Variables
+
+Handlebars helpers in Ember may also specify variables. For example, the
+`{{#with controller.person as tom}}` form specifies a `tom` variable
+that descendent scopes can access. Even if a child context has a `tom`
+property, the `tom` variable will supersede it.
+
+This form has one major benefit: it allows you to shorten long paths
+without losing access to the parent scope.
+
+It is especially important in the `{{#each}}` helper, which provides a
+`{{#each person in people}}` form. In this form, descendent context have
+access to the `person` variable, but remain in the same scope as where
+the template invoked the `each`.
+
+```
+{{#with controller.preferences}}
+  <h1>Title</h1>
+  <ul>
+  {{#each controller.people as person}}
+    {{! prefix here is controller.preferences.prefix }}
+    <li>{{prefix}}: {{person.fullName}}</li>
+  {{/each}}
+  <ul>
+{{/with}}
+```
+
+Note that these variables inherit through `ContainerView`s, even though
+they are not part of the Handlebars context hierarchy.
+
+### Accessing Template Variables from Views
+
+In most cases, you will need to access these template variables from
+inside your templates. In some unusual cases, you may want to access the
+variables in-scope from your view's JavaScript code.
+
+You can do this by accessing the view's `templateVariables` property,
+which will return a JavaScript object containing the variables that were
+in scope when the view was rendered. `ContainerView`s also have access
+to this property, which references the template variables in the most
+recent template-backed view.
+
+At present, you may not observe or bind a path containing
+`templateVariables`.

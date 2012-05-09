@@ -142,13 +142,14 @@ code {
 }
 
 $sidebar-width: $col-width * 4 + $col-spacing * 3;
+$content-width: $page-width - $sidebar-width - $col-spacing;
 
 #content {
   width: $page-width;
 
   &.has-sidebar {
     margin-left: $sidebar-width + $col-spacing;
-    width: $page-width - $sidebar-width - $col-spacing;
+    width: $content-width;
   }
 }
 
@@ -517,6 +518,7 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
     background-color: white;
     padding: 10px;
     border: 1px solid #ccc;
+    max-width: $content-width;
   }
 }
 
