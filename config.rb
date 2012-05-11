@@ -42,7 +42,7 @@ class TableOfContents < Redcarpet::Render::Base
     @toc_count += 1
 
     return "" if level > 3
-    link = "<a href=\"#toc_#{@toc_count-1}\">#{text}</a>"
+    link = "<a href=\"#toc_#{TableOfContents.anchorify(text)}\">#{text}</a>"
     @result << %Q{<li class="level-#{level}">#{link}</li>}
 
     ""
