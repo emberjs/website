@@ -1,3 +1,6 @@
+# THIS GUIDE IS NOT YET FUNCTIONAL OR COMPLETE
+# PLEASE DO NOT USE
+
 ## Getting Started with Ember.js and Ruby on Rails
 
 Before getting started with this guide, you should have the latest version of Ruby on Rails installed (which is 3.2.3 at the time of writing). If you don't already have Ruby on Rails, you can follow the instructions available on the [Rails website](http://rubyonrails.org/download).
