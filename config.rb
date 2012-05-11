@@ -33,6 +33,7 @@ class TableOfContents < Redcarpet::Render::Base
 
   def initialize
     @current_level = 0
+    @toc_count = 0
     @result = []
     super
   end
