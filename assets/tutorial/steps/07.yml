@@ -1,8 +1,0 @@
-body: >
-  <h3>Creating New Todos with a Text Field (cont)</h3>
-
-  <p>Now that we’ve got model, view, and controller represented, we'll start seeing some output.</p>
-
-  <p>In Ember, view objects are responsible for updating the DOM and handling events. Among other things,
-  this allows us to buffer changes to the DOM for maximum performance and to support generic cross-platform event
-  handling. Whenever you want to display dynamic content or handle events, you will use a view object.</p>
