@@ -632,10 +632,10 @@ property, the `tom` variable will supersede it.
 This form has one major benefit: it allows you to shorten long paths
 without losing access to the parent scope.
 
-It is especially important in the `{{#each}}` helper, which provides a
-`{{#each person in people}}` form. In this form, descendent context have
-access to the `person` variable, but remain in the same scope as where
-the template invoked the `each`.
+It is especially important in the `{{#each}}` helper, which provides
+`{{#each person in people}}` and `{{#each people as person}}` forms.
+In this form, descendent context have access to the `person` variable,
+but remain in the same scope as where the template invoked the `each`.
 
 ```
 {{#with controller.preferences}}
