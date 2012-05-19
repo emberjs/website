@@ -458,6 +458,21 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
   $h3-indent: 0;
   $body-indent: $h3-indent;
 
+  figure {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    max-width: 100%;
+    /*max-width: $content-width;*/
+  }
+
   table.figure {
     float: left;
     margin-bottom: 20px;
@@ -537,15 +552,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
       font-size: 15px;
       margin: 10px 0 10px $body-indent+20px;
     }
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
-    max-width: $content-width;
   }
 }
 
