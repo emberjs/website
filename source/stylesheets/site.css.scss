@@ -23,6 +23,7 @@ body {
   line-height: 23px;
   font-size: 13px;
   line-height: 20px;
+  min-width: $page-width;
 
 }
 
@@ -63,9 +64,9 @@ code {
 **/
 #header {
   position: absolute;
-  left: 0;
+  width: 100%;
+  min-width: $page-width;
   top: 0;
-  right: 0;
   height: 60px;
   background: url(/images/navigation_background.png);
   @include box-shadow(rgba(0,0,0,0.2) 0 2px 4px);
@@ -78,6 +79,7 @@ code {
 
   #logo {
     position: absolute;
+    left: 7px;
     top: 6px;
     width: 103px;
     height: 40px;
@@ -93,7 +95,7 @@ code {
 
     li {
       line-height: 26px;
-      margin: 20px 0;
+      margin: 18px 0;
 
       a {
         font-family: "MavenProBold";
@@ -126,6 +128,31 @@ code {
 
     li a:hover {
       color: #fff;
+    }
+  }
+
+  #github {
+    position: absolute;
+    right: 7px;
+    top: 21px;
+
+    a {
+      img {
+        float: left;
+        margin-top: 5px;
+        margin-right: 7px;
+        display: block;
+      }
+
+      font-family: "MavenProBold";
+      font-size: 13px;
+      text-transform: uppercase;
+      color: #faf2ee;
+      @include text-shadow(rgba(0,0,0,0.3) 0px 1px 0px);
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }
