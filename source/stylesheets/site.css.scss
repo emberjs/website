@@ -280,6 +280,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
 
 .section {
   margin: 60px 0;
+  overflow: hidden;
 
   h2 {
     width: 100%;

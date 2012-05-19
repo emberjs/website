@@ -24,15 +24,15 @@ title: "About"
 <div class="features section">
   <h2>More Productive Out of the Box.</h2>
   <div class="feature">
-    <img src="/images/about/fpo.png" alt="Kittens">
+    <img src="/images/about/ember-handlebars-sm.png" alt="Handlebars">
     <p>Write dramatically less code with Handlebars templates that update automatically when the underlying data changes.</p>
   </div>
   <div class="feature">
-    <img src="/images/about/fpo.png" alt="Speed limit signs">
+    <img src="/images/about/ember-structure-sm.png" alt="Structure">
     <p>Don't waste time making trivial choices. Ember.js incorporates common idioms so you can focus on what makes your app special, not reinventing the wheel.</p>
   </div>
   <div class="feature">
-    <img src="/images/about/fpo.png" alt="Handlebars logo">
+    <img src="/images/about/ember-productivity-sm.png" alt="Productivity">
     <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done&mdash;fast.</p>
   </div>
   <div class="clearfix"></div>
@@ -51,52 +51,44 @@ App.Person = DS.Model.extend({
            " " + this.get('lastName');
   }.property('firstName', 'lastName')
 });
-
+ 
 App.peopleController = Em.ArrayController.create({
   content: App.Person.findAll()
-});
-  <% end %>
+});<% end %>
 
   <% highlight :html, :right do %>
 <h1>People</h1>
+ 
 <ul>
 {{#each controller}}
   <li>Hello, <b>{{fullName}}</b>!
 {{/each}}
 </ul>
-.
-.
-.
-.
-.
-  <% end %>
+ 
+ 
+ 
+ 
+ <% end %>
 
-  <p class="left">
-    
-  </p>
-
-  <p class="right"></p>
-
-  <div class="clearfix"></div>
 </div>
 
 <div class="users section">
   <h2>Who's Using Ember.js?</h2>
   <div class="user">
-    <img src="/images/about/tilde.png">
+    <img src="/images/about/livingsocial.png">
+  </div>
+  <div class="user">
+    <img src="/images/about/square.png">
   </div>
   <div class="user">
     <img src="/images/about/tilde.png">
   </div>
   <div class="user">
-    <img src="/images/about/tilde.png">
+    <img src="/images/about/zendesk.png">
   </div>
-  <div class="user">
-    <img src="/images/about/tilde.png">
-  </div>
-  <div class="clearfix"></div>
 </div>
 
+<!--
 <div class="samples section">
   <h2>Check Out Our Sample Applications.</h2>
   <div class="sample">
@@ -139,5 +131,5 @@ App.peopleController = Em.ArrayController.create({
       </div>
     </div>
   </div>
-  <div class="clearfix"></div>
 </div>
+-->

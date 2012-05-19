@@ -92,7 +92,7 @@ helpers do
     concat '<div class="ribbon"></div>'
     code = capture(&block)
     code.gsub!(/^\n+/, '')
-    code.rstrip!
+    #code.rstrip!
     code = CodeRay.scan(code, language)
     concat code.div css: :class,
                     line_numbers: :table,
