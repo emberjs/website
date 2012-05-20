@@ -568,7 +568,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
 
 #footer {
   width: 940px;
-  height: 41px;
+  height: 62px;
   margin: 60px auto 60px auto;
   background-image: url(/images/footer.png);
 
@@ -580,16 +580,14 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
     text-transform: uppercase;
     font-size: 10px;
 
-    .links {
-      a {
-        color: $orange-color;
-        text-decoration: none;
-        margin: 0 7px;
-      }
+    .copyright {
+      margin-top: 12px;
+      margin-bottom: 12px;
     }
 
-    .copyright {
-      margin-top: 6px;
+    a {
+      color: $orange-color;
+      text-decoration: none;
     }
   }
 }
