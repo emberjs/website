@@ -444,7 +444,11 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
 
     li {
       font-size: 15px;
-      margin: 10px 0 10px $body-indent+20px;
+      margin: 10px 0 10px 0;
+
+      p {
+        padding-left: 7px;
+      }
     }
   }
 }
