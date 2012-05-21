@@ -13,5 +13,3 @@ Ember.js app itself lives in `javascripts/app.js`.
 For larger apps, you may want to consider using Ruby on Rails. Rails helps you 
 manage your source code and other assets, while also providing the REST API 
 that your application will talk to.
-
-To learn more, visit the [Getting Started with Ember.js and Ruby on Rails guide](/documentation/rails).
