@@ -13,10 +13,11 @@ def git_update
 end
 
 desc "Build the website"
-task :build => 'examples:update' do
+task :build do
   system "middleman build"
 end
 
+=begin
 namespace :examples do
 
   desc "Update the included examples from the separate examples repository"
@@ -31,6 +32,7 @@ namespace :examples do
   end
 
 end
+=end
 
 desc "Deploy the website to github pages"
 task :deploy do |t, args|
