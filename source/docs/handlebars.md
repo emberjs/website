@@ -678,11 +678,11 @@ They are:
 	
 ```html
 	{{view Ember.Select viewName="select"
-                          contentBinding="app.peopleController"
+                          contentBinding="App.peopleController"
                           optionLabelPath="content.fullName"
                           optionValuePath="content.id"
                           prompt="Pick a person:"
-                          selectionBinding="app.selectedPersonController.person"}}
+                          selectionBinding="App.selectedPersonController.person"}}
 ```
 	
 ####Ember.TextArea
