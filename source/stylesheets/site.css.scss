@@ -318,6 +318,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
 
     p {
       text-align: center;
+      text-shadow: 0 0 1px rgba(0,0,0,.5);
     }
   }
 }
