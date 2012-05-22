@@ -46,4 +46,3 @@ Rails, on the other hand, runs on the server. As such, it can only communicate w
 It is important to keep this difference in mind when architecting your applications. 
 
 [1] Although it is possible to use Ember.js on the server side, that is beyond the scope of this guide.
-# Ember.js MVC
