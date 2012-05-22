@@ -25,7 +25,7 @@ person.say("Hello") // alerts "Hello"
 ```
 
 When creating an instance, you can also add additional properties to the
-class by passing in an object.
+instance by passing in an object.
 
 ```javascript
 var tom = Person.create({
