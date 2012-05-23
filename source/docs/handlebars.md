@@ -646,14 +646,6 @@ Ember comes pre-packaged with a set of views for building a few basic controls l
 
 They are:
 
-####Ember.Button
-	
-```javascript
-	var button = Ember.Button.create({
-    		target: 'MyApp.myActionObject',
-    		action: 'myAction'
-  	});
-```
 ####Ember.Checkbox
 	
 ```html
