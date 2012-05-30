@@ -210,7 +210,7 @@ Photoblog.IndexView = Ember.View.extend({
 
 This is where we define the Ember.js object which manages the view. We simply provide it with a `templateName` property, which points to our handlebars template, and a `controller` property, which manages the view. Here's the template that defines what the index view looks like. Make yours look like the following:
 
-```html
+```handlebars
 <h1>My Photoblog</h1>
 
 {{#each controller}}
@@ -235,7 +235,7 @@ This is where we define the Ember.js object which manages the view. We simply pr
 
 Let's go break this down and explain what's gong on.
 
-```html
+```handlebars
 <h1>My Photoblog</h1>
 
 {{#each controller}}
@@ -243,13 +243,13 @@ Let's go break this down and explain what's gong on.
 
 Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an Ember.ArrayController, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlerbars experssion.
 
-```html
+```handlebars
 {{#view contentBinding="this"}}
 ```
 
 For each photo managed by the photosController, we will create a subview with the following contents, and have its `content` property be bound to the photo object.
 
-```html
+```handlebars
     <div class="photo">
       <h2>{{content.title}}</h2>
       <img {{bindAttr src="content.url"}}>
@@ -258,7 +258,7 @@ For each photo managed by the photosController, we will create a subview with th
 
 Here, we reference our photo to get its title, and user bindAttr to set the `<img>` tag's `src` attribute to the photo's url.
 
-```html
+```handlebars
       {{#if content.comments.length}}
         <h3>Comments</h3>
         <ul>
@@ -271,7 +271,7 @@ Here, we reference our photo to get its title, and user bindAttr to set the `<im
 
 Next, we see if there are any comments on the photo. If there are, we create a section and list for comments, and iterate through them. Note that in this `{{#each}}` expression, we aren't binding the comment object to the content property, so the context is automatically set to it. We create a new `<li>` for each comment with the comments text, and close out our `{{#each}}` iteration, list, and {{#if}}.
 
-```html
+```handlebars
   {{/view}}
 {{/each}}
 ```
@@ -343,7 +343,7 @@ rails generate ember:view create photo
 
 Modify the template for the create view at `app/assets/javascripts/templates/photos/create.handlebars` to look like this:
 
-```html
+```handlebars
 <h1>Add a New Photo</h1>
 {{template "photos/_form"}}
 ```
@@ -352,7 +352,7 @@ We use the handlebars expression `template` to refer to another template we'd li
 
 Let's create the `_form` template in `app/assets/javascripts/templates/photos/_form.handlebars`. It will include only the form elements for our photo, like so:
 
-```html
+```handlebars
 <label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.content.title"}}
 <label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.content.url"}}
 
@@ -457,7 +457,7 @@ Now we define the `save` and `cancel` actions we referenced in our create view t
 
 Finally, we will add a button to the index template, at the very bottom, which tells our state manager to show the create view.
 
-```html
+```handlebars
 <button {{action showCreate target="Photoblog.stateManager"}}>Add Photo</button>
 ```
 
@@ -478,7 +478,7 @@ Photoblog.EditView = Ember.View.extend({
 
 Now, we'll add the template for it at `app/assets/javascripts/templates/photos/edit.handlebars`.
 
-```html
+```handlebars
 <h1>Edit a Photo</h1>
 {{template "templates/photos/_form"}}
 ```
@@ -531,7 +531,7 @@ Ensure that you add a comma to the previous `showCreate`. In this action, we're 
 
 Lastly, lets add an edit button to each photo on the page. Below the `<img>` tag, add the following button, which targets our state manager's new `showEdit` action.
 
-```html
+```handlebars
 <a href="#" {{action showEdit target="Photoblog.stateManager"}}>Edit Photo</a>
 ```
 

@@ -8,7 +8,7 @@ You should store your Handlebars templates inside your application's HTML file. 
 
 To immediately insert a template into your document, place it inside a `<script>` tag within your `<body>` tag:
 
-```html
+```handlebars
 <html>
   <body>
     <script type="text/x-handlebars">
@@ -20,7 +20,7 @@ To immediately insert a template into your document, place it inside a `<script>
 
 To make a template available to be used later, give the `<script>` tag a `data-template-name` attribute:
 
-```html
+```handlebars
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">
@@ -36,7 +36,7 @@ You can use `Ember.View` to render a Handlebars template and insert it into the 
 
 To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:
 
-```html
+```handlebars
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">
@@ -79,7 +79,7 @@ To remove a view from the document, call `remove`:
 
 As you've already seen, you can print the value of a property by enclosing it in a Handlebars expression, or a series of braces, like this:
 
-```html
+```handlebars
 My new car is {{color}}.
 ```
 
@@ -99,7 +99,7 @@ My new car is blue.
 
 You can also specify global paths:
 
-```html
+```handlebars
 My new car is {{App.carController.color}}.
 ```
 
@@ -119,14 +119,14 @@ blue
 
 Because all Handlebars expressions are wrapped in these markers, make sure each HTML tag stays inside the same block. For example, you shouldn't do this:
 
-```html
+```handlebars
 <!-- Don't do it! -->
 <div {{#if isUrgent}}class="urgent"{{/if}}>
 ```
 
 If you want to avoid your property output getting wrapped in these markers, use the `unbound` helper:
 
-```html
+```handlebars
 My new car is {{unbound color}}.
 ```
 
@@ -154,7 +154,7 @@ App.SayHelloView = Ember.View.extend({
 In order to display part of the template only if the `person` object exists, we
 can use the `{{#if}}` helper to conditionally render a block:
 
-```html
+```handlebars
 {{#if person}}
   Welcome back, <b>{{person.firstName}} {{person.lastName}}</b>!
 {{/if}}
@@ -166,7 +166,7 @@ Handlebars will not render the block if the argument passed evaluates to
 If the expression evaluates to falsy, we can also display an alternate template
 using `{{else}}`:
 
-```html
+```handlebars
 {{#if person}}
   Welcome back, <b>{{person.firstName}} {{person.lastName}}</b>!
 {{else}}
@@ -176,7 +176,7 @@ using `{{else}}`:
 
 To only render a block if a value is falsy, use `{{#unless}}`:
 
-```html
+```handlebars
 {{#unless hasPaid}}
   You owe: ${{total}}
 {{/unless}}
@@ -193,7 +193,7 @@ Sometimes you may want to invoke a section of your template with a context
 different than the Ember.View. For example, we can clean up the above template by
 using the `{{#with}}` helper:
 
-```html
+```handlebars
 {{#with person}}
   Welcome back, <b>{{firstName}} {{lastName}}</b>!
 {{/with}}
@@ -216,7 +216,7 @@ App.LogoView = Ember.View.extend({
 
 The best way to display the URL as an image in Handlebars is like this:
 
-```html
+```handlebars
 <div id="logo">
   <img {{bindAttr src="logoUrl"}} alt="Logo">
 </div>
@@ -240,7 +240,7 @@ App.InputView = Ember.View.extend({
 
 And this template:
 
-```html
+```handlebars
 <input type="checkbox" {{bindAttr disabled="isDisabled"}}>
 ```
 
@@ -261,7 +261,7 @@ App.AlertView = Ember.View.extend({
 });
 ```
 
-```html
+```handlebars
 <div {{bindAttr class="priority"}}>
   Warning!
 </div>
@@ -277,7 +277,7 @@ This template will emit the following HTML:
 
 If the value to which you bind is a Boolean, however, the dasherized version of that property will be applied as a class:
 
-```html
+```handlebars
 <div {{bindAttr class="isUrgent"}}>
   Warning!
 </div>
@@ -380,12 +380,12 @@ App.InfoView = Ember.View.extend({
 });
 ```
 
-```html
+```handlebars
 User: {{firstName}} {{lastName}}
 {{view App.InfoView}}
 ```
 
-```html
+```handlebars
 <b>Posts:</b> {{posts}}
 <br>
 <b>Hobbies:</b> {{hobbies}}
@@ -425,7 +425,7 @@ App.UserView = Ember.View.extend({
 });
 ```
 
-```html
+```handlebars
 User: {{firstName}} {{lastName}}
 {{view infoView}}
 ```
@@ -454,7 +454,7 @@ App.InfoView = Ember.View.extend({
 });
 ```
 
-```html
+```handlebars
 User: {{firstName}} {{lastName}}
 {{#view App.InfoView}}
   <b>Posts:</b> {{posts}}
@@ -503,7 +503,7 @@ do that by passing additional arguments to the `{{#view}}` helper. If all
 you're doing is configuring bindings, this often allows you to bypass having to
 create a new subclass.
 
-```html
+```handlebars
 User: {{firstName}} {{lastName}}
 {{#view App.UserView postsBinding="App.userController.content.posts"
         hobbiesBinding="App.userController.content.hobbies"}}
@@ -526,13 +526,13 @@ of the parent's HTML element.
 By default, new instances of `Ember.View` create a `<div>` element. You can
 override this by passing a `tagName` parameter:
 
-```html
+```handlebars
 {{view App.InfoView tagName="span"}}
 ```
 
 You can also assign an ID attribute to the view's HTML element by passing an `id` parameter:
 
-```html
+```handlebars
 {{view App.InfoView id="info-view"}}
 ```
 
@@ -547,7 +547,7 @@ This makes it easy to style using CSS ID selectors:
 
 You can assign class names similarly:
 
-```html
+```handlebars
 {{view App.InfoView class="info urgent"}}
 ```
 
@@ -560,7 +560,7 @@ App.AlertView = Ember.View.extend({
 });
 ```
 
-```html
+```handlebars
 {{view App.AlertView classBinding="isUrgent priority"}}
 ```
 
@@ -581,7 +581,7 @@ App.PeopleView = Ember.View.extend({
 });
 ```
 
-```html
+```handlebars
 <ul>
   {{#each people}}
     <li>Hello, {{name}}!</li>
@@ -602,7 +602,7 @@ If you want to create a view for every item in a list, you can bind a property o
 the current context. For example, this example creates a view for every item in a list and sets
 the `content` property to that item:
 
-```html
+```handlebars
 {{#each App.peopleController}}
   {{#view App.PersonView contentBinding="this"}}
     {{content.firstName}} {{content.lastName}}
@@ -628,7 +628,7 @@ make sure to return a new `SafeString`.
 
 Anywhere in your Handlebars templates, you can now invoke this helper:
 
-```html
+```handlebars
 {{highlight name}}
 ```
 
@@ -648,7 +648,7 @@ They are:
 
 ####Ember.Checkbox
 	
-```html
+```handlebars
     <label>
       {{view Ember.Checkbox checkedBinding="content.isDone"}}
       {{content.title}}
@@ -668,7 +668,7 @@ They are:
 	
 ####Ember.Select
 	
-```html
+```handlebars
 	{{view Ember.Select viewName="select"
                           contentBinding="App.peopleController"
                           optionLabelPath="content.fullName"
@@ -703,7 +703,7 @@ App.myText = Ember.TextField.extend({
 
 You can then use this view as a sub view and capture the events.  In the following example, a change to the Name input would blurr the form and cause the save button to appear.
 
-```html
+```handlebars
 <script id="formDetail" data-template-name='formDetail' type="text/x-handlebars">
     <form>
         <fieldset>
