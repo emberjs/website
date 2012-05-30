@@ -315,6 +315,12 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
+    
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
 
     p {
       text-align: center;
