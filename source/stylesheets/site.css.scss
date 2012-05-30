@@ -330,8 +330,31 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
     &:first-of-type {
       margin-left: 0;
     }
-    p {
-      text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  
+  #listed {
+    float: left;
+    margin-left: $col-width * 9;
+   	text-align: center;
+  }
+}
+
+.gears.section {
+  .gear {
+    text-align: center;
+    height: 120px;
+    
+    .gearplus {
+      padding: 0px 30px 0px 30px;
+      display: inline;
+      line-height: 120px;
+      img {
+        vertical-align: top;
+        padding-top: 50px;
+      }
     }
   }
 }
