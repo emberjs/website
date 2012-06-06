@@ -10,6 +10,7 @@ $col-spacing: 20px;
 
 $orange-color: #e1563f;
 $blue-color: #1f58ce;
+$black-color: #252525;
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
@@ -169,13 +170,13 @@ code {
 }
 
 $sidebar-width: $col-width * 4 + $col-spacing * 3;
-$content-width: $page-width - $sidebar-width - $col-spacing;
+$content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
 #content {
   width: $page-width;
 
   &.has-sidebar {
-    margin-left: $sidebar-width + $col-spacing;
+    margin-left: $sidebar-width + $col-spacing * 2;
     width: $content-width;
   }
 }
@@ -200,37 +201,39 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
     color: $orange-color;
 
     &:hover {
-      color: black;
+      color: $black-color;
     }
 
     &.active {
-      color: black;
+      color: $black-color;
     }
   }
 
   ol {
     list-style-type: none;
-    border-left: 3px solid #e3dddb;
 
     li {
       margin: 14px 0;
-      padding-left: 8px;
-      text-transform: uppercase;
 
       &:first-of-type {
         margin-top: 0;
       }
 
+      &.level-1, &.level-2 {
+        a {
+          font-family: "MavenProBold";
+          color: $black-color;
+        }
+      }
+
       &.level-3, &.level-4 {
+        font-family: "Lato";
+        font-size: 13px;
         text-transform: none;
-        padding-left: 20px;
-        margin: 3px 0;
+        margin: 2px 0;
       }
 
       &:hover {
-        border-left: 3px solid #491500;
-        margin-left: -3px;
-
         a {
           color: #491500;
         }
@@ -286,7 +289,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
     width: 100%;
     text-align: center;
     font-size: 18px;
-    color: black;
+    color: $black-color;
     text-transform: uppercase;
     font-family: "MavenProBold";
     margin-bottom: 28px;
@@ -431,39 +434,36 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
   margin: 43px 0 90px 0;
 
   $h3-indent: 32px;
-  $body-indent: $h3-indent + 24px;
+  $body-indent: $h3-indent;
 
   h2 {
     width: 100%;
     font-size: 18px;
-    color: black;
+    color: $black-color;
     text-transform: uppercase;
     font-family: "MavenProBold";
   }
 
   h3 {
-    font-size: 16px;
+    font-family: "MavenProBold";
+    font-size: 18px;
+    color: $orange-color;
     margin: 30px 0;
-    text-transform: uppercase;
-    padding-left: $h3-indent;
   }
 
   h4 {
-    font-size: 16px;
-    padding-left: $body-indent;
-    margin: 24px 0;
-    line-height: 23px;
+    font-family: "MavenProBold";
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 24px 0 12px 0;
+    line-height: 18px;
   }
 
   p {
     color: #222;
-    padding-left: $body-indent;
     font-size: 15px;
-    line-height: 23px;
-  }
-
-  .highlight {
-    margin-left: $body-indent;
+    line-height: 22px;
   }
 
   ul, ol {
@@ -542,7 +542,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing;
     margin: 50px 0 0 0;
     width: 100%;
     font-size: 24px;
-    color: black;
+    color: $black-color;
     text-transform: uppercase;
     font-family: "MavenProBold";
   }
