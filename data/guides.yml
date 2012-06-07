@@ -2,5 +2,8 @@ ember_mvc:
   name: "Ember MVC"
 view_layer:
   name: "Understanding the Ember.js view layer"
-
+outlets:
+  name: "Ember Application Structure"
+asynchrony:
+  name: "Asynchronous Behavior in Ember"
 
