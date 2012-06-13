@@ -54,7 +54,7 @@ a way to describe how your application moves through various nested states
 
 ### How is Ember.js Different?
 
-Traditional web applications make the user to download a new page every time
+Traditional web applications make the user download a new page every time
 they interact with the server. This means that every interaction is never faster
 than the latency between you and the user, and usually slower. Using AJAX to
 replace only parts of the page helps somewhat, but still requires a roundtrip to
