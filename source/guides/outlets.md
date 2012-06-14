@@ -131,17 +131,17 @@ Let's start with a simple router:
 
 ```javascript
 App.Router = Ember.Router.extend({
-  root: Ember.State.extend({
-    index: Ember.State.extend({
+  root: Ember.Route.extend({
+    index: Ember.Route.extend({
       route: '/',
       redirectsTo: 'posts'
     }),
 
-    posts: Ember.State.extend({
+    posts: Ember.Route.extend({
       route: '/posts'
     }),
 
-    post: Ember.State.extend({
+    post: Ember.Route.extend({
       route: '/posts/:post_id'
     })
   })
@@ -162,13 +162,13 @@ callback.
 
 ```javascript
 App.Router = Ember.Router.extend({
-  root: Ember.State.extend({
-    index: Ember.State.extend({
+  root: Ember.Route.extend({
+    index: Ember.Route.extend({
       route: '/',
       redirectsTo: 'posts'
     }),
 
-    posts: Ember.State.extend({
+    posts: Ember.Route.extend({
       route: '/posts',
 
       connectOutlets: function(router) {
@@ -176,7 +176,7 @@ App.Router = Ember.Router.extend({
       }
     }),
 
-    post: Ember.State.extend({
+    post: Ember.Route.extend({
       route: '/posts/:post_id'
     })
   })
@@ -203,9 +203,9 @@ state to move into the `post` state. We accomplish this by specifying a
 transition.
 
 ```javascript
-posts: Ember.State.extend({
+posts: Ember.Route.extend({
   route: '/posts',
-  showPost: Ember.State.transitionTo('post'),
+  showPost: Ember.Route.transitionTo('post'),
 
   connectOutlets: function(router) {
     router.get('applicationController').connectOutlet(App.PostsView, App.Post.find());
@@ -235,7 +235,7 @@ This time, the `connectOutlets` method will receive the post object
 specified as the context to the `{{action}}` helper.
 
 ```javascript
-post: Ember.State.extend({
+post: Ember.Route.extend({
   route: '/posts/:post_id',
 
   connectOutlets: function(router, post) {
@@ -276,21 +276,21 @@ Because the `post` state uses the same pattern as the `root` state, it
 will look very similar.
 
 ```javascript
-post: Ember.State.extend({
+post: Ember.Route.extend({
   route: '/posts/:post_id',
 
   connectOutlets: function(router, post) {
     router.get('applicationController').connectOutlet(App.PostView, post);
   },
 
-  index: Ember.State.extend({
+  index: Ember.Route.extend({
     route: '/',
     redirectsTo: 'comments'
   }),
 
-  comments: Ember.State.extend({
+  comments: Ember.Route.extend({
     route: '/comments',
-    showTrackbacks: Ember.State.transitionTo('trackbacks'),
+    showTrackbacks: Ember.Route.transitionTo('trackbacks'),
 
     connectOutlets: function(router) {
       var postController = router.get('postController');
@@ -298,9 +298,9 @@ post: Ember.State.extend({
     }
   }),
 
-  trackbacks: Ember.State.extend({
+  trackbacks: Ember.Route.extend({
     route: '/trackbacks',
-    showComments: Ember.State.transitionTo('comments'),
+    showComments: Ember.Route.transitionTo('comments'),
 
     connectOutlets: function(router) {
       var postController = router.get('postController');
