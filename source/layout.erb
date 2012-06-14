@@ -26,36 +26,6 @@
             return false;
           }
         });
-
-        var backToTop = $('#back-to-top');
-        var doc = $(document);
-        var offset = backToTop.offset();
-        var marginTop = 90;
-        var showing = false;
-
-        if (backToTop.length) {
-          backToTop.on('click', function(evt) {
-            $('html,body').animate({scrollTop: 0}, 200);
-            return false;
-          });
-
-          doc.on('scroll', function() {
-            if (!showing && doc.scrollTop() > offset.top+200) {
-              showing = true;
-              backToTop.css({
-                opacity: 1,
-                position: 'fixed',
-                top: 20,
-                left: offset.left
-              });
-            } else if (showing && doc.scrollTop() <= offset.top+200) {
-              showing = false;
-              backToTop.css({
-                opacity: 0
-              });
-            }
-          });
-        }
       });
     </script>
   </head>
@@ -67,7 +37,7 @@
         <ul id="nav">
           <%= link_to_page "about", "/about" %>
           <%= link_to_page "docs", "/documentation" %>
-		  <%= link_to_page "guides", "/guides" %>
+          <%= link_to_page "guides", "/guides" %>
           <%= link_to_page "community", "/community" %>
           <%= link_to_page "api", "http://docs.emberjs.com" %>
         </ul>
@@ -81,7 +51,6 @@
       <% if content_for?(:sidebar) %>
         <div id="sidebar">
           <%= yield_content :sidebar %>
-          <div id="back-to-top"><a href="#">&#11014; Back to Top</a></div>
         </div>
       <% end %>
       <div id="content" <% if content_for?(:sidebar) %>class="has-sidebar"<% end %>>
