@@ -17,6 +17,20 @@ end
 
 run "bundle install"
 
+# This needs to be done outside the bootstrap generator
+# to avoid an initial "unknown variant" error.
+environment <<-RUBY.strip_heredoc, :env => :development
+  config.ember.variant = :development
+RUBY
+
+environment <<-RUBY.strip_heredoc, :env => :test
+  config.ember.variant = :development
+RUBY
+
+environment <<-RUBY.strip_heredoc, :env => :production
+  config.ember.variant = :production
+RUBY
+
 # Configure the app to serve Ember.js and app assets from an AssetsController
 generate "ember:bootstrap"
 generate "ember:install", "--head"
