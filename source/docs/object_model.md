@@ -311,7 +311,7 @@ automatically:
 
 ```javascript
 var todos = App.todosController.get('todos');
-var todo = todos.objectAt(1);
+var todo = todos.objectAt(0);
 todo.set('isDone', true);
 
 App.todosController.get('remaining');
