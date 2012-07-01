@@ -188,12 +188,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   font-family: "MavenProMedium";
   font-size: 14px;
 
-  #back-to-top {
-    text-align: center;
-    opacity: 0;
-    @include transition(opacity 0.05s linear);
-  }
-
   a {
     text-decoration: none;
     line-height: 21px;
