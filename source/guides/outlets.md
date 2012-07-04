@@ -172,7 +172,7 @@ App.Router = Ember.Router.extend({
       route: '/posts',
 
       connectOutlets: function(router) {
-        router.get('applicationController').connectOutlet(App.PostsView, App.Post.find());
+        router.get('applicationController').connectOutlet('posts', App.Post.find());
       }
     }),
 
@@ -208,7 +208,7 @@ posts: Ember.State.extend({
   showPost: Ember.State.transitionTo('post'),
 
   connectOutlets: function(router) {
-    router.get('applicationController').connectOutlet(App.PostsView, App.Post.find());
+    router.get('applicationController').connectOutlet('posts', App.Post.find());
   }
 })
 ```
@@ -239,7 +239,7 @@ post: Ember.State.extend({
   route: '/posts/:post_id',
 
   connectOutlets: function(router, post) {
-    router.get('applicationController').connectOutlet(App.PostView, post);
+    router.get('applicationController').connectOutlet('post', post);
   }
 })
 ```
@@ -280,7 +280,7 @@ post: Ember.State.extend({
   route: '/posts/:post_id',
 
   connectOutlets: function(router, post) {
-    router.get('applicationController').connectOutlet(App.PostView, post);
+    router.get('applicationController').connectOutlet('post', post);
   },
 
   index: Ember.State.extend({
@@ -294,7 +294,7 @@ post: Ember.State.extend({
 
     connectOutlets: function(router) {
       var postController = router.get('postController');
-      postController.connectOutlet(App.CommentsView, postController.get('comments'));
+      postController.connectOutlet('comments', postController.get('comments'));
     }
   }),
 
@@ -304,7 +304,7 @@ post: Ember.State.extend({
 
     connectOutlets: function(router) {
       var postController = router.get('postController');
-      postController.connectOutlet(App.TrackbacksView, postController.get('trackbacks'));
+      postController.connectOutlet('trackbacks', postController.get('trackbacks'));
     }
   })
 })
