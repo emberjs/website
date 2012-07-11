@@ -57,7 +57,7 @@ The template will look like this:
 {{#each post in controller}}
 <h1><a {{action showPost context="post" href=true}}>{{post.title}}</a></h1>
 <div>{{post.intro}}</div>
-{{/post}}
+{{/each}}
 ```
 
 When clicking on a link for an individual post, the application will
