@@ -27,7 +27,7 @@ that will automatically update the DOM when the underlying objects change.
 
 For a simple example, consider this template of a Person:
 
-```html
+```handlebars
 {{person.name}} is {{person.age}}.
 ```
 
@@ -158,7 +158,7 @@ Ember uses Handlebars, a semantic templating library. To take data from your Jav
 and put it into the DOM, create a `<script>` tag and put it into your HTML, wherever you'd like the
 value to appear:
 
-```html
+```handlebars
 <script type="text/x-handlebars">
   The President of the United States is {{MyApp.president.fullName}}.
 </script>

@@ -11,7 +11,7 @@ as a method on your view.
 
 For example, imagine we have a template like this:
 
-```html
+```handlebars
 {{#view App.ClickableView}}
 This is a clickable area!
 {{/view}}

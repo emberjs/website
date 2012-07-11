@@ -141,7 +141,7 @@ The process looks something like:
 
 As Ember renders a templated view, it will generate a view hierarchy. Let's assume we have a template `form`.
 
-```html
+```handlebars
 {{view App.Search placeholder="Search"}}
 {{#view Ember.Button}}Go!{{/view}}
 ```
