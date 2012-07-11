@@ -210,7 +210,7 @@ App.Button = Ember.View.extend({
 });
 
 var button = App.Button.create({
-  title: "Hi jQuery UI!
+  title: "Hi jQuery UI!"
 }).appendTo('#something');
 ```
 
