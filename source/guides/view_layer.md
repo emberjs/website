@@ -633,7 +633,7 @@ This form has one major benefit: it allows you to shorten long paths
 without losing access to the parent scope.
 
 It is especially important in the `{{#each}}` helper, which provides
-`{{#each person in people}}` and `{{#each people as person}}` forms.
+the `{{#each person in people}}` form.
 In this form, descendent context have access to the `person` variable,
 but remain in the same scope as where the template invoked the `each`.
 
@@ -641,7 +641,7 @@ but remain in the same scope as where the template invoked the `each`.
 {{#with controller.preferences}}
   <h1>Title</h1>
   <ul>
-  {{#each controller.people as person}}
+  {{#each person in controller.people}}
     {{! prefix here is controller.preferences.prefix }}
     <li>{{prefix}}: {{person.fullName}}</li>
   {{/each}}
