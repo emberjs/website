@@ -145,24 +145,6 @@ var tom = Person.create({
 tom.get('fullName') // "Tom Dale"
 ```
 
-If you aren't using Ember's prototype extensions, you can use a slightly
-more verbose version, wrapping the function in a call to `Ember.computed`:
-
-```javascript
-Person = Ember.Object.extend({
-  // these will be supplied by `create`
-  firstName: null,
-  lastName: null,
-
-  fullName: Ember.computed(function() {
-    var firstName = this.get('firstName');
-    var lastName = this.get('lastName');
-
-    return firstName + ' ' + lastName;
-  }).property('firstName', 'lastName')
-});
-```
-
 The `property` method defines the function as a computed property, and
 defines its dependencies. Those dependencies will come into play later
 when we discuss bindings and observers.
@@ -182,7 +164,7 @@ Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
 
-  fullName: Ember.computed(function(key, value) {
+  fullName: function(key, value) {
     // getter
     if (arguments.length === 1) {
       var firstName = this.get('firstName');
@@ -199,7 +181,7 @@ Person = Ember.Object.extend({
 
       return value;
     }
-  }).property('firstName', 'lastName')
+  }.property('firstName', 'lastName')
 });
 
 var person = Person.create();
@@ -224,12 +206,12 @@ Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
 
-  fullName: Ember.computed(function() {
+  fullName: function() {
     var firstName = this.get('firstName');
     var lastName = this.get('lastName');
 
     return firstName + ' ' + lastName;
-  }).property('firstName', 'lastName')
+  }.property('firstName', 'lastName')
 });
 
 var person = Person.create({
@@ -271,7 +253,7 @@ Person.reopen({
 
 #### Changes in Arrays
 
-Often, you may have a computed property that relies on all of the items in an 
+Often, you may have a computed property that relies on all of the items in an
 array to determine its value. For example, you may want to count all of the
 todo items in a controller to determine how many of them are completed.
 
