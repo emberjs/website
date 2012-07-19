@@ -9,7 +9,9 @@ title: "Guides"
 	The following Ember.js guides are currently available:
     <ul id='guide_list'>
 		<% data.guides.each do |guide_name, properties| %>
-		<%= link_to_page properties[:name], "/guides/#{guide_name}" %>
+      <% unless properties[:hidden] %>
+        <%= link_to_page properties[:name], "/guides/#{guide_name}" %>
+      <% end %>
 		<% end %>
     </ul>	
 </div>

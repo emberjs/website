@@ -72,7 +72,7 @@ In response to the notification, the app will typically request some
 attribute. In this case, imagine that the `Person` was represented by
 the following template:
 
-```javascript
+```handlebars
 <p>{{name}}</p>
 ```
 
@@ -150,3 +150,31 @@ ID will return the same object.
 
 This feature is known as an "identity map", because it guarantees
 JavaScript _identity_ for objects representing the same backend data.
+
+## Practical Note
+
+In the example above, we used a template that rendered the `Person`
+object directly. As a result, we got partially loaded output that
+automatically filled in as the data loaded.
+
+You may want this behavior in some cases, but in most cases, your
+template would look something like this:
+
+```handlebars
+{{#if isLoaded}}
+  <p>{{name}}</p>
+{{else}}
+  <img src="/images/spinner.gif">
+{{/if}}
+```
+
+When the adapter loads the backend-provided hash into the store, the
+store moves the record into the loaded state, which changes its
+`isLoaded` flag to true.
+
+That will notify an observer set up by the template that `isLoaded` has
+changed, which will cause the template to render the first branch
+(containing `<p>{{name}}</p>`) instead of the spinner.
+
+When it renders that branch, the template will trigger the same
+`get('name')` that caused materialization in the above example.

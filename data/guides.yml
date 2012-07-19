@@ -6,3 +6,6 @@ outlets:
   name: "Ember Application Structure"
 asynchrony:
   name: "Asynchronous Behavior in Ember"
+ember-data-lifecycle:
+  name: "Ember Data Record Lifecycle"
+  hidden: true
