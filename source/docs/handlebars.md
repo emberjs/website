@@ -293,7 +293,7 @@ This emits the following HTML:
 
 Unlike other attributes, you can also bind multiple classes:
 
-```javascript
+```handlebars
 <div {{bindAttr class="isUrgent priority"}}>
   Warning!
 </div>
@@ -302,7 +302,7 @@ Unlike other attributes, you can also bind multiple classes:
 You can also specify an alternate class name to use, instead of just
 dasherizing.
 
-```javascript
+```handlebars
 <div {{bindAttr class="isUrgent:urgent"}}>
   Warning!
 </div>
@@ -317,19 +317,19 @@ Use the `{{action}}` helper to attach a handler in your view class to an event t
 
 To attach an element's `click` event to the `edit()` handler in the current view:
 
-```javascript
+```handlebars
 <a href="#" {{action "edit" on="click"}}>Edit</a>
 ```
 
 Because the default event is `click`, this could be written more concisely as:
 
-```javascript
+```handlebars
 <a href="#" {{action "edit"}}>Edit</a>
 ```
 
 Although the view containing the `{{action}}` helper will be targeted by default, it is possible to target a different view:
 
-```javascript
+```handlebars
 <a href="#" {{action "edit" target="parentView"}}>Edit</a>
 ```
 
