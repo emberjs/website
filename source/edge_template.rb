@@ -57,7 +57,7 @@ file 'app/assets/javascripts/templates/application.handlebars', <<-CODE
   <img src="http://emberjs.com/images/about/ember-productivity-sm.png" style="display: block; margin: 0 auto;">
   <h1>Welcome to Ember.js!</h1>
   <p>You're running an Ember.js app on top of Ruby on Rails. To get started, replace this content
-  (inside <code>app/assets/javascripts/templates/application.handlebars</code> with your application's
+  (inside <code>app/assets/javascripts/templates/application.handlebars</code>) with your application's
   HTML.</p>
 </div>
 CODE
