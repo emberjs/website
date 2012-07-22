@@ -26,7 +26,7 @@ file 'app/views/assets/index.html.erb', <<-CODE
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Photoblog</title>
+  <title>#{@app_name.titleize}</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
