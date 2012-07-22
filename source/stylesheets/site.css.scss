@@ -332,22 +332,120 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 }
 
 .users.section {
-  .user {
-    @include width-for-columns(4);
-    float: left;
-	margin-left: $col-spacing;
-    &:first-of-type {
-      margin-left: 0;
+
+  .surround {
+    @include border-radius(3px);
+    @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff);
+    @include clearfix;
+    background: url('/images/about/carousel_bg.png');
+    border: 1px solid #d1d1d1;
+    padding-top: 19px;
+
+    .bx-wrapper,
+    .bx-window {
+      width: 940px;
+    }
+
+    .bx-wrapper {
+
+      .bx-prev,
+      .bx-next {
+        background: url('/images/about/carousel_controls.png') no-repeat;
+        float: left;
+        height: 28px;
+        width: 30px;
+      }
+
+      .bx-prev,
+      .bx-next,
+      .pager-link {
+        text-indent: -9999px;
+      }
+
+      .bx-prev {
+        background-position: left;
+        border-right: 1px solid #d1d1d1;
+        float: right;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      .bx-next {
+        background-position: right;
+        border-left: 1px solid #d1d1d1;
+        float: right;
+        position: absolute;
+        bottom: 0;
+        right: 1px;
+      }
+
+      .bx-window {
+        border-bottom: 1px solid #d1d1d1;
+        height: 124px;
+      }
+
+      .bx-pager {
+        @include clearfix;
+        background: url('/images/about/carousel_pager_bg.png') bottom repeat-x #f4f4f4;
+        border-left: 1px solid #fafafa;
+        border-right: 1px solid #fafafa;
+        border-top: 1px solid #fefefe;
+        font-size: 0;
+        height: 28px;
+        line-height: 0;
+        margin: 0 29px;
+        padding-top: 9px;
+        text-align: center;
+
+        .pager-link {
+          background: url('/images/about/carousel_dots.png') 0 0 no-repeat;
+          height: 11px;
+          width: 10px;
+          margin-left: 10px;
+          display: inline-block;
+
+          &.pager-active,
+          &.pager-active:hover {
+            background-position: -22px 0;
+          }
+
+          &:hover {
+            background-position: -11px 0;
+          }
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+      }
     }
   }
+
+  .user {
+    position: relative;
+    float: left;
+    width: 230px;
+
+    a {
+      @include border-radius(4px);
+      @include box-shadow(0 1px 2px rgba(0,0,0,0.1));
+      background: url('/images/about/user_bg.png') no-repeat;
+      display: block;
+      height: 103px;
+      margin-left: 20px;
+      width: 210px;
+    }
+  }
+
   p {
     text-align: center;
   }
-  
+
   #listed {
     float: left;
     margin-left: $col-width * 9;
-   	text-align: center;
+    text-align: center;
   }
 }
 
