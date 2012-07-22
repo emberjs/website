@@ -49,6 +49,19 @@ file 'app/views/assets/index.html.erb', <<-CODE
 </body>
 </html>
 CODE
+
+remove_file 'app/assets/javascripts/templates/application.handlebars'
+
+file 'app/assets/javascripts/templates/application.handlebars', <<-CODE
+<div style="width: 600px; border: 6px solid #eee; margin: 0 auto; padding: 20px; text-align: center; font-family: sans-serif;">
+  <img src="http://emberjs.com/images/about/ember-productivity-sm.png" style="display: block; margin: 0 auto;">
+  <h1>Welcome to Ember.js!</h1>
+  <p>You're running an Ember.js app on top of Ruby on Rails. To get started, replace this content
+  (inside <code>app/assets/javascripts/templates/application.handlebars</code> with your application's
+  HTML.</p>
+</div>
+CODE
+
 run "rm -rf app/views/layouts"
 route "root :to => 'assets#index'"
 
