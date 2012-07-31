@@ -132,8 +132,59 @@ This would render this HTML:
 <div class="ember-view urgent">
 ```
 
+Besides the custom class name for the value being `true`, you can also specify a class name which is used when the value is `false`:
+
+```javascript
+App.MyView = Ember.View.extend({
+  classNameBindings: ['isEnabled:enabled:disabled'],
+  isEnabled: false
+});
+```
+
+This would render this HTML:
+
+```html
+<div class="ember-view disabled">
+```
+
+You can also specify to only add a class when the property is `false` by declaring `classNameBindings` like this:
+
+```javascript
+App.MyView = Ember.View.extend({
+  classNameBindings: ['isEnabled::disabled'],
+  isEnabled: false
+});
+```
+
+This would render this HTML:
+
+```html
+<div class="ember-view disabled">
+```
+
+If the `isEnabled` property is set to `true`, no class name is added:
+
+```html
+<div class="ember-view">
+```
+
+
 If the bound value is a string, that value will be added as a class name without
-modification.
+modification:
+
+```javascript
+App.MyView = Ember.View.extend({
+  classNameBindings: ['priority'],
+  priority: 'highestPriority'
+});
+```
+
+This would render this HTML:
+
+```html
+<div class="ember-view highestPriority">
+```
+
 
 ### Attribute Bindings on a View
 

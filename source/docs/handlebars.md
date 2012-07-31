@@ -311,6 +311,26 @@ dasherizing.
 In this case, if the `isUrgent` property is true, the `urgent` class
 will be added. If it is false, the `urgent` class will be removed.
 
+You can also specify a class name which shall be used when the property is `false`:
+
+```handlebars
+<div {{bindAttr class="isEnabled:enabled:disabled"}}>
+  Warning!
+</div>
+```
+
+In this case, if the `isEnabled` property is true, the `enabled` class will be added. If the property is false, the class `disabled` will be added.
+
+This syntax allows the shorthand for only adding a class when a property is `false`, so this:
+
+```handlebars
+<div {{bindAttr class="isEnabled::disabled"}}>
+  Warning!
+</div>
+```
+
+Will add the class `disabled` when `isEnabled` is `false` and add no class if `isEnabled` is `true`.
+
 ### Handling Events with {{action}}
 
 Use the `{{action}}` helper to attach a handler in your view class to an event triggered on an element.
