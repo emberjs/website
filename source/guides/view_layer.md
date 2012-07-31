@@ -524,16 +524,8 @@ override the `init` method:
 ```javascript
 App.ToolbarView = Ember.ContainerView.create({
   childViews: ['descriptionView', 'buttonView'],
-
   descriptionView: App.DescriptionView,
   buttonView: Ember.ButtonView,
-
-  addButton: function() {
-    var childViews = this.get('childViews');
-    var button = Ember.ButtonView.create();
-
-    childViews.pushObject(button);
-  }
 });
 ```
 
