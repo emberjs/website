@@ -214,16 +214,16 @@ This is where we define the Ember.js object which manages the view. We simply pr
 <h1>My Photoblog</h1>
 
 {{#each controller}}
-  {{#view contentBinding="this"}}
+  {{#view}}
     <div class="photo">
-      <h2>{{content.title}}</h2>
-      <img {{bindAttr src="content.url"}}>
+      <h2>{{title}}</h2>
+      <img {{bindAttr src="url"}}>
       <br>
 	  
-      {{#if content.comments.length}}
+      {{#if comments.length}}
         <h3>Comments</h3>
         <ul>
-          {{#each content.comments}}
+          {{#each comments}}
             <li>{{text}}</li>
           {{/each}}
         </ul>
@@ -244,25 +244,25 @@ Let's go break this down and explain what's gong on.
 Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an Ember.ArrayController, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlerbars experssion.
 
 ```handlebars
-{{#view contentBinding="this"}}
+{{#view}}
 ```
 
-For each photo managed by the photosController, we will create a subview with the following contents, and have its `content` property be bound to the photo object.
+For each photo managed by the photosController, we will create a subview with the following contents. The `{{#view}}` helper doesn't change context, so it's not necessary to set any bindings.
 
 ```handlebars
     <div class="photo">
-      <h2>{{content.title}}</h2>
-      <img {{bindAttr src="content.url"}}>
+      <h2>{{title}}</h2>
+      <img {{bindAttr src="url"}}>
       <br>
 ```
 
 Here, we reference our photo to get its title, and user bindAttr to set the `<img>` tag's `src` attribute to the photo's url.
 
 ```handlebars
-      {{#if content.comments.length}}
+      {{#if comments.length}}
         <h3>Comments</h3>
         <ul>
-          {{#each content.comments}}
+          {{#each comments}}
             <li>{{text}}</li>
           {{/each}}
         </ul>

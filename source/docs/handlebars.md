@@ -477,9 +477,9 @@ App.InfoView = Ember.View.extend({
 ```handlebars
 User: {{firstName}} {{lastName}}
 {{#view App.InfoView}}
-  <b>Posts:</b> {{posts}}
+  <b>Posts:</b> {{view.posts}}
   <br>
-  <b>Hobbies:</b> {{hobbies}}
+  <b>Hobbies:</b> {{view.hobbies}}
 {{/view}}
 ```
 
@@ -527,9 +527,9 @@ create a new subclass.
 User: {{firstName}} {{lastName}}
 {{#view App.UserView postsBinding="App.userController.content.posts"
         hobbiesBinding="App.userController.content.hobbies"}}
-  <b>Posts:</b> {{posts}}
+  <b>Posts:</b> {{view.posts}}
   <br>
-  <b>Hobbies:</b> {{hobbies}}
+  <b>Hobbies:</b> {{view.hobbies}}
 {{/view}}
 ```
 
@@ -618,14 +618,13 @@ This will print a list like this:
 </ul>
 ```
 
-If you want to create a view for every item in a list, you can bind a property of the view to
-the current context. For example, this example creates a view for every item in a list and sets
-the `content` property to that item:
+If you want to create a view for every item in a list, just set it up as
+follows:
 
 ```handlebars
 {{#each App.peopleController}}
-  {{#view App.PersonView contentBinding="this"}}
-    {{content.firstName}} {{content.lastName}}
+  {{#view App.PersonView}}
+    {{firstName}} {{lastName}}
   {{/view}}
 {{/each}}
 ```
