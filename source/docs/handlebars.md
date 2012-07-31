@@ -617,8 +617,8 @@ Sometimes, you may use the same HTML in your application multiple times. In thos
 For example, imagine you are frequently wrapping certain values in a `<span>` tag with a custom class. You can register a helper from your JavaScript like this:
 
 ```javascript
-Handlebars.registerHelper('highlight', function(property) {
-  var value = Ember.getPath(this, property);
+Handlebars.registerHelper('highlight', function(property, options) {
+  var value = Ember.Handlebars.getPath(this, property, options);
   return new Handlebars.SafeString('<span class="highlight">'+value+'</span>');
 });
 ```
