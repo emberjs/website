@@ -1,0 +1,12 @@
+---
+title: "Blog"
+---
+
+<h1>Blog</h1>
+
+<% blog.articles.each_with_index do |article, i| %>
+  <article class="blog-post-summary">
+    <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+    <p><%= article.summary %></p>
+  </article>
+<% end %>
