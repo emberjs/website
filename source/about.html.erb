@@ -36,7 +36,7 @@ title: "About"
     </a>
   </div>
 </div>
-	
+
 <div class="features section">
   <h2>More Productive Out of the Box.</h2>
   <div class="feature">
@@ -51,7 +51,7 @@ title: "About"
     <img src="/images/about/ember-productivity-sm.png" alt="Productivity">
     <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done&mdash;fast.</p>
   </div>
-</div> 
+</div>
 
 <div class="getting-started section">
   <h2>Getting Started with Ember.js is Easy.</h2>
@@ -66,23 +66,23 @@ App.Person = DS.Model.extend({
            " " + this.get('lastName');
   }.property('firstName', 'lastName')
 });
- 
+
 App.peopleController = Em.ArrayController.create({
   content: App.Person.findAll()
 });<% end %>
 
   <% highlight :html, :right do %>
 <h1>People</h1>
- 
+
 <ul>
 {{#each peopleController}}
   <li>Hello, <b>{{fullName}}</b>!</li>
 {{/each}}
 </ul>
- 
- 
- 
- 
+
+
+
+
  <% end %>
 
 </div>
@@ -110,6 +110,11 @@ App.peopleController = Em.ArrayController.create({
       <li class="user">
         <a href="http://www.zendesk.com/">
           <img src="/images/about/zendesk.png">
+        </a>
+      </li>
+      <li class="user">
+        <a href="https://www.yapp.us/">
+          <img src="/images/about/yapp.png">
         </a>
       </li>
     </ul>
