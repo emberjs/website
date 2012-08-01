@@ -58,16 +58,11 @@
           });
         }
 
-        $('#slider').bxSlider({
-          displaySlideQty: 4,
-          moveSlideQty: 1,
-          auto: false,
-          pager: true
-        });
-
         $('.bx-wrapper, .bx-window').width(940);
       });
     </script>
+
+    <%= yield_content :head %>
   </head>
 
   <body>

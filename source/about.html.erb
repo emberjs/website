@@ -2,6 +2,22 @@
 title: "About"
 ---
 
+<% content_for :head do %>
+  <script type="text/javascript">
+    $(function() {
+      $('#slider').bxSlider({
+        displaySlideQty: 4,
+        moveSlideQty: 4,
+        auto: false,
+        pager: true
+      });
+
+      // Hack to force proper sizing
+      $('.bx-wrapper, .bx-window').css('width', 940);
+    });
+  </script>
+<% end %>
+
 <img class="about-header-text" src="/images/about/header-text.png" alt="A framework for creating ambitious web applications.">
 <div id="download">
   <div id="download-ember">
