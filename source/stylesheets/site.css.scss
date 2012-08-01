@@ -54,11 +54,6 @@ code {
   @include border-radius(5px);
 }
 
-.clearfix {
-  clear: both;
-  line-height: 0;
-  height: 0;
-}
 
 /**
   Header
@@ -313,6 +308,8 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 }
 
 .features.section {
+  @include clearfix;
+
   .feature {
     @include width-for-columns(4);
     float: left;
@@ -584,7 +581,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   Guide Pages
 **/
 
-.guide {
+article {
   margin: 43px 0 90px 0;
 
   $h3-indent: 0;
