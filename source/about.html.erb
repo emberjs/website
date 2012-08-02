@@ -8,8 +8,10 @@ title: "About"
       $('#slider').bxSlider({
         displaySlideQty: 4,
         moveSlideQty: 4,
-        auto: false,
-        pager: true
+        auto: true,
+        pager: true,
+        speed: 700,
+        pause: 5000
       });
 
       // Hack to force proper sizing
@@ -112,11 +114,18 @@ App.peopleController = Em.ArrayController.create({
           <img src="/images/about/zendesk.png">
         </a>
       </li>
+      <li class="user empty"></li>
       <li class="user">
         <a href="https://www.yapp.us/">
           <img src="/images/about/yapp.png">
         </a>
       </li>
+      <li class="user">
+        <a href="http://www.mhelabs.com/">
+          <img src="/images/about/mhelabs.png">
+        </a>
+      </li>
+      <li class="user empty"></li>
     </ul>
   </div>
 
