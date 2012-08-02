@@ -64,6 +64,13 @@ strong {
   font-weight: bold;
 }
 
+hr {
+  height: 1px;
+  border: none;
+  margin: 40px 0;
+  background-color: $black-color;
+}
+
 /**
   Header
 **/
@@ -251,6 +258,19 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
         display: block;
       }
     }
+  }
+
+  h2 {
+    font-family: "MavenProBold";
+    color: $black-color;
+    margin-bottom: 10px;
+  }
+
+  ul li {
+    font-family: "Lato";
+    font-size: 13px;
+    text-transform: none;
+    margin: 2px 0;
   }
 }
 
@@ -703,13 +723,20 @@ article {
 
   ul, ol {
     margin-left: $body-indent;
-    list-style-type: disc;
     margin-bottom: 28px;
 
     li {
       font-size: 15px;
       margin: 10px 0 10px $body-indent+20px;
     }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
   }
 }
 
