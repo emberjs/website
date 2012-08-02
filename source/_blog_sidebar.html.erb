@@ -1,0 +1,7 @@
+<h2>Recent Posts</h2>
+
+<ul>
+<% blog.articles.each_with_index do |article, i| %>
+  <li><%= link_to article.title, article %></li>
+<% end %>
+</ul>
