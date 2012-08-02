@@ -84,13 +84,14 @@
     </div>
 
     <div id="content-wrapper">
-      <% if content_for?(:sidebar) %>
+      <% sidebar = rendered_partial_for(:sidebar) || yield_content(:sidebar) %>
+      <% if sidebar %>
         <div id="sidebar">
-          <%= yield_content :sidebar %>
+          <%= sidebar %>
           <div id="back-to-top"><a href="#">&#11014; Back to Top</a></div>
         </div>
       <% end %>
-      <div id="content" <% if content_for?(:sidebar) %>class="has-sidebar"<% end %>>
+      <div id="content" <% if sidebar %>class="has-sidebar"<% end %>>
         <%= yield %>
       </div>
     </div>
