@@ -14,7 +14,30 @@ READMORE
 
 ### Router
 
-Talk about Router
+Ember.js is all about giving you the tools to build ambitious apps on
+the web. Here's the thing about ambitious apps: they usually have state.
+Lots of state. And the bigger your app gets, the harder keeping all
+of it in your head becomes.
+
+Part of being an app on the web is taking advantages of the browser's
+strengths. In particular, the fact that we have URLs to describe what
+we see on our screen is an advantage over native applications. Your
+users want to be able to share that URL on Twitter or Facebook and have
+ their friends see what they're seeing.
+
+Ember 1.0 Prerelease includes what we think is the most advanced tool
+for modeling your application's state: `Ember.Router`. The router allows
+you to describe the state of your application as discrete objects, which
+means it's impossible for your application to ever get into a "bad
+state." And because the URL is just a serialization of your
+application's state, you just tell us how to build the URL and we'll
+keep it up-to-date as your users move throughout the application.
+
+We're still making tweaks to the router API to make it as easy as
+possible for new users to pick up, but we think that modeling your apps
+as discrete states is the way all apps will be built in the future. It's
+still new but we believe in a few years it will be as relied on as
+automated testing for building the most robust applications possible.
 
 ### View Context Changes
 
