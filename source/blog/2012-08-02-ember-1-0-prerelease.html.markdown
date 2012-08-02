@@ -41,7 +41,20 @@ automated testing for building the most robust applications possible.
 
 ### View Context Changes
 
-Talk about Context changes
+In apps built on earlier version of Ember, the `{{#view}}` helper
+created a new context for the view. This meant that you had to
+explicitly set the context on them. In 1.0, we've made this a bit
+simpler. The `{{#view}}` helper no longer changes the context, instead
+maintaining the parent context by default. Alternatively, we will use
+the `controller` property if provided. You may also chose to directly
+override the `context` property. The order is as follows:
+
+1. Specified controller
+2. Supplied context (usually by Handlebars)
+3. `parentView`'s context (for a child of a ContainerView)
+
+In the event that you do need to directly refer to a property on the
+view, you can use the `view` keyword, i.e. `{{view.myProp}}`.
 
 ### Miscellaneous
 
@@ -49,7 +62,7 @@ Talk about Context changes
   respectively.
 * `Ember.ObjectProxy` - this object proxies to its `content` property.
   Along with this comes `Ember.ObjectController`.
-* The `#with` helper now supports assigning an objet to a custom
+* The `#with` helper now supports assigning an object to a custom
   property name using the format `{{#with path.to.object as custom}}`
 * The `#each` helper also allows for a custom property using the format
   `{{#each custom in path.to.array}}`.
@@ -82,7 +95,7 @@ For a full list, see the [Changelog](https://github.com/emberjs/ember.js/blob/ma
 Since this is a prerelease, there are still some important known issues:
 
 * **Router** - The Router API is not finalized. Conceptually, things
-are pretty stable, but API details are likely to change.
+  are pretty stable, but API details are likely to change.
 * **Ember.Object.create** - We are currently considering changing `create`
   to behave to make it behave more like `setProperties`. If this does
   happen, we will try to maintain backwards compatibility as far as
@@ -94,5 +107,9 @@ are pretty stable, but API details are likely to change.
 * **Browser support** - We have only done limited testing on older
   browsers so far. We will do more comprehensive testing before the
   final release.
-
-*Anything else?*
+* **Dependent Bindings** - Bindings that depend on other bindings may
+  fail on initial connect unless properly ordered. [Issue #1164](https://github.com/emberjs/ember.js/issues/1164)
+* **ContainerView and SortableMixin** - Using `ContainerView`, or its
+  subclass `CollectionView` (which is used by the `#each` and
+  `#collection` helpers), with `SortableMixin` may cause unexpected
+  rendering errors. [Issue #800](https://github.com/emberjs/ember.js/issues/800)
