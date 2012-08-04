@@ -46,7 +46,7 @@ created a new context for the view. This meant that you had to
 explicitly set the context on them. In 1.0, we've made this a bit
 simpler. The `{{#view}}` helper no longer changes the context, instead
 maintaining the parent context by default. Alternatively, we will use
-the `controller` property if provided. You may also chose to directly
+the `controller` property if provided. You may also choose to directly
 override the `context` property. The order is as follows:
 
 1. Specified controller
