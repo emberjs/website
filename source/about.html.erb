@@ -94,63 +94,16 @@ App.peopleController = Em.ArrayController.create({
 
   <div class="surround">
     <ul id="slider">
+    <% data.users.each do |user| %>
       <li class="user">
-        <a href="http://livingsocial.com/">
-          <img src="/images/about/livingsocial.png">
+        <a href="<%= user.url %>">
+          <img src="/images/about/<%= user.image %>">
         </a>
       </li>
-      <li class="user">
-        <a href="http://squareup.com">
-          <img src="/images/about/square.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://tilde.io">
-          <img src="/images/about/tilde.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://www.zendesk.com/">
-          <img src="/images/about/zendesk.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://www.benefitcloud.com/">
-          <img src="/images/about/benefitcloud.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="https://www.yapp.us/">
-          <img src="/images/about/yapp.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://www.mhelabs.com/">
-          <img src="/images/about/mhelabs.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://www.topicus.nl/">
-          <img src="/images/about/topicus.png">
-        </a>
-      </li>
+    <% end %>
+    <% (4 - data.users.length % 4).times do %>
       <li class="user empty"></li>
-      <li class="user">
-        <a href="http://www.gemfury.com/">
-          <img src="/images/about/gemfury.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://www.batterii.com/">
-          <img src="/images/about/batterii.png">
-        </a>
-      </li>
-      <li class="user">
-        <a href="http://inst.ag/">
-          <img src="/images/about/instagrille.png">
-        </a>
-      </li>
-      <li class="user empty"></li>
+    <% end %>
     </ul>
   </div>
 
