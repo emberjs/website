@@ -55,7 +55,7 @@ The template will look like this:
 
 ```
 {{#each post in controller}}
-<h1><a {{action showPost context="post" href=true}}>{{post.title}}</a></h1>
+<h1><a {{action showPost post href=true}}>{{post.title}}</a></h1>
 <div>{{post.intro}}</div>
 {{/each}}
 ```
@@ -218,7 +218,7 @@ current template.
 
 ```
 {{#each post in controller}}
-  <h1><a {{action showPost context="post" href=true}}>{{post.title}}</a></h1>
+  <h1><a {{action showPost post href=true}}>{{post.title}}</a></h1>
 {{/each}}
 ```
 
