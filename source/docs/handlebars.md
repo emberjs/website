@@ -677,7 +677,7 @@ They are:
 ####Ember.TextField
 	
 ```javascript
-	App.myText = Ember.TextField.extend({
+	App.MyText = Ember.TextField.extend({
 	    formBlurredBinding: 'App.adminController.formBlurred',
 	    change: function(evt) {
 	      this.set('formBlurred', true);
@@ -712,7 +712,7 @@ Events do not bubble from a subview to a parent view so extending these views is
 Example:
 
 ```javascript
-App.myText = Ember.TextField.extend({
+App.MyText = Ember.TextField.extend({
     formBlurredBinding: 'App.adminController.formBlurred',
     change: function(evt) {
       this.set('formBlurred', true);
@@ -728,7 +728,7 @@ You can then use this view as a sub view and capture the events.  In the followi
         <fieldset>
            <legend>Info:</legend>                 
            
-                   {{view App.myText name="Name" id="Name"  valueBinding="myObj.Name"}} 
+                   {{view App.MyText name="Name" id="Name"  valueBinding="myObj.Name"}} 
 	               <label for="Name">Name</label><br/>
                    
                    {{#if formBlurred}}
