@@ -101,8 +101,11 @@ App.peopleController = Em.ArrayController.create({
         </a>
       </li>
     <% end %>
-    <% (4 - data.users.length % 4).times do %>
-      <li class="user empty"></li>
+    <% gap = 4 - data.users.length % 4 %>
+    <% if gap < 4 %>
+      <% gap.times do %>
+        <li class="user empty"></li>
+      <% end %>
     <% end %>
     </ul>
   </div>
