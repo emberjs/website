@@ -188,7 +188,7 @@ This connectOutlet call does a few things for us:
 * It creates a new instance of `App.PostsView`, using the
   `posts.handlebars` template.
 * It sets the `content` property of `postsController` to a list of all
-  of the available posts (`App.Post.find()`) and makes `postController`
+  of the available posts (`App.Post.find()`) and makes `postsController`
   the controller for the new `App.PostsView`.
 * It connects the new view to the outlet in `application.handlebars`.
 
