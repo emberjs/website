@@ -1,0 +1,67 @@
+<h1><%= @class['name'] %> <%= @class['static'] ? "Namespace" : "Class" %></h1>
+
+<% if @class['deprecated'] %><p>DEPRECATED</p><% end %>
+<% if @class['beta'] %><p>BETA</p><% end %>
+<% if @class['access'] %><p><%= @class['access'].upcase %></p><% end %>
+
+<div class="class-info">
+  <% if @class['extends'] %>
+    <p>Extends: <%= api_class_link @class['extends'] %></p>
+  <% end %>
+
+  <% if @class['uses'] %>
+    <% @class['uses'].each do |name| %>
+      <p>Uses: <%= api_class_link name %></p>
+    <% end %>
+  <% end %>
+
+  <% if @class['file'] %>
+    <p>Defined in: <%= api_file_link @class %></p>
+  <% end %>
+
+  <% if @class['submodule'] %>
+    <p>Module: <%= api_module_link @class['submodule'] %></p>
+  <% elsif @class['module'] %>
+    <p>Module: <%= api_module_link @class['module'] %></p>
+  <% end %>
+</div>
+
+<% if @class['description'] %>
+  <div class="description">
+    <%= api_markdown @class['description'] %>
+  </div>
+<% end %>
+
+
+<% types =['method', 'property', 'event'].select{|t| @class.classitems[t] } %>
+
+<div class="tabs">
+  <ul>
+    <li><a href="#index">Index</a></li>
+    <% types.each do |type| %>
+      <li><a href="#<%= type.pluralize %>"><%= type.pluralize.titleize %></a></li>
+    <% end %>
+  </ul>
+
+  <div class="pane" id="index">
+    <% types.each do |type| %>
+      <h2><%= type.pluralize.titleize %></h2>
+      <ul class="index-list">
+        <% @class.classitems[type].each do |name, data| %>
+          <li class="<%= type %> <%= api_classes_for_item(data) %>">
+            <a href="#<%= type %>_<%= sanitize_class name %>"><%= name %></a>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+
+<% types.each do |type| %>
+  <div class="pane" id="<%= type.pluralize %>">
+    <% @class.classitems[type].each do |name, data| %>
+      <%= partial "api/item", :locals => { :item => data, :type => type } %>
+    <% end %>
+  </div>
+<% end %>
+</div>
+

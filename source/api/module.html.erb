@@ -1,0 +1,30 @@
+<h1><%= @module['name'] %> Module</h1>
+
+<% if @module['module'] %>
+  <p>Parent: <%= link_to @module['module'], "#{@module['module']}.html" %></p>
+<% end %>
+
+<% if @module['requires'] %>
+  <p>Requires: <%= @module['requires'].map{|r| link_to(r['name'], "#{r['name']}.html") }.join(", ") %></p>
+<% end %>
+
+<p><%= api_markdown @module['description'] %></p>
+
+<% if @module['submodules'].length > 0 %>
+  <h2>Submodules</h2>
+  <ul>
+  <% @module['submodules'].keys.each do |name| %>
+    <li><%= link_to name, "#{name}.html" %></li>
+  <% end %>
+  </ul>
+<% end %>
+
+<% if @module['classes'].length > 0 %>
+  <%# FIXME: Split these apart %>
+  <h2>Classes and Namespaces</h2>
+  <ul>
+  <% @module['classes'].keys.each do |name| %>
+    <li class="<%= api_classes_for_class(name) %>"><%= link_to name, "../classes/#{name}.html" %></li>
+  <% end %>
+  </ul>
+<% end %>
