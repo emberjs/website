@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Ember.js - <%= data.page.title %></title>
+    <title>Ember.js - <%= data.page.title || @title %></title>
     <link rel="shortcut icon" href="/images/favicon.png" />
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "highlight" %>

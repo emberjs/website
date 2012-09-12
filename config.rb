@@ -16,7 +16,8 @@ set :markdown, :layout_engine => :erb,
 activate :directory_indexes
 activate :toc
 activate :highlighter
-activate :api_docs
+
+activate :api_docs, :default_class => "Ember"
 
 
 ###

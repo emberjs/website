@@ -2,7 +2,7 @@ require_relative "./highlighter"
 
 module APIDocs
   class << self
-    def registered(app)
+    def registered(app, options={})
       app.helpers Helpers
 
       app.after_configuration do
@@ -12,12 +12,21 @@ module APIDocs
 
         data.api['classes'].each do |name, data|
           page "/api/classes/#{name}.html", :proxy => "api/class.html", :layout => "api_layout" do
+            @title = name
             @class = ApiClass.find(name)
+          end
+
+          if name == options[:default_class]
+            page "/api/index.html", :proxy => "api/class.html", :layout => "api_layout" do
+              @title = name
+              @class = ApiClass.find(name)
+            end
           end
         end
 
         data.api['modules'].each do |name, data|
           page "/api/modules/#{name}.html", :proxy => "api/module.html", :layout => "api_layout" do
+            @title = name
             @module = data
           end
         end
