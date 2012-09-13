@@ -1,5 +1,7 @@
-@import "compass/reset";
 @import "compass";
+@import "compass/reset";
+@import "compass/typography/text/ellipsis";
+
 @import "fonts";
 
 /* Calculated page dimensions. */
@@ -69,6 +71,28 @@ hr {
   border: none;
   margin: 40px 0;
   background-color: $black-color;
+}
+
+/**
+  Tabs
+**/
+
+.tabs {
+  > ul {
+    list-style: none;
+    overflow: hidden; // Clearfix
+
+    li {
+      display: block;
+      float: left;
+      padding-right: 10px;
+      margin-right: 10px;
+      border-right: solid 1px gray;
+    }
+
+    border-bottom: solid 1px gray;
+    margin-bottom: 20px;
+  }
 }
 
 /**
@@ -170,6 +194,7 @@ hr {
 }
 
 #content-wrapper {
+  @include clearfix;
   width: $page-width;
   margin: 0 auto 40px auto;
   padding: 20px 0px;
@@ -197,9 +222,9 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 }
 
 #sidebar {
+  float: left;
   width: $sidebar-width;
   margin-top: 43px;
-  position: absolute;
   font-family: "MavenProMedium";
   font-size: 14px;
 
@@ -850,3 +875,90 @@ article {
 }
 
 
+/**
+  API
+**/
+
+body.api {
+  #sidebar {
+    h3 {
+      font-weight: bold;
+      margin: 0 0 20px;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    ul {
+      li {
+        font-family: "MavenProBold";
+      }
+    }
+  }
+
+  #content {
+    position: relative;
+    padding-top: 43px;
+
+    #api-options {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    .class-info {
+      margin-bottom: 50px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    .description {
+      margin: 50px 0; 
+    }
+
+    ul.index-list {
+      overflow: hidden; // Clearfix
+
+      li {
+        float: left;
+        width: 160px;
+        padding-right: 10px;
+        display: block;
+        overflow: hidden;
+        @include ellipsis;
+      }
+    }
+
+    div.method, div.property, div.event {
+      padding-bottom: 15px;
+      border-bottom: solid 1px gray;
+      margin-bottom: 30px;
+    }
+
+    h3.name code {
+      background-color: transparent;
+      color: black;
+      padding: 0;
+      font-weight: bold;
+    }
+
+    span.flag {
+      background-color: gray; 
+      color: white;
+      border-radius: 3px;
+    }
+  }
+}

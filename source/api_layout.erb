@@ -1,0 +1,109 @@
+<% wrap_layout :layout do %>
+  <% content_for :head do %>
+    <script>
+      $(function() {
+        // Type toggling
+        function toggleType() {
+          var type = this.getAttribute('data-type');
+          $('.'+type).toggle(this.checked);
+        }
+
+        $('#api-options input').each(toggleType);
+        $('#api-options input').on('change', toggleType);
+
+        // Tabs
+        $('.tabs .pane').hide();
+        $('.tabs .pane:first').show();
+        $('.tabs ul li:first').addClass('active');
+
+        function showPane($tabs, href) {
+          var $ul = $tabs.find('> ul'),
+              $tab = $ul.find('a[href='+href+']'),
+              $pane = $(href);
+
+          $ul.find('li').removeClass('active');
+          $tab.parent().addClass('active');
+          $tabs.find('.pane').hide();
+
+          $pane.show();
+        }
+
+        $('.tabs > ul li a').click(function(){
+          var $el = $(this),
+              $tabs = $el.parents('.tabs'),
+              href = $el.attr('href');
+
+          showPane($tabs, href);
+
+          return false;
+        });
+
+        // Auto tab
+        function checkHash() {
+          var hash = window.location.hash;
+          if (hash) {
+            var $el = $(hash);
+            if ($el.length > 0 && !$el.is(':visible')) {
+              showPane($el.parents('.tabs'), '#'+$el.parents('.pane').attr('id'));
+              $("html, body").scrollTop($el.offset().top);
+            }
+          }
+        }
+
+        $(window).on('hashchange', checkHash);
+        checkHash();
+      });
+    </script>
+  <% end %>
+
+  <% content_for :sidebar do %>
+    <h3>Version: <%= data.api['project']['version'] %></h3>
+
+    <h2>Modules</h2>
+    <ul>
+    <% api_modules.each do |id, data| %>
+      <li><%= api_module_link data['name'] %></li>
+    <% end %>
+    </ul>
+
+    <h2>Namespaces</h2>
+    <ul>
+    <% api_namespaces.each do |id, data| %>
+      <li class="<%= api_classes_for_namespace data %>"><%= api_namespace_link data['name'] %></li>
+    <% end %>
+    </ul>
+
+    <h2>Classes</h2>
+    <ul>
+    <% api_classes.each do |id, data| %>
+      <li class="<%= api_classes_for_class data %>"><%= api_class_link data['name'] %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
+  <div id="api-options">
+    Show:
+
+    <label>
+      <input type="checkbox" data-type="inherited" checked>
+      Inherited
+    </label>
+
+    <label>
+      <input type="checkbox" data-type="protected">
+      Protected
+    </label>
+
+    <label>
+      <input type="checkbox" data-type="private">
+      Private
+    </label>
+
+    <label>
+      <input type="checkbox" data-type="deprecated">
+      Deprecated
+    </label>
+  </div>
+
+  <%= yield %>
+<% end %>
