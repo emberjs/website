@@ -13,7 +13,7 @@ def git_update
 end
 
 def ember_path
-  File.expand_path(ENV['EMBER_PATH'] || "../ember.js")
+  File.expand_path(ENV['EMBER_PATH'] || File.expand_path("../../ember.js", __FILE__))
 end
 
 def generate_docs
@@ -36,7 +36,7 @@ def generate_docs
   # JSON is valid YAML
   data = YAML.load_file(File.join(ember_path, "docs/build/data.json"))
   data["project"]["sha"] = sha
-  File.open("data/api.yml", "w") do |f|
+  File.open(File.expand_path("../data/api.yml", __FILE__), "w") do |f|
     YAML.dump(data, f)
   end
 
