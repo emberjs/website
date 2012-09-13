@@ -12,9 +12,55 @@ def git_update
   system "git reset --hard origin/master"
 end
 
+def ember_path
+  File.expand_path(ENV['EMBER_PATH'] || "../ember.js")
+end
+
+def generate_docs
+  print "Generating docs data from #{ember_path}... "
+
+  sha = nil
+
+  Dir.chdir(ember_path) do
+    # returns either `tag` or `tag-numcommits-gSHA`
+    sha_parts = `git describe --tags --always`.strip.split('-')
+    sha = sha_parts.length == 1 ? sha_parts[0] : sha_parts[2][1..-1]
+
+    Dir.chdir("docs") do
+      system("npm install") unless File.exist?('node_modules')
+      # Unfortunately -q doesn't always work so we get output
+      system("./node_modules/.bin/yuidoc -p -q")
+    end
+  end
+
+  # JSON is valid YAML
+  data = YAML.load_file(File.join(ember_path, "docs/build/data.json"))
+  data["project"]["sha"] = sha
+  File.open("data/api.yml", "w") do |f|
+    YAML.dump(data, f)
+  end
+
+  puts "Done"
+end
+
 desc "Build the website"
 task :build do
+  generate_docs
   system "middleman build"
+end
+
+desc "Preview"
+task :preview do
+  require 'listen'
+
+  generate_docs
+
+  paths = Dir.glob(File.join(ember_path, "packages/*/lib"))
+  listener = Listen.to(*paths, :filter => /\.js$/)
+  listener.change { generate_docs }
+  listener.start(false)
+
+  system "middleman server"
 end
 
 =begin

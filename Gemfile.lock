@@ -119,8 +119,10 @@ DEPENDENCIES
   activesupport
   coderay
   highline
+  listen
   middleman (~> 3.0)
   middleman-blog (~> 3.0)
+  rack
   rake
   redcarpet
   thin

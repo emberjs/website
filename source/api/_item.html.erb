@@ -1,0 +1,114 @@
+<div id="<%= type %>_<%= sanitize_class item['name'] %>" class="<%= type %> <%= api_classes_for_item item %>">
+  <h3 class="name"><code><%= item['name'] %></code></h3>
+
+<% if item['params'] %>
+  <span class="args">
+    (<%= item['params'].map{|i| i['name']}.join(', ') %>)
+  </span>
+<% end %>
+
+<% if item['return'] %>
+  <span class="type"><%= item['return']['type'] %></span>
+<% end %>
+
+<% if item['type'] %>
+  <span class="type"><%= item['type'] %></span>
+<% end %>
+
+<% if item['deprecated'] %>
+  <%# TODO: Handle deprecation message %>
+  <span class="flag deprecated">deprecated</span>
+<% end %>
+
+<% if item['access'] %>
+  <span class="flag <%= item['access'] %>"><%= item['access'] %></span>
+<% end %>
+
+<% if item['final'] %>
+  <span class="flag final">constant</span>
+<% end %>
+
+<% if item['static'] %>
+  <span class="flag static">static</span>
+<% end %>
+
+<% if item['optional'] %>
+  <span class="flag optional">optional</span>
+<% end %>
+
+<% if item['required'] %>
+  <span class="flag required">required</span>
+<% end %>
+
+  <div class="meta">
+    <p>
+      <% if item['overwritten_from'] %>
+        Inherited from
+        <%= api_class_link item['overwritten_from']['class'], "method_#{item['overwritten_from']['name']}" %>
+        <% if item['file'] %>
+          but overwritten in
+        <% end %>
+      <% else %>
+        <% if item['extended_from'] %>
+          Inherited from
+          <%= api_class_link item['extended_from'], "method_#{item['name']}" %>
+        <% else %>
+          <% if item['file'] %>
+            Defined in
+          <% end %>
+        <% end %>
+      <% end %>
+      <%= api_file_link item %>
+    </p>
+
+    <%# TODO: Handle deprecation message %>
+
+    <% if item['since'] %>
+      <p>Available since <%= item['since'] %></p>
+    <% end %>
+  </div>
+
+  <% if item['description'] %>
+    <div class="description">
+      <%= api_markdown item['description'] %>
+    </div>
+  <% end %>
+
+  <% if item['default'] %>
+    <p><strong>Default:</strong> <%= item['default'] %></p>
+  <% end %>
+
+  <% if item['example'] %>
+    <div class="example">
+      <h4>Example:</h4>
+
+      <div class="example-content">
+        <%= api_markdown item['example'] %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if item['params'] %>
+    <div class="params">
+      <h3>Parameters:</h3>
+
+      <ul>
+        <% item['params'].each do |param| %>
+          <li>
+            <strong><%= param['name'] %></strong> <%= param['type'] %><br>
+            <%= param['description'] %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if item['return'] %>
+    <div class="return">
+      <h3>Returns:</h3>
+
+      <%= item['return']['type'] %>: <%= item['return']['description'] %>
+    </div>
+  <% end %>
+
+</div>
