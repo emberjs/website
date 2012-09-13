@@ -17,7 +17,9 @@ activate :directory_indexes
 activate :toc
 activate :highlighter
 
-activate :api_docs, :default_class => "Ember"
+activate :api_docs,
+  :default_class => "Ember",
+  :repo_url => "https://github.com/emberjs/ember.js"
 
 
 ###

@@ -2,8 +2,14 @@ require_relative "./highlighter"
 
 module APIDocs
   class << self
+    def repo_url
+      @repo_url
+    end
+     
     def registered(app, options={})
       app.helpers Helpers
+
+      @repo_url = options[:repo_url]
 
       app.after_configuration do
         ApiClass.data = data.api
@@ -30,6 +36,11 @@ module APIDocs
             @module = data
           end
         end
+
+        # Update data caches
+        files.changed("data/api.yml") do
+          ApiClass.data = data.api
+        end
       end
     end
     alias :included :registered
@@ -48,7 +59,12 @@ module APIDocs
     cattr_reader :cache
 
     @@data = nil
-    cattr_accessor :data
+    cattr_reader :data
+
+    def self.data=(value)
+      @@cache = {}
+      @@data = value
+    end
 
     def self.find(name)
       cache[name] || new(name)
@@ -114,14 +130,12 @@ module APIDocs
       @data[attr]
     end
 
-    def method_missing(method)
+    def method_missing(method, *args)
       @data[method]
     end
   end
 
   module Helpers
-    GITHUB_SHA = "yuidoc"
-
     def api_modules
       data.api['modules'].sort
     end
@@ -138,7 +152,7 @@ module APIDocs
       path = item['file'].sub(/^\.\.\//, '')
 
       title = path
-      link  = "https://github.com/wagenet/ember.js/tree/#{GITHUB_SHA}/#{path}"
+      link  = "#{APIDocs.repo_url}/tree/#{ApiClass.data['project']['sha']}/#{path}"
 
       if line = item['line']
         title += ":#{line}"
