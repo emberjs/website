@@ -47,7 +47,7 @@
     <% types.each do |type| %>
       <h2><%= type.pluralize.titleize %></h2>
       <ul class="index-list">
-        <% @class.classitems[type].each do |name, data| %>
+        <% @class.classitems[type].sort.each do |(name, data)| %>
           <li class="<%= type %> <%= api_classes_for_item(data) %>">
             <a href="#<%= type %>_<%= sanitize_class name %>"><%= name %></a>
           </li>
@@ -58,7 +58,7 @@
 
 <% types.each do |type| %>
   <div class="pane" id="<%= type.pluralize %>">
-    <% @class.classitems[type].each do |name, data| %>
+    <% @class.classitems[type].sort.each do |(name, data)| %>
       <%= partial "api/item", :locals => { :item => data, :type => type } %>
     <% end %>
   </div>
