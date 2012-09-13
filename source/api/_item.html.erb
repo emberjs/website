@@ -83,7 +83,9 @@
       <h4>Example:</h4>
 
       <div class="example-content">
-        <%= api_markdown item['example'] %>
+        <% item['example'].each do |example| %>
+          <%= api_markdown example %>
+        <% end %>
       </div>
     </div>
   <% end %>
