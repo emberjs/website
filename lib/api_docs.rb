@@ -70,8 +70,18 @@ module APIDocs
       cache[name] || new(name)
     end
 
+    attr_reader :native
+
     def initialize(name)
-      @data = self.class.data['classes'][name]
+      data = self.class.data['classes'][name]
+
+      if data
+        @native = false
+        @data = data
+      else
+        @native = true
+        @data = {}
+      end
     end
 
     def to_s
@@ -181,9 +191,14 @@ module APIDocs
     end
 
     def api_class_link(name, anchor=nil)
-      link = "/api/classes/#{name}.html"
-      link += '#'+anchor if anchor
-      link_to name, link
+      klass = api_class(name)
+      if klass && !klass.native
+        link = "/api/classes/#{name}.html"
+        link += '#'+anchor if anchor
+        link_to name, link
+      else
+        name
+      end
     end
     alias :api_namespace_link :api_class_link
 
