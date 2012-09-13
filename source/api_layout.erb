@@ -57,7 +57,7 @@
   <% end %>
 
   <% content_for :sidebar do %>
-    <h3>Version: <%= data.api['project']['version'] %></h3>
+    <h3>SHA: <%= link_to data.api['project']['sha'], "#{APIDocs.repo_url}/commit/#{data.api['project']['sha']}" %></h3>
 
     <h2>Modules</h2>
     <ul>
