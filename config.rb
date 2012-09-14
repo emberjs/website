@@ -56,6 +56,8 @@ page "examples/*", :directory_index => false
 
 page "index.html", :proxy => "about.html"
 
+page "404.html", :directory_index => false
+
 
 
 ###
