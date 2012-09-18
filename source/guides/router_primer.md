@@ -412,7 +412,7 @@ An initial load of this application looks like the following:
 
 <!--- {{{1 -->
 
-At this point one _technically_ has a funcitoning Router-based application.  The next steps hinge less on the Router, and more on Ember's approach to application construction.  These approaches become manifest in the Router's syntax as more advanced applications are built.
+At this point one _technically_ has a functioning Router-based application.  The next steps hinge less on the Router, and more on Ember's approach to application construction.  These approaches become manifest in the Router's syntax as more advanced applications are built.
 
 ### Views
 
@@ -508,7 +508,7 @@ domain logic.  By setting `classNames` on the View we affect the CSS classes app
 
 <!--- }}}2 -->
 
-### Views Are Tighty Coupled To Their Controllers
+### Views Are Tightly Coupled To Their Controllers
 
 <!--- {{{2 -->
 
@@ -695,7 +695,7 @@ We can likewise change to the other state with:
 state and see a change in the URL slug to `#/shoes`.
 
 It is worth noting that when transferring between sibling states (`cars` to
-`shoes`) the parent state was *not* entered.  This is confirmed both my the
+`shoes`) the parent state was *not* entered.  This is confirmed both by the
 state manager's debugging  output as well as by the non-execution of the
 `root.index`'s `enter()` callback.  The following image demonstrates the
 flexibility the router affords users.
@@ -735,7 +735,7 @@ In many templates, however, there will be only one `{{outlet}}`.
 In the following listing we add templates for the newest routes.  For each
 Ember requires _basename_View, _basename_Controller, and a template for each
 view.  This is a technique that has been demonstrated previously in this guide.
-What is new will be the _linking_ of these new views into the extant
+What is new will be the _linking_ of these new views into the existant
 `ApplicationView`'s `{{outlet}}`.  Discussion of the "linking" method,
 `connectOutlets` occurs after the code listings.
 
@@ -826,8 +826,8 @@ to insert a view."
 
 Recall that `outlets` _can_ be named but, frequently, they are not.  When views
 are extremely well decomposed, it is likely that one will attach a view A to
-ApplicationView, some sub-view to A called "B," some sub views "B-prime" and
-"B-double-prime to B," etc.
+ApplicationView, some sub-view to A called "B", some sub views "B-prime" and
+"B-double-prime to B", etc.
 
 It is into the `outlet` defined in the template that we wish to "connect" a
 view appropriate for the `cars` route.  One does so in a method called,
@@ -848,7 +848,7 @@ components during its bootstrap process.  While
 the same thing eventually, the latter is to be preferred within the router.
 
 The `context` parameter contains any data `return`ed from the `deserialize`
-method.  During a deserialization process the resultant data structure may need
+method. During a deserialization process the resultant data structure may need
 to be passed (and displayed) by one of the views connected in connectOutlets.
 This parameter is a placeholder for that data.  While not a concern in the
 current iteration of the app, it will be demonstrated later.
@@ -862,10 +862,10 @@ Let's flesh out our connectOutlets method some more:
 > "Router, find me the instance of your class App.ApplicationController called
 > App.applicationController which, by convention is associated with the view
 > App.ApplicationView called App.applicationView whose template declaration
-> defines an outlet.  I wish to take an instance of App.CarsView and inject its
+> defines an outlet. I wish to take an instance of App.CarsView and inject its
 > template data into the outlet."
 
-The amount of work done for so little typing is quite staggering!  Clearly some
+The amount of work done for so little typing is quite staggering! Clearly some
 convention-over-configuration inference is being made during this invocation.
 In its single-argument invocation uses this single string to derive:
 
@@ -1039,7 +1039,7 @@ the way up to the top-level `Route` definition, our &uuml;r-container: `root`.
 
 This bubbling effect allows certain actions to remain private.  If certain
 transitions should only be available for certain sub-sub-states, put the
-transition on the sub-state and you've achived a type of scoping.
+transition on the sub-state and you've achieved a type of scoping.
 
 In this example, Ember looks to App.ApplicationView to handle the click, it
 does not.  The event then bubbles upward until it hits the `root` `Route` where
@@ -1347,7 +1347,7 @@ To translate this model to be compatible with Ember's opinions, the `Router`
 should be to call the method: `App.Shoe.all()` which returns a unique reference
 address which, for the lifetime of the app, will be the source of data for the
 `listOfShoesController` which will inform the `ShoesView`'s controller partner,
-`ShoesController`.  Since the content of the `content` variable is to be an
+`ShoesController`. Since the content of the `content` variable is to be an
 array, it makes sense that `ShoesController` should be an extension of the
 `Em.ArrayController` class.  
 
@@ -1369,21 +1369,21 @@ enumerable thing (or dereferencable thing, in the case of
 #### Why the Focus on References?
 
 In the discussion before the aside, much ado was made of this notion of
-"references."  When Ember views are linked up via the router the content
-properties of the controllers are set to watch a specific Ember object.  Per
+"references". When Ember views are linked up via the router the content
+properties of the controllers are set to watch a specific Ember object. Per
 our previous example, say, the object at address 0x000016.  
 
 If one were to replace ShoesController.content with another array (a different
 array reference), the view, which would still be watching the old reference,
-**would not know to update itself**.  This is a very common error for those
+**would not know to update itself**. This is a very common error for those
 learning to use the Router and to integrate it with model-held data methods.
 
 As such when data updates come the content at the controller's `content`
-property must be _replaced_ or emptied and updated.  The content address cannot
+property must be _replaced_ or emptied and updated. The content address cannot
 be changed by means of the Ember `set()` command.
 
-Let's now add the code for fetching all the Shoes.  While we're here, we'll
-also add a `find` method that will let us look up a single Shoe by its ID.  To
+Let's now add the code for fetching all the Shoes. While we're here, we'll
+also add a `find` method that will let us look up a single Shoe by its ID. To
 make this play nicely for demonstration purposes, we'll provide a stub object
 data source.
 
@@ -1914,7 +1914,7 @@ App.initialize();
     {{#each shoe in controller}}
      {{#with shoe}}
         <li style="color: #000">
-         <a {{action showShoe shoe href=true}}> {{id}} | {{name}} | {{price}} : {{description}} </a> </li>
+         <a {{action showShoe this href=true}}> {{id}} | {{name}} | {{price}} : {{description}} </a> </li>
      {{/with}}
     {{/each}}
   </p>
