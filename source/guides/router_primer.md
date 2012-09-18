@@ -234,7 +234,7 @@ initial state "root" `.
 As a legacy of Ember's history and inheritance chain, `State` is a synonym for
 `Route` (see discussion above).  As such, the error message can be read as
 saying that the application could not find an `Ember.Route` called `root`.  The
-Router class of of an Ember application **must** contain an Ember.State called
+Router class of of an Ember application **must** contain an Ember.Route called
 `root`.  Let's add it.
 
 The amended code will look like the following:
