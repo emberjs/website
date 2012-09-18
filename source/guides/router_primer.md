@@ -1354,7 +1354,7 @@ array, it makes sense that `ShoesController` should be an extension of the
 #### Aside:  Sublcasses of Ember.Controller:  Ember.ArrayController and ObjectController
 
 If one examines the sample code thus far, one will note that both
-`ShoesController` and `CarsControllers` are, and have been, `ArrayControllers`
+`ShoesController` and `CarsController` are, and have been, `ArrayController`
 since the very beginning of this document.  For controllers that don't manage a
 collection of array-like data there is `Ember.ObjectController` whose content
 variable is, unsurprisingly, an `Object`.
