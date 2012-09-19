@@ -1,4 +1,4 @@
-# Understanding the Ember.js Router: A Primer
+# Building Applications with Ember.js
 
 
 ## Introduction
@@ -11,13 +11,9 @@ of your application as a collection of states which can be accessed via
 both unique internal specifiers (a "route path") _as well as_ by URL locations
 that "route" to those states.
 
-This approach has many advantages:
-
-  * It Employs the [State Machine][StateMachine] pattern
-  * Functional states of the application define the URL, not vice-versa
-  * Nesting of routes has built-in support
-  * On entry to these states, recursive chains of views can be
-    automatically instantiated and inserted _without your having to manage them!_
+This approach has many advantages.  Perhaps the most important advantage is
+that by employing the [State Machine][StateMachine] pattern, your application
+remains easy to understand, expand, and debug.
 
 This guide is designed to help the reader accomplish the following:
 
@@ -31,9 +27,7 @@ This guide is designed to help the reader accomplish the following:
 
 <!--- {{{1 -->
 
-In common parlance, several of the activities that are essential to the
-router's function are conflated.  To ensure clarity this guide defines
-several terms of art.
+To prevent confusion, this guide will define the following key terms.
 
 ### Navigation
 
@@ -185,7 +179,9 @@ under discussion, adjust the code, try things out, and then move to the next
 step.  Simply clone the project, follow its `README.md` you will have, in the
 `workspace` subdirectory, the code that I demonstrate in the text listings.
 
-In each of the text listings I will include GitHub URLs that show the diffs in the code so that each step is easily digested.
+In each of the text listings I will include GitHub URLs that show the diffs in
+the code so that each step is easily digested.  GitHub links are noted by links
+with the text content:  _Diff View_.
 
 The code is housed in a minimal application framework built on Ruby and Sinatra
 called [Halbert](https://github.com/sgharms/halbert).  If the terms "git,"
@@ -859,10 +855,10 @@ Let's flesh out our connectOutlets method some more:
         router.get('applicationController').connectOutlet('cars');
     }
 
-> "Router, find me the instance of your class App.ApplicationController called
-> App.applicationController which, by convention is associated with the view
-> App.ApplicationView called App.applicationView whose template declaration
-> defines an outlet. I wish to take an instance of App.CarsView and inject its
+> "Router, find me the instance of your class `App.ApplicationController` called
+> `App.applicationController` which, by convention is associated with the view
+> `App.ApplicationView` called `App.applicationView` whose template declaration
+> defines an outlet. I wish to take an instance of `App.CarsView` and inject its
 > template data into the outlet."
 
 The amount of work done for so little typing is quite staggering! Clearly some
@@ -891,6 +887,32 @@ API][ConnectOutletAPI].
 To show the flexibility the Router affords via `connectOutlets`, the
 application will now be built up using the techniques described in this
 section.
+
+As a brief aside, it might feel a bit bizaare to tell the *controller* to wire
+up some other `baseName` to its view's `{{outlet}}` versus telling the view to
+do this "plugging in" itself.  Ember's opinion is that the View should be,
+despite its capability of being quite powerful, fairly limited (CSS class
+calculation, event handling).  Therefore the *controller* should bear the
+responsibility for performing the wiring.  As a code smell, if you find your
+`Ember.View`s doing much more logic than pure view behavior, you might be
+building in a fashion that's not entirely Ember-opinions compatible.
+
+For those who have examined other Ember tutorials or developed some Ember app,
+the question may have arisen:  "Sometimes I define a simple view in my
+templates, or I might want to wire up a simple `Ember.View` into an outlet, do
+I **have** to create a matching `Ember.Controller` for it?"  The answer is
+"no."  When an `Ember.View` is attached to an outlet and it *does* not have its
+own `Controller` for defining its context, it inherits the context of its
+parent template.  A real-life example would be imagine an item that could be
+"liked" by clicking on a glyph.  Handling the CSS and click logic could live on
+this `FavoriteView` which is rendered into an `{{outlet}}` held by `ItemView`'s
+template.  `ItemView`'s domain data should not be passed into the sub-template
+`FavoriteView` by some manner of weird argument-passing contortion.  Rather
+`FavoriteView` can simply, and happily, and, most importantly, _sensibly_ use
+its parent view's context.<sup>[2](#view-preserves-context)</sup>
+
+
+
 
 [_Diff
 View_](https://github.com/sgharms/Halbert/commit/98e6f3ebc033937523ccd723e0d937a5d9465aca)
@@ -1355,7 +1377,7 @@ array, it makes sense that `ShoesController` should be an extension of the
 
 If one examines the sample code thus far, one will note that both
 `ShoesController` and `CarsController` are, and have been, `ArrayController`
-since the very beginning of this document.  For controllers that don't manage a
+since the very beginning of this guide.  For controllers that don't manage a
 collection of array-like data there is `Ember.ObjectController` whose content
 variable is, unsurprisingly, an `Object`.
 
@@ -1365,6 +1387,12 @@ Handlebars directive like `{{#each shoe in controller}}` and the view and the
 controller will automatically proxy the controller's `content` attribute as the
 enumerable thing (or dereferencable thing, in the case of
 `Ember.ObjectController)` to the view.
+
+As an example, one can issue from the console:
+`App.get('router.shoesController.length')`.  Clearly a `shoesController`
+doesn't have a length, but since it is an Ember.ArrayController, the
+`App.ShoesController` class proxies that call to the array that's resident on
+the `content` property.
 
 #### Why the Focus on References?
 
@@ -1978,29 +2006,40 @@ Router to **any** `Ember.Object` that implements the methods specified in the
 
 [E.L.API]: https://github.com/emberjs/ember.js/blob/master/packages/ember-routing/lib/location/api.js "Ember.Location API Source Code"
 
+<a id="view-preserves-context"></a>
+
+2.  This was not always the case in Ember.  Previously the Views preserved the
+context.  As of Ember 0.9.8 the change was made to have the context cascade
+down-over views until either template or the view's controller forcibly changed
+the context.  This adds much flexibility and sense.
+
 <!-- {{{1 -->
 
-[EmberSite]: http://emberjs.com/ "Ember.JS Homepage"
-[StateMachine]: http://en.wikipedia.org/wiki/Finite-state_machine "Wikipedia definition of a State Machine"
-[EmberState]: https://github.com/emberjs/ember.js/blob/master/packages/ember-states/lib/state.js "Ember.State Source Code"
-[EmberRouter]: https://github.com/emberjs/ember.js/blob/master/packages/ember-routing/lib/router.js "Ember.Router Source Code"
-[EmberRoute]: https://github.com/emberjs/ember.js/blob/master/packages/ember-routing/lib/route.js "Ember.Route Source"
-[OutletGuide]: http://emberjs.com/guides/outlets  "Ember Application Structure Guide"
-[StateManager]:  https://github.com/emberjs/ember.js/blob/master/packages/ember-states/lib/state_manager.js "Ember StateManager"
+[ConnectOutletAPI]: https://github.com/emberjs/ember.js/blob/master/packages/ember-views/lib/system/controller.js#L102
 [ERGC]: https://github.com/sgharms/Ember-Router-Application-Guide-Code
-[StepOne]: https://github.com/sgharms/Halbert/commit/c7f2f79f8a5b4f946ab6dc40850c0b7810ee5ef8
+[EmberRoute]: https://github.com/emberjs/ember.js/blob/master/packages/ember-routing/lib/route.js "Ember.Route Source"
+[EmberRouter]: https://github.com/emberjs/ember.js/blob/master/packages/ember-routing/lib/router.js "Ember.Router Source Code"
+[EmberSite]: http://emberjs.com/ "Ember.JS Homepage"
+[EmberState]: https://github.com/emberjs/ember.js/blob/master/packages/ember-states/lib/state.js "Ember.State Source Code"
+[EventList]: http://docs.emberjs.com/symbols/Ember.View.html
+[JoLiss]:  http://www.solitr.com/blog/
+[OutletGuide]: http://emberjs.com/guides/outlets  "Ember Application Structure Guide"
+[StateMachine]: http://en.wikipedia.org/wiki/Finite-state_machine "Wikipedia definition of a State Machine"
+[StateManager]:  https://github.com/emberjs/ember.js/blob/master/packages/ember-states/lib/state_manager.js "Ember StateManager"
 [StepOneOne]: https://github.com/sgharms/Halbert/commit/369f7ce14c72dd9f552e890642ea63b742dade72
+[StepOne]: https://github.com/sgharms/Halbert/commit/c7f2f79f8a5b4f946ab6dc40850c0b7810ee5ef8
 [StepThree]: https://github.com/sgharms/Halbert/commit/0dfbb4b1fadb29e95967b98be9ca13778843fa3d
 [Trek]:  http://trek.github.com
-[ConnectOutletAPI]: https://github.com/emberjs/ember.js/blob/master/packages/ember-views/lib/system/controller.js#L102
-[EventList]: http://docs.emberjs.com/symbols/Ember.View.html
+
 <!-- }}}1 -->
 
 ## Acknowledgments
 
-Big thanks to the Ember core team I owe a special thanks to Trek G. for his
-review of this document, encouragement, and his efforts in documentation of
-this toolkit.
+Big thanks to the Ember core team for enduring my many, many questions over
+these last several weeks.  I owe a special thanks to Trek G. for his review of
+this document, encouragement, and his efforts in documentation of this toolkit.
+I also wish to call out [Jo Liss][JoLiss] whose frequent in-code documentation
+annotations made it possible for this to be written.
 
 
 <!-- vim: set wrap fdm=marker ft=markdown tw=79: -->
