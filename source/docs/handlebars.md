@@ -406,9 +406,9 @@ User: {{firstName}} {{lastName}}
 ```
 
 ```handlebars
-<b>Posts:</b> {{posts}}
+<b>Posts:</b> {{view.posts}}
 <br>
-<b>Hobbies:</b> {{hobbies}}
+<b>Hobbies:</b> {{view.hobbies}}
 ```
 
 If we were to create an instance of `App.UserView` and render it, we would get
