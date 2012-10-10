@@ -2,6 +2,8 @@ ember_mvc:
   name: "Ember MVC"
 view_layer:
   name: "Understanding the Ember.js view layer"
+router_primer:
+  name: "Understanding the Ember.js Router: A Primer"
 outlets:
   name: "Ember Application Structure"
 asynchrony:
