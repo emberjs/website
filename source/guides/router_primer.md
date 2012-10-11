@@ -607,7 +607,7 @@ Routes can be transitioned into programmatically by invoking
 `Ember.Router#transitionTo('stateName')`.  The `Router` instance in the
 currently running application can be accessed by entering: `App.get('router')`
 in the console.  It is also helpful to issue
-`App.get('router.currentState.name')` or `App.get('router.currentPath')` 
+`App.get('router.currentState.name')` or `App.get('router.currentState.path')` 
 when you want to find out what the current, active `Route` is.
 
 Per the code listing, Routes named `cars` and `shoes` were added.  To change to
