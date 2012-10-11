@@ -94,7 +94,8 @@ part of the page.
 ## How it Works
 
 Now that you understand the basic theory, let's take a look at how the
-router controls your outlets.
+router controls your outlets (_for a more extensive treatment of the
+Router, please consult the "Router Primer" guide_).
 
 ### Templates, Controllers, and Views
 
