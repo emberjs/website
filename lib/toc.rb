@@ -36,10 +36,25 @@ module TOC
   end
 
   module Helpers
+    def guides_index
+      guides = data.guides
+
+      result = '<ol>'
+      guides.each_entry do |section, entries|
+        result += %Q{<li class="level-1">#{section}</li>}
+        entries.each do |entry|
+          result += %Q{<li class="level-3"><a href="/guides/#{entry.url}/">#{entry.title}</a></li>}
+        end
+      end
+      result += '</ol>'
+
+      result
+    end
+
     def table_of_contents
-      chapters = data.docs.chapters
+      chapters = data.documentation.chapters
       chapters = chapters.collect_concat do |file|
-         File.read("source/docs/#{file}.md")+"\n"
+         File.read("source/documentation/#{file}.md")+"\n"
       end
       
       toc = TableOfContents.new()

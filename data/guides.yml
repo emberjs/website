@@ -1,13 +1,3 @@
-ember_mvc: 
-  name: "Ember MVC"
-view_layer:
-  name: "Understanding the Ember.js view layer"
-router_primer:
-  name: "Understanding the Ember.js Router: A Primer"
-outlets:
-  name: "Ember Application Structure"
-asynchrony:
-  name: "Asynchronous Behavior in Ember"
-ember-data-lifecycle:
-  name: "Ember Data Record Lifecycle"
-  hidden: true
+Getting Started with Ember.js:
+  - title: "What is Ember.js?"
+    url: "what-is-ember"

@@ -37,15 +37,13 @@ end
 # Pages
 ###
 
-page "/doc*" do
-  @chapters = data.docs.chapters
-end 
-
-data.guides.each do |guide_name, properties|
-  page "/guides/#{guide_name}", :proxy => "guide.html" do
-    @guide = guide_name
-  end
+page 'guides*', :layout => :guide, do
+  @guides = data.guides
 end
+
+page 'guides/index.html',
+  :proxy => 'guides/getting_started.html',
+  :layout => :guide
 
 page "community.html" do
   @chapters = data.community.chapters
@@ -94,21 +92,21 @@ helpers do
   end
 
   # The default one is buggy as of beta 2
-  def wrap_layout(layout_name, &block)
-    # Save current buffer for later
-    @_out_buf, _buf_was = "", @_out_buf
-    begin
-      content = capture(&block) if block_given?
-    ensure
-      # Reset stored buffer
-      @_out_buf = _buf_was
-    end
-    layout_path = locate_layout(layout_name, current_engine)
+  #def wrap_layout(layout_name, &block)
+    ## Save current buffer for later
+    #@_out_buf, _buf_was = "", @_out_buf
+    #begin
+      #content = capture(&block) if block_given?
+    #ensure
+      ## Reset stored buffer
+      #@_out_buf = _buf_was
+    #end
+    #layout_path = locate_layout(layout_name, current_engine)
 
-    if !@_out_buf
-      raise "wrap_layout is currently broken for this templating system"
-    end
+    #if !@_out_buf
+      #raise "wrap_layout is currently broken for this templating system"
+    #end
 
-    @_out_buf.concat render_individual_file(layout_path, @current_locs || {}, @current_opts || {}, self) { content }
-  end
+    #@_out_buf.concat render_individual_file(layout_path, @current_locs || {}, @current_opts || {}, self) { content }
+  #end
 end
