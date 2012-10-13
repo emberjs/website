@@ -836,7 +836,7 @@ Let's first look at the signature of `connectOutlets`:
     connectOutlets:  function(router, context){...}
 
 `connectOutlets` is always passed one argument by default: the router itself
-&endash; the selfsame router in which the method is defined!  When inside
+&ndash; the selfsame router in which the method is defined!  When inside
 `connectOutlets`, if one neds to access other controllers, one should use the
 `router.get('someController')` pattern.  Ember lazily loads many of its
 components during its bootstrap process.  While
@@ -880,9 +880,9 @@ outlet
  
 An example is `.connectOutlet('topNav', 'statesList', context.us_states);`
   
-The most granular, and most declarative version is pass a single configuration
-POJsO with explicit parameters.  The specifics can be viewed in [connectOutlet
-API][ConnectOutletAPI].
+The most granular, and most declarative version is to pass a single configuration
+Plain Old Javascript Object (POJO) with explicit parameters.  The specifics can be 
+viewed in [connectOutlet API][ConnectOutletAPI].
 
 To show the flexibility the Router affords via `connectOutlets`, the
 application will now be built up using the techniques described in this
@@ -1376,7 +1376,7 @@ array, it makes sense that `ShoesController` should be an extension of the
 #### Aside:  Sublcasses of Ember.Controller:  Ember.ArrayController and ObjectController
 
 If one examines the sample code thus far, one will note that both
-`ShoesController` and `CarsController` are, and have been, `ArrayController`
+`ShoesController` and `CarsController` are, and have been, of type `ArrayController`
 since the very beginning of this guide.  For controllers that don't manage a
 collection of array-like data there is `Ember.ObjectController` whose content
 variable is, unsurprisingly, an `Object`.
@@ -1436,7 +1436,7 @@ App.Shoe.reopenClass({
     setTimeout( function(){
       allShoes.clear();
       allShoes.pushObjects( this._stubDataSource;);
-    }, 1000);
+    }, 2000);
 
     return this._listOfShoes;
   },
@@ -1905,7 +1905,7 @@ App.Shoe.reopenClass({
     setTimeout( function(){
       allShoes.clear();
       allShoes.pushObjects( self._stubDataSource );
-    }, 1000);
+    }, 2000);
 
     return this._listOfShoes;
   },
@@ -1996,9 +1996,8 @@ accepting your pull requests on GitHub.
 
 ## Footnotes
 
-<a id="location-manager"></a>
 
-1.  The default location manager, "HashLocation,"  signifies various routes by
+1.  <a id="location-manager"></a>The default location manager, "HashLocation,"  signifies various routes by
 means of `/#/`.  To change this behavior, set the `location` property on the
 Router to **any** `Ember.Object` that implements the methods specified in the
 `Ember.Location` API.  For more information, consult the `Ember.Location`
@@ -2006,9 +2005,8 @@ Router to **any** `Ember.Object` that implements the methods specified in the
 
 [E.L.API]: https://github.com/emberjs/ember.js/blob/master/packages/ember-routing/lib/location/api.js "Ember.Location API Source Code"
 
-<a id="view-preserves-context"></a>
 
-2.  This was not always the case in Ember.  Previously the Views preserved the
+2.  <a id="view-preserves-context"></a>This was not always the case in Ember.  Previously the Views preserved the
 context.  As of Ember 0.9.8 the change was made to have the context cascade
 down-over views until either template or the view's controller forcibly changed
 the context.  This adds much flexibility and sense.
