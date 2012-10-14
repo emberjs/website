@@ -408,7 +408,7 @@ An initial load of this application looks like the following:
 
 <!--- {{{1 -->
 
-At this point one _technically_ has a functioning Router-based application.  The next steps hinge less on the Router, and more on Ember's approach to application construction.  These approaches become manifest in the Router's syntax as more advanced applications are built.
+At this point one _technically_ has a functioning Router-based application.  The next steps hinge less on the Router, and more on Ember's approach to application construction.  These approaches become manifested in the Router's syntax as more advanced applications are built.
 
 ### Views
 
@@ -888,7 +888,7 @@ To show the flexibility the Router affords via `connectOutlets`, the
 application will now be built up using the techniques described in this
 section.
 
-As a brief aside, it might feel a bit bizaare to tell the *controller* to wire
+As a brief aside, it might feel a bit bizarre to tell the *controller* to wire
 up some other `baseName` to its view's `{{outlet}}` versus telling the view to
 do this "plugging in" itself.  Ember's opinion is that the View should be,
 despite its capability of being quite powerful, fairly limited (CSS class
@@ -1057,7 +1057,7 @@ templates to handle eventing in Ember (click, keyDown, [**etc.**][EventList]).
 In Router-driven applications, if an action is not intercepted by a view, that
 event will bubble up to the Route in which that view was rendered.  If that
 Route is a sub-route of another Route the transition will be sought there all
-the way up to the top-level `Route` definition, our &uuml;r-container: `root`. 
+the way up to the top-level `Route` definition, our &uuml;ber-container: `root`. 
 
 This bubbling effect allows certain actions to remain private.  If certain
 transitions should only be available for certain sub-sub-states, put the
@@ -1694,7 +1694,7 @@ to go from viewing a list of shoes, to viewing the details about a shoe.
 
 Here's the plan:
 
-1.  Make a click on the shoe listing do something
+1.  Make a click on the shoe listening do something
 1.  Make a something that receives that noficiation change
 1.  Make the notification say something like: such-and-such shoe's details
     should be shown
