@@ -37,7 +37,7 @@ end
 # Pages
 ###
 
-page 'guides*', :layout => :guide, do
+page 'guides*', :layout => :guide do
   @guides = data.guides
 end
 
