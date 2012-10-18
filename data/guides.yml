@@ -1,11 +1,45 @@
 Getting Started with Ember.js:
   - title: "What is Ember.js?"
     url: "getting-started/what-is-ember-js"
-  - title: "Understanding Client-side Applications"
-    url: "getting-started/understanding-client-side-applications"
-Configuring Your Application:
-  - title: "Creating a Namespace"
-    url: "creating-a-namespace"
+  - title: "Getting Ember.js"
+    url: "getting-started/getting-ember-js"
+  - title: "Build Tools"
+    url: "getting-started/build-tools"
+  - title: "Understanding Web Apps"
+    url: "getting-started/understanding-web-apps"
+
+Templates:
+  - title: "Handlebars Basics"
+    url: "templates/handlebars-basics"
+  - title: "Conditionals"
+    url: "templates/conditionals"
+  - title: "Enumerating Lists"
+    url: "templates/enumerating-lists"
+  - title: "Changing Scope"
+    url: "templates/changing-scope"
+  - title: "Binding Element Attributes"
+    url: "templates/binding-element-attributes"
+  - title: "Keywords"
+    url: "templates/keywords"
+  - title: "Sending Events"
+    url: "templates/sending-events"
+  - title: "Writing Helpers"
+    url: "Writing Helpers"
+
+Routing:
+  - title: "Defining a Route"
+    url: "routing/defining-a-route"
+  - title: "Setting Up a Controller"
+    url: "routing/setting-up-a-controller"
+  - title: "Choosing a Template to Render"
+    url: "routing/choosing-a-template-to-render"
+  - title: "Dynamic Segments"
+    url: "routing/dynamic-segments"
+  - title: "Changing the Route"
+    url: "routing/changing-the-route"
+  - title: "Nested Routes"
+    url: "routing/nested-routes"
+
 The Ember Object Model:
   - title: "Introduction"
     url: "object-model"
@@ -40,7 +74,17 @@ Enumerables:
   - title: "Filtering"
     url: "enumerables/filtering"
   - title: "Aggregate Information"
-    url: "enumerbales/aggregate-information"
+    url: "enumerables/aggregate-information"
+
+Views:
+  - title: "Event Handlers"
+    url: "views/event-handlers"
+
+Loading, Changing, and Saving Data:
+  - title: "Loading Records"
+    url: "data/loading-records"
+  - title: "Finding Records"
+    url: "data/finding-records"
 
 Understanding Ember.js:
   - title: "Managing Asynchrony"
