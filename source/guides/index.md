@@ -1,7 +1,7 @@
 ## Ember.js Guides
 
 Welcome to the Ember.js guides! This documentation will take you from
-total beginniner to Ember expert. It is designed to start from the most
+total beginner to Ember expert. It is designed to start from the most
 basic concepts, and slowly increase to more sophisticated concepts until
 you know everything there is to know about building awesome web
 applications.
@@ -19,7 +19,7 @@ If there is something missing, or you find a typo or mistake, please
 help us out by filing an issue or submitting a pull request. Thanks!
 
 We're excited for all of the great apps you're going to build with
-Ember. To get started, select a topic from the left. They are presented
+Ember.js. To get started, select a topic from the left. They are presented
 in the order that we think will be most useful to you as you're learning
 Ember.js
 
