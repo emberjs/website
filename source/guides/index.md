@@ -16,7 +16,7 @@ _Understanding Ember.js_ section.
 
 All of this documentation is [available on GitHub](https://github.com/emberjs/website/).
 If there is something missing, or you find a typo or mistake, please
-help us out by filling an issue or submitting a pull request. Thanks!
+help us out by filing an issue or submitting a pull request. Thanks!
 
 We're excited for all of the great apps you're going to build with
 Ember.js. To get started, select a topic from the left. They are presented
