@@ -2,7 +2,8 @@
 
 ### Handlebars
 
-Ember comes bundled with [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
+Most Ember applications use [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
+Ember does not come with Handlebars, but you can easily download handlebars and include it with your Ember application.  Ember and Handlebars work great together, but you can substitute other rendering engines by using the Ember.View's render method.
 
 You should store your Handlebars templates inside your application's HTML file. At runtime, Ember will compile these templates so they are available for you to use in your views.
 
