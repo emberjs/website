@@ -368,8 +368,8 @@ App.FormView = Ember.View.extend({
 
 ```
 {{#view App.FormView}}
-  {{view Ember.TextFieldView valueBinding="controller.firstName"}}
-  {{view Ember.TextFieldView valueBinding="controller.lastName"}}
+  {{view Ember.TextField valueBinding="controller.firstName"}}
+  {{view Ember.TextField valueBinding="controller.lastName"}}
   <button type="submit">Done</button>
 {{/view}}
 ```
