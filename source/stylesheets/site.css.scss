@@ -827,30 +827,70 @@ article {
 }
 
 #footer {
-  width: 940px;
-  height: 62px;
-  margin: 60px auto 60px auto;
-  background-image: url(/images/footer.png);
+  margin-top: 60px;
+  padding: 25px 0;
+  border-top: 1px solid #e5dbd6;
+  background-color: #f2ece9;
+  overflow: hidden;
+  font-family: "MavenProBold";
+
+  #footer-wrapper {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    @include clearfix;
+  }
 
   .info {
-    font-family: "MavenProBold";
-    text-align: center;
-    width: 184px;
-    margin: 0 auto;
+    width: 200px;
+    color: #717171;
     text-transform: uppercase;
     font-size: 10px;
-
-    .copyright {
-      margin-top: 4px;
-      margin-bottom: 4px;
-    }
+    float: left;
 
     a {
       color: $orange-color;
       text-decoration: none;
     }
   }
+
+  .statement {
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    left: 200px;
+    right: 200px;
+    top: 10px;
+  }
+
+  .links {
+    width: 200px;
+    text-align: right;
+    float: right;
+
+    a {
+      margin: 0 10px;
+    }
+  }
+
+  .twitter, .github, .googleplus {
+    background: no-repeat url(/images/footer-links.png);
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    text-indent: 9999px;
+    overflow: hidden;
+  }
+
+  .twitter { background-position: 0 2px }
+  .github { background-position: -59px 2px }
+  .googleplus { background-position: -119px 2px }
+
 }
+
+
 
 .screenshot {
   margin-left: -60px;
