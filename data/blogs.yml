@@ -1,3 +1,9 @@
+- name: BradleyPriest.com
+  url: http://bradleypriest.com/tags.html#emberjs-ref
+  description: Bradley Priest's blog includes a great "What's New in EmberJS" series.
+- name: Ember Noob
+  url: http://www.embernoob.com/
+  description: This blog approaches Ember from the perspective of a complete beginner.
 - name: Cerebris
   url: http://www.cerebris.com/blog-search/by-tag/emberjs/
   description: Dan Gebhardt is a frequent contributor to Ember.
