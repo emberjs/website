@@ -4,7 +4,7 @@ project:
   description: ! 'The Ember API: a framework for building ambitious web applications'
   version: 1.0 pre
   url: http://emberjs.com/
-  sha: b45af99
+  sha: b5cee6e
 files:
   ../packages/ember-application/lib/system/application.js:
     name: ../packages/ember-application/lib/system/application.js
@@ -1722,7 +1722,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: ../packages/ember-metal/lib/core.js
-    line: 154
+    line: 145
     description: ! 'Inside Ember-Metal, simply uses the imports.console object.
 
       Override this to provide more robust logging functionality.'
@@ -2521,14 +2521,14 @@ classes:
       be emulated in older versions of JavaScript).\n\nThis mixin is applied automatically
       to the Array class on page load, so you\ncan use any of these methods on simple
       arrays.  If Array already implements\none of these methods, the mixin will not
-      override them.\n\n## Writing Your Own Enumerable\n\nTo make your own custom
+      override them.\n\nh3. Writing Your Own Enumerable\n\nTo make your own custom
       class enumerable, you need two items:\n\n1. You must have a length property.
       \ This property should change whenever\n   the number of items in your enumerable
       object changes.  If you using this\n   with an Ember.Object subclass, you should
       be sure to change the length\n   property using set().\n\n2. If you must implement
       nextObject().  See documentation.\n\nOnce you have these two methods implement,
       apply the Ember.Enumerable mixin\nto your class and you will be able to enumerate
-      the contents of your object\nlike any other collection.\n\n## Using Ember Enumeration
+      the contents of your object\nlike any other collection.\n\nh3. Using Ember Enumeration
       with Other Libraries\n\nMany other libraries provide some kind of iterator or
       enumeration like\nfacility.  This is often where the most common API conflicts
       occur.\nEmber's API is designed to be as friendly as possible with other\nlibraries
@@ -3390,7 +3390,20 @@ classes:
       to\na controller or state manager. For example, you can bind the `currentView`
       of a container to\na controller like this:\n\n``` javascript\nApp.appController
       = Ember.Object.create({\n  view: Ember.View.create({\n    templateName: 'person_template'\n
-      \ })\n});\n```\n\n``` handlebars\n{{view Ember.ContainerView currentViewBinding=\"App.appController.view\"}}\n```"
+      \ })\n});\n```\n\n``` handlebars\n{{view Ember.ContainerView currentViewBinding=\"App.appController.view\"}}\n```\n\n##
+      Use lifecycle hooks\n\nThis is an example of how you could implement reusable
+      currentView view.\n\n``` javascript\nApp.ContainerView = Ember.ContainerView.extend({\n
+      \ appendCurrentView: function(currentView, callback) {\n    currentView.set('isVisible',
+      true);\n\n    if (!this.get('childViews').contains(currentView)) {\n      this._super(currentView,
+      callback);\n    } else {\n      callback();\n    }\n  },\n  removeCurrentView:
+      function(currentView, callback) {\n    if (currentView.get('isShared')) {\n
+      \     currentView.set('isVisible', false);\n      callback();\n    } else {\n
+      \     this._super(currentView, callback);\n    }\n  }\n});\n````\n\nThis is
+      an example of how you could implement animations.\n\n```` javascript\nApp.ContainerView
+      = Ember.ContainerView.extend({\n  presentCurrentView: function(currentView,
+      callback) {\n    currentView.$().animate({top: '0px'}, callback);\n  },\n  dismissCurrentView:
+      function(currentView, callback) {\n    currentView.$().animate({top: '-100px'},
+      callback);\n  }\n});\n````"
     extends: Ember.View
   Ember.View:
     name: Ember.View
@@ -3811,9 +3824,8 @@ classitems:
   description: ! "tagName: 'select',\n  classNames: ['ember-select'],\n  defaultTemplate:
     Ember.Handlebars.compile('{{#if view.prompt}}<option value>{{view.prompt}}</option>{{/if}}{{#each
     view.content}}{{view Ember.SelectOption contentBinding=\"this\"}}{{/each}}'),\n
-    \ attributeBindings: ['multiple', 'disabled', 'tabindex'],\n/**\n    The `multiple`
-    attribute of the select element. Indicates whether multiple\n    options can be
-    selected."
+    \ attributeBindings: ['multiple', 'tabindex'],\n/**\n    The `multiple` attribute
+    of the select element. Indicates whether multiple\n    options can be selected."
   itemtype: property
   name: multiple
   type: Boolean
@@ -3823,7 +3835,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 282
+  line: 280
   description: ! "The list of options.\n\nIf `optionLabelPath` and `optionValuePath`
     are not overridden, this should\nbe a list of strings, which will serve simultaneously
     as labels and values.\n\nOtherwise, this should be a list of objects. For instance:\n\n
@@ -3839,7 +3851,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 303
+  line: 301
   description: ! 'When `multiple` is false, the element of `content` that is currently
 
     selected, if any.
@@ -3855,7 +3867,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 315
+  line: 313
   description: ! 'In single selection mode (when `multiple` is false), value can be
     used to get
 
@@ -3872,7 +3884,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 332
+  line: 330
   description: ! 'If given, a top-most dummy option will be rendered to serve as a
     user
 
@@ -3886,7 +3898,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 342
+  line: 340
   description: The path of the option labels. See `content`.
   itemtype: property
   name: optionLabelPath
@@ -3897,7 +3909,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 351
+  line: 349
   description: The path of the option values. See `content`.
   itemtype: property
   name: optionValuePath
@@ -4293,8 +4305,6 @@ classitems:
   return:
     description: HTML string
     type: String
-  deprecated: true
-  deprecationMessage: Use `{{each}}` helper instead.
   class: Ember.Handlebars.helpers
   module: ember
   submodule: ember-handlebars
@@ -4831,7 +4841,7 @@ classitems:
 
     template''s data hash and used to resolve the path.'
   itemtype: method
-  name: get
+  name: getPath
   params:
   - name: root
     description: The object to look up the property on
@@ -4847,7 +4857,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/ext.js
-  line: 244
+  line: 243
   access: private
   tagname: ! 'Registers a helper in Handlebars that will be called if no property
     with the
@@ -5530,21 +5540,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/core.js
-  line: 140
-  description: ! 'Previously we used `Ember.$.uuid`, however `$.uuid` has been removed
-    from jQuery master.
-
-    We''ll just bootstrap our own uuid now.'
-  itemtype: property
-  name: uuid
-  type: Number
-  access: private
-  tagname: ''
-  class: Ember
-  module: ember
-  submodule: ember-metal
-- file: ../packages/ember-metal/lib/core.js
-  line: 168
+  line: 159
   description: ! 'A function may be assigned to `Ember.onerror` to be called when
     Ember internals encounter an error.
 
@@ -5559,7 +5555,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/core.js
-  line: 178
+  line: 169
   access: private
   tagname: Wrap code block in a try/catch if {{#crossLink "Ember/onerror"}}{{/crossLink}}
     is set.
@@ -5576,7 +5572,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 120
+  line: 95
   description: Add an event listener
   itemtype: method
   name: addListener
@@ -5595,7 +5591,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 152
+  line: 127
   description: ! 'Remove an event listener
 
 
@@ -5617,7 +5613,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 194
+  line: 169
   access: private
   tagname: ! 'Suspend listener during callback.
 
@@ -5649,7 +5645,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 230
+  line: 205
   access: private
   tagname: ! 'Suspend listener during callback.
 
@@ -5681,7 +5677,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 279
+  line: 254
   access: private
   tagname: Return a list of currently watched events
   itemtype: method
@@ -5692,7 +5688,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 301
+  line: 276
   itemtype: method
   name: sendEvent
   params:
@@ -5709,7 +5705,24 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 323
+  line: 294
+  access: private
+  tagname: ''
+  itemtype: method
+  name: deferEvent
+  params:
+  - name: obj
+    description: ''
+  - name: eventName
+    description: ''
+    type: String
+  - name: params
+    description: ''
+    type: Array
+  class: Ember
+  module: ember-metal
+- file: ../packages/ember-metal/lib/events.js
+  line: 321
   access: private
   tagname: ''
   itemtype: method
@@ -5723,7 +5736,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 342
+  line: 340
   access: private
   tagname: ''
   itemtype: method
@@ -6129,13 +6142,13 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 94
+  line: 95
   itemtype: method
   name: endPropertyChanges
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 105
+  line: 103
   description: ! "Make a series of property changes together in an\nexception-safe
     way.\n\n    Ember.changeProperties(function() {\n      obj1.set('foo', mayBlowUpWhenSet);\n
     \     obj2.set('bar', baz);\n    });"
@@ -6151,7 +6164,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 127
+  line: 125
   description: ! 'Set a list of properties on an object. These properties are set
     inside
 
@@ -6171,7 +6184,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 155
+  line: 153
   itemtype: method
   name: addObserver
   params:
@@ -6190,7 +6203,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 172
+  line: 170
   itemtype: method
   name: removeObserver
   params:
@@ -6209,7 +6222,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 185
+  line: 183
   itemtype: method
   name: addBeforeObserver
   params:
@@ -6228,7 +6241,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 226
+  line: 224
   itemtype: method
   name: removeBeforeObserver
   params:
@@ -11236,7 +11249,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 277
+  line: 317
   access: private
   tagname: Instructs each child view to render to the passed render buffer.
   itemtype: method
@@ -11250,7 +11263,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 293
+  line: 333
   access: private
   tagname: ! 'When the container view is destroyed, tear down the child views
 
@@ -11262,7 +11275,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 310
+  line: 350
   access: private
   tagname: ! 'When a child view is removed, destroy its element so that
 
@@ -11289,7 +11302,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 333
+  line: 373
   access: private
   tagname: ! 'When a child view is added, make sure the DOM gets updated appropriately.
 
@@ -11318,6 +11331,80 @@ classitems:
   - name: the
     description: number of child views added
     type: Number
+  class: Ember.ContainerView
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: ../packages/ember-views/lib/views/container_view.js
+  line: 415
+  description: ! 'This method is responsible for presenting a new view.
+
+    Default implementation will simply call the callback.
+
+    You can override this method if you want to add an animation for example.'
+  itemtype: method
+  name: presentCurrentView
+  params:
+  - name: currentView
+    description: a view to present
+    type: Ember.View
+  - name: callback
+    description: the callback called once operation is terminated
+    type: Function
+  class: Ember.ContainerView
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: ../packages/ember-views/lib/views/container_view.js
+  line: 428
+  description: This method is responsible for adding view to containerView
+  itemtype: method
+  name: appendCurrentView
+  params:
+  - name: currentView
+    description: a view to present
+    type: Ember.View
+  - name: callback
+    description: the callback called once view is appended
+    type: Function
+  class: Ember.ContainerView
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: ../packages/ember-views/lib/views/container_view.js
+  line: 443
+  description: ! 'This method is responsible for dismissing a view.
+
+    Default implementation will simply call the callback.
+
+    You can override this method if you want to add an animation for example.'
+  itemtype: method
+  name: dismissCurrentView
+  params:
+  - name: currentView
+    description: a view to dismiss
+    type: Ember.View
+  - name: callback
+    description: the callback called once operation is terminated
+    type: Function
+  class: Ember.ContainerView
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: ../packages/ember-views/lib/views/container_view.js
+  line: 456
+  description: ! 'This method is responsible for removing a view from the containerView
+
+    You may want to override it in case you implementing views sharing for example'
+  itemtype: method
+  name: removeCurrentView
+  params:
+  - name: currentView
+    description: a view to present
+    type: Ember.View
+  - name: callback
+    description: the callback called once view is removed
+    type: Function
   class: Ember.ContainerView
   module: ember
   submodule: ember-views
@@ -11645,19 +11732,18 @@ classitems:
   description: ! 'Return the nearest ancestor that is an instance of the provided
 
     class or mixin.'
-  itemtype: property
-  name: nearestOfType
+  proprty: nearestOfType
+  params:
+  - name: klass
+    description: ! "Subclass of Ember.View (or Ember.View itself),\n       or an instance
+      of Ember.Mixin."
+    type: Class,Mixin
   return:
     description: Ember.View
   class: Ember.View
   module: ember
   submodule: ember-views
   namespace: Ember
-  subprops:
-  - name: klass
-    description: ! "Subclass of Ember.View (or Ember.View itself),\n       or an instance
-      of Ember.Mixin."
-    type: Class,Mixin
 - file: ../packages/ember-views/lib/views/view.js
   line: 1005
   description: Return the nearest ancestor that has a given property.
