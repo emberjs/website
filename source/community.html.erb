@@ -2,25 +2,48 @@
 title: "Community"
 ---
 
-<div class="community section">
-  <h2>Get Involved</h2>
+<% data.community.chapters.each do |chapter| %>
+  <div class="community section">
+    <%= render :markdown, "community/#{chapter}.md" %>
+  </div>
+<% end %>
 
-  <p>The Ember.js source is hosted on <a href="https://github.com/emberjs/ember.js">GitHub</a>. To contribute patches, create a fork of the
-  project on GitHub and submit a pull request. Please be sure to include unit tests and documentation for any new features you add.</p>
+<div class="community section">
+  <h2>Blogs</h2>
+
+  <p>This is a short list of some blogs that write regularly about Ember:</p>
+
+  <ul class="blogs">
+    <% data.blogs.each do |blog| %>
+      <li>
+        <%= link_to blog.name, blog.url %><br>
+        <%= blog.description %>
+      </li>
+    <% end %>
+  </ul>
 </div>
 
-<div class="community section">
-  <h2>Reporting Problems</h2>
-
-  <p>If you found a bug in Ember.js, please let us know. To file a bug, go to <a href="https://github.com/emberjs/ember.js/issues">the issue tracker</a> and create a new issue.
-  Great bug reports include a clear description of what is not happening and what you expected to happen. Issues that include a failing unit test or a reduce test case created on 
-  <a href="http://jsfiddle.net/qKXJt/">JSFiddle</a> are much more likely to receive attention!</p>
-</div>
 
 <div class="community section">
-  <h2>Get Help</h2>
+  <h2>Meetups</h2>
 
-  <p><a href="http://stackoverflow.com">StackOverflow</a> is used to track questions. Just tag your question with <code>ember.js</code> or <a href="http://stackoverflow.com/questions/tagged/ember.js">search for questions with that tag</a>. Please check to see if your question has already been answered before asking a new one.</p>
+  <p>There are a number of different Ember meetups around the world.
+    Going to a meetup is a great way to learn more about Ember and meet
+    other developers.</p>
 
-  <p>There is also an IRC channel which can be found at <code>#emberjs</code> on Freenode. For more information on connecting to Freenode, please see <a href="http://www.freenode.net">the Freenode website</a>
+  <table class="columns">
+    <tr>
+      <% data.meetups.each do |name, groups| %>
+        <td>
+          <h3><%= name %></h3>
+
+          <ul>
+            <% groups.each do |group| %>
+              <li><%= link_to group.location, group.url %></li>
+            <% end %>
+          </ul>
+        </td>
+      <% end %>
+    </tr>
+  </table>
 </div>

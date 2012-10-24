@@ -347,6 +347,21 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     font-family: "MavenProBold";
     margin-bottom: 28px;
   }
+
+  h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "MavenProBold";
+  }
+
+  table.columns {
+    margin: 0 auto;
+
+    td {
+      vertical-align: top;
+      padding-right: 50px;
+    }
+  }
 }
 
 .getting-started.section {
@@ -773,6 +788,16 @@ article {
 .community.section {
   margin-left: ($col-width * 3 + $col-spacing * 3);
   margin-right: ($col-width * 3 + $col-spacing * 3);
+}
+
+.community ul.blogs {
+  li {
+    margin-bottom: 10px;
+
+    a {
+      font-weight: bold;
+    }
+  }
 }
 
 #footer {
