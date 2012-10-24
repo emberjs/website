@@ -4,7 +4,7 @@ project:
   description: ! 'The Ember API: a framework for building ambitious web applications'
   version: 1.0 pre
   url: http://emberjs.com/
-  sha: 4aecc42
+  sha: b45af99
 files:
   ../packages/ember-application/lib/system/application.js:
     name: ../packages/ember-application/lib/system/application.js
@@ -11645,18 +11645,19 @@ classitems:
   description: ! 'Return the nearest ancestor that is an instance of the provided
 
     class or mixin.'
-  proprty: nearestOfType
-  params:
-  - name: klass
-    description: ! "Subclass of Ember.View (or Ember.View itself),\n       or an instance
-      of Ember.Mixin."
-    type: Class,Mixin
+  itemtype: property
+  name: nearestOfType
   return:
     description: Ember.View
   class: Ember.View
   module: ember
   submodule: ember-views
   namespace: Ember
+  subprops:
+  - name: klass
+    description: ! "Subclass of Ember.View (or Ember.View itself),\n       or an instance
+      of Ember.Mixin."
+    type: Class,Mixin
 - file: ../packages/ember-views/lib/views/view.js
   line: 1005
   description: Return the nearest ancestor that has a given property.
