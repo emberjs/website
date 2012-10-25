@@ -23,8 +23,8 @@ def generate_docs
 
   Dir.chdir(ember_path) do
     # returns either `tag` or `tag-numcommits-gSHA`
-    sha_parts = `git describe --tags --always`.strip.split('-')
-    sha = sha_parts.length == 1 ? sha_parts[0] : sha_parts[2][1..-1]
+    describe = `git describe --tags --always`.strip
+    sha = describe =~ /-g(\.+)/ ? $1 : describe
 
     Dir.chdir("docs") do
       system("npm install") unless File.exist?('node_modules')
@@ -40,7 +40,7 @@ def generate_docs
     YAML.dump(data, f)
   end
 
-  puts "Done"
+  puts "Built #{sha}"
 end
 
 def build
