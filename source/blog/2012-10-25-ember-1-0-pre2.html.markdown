@@ -15,11 +15,14 @@ Other than bug fixes, there are a few things we've changed that
 could affect your 1.0.pre apps.
 
 * `{{outlet}}` now creates a Metamorph rather than a `<div>`. This makes
-  it less obtrusive, but you may have to change your HTML if you were
-  relying on the `<div>`.
+  it less obtrusive, but you may have to change your HTML or CSS if you 
+  were relying on the `<div>`.
 * We have removed `CP_DEFAULT_CACHEABLE` and `VIEW_PRESERVES_CONTEXT`
   flags. Both behaviors are now always on.
-* Anonymous inline templates are no longer supported.
+* Inline Handlebars templates must always be named now. The default name
+  is 'application'. This means that `<script type="text/x-handlebars">`
+  behaves exactly the same as
+  `<script type="text/x-handlebars" data-template-name="application">`.
 * Using the `{{collection}}` helper without a class has been deprecated,
   use the `{{each}}` helper instead. The `{{each}}` helper also now
   supports `itemViewClass` which was the main benefit to using
