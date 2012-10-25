@@ -4,7 +4,7 @@ project:
   description: ! 'The Ember API: a framework for building ambitious web applications'
   version: 1.0 pre
   url: http://emberjs.com/
-  sha: b5cee6e
+  sha: v1.0.0-pre.2
 files:
   ../packages/ember-application/lib/system/application.js:
     name: ../packages/ember-application/lib/system/application.js
@@ -1177,7 +1177,7 @@ classes:
 
       performance optimizations.'
     static: 1
-    version: 1.0.pre
+    version: 1.0.0-pre.2
   Ember.TabContainerView:
     name: Ember.TabContainerView
     shortname: Ember.TabContainerView
@@ -1722,7 +1722,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: ../packages/ember-metal/lib/core.js
-    line: 145
+    line: 154
     description: ! 'Inside Ember-Metal, simply uses the imports.console object.
 
       Override this to provide more robust logging functionality.'
@@ -2521,14 +2521,14 @@ classes:
       be emulated in older versions of JavaScript).\n\nThis mixin is applied automatically
       to the Array class on page load, so you\ncan use any of these methods on simple
       arrays.  If Array already implements\none of these methods, the mixin will not
-      override them.\n\nh3. Writing Your Own Enumerable\n\nTo make your own custom
+      override them.\n\n## Writing Your Own Enumerable\n\nTo make your own custom
       class enumerable, you need two items:\n\n1. You must have a length property.
       \ This property should change whenever\n   the number of items in your enumerable
       object changes.  If you using this\n   with an Ember.Object subclass, you should
       be sure to change the length\n   property using set().\n\n2. If you must implement
       nextObject().  See documentation.\n\nOnce you have these two methods implement,
       apply the Ember.Enumerable mixin\nto your class and you will be able to enumerate
-      the contents of your object\nlike any other collection.\n\nh3. Using Ember Enumeration
+      the contents of your object\nlike any other collection.\n\n## Using Ember Enumeration
       with Other Libraries\n\nMany other libraries provide some kind of iterator or
       enumeration like\nfacility.  This is often where the most common API conflicts
       occur.\nEmber's API is designed to be as friendly as possible with other\nlibraries
@@ -3390,20 +3390,7 @@ classes:
       to\na controller or state manager. For example, you can bind the `currentView`
       of a container to\na controller like this:\n\n``` javascript\nApp.appController
       = Ember.Object.create({\n  view: Ember.View.create({\n    templateName: 'person_template'\n
-      \ })\n});\n```\n\n``` handlebars\n{{view Ember.ContainerView currentViewBinding=\"App.appController.view\"}}\n```\n\n##
-      Use lifecycle hooks\n\nThis is an example of how you could implement reusable
-      currentView view.\n\n``` javascript\nApp.ContainerView = Ember.ContainerView.extend({\n
-      \ appendCurrentView: function(currentView, callback) {\n    currentView.set('isVisible',
-      true);\n\n    if (!this.get('childViews').contains(currentView)) {\n      this._super(currentView,
-      callback);\n    } else {\n      callback();\n    }\n  },\n  removeCurrentView:
-      function(currentView, callback) {\n    if (currentView.get('isShared')) {\n
-      \     currentView.set('isVisible', false);\n      callback();\n    } else {\n
-      \     this._super(currentView, callback);\n    }\n  }\n});\n````\n\nThis is
-      an example of how you could implement animations.\n\n```` javascript\nApp.ContainerView
-      = Ember.ContainerView.extend({\n  presentCurrentView: function(currentView,
-      callback) {\n    currentView.$().animate({top: '0px'}, callback);\n  },\n  dismissCurrentView:
-      function(currentView, callback) {\n    currentView.$().animate({top: '-100px'},
-      callback);\n  }\n});\n````"
+      \ })\n});\n```\n\n``` handlebars\n{{view Ember.ContainerView currentViewBinding=\"App.appController.view\"}}\n```"
     extends: Ember.View
   Ember.View:
     name: Ember.View
@@ -3432,9 +3419,9 @@ classes:
       instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view
       my-class my-other-class\"></div>\n```\n\n`class` attribute values can also be
       set by providing a `classNameBindings` property\nset to an array of properties
-      names for the view. The return value of these properties \nwill be added as
-      part of the value for the view's `class` attribute. These properties\ncan be
-      computed properties:\n\n``` javascript\nMyView = Ember.View.extend({\n  classNameBindings:
+      names for the view. The return value of these properties\nwill be added as part
+      of the value for the view's `class` attribute. These properties\ncan be computed
+      properties:\n\n``` javascript\nMyView = Ember.View.extend({\n  classNameBindings:
       ['propertyA', 'propertyB'],\n  propertyA: 'from-a',\n  propertyB: function(){\n
       \   if(someLogic){ return 'from-b'; }\n  }.property()\n});\n```\n\nWill result
       in view instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\"
@@ -3445,75 +3432,68 @@ classes:
       \ classNameBindings: ['hovered'],\n  hovered: true\n});\n```\n\nWill result
       in view instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\"
       class=\"ember-view hovered\"></div>\n```\n\nWhen using boolean class name bindings
-      you can supply a string value other than the \nproperty name for use as the
-      `class` HTML attribute by appending the preferred value after\na \":\" character
-      when defining the binding:\n\n``` javascript\nMyView = Ember.View.extend({\n
-      \ classNameBindings: ['awesome:so-very-cool'],\n  awesome: true\n});\n```\n\nWill
-      result in view instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\"
-      class=\"ember-view so-very-cool\"></div>\n```\n\n\nBoolean value class name
-      bindings whose property names are in a camelCase-style\nformat will be converted
-      to a dasherized format:\n\n``` javascript\nMyView = Ember.View.extend({\n  classNameBindings:
-      ['isUrgent'],\n  isUrgent: true\n});\n```\n\nWill result in view instances with
-      an HTML representation of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view
-      is-urgent\"></div>\n```\n\n\nClass name bindings can also refer to object values
-      that are found by\ntraversing a path relative to the view itself:\n\n``` javascript\nMyView
-      = Ember.View.extend({\n  classNameBindings: ['messages.empty']\n  messages:
-      Ember.Object.create({\n    empty: true\n  })\n});\n```\n\nWill result in view
+      you can supply a string value other than the\nproperty name for use as the `class`
+      HTML attribute by appending the preferred value after\na \":\" character when
+      defining the binding:\n\n``` javascript\nMyView = Ember.View.extend({\n  classNameBindings:
+      ['awesome:so-very-cool'],\n  awesome: true\n});\n```\n\nWill result in view
       instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view
-      empty\"></div>\n```\n\n\nIf you want to add a class name for a property which
-      evaluates to true and\nand a different class name if it evaluates to false,
-      you can pass a binding\nlike this:\n\n```\n// Applies 'enabled' class when isEnabled
-      is true and 'disabled' when isEnabled is false\nEmber.View.create({\n  classNameBindings:
-      ['isEnabled:enabled:disabled']\n  isEnabled: true\n});\n```\n\nWill result in
-      view instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\"
-      class=\"ember-view enabled\"></div>\n``` \n\nWhen isEnabled is `false`, the
-      resulting HTML reprensentation looks like this:\n\n``` html\n<div id=\"ember1\"
-      class=\"ember-view disabled\"></div>\n```\n\nThis syntax offers the convenience
-      to add a class if a property is `false`:\n\n``` javascript\n// Applies no class
-      when isEnabled is true and class 'disabled' when isEnabled is false\nEmber.View.create({\n
-      \ classNameBindings: ['isEnabled::disabled']\n  isEnabled: true\n});\n```\n\nWill
-      result in view instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\"
-      class=\"ember-view\"></div>\n```\n\nWhen the `isEnabled` property on the view
-      is set to `false`, it will result\nin view instances with an HTML representation
-      of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view disabled\"></div>\n```\n\nUpdates
-      to the the value of a class name binding will result in automatic update \nof
-      the  HTML `class` attribute in the view's rendered HTML representation.\nIf
-      the value becomes  `false` or `undefined` the class name will be removed.\n\nBoth
-      `classNames` and `classNameBindings` are concatenated properties. \nSee `Ember.Object`
-      documentation for more information about concatenated properties.\n\n## HTML
-      Attributes\n\nThe HTML attribute section of a view's tag can be set by providing
-      an `attributeBindings`\nproperty set to an array of property names on the view.
-      The return value of these properties\nwill be used as the value of the view's
-      HTML associated attribute:\n\n``` javascript\nAnchorView = Ember.View.extend({\n
-      \ tagName: 'a',\n  attributeBindings: ['href'],\n  href: 'http://google.com'\n});\n```\n\nWill
-      result in view instances with an HTML representation of:\n\n``` html\n<a id=\"ember1\"
-      class=\"ember-view\" href=\"http://google.com\"></a>\n```\n\nIf the return value
-      of an `attributeBindings` monitored property is a boolean\nthe property will
-      follow HTML's pattern of repeating the attribute's name as\nits value:\n\n```
-      javascript\nMyTextInput = Ember.View.extend({\n  tagName: 'input',\n  attributeBindings:
-      ['disabled'],\n  disabled: true\n});\n```\n\nWill result in view instances with
-      an HTML representation of:\n\n``` html\n<input id=\"ember1\" class=\"ember-view\"
-      disabled=\"disabled\" />\n```\n\n`attributeBindings` can refer to computed properties:\n\n```
-      javascript\nMyTextInput = Ember.View.extend({\n  tagName: 'input',\n  attributeBindings:
-      ['disabled'],\n  disabled: function(){\n    if (someLogic) {\n      return true;\n
-      \   } else {\n      return false;\n    }\n  }.property()\n});\n```\n\nUpdates
-      to the the property of an attribute binding will result in automatic update
-      \nof the  HTML attribute in the view's rendered HTML representation.\n\n`attributeBindings`
-      is a concatenated property. See `Ember.Object` documentation\nfor more information
-      about concatenated properties.\n\n## Templates\nThe HTML contents of a view's
-      rendered representation are determined by its template.\nTemplates can be any
-      function that accepts an optional context parameter and returns\na string of
-      HTML that will be inserted within the view's tag. Most\ntypically in Ember this
-      function will be a compiled Ember.Handlebars template.\n\n``` javascript\nAView
-      = Ember.View.extend({\n  template: Ember.Handlebars.compile('I am the template')\n});\n```\n\nWill
-      result in view instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\"
-      class=\"ember-view\">I am the template</div>\n``` \n\nThe default context of
-      the compiled template will be the view instance itself:\n\n``` javascript\nAView
-      = Ember.View.extend({\n  template: Ember.Handlebars.compile('Hello {{excitedGreeting}}')\n});\n\naView
-      = AView.create({\n  content: Ember.Object.create({\n    firstName: 'Barry'\n
-      \ })\n  excitedGreeting: function(){\n    return this.get(\"content.firstName\")
-      + \"!!!\"\n  }\n});\n```\n\nWill result in an HTML representation of:\n\n```
-      html\n<div id=\"ember1\" class=\"ember-view\">Hello Barry!!!</div>\n```\n\nWithin
+      so-very-cool\"></div>\n```\n\n\nBoolean value class name bindings whose property
+      names are in a camelCase-style\nformat will be converted to a dasherized format:\n\n```
+      javascript\nMyView = Ember.View.extend({\n  classNameBindings: ['isUrgent'],\n
+      \ isUrgent: true\n});\n```\n\nWill result in view instances with an HTML representation
+      of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view is-urgent\"></div>\n```\n\n\nClass
+      name bindings can also refer to object values that are found by\ntraversing
+      a path relative to the view itself:\n\n``` javascript\nMyView = Ember.View.extend({\n
+      \ classNameBindings: ['messages.empty']\n  messages: Ember.Object.create({\n
+      \   empty: true\n  })\n});\n```\n\nWill result in view instances with an HTML
+      representation of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view empty\"></div>\n```\n\n\nIf
+      you want to add a class name for a property which evaluates to true and\nand
+      a different class name if it evaluates to false, you can pass a binding\nlike
+      this:\n\n```\n// Applies 'enabled' class when isEnabled is true and 'disabled'
+      when isEnabled is false\nEmber.View.create({\n  classNameBindings: ['isEnabled:enabled:disabled']\n
+      \ isEnabled: true\n});\n```\n\nWill result in view instances with an HTML representation
+      of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view enabled\"></div>\n```\n\nWhen
+      isEnabled is `false`, the resulting HTML reprensentation looks like this:\n\n```
+      html\n<div id=\"ember1\" class=\"ember-view disabled\"></div>\n```\n\nThis syntax
+      offers the convenience to add a class if a property is `false`:\n\n``` javascript\n//
+      Applies no class when isEnabled is true and class 'disabled' when isEnabled
+      is false\nEmber.View.create({\n  classNameBindings: ['isEnabled::disabled']\n
+      \ isEnabled: true\n});\n```\n\nWill result in view instances with an HTML representation
+      of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view\"></div>\n```\n\nWhen
+      the `isEnabled` property on the view is set to `false`, it will result\nin view
+      instances with an HTML representation of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view
+      disabled\"></div>\n```\n\nUpdates to the the value of a class name binding will
+      result in automatic update\nof the  HTML `class` attribute in the view's rendered
+      HTML representation.\nIf the value becomes  `false` or `undefined` the class
+      name will be removed.\n\nBoth `classNames` and `classNameBindings` are concatenated
+      properties.\nSee `Ember.Object` documentation for more information about concatenated
+      properties.\n\n## HTML Attributes\n\nThe HTML attribute section of a view's
+      tag can be set by providing an `attributeBindings`\nproperty set to an array
+      of property names on the view. The return value of these properties\nwill be
+      used as the value of the view's HTML associated attribute:\n\n``` javascript\nAnchorView
+      = Ember.View.extend({\n  tagName: 'a',\n  attributeBindings: ['href'],\n  href:
+      'http://google.com'\n});\n```\n\nWill result in view instances with an HTML
+      representation of:\n\n``` html\n<a id=\"ember1\" class=\"ember-view\" href=\"http://google.com\"></a>\n```\n\nIf
+      the return value of an `attributeBindings` monitored property is a boolean\nthe
+      property will follow HTML's pattern of repeating the attribute's name as\nits
+      value:\n\n``` javascript\nMyTextInput = Ember.View.extend({\n  tagName: 'input',\n
+      \ attributeBindings: ['disabled'],\n  disabled: true\n});\n```\n\nWill result
+      in view instances with an HTML representation of:\n\n``` html\n<input id=\"ember1\"
+      class=\"ember-view\" disabled=\"disabled\" />\n```\n\n`attributeBindings` can
+      refer to computed properties:\n\n``` javascript\nMyTextInput = Ember.View.extend({\n
+      \ tagName: 'input',\n  attributeBindings: ['disabled'],\n  disabled: function(){\n
+      \   if (someLogic) {\n      return true;\n    } else {\n      return false;\n
+      \   }\n  }.property()\n});\n```\n\nUpdates to the the property of an attribute
+      binding will result in automatic update\nof the  HTML attribute in the view's
+      rendered HTML representation.\n\n`attributeBindings` is a concatenated property.
+      See `Ember.Object` documentation\nfor more information about concatenated properties.\n\n##
+      Templates\n\nThe HTML contents of a view's rendered representation are determined
+      by its template.\nTemplates can be any function that accepts an optional context
+      parameter and returns\na string of HTML that will be inserted within the view's
+      tag. Most\ntypically in Ember this function will be a compiled Ember.Handlebars
+      template.\n\n``` javascript\nAView = Ember.View.extend({\n  template: Ember.Handlebars.compile('I
+      am the template')\n});\n```\n\nWill result in view instances with an HTML representation
+      of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view\">I am the template</div>\n```\n\nWithin
       an Ember application is more common to define a Handlebars templates as\npart
       of a page:\n\n``` handlebars\n<script type='text/x-handlebars' data-template-name='some-template'>\n
       \ Hello\n</script>\n```\n\nAnd associate it by name using a view's `templateName`
@@ -3534,14 +3514,23 @@ classes:
       was the default')\n});\n\naView = AView.create({\n  template: Ember.Handlebars.compile('I
       was the template, not default')\n});\n```\n\nWill result in the following HTML
       representation when rendered:\n\n``` html\n<div id=\"ember1\" class=\"ember-view\">I
-      was the template, not default</div>\n```\n\n## Layouts\n\nViews can have a secondary
-      template that wraps their main template. Like\nprimary templates, layouts can
-      be any function that  accepts an optional context\nparameter and returns a string
-      of HTML that will be inserted inside view's tag. Views whose HTML\nelement is
-      self closing (e.g. `<input />`) cannot have a layout and this property will
-      be ignored.\n\nMost typically in Ember a layout will be a compiled Ember.Handlebars
-      template.\n\nA view's layout can be set directly with the `layout` property
-      or reference an\nexisting Handlebars template by name with the `layoutName`
+      was the template, not default</div>\n```\n\n## View Context\n\nThe default context
+      of the compiled template is the view's controller:\n\n``` javascript\nAView
+      = Ember.View.extend({\n  template: Ember.Handlebars.compile('Hello {{excitedGreeting}}')\n});\n\naController
+      = Ember.Object.create({\n  firstName: 'Barry',\n  excitedGreeting: function(){\n
+      \   return this.get(\"content.firstName\") + \"!!!\"\n  }.property()\n});\n\naView
+      = AView.create({\n  controller: aController,\n});\n```\n\nWill result in an
+      HTML representation of:\n\n``` html\n<div id=\"ember1\" class=\"ember-view\">Hello
+      Barry!!!</div>\n```\n\nA context can also be explicitly supplied through the
+      view's `context` property.\nIf the view has neither `context` nor `controller`
+      properties, the parentView's\ncontext will be used.\n\n## Layouts\n\nViews can
+      have a secondary template that wraps their main template. Like\nprimary templates,
+      layouts can be any function that  accepts an optional context\nparameter and
+      returns a string of HTML that will be inserted inside view's tag. Views whose
+      HTML\nelement is self closing (e.g. `<input />`) cannot have a layout and this
+      property will be ignored.\n\nMost typically in Ember a layout will be a compiled
+      Ember.Handlebars template.\n\nA view's layout can be set directly with the `layout`
+      property or reference an\nexisting Handlebars template by name with the `layoutName`
       property.\n\nA template used as a layout must contain a single use of the Handlebars
       `{{yield}}`\nhelper. The HTML contents of a view's rendered `template` will
       be inserted at this location:\n\n``` javascript\nAViewWithLayout = Ember.View.extend({\n
@@ -3551,7 +3540,7 @@ classes:
       class=\"ember-view\">\n  <div class=\"my-decorative-class\">\n    I got wrapped\n
       \ </div>\n</div>\n```\n\nSee `Handlebars.helpers.yield` for more information.\n\n##
       Responding to Browser Events\n\nViews can respond to user-initiated events in
-      one of three ways: method implementation, \nthrough an event manager, and through
+      one of three ways: method implementation,\nthrough an event manager, and through
       `{{action}}` helper use in their template or layout.\n\n### Method Implementation\n\nViews
       can respond to user-initiated events by implementing a method that matches the\nevent
       name. A `jQuery.Event` object will be passed as the argument to this method.\n\n```
@@ -3560,38 +3549,38 @@ classes:
       Event Managers\n\nViews can define an object as their `eventManager` property.
       This object can then\nimplement methods that match the desired event names.
       Matching events that occur\non the view's rendered HTML or the rendered HTML
-      of any of its DOM descendants \nwill trigger this method.  A `jQuery.Event`
-      object will be passed as the first \nargument to the method and an  `Ember.View`
-      object as the second. The `Ember.View`\nwill be the view whose rendered HTML
-      was interacted with. This may be the view with\nthe `eventManager` property
-      or one of its descendent views.\n\n``` javascript\nAView = Ember.View.extend({\n
-      \ eventManager: Ember.Object.create({\n    doubleClick: function(event, view){\n
-      \     // will be called when when an instance's\n      // rendered element or
-      any rendering\n      // of this views's descendent\n      // elements is clicked\n
-      \   }\n  })\n});\n```\n\n\nAn event defined for an event manager takes precedence
-      over events of the same\nname handled through methods on the view.\n\n``` javascript\nAView
-      = Ember.View.extend({\n  mouseEnter: function(event){\n    // will never trigger.\n
-      \ },\n  eventManager: Ember.Object.create({\n    mouseEnter: function(event,
-      view){\n      // takes presedence over AView#mouseEnter\n    }\n  })\n});\n```\n\nSimilarly
-      a view's event manager will take precedence for events of any views\nrendered
-      as a descendent. A method name that matches an event name will not be called\nif
-      the view instance was rendered inside the HTML representation of a view that
-      has \nan `eventManager` property defined that handles events of the name.  Events
-      not handled\nby the event manager will still trigger method calls on the descendent.\n\n```
-      javascript\nOuterView = Ember.View.extend({\n  template: Ember.Handlebars.compile(\"outer
-      {{#view InnerView}}inner{{/view}} outer\"),\n  eventManager: Ember.Object.create({\n
+      of any of its DOM descendants\nwill trigger this method.  A `jQuery.Event` object
+      will be passed as the first\nargument to the method and an  `Ember.View` object
+      as the second. The `Ember.View`\nwill be the view whose rendered HTML was interacted
+      with. This may be the view with\nthe `eventManager` property or one of its descendent
+      views.\n\n``` javascript\nAView = Ember.View.extend({\n  eventManager: Ember.Object.create({\n
+      \   doubleClick: function(event, view){\n      // will be called when when an
+      instance's\n      // rendered element or any rendering\n      // of this views's
+      descendent\n      // elements is clicked\n    }\n  })\n});\n```\n\nAn event
+      defined for an event manager takes precedence over events of the same\nname
+      handled through methods on the view.\n\n``` javascript\nAView = Ember.View.extend({\n
+      \ mouseEnter: function(event){\n    // will never trigger.\n  },\n  eventManager:
+      Ember.Object.create({\n    mouseEnter: function(event, view){\n      // takes
+      presedence over AView#mouseEnter\n    }\n  })\n});\n```\n\nSimilarly a view's
+      event manager will take precedence for events of any views\nrendered as a descendent.
+      A method name that matches an event name will not be called\nif the view instance
+      was rendered inside the HTML representation of a view that has\nan `eventManager`
+      property defined that handles events of the name.  Events not handled\nby the
+      event manager will still trigger method calls on the descendent.\n\n``` javascript\nOuterView
+      = Ember.View.extend({\n  template: Ember.Handlebars.compile(\"outer {{#view
+      InnerView}}inner{{/view}} outer\"),\n  eventManager: Ember.Object.create({\n
       \   mouseEnter: function(event, view){\n      // view might be instance of either\n
       \     // OutsideView or InnerView depending on\n      // where on the page the
       user interaction occured\n    }\n  })\n});\n\nInnerView = Ember.View.extend({\n
       \ click: function(event){\n    // will be called if rendered inside\n    //
       an OuterView because OuterView's\n    // eventManager doesn't handle click events\n
       \ },\n  mouseEnter: function(event){\n    // will never be called if rendered
-      inside \n    // an OuterView.\n  }\n});\n```\n\n### Handlebars `{{action}}`
-      Helper\n\nSee `Handlebars.helpers.action`.\n\n### Event Names\n\nPossible events
-      names for any of the responding approaches described above are:\n\nTouch events:
-      'touchStart', 'touchMove', 'touchEnd', 'touchCancel'\n\nKeyboard events: 'keyDown',
-      'keyUp', 'keyPress'\n\nMouse events: 'mouseDown', 'mouseUp', 'contextMenu',
-      'click', 'doubleClick', 'mouseMove',\n'focusIn', 'focusOut', 'mouseEnter', 'mouseLeave'\n\nForm
+      inside\n    // an OuterView.\n  }\n});\n```\n\n### Handlebars `{{action}}` Helper\n\nSee
+      `Handlebars.helpers.action`.\n\n### Event Names\n\nPossible events names for
+      any of the responding approaches described above are:\n\nTouch events: 'touchStart',
+      'touchMove', 'touchEnd', 'touchCancel'\n\nKeyboard events: 'keyDown', 'keyUp',
+      'keyPress'\n\nMouse events: 'mouseDown', 'mouseUp', 'contextMenu', 'click',
+      'doubleClick', 'mouseMove',\n'focusIn', 'focusOut', 'mouseEnter', 'mouseLeave'\n\nForm
       events: 'submit', 'change', 'focusIn', 'focusOut', 'input'\n\nHTML5 drag and
       drop events: 'dragStart', 'drag', 'dragEnter', 'dragLeave', 'drop', 'dragEnd'\n\n##
       Handlebars `{{view}}` Helper\n\nOther `Ember.View` instances can be included
@@ -3824,8 +3813,9 @@ classitems:
   description: ! "tagName: 'select',\n  classNames: ['ember-select'],\n  defaultTemplate:
     Ember.Handlebars.compile('{{#if view.prompt}}<option value>{{view.prompt}}</option>{{/if}}{{#each
     view.content}}{{view Ember.SelectOption contentBinding=\"this\"}}{{/each}}'),\n
-    \ attributeBindings: ['multiple', 'tabindex'],\n/**\n    The `multiple` attribute
-    of the select element. Indicates whether multiple\n    options can be selected."
+    \ attributeBindings: ['multiple', 'disabled', 'tabindex'],\n/**\n    The `multiple`
+    attribute of the select element. Indicates whether multiple\n    options can be
+    selected."
   itemtype: property
   name: multiple
   type: Boolean
@@ -3835,7 +3825,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 280
+  line: 282
   description: ! "The list of options.\n\nIf `optionLabelPath` and `optionValuePath`
     are not overridden, this should\nbe a list of strings, which will serve simultaneously
     as labels and values.\n\nOtherwise, this should be a list of objects. For instance:\n\n
@@ -3851,7 +3841,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 301
+  line: 303
   description: ! 'When `multiple` is false, the element of `content` that is currently
 
     selected, if any.
@@ -3867,7 +3857,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 313
+  line: 315
   description: ! 'In single selection mode (when `multiple` is false), value can be
     used to get
 
@@ -3884,7 +3874,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 330
+  line: 332
   description: ! 'If given, a top-most dummy option will be rendered to serve as a
     user
 
@@ -3898,7 +3888,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 340
+  line: 342
   description: The path of the option labels. See `content`.
   itemtype: property
   name: optionLabelPath
@@ -3909,7 +3899,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/controls/select.js
-  line: 349
+  line: 351
   description: The path of the option values. See `content`.
   itemtype: property
   name: optionValuePath
@@ -3957,35 +3947,36 @@ classitems:
 - file: ../packages/ember-handlebars/lib/helpers/action.js
   line: 63
   description: ! "The `{{action}}` helper registers an HTML element within a template
-    for\nDOM event handling and forwards that interaction to the Application's router,\nthe
-    template's `Ember.View` instance, or supplied `target` option (see 'Specifying
-    a Target').\n\nUser interaction with that element will invoke the supplied action
-    name on\nthe appropriate target.\n\nGiven the following Handlebars template on
-    the page\n\n``` handlebars\n<script type=\"text/x-handlebars\" data-template-name='a-template'>\n
-    \ <div {{action anActionName}}>\n    click me\n  </div>\n</script>\n```\n\nAnd
-    application code\n\n``` javascript\nAView = Ember.View.extend({\n  templateName;
-    'a-template',\n  anActionName: function(event){}\n});\n\naView = AView.create();\naView.appendTo('body');\n```\n\nWill
-    results in the following rendered HTML\n\n``` html\n<div class=\"ember-view\">\n
-    \ <div data-ember-action=\"1\">\n    click me\n  </div>\n</div>\n```\n\nClicking
-    \"click me\" will trigger the `anActionName` method of the `aView`\nobject with
-    a  `jQuery.Event` object as its argument. The `jQuery.Event`\nobject will be extended
-    to include a `view` property that is set to the\noriginal view interacted with
-    (in this case the `aView` object).\n\n### Event Propagation\n\nEvents triggered
-    through the action helper will automatically have\n`.preventDefault()` called
-    on them. You do not need to do so in your event\nhandlers. To stop propagation
-    of the event, simply return `false` from your\nhandler.\n\nIf you need the default
-    handler to trigger you should either register your\nown event handler, or use
-    event methods on your view class. See Ember.View\n'Responding to Browser Events'
-    for more information.\n\n### Specifying DOM event type\n\nBy default the `{{action}}`
-    helper registers for DOM `click` events. You can\nsupply an `on` option to the
-    helper to specify a different DOM event name:\n\n``` handlebars\n<script type=\"text/x-handlebars\"
+    for\nDOM event handling and forwards that interaction to the view's `controller.target`\nor
+    supplied `target` option (see 'Specifying a Target'). By default the\n`controller.target`
+    is set to the Application's router.\n\nUser interaction with that element will
+    invoke the supplied action name on\nthe appropriate target.\n\nGiven the following
+    Handlebars template on the page\n\n``` handlebars\n<script type=\"text/x-handlebars\"
+    data-template-name='a-template'>\n  <div {{action anActionName target=\"view\"}}>\n
+    \   click me\n  </div>\n</script>\n```\n\nAnd application code\n\n``` javascript\nAView
+    = Ember.View.extend({\n  templateName: 'a-template',\n  anActionName: function(event){}\n});\n\naView
+    = AView.create();\naView.appendTo('body');\n```\n\nWill results in the following
+    rendered HTML\n\n``` html\n<div class=\"ember-view\">\n  <div data-ember-action=\"1\">\n
+    \   click me\n  </div>\n</div>\n```\n\nClicking \"click me\" will trigger the
+    `anActionName` method of the `aView`\nobject with a  `jQuery.Event` object as
+    its argument. The `jQuery.Event`\nobject will be extended to include a `view`
+    property that is set to the\noriginal view interacted with (in this case the `aView`
+    object).\n\n### Event Propagation\n\nEvents triggered through the action helper
+    will automatically have\n`.preventDefault()` called on them. You do not need to
+    do so in your event\nhandlers. To stop propagation of the event, simply return
+    `false` from your\nhandler.\n\nIf you need the default handler to trigger you
+    should either register your\nown event handler, or use event methods on your view
+    class. See Ember.View\n'Responding to Browser Events' for more information.\n\n###
+    Specifying DOM event type\n\nBy default the `{{action}}` helper registers for
+    DOM `click` events. You can\nsupply an `on` option to the helper to specify a
+    different DOM event name:\n\n``` handlebars\n<script type=\"text/x-handlebars\"
     data-template-name='a-template'>\n  <div {{action anActionName on=\"doubleClick\"}}>\n
     \   click me\n  </div>\n</script>\n```\n\nSee Ember.View 'Responding to Browser
     Events' for a list of\nacceptable DOM event names.\n\nBecause `{{action}}` depends
     on Ember's event dispatch system it will only\nfunction if an `Ember.EventDispatcher`
     instance is available. An\n`Ember.EventDispatcher` instance will be created when
     a new\n`Ember.Application` is created. Having an instance of `Ember.Application`\nwill
-    satisfy this requirement.\n\n\n### Specifying a Target\nThere are several possible
+    satisfy this requirement.\n\n\n### Specifying a Target\n\nThere are several possible
     target objects for `{{action}}` helpers:\n\nIn a typical `Ember.Router`-backed
     Application where views are managed\nthrough use of the `{{outlet}}` helper, actions
     will be forwarded to the\ncurrent state of the Applications's Router. See Ember.Router
@@ -4018,12 +4009,15 @@ classitems:
     \ templateName; 'a-template',\n  // note: no method 'aMethodNameThatIsMissing'\n
     \ anActionName: function(event){}\n});\n\naView = AView.create();\naView.appendTo('body');\n```\n\nWill
     throw `Uncaught TypeError: Cannot call method 'call' of undefined` when\n\"click
-    me\" is clicked.\n\n### Specifying a context\n\nBy default the `{{action}}` helper
-    passes the current Handlebars context\nalong in the `jQuery.Event` object. You
-    may specify an alternate object to\npass as the context by providing a property
-    path:\n\n``` handlebars\n<script type=\"text/x-handlebars\" data-template-name='a-template'>\n
+    me\" is clicked.\n\n### Specifying a context\n\nYou may optionally specify objects
+    to pass as contexts to the `{{action}}` helper\nby providing property paths as
+    the subsequent parameters. These objects are made\navailable as the `contexts`
+    (also `context` if there is only one) properties in the\n`jQuery.Event` object:\n\n```
+    handlebars\n<script type=\"text/x-handlebars\" data-template-name='a-template'>\n
     \ {{#each person in people}}\n    <div {{action edit person}}>\n      click me\n
-    \   </div>\n  {{/each}}\n</script>\n```"
+    \   </div>\n  {{/each}}\n</script>\n```\n\nClicking \"click me\" will trigger
+    the `edit` method of the view's context with a\n`jQuery.Event` object containing
+    the person object as its context."
   itemtype: method
   name: action
   params:
@@ -4305,6 +4299,8 @@ classitems:
   return:
     description: HTML string
     type: String
+  deprecated: true
+  deprecationMessage: Use `{{each}}` helper instead.
   class: Ember.Handlebars.helpers
   module: ember
   submodule: ember-handlebars
@@ -4841,7 +4837,7 @@ classitems:
 
     template''s data hash and used to resolve the path.'
   itemtype: method
-  name: getPath
+  name: get
   params:
   - name: root
     description: The object to look up the property on
@@ -4857,7 +4853,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember
 - file: ../packages/ember-handlebars/lib/ext.js
-  line: 243
+  line: 244
   access: private
   tagname: ! 'Registers a helper in Handlebars that will be called if no property
     with the
@@ -5463,7 +5459,7 @@ classitems:
   itemtype: property
   name: VERSION
   type: String
-  default: ! '''1.0.pre'''
+  default: ! '''1.0.0-pre.2'''
   final: 1
   class: Ember
   module: ember
@@ -5540,7 +5536,21 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/core.js
-  line: 159
+  line: 140
+  description: ! 'Previously we used `Ember.$.uuid`, however `$.uuid` has been removed
+    from jQuery master.
+
+    We''ll just bootstrap our own uuid now.'
+  itemtype: property
+  name: uuid
+  type: Number
+  access: private
+  tagname: ''
+  class: Ember
+  module: ember
+  submodule: ember-metal
+- file: ../packages/ember-metal/lib/core.js
+  line: 168
   description: ! 'A function may be assigned to `Ember.onerror` to be called when
     Ember internals encounter an error.
 
@@ -5555,7 +5565,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/core.js
-  line: 169
+  line: 178
   access: private
   tagname: Wrap code block in a try/catch if {{#crossLink "Ember/onerror"}}{{/crossLink}}
     is set.
@@ -5572,7 +5582,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 95
+  line: 120
   description: Add an event listener
   itemtype: method
   name: addListener
@@ -5591,7 +5601,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 127
+  line: 152
   description: ! 'Remove an event listener
 
 
@@ -5613,7 +5623,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 169
+  line: 194
   access: private
   tagname: ! 'Suspend listener during callback.
 
@@ -5645,7 +5655,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 205
+  line: 230
   access: private
   tagname: ! 'Suspend listener during callback.
 
@@ -5677,7 +5687,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 254
+  line: 279
   access: private
   tagname: Return a list of currently watched events
   itemtype: method
@@ -5688,7 +5698,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 276
+  line: 301
   itemtype: method
   name: sendEvent
   params:
@@ -5705,24 +5715,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 294
-  access: private
-  tagname: ''
-  itemtype: method
-  name: deferEvent
-  params:
-  - name: obj
-    description: ''
-  - name: eventName
-    description: ''
-    type: String
-  - name: params
-    description: ''
-    type: Array
-  class: Ember
-  module: ember-metal
-- file: ../packages/ember-metal/lib/events.js
-  line: 321
+  line: 323
   access: private
   tagname: ''
   itemtype: method
@@ -5736,7 +5729,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: ../packages/ember-metal/lib/events.js
-  line: 340
+  line: 342
   access: private
   tagname: ''
   itemtype: method
@@ -6142,13 +6135,13 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 95
+  line: 94
   itemtype: method
   name: endPropertyChanges
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 103
+  line: 105
   description: ! "Make a series of property changes together in an\nexception-safe
     way.\n\n    Ember.changeProperties(function() {\n      obj1.set('foo', mayBlowUpWhenSet);\n
     \     obj2.set('bar', baz);\n    });"
@@ -6164,7 +6157,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 125
+  line: 127
   description: ! 'Set a list of properties on an object. These properties are set
     inside
 
@@ -6184,7 +6177,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 153
+  line: 155
   itemtype: method
   name: addObserver
   params:
@@ -6203,7 +6196,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 170
+  line: 172
   itemtype: method
   name: removeObserver
   params:
@@ -6222,7 +6215,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 183
+  line: 185
   itemtype: method
   name: addBeforeObserver
   params:
@@ -6241,7 +6234,7 @@ classitems:
   class: Ember.platform
   module: ember-metal
 - file: ../packages/ember-metal/lib/observer.js
-  line: 224
+  line: 226
   itemtype: method
   name: removeBeforeObserver
   params:
@@ -11249,7 +11242,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 317
+  line: 277
   access: private
   tagname: Instructs each child view to render to the passed render buffer.
   itemtype: method
@@ -11263,7 +11256,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 333
+  line: 293
   access: private
   tagname: ! 'When the container view is destroyed, tear down the child views
 
@@ -11275,7 +11268,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 350
+  line: 310
   access: private
   tagname: ! 'When a child view is removed, destroy its element so that
 
@@ -11302,7 +11295,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/container_view.js
-  line: 373
+  line: 333
   access: private
   tagname: ! 'When a child view is added, make sure the DOM gets updated appropriately.
 
@@ -11331,80 +11324,6 @@ classitems:
   - name: the
     description: number of child views added
     type: Number
-  class: Ember.ContainerView
-  module: ember
-  submodule: ember-views
-  namespace: Ember
-- file: ../packages/ember-views/lib/views/container_view.js
-  line: 415
-  description: ! 'This method is responsible for presenting a new view.
-
-    Default implementation will simply call the callback.
-
-    You can override this method if you want to add an animation for example.'
-  itemtype: method
-  name: presentCurrentView
-  params:
-  - name: currentView
-    description: a view to present
-    type: Ember.View
-  - name: callback
-    description: the callback called once operation is terminated
-    type: Function
-  class: Ember.ContainerView
-  module: ember
-  submodule: ember-views
-  namespace: Ember
-- file: ../packages/ember-views/lib/views/container_view.js
-  line: 428
-  description: This method is responsible for adding view to containerView
-  itemtype: method
-  name: appendCurrentView
-  params:
-  - name: currentView
-    description: a view to present
-    type: Ember.View
-  - name: callback
-    description: the callback called once view is appended
-    type: Function
-  class: Ember.ContainerView
-  module: ember
-  submodule: ember-views
-  namespace: Ember
-- file: ../packages/ember-views/lib/views/container_view.js
-  line: 443
-  description: ! 'This method is responsible for dismissing a view.
-
-    Default implementation will simply call the callback.
-
-    You can override this method if you want to add an animation for example.'
-  itemtype: method
-  name: dismissCurrentView
-  params:
-  - name: currentView
-    description: a view to dismiss
-    type: Ember.View
-  - name: callback
-    description: the callback called once operation is terminated
-    type: Function
-  class: Ember.ContainerView
-  module: ember
-  submodule: ember-views
-  namespace: Ember
-- file: ../packages/ember-views/lib/views/container_view.js
-  line: 456
-  description: ! 'This method is responsible for removing a view from the containerView
-
-    You may want to override it in case you implementing views sharing for example'
-  itemtype: method
-  name: removeCurrentView
-  params:
-  - name: currentView
-    description: a view to present
-    type: Ember.View
-  - name: callback
-    description: the callback called once view is removed
-    type: Function
   class: Ember.ContainerView
   module: ember
   submodule: ember-views
@@ -11501,7 +11420,7 @@ classitems:
   module: ember
   submodule: ember-views
 - file: ../packages/ember-views/lib/views/view.js
-  line: 728
+  line: 736
   description: ! 'concatenatedProperties: [''classNames'', ''classNameBindings'',
     ''attributeBindings''],
 
@@ -11516,7 +11435,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 744
+  line: 752
   description: ! 'The name of the template to lookup if no template is provided.
 
 
@@ -11534,7 +11453,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 757
+  line: 765
   description: ! 'The name of the layout to lookup if no layout is provided.
 
 
@@ -11552,7 +11471,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 770
+  line: 778
   description: The hash in which to look for `templateName`.
   itemtype: property
   name: templates
@@ -11563,7 +11482,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 779
+  line: 787
   description: ! 'The template used to render the view. This should be a function
     that
 
@@ -11583,7 +11502,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 799
+  line: 807
   description: ! 'The controller managing this view. If this property is set, it will
     be
 
@@ -11596,7 +11515,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 817
+  line: 825
   description: ! 'A view may contain a layout. A layout is a regular template but
 
     supersedes the `template` property during rendering. It is the
@@ -11621,7 +11540,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 853
+  line: 861
   description: ! 'The object from which templates should access properties.
 
 
@@ -11632,7 +11551,7 @@ classitems:
     to do with it.
 
 
-    By default, this will be the view itself.'
+    By default, this will be the view''s controller.'
   itemtype: property
   name: context
   type: Object
@@ -11641,7 +11560,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 874
+  line: 882
   access: private
   tagname: ! 'Private copy of the view''s template context. This can be set directly
 
@@ -11672,7 +11591,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 912
+  line: 920
   access: private
   tagname: ! 'If a value that affects template rendering changes, the view should
     be
@@ -11685,7 +11604,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 924
+  line: 932
   description: If false, the view will appear hidden in DOM.
   itemtype: property
   name: isVisible
@@ -11696,7 +11615,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 933
+  line: 941
   access: private
   tagname: ! 'Array of child views. You should never edit this array directly.
 
@@ -11710,7 +11629,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 965
+  line: 973
   description: ! 'Return the nearest ancestor that is an instance of the provided
 
     class.'
@@ -11728,24 +11647,25 @@ classitems:
     description: Subclass of Ember.View (or Ember.View itself)
     type: Class
 - file: ../packages/ember-views/lib/views/view.js
-  line: 984
+  line: 992
   description: ! 'Return the nearest ancestor that is an instance of the provided
 
     class or mixin.'
-  proprty: nearestOfType
-  params:
-  - name: klass
-    description: ! "Subclass of Ember.View (or Ember.View itself),\n       or an instance
-      of Ember.Mixin."
-    type: Class,Mixin
+  itemtype: property
+  name: nearestOfType
   return:
     description: Ember.View
   class: Ember.View
   module: ember
   submodule: ember-views
   namespace: Ember
+  subprops:
+  - name: klass
+    description: ! "Subclass of Ember.View (or Ember.View itself),\n       or an instance
+      of Ember.Mixin."
+    type: Class,Mixin
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1005
+  line: 1013
   description: Return the nearest ancestor that has a given property.
   itemtype: property
   name: nearestWithProperty
@@ -11760,7 +11680,7 @@ classitems:
     description: A property name
     type: String
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1021
+  line: 1029
   description: ! 'Return the nearest ancestor whose parent is an instance of
 
     `klass`.'
@@ -11777,7 +11697,7 @@ classitems:
     description: Subclass of Ember.View (or Ember.View itself)
     type: Class
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1038
+  line: 1046
   description: Return the nearest ancestor that is an Ember.CollectionView
   itemtype: property
   name: collectionView
@@ -11788,7 +11708,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1048
+  line: 1056
   description: ! 'Return the nearest ancestor that is a direct child of
 
     an Ember.CollectionView'
@@ -11801,7 +11721,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1059
+  line: 1067
   description: ! 'Return the nearest ancestor that has the property
 
     `content`.'
@@ -11814,7 +11734,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1070
+  line: 1078
   access: private
   tagname: ! 'When the parent view changes, recursively invalidate
 
@@ -11826,7 +11746,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1110
+  line: 1118
   description: ! 'Called on your view when it should push strings of HTML into a
 
     Ember.RenderBuffer. Most users will want to override the `template`
@@ -11850,7 +11770,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1190
+  line: 1198
   description: ! 'Renders the view again. This will work regardless of whether the
 
     view is already in the DOM or not. If the view is in the DOM, the
@@ -11879,7 +11799,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1225
+  line: 1233
   access: private
   tagname: ! 'Iterates over the view''s `classNameBindings` array, inserts the value
 
@@ -11895,7 +11815,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1305
+  line: 1313
   access: private
   tagname: ! 'Iterates through the view''s attribute bindings, sets up observers for
     each,
@@ -11912,7 +11832,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1349
+  line: 1357
   access: private
   tagname: ! 'Given a property name, returns a dasherized version of that
 
@@ -11932,7 +11852,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1377
+  line: 1385
   description: Returns the current DOM element for the view.
   itemtype: property
   name: element
@@ -11942,7 +11862,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1391
+  line: 1399
   description: ! 'Returns a jQuery object for this view''s element. If you pass in
     a selector
 
@@ -11969,7 +11889,7 @@ classitems:
     type: String
     optional: true
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1436
+  line: 1444
   description: ! 'Appends the view''s element to the specified parent element.
 
 
@@ -12008,7 +11928,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1467
+  line: 1475
   description: ! 'Replaces the content of the specified parent element with this view''s
     element.
 
@@ -12036,7 +11956,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1491
+  line: 1499
   access: private
   tagname: ! "Schedules a DOM operation to occur during the next render phase. This\nensures
     that all bindings have finished synchronizing before the view is\nrendered.\n\nTo
@@ -12056,7 +11976,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1516
+  line: 1524
   access: private
   tagname: ''
   class: Ember.View
@@ -12064,7 +11984,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1524
+  line: 1532
   description: ! 'Appends the view''s element to the document body. If the view does
 
     not have an HTML representation yet, `createElement()` will be called
@@ -12087,7 +12007,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1540
+  line: 1548
   description: Removes the view's element from the element to which it is attached.
   itemtype: method
   name: remove
@@ -12099,7 +12019,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1558
+  line: 1566
   description: ! 'The ID to use when trying to locate the element in the DOM. If you
     do not
 
@@ -12114,7 +12034,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1575
+  line: 1583
   description: ! 'Attempts to discover the element in the parent element. The default
 
     implementation looks for an element with an ID of elementId (or the view''s
@@ -12138,7 +12058,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1591
+  line: 1599
   description: ! 'Creates a DOM representation of the view and all of its
 
     child views by recursively calling the `render()` method.
@@ -12157,7 +12077,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1610
+  line: 1618
   description: Called when a view is going to insert an element into the DOM.
   itemtype: event
   name: willInsertElement
@@ -12166,7 +12086,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1617
+  line: 1625
   description: ! 'Called when the element of the view has been inserted into the DOM.
 
     Override this function to do any set up that requires an element in the
@@ -12179,7 +12099,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1626
+  line: 1634
   description: ! 'Called when the view is about to rerender, but before anything has
 
     been torn down. This is a good opportunity to tear down any manual
@@ -12192,7 +12112,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1635
+  line: 1643
   access: private
   tagname: Run this callback on the current view and recursively on child views.
   itemtype: method
@@ -12206,7 +12126,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1651
+  line: 1659
   description: Invalidates the cache for a property on all child views.
   itemtype: method
   name: invalidateRecursively
@@ -12215,7 +12135,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1662
+  line: 1670
   access: private
   tagname: ! 'Invokes the receiver''s willInsertElement() method if it exists and
     then
@@ -12233,7 +12153,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1679
+  line: 1687
   access: private
   tagname: ! 'Invokes the receiver''s didInsertElement() method if it exists and then
 
@@ -12245,7 +12165,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1693
+  line: 1701
   access: private
   tagname: ! 'Triggers the `willClearRender` event (which invokes the `willClearRender()`
 
@@ -12257,7 +12177,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1707
+  line: 1715
   description: ! 'Destroys any existing element along with the element for any child
     views
 
@@ -12291,7 +12211,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1729
+  line: 1737
   description: ! 'Called when the element of the view is going to be destroyed. Override
 
     this function to do any teardown that requires an element, like removing
@@ -12304,7 +12224,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1738
+  line: 1746
   access: private
   tagname: ! 'Triggers the `willDestroyElement` event (which invokes the `willDestroyElement()`
 
@@ -12321,7 +12241,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1763
+  line: 1771
   access: private
   tagname: ! 'If this view''s element changes, we need to invalidate the caches of
     our
@@ -12336,7 +12256,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1778
+  line: 1786
   description: Called when the parentView property has changed.
   itemtype: event
   name: parentViewDidChange
@@ -12345,7 +12265,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1838
+  line: 1846
   description: ! 'Tag name for the view''s outer element. The tag name is only used
     when
 
@@ -12364,7 +12284,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1854
+  line: 1862
   description: ! 'The WAI-ARIA role of the control represented by this view. For example,
     a
 
@@ -12387,7 +12307,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1869
+  line: 1877
   description: ! 'Standard CSS class names to apply to the view''s outer element.
     This
 
@@ -12403,7 +12323,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1880
+  line: 1888
   description: ! "A list of properties of the view to apply as class names. If the
     property\nis a string value, the value of that string will be applied as a class\nname.\n\n
     \   // Applies the 'high' class to the view element\n    Ember.View.create({\n
@@ -12425,7 +12345,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1917
+  line: 1925
   description: ! "A list of properties of the view to apply as attributes. If the
     property is\na string value, the value of that string will be applied as the attribute.\n\n
     \   // Applies the type attribute to the element\n    // with the value \"button\",
@@ -12441,7 +12361,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1945
+  line: 1953
   access: private
   tagname: ! "Setup a view, but do not finish waking it up.\n- configure childViews\n-
     register the view with the global views hash, which is used for event\n  dispatch"
@@ -12452,7 +12372,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 1980
+  line: 1988
   description: Removes the child view from the parent view.
   itemtype: method
   name: removeChild
@@ -12468,7 +12388,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2006
+  line: 2014
   description: Removes all children from the parentView.
   itemtype: method
   name: removeAllChildren
@@ -12480,7 +12400,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2024
+  line: 2032
   description: ! 'Removes the view from its parentView, if one is found. Otherwise
 
     does nothing.'
@@ -12494,7 +12414,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2041
+  line: 2049
   description: ! 'You must call `destroy` on a view to destroy the view (and all of
     its
 
@@ -12510,7 +12430,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2085
+  line: 2093
   description: ! 'Instantiates a view to be added to the childViews array during view
 
     initialization. You generally will not call this method directly unless
@@ -12538,7 +12458,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2125
+  line: 2133
   access: private
   tagname: ! 'When the view''s `isVisible` property changes, toggle the visibility
 
@@ -12550,7 +12470,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2205
+  line: 2213
   access: private
   tagname: Handle events from `Ember.EventDispatcher`
   itemtype: method
@@ -12567,7 +12487,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2284
+  line: 2292
   access: private
   tagname: ! "Parse a path and return an object which holds the parsed properties.\n\nFor
     example a path like \"content.isEnabled:enabled:disabled\" wil return the\nfollowing
@@ -12582,7 +12502,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2326
+  line: 2334
   access: private
   tagname: ! "Get the class name for a given value, based on the path, optional className\nand
     optional falsyClassName.\n\n- if a className or falsyClassName has been specified:\n
@@ -12608,7 +12528,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: ../packages/ember-views/lib/views/view.js
-  line: 2383
+  line: 2391
   description: Global views hash
   itemtype: property
   name: views
