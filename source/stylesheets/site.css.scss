@@ -348,6 +348,10 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
   #download-ember {
     left: 0;
+
+    .button {
+      font-size: 13px; /* Due to long version name */
+    }
   }
 
   #download-starter-kit {
