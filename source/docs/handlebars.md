@@ -2,7 +2,8 @@
 
 ### Handlebars
 
-Ember comes bundled with [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
+Ember supports templates for rendering views.  The default ( and best ingegrated ) for Ember is [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
+Ember does not come with Handlebars, but you can easily download Handlebars and include it with your Ember application.  Ember and Handlebars work great together, but you can substitute other rendering engines by pointing the Ember.View's template property at a function that will use the Ember.View's context to produce a string of html.  For now, let's cover the great integration between Ember and Handlebars.
 
 You should store your Handlebars templates inside your application's HTML file. At runtime, Ember will compile these templates so they are available for you to use in your views.
 
