@@ -59,8 +59,6 @@
   <% content_for :sidebar do %>
     <h3>SHA: <%= link_to data.api['project']['sha'], "#{APIDocs.repo_url}/commit/#{data.api['project']['sha']}" %></h3>
 
-    <p><strong>Note:</strong> For 1.0.pre, see the <a href="http://docs.emberjs.com">old docs site</a>.</p>
-
     <h2>Modules</h2>
     <ul>
     <% api_modules.each do |id, data| %>
