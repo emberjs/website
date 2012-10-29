@@ -354,6 +354,30 @@ Although the view containing the `{{action}}` helper will be targeted by default
 <a href="#" {{action "edit" target="parentView"}}>Edit</a>
 ```
 
+If your application has a router, it will be the default target.
+
+```js
+App.Router = Ember.Router.extend({
+
+  root: Ember.Route.extend({
+    index: Ember.Route.extend({
+      route: '/',
+      edit: Ember.Route.transitionTo('editPage')
+    }),
+
+    editPage: Ember.Route.extend({
+      route: '/:edit'
+    })
+  })
+});
+```
+
+To target the view instead, use `target="view"`.
+
+```handlebars
+<a href="#" {{action "edit" target="view"}}>Edit</a>
+```
+
 The action handler can optionally accept a jQuery event object, which will be extended to include `view` and `context` properties. These properties can be useful when targeting a different view with your action. For instance:
 
 ```javascript
