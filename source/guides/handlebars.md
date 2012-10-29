@@ -1,35 +1,5 @@
 ## Describing Your UI with Handlebars
 
-### Handlebars
-
-Ember comes bundled with [Handlebars](http://www.handlebarsjs.com), a semantic templating language. These templates look like regular HTML, with embedded expressions.
-
-You should store your Handlebars templates inside your application's HTML file. At runtime, Ember will compile these templates so they are available for you to use in your views.
-
-To immediately insert a template into your document, place it inside a `<script>` tag within your `<body>` tag:
-
-```handlebars
-<html>
-  <body>
-    <script type="text/x-handlebars">
-      Hello, <b>{{MyApp.name}}</b>
-    </script>
-  </body>
-</html>
-```
-
-To make a template available to be used later, give the `<script>` tag a `data-template-name` attribute:
-
-```handlebars
-<html>
-  <head>
-    <script type="text/x-handlebars" data-template-name="say-hello">
-      Hello, <b>{{MyApp.name}}</b>
-    </script>
-  </head>
-</html>
-```
-
 ### Ember.View
 
 You can use `Ember.View` to render a Handlebars template and insert it into the DOM.
