@@ -7,6 +7,8 @@ Getting Started with Ember.js:
     url: "getting-started/build-tools"
   - title: "Understanding Web Apps"
     url: "getting-started/understanding-web-apps"
+  - title: "Core Concepts"
+    url: "getting-started/core-concepts"
 
 Templates:
   - title: "Handlebars Basics"
