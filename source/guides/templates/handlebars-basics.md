@@ -20,7 +20,7 @@ template inside your HTML by putting it inside a `<script>` tag, like so:
 <html>
   <body>
     <script type="text/x-handlebars">
-      Hello, <b>{{MyApp.name}}</b>
+      Hello, <strong>{{firstName}} {{lastName}}</strong>!
     </script>
   </body>
 </html>
@@ -39,7 +39,7 @@ the `data-template-name` attribute:
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">
-      Hello, <b>{{MyApp.name}}</b>
+      <div class="my-cool-control">{{name}}</div>
     </script>
   </head>
 </html>
