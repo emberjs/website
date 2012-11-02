@@ -12,14 +12,14 @@ To immediately insert a template into your document, place it inside a `<script>
 ```handlebars
 <html>
   <body>
-    <script type="text/x-handlebars">
+    <script type="text/x-handlebars" data-template-name="application">
       Hello, <b>{{MyApp.name}}</b>
     </script>
   </body>
 </html>
 ```
 
-To make a template available to be used later, give the `<script>` tag a `data-template-name` attribute:
+Adding a `data-template-name` attribute makes the template available to use later:
 
 ```handlebars
 <html>
