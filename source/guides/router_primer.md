@@ -54,7 +54,7 @@ A container that holds an arbitrary number of unique states.
 While Ember supports having many `StateManagers` that address a wide variety
 of purposes (handling what's in a status console, toggling lightbox effects,
 etc.), a StateManager dedicated to bringing about certain application states is
-a Router.  Fittingly, in the Ember source, a `Router` is a sublcass of
+a Router.  Fittingly, in the Ember source, a `Router` is a subclass of
 `StateManager`.
 
 ### Route
