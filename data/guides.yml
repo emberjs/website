@@ -63,20 +63,6 @@ The Ember Object Model:
 Enumerables:
   - title: "Introduction"
     url: "enumerables"
-  - title: "Enumerating an Object"
-    url: "enumerables/enumerating-an-object"
-  - title: "First and Last Objects"
-    url: "enumerables/first-and-last-properties"
-  - title: "Converting to an Array"
-    url: "enumerables/converting-to-an-array"
-  - title: "Transforming an Enumerable"
-    url: "enumerables/transforming-an-enumerable"
-  - title: "Manipulating Each Object"
-    url: "enumerables/manipulating-each-object"
-  - title: "Filtering"
-    url: "enumerables/filtering"
-  - title: "Aggregate Information"
-    url: "enumerables/aggregate-information"
 
 Views:
   - title: "Event Handlers"

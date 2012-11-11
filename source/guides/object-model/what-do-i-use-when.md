@@ -15,6 +15,4 @@ behavior after a binding has finished synchronizing.
 
 3. *Bindings* are most often used to ensure objects in two different layers
 are always in sync. For example, you bind your views to your controller using
-Handlebars. You may often bind between two objects in the same layer. For
-example, you might have an `App.selectedContactController` that binds to the
-`selectedContact` property of `App.contactsController`.
+Handlebars.
