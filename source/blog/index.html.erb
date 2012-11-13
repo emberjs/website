@@ -2,6 +2,7 @@
 title: "Blog"
 ---
 
+<% partial_for :head, :blog_head %>
 <% partial_for :sidebar, :blog_sidebar %>
 
 <% blog.articles.each_with_index do |article, i| %>

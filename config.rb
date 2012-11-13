@@ -32,6 +32,8 @@ activate :blog do |blog|
   blog.summary_separator = %r{(<p>READMORE</p>)} # Markdown adds the <p>
 end
 
+page "/blog/feed.xml", :layout => false
+
 
 ###
 # Pages
