@@ -837,7 +837,7 @@ Let's first look at the signature of `connectOutlets`:
 
 `connectOutlets` is always passed one argument by default: the router itself
 &ndash; the selfsame router in which the method is defined!  When inside
-`connectOutlets`, if one neds to access other controllers, one should use the
+`connectOutlets`, if one needs to access other controllers, one should use the
 `router.get('someController')` pattern.  Ember lazily loads many of its
 components during its bootstrap process.  While
 `App.get('router.fooController')` and `router.get('fooController')` point to
