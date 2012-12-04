@@ -11,7 +11,7 @@ READMORE
 While we believe the vast majority of Ember.js apps will be using JSON for
 communication, there's no reason to restrict it so.
 
-To this end we've made two changes to `DS.Store`:
+To this end we've made two changes to Ember Data's `DS.Store`:
 
   1. A new `extractId` method has been added to the adapter for extracting the
      ID from a data hash, by default this simply asks for `data.id`.
@@ -47,13 +47,21 @@ for more information.
 
 ### New Router API
 
-Work is currently being done on the new Router API, check out the progress on
+Managing state in intermediate- to large-scale applications is a major
+challenge for web developers. In fact, that's part of the reason so many
+people love Ember.js—tools like the router built-in to the framework
+make dealing with complex state manageable.
+
+Still, we've heard the feedback loud and clear that the current router
+API is too hard to understand, complicated to maintain, and aesthetically
+unpleasing.
+
+Because we think the router is the centerpiece of Ember, we've been working hard to get this right.
+
+Implementation has been started on a new router API. You can check out the progress on
 the [new-router](https://github.com/emberjs/ember.js/tree/new-router) branch.
 
 Check out a quick rundown of the changes in [this gist](https://gist.github.com/3981133).
-
-TODO: Tom, I don't really know much about the new router, you may want to put
-your thoughts in here.
 
 We believe that this is the final step to make Ember an easily accessible
 framework for new developers.
@@ -69,7 +77,7 @@ around the place.
 
 Zendesk is hosting the [SF Ember.js Meetup](http://www.meetup.com/Ember-SF/events/89198892/)
 on Tuesday 2 December, if you're in the area please head along and
-hang out with fellow emberinõs.
+hang out with fellow Emberenõs.
 
 Likewise, Tom Dale and Yehuda Katz will be making an
 appearance at the [Seattle Ember.js DecEMBER Meetup](http://www.meetup.com/Ember-js-Seattle-Meetup/events/68465172/)
