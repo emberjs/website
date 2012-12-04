@@ -76,7 +76,7 @@ around the place.
 ### Meetups
 
 Zendesk is hosting the [SF Ember.js Meetup](http://www.meetup.com/Ember-SF/events/89198892/)
-on Tuesday 2 December, if you're in the area please head along and
+on Tuesday 4 December, if you're in the area please head along and
 hang out with fellow Emberenõs.
 
 Likewise, Tom Dale and Yehuda Katz will be making an
