@@ -81,7 +81,13 @@ rendered HTML:
 Hello, <strong>Trek Glowacki</strong>!
 ```
 
+These expressions (and the other Handlebars features you will learn
+about next) are __bindings aware__. That means that if the values used
+by your templates ever change, your HTML will be updated automatically.
+It's like magic.
+
 As your application grows in size, it will have many templates, each
 bound to different controllers. The job of the router is to pair a
 template with a controller and make sure it gets put into the DOM in the
 correct place.
+

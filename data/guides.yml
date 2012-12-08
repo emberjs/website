@@ -7,8 +7,8 @@ Getting Started with Ember.js:
     #url: "getting-started/getting-ember-js"
   #- title: "Build Tools"
     #url: "getting-started/build-tools"
-  - title: "Understanding Web Apps"
-    url: "getting-started/understanding-web-apps"
+  #- title: "Understanding Web Apps"
+    #url: "getting-started/understanding-web-apps"
 
 Templates:
   - title: "Handlebars Basics"
@@ -69,8 +69,18 @@ Enumerables:
 Views:
   - title: "Introduction"
     url: "views/introduction"
-  - title: "Event Handlers"
-    url: "views/event-handlers"
+  - title: "Defining a View"
+    url: "views/defining-a-view"
+  - title: "Handling Events"
+    url: "views/handling-events"
+  - title: "Inserting Views in Templates"
+    url: "views/inserting-views-in-templates"
+  - title: "Customizing a View's Element"
+    url: "views/customizing-a-views-element"
+  - title: "Built-in Views"
+    url: "views/built-in-views"
+  - title: "Manually Managing View Hierarchy"
+    url: "views/manually-managing-view-hierarchy"
 
 Loading, Changing, and Saving Data:
   - title: "Loading Records"
@@ -87,6 +97,8 @@ Understanding Ember.js:
     url: "understanding-ember/the-view-layer"
   - title: "Managing Asynchrony"
     url: "understanding-ember/managing-asynchrony"
+  - title: "Keeping Templates Up-to-Date"
+    url: "understanding-ember/keeping-templates-up-to-date"
 
 Understanding Ember Data:
   - title: "Record Lifecycle"
