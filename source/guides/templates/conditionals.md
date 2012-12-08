@@ -1,20 +1,9 @@
 ## Conditionals
 
 Sometimes you may only want to display part of your template if a property
-exists. For example, let's say we have a view with a `person` property that
-contains an object with `firstName` and `lastName` fields:
+exists.
 
-```javascript
-App.SayHelloView = Ember.View.extend({
-  person: Ember.Object.create({
-    firstName: "Joy",
-    lastName: "Clojure"
-  })
-});
-```
-
-In order to display part of the template only if the `person` object exists, we
-can use the `{{#if}}` helper to conditionally render a block:
+We can use the `{{#if}}` helper to conditionally render a block:
 
 ```handlebars
 {{#if person}}

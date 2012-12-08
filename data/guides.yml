@@ -21,6 +21,8 @@ Templates:
     url: "templates/changing-scope"
   - title: "Binding Element Attributes"
     url: "templates/binding-element-attributes"
+  - title: "Binding Element Class Names"
+    url: "templates/binding-element-class-names"
   #- title: "Keywords"
     #url: "templates/keywords"
   - title: "Handling User Events"
