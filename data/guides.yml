@@ -1,4 +1,6 @@
 Getting Started with Ember.js:
+  - title: "Core Concepts"
+    url: "getting-started/core-concepts"
   - title: "What is Ember.js?"
     url: "getting-started/what-is-ember-js"
   #- title: "Getting Ember.js"
@@ -7,8 +9,6 @@ Getting Started with Ember.js:
     #url: "getting-started/build-tools"
   - title: "Understanding Web Apps"
     url: "getting-started/understanding-web-apps"
-  - title: "Core Concepts"
-    url: "getting-started/core-concepts"
 
 Templates:
   - title: "Handlebars Basics"
@@ -67,6 +67,8 @@ Enumerables:
     url: "enumerables"
 
 Views:
+  - title: "Introduction"
+    url: "views/introduction"
   - title: "Event Handlers"
     url: "views/event-handlers"
 
@@ -81,5 +83,12 @@ Configuring Ember.js:
     url: "configuring-ember/disabling-prototype-extensions"
 
 Understanding Ember.js:
+  - title: "The View Layer"
+    url: "understanding-ember/the-view-layer"
   - title: "Managing Asynchrony"
-    url: "managing-asynchrony"
+    url: "understanding-ember/managing-asynchrony"
+
+Understanding Ember Data:
+  - title: "Record Lifecycle"
+    url: "understanding-ember-data/record-lifecycle.md"
+

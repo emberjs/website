@@ -10,9 +10,8 @@ Most of these guides are designed to be very pragmatic—to help you start
 building apps right away.
 
 If you'd like to know more about some of the design decisions in
-Ember.js, or to better understand the advantages of Ember.js over less
-sophisticated frameworks, you'll find what you're looking for in the
-_Understanding Ember.js_ section.
+Ember.js, you'll find what you're looking for in the _Understanding
+Ember.js_ section.
 
 All of this documentation is [available on GitHub](https://github.com/emberjs/website/).
 If there is something missing, or you find a typo or mistake, please
