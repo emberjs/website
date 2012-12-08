@@ -1,0 +1,20 @@
+"United States":
+  - location: San Francisco, CA
+    url:      http://www.meetup.com/Ember-SF/
+  - location: New York, NY
+    url:      http://www.meetup.com/EmberJS-NYC/
+  - location: Chicago, IL
+    url:      http://www.meetup.com/Chicago-Ember-js/
+  - location: Boston, MA
+    url:      http://www.meetup.com/Boston-Ember-js/
+  - location: Atlanta, GA
+    url:      http://www.meetup.com/Ember-Atlanta-Meetup/
+  - location: Orange County, CA
+    url:      http://www.meetup.com/OC-EmberJS/
+"Worldwide":
+  - location: Toronto, Canada
+    url:      http://www.torontoemberjs.com/
+  - location: Paris, France
+    url:      http://www.meetup.com/EmberJS-Paris/
+  - location: London, UK
+    url:      http://www.meetup.com/London-Emberjs-User-Group/

@@ -19,7 +19,7 @@ $black-color: #252525;
 }
 
 body {
-  background: url(/images/background.png);
+  background: url(/images/background-shades.png) no-repeat top center #faf4f1;
   margin: 65px 0 0 0;
   padding: 0;
   font-family: Lato, Arial, sans-serif;
@@ -27,7 +27,6 @@ body {
   font-size: 13px;
   line-height: 20px;
   min-width: $page-width;
-
 }
 
 * {
@@ -104,8 +103,9 @@ hr {
   min-width: $page-width;
   top: 0;
   height: 60px;
-  background: url(/images/navigation_background.png);
-  @include box-shadow(rgba(0,0,0,0.2) 0 2px 4px);
+  background: url(/images/navigation_background.png) top center;
+  border-bottom: 1px solid #aa412f;
+  @include box-shadow(rgba(0,0,0,0.3) 0 0 3px);
 
   #wrapper {
     width: $page-width;
@@ -120,6 +120,11 @@ hr {
     width: 103px;
     height: 40px;
     background: url(/images/ember_logo.png);
+    @include filter(drop-shadow(rgba(0,0,0,0.3) 0 1px 2px));
+
+    &:hover {
+      @include filter(drop-shadow(rgba(0,0,0,0.7) 0 1px 3px));
+    }
   }
 
   #nav {
@@ -131,7 +136,8 @@ hr {
 
     li {
       line-height: 26px;
-      margin: 18px 0;
+      margin: 18px 0 0;
+      display: inline-block;
 
       a {
         font-family: "MavenProBold";
@@ -146,48 +152,68 @@ hr {
         line-height: 26px;
         text-decoration: none;
         border: 1px solid transparent;
+
+        &:hover { color: #fff }
       }
 
-      display: inline-block;
-    }
+      &.active a {
+        color: #331915;
+        @include text-shadow(rgba(255,255,255,0.2) 0 1px 0px);
+        background-color: #bf4737;
+        background-color: rgba(0,0,0,0.2);
+        @include border-radius(3px);
+        border: 1px solid #923c2e;
+        @include box-shadow(
+          rgba(255, 255, 255, 0.15) 0 1px 0px,
+          inset rgba(0, 0, 0, 0.17) 0 1px 1px
+        );
 
-    li.active a {
-      color: #6f1b0b;
-      @include text-shadow(rgba(255,255,255,0.16) 0 1px 0px);
-      background-color: #bf4737;
-      @include border-radius(3px);
-      @include box-shadow(
-        rgba(255, 255, 255, 0.15) 0 1px 0px,
-        inset rgba(0, 0, 0, 0.17) 0 1px 1px
-      );
-    }
+        &:hover {
+          color: black;
+          background-color: rgba(0,0,0,0.17);
+        }
+      }
 
-    li a:hover {
-      color: #fff;
     }
   }
 
   #github {
     position: absolute;
     right: 7px;
-    top: 21px;
+    top: 17px;
 
     a {
       img {
         float: left;
-        margin-top: 5px;
-        margin-right: 7px;
+        margin-top: 7px;
+        margin-right: 6px;
         display: block;
       }
 
       font-family: "MavenProBold";
-      font-size: 13px;
+      font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
       @include text-shadow(rgba(0,0,0,0.3) 0px 1px 0px);
 
+      display: block;
+      padding: 0px 1em;
+      height: 28px;
+      line-height: 28px;
+
+      background-color: #ff6e56;
+      @include filter-gradient(#ff6e56, #ed4f35, vertical);
+      @include background-image(linear-gradient(top, #ff6e56 0%,#ed4f35 100%));
+
+      border: 1px solid #a93926;
+      @include border-radius(4px);
+      @include box-shadow(
+        inset rgba(255,255,255, 0.17) 0 1px 1px
+      );
+
       &:hover {
         color: #fff;
+        background: #f86c55;
       }
     }
   }
@@ -322,6 +348,10 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
   #download-ember {
     left: 0;
+
+    .button {
+      font-size: 13px; /* Due to long version name */
+    }
   }
 
   #download-starter-kit {
@@ -346,6 +376,21 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     text-transform: uppercase;
     font-family: "MavenProBold";
     margin-bottom: 28px;
+  }
+
+  h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "MavenProBold";
+  }
+
+  table.columns {
+    margin: 0 auto;
+
+    td {
+      vertical-align: top;
+      padding-right: 50px;
+    }
   }
 }
 
@@ -373,7 +418,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
-    
+
     img {
       margin-left: auto;
       margin-right: auto;
@@ -514,7 +559,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   .gear {
     text-align: center;
     height: 120px;
-    
+
     .gearplus {
       padding: 0px 30px 0px 30px;
       display: inline;
@@ -775,31 +820,81 @@ article {
   margin-right: ($col-width * 3 + $col-spacing * 3);
 }
 
+.community ul.blogs {
+  li {
+    margin-bottom: 10px;
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+
 #footer {
-  width: 940px;
-  height: 62px;
-  margin: 60px auto 60px auto;
-  background-image: url(/images/footer.png);
+  margin-top: 60px;
+  padding: 25px 0;
+  border-top: 1px solid #e5dbd6;
+  background-color: #f2ece9;
+  overflow: hidden;
+  font-family: "MavenProBold";
+
+  #footer-wrapper {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+    @include clearfix;
+  }
 
   .info {
-    font-family: "MavenProBold";
-    text-align: center;
-    width: 184px;
-    margin: 0 auto;
+    width: 200px;
+    color: #717171;
     text-transform: uppercase;
     font-size: 10px;
-
-    .copyright {
-      margin-top: 4px;
-      margin-bottom: 4px;
-    }
+    float: left;
 
     a {
       color: $orange-color;
       text-decoration: none;
     }
   }
+
+  .statement {
+    font-size: 14px;
+    color: #bbb;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    left: 200px;
+    right: 200px;
+    top: 10px;
+  }
+
+  .links {
+    width: 200px;
+    text-align: right;
+    float: right;
+
+    a {
+      margin: 0 10px;
+    }
+  }
+
+  .twitter, .github, .googleplus {
+    background: no-repeat url(/images/footer-links.png);
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    text-indent: 9999px;
+    overflow: hidden;
+  }
+
+  .twitter { background-position: 0 2px }
+  .github { background-position: -59px 2px }
+  .googleplus { background-position: -119px 2px }
+
 }
+
+
 
 .screenshot {
   margin-left: -60px;
@@ -926,7 +1021,7 @@ body.api {
     }
 
     .description {
-      margin: 50px 0; 
+      margin: 50px 0;
     }
 
     ul.index-list {
@@ -956,7 +1051,7 @@ body.api {
     }
 
     span.flag {
-      background-color: gray; 
+      background-color: gray;
       color: white;
       border-radius: 3px;
     }

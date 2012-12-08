@@ -1,0 +1,49 @@
+--- 
+title: Ember 1.0 Prerelease 2
+---
+
+Ember 1.0 Prerelease 2 is out now. This is mainly a bug fix release
+after 1.0.pre. However, there are a few things you should be aware of
+and we'll go over those a bit below. We're still pushing hard toward the a 1.0 beta release but wanted to make some of our bug fixes available in a more formal way. If you want to go ahead and
+download now, you can grab it over on the [Github Download Page](https://github.com/emberjs/ember.js/downloads).  
+
+READMORE
+
+## What's Changed Now
+
+Other than bug fixes, there are a few things we've changed that
+could affect your 1.0.pre apps.
+
+* `{{outlet}}` now creates a Metamorph rather than a `<div>`. This makes
+  it less obtrusive, but you may have to change your HTML or CSS if you 
+  were relying on the `<div>`.
+* We have removed `CP_DEFAULT_CACHEABLE` and `VIEW_PRESERVES_CONTEXT`
+  flags. Both behaviors are now always on.
+* Inline Handlebars templates must always be named now. The default name
+  is 'application'. This means that `<script type="text/x-handlebars">`
+  behaves exactly the same as
+  `<script type="text/x-handlebars" data-template-name="application">`.
+* Using the `{{collection}}` helper without a class has been deprecated,
+  use the `{{each}}` helper instead. The `{{each}}` helper also now
+  supports `itemViewClass` which was the main benefit to using
+  `{{collection}}`.
+* `Ember.ViewState` has been removed.
+
+For more information on what's been changing in Ember, take a look at
+Bradley Priest's [What's New in EmberJS](http://bradleypriest.com/tags.html#ember-wrapup-ref).
+
+## What Will Change Later
+
+There are still some things that we want to take care of before we do a
+beta release. Here are a few of them:
+
+* New Router API: This is mostly finalized but has not yet been
+  implemented.
+* New Computed Property API: We're working on a new API for Computed 
+  Property getters and setters. Don't worry, we expect to support
+  the existing one for the foreseeable future.
+* Asynchronous Observers: Currently observers are fired immediately
+  whereas bindings are synchronized with the RunLoop. In most cases
+  observers can and should be delayed for optimal performance. We plan
+  to change the existing behavior and add a new API for the cases where
+  immediate execution really is needed.

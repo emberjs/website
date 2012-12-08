@@ -32,6 +32,8 @@ activate :blog do |blog|
   blog.summary_separator = %r{(<p>READMORE</p>)} # Markdown adds the <p>
 end
 
+page "/blog/feed.xml", :layout => false
+
 
 ###
 # Pages
@@ -88,21 +90,21 @@ helpers do
   end
 
   # The default one is buggy as of beta 2
-  #def wrap_layout(layout_name, &block)
-    ## Save current buffer for later
-    #@_out_buf, _buf_was = "", @_out_buf
-    #begin
-      #content = capture(&block) if block_given?
-    #ensure
-      ## Reset stored buffer
-      #@_out_buf = _buf_was
-    #end
-    #layout_path = locate_layout(layout_name, current_engine)
+  def wrap_layout(layout_name, &block)
+    # Save current buffer for later
+    @_out_buf, _buf_was = "", @_out_buf
+    begin
+      content = capture(&block) if block_given?
+    ensure
+      # Reset stored buffer
+      @_out_buf = _buf_was
+    end
+    layout_path = locate_layout(layout_name, current_engine)
 
-    #if !@_out_buf
-      #raise "wrap_layout is currently broken for this templating system"
-    #end
+    if !@_out_buf
+      raise "wrap_layout is currently broken for this templating system"
+    end
 
-    #@_out_buf.concat render_individual_file(layout_path, @current_locs || {}, @current_opts || {}, self) { content }
-  #end
+    @_out_buf.concat render_individual_file(layout_path, @current_locs || {}, @current_opts || {}, self) { content }
+  end
 end

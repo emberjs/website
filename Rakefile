@@ -23,8 +23,8 @@ def generate_docs
 
   Dir.chdir(ember_path) do
     # returns either `tag` or `tag-numcommits-gSHA`
-    sha_parts = `git describe --tags --always`.strip.split('-')
-    sha = sha_parts.length == 1 ? sha_parts[0] : sha_parts[2][1..-1]
+    describe = `git describe --tags --always`.strip
+    sha = describe =~ /-g(\.+)/ ? $1 : describe
 
     Dir.chdir("docs") do
       system("npm install") unless File.exist?('node_modules')
@@ -40,13 +40,21 @@ def generate_docs
     YAML.dump(data, f)
   end
 
-  puts "Done"
+  puts "Built #{sha}"
+end
+
+def build
+  system "middleman build"
+end
+
+desc "Generate API Docs"
+task :generate_docs do
+  generate_docs
 end
 
 desc "Build the website"
-task :build do
-  generate_docs
-  system "middleman build"
+task :build => :generate_docs do
+  build
 end
 
 desc "Preview"
@@ -93,7 +101,7 @@ task :deploy do |t, args|
     git_initialize("emberjs.github.com")
     git_update
 
-    Rake::Task["build"].invoke
+    build
 
     # This screws up the build and isn't necessary
     # rm_r "source/examples"

@@ -1,0 +1,18 @@
+- name: BradleyPriest.com
+  url: http://bradleypriest.com/tags.html#emberjs-ref
+  description: Bradley Priest's blog includes a great "What's New in EmberJS" series.
+- name: Ember Noob
+  url: http://www.embernoob.com/
+  description: This blog approaches Ember from the perspective of a complete beginner.
+- name: Cerebris
+  url: http://www.cerebris.com/blog-search/by-tag/emberjs/
+  description: Dan Gebhardt is a frequent contributor to Ember.
+- name: Codebrief
+  url: http://codebrief.com/
+  description: Gordon Hempton is Co-Founder of GroupTalent which uses Ember in their app.
+- name: holy moly
+  url: http://code418.com/blog/categories/ember-js/
+  description: This blog by Clemens Müller, a regular Ember contributor, includes a detailed walk-through of building a GitHub dashboard in Ember.
+- name: LukeMelia.com
+  url: http://www.lukemelia.com/
+  description: Luke Melia is CTO and Co-Founder of Yapp which has an Ember-based mobile app.
