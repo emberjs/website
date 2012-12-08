@@ -27,8 +27,6 @@ Templates:
     url: "templates/handling-user-events"
   - title: "Writing Helpers"
     url: "templates/writing-helpers"
-  #- title: "Buidling a View Hierarchy"
-    #url: "templates/building-a-view-hierarchy"
 
 Routing:
   - title: "Defining a Route"
@@ -81,6 +79,8 @@ Views:
     url: "views/built-in-views"
   - title: "Manually Managing View Hierarchy"
     url: "views/manually-managing-view-hierarchy"
+  - title: "Building Reusable Views"
+    url: "views/building-reusable-views"
 
 Loading, Changing, and Saving Data:
   - title: "Loading Records"

@@ -26,8 +26,9 @@ template inside your HTML by putting it inside a `<script>` tag, like so:
 </html>
 ```
 
-This template will automatically be compiled and displayed on the page
-by the router when your app loads.
+This template will automatically be compiled and become your
+_application template_, which will be displayed on the page by the
+router when your app loads.
 
 You can also define templates by name that can be used later. For
 example, you may want to define a reusable control that is used in many
@@ -51,8 +52,8 @@ to Ember.js.
 
 ### Handlebars Expressions
 
-Each template has an associated _controller_: this is the JavaScript
-object from which values displayed in the template are found.
+Each template has an associated _controller_: this is where the template 
+finds the properties that it displays.
 
 You can display a property from your controller by wrapping the property
 name in curly braces, like this:
@@ -82,12 +83,8 @@ Hello, <strong>Trek Glowacki</strong>!
 ```
 
 These expressions (and the other Handlebars features you will learn
-about next) are __bindings aware__. That means that if the values used
+about next) are _bindings aware_. That means that if the values used
 by your templates ever change, your HTML will be updated automatically.
-It's like magic.
 
 As your application grows in size, it will have many templates, each
-bound to different controllers. The job of the router is to pair a
-template with a controller and make sure it gets put into the DOM in the
-correct place.
-
+bound to different controllers.
