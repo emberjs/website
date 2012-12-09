@@ -757,7 +757,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
           > a {
             color: #443331;
             border-top: 1px solid #d5ccc8;
-            border-bottom: 1px solid #d5ccc8;
             padding: 12px 12px 10px 12px;
             width: 218px;
             margin-left: -1px;
@@ -768,6 +767,15 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
               border: 1px solid #b23e2a;
               color: white;
             }
+
+          }
+
+          &:last-of-type > a {
+            border-bottom: 1px solid #d5ccc8;
+          }
+
+          ol {
+            border-top: 1px solid #d5ccc8;
           }
         }
 
