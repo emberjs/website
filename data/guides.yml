@@ -47,10 +47,6 @@ Routing:
 Controllers:
   - title: "Introduction"
     url: "controllers"
-  - title: "Representing Models"
-    url: "controllers/representing-models"
-  - title: "Storing Application State"
-    url: "controllers/storing-application-state"
 
 Models:
   - title: "Introduction"
