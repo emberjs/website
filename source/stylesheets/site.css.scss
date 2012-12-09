@@ -704,125 +704,141 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 **/
 
 .guides {
-    #content-wrapper {
-        padding: 0px 0px 20px 0px;
-    }
-    #sidebar {
-        margin-top: 0px;
-        width: 218px;
-        margin-bottom: 28px;
-        padding-bottom: 120px;
-        background: #f4ece9;
-        border-left: 1px solid #d4ccc8;
-        border-right: 1px solid #d4ccc8;
-        position: relative;
-        ol#guide_list {
-            li {
-                font-size: 12px;
-                list-style: none;
-                margin: 0px;
-                padding: 0px;
-                p {
-                    padding-left: 7px;
-                }
-                a {
-                    padding: 0 10px;
-                    line-height: 1.2em;
-                }
-                > ol {
-                    display: none;
-                    background-color: #f9e7e4;
-                    &.selected {
-                        display: block;
-                    }
-                    li:first-of-type {
-                        padding-top: 10px;
-                    }
-                    li:last-of-type {
-                        padding-bottom: 10px;
-                    }
-                }
-                &.level-1 {
-                    text-transform: uppercase;
-                    > a {
-                        color: #443331;
-                        border-top: 1px solid #d5ccc8;
-                        border-bottom: 1px solid #d5ccc8;
-                        padding: 12px 12px 10px 12px;
-                        width: 218px;
-                        margin-left: -1px;
+  #content-wrapper {
+    padding: 0px 0px 20px 0px;
+  }
 
-                        &.selected {
-                            background-color: #f16f58;
-                            background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
-                            border: 1px solid #b23e2a;
-                            color: white;
-                        }
-                    }
-                }
-                &.level-2, &.level-3 {
-                    padding: 4px 0;
-                    a {
-                        text-transform: none;
-                        color: #d84a32;
-                        font-weight: normal;
-                        font-size: 12px;
-                    }
-                }
+  #sidebar {
+    margin-top: 0px;
+    width: 218px;
+    margin-bottom: 28px;
+    padding-bottom: 120px;
+    background: #f4ece9;
+    border-left: 1px solid #d4ccc8;
+    border-right: 1px solid #d4ccc8;
+    position: relative;
+
+    ol#guide_list {
+      li {
+        font-size: 12px;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        p {
+          padding-left: 7px;
+        }
+
+        a {
+          padding: 0 10px;
+          line-height: 1.2em;
+        }
+
+        > ol {
+          display: none;
+          background-color: #f9e7e4;
+
+          &.selected {
+            display: block;
+          }
+
+          li:first-of-type {
+            padding-top: 10px;
+          }
+
+          li:last-of-type {
+            padding-bottom: 10px;
+          }
+        }
+
+        &.level-1 {
+          text-transform: uppercase;
+
+          > a {
+            color: #443331;
+            border-top: 1px solid #d5ccc8;
+            border-bottom: 1px solid #d5ccc8;
+            padding: 12px 12px 10px 12px;
+            width: 218px;
+            margin-left: -1px;
+
+            &.selected {
+              background-color: #f16f58;
+              background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+              border: 1px solid #b23e2a;
+              color: white;
             }
+          }
         }
-        &:after {
-            @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
-            position: absolute;
-            bottom: 0px;
-            left: -2px;
-            right: 0;
-            width: 220px;
-            height: 120px;
-            content: '';
-        }
-    }
 
+        &.level-2, &.level-3 {
+          padding: 4px 0;
 
-    #guide_search {
-        background-color: #fbf8f7;
-        border: 1px solid #ccc;
-        position: relative;
-        color: #423432;
-        display: block;
-        width: 100%;
-        height: 40px;
-        label {
-            padding: 0px 0px 5px 15px;
-            padding-right: 10px;
-            margin-left: 10px;
-            background: no-repeat url(/images/search-icon.png);
-        }
-        border: 0;
-        input::-webkit-input-placeholder { font-style: italic; }
-        input:-moz-placeholder { font-style: italic; }
-        input::-moz-placeholder { font-style: italic; }
-        input {
-            background: none;
+          a {
+            text-transform: none;
+            color: #d84a32;
+            font-weight: normal;
             font-size: 12px;
-            border: 0px;
-            padding: 5px 0px 5px 5px;
-            height: 100%;
-            width: 165px;
-            outline: none;
-            font-style: normal;
+          }
         }
-        button {
-            background: no-repeat url(/images/search-erase.png);
-            width: 14px;
-            border: 0px;
-            height: 14px;
-            position: absolute;
-            cursor: pointer;
-            right: 10px;
-            top: 15px;
-        }
+      }
     }
+
+    &:after {
+      @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
+      position: absolute;
+      bottom: 0px;
+      left: -2px;
+      right: 0;
+      width: 220px;
+      height: 120px;
+      content: '';
+    }
+  }
+
+  #guide_search {
+    background-color: #fbf8f7;
+    border: 1px solid #ccc;
+    position: relative;
+    color: #423432;
+    display: block;
+    width: 100%;
+    height: 40px;
+
+    label {
+      padding: 0px 0px 5px 15px;
+      padding-right: 10px;
+      margin-left: 10px;
+      background: no-repeat url(/images/search-icon.png);
+    }
+
+    border: 0;
+    input::-webkit-input-placeholder { font-style: italic; }
+    input:-moz-placeholder { font-style: italic; }
+    input::-moz-placeholder { font-style: italic; }
+
+    input {
+      background: none;
+      font-size: 12px;
+      border: 0px;
+      padding: 5px 0px 5px 5px;
+      height: 100%;
+      width: 165px;
+      outline: none;
+      font-style: normal;
+    }
+
+    button {
+      background: no-repeat url(/images/search-erase.png);
+      width: 14px;
+      border: 0px;
+      height: 14px;
+      position: absolute;
+      cursor: pointer;
+      right: 10px;
+      top: 15px;
+    }
+  }
 }
 
 
