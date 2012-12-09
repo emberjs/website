@@ -756,18 +756,17 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
           > a {
             color: #443331;
-            border-top: 1px solid #d5ccc8;
+            outline: 1px solid #d5ccc8;
             padding: 12px 12px 10px 12px;
-            width: 218px;
-            margin-left: -1px;
+            margin-top: 1px;
+          }
 
-            &.selected {
-              background-color: #f16f58;
-              background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
-              border: 1px solid #b23e2a;
-              color: white;
-            }
-
+          &.selected > a {
+            background-color: #f16f58;
+            background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+            outline: 1px solid #b23e2a;
+            color: white;
+            border-top: 1px solid rgba(255,255,255,0.4);
           }
 
           &:last-of-type > a {

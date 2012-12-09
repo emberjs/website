@@ -46,10 +46,8 @@ module TOC
             current = true
         end
 
-        class_name = current ? ' class="selected"' : ''
-
-        result += %Q{<li class="level-1"><a #{class_name} href="/guides/#{entries[0].url}">#{section}</a>}
-        result += %Q{<ol #{class_name}>}
+        result += %Q{<li class="level-1#{current ? ' selected' : ''}"><a href="/guides/#{entries[0].url}">#{section}</a>}
+        result += %Q{<ol#{current ? " class='selected'" : ''}>}
         entries.each do |entry|
           result += %Q{<li class="level-3"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
         end
