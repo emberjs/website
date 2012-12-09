@@ -1,11 +1,11 @@
 ## Representing Models
 
-Templates are always connected to controllers, not models. This ensures
-that properties that are display-specific are separated from those that
-are model-specific.
+Templates are always connected to controllers, not models. This makes it
+easy to separate display-specific properties from model-specific
+properties.
 
-Often, however, it is convenient to be able to retrieve properties
-directly from a model. Ember.js makes this easy with
+Often, however, it is convenient for your templates to be able to
+retrieve properties directly from a model. Ember.js makes this easy with
 `Ember.ObjectController` and `Ember.ArrayController`.
 
 ### Representing a Single Model
@@ -122,4 +122,63 @@ Now, the output of our template is a lot friendlier:
 <p>
   <strong>Duration</strong>: 4:17
 </p>
+```
+
+### Representing Multiple Models
+
+You can use `Ember.ArrayController` to represent an array of models. To tell an
+`ArrayController` which model to represent, set its `content` property
+in your route's `setupControllers` method.
+
+You can treat an `ArrayController` just like its underlying array. For
+example, imagine we want to display the current playlist. In our router,
+we set tell our `SongsController` to represent the songs in the playlist:
+
+```javascript
+App.SongsRoute = Ember.Route.extend({
+  setupControllers: function(playlist) {
+    this.set('controller.content', playlist.get('songs'));
+  }
+});
+```
+
+In the `songs` template, we can use the `{{#each}}` helper to display
+each song:
+
+```handlebars
+<h1>Playlist</h1>
+
+<ul>
+  {{#each controller}}
+    <li>{{name}} by {{artist}}</li>
+  {{/each}}
+</ul>
+```
+
+You can use the `ArrayController` to collect aggregate information about
+the models it represents. For example, imagine we want to display the
+number of songs that are over 30 seconds long. We can add a new computed
+property called `longSongCount` to the controller:
+
+```javascript
+App.SongsController = App.ArrayController.extend({
+  longSongCount: function() {
+    var longSongs = this.filter(function(song) {
+      return song.get('duration') > 30;
+    });
+    return longSongs.get('length');
+  }.property('@each.duration')
+});
+```
+
+Now we can use this property in our template:
+
+```handlebars
+<ul>
+  {{#each controller}}
+    <li>{{name}} by {{artist}}</li>
+  {{/each}}
+</ul>
+
+{{longSongCounty}} songs over 30 seconds.
 ```
