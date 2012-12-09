@@ -1,4 +1,4 @@
-## Ember.js Guides
+# Ember.js Guides
 
 Welcome to the Ember.js guides! This documentation will take you from
 total beginner to Ember expert. It is designed to start from the most

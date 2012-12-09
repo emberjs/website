@@ -39,16 +39,36 @@ module TOC
     def guides_index
       guides = data.guides
 
-      result = '<ol>'
+      result = '<ol id="guide_list">'
       guides.each_entry do |section, entries|
-        result += %Q{<li class="level-1">#{section}</li>}
-        entries.each do |entry|
-          result += %Q{<li class="level-3"><a href="/guides/#{entry.url}/">#{entry.title}</a></li>}
+
+        if entries[0].url.split("/")[0] == request.path.split("/")[2]
+            current = true
         end
+
+        class_name = current ? ' class="selected"' : ''
+
+        result += %Q{<li class="level-1"><a #{class_name} href="/guides/#{entries[0].url}">#{section}</a>}
+        result += %Q{<ol #{class_name}>}
+        entries.each do |entry|
+          result += %Q{<li class="level-3"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
+        end
+        result += '</ol></li>'
       end
       result += '</ol>'
+    end
 
-      result
+    def chapter_name
+        guides = data.guides
+
+        heading = ""
+        guides.each_entry do |section, entries|
+            if entries[0].url.split("/")[0] == request.path.split("/")[2]
+                heading = %Q{<h1> #{section} </h1>}
+                break
+            end
+        end
+        result = heading
     end
 
     def table_of_contents
