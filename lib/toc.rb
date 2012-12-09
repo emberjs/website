@@ -59,16 +59,21 @@ module TOC
     end
 
     def chapter_name
-        guides = data.guides
+      guides = data.guides
 
-        heading = ""
-        guides.each_entry do |section, entries|
-            if entries[0].url.split("/")[0] == request.path.split("/")[2]
-                heading = %Q{<h1> #{section} </h1>}
-                break
-            end
+      heading = ""
+      guides.each_entry do |section, entries|
+        if entries[0].url.split("/")[0] == request.path.split("/")[2]
+          heading = section
+          break
         end
-        result = heading
+      end
+      heading
+    end
+
+    def chapter_heading
+      name = chapter_name
+      name ? %Q{<h1> #{name} </h1>} : nil
     end
 
     def table_of_contents
