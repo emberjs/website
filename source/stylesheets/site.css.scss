@@ -20,7 +20,7 @@ $black-color: #252525;
 
 body {
   background: url(/images/background-shades.png) no-repeat top center #faf4f1;
-  margin: 65px 0 0 0;
+  margin: 60px 0 0 0;
   padding: 0;
   font-family: Lato, Arial, sans-serif;
   line-height: 23px;
@@ -105,6 +105,7 @@ hr {
   height: 60px;
   background: url(/images/navigation_background.png) top center;
   border-bottom: 1px solid #aa412f;
+  z-index: 10; // the header is on top to have a proper drop shadow
   @include box-shadow(rgba(0,0,0,0.3) 0 0 3px);
 
   #wrapper {
@@ -225,6 +226,7 @@ hr {
   margin: 0 auto 40px auto;
   padding: 20px 0px;
   position: relative;
+  z-index: 1;
 
   &.grid {
     background-image: url(/images/grid.png);
@@ -635,29 +637,39 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 **/
 
 .chapter {
-  margin: 43px 0 90px 0;
+  margin: 23px 0 90px 0;
 
   $h3-indent: 32px;
   $body-indent: $h3-indent;
 
+  h1 {
+    font-family: "MavenProBold";
+    font-size: 22px;
+    text-transform: uppercase;
+    color: $orange-color;
+    padding: 0px 0px 15px 25px;
+    background: no-repeat url(/images/chapter-mark.png) 0px 7px;
+    border-bottom: 1px solid #dfd7d4;
+  }
+
   h2 {
     width: 100%;
-    font-size: 18px;
+    font-size: 22px;
     color: $black-color;
-    text-transform: uppercase;
     font-family: "MavenProBold";
   }
 
   h3 {
     font-family: "MavenProBold";
     font-size: 18px;
-    color: $orange-color;
+    color: $black-color;
     margin: 30px 0;
   }
 
   h4 {
     font-family: "MavenProBold";
     font-size: 12px;
+    color: $orange-color;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: 24px 0 12px 0;
@@ -686,24 +698,137 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   }
 }
 
+
 /**
-  Guides and Blogs
+  Guides Page
 **/
 
-ul#guide_list {
-  margin-left: 30px;
-  list-style-type: disc;
-  margin-bottom: 28px;
-
-  li {
-    font-size: 15px;
-    margin: 10px 0 10px 0;
-
-    p {
-      padding-left: 7px;
+.guides {
+    #content-wrapper {
+        padding: 0px 0px 20px 0px;
     }
-  }
+    #sidebar {
+        margin-top: 0px;
+        width: 218px;
+        margin-bottom: 28px;
+        padding-bottom: 120px;
+        background: #f4ece9;
+        border-left: 1px solid #d4ccc8;
+        border-right: 1px solid #d4ccc8;
+        position: relative;
+        ol#guide_list {
+            li {
+                font-size: 12px;
+                list-style: none;
+                margin: 0px;
+                padding: 0px;
+                p {
+                    padding-left: 7px;
+                }
+                a {
+                    padding: 0 10px;
+                    line-height: 1.2em;
+                }
+                > ol {
+                    display: none;
+                    background-color: #f9e7e4;
+                    &.selected {
+                        display: block;
+                    }
+                    li:first-of-type {
+                        padding-top: 10px;
+                    }
+                    li:last-of-type {
+                        padding-bottom: 10px;
+                    }
+                }
+                &.level-1 {
+                    text-transform: uppercase;
+                    > a {
+                        color: #443331;
+                        border-top: 1px solid #d5ccc8;
+                        border-bottom: 1px solid #d5ccc8;
+                        padding: 12px 12px 10px 12px;
+                        width: 218px;
+                        margin-left: -1px;
+
+                        &.selected {
+                            background-color: #f16f58;
+                            background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+                            border: 1px solid #b23e2a;
+                            color: white;
+                        }
+                    }
+                }
+                &.level-2, &.level-3 {
+                    padding: 4px 0;
+                    a {
+                        text-transform: none;
+                        color: #d84a32;
+                        font-weight: normal;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        &:after {
+            @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
+            position: absolute;
+            bottom: 0px;
+            left: -2px;
+            right: 0;
+            width: 220px;
+            height: 120px;
+            content: '';
+        }
+    }
+
+
+    #guide_search {
+        background-color: #fbf8f7;
+        border: 1px solid #ccc;
+        position: relative;
+        color: #423432;
+        display: block;
+        width: 100%;
+        height: 40px;
+        label {
+            padding: 0px 0px 5px 15px;
+            padding-right: 10px;
+            margin-left: 10px;
+            background: no-repeat url(/images/search-icon.png);
+        }
+        border: 0;
+        input::-webkit-input-placeholder { font-style: italic; }
+        input:-moz-placeholder { font-style: italic; }
+        input::-moz-placeholder { font-style: italic; }
+        input {
+            background: none;
+            font-size: 12px;
+            border: 0px;
+            padding: 5px 0px 5px 5px;
+            height: 100%;
+            width: 165px;
+            outline: none;
+            font-style: normal;
+        }
+        button {
+            background: no-repeat url(/images/search-erase.png);
+            width: 14px;
+            border: 0px;
+            height: 14px;
+            position: absolute;
+            cursor: pointer;
+            right: 10px;
+            top: 15px;
+        }
+    }
 }
+
+
+/**
+  Blogs
+**/
 
 article {
   margin: 43px 0 90px 0;
