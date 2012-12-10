@@ -46,10 +46,16 @@ module TOC
             current = true
         end
 
+
         result += %Q{<li class="level-1#{current ? ' selected' : ''}"><a href="/guides/#{entries[0].url}">#{section}</a>}
         result += %Q{<ol#{current ? " class='selected'" : ''}>}
         entries.each do |entry|
-          result += %Q{<li class="level-3"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
+
+          if entry.url.split('/')[-1] == request.path.split("/")[-2]
+            result += %Q{<li class="level-3 active"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
+          else
+            result += %Q{<li class="level-3"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
+          end
         end
         result += '</ol></li>'
       end
@@ -79,7 +85,7 @@ module TOC
       chapters = chapters.collect_concat do |file|
          File.read("source/documentation/#{file}.md")+"\n"
       end
-      
+
       toc = TableOfContents.new()
       markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
       markdown.render(chapters.join(''))
