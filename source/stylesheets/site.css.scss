@@ -696,6 +696,25 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
       }
     }
   }
+  .nav-next {
+    display: block;
+    float: right;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    &:before {
+      content: "Next Up: ";
+    }
+  }
+  .nav-prev {
+    display: block;
+    float: left;
+    position: absolute;
+    bottom: 0px;
+    &:before {
+      content: "Back To: ";
+    }
+  }
 }
 
 
@@ -727,6 +746,10 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
         p {
           padding-left: 7px;
+        }
+
+        &.active {
+          background: #FFF;
         }
 
         a {
@@ -779,7 +802,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
         }
 
         &.level-2, &.level-3 {
-          padding: 4px 0;
+          padding: 5px 0;
 
           a {
             text-transform: none;
