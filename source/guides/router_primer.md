@@ -1438,7 +1438,7 @@ App.Shoe.reopenClass({
       allShoes.pushObjects( this._stubDataSource;);
     }, 2000);
 
-    return this._listOfShoes;
+    return allShoes;
   },
   find:  function(id){
     return this._stubDataSource.findProperty('id', id);
