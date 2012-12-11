@@ -192,7 +192,7 @@ Now we can use this property in our template:
   {{/each}}
 </ul>
 
-{{longSongCounty}} songs over 30 seconds.
+{{longSongCount}} songs over 30 seconds.
 ```
 
 ## Storing Application Properties
