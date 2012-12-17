@@ -667,42 +667,42 @@ Ember comes pre-packaged with a set of views for building a few basic controls l
 They are:
 
 ####Ember.Checkbox
-	
+
 ```handlebars
-    <label>
-      {{view Ember.Checkbox checkedBinding="content.isDone"}}
-      {{content.title}}
-    </label>
+<label>
+  {{view Ember.Checkbox checkedBinding="content.isDone"}}
+  {{content.title}}
+</label>
 ```
-	
+
 ####Ember.TextField
-	
+
 ```javascript
-	App.MyText = Ember.TextField.extend({
-	    formBlurredBinding: 'App.adminController.formBlurred',
-	    change: function(evt) {
-	      this.set('formBlurred', true);
-	    }
-	  });
+App.MyText = Ember.TextField.extend({
+    formBlurredBinding: 'App.adminController.formBlurred',
+    change: function(evt) {
+      this.set('formBlurred', true);
+    }
+  });
 ```
-	
+
 ####Ember.Select
-	
+
 ```handlebars
-	{{view Ember.Select viewName="select"
-                          contentBinding="App.peopleController"
-                          optionLabelPath="content.fullName"
-                          optionValuePath="content.id"
-                          prompt="Pick a person:"
-                          selectionBinding="App.selectedPersonController.person"}}
+{{view Ember.Select viewName="select"
+                    contentBinding="App.peopleController"
+                    optionLabelPath="content.fullName"
+                    optionValuePath="content.id"
+                    prompt="Pick a person:"
+                    selectionBinding="App.selectedPersonController.person"}}
 ```
-	
+
 ####Ember.TextArea
-	
+
 ```javascript
-	var textArea = Ember.TextArea.create({
-      		valueBinding: 'TestObject.value'
-    		});
+var textArea = Ember.TextArea.create({
+  valueBinding: 'TestObject.value'
+});
 ```
 	
 
@@ -714,29 +714,26 @@ Example:
 
 ```javascript
 App.MyText = Ember.TextField.extend({
-    formBlurredBinding: 'App.adminController.formBlurred',
-    change: function(evt) {
-      this.set('formBlurred', true);
-    }
-  });
+  formBlurredBinding: 'App.adminController.formBlurred',
+  change: function(evt) {
+    this.set('formBlurred', true);
+  }
+});
 ```
 
-You can then use this view as a sub view and capture the events.  In the following example, a change to the Name input would blurr the form and cause the save button to appear.
+You can then use this view as a sub view and capture the events.  In the following example, a change to the Name input would blur the form and cause the save button to appear.
 
 ```handlebars
-<script id="formDetail" data-template-name='formDetail' type="text/x-handlebars">
-    <form>
-        <fieldset>
-           <legend>Info:</legend>                 
-           
-                   {{view App.MyText name="Name" id="Name"  valueBinding="myObj.Name"}} 
-	               <label for="Name">Name</label><br/>
-                   
-                   {{#if formBlurred}}
-                    <a href="#" {{action "syncData" on="click"}}>Save</a>
-                    {{/if}}
-               
-        </fieldset>
-    </form>
-</script>
+<form>
+  <fieldset>
+    <legend>Info:</legend>
+
+    {{view App.MyText name="Name" id="Name"  valueBinding="myObj.Name"}}
+    <label for="Name">Name</label><br/>
+
+    {{#if formBlurred}}
+      <a href="#" {{action "syncData" on="click"}}>Save</a>
+    {{/if}}
+  </fieldset>
+</form>
 ```
