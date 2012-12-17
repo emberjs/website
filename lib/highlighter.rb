@@ -11,10 +11,7 @@ module Highlighter
 
   module Helpers
     def _highlight(string, language, class_name=nil)
-      language_class = language
-      language = 'html' if language == 'handlebars'
-
-      result = %Q{<div class="highlight #{language_class} #{class_name}">}
+      result = %Q{<div class="highlight #{language} #{class_name}">}
       result += '<div class="ribbon"></div>'
       code = string.gsub(/^\n+/, '').rstrip
       code = CodeRay.scan(code, language)
@@ -23,7 +20,7 @@ module Highlighter
                       line_number_anchors: false
 
       result += %Q{</div>}
-      result 
+      result
     end
 
     def highlight(language, class_name, &block)

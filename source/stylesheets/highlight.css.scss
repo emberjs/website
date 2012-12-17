@@ -22,13 +22,16 @@ $border-radius: 5px;
 		height: 20px;
 	}
 
-	&.javascript .ribbon {
-		background-image: url(/images/js-ribbon.png);
-	}
-
-	&.html .ribbon {
-		background-image: url(/images/html-ribbon.png);
-	}
+    &.javascript .ribbon {
+      background-image: url(/images/js-ribbon.png);
+    }
+    &.html .ribbon {
+      background-image: url(/images/html-ribbon.png);
+    }
+    /* TODO - create custom handlebars-ribbon.png */
+    &.handlebars .ribbon {
+      background-image: url(/images/html-ribbon.png);
+    }
 }
 
 .CodeRay {
@@ -53,7 +56,7 @@ $border-radius: 5px;
 
 /* HTML */
 .CodeRay {
-	.tag {
+	.tag, .error {
 		color: red;
 	}
 
