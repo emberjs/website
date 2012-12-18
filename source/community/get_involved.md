@@ -1,10 +1,7 @@
 ## IN A GIVING MOOD? CONTRIBUTE TO THE PROJECT
 
-![Placeholder Text](/images/community/placeholder.png)
+![Placeholder Text](/images/community/give.png)
 
 The Ember.js source is hosted on [GitHub](https://github.com/emberjs/ember.js).
-To learn more about filing issues or contributing patches, see our
-[contributor guidelines](https://github.com/emberjs/ember.js/blob/master/CONTRIBUTING.md).
-
-If you notice problems relating to the guides or the website, the
-website source is also on [GitHub](https://github.com/emberjs/website).
+To contribute patches, create a fork of the project on GitHub and submit a pull request. 
+Please be sure to include unit tests and documentation for any new features you add.
