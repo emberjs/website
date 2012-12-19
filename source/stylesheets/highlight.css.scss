@@ -28,9 +28,8 @@ $border-radius: 5px;
     &.html .ribbon {
       background-image: url(/images/html-ribbon.png);
     }
-    /* TODO - create custom handlebars-ribbon.png */
     &.handlebars .ribbon {
-      background-image: url(/images/html-ribbon.png);
+      background-image: url(/images/handlebars-ribbon.png);
     }
 }
 
