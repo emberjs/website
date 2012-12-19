@@ -176,7 +176,7 @@ has references to a [GitHub](http://github.com) project,
 [Ember-Router-Application-Guide-Code][ERGC], whose commits match each of these
 incremental steps.  As such, you can clone the repository, check out the commit
 under discussion, adjust the code, try things out, and then move to the next
-step.  Simply clone the project, follow its `README.md` you will have, in the
+step.  Simply clone the project, follow its `README.md` and you will have, in the
 `workspace` subdirectory, the code that I demonstrate in the text listings.
 
 In each of the text listings I will include GitHub URLs that show the diffs in
@@ -381,7 +381,7 @@ place to insert logging and debugging data as has already appeared in this
 application.
 
 Setting the `enableLogging` property to `true` within the Router also helpfully
-display's the Router's decision-making process.  When the browser's debug
+displays the Router's decision-making process.  When the browser's debug
 console is open, the router will print helpful error messages beginning with
 `STATEMANAGER`.
 
@@ -498,7 +498,7 @@ The result is the following:
   <img src="/images/routing-primer/contexts-and-content.png">
 </figure>
 
-Information is shared between the ApplicationView and the ApplicationController
+Information is shared between the ApplicationView and the ApplicationController.
 The View stays focused on presentation while the Controller stays focused on
 domain logic.  By setting `classNames` on the View we affect the CSS classes applied to the `Ember.View`.  By using `bindAttr` we tell the template to apply the class `is-slogan` if the context's evaluation of `isSlogan` returns `true`.
 
@@ -511,7 +511,7 @@ domain logic.  By setting `classNames` on the View we affect the CSS classes app
 Given the preceeding discussion, an opinion of Ember's designers, that is
 enforced by the router is that for a given `BaseName` (e.g. "Application,"
 "CustomerEntry," "My Items") there should be a BaseNameView and a
-BaseNameController.  The base name "Application" is no different.  In this
+BaseNameController.  The base name "Application" is no different in this
 respect.  Remember: Views hold UI behavior, their partner controllers hold
 information about UI.
 
@@ -528,7 +528,7 @@ last line of code.  The function of this call is multiple:
 1.  It iterates through the controller and view namespaces and, for each class found, it executes .create() on the class and sets that instance as a property on `App.router`
 1. Each `create`d view is given a `controller` property that corresponds to its controller (thus setting up the context to be helpful by default so that templates look in the right place for data).
 
-Again, thanks to the requirement that `ApplicationController` and
+Again, thanks to the requirement of `ApplicationController`,
 `ApplicationView` and the #initialize() method, developers are assured that
 there is a primoridal view managed by a sensibly-named controller, onto which
 other views can be plugged in.  Specifically the ApplicationView and
@@ -612,7 +612,7 @@ when you want to find out what the current, active `Route` is.
 
 Per the code listing, Routes named `cars` and `shoes` were added.  To change to
 the `cars` route, issue `App.get('router').transitionTo('cars')`.  Notice that
-The [State Manager][StateManager] logging output states that the `cars
+the [State Manager][StateManager] logging output states that the `cars
 sub-state was entered`.  The console provides further tools wherewith to
 ascertain the state of the router as shown in the image.
 
@@ -720,7 +720,7 @@ data source might contain different content when loaded (e.g. "logged-in
 navigation" or "admin navigation");
 
 The place where this appropriate-to-the-State View "plugs in" is an "`outlet`."
-While "outlet" has many subtle meanings in English, in Ember case it means "the
+While "outlet" has many subtle meanings in English, in Ember's case it means "the
 place where Views get plugged in."
 
 We denote an outlet by putting the Em.Handlebars helper `{{outlet}}` inside of
@@ -728,7 +728,7 @@ our Views' template code.  A template can have multiple outlets which are
 differentiated by name (e.g. `{{outlet topNav }}` and `{{outlet leftNav}}`).
 In many templates, however, there will be only one `{{outlet}}`.
 
-In the following listing we add templates for the newest routes.  For each
+In the following listing we add templates for the newest routes.
 Ember requires _basename_View, _basename_Controller, and a template for each
 view.  This is a technique that has been demonstrated previously in this guide.
 What is new will be the _linking_ of these new views into the existant
@@ -901,7 +901,7 @@ For those who have examined other Ember tutorials or developed some Ember app,
 the question may have arisen:  "Sometimes I define a simple view in my
 templates, or I might want to wire up a simple `Ember.View` into an outlet, do
 I **have** to create a matching `Ember.Controller` for it?"  The answer is
-"no."  When an `Ember.View` is attached to an outlet and it *does* not have its
+"no."  When an `Ember.View` is attached to an outlet and it *does not* have its
 own `Controller` for defining its context, it inherits the context of its
 parent template.  A real-life example would be imagine an item that could be
 "liked" by clicking on a glyph.  Handling the CSS and click logic could live on
@@ -1063,7 +1063,7 @@ This bubbling effect allows certain actions to remain private.  If certain
 transitions should only be available for certain sub-sub-states, put the
 transition on the sub-state and you've achieved a type of scoping.
 
-In this example, Ember looks to App.ApplicationView to handle the click, it
+In this example, Ember looks to App.ApplicationView to handle the click, but it
 does not.  The event then bubbles upward until it hits the `root` `Route` where
 a transition is indeed found.
 
@@ -1366,7 +1366,7 @@ C-influenced style for reasons explained shortly:
     appropriate object
 
 To translate this model to be compatible with Ember's opinions, the `Router`
-should be to call the method: `App.Shoe.all()` which returns a unique reference
+should be able to call the method: `App.Shoe.all()` which returns a unique reference
 address which, for the lifetime of the app, will be the source of data for the
 `listOfShoesController` which will inform the `ShoesView`'s controller partner,
 `ShoesController`. Since the content of the `content` variable is to be an
@@ -1406,7 +1406,7 @@ array reference), the view, which would still be watching the old reference,
 **would not know to update itself**. This is a very common error for those
 learning to use the Router and to integrate it with model-held data methods.
 
-As such when data updates come the content at the controller's `content`
+As such, when data updates come, the content at the controller's `content`
 property must be _replaced_ or emptied and updated. The content address cannot
 be changed by means of the Ember `set()` command.
 
@@ -1974,7 +1974,7 @@ App.initialize();
 
 ## Conclusion
 
-With this guide you should not have a feel for how to construct an application
+With this guide you should now have a feel for how to construct an application
 using Ember.JS.  You have learned how to define a `Router`, how to define a
 model class, and how each Ember application is conceived of as a finite series
 of states.  You have learned to move between states by allowing the URL to
