@@ -210,7 +210,7 @@ API. The public view hierarchy reflects only views created using the
 
 For example, consider the following Handlebars template:
 
-```
+```handlebars
 <h1>Joe's Lamprey Shack</h1>
 {{controller.restaurantHours}}
 
@@ -326,7 +326,7 @@ App.ChildView = Ember.View.extend({
 
 And here's the Handlebars template that uses them:
 
-```
+```handlebars
 {{#view App.GrandparentView}}
   {{#view App.ParentView}}
     {{#view App.ChildView}}
@@ -366,7 +366,7 @@ App.FormView = Ember.View.extend({
 });
 ```
 
-```
+```handlebars
 {{#view App.FormView}}
   {{view Ember.TextField valueBinding="controller.firstName"}}
   {{view Ember.TextField valueBinding="controller.lastName"}}
@@ -566,7 +566,7 @@ context-preserving helper, Ember will re-use the original context when
 re-rendering the block. Otherwise, Ember will use the new value of the
 path as the context.
 
-```
+```handlebars
 {{#if controller.isAuthenticated}}
   <h1>Welcome {{controller.name}}</h1>
 {{/if}}
@@ -611,7 +611,7 @@ App.MenuItemView = Ember.View.create({
 
 …and the following template:
 
-```
+```handlebars
 {{#with controller}}
   {{view.bulletText}} {{name}}
 {{/with}}
@@ -661,7 +661,7 @@ the `{{#each person in people}}` form.
 In this form, descendent context have access to the `person` variable,
 but remain in the same scope as where the template invoked the `each`.
 
-```
+```handlebars
 {{#with controller.preferences}}
   <h1>Title</h1>
   <ul>

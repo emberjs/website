@@ -33,7 +33,7 @@ determined at runtime based on user interaction.
 The template for the Application (`application.handlebars`) will look
 something like this:
 
-```
+```handlebars
 <h1>My Application</h1>
 
 {{outlet}}
@@ -53,7 +53,7 @@ the application's outlet with the template for an individual post.
 
 The template will look like this:
 
-```
+```handlebars
 {{#each post in controller}}
 <h1><a {{action showPost post href=true}}>{{post.title}}</a></h1>
 <div>{{post.intro}}</div>
@@ -74,7 +74,7 @@ trackbacks.
 
 The template for an individual post looks like this:
 
-```
+```handlebars
 <h1>{{title}}</h1>
 
 <div class="body">
@@ -217,7 +217,7 @@ posts: Ember.Route.extend({
 You invoke this transition by using the `{{action}}` helper in the
 current template.
 
-```
+```handlebars
 {{#each post in controller}}
   <h1><a {{action showPost post href=true}}>{{post.title}}</a></h1>
 {{/each}}
@@ -324,7 +324,7 @@ There are only a few changes here:
 
 Here's the template for an individual post.
 
-```
+```handlebars
 <h1>{{title}}</h1>
 
 <div class="body">
@@ -378,7 +378,7 @@ along with the post, ember-data will also automatically update the
 In your `trackbacks.handlebars` template, you will have done something
 like:
 
-```
+```handlebars
 <ul>
 {{#each trackback in controller}}
   <li><a {{bindAttr href="trackback.url"}}>{{trackback.title}}</a></li>
@@ -392,7 +392,7 @@ propagate through the `trackbacksController` and into the DOM.
 You may also want to avoid showing partial data that is not yet loaded.
 In that case, you could do something like:
 
-```
+```handlebars
 <ul>
 {{#if controller.isLoaded}}
   {{#each trackback in controller}}
