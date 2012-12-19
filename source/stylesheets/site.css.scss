@@ -699,9 +699,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   .nav-next {
     display: block;
     float: right;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
     &:before {
       content: "Next Up: ";
     }
@@ -709,8 +706,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   .nav-prev {
     display: block;
     float: left;
-    position: absolute;
-    bottom: 0px;
     &:before {
       content: "Back To: ";
     }
