@@ -11,13 +11,6 @@
 
     <script type="text/javascript">
       $(function() {
-        $('#logo').on('click', function(evt) {
-          if (evt.shiftKey) {
-            $('#content-wrapper').toggleClass('grid');
-            return false;
-          }
-        });
-
         var backToTop = $('#back-to-top');
         var doc = $(document);
         var offset = backToTop.offset();
