@@ -245,6 +245,12 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   & > h1:first-child {
     margin-top: 43px;
   }
+
+  h1.sub-header {
+    color: #e1563f;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 #sidebar {
@@ -324,6 +330,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     margin: 2px 0;
   }
 }
+
 
 /**
   About Page
@@ -815,11 +822,27 @@ article {
   Community Page
 **/
 
-.community.section {
-  margin-left: ($col-width * 3 + $col-spacing * 3);
-  margin-right: ($col-width * 3 + $col-spacing * 3);
+.community {
+  #content {
+    margin-left: ($col-width + $col-spacing);
+    margin-right: ($col-width + $col-spacing);
+    hr {
+      background-color: #d1d1d1;
+    }
+    .section {
+      margin: 32px 0;
+      h2 {
+        text-align: left;
+      }
+      h2+p {
+        margin: 24px 0;
+      }
+      table.columns {
+        margin: 0;
+      }
+    }
+  }
 }
-
 .community ul.blogs {
   li {
     margin-bottom: 10px;
