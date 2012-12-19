@@ -356,7 +356,7 @@ Although the view containing the `{{action}}` helper will be targeted by default
 
 If your application has a router, it will be the default target.
 
-```js
+```javascript
 App.Router = Ember.Router.extend({
 
   root: Ember.Route.extend({
