@@ -1,5 +1,7 @@
-ember_mvc: 
+ember_mvc:
   name: "Ember MVC"
+getting_started:
+  name: "Getting Started with Ember.js"
 view_layer:
   name: "Understanding the Ember.js view layer"
 router_primer:
