@@ -112,13 +112,9 @@ by the template:
 ```javascript
 App.SongController = Ember.ObjectController.extend({
   duration: function() {
-    var seconds = this.get('content.duration'),
-        divisorForMinutes = seconds % 3600,
-        divisorForSeconds = divisorForMinutes % 60,
-        minutes, seconds;
-
-    minutes = Math.floor(divisorForMinutes / 60),
-    seconds = Math.ceil(divisorForSeconds);
+    var duration = this.get('content.duration'),
+         minutes = Math.floor(duration / 60),
+         seconds = duration % 60;
 
     return [minutes, seconds].join(':');
   }.property('content.duration')
