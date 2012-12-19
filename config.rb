@@ -53,12 +53,17 @@ page "community.html" do
   @chapters = data.community.chapters
 end
 
-# Is this used?
-page "examples/*", :directory_index => false
-
 page "index.html", :proxy => "about.html"
 
 page "404.html", :directory_index => false
+
+
+# Don't build layouts standalone
+ignore "*_layout.erb"
+
+# Don't build API layouts
+ignore "api/class.html.erb"
+ignore "api/module.html.erb"
 
 
 
