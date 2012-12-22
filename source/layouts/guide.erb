@@ -20,11 +20,5 @@
         $(this).parent().find('> ol').stop().slideToggle();
         return false;
   });
-
-  (function(){
-    var prev = $(".level-3.active").prev();
-    var next = $(".level-3.active").next();
-    $(".chapter").append("<div class='nav-prev'>"+(prev.length ? prev.html() : '')+"</div><div class='nav-next'>"+(next.length ? next.html() : '')+"</div>");
-  }());
   </script>
 <% end %>
