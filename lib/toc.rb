@@ -76,8 +76,9 @@ module TOC
     end
 
     def chapter_heading
-      name = chapter_name
-      name ? %Q{<h1> #{name} </h1>} : nil
+      name = chapter_name.strip
+      return if name.blank?
+      %Q{<h1> #{name} </h1>}
     end
 
     def table_of_contents
