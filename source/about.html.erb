@@ -71,9 +71,10 @@ App.Person = DS.Model.extend({
 
 App.peopleController = Em.ArrayController.create({
   content: App.Person.findAll()
-});<% end %>
+});
+<% end %>
 
-  <% highlight :html, :right do %>
+<% highlight :handlebars, :right do %>
 <h1>People</h1>
 
 <ul>
@@ -81,11 +82,7 @@ App.peopleController = Em.ArrayController.create({
   <li>Hello, <b>{{fullName}}</b>!</li>
 {{/each}}
 </ul>
-
-
-
-
- <% end %>
+<% end %>
 
 </div>
 

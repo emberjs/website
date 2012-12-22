@@ -24,7 +24,7 @@ def generate_docs
   Dir.chdir(ember_path) do
     # returns either `tag` or `tag-numcommits-gSHA`
     describe = `git describe --tags --always`.strip
-    sha = describe =~ /-g(\.+)/ ? $1 : describe
+    sha = describe =~ /-g(.+)/ ? $1 : describe
 
     Dir.chdir("docs") do
       system("npm install") unless File.exist?('node_modules')
