@@ -35,8 +35,8 @@ Templates:
     url: "templates/writing-helpers"
 
 Routing:
-  - title: "Defining a Route"
-    url: "routing/defining-a-route"
+  - title: "Defining Your Routes"
+    url: "routing/defining-your-routes"
   - title: "Setting Up a Controller"
     url: "routing/setting-up-a-controller"
   - title: "Choosing a Template to Render"
