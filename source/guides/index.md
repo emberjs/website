@@ -20,6 +20,6 @@ help us out by filing an issue or submitting a pull request. Thanks!
 We're excited for all of the great apps you're going to build with
 Ember.js. To get started, select a topic from the left. They are presented
 in the order that we think will be most useful to you as you're learning
-Ember.js
+Ember.js, but you can also jump to whatever seems most interesting.
 
 Good luck!
