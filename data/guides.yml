@@ -10,6 +10,12 @@ Getting Started with Ember.js:
   #- title: "Understanding Web Apps"
     #url: "getting-started/understanding-web-apps"
 
+Application:
+  - title: "Introduction"
+    url: "application"
+  - title: "The Application Template"
+    url: "application/the-application-template"
+
 Templates:
   - title: "Handlebars Basics"
     url: "templates/handlebars-basics"
