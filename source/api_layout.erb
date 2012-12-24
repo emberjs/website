@@ -2,10 +2,12 @@
   <% content_for :head do %>
     <script>
       $(function() {
+        var ls = window['localStorage'];
+
         // Restoring method visibility preference from localStorage
         function initApiOptions() {
           var type = this.getAttribute('data-type'),
-            checked = localStorage.getItem('api-options-' + type);
+            checked = ls ? ls.getItem('api-options-' + type) : undefined;
 
           if (checked != undefined) {
             // Bools are stored as strings in localStorage
@@ -19,7 +21,9 @@
           var type = this.getAttribute('data-type');
 
           $('.'+type).toggle(this.checked);
-          localStorage.setItem('api-options-' + type, this.checked);
+
+          if(ls)
+            ls.setItem('api-options-' + type, this.checked);
         }
 
         $('#api-options input').each(initApiOptions);
