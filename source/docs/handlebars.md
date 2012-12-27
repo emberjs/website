@@ -78,10 +78,10 @@ To remove a view from the document, call `remove`:
 
 ### Handlebars Basics
 
-As you've already seen, you can print the value of a property by enclosing it in a Handlebars expression, or a series of braces, like this:
+As you've already seen, you can print the value of a property by enclosing it in a Handlebars expression, or a series of braces, prepended by the `view` keyword, like this:
 
 ```handlebars
-My new car is {{color}}.
+My new car is {{view.color}}.
 ```
 
 This will look up and print the View's `color` property. For example, if your view looks like this:
