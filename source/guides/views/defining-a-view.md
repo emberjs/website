@@ -8,7 +8,7 @@ To tell the view which template to use, set its `templateName` property. For exa
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">
-      Hello, <b>{{name}}</b>
+      Hello, <b>{{view.name}}</b>
     </script>
   </head>
 </html>
