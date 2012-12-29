@@ -74,7 +74,7 @@ either a list of posts, or a particular post:
 ```javascript
 App.Router.map(function(match) {
   match('/posts').to('posts');
-  match(/post/:post_id').to('post');
+  match('/post/:post_id').to('post');
 });
 ```
 
