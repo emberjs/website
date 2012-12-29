@@ -25,7 +25,7 @@ App.InfoView = Ember.View.extend({
 ```
 
 ```handlebars
-User: {{firstName}} {{lastName}}
+User: {{view.firstName}} {{view.lastName}}
 {{view App.InfoView}}
 ```
 
@@ -70,8 +70,8 @@ App.UserView = Ember.View.extend({
 ```
 
 ```handlebars
-User: {{firstName}} {{lastName}}
-{{view infoView}}
+User: {{view.firstName}} {{view.lastName}}
+{{view view.infoView}}
 ```
 
 When nesting a view class like this, make sure to use a lowercase
@@ -99,7 +99,7 @@ App.InfoView = Ember.View.extend({
 ```
 
 ```handlebars
-User: {{firstName}} {{lastName}}
+User: {{view.firstName}} {{view.lastName}}
 {{#view App.InfoView}}
   <b>Posts:</b> {{view.posts}}
   <br>
