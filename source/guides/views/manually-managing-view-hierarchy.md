@@ -1,4 +1,4 @@
-### Manually Managed Views with Ember.ContainerView
+## Manually Managed Views with Ember.ContainerView
 
 Usually, views create their child views by using the `{{view}}` helper. Sometimes it is useful to manually manage a view's
 child views. If you create an instance of `Ember.ContainerView`, the `childViews` array is editable. Views that you add
