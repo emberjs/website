@@ -1,4 +1,4 @@
-#### Computed Properties and Aggregate Data
+## Computed Properties and Aggregate Data
 
 Often, you may have a computed property that relies on all of the items in an
 array to determine its value. For example, you may want to count all of the

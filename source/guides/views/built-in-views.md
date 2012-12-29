@@ -1,10 +1,10 @@
-### Built-in Views
+## Built-in Views
 
 Ember comes pre-packaged with a set of views for building a few basic controls like text inputs, check boxes, and select lists.
 
 They are:
 
-####Ember.Checkbox
+#### Ember.Checkbox
 	
 ```handlebars
     <label>
@@ -13,7 +13,7 @@ They are:
     </label>
 ```
 	
-####Ember.TextField
+#### Ember.TextField
 	
 ```javascript
 	App.MyText = Ember.TextField.extend({
@@ -24,7 +24,7 @@ They are:
 	  });
 ```
 	
-####Ember.Select
+#### Ember.Select
 	
 ```handlebars
 	{{view Ember.Select viewName="select"
@@ -35,7 +35,7 @@ They are:
                           selectionBinding="App.selectedPersonController.person"}}
 ```
 	
-####Ember.TextArea
+#### Ember.TextArea
 	
 ```javascript
 	var textArea = Ember.TextArea.create({

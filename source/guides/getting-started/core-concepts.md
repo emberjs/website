@@ -15,7 +15,7 @@ constraints of the web–we turned to other popular open source projects
 like Ruby on Rails and Backbone.js for inspiration.
 
 Ember.js, therefore, is a synthesis of the powerful tools of our native
-forebears with the lightweight sensibilities of the modern web. 
+forebearers with the lightweight sensibilities of the modern web. 
 
 ### Concepts
 
@@ -26,7 +26,7 @@ the user interface of your application. In addition to plain HTML,
 templates can contain:
 
 * **Expressions**, like `{{firstName}}`, which take information from
-  controllers, place them into HTML, and automatically keep them
+  controllers and models, place them into HTML, and automatically keep them
   updated.
 * **Outlets**, which are placeholders for other templates. As your user
   moves around your app, different templates can be plugged into the
@@ -40,12 +40,12 @@ templates can contain:
 A **view** is embedded inside a template and is responsible for
 translating _primitive events_ (like clicks, taps, and swipes) into
 _semantic events_ that have meaning to your application and are sent to
-the router.
+the controller.
 
 For example, a view might translate a `click` event into the more
-meaningful `deleteItem` event, which would be sent to the router. The
-behavior of your app in response to that event would depend on the
-currently active route handlers.
+meaningful `deleteItem` event, which would be sent to the controller.
+If the controller does not implement the `deleteItem` event, the event
+will be sent to the current route.
 
 #### Controllers
 
@@ -53,7 +53,7 @@ A **controller** is an object that stores _application state_. Templates
 are connected to controllers and translate the current state of the
 controller into HTML.
 
-Controllers often act as representations of models** for templates. In
+Controllers often act as representations of **models** for templates. In
 these cases, the controller passes the properties of the model to the
 template, and can transform or augment the model to present it in a way
 the template is expecting.
@@ -84,7 +84,10 @@ its current state with others.
 
 ---
 
-These are the core concepts you'll need to understand as you develop your Ember.js app. If you stick to these basics, we've designed the system to scale up in complexity, so that adding new functionality doesn't require you to go back and change the entire system.
+These are the core concepts you'll need to understand as you develop
+your Ember.js app. If you stick to these basics, we've designed the
+system to scale up in complexity, so that adding new functionality
+doesn't require you to go back and change the entire system.
 
 We think it's important that multiple developers can look at a problem
 and, using the patterns of the framework, arrive at the same solution.

@@ -1,8 +1,8 @@
 Getting Started with Ember.js:
   - title: "Core Concepts"
     url: "getting-started/core-concepts"
-  - title: "What is Ember.js?"
-    url: "getting-started/what-is-ember-js"
+  #- title: "What is Ember.js?"
+    #url: "getting-started/what-is-ember-js"
   #- title: "Getting Ember.js"
     #url: "getting-started/getting-ember-js"
   #- title: "Build Tools"
@@ -34,35 +34,35 @@ Templates:
   - title: "Writing Helpers"
     url: "templates/writing-helpers"
 
-Routing:
-  - title: "Introduction"
-    url: "routing"
-  - title: "Defining Your Routes"
-    url: "routing/defining-your-routes"
-  - title: "Setting Up a Controller"
-    url: "routing/setting-up-a-controller"
-  - title: "Choosing a Template to Render"
-    url: "routing/choosing-a-template-to-render"
-  - title: "Dynamic Segments"
-    url: "routing/dynamic-segments"
-  - title: "Changing the Route"
-    url: "routing/changing-the-route"
-  - title: "Sending Events from Templates"
-    url: "routing/sending-events-from-templates"
-  - title: "Nested Routes"
-    url: "routing/nested-routes"
+#Routing:
+  #- title: "Introduction"
+    #url: "routing"
+  #- title: "Defining Your Routes"
+    #url: "routing/defining-your-routes"
+  #- title: "Setting Up a Controller"
+    #url: "routing/setting-up-a-controller"
+  #- title: "Choosing a Template to Render"
+    #url: "routing/choosing-a-template-to-render"
+  #- title: "Dynamic Segments"
+    #url: "routing/dynamic-segments"
+  #- title: "Changing the Route"
+    #url: "routing/changing-the-route"
+  #- title: "Sending Events from Templates"
+    #url: "routing/sending-events-from-templates"
+  #- title: "Nested Routes"
+    #url: "routing/nested-routes"
 
 Controllers:
   - title: "Introduction"
     url: "controllers"
 
-Models:
-  - title: "Introduction"
-    url: "models/introduction"
-  - title: "Loading Models"
-    url: "data/loading-models"
-  - title: "Finding Models"
-    url: "data/finding-models"
+#Models:
+  #- title: "Introduction"
+    #url: "models/introduction"
+  #- title: "Loading Models"
+    #url: "data/loading-models"
+  #- title: "Finding Models"
+    #url: "data/finding-models"
 
 Views:
   - title: "Introduction"
@@ -79,8 +79,8 @@ Views:
     url: "views/built-in-views"
   - title: "Manually Managing View Hierarchy"
     url: "views/manually-managing-view-hierarchy"
-  - title: "Building Reusable Views"
-    url: "views/building-reusable-views"
+  #- title: "Building Reusable Views"
+    #url: "views/building-reusable-views"
 
 The Ember Object Model:
   - title: "Introduction"
@@ -115,7 +115,7 @@ Understanding Ember.js:
   - title: "Keeping Templates Up-to-Date"
     url: "understanding-ember/keeping-templates-up-to-date"
 
-Understanding Ember Data:
-  - title: "Record Lifecycle"
-    url: "understanding-ember-data/record-lifecycle"
+#Understanding Ember Data:
+  #- title: "Record Lifecycle"
+    #url: "understanding-ember-data/record-lifecycle"
 
