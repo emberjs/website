@@ -3,7 +3,7 @@
 Because Handlebars templates in Ember.js are so powerful, the majority
 of your application's user interface will be described using them. If
 you are coming from other JavaScript libraries, you may be surprised at
-how few views have to create.
+how few views you have to create.
 
 Views in Ember.js are typically only created for the following reasons:
 
