@@ -1,11 +1,11 @@
 ## What is Ember.js?
 
 Ember.js is a JavaScript framework for creating ambitious web
-applications. It helps you by:
+applications. It helps you:
 
-1. Enhancing JavaScript
-2. Eliminating boilerplate
-3. Providing application architecture
+1. Write less code with templates that automatically update.
+2. Retrieve models, with rich relationships, from your server.
+3. Conventional app structure helps your app grow without messy code.
 
 ### Enhancing JavaScript
 

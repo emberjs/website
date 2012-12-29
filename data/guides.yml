@@ -35,6 +35,8 @@ Templates:
     url: "templates/writing-helpers"
 
 Routing:
+  - title: "Introduction"
+    url: "routing"
   - title: "Defining Your Routes"
     url: "routing/defining-your-routes"
   - title: "Setting Up a Controller"
@@ -57,6 +59,10 @@ Controllers:
 Models:
   - title: "Introduction"
     url: "models/introduction"
+  - title: "Loading Models"
+    url: "data/loading-models"
+  - title: "Finding Models"
+    url: "data/finding-models"
 
 Views:
   - title: "Introduction"
@@ -75,12 +81,6 @@ Views:
     url: "views/manually-managing-view-hierarchy"
   - title: "Building Reusable Views"
     url: "views/building-reusable-views"
-
-Loading, Changing, and Saving Data:
-  - title: "Loading Records"
-    url: "data/loading-records"
-  - title: "Finding Records"
-    url: "data/finding-records"
 
 The Ember Object Model:
   - title: "Introduction"
@@ -117,5 +117,5 @@ Understanding Ember.js:
 
 Understanding Ember Data:
   - title: "Record Lifecycle"
-    url: "understanding-ember-data/record-lifecycle.md"
+    url: "understanding-ember-data/record-lifecycle"
 

@@ -1,9 +1,9 @@
 ## Defining Your Routes
 
-When your application starts, the router is responsible for recognizing
-the current URL and selecting the current _state_. This state object is
-responsible for rendering templates, finding models, configuring
-controllers, and responding to actions from templates and views.
+When your application starts, the router is responsible for displaying
+templates, loading data, and otherwise setting up application state.
+It does so by matching the current URL to the _routes_ that you've
+defined.
 
 Most applications will start by defining what happens when the user
 navigates to `/`, the application's home page:
@@ -14,15 +14,16 @@ App.Router.map(function(match) {
 });
 ```
 
-The above example tells Ember.js to map the route `/` to the state
-`index`, which by default renders the template of the same name.
+The above example tells Ember.js to map the route `/` to the `index`
+_route handler_. By default, this renders the template of the same name.
 
-You can customize the behavior of a state by defining an `Ember.State`.
-For example, because the above route maps to the `index` state, you
-would define a state called `App.IndexState`:
+You can customize the behavior of a route handler by defining an
+`Ember.Route`. For example, if you wanted to render a template other
+than `index`, you can define a handler called `App.IndexState` and
+override the `renderTemplates` method:
 
 ```javascript
-App.IndexState = Ember.State.extend({
+App.IndexRoute = Ember.State.extend({
   renderTemplates: function() {
     this.render('other-template');
   }
@@ -35,12 +36,30 @@ You can define as many routes inside the `map` function as you'd like:
 App.Router.map(function(match) {
   match('/').to('index');
   match('/posts').to('posts');
-  match('/author').to('author');
+  match('/user/favorites').to('starredSongs');
 });
 ```
 
-These would correspond to `App.IndexState`, `App.PostsState` and
-`App.AuthorState`, respectively.
+Visiting `/posts` would render the `posts` template, and visiting
+`/user/favorites` would render the `starredSongs` template. If you
+wanted to customize the behavior of these routes, you would define
+`App.PostsRoute` and `App.StarredSongsRoute`, respectively.
+
+### Nested Routes
+
+You can define nested routes by passing an additional function to the
+`to()` method:
+
+```javascript
+App.Router.map(function(match) {
+  match('/').to('index');
+  match('/posts').to('posts', function(match) {
+    match('/new').to('newPost');
+  });
+});
+```
+
+When the router matches a 
 
 ### Dynamic Segments
 
@@ -62,4 +81,3 @@ App.Router.map(function(match) {
 When the user visits `/post/123`, Ember.js will automatically provide
 your state with the model returned by `App.Post.find(123)`.
 
-### Nested States

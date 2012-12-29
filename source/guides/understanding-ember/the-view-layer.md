@@ -1,4 +1,4 @@
-# The Ember.js View Layer
+## The Ember.js View Layer
 
 This guide goes into extreme detail about the Ember.js view layer. It is
 intended for an experienced Ember developer, and includes details that
@@ -14,9 +14,9 @@ You can also dynamically make changes to the view hierarchy at application runti
 
 Views and templates work in tandem to provide a robust system for creating whatever user interface you dream up. End users should be isolated from the complexities of things like timing issues while rendering and event propagation. Application developers should be able to describe their UI once, as a string of Handlebars markup, and then carry on with their application without having to worry about making sure that it remains up-to-date.
 
-## What problems does it solve?
+### What problems does it solve?
 
-### Child Views
+#### Child Views
 
 In a typical client-side application, views may represent elements nested inside of each other in the DOM. In the naïve solution to this problem, separate view objects represent each DOM element, and ad-hoc references help the various view object keep track of the views conceptually nested inside of them.
 
@@ -40,7 +40,7 @@ When the App View re-renders, Ember is responsible for re-rendering and insertin
 
 Not only does this eliminate quite a bit of boilerplate code, but it eliminates the possibility that an imperfectly implemented view hierarchy will cause unexpected failures.
 
-### Event Delegation
+#### Event Delegation
 
 In the past, web developers have added event listeners to individual elements in order to know when the user interacts with them. For example, you might have a `<div>` element on which you register a function that gets called when the user clicks it.
 
@@ -68,7 +68,7 @@ In order to solve this problem, Ember delegates all events to the application's 
 
 Further, because Ember registers only one event for the entire Ember application, creating new views never requires setting up event listeners, making re-renders efficient and less error-prone. When a view has child views, this also means that there is no need to manually undelegate views that the re-render process replaces.
 
-### The Rendering Pipeline
+#### The Rendering Pipeline
 
 Most web applications specify their user interface using the markup of a particular templating language. For Ember.js, we've done the work to make templates written using the Handlebars templating language automatically update when the values used inside of them are changed.
 
@@ -80,7 +80,7 @@ This is the approximate lifecycle of an Ember view:
   <img src="/images/view-guide/view-lifecycle-ember.png">
 </figure>
 
-#### 1. Template Compilation
+##### 1. Template Compilation
 
 The application's templates are loaded over the network or as part of the application payload in string form. When the application loads, it sends the template string to Handlebars to be compiled into a function. Once compiled, the template function is saved, and can be used by multiple views repeatedly, each time they need to re-render.
 
@@ -88,7 +88,7 @@ This step may be omitted in applications where the templates are pre-compiled on
 
 Because Ember is responsible for template compilation, you don't have to do any additional work to ensure that compiled templates are reused.
 
-#### 2. String Concatenation
+##### 2. String Concatenation
 
 A view's rendering process is kickstarted when the application calls `append` or `appendTo` on the view. Calling `append` or `appendTo` **schedules** the view to be rendered and inserted later. This allows any deferred logic in your application (such as binding synchronization) to happen before rendering the element.
 
@@ -106,13 +106,13 @@ Here is a simple example:
 
 In addition to children (Strings and other `RenderBuffer`s), a `RenderBuffer` also encapsulates the element's tag name, id, classes, style, and other attributes. This makes it possible for the render process to modify one of these properties (style, for example), even after its child Strings have rendered. Because many of these properties are controlled via bindings (e.g. using `bindAttr`), this makes the process robust and transparent.
 
-#### 3. Element Creation and Insertion
+##### 3. Element Creation and Insertion
 
 At the end of the rendering process, the root view asks the `RenderBuffer` for its element. The `RenderBuffer` takes its completed string and uses jQuery to convert it into an element. The view assigns that element to its `element` property and places it into the correct place in the DOM (the location specified in `appendTo` or the application's root element if the application used `append`).
 
 While the parent view assigns its element directly, each child views looks up its element lazily. It does this by looking for an element whose `id` matches its `elementId` property. Unless explicitly provided, the rendering process generates an `elementId` property and assigns its value to the view's `RenderBuffer`, which allows the view to find its element as needed.
 
-#### 4. Re-Rendering
+##### 4. Re-Rendering
 
 After the view inserts itself into the DOM, either Ember or the application may want to re-render the view. They can trigger a re-render by calling the `rerender` method on a view.
 
@@ -135,9 +135,9 @@ The process looks something like:
   <img src="/images/view-guide/re-render.png">
 </figure>
 
-## The View Hierarchy
+### The View Hierarchy
 
-### Parent and Child Views
+#### Parent and Child Views
 
 As Ember renders a templated view, it will generate a view hierarchy. Let's assume we have a template `form`.
 
@@ -177,7 +177,7 @@ App.Search = Ember.View.extend({
 })
 ```
 
-### Lifecycle Hooks
+#### Lifecycle Hooks
 
 In order to make it easy to take action at different points during your view's lifecycle, there are several hooks you can implement.
 
@@ -196,7 +196,7 @@ view.on('willRerender', function() {
 });
 ```
 
-### Virtual Views
+#### Virtual Views
 
 As described above, Handlebars creates views in the view hierarchy to
 represent bound values. Every time you use a Handlebars expression,
@@ -260,7 +260,7 @@ public API for your use-case.
 Bottom line: This API is like XML. If you think you have a use for it,
 you may not yet understand the problem enough. Reconsider!
 
-### Event Bubbling
+#### Event Bubbling
 
 One responsibility of views is to respond to primitive user events
 and translate them into events that have semantic meaning for your
@@ -374,7 +374,7 @@ App.FormView = Ember.View.extend({
 {{/view}}
 ```
 
-### Adding New Events
+#### Adding New Events
 
 Ember comes with built-in support for the following native browser
 events:
@@ -437,7 +437,7 @@ In order for this to work for a custom event, the HTML5 spec must define
 the event as "bubbling", or jQuery must have provided an event
 delegation shim for the event.
 
-## Templated Views
+### Templated Views
 
 As you've seen so far in this guide, the majority of views that you will
 use in your application are backed by a template. When using templates,
@@ -478,7 +478,7 @@ direct, programmatic control of a view's children. In that case, you can
 use `Ember.ContainerView`, which explicitly exposes a public API for
 doing so.
 
-## Container Views
+### Container Views
 
 Container views contain no plain text. They are composed entirely of
 their child views (which may themselves be template-backed).
@@ -547,7 +547,7 @@ is automatically instantiated, if necessary, and added to the
   <img src="/images/view-guide/container-view-shorthand.png">
 </figure>
 
-## Template Scopes
+### Template Scopes
 
 Standard Handlebars templates have the concept of a *context*--the
 object from which expressions will be looked up.
@@ -585,7 +585,7 @@ property on the current controller. When the `user` property changes,
 Ember re-renders the block, using the new value of `controller.user` as
 its context.
 
-### View Scope
+#### View Scope
 
 In addition to the Handlebars context, templates in Ember also have the
 notion of the current view. No matter what the current context is, the
@@ -621,7 +621,7 @@ Even though the Handlebars context has changed to the current
 controller, you can still access the view's `bulletText` by referencing
 `view.bulletText`.
 
-## Template Variables
+### Template Variables
 
 So far in this guide, we've been handwaving around the use of the
 `controller` property in our Handlebars templates. Where does it come
@@ -646,7 +646,7 @@ a rendered view has a `controller` property. If a view has no
 `controller` property, it inherits the `controller` variable from the
 most recent view with one.
 
-### Other Variables
+#### Other Variables
 
 Handlebars helpers in Ember may also specify variables. For example, the
 `{{#with controller.person as tom}}` form specifies a `tom` variable
@@ -676,7 +676,7 @@ but remain in the same scope as where the template invoked the `each`.
 Note that these variables inherit through `ContainerView`s, even though
 they are not part of the Handlebars context hierarchy.
 
-### Accessing Template Variables from Views
+#### Accessing Template Variables from Views
 
 In most cases, you will need to access these template variables from
 inside your templates. In some unusual cases, you may want to access the
