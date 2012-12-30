@@ -84,9 +84,7 @@ Views:
   #- title: "Building Reusable Views"
     #url: "views/building-reusable-views"
 
-The Ember Object Model:
-  - title: "Introduction"
-    url: "object-model"
+The Object Model:
   - title: "Classes and Instances"
     url: "object-model/classes-and-instances"
   - title: "Observers"
