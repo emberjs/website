@@ -65,6 +65,8 @@ Models:
     url: "models/defining-models"
   - title: "Finding Models"
     url: "models/finding-models"
+  - title: "The REST Adapter"
+    url: "models/the-rest-adapter"
 
 Views:
   - title: "Introduction"

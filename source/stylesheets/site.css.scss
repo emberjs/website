@@ -846,6 +846,23 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
       top: 15px;
     }
   }
+
+  table {
+    width: 100%;
+
+    thead {
+      background-color: #F9E7E4;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    th, td {
+      padding: 5px 10px;
+    }
+
+  }
 }
 
 
