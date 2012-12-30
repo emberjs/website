@@ -219,7 +219,6 @@ This is where we define the Ember.js object which manages the view. We simply pr
       <h2>{{title}}</h2>
       <img {{bindAttr src="url"}}>
       <br>
-	  
       {{#if comments.length}}
         <h3>Comments</h3>
         <ul>

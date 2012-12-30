@@ -16,7 +16,7 @@ write any additional code to make sure it keeps up-to-date.
 If you're not using build tools, you can define your application's main
 template inside your HTML by putting it inside a `<script>` tag, like so:
 
-```handlebars
+```html
 <html>
   <body>
     <script type="text/x-handlebars">
@@ -36,7 +36,7 @@ different places in your user interface. To tell Ember.js to save the
 template for later, instead of displaying it immediately, you can add
 the `data-template-name` attribute:
 
-```handlebars
+```html
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">

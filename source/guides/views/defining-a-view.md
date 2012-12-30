@@ -4,7 +4,7 @@ You can use `Ember.View` to render a Handlebars template and insert it into the 
 
 To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:
 
-```handlebars
+```html
 <html>
   <head>
     <script type="text/x-handlebars" data-template-name="say-hello">
