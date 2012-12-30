@@ -26,7 +26,7 @@ $green:  #007700;
     height: 20px;
   }
 
-  &.javascript .ribbon {
+  &.javascript .ribbon, &.js .ribbon {
     background-image: url(/images/js-ribbon.png);
   }
   &.html .ribbon {
