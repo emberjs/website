@@ -56,13 +56,15 @@ Controllers:
   - title: "Introduction"
     url: "controllers"
 
-#Models:
-  #- title: "Introduction"
-    #url: "models/introduction"
-  #- title: "Loading Models"
-    #url: "data/loading-models"
-  #- title: "Finding Models"
-    #url: "data/finding-models"
+Models:
+  - title: "Introduction"
+    url: "models"
+  - title: "Defining a Store"
+    url: "models/defining-a-store"
+  - title: "Defining Models"
+    url: "models/defining-models"
+  - title: "Finding Models"
+    url: "models/finding-models"
 
 Views:
   - title: "Introduction"
