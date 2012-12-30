@@ -65,6 +65,12 @@ Models:
     url: "models/defining-models"
   - title: "Finding Models"
     url: "models/finding-models"
+  - title: "Modifying Attributes"
+    url: "models/modifying-attributes"
+  #- title: "Modifying Relationships"
+    #url: "models/modifying-relationships"
+  - title: "Model Lifecycle"
+    url: "models/model-lifecycle"
   - title: "The REST Adapter"
     url: "models/the-rest-adapter"
 
