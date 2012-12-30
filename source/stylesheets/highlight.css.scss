@@ -21,7 +21,7 @@ $green:  #007700;
   .ribbon {
     position: absolute;
     right: 0;
-    bottom: 12px;
+    bottom: 6px;
     width: 52px;
     height: 20px;
   }
@@ -38,11 +38,7 @@ $green:  #007700;
 }
 
 .CodeRay {
-  td {
-    padding: 14px 0;
-  }
-
-  .line-numbers {
+  td.line-numbers {
     width: 38px;
     text-align: center;
     border-right: 1px solid #d1d1d1;
@@ -53,7 +49,7 @@ $green:  #007700;
   }
 
   td.code {
-    padding-left: 13px;
+    padding: 8px 0 8px 13px;
   }
 
   /* HTML */
