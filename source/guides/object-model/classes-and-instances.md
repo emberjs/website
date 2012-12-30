@@ -7,7 +7,7 @@ At its most basic, you create a new Ember class by using the
 Person = Ember.Object.extend({
   say: function(thing) {
     alert(thing);
- }
+  }
 });
 ```
 
