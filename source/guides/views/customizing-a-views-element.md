@@ -166,5 +166,5 @@ App.AlertView = Ember.View.extend({
 This yields a view wrapper that will look something like this:
 
 ```html
-<div id="sc420" class="sc-view is-urgent p4"></div>
+<div id="ember420" class="ember-view is-urgent p4"></div>
 ```
