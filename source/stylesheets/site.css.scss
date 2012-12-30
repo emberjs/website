@@ -769,12 +769,12 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
             border-top: 1px solid rgba(255,255,255,0.4);
           }
 
-          &:last-of-type > a {
-            border-bottom: 1px solid #d5ccc8;
-          }
-
           ol {
             border-top: 1px solid #d5ccc8;
+          }
+
+          &:last-of-type ol {
+            border-bottom: 1px solid #d5ccc8;
           }
         }
 
