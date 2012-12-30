@@ -7,6 +7,27 @@ while you get ready for the New Year, here's what's been happening in Ember.
 
 READMORE
 
+### New Router API
+
+The new router API is has been [merged into
+master!](https://github.com/emberjs/ember.js/commit/44b23dcf245b0fffdeb29f9f8a5d1bbdc9eb7690)
+We've spent a lot of time incorporating feedback about our first
+iteration of the router, and we think you're going to really love what
+we've come up with. It makes getting started super simple, and
+eliminates the old API that forced you to write unwieldy nested objects.
+
+There is a [short walkthrough](https://gist.github.com/3981133) that
+describes the thinking behind the new API. Full documentation should be
+landing this week.
+
+### Embedded Records
+
+After a massive refactor of the Ember Data library, it now fully
+supports embedded records, amongst other goodies.
+
+As always, check out [BREAKING_CHANGES](https://github.com/emberjs/data/blob/master/BREAKING_CHANGES.md)
+for information about updating your apps.
+
 ### DS.JSONSerializer
 In the last post we talked about the changes in the serialization API's renaming methods
 to remove the JSON specificity whilst adding hooks to manage relationship dirtiness.
@@ -23,6 +44,7 @@ As always, check out [BREAKING_CHANGES](https://github.com/emberjs/data/blob/mas
 for more information.
 
 ### Bound handlebars helpers
+
 Ember.Handlebars just got a little bit smarter. `Ember.Handlebars.registerBoundHelper`
 provides a way to easily create your own bound custom helpers.
 
@@ -49,15 +71,7 @@ This change should increase object creation performance by 2x.
 `reject` and `rejectProperty` methods have been added to `Ember.Enumerable`.
 
 `Ember.none` and `Ember.empty` have been renamed to `Ember.isEmpty` and `Ember.isNone`
-to keep with the Ember boolean naming convention.
-
-### New Router API
-The new router API is nearly complete, if you'd like to take a sneak-peek check it out
-on the [new-router](https://github.com/emberjs/ember.js/tree/new-router) branch.
-### Embedded Records
-Tom and Yehuda are working on a massive refactor of the Ember Data library to fully
-support embedded records amongst other goodies, check out the WIP on the
-[embedded-records](https://github.com/emberjs/data/tree/embedded-records) branch.
+to keep with the Ember Boolean naming convention.
 
 
 ### EmberCamp
