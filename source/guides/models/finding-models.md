@@ -40,13 +40,12 @@ For more information, see [Ember.Enumerable][1] and [Ember.Array][2].
 
 ### Queries
 
-You can make a server query by passing a hash as the second parameter to
+You can query the server by passing a hash as the second parameter to
 `find()`.
 
 ```js
 var people = App.Person.find({ name: "Peter" });
 ```
 
-Note: If manually retrieving records from a `ModelArray`, you must use
-the `objectAt(index)` method. Since the object is not a JavaScript Array,
-using the `[]` notation will not work.
+The contents of the hash is opaque to Ember Data; it is up to your
+server to interpret it and return a list of records.
