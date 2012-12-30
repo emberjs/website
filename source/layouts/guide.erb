@@ -1,4 +1,7 @@
-<% @title = chapter_name %>
+<%
+@title = chapter_name
+@title = "Guides" if chapter_name.blank?
+%>
 
 <% wrap_layout :layout do %>
   <% content_for :sidebar do %>
