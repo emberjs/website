@@ -17,6 +17,31 @@
         var marginTop = 90;
         var showing = false;
 
+        positionBackToTop = function(reset) {
+          if (reset) {
+            backToTop.css({
+              top: '',
+              position: ''
+            });
+            offset = backToTop.offset();
+          }
+
+          if (!showing && doc.scrollTop() > offset.top+200) {
+            showing = true;
+            backToTop.css({
+              opacity: 1,
+              position: 'fixed',
+              top: 20,
+              left: offset.left
+            });
+          } else if (showing && doc.scrollTop() <= offset.top+200) {
+            showing = false;
+            backToTop.css({
+              opacity: 0
+            });
+          }
+        };
+
         if (backToTop.length) {
           backToTop.on('click', function(evt) {
             $('html,body').animate({scrollTop: 0}, 200);
@@ -24,20 +49,7 @@
           });
 
           doc.on('scroll', function() {
-            if (!showing && doc.scrollTop() > offset.top+200) {
-              showing = true;
-              backToTop.css({
-                opacity: 1,
-                position: 'fixed',
-                top: 20,
-                left: offset.left
-              });
-            } else if (showing && doc.scrollTop() <= offset.top+200) {
-              showing = false;
-              backToTop.css({
-                opacity: 0
-              });
-            }
+            positionBackToTop();
           });
         }
 

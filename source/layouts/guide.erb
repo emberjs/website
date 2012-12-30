@@ -16,9 +16,12 @@
   </div>
 
   <script>
-  $("#guide_list .level-1 > a").click(function() {
-        $(this).parent().find('> ol').stop().slideToggle();
-        return false;
-  });
+    $("#guide_list .level-1 > a").click(function() {
+      $(this).parent().find('> ol').slideToggle(function() {
+        positionBackToTop(true);
+      });
+
+      return false;
+    });
   </script>
 <% end %>
