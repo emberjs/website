@@ -147,7 +147,7 @@ Ember uses Handlebars, a semantic templating library. To take data from your Jav
 and put it into the DOM, create a `<script>` tag and put it into your HTML, wherever you'd like the
 value to appear:
 
-```handlebars
+```html
 <script type="text/x-handlebars">
   The President of the United States is {{MyApp.president.fullName}}.
 </script>

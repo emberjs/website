@@ -12,7 +12,7 @@ blue
 Because all Handlebars expressions are wrapped in these markers, make sure each HTML tag stays inside the same block. For example, you shouldn't do this:
 
 ```handlebars
-<!-- Don't do it! -->
+{{! Don't do it! }}
 <div {{#if isUrgent}}class="urgent"{{/if}}>
 ```
 
