@@ -18,4 +18,10 @@ many of them crazy, inconsistent, and out of your control. Ember Data is
 designed to be configurable to work with whatever persistence layer you
 want, from the ordinary to the exotic.
 
+Currently, Ember Data ships as a separate library from Ember.js, while
+we expand the adapter API to support more features. The API described in
+this section tends to be stable, however.  Until Ember Data is included
+as part of the standard distribution, you can get your copy from the
+[GitHub page][1].
+
 [1]: https://github.com/emberjs/data
