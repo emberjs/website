@@ -160,6 +160,6 @@ outside the JSON root, and are represented as an array of hashes:
   {
     "id": 3,
     "body": "Put me on the fast track to a delicious dinner"
-  }
+  }]
 }
 ```
