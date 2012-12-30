@@ -139,9 +139,9 @@ This makes it easy to style using CSS ID selectors:
 
 ```css
 /** Give the view a red background. **/
-  #info-view {
-    background-color: red;
-  }
+#info-view {
+  background-color: red;
+}
 ```
 
 You can assign class names similarly:

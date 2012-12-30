@@ -28,17 +28,17 @@ Note: For the remainder of the guide, the `templateName` property will be omitte
 You can append views to the document by calling `appendTo`:
 
 ```javascript
-  view.appendTo('#container');
+view.appendTo('#container');
 ```
 
 As a shorthand, you can append a view to the document body by calling `append`:
 
 ```javascript
-  view.append();
+view.append();
 ```
 
 To remove a view from the document, call `remove`:
 
 ```javascript
-  view.remove();
+view.remove();
 ```
