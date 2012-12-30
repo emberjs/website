@@ -43,9 +43,7 @@ page 'guides*', :layout => :guide do
   @guides = data.guides
 end
 
-page "community.html" do
-  @chapters = data.community.chapters
-end
+page "community.html"
 
 page "index.html", :proxy => "about.html"
 

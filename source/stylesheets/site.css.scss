@@ -963,20 +963,48 @@ article {
   Community Page
 **/
 
-.community.section {
-  margin-left: ($col-width * 3 + $col-spacing * 3);
-  margin-right: ($col-width * 3 + $col-spacing * 3);
-}
+body.community #content {
+  h1, h1:first-child {
+    margin-top: 0;
+    color: $orange-color;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: solid 1px #d0d0d0;
+    padding-bottom: 20px;
+  }
 
-.community ul.blogs {
-  li {
-    margin-bottom: 10px;
+  h2 {
+    margin-bottom: 20px;
+    text-align: left;
+  }
 
-    a {
-      font-weight: bold;
+  .section {
+    margin: 40px 0 50px;
+    font-size: 15px;
+    text-align: left;
+
+    img {
+      float: left;
+      margin: 0 20px 15px 0;
+    }
+
+    p {
+      margin: 15px 0;
+    }
+  }
+
+  ul.blogs {
+    li {
+      margin-bottom: 10px;
+
+      a {
+        font-weight: bold;
+      }
     }
   }
 }
+
 
 #footer {
   margin-top: 60px;
