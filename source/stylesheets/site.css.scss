@@ -981,6 +981,9 @@ article {
 **/
 
 body.community #content {
+  width: 700px;
+  margin: 0 auto;
+
   h1, h1:first-child {
     margin-top: 0;
     color: $orange-color;
@@ -1004,6 +1007,11 @@ body.community #content {
     img {
       float: left;
       margin: 0 20px 15px 0;
+    }
+
+    &.bugs img {
+      float: right;
+      margin: 0 0 15px 20px;
     }
 
     p {
