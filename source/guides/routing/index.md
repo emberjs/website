@@ -11,26 +11,22 @@ user? What post are they looking at? Is the settings screen open?  Are
 they editing the current post?_
 
 In Ember.js, each of the possible states in your application is
-represented by an object. Because all of the questions we asked above—
+represented by a URL. Because all of the questions we asked above—
 _Are we logged in?  What post are we looking at?_ —are encapsulated by
-these objects, answering them is both simple and accurate.
+route handlers for the URLs, answering them is both simple and accurate.
 
-At any given time, your application has a _current state_. The current
-state can change for one of two reasons:
+At any given time, your application has one or more _active route
+handlers_. The active handlers can change for one of two reasons:
 
 1. The user interacted with a view, which generated an event that caused
-   the current state to change.
-2. The URL in the browser changed (or was loaded for the first time).
+   the URL to change.
+2. The user changed the URL manually (e.g., via the back button), or the
+   page was loaded for the first time.
 
-Every state in your router is also associated with a URL. When the
-current state changes, the router updates the browser URL
-automatically.
+When the current URL changes, the newly active route handlers may do one
+or more of the following:
 
-When your application changes to a new state, the state may do one or
-more of the following:
-
-1. Change the template on screen, or place a new template into an
-   outlet.
-2. Connect a template to a controller.
-3. Configure a controller, including telling the controller that it
-   should represent a model.
+1. Conditionally redirect to a new URL.
+2. Update a controller so that it represents a particular model.
+3. Change the template on screen, or place a new template into an
+   existing outlet.
