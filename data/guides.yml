@@ -45,6 +45,8 @@ Routing:
     url: "routing/setting-up-a-controller"
   - title: "Rendering a Template"
     url: "routing/rendering-a-template"
+  - title: "Redirecting to a Different URL"
+    url: "routing/redirection"
   #- title: "Dynamic Segments"
     #url: "routing/dynamic-segments"
   #- title: "Changing the Route"
