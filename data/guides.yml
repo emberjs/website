@@ -29,6 +29,8 @@ Templates:
     url: "templates/binding-element-attributes"
   - title: "Binding Element Class Names"
     url: "templates/binding-element-class-names"
+  - title: "Links"
+    url: "templates/links"
   #- title: "Keywords"
     #url: "templates/keywords"
   - title: "Writing Helpers"
