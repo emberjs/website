@@ -5,8 +5,7 @@ Sometimes, you may use the same HTML in your application multiple times. In thos
 For example, imagine you are frequently wrapping certain values in a `<span>` tag with a custom class. You can register a helper from your JavaScript like this:
 
 ```javascript
-Handlebars.registerHelper('highlight', function(property, options) {
-  var value = Ember.Handlebars.getPath(this, property, options);
+Ember.Handlebars.registerBoundHelper('highlight', function(value, options) {
   return new Handlebars.SafeString('<span class="highlight">'+value+'</span>');
 });
 ```
@@ -26,4 +25,30 @@ and it will output the following:
 <span class="highlight">Peter</span>
 ```
 
-NOTE: Parameters to helper functions are passed as names, not their current values. This allows you to optionally set up observers on the values. To get the current value of the parameter, use Ember.getPath, as shown above.
+If the `name` property on the current context changes, Ember.js will
+automatically execute the helper again and update the DOM with the new
+value.
+
+### Dependencies
+
+Imagine you want to render the full name of an `App.Person`. In this
+case, you will want to update the output if the person itself changes,
+or if the `firstName` or `lastName` properties change.
+
+```js
+Ember.Handlebars.registerBoundHelper('fullName', function(person) {
+  return person.get('firstName') + ' ' + person.get('lastName');
+}, 'firstName', 'lastName');
+```
+
+You would use the helper like this:
+
+```handlebars
+{{fullName person}}
+```
+
+Now, whenever the context's person changes, or when any of the
+_dependent keys_ change, the output will automatically update.
+
+Both the path passed to the `fullName` helper and its dependent keys may
+be full _property paths_ (e.g. `person.address.country`).
