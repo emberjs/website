@@ -31,6 +31,8 @@ Templates:
     url: "templates/binding-element-class-names"
   - title: "Links"
     url: "templates/links"
+  - title: "Actions"
+    url: "templates/actions"
   #- title: "Keywords"
     #url: "templates/keywords"
   - title: "Writing Helpers"
