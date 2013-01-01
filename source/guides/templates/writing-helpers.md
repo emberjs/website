@@ -6,12 +6,14 @@ For example, imagine you are frequently wrapping certain values in a `<span>` ta
 
 ```javascript
 Ember.Handlebars.registerBoundHelper('highlight', function(value, options) {
-  return new Handlebars.SafeString('<span class="highlight">'+value+'</span>');
+  escaped = Handlebars.Utils.escapeExpression(value);
+  return new Handlebars.SafeString('<span class="highlight">' + escaped + '</span>');
 });
 ```
 
 If you return HTML from a helper, and you don't want it to be escaped,
-make sure to return a new `SafeString`.
+make sure to return a new `SafeString`. Make sure you first escape any
+user data!
 
 Anywhere in your Handlebars templates, you can now invoke this helper:
 
