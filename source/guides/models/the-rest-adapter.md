@@ -21,10 +21,8 @@ You can specify irregular pluralizations via the adapter's `configure`
 API:
 
 ```js
-DS.RESTAdapter.configure({
-  plurals: {
-    person: "people"
-  }
+DS.RESTAdapter.configure("plurals", {
+  person: "people"
 });
 ```
 
