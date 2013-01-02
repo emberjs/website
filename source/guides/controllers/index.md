@@ -47,8 +47,8 @@ currently playing song:
 
 ```javascript
 App.SongRoute = Ember.Route.extend({
-  setupControllers: function(song) {
-    this.set('controller.content', song);
+  setupControllers: function(controller, song) {
+    controller.set('content', song);
   }
 });
 ```
@@ -144,8 +144,8 @@ we set tell our `SongsController` to represent the songs in the playlist:
 
 ```javascript
 App.SongsRoute = Ember.Route.extend({
-  setupControllers: function(playlist) {
-    this.set('controller.content', playlist.get('songs'));
+  setupControllers: function(controller, playlist) {
+    controller.set('content', playlist.get('songs'));
   }
 });
 ```
