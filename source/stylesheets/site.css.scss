@@ -865,6 +865,13 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   }
 }
 
+.previous-guide {
+  float: left;
+}
+
+.next-guide {
+  float: right;
+}
 
 /**
   Blogs
