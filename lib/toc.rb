@@ -75,6 +75,74 @@ module TOC
       %Q{<h1> #{name} </h1>}
     end
 
+    def section_slug
+      request.path.split('/')[2]
+    end
+
+    def guide_slug
+      request.path.split('/')[3]
+    end
+
+    def current_section
+      data.guides.find do |section, entries|
+        entries[0].url.split("/")[0] == section_slug
+      end
+    end
+
+    def current_guide
+      if guide_slug == 'index.html'
+        current_section[1][0]
+      else
+        current_section[1].find{|guide| guide.url.split('/')[1] == guide_slug}
+      end
+    end
+
+    def chapter_links
+      %Q{
+      <footer>
+        #{previous_chapter_link} #{next_chapter_link}
+      </footer>
+      }
+    end
+
+    def previous_chapter_link
+      return '' unless previous_chapter
+      %Q{
+        <a class="previous-guide" href="/guides/#{previous_chapter.url}">
+          \u2190 #{previous_chapter.title}
+        </a>
+      }
+    end
+
+    def next_chapter_link
+      return '' unless next_chapter
+      %Q{
+      <a class="next-guide" href="/guides/#{next_chapter.url}">
+        #{next_chapter.title} \u2192
+      </a>
+      }
+    end
+
+    def previous_chapter
+      guides = current_section[1]
+      current_index = guides.find_index(current_guide)
+      if current_index != 0
+        guides[current_index-1]
+      else
+        nil
+      end
+    end
+
+    def next_chapter
+      guides = current_section[1]
+      current_index = guides.find_index(current_guide)
+      if current_index < guides.length
+        guides[current_index+1]
+      else
+        nil
+      end
+    end
+
     def table_of_contents
       chapters = data.documentation.chapters
       chapters = chapters.collect_concat do |file|
