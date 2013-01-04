@@ -44,9 +44,9 @@ array.forEach(function(item) {
   console.log(item, this.indexOf(item));
 }, array)
 
-//=> 0
-//=> 1
-//=> 2
+//=> 1 0
+//=> 2 1
+//=> 3 2
 ```
 
 ### Enumerables in Ember.js
