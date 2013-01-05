@@ -124,6 +124,8 @@ module TOC
     end
 
     def previous_chapter
+      return if not current_section
+
       guides = current_section[1]
       current_index = guides.find_index(current_guide)
       if current_index != 0
@@ -134,6 +136,8 @@ module TOC
     end
 
     def next_chapter
+      return if not current_section
+
       guides = current_section[1]
       current_index = guides.find_index(current_guide)
       if current_index < guides.length
