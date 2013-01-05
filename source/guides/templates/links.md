@@ -35,7 +35,7 @@ The `{{linkTo}}` helper takes:
 
 * The name of a route. In this example, it would be `index`, `posts`, or
   `post`.
-* If the route has a dynamic segment, an model that represents the
+* If the route has a dynamic segment, a model that represents the
   segment. By default, Ember.js will replace the segment with the
   value of the object's `id` property.
 
