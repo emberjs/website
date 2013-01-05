@@ -40,8 +40,7 @@ For more information, see [Ember.Enumerable][1] and [Ember.Array][2].
 
 ### Queries
 
-You can query the server by passing a hash as the second parameter to
-`find()`.
+You can query the server by passing a hash  to `find()`.
 
 ```js
 var people = App.Person.find({ name: "Peter" });
