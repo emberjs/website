@@ -63,6 +63,10 @@ Routing:
 Controllers:
   - title: "Introduction"
     url: "controllers"
+  - title: "Representing a Single Model with ObjectController"
+    url: "controllers/representing-a-single-model-with-objectcontroller"
+  - title: "Representing Multiple Models with ArrayController"
+    url: "controllers/representing-multiple-models-with-arraycontroller"
 
 Models:
   - title: "Introduction"
