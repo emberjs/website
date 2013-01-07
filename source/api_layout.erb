@@ -81,21 +81,30 @@
     <h2>Modules</h2>
     <ul>
     <% api_modules.each do |id, data| %>
-      <li><%= api_module_link data['name'] %></li>
+      <li>
+        <%= api_module_link data['name'] %>
+        <%= api_file_link data, title: 'github', target: '_blank' %>
+      </li>
     <% end %>
     </ul>
 
     <h2>Namespaces</h2>
     <ul>
     <% api_namespaces.each do |id, data| %>
-      <li class="<%= api_classes_for_namespace data %>"><%= api_namespace_link data['name'] %></li>
+      <li class="<%= api_classes_for_namespace data %>">
+        <%= api_namespace_link data['name'] %>
+        <%= api_file_link data, title: 'github', target: '_blank' %>
+      </li>
     <% end %>
     </ul>
 
     <h2>Classes</h2>
     <ul>
     <% api_classes.each do |id, data| %>
-      <li class="<%= api_classes_for_class data %>"><%= api_class_link data['name'] %></li>
+      <li class="<%= api_classes_for_class data %>">
+        <%= api_class_link data['name'] %>
+        <%= api_file_link data, title: 'github', target: '_blank' %>
+      </li>
     <% end %>
     </ul>
   <% end %>
