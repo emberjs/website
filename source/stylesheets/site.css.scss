@@ -724,6 +724,27 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     padding: 0px 0px 20px 0px;
   }
 
+  .anchorable-toc {
+    position: relative;
+
+    &:hover a.toc-anchor {
+      display: block;
+    }
+  }
+
+  a.toc-anchor {
+    display: none;
+    position: absolute;
+    text-decoration: none;
+    left: -1em;
+    width: 30px;
+    height: 13px;
+    background: url(/images/link.png) no-repeat;
+    background-size: 18px 9px;
+    left: -21px;
+    margin-top: 5px;
+  }
+
   #sidebar {
     margin-top: 29px;
     width: 218px;

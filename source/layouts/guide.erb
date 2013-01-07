@@ -20,12 +20,26 @@
   </div>
 
   <script>
-    $("#guide_list .level-1 > a").click(function() {
-      $(this).parent().find('> ol').slideToggle(function() {
-        positionBackToTop(true);
+    $(function(){
+      $("#guide_list .level-1 > a").click(function() {
+        $(this).parent().find('> ol').slideToggle(function() {
+          positionBackToTop(true);
+        });
+
+        return false;
       });
 
-      return false;
+      $(function(){
+        $('.anchorable-toc').each(function(){
+          var toc = $(this),
+          id = toc.attr('id'),
+          href = "#" + id,
+          anchor = '<a class="toc-anchor" href="'+href+'"></a>';
+
+          toc.prepend(anchor);
+        });
+      });
+
     });
   </script>
 <% end %>

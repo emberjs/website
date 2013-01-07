@@ -31,7 +31,7 @@ module Highlighter
     include Helpers
 
     def header(text, level)
-      "<h#{level} id='toc_#{TOC::TableOfContents.anchorify(text)}'>#{text}</h#{level}>"
+      "<h#{level} class='anchorable-toc' id='toc_#{TOC::TableOfContents.anchorify(text)}'>#{text}</h#{level}>"
     end
 
     def block_code(code, language)
