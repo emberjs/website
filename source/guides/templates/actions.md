@@ -55,6 +55,18 @@ If the action is not found on the current controller, it will bubble up
 to the current route handler. From there, it will bubble up to parent
 route handlers until it reaches the application route.
 
+Define actions on the route's `events` property. 
+
+```javascript
+App.PostsIndex = Ember.Route.extend({
+  events: {
+    myCoolAction: function() {
+      // do your business.
+    }
+  }
+});
+```
+
 This allows you to create a button that has different behavior based on
 where you are in the application. For example, you might want to have a
 button in a sidebar that does one thing if you are somewhere inside of
