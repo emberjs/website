@@ -72,7 +72,7 @@ By default, your top-most application template is bound to your `ApplicationCont
 App.ApplicationController = Ember.Controller.extend({
   firstName: "Trek",
   lastName: "Glowacki"
-}});
+});
 ```
 
 The above template and controller would combine to display the following

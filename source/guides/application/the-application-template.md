@@ -43,4 +43,4 @@ to the screen.
 If you're using build tools to load your templates, make sure you name
 the template `application`.
 
-For more information, see [Templates](/guides/templates/) and [Routing](/guides/routing/).
+For more information, see [Templates](/guides/templates/handlebars-basics) and [Routing](/guides/routing/).
