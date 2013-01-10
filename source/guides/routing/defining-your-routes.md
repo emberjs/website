@@ -5,45 +5,68 @@ templates, loading data, and otherwise setting up application state.
 It does so by matching the current URL to the _routes_ that you've
 defined.
 
-Most applications will start by defining what happens when the user
-navigates to `/`, the application's home page:
-
-```javascript
+```js
 App.Router.map(function(match) {
-  match('/').to('index');
+  match("/about").to("about");
+  match("/favs").to("favorites");
 });
 ```
 
-The above example tells Ember.js to map the route `/` to the `index`
-_route handler_. By default, this renders the template of the same name.
+When the user visits `/`, Ember.js will render the `index` template.
+Visiting `/about` renders the `about` template, and `/favs` renders the
+`favorites` template.
 
-You can customize the behavior of a route handler by defining an
-`Ember.Route`. For example, if you wanted to render a template other
-than `index`, you can define a handler called `App.IndexRoute` and
-override the `renderTemplates` method:
+Inside your templates, you can use `{{linkTo}}` to navigate between
+routes, using the name that you provided in the `to()` method (or, in
+the case of `/`, the name `index`).
+
+```handlebars
+{{#linkTo "index"}}<img class="logo">{{/linkTo}}
+
+<nav>
+  {{#linkTo "about"}}About{{/linkTo}}
+  {{#linkTo "favorites"}}Favorites{{/linkTo}}
+</nav>
+```
+
+The `{{linkTo}}` helper will also add an `active` class to the link that
+points to the currently active route.
+
+You can customize the behavior of a route by creating an `Ember.Route`
+subclass. For example, to customize what happens when your user visits
+`/`, create an `App.IndexRoute`:
 
 ```javascript
 App.IndexRoute = Ember.Route.extend({
-  renderTemplates: function() {
-    this.render('other-template');
+  setupController: function(controller) {
+    // Set the IndexController's `title`
+    controller.set('title', "My App");
   }
 });
 ```
 
-You can define as many routes inside the `map` function as you'd like:
+The `IndexController` is the starting context for the `index` template.
+Now that you've set `title`, you can use it in the template:
 
-```javascript
-App.Router.map(function(match) {
-  match('/').to('index');
-  match('/posts').to('posts');
-  match('/user/favorites').to('starredSongs');
-});
+```handlebars
+<!-- get the title from the IndexController -->
+<h1>{{title}}</h1>
 ```
 
-Visiting `/posts` would render the `posts` template, and visiting
-`/user/favorites` would render the `starredSongs` template. If you
-wanted to customize the behavior of these routes, you would define
-`App.PostsRoute` and `App.StarredSongsRoute`, respectively.
+You don't need to create an `App.IndexController` just yet; Ember.js
+will create controllers for you.
+
+The above examples show you how to customize `/`, which is implicitly
+named `index`. Use the name provided to `to()` when customizing other
+routes. For example, in the case of `/favs`:
+
+```js
+App.FavoritesRoute = Ember.Route.extend({
+  setupController: function(controller) {
+    // ...controller setup here
+  }
+});
+```
 
 ### Nested Routes
 
@@ -52,10 +75,8 @@ You can define nested routes by passing an additional function to the
 
 ```javascript
 App.Router.map(function(match) {
-  match('/').to('index');
   match('/posts').to('posts', function(match) {
-    match('/').to('postIndex');
-    match('/new').to('newPost');
+    match('/new').to('new');
   });
 });
 ```
@@ -66,16 +87,28 @@ This router creates three routes:
 * `/posts`
 * `/posts/new`
 
-
 Visiting `/` renders the `index` template into the `application`
 template's outlet, as you would expect.
 
 Visiting `/posts` is slightly different. It will first render the
 `posts` template into the `application` template's outlet. Then, it will
-render the `postIndex` template into the `posts` template's outlet.
+render the `posts/index` template into the `posts` template's outlet.
 
 Finally, visiting `/posts/new` will first render the `posts` template,
-then render the `newPost` template into its outlet.
+then render the `posts/new` template into its outlet.
+
+Customizing routes or controllers uses a similar naming scheme. For
+example, to customize `/posts/new`:
+
+* The route is `App.PostsNewRoute`
+* The controller is `App.PostsNewController`
+
+This nested naming does not continue forever. A nested route's template
+is always `<parent>/<current>`.
+
+<!-- See [Nested Routes][1] for more information. -->
+
+[1]: /guides/routing/nested-routes
 
 ### Dynamic Segments
 

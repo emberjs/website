@@ -29,10 +29,10 @@ App.Router.map(function(match) {
   });
 });
 
-App.ChooseRoute = Ember.Route.extend({
+App.TopChartsChooseRoute = Ember.Route.extend({
   redirect: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
-    this.transitionTo(lastFilter || 'songs');
+    this.transitionTo('topCharts.' + lastFilter || 'songs');
   }
 });
 
@@ -44,10 +44,10 @@ App.FilterRoute = Ember.Route.extend({
   }
 });
 
-App.SongsRoute = App.FilterRoute.extend();
-App.AlbumsRoute = App.FilterRoute.extend();
-App.ArtistsRoute = App.FilterRoute.extend();
-App.PlayistsRoute = App.FilterRoute.extend();
+App.TopChartsSongsRoute = App.FilterRoute.extend();
+App.TopChartsAlbumsRoute = App.FilterRoute.extend();
+App.TopChartsArtistsRoute = App.FilterRoute.extend();
+App.TopChartsPlayistsRoute = App.FilterRoute.extend();
 ```
 
 In this example, navigating to the `/` URL immediately transitions into
