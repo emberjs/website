@@ -737,17 +737,16 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
         > ol {
           display: none;
           background-color: #f9e7e4;
+          padding: 10px 0;
 
           &.selected {
             display: block;
           }
 
-          li:first-of-type {
-            padding-top: 10px;
-          }
-
-          li:last-of-type {
-            padding-bottom: 10px;
+          li.sub-selected {
+            padding-top: 6px;
+            background-color: #fcc;
+            margin-bottom: 3px;
           }
         }
 
