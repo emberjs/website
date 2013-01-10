@@ -15,11 +15,11 @@ App.PostsRoute = Ember.Route.extend();
 ```
 
 If you want to render a template other than the one associated with the
-route handler, implement the `renderTemplates` hook:
+route handler, implement the `renderTemplate` hook:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
-  renderTemplates: function() {
+  renderTemplate: function() {
     this.render('favoritePost');
   }
 });
@@ -30,7 +30,7 @@ controller:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
-  renderTemplates: function() {
+  renderTemplate: function() {
     var controller = this.controllerFor('favoritePost');
 
     this.render({ controller: controller });
@@ -42,7 +42,7 @@ If you want to render the template into a different parent template:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
-  renderTemplates: function() {
+  renderTemplate: function() {
     this.render({ into: 'sidebar' });
   }
 });
@@ -52,7 +52,7 @@ If you want to render the template into a different named outlet:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
-  renderTemplates: function() {
+  renderTemplate: function() {
     this.render({ outlet: 'posts' });
   }
 });
@@ -63,7 +63,7 @@ combination you'd like:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
-  renderTemplates: function() {
+  renderTemplate: function() {
     var controller = this.controllerFor('favoritePost');
 
     // Render the `favoritePost` template into
