@@ -5,7 +5,7 @@ module APIDocs
     def repo_url
       @repo_url
     end
-     
+
     def registered(app, options={})
       app.helpers Helpers
 
@@ -158,8 +158,11 @@ module APIDocs
       data.api['classes'].select{|_,c| c['static'] }.sort
     end
 
-    def api_file_link(item)
+    def api_file_link(item, options = {})
+      return unless item['file']
       path = item['file'].sub(/^\.\.\//, '')
+
+      options[:class] ||= 'api-file-link'
 
       title = path
       link  = "#{APIDocs.repo_url}/tree/#{ApiClass.data['project']['sha']}/#{path}"
@@ -169,7 +172,9 @@ module APIDocs
         link += "#L#{line}"
       end
 
-      link_to title, link
+      title = options.delete(:title) || title
+
+      link_to title, link, options
     end
 
     def api_module(name)

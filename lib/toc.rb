@@ -41,7 +41,7 @@ module TOC
 
       result = '<ol id="guide_list">'
       guides.each_entry do |section, entries|
-        
+
         current_url = request.path.split("/")[2]
         sub_url     = request.path.split("/")[3]
         sub_url     = nil if sub_url == "index.html" # For intro pages
@@ -57,7 +57,7 @@ module TOC
           if entry.url.split("/")[1] == sub_url
             sub_current = true
           end
-          
+
           result += %Q{<li class="level-3#{sub_current ? ' sub-selected' : ''}"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
         end
         result += '</ol></li>'
@@ -161,7 +161,7 @@ module TOC
       chapters = chapters.collect_concat do |file|
          File.read("source/documentation/#{file}.md")+"\n"
       end
-      
+
       toc = TableOfContents.new()
       markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
       markdown.render(chapters.join(''))
