@@ -761,6 +761,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
         list-style: none;
         margin: 0px;
         padding: 0px;
+        background-color: #f9e7e4;
 
         p {
           padding-left: 7px;
@@ -773,8 +774,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
         > ol {
           display: none;
-          background-color: #f9e7e4;
-          padding: 10px 0;
+          margin: 10px 0;
 
           &.selected {
             display: block;
@@ -793,6 +793,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
             outline: 1px solid #d5ccc8;
             padding: 12px 12px 10px 12px;
             margin-top: 1px;
+            background-color: rgb(244, 236, 233);
           }
 
           &.selected > a {
@@ -801,10 +802,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
             outline: 1px solid #b23e2a;
             color: white;
             border-top: 1px solid rgba(255,255,255,0.4);
-          }
-
-          ol {
-            border-top: 1px solid #d5ccc8;
           }
 
           &:last-of-type ol {
