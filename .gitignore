@@ -8,4 +8,4 @@ build/
 source/examples
 .mm-pid-*
 /b
-
+*.swp

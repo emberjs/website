@@ -14,24 +14,24 @@ module APIDocs
       app.after_configuration do
         ApiClass.data = data.api
 
-        page "/api*", :directory_index => false, :layout => "api_layout"
+        page '/api*', directory_index: false, layout: 'layouts/api'
 
-        data.api['classes'].each do |name, data|
-          page "/api/classes/#{name}.html", :proxy => "api/class.html", :layout => "api_layout" do
+        data.api.fetch('classes').each do |name, data|
+          page "/api/classes/#{name}.html", proxy: 'api/class.html', layout: 'layouts/api' do
             @title = name
             @class = ApiClass.find(name)
           end
 
           if name == options[:default_class]
-            page "/api/index.html", :proxy => "api/class.html", :layout => "api_layout" do
+            page '/api/index.html', proxy: 'api/class.html', layout: 'layouts/api' do
               @title = name
               @class = ApiClass.find(name)
             end
           end
         end
 
-        data.api['modules'].each do |name, data|
-          page "/api/modules/#{name}.html", :proxy => "api/module.html", :layout => "api_layout" do
+        data.api.fetch('modules').each do |name, data|
+          page "/api/modules/#{name}.html", proxy: 'api/module.html', layout: 'layouts/api' do
             @title = name
             @module = data
           end
@@ -146,6 +146,104 @@ module APIDocs
   end
 
   module Helpers
+    def current?(key)
+      request_key = _request_as_key
+
+      category_match = request_key[:category] == key[:category]
+      name_match = request_key[:name] == key[:name]
+
+      if key[:name].present?
+        category_match and name_match
+      else
+        category_match
+      end
+    end
+
+    def _file_to_category(file)
+      lookup ||= begin
+        obj = {}
+
+        api_modules.map(&:first).each_with_object(obj) do |file, hash|
+          hash[file] = :modules
+        end
+
+        api_classes.map(&:first).each_with_object(obj) do |file, hash|
+          hash[file] = :classes
+        end
+
+        api_namespaces.map(&:first).each_with_object(obj) do |file, hash|
+          hash[file] = :namespaces
+        end
+      end
+
+      lookup[file]
+    end
+
+
+    def _request_as_key
+      path = request.path.split('/')
+      file = File.basename(path.pop, '.html')
+
+      category = _file_to_category(file)
+
+      {
+        name: file,
+        category: category
+      }
+    end
+
+    def _level
+      @level ||= 0
+      @level += 1
+      yield(@level)
+      @level -= 1
+    end
+
+    def li_for(category, options = {}, &block)
+      class_name = options[:class]
+      key = {
+        category: category,
+        name: options[:name]
+      }
+
+      _level do |level|
+        concat(%Q{
+          <li class="level-#{level} #{selected_class(key, class_name)}">
+          #{capture(&block)}
+          </li>
+        })
+      end
+    end
+
+    def ol_for(category, options = {}, &block)
+      class_name = options[:class]
+
+      key = {
+        category: category,
+        name: options[:name]
+      }
+
+      _level do |level|
+        concat(%Q{
+          <ol class="#{selected_class(key, class_name)}">
+          #{capture(&block)}
+          </ol>
+        })
+      end
+    end
+
+    def selected_class(key, class_name = nil)
+      class_name || 'selected' if current?(key)
+    end
+
+    def sha
+      data.api.fetch('project')['sha']
+    end
+
+    def sha_url
+      "#{APIDocs.repo_url}/commit/#{sha}"
+    end
+
     def api_modules
       data.api['modules'].sort
     end

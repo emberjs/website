@@ -1,4 +1,4 @@
-require "redcarpet"
+require 'redcarpet'
 
 module TOC
   class << self
@@ -8,50 +8,36 @@ module TOC
     alias :included :registered
   end
 
-  class TableOfContents < Redcarpet::Render::Base
-    def self.anchorify(text)
+  module TableOfContents
+    extend self
+
+    def anchorify(text)
       text.gsub(/&#?\w+;/, '-').gsub(/\W+/, '-').gsub(/^-|-$/, '').downcase
-    end
-
-    def initialize
-      @current_level = 0
-      @toc_count = 0
-      @result = []
-      super
-    end
-
-    def header(text, level)
-      @toc_count += 1
-
-      return "" if level > 3
-      link = "<a href=\"#toc_#{TableOfContents.anchorify(text)}\">#{text}</a>"
-      @result << %Q{<li class="level-#{level}">#{link}</li>}
-
-      ""
-    end
-
-    def postprocess(text)
-      "<ol>" + @result.join("") + "</ol>"
     end
   end
 
   module Helpers
-    def guides_index
-      guides = data.guides
+    def index_for(data)
+      result = '<ol id="toc-list">'
 
-      result = '<ol id="guide_list">'
-      guides.each_entry do |section, entries|
+      data.each_entry do |section, entries|
+        next if entries.any? do |entry|
+          entry[:skip_sidebar]
+        end
 
-        current_url = request.path.split("/")[2]
-        sub_url     = request.path.split("/")[3]
-        intro_page  = sub_url == "index.html"
+        current_url = request.path.split('/')[2]
+        sub_url     = request.path.split('/')[3]
+        intro_page  = sub_url == 'index.html'
         sub_url     = nil if intro_page
         chapter     = entries[0].url.split("/")[0]
 
         current = (chapter == current_url)
 
-        result += %Q{<li class="level-1#{current ? ' selected' : ''}"><a href="/guides/#{entries[0].url}">#{section}</a>}
-        result += %Q{<ol#{current ? " class='selected'" : ''}>}
+        result << %Q{
+          <li class="level-1#{current ? ' selected' : ''}">
+            <a href="/guides/#{entries[0].url}">#{section}</a>
+            <ol#{current ? " class='selected'" : ''}>
+        }
 
         entries.each do |entry|
           current_segment = entry.url.split("/")[1]
@@ -64,19 +50,29 @@ module TOC
             false
           end
 
-          result += %Q{<li class="level-3#{sub_current ? ' sub-selected' : ''}"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
+          result << %Q{
+            <li class="level-3#{sub_current ? ' sub-selected' : ''}">
+              <a href="/guides/#{entry.url}">#{entry.title}</a>
+            </li>
+          }
         end
-        result += '</ol></li>'
+
+        result << '</ol></li>'
       end
-      result += '</ol>'
+
+      result << '</ol>'
+
+      result
     end
 
     def chapter_name
       guides = data.guides
 
-      heading = ""
+      sub_url = request.path.split('/')[2]
+      heading = ''
+
       guides.each_entry do |section, entries|
-        if entries[0].url.split("/")[0] == request.path.split("/")[2]
+        if entries[0].url.split('/')[0] == sub_url
           heading = section
           break
         end
@@ -87,7 +83,7 @@ module TOC
     def chapter_heading
       name = chapter_name.strip
       return if name.blank?
-      %Q{<h1> #{name} </h1>}
+      %Q{<h1>#{name}</h1>}
     end
 
     def section_slug
@@ -100,7 +96,7 @@ module TOC
 
     def current_section
       data.guides.find do |section, entries|
-        entries[0].url.split("/")[0] == section_slug
+        entries[0].url.split('/')[0] == section_slug
       end
     end
 
@@ -160,26 +156,6 @@ module TOC
       else
         nil
       end
-    end
-
-    def table_of_contents
-      chapters = data.documentation.chapters
-      chapters = chapters.collect_concat do |file|
-         File.read("source/documentation/#{file}.md")+"\n"
-      end
-
-      toc = TableOfContents.new()
-      markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
-      markdown.render(chapters.join(''))
-    end
-
-    def table_of_contents_for(file)
-      document = File.read("source/#{file}")
-
-      toc = TableOfContents.new()
-      markdown = Redcarpet::Markdown.new(toc, fenced_code_blocks: true)
-
-      markdown.render(document)
     end
   end
 end

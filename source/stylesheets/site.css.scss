@@ -22,24 +22,30 @@ body {
   background: url(/images/background-shades.png) no-repeat top center #faf4f1;
   margin: 60px 0 0 0;
   padding: 0;
-  font-family: Lato, Arial, sans-serif;
-  line-height: 23px;
-  font-size: 13px;
-  line-height: 20px;
-  min-width: $page-width;
+  font-family: Helvetica neue;
+  font-size: 14px;
+  line-height: 1.4em;
+  color: #444444;
+  font-weight: 200;
 }
 
 * {
   @include box-sizing(border-box);
 }
 
+// Typography
+
 a {
-  color: $orange-color;
+  color: #f23818;
   text-decoration: none;
 }
 
+a:hover {
+  border-bottom: 1px dotted #f23818;
+}
+
 p {
-  margin: 24px 0;
+  margin: 1.5em 0;
 }
 
 em {
@@ -55,10 +61,35 @@ code {
   @include border-radius(5px);
 }
 
+h1,h2,h3,h4,h5,h6 {
+  text-transform: uppercase;
+  font-family: "MavenProBold";
+}
+
 h1 {
   font-size: 32px;
-  margin-bottom: 32px;
   line-height: 40px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h2,h3{
+  font-family: "MavenProBold";
+  color: $black-color;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 12px;
+  line-height: 18px;
+  color: $orange-color;
+  letter-spacing: 1px;
+  margin: 24px 0 12px 0;
 }
 
 strong {
@@ -72,27 +103,239 @@ hr {
   background-color: $black-color;
 }
 
+ul {
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: decimal;
+}
+// Structure
+
+.section {
+  margin: 0 auto;
+  width: 960px;
+}
+
+// components
 /**
   Tabs
 **/
 
 .tabs {
+  border: 1px solid #e0e0e0;
+          border-radius: 5px;
+       -o-border-radius: 5px;
+      -ms-border-radius: 5px;
+     -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+
   > ul {
     list-style: none;
     overflow: hidden; // Clearfix
+    display: table;
+    width: 100%;
 
     li {
-      display: block;
-      float: left;
-      padding-right: 10px;
-      margin-right: 10px;
-      border-right: solid 1px gray;
+      display: table-cell;
+      a {
+        display: block;
+        border-top: solid 1px rgb(250, 250, 250);
+        border-right: solid 1px #e6e4e3;
+        background-color: #f3f3f3;
+        background-image:         linear-gradient( #f3f3f3, #ebebeb);
+        background-image:      -o-linear-gradient( #f3f3f3, #ebebeb);
+        background-image:    -moz-linear-gradient( #f3f3f3, #ebebeb);
+        background-image:     -ms-linear-gradient( #f3f3f3, #ebebeb);
+        background-image: -webkit-linear-gradient( #f3f3f3, #ebebeb);
+        padding: 0.5em 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: #443331;
+        font-family: helvetica neue;
+
+        &:hover {
+          background-color: #ebebeb;
+          background-image:         linear-gradient( #ebebeb, #f3f3f3);
+          background-image:      -o-linear-gradient( #ebebeb, #f3f3f3);
+          background-image:    -moz-linear-gradient( #ebebeb, #f3f3f3);
+          background-image:     -ms-linear-gradient( #ebebeb, #f3f3f3);
+          background-image: -webkit-linear-gradient( #ebebeb, #f3f3f3);
+          color: black;
+          border-bottom: none;
+        }
+
+      }
     }
 
-    border-bottom: solid 1px gray;
+    border-bottom: solid 1px #e6e4e3;
     margin-bottom: 20px;
   }
+  .pane {
+    margin: 2em 1.5em;
+  }
 }
+
+/**
+  Sidebar
+**/
+
+#sidebar {
+  margin-top: 29px;
+  width: 218px;
+  min-height: 475px;
+  margin-bottom: 28px;
+  padding-bottom: 120px;
+  background: #f4ece9;
+  border-left: 1px solid #d4ccc8;
+  border-right: 1px solid #d4ccc8;
+  position: relative;
+
+  ol#toc-list {
+    background: #f9e7e4;
+    li {
+      font-size: 12px;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+
+      p {
+        padding-left: 7px;
+      }
+
+      a {
+        padding: 0 0 0 1em;
+        line-height: 1.2em;
+      }
+
+      > ol {
+        display: none;
+        margin: 10px 0;
+
+        &.selected {
+          display: block;
+        }
+
+        li.sub-selected {
+          background-color: #fcc;
+        }
+
+        li {
+          a.api-file-link {
+            display: none;
+            color: #717171;
+            font-size: 11px;
+            margin: 0;
+            padding: 0 0 0 0.5em;
+            &:hover {
+              color: black;
+            }
+          }
+
+          &:hover a.api-file-link{
+            display: inline-block;
+          }
+        }
+      }
+
+      &.level-1 {
+        text-transform: uppercase;
+
+        > a {
+          color: #443331;
+          outline: 1px solid #d5ccc8;
+          padding: 12px 12px 10px 12px;
+          margin-top: 1px;
+          background-color: rgb(244, 236, 233);
+        }
+
+        &.selected > a {
+          background-color: #f16f58;
+          background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+          outline: 1px solid #b23e2a;
+          color: white;
+          border-top: 1px solid rgba(255,255,255,0.4);
+        }
+
+        &:last-of-type ol {
+          border-bottom: 1px solid #d5ccc8;
+        }
+      }
+
+      &.level-2, &.level-3 {
+        padding: 3px 0 3px 0;
+
+        a {
+          display: inline;
+          text-transform: none;
+          color: #d84a32;
+          font-weight: normal;
+          font-size: 12px;
+        }
+        &.sub-selected {
+          // fancy me up.
+        }
+      }
+    }
+  }
+
+  &:after {
+    @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
+    position: absolute;
+    bottom: 0px;
+    left: -2px;
+    right: 0;
+    width: 220px;
+    height: 120px;
+    content: '';
+  }
+}
+
+#guide_search {
+  background-color: #fbf8f7;
+  border: 1px solid #ccc;
+  position: relative;
+  color: #423432;
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  label {
+    padding: 0px 0px 5px 15px;
+    padding-right: 10px;
+    margin-left: 10px;
+    background: no-repeat url(/images/search-icon.png);
+  }
+
+  border: 0;
+  input::-webkit-input-placeholder { font-style: italic; }
+  input:-moz-placeholder { font-style: italic; }
+  input::-moz-placeholder { font-style: italic; }
+
+  input {
+    background: none;
+    font-size: 12px;
+    border: 0px;
+    padding: 5px 0px 5px 5px;
+    height: 100%;
+    width: 165px;
+    outline: none;
+    font-style: normal;
+  }
+
+  button {
+    background: no-repeat url(/images/search-erase.png);
+    width: 14px;
+    border: 0px;
+    height: 14px;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 15px;
+  }
+}
+// pages
 
 /**
   Header
@@ -222,7 +465,7 @@ hr {
 
 #content-wrapper {
   @include clearfix;
-  width: $page-width;
+  width: 960px;
   margin: 0 auto 40px auto;
   padding: 20px 0px;
   position: relative;
@@ -237,15 +480,11 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
 #content {
-  width: $page-width;
-
   &.has-sidebar {
-    margin-left: $sidebar-width + $col-spacing * 2;
+    margin-left: 1.5em;
+    margin-top: 15px;
     width: $content-width;
-  }
-
-  & > h1:first-child {
-    margin-top: 43px;
+    float: left;
   }
 }
 
@@ -266,7 +505,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     text-decoration: none;
     line-height: 21px;
     border-bottom: none;
-    color: $orange-color;
+    color: #d84a32;
 
     &:hover {
       color: $black-color;
@@ -314,8 +553,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   }
 
   h2 {
-    font-family: "MavenProBold";
-    color: $black-color;
     margin-bottom: 10px;
   }
 
@@ -324,22 +561,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     font-size: 13px;
     text-transform: none;
     margin: 2px 0;
-  }
-
-  li {
-
-    a.api-file-link {
-      display: none;
-      color: #717171;
-      font-size: 11px;
-      &:hover {
-        color: black;
-      }
-    }
-
-    &:hover a.api-file-link{
-      display: inline-block;
-    }
   }
 }
 
@@ -383,23 +604,13 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 }
 
 .section {
-  margin: 60px 0;
+  margin-top: 60px;
   overflow: hidden;
 
   h2 {
     width: 100%;
     text-align: center;
-    font-size: 18px;
-    color: $black-color;
-    text-transform: uppercase;
-    font-family: "MavenProBold";
     margin-bottom: 28px;
-  }
-
-  h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    font-family: "MavenProBold";
   }
 
   table.columns {
@@ -450,7 +661,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 }
 
 .users.section {
-
   .surround {
     @include border-radius(3px);
     @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff);
@@ -648,78 +858,43 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
   }
 }
 
-/**
-  Documentation Page
-**/
-
-.chapter {
-  margin: 23px 0 90px 0;
-
-  $h3-indent: 32px;
-  $body-indent: $h3-indent;
-
-  h1 {
-    font-family: "MavenProBold";
-    font-size: 22px;
-    text-transform: uppercase;
-    color: $orange-color;
-    padding: 0px 0px 15px 25px;
-    background: no-repeat url(/images/chapter-mark.png) 0px 7px;
-    border-bottom: 1px solid #dfd7d4;
-  }
-
-  h2 {
-    width: 100%;
-    font-size: 22px;
-    color: $black-color;
-    font-family: "MavenProBold";
-  }
-
-  h3 {
-    font-family: "MavenProBold";
-    font-size: 18px;
-    color: $black-color;
-    margin: 30px 0;
-  }
-
-  h4 {
-    font-family: "MavenProBold";
-    font-size: 12px;
-    color: $orange-color;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 24px 0 12px 0;
-    line-height: 18px;
-  }
-
-  p {
-    color: #222;
-    font-size: 15px;
-    line-height: 22px;
-  }
-
-  ul, ol {
-    margin-left: $body-indent;
-    list-style-type: disc;
-    margin-bottom: 28px;
-
-    li {
-      font-size: 15px;
-      margin: 10px 0 10px 0;
-
-      p {
-        padding-left: 7px;
-      }
-    }
-  }
-}
-
 
 /**
   Guides Page
 **/
 
 .guides {
+  .chapter {
+    margin: 23px 0 90px 0;
+
+    $h3-indent: 32px;
+    $body-indent: $h3-indent;
+
+    h1 {
+      font-size: 22px;
+      color: $orange-color;
+      padding: 0px 0px 1em 2em;
+      margin-bottom: 1.5em;
+      background: no-repeat url(/images/chapter-mark.png) 0px 7px;
+      border-bottom: 1px solid #dfd7d4;
+    }
+
+    ul, ol {
+      margin-left: $body-indent;
+      list-style-type: disc;
+      margin-bottom: 28px;
+
+      li {
+        font-size: 15px;
+        margin: 10px 0 10px 0;
+
+        p {
+          padding-left: 7px;
+        }
+      }
+    }
+  }
+
   #content-wrapper {
     padding: 0px 0px 20px 0px;
   }
@@ -741,144 +916,8 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     height: 13px;
     background: url(/images/link.png) no-repeat;
     background-size: 18px 9px;
-    left: -21px;
+    left: -19px;
     margin-top: 5px;
-  }
-
-  #sidebar {
-    margin-top: 29px;
-    width: 218px;
-    margin-bottom: 28px;
-    padding-bottom: 120px;
-    background: #f4ece9;
-    border-left: 1px solid #d4ccc8;
-    border-right: 1px solid #d4ccc8;
-    position: relative;
-
-    ol#guide_list {
-      li {
-        font-size: 12px;
-        list-style: none;
-        margin: 0px;
-        padding: 0px;
-        background-color: #f9e7e4;
-
-        p {
-          padding-left: 7px;
-        }
-
-        a {
-          padding: 0 10px;
-          line-height: 1.2em;
-        }
-
-        > ol {
-          display: none;
-          margin: 10px 0;
-
-          &.selected {
-            display: block;
-          }
-
-          li.sub-selected {
-            background-color: #fcc;
-          }
-        }
-
-        &.level-1 {
-          text-transform: uppercase;
-
-          > a {
-            color: #443331;
-            outline: 1px solid #d5ccc8;
-            padding: 12px 12px 10px 12px;
-            margin-top: 1px;
-            background-color: rgb(244, 236, 233);
-          }
-
-          &.selected > a {
-            background-color: #f16f58;
-            background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
-            outline: 1px solid #b23e2a;
-            color: white;
-            border-top: 1px solid rgba(255,255,255,0.4);
-          }
-
-          &:last-of-type ol {
-            border-bottom: 1px solid #d5ccc8;
-          }
-        }
-
-        &.level-2, &.level-3 {
-          padding: 5px 0 4px 0;
-
-          a {
-            text-transform: none;
-            color: #d84a32;
-            font-weight: normal;
-            font-size: 12px;
-          }
-          &.sub-selected {
-            // fancy me up.
-          }
-        }
-      }
-    }
-
-    &:after {
-      @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
-      position: absolute;
-      bottom: 0px;
-      left: -2px;
-      right: 0;
-      width: 220px;
-      height: 120px;
-      content: '';
-    }
-  }
-
-  #guide_search {
-    background-color: #fbf8f7;
-    border: 1px solid #ccc;
-    position: relative;
-    color: #423432;
-    display: block;
-    width: 100%;
-    height: 40px;
-
-    label {
-      padding: 0px 0px 5px 15px;
-      padding-right: 10px;
-      margin-left: 10px;
-      background: no-repeat url(/images/search-icon.png);
-    }
-
-    border: 0;
-    input::-webkit-input-placeholder { font-style: italic; }
-    input:-moz-placeholder { font-style: italic; }
-    input::-moz-placeholder { font-style: italic; }
-
-    input {
-      background: none;
-      font-size: 12px;
-      border: 0px;
-      padding: 5px 0px 5px 5px;
-      height: 100%;
-      width: 165px;
-      outline: none;
-      font-style: normal;
-    }
-
-    button {
-      background: no-repeat url(/images/search-erase.png);
-      width: 14px;
-      border: 0px;
-      height: 14px;
-      position: absolute;
-      cursor: pointer;
-      right: 10px;
-      top: 15px;
-    }
   }
 
   table {
@@ -912,7 +951,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 **/
 
 article {
-  margin: 43px 0 90px 0;
+  margin: 3em 0;
 
   $h3-indent: 0;
   $body-indent: $h3-indent;
@@ -930,6 +969,10 @@ article {
     background-color: white;
     max-width: 100%;
     /*max-width: $content-width;*/
+  }
+
+  ul, ol {
+    margin-left: 1.5em;
   }
 
   table.figure {
@@ -958,62 +1001,6 @@ article {
     }
   }
 
-  h2 {
-    margin: 50px 0 0 0;
-    width: 100%;
-    font-size: 24px;
-    color: $black-color;
-    text-transform: uppercase;
-    font-family: "MavenProBold";
-  }
-
-  :not(h2) + h3 {
-    margin-top: 50px;
-  }
-
-  h3 {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 30px 0;
-    text-transform: uppercase;
-    padding-left: $h3-indent;
-  }
-
-  h4 {
-    font-size: 16px;
-    padding-left: $body-indent;
-    margin: 24px 0;
-    line-height: 23px;
-  }
-
-  p {
-    color: #222;
-    padding-left: $body-indent;
-    font-size: 15px;
-    line-height: 23px;
-  }
-
-  .highlight {
-    margin-left: $body-indent;
-  }
-
-  ul, ol {
-    margin-left: $body-indent;
-    margin-bottom: 28px;
-
-    li {
-      font-size: 15px;
-      margin: 10px 0 10px $body-indent+20px;
-    }
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ol {
-    list-style-type: decimal;
-  }
 }
 
 
@@ -1022,29 +1009,18 @@ article {
 **/
 
 body.community #content {
-  width: 700px;
   margin: 0 auto;
+  width: 54em;;
 
   h1, h1:first-child {
     margin-top: 0;
     color: $orange-color;
-    text-transform: uppercase;
-    font-size: 22px;
-    font-weight: bold;
     border-bottom: solid 1px #d0d0d0;
     padding-bottom: 20px;
   }
 
-  h2 {
-    margin-bottom: 20px;
-    text-align: left;
-  }
-
   .section {
-    margin: 40px 0 50px;
-    font-size: 15px;
-    text-align: left;
-
+    width: auto;
     img {
       float: left;
       margin: 0 20px 15px 0;
@@ -1053,20 +1029,6 @@ body.community #content {
     &.bugs img {
       float: right;
       margin: 0 0 15px 20px;
-    }
-
-    p {
-      margin: 15px 0;
-    }
-  }
-
-  ul.blogs {
-    li {
-      margin-bottom: 10px;
-
-      a {
-        font-weight: bold;
-      }
     }
   }
 }
@@ -1217,85 +1179,96 @@ body.community #content {
 **/
 
 body.api {
-  #sidebar {
-    h3 {
-      font-weight: bold;
-      margin: 0 0 20px;
+  h3 {
+    &.name {
+      text-transform: none;
+      float: left;
+      margin-right: 5px;
+    }
+  }
+  .meta {
+    line-height: 16px;
+    font-size: 11px;
+    clear: left;
+  }
+
+  .args {
+    font-style: italic;
+    color: #444444;
+  }
+
+  .method h3{
+    text-transform: none;
+  }
+  dl {
+    margin: 1em 0 1em 1em;
+    dt {
     }
 
-    h2 {
-      margin: 10px 0;
+    dd {
+      margin: 0em 0 0.5em 0;
     }
+  }
 
-    ul {
-      li {
-        font-family: "MavenProBold";
+  .type {
+    border-bottom: 1px dotted #afafaf;
+    font-size: 13px;
+    color: gray;
+  }
+
+  #api-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .class-info {
+    p {
+      margin: 0;
+      text-transform: uppercase;
+      a {
+        text-transform: none;
       }
     }
   }
 
-  #content {
-    position: relative;
-    padding-top: 43px;
-
-    #api-options {
-      position: absolute;
-      top: 0;
-      right: 0;
+  .description {
+    p {
+      font-family: Helvetica neue;
+      font-weight: 200;
     }
+  }
 
-    h2 {
-      font-size: 18px;
-      font-weight: bold;
-      margin: 10px 0;
+  ul.index-list {
+    margin-left: 1.5em;
+    overflow: hidden; // Clearfix
+
+    li {
+      float: left;
+      width: 300px;
+      padding-right: 1em;
+      display: block;
+      overflow: hidden;
+      @include ellipsis;
     }
+  }
 
-    h3 {
-      font-size: 16px;
-    }
+  div.method, div.property, div.event {
+    padding-bottom: 1em;
+    border-bottom: solid 1px #e0e0e0;
+    margin-bottom: 2em;
+  }
 
-    .class-info {
-      margin-bottom: 50px;
+  h3.name code {
+    background-color: transparent;
+    color: black;
+    padding: 0;
+    font-weight: bold;
+  }
 
-      p {
-        margin: 0;
-      }
-    }
-
-    .description {
-      margin: 50px 0;
-    }
-
-    ul.index-list {
-      overflow: hidden; // Clearfix
-
-      li {
-        float: left;
-        width: 160px;
-        padding-right: 10px;
-        display: block;
-        overflow: hidden;
-        @include ellipsis;
-      }
-    }
-
-    div.method, div.property, div.event {
-      padding-bottom: 15px;
-      border-bottom: solid 1px gray;
-      margin-bottom: 30px;
-    }
-
-    h3.name code {
-      background-color: transparent;
-      color: black;
-      padding: 0;
-      font-weight: bold;
-    }
-
-    span.flag {
-      background-color: gray;
-      color: white;
-      border-radius: 3px;
-    }
+  span.flag {
+    background-color: gray;
+    color: white;
+    border-radius: 3px;
   }
 }

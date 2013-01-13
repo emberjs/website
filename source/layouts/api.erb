@@ -72,63 +72,92 @@
         $(window).on('hashchange', checkHash);
         checkHash();
       });
+    $(function(){
+      $("#toc-list .level-1 > a").click(function() {
+        $(this).parent().find('> ol').slideToggle(function() {
+          positionBackToTop(true);
+        });
+
+        return false;
+      });
+
+      $(function(){
+        $('.anchorable-toc').each(function(){
+          var toc = $(this),
+          id = toc.attr('id'),
+          href = "#" + id,
+          anchor = '<a class="toc-anchor" href="'+href+'"></a>';
+
+          toc.prepend(anchor);
+        });
+      });
+
+    });
     </script>
   <% end %>
 
   <% content_for :sidebar do %>
-    <h3>SHA: <%= link_to data.api['project']['sha'], "#{APIDocs.repo_url}/commit/#{data.api['project']['sha']}" %></h3>
+    <h3>SHA: <%= link_to sha, sha_url %></h3>
 
-    <h2>Modules</h2>
-    <ul>
-    <% api_modules.each do |id, data| %>
-      <li>
-        <%= api_module_link data['name'] %>
-        <%= api_file_link data, title: 'github', target: '_blank' %>
-      </li>
-    <% end %>
-    </ul>
+    <ol id='toc-list'>
 
-    <h2>Namespaces</h2>
-    <ul>
-    <% api_namespaces.each do |id, data| %>
-      <li class="<%= api_classes_for_namespace data %>">
-        <%= api_namespace_link data['name'] %>
-        <%= api_file_link data, title: 'github', target: '_blank' %>
-      </li>
-    <% end %>
-    </ul>
+      <% li_for(:modules) do %>
+        <a href='#'>Modules</a>
+        <% ol_for(:modules) do %>
+          <% api_modules.each do |id, data| %>
+            <% li_for(:modules, name: data['name'], class: 'sub-selected') do %>
+              <%= api_module_link data['name'] %>
+              <%= api_file_link data, title: 'github', target: '_blank' %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
 
-    <h2>Classes</h2>
-    <ul>
-    <% api_classes.each do |id, data| %>
-      <li class="<%= api_classes_for_class data %>">
-        <%= api_class_link data['name'] %>
-        <%= api_file_link data, title: 'github', target: '_blank' %>
-      </li>
-    <% end %>
-    </ul>
+      <% li_for(:namespaces) do %>
+        <a href='#'>Namespaces</a>
+        <% ol_for(:namespaces) do %>
+          <% api_namespaces.each do |id, data| %>
+            <% li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
+              <%= api_namespace_link data['name'] %>
+              <%= api_file_link data, title: 'github', target: '_blank' %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      <% li_for(:classes) do %>
+        <a href='#'>Classes</a>
+        <% ol_for(:classes) do %>
+          <% api_classes.each do |id, data| %>
+            <% li_for(:classes, name:data['name'], class: 'sub-selected') do %>
+              <%= api_class_link data['name'] %>
+              <%= api_file_link data, title: 'github', target: '_blank' %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
   <% end %>
 
-  <div id="api-options">
+  <div id='api-options'>
     Show:
 
     <label>
-      <input type="checkbox" data-type="inherited" checked>
+      <input type='checkbox' data-type='inherited' checked>
       Inherited
     </label>
 
     <label>
-      <input type="checkbox" data-type="protected">
+      <input type='checkbox' data-type='protected'>
       Protected
     </label>
 
     <label>
-      <input type="checkbox" data-type="private">
+      <input type='checkbox' data-type='private'>
       Private
     </label>
 
     <label>
-      <input type="checkbox" data-type="deprecated">
+      <input type='checkbox' data-type='deprecated'>
       Deprecated
     </label>
   </div>

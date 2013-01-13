@@ -1,3 +1,7 @@
+"Ember.js Guides":
+  - title: 'Ember.js Guides'
+    url: 'index.html'
+    skip_sidebar: true
 Getting Started with Ember.js:
   - title: "Core Concepts"
     url: "getting-started/core-concepts"

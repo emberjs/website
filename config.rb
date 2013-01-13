@@ -1,11 +1,10 @@
-require "redcarpet"
-require "active_support/core_ext"
+require 'redcarpet'
+require 'active_support/core_ext'
 
-Dir["./lib/*"].each{|f| require f }
+Dir['./lib/*'].each { |f| require f }
 
 # Debugging
 set(:logging, ENV['RACK_ENV'] != 'production')
-
 
 set :markdown_engine, :redcarpet
 set :markdown, :layout_engine => :erb,
@@ -18,46 +17,41 @@ activate :toc
 activate :highlighter
 
 activate :api_docs,
-  :default_class => "Ember",
-  :repo_url => "https://github.com/emberjs/ember.js"
-
+  default_class: 'Ember',
+  repo_url: 'https://github.com/emberjs/ember.js'
 
 ###
 # Blog
 ###
 
 activate :blog do |blog|
-  blog.prefix = "blog"
-  blog.layout = "blog_layout"
+  blog.prefix = 'blog'
+  blog.layout = 'layouts/blog'
   blog.summary_separator = %r{(<p>READMORE</p>)} # Markdown adds the <p>
 end
 
-page "/blog/feed.xml", :layout => false
-
+page '/blog/feed.xml', layout: false
 
 ###
 # Pages
 ###
 
-page 'guides*', :layout => :guide do
+page 'guides*', layout: :guide do
   @guides = data.guides
 end
 
-page "community.html"
+page 'community.html'
 
-page "index.html", :proxy => "about.html"
+page 'index.html', proxy: 'about.html'
 
-page "404.html", :directory_index => false
-
+page '404.html', directory_index: false
 
 # Don't build layouts standalone
-ignore "*_layout.erb"
+ignore '*_layout.erb'
 
 # Don't build API layouts
-ignore "api/class.html.erb"
-ignore "api/module.html.erb"
-
-
+ignore 'api/class.html.erb'
+ignore 'api/module.html.erb'
 
 ###
 # Helpers
