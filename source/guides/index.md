@@ -23,3 +23,7 @@ in the order that we think will be most useful to you as you're learning
 Ember.js, but you can also jump to whatever seems most interesting.
 
 Good luck!
+
+**NOTE:** 
+These guides currently reflect our "master" branch since we are
+in a pre-release cycle.
