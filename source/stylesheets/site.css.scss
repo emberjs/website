@@ -22,10 +22,11 @@ body {
   background: url(/images/background-shades.png) no-repeat top center #faf4f1;
   margin: 60px 0 0 0;
   padding: 0;
-  font-family: Lato, Arial, sans-serif;
-  line-height: 23px;
-  font-size: 13px;
-  line-height: 20px;
+  font-family: Helvetica neue;
+  font-size: 14px;
+  line-height: 1.3em;
+  color: #444444;
+  font-weight: 200;
   min-width: $page-width;
 }
 
@@ -33,13 +34,15 @@ body {
   @include box-sizing(border-box);
 }
 
+// Typography
+
 a {
-  color: $orange-color;
+  color: #f23818;
   text-decoration: none;
 }
 
 p {
-  margin: 24px 0;
+  margin: 1.5em 0;
 }
 
 em {
@@ -53,6 +56,10 @@ code {
   background-color: rgba(0, 0, 0, 0.05);
   padding: 3px;
   @include border-radius(5px);
+}
+
+h1,h2,h3,h4,h5,h6 {
+
 }
 
 h1 {
@@ -72,25 +79,60 @@ hr {
   background-color: $black-color;
 }
 
+// Structure
+// modules
+// pages
+
 /**
   Tabs
 **/
 
 .tabs {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
   > ul {
     list-style: none;
     overflow: hidden; // Clearfix
+    display: table;
+    width: 100%;
 
     li {
-      display: block;
-      float: left;
-      padding-right: 10px;
-      margin-right: 10px;
-      border-right: solid 1px gray;
+      display: table-cell;
+      a { 
+        display: block;
+        border-top: solid 1px rgb(250, 250, 250);
+        border-right: solid 1px #e6e4e3;
+        background-color: #f3f3f3;
+        background-image:         linear-gradient( #f3f3f3, #ebebeb);
+        background-image:      -o-linear-gradient( #f3f3f3, #ebebeb);
+        background-image:    -moz-linear-gradient( #f3f3f3, #ebebeb);
+        background-image:     -ms-linear-gradient( #f3f3f3, #ebebeb);
+        background-image: -webkit-linear-gradient( #f3f3f3, #ebebeb);
+        padding: 0.5em 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: #443331;
+        font-family: helvetica neue;
+
+        &:hover {
+          background-color: #ebebeb;
+          background-image:         linear-gradient( #ebebeb, #f3f3f3);
+          background-image:      -o-linear-gradient( #ebebeb, #f3f3f3);
+          background-image:    -moz-linear-gradient( #ebebeb, #f3f3f3);
+          background-image:     -ms-linear-gradient( #ebebeb, #f3f3f3);
+          background-image: -webkit-linear-gradient( #ebebeb, #f3f3f3);
+          color: black;
+        }
+
+      }
     }
 
-    border-bottom: solid 1px gray;
+    border-bottom: solid 1px #e6e4e3;
     margin-bottom: 20px;
+  }
+  .pane {
+    margin: 2em 1.5em;
   }
 }
 
@@ -266,7 +308,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     text-decoration: none;
     line-height: 21px;
     border-bottom: none;
-    color: $orange-color;
+    color: #d84a32;
 
     &:hover {
       color: $black-color;
@@ -692,12 +734,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     line-height: 18px;
   }
 
-  p {
-    color: #222;
-    font-size: 15px;
-    line-height: 22px;
-  }
-
   ul, ol {
     margin-left: $body-indent;
     list-style-type: disc;
@@ -969,14 +1005,10 @@ article {
     font-family: "MavenProBold";
   }
 
-  :not(h2) + h3 {
-    margin-top: 50px;
-  }
 
   h3 {
     font-size: 16px;
     font-weight: bold;
-    margin: 30px 0;
     text-transform: uppercase;
     padding-left: $h3-indent;
   }
@@ -991,8 +1023,6 @@ article {
   p {
     color: #222;
     padding-left: $body-indent;
-    font-size: 15px;
-    line-height: 23px;
   }
 
   .highlight {
@@ -1239,11 +1269,25 @@ body.api {
   #content {
     position: relative;
     padding-top: 43px;
+    font-size: 14px;
+    font-family: MavenProBold;
+    line-height: 1.3em;
+    color: #444444;
 
     #api-options {
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 24px;
+      color: 444444;
+    }
+
+    h2,h3,h4 {
+      color: #444444;
     }
 
     h2 {
@@ -1257,15 +1301,21 @@ body.api {
     }
 
     .class-info {
-      margin-bottom: 50px;
-
+      padding-bottom: 1.5em;
       p {
         margin: 0;
+        text-transform: uppercase;
+        a {
+          text-transform: none;
+        }
       }
     }
 
     .description {
-      margin: 50px 0;
+      p {
+        font-family: Helvetica neue;
+        font-weight: 200;
+      }
     }
 
     ul.index-list {
@@ -1282,9 +1332,9 @@ body.api {
     }
 
     div.method, div.property, div.event {
-      padding-bottom: 15px;
-      border-bottom: solid 1px gray;
-      margin-bottom: 30px;
+      padding-bottom: 1em;
+      border-bottom: solid 1px #e0e0e0;
+      margin-bottom: 2em;
     }
 
     h3.name code {
