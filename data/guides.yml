@@ -1,3 +1,6 @@
+"Ember.js Guides":
+  - title: 'Ember.js Guides'
+    url: 'index.html'
 Getting Started with Ember.js:
   - title: "Core Concepts"
     url: "getting-started/core-concepts"

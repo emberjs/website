@@ -39,7 +39,7 @@ module TOC
     def guides_index
       guides = data.guides
 
-      result = '<ol id="guide_list">'
+      result = '<ol id="toc-list">'
       guides.each_entry do |section, entries|
 
         current_url = request.path.split("/")[2]
@@ -74,9 +74,11 @@ module TOC
     def chapter_name
       guides = data.guides
 
+      sub_url = request.path.split("/")[2]
       heading = ""
+
       guides.each_entry do |section, entries|
-        if entries[0].url.split("/")[0] == request.path.split("/")[2]
+        if entries[0].url.split("/")[0] == sub_url
           heading = section
           break
         end
