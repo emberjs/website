@@ -88,7 +88,7 @@ Models:
 
 Views:
   - title: "Introduction"
-    url: "views/"
+    url: "views"
   - title: "Defining a View"
     url: "views/defining-a-view"
   - title: "Handling Events"
