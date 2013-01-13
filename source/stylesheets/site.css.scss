@@ -781,9 +781,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
           }
 
           li.sub-selected {
-            padding-top: 6px;
             background-color: #fcc;
-            margin-bottom: 3px;
           }
         }
 
@@ -826,6 +824,11 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
           &.sub-selected {
             // fancy me up.
           }
+        }
+
+        &.level-3 {
+            padding-top: 6px;
+            margin-bottom: 3px;
         }
       }
     }
