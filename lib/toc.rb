@@ -44,18 +44,24 @@ module TOC
 
         current_url = request.path.split("/")[2]
         sub_url     = request.path.split("/")[3]
-        sub_url     = nil if sub_url == "index.html" # For intro pages
+        intro_page  = sub_url == "index.html"
+        sub_url     = nil if intro_page
         chapter     = entries[0].url.split("/")[0]
 
-        if chapter == current_url
-          current = true
-        end
+        current = (chapter == current_url)
 
         result += %Q{<li class="level-1#{current ? ' selected' : ''}"><a href="/guides/#{entries[0].url}">#{section}</a>}
         result += %Q{<ol#{current ? " class='selected'" : ''}>}
+
         entries.each do |entry|
-          if entry.url.split("/")[1] == sub_url
-            sub_current = true
+          current_segment = entry.url.split("/")[1]
+
+          sub_current = if current_segment and current_segment == sub_url
+            true
+          elsif intro_page and current_url == entry.url
+            true
+          else
+            false
           end
 
           result += %Q{<li class="level-3#{sub_current ? ' sub-selected' : ''}"><a href="/guides/#{entry.url}">#{entry.title}</a></li>}
