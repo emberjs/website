@@ -60,12 +60,12 @@
         // Auto tab
         function checkHash() {
           var hash = window.location.hash;
-          if (hash) {
-            var $el = $(hash);
-            if ($el.length > 0 && !$el.is(':visible')) {
-              showPane($el.parents('.tabs'), '#'+$el.parents('.pane').attr('id'));
-              $("html, body").scrollTop($el.offset().top);
-            }
+          var $el = $(hash);
+          if ($el.length > 0 && !$el.is(':visible')) {
+            showPane($el.parents('.tabs'), '#'+$el.parents('.pane').attr('id'));
+            $("html, body").scrollTop($el.offset().top);
+          } else if ($el.length == 0) {
+            showPane($('.tabs'), '#index');
           }
         }
 
