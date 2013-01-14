@@ -41,7 +41,6 @@
 <% end %>
 
   <div class="meta">
-    <p>
       <% if item['overwritten_from'] %>
         Inherited from
         <%= api_class_link item['overwritten_from']['class'], "method_#{item['overwritten_from']['name']}" %>
@@ -59,12 +58,11 @@
         <% end %>
       <% end %>
       <%= api_file_link item %>
-    </p>
 
     <%# TODO: Handle deprecation message %>
 
     <% if item['since'] %>
-      <p>Available since <%= item['since'] %></p>
+      <br/>Available since <%= item['since'] %>
     <% end %>
   </div>
 
@@ -74,9 +72,11 @@
     </div>
   <% end %>
 
-  <% if item['default'] %>
-    <p><strong>Default:</strong> <%= item['default'] %></p>
-  <% end %>
+  <p>
+    <% if item['default'] %>
+      <strong>Default:</strong> <code><%= item['default'] %></code>
+    <% end %>
+  </p>
 
   <% if item['example'] %>
     <div class="example">
@@ -94,23 +94,22 @@
     <div class="params">
       <h3>Parameters:</h3>
 
-      <ul>
+      <dl>
         <% item['params'].each do |param| %>
-          <li>
-            <strong><%= param['name'] %></strong> <%= param['type'] %><br>
-            <%= param['description'] %>
-          </li>
+          <dt><strong><%= param['name'] %></strong> <span class="type"><%= param['type'] %></span></dt>
+          <dd><%= param['description'] %></dd>
         <% end %>
-      </ul>
+      </dl>
     </div>
   <% end %>
 
   <% if item['return'] %>
     <div class="return">
       <h3>Returns:</h3>
-
-      <%= item['return']['type'] %>: <%= item['return']['description'] %>
+      <dl>
+        <dt><span class="type"><%= item['return']['type'] %></span>
+        <dd> <%= item['return']['description'] %></dd>
+      </dl>
     </div>
   <% end %>
-
 </div>

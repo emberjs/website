@@ -45,7 +45,7 @@
 
   <div class="pane" id="index">
     <% types.each do |type| %>
-      <h2><%= type.pluralize.titleize %></h2>
+      <p><h2><%= type.pluralize.titleize %></h2></p>
       <ul class="index-list">
         <% @class.classitems[type].sort.each do |(name, data)| %>
           <li class="<%= type %> <%= api_classes_for_item(data) %>">
