@@ -18,6 +18,25 @@ $black-color: #252525;
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
 
+sup {
+  vertical-align: super;
+}
+
+small {
+  font-size: 85%;
+  color: #999;
+
+  &:hover {
+    color: #000;
+
+    code { color: #666; }
+  }
+
+  code {
+    color: #aaa;
+  }
+}
+
 body {
   background: url(/images/background-shades.png) no-repeat top center #faf4f1;
   margin: 60px 0 0 0;

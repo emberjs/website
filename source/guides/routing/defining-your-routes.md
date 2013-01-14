@@ -145,6 +145,13 @@ This router creates three routes:
     <td><code>index</code></td>
   </tr>
   <tr>
+    <td>N/A</td>
+    <td><code>posts</code><sup>1</sup></td>
+    <td><code>App.PostsController</code></td>
+    <td><code>App.PostsRoute</code></td>
+    <td><code>posts</code></td>
+  </tr>
+  <tr>
     <td><code>/posts</code></td>
     <td><code>posts.index</code></td>
     <td><code>App.PostsIndexController</code></td>
@@ -159,6 +166,10 @@ This router creates three routes:
     <td><code>posts/new</code></td>
   </tr>
 </table>
+
+<small><sup>1</sup> Transitioning to `posts` or creating a link to
+`posts` is equivalent to transitioning to `posts.index` or linking to
+`posts.index`</small>
 
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
