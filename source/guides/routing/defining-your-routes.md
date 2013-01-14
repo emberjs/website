@@ -6,9 +6,9 @@ It does so by matching the current URL to the _routes_ that you've
 defined.
 
 ```js
-App.Router.map(function(match) {
-  match("/about").to("about");
-  match("/favs").to("favorites");
+App.Router.map(function() {
+  this.route("about", { path: "/about" });
+  this.route("favorites", { path: "/favs" });
 });
 ```
 
@@ -16,8 +16,18 @@ When the user visits `/`, Ember.js will render the `index` template.
 Visiting `/about` renders the `about` template, and `/favs` renders the
 `favorites` template.
 
+Note that you can leave off the path if it is the same as the route
+name. In this case, the following is equivalent to the above example:
+
+```js
+App.Router.map(function() {
+  this.route("about");
+  this.route("favorites", { path: "/favs" });
+});
+```
+
 Inside your templates, you can use `{{linkTo}}` to navigate between
-routes, using the name that you provided in the `to()` method (or, in
+routes, using the name that you provided to the `route` method (or, in
 the case of `/`, the name `index`).
 
 ```handlebars
@@ -53,58 +63,116 @@ Now that you've set `title`, you can use it in the template:
 <h1>{{title}}</h1>
 ```
 
-You don't need to create an `App.IndexController` just yet; Ember.js
-will create controllers for you.
+(If you don't explicitly define an `App.IndexController`, Ember.js will
+automatically generate one for you.)
 
-The above examples show you how to customize `/`, which is implicitly
-named `index`. Use the name provided to `to()` when customizing other
-routes. For example, in the case of `/favs`:
+Ember.js automatically figures out the names of routes and controllers based on
+the name you pass to `this.route`.
 
-```js
-App.FavoritesRoute = Ember.Route.extend({
-  setupController: function(controller) {
-    // ...controller setup here
-  }
+<table>
+  <thead>
+  <tr>
+    <th>URL</th>
+    <th>Route Name</th>
+    <th>Controller</th>
+    <th>Route</th>
+    <th>Template</th>
+  </tr>
+  </thead>
+  <tr>
+    <td><code>/</code></td>
+    <td><code>index</code></td>
+    <td><code>App.IndexController</code></td>
+    <td><code>App.IndexRoute</code></td>
+    <td><code>index</code></td>
+  </tr>
+  <tr>
+    <td><code>/about</code></td>
+    <td><code>about</code></td>
+    <td><code>App.AboutController</code></td>
+    <td><code>App.AboutRoute</code></td>
+    <td><code>about</code></td>
+  </tr>
+  <tr>
+    <td><code>/favs</code></td>
+    <td><code>favorites</code></td>
+    <td><code>App.FavoritesController</code></td>
+    <td><code>App.FavoritesRoute</code></td>
+    <td><code>favorites</code></td>
+  </tr>
+</table>
+
+### Resources
+
+You can define groups of routes that work with a resource:
+
+```javascript
+App.Router.map(function() {
+  this.resource('posts', { path: '/posts' }, function() {
+    this.route('new');
+  });
 });
 ```
 
-### Nested Routes
-
-You can define nested routes by passing an additional function to the
-`to()` method:
+As with `this.route`, you can leave off the path if it's the same as the
+name of the route, so the following router is equivalent:
 
 ```javascript
-App.Router.map(function(match) {
-  match('/posts').to('posts', function(match) {
-    match('/new').to('new');
+App.Router.map(function() {
+  this.resource('posts', function() {
+    this.route('new');
   });
 });
 ```
 
 This router creates three routes:
 
-* `/`
-* `/posts`
-* `/posts/new`
+<table>
+  <thead>
+  <tr>
+    <th>URL</th>
+    <th>Route Name</th>
+    <th>Controller</th>
+    <th>Route</th>
+    <th>Template</th>
+  </tr>
+  </thead>
+  <tr>
+    <td><code>/</code></td>
+    <td><code>index</code></td>
+    <td><code>App.IndexController</code></td>
+    <td><code>App.IndexRoute</code></td>
+    <td><code>index</code></td>
+  </tr>
+  <tr>
+    <td><code>/posts</code></td>
+    <td><code>posts.index</code></td>
+    <td><code>App.PostsIndexController</code></td>
+    <td><code>App.PostsIndexRoute</code></td>
+    <td><code>posts/index</code></td>
+  </tr>
+  <tr>
+    <td><code>/posts/new</code></td>
+    <td><code>posts.new</code></td>
+    <td><code>App.PostsNewController</code></td>
+    <td><code>App.PostsNewRoute</code></td>
+    <td><code>posts/new</code></td>
+  </tr>
+</table>
 
-Visiting `/` renders the `index` template into the `application`
-template's outlet, as you would expect.
+Routes nested under a resource take the name of the resource plus their
+name as their route name. If you want to transition to a route (either
+via `transitionTo` or `{{#linkTo}}`, make sure to use the full route
+name (`posts.new`, not `new`).
+
+Visiting `/` renders the `index` template, as you would expect.
 
 Visiting `/posts` is slightly different. It will first render the
-`posts` template into the `application` template's outlet. Then, it will
-render the `posts/index` template into the `posts` template's outlet.
+`posts` template. Then, it will render the `posts/index` template into the
+`posts` template's outlet.
 
 Finally, visiting `/posts/new` will first render the `posts` template,
 then render the `posts/new` template into its outlet.
-
-Customizing routes or controllers uses a similar naming scheme. For
-example, to customize `/posts/new`:
-
-* The route is `App.PostsNewRoute`
-* The controller is `App.PostsNewController`
-
-This nested naming does not continue forever. A nested route's template
-is always `<parent>/<current>`.
 
 <!-- See [Nested Routes][1] for more information. -->
 
@@ -112,10 +180,10 @@ is always `<parent>/<current>`.
 
 ### Dynamic Segments
 
-One of the responsibilities of a route handler is to convert a URL
+One of the responsibilities of a resource's route handler is to convert a URL
 into a model.
 
-For example, if we have the route `match('/blog_posts').to('blogPosts')`, our
+For example, if we have the resource `this.resource('/blog_posts');`, our
 route handler might look like this:
 
 ```js
@@ -126,12 +194,12 @@ App.BlogPostsRoute = Ember.Route.extend({
 });
 ```
 
-The `posts` template will then receive a list of all available posts as
+The `blog_posts` template will then receive a list of all available posts as
 its context.
 
-Because `/posts` represents a fixed model, we don't need any additional
-information to know what to use.  However, if we want a route to
-represent a single post, we would not want to have to hardcode every
+Because `/blog_posts` represents a fixed model, we don't need any
+additional information to know what to use.  However, if we want a route
+to represent a single post, we would not want to have to hardcode every
 possible post into the router.
 
 Enter _dynamic segments_.
@@ -140,25 +208,25 @@ A dynamic segment is a portion of a URL that starts with a `:` and is
 followed by an identifier.
 
 ```js
-App.Router.map(function(match) {
-  match('/posts').to('blogPosts');
-  match('/posts/:blog_post_id').to('showBlogPost');
+App.Router.map(function() {
+  this.resource('posts');
+  this.resource('post', { path: '/posts/:post_id' });
 });
 
-App.ShowBlogPostRoute = Ember.Route.extend({
+App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return App.BlogPost.find(params.blog_post_id);
+    return App.Post.find(params.post_id);
   }
 });
 ```
 
-Because this pattern is so common, the above model definition is the
+Because this pattern is so common, the above `model` hook is the
 default behavior.
 
-For example, if the dynamic segment is `:blog_post_id`, Ember.js is smart
-enough to know that it should use the model `App.BlogPost` (with the ID
-provided in the URL). If you use the default `model`, the route will
-call `App.BlogPost.find(params.blog_post_id)` for you.
+For example, if the dynamic segment is `:post_id`, Ember.js is smart
+enough to know that it should use the model `App.Post` (with the ID
+provided in the URL). Specifically, unless you override `model`, the route will
+return `App.Post.find(params.post_id)` automatically.
 
 Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
