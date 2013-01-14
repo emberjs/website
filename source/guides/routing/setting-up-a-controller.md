@@ -16,8 +16,8 @@ To tell one of these controllers which model to present, set its
 `content` property in the route handler's `setupControllers` hook.
 
 ```js
-App.Route.map(function(match) {
-  match('/posts/:post_id').to('post');
+App.Route.map(function() {
+  this.resource('post', { path: '/posts/:post_id' });
 });
 
 App.PostRoute = Ember.Route.extend({
@@ -37,7 +37,7 @@ information, see [Specifying a Route's Model][1].
 
 [1]: /guides/routing/specifying-a-routes-model
 
-The default `setupControllers` hook sets the `content` property of the
+The default `setupControllers` hook sets the `model` property of the
 associated controller to the route handler's model.
 
 If you want to configure a controller other than the controller

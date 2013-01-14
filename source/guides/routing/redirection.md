@@ -4,9 +4,8 @@ If you want to redirect from one route to another, simply implement the
 `redirect` hook in your route handler.
 
 ```javascript
-App.Router.map(function(match) {
-  match('/').to('index');
-  match('/posts').to('posts');
+App.Router.map(function() {
+  this.resource('posts');
 });
 
 App.IndexRoute = Ember.Route.extend({
@@ -20,12 +19,12 @@ You can conditionally transition based on some other application state.
 
 ```javascript
 App.Router.map(function(match) {
-  match('/topCharts').to('topCharts', function(match) {
-    match('/').to('choose');
-    match('/albums').to('albums');
-    match('/songs').to('songs');
-    match('/artists').to('artists');
-    match('/playlists').to('playlists');
+  this.resource('topCharts', function() {
+    this.route('choose', { path: '/' });
+    this.route('albums');
+    this.route('songs');
+    this.route('artists');
+    this.route('playlists');
   });
 });
 

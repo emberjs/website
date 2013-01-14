@@ -7,8 +7,8 @@ By default, a route handler will render the template with the same name
 into the `application` template's outlet.
 
 ```js
-App.Router.map(function(match) {
-  match('/posts').to('posts');
+App.Router.map(function() {
+  this.resource('posts');
 });
 
 App.PostsRoute = Ember.Route.extend();
@@ -38,16 +38,6 @@ App.PostsRoute = Ember.Route.extend({
 });
 ```
 
-If you want to render the template into a different parent template:
-
-```js
-App.PostsRoute = Ember.Route.extend({
-  renderTemplate: function() {
-    this.render({ into: 'sidebar' });
-  }
-});
-```
-
 If you want to render the template into a different named outlet:
 
 ```js
@@ -67,10 +57,9 @@ App.PostsRoute = Ember.Route.extend({
     var controller = this.controllerFor('favoritePost');
 
     // Render the `favoritePost` template into
-    // the `sidebar` template's outlet `posts`,
-    // and display the `favoritePost` controller.
+    // the outlet `posts`, and display the `favoritePost`
+    // controller.
     this.render('favoritePost', {
-      into: 'sidebar',
       outlet: 'posts',
       controller: controller
     });
