@@ -178,6 +178,10 @@ then render the `posts/new` template into its outlet.
 
 [1]: /guides/routing/nested-routes
 
+NOTE: You should use `this.resource` for URLs that represent a **noun**,
+and `this.route` for URLs that represent **adjectives** or **verbs**
+modifying those nouns.
+
 ### Dynamic Segments
 
 One of the responsibilities of a resource's route handler is to convert a URL
