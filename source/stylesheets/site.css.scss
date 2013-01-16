@@ -907,7 +907,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     width: 100%;
 
     thead {
-      background-color: #F9E7E4;
+      background-color: darken(#F9E7E4, 8%);
     }
 
     th {
@@ -915,9 +915,12 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     }
 
     th, td {
-      padding: 5px 10px;
+      padding: 10px 10px;
     }
 
+    tr:nth-child(even) {
+      background-color: darken(#F9E7E4, 2%);
+    }
   }
 }
 

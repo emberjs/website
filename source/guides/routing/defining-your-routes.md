@@ -82,22 +82,22 @@ the name you pass to `this.route`.
   <tr>
     <td><code>/</code></td>
     <td><code>index</code></td>
-    <td><code>App.IndexController</code></td>
-    <td><code>App.IndexRoute</code></td>
+    <td><code>IndexController</code></td>
+    <td><code>IndexRoute</code></td>
     <td><code>index</code></td>
   </tr>
   <tr>
     <td><code>/about</code></td>
     <td><code>about</code></td>
-    <td><code>App.AboutController</code></td>
-    <td><code>App.AboutRoute</code></td>
+    <td><code>AboutController</code></td>
+    <td><code>AboutRoute</code></td>
     <td><code>about</code></td>
   </tr>
   <tr>
     <td><code>/favs</code></td>
     <td><code>favorites</code></td>
-    <td><code>App.FavoritesController</code></td>
-    <td><code>App.FavoritesRoute</code></td>
+    <td><code>FavoritesController</code></td>
+    <td><code>FavoritesRoute</code></td>
     <td><code>favorites</code></td>
   </tr>
 </table>
@@ -140,30 +140,30 @@ This router creates three routes:
   <tr>
     <td><code>/</code></td>
     <td><code>index</code></td>
-    <td><code>App.IndexController</code></td>
-    <td><code>App.IndexRoute</code></td>
+    <td><code>IndexController</code></td>
+    <td><code>IndexRoute</code></td>
     <td><code>index</code></td>
   </tr>
   <tr>
     <td>N/A</td>
     <td><code>posts</code><sup>1</sup></td>
-    <td><code>App.PostsController</code></td>
-    <td><code>App.PostsRoute</code></td>
+    <td><code>PostsController</code></td>
+    <td><code>PostsRoute</code></td>
     <td><code>posts</code></td>
   </tr>
   <tr>
     <td><code>/posts</code></td>
-    <td><code>posts.index</code></td>
-    <td><code>App.PostsIndexController</code></td>
-    <td><code>App.PostsIndexRoute</code></td>
-    <td><code>posts/index</code></td>
+    <td><code>posts.index</code></code></td>
+    <td><code>PostsController</code><br>↳<code>PostsIndexController</code></td>
+    <td><code>PostsRoute</code><br>↳<code>PostsIndexRoute</code></td>
+    <td><code>posts</code><br>↳<code>posts/index</code></td>
   </tr>
   <tr>
     <td><code>/posts/new</code></td>
     <td><code>posts.new</code></td>
-    <td><code>App.PostsNewController</code></td>
-    <td><code>App.PostsNewRoute</code></td>
-    <td><code>posts/new</code></td>
+    <td><code>PostsController</code><br>↳<code>PostsNewController</code></td>
+    <td><code>PostsRoute</code><br>↳<code>PostsNewRoute</code></td>
+    <td><code>posts</code><br>↳<code>posts/new</code></td>
   </tr>
 </table>
 
