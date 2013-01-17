@@ -371,14 +371,14 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 }
 
 #download {
-  width: 465px;
+  width: 226px;
   height: 125px;
   margin: 0 auto;
   position: relative;
 
-  #download-ember, #download-starter-kit {
+  #download-ember {
     position: absolute;
-    width: 220px;
+    width: 226px;
     top: 40px;
     text-align: center;
   }
@@ -389,10 +389,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     .button {
       font-size: 13px; /* Due to long version name */
     }
-  }
-
-  #download-starter-kit {
-    left: 240px;
   }
 
   .info {
