@@ -28,7 +28,7 @@ App.Router.map(function(match) {
   });
 });
 
-App.TopChartsChooseRoute = Ember.Route.extend({
+App.TopCharts.ChooseRoute = Ember.Route.extend({
   redirect: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
     this.transitionTo('topCharts.' + lastFilter || 'songs');
@@ -43,10 +43,10 @@ App.FilterRoute = Ember.Route.extend({
   }
 });
 
-App.TopChartsSongsRoute = App.FilterRoute.extend();
-App.TopChartsAlbumsRoute = App.FilterRoute.extend();
-App.TopChartsArtistsRoute = App.FilterRoute.extend();
-App.TopChartsPlayistsRoute = App.FilterRoute.extend();
+App.TopCharts.SongsRoute = App.FilterRoute.extend();
+App.TopCharts.AlbumsRoute = App.FilterRoute.extend();
+App.TopCharts.ArtistsRoute = App.FilterRoute.extend();
+App.TopCharts.PlayistsRoute = App.FilterRoute.extend();
 ```
 
 In this example, navigating to the `/` URL immediately transitions into
@@ -55,4 +55,4 @@ to the `/songs` URL.
 
 Your route can also choose to transition only in some cases. If the
 `redirect` hook does not transition to a new route, the remaining hooks
-(`model`, `setupControllers`, `renderTemplates`) will execute as usual.
+(`model`, `setupController`, `renderTemplate`) will execute as usual.
