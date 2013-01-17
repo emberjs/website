@@ -26,14 +26,12 @@ App.PostsRoute = Ember.Route.extend({
 ```
 
 If you want to use a different controller than the route handler's
-controller:
+controller, pass the controller's name in the `controller` option:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
   renderTemplate: function() {
-    var controller = this.controllerFor('favoritePost');
-
-    this.render({ controller: controller });
+    this.render({ controller: 'favoritePost' });
   }
 });
 ```
