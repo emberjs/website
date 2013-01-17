@@ -37,7 +37,7 @@ information, see [Specifying a Route's Model][1].
 
 [1]: /guides/routing/specifying-a-routes-model
 
-The default `setupControllers` hook sets the `model` property of the
+The default `setupControllers` hook sets the `content` property of the
 associated controller to the route handler's model.
 
 If you want to configure a controller other than the controller

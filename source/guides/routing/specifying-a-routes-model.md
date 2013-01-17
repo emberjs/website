@@ -24,7 +24,7 @@ App.PostsRoute = Ember.Route.extend({
 ```
 
 By default, the value returned from your `model` hook will be assigned
-to the `model` property of the `posts` controller. You can change this
+to the `content` property of the `posts` controller. You can change this
 behavior by implementing the [setupControllers hook][1]. The `posts`
 controller is the context for the `posts` template.
 
