@@ -2,7 +2,7 @@
 
 You can use `Ember.ArrayController` to represent an array of models. To tell an
 `ArrayController` which model to represent, set its `content` property
-in your route's `setupControllers` method.
+in your route's `setupController` method.
 
 You can treat an `ArrayController` just like its underlying array. For
 example, imagine we want to display the current playlist. In our router,
@@ -10,7 +10,7 @@ we set tell our `SongsController` to represent the songs in the playlist:
 
 ```javascript
 App.SongsRoute = Ember.Route.extend({
-  setupControllers: function(controller, playlist) {
+  setupController: function(controller, playlist) {
     controller.set('content', playlist.get('songs'));
   }
 });

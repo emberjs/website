@@ -55,4 +55,4 @@ to the `/songs` URL.
 
 Your route can also choose to transition only in some cases. If the
 `redirect` hook does not transition to a new route, the remaining hooks
-(`model`, `setupControllers`, `renderTemplates`) will execute as usual.
+(`model`, `setupController`, `renderTemplates`) will execute as usual.
