@@ -185,10 +185,6 @@ Visiting `/posts` is slightly different. It will first render the
 Finally, visiting `/posts/new` will first render the `posts` template,
 then render the `posts/new` template into its outlet.
 
-<!-- See [Nested Routes][1] for more information. -->
-
-[1]: /guides/routing/nested-routes
-
 NOTE: You should use `this.resource` for URLs that represent a **noun**,
 and `this.route` for URLs that represent **adjectives** or **verbs**
 modifying those nouns.
