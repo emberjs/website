@@ -43,7 +43,8 @@ App.PostController = Ember.ObjectController.extend({
 ```
 
 By default, the `{{action}}` helper triggers a method on the current
-controller. You can also pass parameters to the method:
+controller. You can also pass parameter paths to the method. The following
+will call `controller.select( context.post )` when clicked:
 
 ```handlebars
 <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
@@ -55,7 +56,7 @@ If the action is not found on the current controller, it will bubble up
 to the current route handler. From there, it will bubble up to parent
 route handlers until it reaches the application route.
 
-Define actions on the route's `events` property. 
+Define actions on the route's `events` property.
 
 ```javascript
 App.PostsIndex = Ember.Route.extend({
