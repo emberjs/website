@@ -260,66 +260,68 @@ App.Router.map(function() {
 
 This router creates five routes:
 
-<table>
-  <thead>
-  <tr>
-    <th>URL</th>
-    <th>Route Name</th>
-    <th>Controller</th>
-    <th>Route</th>
-    <th>Template</th>
-  </tr>
-  </thead>
-  <tr>
-    <td><code>/</code></td>
-    <td><code>index</code></td>
-    <td><code>App.IndexController</code></td>
-    <td><code>App.IndexRoute</code></td>
-    <td><code>index</code></td>
-  </tr>
-  <tr>
-    <td>N/A</td>
-    <td><code>post</code></td>
-    <td><code>App.PostController</code></td>
-    <td><code>App.PostRoute</code></td>
-    <td><code>post</code></td>
-  </tr>
-  <tr>
-    <td><code>/post/:post_id<sup>2</sup></code></td>
-    <td><code>post.index</code></td>
-    <td><code>App.PostIndexController</code></td>
-    <td><code>App.PostIndexRoute</code></td>
-    <td><code>post/index</code></td>
-  </tr>
-  <tr>
-    <td><code>/post/:post_id/edit</code></td>
-    <td><code>post.edit</code></td>
-    <td><code>App.PostEditController</code></td>
-    <td><code>App.PostEditRoute</code></td>
-    <td><code>post/edit</code></td>
-  </tr>
-  <tr>
-    <td>N/A</td>
-    <td><code>comments</code></td>
-    <td><code>App.CommentsController</code></td>
-    <td><code>App.CommentsRoute</code></td>
-    <td><code>comments</code></td>
-  </tr>
-  <tr>
-    <td><code>/post/:post_id/comments</code></td>
-    <td><code>comments.index</code></td>
-    <td><code>App.CommentsIndexController</code></td>
-    <td><code>App.CommentsIndexRoute</code></td>
-    <td><code>comments/index</code></td>
-  </tr>
-  <tr>
-    <td><code>/post/:post_id/comments/new</code></td>
-    <td><code>comments.new</code></td>
-    <td><code>App.CommentsNewController</code></td>
-    <td><code>App.CommentsNewRoute</code></td>
-    <td><code>comments/new</code></td>
-  </tr>
-</table>
+<div style="overflow: auto">
+  <table>
+    <thead>
+    <tr>
+      <th>URL</th>
+      <th>Route Name</th>
+      <th>Controller</th>
+      <th>Route</th>
+      <th>Template</th>
+    </tr>
+    </thead>
+    <tr>
+      <td><code>/</code></td>
+      <td><code>index</code></td>
+      <td><code>App.IndexController</code></td>
+      <td><code>App.IndexRoute</code></td>
+      <td><code>index</code></td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><code>post</code></td>
+      <td><code>App.PostController</code></td>
+      <td><code>App.PostRoute</code></td>
+      <td><code>post</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id<sup>2</sup></code></td>
+      <td><code>post.index</code></td>
+      <td><code>App.PostIndexController</code></td>
+      <td><code>App.PostIndexRoute</code></td>
+      <td><code>post/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id/edit</code></td>
+      <td><code>post.edit</code></td>
+      <td><code>App.PostEditController</code></td>
+      <td><code>App.PostEditRoute</code></td>
+      <td><code>post/edit</code></td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><code>comments</code></td>
+      <td><code>App.CommentsController</code></td>
+      <td><code>App.CommentsRoute</code></td>
+      <td><code>comments</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id/comments</code></td>
+      <td><code>comments.index</code></td>
+      <td><code>App.CommentsIndexController</code></td>
+      <td><code>App.CommentsIndexRoute</code></td>
+      <td><code>comments/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id/comments/new</code></td>
+      <td><code>comments.new</code></td>
+      <td><code>App.CommentsNewController</code></td>
+      <td><code>App.CommentsNewRoute</code></td>
+      <td><code>comments/new</code></td>
+    </tr>
+  </table>
+</div>
 
 
 <small><sup>2</sup> :post_id is the post's id.  For a post with id = 1, the route will be: 
