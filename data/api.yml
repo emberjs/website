@@ -4,7 +4,7 @@ project:
   description: ! 'The Ember API: a framework for building ambitious web applications'
   version: 1.0 pre
   url: http://emberjs.com/
-  sha: v1.0.0-pre.3
+  sha: v1.0.0-pre.4
 files:
   ../packages/ember-application/lib/system/application.js:
     name: ../packages/ember-application/lib/system/application.js
@@ -1135,7 +1135,7 @@ classes:
 
       performance optimizations.'
     static: 1
-    version: 1.0.0-pre.3
+    version: 1.0.0-pre.4
   Ember.Button:
     name: Ember.Button
     shortname: Ember.Button
@@ -5250,7 +5250,7 @@ classitems:
   itemtype: property
   name: VERSION
   type: String
-  default: ! '''1.0.0-pre.3'''
+  default: ! '''1.0.0-pre.4'''
   final: 1
   class: Ember
   module: ember
