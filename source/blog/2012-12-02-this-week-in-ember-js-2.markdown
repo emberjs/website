@@ -1,5 +1,5 @@
 ---
-title: This Week in Ember.js 2
+title: This Week in Ember.js (Dec 12, 2012)
 ---
 
 There's been a lot of exciting changes going in the Ember.js community, here's a recap of some of the biggest updates.
