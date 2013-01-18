@@ -3,8 +3,8 @@
 One of the most important jobs of a route handler is rendering the
 appropriate template to the screen.
 
-By default, a route handler will render the template with the same name
-into the `application` template's outlet.
+By default, a route handler will render the template into the closest 
+parent with a template.
 
 ```js
 App.Router.map(function() {
