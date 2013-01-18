@@ -249,11 +249,11 @@ You cannot nest routes, but you can nest resources:
 
 ```javascript
 App.Router.map(function() {
-  this.resource('post', function({ path: '/post/:post_id' }) {
+  this.resource('post', { path: '/post/:post_id' }, function() {
     this.route('edit');
     this.resource('comments', function() {
-    	this.route('new');
-    }
+      this.route('new');
+    });
   });
 });
 ```
