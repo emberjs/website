@@ -796,7 +796,11 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
           }
 
           li.sub-selected {
-            background-color: #fcc;
+            background-color: #F2D1CB;
+
+            > a {
+              color: #C2402B;
+            }
           }
         }
 
