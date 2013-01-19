@@ -840,6 +840,11 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
             // fancy me up.
           }
         }
+
+        &.level-3 {
+            padding-top: 6px;
+            margin-bottom: 3px;
+        }
       }
     }
 
