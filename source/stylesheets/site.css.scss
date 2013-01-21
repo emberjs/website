@@ -1201,10 +1201,13 @@ body.api {
 
   .class-info {
     p {
+      color: #443331;
+      font-weight: bold;
       margin: 0;
       text-transform: uppercase;
       a {
         text-transform: none;
+        font-weight: normal;
       }
     }
   }
