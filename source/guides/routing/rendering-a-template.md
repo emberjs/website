@@ -3,8 +3,8 @@
 One of the most important jobs of a route handler is rendering the
 appropriate template to the screen.
 
-By default, a route handler will render the template with the same name
-into the `application` template's outlet.
+By default, a route handler will render the template into the closest 
+parent with a template.
 
 ```js
 App.Router.map(function() {
@@ -26,14 +26,12 @@ App.PostsRoute = Ember.Route.extend({
 ```
 
 If you want to use a different controller than the route handler's
-controller:
+controller, pass the controller's name in the `controller` option:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
   renderTemplate: function() {
-    var controller = this.controllerFor('favoritePost');
-
-    this.render({ controller: controller });
+    this.render({ controller: 'favoritePost' });
   }
 });
 ```

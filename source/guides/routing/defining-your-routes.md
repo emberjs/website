@@ -82,22 +82,22 @@ the name you pass to `this.route`.
   <tr>
     <td><code>/</code></td>
     <td><code>index</code></td>
-    <td><code>App.IndexController</code></td>
-    <td><code>App.IndexRoute</code></td>
+    <td><code>IndexController</code></td>
+    <td><code>IndexRoute</code></td>
     <td><code>index</code></td>
   </tr>
   <tr>
     <td><code>/about</code></td>
     <td><code>about</code></td>
-    <td><code>App.AboutController</code></td>
-    <td><code>App.AboutRoute</code></td>
+    <td><code>AboutController</code></td>
+    <td><code>AboutRoute</code></td>
     <td><code>about</code></td>
   </tr>
   <tr>
     <td><code>/favs</code></td>
     <td><code>favorites</code></td>
-    <td><code>App.FavoritesController</code></td>
-    <td><code>App.FavoritesRoute</code></td>
+    <td><code>FavoritesController</code></td>
+    <td><code>FavoritesRoute</code></td>
     <td><code>favorites</code></td>
   </tr>
 </table>
@@ -140,25 +140,36 @@ This router creates three routes:
   <tr>
     <td><code>/</code></td>
     <td><code>index</code></td>
-    <td><code>App.IndexController</code></td>
-    <td><code>App.IndexRoute</code></td>
+    <td><code>IndexController</code></td>
+    <td><code>IndexRoute</code></td>
     <td><code>index</code></td>
   </tr>
   <tr>
+    <td>N/A</td>
+    <td><code>posts</code><sup>1</sup></td>
+    <td><code>PostsController</code></td>
+    <td><code>PostsRoute</code></td>
+    <td><code>posts</code></td>
+  </tr>
+  <tr>
     <td><code>/posts</code></td>
-    <td><code>posts.index</code></td>
-    <td><code>App.PostsIndexController</code></td>
-    <td><code>App.PostsIndexRoute</code></td>
-    <td><code>posts/index</code></td>
+    <td><code>posts.index</code></code></td>
+    <td><code>PostsController</code><br>↳<code>PostsIndexController</code></td>
+    <td><code>PostsRoute</code><br>↳<code>PostsIndexRoute</code></td>
+    <td><code>posts</code><br>↳<code>posts/index</code></td>
   </tr>
   <tr>
     <td><code>/posts/new</code></td>
     <td><code>posts.new</code></td>
-    <td><code>App.PostsNewController</code></td>
-    <td><code>App.PostsNewRoute</code></td>
-    <td><code>posts/new</code></td>
+    <td><code>PostsController</code><br>↳<code>PostsNewController</code></td>
+    <td><code>PostsRoute</code><br>↳<code>PostsNewRoute</code></td>
+    <td><code>posts</code><br>↳<code>posts/new</code></td>
   </tr>
 </table>
+
+<small><sup>1</sup> Transitioning to `posts` or creating a link to
+`posts` is equivalent to transitioning to `posts.index` or linking to
+`posts.index`</small>
 
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
@@ -174,9 +185,9 @@ Visiting `/posts` is slightly different. It will first render the
 Finally, visiting `/posts/new` will first render the `posts` template,
 then render the `posts/new` template into its outlet.
 
-<!-- See [Nested Routes][1] for more information. -->
-
-[1]: /guides/routing/nested-routes
+NOTE: You should use `this.resource` for URLs that represent a **noun**,
+and `this.route` for URLs that represent **adjectives** or **verbs**
+modifying those nouns.
 
 ### Dynamic Segments
 
@@ -231,3 +242,90 @@ return `App.Post.find(params.post_id)` automatically.
 Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
 as expected out of the box.
+
+### Nested Resources
+
+You cannot nest routes, but you can nest resources:
+
+```javascript
+App.Router.map(function() {
+  this.resource('post', { path: '/post/:post_id' }, function() {
+    this.route('edit');
+    this.resource('comments', function() {
+      this.route('new');
+    });
+  });
+});
+```
+
+This router creates five routes:
+
+<div style="overflow: auto">
+  <table>
+    <thead>
+    <tr>
+      <th>URL</th>
+      <th>Route Name</th>
+      <th>Controller</th>
+      <th>Route</th>
+      <th>Template</th>
+    </tr>
+    </thead>
+    <tr>
+      <td><code>/</code></td>
+      <td><code>index</code></td>
+      <td><code>App.IndexController</code></td>
+      <td><code>App.IndexRoute</code></td>
+      <td><code>index</code></td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><code>post</code></td>
+      <td><code>App.PostController</code></td>
+      <td><code>App.PostRoute</code></td>
+      <td><code>post</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id<sup>2</sup></code></td>
+      <td><code>post.index</code></td>
+      <td><code>App.PostIndexController</code></td>
+      <td><code>App.PostIndexRoute</code></td>
+      <td><code>post/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id/edit</code></td>
+      <td><code>post.edit</code></td>
+      <td><code>App.PostEditController</code></td>
+      <td><code>App.PostEditRoute</code></td>
+      <td><code>post/edit</code></td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><code>comments</code></td>
+      <td><code>App.CommentsController</code></td>
+      <td><code>App.CommentsRoute</code></td>
+      <td><code>comments</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id/comments</code></td>
+      <td><code>comments.index</code></td>
+      <td><code>App.CommentsIndexController</code></td>
+      <td><code>App.CommentsIndexRoute</code></td>
+      <td><code>comments/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/post/:post_id/comments/new</code></td>
+      <td><code>comments.new</code></td>
+      <td><code>App.CommentsNewController</code></td>
+      <td><code>App.CommentsNewRoute</code></td>
+      <td><code>comments/new</code></td>
+    </tr>
+  </table>
+</div>
+
+
+<small><sup>2</sup> :post_id is the post's id.  For a post with id = 1, the route will be: 
+`/post/1`</small>
+
+The `comments` template will be rendered in the `post` outlet.  
+All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.

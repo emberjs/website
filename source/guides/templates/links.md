@@ -3,10 +3,10 @@
 You create a link to a route using the `{{linkTo}}` helper.
 
 ```js
-App.Router.map(function(match) {
-  match('/').to('index');
-  match('/posts').to('posts');
-  match('/posts/:post_id').to('post');
+App.Router.map(function() {
+  this.resource("posts", function(){
+    this.route("post", { path: "/:post_id" });
+  });
 });
 ```
 
@@ -15,7 +15,7 @@ App.Router.map(function(match) {
 
 <ul>
 {{#each post in posts}}
-  <li>{{#linkTo "post" post}}{{post.title}}{{/linkTo}}</li>
+  <li>{{#linkTo posts.post post}}{{post.title}}{{/linkTo}}</li>
 {{/each}}
 </ul>
 ```
@@ -38,6 +38,7 @@ The `{{linkTo}}` helper takes:
 * If the route has a dynamic segment, a model that represents the
   segment. By default, Ember.js will replace the segment with the
   value of the object's `id` property.
+* An optional title which will be bound to the `a` title attribute
 
 ### Multiple Contexts
 
@@ -45,12 +46,11 @@ If the route is nested, you can supply a model for each dynamic
 segment.
 
 ```js
-App.Router.map(function(match) {
-  match('/posts').to('posts', function(match) {
-    match('/:post_id').to('post', function(match) {
-      match('/').to('postIndex');
-      match('/comments').to('comments');
-      match('/comments/:comment_id').to('comment');
+App.Router.map(function() {
+  this.resource("posts", function(){
+    this.resource("post", { path: "/:post_id" }, function(){
+      this.route("comments");
+      this.route("comment", { path: "/comments/:comment_id" });
     });
   });
 });
@@ -63,7 +63,7 @@ In the `postIndex` template:
   {{body}}
 </div>
 
-<p>{{#linkTo 'comment' primaryComment}}Main Comment{{/linkTo}}</p>
+<p>{{#linkTo post.comment primaryComment}}Main Comment{{/linkTo}}</p>
 ```
 
 Since only a single model was supplied, the link will inherit the
@@ -74,7 +74,7 @@ Alternatively, you could pass both a post and a comment to the helper:
 
 ```handlebars
 <p>
-  {{#linkTo 'comment' nextPost primaryComment}}
+  {{#linkTo post.comment nextPost primaryComment}}
     Main Comment for the Next Post
   {{/linkTo}}
 </p>

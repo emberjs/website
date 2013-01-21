@@ -1,5 +1,5 @@
 ---
-title: This Week in Ember.js 3
+title: This Week in Ember.js (Dec 22, 2012)
 ---
 
 Only a few more days left, I hope everyone's had a great 2012,

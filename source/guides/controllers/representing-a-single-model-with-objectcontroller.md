@@ -2,7 +2,7 @@
 
 Use `Ember.ObjectController` to represent a single model. To tell an
 `ObjectController` which model to represent, set its `content`
-property in your route's `setupControllers` method.
+property in your route's `setupController` method.
 
 When a template asks an `ObjectController` for a property, it will first
 check to see if it has its own property with that name defined. If so, it will
@@ -25,7 +25,7 @@ currently playing song:
 
 ```javascript
 App.SongRoute = Ember.Route.extend({
-  setupControllers: function(controller, song) {
+  setupController: function(controller, song) {
     controller.set('content', song);
   }
 });
