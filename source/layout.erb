@@ -42,15 +42,15 @@
           if (!showing && doc.scrollTop() > offset.top+200) {
             showing = true;
             backToTop.css({
-              opacity: 1,
               position: 'fixed',
               top: 20,
-              left: offset.left
+              left: offset.left,
+              display:' block'
             });
           } else if (showing && doc.scrollTop() <= offset.top+200) {
             showing = false;
             backToTop.css({
-              opacity: 0
+              display:'none'
             });
           }
         };
@@ -95,7 +95,7 @@
       <% if sidebar %>
         <div id="sidebar">
           <%= sidebar %>
-          <div id="back-to-top"><a href="#">&#11014; Back to Top</a></div>
+          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
         </div>
       <% end %>
       <div id="content" <% if sidebar %>class="has-sidebar"<% end %>>
