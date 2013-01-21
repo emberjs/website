@@ -6,17 +6,20 @@ $blue:   #1F58CE;
 $gray:   #777777;
 $green:  #007700;
 
-.highlight {
+#content .highlight {
   background-image: url(/images/code_background.gif);
   border: 1px solid #d1d1d1;
   @include border-radius($border-radius);
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;
-  margin-bottom: 25px;
   overflow: hidden;
   position: relative;
   @include box-shadow(0 1px #fff, inset -1px 1px 4px rgba(0,0,0,0.1));
+
+  table {
+    margin: 0 0;
+  }
 
   .ribbon {
     position: absolute;
