@@ -922,58 +922,72 @@ ol {
 /**
   Blogs
 **/
+.blog {
 
-article {
-  margin: 3em 0;
+#sidebar ol#toc-list li.level-2 a, #sidebar ol#toc-list li.level-3 a {
+  width: 143px;
+  overflow: hidden;
+  white-space: nowrap;
+}
 
-  $h3-indent: 0;
-  $body-indent: $h3-indent;
+  article {
+    margin: 0 0 3em 0;
+    padding: 0 0 3em 0;
 
-  figure {
-    width: 100%;
-    background-color: white;
-    padding: 10px;
-    border: 1px solid #ccc;
+    $h3-indent: 0;
+    $body-indent: $h3-indent;
+    border-bottom: solid 1px #e0e0e0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    figure {
+      width: 100%;
+      background-color: white;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      background-color: white;
+      max-width: 100%;
+      /*max-width: $content-width;*/
+    }
+
+    ul, ol {
+      margin-left: 1.5em;
+    }
+
+    table.figure {
+      float: left;
+      margin-bottom: 20px;
+
+      & + table.figure {
+        margin-left: 20px;
+      }
+
+      & + table.figure + * {
+        clear: left;
+      }
+
+      th, td {
+        padding: 5px 10px;
+      }
+
+      thead th {
+        font-weight: bold;
+        border-bottom: 2px solid $orange-color;
+      }
+
+      tbody td {
+        border-bottom: 1px solid lighten($orange-color, 20%);
+      }
+    }
+
   }
-
-  img {
-    display: block;
-    margin: 0 auto;
-    background-color: white;
-    max-width: 100%;
-    /*max-width: $content-width;*/
-  }
-
-  ul, ol {
-    margin-left: 1.5em;
-  }
-
-  table.figure {
-    float: left;
-    margin-bottom: 20px;
-
-    & + table.figure {
-      margin-left: 20px;
-    }
-
-    & + table.figure + * {
-      clear: left;
-    }
-
-    th, td {
-      padding: 5px 10px;
-    }
-
-    thead th {
-      font-weight: bold;
-      border-bottom: 2px solid $orange-color;
-    }
-
-    tbody td {
-      border-bottom: 1px solid lighten($orange-color, 20%);
-    }
-  }
-
 }
 
 
