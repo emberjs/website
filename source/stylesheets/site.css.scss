@@ -263,7 +263,10 @@ ol {
         }
 
         li.sub-selected {
-          background-color: #fcc;
+          background-color: #F2D1CB;
+          > a {
+            color: #282828;
+          }
         }
 
         li {
