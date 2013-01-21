@@ -982,7 +982,7 @@ article {
 **/
 
 body.community #content {
-  margin: 0 auto;
+  margin: 3em auto 0 auto;
   width: 54em;;
 
   h1, h1:first-child {
@@ -1002,6 +1002,9 @@ body.community #content {
     &.bugs img {
       float: right;
       margin: 0 0 15px 20px;
+    }
+    table {
+      margin: 2em auto;
     }
   }
 }
