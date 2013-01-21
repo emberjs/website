@@ -73,7 +73,7 @@
         checkHash();
       });
     $(function(){
-      $("#toc-list .level-1 > a").click(function() {
+      $("#toc-list .level-1 > a").not('[target=_blank]').click(function() {
         $(this).parent().find('> ol').slideToggle(function() {
           positionBackToTop(true);
         });
@@ -97,9 +97,8 @@
   <% end %>
 
   <% content_for :sidebar do %>
-    <h3>SHA: <%= link_to sha, sha_url %></h3>
-
     <ol id='toc-list'>
+      <li class='level-1'><a href="<%= sha_url %>" target="_blank"> Tag: <%= sha %></a></li>
 
       <% li_for(:modules) do %>
         <a href='#'>Modules</a>
@@ -138,7 +137,7 @@
       <% end %>
   <% end %>
 
-  <div id='api-options'>
+  <div id='api-options' class="hidden">
     Show:
 
     <label>
