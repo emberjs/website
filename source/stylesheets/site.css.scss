@@ -9,6 +9,8 @@ $page-width: 940px;
 
 $col-width: 40px;
 $col-spacing: 20px;
+$sidebar-width: $col-width * 4 + $col-spacing * 3;
+$content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
 $orange-color: #e1563f;
 $blue-color: #1f58ce;
@@ -27,6 +29,12 @@ body {
   line-height: 1.4em;
   color: #444444;
   font-weight: 200;
+}
+sup {
+  vertical-align: super;
+  font-weight: 100;
+  color: gray;
+  font-size: 11px
 }
 
 * {
@@ -56,7 +64,7 @@ code {
   font-family: Menlo, Courier, monospace;
   font-size: 90%;
   color: #666;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.04);
   padding: 3px;
   @include border-radius(5px);
 }
@@ -67,9 +75,14 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 22px;
+  color: $orange-color;
+  padding: 0px 0px 1em 2em;
+  margin-bottom: 1.5em;
+  background: no-repeat url(/images/chapter-mark.png) top left;
+  border-bottom: 1px solid #dfd7d4;
 }
+
 
 h2 {
   font-size: 22px;
@@ -85,8 +98,8 @@ h3 {
 }
 
 h4 {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 1.618em;
   color: $orange-color;
   letter-spacing: 1px;
   margin: 24px 0 12px 0;
@@ -100,7 +113,7 @@ hr {
   height: 1px;
   border: none;
   margin: 40px 0;
-  background-color: $black-color;
+  background-color: #dfd7d4;
 }
 
 ul {
@@ -110,6 +123,11 @@ ul {
 ol {
   list-style-type: decimal;
 }
+
+.hidden {
+  display: none;
+}
+
 // Structure
 
 .section {
@@ -182,8 +200,10 @@ ol {
 **/
 
 #sidebar {
-  margin-top: 29px;
-  width: 218px;
+  font-family: "MavenProMedium";
+  margin-top: 38px;
+  float: left;
+  width: $sidebar-width;
   min-height: 475px;
   margin-bottom: 28px;
   padding-bottom: 120px;
@@ -191,6 +211,31 @@ ol {
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
+
+  #back-to-top {
+    text-align: center;
+    opacity: 0;
+    @include transition(opacity 0.05s linear);
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.5em;
+    border-bottom: none;
+    color: #d84a32;
+    font-weight: bold;
+    font-family: MavenProBold;
+    cursor: pointer;
+
+    &:hover {
+      color: $black-color;
+    }
+
+    &.active {
+      color: $black-color;
+    }
+  }
 
   ol#toc-list {
     background: #f9e7e4;
@@ -243,6 +288,7 @@ ol {
         text-transform: uppercase;
 
         > a {
+          display: block;
           color: #443331;
           outline: 1px solid #d5ccc8;
           padding: 12px 12px 10px 12px;
@@ -264,10 +310,9 @@ ol {
       }
 
       &.level-2, &.level-3 {
-        padding: 3px 0 3px 0;
+        padding: 2px 0 2px 0;
 
         a {
-          display: inline;
           text-transform: none;
           color: #d84a32;
           font-weight: normal;
@@ -466,103 +511,41 @@ ol {
 #content-wrapper {
   @include clearfix;
   width: 960px;
-  margin: 0 auto 40px auto;
-  padding: 20px 0px;
+  padding: 0px 0px 20px 0px;
+  margin: 0 auto;
   position: relative;
-  z-index: 1;
 
   &.grid {
     background-image: url(/images/grid.png);
   }
 }
 
-$sidebar-width: $col-width * 4 + $col-spacing * 3;
-$content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
 #content {
   &.has-sidebar {
-    margin-left: 1.5em;
-    margin-top: 15px;
+    margin: 38px 0 90px 1.5em;
     width: $content-width;
     float: left;
   }
+
+  ol, ul{
+    margin: 1em 1.5em;
+  }
+
+  .tabs > ul{
+    margin: 0 0;
+    padding: 0 0;
+  }
+
+  table {
+    margin: 1em 0;
+    tbody tr{
+      background: rgba(255, 249, 249, 0.56);
+      border-bottom: 1px solid rgba(223, 215, 212, 0.28);
+    }
+  }
 }
 
-#sidebar {
-  float: left;
-  width: $sidebar-width;
-  margin-top: 43px;
-  font-family: "MavenProMedium";
-  font-size: 14px;
-
-  #back-to-top {
-    text-align: center;
-    opacity: 0;
-    @include transition(opacity 0.05s linear);
-  }
-
-  a {
-    text-decoration: none;
-    line-height: 21px;
-    border-bottom: none;
-    color: #d84a32;
-
-    &:hover {
-      color: $black-color;
-    }
-
-    &.active {
-      color: $black-color;
-    }
-  }
-
-  ol {
-    list-style-type: none;
-
-    li {
-      margin: 14px 0;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-
-      &.level-1, &.level-2 {
-        a {
-          font-family: "MavenProBold";
-          color: $black-color;
-        }
-      }
-
-      &.level-3, &.level-4 {
-        font-family: "Lato";
-        font-size: 13px;
-        text-transform: none;
-        margin: 2px 0;
-      }
-
-      &:hover {
-        a {
-          color: #491500;
-        }
-      }
-
-      a {
-        display: block;
-      }
-    }
-  }
-
-  h2 {
-    margin-bottom: 10px;
-  }
-
-  ul li {
-    font-family: "Lato";
-    font-size: 13px;
-    text-transform: none;
-    margin: 2px 0;
-  }
-}
 
 /**
   About Page
@@ -865,19 +848,8 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
 .guides {
   .chapter {
-    margin: 23px 0 90px 0;
-
     $h3-indent: 32px;
     $body-indent: $h3-indent;
-
-    h1 {
-      font-size: 22px;
-      color: $orange-color;
-      padding: 0px 0px 1em 2em;
-      margin-bottom: 1.5em;
-      background: no-repeat url(/images/chapter-mark.png) 0px 7px;
-      border-bottom: 1px solid #dfd7d4;
-    }
 
     ul, ol {
       margin-left: $body-indent;
@@ -895,10 +867,6 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     }
   }
 
-  #content-wrapper {
-    padding: 0px 0px 20px 0px;
-  }
-
   .anchorable-toc {
     position: relative;
 
@@ -911,13 +879,15 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
     display: none;
     position: absolute;
     text-decoration: none;
+    border: none;
     left: -1em;
     width: 30px;
     height: 13px;
     background: url(/images/link.png) no-repeat;
     background-size: 18px 9px;
     left: -19px;
-    margin-top: 5px;
+    margin-top: 7px;
+    opacity: 0.5;
   }
 
   table {
@@ -1186,6 +1156,7 @@ body.api {
       margin-right: 5px;
     }
   }
+
   .meta {
     line-height: 16px;
     font-size: 11px;
@@ -1257,6 +1228,9 @@ body.api {
     padding-bottom: 1em;
     border-bottom: solid 1px #e0e0e0;
     margin-bottom: 2em;
+    &:last-child {
+      border-bottom: none;
+    }
   }
 
   h3.name code {
