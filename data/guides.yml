@@ -51,6 +51,8 @@ Routing:
     url: "routing/rendering-a-template"
   - title: "Redirecting to a Different URL"
     url: "routing/redirection"
+  - title: "Specifying the location API"
+    url: "routing/specifying-the-location-api"
   #- title: "Dynamic Segments"
     #url: "routing/dynamic-segments"
   #- title: "Changing the Route"
