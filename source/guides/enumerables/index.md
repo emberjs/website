@@ -58,7 +58,7 @@ Usually, objects that represent lists implement the Enumerable interface. Some e
    extensions.](/guides/configuring-ember/disabling-prototype-extensions/))
  * **Ember.ArrayController** - A controller that wraps an underlying array and
    adds additional functionality for the view layer.
- * **Ember.Set** - An data structure that can efficiently answer whether it
+ * **Ember.Set** - A data structure that can efficiently answer whether it
    includes an object.
 
 ### API Overview
