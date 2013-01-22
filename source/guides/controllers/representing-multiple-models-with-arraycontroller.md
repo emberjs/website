@@ -35,7 +35,7 @@ number of songs that are over 30 seconds long. We can add a new computed
 property called `longSongCount` to the controller:
 
 ```javascript
-App.SongsController = App.ArrayController.extend({
+App.SongsController = Ember.ArrayController.extend({
   longSongCount: function() {
     var longSongs = this.filter(function(song) {
       return song.get('duration') > 30;
