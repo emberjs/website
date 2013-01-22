@@ -18,7 +18,7 @@ App.IndexRoute = Ember.Route.extend({
 You can conditionally transition based on some other application state.
 
 ```javascript
-App.Router.map(function(match) {
+App.Router.map(function() {
   this.resource('topCharts', function() {
     this.route('choose', { path: '/' });
     this.route('albums');
