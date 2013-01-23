@@ -1,16 +1,11 @@
 <%
 @title = chapter_name
-@title = "Guides" if chapter_name.blank?
+@title = 'Guides' if chapter_name.blank?
 %>
 
-<% wrap_layout :layout do %>
-  <% content_for :sidebar do %>
-    <%#<div id="guide_search">%>
-    <%#[> TODO: search form here <]%>
-    <%#<label><input placeholder="search ember docs..."></label>%>
-    <%#<button></button>%>
-    <%#</div>%>
-    <%= guides_index %>
+<% wrap_layout(:layout) do %>
+  <% content_for(:sidebar) do %>
+    <%= index_for(data.guides) %>
   <% end %>
 
   <div class="chapter">
@@ -21,7 +16,7 @@
 
   <script>
     $(function(){
-      $("#guide_list .level-1 > a").click(function() {
+      $("#toc-list .level-1 > a").click(function() {
         $(this).parent().find('> ol').slideToggle(function() {
           positionBackToTop(true);
         });

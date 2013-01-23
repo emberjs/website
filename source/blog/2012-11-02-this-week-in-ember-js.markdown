@@ -1,5 +1,7 @@
 ---
-title: This Week in Ember.js (Nov 11, 2012)
+title: This Week in Ember.js
+date:  2012/11/02
+tags: This Week in Ember
 ---
 
 There's a lot of work happening on Ember.js and sometimes it's hard to keep track of what's going on. Here's what me and Yehuda got done this week.
