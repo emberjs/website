@@ -562,15 +562,13 @@ ol {
 
 #download {
   width: 465px;
-  height: 125px;
   margin: 0 auto;
   position: relative;
 
   #download-ember, #download-starter-kit {
-    position: absolute;
     width: 220px;
-    top: 40px;
     text-align: center;
+    margin: 4em auto 0 auto;
   }
 
   #download-ember {
@@ -610,20 +608,21 @@ ol {
     }
   }
 }
+#content{
+  .getting-started.section {
+    .highlight, p {
+      float: left;
+      width: $col-width * 8 + $col-spacing * 6;
 
-.getting-started.section {
-  .highlight, p {
-    float: left;
-    width: $col-width * 8 + $col-spacing * 6;
-
-    &.right {
-      margin-left: $col-width * 1 + $col-spacing * 1;
+      &.right {
+        margin-left: $col-width * 1 + $col-spacing * 1;
+      }
     }
-  }
 
-  p {
-    text-align: center;
-    color: #222;
+    p {
+      text-align: center;
+      color: #222;
+    }
   }
 }
 
