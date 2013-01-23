@@ -141,6 +141,7 @@ ol {
 **/
 
 .tabs {
+  margin-top: 1em;
   border: 1px solid #e0e0e0;
           border-radius: 5px;
        -o-border-radius: 5px;
@@ -1209,6 +1210,7 @@ body.api {
   }
 
   .class-info {
+    margin-bottom: 2em;
     p {
       color: #443331;
       font-weight: bold;
