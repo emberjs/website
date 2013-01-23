@@ -1,12 +1,17 @@
 <ol id='toc-list'>
   <li class='level-1'>
-    <a href="/blog/feed.xml">
-      Recent Posts
-      <img src="/images/feed-icon-14x14.png">
-    </a>
+    <a href="#">Recent Post</a>
     <ol style="display:block">
-    <% blog.articles.each_with_index do |article, i| %>
+      <% blog.tags['Recent Posts'].sort_by(&:date).reverse.each_with_index do |article, i| %>
       <li class='level-3'><%= link_to article.title, article %></li>
+    <% end %>
+    </ol>
+  </li>
+  <li class='level-1'>
+    <a href="#">This Week in Ember</a>
+    <ol style="display:block">
+      <% blog.tags['This Week in Ember'].sort_by(&:date).reverse.each_with_index do |article, i| %>
+      <li class='level-3'><%= link_to article.date.strftime('%B %d, %Y'), article %></li>
     <% end %>
     </ol>
   </li>

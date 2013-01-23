@@ -7,7 +7,7 @@ title: "Blog"
 
 <% blog.articles.each_with_index do |article, i| %>
   <article class="blog-post-summary">
-    <h2><%= link_to article.title, article %></span></h2>
+    <h2><%= link_to article.title, article %> &ndash; <time><%= article.date.strftime('%b %d, %Y') %></time></span></h2>
     <%= article.summary %>
     <%= link_to "Read more...", article %>
   </article>

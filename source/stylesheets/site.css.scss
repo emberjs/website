@@ -214,7 +214,7 @@ ol {
 
   #back-to-top {
     text-align: center;
-    opacity: 0;
+    display: none;
     @include transition(opacity 0.05s linear);
   }
 
@@ -309,6 +309,7 @@ ol {
 
         &:last-of-type ol {
           border-bottom: 1px solid #d5ccc8;
+          padding-bottom: 0.5em;
         }
       }
 
@@ -920,15 +921,9 @@ ol {
 }
 
 /**
-  Blogs
+  Blog
 **/
 .blog {
-
-#sidebar ol#toc-list li.level-2 a, #sidebar ol#toc-list li.level-3 a {
-  width: 143px;
-  overflow: hidden;
-  white-space: nowrap;
-}
 
   article {
     margin: 0 0 3em 0;

@@ -1,5 +1,6 @@
 --- 
 title: Ember 1.0 Prerelease 2
+tags: Recent Posts
 ---
 
 Ember 1.0 Prerelease 2 is out now. This is mainly a bug fix release

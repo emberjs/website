@@ -1,5 +1,7 @@
 ---
-title: This Week in Ember.js (Dec 22, 2012)
+title: This Week in Ember.js
+date: 2012/12/22
+tags: This Week in Ember
 ---
 
 Only a few more days left, I hope everyone's had a great 2012,

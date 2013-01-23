@@ -1,5 +1,7 @@
 ---
-title: This Week in Ember.js (Jan 18, 2013)
+title: This Week in Ember
+date: 2013/01/18
+tags: This Week in Ember
 ---
 
 It's been a big month for Ember.js, and we're excited about the progress
