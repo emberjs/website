@@ -141,6 +141,10 @@ Understanding Ember.js:
   - title: "Keeping Templates Up-to-Date"
     url: "understanding-ember/keeping-templates-up-to-date"
 
+Debugging Ember.js:
+  - title: "Introduction"
+    url: "debugging-ember"
+
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
     #url: "understanding-ember-data/record-lifecycle"
