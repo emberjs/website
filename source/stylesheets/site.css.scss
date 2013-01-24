@@ -1346,4 +1346,8 @@ body.api {
     color: white;
     border-radius: 3px;
   }
+
+  #sidebar ol#toc-list li > ol {
+    display: block;
+  }
 }
