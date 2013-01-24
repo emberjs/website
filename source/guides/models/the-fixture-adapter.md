@@ -19,7 +19,7 @@ Simply attach it to your instance of `Ember.Store`:
 
 ```
 var App = Ember.Application.create();
-App.fixtureStore = DS.Store.extend({
+App.FixtureStore = DS.Store.extend({
   revision: 11,
   adapter: DS.FixtureAdapter.create();
 });
