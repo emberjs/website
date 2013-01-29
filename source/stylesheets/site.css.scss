@@ -422,7 +422,7 @@ ol {
   }
 
   #nav {
-    width: 500px;
+    width: 700px;
     height: 65px;
     margin: 0 auto;
 
@@ -468,6 +468,17 @@ ol {
         }
       }
 
+    }
+  }
+
+  #search{
+    form input.st-search-input{
+      margin-left: 12px;
+      font-size: 100%;
+      padding: 2px 9px 2px 27px;
+      height: 26px;
+      background-position: 7px 6px;
+      width: 150px;
     }
   }
 
