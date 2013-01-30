@@ -40,7 +40,7 @@ App.Router.map(function() {
   this.resource('post', { path: '/posts/:post_id' });
 });
 
-App.ShowPostRoute = Ember.Route.extend({
+App.PostRoute = Ember.Route.extend({
   model: function(params) {
     return App.Post.find(params.post_id);
   }
