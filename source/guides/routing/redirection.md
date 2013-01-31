@@ -46,7 +46,7 @@ App.FilterRoute = Ember.Route.extend({
 App.TopChartsSongsRoute = App.FilterRoute.extend();
 App.TopChartsAlbumsRoute = App.FilterRoute.extend();
 App.TopChartsArtistsRoute = App.FilterRoute.extend();
-App.TopChartsPlayistsRoute = App.FilterRoute.extend();
+App.TopChartsPlaylistsRoute = App.FilterRoute.extend();
 ```
 
 In this example, navigating to the `/` URL immediately transitions into
