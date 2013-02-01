@@ -171,6 +171,11 @@ This router creates three routes:
 `posts` is equivalent to transitioning to `posts.index` or linking to
 `posts.index`</small>
 
+NOTE: If you define a resource using `this.resource` and **do not** supply
+a function, then the implicit `resource.index` route is **not** created. In
+that case, `/resource` will only use the `ResourceRoute`, `ResourceController`,
+and `resource` template.
+
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
 via `transitionTo` or `{{#linkTo}}`, make sure to use the full route
@@ -324,8 +329,8 @@ This router creates five routes:
 </div>
 
 
-<small><sup>2</sup> :post_id is the post's id.  For a post with id = 1, the route will be: 
+<small><sup>2</sup> :post_id is the post's id.  For a post with id = 1, the route will be:
 `/post/1`</small>
 
-The `comments` template will be rendered in the `post` outlet.  
+The `comments` template will be rendered in the `post` outlet.
 All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.
