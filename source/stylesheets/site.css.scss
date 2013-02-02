@@ -1073,6 +1073,11 @@ body.community #content {
 
     a {
       margin: 0 10px;
+      border-bottom: none;
+      opacity: 0.7; 
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
