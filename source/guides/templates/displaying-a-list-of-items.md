@@ -52,3 +52,14 @@ Trek's Friends
   <li>Trek's friend Tom!</li>
 </ul>
 ```
+
+The `{{#each}}` helper can have a matching `{{else}}`.
+The contents of this block will render if the collection is empty:
+
+```handlebars
+{{#each people}}
+  Hello, {{name}}!
+{{else}}
+  Sorry, nobody is here.
+{{/each}}  
+```
