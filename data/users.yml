@@ -8,10 +8,12 @@
   image: zendesk.png
 - url: http://www.groupon.com
   image: groupon.png
-- url: https://www.yapp.us/
-  image: yapp.png
+- url: http://www.timbuk2.com/
+  image: timbuk2.png
 - url: http://www.mhelabs.com/
   image: mhelabs.png
+- url: https://www.yapp.us/
+  image: yapp.png
 - url: http://www.benefitcloud.com/
   image: benefitcloud.png
 - url: http://www.topicus.nl/
@@ -48,14 +50,14 @@
   image: netminds.png
 - url: http://mochaleaf.com
   image: mochaleaf.png
-- url: http://kabisa.nl/
-  image: kabisa.png
-- url: http://fundinggates.com
-  image: fundinggates.png
+# - url: http://kabisa.nl/
+#   image: kabisa.png
+# - url: http://fundinggates.com
+#   image: fundinggates.png
 - url: http://witsbits.com
   image: witsbits.png
-- url: http://www.cliptem.com
-  image: cliptem.png
+# - url: http://www.cliptem.com
+#   image: cliptem.png
 - url: http://www.yesmail.com/services/market-intelligence-measurement/yesmail-market-intelligence
   image: yesmail.png
 - url: http://crashlog.io
@@ -70,8 +72,8 @@
   image: crowdstrike.png
 - url: http://www.playtin.com
   image: playtin.png
-- url:  http://www.visualsupply.co
-  image: visualsupplyco.png
+# - url:  http://www.visualsupply.co
+#   image: visualsupplyco.png
 - url:  http://www.crowdcompass.com
   image: crowdcompass.png
 - url:  http://www.totango.com
@@ -80,14 +82,12 @@
   image: nearzero.png
 - url: https://www.action.io/
   image: actionio.png
-- url: http://www.timbuk2.com/
-  image: timbuk2.png
 - url: http://porkepic.com/
   image: porkepic.png
 - url: http://www.appdrones.com/
   image: appdrones.png
-- url: http://www.d-i.co/
-  image: di-logo-blue.png
+# - url: http://www.d-i.co/
+#   image: di-logo-blue.png
 - url: http://dockyard.com
   image: dockyard.png
 - url: http://www.montania.se/
