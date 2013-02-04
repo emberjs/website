@@ -86,7 +86,7 @@ App.peopleController = Em.ArrayController.create({
 
   <div class="surround">
     <ul id="slider">
-    <% data.users.each do |user| %>
+    <% data.users.slice(0,12).each do |user| %>
       <li class="user">
         <a href="<%= user.url %>">
           <img src="/images/about/<%= user.image %>">
@@ -103,11 +103,8 @@ App.peopleController = Em.ArrayController.create({
   </div>
 
   <div id="listed">
-    <p>
-      Is your team using Ember.js?
-    </p>
-    <a class="orange button" href="mailto:hello@emberjs.com">
-        GET LISTED
+    <a class="orange button" href="/ember-users">
+        Meet More Users
       </a>
   </div>
 </div>
