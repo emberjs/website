@@ -766,6 +766,7 @@ ol {
   #listed {
     float: left;
     margin-left: $col-width * 9;
+    margin-top: 20px;
     text-align: center;
   }
 }
@@ -1026,6 +1027,73 @@ body.community #content {
   }
 }
 
+/**
+  Ember Users Page
+**/
+
+.ember-users {
+
+  .section {
+    width: 100%;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  #content {
+    margin: 3em auto 0 auto;
+    width: 54em;
+  }
+
+  .button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+}
+
+.users.section {
+  margin-top: 0px;
+}
+
+#showcase {
+  margin: 0 auto;
+  width: 100%;
+}
+
+#content #showcase tr {
+  background: transparent;
+  border-bottom: none;
+}
+
+#showcase td {
+
+  &:nth-child(2) a {
+    margin: 0 auto;
+  }
+
+  &:nth-child(3) a {
+    margin-left: auto;
+  }
+
+  padding: 10px;
+  a {
+    background-image: url("/images/about/user_bg.png");
+    display: block;
+    height: 103px;
+    width: 210px;
+  }
+}
+
+#showcase a:hover {
+  border-bottom: none;
+}
+
+/**
+  Footer
+**/
 
 #footer {
   margin-top: 60px;
