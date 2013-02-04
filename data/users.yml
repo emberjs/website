@@ -56,8 +56,8 @@
 #   image: fundinggates.png
 - url: http://witsbits.com
   image: witsbits.png
-# - url: http://www.cliptem.com
-#   image: cliptem.png
+- url: http://www.cliptem.com
+  image: cliptem.png
 - url: http://www.yesmail.com/services/market-intelligence-measurement/yesmail-market-intelligence
   image: yesmail.png
 - url: http://crashlog.io
