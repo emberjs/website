@@ -418,6 +418,7 @@ ol {
 
     &:hover {
       @include filter(drop-shadow(rgba(0,0,0,0.7) 0 1px 3px));
+      border: 0;
     }
   }
 
@@ -657,6 +658,10 @@ ol {
     @include clearfix;
     background: url('/images/about/carousel_bg.png');
     border: 1px solid #d1d1d1;
+
+    a:hover {
+      border: 0;
+    }
 
     .bx-wrapper,
     .bx-window {
