@@ -62,7 +62,7 @@ title: "Community"
           <h3><%= name %></h3>
 
           <ul>
-            <% groups.each do |group| %>
+            <% groups.sort_by(&:location).each do |group| %>
               <li><%= link_to group.location, group.url %></li>
             <% end %>
           </ul>
