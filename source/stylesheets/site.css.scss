@@ -652,6 +652,7 @@ ol {
   .surround {
     width: 940px;
     margin: 0 auto;
+    padding-top: 19px;
 
     @include border-radius(3px);
     @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff);
@@ -661,6 +662,10 @@ ol {
 
     a:hover {
       border: 0;
+    }
+
+    ul {
+      margin: 0;
     }
 
     .bx-wrapper,
