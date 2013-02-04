@@ -11,6 +11,10 @@
     url:      http://www.meetup.com/Ember-Atlanta-Meetup/
   - location: Orange County, CA
     url:      http://www.meetup.com/OC-EmberJS/
+  - location: Philadelphia, PA
+    url:      http://www.meetup.com/Emberjs-Philly/
+  - location: Seattle, WA
+    url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
@@ -18,3 +22,9 @@
     url:      http://www.meetup.com/EmberJS-Paris/
   - location: London, UK
     url:      http://www.meetup.com/London-Emberjs-User-Group/
+  - location: Dublin, Ireland
+    url:      http://www.meetup.com/emberjsdublin/
+  - location: Berlin, Germany
+    url:      http://www.meetup.com/Emberjs-Philly/
+  - location: Munich, Germany
+    url:      http://www.meetup.com/Ember-js-Munich/
