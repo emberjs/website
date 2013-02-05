@@ -52,8 +52,8 @@
   image: mochaleaf.png
 # - url: http://kabisa.nl/
 #   image: kabisa.png
-# - url: http://fundinggates.com
-#   image: fundinggates.png
+- url: http://fundinggates.com
+  image: fundinggates.png
 - url: http://witsbits.com
   image: witsbits.png
 - url: http://www.cliptem.com
