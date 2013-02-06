@@ -3,8 +3,11 @@
     url: 'index.html'
     skip_sidebar: true
 Getting Started with Ember.js:
+  - title: "Prerequisites"
+    url: "getting-started/prerequisites"
   - title: "Core Concepts"
     url: "getting-started/core-concepts"
+
   #- title: "What is Ember.js?"
     #url: "getting-started/what-is-ember-js"
   #- title: "Getting Ember.js"
