@@ -1,7 +1,7 @@
 ## Core Concepts
 
 To get started with Ember.js, there are a few core concepts you
-should understand.
+should understand. 
 
 We want developers to be able to build ambitiously large web
 applications that are competitive with native apps. To do that, they
@@ -15,7 +15,7 @@ constraints of the web–we turned to other popular open source projects
 like Ruby on Rails and Backbone.js for inspiration.
 
 Ember.js, therefore, is a synthesis of the powerful tools of our native
-forebearers with the lightweight sensibilities of the modern web.
+forebearers with the lightweight sensibilities of the modern web. 
 
 ### Concepts
 
