@@ -23,6 +23,17 @@
 }
 
 @font-face {
+  font-family: 'MavenProBlack';
+  src: url('/fonts/maven_pro_black-webfont.eot');
+  src: url('/fonts/maven_pro_black-webfont.eot?#iefix') format('eot'),
+       url('/fonts/maven_pro_black-webfont.woff') format('woff'),
+       url('/fonts/maven_pro_black-webfont.ttf') format('truetype'),
+       url('/fonts/maven_pro_black-webfont.svg#webfontXhB2DgBK') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
