@@ -23,7 +23,7 @@ each song:
 <h1>Playlist</h1>
 
 <ul>
-  {{#each controller}}
+  {{#each content}}
     <li>{{name}} by {{artist}}</li>
   {{/each}}
 </ul>
