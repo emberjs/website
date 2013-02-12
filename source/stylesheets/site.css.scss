@@ -1284,3 +1284,44 @@ body.api {
     border-radius: 3px;
   }
 }
+
+
+/* Swiftype Search CSS overrides - https://swiftype.com/documentation/tutorials/custom_styles
+   =========================================================================================== */
+
+/* Change color of search dropdown text */
+.swiftype-widget .autocomplete ul li {
+  p.title {
+    color: $orange-color;
+  }
+
+  &.active {
+    background: none;
+    background-color: $orange-color;
+    border-top: 1px solid darken($orange-color, 20%);
+    border-bottom: 1px solid darken($orange-color, 20%);
+    -webkit-box-shadow: 0 1px 0 #C0242D inset;
+
+    .sections {
+      color: white;
+
+      em {
+        color: $black-color;
+        text-shadow: lighten($orange-color, 10%) 0px -1px 0px;
+      }
+    }
+  }
+}
+
+/* Changing the search result link colors */
+.st-result-listing a {
+  color: $orange-color;
+
+  &:visited {
+    color: darken($orange-color, 20%);
+  }
+
+  &hover {
+    color: lighten($orange-color, 20%);
+  }
+}
