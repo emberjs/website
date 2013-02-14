@@ -214,9 +214,21 @@ ol {
   position: relative;
 
   #back-to-top {
+    padding-left: 13px;
     text-align: center;
     display: none;
     @include transition(opacity 0.05s linear);
+
+    @media screen and (max-width: 1200px){
+      padding-left: 0px;
+      height: 20px;
+      width: 30px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 1020px){
+      display: none !important;
+    }
   }
 
   a {
