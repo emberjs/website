@@ -169,7 +169,7 @@ this line into `hello/js/app.js` for the moment:
     window.App = Ember.Application.create();
 
 Now, open `hello/js/index.html` in a web browser.  You should see
-"Hello from Ember.js" emblazoned across the window in glorious <h1>.
+"Hello from Ember.js" emblazoned across the window in glorious \<h1\>.
 
 
 Your First Controller (and Template)
