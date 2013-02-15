@@ -70,7 +70,7 @@ starting point is this:
 	<h1>Hello from Ember.js</h1>
       </script>
 
-      <script src="js/libs/jquery-1.7.2.min.js"</script>
+      <script src="js/libs/jquery-1.7.2.min.js"></script>
       <script src="js/libs/handlebars-1.0.0.beta.6.js"></script>
       <script src="js/libs/ember-1.0.0-pre.2.min.js"></script>
       <script src="js/app.js"></script>
