@@ -88,7 +88,7 @@ App.peopleController = Em.ArrayController.create({
     <ul id="slider">
     <% data.users.slice(0,12).each do |user| %>
       <li class="user">
-        <a href="<%= user.url %>">
+        <a href="<%= user.url %>" rel="nofollow">
           <img src="/images/about/<%= user.image %>">
         </a>
       </li>
