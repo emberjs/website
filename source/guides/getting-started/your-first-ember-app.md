@@ -67,7 +67,7 @@ starting point is this:
     </head>
     <body>
       <script type="text/x-handlebars">
-	<h1>Hello from Ember.js</h1>
+        <h1>Hello from Ember.js</h1>
       </script>
 
       <script src="js/libs/jquery-1.7.2.min.js"></script>
@@ -143,7 +143,7 @@ This is used to limit the rendering of the page to the screen width
 for mobile browsers.
 
       <!--[if lt IE 9]>
-	<script src="js/libs/html5.js"></script>
+        <script src="js/libs/html5.js"></script>
       <![endif]-->
 
 If we have a less recent version of Internet Explorer, this
@@ -155,7 +155,7 @@ wouldn't otherwise have access to.
       <script src="js/libs/handlebars-1.0.0.beta.6.js"></script>
       <script src="js/libs/ember-1.0.0-pre.2.min.js"></script>
 
-Finally, These load the libraries we need for ember to work before we
+Finally, these load the libraries we need for ember to work before we
 load the `hello/js/app.js` file.
 
 
@@ -200,7 +200,7 @@ value we marked as `you` in our new `App.ApplicationController` is dropped
 into the template where we'd expect.
 
 It's important to note that the name `ApplicationController` is magic:
-Ember.js always expects there to be one, and it's effectively the
+every Ember.js application has one, and it's effectively the
 entry point for your application.
 
 The name `App` is *not* magic.  It's just a namespace, and you can
@@ -225,7 +225,7 @@ this:
     App.ApplicationController = Ember.Controller.extend({
       you: "Your Name Here",
       chompchompchomp: function() {
-	this.set( "you", this.you.slice(1) );
+        this.set( "you", this.you.slice(1) );
       }
     });
 
@@ -268,7 +268,7 @@ Replace the entire content of `hello/js/app.js` with the following:
     App.you = "Your Name Here";
 
     App.Router.map(function(){
-	this.route("italic");
+      this.route("italic");
     });
 
 Now, Replace the template in `hello/index.html` with these templates:
@@ -311,10 +311,10 @@ Points to note:
   location, and the `App` namespace is globally visible.  Yes, this
   means we've created a global variable.  We'll fix that in a bit.
 
-You might well be asking "Well, where our `ApplicationController` go?"
+You might well be asking "Well, where did our `ApplicationController` go?"
 And you would be right to wonder.  The answer is that if you're not
 doing any customisation, `App.ApplicationController` doesn't need to
-be defined.  One gets created for you automatically.
+be explicitly defined.  One gets created for you automatically.
 
 The second oddity is our `App.Router.map()` call.  Why, you might
 think, does it only define an `italic` route?  Surely an `index` route
@@ -358,7 +358,7 @@ Now, bring the ApplicationController back, with a modified
 
     App.ApplicationController = Ember.Controller.extend({
       chompchompchomp: function() {
-	App.set( "you", App.you.slice(1) );
+        App.set( "you", App.you.slice(1) );
       }
     });
 
