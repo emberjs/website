@@ -13,7 +13,7 @@ title: "Community"
     <tr>
       <% slice.each do |user| %>
         <td>
-          <a href="<%= user.url %>">
+          <a href="<%= user.url %>" rel="nofollow">
             <img src="/images/about/<%= user.image %>">
           </a>
         </td>
@@ -25,5 +25,5 @@ title: "Community"
 <a class="orange button" href="mailto:hello@emberjs.com">
   GET LISTED
 </a>
-  
+
 </div>
