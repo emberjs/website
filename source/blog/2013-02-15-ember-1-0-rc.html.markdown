@@ -1,0 +1,125 @@
+---
+title: Ember 1.0 RC
+tags: Recent Posts
+---
+
+Today at Ember Camp, we announced the release of Ember.js 1.0 RC1.
+
+This release is all about fixing bugs from the `pre4` release, and
+gets us that much closer to a final 1.0 release. Between this release
+and the 1.0 final, we will mostly be focusing on stability and documentation.
+
+If you discover any blocking bugs or undocumented areas, please file tickets at
+the emberjs/ember.js repo on GitHub and consider helping out.
+
+### Route Replacement
+
+You can now transition to a new route without creating an entry in the history:
+
+```js
+// instead of this, which creates a history entry
+router.transitionTo('index');
+
+// do this
+router.replaceWith('index');
+```
+
+In the `redirect` hook, you can just use `transitionTo` and Ember won't create
+a history entry.
+
+In a controller, you can use `replaceRoute` (instead of `transitionToRoute`)
+to do the same thing.
+
+### Item Controller
+
+If you want every item in a `{{#each}}` to be wrapped in an `ObjectController`,
+you can do so easily:
+
+```js
+{{#each posts itemController="post"}}
+  {{!-- `this` in here is each post wrapped in an App.PostController --}}
+{{/each}}
+```
+
+### Register and Inject
+
+Internally, Ember uses a "container" to instantiate your controllers and other
+objects.
+
+As of Ember 1.0 RC1, you can use `App.register` to override the default lookup
+for controllers and other objects. For example:
+
+```js
+App.register('controller:post', Ember.ObjectController.extend());
+```
+
+In general, you should use the default naming conventions, which Ember will use
+to find objects, but you can use this API for advanced usages.
+
+Similarly, you can use `App.inject` to tell Ember to automatically inject
+objects into other Ember objects.
+
+```js
+App.register('network:main', App.NetworkAdapter);
+App.inject('controller', 'network', 'network:main');
+```
+
+This will create a single instance of `App.NetworkAdapter` and give it to every
+controller created over the course of building your application. Internally,
+Ember Data uses this API to give every controller the application's store:
+
+### Router Activate and Deactivate
+
+Currently, many people are using the undocumented and private `enter` and
+`exit` hooks to run code whenever Ember activates a route handler or
+deactivates it.
+
+As of Ember 1.0 RC1, there are public hooks: `activate` and `deactivate`. Note
+that the `activate` hook will run only when a route handler is activated for
+the first time. If a route handler's context changes, the `setupController`
+hook will run again, but not the `activate` hook.
+
+### `App.reset()`
+
+If you are trying to run integration tests with Ember, you might have noticed
+that there is no good way to reset all of an application's state.
+
+No more!
+
+As of Ember 1.0 RC1, you can call `App.reset()` to destroy all objects created
+for the application, and bring the application back to `/`.
+
+### Big List of Changes
+
+Since `.pre4`, we've added these features:
+
+* Added the ability to replace the current route without adding a history
+  entry, using `router.replaceWith`
+* Added support for String literals in `{{action}}` and `{{linkTo}}` to
+  differentiate between static String parameters and properties on the current
+  context
+* Allow redirection from routes that are not the final resting route
+* Fix a bug where using named outlets would confuse where child templates should
+  be rendered into
+* Add `itemController`, which allows a `{{#each}}` to wrap each iterated element
+  in a controller that can be used to store transient state
+* Fix a bug involving {{else}} templates only working a single time
+* Add `intersection` to `EnumerableUtils`
+* Added `App.register` and `App.inject` to control the default application's
+  dependency injection container
+* Fixes regressions in jQuery 1.9 to address changes made to .attr and .prop
+* Add support for `{{unbound helper}}` where `helper` is a custom helper
+  registered via `Ember.Handlebars.registerBoundHelper`
+* Added `Ember.debug` to print debug-level warnings and use it to print the
+  current version of Ember and its dependencies on boot
+* Fix a bug where changing the model property passed to `{{render}}` does not
+  update the rendered template
+* Added public `activate` and `deactivate` hooks in the router. If you were
+  using the private `enter` and `exit` methods, please switch!
+* Added `Application#reset` to help with integration tests
+* Several fixes for the Ember Inspector
+* Many bug and performance fixes
+
+You can see the full changelog at [the official CHANGELOG][1].
+
+[1]: https://github.com/emberjs/ember.js/blob/master/CHANGELOG
