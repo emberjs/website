@@ -2047,7 +2047,7 @@ classes:
 
       contents in a KVO-friendly way. You can also be notified whenever the
 
-      membership if an array changes by changing the syntax of the property to
+      membership of an array changes by changing the syntax of the property to
 
       `.observes(''*myProperty.[]'')`.
 
