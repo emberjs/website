@@ -24,9 +24,6 @@ Next, we need to collect these dependencies.  They are:
   [here](http://code.jquery.com/jquery-1.7.2.min.js).
 - Handlebars. Version 1.0.rc.2, available
   [here](https://raw.github.com/wycats/handlebars.js/1.0.rc.2/dist/handlebars.js).
-- Html5.js.  This isn't versioned, and fingers crossed the version
-  [here](http://html5shiv.googlecode.com/svn/trunk/html5.js) will
-  still work for you when you read this.
 - Ember.js itself. The current version at time of writing is
   1.0.0-pre4, available
   [here](https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-pre.4.js).
@@ -35,7 +32,6 @@ Download each of these files into the `hello/js/libs` directory.  You should now
 
     hello/js/libs/jquery-1.7.2.min.js
     hello/js/libs/handlebars.js
-    hello/js/libs/html5.js
     hello/js/libs/ember-1.0.0-pre.4.js
 
 Your application code, where the JavaScript which comprises the logic
@@ -60,10 +56,6 @@ starting point is this:
       <meta name="author" content="Your Name Here">
 
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-      <!--[if lt IE 9]>
-      <script src="js/libs/html5.js"></script>
-      <![endif]-->
     </head>
     <body>
       <script type="text/x-handlebars">
@@ -141,15 +133,6 @@ Hopefully there should be no surprises here.
 
 This is used to limit the rendering of the page to the screen width
 for mobile browsers.
-
-      <!--[if lt IE 9]>
-        <script src="js/libs/html5.js"></script>
-      <![endif]-->
-
-If we have a less recent version of Internet Explorer, this
-conditional script tag will provide certain html5 facilities we
-wouldn't otherwise have access to.
-
 
       <script src="js/libs/jquery-1.7.2.min.js"></script>
       <script src="js/libs/handlebars-1.0.0.beta.6.js"></script>
