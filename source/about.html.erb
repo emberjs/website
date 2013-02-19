@@ -65,7 +65,7 @@ App.Person = DS.Model.extend({
 });
 
 App.peopleController = Em.ArrayController.create({
-  content: App.Person.findAll()
+  content: App.Person.find()
 });
 <% end %>
 
