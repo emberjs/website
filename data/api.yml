@@ -10469,7 +10469,7 @@ classitems:
   name: addObserver
   params:
   - name: key
-    description: The key to observer
+    description: The key to observe
     type: String
   - name: target
     description: The target object to invoke
@@ -10496,7 +10496,7 @@ classitems:
   name: removeObserver
   params:
   - name: key
-    description: The key to observer
+    description: The key to observe
     type: String
   - name: target
     description: The target object to invoke
