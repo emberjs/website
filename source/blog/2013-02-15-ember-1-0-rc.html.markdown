@@ -79,7 +79,7 @@ that the `activate` hook will run only when a route handler is activated for
 the first time. If a route handler's context changes, the `setupController`
 hook will run again, but not the `activate` hook.
 
-### `App.reset()`
+### App.reset()
 
 If you are trying to run integration tests with Ember, you might have noticed
 that there is no good way to reset all of an application's state.
