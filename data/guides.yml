@@ -103,6 +103,8 @@ Views:
     url: "views/handling-events"
   - title: "Inserting Views in Templates"
     url: "views/inserting-views-in-templates"
+  - title: "Adding Layouts to Views"
+    url: "views/adding-layouts-to-views"
   - title: "Customizing a View's Element"
     url: "views/customizing-a-views-element"
   - title: "Built-in Views"
