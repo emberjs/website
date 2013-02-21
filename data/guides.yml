@@ -73,6 +73,8 @@ Controllers:
     url: "controllers/representing-a-single-model-with-objectcontroller"
   - title: "Representing Multiple Models with ArrayController"
     url: "controllers/representing-multiple-models-with-arraycontroller"
+  - title: "Managing Dependencies Between Controllers"
+    url: "controllers/dependencies-between-controllers"
 
 Models:
   - title: "Introduction"
