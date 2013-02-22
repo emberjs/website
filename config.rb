@@ -27,7 +27,6 @@ activate :api_docs,
 activate :blog do |blog|
   blog.prefix = 'blog'
   blog.layout = 'layouts/blog'
-  blog.summary_separator = %r{(<p>READMORE</p>)} # Markdown adds the <p>
   blog.tag_template = 'blog/tag.html'
 end
 
