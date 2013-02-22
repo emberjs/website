@@ -28,7 +28,7 @@ activate :blog do |blog|
   blog.prefix = 'blog'
   blog.layout = 'layouts/blog'
   blog.summary_separator = %r{(<p>READMORE</p>)} # Markdown adds the <p>
-  blog.taglink = "categories/:tag.html"
+  blog.tag_template = 'blog/tag.html'
 end
 
 page '/blog/feed.xml', layout: false
