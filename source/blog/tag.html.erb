@@ -4,24 +4,12 @@ per_page: 12
 ---
 <% partial_for :sidebar, 'sidebar' %>
 
-<h1>Articles tagged '<%= tagname %>'</h1>
+<h1><%= tagname %></h1>
 
-<% if paginate %>
-  <p>Page <%= page_number %> of <%= num_pages %></p>
-
-  <% if prev_page %>
-    <p><%= link_to 'Previous page', prev_page %></p>
-  <% end %>
-<% end %>
-
-<ul>
-  <% page_articles.each_with_index do |article, i| %>
-    <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-  <% end %>
-</ul>
-
-<% if paginate %>
-  <% if next_page %>
-    <p><%= link_to 'Next page', next_page %></p>
-  <% end %>
+<% page_articles.each_with_index do |article, i| %>
+  <article class="blog-post-summary">
+    <h2><%= link_to article.title, article %> &ndash; <time><%= article.date.strftime('%b %d, %Y') %></time></span></h2>
+    <%= article.summary %>
+    <%= link_to "Read more...", article %>
+  </article>
 <% end %>
