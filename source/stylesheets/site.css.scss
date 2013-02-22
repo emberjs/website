@@ -918,8 +918,9 @@ ol {
     background: url(/images/link.png) no-repeat;
     background-size: 18px 9px;
     left: -19px;
-    margin-top: 7px;
     opacity: 0.5;
+    top: 50%;
+    margin-top: -5px;
   }
 
   table {
