@@ -1315,12 +1315,35 @@ body.community #content {
   API
 **/
 
-body.api {
+.api {
   h3 {
     &.name {
       text-transform: none;
       float: left;
       margin-right: 5px;
+    }
+    &.anchorable-toc {
+      position: relative;
+
+      &:hover a.toc-anchor {
+        display: block;
+      }
+
+      .toc-anchor {
+        display: none;
+        position: absolute;
+        text-decoration: none;
+        border: none;
+        left: -1em;
+        width: 30px;
+        height: 13px;
+        background: url(/images/link.png) no-repeat;
+        background-size: 18px 9px;
+        left: -19px;
+        opacity: 0.5;
+        top: 50%;
+        margin-top: -5px;
+      };
     }
   }
 
