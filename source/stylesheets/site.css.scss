@@ -314,13 +314,21 @@ ol {
       }
 
       &.level-2, &.level-3 {
-        padding: 2px 0 2px 0;
 
         a {
+          padding: 4px 0 4px 0;
+          display: block;
           text-transform: none;
           color: #d84a32;
           font-weight: normal;
           font-size: 12px;
+          &:hover {
+            background-color: #F2D1CB;
+            color: black;
+          }
+          &:active {
+            color: rgb(94, 94, 94);
+          }
         }
         &.sub-selected {
           // fancy me up.
