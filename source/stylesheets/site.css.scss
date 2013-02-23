@@ -196,7 +196,7 @@ ol {
     margin-bottom: 20px;
   }
   .pane {
-    margin: 2em 1.5em;
+    margin: 1em 1.5em  2em 1.5em;
   }
 }
 
@@ -1349,9 +1349,9 @@ body.api {
   }
 
   #api-options {
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding-bottom: 1em;
+    border-bottom: solid 1px #e0e0e0;
+    margin-bottom: 1.5em;
   }
 
   .class-info {
