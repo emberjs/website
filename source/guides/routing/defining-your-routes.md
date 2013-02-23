@@ -187,6 +187,10 @@ Visiting `/posts` is slightly different. It will first render the
 `posts` template. Then, it will render the `posts/index` template into the
 `posts` template's outlet.
 
+NOTE: If you do not create a `posts` template with an outlet, Ember will
+display a warning message: "The immediate parent route did not render into
+the main outlet..."
+
 Finally, visiting `/posts/new` will first render the `posts` template,
 then render the `posts/new` template into its outlet.
 
