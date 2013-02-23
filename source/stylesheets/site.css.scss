@@ -555,7 +555,42 @@ ol {
 
   .tabs > ul{
     margin: 0 0;
+    a {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+    }
     padding: 0 0;
+
+    li.active, li:hover {
+      border-top: 1px solid #b23e2a;
+    }
+
+    li:first-child {
+      border-left: 1px solid transparent;
+      &:hover, &.active{
+        border-left: 1px solid #b23e2a;
+      }
+    }
+
+    li:last-child {
+      border-right: 1px solid transparent;
+      &:hover, &.active {
+        border-right: 1px solid #b23e2a;
+      }
+    }
+    li.active , li {
+      &:last-child a{
+        border-right: 1px solid transparent;
+      }
+    }
+    li.active a, li a:hover{
+      background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+      border-right: 1px solid #b23e2a;
+
+      color: white;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      border-left: 1px solid transparent;
+    }
   }
 
   table {
