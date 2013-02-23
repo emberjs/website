@@ -553,6 +553,20 @@ ol {
     }
     padding: 0 0;
 
+    li:first-child {
+      border-top-left-radius: 4px;
+      a {
+        border-top-left-radius: 2px;
+      }
+    }
+
+    li:last-child {
+      border-top-right-radius: 4px;
+      a {
+        border-top-right-radius: 2px;
+      }
+    }
+
     li.active, li:hover {
       border-top: 1px solid #b23e2a;
     }
