@@ -486,6 +486,47 @@ ol {
 
     }
   }
+
+  #github {
+    position: absolute;
+    right: 7px;
+    top: 17px;
+
+    a {
+      img {
+        float: left;
+        margin-top: 7px;
+        margin-right: 6px;
+        display: block;
+      }
+
+      font-family: "MavenProBold";
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #faf2ee;
+      @include text-shadow(rgba(0,0,0,0.3) 0px 1px 0px);
+
+      display: block;
+      padding: 0px 1em;
+      height: 28px;
+      line-height: 28px;
+
+      background-color: #ff6e56;
+      @include filter-gradient(#ff6e56, #ed4f35, vertical);
+      @include background-image(linear-gradient(top, #ff6e56 0%,#ed4f35 100%));
+
+      border: 1px solid #a93926;
+      @include border-radius(4px);
+      @include box-shadow(
+        inset rgba(255,255,255, 0.17) 0 1px 1px
+      );
+
+      &:hover {
+        color: #fff;
+        background: #f86c55;
+      }
+    }
+  }
 }
 
 #content-wrapper {
