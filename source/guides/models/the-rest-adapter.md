@@ -108,7 +108,7 @@ The JSON should encode the relationship as an array of IDs:
 ```js
 {
   "post": {
-    "comments": [1, 2, 3]
+    "comment_ids": [1, 2, 3]
   }
 }
 ```
@@ -144,7 +144,7 @@ outside the JSON root, and are represented as an array of hashes:
   "post": {
     "id": 1,
     "title": "Rails is omakase",
-    "comments": [1, 2, 3]
+    "comment_ids": [1, 2, 3]
   },
 
   "comments": [{
