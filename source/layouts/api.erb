@@ -106,7 +106,6 @@
           <% api_modules.each do |id, data| %>
             <% li_for(:modules, name: data['name'], class: 'sub-selected') do %>
               <%= api_module_link data['name'] %>
-              <%= api_file_link data, title: 'github', target: '_blank' %>
             <% end %>
           <% end %>
         <% end %>
@@ -118,7 +117,6 @@
           <% api_namespaces.each do |id, data| %>
             <% li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
               <%= api_namespace_link data['name'] %>
-              <%= api_file_link data, title: 'github', target: '_blank' %>
             <% end %>
           <% end %>
         <% end %>
@@ -130,7 +128,6 @@
           <% api_classes.each do |id, data| %>
             <% li_for(:classes, name:data['name'], class: 'sub-selected') do %>
               <%= api_class_link data['name'] %>
-              <%= api_file_link data, title: 'github', target: '_blank' %>
             <% end %>
           <% end %>
         <% end %>

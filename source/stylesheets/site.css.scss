@@ -285,22 +285,6 @@ ol {
           }
         }
 
-        li {
-          a.api-file-link {
-            display: none;
-            color: #717171;
-            font-size: 11px;
-            margin: 0;
-            padding: 0 0 0 0.5em;
-            &:hover {
-              color: black;
-            }
-          }
-
-          &:hover a.api-file-link{
-            display: inline-block;
-          }
-        }
       }
 
       &.level-1 {
