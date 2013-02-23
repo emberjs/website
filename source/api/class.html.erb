@@ -32,38 +32,36 @@
   </div>
 <% end %>
 
+<% types = ['method', 'property', 'event'].select{|t| @class.classitems[t] } %>
 
-<% types =['method', 'property', 'event'].select{|t| @class.classitems[t] } %>
-
-<div class="tabs">
-  <ul>
-    <li><a href="#index">Index</a></li>
-    <% types.each do |type| %>
-      <li><a href="#<%= type.pluralize %>"><%= type.pluralize.titleize %></a></li>
-    <% end %>
-  </ul>
-
-  <div class="pane" id="index">
-    <%= partial "api_options" %>
-    <% types.each do |type| %>
-      <p><h2><%= type.pluralize.titleize %></h2></p>
-      <ul class="index-list">
-        <% @class.classitems[type].sort.each do |(name, data)| %>
-          <li class="<%= type %> <%= api_classes_for_item(data) %>">
-            <a href="#<%= type %>_<%= sanitize_class name %>"><%= name %></a>
-          </li>
-        <% end %>
-      </ul>
-    <% end %>
-  </div>
-
-<% types.each do |type| %>
-  <div class="pane" id="<%= type.pluralize %>">
-    <%= partial "api_options" %>
-    <% @class.classitems[type].sort.each do |(name, data)| %>
-      <%= partial "api/item", :locals => { :item => data, :type => type } %>
-    <% end %>
+<% if types.any? %>
+  <div class="tabs">
+    <ul>
+      <li><a href="#index">Index</a></li>
+      <% types.each do |type| %>
+        <li><a href="#<%= type.pluralize %>"><%= type.pluralize.titleize %></a></li>
+      <% end %>
+    </ul>
+    <div class="pane" id="index">
+      <%= partial "api_options" %>
+      <% types.each do |type| %>
+        <p><h2><%= type.pluralize.titleize %></h2></p>
+        <ul class="index-list">
+          <% @class.classitems[type].sort.each do |(name, data)| %>
+            <li class="<%= type %> <%= api_classes_for_item(data) %>">
+              <a href="#<%= type %>_<%= sanitize_class name %>"><%= name %></a>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  <% types.each do |type| %>
+    <div class="pane" id="<%= type.pluralize %>">
+      <%= partial "api_options" %>
+      <% @class.classitems[type].sort.each do |(name, data)| %>
+        <%= partial "api/item", :locals => { :item => data, :type => type } %>
+      <% end %>
+    </div>
+  <% end %>
   </div>
 <% end %>
-</div>
-
