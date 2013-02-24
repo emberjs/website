@@ -32,14 +32,3 @@ App.Store = DS.Store.extend({
   adapter: 'App.MyCustomAdapter'
 });
 ```
-
-### Multiple Adapters
-In some instances it can be necessary to need different adapters for
-different models in your project. The Store object supports registering
-multiple adapters like so:
-
-```js
-App.Store.registerAdapter('App.Post', DS.RESTAdapter.extend({
-  // implement adapter
-}));
-```
