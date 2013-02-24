@@ -3,7 +3,7 @@
 One of the most important jobs of a route handler is rendering the
 appropriate template to the screen.
 
-By default, a route handler will render the template into the closest 
+By default, a route handler will render the template into the closest
 parent with a template.
 
 ```js
@@ -64,3 +64,11 @@ App.PostsRoute = Ember.Route.extend({
   }
 });
 ```
+
+NOTE: When a template tries to render, and the parent route did not render a template, then you will see this warning:
+
+"The immediate parent route did not render into the main outlet ..."
+
+This means that the the current route tried to render into the parent routes template, but the parent route didn't render a template, or if it did, the template did not render 'into' the main template (a default {{outlet}}). For the case of the following routes: Application > Posts > Post, if the posts route does not have a template, the post template will render into the application template.
+
+This default behavior could be what you expect, or it could be unexpected and the waring is there to point out the potential unexpected behavior.
