@@ -2112,7 +2112,7 @@ classes:
 
       contents in a KVO-friendly way. You can also be notified whenever the
 
-      membership if an array changes by changing the syntax of the property to
+      membership of an array changes by changing the syntax of the property to
 
       `.observes(''*myProperty.[]'')`.
 
@@ -10469,7 +10469,7 @@ classitems:
   name: addObserver
   params:
   - name: key
-    description: The key to observer
+    description: The key to observe
     type: String
   - name: target
     description: The target object to invoke
@@ -10496,7 +10496,7 @@ classitems:
   name: removeObserver
   params:
   - name: key
-    description: The key to observer
+    description: The key to observe
     type: String
   - name: target
     description: The target object to invoke
@@ -11604,10 +11604,20 @@ classitems:
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/string.js
   line: 226
-  description: ! "Returns the Capitalized form of a string\n\n   'innerHTML'.capitalize()
-    \        => 'InnerHTML'\n   'action_name'.capitalize()       => 'Action_name'\n
-    \  'css-class-name'.capitalize()    => 'Css-class-name'\n   'my favorite items'.capitalize()
-    => 'My favorite items'"
+  description: ! 'Returns the Capitalized form of a string.
+
+
+    ```javascript
+
+    ''innerHTML''.capitalize(); // ''InnerHTML''
+
+    ''actionname''.capitalize(); // ''Actionname''
+
+    ''css-class-name''.capitalize(); // ''Css-class-name''
+
+    ''my favorite items''.capitalize(); // ''My favorite items''
+
+    ```'
   itemtype: method
   name: capitalize
   params:
