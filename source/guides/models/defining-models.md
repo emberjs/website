@@ -72,7 +72,7 @@ To declare a many-to-many relationship between two models, use
 `DS.hasMany`:
 
 ```js
-App.BlogPost = DS.Model.extend({
+App.Post = DS.Model.extend({
   tags: DS.hasMany('App.Tag')
 });
 
