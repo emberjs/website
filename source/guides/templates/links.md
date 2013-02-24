@@ -31,11 +31,13 @@ rendered HTML would look something like this:
 </ul>
 ```
 
+When the rendered link matches the current route, then the link is given `class="active"`.
+
 The `{{linkTo}}` helper takes:
 
 * The name of a route. In this example, it would be `index`, `posts`, or
   `post`.
-* If the route has a [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments), 
+* If the route has a [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments),
   a model that represents the segment. By default, Ember.js will replace the segment with the
   value of the object's `id` property.
 * An optional title which will be bound to the `a` title attribute
