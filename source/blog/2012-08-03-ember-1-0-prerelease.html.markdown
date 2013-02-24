@@ -98,7 +98,7 @@ Since this is a prerelease, there are still some important known issues:
 * **Router** - The Router API is not finalized. Conceptually, things
   are pretty stable, but API details are likely to change.
 * **Ember.Object.create** - We are currently considering changing `create`
-  to behave to make it behave more like `setProperties`. If this does
+  to make it behave more like `setProperties`. If this does
   happen, we will try to maintain backwards compatibility as far as
   possible.
 * **Ember Data** - We hope to merge Ember Data into the core Ember project
