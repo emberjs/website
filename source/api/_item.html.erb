@@ -1,7 +1,7 @@
 
 <% item_name_id= "#{type}_#{sanitize_class item['name']}" %>
-<div  class="<%= type %> <%= api_classes_for_item item %>">
-  <h3 id="<%= item_name_id %>" class="name anchorable-toc"><code><%= item['name'] %></code></h3>
+<div id="<%= item_name_id %>" class="<%= type %> <%= api_classes_for_item item %> item-entry">
+  <h3 data-id="<%= item_name_id %>" class="name anchorable-toc"><code><%= item['name'] %></code></h3>
 <% if item['params'] %>
   <span class="args">
     (<%= item['params'].map{|i| i['name']}.join(', ') %>)

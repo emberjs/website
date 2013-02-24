@@ -84,7 +84,7 @@
       $(function(){
         $('.anchorable-toc').each(function(){
           var toc = $(this),
-          id = toc.attr('id'),
+          id = toc.data('id') || toc.attr('id'),
           href = "#" + id,
           anchor = '<a class="toc-anchor" href="'+href+'"></a>';
 
