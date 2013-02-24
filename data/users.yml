@@ -50,8 +50,8 @@
   image: netminds.png
 - url: http://mochaleaf.com
   image: mochaleaf.png
-# - url: http://kabisa.nl/
-#   image: kabisa.png
+- url: http://kabisa.nl/
+  image: kabisa.png
 - url: http://fundinggates.com
   image: fundinggates.png
 - url: http://witsbits.com
