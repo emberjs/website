@@ -1379,3 +1379,13 @@ body.api {
     display: block;
   }
 }
+
+/**
+  404 Page
+**/
+
+body.not-found #content {
+  margin: 3em auto 0 auto;
+  width: 54em;
+}
+
