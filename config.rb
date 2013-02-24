@@ -86,4 +86,10 @@ helpers do
 
     "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
   end
+
+  def page_classes
+    classes = super
+    return 'not-found' if classes == '404'
+    classes
+  end
 end
