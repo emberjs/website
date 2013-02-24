@@ -59,7 +59,7 @@ route handlers until it reaches the application route.
 Define actions on the route's `events` property.
 
 ```javascript
-App.PostsIndex = Ember.Route.extend({
+App.PostsIndexRoute = Ember.Route.extend({
   events: {
     myCoolAction: function() {
       // do your business.
