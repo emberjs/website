@@ -1,4 +1,4 @@
-@import "compass";
+aimport "compass";
 @import "compass/reset";
 @import "compass/typography/text/ellipsis";
 
@@ -301,6 +301,10 @@ ol {
 
         &.selected > a {
           background-color: #f16f58;
+          background-image:         linear-gradient(-90deg, #f67862, #e7624b);
+          background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
+          background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
+          background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
           background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
           outline: 1px solid #b23e2a;
           color: white;
@@ -589,6 +593,11 @@ ol {
       }
     }
     li.active a, li a:hover{
+      background-color:  #f67862;
+      background-image:         linear-gradient(-90deg, #f67862, #e7624b);
+      background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
+      background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
+      background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
       background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
       border-right: 1px solid #b23e2a;
 
