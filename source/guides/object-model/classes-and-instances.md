@@ -113,7 +113,7 @@ Person.create({
 // alerts "Stefan Penner, reporting for duty!"
 ```
 
-If you are subclassing a framework like class, like `Ember.View` or
+If you are subclassing a framework class, like `Ember.View` or
 `Ember.ArrayController`, and you override the `init` method, make sure
 you call `this._super()`! If you don't, the system may not have an
 opportunity to do important setup work, and you'll see strange behavior
