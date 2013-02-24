@@ -187,7 +187,7 @@ todos = [
 
 todos.filterProperty('isDone', true);
 
-// returns an Array containing just the first item
+// returns an Array containing only items with `isDone == true`
 ```
 
 If you want to return just the first matched value, rather than an Array containing all of the matched values, you can use `find` and `findProperty`, which work just like `filter` and `filterProperty`, but return only one item.
