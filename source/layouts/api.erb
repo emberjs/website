@@ -84,7 +84,7 @@
       $(function(){
         $('.anchorable-toc').each(function(){
           var toc = $(this),
-          id = toc.attr('id'),
+          id = toc.data('id') || toc.attr('id'),
           href = "#" + id,
           anchor = '<a class="toc-anchor" href="'+href+'"></a>';
 
@@ -106,7 +106,6 @@
           <% api_modules.each do |id, data| %>
             <% li_for(:modules, name: data['name'], class: 'sub-selected') do %>
               <%= api_module_link data['name'] %>
-              <%= api_file_link data, title: 'github', target: '_blank' %>
             <% end %>
           <% end %>
         <% end %>
@@ -118,7 +117,6 @@
           <% api_namespaces.each do |id, data| %>
             <% li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
               <%= api_namespace_link data['name'] %>
-              <%= api_file_link data, title: 'github', target: '_blank' %>
             <% end %>
           <% end %>
         <% end %>
@@ -130,36 +128,10 @@
           <% api_classes.each do |id, data| %>
             <% li_for(:classes, name:data['name'], class: 'sub-selected') do %>
               <%= api_class_link data['name'] %>
-              <%= api_file_link data, title: 'github', target: '_blank' %>
             <% end %>
           <% end %>
         <% end %>
       <% end %>
   <% end %>
-
-  <div id='api-options' class="hidden">
-    Show:
-
-    <label>
-      <input type='checkbox' data-type='inherited' checked>
-      Inherited
-    </label>
-
-    <label>
-      <input type='checkbox' data-type='protected'>
-      Protected
-    </label>
-
-    <label>
-      <input type='checkbox' data-type='private'>
-      Private
-    </label>
-
-    <label>
-      <input type='checkbox' data-type='deprecated'>
-      Deprecated
-    </label>
-  </div>
-
   <%= yield %>
 <% end %>

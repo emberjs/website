@@ -25,9 +25,11 @@ module TOC
           entry[:skip_sidebar]
         end
 
-        current_url = request.path.split('/')[2]
-        sub_url     = request.path.split('/')[3]
-        intro_page  = sub_url == 'index.html'
+        request_path_splits = request.path.split('/')
+
+        current_url = request_path_splits[1]
+        sub_url     = request_path_splits[2]
+        intro_page  = request_path_splits.length == 3
         sub_url     = nil if intro_page
         chapter     = entries[0].url.split("/")[0]
 
@@ -68,7 +70,7 @@ module TOC
     def chapter_name
       guides = data.guides
 
-      sub_url = request.path.split('/')[2]
+      sub_url = request.path.split('/')[1]
       heading = ''
 
       guides.each_entry do |section, entries|
