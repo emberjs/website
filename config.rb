@@ -1,6 +1,7 @@
 require 'redcarpet'
 require 'active_support/core_ext'
 
+
 Dir['./lib/*'].each { |f| require f }
 
 # Debugging
@@ -36,8 +37,49 @@ page '/blog/feed.xml', layout: false
 # Pages
 ###
 
-page 'guides*', layout: :guide do
-  @guides = data.guides
+repo = Grit::Repo.new(
+  File.join( File.dirname(__FILE__), ".git" )
+)
+
+def reach_into_guides(content, path=[], &block)
+  if content.is_a? Grit::Tree
+    content.contents.each do |sub_content|
+      reach_into_guides(sub_content, path.dup << content.name, &block)
+    end
+  elsif content.is_a? Grit::Blob
+    if content.name == "index.md" && path[1]
+      yield "#{path * '/'}", content.data
+    else
+      yield "#{path * '/'}/#{content.name}".sub('.md', ''), content.data
+    end
+  end 
+end
+
+data.guide_versions.each do |name, sha|
+  next if name == "Current"
+  commit = repo.commits(sha).first
+  guides_data = ::Middleman::Util.recursively_enhance(
+    YAML.load (commit.tree / "data" / "guides.yml").data
+  )
+  tree = commit.tree / "source" / "guides"
+  reach_into_guides(tree) do |path, data_at_sha|
+    sha_path = path.dup.sub("guides/", "guides/#{sha}/")
+    page sha_path, 
+      :proxy => "guides/versioned.html",
+      :layout => "guide"  do
+        @guides = guides_data
+        @template = data_at_sha
+        @path = path + ".md"
+        @sha = sha
+    end
+  end
+
+  page "/guides/#{sha}", 
+    :proxy => "guides/index.html",
+    :layout => "guide" do
+      @guides = guides_data
+      @sha = sha
+  end
 end
 
 page 'community.html'
