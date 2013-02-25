@@ -24,7 +24,7 @@ body {
   background: url(/images/background-shades.png) no-repeat top center #faf4f1;
   margin: 60px 0 0 0;
   padding: 0;
-  font-family: Helvetica neue;
+  font-family: Helvetica Neue, Helvetica, Arial, Sans-Serif;
   font-size: 14px;
   line-height: 1.4em;
   color: #444444;
@@ -196,7 +196,7 @@ ol {
     margin-bottom: 20px;
   }
   .pane {
-    margin: 2em 1.5em;
+    margin: 1em 1.5em  2em 1.5em;
   }
 }
 
@@ -285,22 +285,6 @@ ol {
           }
         }
 
-        li {
-          a.api-file-link {
-            display: none;
-            color: #717171;
-            font-size: 11px;
-            margin: 0;
-            padding: 0 0 0 0.5em;
-            &:hover {
-              color: black;
-            }
-          }
-
-          &:hover a.api-file-link{
-            display: inline-block;
-          }
-        }
       }
 
       &.level-1 {
@@ -317,6 +301,10 @@ ol {
 
         &.selected > a {
           background-color: #f16f58;
+          background-image:         linear-gradient(-90deg, #f67862, #e7624b);
+          background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
+          background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
+          background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
           background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
           outline: 1px solid #b23e2a;
           color: white;
@@ -330,13 +318,21 @@ ol {
       }
 
       &.level-2, &.level-3 {
-        padding: 2px 0 2px 0;
 
         a {
+          padding: 4px 0 4px 1em;
+          display: block;
           text-transform: none;
           color: #d84a32;
           font-weight: normal;
           font-size: 12px;
+          &:hover {
+            background-color: #F2D1CB;
+            color: black;
+          }
+          &:active {
+            color: rgb(94, 94, 94);
+          }
         }
         &.sub-selected {
           // fancy me up.
@@ -349,8 +345,7 @@ ol {
     @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
     position: absolute;
     bottom: 0px;
-    left: -2px;
-    right: 0;
+    left: -1px;
     width: 220px;
     height: 120px;
     content: '';
@@ -555,7 +550,61 @@ ol {
 
   .tabs > ul{
     margin: 0 0;
+    a {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+    }
     padding: 0 0;
+
+    li:first-child {
+      border-top-left-radius: 4px;
+      a {
+        border-top-left-radius: 2px;
+      }
+    }
+
+    li:last-child {
+      border-top-right-radius: 4px;
+      a {
+        border-top-right-radius: 2px;
+      }
+    }
+
+    li.active, li:hover {
+      border-top: 1px solid #b23e2a;
+    }
+
+    li:first-child {
+      border-left: 1px solid transparent;
+      &:hover, &.active{
+        border-left: 1px solid #b23e2a;
+      }
+    }
+
+    li:last-child {
+      border-right: 1px solid transparent;
+      &:hover, &.active {
+        border-right: 1px solid #b23e2a;
+      }
+    }
+    li.active , li {
+      &:last-child a{
+        border-right: 1px solid transparent;
+      }
+    }
+    li.active a, li a:hover{
+      background-color:  #f67862;
+      background-image:         linear-gradient(-90deg, #f67862, #e7624b);
+      background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
+      background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
+      background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
+      background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+      border-right: 1px solid #b23e2a;
+
+      color: white;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      border-left: 1px solid transparent;
+    }
   }
 
   table {
@@ -918,8 +967,9 @@ ol {
     background: url(/images/link.png) no-repeat;
     background-size: 18px 9px;
     left: -19px;
-    margin-top: 7px;
     opacity: 0.5;
+    top: 50%;
+    margin-top: -5px;
   }
 
   table {
@@ -1273,12 +1323,35 @@ body.community #content {
   API
 **/
 
-body.api {
+.api {
   h3 {
     &.name {
       text-transform: none;
       float: left;
       margin-right: 5px;
+    }
+    &.anchorable-toc {
+      position: relative;
+
+      &:hover a.toc-anchor {
+        display: block;
+      }
+
+      .toc-anchor {
+        display: none;
+        position: absolute;
+        text-decoration: none;
+        border: none;
+        left: -1em;
+        width: 30px;
+        height: 13px;
+        background: url(/images/link.png) no-repeat;
+        background-size: 18px 9px;
+        left: -19px;
+        opacity: 0.5;
+        top: 50%;
+        margin-top: -5px;
+      };
     }
   }
 
@@ -1313,9 +1386,9 @@ body.api {
   }
 
   #api-options {
-    position: absolute;
-    top: 0;
-    right: 0;
+    padding-bottom: 1em;
+    border-bottom: solid 1px #e0e0e0;
+    margin-bottom: 1.5em;
   }
 
   .class-info {

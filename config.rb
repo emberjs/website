@@ -27,8 +27,7 @@ activate :api_docs,
 activate :blog do |blog|
   blog.prefix = 'blog'
   blog.layout = 'layouts/blog'
-  blog.summary_separator = %r{(<p>READMORE</p>)} # Markdown adds the <p>
-  blog.taglink = "categories/:tag.html"
+  blog.tag_template = 'blog/tag.html'
 end
 
 page '/blog/feed.xml', layout: false
@@ -76,9 +75,9 @@ helpers do
 
   def link_to_page name, url
     path = request.path
-    current = path =~ Regexp.new(url)
+    current = path =~ Regexp.new(url[1..-1] + '/index.html')
 
-    if path == '/index.html' and name == 'about'
+    if path == 'index.html' and name == 'about'
       current = true
     end
 
