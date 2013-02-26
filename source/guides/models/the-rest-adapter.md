@@ -161,3 +161,52 @@ outside the JSON root, and are represented as an array of hashes:
   }]
 }
 ```
+
+#### Embedded Relationships
+
+You may also want to embed association records directly in the
+model's record. You can achieve this by configuring the REST
+adapter:
+
+```js
+DS.RESTAdapter.map('App.Post',{
+    comments:{
+        embedded: 'load'
+    }
+})
+```
+
+The embedded option can either be `load` or `always`:
+
+* load: child records are embedded when loading, but should
+be saved as standalone records. In order for this to work, the 
+child records must have an ID.
+* always: child records are embedded when loading, and are saved
+embedded in the same record. This, of course, affects the dirtiness
+of the records (if the child record changes, the adapter will mark 
+the parent record as dirty).
+
+You can now send JSON under the following structure:
+
+```js
+{
+  "post": {
+    "id": 1,
+    "title": "Rails is omakase",
+    "comments": [
+      {
+        "id": 1,
+        "body": "But is it _lightweight_ omakase?"
+      },
+      {
+        "id": 2,
+        "body": "I for one welcome our new omakase overlords"
+      },
+      {
+        "id": 3,
+        "body": "Put me on the fast track to a delicious dinner"
+      }
+    ]
+  }
+}
+```
