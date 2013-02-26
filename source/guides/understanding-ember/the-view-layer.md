@@ -275,10 +275,8 @@ implements that event as a method:
 ```javascript
 App.DeleteButton = Ember.View.create({
   click: function(event) {
-    var stateManager = this.getPath('controller.stateManager');
     var item = this.get('content');
-
-    stateManager.send('deleteItem', item);
+    this.get('controller').send('deleteItem', item);
   }
 });
 ```
