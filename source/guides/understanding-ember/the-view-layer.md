@@ -276,7 +276,7 @@ implements that event as a method:
 App.DeleteButton = Ember.View.create({
   click: function(event) {
     var item = this.get('content');
-    App.Router.router.trigger('deleteItem', item);
+    this.get('controller').send('deleteItem', item);
   }
 });
 ```
