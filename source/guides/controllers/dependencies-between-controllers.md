@@ -41,7 +41,7 @@ it's parent `PostController`, which can be done via `controllers.post`
 ```
 
 We can also create a binding to give ourselves a shorter way to access
-the `PostControler` (since it is `ObjectController`, we don't need or
+the `PostController` (since it is `ObjectController`, we don't need or
 want the `Post` instance directly).
 
 
