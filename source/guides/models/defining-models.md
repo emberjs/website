@@ -17,9 +17,9 @@ computed property.
 var attr = DS.attr;
 
 App.Person = DS.Model.extend({
-  firstName: attr('string'),
-  lastName: attr('string'),
-  birthday: attr('date'),
+  firstName: DS.attr('string'),
+  lastName: DS.attr('string'),
+  birthday: DS.attr('date'),
 
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
