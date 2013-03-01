@@ -1,4 +1,5 @@
 require "bundler/setup"
+require 'yaml'
 
 def git_initialize(repository)
   unless File.exist?(".git")

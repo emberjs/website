@@ -17,17 +17,6 @@ var post = App.Post.find(1);
 ```
 
 The REST adapter will automatically send a `GET` request to `/posts/1`.
-You can specify irregular pluralizations via the adapter's `configure`
-API:
-
-```js
-DS.RESTAdapter.configure("plurals", {
-  person: "people"
-});
-```
-
-This will tell the REST adapter that requests for `App.Person` requests
-should go to `/people/1` instead of `/persons/1`.
 
 The actions you can take on a record map onto the following URLs in the
 REST adapter:
@@ -44,6 +33,45 @@ REST adapter:
     <tr><th>Delete</th><td>DELETE</td><td>/people/123</td></tr>
   </tbody>
 </table>
+
+#### Pluralization Customization
+
+Irregular pluralizations can be specified via the adapter's `configure`
+API:
+
+```js
+DS.RESTAdapter.configure("plurals", {
+  person: "people"
+});
+```
+
+This will tell the REST adapter that requests for `App.Person` requests
+should go to `/people/1` instead of `/persons/1`.
+
+#### Endpoint Path Customization
+
+Endpoint paths can be prefixed with a namespace by setting the `namespace`
+property on the adapter:
+
+```js
+DS.RESTAdapter.reopen({
+  namespace: 'api/1'
+});
+```
+
+Requests for `App.Person` would now target `/api/1/people/1`.
+
+#### Host Customization
+
+An adapter can target other hosts by setting the `url` property.
+
+```js
+DS.RESTAdapter.reopen({
+  url: 'https://api.example.com'
+});
+```
+
+Requests for `App.Person` would now target `https://api.example.com/people/1`.
 
 ### JSON Conventions
 
@@ -90,6 +118,19 @@ The JSON returned from your server should look like this:
     "is_person_of_the_year": true
   }
 }
+```
+
+Irregular keys can be mapped on the adapter. If the JSON
+has a key of `lastNameOfPerson`, and the desired attribute
+name is simply `lastName`, inform the adapter:
+
+```js
+App.Person = DS.Model.extend({
+  lastName: DS.attr('string')
+});
+DS.RESTAdapter.map('App.Person', {
+  lastName: { key: 'lastNameOfPerson' }
+});
 ```
 
 #### Relationships
@@ -161,3 +202,49 @@ outside the JSON root, and are represented as an array of hashes:
   }]
 }
 ```
+
+### Creating Custom Transformations
+
+In some circumstances, the built in attribute types of `string`,
+`number`, `boolean`, and `date` may be inadequate. For example, a
+server may return a non-standard date format.
+
+The `RESTAdapter`, like any Ember adapter, can have new tranforms
+registered for use as attributes:
+
+```js
+DS.RESTAdapter.registerTransform('coordinatePoint', {
+  serialize: function(value) {
+    return [value.get('x'), value.get('y')];
+  },
+  deserialize: function(value) {
+    return Ember.create({ x: value[0], y: value[1] });
+  }
+});
+App.Cursor = DS.Model.extend({
+  position: DS.attr('coordinatePoint')
+});
+```
+
+When `coordinatePoint` is recieved from the API, it is
+expected to be an array:
+
+```js
+{
+  cursor: {
+    position: [4,9]
+  }
+}
+```
+
+But once loaded on a model instance, it will behave as an object:
+
+```js
+var cursor = App.Cursor.find(1);
+cursor.get('position.x'); //=> 4
+cursor.get('position.y'); //=> 9
+```
+
+If `position` is modified and saved, it will pass through the
+`serialize` function in the transform and again be presented as
+an array in JSON.
