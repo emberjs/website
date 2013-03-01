@@ -30,3 +30,13 @@ or more of the following:
 2. Update a controller so that it represents a particular model.
 3. Change the template on screen, or place a new template into an
    existing outlet.
+
+###Logging Route Changes
+
+As your application increases in complexity, it can be helpful to see exactly what is going on with the router. To have Ember write out transition events to the log, simply modify your `Ember.Application`:
+
+```javascript
+App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});
+```
