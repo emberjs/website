@@ -27,7 +27,8 @@ App.Person = DS.Model.extend({
 
 By default, the REST adapter supports attribute types of `string`,
 `number`, `boolean`, and `date`. Custom adapters may offer additional
-attribute types.
+attribute types, and new types can be registered as transforms. See the
+[documentation section on the REST Adapter](/guides/models/the-rest-adapter).
 
 ### Relationships
 
