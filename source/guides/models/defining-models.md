@@ -14,8 +14,6 @@ use attributes just like any other property, including as part of a
 computed property.
 
 ```javascript
-var attr = DS.attr;
-
 App.Person = DS.Model.extend({
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
