@@ -272,7 +272,7 @@ App.PostView = Ember.View.extend({
   template: Ember.Handlebars.compile("<h1>{{title}}</h1><h2>{{author}}</h2><div>{{body}}</div>"),
 
   authorDidChange: function() {
-    alert("New author name: " + this.getPath('controller.author'));
+    alert("New author name: " + this.get('controller.author'));
   }.observes('controller.author')
 });
 ```
@@ -298,7 +298,7 @@ App.PostView = Ember.View.extend({
 
   didInsertElement: function() {
     this.addObserver('controller.name', function() {
-      alert("New author name: " + this.getPath('controller.author'));
+      alert("New author name: " + this.get('controller.author'));
     });
   }
 });
@@ -322,7 +322,7 @@ App.PostView = Ember.View.extend({
 
   didInsertElement: function() {
     this.addObserver('controller.name', function() {
-      alert("New author name: " + this.getPath('controller.author'));
+      alert("New author name: " + this.get('controller.author'));
     });
   },
 
