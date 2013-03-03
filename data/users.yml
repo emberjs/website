@@ -1,10 +1,10 @@
 # To have your pull request accepted, you must email listing@emberjs.com
-# with the subject line "Ember User Logo Contact". Please include the 
+# with the subject line "Ember User Logo Contact". Please include the
 # name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants. 
+# to make changes to this page or get logo variants.
 
-# Please also be sure the logo you upload has a transparent background, 
-# and adequate whitespace. 
+# Please also be sure the logo you upload has a transparent background,
+# and adequate whitespace.
 
 - url: http://livingsocial.com/
   image: livingsocial.png
@@ -32,7 +32,7 @@
   contact: Luke Melia
 - url: http://www.benefitcloud.com/
   image: benefitcloud.png
-  contact: 
+  contact:
 - url: http://www.topicus.nl/
   image: topicus.png
   contact: Ralf Schimmel
@@ -59,10 +59,10 @@
   contact: Sérgio Almeida
 - url: http://tradegecko.com
   image: tradegecko.png
-  contact: 
+  contact:
 - url: http://grouptalent.com
   image: grouptalent.png
-  contact: 
+  contact:
 - url: http://www.kohactive.com
   image: kohactive.png
   contact: Justin McNally
@@ -80,7 +80,7 @@
   contact: Dhananjay Singh
 - url: http://netminds.com/
   image: netminds.png
-  contact: 
+  contact:
 - url: http://mochaleaf.com
   image: mochaleaf.png
   contact: Andy Leeper
@@ -104,7 +104,7 @@
   contact: Ivan Vanderbyl
 - url: http://plasmiq.com
   image: plasmiq.png
-  contact: 
+  contact:
 - url: http://www.toushay.com
   image: toushay.png
   contact: Sandeep Mistry
@@ -116,55 +116,55 @@
   contact: Sven Krassner
 - url: http://www.playtin.com
   image: playtin.png
-  contact: 
+  contact:
 # - url:  http://www.visualsupply.co
 #   image: visualsupplyco.png
-#   contact: 
+#   contact:
 - url:  http://www.crowdcompass.com
   image: crowdcompass.png
-  contact: 
+  contact:
 - url:  http://www.totango.com
   image: totango.png
-  contact: 
+  contact:
 - url: http://www.nearzero.org
   image: nearzero.png
-  contact: 
+  contact:
 - url: https://www.action.io/
   image: actionio.png
-  contact: 
+  contact:
 - url: http://porkepic.com/
   image: porkepic.png
-  contact: 
+  contact:
 - url: http://www.appdrones.com/
   image: appdrones.png
-  contact: 
+  contact:
 # - url: http://www.d-i.co/
 #   image: di-logo-blue.png
-#   contact: 
+#   contact:
 - url: http://dockyard.com
   image: dockyard.png
   contact: Brian Cardarella
 - url: http://www.montania.se/
   image: montania.png
-  contact: 
+  contact:
 - url: http://yourkarma.com
   image: karma.png
-  contact: 
+  contact:
 - url: http://nosolosoftware.biz
   image: nosolosoftware.png
-  contact: 
+  contact:
 - url: http://unspace.ca
   image: unspace.png
   contact: Carsten Nielsen
 - url: https://mist.io
   image: mistio.png
-  contact: 
+  contact:
 - url: http://billysbilling.com/
   image: billysbilling.png
-  contact: 
+  contact:
 - url: http://llanoseco.com/
   image: llanoseco.png
-  contact: 
+  contact:
 - url: https://www.data-field.com/
   image: datafield.png
-  contact: 
+  contact:
