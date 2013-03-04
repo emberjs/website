@@ -7740,7 +7740,7 @@ classitems:
 - file: ../packages/ember-routing/lib/system/route.js
   line: 176
   description: ! "A hook you can implement to convert the URL into the model for\nthis
-    route.\n\n```js\nApp.Route.map(function(match) {\n  match(\"/posts/:post_id\").to(\"post\");\n});\n```\n\nThe
+    route.\n\n```js\nApp.Router.map(function(match) {\n  match(\"/posts/:post_id\").to(\"post\");\n});\n```\n\nThe
     model for the `post` route is `App.Post.find(params.post_id)`.\n\nBy default,
     if your route has a dynamic segment ending in `_id`:\n\n* The model class is determined
     from the segment (`post_id`'s\n  class is `App.Post`)\n* The find method is called
@@ -7758,7 +7758,7 @@ classitems:
 - file: ../packages/ember-routing/lib/system/route.js
   line: 220
   description: ! "A hook you can implement to convert the route's model into parameters\nfor
-    the URL.\n\n```js\nApp.Route.map(function(match) {\n  match(\"/posts/:post_id\").to(\"post\");\n});\n\nApp.PostRoute
+    the URL.\n\n```js\nApp.Router.map(function(match) {\n  match(\"/posts/:post_id\").to(\"post\");\n});\n\nApp.PostRoute
     = Ember.Route.extend({\n  model: function(params) {\n    // the server returns
     `{ id: 12 }`\n    return jQuery.getJSON(\"/posts/\" + params.post_id);\n  },\n\n
     \ serialize: function(model) {\n    // this will make the URL `/posts/12`\n    return
@@ -7787,7 +7787,7 @@ classitems:
   line: 268
   description: ! "A hook you can use to setup the controller for the current route.\n\nThis
     method is called with the controller for the current route and the\nmodel supplied
-    by the `model` hook.\n\n```js\nApp.Route.map(function(match) {\n  match(\"/posts/:post_id\").to(\"post\");\n});\n```\n\nFor
+    by the `model` hook.\n\n```js\nApp.Router.map(function(match) {\n  match(\"/posts/:post_id\").to(\"post\");\n});\n```\n\nFor
     the `post` route, the controller is `App.PostController`.\n\nBy default, the `setupController`
     hook sets the `content` property of\nthe controller to the `model`.\n\nIf no explicit
     controller is defined, the route will automatically create\nan appropriate controller
