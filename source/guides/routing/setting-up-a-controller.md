@@ -16,7 +16,7 @@ To tell one of these controllers which model to present, set its
 `content` property in the route handler's `setupController` hook.
 
 ```js
-App.Route.map(function() {
+App.Router.map(function() {
   this.resource('post', { path: '/posts/:post_id' });
 });
 
