@@ -30,8 +30,7 @@ The `property` method defines the function as a computed property, and
 defines its dependencies. Those dependencies will come into play
 later when we discuss bindings and observers.
 
-When subclassing a class or creating a new instance, you can
-override any computed properties.
+When subclassing a class, you can override any computed properties.
 
 ### Setting Computed Properties
 
