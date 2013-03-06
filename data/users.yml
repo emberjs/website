@@ -6,8 +6,8 @@
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace.
 
-- url: http://livingsocial.com/
-  image: livingsocial.png
+- url: https://addepar.com/
+  image: addepar.png
 - url: http://squareup.com/
   image: square.png
 - url: http://tilde.io/
@@ -24,6 +24,8 @@
   image: yapp.png
 - url: http://www.benefitcloud.com/
   image: benefitcloud.png
+- url: http://livingsocial.com/
+  image: livingsocial.png
 - url: http://www.topicus.nl/
   image: topicus.png
 - url: http://www.gemfury.com/
