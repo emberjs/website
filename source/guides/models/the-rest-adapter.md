@@ -154,6 +154,9 @@ The JSON should encode the relationship as an array of IDs:
 }
 ```
 
+`Comments` for a `post` can be loaded by `post.get('comments')`. The REST adapter
+will send a `GET` request to `/comments?ids[]=1&ids[]=2&ids[]=3`.
+
 Any `belongsTo` relationships in the JSON representation should be the
 underscored version of the Ember Data model's name, with the string
 `_id` appended. For example, if you have a model:
