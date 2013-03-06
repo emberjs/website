@@ -6,26 +6,26 @@
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace.
 
+- url: http://www.mhelabs.com/
+  image: mhelabs.png
 - url: https://addepar.com/
   image: addepar.png
-- url: http://squareup.com/
-  image: square.png
 - url: http://tilde.io/
   image: tilde.png
 - url: http://www.zendesk.com/
   image: zendesk.png
+- url: http://squareup.com/
+  image: square.png
 - url: http://www.groupon.com
   image: groupon.png
-- url: http://www.timbuk2.com/
-  image: timbuk2.png
-- url: http://www.mhelabs.com/
-  image: mhelabs.png
-- url: https://www.yapp.us/
-  image: yapp.png
-- url: http://www.benefitcloud.com/
-  image: benefitcloud.png
 - url: http://livingsocial.com/
   image: livingsocial.png
+- url: https://www.yapp.us/
+  image: yapp.png
+- url: http://www.timbuk2.com/
+  image: timbuk2.png
+- url: http://www.benefitcloud.com/
+  image: benefitcloud.png
 - url: http://www.topicus.nl/
   image: topicus.png
 - url: http://www.gemfury.com/
