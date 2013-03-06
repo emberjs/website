@@ -16,12 +16,14 @@
   image: zendesk.png
 - url: http://squareup.com/
   image: square.png
-- url: http://www.groupon.com
-  image: groupon.png
+- url: http://www.discourse.org
+  image: discourse.png
 - url: http://livingsocial.com/
   image: livingsocial.png
 - url: https://www.yapp.us/
   image: yapp.png
+- url: http://www.groupon.com
+  image: groupon.png
 - url: http://www.timbuk2.com/
   image: timbuk2.png
 - url: http://www.benefitcloud.com/
@@ -118,7 +120,5 @@
   image: datafield.png
 - url: http://www.wagaroo.com/
   image: wagaroo.png
-- url: http://www.discourse.org
-  image: discourse.png
 - url: http://www.pertino.com
   image: pertino.png
