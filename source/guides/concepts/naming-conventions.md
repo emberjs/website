@@ -177,9 +177,9 @@ handlers.
 
 If you don't specify a route handler for the `post` route
 (`App.PostRoute`), Ember.js  will still render the `post` 
-template with the app's instance of `App.FavoritesController`.
+template with the app's instance of `App.PostController`.
 
-If you don't specify the controller (`App.FavoritesController`),
+If you don't specify the controller (`App.PostController`),
 Ember will automatically make one for you based on the return value
 of the route's `model` hook. If the model is an Array, you get an
 `ArrayController`. Otherwise, you get an `ObjectController`.
