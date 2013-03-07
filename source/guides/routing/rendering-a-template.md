@@ -72,3 +72,23 @@ NOTE: When a template tries to render, and the parent route did not render a tem
 This means that the the current route tried to render into the parent routes template, but the parent route didn't render a template, or if it did, the template did not render 'into' the main template (a default {{outlet}}). For the case of the following routes: Application > Posts > Post, if the posts route does not have a template, the post template will render into the application template.
 
 This default behavior could be what you expect, or it could be unexpected and the warning is there to point out the potential unexpected behavior.
+
+If you want to render two different templates into outlets of two different rendered templates of a route:
+
+```js
+App.PostRoute = App.Route.extend({
+  renderTemplate: function() {
+    this.render('favoritePost', {   // the template to render
+      into: 'posts',                // the template to render into
+      outlet: 'posts',       // the name of the outlet in that template
+      controller: 'blogPost'  // the controller to use for the template
+    });
+    this.render('comments', {
+      into: 'favoritePost',
+      outlet: 'comment',
+      controller: 'blogPost'
+    });
+  }
+});
+```
+
