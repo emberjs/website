@@ -548,6 +548,10 @@ ol {
     margin: 1em 1.5em;
   }
 
+  ol + h2, ul + h2, p + h2 {
+    margin-top: 1.5em;
+  }
+
   .tabs > ul{
     margin: 0 0;
     a {

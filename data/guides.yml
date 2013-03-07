@@ -2,9 +2,11 @@
   - title: 'Ember.js Guides'
     url: 'index.html'
     skip_sidebar: true
-Getting Started with Ember.js:
+Concepts:
   - title: "Core Concepts"
-    url: "getting-started/core-concepts"
+    url: "concepts/core-concepts"
+  - title: "Naming Conventions"
+    url: "concepts/naming-conventions"
   #- title: "What is Ember.js?"
     #url: "getting-started/what-is-ember-js"
   #- title: "Getting Ember.js"
