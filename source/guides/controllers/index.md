@@ -151,7 +151,7 @@ App.ApplicationController = Ember.Controller.extend({
   query: function() {
     // the current value of the text field
     var query = this.get('search');
-    this.transitionTo('search', { query: query });
+    this.transitionToRoute('search', { query: query });
   }
 });
 ```
