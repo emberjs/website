@@ -226,7 +226,7 @@ followed by an identifier.
 ```js
 App.Router.map(function() {
   this.resource('posts');
-  this.resource('post', { path: '/posts/:post_id' });
+  this.resource('post', { path: '/post/:post_id' });
 });
 
 App.PostRoute = Ember.Route.extend({
