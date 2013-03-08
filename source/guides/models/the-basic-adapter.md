@@ -93,3 +93,23 @@ App.Person.sync = {
 You can modify the JSON before passing it to `process`. The `munge`
 API is provided to make it easier to compose with other methods on
 the `process` wrapper.
+
+### Querying for Multiple Records
+
+When you use the `query` method on a model, Ember Data will invoke
+the `query` hook on your model's `sync` object.
+
+```javascript
+App.Person.query({ page: 1 });
+
+App.Person.sync = {
+  query: function(query, process) {
+    jQuery.getJSON("/people", query).then(function(json) {
+      process(json).camelizeKeys().load();
+    });
+  }
+}
+```
+
+In the case of a query, the `process` wrapper will wrap an Array of
+returned objects.
