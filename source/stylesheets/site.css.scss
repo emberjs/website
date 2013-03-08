@@ -28,7 +28,8 @@ body {
   font-size: 14px;
   line-height: 1.4em;
   color: #444444;
-  font-weight: 200;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
 }
 sup {
   vertical-align: super;
@@ -71,7 +72,8 @@ code {
 
 h1,h2,h3,h4,h5,h6 {
   text-transform: uppercase;
-  font-family: "MavenProBold";
+  font-family: "Maven Pro";
+  font-weight: bold;
 
   code {
     text-transform: none;
@@ -93,7 +95,8 @@ h2 {
 }
 
 h2,h3{
-  font-family: "MavenProBold";
+  font-family: "Maven Pro";
+  font-weight: bold;
   color: $black-color;
 }
 
@@ -205,7 +208,8 @@ ol {
 **/
 
 #sidebar {
-  font-family: "MavenProMedium";
+  font-family: "Maven Pro";
+  font-weight: normal;
   margin-top: 38px;
   float: left;
   width: $sidebar-width;
@@ -241,7 +245,8 @@ ol {
     line-height: 1.5em;
     border-bottom: none;
     color: #d84a32;
-    font-family: MavenProBlack;
+    font-family: "Maven Pro";
+    font-weight: bold;
     cursor: pointer;
 
     &:hover {
@@ -281,6 +286,8 @@ ol {
         li.sub-selected {
           background-color: #F2D1CB;
           > a {
+            font-family: 'Maven Pro';
+            font-weight: bolder;
             color: #282828;
           }
         }
@@ -320,12 +327,12 @@ ol {
       &.level-2, &.level-3 {
 
         a {
-          padding: 4px 0 4px 1em;
+          padding: 6px 1em 6px 1em;
           display: block;
           text-transform: none;
           color: #d84a32;
           font-weight: normal;
-          font-size: 12px;
+          font-size: 13px;
           &:hover {
             background-color: #F2D1CB;
             color: black;
@@ -445,7 +452,8 @@ ol {
       display: inline-block;
 
       a {
-        font-family: "MavenProBold";
+        font-family: "Maven Pro";
+        font-weight: bold;
         font-size: 13px;
         text-transform: uppercase;
         color: #faf2ee;
@@ -495,7 +503,8 @@ ol {
         display: block;
       }
 
-      font-family: "MavenProBold";
+      font-family: "Maven Pro";
+      font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
@@ -539,7 +548,7 @@ ol {
 
 #content {
   &.has-sidebar {
-    margin: 38px 0 90px 1.5em;
+    margin: 38px 0 90px 2.1em;
     width: $content-width;
     float: left;
   }
@@ -548,7 +557,8 @@ ol {
     margin: 1em 1.5em;
   }
 
-  ol + h2, ul + h2, p + h2 {
+  ol + h2, ul + h2, p + h2,
+  ol + h3, ul + h3, p + h3 {
     margin-top: 1.5em;
   }
 
@@ -916,7 +926,8 @@ ol {
       .name {
         text-align: center;
         color: white;
-        font-family: MavenProMedium;
+        font-family: "Maven Pro";
+        font-weight: normal;
         font-size: 18px;
         margin-top: 55px;
         text-transform: uppercase;
@@ -987,7 +998,7 @@ ol {
     height: 13px;
     background: url(/images/link.png) no-repeat;
     background-size: 18px 9px;
-    left: -19px;
+    left: -22px;
     opacity: 0.5;
     top: 50%;
     margin-top: -5px;
@@ -1199,7 +1210,8 @@ body.community #content {
   border-top: 1px solid #e5dbd6;
   background-color: #f2ece9;
   overflow: hidden;
-  font-family: "MavenProBold";
+  font-family: "Maven Pro";
+  font-weight: bold;
 
   #footer-wrapper {
     width: 940px;
@@ -1276,7 +1288,8 @@ body.community #content {
   display: block;
   width: 226px;
   height: 46px;
-  font-family: "MavenProBold";
+  font-family: "Maven Pro";
+  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 47px;
@@ -1324,7 +1337,8 @@ body.community #content {
   width: 74px;
   height: 22px;
 
-  font-family: "MavenProMedium";
+  font-family: "Maven Pro";
+  font-weight: normal;
   color: #fff;
   line-height: 24px;
   text-transform: uppercase;
