@@ -137,7 +137,7 @@ application` template to that  property.
 ```handlebars
 <!-- application.handlebars -->
 <header>
-  {{#view Ember.TextField valueBinding="search" action="query"}}
+  {{view Ember.TextField valueBinding="search" action="query"}}
 </header>
 
 {{outlet}}
