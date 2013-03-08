@@ -611,6 +611,23 @@ ol {
     }
   }
 
+  figure {
+    width: 100%;
+    background-color: #fff;
+    margin: 1.5em 0;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+
+  aside {
+    background-color: #fff;
+    padding: 1em;
+    color: #666;
+    code {
+      color: #777;
+    }
+  }
+
   table {
     margin: 1em 0;
     tbody tr{
