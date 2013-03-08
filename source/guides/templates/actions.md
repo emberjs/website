@@ -50,6 +50,49 @@ will call `controller.select( context.post )` when clicked:
 <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
 ```
 
+### Specifying the Type of Event
+
+By default, the `{{action}}` helper listens for click events and triggers
+the action when the user clicks on the element.
+
+You can specify an alternative event by using the `on` option.
+
+```javascript
+<p>
+  <button {{action "select" post on="mouseUp"}}>✓</button>
+  {{post.title}}
+</p>
+```
+
+You should use the normalized event names [listed in the View guide][1].
+In general, two-word event names (like `keypress`) become `keyPress`.
+
+[1]: /guides/understanding-ember/the-view-layer/#toc_adding-new-events
+
+### Stopping Event Propagation
+
+By default, the `{{action}}` helper allows events it handles to bubble
+up to parent DOM nodes. If you want to stop propagation, you can disable
+propagation to the parent node.
+
+For example, if you have a **✗** button inside of a link, you will want
+to ensure that if the user clicks on the **✗**, that the link is not
+clicked.
+
+```javascript
+{{#linkTo 'post'}}
+  Post
+  <button {{action close bubbles=false}}>✗</button>
+{{/linkTo}}
+```
+
+Without `bubbles=false`, if the user clicked on the button, Ember.js
+will trigger the action, and then the browser will propagate the click
+to the link.
+
+With `bubbles=false`, Ember.js will stop the browser from propagating
+the event.
+
 ### Target Bubbling
 
 If the action is not found on the current controller, it will bubble up
