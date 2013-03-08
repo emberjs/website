@@ -95,6 +95,8 @@ Models:
     url: "models/model-lifecycle"
   - title: "The REST Adapter"
     url: "models/the-rest-adapter"
+  #- title: "The Basic Adapter"
+    #url: "models/the-basic-adapter"
 
 Views:
   - title: "Introduction"
