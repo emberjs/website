@@ -69,6 +69,23 @@ In general, two-word event names (like `keypress`) become `keyPress`.
 
 [1]: /guides/understanding-ember/the-view-layer/#toc_adding-new-events
 
+### Specifying Whitelisted Modifier Keys
+
+By default the `{{action}}` helper will ignore click event with
+pressed modifier keys. You can supply an `allowed-keys` option
+to specify which keys should not be ignored.
+
+```handlebars
+<script type="text/x-handlebars" data-template-name='a-template'>
+  <div {{action anActionName allowed-keys="alt"}}>
+    click me
+  </div>
+</script>
+```
+
+This way the `{{action}}` will fire when clicking with the alt key
+pressed down.
+
 ### Stopping Event Propagation
 
 By default, the `{{action}}` helper allows events it handles to bubble
