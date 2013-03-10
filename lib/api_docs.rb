@@ -11,7 +11,7 @@ module APIDocs
 
       @repo_url = options[:repo_url]
 
-      app.after_configuration do
+      app.ready do
         ApiClass.data = data.api
 
         page '/api*', directory_index: false, layout: 'layouts/api'

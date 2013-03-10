@@ -27,7 +27,23 @@ activate :api_docs,
 activate :blog do |blog|
   blog.prefix = 'blog'
   blog.layout = 'layouts/blog'
-  blog.tag_template = 'blog/tag.html'
+  blog.tag_template = 'blog/tag'
+  blog.permalink = '/:year/:month/:day/:title'
+  blog.taglink = 'tags/:tag'
+end
+
+ready do
+  blog.articles.each do |article|
+    options = {
+      locals: {
+        redirect_to: article.url
+      },
+      layout: false,
+      ignore: true
+    }
+
+    proxy article.path + '.html', 'redirect.html', options
+  end
 end
 
 page '/blog/feed.xml', layout: false
@@ -75,7 +91,7 @@ helpers do
 
   def link_to_page name, url
     path = request.path
-    current = path =~ Regexp.new('^' + url[1..-1] + '.*\.html')
+    current = path =~ Regexp.new('^' + url[1..-1])
 
     if path == 'index.html' and name == 'about'
       current = true
