@@ -1,7 +1,7 @@
 ## Naming Conventions
 
-Ember.js uses naming conventions to wire up your objects without a 
-lot  of boilerplate. You will want to  use the conventional names 
+Ember.js uses naming conventions to wire up your objects without a
+lot  of boilerplate. You will want to  use the conventional names
 for your routes, controllers and templates.
 
 You can usually guess the names, but this guide outlines, in one place, all of the naming conventions.
@@ -50,7 +50,7 @@ App.ApplicationController = Ember.Controller.extend({
 <h2>{{title}}</h2>
 ```
 
-In Ember.js applications, you will always specify your controllers 
+In Ember.js applications, you will always specify your controllers
 as **classes**, and the framework is responsible for instantiating
 them and providing them to your templates.
 
@@ -59,7 +59,7 @@ your entire application shares a single instance of each controller.
 
 ## Simple Routes
 
-Each of your routes will also have a route, a controller and a 
+Each of your routes will also have a route, a controller and a
 template named after the route.
 
 Let's start with a simple router:
@@ -70,7 +70,7 @@ App.Router.map(function() {
 });
 ```
 
-If your user navigates to `/favorites`, Ember.js will look for these 
+If your user navigates to `/favorites`, Ember.js will look for these
 objects:
 
 * `App.FavoritesRoute`
@@ -81,8 +81,8 @@ Ember.js will render the `favorites` template into the `{{outlet}}`
 in the `application` template. It will set an instance of the
 `App.FavoritesController` as the controller for the template.
 
-If your app provides an `App.FavoritesRoute`, the framework will 
-invoke it before rendering the template. Yes, this is a bit 
+If your app provides an `App.FavoritesRoute`, the framework will
+invoke it before rendering the template. Yes, this is a bit
 repetitive.
 
 For a route like `App.FavoritesRoute`, you will probably implement
@@ -105,7 +105,7 @@ the model is an Array, Ember.js will automatically supply an instance
 of `Ember.ArrayController`, which will present the backing Array as
 its model.
 
-You can treat the `ArrayController` as if it was the model itself. 
+You can treat the `ArrayController` as if it was the model itself.
 This has two major benefits:
 
 * You can replace the controller's model at any time without having
@@ -147,7 +147,7 @@ these objects:
 
 Your route handler's `model` hook converts the dynamic `:post_id`
 parameter into a model. The `serialize` hook converts a model object
-back into the URL parameters for this route (for example, when 
+back into the URL parameters for this route (for example, when
 generating a link for a model object).
 
 ```javascript
@@ -170,13 +170,13 @@ handlers.
   application's namespace (`post` becomes `App.Post`). It will
   then call `find` on that class with the value of the dynamic
   segment.
-* The default `serialize` hook will pull replace the dynamic
+* The default `serialize` hook will pull the dynamic
   segment with the `id` property of the model object.
 
 ## Route, Controller and Template Defaults
 
 If you don't specify a route handler for the `post` route
-(`App.PostRoute`), Ember.js  will still render the `post` 
+(`App.PostRoute`), Ember.js  will still render the `post`
 template with the app's instance of `App.PostController`.
 
 If you don't specify the controller (`App.PostController`),
@@ -184,7 +184,7 @@ Ember will automatically make one for you based on the return value
 of the route's `model` hook. If the model is an Array, you get an
 `ArrayController`. Otherwise, you get an `ObjectController`.
 
-If you don't specify a `post` template, Ember.js won't render 
+If you don't specify a `post` template, Ember.js won't render
 anything!
 
 ## Nesting
@@ -200,7 +200,7 @@ App.Router.map(function() {
 });
 ```
 
-A **resource** is the beginning of a route, controller, or template 
+A **resource** is the beginning of a route, controller, or template
 name. Even though the `post` resource is nested, its route is named
 `App.PostRoute`, its controller is named `App.PostController` and its
 template is `post`.
@@ -241,13 +241,13 @@ this router:
 </table>
 
 The rule of thumb is to use resources for nouns, and routes for
-adjectives (`favorites`) or verbs (`edit`). This ensures that 
-nesting does not create ridiculously long names, but avoids 
+adjectives (`favorites`) or verbs (`edit`). This ensures that
+nesting does not create ridiculously long names, but avoids
 collisions with common adjectives and verbs.
 
 ## The Index Route
 
-At every level of nesting (including the top level), Ember.js 
+At every level of nesting (including the top level), Ember.js
 automatically provides a route for the `/` path named `index`.
 
 For example, if you write a simple router like this:
@@ -273,7 +273,7 @@ If the user visits `/`, Ember.js will look for these objects:
 * `App.IndexController`
 * the `index` template
 
-The `index` template will be rendered into the `{{outlet}}` in the 
+The `index` template will be rendered into the `{{outlet}}` in the
 `application` template. If the user navigates to `/favorites`,
 Ember.js will replace the `index` template with the `favorites`
 template.
@@ -307,7 +307,7 @@ If the user navigates to `/posts`, the current route will be
 * `App.PostsIndexController`
 * The `posts/index` template
 
-First, the `posts` template will be rendered into the `{{outlet}}` 
+First, the `posts` template will be rendered into the `{{outlet}}`
 in the `application` template. Then, the `posts/index` template
 will be rendered into the `{{outlet}}` in the `posts` template.
 
