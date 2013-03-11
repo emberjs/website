@@ -18,9 +18,9 @@ and supports expanding the post with additional information.
 
 {{#if isExpanded}}
   <div class='body'>{{body}}</div>
-  <button {{action "contract"}}>Contract</button>
+  <button {{action contract}}>Contract</button>
 {{else}}
-  <button {{action "expand"}}>Show More...</button>
+  <button {{action expand}}>Show More...</button>
 {{/if}}
 ```
 
