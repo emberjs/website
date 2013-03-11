@@ -7185,7 +7185,7 @@ classitems:
     \   click me\n  </div>\n</div>\n```\n\nClicking \"click me\" will trigger the
     `anActionName` method of the\n`AController`. In this case, no additional parameters
     will be passed.\n\nIf you provide additional parameters to the helper:\n\n```handlebars\n<button
-    {{action 'edit' post}}>Edit</button>\n```\n\nThose parameters will be passed along
+    {{action edit post}}>Edit</button>\n```\n\nThose parameters will be passed along
     as arguments to the JavaScript\nfunction implementing the action.\n\n### Event
     Propagation\n\nEvents triggered through the action helper will automatically have\n`.preventDefault()`
     called on them. You do not need to do so in your event\nhandlers.\n\nTo also disable
