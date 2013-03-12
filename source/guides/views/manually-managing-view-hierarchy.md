@@ -59,7 +59,7 @@ container.objectAt(1).toString(); //=> '<App.SecondView:ember124>'
 ```
 
 Another bit of syntactic sugar is available as an option as well:
-specifyig string names in the childViews property that correspond
+specifying string names in the childViews property that correspond
 to properties on the `ContainerView`. This style is less intuitive
 at first but has the added bonus that the each named property will
 be updated to reference its instantiated child view:
