@@ -123,6 +123,8 @@
   image: wagaroo.png
 - url: http://www.pertino.com
   image: pertino.png
+- url: http://www.summit.com/mobile
+  image: summit_electric_supply.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
