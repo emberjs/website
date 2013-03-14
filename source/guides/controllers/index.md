@@ -114,7 +114,7 @@ user navigates around the page.
 
 For convenience, Ember.js provides controllers that _proxy_ 
 properties from their models so that you can say `{{name}}` in your
-template rather than `{{model.name}}. An `Ember.ArrayController` 
+template rather than `{{model.name}}`. An `Ember.ArrayController` 
 proxies properties from an Array, and an `Ember.ObjectController` 
 proxies properties from an obect.
 
