@@ -146,7 +146,9 @@ module TOC
       guides = current_section[1]
       current_index = guides.find_index(current_guide)
 
-      if current_index and current_index != 0
+      return unless current_index
+
+      if current_index != 0
         guides[current_index-1]
       else
         nil
@@ -158,6 +160,9 @@ module TOC
 
       guides = current_section[1]
       current_index = guides.find_index(current_guide)
+
+      return unless current_index
+
       next_guide_index = current_index + 1
 
       if current_index < guides.length
