@@ -1,0 +1,1 @@
+## Testing Ember.js Models
