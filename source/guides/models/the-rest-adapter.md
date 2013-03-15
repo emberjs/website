@@ -212,7 +212,7 @@ In some circumstances, the built in attribute types of `string`,
 `number`, `boolean`, and `date` may be inadequate. For example, a
 server may return a non-standard date format.
 
-The `RESTAdapter`, like any Ember adapter, can have new tranforms
+The `RESTAdapter`, like any Ember adapter, can have new transforms
 registered for use as attributes:
 
 ```js
