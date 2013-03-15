@@ -11,6 +11,7 @@ gem "thin"
 gem "rack"
 gem "listen"
 gem "builder"
+gem "grit"
 
 group :development do
   gem "pry"

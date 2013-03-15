@@ -37,7 +37,7 @@ module TOC
 
         result << %Q{
           <li class="level-1#{current ? ' selected' : ''}">
-            <a href="/guides/#{entries[0].url}">#{section}</a>
+            <a href="/guides/#{@sha}/#{entries[0].url}">#{section}</a>
             <ol#{current ? " class='selected'" : ''}>
         }
 
@@ -54,7 +54,7 @@ module TOC
 
           result << %Q{
             <li class="level-3#{sub_current ? ' sub-selected' : ''}">
-              <a href="/guides/#{entry.url}">#{entry.title}</a>
+              <a href="/guides/#{@sha}/#{entry.url}">#{entry.title}</a>
             </li>
           }
         end
@@ -68,9 +68,9 @@ module TOC
     end
 
     def chapter_name
-      guides = data.guides
+      guides = @guides
 
-      sub_url = request.path.split('/')[1]
+      sub_url = request.path.split('/')[2]
       heading = ''
 
       guides.each_entry do |section, entries|
@@ -125,7 +125,7 @@ module TOC
     def previous_chapter_link
       return '' unless previous_chapter
       %Q{
-        <a class="previous-guide" href="/guides/#{previous_chapter.url}">
+        <a class="previous-guide" href="/guides/#{@sha}/#{previous_chapter.url}">
           \u2190 #{previous_chapter.title}
         </a>
       }
@@ -134,7 +134,7 @@ module TOC
     def next_chapter_link
       return '' unless next_chapter
       %Q{
-      <a class="next-guide" href="/guides/#{next_chapter.url}">
+      <a class="next-guide" href="/guides/#{@sha}/#{next_chapter.url}">
         #{next_chapter.title} \u2192
       </a>
       }

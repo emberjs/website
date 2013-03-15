@@ -4,8 +4,15 @@
 %>
 
 <% wrap_layout(:layout) do %>
+  <nav>
+    <% data.guide_versions.each do |name, sha| %>
+      <% next if name == "Current" %>
+      <a href="/guides/<%= sha %>"><%= name %></a>
+    <% end %>
+  </nav>
+
   <% content_for(:sidebar) do %>
-    <%= index_for(data.guides) %>
+    <%= index_for(@guides) %>
   <% end %>
 
   <div class="chapter">
