@@ -89,16 +89,18 @@ module TOC
     end
 
     def section_slug
-      request.path.split('/')[2]
+      request.path.split('/')[1]
     end
 
     def guide_slug
-      request.path.split('/')[3]
+      request.path.split('/')[1..-2].join('/')
     end
 
     def current_section
       data.guides.find do |section, entries|
-        entries[0].url.split('/')[0] == section_slug
+        entries.find do |entry|
+          entry.url == section_slug
+        end
       end
     end
 
@@ -106,7 +108,9 @@ module TOC
       if guide_slug == 'index.html'
         current_section[1][0]
       else
-        current_section[1].find{|guide| guide.url.split('/')[1] == guide_slug}
+        current_section[1].find do |guide|
+          guide.url == guide_slug
+        end
       end
     end
 
@@ -141,7 +145,8 @@ module TOC
 
       guides = current_section[1]
       current_index = guides.find_index(current_guide)
-      if current_index != 0
+
+      if current_index and current_index != 0
         guides[current_index-1]
       else
         nil
@@ -153,8 +158,10 @@ module TOC
 
       guides = current_section[1]
       current_index = guides.find_index(current_guide)
+      next_guide_index = current_index + 1
+
       if current_index < guides.length
-        guides[current_index+1]
+        guides[next_guide_index]
       else
         nil
       end
