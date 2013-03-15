@@ -8,3 +8,4 @@ build/
 .mm-pid-*
 /b
 *.swp
+.rvmrc
