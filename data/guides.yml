@@ -49,6 +49,8 @@ Routing:
     url: "routing"
   - title: "Defining Your Routes"
     url: "routing/defining-your-routes"
+  - title: "Generated Objects"
+    url: "routing/generated-objects"
   - title: "Specifying a Route's Model"
     url: "routing/specifying-a-routes-model"
   - title: "Setting Up a Controller"
