@@ -11,6 +11,10 @@ describing the user interface of your app. And, once you've told
 Ember.js to render a given template on the screen, you don't need to
 write any additional code to make sure it keeps up-to-date.
 
+If you'd prefer an indentation-based alternative to Handlebars syntax, 
+try [Emblem.js](http://www.emblemjs.com), but make sure you're comfortable
+with Handlebars first!
+
 ### Defining Templates
 
 If you're not using build tools, you can define your application's main
