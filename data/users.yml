@@ -127,6 +127,8 @@
   image: summit_electric_supply.png
 - url: https://spoton.it
   image: spoton.png
+- url: http://simplereach.com
+  image: simplereach.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
