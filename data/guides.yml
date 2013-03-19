@@ -39,6 +39,8 @@ Templates:
     url: "templates/links"
   - title: "Actions"
     url: "templates/actions"
+  - title: "Rendering Helpers"
+    url: "templates/rendering-helpers"
   #- title: "Keywords"
     #url: "templates/keywords"
   - title: "Writing Helpers"
