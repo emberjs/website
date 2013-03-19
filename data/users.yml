@@ -129,6 +129,8 @@
   image: spoton.png
 - url: http://simplereach.com
   image: simplereach.png
+- url: http://crowdhall.com
+  image: crowdhall.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
