@@ -31,7 +31,7 @@ rendered HTML would look something like this:
 </ul>
 ```
 
-When the rendered link matches the current route, then the link is given `class="active"`.
+When the rendered link matches the current route, and the same object instance is passed into the helper, then the link is given `class="active"`.
 
 The `{{linkTo}}` helper takes:
 
