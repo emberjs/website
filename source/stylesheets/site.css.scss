@@ -870,7 +870,7 @@ ol {
     text-align: center;
   }
 
-  #listed {
+  .listed {
     float: left;
     margin-left: $col-width * 9;
     margin-top: 20px;
@@ -952,6 +952,10 @@ ol {
       opacity: 1;
     }
   }
+}
+
+.donate {
+  margin-top: 10px;
 }
 
 
@@ -1295,6 +1299,7 @@ body.community #content {
   line-height: 47px;
   font-size: 14px;
   color: #f6ece8;
+  text-align: center;
   @include text-shadow(rgba(0,0,0,0.3) 0 1px 0);
 
   &.orange {
