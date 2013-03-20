@@ -6,7 +6,7 @@ in your route's `setupController` method.
 
 You can treat an `ArrayController` just like its underlying array. For
 example, imagine we want to display the current playlist. In our router,
-we set tell our `SongsController` to represent the songs in the playlist:
+we setup our `SongsController` to represent the songs in the playlist:
 
 ```javascript
 App.SongsRoute = Ember.Route.extend({
