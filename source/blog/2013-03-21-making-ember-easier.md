@@ -1,12 +1,12 @@
 ---
 title: Making Ember.js Easier
+tags: Recent Posts
 ---
 
 We frequently receive feedback from new developers about how frustrating
 it can be to get started with Ember. Yesterday, one of the [most active
 comment threads on Hacker
-News](https://news.ycombinator.com/item?id=5406857) was about 
-just that.
+News](https://news.ycombinator.com/item?id=5406857) was largely about just that.
 
 We hear you loud and clear. Ember.js is not easy to get started with, and we take that very seriously. We are all working nights and weekends to make the framework as approachable as humanly possible.
 
