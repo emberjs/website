@@ -29,16 +29,18 @@ App.Router.map(function() {
 });
 
 App.TopChartsChooseRoute = Ember.Route.extend({
+  needs: ['application'],
   redirect: function() {
-    var lastFilter = this.controllerFor('application').get('lastFilter');
+    var lastFilter = this.get('controllers.application').get('lastFilter');
     this.transitionTo('topCharts.' + lastFilter || 'songs');
   }
 });
 
 // Superclass to be used by all of the filter routes below
 App.FilterRoute = Ember.Route.extend({
+  needs: ['application'],
   enter: function() {
-    var controller = this.controllerFor('application');
+    var controller = this.get('controllers.application');
     controller.set('lastFilter', this.templateName);
   }
 });

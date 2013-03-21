@@ -41,12 +41,15 @@ The default `setupController` hook sets the `model` property of the
 associated controller to the route handler's model.
 
 If you want to configure a controller other than the controller
-associated with the route handler, use the `controllerFor` method:
+associated with the route handler, you need to provide the name
+of that controller in the `needs` array and `get` that controller
+from the controllers array:
 
 ```js
 App.PostRoute = Ember.Route.extend({
+  needs: ['topPost'],
   setupController: function(controller, model) {
-    this.controllerFor('topPost').set('content', model);
+    this.get('controllers.topPost').set('content', model);
   }
 });
 ```

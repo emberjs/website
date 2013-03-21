@@ -51,8 +51,10 @@ combination you'd like:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
+  needs: ['favoritePost'],
+
   renderTemplate: function() {
-    var controller = this.controllerFor('favoritePost');
+    var controller = this.get('controllers.favoritePost');
 
     // Render the `favoritePost` template into
     // the outlet `posts`, and display the `favoritePost`
