@@ -6,7 +6,7 @@ For example, imagine you are frequently wrapping certain values in a `<span>` ta
 
 ```javascript
 Ember.Handlebars.registerBoundHelper('highlight', function(value, options) {
-  escaped = Handlebars.Utils.escapeExpression(value);
+  var escaped = Handlebars.Utils.escapeExpression(value);
   return new Handlebars.SafeString('<span class="highlight">' + escaped + '</span>');
 });
 ```
