@@ -57,8 +57,8 @@ title: "About"
 App = Ember.Application.create();
 
 App.Person = Ember.Object.extend({
-  firstName: "",
-  lastName: "",
+  firstName: null,
+  lastName: null,
 
   fullName: function() {
     return this.get('firstName') +
