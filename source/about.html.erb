@@ -54,9 +54,11 @@ title: "About"
   <h2>Getting Started with Ember.js is Easy.</h2>
 
 <% highlight :javascript, :left do %>
-App.Person = DS.Model.extend({
-  firstName: DS.attr('string'),
-  lastName: DS.attr('string'),
+App = Ember.Application.create();
+
+App.Person = Ember.Object.extend({
+  firstName: "",
+  lastName: "",
 
   fullName: function() {
     return this.get('firstName') +
@@ -64,19 +66,35 @@ App.Person = DS.Model.extend({
   }.property('firstName', 'lastName')
 });
 
-App.peopleController = Em.ArrayController.create({
-  content: App.Person.find()
+
+App.ApplicationRoute = Ember.Route.extend({
+  model: function() {
+    var people = [
+      App.Person.create({
+        firstName: "Tom",
+        lastName: "Dale"
+      }),
+      App.Person.create({
+        firstName: "Yehuda",
+        lastName: "Katz"
+      })
+    ];
+    return people;
+  }
 });
+
 <% end %>
 
 <% highlight :handlebars, :right do %>
-<h1>People</h1>
+<script type="text/x-handlebars">
+  <h1>People</h1>
 
-<ul>
-{{#each peopleController}}
-  <li>Hello, <b>{{fullName}}</b>!</li>
-{{/each}}
-</ul>
+  <ul>
+  {{#each controller}}
+    <li>Hello, <b>{{fullName}}</b>!</li>
+  {{/each}}
+  </ul>
+</script>
 <% end %>
 
 </div>
