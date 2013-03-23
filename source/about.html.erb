@@ -29,6 +29,9 @@ title: "About"
     <div class="info">49k min+gzip |
       <a class="debug" href="https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-rc.1.min.js">
         minified
+      </a> |
+      <a class="debug" href="https://github.com/emberjs/starter-kit/archive/master.zip">
+        Starter Kit
       </a>
     </div>
   </div>
@@ -57,8 +60,8 @@ title: "About"
 App = Ember.Application.create();
 
 App.Person = Ember.Object.extend({
-  firstName: "",
-  lastName: "",
+  firstName: null,
+  lastName: null,
 
   fullName: function() {
     return this.get('firstName') +
