@@ -9,11 +9,11 @@
 <% end %>
 
 <% if item['return'] %>
-  <span class="type"><%= item['return']['type'] %></span>
+  <span class="type"><%= api_class_link item['return']['type'] %></span>
 <% end %>
 
 <% if item['type'] %>
-  <span class="type"><%= item['type'] %></span>
+  <span class="type"><%= api_class_link item['type'] %></span>
 <% end %>
 
 <% if item['deprecated'] %>
@@ -97,7 +97,7 @@
 
       <dl>
         <% item['params'].each do |param| %>
-          <dt><strong><%= param['name'] %></strong> <span class="type"><%= param['type'] %></span></dt>
+          <dt><strong><%= param['name'] %></strong> <span class="type"><%= api_class_link param['type'] %></span></dt>
           <dd><%= param['description'] %></dd>
         <% end %>
       </dl>
@@ -108,7 +108,7 @@
     <div class="return">
       <h3>Returns:</h3>
       <dl>
-        <dt><span class="type"><%= item['return']['type'] %></span>
+        <dt><span class="type"><%= api_class_link item['return']['type'] %></span>
         <dd> <%= item['return']['description'] %></dd>
       </dl>
     </div>
