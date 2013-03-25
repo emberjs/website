@@ -2,6 +2,7 @@
 title: This Week in Ember
 date: 2013/01/18
 tags: This Week in Ember
+author: Tom Dale & Yehuda Katz
 ---
 
 It's been a big month for Ember.js, and we're excited about the progress

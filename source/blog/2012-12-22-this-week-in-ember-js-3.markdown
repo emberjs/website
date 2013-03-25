@@ -2,6 +2,7 @@
 title: This Week in Ember.js
 date: 2012/12/22
 tags: This Week in Ember
+author: Bradley Priest
 ---
 
 Only a few more days left, I hope everyone's had a great 2012,
