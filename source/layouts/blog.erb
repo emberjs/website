@@ -4,6 +4,9 @@
 <% wrap_layout :layout do %>
   <article class="blog-post">
     <h1><%= current_article.title %></h1>
+    <% if current_page.data.author %>
+      <h3 class="blog-post-author">Posted By: <%= current_page.data.author %></h3>
+    <% end %>
 
     <%= yield %>
 
