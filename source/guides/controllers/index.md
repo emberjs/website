@@ -116,7 +116,7 @@ For convenience, Ember.js provides controllers that _proxy_
 properties from their models so that you can say `{{name}}` in your
 template rather than `{{model.name}}`. An `Ember.ArrayController` 
 proxies properties from an Array, and an `Ember.ObjectController` 
-proxies properties from an obect.
+proxies properties from an object.
 
 If your controller is an `ArrayController`, you can iterate directly
 over the controller using `{{#each controller}}`. This keeps the
