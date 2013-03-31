@@ -1,5 +1,5 @@
----
 title: "About"
+---
 ---
 
 <% content_for :head do %>
@@ -69,8 +69,7 @@ App.Person = Ember.Object.extend({
   }.property('firstName', 'lastName')
 });
 
-
-App.IndexRoute = Ember.Route.extend({
+App.ApplicationRoute = Ember.Route.extend({
   model: function() {
     var people = [
       App.Person.create({
@@ -93,7 +92,7 @@ App.IndexRoute = Ember.Route.extend({
   <h1>People</h1>
 
   <ul>
-  {{#each controller}}
+  {{#each model}}
     <li>Hello, <b>{{fullName}}</b>!</li>
   {{/each}}
   </ul>
