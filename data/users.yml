@@ -135,6 +135,8 @@
   image: travisci.png
 - url: http://boxee.tv
   image: boxee.png
+- url: http://www.crowdflower.com
+  image: crowdflower.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
