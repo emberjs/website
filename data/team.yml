@@ -1,0 +1,24 @@
+- name: Yehuda Katz
+  github: http://github.com/wycats
+  image: ykatz.jpg
+- name: Tom Dale
+  github: http://github.com/tdale
+  image: tdale.jpg
+- name: Peter Wagenet
+  github: http://github.com/pwagenet
+  image: pwagenet.jpg
+- name: Trek Glowaki
+  github: http://github.com/trek
+  image: tglowaki.jpg
+- name: Erik Bryn
+  github: http://github.com/ebryn
+  image: ebryn.jpg
+- name: Kris Selden
+  github: http://github.com/kselden
+  image: kselden.jpg
+- name: Stefan Penner
+  github: http://github.com/stefanpenner
+  image: spenner.jpg
+- name: Leah Silber
+  github: http://github.com/wifelette
+  image: lsilber.jpg

@@ -1228,6 +1228,91 @@ body.community #content {
   border-bottom: none;
 }
 
+
+/**
+  Sponsors Page
+**/
+
+.sponsors {
+
+  .section {
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  #content {
+    margin: 3em auto 0 auto;
+    width: 54em;
+  }
+
+  .button {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  ul, ol {
+        list-style-type: disc;
+        margin-bottom: 28px;
+
+        li {
+          font-size: 15px;
+          margin: 10px 0 10px 0;
+
+          p {
+            padding-left: 7px;
+          }
+        }
+      }
+}
+
+/**
+  Core Team Page
+**/
+
+.team {
+
+  .section {
+    width: 100%;
+    margin-top: 0px;
+
+    .headshots {
+      width: 756px;
+
+      a:hover {
+        border-bottom: none;
+      }
+
+      td {
+        text-align: center;
+
+        p {
+          margin: 0px 0px 10px 0px;
+          font-weight: bold;
+        }
+
+        img {
+          border: 1px solid #888888;
+          margin-bottom: 10px
+        }
+      }
+    }
+  }
+
+  #content {
+    margin: 3em auto 0 auto;
+    width: 54em;
+  }
+}
+
 /**
   Footer
 **/
