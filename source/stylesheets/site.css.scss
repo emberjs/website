@@ -1,11 +1,10 @@
-@import "compass";
-@import "compass/reset";
-@import "compass/typography/text/ellipsis";
-@import "fonts";
+@import 'compass';
+@import 'compass/reset';
+@import 'compass/typography/text/ellipsis';
+@import 'fonts';
 
 /* Calculated page dimensions. */
 $page-width: 940px;
-
 $col-width: 40px;
 $col-spacing: 20px;
 $sidebar-width: $col-width * 4 + $col-spacing * 3;
@@ -20,10 +19,10 @@ $black-color: #252525;
 }
 
 body {
-  background: url(/images/background-shades.png) no-repeat top center #faf4f1;
+  background: url('/images/background-shades.png') no-repeat top center #faf4f1;
   margin: 60px 0 0 0;
   padding: 0;
-  font-family: Helvetica Neue, Helvetica, Arial, Sans-Serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
   font-size: 14px;
   line-height: 1.4em;
   color: #444444;
@@ -42,7 +41,7 @@ sup {
   @include box-sizing(border-box);
 }
 
-// Typography
+/* Typography */
 
 a {
   color: #f23818;
@@ -72,7 +71,7 @@ code {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  font-family: "Maven Pro";
+  font-family: 'Maven Pro';
   font-weight: bold;
 
   code {
@@ -85,7 +84,7 @@ h1 {
   color: $orange-color;
   padding: 0px 0px 1em 2em;
   margin-bottom: 1.5em;
-  background: no-repeat url(/images/chapter-mark.png) top left;
+  background: no-repeat url('/images/chapter-mark.png') top left;
   border-bottom: 1px solid #dfd7d4;
 }
 
@@ -93,8 +92,8 @@ h2 {
   font-size: 22px;
 }
 
-h2,h3{
-  font-family: "Maven Pro";
+h2, h3{
+  font-family: 'Maven Pro';
   font-weight: bold;
   color: $black-color;
 }
@@ -134,14 +133,14 @@ ol {
   display: none;
 }
 
-// Structure
+/* Structure */
 
 .section {
   margin: 0 auto;
   width: 960px;
 }
 
-// Components
+/* Components */
 
 /**
   Tabs
@@ -158,7 +157,7 @@ ol {
 
   > ul {
     list-style: none;
-    overflow: hidden; // Clearfix
+    overflow: hidden; /* Clearfix */
     display: table;
     width: 100%;
 
@@ -179,7 +178,7 @@ ol {
         text-transform: uppercase;
         font-weight: normal;
         color: #443331;
-        font-family: helvetica neue;
+        font-family: 'Helvetica Neue';
 
         &:hover {
           background-color: #ebebeb;
@@ -199,7 +198,7 @@ ol {
     margin-bottom: 20px;
   }
   .pane {
-    margin: 1em 1.5em  2em 1.5em;
+    margin: 1em 1.5em 2em 1.5em;
   }
 }
 
@@ -208,7 +207,7 @@ ol {
 **/
 
 #sidebar {
-  font-family: "Maven Pro";
+  font-family: 'Maven Pro';
   font-weight: normal;
   margin-top: 38px;
   float: left;
@@ -227,14 +226,14 @@ ol {
     display: none;
     @include transition(opacity 0.05s linear);
 
-    @media screen and (max-width: 1200px){
+    @media screen and (max-width: 1200px) {
       padding-left: 0px;
       height: 20px;
       width: 30px;
       overflow: hidden;
     }
 
-    @media screen and (max-width: 1020px){
+    @media screen and (max-width: 1020px) {
       display: none !important;
     }
   }
@@ -245,7 +244,7 @@ ol {
     line-height: 1.5em;
     border-bottom: none;
     color: #d84a32;
-    font-family: "Maven Pro";
+    font-family: 'Maven Pro';
     font-weight: bold;
     cursor: pointer;
 
@@ -284,7 +283,7 @@ ol {
         }
 
         li.sub-selected {
-          background-color: #F2D1CB;
+          background-color: #f2d1cb;
           > a {
             font-family: 'Maven Pro';
             font-weight: bolder;
@@ -315,7 +314,7 @@ ol {
           background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
           outline: 1px solid #b23e2a;
           color: white;
-          border-top: 1px solid rgba(255,255,255,0.4);
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         &:last-of-type ol {
@@ -334,7 +333,7 @@ ol {
           font-weight: normal;
           font-size: 13px;
           &:hover {
-            background-color: #F2D1CB;
+            background-color: #f2d1cb;
             color: black;
           }
           &:active {
@@ -361,7 +360,7 @@ ol {
 
 #guide_search {
   background-color: #fbf8f7;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   position: relative;
   color: #423432;
   display: block;
@@ -372,13 +371,13 @@ ol {
     padding: 0px 0px 5px 15px;
     padding-right: 10px;
     margin-left: 10px;
-    background: no-repeat url(/images/search-icon.png);
+    background: no-repeat url('/images/search-icon.png');
   }
 
   border: 0;
-  input::-webkit-input-placeholder { font-style: italic; }
-  input:-moz-placeholder { font-style: italic; }
-  input::-moz-placeholder { font-style: italic; }
+  input:-webkit-input-placeholder { font-style: italic; }
+  input:         -moz-placeholder { font-style: italic; }
+  input:         -moz-placeholder { font-style: italic; }
 
   input {
     background: none;
@@ -392,7 +391,7 @@ ol {
   }
 
   button {
-    background: no-repeat url(/images/search-erase.png);
+    background: no-repeat url('/images/search-erase.png');
     width: 14px;
     border: 0px;
     height: 14px;
@@ -403,7 +402,7 @@ ol {
   }
 }
 
-// Pages
+/* Pages */
 
 /**
   Header
@@ -415,10 +414,10 @@ ol {
   min-width: $page-width;
   top: 0;
   height: 60px;
-  background: url(/images/navigation_background.png) top center;
+  background: url('/images/navigation_background.png') top center;
   border-bottom: 1px solid #aa412f;
-  z-index: 10; // the header is on top to have a proper drop shadow
-  @include box-shadow(rgba(0,0,0,0.3) 0 0 3px);
+  z-index: 10; /* The header is on top to have proper drop-shadow. */
+  @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 3px);
 
   #wrapper {
     width: $page-width;
@@ -432,11 +431,11 @@ ol {
     top: 6px;
     width: 103px;
     height: 40px;
-    background: url(/images/ember_logo.png);
-    @include filter(drop-shadow(rgba(0,0,0,0.3) 0 1px 2px));
+    background: url('/images/ember_logo.png');
+    @include filter(drop-shadow(rgba(0, 0, 0, 0.3) 0 1px 2px));
 
     &:hover {
-      @include filter(drop-shadow(rgba(0,0,0,0.7) 0 1px 3px));
+      @include filter(drop-shadow(rgba(0, 0, 0, 0.7) 0 1px 3px));
       border: 0;
     }
   }
@@ -454,13 +453,13 @@ ol {
       display: inline-block;
 
       a {
-        font-family: "Maven Pro";
+        font-family: 'Maven Pro';
         font-weight: bold;
         font-size: 13px;
         text-transform: uppercase;
         color: #faf2ee;
 
-        @include text-shadow(rgba(0,0,0,0.3) 0px 1px 0px);
+        @include text-shadow(rgba(0, 0, 0, 0.3) 0px 1px 0px);
         display: block;
         padding: 0px 1em;
         height: 26px;
@@ -468,14 +467,14 @@ ol {
         text-decoration: none;
         border: 1px solid transparent;
 
-        &:hover { color: #fff }
+        &:hover { color: #ffffff }
       }
 
       &.active a {
         color: #331915;
-        @include text-shadow(rgba(255,255,255,0.2) 0 1px 0px);
+        @include text-shadow(rgba(255, 255, 255, 0.2) 0 1px 0px);
         background-color: #bf4737;
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0, 0, 0, 0.2);
         @include border-radius(3px);
         border: 1px solid #923c2e;
         @include box-shadow(
@@ -485,7 +484,7 @@ ol {
 
         &:hover {
           color: black;
-          background-color: rgba(0,0,0,0.17);
+          background-color: rgba(0, 0, 0, 0.17);
         }
       }
 
@@ -505,12 +504,12 @@ ol {
         display: block;
       }
 
-      font-family: "Maven Pro";
+      font-family: 'Maven Pro';
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
-      @include text-shadow(rgba(0,0,0,0.3) 0px 1px 0px);
+      @include text-shadow(rgba(0, 0, 0, 0.3) 0px 1px 0px);
 
       display: block;
       padding: 0px 1em;
@@ -519,16 +518,16 @@ ol {
 
       background-color: #ff6e56;
       @include filter-gradient(#ff6e56, #ed4f35, vertical);
-      @include background-image(linear-gradient(top, #ff6e56 0%,#ed4f35 100%));
+      @include background-image(linear-gradient(top, #ff6e56 0%, #ed4f35 100%));
 
       border: 1px solid #a93926;
       @include border-radius(4px);
       @include box-shadow(
-        inset rgba(255,255,255, 0.17) 0 1px 1px
+        inset rgba(255, 255, 255, 0.17) 0 1px 1px
       );
 
       &:hover {
-        color: #fff;
+        color: #ffffff;
         background: #f86c55;
       }
     }
@@ -543,7 +542,7 @@ ol {
   position: relative;
 
   &.grid {
-    background-image: url(/images/grid.png);
+    background-image: url('/images/grid.png');
   }
 }
 
@@ -626,18 +625,18 @@ ol {
 
   figure {
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff;
     margin: 1.5em 0;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
   }
 
   aside {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 1em;
-    color: #666;
+    color: #666666;
     code {
-      color: #777;
+      color: #777777;
     }
   }
 
@@ -674,8 +673,7 @@ ol {
     left: 0;
 
     .button {
-/* Due to long version name */
-      font-size: 13px;
+      font-size: 13px; /* Due to long version name */
     }
   }
 
@@ -685,7 +683,7 @@ ol {
 
   .info {
     margin-top: 4px;
-    color: #888;
+    color: #888888;
   }
 }
 
@@ -722,7 +720,7 @@ ol {
 
     p {
       text-align: center;
-      color: #222;
+      color: #222222;
     }
   }
 }
@@ -857,12 +855,12 @@ ol {
     &.empty {
       display: block;
       height: 210px;
-      visibility: hidden; // Take up space, but be invisible
+      visibility: hidden; /*Take up space, but be invisible*/
     }
 
     a {
       @include border-radius(4px);
-      @include box-shadow(0 1px 2px rgba(0,0,0,0.1));
+      @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
       background: url('/images/about/user_bg.png') no-repeat;
       display: block;
       height: 103px;
@@ -905,9 +903,9 @@ ol {
     float: left;
     position: relative;
     margin-left: $col-spacing;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    @include box-shadow(rgba(0,0,0,0.1) 0 2px 3px);
+    @include box-shadow(rgba(0, 0, 0, 0.1) 0 2px 3px);
     @include border-radius(6px);
     @include width-for-columns(4);
 
@@ -922,7 +920,7 @@ ol {
       bottom: 0;
       left: 0;
       opacity: 0;
-      background-color: rgba(0,0,0,0.85);
+      background-color: rgba(0, 0, 0, 0.85);
       -webkit-font-smoothing: antialiased;
       @include transition(opacity 0.1s linear);
       @include border-radius(6px);
@@ -930,7 +928,7 @@ ol {
       .name {
         text-align: center;
         color: white;
-        font-family: "Maven Pro";
+        font-family: 'Maven Pro';
         font-weight: normal;
         font-size: 18px;
         margin-top: 55px;
@@ -1003,7 +1001,7 @@ ol {
     left: -1em;
     width: 30px;
     height: 13px;
-    background: url(/images/link.png) no-repeat;
+    background: url('/images/link.png') no-repeat;
     background-size: 18px 9px;
     left: -22px;
     opacity: 0.5;
@@ -1015,7 +1013,7 @@ ol {
     width: 100%;
 
     thead {
-      background-color: #F9E7E4;
+      background-color: #f9e7e4;
     }
 
     th {
@@ -1060,7 +1058,7 @@ ol {
       border-bottom: none;
     }
 
-    .blog-post-author { 
+    .blog-post-author {
       font-size: 10px;
       color: gray;
       position: absolute;
@@ -1072,11 +1070,11 @@ ol {
       width: 100%;
       background-color: white;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #cccccc;
     }
 
     blockquote {
-      background-color: rgba(100,100,100,0.1);
+      background-color: rgba(100, 100, 100, 0.1);
       font-style: italic;
       padding: 8px;
 
@@ -1091,7 +1089,6 @@ ol {
       margin: 0 auto;
       background-color: white;
       max-width: 100%;
-      /*max-width: $content-width;*/
     }
 
     ul, ol {
@@ -1141,7 +1138,7 @@ ol {
 
 body.community #content {
   margin: 3em auto 0 auto;
-  width: 54em;;
+  width: 54em;
 
   h1, h1:first-child {
     margin-top: 0;
@@ -1220,7 +1217,7 @@ body.community #content {
 
   padding: 10px;
   a {
-    background-image: url("/images/about/user_bg.png");
+    background-image: url('/images/about/user_bg.png');
     display: block;
     height: 103px;
     width: 210px;
@@ -1241,7 +1238,7 @@ body.community #content {
   border-top: 1px solid #e5dbd6;
   background-color: #f2ece9;
   overflow: hidden;
-  font-family: "Maven Pro";
+  font-family: 'Maven Pro';
   font-weight: bold;
 
   #footer-wrapper {
@@ -1266,7 +1263,7 @@ body.community #content {
 
   .statement {
     font-size: 14px;
-    color: #bbb;
+    color: #bbbbbb;
     text-transform: uppercase;
     position: absolute;
     text-align: center;
@@ -1283,7 +1280,7 @@ body.community #content {
     a {
       margin: 0 10px;
       border-bottom: none;
-      opacity: 0.7; 
+      opacity: 0.7;
       &:hover {
         opacity: 1;
       }
@@ -1291,7 +1288,7 @@ body.community #content {
   }
 
   .twitter, .github, .googleplus {
-    background: no-repeat url(/images/footer-links.png);
+    background: no-repeat url('/images/footer-links.png');
     height: 35px;
     width: 35px;
     display: inline-block;
@@ -1317,7 +1314,7 @@ body.community #content {
   display: block;
   width: 226px;
   height: 46px;
-  font-family: "Maven Pro";
+  font-family: 'Maven Pro';
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -1325,10 +1322,10 @@ body.community #content {
   font-size: 14px;
   color: #f6ece8;
   text-align: center;
-  @include text-shadow(rgba(0,0,0,0.3) 0 1px 0);
+  @include text-shadow(rgba(0, 0, 0, 0.3) 0 1px 0);
 
   &.orange {
-    background-image: url(/images/orange_buttons.png);
+    background-image: url('/images/orange_buttons.png');
 
     &:hover {
       background-position: 0 -46px;
@@ -1337,12 +1334,12 @@ body.community #content {
 
     &:active {
       background-position: 0 -92px;
-      @include text-shadow(rgba(0,0,0,0.3) 0 -1px 0);
+      @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
     }
   }
 
   &.black {
-    background-image: url(/images/black_buttons.png);
+    background-image: url('/images/black_buttons.png');
 
     &:hover {
       background-position: 0 -46px;
@@ -1351,7 +1348,7 @@ body.community #content {
 
     &:active {
       background-position: 0 -92px;
-      @include text-shadow(rgba(0,0,0,0.3) 0 -1px 0);
+      @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
     }
   }
 
@@ -1367,19 +1364,19 @@ body.community #content {
   width: 74px;
   height: 22px;
 
-  font-family: "Maven Pro";
+  font-family: 'Maven Pro';
   font-weight: normal;
-  color: #fff;
+  color: #ffffff;
   line-height: 24px;
   text-transform: uppercase;
-  @include text-shadow(rgba(0,0,0,0.3) 0 1px 0);
+  @include text-shadow(rgba(0, 0, 0, 0.3) 0 1px 0);
 
   &.orange {
-    background-image: url(/images/small-orange-button.png);
+    background-image: url('/images/small-orange-button.png');
   }
 
   &.black {
-    background-image: url(/images/small-black-button.png);
+    background-image: url('/images/small-black-button.png');
   }
 }
 
@@ -1409,7 +1406,7 @@ body.community #content {
         left: -1em;
         width: 30px;
         height: 13px;
-        background: url(/images/link.png) no-repeat;
+        background: url('/images/link.png') no-repeat;
         background-size: 18px 9px;
         left: -19px;
         opacity: 0.5;
@@ -1471,14 +1468,14 @@ body.community #content {
 
   .description {
     p {
-      font-family: Helvetica neue;
+      font-family: 'Helvetica Neue';
       font-weight: 200;
     }
   }
 
   ul.index-list {
     margin-left: 1.5em;
-    overflow: hidden; // Clearfix
+    overflow: hidden; /* Clearfix */
 
     li {
       float: left;
