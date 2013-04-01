@@ -14,7 +14,7 @@ Having an application object is important for several reasons:
 
 1. It is your application's namespace. All of the classes in your application will
    be defined as properties on this object (e.g., `App.PostsView` and
-   `App.PostsController`). This helps to prevent polluting the global scope.
+   `App.PostsController`). This helps to prevent polluting of the global scope.
 2. It adds event listeners to the document and is responsible for
    sending events to your views.
 3. It automatically renders the [_application

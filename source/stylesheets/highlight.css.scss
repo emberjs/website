@@ -1,13 +1,13 @@
-@import "compass";
+@import 'compass';
 
 $border-radius: 5px;
 
-$blue:   #1F58CE;
+$blue:   #1f58ce;
 $gray:   #777777;
 $green:  #007700;
 
 #content .highlight {
-  background-image: url(/images/code_background.gif);
+  background-image: url('/images/code_background.gif');
   border: 1px solid #d1d1d1;
   @include border-radius($border-radius);
   font-size: 12px;
@@ -16,7 +16,7 @@ $green:  #007700;
   overflow: hidden;
   position: relative;
   margin: 2em 0;
-  @include box-shadow(0 1px #fff, inset -1px 1px 4px rgba(0,0,0,0.1));
+  @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
 
   table {
     margin: 0 0;
@@ -31,13 +31,13 @@ $green:  #007700;
   }
 
   &.javascript .ribbon, &.js .ribbon {
-    background-image: url(/images/js-ribbon.png);
+    background-image: url('/images/js-ribbon.png');
   }
   &.html .ribbon {
-    background-image: url(/images/html-ribbon.png);
+    background-image: url('/images/html-ribbon.png');
   }
   &.handlebars .ribbon {
-    background-image: url(/images/handlebars-ribbon.png);
+    background-image: url('/images/handlebars-ribbon.png');
   }
 }
 
@@ -58,6 +58,7 @@ $green:  #007700;
   }
 
   /* HTML */
+
   .tag {
     color: $blue;
   }
@@ -97,7 +98,7 @@ $green:  #007700;
       &,
       .inline-delimiter,
       .delimiter {
-        color: lighten($green, 10%);;
+        color: lighten($green, 10%);
       }
 
       .attribute-name {
