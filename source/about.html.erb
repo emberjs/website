@@ -23,14 +23,14 @@ title: "About"
 <img class="about-header-text" src="/images/about/header-text.png" alt="A framework for creating ambitious web applications.">
 <div id="download">
   <div id="download-ember">
-    <a class="orange button" href="https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-rc.1.js">
-      Download Ember 1.0.0-rc.1
+    <a class="orange button" href="https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-rc.2.js">
+      Download Ember 1.0.0-rc.2
     </a>
-    <div class="info">49k min+gzip |
-      <a class="debug" href="https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-rc.1.min.js">
+    <div class="info">51k min+gzip |
+      <a class="debug" href="https://raw.github.com/emberjs/ember.js/release-builds/ember-1.0.0-rc.2.min.js">
         minified
       </a> |
-      <a class="debug" href="https://github.com/emberjs/starter-kit/archive/master.zip">
+      <a class="debug" href="https://github.com/emberjs/starter-kit/archive/v1.0.0-rc.2.zip">
         Starter Kit
       </a>
     </div>
@@ -69,7 +69,6 @@ App.Person = Ember.Object.extend({
   }.property('firstName', 'lastName')
 });
 
-
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
     var people = [
@@ -93,7 +92,7 @@ App.ApplicationRoute = Ember.Route.extend({
   <h1>People</h1>
 
   <ul>
-  {{#each controller}}
+  {{#each model}}
     <li>Hello, <b>{{fullName}}</b>!</li>
   {{/each}}
   </ul>

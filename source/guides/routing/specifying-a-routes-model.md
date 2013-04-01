@@ -58,3 +58,11 @@ return `App.Post.find(params.post_id)` automatically.
 Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
 as expected out of the box.
+
+Note: A route with a dynamic segment will only have it's `model` hook called
+when it is entered via the URL. If the route is entered through a transition
+(e.g. when using the [linkTo][2] Handlebars helper), then a model context is
+already provided and the hook is not executed. Routes without dynamic segments
+will always execute the model hook.
+
+[2]: /guides/templates/links

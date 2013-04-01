@@ -5,7 +5,7 @@ your application starts.
 
 You should put your header, footer, and any other decorative content
 here. Additionally, you should have at least one `{{outlet}}`:
-a placeholder that the router will fill in with the appropriate template
+a placeholder that the router will fill in with the appropriate template,
 based on the current state of the application.
 
 Here's an example template:

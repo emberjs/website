@@ -1,0 +1,124 @@
+---
+title: Ember 1.0 RC2
+author: Yehuda Katz
+tags: Releases, Recent Posts
+---
+
+Today, we're releasing the second Release Candidate of Ember 1.0.
+As we said when we released RC1, the next few releases will be
+about bugfixes and improvements, and should not have any breaking
+changes.
+
+### Namespace Lookup for Controllers
+
+It is now possible to look up controllers that are included in a
+namespace other than the main application namespace.
+
+For example, when using the render helper:
+
+```handlebars
+{{render 'posts'}}
+```
+
+This will render the `posts` template with the controller `App.PostsController`, where `App` is the main application namespace.
+
+If you want to use an alternative namespace, you can use a
+`/`-separated path.
+
+```handlebars
+{{render 'blog/posts'}}
+```
+
+This will render the `blog/posts` template with the controller
+`Blog.PostsController`.
+
+### Using Render With Multiple Models
+
+In RC1, you could use `{{render 'posts'}}` to render the `posts`
+template using the app's instance of `App.PostsController`. Using
+`render` in this way will always render the template using the same
+singleton controller.
+
+In RC2, we are adding the ability to render a template with a
+particular model: `{{render 'post' post}}`. When you supply a model,
+Ember.js will create a new instance of the `App.PostController` each
+time it is used.
+
+This allows you to use `{{render}}` in a loop:
+
+```handlebars
+{{#each post in posts}}
+  {{render 'post' post}}
+{{/each}}
+```
+
+### Unwrapping an `ObjectController`'s Model
+
+When passing an `ObjectController` as a parameter to the `action`
+or `linkTo` helpers, Ember now unwraps the underlying model and 
+passes it through.
+
+Most importantly, this allows you to add an `itemController` to
+`{{#each}}` without affecting action handlers in your controller
+or router.
+
+If you have a template like this:
+
+```handlebars
+<!-- posts.handlebars -->
+
+<ul>
+{{#each controller itemController='postItem'}}
+  <li><button {{action selectPost this}}>{{name}}</button></li>
+{{/each}}
+</ul>
+```
+
+Your `App.PostsController` would look like this:
+
+```javascript
+App.PostsController = Ember.ArrayController.extend({
+  needs: 'currentPost',
+
+  selectPost: function(post) {
+    // `post` here is an `App.Post`, not an
+    // `App.PostItemController`
+    this.set('controllers.currentPost.model', post);
+  }
+});
+```
+
+This should make using `itemController` less gotcha-prone.
+
+### Support for jQuery 2.0
+
+Ember 1.0 RC2 supports [jQuery 2.0][1].
+
+This allows you to use a smaller, optimized build for newer builds
+that is fully compatible with Ember.
+
+If you're targeting both older IE and modern browsers, you can use
+the following snippet to get the best of both worlds:
+
+```html
+<!--[if lt IE 9]>
+    <script src="jquery-1.9.1.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script src="jquery-2.0.0.js"></script>
+<!--<![endif]-->
+```
+
+Because jQuery 1.9 and 2.0 are API-compatible, this strategy will
+allow you to target the widest range of browsers, but ship a
+smaller build for modern browsers.
+
+The future is here!
+
+[1]: http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/
+
+### Changelog
+
+The full [CHANGELOG][2] is available on Github, as always.
+
+[2]: https://github.com/emberjs/ember.js/blob/7e012d9e7f4c5e5b7ce6e60307aac7cd653df5b9/CHANGELOG#L1

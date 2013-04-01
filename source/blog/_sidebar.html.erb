@@ -1,8 +1,18 @@
 <ol id='toc-list'>
+  <% if blog.tags['Recent Posts'] %>
   <li class='level-1'>
     <a href="<%= tag_path 'Recent posts'%>">Recent Posts</a>
     <ol style="display:block">
       <% blog.tags['Recent Posts'].sort_by(&:date).reverse.each_with_index do |article, i| %>
+      <li class='level-3'><%= link_to article.title, article %></li>
+    <% end %>
+    </ol>
+  </li>
+  <% end %>
+  <li class='level-1'>
+    <a href="<%= tag_path 'Releases'%>">Releases</a>
+    <ol style="display:block">
+      <% blog.tags['Releases'].sort_by(&:date).reverse.each_with_index do |article, i| %>
       <li class='level-3'><%= link_to article.title, article %></li>
     <% end %>
     </ol>
