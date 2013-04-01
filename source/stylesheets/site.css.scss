@@ -1,7 +1,6 @@
 @import "compass";
 @import "compass/reset";
 @import "compass/typography/text/ellipsis";
-
 @import "fonts";
 
 /* Calculated page dimensions. */
@@ -31,6 +30,7 @@ body {
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
 }
+
 sup {
   vertical-align: super;
   font-weight: 100;
@@ -70,7 +70,7 @@ code {
   @include border-radius(5px);
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   font-family: "Maven Pro";
   font-weight: bold;
@@ -88,7 +88,6 @@ h1 {
   background: no-repeat url(/images/chapter-mark.png) top left;
   border-bottom: 1px solid #dfd7d4;
 }
-
 
 h2 {
   font-size: 22px;
@@ -142,7 +141,8 @@ ol {
   width: 960px;
 }
 
-// components
+// Components
+
 /**
   Tabs
 **/
@@ -402,11 +402,13 @@ ol {
     top: 15px;
   }
 }
-// pages
+
+// Pages
 
 /**
   Header
 **/
+
 #header {
   position: absolute;
   width: 100%;
@@ -545,7 +547,6 @@ ol {
   }
 }
 
-
 #content {
   &.has-sidebar {
     margin: 38px 0 90px 2.1em;
@@ -601,11 +602,13 @@ ol {
         border-right: 1px solid #b23e2a;
       }
     }
+
     li.active , li {
       &:last-child a{
         border-right: 1px solid transparent;
       }
     }
+
     li.active a, li a:hover{
       background-color:  #f67862;
       background-image:         linear-gradient(-90deg, #f67862, #e7624b);
@@ -647,10 +650,10 @@ ol {
   }
 }
 
-
 /**
   About Page
 **/
+
 .about-header-text {
   display: block;
   margin: 60px auto 0 auto;
@@ -671,7 +674,8 @@ ol {
     left: 0;
 
     .button {
-      font-size: 13px; /* Due to long version name */
+/* Due to long version name */
+      font-size: 13px;
     }
   }
 
@@ -704,6 +708,7 @@ ol {
     }
   }
 }
+
 #content{
   .getting-started.section {
     .highlight, p {
@@ -895,7 +900,6 @@ ol {
   }
 }
 
-
 .samples.section {
   .sample {
     float: left;
@@ -957,7 +961,6 @@ ol {
 .donate {
   margin-top: 10px;
 }
-
 
 /**
   Guides Page
@@ -1037,6 +1040,7 @@ ol {
 /**
   Blog
 **/
+
 .blog {
 
   h5.blog-post-summary-author {
@@ -1130,7 +1134,6 @@ ol {
 
   }
 }
-
 
 /**
   Community Page
@@ -1302,8 +1305,6 @@ body.community #content {
 
 }
 
-
-
 .screenshot {
   margin-left: -60px;
 }
@@ -1381,7 +1382,6 @@ body.community #content {
     background-image: url(/images/small-black-button.png);
   }
 }
-
 
 /**
   API
@@ -1525,4 +1525,3 @@ body.not-found #content {
   margin: 3em auto 0 auto;
   width: 54em;
 }
-
