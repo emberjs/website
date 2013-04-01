@@ -23,7 +23,7 @@ forebearers with the lightweight sensibilities of the modern web.
 
 A **template**, written in the Handlebars templating language, describes
 the user interface of your application. In addition to plain HTML,
-templates can contain:
+templates can contain the following:
 
 * **Expressions**, like `{{firstName}}`, which take information from
   controllers and models, place them into HTML, and automatically keep them
