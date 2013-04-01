@@ -10,8 +10,8 @@ help them communicate and collaborate.
 
 We've spent a lot of time borrowing liberally from ideas introduced
 by native application frameworks, like Cocoa. When we felt those
-concepts were more hindrance than help–or didn't fit within the unique
-constraints of the web–we turned to other popular open source projects
+concepts were more hindrance than help–-or didn't fit within the unique
+constraints of the web–-we turned to other popular open source projects
 like Ruby on Rails and Backbone.js for inspiration.
 
 Ember.js, therefore, is a synthesis of the powerful tools of our native
@@ -23,7 +23,7 @@ forebearers with the lightweight sensibilities of the modern web.
 
 A **template**, written in the Handlebars templating language, describes
 the user interface of your application. In addition to plain HTML,
-templates can contain:
+templates can contain the following:
 
 * **Expressions**, like `{{firstName}}`, which take information from
   controllers and models, place them into HTML, and automatically keep them
