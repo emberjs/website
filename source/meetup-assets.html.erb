@@ -12,21 +12,37 @@ title: "Community"
 
 <div class="team section">
 
-<table class="headshots" id="alpha">
-  <% data.team.each_slice(4) do |slice| %>
+<table class="headshots">
+  <% data.fetch('meetups').each_slice(4) do |slice| %>
     <tr>
       <% slice.each do |user| %>
         <td>
           <p>
-            <%= user.name %>
+            <%= user.location %>
           </p>
-          <a href="<%= user.github %>" rel="nofollow">
-            <img src="/images/team/<%= user.image %>">
+          <a href="<%= user.url %>" rel="nofollow">
+            <img src="/images/meetups/<%= user.image %>">
           </a>
         </td>
       <% end %>
     </tr>
   <% end %>
 </table>
+
+<table class="columns">
+    <tr>
+      <% data.meetups.each do |name, groups| %>
+        <td>
+          <h3><%= name %></h3>
+          <ul>
+            <% groups.sort_by(&:location).each do |group| %>
+              <li><%= link_to group.location, group.url %></li>
+            <% end %>
+          </ul>
+        </td>
+      <% end %>
+    </tr>
+  </table>
+
 
 </div>
