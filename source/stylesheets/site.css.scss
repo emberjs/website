@@ -1232,10 +1232,10 @@ body.community #content {
 **/
 
 .sponsors {
-
   .section {
     width: 100%;
     margin-top: 0px;
+    padding: 2em;
   }
 
   h1 {
@@ -1258,18 +1258,18 @@ body.community #content {
   }
 
   ul, ol {
-        list-style-type: disc;
-        margin-bottom: 28px;
+    margin-bottom: 28px;
 
-        li {
-          font-size: 15px;
-          margin: 10px 0 10px 0;
+    list-style-type: disc;
+    li {
+      font-size: 15px;
+      margin: 10px 0 10px 0;
 
-          p {
-            padding-left: 7px;
-          }
-        }
+      p {
+        padding-left: 7px;
       }
+    }
+  }
 }
 
 /**
