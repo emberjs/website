@@ -94,7 +94,7 @@ This should make using `itemController` less gotcha-prone.
 
 Ember 1.0 RC2 supports [jQuery 2.0][1].
 
-This allows you to use a smaller, optimized build for newer builds
+This allows you to use a smaller, optimized build for newer browsers
 that is fully compatible with Ember.
 
 If you're targeting both older IE and modern browsers, you can use
