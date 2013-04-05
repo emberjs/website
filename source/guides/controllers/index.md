@@ -94,8 +94,8 @@ the view knows anything about those mechanics.
 
 <aside>
 For example, if the user navigates from `/posts/1` to `/posts/2`,
-the `PostController` will change its model from `User.find(1)` to
-`User.find(2)`. The template will update its representations of any
+the `PostController` will change its model from `Post.find(1)` to
+`Post.find(2)`. The template will update its representations of any
 properties on the model, as well as any computed properties on the
 controller that depend on the model.
 </aside>
