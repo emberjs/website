@@ -1315,40 +1315,29 @@ body.community #content {
   Meetup Assets Page
 **/
 
-.meetup, .meetup-assets {
-
-  .section {
+#content .meetups {
+  ul {
     width: 100%;
-    margin-top: 0px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 2.5em;
+  }
 
-    .meetup-badges {
-      width: 756px;
-
-      a:hover {
-        border-bottom: none;
-      }
-
-      td {
-        text-align: center;
-
-        p {
-          margin: 0px 0px 10px 0px;
-          font-weight: bold;
-        }
-
-        img {
-          border: 1px solid #888888;
-          margin-bottom: 10px
-        }
-      }
+  li {
+    width: 220px;
+    float: left;
+    margin-bottom: 20px;
+    img, a {
+      display: block;
+      margin: 0 auto;
     }
   }
 
-  #content {
-    margin: 3em auto 0 auto;
-    width: 54em;
+  p {
+    text-align: center;
   }
 }
+
 
 /**
   Footer
