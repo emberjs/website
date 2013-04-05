@@ -1312,6 +1312,34 @@ body.community #content {
 }
 
 /**
+  Meetup Assets Page
+**/
+
+#content .meetups {
+  ul {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 2.5em;
+  }
+
+  li {
+    width: 220px;
+    float: left;
+    margin-bottom: 20px;
+    img, a {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+
+/**
   Footer
 **/
 

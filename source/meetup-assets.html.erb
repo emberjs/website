@@ -10,23 +10,21 @@ title: "Community"
   The following Meetup Badges are optimized for the main Meetup.com size. Get in touch if we can help you with something else.
 </p>
 
-<div class="team section">
+<div class="meetups section">
 
-<table class="headshots" id="alpha">
-  <% data.team.each_slice(4) do |slice| %>
-    <tr>
-      <% slice.each do |user| %>
-        <td>
-          <p>
-            <%= user.name %>
-          </p>
-          <a href="<%= user.github %>" rel="nofollow">
-            <img src="/images/team/<%= user.image %>">
-          </a>
-        </td>
-      <% end %>
-    </tr>
+  <% data.meetups.each do |name, groups| %>
+    <h2><%= name %></h2>
+    <ul>
+    <% groups.sort_by(&:location).each do |group| %>
+      <li>
+        <%= image_tag "meetups/#{group.image}" %>
+      </li>
+    <% end %>
+    </ul>
   <% end %>
-</table>
+
+  <p>
+    Starting a <em>new</em> user group? Want to play with fonts? <a href="/images/meetups/EmberMeetUp_180x135.psd">Download the PSD</a> and have at it!
+  </p>
 
 </div>
