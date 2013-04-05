@@ -1163,6 +1163,22 @@ body.community #content {
 }
 
 /**
+  Security Page
+**/
+
+body.security #content {
+  margin: 3em auto 0 auto;
+  width: 54em;
+
+  h1, h1:first-child {
+    margin-top: 0;
+    color: $orange-color;
+    border-bottom: solid 1px #d0d0d0;
+    padding-bottom: 20px;
+  }
+}
+
+/**
   Ember Users Page
 **/
 
