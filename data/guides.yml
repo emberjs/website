@@ -21,6 +21,8 @@ Application:
     url: "application"
   - title: "The Application Template"
     url: "application/the-application-template"
+  - title: "Application Initializers"
+    url: "application/application-initializers"
 
 Templates:
   - title: "Handlebars Basics"
