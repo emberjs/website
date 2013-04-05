@@ -31,7 +31,7 @@ App.Router.map(function() {
 App.TopChartsChooseRoute = Ember.Route.extend({
   redirect: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
-    this.transitionTo('topCharts.' + lastFilter || 'songs');
+    this.transitionTo('topCharts.' + (lastFilter || 'songs') );
   }
 });
 
