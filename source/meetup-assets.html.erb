@@ -1,0 +1,32 @@
+---
+title: "Community"
+---
+
+<h1>
+  Ember Meetup Assets
+</h1>
+
+<p>
+  The following Meetup Badges are optimized for the main Meetup.com size. Get in touch if we can help you with something else.
+</p>
+
+<div class="team section">
+
+<table class="headshots" id="alpha">
+  <% data.team.each_slice(4) do |slice| %>
+    <tr>
+      <% slice.each do |user| %>
+        <td>
+          <p>
+            <%= user.name %>
+          </p>
+          <a href="<%= user.github %>" rel="nofollow">
+            <img src="/images/team/<%= user.image %>">
+          </a>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+</div>
