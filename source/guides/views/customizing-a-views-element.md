@@ -116,6 +116,16 @@ App.MyView = Ember.View.extend({
 });
 ```
 
+You can also bind these attributes to differently named properties:
+
+```javascript
+App.MyView = Ember.View.extend({
+  tagName: 'a',
+  attributeBindings: ['customHref:href'],
+  customHref: "http://emberjs.com"
+});
+```
+
 ### Customizing a View's Element from Handlebars
 
 When you append a view, it creates a new HTML element that holds its content.
