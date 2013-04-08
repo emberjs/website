@@ -15,7 +15,7 @@ constraints of the web–-we turned to other popular open source projects
 like Ruby on Rails and Backbone.js for inspiration.
 
 Ember.js, therefore, is a synthesis of the powerful tools of our native
-forebearers with the lightweight sensibilities of the modern web. 
+forebears with the lightweight sensibilities of the modern web.
 
 ### Concepts
 
