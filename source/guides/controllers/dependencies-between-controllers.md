@@ -51,3 +51,6 @@ App.CommentsController = Ember.ArrayController.extend({
   postBinding: "controllers.post"
 });
 ```
+For more information about bindings, see the API docs for
+`Ember.Binding`.
+
