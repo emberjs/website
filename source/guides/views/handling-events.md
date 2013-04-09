@@ -23,9 +23,11 @@ App.ClickableView = Ember.View.extend({
 });
 ```
 
-Events bubble up from the target view to each parent view in
-succession, until the root view. These values are read-only. If you want to manually manage views in JavaScript (instead of creating them
-using the {{view}} helper in Handlebars), see the `Ember.ContainerView` documentation below.
+Events bubble up from the target view to each parent view in succession,
+until the root view. These values are read-only. If you want to
+manually manage views in JavaScript (instead of creating them using
+the `{{view}}` helper in Handlebars), see the `Ember.ContainerView`
+documentation below.
 
 ###Sending Events
 
