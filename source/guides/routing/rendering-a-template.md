@@ -36,12 +36,21 @@ App.PostsRoute = Ember.Route.extend({
 });
 ```
 
-If you want to render the template into a different named outlet:
+Ember allows you to name your outlets. For instance, this code allows
+you to specify two outlets with distinct names:
+
+```handlebars
+<div class="toolbar">{{outlet toolbar}}</div>
+<div class="sidebar">{{outlet sidebar}}</div>
+```
+
+So, if you want to render your posts into the `sidebar` outlet, use code
+like this:
 
 ```js
 App.PostsRoute = Ember.Route.extend({
   renderTemplate: function() {
-    this.render({ outlet: 'posts' });
+    this.render({ outlet: 'sidebar' });
   }
 });
 ```
@@ -65,14 +74,6 @@ App.PostsRoute = Ember.Route.extend({
 });
 ```
 
-NOTE: When a template tries to render, and the parent route did not render a template, then you will see this warning:
-
-"The immediate parent route did not render into the main outlet ..."
-
-This means that the the current route tried to render into the parent routes template, but the parent route didn't render a template, or if it did, the template did not render 'into' the main template (a default {{outlet}}). For the case of the following routes: Application > Posts > Post, if the posts route does not have a template, the post template will render into the application template.
-
-This default behavior could be what you expect, or it could be unexpected and the warning is there to point out the potential unexpected behavior.
-
 If you want to render two different templates into outlets of two different rendered templates of a route:
 
 ```js
@@ -80,8 +81,8 @@ App.PostRoute = App.Route.extend({
   renderTemplate: function() {
     this.render('favoritePost', {   // the template to render
       into: 'posts',                // the template to render into
-      outlet: 'posts',       // the name of the outlet in that template
-      controller: 'blogPost'  // the controller to use for the template
+      outlet: 'posts',              // the name of the outlet in that template
+      controller: 'blogPost'        // the controller to use for the template
     });
     this.render('comments', {
       into: 'favoritePost',
@@ -91,4 +92,19 @@ App.PostRoute = App.Route.extend({
   }
 });
 ```
+
+## Rendering Warning
+
+When a template tries to render, and the parent route did not render a
+template, then you will see this warning:
+
+"The immediate parent route did not render into the main outlet ..."
+
+This means that the current route tried to render into the parent
+route's template, but the parent route didn't render a template, or, if
+it did, that the template which the parent route provided did not render
+into the main template (i.e., a default `{{outlet}}`).
+
+Ember provides this warning because it expects that you will want to
+render into the main template.
 
