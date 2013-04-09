@@ -41,8 +41,8 @@ its parent `PostController`, which can be done via `controllers.post`
 ```
 
 We can also create a binding to give ourselves a shorter way to access
-the `PostController` (since it is `ObjectController`, we don't need or
-want the `Post` instance directly).
+the `PostController` (since it is an `ObjectController`, we don't need
+or want the `Post` instance directly).
 
 
 ```javascript
