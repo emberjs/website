@@ -69,7 +69,7 @@ NOTE: When a template tries to render, and the parent route did not render a tem
 
 "The immediate parent route did not render into the main outlet ..."
 
-This means that the the current route tried to render into the parent routes template, but the parent route didn't render a template, or if it did, the template did not render 'into' the main template (a default {{outlet}}). For the case of the following routes: Application > Posts > Post, if the posts route does not have a template, the post template will render into the application template.
+This means that the the current route tried to render into the parent routes template, but the parent route didn't render a template, or if it did, the template did not render 'into' the main template (a default `{{outlet}}`). For the case of the following routes Application > Posts > Post, if the posts route does not have a template, the post template will render into the application template.
 
 This default behavior could be what you expect, or it could be unexpected and the warning is there to point out the potential unexpected behavior.
 
