@@ -27,7 +27,7 @@ App.CommentsController = Ember.ArrayController.extend({
 ```
 
 This tells Ember that our `CommentsController` should be able to access
-it's parent `PostController`, which can be done via `controllers.post`
+its parent `PostController`, which can be done via `controllers.post`
 (either in the template or in the controller itself).
 
 ```handlebars
