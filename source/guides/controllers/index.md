@@ -129,10 +129,10 @@ Not all properties in your application need to be saved to the
 server. Any time you need to store information only for the lifetime
 of this application run, you should store it on a controller.
 
-For example, imagine your application has a search field that is 
-always present. You could have store a `query` property on your
+For example, imagine your application has a search field that
+is always present. You could store a `query` property on your
 `ApplicationController`, and bind the `search` field in the `
-application` template to that  property.
+application` template to that property.
 
 ```handlebars
 <!-- application.handlebars -->

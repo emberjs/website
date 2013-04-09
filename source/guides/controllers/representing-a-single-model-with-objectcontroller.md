@@ -84,8 +84,8 @@ Since our users are humans and not robots, however, we'd like to display
 the duration as a formatted string.
 
 This is very easy to do by defining a computed property on the
-controller that transforms the model's value into a format more useful
-by the template:
+controller which transforms the model's value into a human-readable
+format for the template:
 
 ```javascript
 App.SongController = Ember.ObjectController.extend({
