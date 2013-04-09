@@ -69,7 +69,7 @@ App.Person = Ember.Object.extend({
   }.property('firstName', 'lastName')
 });
 
-App.ApplicationRoute = Ember.Route.extend({
+App.IndexRoute = Ember.Route.extend({
   model: function() {
     var people = [
       App.Person.create({
@@ -89,6 +89,10 @@ App.ApplicationRoute = Ember.Route.extend({
 
 <% highlight :handlebars, :right do %>
 <script type="text/x-handlebars">
+  {{outlet}}
+</script>
+
+<script type="text/x-handlebars" id="index">
   <h1>People</h1>
 
   <ul>
