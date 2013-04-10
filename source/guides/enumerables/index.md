@@ -17,8 +17,8 @@ to an array that fetches data from the server lazily, your view,
 template and controller code do not change at all.
 
 The Enumerable API follows ECMAScript specifications as much as
-possible.  This minimizes incompatibility with other libraries, as well
-as allows Ember.js to use the native browser implementations in arrays
+possible. This minimizes incompatibility with other libraries, and
+allows Ember.js to use the native browser implementations in arrays
 where available.
 
 For instance, all Enumerables support the standard `forEach` method:

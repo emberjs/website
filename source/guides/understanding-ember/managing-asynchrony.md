@@ -195,7 +195,7 @@ how to make sure that certain actions happen at the right time.
 For example, imagine that you have a view that contains a button, and
 you want to use jQuery UI to style the button. Since a view's `append`
 method, like everything else in Ember, defers its side-effects, how can
-you execute the jQuery UI code at the right time.
+you execute the jQuery UI code at the right time?
 
 The answer is lifecycle callbacks.
 
