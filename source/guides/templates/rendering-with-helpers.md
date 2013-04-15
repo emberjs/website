@@ -6,7 +6,7 @@ Ember provides several helpers that allow you to render other views and template
 
 `{{partial}}` takes the template to be rendered as an argument, and renders that template in place.
 
-`{{partial}}` does not change context or scope.  It simply drops the given template into place with the current scope.  
+`{{partial}}` does not change context or scope.  It simply drops the given template into place with the current scope.
 
 ```handlebars
 <script type="text/x-handlebars" data-template-name='author'>
@@ -39,7 +39,7 @@ App.AuthorView = Ember.View.extend({
   // We are setting templateName manually here to the default value
   templateName: "author",
 
-  // A fullName property should probably go on App.Author, 
+  // A fullName property should probably go on App.Author,
   // but we're doing it here for the example
   fullName: (function() {
     return this.get("author").get("firstName") + " " + this.get("author").get("lastName");
@@ -90,13 +90,13 @@ For more information, see [Inserting Views in Templates](/guides/views/inserting
 
 * Gets the singleton instance of the corresponding controller
 * Renders the named template using this controller
-* Sets the model of the corresponding controller 
+* Sets the model of the corresponding controller
 
 Modifying the post / author example slightly:
 
 ```handlebars
 <script type="text/x-handlebars" data-template-name='author'>
-  Written by {{firstName}} {{lastName}}. 
+  Written by {{firstName}} {{lastName}}.
   Total Posts: {{postCount}}
 </script>
 
@@ -109,7 +109,7 @@ Modifying the post / author example slightly:
 
 ```javascript
 App.AuthorController = Ember.ObjectController.extend({
-  postCount: function() { 
+  postCount: function() {
     return App.Post.countForAuthor(this.get("model"));
   }.property("model","App.Post.@each.author")
 })
@@ -123,7 +123,7 @@ In this example, render will:
 * Set the AuthorController's model to the 2nd argument passed to render, here the author field on the post
 * Render the template in place, with the context created in the previous steps.
 
-`{{render}}` does not require the presence of a matching route.  
+`{{render}}` does not require the presence of a matching route.
 
 `{{render}}` is similar to `{{outlet}}`. Both tell Ember to devote this portion of the page to something.
 
@@ -138,7 +138,16 @@ Note: `{{render}}` cannot be called multiple times for the same route.  For that
 
 `{{control}}` works like render, except it uses a new controller instance for every call, instead of reusing the singleton controller.
 
-This helper is currently under heavy development, and will likely change soon.
+
+Note: This helper is currently under heavy development, and will likely change soon. To enable it, set `ENV.EXPERIMENTAL_CONTROL_HELPER = true` before requiring Ember.
+
+```javascript
+window.ENV = window.ENV || {};
+ENV.EXPERIMENTAL_CONTROL_HELPER = true;
+
+App = Ember.Application.create();
+```
+
 
 ### Comparison Table
 
