@@ -157,3 +157,6 @@ Understanding Ember.js:
   #- title: "Record Lifecycle"
     #url: "understanding-ember-data/record-lifecycle"
 
+Testing Ember Apps:
+  - title: "Integration Testing"
+    url: "testing/integration-testing"
