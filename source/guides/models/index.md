@@ -21,7 +21,12 @@ want, from the ordinary to the exotic.
 Currently, Ember Data ships as a separate library from Ember.js, while
 we expand the adapter API to support more features. The API described in
 this section tends to be stable, however.  Until Ember Data is included
-as part of the standard distribution, you can get your copy from the
-[GitHub page][1].
+as part of the standard distribution, you can get your copy of the latest
+passing build from the "master" branch from [builds.emberjs.com][builds]:
 
-[1]: https://github.com/emberjs/data
+* [Development][development-build]
+* [Minified][minified-build]
+
+[builds]: http://builds.emberjs.com
+[development-build]: http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js
+[minified-build]: http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.min.js
