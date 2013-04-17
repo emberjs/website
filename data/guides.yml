@@ -122,6 +122,14 @@ Views:
   #- title: "Building Reusable Views"
     #url: "views/building-reusable-views"
 
+Testing:
+  - title: "Introduction"
+    url: "testing"
+  - title: "Views"
+    url: "testing/views"
+  - title: "Models"
+    url: "testing/models"
+
 The Object Model:
   - title: "Classes and Instances"
     url: "object-model/classes-and-instances"
