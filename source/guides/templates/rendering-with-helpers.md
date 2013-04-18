@@ -49,7 +49,7 @@ App.AuthorView = Ember.View.extend({
 
 ```handlebars
 <script type="text/x-handlebars" data-template-name='author'>
-  Written by {{fullName}}
+  Written by {{view.fullName}}
 </script>
 
 <script type="text/x-handlebars" data-template-name='post'>
