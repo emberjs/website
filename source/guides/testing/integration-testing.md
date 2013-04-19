@@ -1,22 +1,22 @@
 ## Integration Testing
 
 Here is a suggested setup for JavaScript *client-side integration tests,*
-which test your Ember app in isolation from the backend. Our tests
+which test your Ember app in isolation from the backend. Our tests:
 
 * (re-)instantiate our app,
 * simulate user input (with jQuery), and
 * check that the results show up in the DOM correctly.
 
-We are also free to modify and check the state of the application's models
+We can also modify and check the state of the application's models
 directly, whenever it makes testing easier.
 
 By exercising the entire Ember app, we test that all its (individually simple)
 layers work together.
 
 Integration tests have a reputation for being slow and brittle. These
-client-side integration tests are not, because they do not require
-coordinating the backend and the frontend, so they can cover the bulk of our
-testing needs.
+client-side integration tests are not, however, because they do not
+require coordinating the backend and the frontend, so they can cover the
+bulk of our testing needs.
 
 ### Setup
 
