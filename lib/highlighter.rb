@@ -13,11 +13,12 @@ module Highlighter
     def _highlight(string, language, class_name=nil)
       result = %Q{<div class="highlight #{language} #{class_name}">}
       result += '<div class="ribbon"></div>'
+      result += '<div class="scroller">'
       code = CodeRay.scan(string, language)
       result += code.div css: :class,
                       line_numbers: :table,
                       line_number_anchors: false
-
+      result += '</div>'
       result += %Q{</div>}
       result
     end
