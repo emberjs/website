@@ -18,6 +18,10 @@ $green:  #007700;
   margin: 2em 0;
   @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
 
+  .scroller {
+    overflow: auto;
+  }
+
   table {
     margin: 0 0;
   }
