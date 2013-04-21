@@ -90,4 +90,4 @@ than we can mention here. Thank you everyone for helping out!
 
 The full [CHANGELOG][1] is available on Github, as always.
 
-[1]: https://github.com/emberjs/ember.js/blob/master/CHANGELOG
+[1]: https://github.com/emberjs/ember.js/blob/v1.0.0-rc.3/CHANGELOG
