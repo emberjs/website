@@ -59,21 +59,28 @@ Thanks to Stanley Stuart, Luke Melia, Erik Bryn and others for getting this set 
 
 ### New Input and TextArea helpers
 
-TextField and TextArea views now have simple Handlebars helpers.
-
-You used to have to write:
+`TextField`, `TextArea` and `Checkbox` views now have corresponding handlebars helpers.
 
 ```handlebars
   {{view Ember.TextField valueBinding="name"}}
+  {{view Ember.Checkbox  checkedBinding="isActive"}}
   {{view Ember.TextArea  valueBinding="name"}}
 ```
 
-You can now express the same thing as:
+can now be expressed as:
 
 ```handlebars
-  {{input value="name"}}
-  {{textarea value="name"}}
+  {{input value=name}}
+  {{input checked=isActive}}
+  {{textarea value=name}}
 ```
+
+We recommend using the "dynamic tag" forms rather than the `{{view}}` forms because
+they are equivalent to the static tags that we all know and love.
+
+Note that when using dynamic tags, you do not need to use a `Binding` suffix and
+must leave out the quotation marks around the values. Ember will interpret quoted
+strings as static strings in this context.
 
 ### Documentation
 
