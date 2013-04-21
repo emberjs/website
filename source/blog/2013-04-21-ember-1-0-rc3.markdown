@@ -4,31 +4,34 @@ author: Stefan Penner
 tags: Releases, Recent Posts
 ---
 
-Today, we're releasing the third Release Candidate of Ember 1.0.
-As we said when we released RC1, the next few releases will be
-about bugfixes and improvements, and should not have any breaking
-changes.
+Today we are announcing the third Release Candidate of Ember 1.0.
+As we said when we released RC1, all releases until 1.0 is final
+will be about bugfixes and improvements, and should not have any
+breaking changes.
 
 ### Performance
 
-Since RC2 a series of performance improvements have landed.
+Since RC2, a series of performance improvements have landed.
 
 - When adjacent child views are scheduled for insertion they are
-are now batched together, and inserted together rather then piecemeal.
+are now batched together, and inserted together rather then one at
+a time.
 
 - Object deletion is now async, this prevents un-needed churn when destroying
 large interconnected object graphs.
 
-- The amount of objects allocated during view rendering has been cut down.
+- The number of objects allocated during view rendering has been cut down.
 
-The recent and ongoing performance effort is being championed 
+The ongoing performance effort is being championed 
 by Erik Bryn and Kris Selden.
 
 ### Testing
 
-Many fixes and improvements to App#reset, which should now correctly
-clear application state when invoked. Typically this is only used for
-integration tests.
+There have been many fixes and improvements to App#reset, which should now
+correctly clear application state when invoked. Typically this is only used
+for integration tests.
+
+Please note: `App.reset` must be called within an Ember run loop.
 
 ```javascript
 // before each integration test
@@ -36,39 +39,49 @@ Ember.run(function(){
   App.reset();
 });
 ```
-Please note: `App.reset` must be called within an Ember run loop.
 
-Initial work on ember-testing package has begun. The goal of this project
-is to make testing Ember applications easier, especially when it comes to
-testing asynchrony. As this effort matures, expect full documentation,
-examples and guides.
+Initial work on a new [ember-testing package](https://github.com/emberjs/ember.js/tree/master/packages/ember-testing)
+has begun. The goal of this project is to make testing Ember applications easier,
+especially when it comes to testing asynchrony. As this effort matures, expect full
+documentation, examples and guides.
 
-Special thanks to Erik Bryn.
+Props to Erik Bryn for researching integration testing approaches by many community
+members, including Jo Liss and Katie Gengler, and spearheading initial work on what
+will be our official library.
 
 ### Ember Builds
 
-Thanks to the hard work of many, including Stanley Stuart, Luke Melia
-and Erik Bryn. Each successful CI run, now pushes its build results to
+Each successful [CI](https://travis-ci.org/emberjs/ember.js) run now publishes its build results to
 [http://builds.emberjs.com/](http://builds.emberjs.com/). This should make
 it much simpler to reference and use the [the latest ember build](http://builds.emberjs.com/ember-latest.js).
 
+Thanks to Stanley Stuart, Luke Melia, Erik Bryn and others for getting this set up.
+
 ### New Input and TextArea helpers
-TextField and TextArea views now have corresponding handlebars helpers.
+
+TextField and TextArea views now have simple Handlebars helpers.
+
+You used to have to write:
 
 ```handlebars
   {{view Ember.TextField valueBinding="name"}}
   {{view Ember.TextArea  valueBinding="name"}}
 ```
 
-can now be expressed as:
+You can now express the same thing as:
 
 ```handlebars
   {{input value="name"}}
   {{textarea value="name"}}
 ```
 
+### Documentation
+
+The API docs have been refined and filled in by more community members
+than we can mention here. Thank you everyone for helping out!
+
 ### Changelog
 
 The full [CHANGELOG][1] is available on Github, as always.
 
-[1]: https://github.com/emberjs/ember.js/blob/7e012d9e7f4c5e5b7ce6e60307aac7cd653df5b9/CHANGELOG#L1
+[1]: https://github.com/emberjs/ember.js/blob/master/CHANGELOG
