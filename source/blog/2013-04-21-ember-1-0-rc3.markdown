@@ -31,12 +31,13 @@ There have been many fixes and improvements to App#reset, which should now
 correctly clear application state when invoked. Typically this is only used
 for integration tests.
 
-Please note: `App.reset` must be called within an Ember run loop.
-
 ```javascript
 // before each integration test
 App.reset();
 ```
+
+Please Note: `App.reset()` now brings its own run loop, and no longer
+needs to be wrapped in one.
 
 Initial work on a new [ember-testing package](https://github.com/emberjs/ember.js/tree/master/packages/ember-testing)
 has begun. The goal of this project is to make testing Ember applications easier,
