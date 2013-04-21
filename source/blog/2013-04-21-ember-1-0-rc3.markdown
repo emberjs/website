@@ -35,9 +35,7 @@ Please note: `App.reset` must be called within an Ember run loop.
 
 ```javascript
 // before each integration test
-Ember.run(function(){
-  App.reset();
-});
+App.reset();
 ```
 
 Initial work on a new [ember-testing package](https://github.com/emberjs/ember.js/tree/master/packages/ember-testing)
