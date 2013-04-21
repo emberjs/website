@@ -32,11 +32,8 @@ integration tests.
 
 ```javascript
 // before each integration test
-Ember.run(function(){
-  App.reset();
-});
+App.reset();
 ```
-Please note: `App.reset` must be called within an Ember run loop.
 
 Initial work on ember-testing package has begun. The goal of this project
 is to make testing Ember applications easier, especially when it comes to
