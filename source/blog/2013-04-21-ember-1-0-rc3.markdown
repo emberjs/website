@@ -70,7 +70,7 @@ can now be expressed as:
 
 ```handlebars
   {{input value=name}}
-  {{input checked=isActive}}
+  {{input type=checkbox checked=isActive}}
   {{textarea value=name}}
 ```
 
