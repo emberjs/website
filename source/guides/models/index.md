@@ -1,7 +1,7 @@
 ## Models
 
-In most Ember.js apps, models are handled by [Ember Data][1]. Ember Data
-is a library, built with and for Ember.js, designed to make it easy to
+In most Ember.js apps, models are handled by [Ember Data][emberdata]. Ember
+Data is a library, built with and for Ember.js, designed to make it easy to
 retrieve records from a server, make changes in the browser, then save
 those changes back to the server.
 
@@ -27,6 +27,7 @@ passing build from the "master" branch from [builds.emberjs.com][builds]:
 * [Development][development-build]
 * [Minified][minified-build]
 
+[emberdata]: https://github.com/emberjs/data
 [builds]: http://builds.emberjs.com
 [development-build]: http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js
 [minified-build]: http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.min.js
