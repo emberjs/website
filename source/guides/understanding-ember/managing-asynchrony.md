@@ -10,7 +10,7 @@ using jQuery or event-based MVC frameworks.
 
 Let's use the most common asynchronous behavior in a web application,
 making an Ajax request, as an example. The browser APIs for making Ajax
-request provide an asynchronous API. jQuery's wrapper does as well:
+requests provide an asynchronous API. jQuery's wrapper does as well:
 
 ```javascript
 jQuery.getJSON('/posts/1', function(post) {
@@ -63,10 +63,10 @@ jQuery.getJSON('/posts/1', function(json) {
 });
 ```
 
-This example doesn't use any particular JavaScript library, but its
-approach is typical of event-driven MVC frameworks. It helps organize
-the asynchronous events, but asynchronous behavior is still the core
-programming model.
+This example doesn't use any particular JavaScript library beyond
+jQuery, but its approach is typical of event-driven MVC frameworks. It
+helps organize the asynchronous events, but asynchronous behavior is
+still the core programming model.
 
 ### Ember's Approach
 
