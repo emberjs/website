@@ -1,7 +1,7 @@
 require 'redcarpet'
 require 'active_support/core_ext'
 
-Dir['./lib/*'].each { |f| require f }
+Dir['./lib/*'].reject{|path| path.split("/").include?("tasks") }.each { |f| require f }
 
 # Debugging
 set(:logging, ENV['RACK_ENV'] != 'production')

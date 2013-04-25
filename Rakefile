@@ -1,5 +1,6 @@
 require "bundler/setup"
 require 'yaml'
+load 'lib/tasks/s3.rake'
 
 def git_initialize(repository)
   unless File.exist?(".git")
