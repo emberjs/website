@@ -3400,7 +3400,7 @@ classes:
       letter: B</li>\n  <li class=\"ember-view\">the letter: C</li>\n</ul>\n```\n\nAdditional
       `tagName` pairs can be provided by adding to\n`Ember.CollectionView.CONTAINER_MAP
       `\n\n```javascript\nEmber.CollectionView.CONTAINER_MAP['article'] = 'section'\n```\n\n##
-      Programatic creation of child views\n\nFor cases where additional customization
+      Programmatic creation of child views\n\nFor cases where additional customization
       beyond the use of a single\n`itemViewClass` or `tagName` matching is required
       CollectionView's\n`createChildView` method can be overidden:\n\n```javascript\nCustomCollectionView
       = Ember.CollectionView.extend({\n  createChildView: function(viewClass, attrs)
@@ -3437,7 +3437,7 @@ classes:
     file: ../packages/ember-views/lib/views/container_view.js
     line: 16
     description: ! "A `ContainerView` is an `Ember.View` subclass that implements
-      `Ember.MutableArray`\nallowing programatic management of its child views.\n\n##
+      `Ember.MutableArray`\nallowing programmatic management of its child views.\n\n##
       Setting Initial Child Views\n\nThe initial array of child views can be set in
       one of two ways. You can\nprovide a `childViews` property at creation time that
       contains instance of\n`Ember.View`:\n\n```javascript\naContainer = Ember.ContainerView.create({\n
@@ -3450,7 +3450,7 @@ classes:
       child view's rendering will be inserted into the container's rendered\nHTML
       in the same order as its position in the `childViews` property.\n\n## Adding
       and Removing Child Views\n\nThe container view implements `Ember.MutableArray`
-      allowing programatic management of its child views.\n\nTo remove a view, pass
+      allowing programmatic management of its child views.\n\nTo remove a view, pass
       that view into a `removeObject` call on the container view.\n\nGiven an empty
       `<body>` the following code\n\n```javascript\naContainer = Ember.ContainerView.create({\n
       \ classNames: ['the-container'],\n  childViews: ['aView', 'bView'],\n  aView:
