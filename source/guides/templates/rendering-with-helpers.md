@@ -117,7 +117,7 @@ App.AuthorController = Ember.ObjectController.extend({
 
 In this example, render will:
 
-* Gets an instance of App.AuthorView if that class exists, otherwise uses a default generated view
+* Get an instance of App.AuthorView if that class exists, otherwise uses a default generated view
 * Use the corresponding template (in this case the default of "author")
 * Get (or generate) the singleton instance of AuthorController
 * Set the AuthorController's model to the 2nd argument passed to render, here the author field on the post
