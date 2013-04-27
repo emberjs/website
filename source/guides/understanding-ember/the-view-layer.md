@@ -585,7 +585,7 @@ its context.
 
 #### View Scope
 
-In addition to the Handlebars context, templates in Ember also have the
+In addition to the Handlebars context, views in Ember also have the
 notion of the current view. No matter what the current context is, the
 `view` property always references the closest view.
 
