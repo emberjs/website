@@ -23,6 +23,9 @@
   - location: Seattle, WA
     url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
     image:    08seattle.png
+  - location: Austin, TX
+    url:      http://emberatx.org/
+    image:    
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
@@ -45,3 +48,6 @@
   - location: Ottawa, Canada
     url:      http://www.meetup.com/Ember-js-Ottawa/
     image:    13ottawa.png
+  - location: Göteborg, Sweden
+    url:      http://www.meetup.com/ember-js-goteborg/
+    image:    
