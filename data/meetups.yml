@@ -45,3 +45,6 @@
   - location: Ottawa, Canada
     url:      http://www.meetup.com/Ember-js-Ottawa/
     image:    13ottawa.png
+  - location: Gothenburg, Sweden
+    url:      http://www.meetup.com/ember-js-goteborg/
+    image:    16gothenburg.png
