@@ -33,7 +33,7 @@ This would render a view like this:
 <div class="ember-view is-urgent">
 ```
 
-If isUrgent is changed to false, then the `is-urgent` class name will be removed.
+If `isUrgent` is changed to `false`, then the `is-urgent` class name will be removed.
 
 By default, the name of the Boolean property is dasherized. You can customize the class name
 applied by delimiting it with a colon:
