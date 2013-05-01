@@ -3,7 +3,7 @@
 As you probably know by now, views usually create their child views
 by using the `{{view}}` helper. However, it is sometimes useful to
 _manually_ manage a view's child views.
-[`Ember.ContainerView`](/api/classes/Ember.MutableArray.html)
+[`Ember.ContainerView`](/api/classes/Ember.ContainerView.html)
 is the way to do just that.
 
 As you programmatically add or remove views to a `ContainerView`,
