@@ -57,7 +57,7 @@ the action when the user clicks on the element.
 
 You can specify an alternative event by using the `on` option.
 
-```javascript
+```handlebars
 <p>
   <button {{action "select" post on="mouseUp"}}>✓</button>
   {{post.title}}
@@ -96,7 +96,7 @@ For example, if you have a **✗** button inside of a link, you will want
 to ensure that if the user clicks on the **✗**, that the link is not
 clicked.
 
-```javascript
+```handlebars
 {{#linkTo 'post'}}
   Post
   <button {{action close bubbles=false}}>✗</button>
