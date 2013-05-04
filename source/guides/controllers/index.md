@@ -18,7 +18,7 @@ Your `BlogPost` model would have properties like:
 Your template would bind to these properties in the `blog_post` 
 template:
 
-```javascript
+```handlebars
 <h1>{{title}}</h1>
 <h2>by {{author}}</h2>
 
@@ -41,7 +41,7 @@ toggle the display of the body section. To implement this, we would
 first modify our template to show the body only if the value of a 
 new `isExpanded` property is true.
 
-```javascript
+```handlebars
 <h1>{{title}}</h1>
 <h2>by {{author}}</h2>
 
