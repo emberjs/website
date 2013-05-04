@@ -169,7 +169,7 @@ proof-of-concept will allow us to verify the specification is solving
 real-world problems.
 
 This work will make it extremely simple for Ember.js developers to
-integrate with Ruby on Rails, and we hope other server-side framework
+integrate with Ruby on Rails, and we hope other server-side frameworks
 vendors follow suit.
 
 Of course, the `RESTAdapter` will continue to be configurable, so if you
