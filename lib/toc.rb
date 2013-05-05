@@ -100,7 +100,8 @@ module TOC
       section_prefix = section_slug + "/"
       data.guides.find do |section, entries|
         entries.find do |entry|
-          entry.url.starts_with? section_prefix
+          url = entry.url
+          url.starts_with?(section_prefix) || url == section_slug
         end
       end
     end
