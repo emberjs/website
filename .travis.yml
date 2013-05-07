@@ -1,0 +1,11 @@
+---
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq s3cmd
+script: bundle exec rake build
+after_success: bundle exec rake versions:deploy_edge
+env:
+  global:
+  - S3_ACCESS_KEY_ID: "fPQRYdwg/FBa+UVocY9gfr3M/wyteRT/xo0haWXb/JZ8yXGhH++NTjvUMkCK\n4BN0gOm7FIVqQ8fqhnAYc9uhprOZec1qQa4u534a8oH8t/8bHb4XpEuz1qvX\nAIylV44qqdCsezRRjQsNA8xndxnRfywhEx4gjZ4sGbZU26Lsy9U="
+  - S3_SECRET_ACCESS_KEY: "aA0dO8u24fyYu+kakO+Gxnbkt6jjqWn+5z+w55iCJ1fReCpGQfz3vXYxDunW\n+rJeYdFNjxPOISTIpk49LY6981hP6jxuWZHR8VVO+dOx9N25CCqVMJSLqCU6\nLJ1R6cxc1ZnCKLksWiSJ/bs4SXqlj6Nnsb6bTz/zKmJFBPUskTo="
+

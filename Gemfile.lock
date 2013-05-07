@@ -5,6 +5,14 @@ GIT
   specs:
     coderay (1.1.0.rc1)
 
+GIT
+  remote: git://github.com/mharris717/website_versions.git
+  revision: 3b14920dce20a34ae7f98fc4c7d38851ac61024d
+  specs:
+    website_versions (0.1.0)
+      grit
+      rake
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -174,3 +182,4 @@ DEPENDENCIES
   redcarpet
   rspec
   thin
+  website_versions!
