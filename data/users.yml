@@ -139,6 +139,8 @@
   image: crowdflower.png
 - url: http://www.avalara.com
   image: avalara.png
+- url: http://www.twitch.tv
+  image: twitch.png
   
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
