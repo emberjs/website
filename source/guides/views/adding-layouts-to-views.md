@@ -41,7 +41,7 @@ This will result in view instances containing the following HTML
 
 ```html
 <div class="content-wrapper">
-  Hello, Teddy!
+  Hello, <b>Teddy</b>!
 </div>
 ```
 
