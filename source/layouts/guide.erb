@@ -8,6 +8,9 @@
     <%= index_for(data.guides) %>
   <% end %>
 
+  <% if warning %>
+    <%= warning %>
+  <% end %>
   <div class="chapter">
     <%= chapter_heading %>
     <%= yield %>
