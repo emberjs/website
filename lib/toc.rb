@@ -226,7 +226,8 @@ module TOC
     end
 
     def warning
-      return nil if not current_section
+      return unless current_guide
+      return unless current_section
       warning_key = current_guide["warning"]
       warning_key ? WARNINGS[warning_key] : nil
     end
