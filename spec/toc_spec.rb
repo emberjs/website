@@ -61,4 +61,13 @@ describe "TOC", :type => :feature do
     visit "/guides/understanding-ember/keeping-templates-up-to-date"
     page.should_not have_css('a.next-guide')
   end
+
+  it "should have an ember-data warning on model pages but not on other pages" do
+    visit "/guides/models"
+    find('.under_construction_warning').text.should =~
+        /WARNING: EMBER-DATA IS A WORK IN PROGRESS AND UNDER RAPID DEVELOPMENT. USE WITH CAUTION!!!/
+    visit "/guides/views"
+    page.should_not have_css('.under_construction_warning')
+  end
+
 end

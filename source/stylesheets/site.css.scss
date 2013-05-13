@@ -1656,3 +1656,32 @@ body.not-found #content {
   margin: 3em auto 0 auto;
   width: 54em;
 }
+
+.under_construction_warning {
+  background-color: #FFFFCC;
+  width: 100%;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+.under_construction_warning h1 {
+  height: 64px;
+  font-size: 14px;
+  border: 1px solid #dfd7d4;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  color: #e1563f;
+  padding: 0px 0px 1em 2em;
+  margin-bottom: 1.5em;
+  background: no-repeat url("/images/ember-construction-57.png") top left; }
+
+.under_construction_warning h1 .msg {
+  margin-top: 12px;
+  margin-left: 40px;
+}
+
+.more_caution {
+  color: black;
+}

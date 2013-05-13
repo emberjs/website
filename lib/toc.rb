@@ -225,6 +225,27 @@ module TOC
       end
     end
 
+    def warning
+      return nil if not current_section
+      warning_key = current_guide["warning"]
+      warning_key ? WARNINGS[warning_key] : nil
+    end
+
+
+    WARNINGS = {
+        "ember-data"=>  %Q{
+          <div class="under_construction_warning">
+            <h1>
+              <div class="msg">
+                Warning: ember-data is a work in progress and under rapid development.
+                <br/>
+                <span class="more_caution">Use with caution!!!</span>
+              </div>
+            </h1>
+          </div>
+        }
+    }
+
   end
 end
 
