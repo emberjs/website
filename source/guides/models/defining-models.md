@@ -79,3 +79,30 @@ App.Tag = DS.Model.extend({
   posts: DS.hasMany('App.Post')
 });
 ```
+
+#### Explicit Inverses
+From [This Week in Ember.JS, posted November 2, 2012](http://emberjs.com/blog/2012/11/02/this-week-in-ember-js.html)
+
+Ember Data has always been smart enough to know that when you set a `belongsTo` relationship, the child record should be added to the parent's corresponding `hasMany` relationship.
+
+Unfortunately, it was pretty braindead about *which* `hasMany` relationship it would update. Before, it would just pick the first relationship it found with the same type as the child.
+
+Because it's reasonable for people to have multiple `belongsTo`/`hasMany`s for the same type, we added support for specifying an inverse:
+
+```javascript
+App.Comment = DS.Model.extend({
+  onePost: DS.belongsTo("App.Post"),
+  twoPost: DS.belongsTo("App.Post"),
+  redPost: DS.belongsTo("App.Post"),
+  bluePost: DS.belongsTo("App.Post")
+});
+
+
+App.Post = DS.Model.extend({
+  comments: DS.hasMany('App.Comment', {
+    inverse: 'redPost'
+  })
+});
+```
+
+You can also specify an inverse on a `belongsTo`, which works how you'd expect.
