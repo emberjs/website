@@ -5,7 +5,7 @@
   <article class="blog-post">
     <h1><%= current_article.title %></h1>
     <% if current_page.data.author %>
-      <h3 class="blog-post-author">Posted By: <%= current_page.data.author %></h3>
+      <h3 class="blog-post-author">Posted By: <%= current_page.data.author %> &ndash; <time><%= current_article.date.strftime('%b %d, %Y') %></time></h3>
     <% end %>
 
     <%= yield %>
