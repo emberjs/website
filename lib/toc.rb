@@ -85,7 +85,16 @@ module TOC
     def chapter_heading
       name = chapter_name.strip
       return if name.blank?
-      %Q{<h1>#{name}</h1>}
+      if current_guide
+        %Q{
+          <h1>#{name} 
+            <a href="#{chapter_github_source_url}" target="_blank" class="edit-page">
+              Edit Page</a>
+          </h1>
+        }
+      else
+        %Q{<h1>#{name}</h1>}
+      end
     end
 
     def section_slug
@@ -94,6 +103,11 @@ module TOC
 
     def guide_slug
       request.path.split('/')[1..-2].join('/')
+    end
+
+    def chapter_github_source_url
+      base_guide_url = "https://github.com/emberjs/website/tree/master/source/guides"
+      markdown_url = "#{base_guide_url}/#{current_guide['url']}.md"
     end
 
     def current_section
