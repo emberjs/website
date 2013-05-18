@@ -2,6 +2,7 @@ tmp
 .DS_Store
 bin/
 .bundle/
+bundle/
 output
 .sass-cache
 build/
