@@ -13,7 +13,7 @@ App.Router.map(function() {
 ```
 
 If we visit a `/posts/1/comments` URL, our `Post` model will get
-loaded into a `PostController`'s content, which means it is not directly
+loaded into a `PostController`'s model, which means it is not directly
 accessible in the `CommentsController`. We might however want to display
 some information about it in the `comments` template.
 

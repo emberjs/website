@@ -99,7 +99,7 @@ App.PostView = Ember.View.extend({
 });
 
 var post = App.Post.create();
-var postController = App.PostController.create({ content: post });
+var postController = App.PostController.create({ model: post });
 
 App.PostView.create({ controller: postController }).appendTo('body');
 
@@ -114,7 +114,7 @@ change.
 
 The `{{title}}`, `{{author}}` and `{{body}}` template elements are bound
 to those properties on the `PostController`. When the `PostController`'s
-content changes, it automatically propagates those changes to the DOM.
+model changes, it automatically propagates those changes to the DOM.
 
 Using a computed property for `author` eliminated the need to explicitly
 invoke the computation in a callback when the underlying property

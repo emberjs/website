@@ -54,7 +54,7 @@ native arrays with things like a template's `{{#each}}` helper, Ember.js
 will have no way to detect changes to the array and the template will
 not update as the underlying array changes.
 
-Additionally, if you try to set the content of an
+Additionally, if you try to set the model of an
 `Ember.ArrayController` to a plain native array, it will raise an
 exception since it no longer implements the `Ember.Array` interface.
 
