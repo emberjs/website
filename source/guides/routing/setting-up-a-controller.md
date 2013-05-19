@@ -13,7 +13,7 @@ model's properties to a template, along with any additional
 display-specific properties.
 
 To tell one of these controllers which model to present, set its
-`content` property in the route handler's `setupController` hook.
+`model` property in the route handler's `setupController` hook.
 
 ```js
 App.Router.map(function() {
@@ -22,7 +22,7 @@ App.Router.map(function() {
 
 App.PostRoute = Ember.Route.extend({
   setupController: function(controller, model) {
-    controller.set('content', model);
+    controller.set('model', model);
   }
 });
 ```
@@ -46,7 +46,7 @@ associated with the route handler, use the `controllerFor` method:
 ```js
 App.PostRoute = Ember.Route.extend({
   setupController: function(controller, model) {
-    this.controllerFor('topPost').set('content', model);
+    this.controllerFor('topPost').set('model', model);
   }
 });
 ```

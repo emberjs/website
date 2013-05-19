@@ -1,7 +1,7 @@
 ## Representing a Single Model
 
 Use `Ember.ObjectController` to represent a single model. To tell an
-`ObjectController` which model to represent, set its `content`
+`ObjectController` which model to represent, set its `model`
 property in your route's `setupController` method.
 
 When a template asks an `ObjectController` for a property, it will first
@@ -20,13 +20,13 @@ App.SongController = Ember.ObjectController.extend({
 });
 ```
 
-In your router, you set the `content` of the controller to the
+In your router, you set the `model` of the controller to the
 currently playing song:
 
 ```javascript
 App.SongRoute = Ember.Route.extend({
   setupController: function(controller, song) {
-    controller.set('content', song);
+    controller.set('model', song);
   }
 });
 ```
@@ -90,12 +90,12 @@ format for the template:
 ```javascript
 App.SongController = Ember.ObjectController.extend({
   duration: function() {
-    var duration = this.get('content.duration'),
+    var duration = this.get('model.duration'),
          minutes = Math.floor(duration / 60),
          seconds = duration % 60;
 
     return [minutes, seconds].join(':');
-  }.property('content.duration')
+  }.property('model.duration')
 });
 ```
 

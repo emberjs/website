@@ -1,7 +1,7 @@
 ## Representing Multiple Models
 
 You can use `Ember.ArrayController` to represent an array of models. To tell an
-`ArrayController` which model to represent, set its `content` property
+`ArrayController` which model to represent, set its `model` property
 in your route's `setupController` method.
 
 You can treat an `ArrayController` just like its underlying array. For
@@ -11,7 +11,7 @@ we setup our `SongsController` to represent the songs in the playlist:
 ```javascript
 App.SongsRoute = Ember.Route.extend({
   setupController: function(controller, playlist) {
-    controller.set('content', playlist.get('songs'));
+    controller.set('model', playlist.get('songs'));
   }
 });
 ```
