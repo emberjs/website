@@ -46,7 +46,7 @@ associated with the route handler, use the `controllerFor` method:
 ```js
 App.PostRoute = Ember.Route.extend({
   setupController: function(controller, model) {
-    this.controllerFor('topPost').set('content', model);
+    this.controllerFor('topPost').set('model', model);
   }
 });
 ```
