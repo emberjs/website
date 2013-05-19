@@ -188,13 +188,13 @@ This connectOutlet call does a few things for us:
 
 * It creates a new instance of `App.PostsView`, using the
   `posts.handlebars` template.
-* It sets the `content` property of `postsController` to a list of all
+* It sets the `model` property of `postsController` to a list of all
   of the available posts (`App.Post.find()`) and makes `postsController`
   the controller for the new `App.PostsView`.
 * It connects the new view to the outlet in `application.handlebars`.
 
 In general, you should just think of these objects as operating in
-tandem. You will always provide the content for a view's controller when
+tandem. You will always provide the model for a view's controller when
 you create a view.
 
 ## Transitions and URLs
@@ -249,7 +249,7 @@ To recap, the `connectOutlet` call performs a number of steps:
 
 * It creates a new instance of `App.PostView`, using the
   `post.handlebars` template.
-* It sets the `content` property of `postController` to the post that
+* It sets the `model` property of `postController` to the post that
   the user clicked on.
 * It connects the new view to the outlet in `application.handlebars`.
 
@@ -351,7 +351,7 @@ site at `/posts/1/trackbacks`.
   `connectOutlet` method on the post with `App.Post.find(1)`.
 * When the router gets to the trackbacks state, it will invoke
   `connectOutlets`. Because the `connectOutlets` method for `post` has
-  set the `content` of the `postController`, the trackbacks state will
+  set the `model` of the `postController`, the trackbacks state will
   retrieve the association.
 
 Again, because of the way the `connectOutlets` callback works with

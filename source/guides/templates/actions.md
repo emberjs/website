@@ -25,7 +25,7 @@ and supports expanding the post with additional information.
 ```
 
 In this case, the `post` controller would be an `Ember.ObjectController`
-whose `content` is an instance of `App.Post`.
+whose `model` is an instance of `App.Post`.
 
 ```js
 App.PostController = Ember.ObjectController.extend({

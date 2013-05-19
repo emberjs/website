@@ -8,8 +8,8 @@ They are:
 
 ```handlebars
 <label>
-  {{view Ember.Checkbox checkedBinding="content.isDone"}}
-  {{content.title}}
+  {{view Ember.Checkbox checkedBinding="model.isDone"}}
+  {{model.title}}
 </label>
 ```
 
@@ -29,8 +29,8 @@ App.MyText = Ember.TextField.extend({
 ```handlebars
 {{view Ember.Select viewName="select"
                     contentBinding="App.peopleController"
-                    optionLabelPath="content.fullName"
-                    optionValuePath="content.id"
+                    optionLabelPath="model.fullName"
+                    optionValuePath="model.id"
                     prompt="Pick a person:"
                     selectionBinding="App.selectedPersonController.person"}}
 ```

@@ -161,7 +161,7 @@ Photoblog.StateManager = Ember.StateManager.extend({
         manager.set('store', store);
 		
         var photos = store.find(Photoblog.Photo);
-        manager.photosController.set('content', photos);
+        manager.photosController.set('model', photos);
 
         store.adapter.mappings = {
           comments: Photoblog.Comment
@@ -240,7 +240,7 @@ Let's go break this down and explain what's gong on.
 {{#each controller}}
 ```
 
-Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an Ember.ArrayController, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlerbars experssion.
+Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an Ember.ArrayController, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlebars expression.
 
 ```handlebars
 {{#view}}
@@ -268,7 +268,7 @@ Here, we reference our photo to get its title, and user bindAttr to set the `<im
       {{/if}}
 ```
 
-Next, we see if there are any comments on the photo. If there are, we create a section and list for comments, and iterate through them. Note that in this `{{#each}}` expression, we aren't binding the comment object to the content property, so the context is automatically set to it. We create a new `<li>` for each comment with the comments text, and close out our `{{#each}}` iteration, list, and {{#if}}.
+Next, we see if there are any comments on the photo. If there are, we create a section and list for comments, and iterate through them. Note that in this `{{#each}}` expression, we aren't binding the comment object to the model property, so the context is automatically set to it. We create a new `<li>` for each comment with the comments text, and close out our `{{#each}}` iteration, list, and {{#if}}.
 
 ```handlebars
   {{/view}}
@@ -304,7 +304,7 @@ The last thing for us to do is to add the bootstraping code for our app. In `ass
   Photoblog.photosView.append();
 ```
 
-We're doing a few things here. First, we're getting all the photos in our data store, and setting the content of our `photosController` to the results array. Next, we set the data store's adapter mappings so that it knows comments are `Photoblog.Comments`. We then move to our initial state, and create an `Ember.ContainerView` with a `currentView` property that is bound to our current state's `view` property. Finally, add the `photosView` to the page.
+We're doing a few things here. First, we're getting all the photos in our data store, and setting the `model` of our `photosController` to the results array. Next, we set the data store's adapter mappings so that it knows comments are `Photoblog.Comments`. We then move to our initial state, and create an `Ember.ContainerView` with a `currentView` property that is bound to our current state's `view` property. Finally, add the `photosView` to the page.
 
 You can now view the app in your browser by running `rails server` going to `http://localhost:3000`. You should see something like this:
 
@@ -352,14 +352,14 @@ We use the handlebars expression `template` to refer to another template we'd li
 Let's create the `_form` template in `app/assets/javascripts/templates/photos/_form.handlebars`. It will include only the form elements for our photo, like so:
 
 ```handlebars
-<label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.content.title"}}
-<label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.content.url"}}
+<label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.model.title"}}
+<label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.model.url"}}
 
 <button {{action save target="Photoblog.stateManager"}}>Save</button>
 <button {{action cancel target="Photoblog.stateManager"}}>Cancel</button>
 ```
 
-We create two Ember.TextField views, and we bind the value property (which will be the text in the text field) to that of our controllers' contents' title and url objects, repesctively. The controller is is the PhotoController, which we created above. Its content will be a photo object.
+We create two Ember.TextField views, and we bind the value property (which will be the text in the text field) to that of our controllers' model's title and url objects, respectively. The controller is is the PhotoController, which we created above. Its model will be a photo object.
 
 We then have a save button and cancel button, both of which target our state manager.
 
@@ -394,7 +394,7 @@ enter: function(manager) {
   var transaction = Photoblog.store.transaction();
   var photo = transaction.createRecord(Photoblog.Photo);
 
-  manager.photoController.set('content', photo);
+  manager.photoController.set('model', photo);
   manager.set('transaction', transaction);
 },
 
@@ -429,12 +429,12 @@ enter: function(manager) {
   var transaction = store.transaction();
   var photo = transaction.createRecord(Photoblog.Photo);
 
-  manager.photoController.set('content', photo);
+  manager.photoController.set('model', photo);
   manager.set('transaction', transaction);
 },
 ```
 
-Here, we define the `enter` action of this state. `enter` and `exit` are special actions that are automatically called whenever the state manager enters or exits that particular state. Here, we set up a new transaction with our store, and create a new `photo` object from that transaction. We set it to be the content of our `photoController`, and save off the `transaction` for later use.
+Here, we define the `enter` action of this state. `enter` and `exit` are special actions that are automatically called whenever the state manager enters or exits that particular state. Here, we set up a new transaction with our store, and create a new `photo` object from that transaction. We set it to be the model of our `photoController`, and save off the `transaction` for later use.
 
 ```javascript
 save: function(manager) {
@@ -492,7 +492,7 @@ edit: Ember.State.create({
 
 	enter: function(manager) {
 	  var transaction = Photoblog.store.transaction();
-	  var photo = Photoblog.photoController.get('content');
+	  var photo = Photoblog.photoController.get('model');
 	  transaction.add(photo);
 
 	  manager.set('transaction', transaction);
@@ -521,12 +521,12 @@ Further up, in the state manager, we should add a function which lets us go from
 ```javascript
 showEdit: function(manager, evt) {
   var photo = evt.context;
-  Photoblog.photoController.set('content', photo);
+  Photoblog.photoController.set('model', photo);
   manager.goToState('edit');
 }
 ```
 
-Ensure that you add a comma to the previous `showCreate`. In this action, we're grabbing the photo from the event context and setting it to the content of our `photoController`.
+Ensure that you add a comma to the previous `showCreate`. In this action, we're grabbing the photo from the event context and setting it to the model of our `photoController`.
 
 Lastly, lets add an edit button to each photo on the page. Below the `<img>` tag, add the following button, which targets our state manager's new `showEdit` action.
 
