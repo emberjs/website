@@ -1,4 +1,5 @@
 require 'redcarpet'
+require 'pry'
 
 module TOC
   class << self
@@ -85,16 +86,13 @@ module TOC
     def chapter_heading
       name = chapter_name.strip
       return if name.blank?
-      if current_guide
-        %Q{
-          <h1>#{name} 
-            <a href="#{chapter_github_source_url}" target="_blank" class="edit-page">
-              Edit Page</a>
-          </h1>
-        }
-      else
-        %Q{<h1>#{name}</h1>}
-      end
+
+      %Q{
+        <h1>#{name} 
+          <a href="#{chapter_github_source_url}" target="_blank" class="edit-page">
+            Edit Page</a>
+        </h1>
+      }
     end
 
     def section_slug
@@ -107,7 +105,11 @@ module TOC
 
     def chapter_github_source_url
       base_guide_url = "https://github.com/emberjs/website/tree/master/source/guides"
-      markdown_url = "#{base_guide_url}/#{current_guide['url']}.md"
+      if current_guide
+        return "#{base_guide_url}/#{current_guide['url']}.md"
+      else
+        return "#{base_guide_url}/index.md"
+      end
     end
 
     def current_section

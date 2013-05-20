@@ -1,4 +1,9 @@
-<h1><%= @class['name'] %> <%= @class['static'] ? "Namespace" : "Class" %></h1>
+<h1>
+  <%= @class['name'] %> <%= @class['static'] ? "Namespace" : "Class" %>
+  <% if @class['file'] %>
+    <%= api_file_link @class, :class => "edit-page", :target => "_blank" %>
+  <% end %>
+</h1>
 
 <% if @class['deprecated'] %><p>DEPRECATED</p><% end %>
 <% if @class['beta'] %><p>BETA</p><% end %>
