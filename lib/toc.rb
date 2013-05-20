@@ -1,4 +1,5 @@
 require 'redcarpet'
+require 'pry'
 
 module TOC
   class << self
