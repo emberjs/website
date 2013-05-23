@@ -9,7 +9,7 @@ Ember provides several helpers that allow you to render other views and template
 `{{partial}}` does not change context or scope.  It simply drops the given template into place with the current scope.  
 
 ```handlebars
-<script type="text/x-handlebars" data-template-name='author'>
+<script type="text/x-handlebars" data-template-name='_author'>
   Written by {{author.firstName}} {{author.lastName}}
 </script>
 
@@ -27,6 +27,8 @@ Ember provides several helpers that allow you to render other views and template
   Written by Yehuda Katz
 </div>
 ```
+
+The partial's `data-template-name` must start with an underscore (e.g. `data-template-name='_author'` or `data-template-name='foo/_bar'`)
 
 Note: in cases where you may have used `{{template}}` in the past, you should likely use `{{partial}}` instead.
 
