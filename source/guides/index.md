@@ -8,6 +8,7 @@ To help you get started, we've also made a 30-minute screencast that
 will guide you through building a full-featured Ember.js application:
 
 <iframe width="640" height="360" src="http://www.youtube.com/embed/Ga99hMi7wfY?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+Source code for the video <a href="https://github.com/tildeio/bloggr-client">https://github.com/tildeio/bloggr-client</a>
 
 Most of these guides are designed to be very pragmatic—to help you
 start building apps right away.
