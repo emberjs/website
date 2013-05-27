@@ -90,7 +90,8 @@ For more information, see [Inserting Views in Templates](/guides/views/inserting
 
 `{{render}}` does several things:
 
-* Gets the singleton instance of the corresponding controller
+* When no model is provided it gets the singleton instance of the corresponding controller
+* When a model is provided it gets a unique instance of the corresponding controller
 * Renders the named template using this controller
 * Sets the model of the corresponding controller 
 
@@ -134,13 +135,15 @@ In this example, render will:
 
 
 
-Note: `{{render}}` cannot be called multiple times for the same route.  For that you'll need `{{control}}`.
+Note: `{{render}}` cannot be called multiple times for the same route when not specifying a model.  For that you'll need `{{control}}`.
 
 ### The `{{control}}` Helper
 
 `{{control}}` works like render, except it uses a new controller instance for every call, instead of reusing the singleton controller.
 
 This helper is currently under heavy development, and will likely change soon.
+
+Note: The `{{control}}` helper is currently disabled by default. To enable it set `ENV.EXPERIMENTAL_CONTROL_HELPER = true` before requiring Ember.
 
 ### Comparison Table
 
