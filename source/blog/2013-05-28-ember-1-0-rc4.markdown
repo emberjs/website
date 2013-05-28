@@ -1,5 +1,5 @@
 ---
-title: Ember 1.0 RC4 and Ember Data 0.13
+title: Ember 1.0 RC4
 author: Tom Dale
 tags: Releases, Recent Posts
 ---
