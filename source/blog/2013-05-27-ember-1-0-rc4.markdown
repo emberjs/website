@@ -129,6 +129,8 @@ officially-supported library for writing unit and integration tests for
 Ember apps. Introduced in RC3, this has continued to be improved, with
 many bug fixes and performance improvements landing in RC4.
 
+A huge thanks to Teddy Zeeny for driving many of these improvements
+
 #### `disabledWhen` {{linkTo}} Option
 
 The `{{#linkTo}}` Handlebars helper now has a `disabledWhen` option that
