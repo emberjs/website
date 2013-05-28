@@ -14,8 +14,6 @@ We have [noticed](https://github.com/emberjs/ember.js/issues/2750) a performance
 Today, we are pleased to announce Ember.js 1.0 RC4:
 
 This RC4 release of Ember puts us very close to the final 1.0 release.
-If everything goes to plan, we anticipate one more possible RC release
-before we're ready to put the "all done" stamp on it.
 
 ### Ember.js 1.0 RC4
 
