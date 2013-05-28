@@ -1,0 +1,188 @@
+---
+title: Ember 1.0 RC4 and Ember Data 0.13
+author: Tom Dale
+tags: Releases, Recent Posts
+---
+
+Today, we are pleased to announce two new releases:
+
+* Ember.js 1.0 RC4
+* Ember Data 0.13
+
+This RC4 release of Ember puts us very close to the final 1.0 release.
+If everything goes to plan, we anticipate one more possible RC release
+before we're ready to put the "all done" stamp on it.
+
+Ember Data 0.13 is the first official release of Ember Data. This should
+make it easier for people to synchronize Ember.js and Ember Data
+versions, and make reasoning about the upgrade process much easier.
+
+### Ember.js 1.0 RC4
+
+As we approach 1.0 final, our focus continues to be on bugfixes, performance, and
+reliability.
+
+#### BREAKING CHANGE: Controller/Model Setup
+
+One of the roles of `Route` objects in an Ember application is to tell
+controllers which model they should represent.
+
+By default, the object that you return from a route's `model` hook is
+set as the `model` property on the corresponding controller. So, for
+example, if you have this route:
+
+```js
+App.PhotosRoute = Ember.Route.extend({
+  model: function() {
+    return App.Photo.find();
+  }
+});
+```
+
+The array returned from `model` would be set as the `model` property of
+the `App.PhotosController`. This tells the controller that it should
+present that model to its template.
+
+What if you need to set up additional controllers, beyond the primary
+controller associated with that route? In that case, you can implement
+the `setupController` hook:
+
+```js
+App.PhotosRoute = Ember.Route.extend({
+  model: function() {
+    return App.Photo.find();
+  },
+
+  setupController: function(controller, model) {
+    this.controllerFor('application').set('showingPhotos', true);
+  }
+});
+```
+
+This is all well and good, but what if you wanted to **prevent** a model
+from being set on the `PhotosController` at all?
+
+In RC3, *preventing this default behavior was impossible*. In RC4,
+**implementing the `setupController` hook prevents the default behavior
+from happening. This is a potentially breaking change.**
+
+If your route implements the `setupController` hook *and* you want to
+preserve default behavior, **make sure you call `_super()` from within
+the hook**:
+
+```js
+App.PhotosRoute = Ember.Route.extend({
+  model: function() {
+    return App.Photo.find();
+  },
+
+  setupController: function(controller, model) {
+    // Call _super for default behavior
+    this._super(controller, model);
+    this.controllerFor('application').set('showingPhotos', true);
+  }
+});
+```
+
+#### RSVP 2.0
+
+Ember now embeds version 2.0 of
+[RSVP.js](https://github.com/tildeio/rsvp.js), a microlibrary for
+[Promises/A+ compatible
+promises](http://promises-aplus.github.io/promises-spec/).
+
+All of the Ember.js and Ember Data APIs that return promises use this
+library to ensure compatible behavior.
+
+A big, big thanks to Stefan Penner for all of his work on improving the
+promises story across both Ember and Ember Data.
+
+#### Run Loop Extracted to Backburner.js
+
+Erik Bryn has extracted the run loop into the
+[Backburner.js](https://github.com/ebryn/backburner.js) microlibrary,
+which Ember now uses.
+
+This will allow other frameworks and libraries that use
+Backburner to benefit from using a deferred event queue, and hopefully
+we can share our work to make the web platform faster for everyone.
+
+#### Handlebars RC4 Compatibility
+
+Ember.js RC4 is compatible with the latest release of Handlebars, which
+is also at RC4.
+
+#### Improved Route Redirection
+
+Routes provide a `redirect` hook that allows them to conditionally redirect to
+a different route. For example, you may redirect the user to a login
+route if you detect that they do not have an authentication token saved.
+
+Many improvements to the `redirect` hook have been made to make it more
+reliable. Additionally, you can now implement this hook in the
+`ApplicationRoute`, which previously would not work.
+
+#### ember-testing Improvements
+
+The `ember-testing` package, included in Ember.js, is the
+officially-supported library for writing unit and integration tests for
+Ember apps. Introduced in RC3, this has continued to be improved, with
+many bug fixes and performance improvements landing in RC4.
+
+#### `disabledWhen` {{linkTo}} Option
+
+The `{{#linkTo}}` Handlebars helper now has a `disabledWhen` option that
+can be bound to conditionally disable a link:
+
+```handlebars
+{{#linkTo 'upgradeAccount' disableWhen=isPremiumUser}}Upgrade
+Account{{/linkTo}}
+```
+
+### Ember Data 0.13
+
+In the past few months, Ember Data has stabilized dramatically. To
+reflect this, we will be cutting regular releases like we do with
+Ember.js.
+
+#### API Revision Removal
+
+Now that we are doing regular releases, the API revision check has been
+removed. You no longer need to provide the API revision number when
+defining your store:
+
+```js
+App.Store = DS.Store.extend({
+  // Delete this!
+  revision: 13
+});
+```
+
+### Ember Data Future Plans
+
+Our immediate goals for Ember Data are stabilization, bug fixes, and
+documentation. There are only two major areas of improvement planned
+before we beging promoting builds to prerelease and RC versions:
+
+#### Promises
+
+Currently, most Ember Data APIs return objects that also implement a
+`then()` method, allowing them to be used interchangeably as either
+models or promises.
+
+While this flexibility was convenient, it unfortunately caused confusing
+semantics. Specifically, because a resolved promise stays resolved,
+operations like reloading became very confusing.
+
+While not in this release, you should expect that future releases of
+Ember Data will shift to an entirely promise-based API. This both
+resolves the issues with confusing semantics as well as allows us to
+implement some exciting features, like more powerful polymorphism.
+
+#### Error Handling
+
+We want to make error handling and dealing with client and server
+conflicts rock solid. A [pull request from Paul Chavard](https://github.com/emberjs/data/pull/958)
+is currently open and looks like a solid starting point for error
+handling. You should see much more development on this in the near
+future.
