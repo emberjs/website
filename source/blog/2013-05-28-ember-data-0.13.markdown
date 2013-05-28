@@ -1,0 +1,68 @@
+---
+title: Ember Data 0.13
+author: Tom Dale
+tags: Releases, Recent Posts
+---
+
+Today, we are pleased to announce the release of Ember Data 0.13.
+
+Ember Data 0.13 is the first official release of Ember Data. This should
+make it easier for people to synchronize Ember.js and Ember Data
+versions, and make reasoning about the upgrade process much easier.
+
+### Ember Data 0.13
+
+In the past few months, Ember Data has stabilized a lot. We still consider
+it alpha, and recommend it for production use only to those who like to
+live on the bleeding edge and contribute back to the project. To make life
+easier for those folks, though, we will be cutting regular releases like we
+do with Ember.js.
+
+A few of the many folks involved in the changes in this release include
+Tom Dale, Yehuda Katz, Cyril Fluck, Igor Terzic, Stefan Penner, Paul Chavard,
+Gordon Hempton, Peter Wagenet. Thank you to you all and everyone else who
+has contributed code and others.
+
+#### API Revision Removal
+
+Now that we are doing regular releases, the API revision check has been
+removed. You no longer need to provide the API revision number when
+defining your store:
+
+```js
+App.Store = DS.Store.extend({
+  // Delete this!
+  revision: 13
+});
+```
+
+### Ember Data Future Plans
+
+Our immediate goals for Ember Data are stabilization, bug fixes, and
+documentation. There are only two major areas of improvement planned
+before we beging promoting builds to prerelease and RC versions:
+
+#### Promises
+
+Currently, most Ember Data APIs return objects that also implement a
+`then()` method, allowing them to be used interchangeably as either
+models or promises.
+
+While this flexibility was convenient, it unfortunately caused confusing
+semantics. Specifically, because a resolved promise stays resolved,
+operations like reloading became very confusing.
+
+While not in this release, you should expect that future releases of
+Ember Data will shift to an entirely promise-based API. This both
+resolves the issues with confusing semantics as well as allows us to
+implement some exciting features, like more powerful polymorphism.
+
+Thanks to Stefan Penner for leading the charge on this.
+
+#### Error Handling
+
+We want to make error handling and dealing with client and server
+conflicts rock solid. A [pull request from Paul Chavard](https://github.com/emberjs/data/pull/958)
+is currently open and looks like a solid starting point for error
+handling. You should see much more development on this in the near
+future.
