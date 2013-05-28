@@ -4,6 +4,13 @@ author: Tom Dale
 tags: Releases, Recent Posts
 ---
 
+
+#### Announcement
+
+We have [noticed](https://github.com/emberjs/ember.js/issues/2750) a performance regression, a debug flag was left on by mistake. So if you really want the goodness of RC4 without this regression use [this build](http://builds.emberjs.com/ember-bd1629e1f38888be881dbfdf29b779a0cdb4e85f.js), we'll have an official release out soon.
+
+---------------------------------------
+
 Today, we are pleased to announce Ember.js 1.0 RC4:
 
 This RC4 release of Ember puts us very close to the final 1.0 release.
