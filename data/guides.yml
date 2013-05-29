@@ -4,7 +4,7 @@
     skip_sidebar: true
 "Getting Started":
 - title: "Getting Started"
-  url: "getting-started/getting-started/"
+  url: "getting-started/"
 - title: "Planning The Application"
   url: "getting-started/planning-the-application"
 - title: "Creating a Static Mockup"
