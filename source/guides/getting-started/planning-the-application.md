@@ -5,7 +5,7 @@ TodoMVC, despite its small size, contains most of the behaviors typical in moder
 TodoMVC has the following main features:
 <img src="/guides/getting-started/images/todo-mvc.png" width="680">
 
-  1. It displays a list of todos for a user to see. This list will grown and shrink as the user adds and removes todos.
+  1. It displays a list of todos for a user to see. This list will grow and shrink as the user adds and removes todos.
 
   1. It accepts text in an `<input>` for entry of new todos. Hitting `<return>` creates the new item and displays it in the list below.
 
