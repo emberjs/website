@@ -1,6 +1,6 @@
 ## Modeling Your Data
 
-Next we will create a model class to describe todo items and a data store to track them locally.
+Next we will create a model class to describe todo items and a data store to track them locally. 
 
 Create a file at `js/models/todo.js` and put the following code inside:
 
@@ -17,6 +17,7 @@ Create a file at `js/models/store.js` and put the following code inside:
 
 ```javascript
 Todos.Store = DS.Store.extend({
+  revision: 12,
   adapter: 'DS.FixtureAdapter'
 });
 ```
