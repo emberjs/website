@@ -22,7 +22,7 @@ Todos.Router.map(function () {
 
 This will tell Ember.js to detect when the application's URL matches `'/'` and to render the `todos` template.
 
-Next, update your `index.html` to wrap the inner contents of `<body>` in a Handlebars script tag:
+Next, update your `index.html` to wrap the inner contents of `<body>` in a Handlebars script tag and include `js/application.js` and `js/router.js`:
 
 ```html
 <!-- ... additional lines truncated for brevity ... -->
@@ -39,9 +39,13 @@ Next, update your `index.html` to wrap the inner contents of `<body>` in a Handl
   
   </script>
 
-<script src="js/libs/jquery.min.js"></script>
-<script src="js/libs/handlebars.js"></script>
-
+  <script src="js/libs/jquery.min.js"></script>
+  <script src="js/libs/handlebars.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  
+  <script src="js/application.js"></script>
+  <script src="js/router.js"></script>
 <!-- ... additional lines truncated for brevity ... -->
 ```
 

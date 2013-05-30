@@ -1,6 +1,6 @@
 ## Displaying a Button to Remove All Completed Todos
 
-TodoMVC allows users to users to delete all completed todos at once by clicking a button. This button is visible only when there are any completed todos, displays the number of completed todos, and removes all todos from the applicaiton when clicked.
+TodoMVC allows users to delete all completed todos at once by clicking a button. This button is visible only when there are any completed todos, displays the number of completed todos, and removes all todos from the application when clicked.
 
 In this step, we'll implement that behavior. In `index.html` update the static `<button>` for clearing all completed todos:
 
