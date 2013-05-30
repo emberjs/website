@@ -48,10 +48,10 @@ In `index.html` replace the static `<input>` element with `Todos.EditTodoView` a
 <!--- ... additional lines truncated for brevity ... -->
 ```
 
-This will insert a `<input>` into our page with the behaviors we added above. Additionally, it will bind the `value` property of this `<input>` to the `title` property of instance of `TodoController`. We will not implement a `title` property on the controller so it will retain the default behavior of proxying all requests to its `model`. 
+This will insert an `<input>` element into our page with the behaviors we added above. Additionally, it will bind the `value` property of this `<input>` to the `title` property of this instance of `TodoController`. We will not implement a `title` property on the controller so it will retain the default behavior of proxying all requests to its `model`. 
 
 
-In `js/controllers/todo_controller.js` add the method `acceptChanges` that we called from `EditTodoView`:
+In `js/controllers/todo_controller.js`, add the method `acceptChanges` that we called from `EditTodoView`:
 
 ```javascript
 // ... additional lines truncated for brevity ...
