@@ -1,6 +1,6 @@
 ## Deleting A Model
 
-TodoMVC displays a button for removing todos next to each todo when its `<li>` is hovered. Clicking this button will remove the todo and the update the display of remaining incomplete todos and remaining completed todos appropriately.
+TodoMVC displays a button for removing todos next to each todo when its `<li>` is hovered. Clicking this button will remove the todo and update the display of remaining incomplete todos and remaining completed todos appropriately.
 
 In `index.html` update the static `<button>` element to include an `{{action}}` Handlebars helper:
 
@@ -24,9 +24,9 @@ removeTodo: function () {
 
 This method will delete the todo locally and then persist this data change.
 
-Because the todo is no longer part of collection of all todos, its `<li>` element in on the page will be automatically removed for us. If the deleted todo was incomplete, the count of remaining todos will be decreased by one and the display of this number will be automatically re-rendered. If the new count results in an inflection change between "item" and "items" this area of the page will be automatically re-rendered.
+Because the todo is no longer part of the collection of all todos, its `<li>` element in on the page will be automatically removed for us. If the deleted todo was incomplete, the count of remaining todos will be decreased by one and the display of this number will be automatically re-rendered. If the new count results in an inflection change between "item" and "items" this area of the page will be automatically re-rendered.
 
-Reload your web browser to ensure that there are no errors and the behavior described above occurs. 
+Reload your web browser to ensure that there are no errors and the behaviors described above occurs. 
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/asokal/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
