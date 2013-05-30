@@ -55,7 +55,7 @@ In `index.html` include `js/controllers/todo_controller.js` as a dependency:
  Reload your web browser to ensure that all files have been referenced correctly and no errors occur. You should now be able to add change the `isCompleted` property of a todo.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/asayac/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/asayac/3/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
