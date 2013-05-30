@@ -56,7 +56,7 @@ Todos.TodosIndexRoute = Ember.Route.extend({
 
 When the application loads at the url `'/'` Ember.js will enter the `todos` route and render the `todos` template as before. It will also transition into the `todos.index` route and fill the `{{outlet}}` in the `todos` template with the `todos/index` template.  The model data for this template is the result of the `model` method of `TodosIndexRoute`.
 
-This mapping is described in more detail in the [Naming Conventions Guide](/guides/concepts/naming-conventions)
+This mapping is described in more detail in the [Naming Conventions Guide](/guides/concepts/naming-conventions).
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/ogelup/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
