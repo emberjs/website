@@ -13,7 +13,7 @@ TodoMVC strikes through completed todos by applying a CSS class `completed` to t
 
 This code will apply the CSS class `completed` when the todo's `isCompleted` property is `true` and remove it when the property becomes `false`.
 
-The first fixture todo in our application has a `isCompleted` property of `true`. Reload the application to see the first todo is now decorated with a strike-through to visually indicate it has been completed.
+The first fixture todo in our application has an `isCompleted` property of `true`. Reload the application to see the first todo is now decorated with a strike-through to visually indicate it has been completed.
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/iqofac/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script> 
