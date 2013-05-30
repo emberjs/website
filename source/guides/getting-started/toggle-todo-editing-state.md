@@ -34,7 +34,7 @@ editTodo: function () {
 // ... additional lines truncated for brevity ...
 ```
 
-Above we defined an initial `isEditing` value of `false` for controllers of this type and said that when the `editTodo` action is called it should set the `isEditing` property of this controller to `true`.  This will automatically trigger the sections of template that use `isEditing` to update their rendered content
+Above we defined an initial `isEditing` value of `false` for controllers of this type and said that when the `editTodo` action is called it should set the `isEditing` property of this controller to `true`.  This will automatically trigger the sections of template that use `isEditing` to update their rendered content.
 
 Reload your web browser to ensure that no errors occur. You can now double-click a todo to edit it.
 
