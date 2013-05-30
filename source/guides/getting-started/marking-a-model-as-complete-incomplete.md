@@ -41,7 +41,7 @@ Todos.TodoController = Ember.ObjectController.extend({
 
 When called from the template to display the current `isCompleted` state of the todo, this property will proxy that question to its underlying `model`. When called with a value because a user has toggled the checkbox in the template, this property will set the `isCompleted` property of its `model` to the passed value (`true` or `false`), persist the model update, and return the passed value so the checkbox will display correct.
 
-In `index.html` include `js/controllers/todos_controller.js` as a dependency:
+In `index.html` include `js/controllers/todo_controller.js` as a dependency:
 
 ```html
 <!--- ... additional lines truncated for brevity ... -->
