@@ -42,7 +42,7 @@ Todos.TodosController = Ember.ArrayController.extend({
 });
 ```
 
-This controller will now respond to user interaction by using its `newTitle` property as the title of a new todo whose `isCompleted` property is false.  Then it will clear its `newTitle` property which will synchronize to the template and reset the textfield. Finally, it persist any unsaved changes on the todo.
+This controller will now respond to user interaction by using its `newTitle` property as the title of a new todo whose `isCompleted` property is false.  Then it will clear its `newTitle` property which will synchronize to the template and reset the textfield. Finally, it persists any unsaved changes on the todo.
 
 In `index.html` include `js/controllers/todos_controller.js` as a dependency:
 
