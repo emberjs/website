@@ -1032,6 +1032,20 @@ ol {
   float: right;
 }
 
+.guides_getting-started {
+  .jsbin-embed {
+    /**
+      height of TodoMVC with three sample todos
+      after rendering. JSBin calculates height
+      before ember has a chance to render.
+
+      This style is !important to get around
+      the inline style on .jsbin-embed
+    **/
+    min-height: 519px !important;
+  }
+}
+
 /**
   Blog
 **/
