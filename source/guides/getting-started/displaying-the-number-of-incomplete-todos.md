@@ -1,6 +1,6 @@
 ## Displaying the number of incomplete todos
 
-Next we'll update our template's hard-coded coded count of completed todos to reflect the actual number of completed todos. Update `index.html` to use two properties:
+Next we'll update our template's hard-coded count of completed todos to reflect the actual number of completed todos. Update `index.html` to use two properties:
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
