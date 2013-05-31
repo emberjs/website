@@ -1760,7 +1760,7 @@ body.not-found #content {
     color: darken($orange-color, 20%);
   }
 
-  &hover {
+  &:hover {
     color: lighten($orange-color, 20%);
   }
 }
