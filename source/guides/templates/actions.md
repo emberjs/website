@@ -133,3 +133,15 @@ where you are in the application. For example, you might want to have a
 button in a sidebar that does one thing if you are somewhere inside of
 the `/posts` route, and another thing if you are inside of the `/about`
 route.
+
+### View Action Handling (Target)
+
+In some cases (when creating custom components) it may be necessary to
+handle actions in your view class. This can be done by specifying the
+target of your action.
+
+```handlebars
+<button {{action expand target="view"}}>Show More...</button>
+```
+
+Now the view will be checked to see if it can handle this action.
