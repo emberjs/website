@@ -1,9 +1,9 @@
 <%
   @title = section_name
-  if chapter_name
+  if not chapter_name.blank?
     @title += ": #{chapter_name}"
   else
-   @title = 'Guides' if chapter_name.blank?
+   @title = 'Guides'
   end
 %>
 

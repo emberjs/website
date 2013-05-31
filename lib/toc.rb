@@ -68,8 +68,10 @@ module TOC
     end
 
     def chapter_name
-      if current_guide and current_guide.title
-        current_guide.title
+      if current_guide
+        return current_guide.title
+      else
+        return ""
       end
     end
 
