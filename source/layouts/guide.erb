@@ -1,6 +1,6 @@
 <%
-@title = chapter_name
-@title = 'Guides' if chapter_name.blank?
+  @title = "#{section_name}: #{chapter_name}"
+  @title = 'Guides' if chapter_name.blank?
 %>
 
 <% wrap_layout(:layout) do %>

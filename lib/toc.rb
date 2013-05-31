@@ -68,18 +68,11 @@ module TOC
     end
 
     def chapter_name
-      guides = data.guides
+      current_guide.title
+    end
 
-      sub_url = request.path.split('/')[1]
-      heading = ''
-
-      guides.each_entry do |section, entries|
-        if entries[0].url.split('/')[0] == sub_url
-          heading = section
-          break
-        end
-      end
-      heading
+    def section_name
+      current_section[0] if current_section
     end
 
     def chapter_heading
