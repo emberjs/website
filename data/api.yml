@@ -4,7 +4,7 @@ project:
   description: ! 'The Ember API: a framework for building ambitious web applications'
   version: 1.0 pre
   url: http://emberjs.com/
-  sha: v1.0.0-rc.4
+  sha: v1.0.0-rc.5
 files:
   ../packages/ember-application/lib/ext/controller.js:
     name: ../packages/ember-application/lib/ext/controller.js
@@ -1322,7 +1322,7 @@ classes:
 
       performance optimizations.'
     static: 1
-    version: 1.0.0-rc.4
+    version: 1.0.0-rc.5
   Ember.Button:
     name: Ember.Button
     shortname: Ember.Button
@@ -6161,7 +6161,7 @@ classitems:
   itemtype: property
   name: VERSION
   type: String
-  default: ! '''1.0.0-rc.4'''
+  default: ! '''1.0.0-rc.5'''
   final: 1
   class: Ember
   module: ember
@@ -6942,6 +6942,15 @@ classitems:
   module: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
   line: 659
+  description: ! "When observers fire, they are called with the arguments `obj`, `keyName`\nand
+    `value`. In a typical observer, value is the new, post-change value.\n\nA `beforeObserver`
+    fires before a property changes. The `value` argument contains\nthe pre-change
+    value.\n\nA `beforeObserver` is an alternative form of `.observesBefore()`.\n\n```javascript\nApp.PersonView
+    = Ember.View.extend({\n  valueWillChange: function (obj, keyName, value) {\n    this.changingFrom
+    = value;\n  }.observesBefore('content.value'),\n  valueDidChange: function(obj,
+    keyName, value) {\n      // only run if updating a value already in the DOM\n
+    \     if(this.get('state') === 'inDOM') {\n          var color = value > this.changingFrom
+    ? 'green' : 'red';\n          // logic\n      }\n  }.observes('content.value')\n});\n```"
   itemtype: method
   name: beforeObserver
   params:
@@ -8219,7 +8228,7 @@ classitems:
     helper, actions will bubble to the current controller, then\nto the current route,
     and then up the route hierarchy.\n\nAlternatively, a `target` option can be provided
     to the helper to change\nwhich object will receive the method call. This option
-    must be a path\npath to an object, accessible in the current context:\n\n```handlebars\n<script
+    must be a path\nto an object, accessible in the current context:\n\n```handlebars\n<script
     type=\"text/x-handlebars\" data-template-name='a-template'>\n  <div {{action anActionName
     target=\"MyApplication.someObject\"}}>\n    click me\n  </div>\n</script>\n```\n\nClicking
     \"click me\" in the rendered HTML of the above template will trigger\nthe  `anActionName`
@@ -8743,7 +8752,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 131
+  line: 134
   access: private
   tagname: ! 'Internal counter for tracking whether a route handler has
 
@@ -8753,7 +8762,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 140
+  line: 143
   access: private
   tagname: This hook is the entry point for router.js
   itemtype: method
@@ -8763,7 +8772,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 221
+  line: 224
   description: ! 'A hook you can implement to optionally redirect to another route.
 
 
@@ -8781,7 +8790,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 232
+  line: 235
   access: private
   tagname: ! 'The hook called by `router.js` to convert parameters into the context
 
@@ -8793,7 +8802,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 245
+  line: 248
   access: private
   tagname: Called when the context is changed by router.js.
   itemtype: method
@@ -8803,7 +8812,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 256
+  line: 259
   description: ! "A hook you can implement to convert the URL into the model for\nthis
     route.\n\n```js\nApp.Router.map(function() {\n  this.resource('post', {path: '/posts/:post_id'});\n});\n```\n\nThe
     model for the `post` route is `App.Post.find(params.post_id)`.\n\nBy default,
@@ -8825,7 +8834,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 307
+  line: 310
   description: ! "A hook you can implement to convert the route's model into parameters\nfor
     the URL.\n\n```js\nApp.Router.map(function() {\n  this.resource('post', {path:
     '/posts/:post_id'});\n});\n\nApp.PostRoute = Ember.Route.extend({\n  model: function(params)
@@ -8853,7 +8862,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 355
+  line: 358
   description: ! "A hook you can use to setup the controller for the current route.\n\nThis
     method is called with the controller for the current route and the\nmodel supplied
     by the `model` hook.\n\nBy default, the `setupController` hook sets the `content`
@@ -8875,7 +8884,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 397
+  line: 400
   description: ! "Returns the controller for a particular route.\n\n```js\nApp.PostRoute
     = Ember.Route.extend({\n  setupController: function(controller, post) {\n    this._super(controller,
     post);\n    this.controllerFor('posts').set('currentPost', post);\n  }\n});\n```\n\nBy
@@ -8897,7 +8906,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 432
+  line: 435
   description: ! 'Returns the current model for a given route.
 
 
@@ -8918,7 +8927,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 447
+  line: 450
   description: ! 'A hook you can use to render the template for the current route.
 
 
@@ -8946,7 +8955,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 465
+  line: 468
   description: ! "Renders a template into an outlet.\n\nThis method has a number of
     defaults, based on the name of the\nroute specified in the router.\n\nFor example:\n\n```js\nApp.Router.map(function()
     {\n  this.route('index');\n  this.resource('post', {path: '/posts/:post_id'});\n});\n\nApp.PostRoute
