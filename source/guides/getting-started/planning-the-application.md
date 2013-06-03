@@ -11,15 +11,15 @@ TodoMVC has the following main features:
 
   1. It provides a checkbox to toggle between complete and incomplete states for each todo. New todos start as incomplete.
 
-  1. It display the number of incomplete todos and keeps this count updated as new todos are added and existing todos are completed.
+  1. It displays the number of incomplete todos and keeps this count updated as new todos are added and existing todos are completed.
 
   1. It provides links for the user to navigate between lists showing all, incomplete, and completed todos.
 
-  1. It provide a button to remove all completed todos and informs the user of the number of completed todos. This button will not be visible if there are no completed todos.
+  1. It provides a button to remove all completed todos and informs the user of the number of completed todos. This button will not be visible if there are no completed todos.
 
-  1. It provide a button to remove a single specific todo. This button displays as a user hovers over a todo and takes the form of a red X.
+  1. It provides a button to remove a single specific todo. This button displays as a user hovers over a todo and takes the form of a red X.
 
-  1. It provide a checkbox to toggle all existing todos between complete and incomplete states. Further, when all todos are completed this checkbox becomes checked without user interaction.
+  1. It provides a checkbox to toggle all existing todos between complete and incomplete states. Further, when all todos are completed this checkbox becomes checked without user interaction.
 
   1. It allows a user to double click to show a textfield for editing a single todo. Hitting `<enter>` or moving focus outside of this textfield will persist the changed text.
 
