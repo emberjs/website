@@ -23,7 +23,7 @@ In `js/router.js` update the router to recognize this new path and implement a m
 ```javascript
 Todos.Router.map(function () {
   this.resource('todos', { path: '/' }, function () {
-    // additional child routes    
+    // additional child routes
     this.route('active');
     this.route('completed');
   });
@@ -45,7 +45,7 @@ Todos.TodosCompletedRoute = Ember.Route.extend({
 
 The model data for this route is the collection of todos whose `isCompleted` property is `true`. When a todo's `isCompleted` property changes this collection will automatically update to add or remove the todo appropriately.
 
-Normally transitioning into a new route changes the template rendered into the parent `{{outlet}}`, but in this case we'd like to reuse the existing `todos/index` template. We can can accomplish this by implementing the `renderTemplate` method and calling `render` ourselves with the specific template and controller options.
+Normally transitioning into a new route changes the template rendered into the parent `{{outlet}}`, but in this case we'd like to reuse the existing `todos/index` template. We can accomplish this by implementing the `renderTemplate` method and calling `render` ourselves with the specific template and controller options.
 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 

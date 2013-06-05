@@ -30,7 +30,7 @@ Todos.TodoController = Ember.ObjectController.extend({
       // property being used as a getter
       return model.get('isCompleted');
     } else {
-      // property being used as  setter
+      // property being used as a setter
       model.set('isCompleted', value);
       model.save();
       return value;
@@ -64,5 +64,3 @@ In `index.html` include `js/controllers/todo_controller.js` as a dependency:
   * [Ember Controller Guide](/guides/controllers)
   * [Computed Properties Guide](/guides/object-model/computed-properties/)
   * [Naming Conventions Guide](/guides/concepts/naming-conventions)
-
-

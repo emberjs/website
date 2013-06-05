@@ -34,14 +34,14 @@ Still within `index.html` place a Handlebars `{{outlet}}` helper where the `<ul>
 <!--- ... additional lines truncated for brevity ... -->
 ```
 
-The `{{outlet}}` Handlebars helper designates an area of a template that will dynamically update as we transition between routes. Our first new child route will fill this area will the list of all todos in the application.
+The `{{outlet}}` Handlebars helper designates an area of a template that will dynamically update as we transition between routes. Our first new child route will fill this area with the list of all todos in the application.
 
 In `js/router.js` update the router to change the `todos` mapping so it can accept child routes and add this first `index` route:
 
 ```javascript
 Todos.Router.map(function () {
   this.resource('todos', { path: '/' }, function () {
-    // additional child routes    
+    // additional child routes
   });
 });
 
