@@ -52,9 +52,8 @@ describe "TOC", :type => :feature do
   end
 
   it "First page should have a link to the first guide" do
-    pending
     visit "/guides/index.html"
-    find('a.next-guid').text.should =~ /Core Concepts/
+    find('a.next-guide').text.should =~ /Core Concepts/
   end
 
   it "Chills on the last page" do
