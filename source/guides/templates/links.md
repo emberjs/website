@@ -38,7 +38,7 @@ object instance is passed into the helper, then the link is given
 The `{{linkTo}}` helper takes:
 
 * The name of a route. In this example, it would be `index`, `photos`, or
-  `edit`.
+  `photos.edit`.
 * If the route has a [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments),
   a model that represents the segment. By default, Ember.js will replace the segment with the
   value of the object's `id` property.
