@@ -47,6 +47,7 @@ or want the `Post` instance directly).
 
 ```javascript
 App.CommentsController = Ember.ArrayController.extend({
+  post: null,
   needs: "post",
   postBinding: "controllers.post"
 });
