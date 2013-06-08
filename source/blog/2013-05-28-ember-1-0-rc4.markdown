@@ -126,14 +126,6 @@ reliable. Additionally, you can now implement this hook in the
 
 Props to Tom Dale for this work.
 
-#### linkTo now generates routeTo events
-
-Previously, the `{{linkTo}}` helper caused the router to transition without
-any hooks to affect that behavior. Thanks to the work of Alex Matchneer,
-the `{{linkTo}}` helper now generates a routeTo event that can be handled
-just like any other event in a controller or a route's `events` object. The
-default behavior of transitioning to the specified route remains unchanged.
-
 #### ember-testing Improvements
 
 The `ember-testing` package, included in Ember.js, is the
