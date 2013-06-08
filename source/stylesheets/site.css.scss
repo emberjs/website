@@ -1185,8 +1185,8 @@ body.community #content {
     table {
       margin: 2em auto;
     }
-    .inline_list a {
-    margin-left: 20px;
+    .inline_list a:first-child {
+      margin-left: 20px;
     }
   }
 }
