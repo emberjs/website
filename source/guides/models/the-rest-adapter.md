@@ -229,7 +229,7 @@ App.Cursor = DS.Model.extend({
 });
 ```
 
-When `coordinatePoint` is recieved from the API, it is
+When `coordinatePoint` is received from the API, it is
 expected to be an array:
 
 ```js
