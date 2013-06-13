@@ -23,7 +23,7 @@
   - title: "Displaying Model Data"
     url: "getting-started/displaying-model-data"
     warning: "ember-data"
-  - title: "Displaying a Models's Complete State"
+  - title: "Displaying a Model's Complete State"
     url: "getting-started/displaying-a-models-completeness"
     warning: "ember-data"
   - title: "Creating a New Model Instance"
