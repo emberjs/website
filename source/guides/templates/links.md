@@ -39,12 +39,12 @@ The `{{linkTo}}` helper takes:
 
 * The name of a route. In this example, it would be `index`, `photos`, or
   `photos.edit`.
-* If the route has a [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments),
-  a model that represents the segment. By default, Ember.js will replace the segment with the
-  value of the object's `id` property.
+* At most one model for each [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments).
+  By default, Ember.js will replace each segment with the
+  value of the corresponding object's `id` property.
 * An optional title which will be bound to the `a` title attribute
 
-### Multiple Contexts
+### Example for Multiple Segments
 
 If the route is nested, you can supply a model for each dynamic
 segment.
@@ -60,9 +60,9 @@ App.Router.map(function() {
 });
 ```
 
-In the `photoIndex` template:
-
 ```handlebars
+<!-- photoIndex.handlebars -->
+
 <div class="photo">
   {{body}}
 </div>
@@ -70,9 +70,8 @@ In the `photoIndex` template:
 <p>{{#linkTo photo.comment primaryComment}}Main Comment{{/linkTo}}</p>
 ```
 
-Since only a single model was supplied, the link will inherit the
-current photo for the dynamic segment `:photo_id`. The `primaryComment`
-will become the new model for the `comment` route handler.
+If you specify only one model, it will represent the innermost dynamic segment `:comment_id`.
+The `:photo_id` segment will use the current photo.
 
 Alternatively, you could pass both a photo and a comment to the helper:
 
@@ -85,12 +84,4 @@ Alternatively, you could pass both a photo and a comment to the helper:
 ```
 
 In this case, the models specified will populate both the `:photo_id`
-and `:comment_id`. The specified `nextPhoto` will become the new
-model for the `photo` handler and the `primaryComment` will become the
-new model for the `comment` handler.
-
-When transitioning to a new URL, the router will only execute the
-handler if:
-
-* the handler became newly active, or
-* the model for the handler changes
+and `:comment_id`.
