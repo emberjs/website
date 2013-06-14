@@ -248,6 +248,30 @@ Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
 as expected out of the box.
 
+If your model does not use the `id` property in the url, you should
+define a serialize method on your route:
+
+```javascript
+App.Router.map(function() {
+  this.resource('post', {path: '/posts/:post_slug'});
+});
+
+App.PostRoute = Ember.Route.extend({
+  model: function(params) {
+    // the server returns `{ slug: 'foo-post' }`
+    return jQuery.getJSON("/posts/" + params.post_slug);
+  },
+
+  serialize: function(model) {
+    // this will make the URL `/posts/foo-post`
+    return { post_slug: model.slug };
+  }
+});
+```
+
+The default `serialize` method inserts the model's `id` into the route's
+dynamic segment (in this case, `:post_id`).
+
 ### Nested Resources
 
 You cannot nest routes, but you can nest resources:
