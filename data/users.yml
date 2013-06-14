@@ -7,6 +7,8 @@
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace.
 
+- url: http://www.nezasa.com
+  image: nezasa.png
 - url: http://www.mhelabs.com/
   image: mhelabs.png
 - url: https://addepar.com/
