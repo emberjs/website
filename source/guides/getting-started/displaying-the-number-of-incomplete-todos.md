@@ -12,6 +12,8 @@ Next we'll update our template's hard-coded count of completed todos to reflect 
 
 Implement these properties as part of this template's controller, the `Todos.TodosController`:
 
+*Note:*do not forget to add a coma after the last bracket of the `createTodo` function.
+
 ```javascript
 // ... additional lines truncated for brevity ...
 remaining: function () {
