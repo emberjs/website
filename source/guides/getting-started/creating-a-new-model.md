@@ -18,7 +18,7 @@ Because we have not needed custom controller behavior until this point, Ember.js
 
 Add a `js/controllers/todos_controller.js` file. You may place this file anywhere you like (even just putting all code into the same file), but this guide will assume you have created the file and named it as indicated.
 
-Inside `js/controllers/todos_controller.js` implement the controller Ember.js expects to find [according it its naming conventions](/guides/concepts/naming-conventions):
+Inside `js/controllers/todos_controller.js` implement the controller Ember.js expects to find [according to its naming conventions](/guides/concepts/naming-conventions):
 
 ```javascript
 Todos.TodosController = Ember.ArrayController.extend({
