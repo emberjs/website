@@ -210,6 +210,10 @@ Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
     url: "configuring-ember/disabling-prototype-extensions"
 
+Cookbook:
+  - title: "Delicious Unagi"
+    url: "cookbook/delicious-unagi"
+
 Understanding Ember.js:
   - title: "The View Layer"
     url: "understanding-ember/the-view-layer"
