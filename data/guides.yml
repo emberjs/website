@@ -235,6 +235,10 @@ Configuring Ember.js:
   - title: "Embedding Applications"
     url: "configuring-ember/embedding-applications"
 
+Cookbook:
+  - title: "Delicious Unagi"
+    url: "cookbook/delicious-unagi"
+
 Understanding Ember.js:
   - title: "The View Layer"
     url: "understanding-ember/the-view-layer"
