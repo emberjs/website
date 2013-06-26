@@ -31,11 +31,11 @@ routes, using the name that you provided to the `route` method (or, in
 the case of `/`, the name `index`).
 
 ```handlebars
-{{#linkTo "index"}}<img class="logo">{{/linkTo}}
+{{#linkTo 'index'}}<img class="logo">{{/linkTo}}
 
 <nav>
-  {{#linkTo "about"}}About{{/linkTo}}
-  {{#linkTo "favorites"}}Favorites{{/linkTo}}
+  {{#linkTo 'about'}}About{{/linkTo}}
+  {{#linkTo 'favorites'}}Favorites{{/linkTo}}
 </nav>
 ```
 

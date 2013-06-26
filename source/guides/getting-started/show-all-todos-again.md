@@ -7,13 +7,13 @@ In `index.html` convert the `<a>` tag for 'All' todos into a Handlebars `{{linkT
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <li>
-  {{#linkTo todos.index activeClass="selected"}}All{{/linkTo}}
+  {{#linkTo 'todos.index' activeClass="selected"}}All{{/linkTo}}
 </li>
 <li>
-  {{#linkTo todos.active activeClass="selected"}}Active{{/linkTo}}
+  {{#linkTo 'todos.active' activeClass="selected"}}Active{{/linkTo}}
 </li>
 <li>
-  {{#linkTo todos.completed activeClass="selected"}}Completed{{/linkTo}}
+  {{#linkTo 'todos.completed' activeClass="selected"}}Completed{{/linkTo}}
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```

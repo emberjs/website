@@ -15,7 +15,7 @@ App.Router.map(function() {
 
 <ul>
 {{#each photo in photos}}
-  <li>{{#linkTo photos.edit photo}}{{photo.title}}{{/linkTo}}</li>
+  <li>{{#linkTo 'photos.edit' photo}}{{photo.title}}{{/linkTo}}</li>
 {{/each}}
 </ul>
 ```
@@ -67,7 +67,7 @@ App.Router.map(function() {
   {{body}}
 </div>
 
-<p>{{#linkTo photo.comment primaryComment}}Main Comment{{/linkTo}}</p>
+<p>{{#linkTo 'photo.comment' primaryComment}}Main Comment{{/linkTo}}</p>
 ```
 
 If you specify only one model, it will represent the innermost dynamic segment `:comment_id`.
@@ -77,7 +77,7 @@ Alternatively, you could pass both a photo and a comment to the helper:
 
 ```handlebars
 <p>
-  {{#linkTo photo.comment nextPhoto primaryComment}}
+  {{#linkTo 'photo.comment' nextPhoto primaryComment}}
     Main Comment for the Next Photo
   {{/linkTo}}
 </p>
