@@ -1,24 +1,27 @@
 ## Creating an Application
 
-The first step in creating an Ember.js application is to make an
-instance of `Ember.Application`:
+The first step to creating an Ember.js application is to make an
+instance of `Ember.Application` and assign it to a global variable.
 
 ```javascript
 window.App = Ember.Application.create();
 ```
 
-Here we've called our application `App`, but you can call it whatever
-makes the most sense for your application.
+Most people call their application `App`, but you can call it whatever
+makes the most sense to you. Just make sure it starts with a capital
+letter.
 
-Having an application object is important for several reasons:
+What does creating an `Ember.Application` instance get you?
 
-1. It is your application's namespace. All of the classes in your application will
-   be defined as properties on this object (e.g., `App.PostsView` and
-   `App.PostsController`). This helps to prevent polluting of the global scope.
+1. It is your application's namespace. All of the classes in your
+   application will be defined as properties on this object (e.g.,
+`App.PostsView` and `App.PostsController`). This helps to prevent
+polluting of the global scope.
 2. It adds event listeners to the document and is responsible for
-   sending events to your views.
-3. It automatically renders the [_application
-   template_](/guides/application/the-application-template), the root or base
-   template, into which your other templates will be rendered.
-4. It automatically creates a router and begins routing, based on the
-   current URL.
+   delegating events to your views. (See [The View
+   Layer](http://localhost:4567/guides/understanding-ember/the-view-layer)
+  for a detailed description.)
+3. It automatically renders the [application
+   template](/guides/application/the-application-template).
+4. It automatically creates a router and begins routing, choosing which
+   template and model to display based on the current URL.
