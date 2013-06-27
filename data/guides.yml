@@ -58,6 +58,7 @@
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
     warning: "ember-data"
+
 Concepts:
   - title: "Core Concepts"
     url: "concepts/core-concepts"
@@ -77,6 +78,8 @@ Application:
     url: "application"
   - title: "The Application Template"
     url: "application/the-application-template"
+  - title: "Embedding Applications"
+    url: "application/embedding-applications"
 
 Templates:
   - title: "Handlebars Basics"
