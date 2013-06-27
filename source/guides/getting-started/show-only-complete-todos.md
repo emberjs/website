@@ -10,10 +10,10 @@ In `index.html` convert the `<a>` tag for 'Completed' todos into a Handlebars `{
   <a href="all" class="selected">All</a>
 </li>
 <li>
-  {{#linkTo todos.active activeClass="selected"}}Active{{/linkTo}}
+  {{#linkTo 'todos.active' activeClass="selected"}}Active{{/linkTo}}
 </li>
 <li>
-  {{#linkTo todos.completed activeClass="selected"}}Completed{{/linkTo}}
+  {{#linkTo 'todos.completed' activeClass="selected"}}Completed{{/linkTo}}
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```
