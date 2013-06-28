@@ -19,9 +19,9 @@ What does creating an `Ember.Application` instance get you?
 polluting of the global scope.
 2. It adds event listeners to the document and is responsible for
    delegating events to your views. (See [The View
-   Layer](http://localhost:4567/guides/understanding-ember/the-view-layer)
+   Layer](/guides/understanding-ember/the-view-layer)
   for a detailed description.)
 3. It automatically renders the [application
-   template](/guides/application/the-application-template).
+   template](/guides/templates/the-application-template).
 4. It automatically creates a router and begins routing, choosing which
    template and model to display based on the current URL.
