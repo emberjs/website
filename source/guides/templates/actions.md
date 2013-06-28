@@ -93,10 +93,8 @@ containing the post model:
 
 ```js
 App.PostController = Ember.ObjectController.extend({
-  events: {
-    select: function(post) {
-      console.log(post.get('title'));
-    }
+  select: function(post) {
+    console.log(post.get('title'));
   }
 });
 ```
