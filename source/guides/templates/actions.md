@@ -45,34 +45,38 @@ By default, the `{{action}}` helper triggers a method on the template's
 controller, as illustrated above.
 
 If the controller does not implement a method with the same name as the
-event, the event will be sent to the template's route.
+event, the event will be sent to the router, where the currently active
+leaf route will be given a chance to handle the event.
 
-Note that routes that handle events **must place event handlers inside
-an `events` hash**. Even if a route has a method with the same name as
-the event, it will not be triggered unless it is inside an `events` hash.
+Routes that handle events **must place event handlers inside an `events`
+hash**. Even if a route has a method with the same name as the event,
+it will not be triggered unless it is inside an `events` hash.
 
 ```js
 App.PostRoute = Ember.Route.extend({
   events: {
     expand: function() {
-      this.controllerFor('post').set('isExpanded', true);
+      this.controller.set('isExpanded', true);
     },
 
     contract: function() {
-      this.controllerFor('post').set('isExpanded', false);
+      this.controller.set('isExpanded', false);
     }
   }
 });
 ```
 
-If neither the template's controller nor its associated route implement
-a handler, the event will continue to bubble to any parent routes.
-Finally, if an `ApplicationRoute` is defined, it will have an
+As you can see in this example, the event handlers are called such
+that when executed, `this` is the route, not the `events` hash.
+
+If neither the template's controller nor the currently active route
+implements a handler, the event will continue to bubble to any parent
+routes. Ultimately, if an `ApplicationRoute` is defined, it will have an
 opportunity to handle the event.
 
-If a handler for the event is not implemented in the controller, the
-route, any parent routes, or the `ApplicationRoute`, an exception will
-be thrown.
+When an action is triggered, but no matching event handler is
+implemented on the controller, the current route, or any of the
+current route's ancestors, an error will be thrown.
 
 ![Event Bubbling](/images/template-guide/event-bubbling.png)
 
