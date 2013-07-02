@@ -3,94 +3,82 @@
 To get started with Ember.js, there are a few core concepts you
 should understand. 
 
-We want developers to be able to build ambitiously large web
-applications that are competitive with native apps. To do that, they
-need both sophisticated tools *and* the right vocabulary of concepts to
-help them communicate and collaborate.
+Ember.js is designed to help developers build ambitiously large web
+applications that are competitive with native apps. Doing so requires
+both new tools and a new vocabulary of concepts. We've spent a lot of
+time borrowing ideas pioneered by native application frameworks like
+Cocoa and Smalltalk.
 
-We've spent a lot of time borrowing liberally from ideas introduced
-by native application frameworks, like Cocoa. When we felt those
-concepts were more hindrance than help–-or didn't fit within the unique
-constraints of the web–-we turned to other popular open source projects
-like Ruby on Rails and Backbone.js for inspiration.
+However, it's important to remember what makes the web special. Many
+people think that something is a web application because it uses
+technologies like HTML, CSS and JavaScript. In reality, these are just
+implementation details.
 
-Ember.js, therefore, is a synthesis of the powerful tools of our native
-forebears with the lightweight sensibilities of the modern web.
+Instead, **the web derives its power from the ability to bookmark and
+share URLs.** URLs are the key feature that give web applications
+superior shareability and collaboration. Today, most JavaScript
+frameworks treat the URL as an afterthought, instead of the primary
+reason for the web's success.
+
+Ember.js, therefore, marries the tools and concepts of native
+GUI frameworks with support for the feature that makes the web so
+powerful: the URL.
 
 ### Concepts
 
 #### Templates
 
 A **template**, written in the Handlebars templating language, describes
-the user interface of your application. In addition to plain HTML,
-templates can contain the following:
+the user interface of your application. Each template is backed by a
+model, and the template automatically updates itself if the model changes.
+
+In addition to plain HTML, templates can contain:
 
 * **Expressions**, like `{{firstName}}`, which take information from
-  controllers and models, place them into HTML, and automatically keep them
-  updated.
-* **Outlets**, which are placeholders for other templates. As your user
-  moves around your app, different templates can be plugged into the
+  the template's model and puts it into HTML.
+* **Outlets**, which are placeholders for other templates. As users
+  move around your app, different templates can be plugged into the
   outlet by the router. You can put outlets into your template using the
   `{{outlet}}` helper.
-* **Views**, which are responsible for handling user events. You can put
-  views into your templates using the `{{view}}` helper.
-
-#### Views
-
-A **view** is embedded inside a template and is responsible for
-translating _primitive events_ (like clicks, taps, and swipes) into
-_semantic events_ that have meaning to your application and are sent to
-the controller.
-
-For example, a view might translate a `click` event into the more
-meaningful `deleteItem` event, which would be sent to the controller.
-If the controller does not implement the `deleteItem` event, the event
-will be sent to the current route.
-
-#### Controllers
-
-A **controller** is an object that stores _application state_. Templates
-are connected to controllers and translate the current state of the
-controller into HTML.
-
-Controllers often act as representations of **models** for templates. In
-these cases, the controller passes the properties of the model to the
-template, and can transform or augment the model to present it in a way
-the template is expecting.
+* **Components**, custom HTML elements that you can use to clean up
+  repetitive templates or create reusable controls.
 
 #### Models
 
-A **model** is an object that stores _persistent state_. This is the
-data that your application operates on and what gives it value to your
-users.  These objects are usually loaded from your server, then saved
-back when changes are made on the client.
-
-Usually, you'll use Ember Data to translate the _raw JSON payloads_
-delivered by your API server into full-blown Ember.js objects with
-associations, computed properties, and more.
+A **model** is an object that stores _persistent state_. Templates are
+responsible for displaying the model to the user by turning it into
+HTML. In many applications, models are loaded via an HTTP JSON API,
+although Ember is agnostic to the backend that you choose.
 
 #### Router
 
-The **router** is the object responsible for _managing application state_.
+The **router** translates a URL into a series of nested templates, each
+backed by a model. As the templates or models being shown to the user
+change, Ember automatically keeps the URL in the browser's address bar
+up-to-date.
 
-When your user starts your application, it will look at the URL and make
-sure that the right set of templates is displayed, as well as pairing
-those templates with the right model objects.
+This means that, at any point, users are able to share the URL of your
+app. When someone clicks the link, they reliably see the same content as
+the original user.
 
-As you move around the different states of your application, the
-router automatically keeps the URL up-to-date. Users can save the URL
-and re-enter the application at this state later, or share the app in
-its current state with others.
+#### Route
+
+A **route** is an object that tells the template which model it should
+display.
+
+#### Controllers
+
+A **controller** is an object that stores _application state_. A
+template can optionally have a controller in addition to a model, and
+can retrieve properties from both.
 
 ---
 
 These are the core concepts you'll need to understand as you develop
-your Ember.js app. If you stick to these basics, we've designed the
-system to scale up in complexity, so that adding new functionality
-doesn't require you to go back and change the entire system.
+your Ember.js app. They are designed to scale up in complexity, so that
+adding new functionality doesn't force you to go back and refactor major 
+parts of your app.
 
-We think it's important that multiple developers can look at a problem
-and, using the patterns of the framework, arrive at the same solution.
 Now that you understand the roles of these objects, you're equipped to
 dive deep into Ember.js and learn the details of how each of these
 individual pieces work.
