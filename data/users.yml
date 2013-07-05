@@ -145,6 +145,8 @@
   image: twitch.png
 - url: http://www.eatwith.com
   image: eatwith.png
+- url: https://pivotshare.com/
+  image: pivotshare.png
   
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
