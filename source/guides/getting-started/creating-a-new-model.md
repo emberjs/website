@@ -38,7 +38,7 @@ Todos.TodosController = Ember.ArrayController.extend({
 
     // Save the new model
     todo.save();
-  }
+  },
 });
 ```
 
