@@ -26,6 +26,9 @@
   - location: Austin, TX
     url:      http://emberatx.org/
     image:    16austin.png
+  - location: Washington, DC
+    url: http://www.meetup.com/Ember-JS-DC/
+    image:    19washington.png
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
