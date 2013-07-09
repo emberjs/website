@@ -7,8 +7,10 @@
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace.
 
-- url: http://www.nezasa.com
-  image: nezasa.png
+# These logos are in a particular order, most recently, that being the 
+# order in which people made their requests. Be respectful to those who 
+# came before you and add your name to the *bottom*.
+
 - url: http://www.mhelabs.com/
   image: mhelabs.png
 - url: https://addepar.com/
@@ -87,8 +89,8 @@
   image: crowdstrike.png
 - url: http://www.playtin.com
   image: playtin.png
-# - url:  http://www.visualsupply.co
-#   image: visualsupplyco.png
+# - url:  http://www.visualsupply.co 
+#   image: visualsupplyco.png —company contact info required, email listings@!
 - url:  http://www.crowdcompass.com
   image: crowdcompass.png
 - url:  http://www.totango.com
@@ -102,7 +104,7 @@
 - url: http://www.appdrones.com/
   image: appdrones.png
 # - url: http://www.d-i.co/
-#   image: di-logo-blue.png
+#   image: di-logo-blue.png —company contact info required, email listings@!
 - url: http://dockyard.com
   image: dockyard.png
 - url: http://www.montania.se/
@@ -147,6 +149,9 @@
   image: eatwith.png
 - url: https://pivotshare.com/
   image: pivotshare.png
+- url: http://www.nezasa.com
+  image: nezasa.png
+
   
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
