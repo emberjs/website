@@ -1,6 +1,6 @@
 ## Obtaining Ember.js and Dependencies
 
-The latest release candidate (RC6) of Ember.js can be downloaded directly from [the Ember.js website](http://emberjs.com/).  Ember.js has two dependencies: jQuery and Handlebars. jQuery can be downloaded from [http://jquery.com/](http://jquery.com/) and Handlebars can be downloaded at [http://handlebarsjs.com/](http://handlebarsjs.com/). This guide uses `ember-data` for managing model data. The latest development builds of Ember data can be downloaded at [http://builds.emberjs.com/](http://builds.emberjs.com/). The build compatible [with RC3 has the SHA `e324f0e`](http://builds.emberjs.com.s3.amazonaws.com/ember-data-e324f0e582fe180bb577f648b1b7247958db21d9.js).
+The latest release candidate (RC6) of Ember.js can be downloaded directly from [the Ember.js website](http://emberjs.com/).  Ember.js has two dependencies: jQuery and Handlebars. jQuery can be downloaded from [http://jquery.com/](http://jquery.com/) and Handlebars can be downloaded at [http://handlebarsjs.com/](http://handlebarsjs.com/). This guide uses `ember-data` for managing model data. The latest development build of Ember data can be downloaded at [http://builds.emberjs.com/ember-data-latest.js](http://builds.emberjs.com/ember-data-latest.js). 
 
 For this example, all of these resources should be stored in the folder `js/libs` located in the same location as `index.html`. Update your `index.html` to load these files by placing `<script>` tags just before your closing `</body>` tag in the following order:
 
