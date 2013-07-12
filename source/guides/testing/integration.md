@@ -1,4 +1,3 @@
-
 Ember includes several helpers to facilitate integration testing. These helpers are "aware" of (and wait for) asynchronous behavior within your application, making it much easier to write deterministic tests.
 
 [QUnit](http://qunitjs.com/) is the default testing framework for this package, but others are supported through third-party adapters.
@@ -104,7 +103,7 @@ For example:
     
 ```javascript
 Ember.Test.registerHelper('dblclick', function(app, selector, context) {
-  var $el = findWithAssert(app, selector, context);
+  var $el = findWithAssert(selector, context);
   Ember.run(function() {
     $el.dblclick();
   });
