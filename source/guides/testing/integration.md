@@ -21,7 +21,7 @@ This injects the test helpers into the window's scope.
 App.injectTestHelpers();
 ```
 
-With QUnit, `setup` and `teardown` functions are defined in each test module's configuration. These functions are called for each test in the module. If you are using a framework other than QUnit, use the hook that is called before each individual test. 
+With QUnit, `setup` and `teardown` functions are defined in each test module's configuration. These functions are called for each test in the module. If you are using a framework other than QUnit, use the hook that is called before each individual test.
 
 Before each test, reset and start the application: `App.reset()` completely resets the state of the application, then call `App.advanceReadiness` to start your application once you're ready to begin testing.
 
@@ -49,14 +49,14 @@ module("Integration Tests", {
 
 ### Writing tests
 
-Almost every test has a pattern of visiting a route, interacting with the page (using the helpers), and checking for expected changes in the DOM. 
+Almost every test has a pattern of visiting a route, interacting with the page (using the helpers), and checking for expected changes in the DOM.
 
 Examples:
 
-```javascript 
+```javascript
 test("root lists first page of posts", function(){
   visit("/").then(function() {
-    equal(find(".post").length, 5, "The first page should have 5 posts"); 
+    equal(find(".post").length, 5, "The first page should have 5 posts");
     // Assuming we know that 5 posts display per page and that there are more than 5 posts
   });
 });
@@ -67,7 +67,7 @@ The helpers that perform actions return a promise that resolves when all asynchr
 ```javascript
 test("creating a post displays the new post", function(){
   visit("/posts/new").then(function() {
-    return fillIn(".post-title", "A new post");  
+    return fillIn(".post-title", "A new post");
   }).then(function() {
     return fillIn(".post-author", "John Doe");
   }).then(function() {
@@ -79,12 +79,12 @@ test("creating a post displays the new post", function(){
 });
 ```
 
-For convenience, helpers can be chained: 
+For convenience, helpers can be chained:
 
 ```javascript
 test("creating a post displays the new post", function() {
   visit("/posts/new")
-  .fillIn(".post-title", "A new post")  
+  .fillIn(".post-title", "A new post")
   .fillIn(".post-author", "John Doe")
   .click("button.create")
   .then(function() {
@@ -97,17 +97,17 @@ test("creating a post displays the new post", function() {
 ### Creating your own test helpers
 
 `Ember.Test.registerHelper` is used to register a test helper that will be injected when `App.injectTestHelpers` is called.
-The helper method will always be called with the current Application as the first parameter. Helpers that cause asynchronous behavior should return `wait(app)` to return a promise that will resolve when that asynchronous behavior is complete.
+The helper method will always be called with the current Application as the first parameter. Helpers that cause asynchronous behavior should return `wait()` to return a promise that will resolve when that asynchronous behavior is complete.
 
 For example:
-    
+
 ```javascript
 Ember.Test.registerHelper('dblclick', function(app, selector, context) {
   var $el = findWithAssert(selector, context);
   Ember.run(function() {
     $el.dblclick();
   });
-  return wait(app);
+  return wait();
 });
 ```
 
