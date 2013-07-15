@@ -3,7 +3,7 @@ Ember includes several helpers to facilitate integration testing. These helpers 
 [QUnit](http://qunitjs.com/) is the default testing framework for this package, but others are supported through third-party adapters.
 
 ### Setup
-In order to integration test the Ember application, you need to run the app within your test framework. Set the root element of the application to an arbitrary element you know will exist. It is useful, as an aid to test-driven development, if the root element is visible while the tests run. Note: Do not use #qunit-fixture.
+In order to integration test the Ember application, you need to run the app within your test framework. Set the root element of the application to an arbitrary element you know will exist. It is useful, as an aid to test-driven development, if the root element is visible while the tests run. You can potentially use #qunit-fixture, typically used to contain fixture html for use in tests, but you will need to override css to make it visible.
 
 ```javascript
 App.rootElement = '#arbitrary-element-to-contain-ember-application';
