@@ -211,6 +211,10 @@ Enumerables:
   - title: "Introduction"
     url: "enumerables"
 
+Testing:
+  - title: "Integration Testing"
+    url: "testing/integration"
+
 Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
     url: "configuring-ember/disabling-prototype-extensions"
