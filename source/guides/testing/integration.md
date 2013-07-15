@@ -36,15 +36,15 @@ module("Integration Tests", {
 ### Helpers
 
 * `visit(url)`
- - Visits the given route and returns a promise that resolves when all resulting async behavior is complete.
+ - Visits the given route and returns a promise that fulfills when all resulting async behavior is complete.
 * `find(selector, context)`
  - Finds an element within the app's root element and within the context (optional). Scoping to the root element is especially useful to avoid conflicts with the test framework's reporter.
 * `fillIn(input_selector, text)`
- - Fills in the selected input with the given text and returns a promise that resolves when all resulting async behavior is complete.
+ - Fills in the selected input with the given text and returns a promise that fulfills when all resulting async behavior is complete.
 * `click(selector)`
-  - Clicks an element and triggers any actions triggered by the element's `click` event and returns a promise that resolves when all resulting async behavior is complete.
+  - Clicks an element and triggers any actions triggered by the element's `click` event and returns a promise that fulfills when all resulting async behavior is complete.
 * `wait()`
-  - Returns a promise that resolves when all async behavior is complete.
+  - Returns a promise that fulfills when all async behavior is complete.
 
 ### Writing tests
 
@@ -61,7 +61,7 @@ test("root lists first page of posts", function(){
 });
 ```
 
-The helpers that perform actions return a promise that resolves when all asynchronous behavior has completed.
+The helpers that perform actions return a promise that fulfills when all asynchronous behavior has completed.
 
 ```javascript
 test("creating a post displays the new post", function(){
