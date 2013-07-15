@@ -23,13 +23,12 @@ App.injectTestHelpers();
 
 With QUnit, `setup` and `teardown` functions are defined in each test module's configuration. These functions are called for each test in the module. If you are using a framework other than QUnit, use the hook that is called before each individual test.
 
-Before each test, reset and start the application: `App.reset()` completely resets the state of the application, then call `App.advanceReadiness` to start your application once you're ready to begin testing.
+Before each test, reset the application: `App.reset()` completely resets the state of the application.
 
 ```javascript
 module("Integration Tests", {
   setup: function() {
     App.reset();
-    Ember.run(App, App.advanceReadiness);
   }
 });
 ```
@@ -95,7 +94,6 @@ test("creating a post displays the new post", function() {
 ```
 
 ### Creating your own test helpers
-
 `Ember.Test.registerHelper` is used to register a test helper that will be injected when `App.injectTestHelpers` is called.
 The helper method will always be called with the current Application as the first parameter. Helpers that cause asynchronous behavior should return `wait()` to return a promise that will resolve when that asynchronous behavior is complete.
 
