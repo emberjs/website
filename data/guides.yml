@@ -228,6 +228,8 @@ Understanding Ember.js:
     url: "understanding-ember/managing-asynchrony"
   - title: "Keeping Templates Up-to-Date"
     url: "understanding-ember/keeping-templates-up-to-date"
+  - title: "Debugging"
+    url: "understanding-ember/debugging"
 
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
