@@ -56,9 +56,14 @@ App.__container__.lookup("route:application")
 #### View ember-data's identity map
 
 ```javascript
-App.__container__.lookup('store:main').recordCache # all records in memory
-App.__container__.lookup('store:main').recordCache[2].get('data.attributes') // attributes
-App.__container__.lookup('store:main').recordCache[2].get('comments')        // loaded associations
+// all records in memory
+App.__container__.lookup('store:main').recordCache 
+
+// attributes
+App.__container__.lookup('store:main').recordCache[2].get('data.attributes')
+
+// loaded associations
+App.__container__.lookup('store:main').recordCache[2].get('comments')
 ```
 
 #### See all observers for a object, key
