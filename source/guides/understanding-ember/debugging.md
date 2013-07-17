@@ -57,8 +57,8 @@ App.__container__.lookup("route:application")
 
 ```javascript
 App.__container__.lookup('store:main').recordCache # all records in memory
-App.__container__.lookup('store:main').recordCache[2].get('data.attributes') #attributes
-App.__container__.lookup('store:main').recordCache[2].get('comments') #loaded associations
+App.__container__.lookup('store:main').recordCache[2].get('data.attributes') // attributes
+App.__container__.lookup('store:main').recordCache[2].get('comments')        // loaded associations
 ```
 
 #### See all observers for a object, key
