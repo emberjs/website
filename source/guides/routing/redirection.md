@@ -37,7 +37,7 @@ App.TopChartsChooseRoute = Ember.Route.extend({
 
 // Superclass to be used by all of the filter routes below
 App.FilterRoute = Ember.Route.extend({
-  enter: function() {
+  activate: function() {
     var controller = this.controllerFor('application');
     controller.set('lastFilter', this.templateName);
   }
