@@ -6,7 +6,23 @@ Here are some tips you can use to help debug your Ember application.
 
 ```javascript
 window.App = Ember.Application.create({
-  LOG_TRANSITIONS: true,
+  LOG_TRANSITIONS: true
+});
+```
+
+#### Log view lookups
+
+```javascript
+window.App = Ember.Application.create({
+  LOG_VIEW_LOOKUPS: true
+});
+```
+
+#### LOG generated controller 
+
+```javascript
+window.App = Ember.Application.create({
+  LOG_ACTIVE_GENERATION: true
 });
 ```
 
