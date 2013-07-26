@@ -111,4 +111,7 @@ Ember.Test.registerHelper('dblclick', function(app, selector, context) {
 });
 ```
 
-**(Please note: Only development builds of Ember include the testing package.)**
+### Test adapters for other libraries
+If you use a library other than QUnit, your test adapter will need to provide methods for `asyncStart` and `asyncEnd`. To facilitate asynchronous testing, the default test adapter for QUnit uses methods that QUnit provides: (globals) `stop()` and `start()`.
+
+**(Please note: Only development builds of Ember include the testing package. The ember-testing package is not included in the production build of Ember. The package can be loaded in your dev or qa builds to facilitate testing your application. By not including the ember-testing package in production, your tests will not be executable in a production environment.)**
