@@ -83,9 +83,7 @@ h1 {
   font-size: 22px;
   color: $orange-color;
   padding: 0px 0px 1em 2em;
-  margin-bottom: 1.5em;
   background: no-repeat url('/images/chapter-mark.png') top left;
-  border-bottom: 1px solid #dfd7d4;
 }
 
 h2 {
@@ -119,6 +117,10 @@ hr {
   border: none;
   margin: 40px 0;
   background-color: #dfd7d4;
+
+  &:first-of-type {
+    margin: 8px 0;
+  }
 }
 
 ul {
@@ -1085,7 +1087,6 @@ ol {
     .blog-post-author {
       font-size: 10px;
       color: gray;
-      position: absolute;
       top: 59px;
       margin-left: 45px;
     }
