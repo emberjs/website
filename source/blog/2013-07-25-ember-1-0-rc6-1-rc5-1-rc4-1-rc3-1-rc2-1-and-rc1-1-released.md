@@ -16,7 +16,7 @@ We want developers to know that they can trust Ember enough to build
 their businesses on top of it.
 
 In that spirit, today we are announcing the release of Ember.js 1.0
-RC6.3, RC5.1, RC4.1, RC3.1, RC2.1 and RC1.1. These are all security
+RC6.1, RC5.1, RC4.1, RC3.1, RC2.1 and RC1.1. These are all security
 releases that address a potential XSS security issue you can learn more
 about by following this link:
 
