@@ -4,7 +4,7 @@ project:
   description: ! 'The Ember API: a framework for building ambitious web applications'
   version: 1.0 pre
   url: http://emberjs.com/
-  sha: v1.0.0-rc.6
+  sha: v1.0.0-rc.6.1
 files:
   ../packages/ember-application/lib/ext/controller.js:
     name: ../packages/ember-application/lib/ext/controller.js
