@@ -1,11 +1,13 @@
-Unlike other JavaScript frameworks that try to abstract away the DOM,
-Ember.js embraces HTML, then adds some powerful new features that
-modernize it for building web apps instead of documents.
+HTML was designed in a time when the browser was a simple document
+viewer. Developers building great web apps need something more.
 
-HTML is great, but currently you are limited to the tags that are
-created for you by the W3C. Wouldn't it be even better if you could define
-your own, application-specific HTML tags, then implement their behavior
-using JavaScript?
+Instead of trying to replace HTML, however, Ember.js embraces it, then adds
+powerful new features that modernize it for building web apps.
+
+Currently, you are limited to the tags that are created for you by the
+W3C. Wouldn't it be great if you could define your own,
+application-specific HTML tags, then implement their behavior using
+JavaScript?
 
 That's exactly what components let you do. In fact, it's such a good
 idea that the W3C is currently working on the [Custom
