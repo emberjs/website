@@ -692,6 +692,30 @@ ol {
     margin-top: 4px;
     color: #888888;
   }
+
+  .social {
+    margin-top: 25px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    height: 20px;
+
+
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 10px;
+      font-size: 11px;
+    }
+
+    a:hover {
+      border: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+  }
 }
 
 .section {
