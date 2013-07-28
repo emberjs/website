@@ -671,7 +671,7 @@ ol {
   position: relative;
 
   #download-ember, #download-starter-kit {
-    width: 220px;
+    width: 320px;
     text-align: center;
     margin: 4em auto 0 auto;
   }
@@ -680,6 +680,7 @@ ol {
     left: 0;
 
     .button {
+      margin: 0 auto;
       font-size: 13px; /* Due to long version name */
     }
   }
