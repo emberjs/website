@@ -25,6 +25,6 @@ roadmap of the web platform.
 To highlight the power of components, here is a short example of turning a blog post into a reusable
 `blog-post` custom element that you could use again and again in your
 application. Keep reading this section for more details on building
-component components.
+components.
 
 <a class="jsbin-embed" href="http://jsbin.com/ifuxey/2/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
