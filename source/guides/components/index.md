@@ -3,7 +3,7 @@ Ember.js embraces HTML, then adds some powerful new features that
 modernize it for building web apps instead of documents.
 
 HTML is great, but currently you are limited to the tags that are
-created for you by the W3C. Wouldn't it be great if you could define
+created for you by the W3C. Wouldn't it be even better if you could define
 your own, application-specific HTML tags, then implement their behavior
 using JavaScript?
 
