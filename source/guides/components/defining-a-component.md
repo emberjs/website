@@ -1,5 +1,5 @@
 To define a component, create a template whose name starts with
-`component/`. To define a new component `{{blog-post}}`, for example,
+`components/`. To define a new component `{{blog-post}}`, for example,
 create a `components/blog-post` template.
 
 If you are including your Handlebars templates inside an HTML file via
