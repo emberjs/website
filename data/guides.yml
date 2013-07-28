@@ -103,6 +103,16 @@ Templates:
   - title: "Writing Helpers"
     url: "templates/writing-helpers"
 
+Components:
+  - title: "Introduction"
+    url: "components"
+  - title: "Defining a Component"
+    url: "components/defining-a-component"
+  - title: "Passing Properties to a Component"
+    url: "components/passing-properties-to-a-component"
+  - title: "Customizing a Component's Element"
+    url: "components/customizing-a-components-element"
+
 Routing:
   - title: "Introduction"
     url: "routing"
