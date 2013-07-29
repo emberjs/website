@@ -19,7 +19,7 @@ $black-color: #252525;
 }
 
 body {
-  background: url('/images/background-shades.png') no-repeat top center #faf4f1;
+  background-color: #faf4f1;
   margin: 60px 0 0 0;
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
@@ -28,6 +28,10 @@ body {
   color: #444444;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+}
+
+body.index, body.about {
+  background: url('/images/background-shades.png') no-repeat top center #faf4f1;
 }
 
 sup {
