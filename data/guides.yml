@@ -136,6 +136,8 @@ Components:
     url: "components/defining-a-component"
   - title: "Passing Properties to a Component"
     url: "components/passing-properties-to-a-component"
+  - title: "Wrapping Content in a Component"
+    url: "components/wrapping-content-in-a-component"
   - title: "Customizing a Component's Element"
     url: "components/customizing-a-components-element"
 
