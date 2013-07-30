@@ -140,6 +140,8 @@ Components:
     url: "components/wrapping-content-in-a-component"
   - title: "Customizing a Component's Element"
     url: "components/customizing-a-components-element"
+  - title: "Handling User Interaction with Actions"
+    url: "components/handling-user-interaction-with-actions"
 
 Controllers:
   - title: "Introduction"
