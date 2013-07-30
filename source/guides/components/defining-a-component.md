@@ -32,7 +32,7 @@ Each component, under the hood, is backed by an element. By default,
 Ember will use a `<div>` element to contain your component's template.
 To learn how to change the element Ember uses for your component, see
 [Customizing a Component's
-Element](/guides/customizing-a-components-element).
+Element](/guides/components/customizing-a-components-element).
 
 
 ### Defining a Component Subclass
