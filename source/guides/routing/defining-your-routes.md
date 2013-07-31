@@ -358,3 +358,23 @@ This router creates five routes:
 
 The `comments` template will be rendered in the `post` outlet.
 All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.
+
+Resources reset the namespace, but it is possible to prefix a route's name like this in order to use the same resource name more than once:
+
+```javascript
+App.Router.map(function() {
+  this.resource('post', function() {
+    this.resource('post.comments', function() {
+      this.route('new');
+    });
+  });
+
+  this.resource('docs', function() {
+    this.resource('docs.comments', function() {
+      this.route('new');
+    });
+  });
+});
+```
+
+This works as expected. The name of the controller for `docs.comments.new` will be `App.DocsCommentsNewController`, and its template will be `docs/comments/new`.
