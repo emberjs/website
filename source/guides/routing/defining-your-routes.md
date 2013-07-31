@@ -205,7 +205,7 @@ route handler might look like this:
 ```js
 App.BlogPostsRoute = Ember.Route.extend({
   model: function() {
-    return App.BlogPost.all();
+    return App.BlogPost.find();
   }
 });
 ```
