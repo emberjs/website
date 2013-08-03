@@ -61,7 +61,7 @@ a view will be generated for you.
 
 A generated template is empty.
 If it's a resource template, the template will simply act
-as an `outlet` so that nested routes can be seemlessly inserted.  It is equivalent to:
+as an `outlet` so that nested routes can be seamlessly inserted.  It is equivalent to:
 
 ```handlebars
 {{outlet}}
