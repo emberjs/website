@@ -358,3 +358,15 @@ This router creates five routes:
 
 The `comments` template will be rendered in the `post` outlet.
 All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.
+
+You are also able to create deeply nested resources in order to preserve the namespace on your routes:
+
+```javascript
+App.Router.map(function() {
+  this.resource('foo', function() {
+    this.resource('foo.bar', { path: '/bar' }, function() {
+      this.route('baz'); // This will be foo.bar.baz
+    });
+  });
+});
+```
