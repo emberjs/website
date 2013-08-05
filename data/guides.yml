@@ -228,6 +228,17 @@ Enumerables:
 Testing:
   - title: "Integration Testing"
     url: "testing/integration"
+  - title: "Example Browser Application"
+    url: "testing/peepcode-ordr"
+  - title: "Fixture Data"
+    url: "testing/fixtures"
+    warning: "ember-data"
+  - title: "Testing Setup/Helpers"
+    url: "testing/support"
+  - title: "End-to-End Tests"
+    url: "testing/end-to-end"
+  - title: "Unit Tests"
+    url: "testing/unit"
 
 Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
