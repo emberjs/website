@@ -21,7 +21,7 @@ in another template:
 <a class="jsbin-embed" href="http://jsbin.com/obogub/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 (See [Passing Properties to a
-Component](/guides/components/passing-proprties-to-a-component/) for
+Component](/guides/components/passing-properties-to-a-component/) for
 more.)
 
 In this case, the content we wanted to display came from the model. But
