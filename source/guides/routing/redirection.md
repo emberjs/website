@@ -10,7 +10,7 @@ App.Router.map(function() {
 
 App.IndexRoute = Ember.Route.extend({
   redirect: function() {
-    this.transitionToRoute('posts');
+    this.transitionTo('posts');
   }
 });
 ```
@@ -31,7 +31,7 @@ App.Router.map(function() {
 App.TopChartsChooseRoute = Ember.Route.extend({
   redirect: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
-    this.transitionToRoute('topCharts.' + lastFilter || 'songs');
+    this.transitionTo('topCharts.' + lastFilter || 'songs');
   }
 });
 
