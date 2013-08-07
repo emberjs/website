@@ -29,7 +29,7 @@ window.App = Ember.Application.create({
 #### Log object bindings
 
 ```javascript
-Ember.LOG_BINDING = true
+Ember.LOG_BINDINGS = true
 ```
 
 #### View all registered routes
