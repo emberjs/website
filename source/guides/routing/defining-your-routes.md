@@ -358,3 +358,59 @@ This router creates five routes:
 
 The `comments` template will be rendered in the `post` outlet.
 All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.
+
+You are also able to create deeply nested resources in order to preserve the namespace on your routes:
+
+```javascript
+App.Router.map(function() {
+  this.resource('foo', function() {
+    this.resource('foo.bar', { path: '/bar' }, function() {
+      this.route('baz'); // This will be foo.bar.baz
+    });
+  });
+});
+```
+
+This router creates following routes:
+
+<div style="overflow: auto">
+  <table>
+    <thead>
+    <tr>
+      <th>URL</th>
+      <th>Route Name</th>
+      <th>Controller</th>
+      <th>Route</th>
+      <th>Template</th>
+    </tr>
+    </thead>
+    <tr>
+      <td><code>/</code></td>
+      <td><code>index</code></td>
+      <td><code>App.IndexController</code></td>
+      <td><code>App.IndexRoute</code></td>
+      <td><code>index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo</code></td>
+      <td><code>foo.index</code></td>
+      <td><code>App.FooIndexController</code></td>
+      <td><code>App.FooIndexRoute</code></td>
+      <td><code>foo/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo/bar</code></td>
+      <td><code>foo.bar.index</code></td>
+      <td><code>App.FooBarIndexController</code></td>
+      <td><code>App.FooBarIndexRoute</code></td>
+      <td><code>foo/bar/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo/bar/baz</code></td>
+      <td><code>foo.bar.baz</code></td>
+      <td><code>App.FooBarBazController</code></td>
+      <td><code>App.FooBarBazRoute</code></td>
+      <td><code>foo/bar/baz</code></td>
+    </tr>
+  </table>
+</div>
