@@ -7,7 +7,8 @@ GIT
 
 GIT
   remote: git://github.com/mharris717/website_versions.git
-  revision: 843fdd6ee15d113b4e419c17cafa613af3740e4f
+  revision: ac6f59d0ca6c726ee8b1ceaa05c8caa683a56be3
+  branch: master
   specs:
     website_versions (0.1.0)
       grit
@@ -43,6 +44,10 @@ GEM
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
     fssm (0.2.10)
+    grit (2.5.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+      posix-spawn (~> 0.3.6)
     haml (4.0.3)
       tilt
     highline (1.6.19)
@@ -107,6 +112,7 @@ GEM
       capybara (~> 2.1.0)
       faye-websocket (>= 0.4.4, < 0.5.0)
       http_parser.rb (~> 0.5.3)
+    posix-spawn (0.3.6)
     pry (0.9.6)
       coderay (>= 0.9.8)
       method_source (>= 0.6.5)
