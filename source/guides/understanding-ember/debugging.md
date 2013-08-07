@@ -112,3 +112,17 @@ Ember.onerror = function(error) {
   });
 }
 ```
+
+#### Import the console
+
+If you are using imports with Ember, be sure to import the console:
+
+```javascript
+Ember = {
+  imports: {
+    Handlebars: Handlebars,
+    jQuery: $,
+    console: window.console
+  }
+};
+```
