@@ -88,6 +88,10 @@ h1 {
   color: $orange-color;
   padding: 0px 0px 1em 2em;
   background: no-repeat url('/images/chapter-mark.png') top left;
+
+  &.api-header {
+    padding-bottom: 0.5em;
+  }
 }
 
 h2 {
