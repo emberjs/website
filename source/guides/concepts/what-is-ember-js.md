@@ -176,7 +176,7 @@ Ember runs in the browser, so it can detect and respond to browser events such a
   <img alt="Ember.js MVC Diagram" src="/images/ember_mvc/embermvc.png">
 </figure>
 
-Rails, on the other hand, runs on the server. As such, it can only communicate with the client through HTTP requests. Rather than receive direct user events, the server takes HTTP requests as input (GET /, POST /user/1, etc.), reads the route and maps it to a controller action. The controller then interacts with the model and the view templates to construct a response (usually in the form of an HTML document) to send back over HTTP. The user is always interacting with what is basically a flat page, assembled on demand for them based on their requests.
+Rails, on the other hand, runs on the server. As such, it can only communicate with the client through HTTP requests. Rather than receive direct user events, the server takes HTTP requests as input (GET /, POST /users/1, etc.), reads the route and maps it to a controller action. The controller then interacts with the model and the view templates to construct a response (usually in the form of an HTML document) to send back over HTTP. The user is always interacting with what is basically a flat page, assembled on demand for them based on their requests.
 
 <figure>
   <img alt="Rails MVC Diagram" src="/images/ember_mvc/railsmvc.png">
