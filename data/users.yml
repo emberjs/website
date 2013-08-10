@@ -157,8 +157,9 @@
   image: verisk_health.png
 - url: http://www.bustle.com
   image: bustle.png
+- url: https://uniiverse.com
+  image: uniiverse.gif
 
-  
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
