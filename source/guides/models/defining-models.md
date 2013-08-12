@@ -106,3 +106,21 @@ App.Post = DS.Model.extend({
 ```
 
 You can also specify an inverse on a `belongsTo`, which works how you'd expect.
+
+#### Embedded Objects
+
+When you have a data structure where the embedded data doesn't use or need ids, you have to specify that the `belongsTo` relationship is contained by the `hasMany` relationship.
+
+To do this, you need to extend the adapter that your app is using to load the data with the embedded structure.
+
+```javascript
+App.Comment = DS.Model.extend({});
+
+App.Post = DS.Model.extend({
+  comments: DS.hasMany('App.Comment')
+});
+
+App.Adapter.map('App.Post', {
+  comments: { embedded: 'always' }
+});
+```
