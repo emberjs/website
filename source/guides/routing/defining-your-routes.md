@@ -12,9 +12,14 @@ App.Router.map(function() {
 });
 ```
 
-When the user visits `/`, Ember.js will render the `index` template.
-Visiting `/about` renders the `about` template, and `/favs` renders the
-`favorites` template.
+Now, when the user visits `/about`, Ember.js will render the `about` 
+template. Visiting `/favs` will render the `favorites` template.
+
+<aside>
+**Heads up!** You get a few routes for free: the `ApplicationRoute`, the `IndexRoute` 
+(corresponding to the `/` path), and the `LoadingRoute` (useful for 
+AJAX requests). [See below](#toc_initial-routes) for more details.
+</aside>
 
 Note that you can leave off the path if it is the same as the route
 name. In this case, the following is equivalent to the above example:
@@ -414,3 +419,37 @@ This router creates following routes:
     </tr>
   </table>
 </div>
+
+### Initial routes
+
+A few routes are immediately available within your application:  
+
+  - `App.ApplicationRoute` is entered when your app first boots up. It renders 
+    the `application` template.  
+
+  - `App.IndexRoute` is the default route, and will render the `index` template 
+    when the user visits `/` (unless `/` has been overridden by your own 
+    custom route).  
+    
+  - `App.LoadingRoute` will render the `loading` template each time your app
+    transitions from one route to another that involves a promise - for 
+    example, during an AJAX request. To enable this route, redefine it within 
+    your app:
+
+    ```js
+    // app.js
+    App.LoadingRoute = Ember.Route.extend({});
+
+    // index.html
+    <script type="text/x-handlebars" data-template-name="loading">
+      <h1>Loading...</h1>
+    </script>
+    ```
+
+    By default, the route will append the template to the `<body>` element of 
+    the DOM. For different behavior, like [rendering the template to a named 
+    outlet](http://emberjs.com/guides/routing/rendering-a-template/), override 
+    the `renderTemplate` method of the `LoadingRoute`.
+
+Remember, these routes are part of every application, so you don't need to 
+specify them in `App.Router.map`.
