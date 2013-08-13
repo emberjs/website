@@ -29,7 +29,7 @@ window.App = Ember.Application.create({
 #### Log object bindings
 
 ```javascript
-Ember.LOG_BINDING = true
+Ember.LOG_BINDINGS = true
 ```
 
 #### View all registered routes
@@ -111,4 +111,18 @@ Ember.onerror = function(error) {
     otherInformation: 'exception message'
   });
 }
+```
+
+#### Import the console
+
+If you are using imports with Ember, be sure to import the console:
+
+```javascript
+Ember = {
+  imports: {
+    Handlebars: Handlebars,
+    jQuery: $,
+    console: window.console
+  }
+};
 ```

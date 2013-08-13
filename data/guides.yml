@@ -129,6 +129,20 @@ Routing:
   #- title: "Nested Routes"
     #url: "routing/nested-routes"
 
+Components:
+  - title: "Introduction"
+    url: "components"
+  - title: "Defining a Component"
+    url: "components/defining-a-component"
+  - title: "Passing Properties to a Component"
+    url: "components/passing-properties-to-a-component"
+  - title: "Wrapping Content in a Component"
+    url: "components/wrapping-content-in-a-component"
+  - title: "Customizing a Component's Element"
+    url: "components/customizing-a-components-element"
+  - title: "Handling User Interaction with Actions"
+    url: "components/handling-user-interaction-with-actions"
+
 Controllers:
   - title: "Introduction"
     url: "controllers"

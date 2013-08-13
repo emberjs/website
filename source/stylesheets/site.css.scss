@@ -19,7 +19,7 @@ $black-color: #252525;
 }
 
 body {
-  background: url('/images/background-shades.png') no-repeat top center #faf4f1;
+  background-color: #faf4f1;
   margin: 60px 0 0 0;
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
@@ -28,6 +28,10 @@ body {
   color: #444444;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
+}
+
+body.index, body.about {
+  background: url('/images/background-shades.png') no-repeat top center #faf4f1;
 }
 
 sup {
@@ -84,6 +88,10 @@ h1 {
   color: $orange-color;
   padding: 0px 0px 1em 2em;
   background: no-repeat url('/images/chapter-mark.png') top left;
+
+  &.api-header {
+    padding-bottom: 0.5em;
+  }
 }
 
 h2 {
@@ -671,7 +679,6 @@ ol {
   position: relative;
 
   #download-ember, #download-starter-kit {
-    width: 220px;
     text-align: center;
     margin: 4em auto 0 auto;
   }
@@ -680,6 +687,7 @@ ol {
     left: 0;
 
     .button {
+      margin: 0 auto;
       font-size: 13px; /* Due to long version name */
     }
   }
@@ -691,6 +699,30 @@ ol {
   .info {
     margin-top: 4px;
     color: #888888;
+  }
+
+  .social {
+    margin-top: 25px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    height: 20px;
+
+
+    > li {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 10px;
+      font-size: 11px;
+    }
+
+    a:hover {
+      border: none;
+    }
+
+    img {
+      vertical-align: middle;
+    }
   }
 }
 
