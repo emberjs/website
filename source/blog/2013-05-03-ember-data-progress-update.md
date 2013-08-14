@@ -1,7 +1,7 @@
 ---
 title: Ember Data Progress Update
 author: Tom Dale
-tags: Recent Posts
+tags: Ember Data
 ---
 
 Just over a month ago, we told you about our [plans for stabilizing Ember

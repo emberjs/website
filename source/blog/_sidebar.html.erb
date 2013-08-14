@@ -18,10 +18,10 @@
     </ol>
   </li>
   <li class='level-1'>
-    <a href="<%= tag_path 'This Week in Ember' %>">This Week in Ember</a>
+    <a href="<%= tag_path 'Ember Data' %>">Ember Data</a>
     <ol style="display:block">
-      <% blog.tags['This Week in Ember'].sort_by(&:date).reverse.each_with_index do |article, i| %>
-      <li class='level-3'><%= link_to article.date.strftime('%B %d, %Y'), article %></li>
+      <% blog.tags['Ember Data'].sort_by(&:date).reverse.each_with_index do |article, i| %>
+      <li class='level-3'><%= link_to article.title, article %></li>
     <% end %>
     </ol>
   </li>
