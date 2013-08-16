@@ -269,7 +269,7 @@ App.PostRoute = Ember.Route.extend({
 
   serialize: function(model) {
     // this will make the URL `/posts/foo-post`
-    return { post_slug: model.slug };
+    return { post_slug: model.get('slug') };
   }
 });
 ```
@@ -419,6 +419,7 @@ This router creates following routes:
     </tr>
   </table>
 </div>
+
 
 ### Initial routes
 
