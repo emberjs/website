@@ -1,5 +1,3 @@
-## Using the Store
-
 Before your application can display a model, it must first load it from
 the server. Of course, since network requests can be expensive, it is
 important to only request a given record once. 
@@ -16,7 +14,7 @@ called `store`. This instance of `DS.Store` is created for you
 automatically and is shared among all of the objects in your
 application.
 
-You will use this object to retrieve records, as well to create new
+You will use the store to retrieve records, as well to create new
 ones. For example, we might want to find an `App.Person` model with the ID of `1`
 from our route's `model` hook:
 
