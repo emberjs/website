@@ -62,10 +62,10 @@ A model also describes its relationships with other objects. For
 example, an `Order` may have many `LineItems`, and a `LineItem` may
 belong to a particular `Order`.
 
-Models don't have any data itself; it just defines the properties and
+Models don't have any data themselves; they just define the properties and
 behavior of specific instances, which are called _records_.
 
-#### Record
+#### Records
 
 A **record** is an instance of a model that contains data loaded from a
 server. Your application can also create new records and save them back
@@ -73,39 +73,117 @@ to the server.
 
 Records are uniquely identified by two things:
 
-1. Their model type
-2. An ID
-
-Put another way, a record pairs the behavior, properties and
-relationships described in a model with a particular set of data that is
-identified by a unique ID.
+1. A model type.
+2. A globally unique ID.
 
 For example, if you were writing a contact management app, you might
-have a model called `Person`. An individual contact in your app might
-have a type of `Person and an ID of `1` or `steve-buscemi`.
+have a model called `Person`. An individual record in your app might
+have a type of `Person` and an ID of `1` or `steve-buscemi`.
+
+IDs are usually assigned by the server when you save them for the first
+time, but you can also generate IDs client-side.
+
+#### Adapter
+
+An **adapter** is an object that knows about your particular server
+backend and is responsible for translating requests for and changes to
+records into the appropriate calls to your server.
+
+For example, if your application asks for a `person` record with an ID
+of `1`, how should Ember Data load it? Is it over HTTP or a WebSocket?
+If it's HTTP, is the URL `/person/1` or `/resources/people/1`?
+
+The adapter is responsible for answering all of these questions.
+Whenever your app asks the store for a record that it doesn't have
+cached, it will ask the adapter for it. If you change a record and save
+it, the store will hand the record to the adapter to send the
+appropriate data to your server and confirm that the save was
+successful.
+
+#### Serializer
+
+A **serializer** is responsible for turning a raw JSON payload returned
+from your server into a record object.
+
+JSON APIs may represent attributes and relationships in many different
+ways. For example, some attribute names may be `camelCased` and others
+may be `under_scored`. Representing relationships is even more diverse:
+they may be encoded as an array of IDs, an array of embedded objects, or
+as foreign keys.
+
+When the adapter gets a payload back for a particular record, it will
+give that payload to the serializer to normalize into the form that
+Ember Data is expecting.
+
+While most people will use a serializer for normalizing JSON, because
+Ember Data treats these payloads as opaque objects, there's no reason it
+couldn't be binary data stored in a `Blob` or
+[ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer);
 
 #### Automatic Caching
 
-The store automatically caches records for you, returning the same
-instance if it had already been loaded. This minimizes the number of
-round-trips to the server, and allows your application to render UI to
-the user as fast as possible.
+The store automatically caches records for you. If a record had already
+been loaded, asking for it a second time will always return the same
+object instance. This minimizes the number of round-trips to the
+server, and allows your application to render UI to the user as fast as
+possible.
 
 For example, the first time your application asks the store for a
 `person` record with an ID of `1`, it will fetch that information from
 your server.
 
-However, the next time your app asks for a `person` with ID `1`,
-the store will notice that it had already retrieved that information
-from the server and had cached it locally.
-
-Instead of sending another request for the same information, it will
-give your application the same record it had provided it the first time.
-This feature—always returning the same record object, no matter how many times
-you look it up—is sometimes called an _identity map_.
+However, the next time your app asks for a `person` with ID `1`, the
+store will notice that it had already retrieved and cached that
+information from the server. Instead of sending another request for the
+same information, it will give your application the same record it had
+provided it the first time.  This feature—always returning the same
+record object, no matter how many times you look it up—is sometimes
+called an _identity map_.
 
 Using an identity map is important because it ensures that changes you
 make in one part of your UI are propagated to other parts of the UI. It
 also means that you don't have to manually keep records in sync—you can
 ask for a record by ID and not have to worry about whether other parts
 of your application have already asked for and loaded it.
+
+### Architecture Overview
+
+The first time your application asks the store for a record, the store
+sees that it doesn't have a local copy and requests it from your
+adapter. Your adapter will go and retrieve the record from your
+persistence layer; typically, this will be a JSON representation of the
+record served from an HTTP server.
+
+![Diagram showing process for finding an unloaded record](/images/guides/models/finding-unloaded-record-step1-diagram.png)
+
+As illustrated in the diagram above, the adapter cannot always
+immediately return the requested record immediately. In this case, the
+adapter must make an _asynchronous_ request to the server, and only when
+that request finishes loading can the record be created with its backing
+data.
+
+Because of this asynchronicity, the store immediately returns a
+_promise_ from the `find()` method. Similarly, any requests that the
+store makes to the adapter also return promises.
+
+Once the request to the server returns with a JSON payload for the
+requested record, the adapter resolves the promise it returned to the
+store with the JSON.
+
+The store then takes that JSON, initializes the record with the
+JSON data, and resolves the promise returned to your application
+with the newly-loaded record.
+
+![Diagram showing process for finding an unloaded record after the payload has returned from the server](/images/guides/models/finding-unloaded-record-step2-diagram.png)
+
+Let's look at what happens if you request a record that the store
+already has in its cache. (A record can get into the cache either by
+being requested via `find()`, or by pre-emptively pushing it into the
+store via `push()`.)
+
+![Diagram showing process for finding an unloaded record after the payload has returned from the server](/images/guides/models/finding-loaded-record-diagram.png)
+
+In this case, because the store already knew about the record, it
+returns a promise that it resolves with the record immediately. It does
+not need to ask the adapter (and, therefore, the server) for a copy
+since it already has it saved locally.
