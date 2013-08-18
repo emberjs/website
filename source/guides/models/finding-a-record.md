@@ -1,11 +1,18 @@
-You can retrieve a record by passing its unique ID to the `find()` method:
+## Finding a Record
+
+You can retrieve a record by passing its unique ID to the `find()`
+method. This will return a promise that resolves to the requested
+record:
 
 ```js
-var post = App.Post.find(1);
+store.find('post', 1).then(function(post) {
+  post.set('title', "My Dark Twisted Fantasy");
+});
 ```
 
-If a record with that ID has already been created, it will be returned
-immediately. This feature is sometimes called an _identity map_.
+If a record with that ID had already been created, it will be returned
+immediately. This feature is sometimes called an _identity map_. If you
+request the 
 
 Otherwise, a new record will be created and put into the loading
 state, then returned. Feel free to use this record in templates; because
