@@ -16,11 +16,12 @@ responsible for telling their template which model to render.
 
 `Ember.Route`'s `model` hook supports asynchronous values
 out-of-the-box. If you return a promise from the `model` hook, the
-router will wait until the promise has resolved to a record.
+router will wait until the promise has resolved to render the
+template.
 
-This makes it easy to write apps using Ember Data. Just return the
-requested record from the `model` hook, and let Ember deal with figuring
-out whether a network request is needed or not:
+This makes it easy to write apps with asynchronous data using Ember
+Data. Just return the requested record from the `model` hook, and let
+Ember deal with figuring out whether a network request is needed or not:
 
 ```js
 App.Router.map(function() {
