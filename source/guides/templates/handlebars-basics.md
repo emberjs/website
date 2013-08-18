@@ -28,9 +28,9 @@ template inside your HTML by putting it inside a `<script>` tag, like so:
 </html>
 ```
 
-This template will automatically be compiled and become your
-_application template_, which will be displayed on the page by the
-router when your app loads.
+This template will be compiled automatically and become your
+[application template](/guides/templates/the-application-template),
+which will be displayed on the page when your app loads.
 
 You can also define templates by name that can be used later. For
 example, you may want to define a reusable control that is used in many
