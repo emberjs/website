@@ -1,21 +1,71 @@
-For every type of model you'd like to represent, create a new subclass of
-`DS.Model`:
+A model is a class that defines the properties and behavior of the
+data that you present to the user. Anything that the user expects to see
+if they leave your app and come back later (or if they refresh the page)
+should be represented by a model.
+
+For every model in your application, create a subclass of `DS.Model`:
 
 ```javascript
 App.Person = DS.Model.extend();
 ```
 
-### Attributes
+After you have defined a model class, you can start finding and creating
+records of that type. When interacting with the store, you will need to
+specify a record's type using the model name. For example, the store's
+`find()` method expects a string as the first argument to tell it what
+type of record to find:
 
-You can specify which attributes a model has by using `DS.attr`. You can
-use attributes just like any other property, including as part of a
-computed property.
+```js
+store.find('person', 1);
+```
+
+The table below shows how model names map to model classes.
+
+<table>
+  <thead>
+  <tr>
+    <th>Model Name</th>
+    <th>Model Class</th>
+  </tr>
+  </thead>
+  <tr>
+    <td><code>photo</code></td>
+    <td><code>App.Photo</code></td>
+  </tr>
+  <tr>
+    <td><code>admin-user-profile</code></td>
+    <td><code>App.AdminUserProfile</code></td>
+  </tr>
+</table>
+
+### Defining Attributes
+
+You can specify which attributes a model has by using `DS.attr`.
 
 ```javascript
+var attr = DS.attr;
+
 App.Person = DS.Model.extend({
-  firstName: DS.attr('string'),
-  lastName: DS.attr('string'),
-  birthday: DS.attr('date'),
+  firstName: attr(),
+  lastName: attr(),
+  birthday: attr()
+});
+```
+
+Attributes are used when turning the JSON payload returned from your
+server into a record, and when serializing a record to save back to the
+server after it has been modified.
+
+You can use attributes just like any other property, including as part of a
+computed property. Frequently, you will want to define computed
+properties that combine or transform primitive attributes.
+
+```javascript
+var attr = DS.attr;
+
+App.Person = DS.Model.extend({
+  firstName: attr(),
+  lastName: attr(),
 
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
@@ -23,12 +73,25 @@ App.Person = DS.Model.extend({
 });
 ```
 
-By default, the REST adapter supports attribute types of `string`,
-`number`, `boolean`, and `date`. Custom adapters may offer additional
+For more about adding computed properties to your classes, see [Computed
+Properties](/guides/object-model/computed-properties).
+
+If you don't specify the type of the attribute, it will be whatever was
+provided by the server. You can make sure that an attribute is always
+coerced into a particular type by passing a `type` option to `attr`:
+
+```js
+App.Person = DS.Model.extend({
+  birthday: attr({ type: Date })
+});
+```
+
+The default adapter supports attribute types of `String`,
+`Number`, `Boolean`, and `Date`. Custom adapters may offer additional
 attribute types, and new types can be registered as transforms. See the
 [documentation section on the REST Adapter](/guides/models/the-rest-adapter).
 
-### Relationships
+### Defining Relationships
 
 Ember Data includes several built-in relationship types to help you
 define how your models relate to each other.
@@ -79,25 +142,31 @@ App.Tag = DS.Model.extend({
 ```
 
 #### Explicit Inverses
-From [This Week in Ember.JS, posted November 2, 2012](http://emberjs.com/blog/2012/11/02/this-week-in-ember-js.html)
 
-Ember Data has always been smart enough to know that when you set a `belongsTo` relationship, the child record should be added to the parent's corresponding `hasMany` relationship.
+Ember Data will do its bed to discover which relationships map to one
+another. In the one-to-many code above, for example, Ember Data can figure out that
+changing the `comments` relationship should update the `post`
+relationship on the inverse because `post` is the only relationship to
+that model.
 
-Unfortunately, it was pretty braindead about *which* `hasMany` relationship it would update. Before, it would just pick the first relationship it found with the same type as the child.
-
-Because it's reasonable for people to have multiple `belongsTo`/`hasMany`s for the same type, we added support for specifying an inverse:
+However, sometimes you may have multiple `belongsTo`/`hasMany`s for the
+same type. You can specify which property on the related model is the
+inverse using `DS.attr`'s `inverse` option:
 
 ```javascript
+var belongsTo = DS.belongsTo,
+    hasMany = DS.hasMany;
+
 App.Comment = DS.Model.extend({
-  onePost: DS.belongsTo("post"),
-  twoPost: DS.belongsTo("post"),
-  redPost: DS.belongsTo("post"),
-  bluePost: DS.belongsTo("post")
+  onePost: belongsTo('post'),
+  twoPost: belongsTo('post'),
+  redPost: belongsTo('post'),
+  bluePost: belongsTo('post')
 });
 
 
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('comment', {
+  comments: hasMany('comment', {
     inverse: 'redPost'
   })
 });

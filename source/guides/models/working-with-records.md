@@ -1,3 +1,5 @@
+### Modifying Attributes
+
 Once a record has been loaded, you can begin making changes to its
 attributes. Attributes behave just like normal properties in Ember.js
 objects. Making changes is as simple as setting the attribute you
@@ -37,3 +39,5 @@ Data will raise an exception. For more information, see [Model
 Lifecycle][1].
 
 [1]: /guides/models/model-lifecycle
+
+### Modifying Relationships

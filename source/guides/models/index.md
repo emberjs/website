@@ -116,13 +116,13 @@ give that payload to the serializer to normalize into the form that
 Ember Data is expecting.
 
 While most people will use a serializer for normalizing JSON, because
-Ember Data treats these payloads as opaque objects, there's no reason it
-couldn't be binary data stored in a `Blob` or
-[ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer);
+Ember Data treats these payloads as opaque objects, there's no reason
+they couldn't be binary data stored in a `Blob` or
+[ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays/ArrayBuffer).
 
 #### Automatic Caching
 
-The store automatically caches records for you. If a record had already
+The store will automatically caches records for you. If a record had already
 been loaded, asking for it a second time will always return the same
 object instance. This minimizes the number of round-trips to the
 server, and allows your application to render UI to the user as fast as
@@ -177,9 +177,7 @@ with the newly-loaded record.
 ![Diagram showing process for finding an unloaded record after the payload has returned from the server](/images/guides/models/finding-unloaded-record-step2-diagram.png)
 
 Let's look at what happens if you request a record that the store
-already has in its cache. (A record can get into the cache either by
-being requested via `find()`, or by pre-emptively pushing it into the
-store via `push()`.)
+already has in its cache. 
 
 ![Diagram showing process for finding an unloaded record after the payload has returned from the server](/images/guides/models/finding-loaded-record-diagram.png)
 
@@ -187,3 +185,9 @@ In this case, because the store already knew about the record, it
 returns a promise that it resolves with the record immediately. It does
 not need to ask the adapter (and, therefore, the server) for a copy
 since it already has it saved locally.
+
+---
+
+These are the core concepts you should understand to get the most out of
+Ember Data. The following sections go into more depth about each of
+these concepts, and how to use them together.
