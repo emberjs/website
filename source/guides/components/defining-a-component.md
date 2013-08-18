@@ -44,7 +44,7 @@ the Handlebars template as described above and use the component that is
 created.
 
 If you need to customize the behavior of the component, however, you'll
-need to define a subclass of `Ember.Component. For example, you would
+need to define a subclass of `Ember.Component`. For example, you would
 need a custom subclass if you wanted to change a component's element,
 respond to actions from the component's template, or manually make
 changes to the component's element using JavaScript.
