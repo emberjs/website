@@ -159,6 +159,8 @@
   image: bustle.png
 - url: https://uniiverse.com
   image: uniiverse.gif
+- url: http://www.silveregg.nl
+  image: silveregg.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
