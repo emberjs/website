@@ -581,7 +581,8 @@ ol {
   }
 
   ol + h2, ul + h2, p + h2,
-  ol + h3, ul + h3, p + h3 {
+  ol + h3, ul + h3, p + h3,
+  div + h3 {
     margin-top: 1.5em;
   }
 
