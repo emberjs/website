@@ -1,7 +1,6 @@
 ---
 title: Announcing the Ember.js Security Policy
 author: Tom Dale
-tags: Recent Posts
 ---
 
 We know that building your apps on top of a framework requires

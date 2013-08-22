@@ -1,13 +1,13 @@
 ## Actions (The `{{action}}` Helper)
 
-You may want to trigger high level events in response to a simple user
-event (like a click).
+Your app will often need a way to let users interact with controls that
+change application state. For example, imagine that you have a template
+that shows a blog post, and supports expanding the post with additional
+information.
 
-In general, these events will manipulate some property on the
-controller, which will change the current template via bindings.
-
-For example, imagine that you have a template that shows a blog post,
-and supports expanding the post with additional information.
+You can use the `{{action}}` helper to make an HTML element clickable.
+When a user clicks the element, the named event will be sent to your
+application.
 
 ```handlebars
 <!-- post.handlebars -->
@@ -18,14 +18,11 @@ and supports expanding the post with additional information.
 
 {{#if isExpanded}}
   <div class='body'>{{body}}</div>
-  <button {{action contract}}>Contract</button>
+  <button {{action 'contract'}}>Contract</button>
 {{else}}
-  <button {{action expand}}>Show More...</button>
+  <button {{action 'expand'}}>Show More...</button>
 {{/if}}
 ```
-
-In this case, the `post` controller would be an `Ember.ObjectController`
-whose `model` is an instance of `App.Post`.
 
 ```js
 App.PostController = Ember.ObjectController.extend({
@@ -42,12 +39,68 @@ App.PostController = Ember.ObjectController.extend({
 });
 ```
 
-By default, the `{{action}}` helper triggers a method on the current
-controller. You can also pass parameter paths to the method. The following
-will call `controller.select( context.post )` when clicked:
+### Event Bubbling
+
+By default, the `{{action}}` helper triggers a method on the template's
+controller, as illustrated above.
+
+If the controller does not implement a method with the same name as the
+event, the event will be sent to the router, where the currently active
+leaf route will be given a chance to handle the event.
+
+Routes that handle events **must place event handlers inside an `events`
+hash**. Even if a route has a method with the same name as the event,
+it will not be triggered unless it is inside an `events` hash.
+
+```js
+App.PostRoute = Ember.Route.extend({
+  events: {
+    expand: function() {
+      this.controller.set('isExpanded', true);
+    },
+
+    contract: function() {
+      this.controller.set('isExpanded', false);
+    }
+  }
+});
+```
+
+As you can see in this example, the event handlers are called such
+that when executed, `this` is the route, not the `events` hash.
+
+If neither the template's controller nor the currently active route
+implements a handler, the event will continue to bubble to any parent
+routes. Ultimately, if an `ApplicationRoute` is defined, it will have an
+opportunity to handle the event.
+
+When an action is triggered, but no matching event handler is
+implemented on the controller, the current route, or any of the
+current route's ancestors, an error will be thrown.
+
+![Event Bubbling](/images/template-guide/event-bubbling.png)
+
+### Event Parameters
+
+You can optionally pass arguments to the event handler. Any values
+passed to the `{{action}}` helper after the event name will be passed to
+the handler as arguments.
+
+For example, if the `post` argument was passed:
 
 ```handlebars
 <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
+```
+
+The route's `select` event handler would be called with a single argument
+containing the post model:
+
+```js
+App.PostController = Ember.ObjectController.extend({
+  select: function(post) {
+    console.log(post.get('title'));
+  }
+});
 ```
 
 ### Specifying the Type of Event
@@ -72,12 +125,12 @@ In general, two-word event names (like `keypress`) become `keyPress`.
 ### Specifying Whitelisted Modifier Keys
 
 By default the `{{action}}` helper will ignore click event with
-pressed modifier keys. You can supply an `allowed-keys` option
+pressed modifier keys. You can supply an `allowedKeys` option
 to specify which keys should not be ignored.
 
 ```handlebars
 <script type="text/x-handlebars" data-template-name='a-template'>
-  <div {{action anActionName allowed-keys="alt"}}>
+  <div {{action anActionName allowedKeys="alt"}}>
     click me
   </div>
 </script>
@@ -133,15 +186,3 @@ where you are in the application. For example, you might want to have a
 button in a sidebar that does one thing if you are somewhere inside of
 the `/posts` route, and another thing if you are inside of the `/about`
 route.
-
-### View Action Handling (Target)
-
-In some cases (when creating custom components) it may be necessary to
-handle actions in your view class. This can be done by specifying the
-target of your action.
-
-```handlebars
-<button {{action expand target="view"}}>Show More...</button>
-```
-
-Now the view will be checked to see if it can handle this action.

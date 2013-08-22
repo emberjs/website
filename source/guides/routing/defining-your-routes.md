@@ -12,9 +12,14 @@ App.Router.map(function() {
 });
 ```
 
-When the user visits `/`, Ember.js will render the `index` template.
-Visiting `/about` renders the `about` template, and `/favs` renders the
-`favorites` template.
+Now, when the user visits `/about`, Ember.js will render the `about` 
+template. Visiting `/favs` will render the `favorites` template.
+
+<aside>
+**Heads up!** You get a few routes for free: the `ApplicationRoute`, the `IndexRoute` 
+(corresponding to the `/` path), and the `LoadingRoute` (useful for 
+AJAX requests). [See below](#toc_initial-routes) for more details.
+</aside>
 
 Note that you can leave off the path if it is the same as the route
 name. In this case, the following is equivalent to the above example:
@@ -31,11 +36,11 @@ routes, using the name that you provided to the `route` method (or, in
 the case of `/`, the name `index`).
 
 ```handlebars
-{{#linkTo "index"}}<img class="logo">{{/linkTo}}
+{{#linkTo 'index'}}<img class="logo">{{/linkTo}}
 
 <nav>
-  {{#linkTo "about"}}About{{/linkTo}}
-  {{#linkTo "favorites"}}Favorites{{/linkTo}}
+  {{#linkTo 'about'}}About{{/linkTo}}
+  {{#linkTo 'favorites'}}Favorites{{/linkTo}}
 </nav>
 ```
 
@@ -205,7 +210,7 @@ route handler might look like this:
 ```js
 App.BlogPostsRoute = Ember.Route.extend({
   model: function() {
-    return App.BlogPost.all();
+    return App.BlogPost.find();
   }
 });
 ```
@@ -264,7 +269,7 @@ App.PostRoute = Ember.Route.extend({
 
   serialize: function(model) {
     // this will make the URL `/posts/foo-post`
-    return { post_slug: model.slug };
+    return { post_slug: model.get('slug') };
   }
 });
 ```
@@ -358,3 +363,94 @@ This router creates five routes:
 
 The `comments` template will be rendered in the `post` outlet.
 All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.
+
+You are also able to create deeply nested resources in order to preserve the namespace on your routes:
+
+```javascript
+App.Router.map(function() {
+  this.resource('foo', function() {
+    this.resource('foo.bar', { path: '/bar' }, function() {
+      this.route('baz'); // This will be foo.bar.baz
+    });
+  });
+});
+```
+
+This router creates following routes:
+
+<div style="overflow: auto">
+  <table>
+    <thead>
+    <tr>
+      <th>URL</th>
+      <th>Route Name</th>
+      <th>Controller</th>
+      <th>Route</th>
+      <th>Template</th>
+    </tr>
+    </thead>
+    <tr>
+      <td><code>/</code></td>
+      <td><code>index</code></td>
+      <td><code>App.IndexController</code></td>
+      <td><code>App.IndexRoute</code></td>
+      <td><code>index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo</code></td>
+      <td><code>foo.index</code></td>
+      <td><code>App.FooIndexController</code></td>
+      <td><code>App.FooIndexRoute</code></td>
+      <td><code>foo/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo/bar</code></td>
+      <td><code>foo.bar.index</code></td>
+      <td><code>App.FooBarIndexController</code></td>
+      <td><code>App.FooBarIndexRoute</code></td>
+      <td><code>foo/bar/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo/bar/baz</code></td>
+      <td><code>foo.bar.baz</code></td>
+      <td><code>App.FooBarBazController</code></td>
+      <td><code>App.FooBarBazRoute</code></td>
+      <td><code>foo/bar/baz</code></td>
+    </tr>
+  </table>
+</div>
+
+
+### Initial routes
+
+A few routes are immediately available within your application:  
+
+  - `App.ApplicationRoute` is entered when your app first boots up. It renders 
+    the `application` template.  
+
+  - `App.IndexRoute` is the default route, and will render the `index` template 
+    when the user visits `/` (unless `/` has been overridden by your own 
+    custom route).  
+    
+  - `App.LoadingRoute` will render the `loading` template each time your app
+    transitions from one route to another that involves a promise - for 
+    example, during an AJAX request. To enable this route, redefine it within 
+    your app:
+
+    ```js
+    // app.js
+    App.LoadingRoute = Ember.Route.extend({});
+
+    // index.html
+    <script type="text/x-handlebars" data-template-name="loading">
+      <h1>Loading...</h1>
+    </script>
+    ```
+
+    By default, the route will append the template to the `<body>` element of 
+    the DOM. For different behavior, like [rendering the template to a named 
+    outlet](http://emberjs.com/guides/routing/rendering-a-template/), override 
+    the `renderTemplate` method of the `LoadingRoute`.
+
+Remember, these routes are part of every application, so you don't need to 
+specify them in `App.Router.map`.

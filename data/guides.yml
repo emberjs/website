@@ -58,6 +58,7 @@
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
     warning: "ember-data"
+
 Concepts:
   - title: "Core Concepts"
     url: "concepts/core-concepts"
@@ -75,10 +76,10 @@ Concepts:
 Application:
   - title: "Introduction"
     url: "application"
-  - title: "The Application Template"
-    url: "application/the-application-template"
 
 Templates:
+  - title: "The Application Template"
+    url: "templates/the-application-template"
   - title: "Handlebars Basics"
     url: "templates/handlebars-basics"
   - title: "Conditionals"
@@ -128,6 +129,20 @@ Routing:
   #- title: "Nested Routes"
     #url: "routing/nested-routes"
 
+Components:
+  - title: "Introduction"
+    url: "components"
+  - title: "Defining a Component"
+    url: "components/defining-a-component"
+  - title: "Passing Properties to a Component"
+    url: "components/passing-properties-to-a-component"
+  - title: "Wrapping Content in a Component"
+    url: "components/wrapping-content-in-a-component"
+  - title: "Customizing a Component's Element"
+    url: "components/customizing-a-components-element"
+  - title: "Handling User Interaction with Actions"
+    url: "components/handling-user-interaction-with-actions"
+
 Controllers:
   - title: "Introduction"
     url: "controllers"
@@ -159,6 +174,9 @@ Models:
     #warning: "ember-data"
   - title: "Model Lifecycle"
     url: "models/model-lifecycle"
+    warning: "ember-data"
+  - title: "The Fixture Adapter"
+    url: "models/the-fixture-adapter"
     warning: "ember-data"
   - title: "The REST Adapter"
     url: "models/the-rest-adapter"
@@ -206,9 +224,16 @@ The Object Model:
 Enumerables:
   - title: "Introduction"
     url: "enumerables"
+
+Testing:
+  - title: "Integration Testing"
+    url: "testing/integration"
+
 Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
     url: "configuring-ember/disabling-prototype-extensions"
+  - title: "Embedding Applications"
+    url: "configuring-ember/embedding-applications"
 
 Cookbook:
   - title: "Delicious Unagi"
@@ -221,6 +246,8 @@ Understanding Ember.js:
     url: "understanding-ember/managing-asynchrony"
   - title: "Keeping Templates Up-to-Date"
     url: "understanding-ember/keeping-templates-up-to-date"
+  - title: "Debugging"
+    url: "understanding-ember/debugging"
 
 #Understanding Ember Data:
   #- title: "Record Lifecycle"

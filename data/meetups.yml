@@ -26,6 +26,12 @@
   - location: Austin, TX
     url:      http://emberatx.org/
     image:    16austin.png
+  - location: Washington, DC
+    url: http://www.meetup.com/Ember-JS-DC/
+    image:    19washington.png
+  - location: Salt Lake City, UT
+    url: http://www.meetup.com/EmberJS-SLC
+    image:    
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
@@ -54,3 +60,9 @@
   - location: Melbourne, Australia
     url:      http://www.meetup.com/Ember-Melb-JS/
     image:    18melbourne.png
+  - location: Tel Aviv, Israel
+    url:      http://www.meetup.com/Ember-IL/
+    image:    20telaviv.png
+  - location: Budapest, Hungary
+    url:      http://www.meetup.com/ember-bp/
+    image:    

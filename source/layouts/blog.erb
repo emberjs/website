@@ -8,6 +8,8 @@
       <h3 class="blog-post-author">Posted By: <%= current_page.data.author %> &ndash; <time><%= current_article.date.strftime('%b %d, %Y') %></time></h3>
     <% end %>
 
+    <hr>
+
     <%= yield %>
 
     <hr>

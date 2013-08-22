@@ -119,7 +119,7 @@ module TOC
     end
 
     def current_guide
-      if guide_slug == 'index.html'
+      if guide_slug == '' && section_slug == 'index.html'
         current_section[1][0]
       else
         current_section[1].find do |guide|

@@ -1,4 +1,6 @@
-<h1><%= @module['name'] %> Module</h1>
+<h1 class="api-header"><%= @module['name'] %> Module</h1>
+
+<hr>
 
 <% if @module['module'] %>
   <p>Parent: <%= link_to @module['module'], "#{@module['module']}.html" %></p>

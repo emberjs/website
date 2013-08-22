@@ -241,7 +241,7 @@ module APIDocs
     end
 
     def sha_url
-      "#{APIDocs.repo_url}/commit/#{sha}"
+      "#{APIDocs.repo_url}/tree/#{sha}"
     end
 
     def api_modules
