@@ -4,15 +4,15 @@ In this step we'll update our application to allow a user to mark a todo as comp
 
 In `index.html` update your template to wrap each todo in its own controller by adding an `itemController` argument to the `{{each}}` Handlebars helper. Then convert our static `<input type="checkbox">` into an `Ember.Checkbox`:
 
-```javascript
-... additional lines truncated for brevity ...
+```handlebars
+<!--- ... additional lines truncated for brevity ... -->
 {{#each controller itemController="todo"}}
   <li {{bindAttr class="isCompleted:completed"}}>
     {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
     <label>{{title}}</label><button class="destroy"></button>
   </li>
 {{/each}}
-... additional lines truncated for brevity ...
+<!--- ... additional lines truncated for brevity ... -->
 ```
 
 When this `Ember.Checkbox` is rendered it will ask for the current value of the controller's `isCompleted` property. When a user clicks this input, it will call the controller's `isCompleted` property with an argument of either `true` or `false` depending on the new checked value of the input.
