@@ -16,7 +16,7 @@ Because we hadn't implemented this object before, Ember.js provided a `Route` fo
 
 Now that we need custom behavior (returning a specific set of models), we implement the class and add the desired behavior.
 
-Update `index.html` to remove the static `<li>` elements with a Handlebars `{{each}}` helper and a dynamic `{{title}}` for each item.
+Update `index.html` to replace the static `<li>` elements with a Handlebars `{{each}}` helper and a dynamic `{{title}}` for each item.
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
