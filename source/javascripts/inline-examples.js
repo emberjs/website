@@ -34,9 +34,15 @@ $(function loadExamples() {
       return files;
     }).then(function(files) {
       generateViewerApp($viewer, files);
-      generateOutputApp($output, files);
+      //generateOutputApp($output, files);
     });
   });
+});
+
+Ember.Handlebars.helper('syntax-highlight', function(value, options) {
+  var highlighted = hljs.highlightAuto(value).value;
+  var output = "<div class='highlight'>" + highlighted + "</div>";
+  return new Ember.Handlebars.SafeString(output);
 });
 
 function generateViewerApp($elem, files) {
