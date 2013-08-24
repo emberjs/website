@@ -6,7 +6,14 @@ Here are some tips you can use to help debug your Ember application.
 
 ```javascript
 window.App = Ember.Application.create({
-  LOG_TRANSITIONS: true
+  // Basic logging, e.g. "Transitioned into 'post'"
+  LOG_TRANSITIONS: true, 
+
+  // Extremely detailed logging, highlighting every internal
+  // step made while transitioning into a route, including
+  // `beforeModel`, `model`, and `afterModel` hooks, and
+  // information about redirects and transition aborts
+  LOG_TRANSITIONS_INTERNAL: true
 });
 ```
 
@@ -36,13 +43,13 @@ Ember.LOG_BINDINGS = true
 
 ```javascript
  Ember.keys(App.Router.router.recognizer.names)
- ```
+```
 
 #### View all registered templates
 
- ```javascript
+```javascript
 Ember.keys(Ember.TEMPLATES)
- ```
+```
 
 #### Get the state history of an ember-data record
 
