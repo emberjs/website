@@ -20,6 +20,7 @@ title: "About"
   </script>
   <script type="text/javascript" src="/javascripts/handlebars-1.0.rc.4.js"></script>
   <script type="text/javascript" src="/javascripts/ember.js"></script>
+  <script type="text/javascript" src="/javascripts/highlight.js"></script>
   <script type="text/javascript" src="/javascripts/inline-examples.js"></script>
 <% end %>
 
@@ -86,14 +87,14 @@ title: "About"
         </li>
       {{/each}}
     </ul>
-    <pre>{{selectedTab.contents}}</pre>
+    <pre>{{syntax-highlight selectedTab.contents}}</pre>
   </script>
 
   <div class="example-app" data-name="components" data-files="routes/application.js templates/application.hbs templates/components/avatar-viewer.hbs"></div>
+<!-- 
 <%# IMPORTANT: If you change the example below, please make sure you update the test at:
 https://github.com/emberjs/ember.js/blob/master/packages/ember/tests/homepage_example_test.js %>
 
-<!--
 <% highlight :javascript, :left do %>
 App = Ember.Application.create();
 
@@ -129,6 +130,7 @@ App.IndexRoute = Ember.Route.extend({
 <script type="text/x-handlebars">
   {{outlet}}
 </script>
+-->
 
 <script type="text/x-handlebars" id="index">
   <h1>People</h1>
@@ -140,7 +142,6 @@ App.IndexRoute = Ember.Route.extend({
   </ul>
 </script>
 <% end %>
--->
 
 </div>
 

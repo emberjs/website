@@ -1,13 +1,23 @@
 @import "compass/css3";
+@import "solarized_light";
 
 /* The CSS in this file is for the inline examples on the home page.  */
 
-.example-tabs {
-  margin: 0;
-}
+/* Might need to specify this for whatever your global class for examples would be */
+/*#content .getting-started.section .highlight {*/
+  /*width: 100%;*/
+  /*margin: 0;*/
+  /*-webkit-border-radius: 0 0 5px 5px;*/
+  /*-moz-border-radius: 0 0 5px 5px;*/
+  /*-ms-border-radius: 0 0 5px 5px;*/
+  /*-o-border-radius: 0 0 5px 5px;*/
+  /*border-radius: 0 0 5px 5px;*/
+/*}*/
 
 .example-tabs li {
-  display: inline-block;
+  display: table-cell;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #fff;
   background-color: rgba(0,0,0, 0.1);
   padding: 6px 8px;
   /*color: #fff;*/
