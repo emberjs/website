@@ -1,0 +1,39 @@
+@import "compass/css3";
+
+/* The CSS in this file is for the inline examples on the home page.  */
+
+.example-tabs {
+  margin: 0;
+}
+
+.example-tabs li {
+  display: inline-block;
+  background-color: rgba(0,0,0, 0.1);
+  padding: 6px 8px;
+  /*color: #fff;*/
+  cursor: pointer;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 80%;
+  margin: 3px 0;
+  float: left;
+
+  &.is-selected {
+    color: #fff;
+    background-color: #e1563f;
+    font-weight: bold;
+  }
+}
+
+pre {
+  clear: left;
+}
+
+.example-viewer {
+  float: left;
+  width: 700px;
+}
+
+.example-output {
+  float: left;
+  width: 260px;
+}

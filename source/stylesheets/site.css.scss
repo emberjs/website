@@ -2,6 +2,9 @@
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
 @import 'fonts';
+@import 'colors';
+@import 'examples';
+@import 'guides';
 
 /* Calculated page dimensions. */
 $page-width: 940px;
@@ -10,12 +13,13 @@ $col-spacing: 20px;
 $sidebar-width: $col-width * 4 + $col-spacing * 3;
 $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
-$orange-color: #e1563f;
-$blue-color: #1f58ce;
-$black-color: #252525;
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
+}
+
+* {
+  @include box-sizing(border-box);
 }
 
 body {
@@ -30,21 +34,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-body.index, body.about {
-  background: url('/images/background-shades.png') no-repeat top center #faf4f1;
-}
-
-sup {
-  vertical-align: super;
-  font-weight: 100;
-  color: gray;
-  font-size: 11px
-}
-
-* {
-  @include box-sizing(border-box);
-}
-
 /* Typography */
 
 a {
@@ -56,21 +45,12 @@ a:hover {
   border-bottom: 1px dotted #f23818;
 }
 
-p {
-  margin: 1.5em 0;
-}
-
 em {
   font-style: italic;
 }
 
-code {
-  font-family: Menlo, Courier, monospace;
-  font-size: 90%;
-  color: #666;
-  background-color: rgba(0, 0, 0, 0.04);
-  padding: 3px;
-  @include border-radius(5px);
+strong {
+  font-weight: bold;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -80,17 +60,6 @@ h1, h2, h3, h4, h5, h6 {
 
   code {
     text-transform: none;
-  }
-}
-
-h1 {
-  font-size: 22px;
-  color: $orange-color;
-  padding: 0px 0px 1em 2em;
-  background: no-repeat url('/images/chapter-mark.png') top left;
-
-  &.api-header {
-    padding-bottom: 0.5em;
   }
 }
 
@@ -116,31 +85,13 @@ h4 {
   margin: 24px 0 12px 0;
 }
 
-strong {
-  font-weight: bold;
-}
-
-hr {
-  height: 1px;
-  border: none;
-  margin: 40px 0;
-  background-color: #dfd7d4;
-
-  &:first-of-type {
-    margin: 8px 0;
-  }
-}
 
 ul {
-  list-style-type: none;
+  list-style-type: disc;
 }
 
 ol {
   list-style-type: decimal;
-}
-
-.hidden {
-  display: none;
 }
 
 /* Structure */
@@ -759,7 +710,7 @@ ol {
     }
 
     p {
-      text-align: center;
+      /*text-align: center;*/
       color: #222222;
     }
   }
