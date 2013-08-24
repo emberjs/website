@@ -18,6 +18,9 @@ title: "About"
       $('.bx-wrapper, .bx-window').css('width', 940);
     });
   </script>
+  <script type="text/javascript" src="/javascripts/handlebars-1.0.rc.4.js"></script>
+  <script type="text/javascript" src="/javascripts/ember.js"></script>
+  <script type="text/javascript" src="/javascripts/inline-examples.js"></script>
 <% end %>
 
 <img class="about-header-text" src="/images/about/header-text.png" alt="A framework for creating ambitious web applications.">
@@ -73,9 +76,24 @@ title: "About"
 <div class="getting-started section">
   <h2>Getting Started with Ember.js is Easy.</h2>
 
+  <script type="text/x-handlebars" id="application">
+    <ul class="example-tabs">
+      {{#each itemController="tabItem"}}
+        <li
+          {{action "selectTab" this}}
+          {{bindAttr class="isSelected"}}>
+            {{name}}
+        </li>
+      {{/each}}
+    </ul>
+    <pre>{{selectedTab.contents}}</pre>
+  </script>
+
+  <div class="example-app" data-name="components" data-files="routes/application.js templates/application.hbs templates/components/avatar-viewer.hbs"></div>
 <%# IMPORTANT: If you change the example below, please make sure you update the test at:
 https://github.com/emberjs/ember.js/blob/master/packages/ember/tests/homepage_example_test.js %>
 
+<!--
 <% highlight :javascript, :left do %>
 App = Ember.Application.create();
 
@@ -122,6 +140,7 @@ App.IndexRoute = Ember.Route.extend({
   </ul>
 </script>
 <% end %>
+-->
 
 </div>
 

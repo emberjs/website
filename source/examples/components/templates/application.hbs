@@ -1,0 +1,13 @@
+<h1>The App</h1>
+<div class="album-list">
+  {{#each}}
+    <div class="album">
+      <p class="album-name">{{name}}</p>
+      <p class="album-artist">{{artist}}</p>
+      <p class="song-count">
+        8 songs
+        {{#if isExplicit}}<span class="explicit">EXPLICIT</span>{{/if}}
+      </p>
+    </div>
+  {{/each}}
+</div>

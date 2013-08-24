@@ -1,0 +1,45 @@
+@import "colors";
+
+body.guides, body.blog {
+  p {
+    margin: 1.5em 0;
+  }
+
+  sup {
+    vertical-align: super;
+    font-weight: 100;
+    color: gray;
+    font-size: 11px
+  }
+
+  code {
+    font-family: Menlo, Courier, monospace;
+    font-size: 90%;
+    color: #666;
+    background-color: rgba(0, 0, 0, 0.04);
+    padding: 3px;
+    @include border-radius(5px);
+  }
+
+  h1 {
+    font-size: 22px;
+    color: $orange-color;
+    padding: 0px 0px 1em 2em;
+    background: no-repeat url('/images/chapter-mark.png') top left;
+
+    &.api-header {
+      padding-bottom: 0.5em;
+    }
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    margin: 40px 0;
+    background-color: #dfd7d4;
+
+    &:first-of-type {
+      margin: 8px 0;
+    }
+  }
+}
