@@ -27,14 +27,14 @@ the specified attribute. For example, given this template:
 <input type="checkbox" {{bindAttr disabled=isAdministrator}}>
 ```
 
-If `isAdministrator` is `true`, Handlebars will produce the following
+If `isAdministrator` is `false`, Handlebars will produce the following
 HTML element:
 
 ```html
 <input type="checkbox" disabled>
 ```
 
-If `isAdministrator` is `false`, Handlebars will produce the following:
+If `isAdministrator` is `true`, Handlebars will produce the following:
 
 ```html
 <input type="checkbox">
