@@ -3,47 +3,198 @@
 
 /* The CSS in this file is for the inline examples on the home page.  */
 
-/* Might need to specify this for whatever your global class for examples would be */
-/*#content .getting-started.section .highlight {*/
-  /*width: 100%;*/
-  /*margin: 0;*/
-  /*-webkit-border-radius: 0 0 5px 5px;*/
-  /*-moz-border-radius: 0 0 5px 5px;*/
-  /*-ms-border-radius: 0 0 5px 5px;*/
-  /*-o-border-radius: 0 0 5px 5px;*/
-  /*border-radius: 0 0 5px 5px;*/
-/*}*/
+.example-app {
+  margin: 70px 0;
+}
 
-.example-tabs li {
-  display: table-cell;
-  border-right: 1px solid #ccc;
-  border-left: 1px solid #fff;
-  background-color: rgba(0,0,0, 0.1);
-  padding: 6px 8px;
-  /*color: #fff;*/
-  cursor: pointer;
-  font-family: Menlo, Consolas, monospace;
-  font-size: 80%;
-  margin: 3px 0;
-  float: left;
+.example-viewer .tabs {
+  width: 100%;
 
-  &.is-selected {
-    color: #fff;
-    background-color: #e1563f;
-    font-weight: bold;
+  li {
+    cursor: pointer;
+  }
+
+  a {
+    font-family: Menlo, monospace;
   }
 }
 
-pre {
-  clear: left;
-}
-
-.example-viewer {
-  float: left;
-  width: 700px;
+.example-viewer img {
+  display: block;
+  margin: 17px auto;
 }
 
 .example-output {
-  float: left;
-  width: 260px;
+  padding: 17px;
+  background-color: white;
+  @include border-radius(6px);
+  @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+}
+
+#routing-example .example-output {
+  h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+  }
+
+  h2 {
+      margin-bottom: 1em;
+  }
+
+  h4 {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+      font-weight: bold;
+  }
+
+  .loading {
+      position: absolute;
+      top: 50%;
+      bottom: 50%;
+      left: 50%;
+      right: 50%;
+      
+      width: 100px;
+      height: 50px;
+      
+      color: white;
+      background-color: rgba(0,0,0,0.5);
+      
+      margin-left: -50px;
+      margin-top: -25px;
+      
+      border-radius: 10px;
+      text-align: center;
+      line-height: 50px;
+      
+  }
+
+  aside {
+      float: left;
+      background-color: #9cb5d1;
+      width: 180px;
+      height: 430px;
+      border: 1px solid #ccc;
+      border-right-color: #333;
+  }
+
+  aside h2 {
+      text-transform: uppercase;
+      font-size: 0.7em;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-shadow: 1px 1px 0px #eee;
+      padding: 15px;
+      margin-bottom: 0;
+  }
+
+  aside a {
+      color: #333;
+      text-decoration: none;
+      display: block;
+      padding: 15px;
+  }
+
+  aside a.active {
+      background: linear-gradient(to bottom, #7db9e8 0%,#267dc9 99%);
+      color: white;
+      text-shadow: 1px 1px 0px #666;
+  }
+
+  span.count {
+      float: right;
+      background-color: #505f71;
+      color: white;
+      padding: 0.5em 1em;
+      border-radius: 40%;
+      font-size: 0.6em;
+      position: relative;
+      top: -3px;
+  }
+
+  section.main {
+      height: 430px;
+      border: 1px solid #ccc;
+      margin-left: 180px;
+  }
+
+  .ember-view.index {
+      padding-top: 5em;
+      text-align: center;
+      height: 100%;
+  }
+
+  table {
+      width: 99%;
+      border-bottom: 1px solid #999;
+      border-collapse: collapse;
+  }
+
+  td, th {
+      padding: 0.5em;
+  }
+
+  th {
+      font-weight: bold;
+      font-size: 0.8em;
+  }
+
+  tr {
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+  }
+
+  td a {
+      text-decoration: none;
+      color: #333;
+  }
+
+  tr.active {
+      background: linear-gradient(to bottom, #7db9e8 0%,#267dc9 99%);
+      color: white;
+      text-shadow: 1px 1px 0px #666;
+  }
+
+  .ember-view.mailbox-index {
+      padding-top: 5em;
+      text-align: center;
+      color: #eee;
+      font-style: italic;
+  }
+
+  .ember-view.mail {
+      padding: 1em;
+  }
+
+  dl {
+      width: 100%;
+      border-bottom: 1px solid #333;
+      margin-bottom: 1em;
+      padding-bottom: 0.5em;
+          
+  }
+
+  dt {
+      font-weight: bold;
+      font-size: 0.8em;
+      width: 60px;
+  }
+
+  dd {
+      margin-bottom: 0.5em;
+  }
+
+
+  .url {
+     font-family: sans-serif;
+     padding: 0.5em;
+     border: 1px inset #ccc;
+     margin-bottom: 1em;
+  }
+}
+
+body.about, body.index {
+  .tabs ul {
+    border-bottom-color: #d1d1d1;
+  }
 }

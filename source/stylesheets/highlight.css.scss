@@ -1,4 +1,5 @@
-@import 'compass';
+@import "compass";
+@import "shared";
 
 $border-radius: 5px;
 
@@ -6,17 +7,19 @@ $blue:   #1f58ce;
 $gray:   #777777;
 $green:  #007700;
 
-#content .highlight {
-  background-image: url('/images/code_background.gif');
-  border: 1px solid #d1d1d1;
+body.guides .highlight {
   @include border-radius($border-radius);
+  border: 1px solid #d1d1d1;
+}
+
+#content .highlight {
+  @include well;
+
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;
   overflow: hidden;
   position: relative;
-  margin: 2em 0;
-  @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
 
   .scroller {
     overflow: auto;

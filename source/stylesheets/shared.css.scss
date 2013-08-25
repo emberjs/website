@@ -1,0 +1,117 @@
+@import "compass/css3";
+
+.tabs {
+  margin-top: 1em;
+  border: 1px solid #e0e0e0;
+          border-radius: 5px;
+       -o-border-radius: 5px;
+      -ms-border-radius: 5px;
+     -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+
+  overflow: hidden;
+
+  > ul {
+    list-style: none;
+    overflow: hidden; /* Clearfix */
+    display: table;
+    width: 100%;
+
+    li:first-of-type {
+      border-top-left-radius: 4px;
+      a {
+        border-top-left-radius: 2px;
+      }
+    }
+
+    li:last-of-type {
+      border-top-right-radius: 4px;
+      a {
+        border-top-right-radius: 2px;
+      }
+    }
+
+    /*li.active, li:hover {*/
+      /*border-top: 1px solid #b23e2a;*/
+    /*}*/
+
+    li:first-of-type {
+      border-left: none;
+    }
+
+    li:last-of-type {
+      border-right: 1px solid transparent;
+    }
+
+    li.active , li {
+      &:last-of-type a{
+        border-right: 1px solid transparent;
+      }
+    }
+
+    li.active a {
+      background-color:  #f67862;
+      @include background-image(linear-gradient(0deg, #e7624b, #f67862));
+      border-right: 1px solid #b23e2a;
+      border-top: none;
+
+      color: white;
+      /*border-top: 1px solid rgba(255, 255, 255, 0.4);*/
+
+      &:hover {
+        color: white;
+        @include background-image(linear-gradient(0deg, #e7624b, #f67862));
+        /*@include background-image(linear-gradient(180deg, #e7624b, #f67862));*/
+      }
+    }
+
+    margin: 0 0;
+    a {
+      border-right: 1px solid transparent;
+      border-left: 1px solid transparent;
+    }
+    padding: 0 0;
+
+    li {
+      display: table-cell;
+      a {
+        display: block;
+        border-top: solid 1px rgb(250, 250, 250);
+        border-right: solid 1px #e6e4e3;
+        background-color: #f3f3f3;
+        background-image:         linear-gradient( #f3f3f3, #ebebeb);
+        background-image:      -o-linear-gradient( #f3f3f3, #ebebeb);
+        background-image:    -moz-linear-gradient( #f3f3f3, #ebebeb);
+        background-image:     -ms-linear-gradient( #f3f3f3, #ebebeb);
+        background-image: -webkit-linear-gradient( #f3f3f3, #ebebeb);
+        padding: 0.5em 1em;
+        text-align: center;
+        font-weight: normal;
+        color: #443331;
+        font-family: 'Helvetica Neue';
+
+        &:hover {
+          background-color: #ebebeb;
+          background-image:         linear-gradient( #ebebeb, #f3f3f3);
+          background-image:      -o-linear-gradient( #ebebeb, #f3f3f3);
+          background-image:    -moz-linear-gradient( #ebebeb, #f3f3f3);
+          background-image:     -ms-linear-gradient( #ebebeb, #f3f3f3);
+          background-image: -webkit-linear-gradient( #ebebeb, #f3f3f3);
+          color: black;
+          border-bottom: none;
+        }
+
+      }
+    }
+
+    border-bottom: solid 1px #e6e4e3;
+  }
+  .pane {
+    margin: 1em 1.5em 2em 1.5em;
+  }
+}
+
+@mixin well {
+  background-image: url('/images/code_background.gif');
+  @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+}

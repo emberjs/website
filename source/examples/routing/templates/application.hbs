@@ -1,0 +1,21 @@
+<div class='url'>URL: {{target.url}}</div>
+<aside>
+    
+    <ul>
+        <li><h2>Mailboxes</h2></li>
+        {{#each}}
+            <li>
+                {{#linkTo 'mailbox' this}}
+                    <span class="count">
+                        {{messages.length}}
+                    </span>
+                    {{name}}
+                {{/linkTo}}
+            </li>
+        {{/each}}
+    </ul>
+</aside>
+
+<section class='main'>
+    {{outlet}}
+</section>
