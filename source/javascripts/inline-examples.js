@@ -28,20 +28,37 @@ $(function loadExamples() {
         return {
           name: fileNames[i],
           contents: file
-        }
+        };
       });
 
       return files;
     }).then(function(files) {
       generateViewerApp($viewer, files);
-      //generateOutputApp($output, files);
+      generateOutputApp($output, files);
     });
   });
 });
 
+function buildLineNumbers(source) {
+  var byLine = source.split("\n"),
+      output = [];
+
+  for (var i = 1; i < byLine.length; i++) {
+    output.push(i + "\n");
+  }
+
+  return "<pre>"+output.join('')+"</pre>";
+}
+
 Ember.Handlebars.helper('syntax-highlight', function(value, options) {
   var highlighted = hljs.highlightAuto(value).value;
-  var output = "<div class='highlight'>" + highlighted + "</div>";
+  var lineNumbers = buildLineNumbers(highlighted);
+
+  var output = '<table class="CodeRay"><tr><td class="line-numbers">';
+  output += lineNumbers;
+  output += '</td><td class="code">' + highlighted + '</td></tr></table>';
+
+  output = "<div class='highlight'>" + output + "</div>";
   return new Ember.Handlebars.SafeString(output);
 });
 
@@ -98,7 +115,7 @@ function generateOutputApp($elem, files) {
     }
   });
 
-  var DemoApp = Ember.Application.create({
+  var App = Ember.Application.create({
     rootElement: $elem,
 
     resolver: Ember.DefaultResolver.extend({
@@ -108,8 +125,11 @@ function generateOutputApp($elem, files) {
     })
   });
 
+  App.Router.reopen({
+    location: 'none'
+  });
+
   scripts.forEach(function(script) {
-    console.log(script);
     eval(script);
   });
 }

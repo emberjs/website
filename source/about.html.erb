@@ -20,6 +20,7 @@ title: "About"
   </script>
   <script type="text/javascript" src="/javascripts/handlebars-1.0.rc.4.js"></script>
   <script type="text/javascript" src="/javascripts/ember.js"></script>
+  <script type="text/javascript" src="/javascripts/moment.js"></script>
   <script type="text/javascript" src="/javascripts/highlight.js"></script>
   <script type="text/javascript" src="/javascripts/inline-examples.js"></script>
 <% end %>
@@ -81,23 +82,32 @@ title: "About"
   <h2>Getting Started with Ember.js is Easy.</h2>
 
   <script type="text/x-handlebars" id="application">
-    <ul class="example-tabs">
-      {{#each itemController="tabItem"}}
-        <li
-          {{action "selectTab" this}}
-          {{bindAttr class="isSelected"}}>
-            {{name}}
-        </li>
-      {{/each}}
-    </ul>
-    <pre>{{syntax-highlight selectedTab.contents}}</pre>
+      <div class="tabs">
+        <ul>
+          {{#each itemController="tabItem"}}
+            <li
+              {{action "selectTab" this}}
+              {{bindAttr class="isSelected:active"}}>
+                <a href="#">{{unbound name}}</a>
+            </li>
+          {{/each}}
+        </ul>
+
+        <pre>{{syntax-highlight selectedTab.contents}}</pre>
+      </div>
+      <img src="/images/about/example-arrow.png" width=80 height=38>
   </script>
 
+  <div class="example-app" data-name="binding" data-files="templates/application.hbs">
+    <p>Ember makes it super easy to write Handlebars templates that stay up-to-date when the underlying model changes. You don't even need to write any JavaScript!</p>
+  </div>
   <div class="example-app" data-name="components" data-files="routes/application.js templates/application.hbs templates/components/avatar-viewer.hbs"></div>
-<!-- 
+
+  <div id="routing-example" class="example-app" data-name="routing" data-files="app.js templates/application.hbs templates/index.hbs templates/loading.hbs templates/mail.hbs templates/mailbox.hbs templates/mailbox/index.hbs"></div>
 <%# IMPORTANT: If you change the example below, please make sure you update the test at:
 https://github.com/emberjs/ember.js/blob/master/packages/ember/tests/homepage_example_test.js %>
 
+<!-- 
 <% highlight :javascript, :left do %>
 App = Ember.Application.create();
 
@@ -133,7 +143,6 @@ App.IndexRoute = Ember.Route.extend({
 <script type="text/x-handlebars">
   {{outlet}}
 </script>
--->
 
 <script type="text/x-handlebars" id="index">
   <h1>People</h1>
@@ -146,6 +155,7 @@ App.IndexRoute = Ember.Route.extend({
 </script>
 <% end %>
 
+-->
 </div>
 
 <div class="users section">

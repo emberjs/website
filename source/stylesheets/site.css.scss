@@ -4,7 +4,9 @@
 @import 'fonts';
 @import 'colors';
 @import 'examples';
+@import 'about';
 @import 'guides';
+@import 'shared';
 
 /* Calculated page dimensions. */
 $page-width: 940px;
@@ -102,66 +104,6 @@ ol {
 }
 
 /* Components */
-
-/**
-  Tabs
-**/
-
-.tabs {
-  margin-top: 1em;
-  border: 1px solid #e0e0e0;
-          border-radius: 5px;
-       -o-border-radius: 5px;
-      -ms-border-radius: 5px;
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-
-  > ul {
-    list-style: none;
-    overflow: hidden; /* Clearfix */
-    display: table;
-    width: 100%;
-
-    li {
-      display: table-cell;
-      a {
-        display: block;
-        border-top: solid 1px rgb(250, 250, 250);
-        border-right: solid 1px #e6e4e3;
-        background-color: #f3f3f3;
-        background-image:         linear-gradient( #f3f3f3, #ebebeb);
-        background-image:      -o-linear-gradient( #f3f3f3, #ebebeb);
-        background-image:    -moz-linear-gradient( #f3f3f3, #ebebeb);
-        background-image:     -ms-linear-gradient( #f3f3f3, #ebebeb);
-        background-image: -webkit-linear-gradient( #f3f3f3, #ebebeb);
-        padding: 0.5em 1em;
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: normal;
-        color: #443331;
-        font-family: 'Helvetica Neue';
-
-        &:hover {
-          background-color: #ebebeb;
-          background-image:         linear-gradient( #ebebeb, #f3f3f3);
-          background-image:      -o-linear-gradient( #ebebeb, #f3f3f3);
-          background-image:    -moz-linear-gradient( #ebebeb, #f3f3f3);
-          background-image:     -ms-linear-gradient( #ebebeb, #f3f3f3);
-          background-image: -webkit-linear-gradient( #ebebeb, #f3f3f3);
-          color: black;
-          border-bottom: none;
-        }
-
-      }
-    }
-
-    border-bottom: solid 1px #e6e4e3;
-    margin-bottom: 20px;
-  }
-  .pane {
-    margin: 1em 1.5em 2em 1.5em;
-  }
-}
 
 /**
   Sidebar
@@ -527,10 +469,6 @@ ol {
     float: left;
   }
 
-  ol, ul{
-    margin: 1em 1.5em;
-  }
-
   ol + h2, ul + h2, p + h2,
   ol + h3, ul + h3, p + h3,
   div + h3 {
@@ -538,64 +476,6 @@ ol {
   }
 
   .tabs > ul{
-    margin: 0 0;
-    a {
-      border-right: 1px solid transparent;
-      border-left: 1px solid transparent;
-    }
-    padding: 0 0;
-
-    li:first-child {
-      border-top-left-radius: 4px;
-      a {
-        border-top-left-radius: 2px;
-      }
-    }
-
-    li:last-child {
-      border-top-right-radius: 4px;
-      a {
-        border-top-right-radius: 2px;
-      }
-    }
-
-    li.active, li:hover {
-      border-top: 1px solid #b23e2a;
-    }
-
-    li:first-child {
-      border-left: 1px solid transparent;
-      &:hover, &.active{
-        border-left: 1px solid #b23e2a;
-      }
-    }
-
-    li:last-child {
-      border-right: 1px solid transparent;
-      &:hover, &.active {
-        border-right: 1px solid #b23e2a;
-      }
-    }
-
-    li.active , li {
-      &:last-child a{
-        border-right: 1px solid transparent;
-      }
-    }
-
-    li.active a, li a:hover{
-      background-color:  #f67862;
-      background-image:         linear-gradient(-90deg, #f67862, #e7624b);
-      background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
-      background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
-      background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
-      background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
-      border-right: 1px solid #b23e2a;
-
-      color: white;
-      border-top: 1px solid rgba(255, 255, 255, 0.4);
-      border-left: 1px solid transparent;
-    }
   }
 
   figure {
@@ -694,24 +574,6 @@ ol {
     td {
       vertical-align: top;
       padding-right: 50px;
-    }
-  }
-}
-
-#content{
-  .getting-started.section {
-    .highlight, p {
-      float: left;
-      width: $col-width * 8 + $col-spacing * 6;
-
-      &.right {
-        margin-left: $col-width * 1 + $col-spacing * 1;
-      }
-    }
-
-    p {
-      /*text-align: center;*/
-      color: #222222;
     }
   }
 }
