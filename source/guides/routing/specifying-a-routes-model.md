@@ -18,7 +18,7 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return App.Post.find();
+    return App.Post.findAll();
   }
 });
 ```
