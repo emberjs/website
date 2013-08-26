@@ -31,20 +31,20 @@ App.Router.map(function() {
 });
 ```
 
-Inside your templates, you can use `{{linkTo}}` to navigate between
+Inside your templates, you can use `{{link-to}}` to navigate between
 routes, using the name that you provided to the `route` method (or, in
 the case of `/`, the name `index`).
 
 ```handlebars
-{{#linkTo 'index'}}<img class="logo">{{/linkTo}}
+{{#link-to 'index'}}<img class="logo">{{/link-to}}
 
 <nav>
-  {{#linkTo 'about'}}About{{/linkTo}}
-  {{#linkTo 'favorites'}}Favorites{{/linkTo}}
+  {{#link-to 'about'}}About{{/link-to}}
+  {{#link-to 'favorites'}}Favorites{{/link-to}}
 </nav>
 ```
 
-The `{{linkTo}}` helper will also add an `active` class to the link that
+The `{{link-to}}` helper will also add an `active` class to the link that
 points to the currently active route.
 
 You can customize the behavior of a route by creating an `Ember.Route`
@@ -183,7 +183,7 @@ and `resource` template.
 
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
-via `transitionTo` or `{{#linkTo}}`, make sure to use the full route
+via `transitionTo` or `{{#link-to}}`, make sure to use the full route
 name (`posts.new`, not `new`).
 
 Visiting `/` renders the `index` template, as you would expect.
