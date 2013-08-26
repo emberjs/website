@@ -217,7 +217,7 @@ This is where we define the Ember.js object which manages the view. We simply pr
   {{#view}}
     <div class="photo">
       <h2>{{title}}</h2>
-      <img {{bindAttr src="url"}}>
+      <img {{bind-attr src="url"}}>
       <br>
       {{#if comments.length}}
         <h3>Comments</h3>
@@ -251,11 +251,11 @@ For each photo managed by the photosController, we will create a subview with th
 ```handlebars
     <div class="photo">
       <h2>{{title}}</h2>
-      <img {{bindAttr src="url"}}>
+      <img {{bind-attr src="url"}}>
       <br>
 ```
 
-Here, we reference our photo to get its title, and user bindAttr to set the `<img>` tag's `src` attribute to the photo's url.
+Here, we reference our photo to get its title, and user bind-attr to set the `<img>` tag's `src` attribute to the photo's url.
 
 ```handlebars
       {{#if comments.length}}
