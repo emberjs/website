@@ -83,27 +83,26 @@ title: "About"
 
   <script type="text/x-handlebars" id="application">
       <div class="tabs">
-        <ul>
-          {{#each itemController="tabItem"}}
-            <li
-              {{action "selectTab" this}}
-              {{bindAttr class="isSelected:active"}}>
-                <a href="#">{{unbound name}}</a>
-            </li>
-          {{/each}}
-        </ul>
-
-        <pre>{{syntax-highlight selectedTab.contents}}</pre>
+        {{#each itemController="tabItem"}}
+          <a {{action "selectTab" this}} {{bindAttr class="isSelected:active"}} href="#">{{unbound name}}</a>
+        {{/each}}
+        <span class="tabs-footer"></span>
       </div>
+      {{syntax-highlight selectedTab.contents}}
       <img src="/images/about/example-arrow.png" width=80 height=38>
   </script>
 
   <div class="example-app" data-name="binding" data-files="templates/application.hbs">
+    <h2>Handlebars Binding</h2>
     <p>Ember makes it super easy to write Handlebars templates that stay up-to-date when the underlying model changes. You don't even need to write any JavaScript!</p>
   </div>
-  <div class="example-app" data-name="components" data-files="routes/application.js templates/application.hbs templates/components/avatar-viewer.hbs"></div>
+  <div class="example-app" data-name="components" data-files="routes/application.js templates/application.hbs templates/components/avatar-viewer.hbs">
+    <h2>Components</h2>
+  </div>
 
-  <div id="routing-example" class="example-app" data-name="routing" data-files="app.js templates/application.hbs templates/index.hbs templates/loading.hbs templates/mail.hbs templates/mailbox.hbs templates/mailbox/index.hbs"></div>
+  <div id="routing-example" class="example-app" data-name="routing" data-files="app.js fixtures.js templates/application.hbs templates/index.hbs templates/loading.hbs templates/mail.hbs templates/mailbox.hbs templates/mailbox/index.hbs">
+    <h2>Routing</h2>
+  </div>
 <%# IMPORTANT: If you change the example below, please make sure you update the test at:
 https://github.com/emberjs/ember.js/blob/master/packages/ember/tests/homepage_example_test.js %>
 
