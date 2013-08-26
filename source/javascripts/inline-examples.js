@@ -56,7 +56,7 @@ Ember.Handlebars.helper('syntax-highlight', function(value, options) {
 
   var output = '<table class="CodeRay"><tr><td class="line-numbers">';
   output += lineNumbers;
-  output += '</td><td class="code">' + highlighted + '</td></tr></table>';
+  output += '</td><td class="code"><pre>' + highlighted + '</pre></td></tr></table>';
 
   output = "<div class='highlight'>" + output + "</div>";
   return new Ember.Handlebars.SafeString(output);
@@ -107,6 +107,7 @@ function generateOutputApp($elem, files) {
     if (extension === 'hbs') {
       if (name.substr(0, 10) === "templates/") {
         name = name.substr(10);
+        file.name = name + '.' + extension;
       }
 
       templates[name] = Ember.Handlebars.compile(file.contents);
