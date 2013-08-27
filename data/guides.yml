@@ -236,8 +236,24 @@ Configuring Ember.js:
     url: "configuring-ember/embedding-applications"
 
 Cookbook:
-  - title: "Delicious Unagi"
-    url: "cookbook/delicious-unagi"
+  - title: "Contributing"
+    url: "cookbook/contributing"
+  - title: "User Interface and Interaction"
+    url: "cookbook/user_interface_and_interaction"
+  - title: "Event Handling & Data Binding"
+    url: "cookbook/event_handling_and_data_binding"
+  - title: "Client/Server Interaction"
+    url: "cookbook/client_server_interaction"
+  - title: "Helpers & Components"
+    url: "cookbook/helpers_and_components"
+  - title: "Working with Objects"
+    url: "cookbook/working_with_objects"
+  - title: "Debugging & Configuration"
+    url: "cookbook/debugging_and_configuration"
+  - title: "Ember Data"
+    url: "cookbook/ember_data"
+  - title: "To Be Done"
+    url: "cookbook/to_be_done"
 
 Understanding Ember.js:
   - title: "The View Layer"
