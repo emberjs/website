@@ -7,6 +7,45 @@ pre, code {
   border-radius:3px;
 }
 
+.name-input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted #999;
+  text-align: center;
+  min-width: 50px;
+  display: inline-block;
+}
+
+.example-output label {
+  vertical-align: bottom;
+}
+
+.example-output .text {
+  padding-top: 20px;
+}
+
+.example-output input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dotted #999;
+  text-align: center;
+  min-width: 150px;
+  display: inline-block;
+  font-size: 14px;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  border-radius: 0;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 rgba(0,0,0,0);
+  -moz-box-shadow: 0 0 0 rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 1px;
+  outline: none;
+}
+
 .example-viewer .highlight {
   margin-top:0;
   border-top-left-radius:0;
