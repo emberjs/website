@@ -358,7 +358,7 @@ This router creates five routes:
 </div>
 
 
-<small><sup>2</sup> :post_id is the post's id.  For a post with id = 1, the route will be:
+<small><sup>2</sup> `:post_id` is the post's id.  For a post with id = 1, the route will be:
 `/post/1`</small>
 
 The `comments` template will be rendered in the `post` outlet.

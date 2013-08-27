@@ -161,6 +161,8 @@
   image: uniiverse.gif
 - url: http://www.silveregg.nl
   image: silveregg.png
+- url: https://owner.urbanspoon.com
+  image: urbanspoon.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
