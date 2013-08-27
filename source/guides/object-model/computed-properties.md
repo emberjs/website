@@ -36,7 +36,8 @@ When subclassing a class, you can override any computed properties.
 
 You can also define what Ember should do when setting a computed
 property. If you try to set a computed property, it will be invoked
-with the key and value you want to set it to.
+with the key (property name), the value you want to set it to, and the previous
+value.
 
 ```javascript
 Person = Ember.Object.extend({
@@ -44,7 +45,7 @@ Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
 
-  fullName: function(key, value) {
+  fullName: function(key, value, oldValue) {
     // getter
     if (arguments.length === 1) {
       var firstName = this.get('firstName');
@@ -54,6 +55,8 @@ Person = Ember.Object.extend({
 
     // setter
     } else {
+      if (oldValue === value) { return value; }
+
       var name = value.split(" ");
 
       this.set('firstName', name[0]);
