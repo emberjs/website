@@ -150,10 +150,10 @@ to ensure that if the user clicks on the **✗**, that the link is not
 clicked.
 
 ```handlebars
-{{#linkTo 'post'}}
+{{#link-to 'post'}}
   Post
   <button {{action close bubbles=false}}>✗</button>
-{{/linkTo}}
+{{/link-to}}
 ```
 
 Without `bubbles=false`, if the user clicked on the button, Ember.js

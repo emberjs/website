@@ -8,7 +8,7 @@ In `index.html` move the entire `<ul>` of todos into a new template named `todos
 <script type="text/x-handlebars" data-template-name="todos/index">
 <ul id="todo-list">
   {{#each controller itemController="todo"}}
-    <li {{bindAttr class="isCompleted:completed isEditing:editing"}}>
+    <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
       {{#if isEditing}}
         {{view Todos.EditTodoView valueBinding="title"}}
       {{else}}

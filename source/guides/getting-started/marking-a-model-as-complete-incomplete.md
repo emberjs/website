@@ -7,7 +7,7 @@ In `index.html` update your template to wrap each todo in its own controller by 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 {{#each controller itemController="todo"}}
-  <li {{bindAttr class="isCompleted:completed"}}>
+  <li {{bind-attr class="isCompleted:completed"}}>
     {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
     <label>{{title}}</label><button class="destroy"></button>
   </li>

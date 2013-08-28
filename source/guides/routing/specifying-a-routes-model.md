@@ -61,7 +61,7 @@ as expected out of the box.
 
 Note: A route with a dynamic segment will only have its `model` hook called
 when it is entered via the URL. If the route is entered through a transition
-(e.g. when using the [linkTo][2] Handlebars helper), then a model context is
+(e.g. when using the [link-to][2] Handlebars helper), then a model context is
 already provided and the hook is not executed. Routes without dynamic segments
 will always execute the model hook.
 
