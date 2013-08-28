@@ -1,8 +1,303 @@
 ---
-title: Ember 1.0 RC7 Released
-author: Tom Dale
+title: Ember 1.0 RC8 Released
+author: Tom Dale and Yehuda Katz
 tags: Releases, Recent Posts
 ---
+
+With Ember 1.0 RC8, we have reached the final RC before 1.0 final, which
+we hope to release this weekend if all goes well. 
+
+This final release candidate comes with a couple of small breaking
+changes that we are making before 1.0 because they should have a small
+impact on application code but a large impact on performance.
+
+We normally would not make changes of this nature this close to the 1.0
+final release date. However, the performance improvements were so
+dramatic we did not want to wait until Ember.js 2.0 to introduce the
+change, and we are serious in our commitment to not breaking the API
+post-1.0. This was our last chance to get these changes in before
+putting the final stamp on the 1.0.
+
+Both of the changes are related to observers. If you find yourself
+writing code with lots of observers, you may be writing non-idiomatic
+code. In general, you should only need to use observers when you are
+bridging Ember code to other libraries that do not support bindings or
+computed properties.
+
+For example, if you were writing a component that wrapped a jQuery UI
+widget, you might use an observer to watch for changes on the component
+and reflect them on to the widget.
+
+In your application code, however, you should be relying almost entirely
+on computed properties.
+
+If you are having trouble upgrading your application, please join us in
+the IRC channel or post on StackOverflow for help.
+
+#### Declarative Event Listeners
+
+There is now a way to declaratively add event listeners to Ember
+classes. This is easier than manually setting up the listeners in
+`init`.
+
+Instead of:
+
+```js
+App.Person = DS.Model.extend({
+  init: function() {
+    this.on('didLoad', this, function() {
+      this.finishedLoading();
+    });
+  },
+
+  finishedLoading: function() {
+    // do stuff
+  }
+});
+```
+
+You can just do this:
+
+```js
+App.Person = DS.Model.extend({
+  finishedLoading: function() {
+    // do stuff
+  }.on('didLoad')
+});
+```
+
+#### Array Computed
+
+Thanks to the tremendous work of David Hamilton, there is now a
+convenient and robust way to build a computed property based on an array
+that will only perform calculations on the updated portion.
+
+For example, say that you have an array of people, and you want to
+create a computed property that returns an Array of their ages.
+
+Currently, the easiest way to do that is:
+
+```js
+App.Person = Ember.Object.extend({
+  childAges: function() {
+    return this.get('children').mapProperty('age');
+  }.property('children.@each.age')
+});
+```
+
+This is pretty terse, but it must recalculate the entire array any time
+a single element is added or removed. This works OK for small arrays,
+but for larger arrays, or when these kinds of computed properties are
+chained or doing expensive work, it can add up.
+
+Enter Array Computed properties:
+
+```js
+App.Person = Ember.Object.extend({
+  childAges: Ember.computed.mapProperty('children', 'age')
+});
+```
+
+You can also chain these Array computed properties together:
+
+```js
+App.Person = Ember.Object.extend({
+  childAges: Ember.computed.mapProperty('children', 'age'),
+  maxChildAge: Ember.computed.max('childAges')
+});
+```
+
+When an element is added or removed, the computation is only done once.
+In this example, if a child is added, their age is appended to
+`childAges`, and if that age is larger than the `maxChildAge`, that
+property is updated.
+
+These computed properties are always up to date, efficient, and
+completely managed by Ember.
+
+#### Ember Extension
+
+After months of testing, and tons of work by Teddy Zeenny, we're finally
+ready to put the Ember Inspector in the Chrome Web Store.
+
+Most recently, Teddy added support for loaded data. It already has
+support for Ember Data, and Ember Model is actively working on adding
+support.
+
+<img src="/images/blog/rc8-ember-data.png">
+
+Teddy has also significantly improved the object inspector, adding
+support for objects to group properties as they wish (e.g. attributes,
+has many, belongs to in Ember Data) and editing records in the inspector
+itself.
+
+<img src="/images/blog/rc8-editing.png">
+
+You can also see a list of all routes in your app, along with the naming
+you should use for associated objects. This should make remembering the
+naming conventions a lot easier.
+
+<img src="/images/blog/rc8-routes.png">
+
+And finally, a view tree that shows an overlay in your app with the
+associated controller and model for your application's templates.
+
+<img src="/images/blog/rc8-view-tree.png">
+
+It should be in the web store in the next day or so, so keep an eye out.
+Follow @emberjs on Twitter to get the latest!
+
+#### Release Cycle
+
+We know that the Ember 1.0 RC cycle was a **bit** long. In truth, we
+released RC1 too early. We're sorry if the release names caused
+confusion.
+
+Going forward, we plan to seriously tighten up our release process. We
+will have a blog post outlining the new process together with the final
+Ember 1.0 release.
+
+#### Other Improvements
+
+* Several improvements to `yield` to make sure it always yields back to
+  the calling context [@kselden]
+* Performance improvement to range updates by not using the W3C range
+  API even if it's available [@eviltrout]
+* Completion of the 1.0 documentation audit [@trek]
+* Better error message if you try to use the same template name multiple
+  times by using `<script>` tags [@locks]
+* Add `currentRouteName` to `ApplicationController`, which you can use
+  in `link-to`, `transitionTo`, etc. [@machty]
+* Alias `linkTo` to `link-to` and `bindAttr` to `bind-attr` for
+  consistency with HTML naming. Old names remain but are soft-deprecated
+  [@ebryn]
+
+#### Changes TL;DR
+
+##### Observers Don't Fire During Construction
+
+Previously, observers would not fire for properties passed into
+`create` or specified on the prototype, but they would fire if you `set`
+a property in `init`.
+
+Now, observers **never** fire until after `init`.
+
+If you need an observer to fire as part of the initialization process,
+you can no longer rely on the side effect of `set`. Instead, specify
+that the observer should also run after `init` by using
+`.on('init')`.
+
+```js
+App.Person = Ember.Object.extend({
+  init: function() {
+    this.set('salutation', "Mr/Ms");
+
+    // You must now do this:
+    this.salutationDidChange();
+  },
+
+  salutationDidChange: function() {
+    // some side effect of salutation changing
+  }.observes('salutation').on('init')
+});
+```
+
+##### Unconsumed Computed Properties Do Not Trigger Observers
+
+If you never `get` a computed property, its observers will not fire even
+if its dependent keys change. You can think of the value changing from
+one unknown value to another.
+
+This doesn't usually affect application code because computed properties
+are almost always observed at the same time as they are fetched. For
+example, you get the value of a computed property, put it in DOM (or
+draw it with D3), and then observe it so you can update the DOM once the
+property changes.
+
+If you need to observe a computed property but aren't currently
+retrieving it, just `get` it in your `init` method.
+
+#### Setting Properties in `init`
+
+Currently, there is an inconsistency between properties set when passing
+a hash to `create` and setting those same properties in `init`.
+
+```js
+App.Person = Ember.Object.extend({
+  firstNameDidChange: function() {
+    // this observer does not fire
+  }.observes('firstName')
+});
+
+App.Person.create({ firstName: "Tom", lastName: "Dale" });
+```
+
+In this case, because the properties were set by passing a hash to
+`create`, the observers are not fired.
+
+But let's look at what happens in RC7 when the same initialization is
+done via the `init` method:
+
+```js
+// WARNING: OLD BEHAVIOR
+
+App.Person = Ember.Object.extend({
+  init: function() {
+    if (!this.get('firstName')) {
+      this.set('firstName', "Tom");
+    }
+  },
+  firstNameDidChange: function() {
+    // this observer does not fire
+  }.observes('firstName')
+});
+
+App.Person.create({ lastName: "Dale" });
+```
+
+In this case, the old behavior would trigger the observers if
+`firstName` was not provided.
+
+We intended the design of the object model to trigger observers only
+after construction, which is why `create` behaves the way it does.
+
+Also, because the only way to define initial properties that have arrays
+or objects as values is in `init`, there is a further inconsistency:
+
+```js
+// WARNING: OLD BEHAVIOR
+
+App.Person = Ember.Object.extend({
+  // initial property value, does not trigger an initialization observer
+  salutation: "Mr.",
+
+  init: function() {
+    // also initial property value, triggers an observer on
+    // initialization
+    this.set('children', []);
+  }
+});
+```
+
+In short, properties that get set during initialization, whether they
+were already set on the prototype, passed as a hash to `create`, or set
+in `init`, do not trigger observers.
+
+If you have some code that you want to run both on initialization and
+when a property changes, just mark it as a method that should also run
+when initialization is done by using `.on('init')`. This will also be
+more resiliant to refactoring, and not rely on a side effect of an
+`init`-time `set`.
+
+```js
+App.Person = Ember.Object.extend({
+  firstNameDidChange: function() {
+    // some side effect that happens when first name changes
+  }.observes('firstName').on('init')
+});
+```
+
+#### Computed Property Performance Improvements
 
 The latest release of Ember.js contains a change to the way that observers and
 computed properties interact. This may be a breaking change in apps that
@@ -206,24 +501,3 @@ App.Person = Ember.Object.extend({
 });
 ```
 
-If you find yourself writing code with lots of observers, you may be
-writing non-idiomatic code. In general, you should only need to use
-observers when you are bridging Ember code to other libraries that do
-not support bindings or computed properties.
-
-For example, if you were writing a component that wrapped a jQuery UI
-widget, you might use an observer to watch for changes on the component
-and reflect them on to the widget.
-
-In your application code, however, you should be relying almost entirely
-on computed properties.
-
-We normally would not make changes of this nature this close to the 1.0
-final release date. However, the performance improvements were so
-dramatic we did not want to wait until Ember.js 2.0 to introduce the
-change, and we are serious in our commitment to not breaking the API
-post-1.0. This was our last chance to get these changes in before
-putting the final stamp on the 1.0.
-
-If you are having trouble upgrading your application, please join us in
-the IRC channel or post on StackOverflow for help.
