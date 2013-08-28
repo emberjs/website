@@ -53,3 +53,6 @@ todos.pushObject(todo);
 App.todosController.get('remaining');
 // 1
 ```
+
+Note that `@each` only works one level deep. You cannot use nested forms like
+`todos.@each.owner.name` or `todos.@each.owner.@each.name`.
