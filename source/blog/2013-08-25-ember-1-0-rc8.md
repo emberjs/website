@@ -248,7 +248,7 @@ App.Person = Ember.Object.extend({
     }
   },
   firstNameDidChange: function() {
-    // this observer does not fire
+    // this observer fires
   }.observes('firstName')
 });
 
