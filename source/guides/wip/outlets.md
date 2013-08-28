@@ -381,7 +381,7 @@ like:
 ```handlebars
 <ul>
 {{#each trackback in controller}}
-  <li><a {{bindAttr href="trackback.url"}}>{{trackback.title}}</a></li>
+  <li><a {{bind-attr href="trackback.url"}}>{{trackback.title}}</a></li>
 {{/each}}
 </ul>
 ```
@@ -396,7 +396,7 @@ In that case, you could do something like:
 <ul>
 {{#if controller.isLoaded}}
   {{#each trackback in controller}}
-    <li><a {{bindAttr href="trackback.url"}}>{{trackback.title}}</a></li>
+    <li><a {{bind-attr href="trackback.url"}}>{{trackback.title}}</a></li>
   {{/each}}
 {{else}}
   <li><img src="/spinner.gif"> Loading trackbacks...</li>
