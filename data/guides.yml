@@ -260,8 +260,8 @@ Cookbook:
   - title: "Adding CSS Classes to Your Components"
     url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_components"
     skip_sidebar_item: true
-  - title: "Adding CSS Classes to Your Views Based on Properties"
-    url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_views_based_on_properties"
+  - title: "Adding CSS Classes to Your Components Based on Properties"
+    url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_components_based_on_properties"
     skip_sidebar_item: true
   - title: "Focusing a Textfield after It's Been Inserted"
     url: "cookbook/user_interface_and_interaction/focusing_a_textfield_after_its_been_inserted"
