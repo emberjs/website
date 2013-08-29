@@ -96,6 +96,22 @@ function generateViewerApp($elem, files) {
   });
 }
 
+function registerComponent(container, name) {
+  Ember.assert("You provided a template named 'components/" + name + "', but custom components must include a '-'", name.match(/-/));
+
+  container.injection('component:' + name, 'layout', 'template:components/' + name);
+
+  var fullName = 'component:' + name;
+  var Component = container.lookupFactory(fullName);
+
+  if (!Component) {
+    container.register('component:' + name, Ember.Component);
+    Component = container.lookupFactory(fullName);
+  }
+
+  Ember.Handlebars.helper(name, Component);
+}
+
 function generateOutputApp($elem, files) {
   var templates = {}, scripts = [];
 
@@ -118,7 +134,13 @@ function generateOutputApp($elem, files) {
 
   var App = Ember.Application.create({
     rootElement: $elem,
-
+    ready: function() {
+      for (var name in templates) {
+        if (name.substr(0, 11) === "components/") {
+          registerComponent(this.__container__, name.substr(11, name.length));
+        }
+      }
+    },
     resolver: Ember.DefaultResolver.extend({
       resolveTemplate: function(name) {
         return templates[name.name];
