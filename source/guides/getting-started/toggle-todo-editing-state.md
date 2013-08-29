@@ -7,7 +7,7 @@ We'll update the application to allow users to toggle into this editing state fo
 ```handlebars
  <!--- ... additional lines truncated for brevity ... -->
 {{#each controller itemController="todo"}}
-  <li {{bindAttr class="isCompleted:completed isEditing:editing"}}>
+  <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
     {{#if isEditing}}
       <input class='edit'>
     {{else}}
@@ -45,6 +45,6 @@ Reload your web browser to ensure that no errors occur. You can now double-click
 
   * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/7eb87f8f987714385e8381197ec7c77215df8cf9)
   * [Handlebars Conditionals Guide](/guides/templates/conditionals)
-  * [bindAttr API documentation](/api/classes/Ember.Handlebars.helpers.html#method_bindAttr)
+  * [bind-attr API documentation](/api/classes/Ember.Handlebars.helpers.html#method_bind-attr)
   * [action API documentation](/api/classes/Ember.Handlebars.helpers.html#method_action)
   * [bind and bindAttr article by Peter Wagenet](http://www.emberist.com/2012/04/06/bind-and-bindattr.html)

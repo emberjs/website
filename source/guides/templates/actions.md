@@ -29,32 +29,38 @@ App.PostController = Ember.ObjectController.extend({
   // initial value
   isExpanded: false,
 
-  expand: function() {
-    this.set('isExpanded', true);
-  },
+  actions: {
+    expand: function() {
+      this.set('isExpanded', true);
+    },
 
-  contract: function() {
-    this.set('isExpanded', false);
+    contract: function() {
+      this.set('isExpanded', false);
+    }
   }
 });
 ```
 
-### Event Bubbling
+### Action Bubbling
 
 By default, the `{{action}}` helper triggers a method on the template's
 controller, as illustrated above.
 
 If the controller does not implement a method with the same name as the
-event, the event will be sent to the router, where the currently active
-leaf route will be given a chance to handle the event.
+action in its actions object, the action will be sent to the router, where
+the currently active leaf route will be given a chance to handle the action.
 
-Routes that handle events **must place event handlers inside an `events`
-hash**. Even if a route has a method with the same name as the event,
-it will not be triggered unless it is inside an `events` hash.
+Routes and controllers that handle actions **must place action handlers
+inside an `actions` hash**. Even if a route has a method with the same name
+as the actions, it will not be triggered unless it is inside an `actions` hash.
+In the case of a controller, while there is deprecated support for triggering
+a method directly on the controller, it is strongly recommended that you
+put your action handling methods inside an `actions` hash for forward
+compatibility.
 
 ```js
 App.PostRoute = Ember.Route.extend({
-  events: {
+  actions: {
     expand: function() {
       this.controller.set('isExpanded', true);
     },
@@ -66,24 +72,24 @@ App.PostRoute = Ember.Route.extend({
 });
 ```
 
-As you can see in this example, the event handlers are called such
-that when executed, `this` is the route, not the `events` hash.
+As you can see in this example, the action handlers are called such
+that when executed, `this` is the route, not the `actions` hash.
 
 If neither the template's controller nor the currently active route
-implements a handler, the event will continue to bubble to any parent
+implements a handler, the action will continue to bubble to any parent
 routes. Ultimately, if an `ApplicationRoute` is defined, it will have an
-opportunity to handle the event.
+opportunity to handle the action.
 
-When an action is triggered, but no matching event handler is
+When an action is triggered, but no matching action handler is
 implemented on the controller, the current route, or any of the
 current route's ancestors, an error will be thrown.
 
-![Event Bubbling](/images/template-guide/event-bubbling.png)
+![Action Bubbling](/images/template-guide/action-bubbling.png)
 
-### Event Parameters
+### Action Parameters
 
-You can optionally pass arguments to the event handler. Any values
-passed to the `{{action}}` helper after the event name will be passed to
+You can optionally pass arguments to the action handler. Any values
+passed to the `{{action}}` helper after the action name will be passed to
 the handler as arguments.
 
 For example, if the `post` argument was passed:
@@ -92,13 +98,15 @@ For example, if the `post` argument was passed:
 <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
 ```
 
-The route's `select` event handler would be called with a single argument
+The route's `select` action handler would be called with a single argument
 containing the post model:
 
 ```js
 App.PostController = Ember.ObjectController.extend({
-  select: function(post) {
-    console.log(post.get('title'));
+  actions: {
+    select: function(post) {
+      console.log(post.get('title'));
+    }
   }
 });
 ```
@@ -150,10 +158,10 @@ to ensure that if the user clicks on the **✗**, that the link is not
 clicked.
 
 ```handlebars
-{{#linkTo 'post'}}
+{{#link-to 'post'}}
   Post
   <button {{action close bubbles=false}}>✗</button>
-{{/linkTo}}
+{{/link-to}}
 ```
 
 Without `bubbles=false`, if the user clicked on the button, Ember.js
@@ -169,11 +177,11 @@ If the action is not found on the current controller, it will bubble up
 to the current route handler. From there, it will bubble up to parent
 route handlers until it reaches the application route.
 
-Define actions on the route's `events` property.
+Define actions on the route's `actions` property.
 
 ```javascript
 App.PostsIndexRoute = Ember.Route.extend({
-  events: {
+  actions: {
     myCoolAction: function() {
       // do your business.
     }
@@ -186,3 +194,31 @@ where you are in the application. For example, you might want to have a
 button in a sidebar that does one thing if you are somewhere inside of
 the `/posts` route, and another thing if you are inside of the `/about`
 route.
+
+### Specifying a Target
+
+By default, the `{{action}}` helper will send the action to the view's
+target, which is generally the view's controller. (Note: in the case of
+an Ember.Component, the default target is the component itself.)
+
+You can specify an alternative target by using the `target` option. This
+is most commonly used to send actions to a view instead of a controller.
+
+```handlebars
+<p>
+  <button {{action "select" post target="view"}}>✓</button>
+  {{post.title}}
+</p>
+```
+
+You would handle it this in an `actions` hash on your view.
+
+```javascript
+App.PostsIndexView = Ember.View.extend({
+  actions: {
+    select: function(post) {
+      // do your business.
+    }
+  }
+});
+```

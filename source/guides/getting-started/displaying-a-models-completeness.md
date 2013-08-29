@@ -4,7 +4,7 @@ TodoMVC strikes through completed todos by applying a CSS class `completed` to t
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
-<li {{bindAttr class="isCompleted:completed"}}>
+<li {{bind-attr class="isCompleted:completed"}}>
   <input type="checkbox" class="toggle">
   <label>{{title}}</label><button class="destroy"></button>
 </li>
@@ -21,5 +21,5 @@ The first fixture todo in our application has an `isCompleted` property of `true
 ### Additional Resources
 
   * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/19d08dd3b294187fadbe57860cf68fc0dc629ad8)
-  * [bindAttr API documentation](/api/classes/Ember.Handlebars.helpers.html#method_bindAttr)
-  * [bind and bindAttr article by Peter Wagenet](http://www.emberist.com/2012/04/06/bind-and-bindattr.html)
+  * [bind-attr API documentation](/api/classes/Ember.Handlebars.helpers.html#method_bind-attr)
+  * [bind and bind-attr article by Peter Wagenet](http://www.emberist.com/2012/04/06/bind-and-bindattr.html)

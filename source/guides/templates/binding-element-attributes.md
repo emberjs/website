@@ -8,7 +8,7 @@ to an image:
 
 ```handlebars
 <div id="logo">
-  <img {{bindAttr src=logoUrl}} alt="Logo">
+  <img {{bind-attr src=logoUrl}} alt="Logo">
 </div>
 ```
 
@@ -20,11 +20,11 @@ This generates the following HTML:
 </div>
 ```
 
-If you use `{{bindAttr}}` with a Boolean value, it will add or remove
+If you use `{{bind-attr}}` with a Boolean value, it will add or remove
 the specified attribute. For example, given this template:
 
 ```handlebars
-<input type="checkbox" {{bindAttr disabled=isAdministrator}}>
+<input type="checkbox" {{bind-attr disabled=isAdministrator}}>
 ```
 
 If `isAdministrator` is `false`, Handlebars will produce the following
