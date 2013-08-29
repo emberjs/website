@@ -36,7 +36,7 @@ App.PostSummaryComponent = Ember.Component.extend({
   }
 });
 ```
-<a class="jsbin-embed" href="http://jsbin.com/uyibis/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/EWEQeKO/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 The `{{action}}` helper can accept arguments, listen for different event
 types, control how action bubbling occurs, and more.
