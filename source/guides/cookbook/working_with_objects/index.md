@@ -1,5 +1,5 @@
 1. [Displaying Content Arrays in Reverse Order ](/guides/cookbook/working_with_objects/displaying_content_arrays_in_reverse_order)
-1. [Incrementing And Decrementing A Property](/guides/cookbook/working_with_objects/incrementing_and_decrementing_a_property)
+1. [Incrementing Or Decrementing A Property](/guides/cookbook/working_with_objects/incrementing_or_decrementing_a_property)
 1. [Setting Multiple Properties At Once](/guides/cookbook/working_with_objects/setting_multiple_properties_at_once)
 1. [Continuous redrawing of views](/guides/cookbook/working_with_objects/continuous_redrawing_of_views)
 1. [Naming Your Child Views](/guides/cookbook/working_with_objects/naming_your_child_views)
