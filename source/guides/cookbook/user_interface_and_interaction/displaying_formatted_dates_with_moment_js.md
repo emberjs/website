@@ -1,5 +1,3 @@
-# Displaying Formatted Dates With Moment.js
-
 ## Problem
 You want to display JavaScript Date objects in a human readable format.
 

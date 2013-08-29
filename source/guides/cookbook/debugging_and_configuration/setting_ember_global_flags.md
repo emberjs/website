@@ -1,5 +1,3 @@
-# Setting Ember Global Flags
-
 ## Problem
 You want to control features of Ember by setting specified global flags like `Ember.LOG_BINDINGS`.
 

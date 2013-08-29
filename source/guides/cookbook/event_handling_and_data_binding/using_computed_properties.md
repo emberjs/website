@@ -1,4 +1,3 @@
-# Using Computed Properties
 ## Problem
 You want a property on an object whose value is determined programmatically
 

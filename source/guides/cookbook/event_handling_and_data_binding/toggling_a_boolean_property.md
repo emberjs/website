@@ -1,5 +1,3 @@
-# Toggling A Boolean Property
-
 ## Problem
 You want to toggle a boolean property.
 

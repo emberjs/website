@@ -1,5 +1,3 @@
-# Incrementing And Decrementing A Property
-
 ## Problem
 You want to increment and decrement a property.
 

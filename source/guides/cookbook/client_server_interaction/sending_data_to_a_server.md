@@ -1,5 +1,3 @@
-# Sending Data To A Server
-
 ## Problem
 You want to send data from your Ember application to a server.
 
