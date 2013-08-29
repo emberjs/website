@@ -1,5 +1,3 @@
-# Suggesting a Recipe
-
 ## Problem
 You'd like to submit a possible recipe.
 

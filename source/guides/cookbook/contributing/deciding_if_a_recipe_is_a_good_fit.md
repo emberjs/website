@@ -1,4 +1,3 @@
-# Deciding If A Recipe Is A Good Fit
 ## Problem
 You have a possible recipe but aren't sure it is a good fit for a Cookbook
 

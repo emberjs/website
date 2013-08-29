@@ -1,4 +1,3 @@
-# Naming Your Child Views
 ## Problem
 You want to access a particular child view by name from its parent view.
 

@@ -1,4 +1,3 @@
-# Displaying Content Arrays in Reverse Order 
 ## Problem
 You want to display an Ember content array from an ArrayController in descending order instead of ascending order (the default).
 

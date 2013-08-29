@@ -1,5 +1,3 @@
-# Writing a Custom Handlebars Helper
-
 ## Problem
 You have portions of your views layer that use the same or similar HTML in many places.
 

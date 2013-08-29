@@ -1,4 +1,3 @@
-# Participating If You Don't Know Ember
 ## Problem
 You are entirely or mostly new to Ember but wish to support the creation of this document.
 

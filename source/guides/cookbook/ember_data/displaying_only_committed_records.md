@@ -1,5 +1,3 @@
-# Displaying Only Committed DS.Model Records
-
 ## Problem
 
 You want to display only the committed `DS.Model` records from the ArrayController `content` array.
