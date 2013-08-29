@@ -52,7 +52,7 @@ will be our official library.
 
 Each successful [CI](https://travis-ci.org/emberjs/ember.js) run now publishes its build results to
 [http://builds.emberjs.com/](http://builds.emberjs.com/). This should make
-it much simpler to reference and use the [the latest ember build](http://builds.emberjs.com/ember-latest.js).
+it much simpler to reference and use the [the latest ember build](http://builds.emberjs.com/latest/ember.js).
 
 Thanks to Stanley Stuart, Luke Melia, Erik Bryn and others for getting this set up.
 

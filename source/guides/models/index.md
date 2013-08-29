@@ -29,5 +29,5 @@ passing build from the "master" branch from [builds.emberjs.com][builds]:
 
 [emberdata]: https://github.com/emberjs/data
 [builds]: http://builds.emberjs.com
-[development-build]: http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.js
-[minified-build]: http://builds.emberjs.com.s3.amazonaws.com/ember-data-latest.min.js
+[development-build]: http://builds.emberjs.com/latest/ember-data.js
+[minified-build]: http://builds.emberjs.com/latest/ember-data.min.js
