@@ -314,8 +314,8 @@ Cookbook:
   - title: "Displaying Content Arrays in Reverse Order"
     url: "cookbook/working_with_objects/displaying_content_arrays_in_reverse_order"
     skip_sidebar_item: true
-  - title: "Incrementing And Decrementing A Property"
-    url: "cookbook/working_with_objects/incrementing_and_decrementing_a_property"
+  - title: "Incrementing Or Decrementing A Property"
+    url: "cookbook/working_with_objects/incrementing_or_decrementing_a_property"
     skip_sidebar_item: true
   - title: "Setting Multiple Properties At Once"
     url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
