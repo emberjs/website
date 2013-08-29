@@ -7,19 +7,19 @@ You want to add CSS class names to your Ember Components.
 Set additional class names with the `classNames` property of subclassed components:
 
 ```js
-classNames: ['stooge']
+classNames: ['active']
 ```
 
 ## Discussion
 
-You can take it a step further by applying classes based on data being passed in to the component. This is done by binding the class attribute using `classNameBindings`.
+If desired, you can apply multiple class names.
 
 ```js
-classNameBindings: ['isRelated:relative'],
-isRelatedBinding: "stooge.isRelated" // value resolves to boolean
+classNames: ['bold', 'italic', 'blue']
 ```
 
-<a class="jsbin-embed" href="http://jsbin.com/olorAco/1/embed?live,js">JS Bin</a>
-<script src="http://static.jsbin.com/js/embed.js"></script>
+#### Example
+
+<a class="jsbin-embed" href="http://jsbin.com/ELiCOG/2/embed?live,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 See [Customizing a Component's Element](/guides/components/customizing-a-components-element/) for further examples.
