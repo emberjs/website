@@ -1,16 +1,5 @@
-{{input type="text" value=name}}
-
-Your name is {{name}}.
-
-<div class="album-list">
-  {{#each}}
-    <div class="album">
-      <p class="album-name">{{name}}</p>
-      <p class="album-artist">{{artist}}</p>
-      <p class="song-count">
-        8 songs
-        {{#if isExplicit}}<span class="explicit">EXPLICIT</span>{{/if}}
-      </p>
-    </div>
-  {{/each}}
-</div>
+<ul class="example-gravatar">
+  <li>{{gravatar-image email="cavneb@gmail.com" size="200"}}</li>
+  <li>{{gravatar-image email="alex.navasardyan@gmail.com" size="200"}}</li>
+  <li>{{gravatar-image email="tom@tomdale.net" size="200"}}</li>
+</ul>
