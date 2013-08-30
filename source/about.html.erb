@@ -83,7 +83,7 @@ title: "About"
   <h2>Getting Started with Ember.js is Easy.</h2>
 
   <script type="text/x-handlebars" id="application">
-      <div class="tabs">
+      <div class="example-tabs">
         {{#each itemController="tabItem"}}
           <a {{action "selectTab" this}} {{bindAttr class="isSelected:active"}} href="#">{{unbound name}}</a>
         {{/each}}
