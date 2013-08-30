@@ -4,4 +4,17 @@ body.index, body.about {
   .feature p {
     margin-top: 1.5em;
   }
+
+  .getting-started {
+    h2.sub {
+      color: #F23818;
+      padding-top: 40px;
+      border-top: 1px dotted #E5DBD6;
+      font-size: 19px;
+    }
+  }
+
+  p.prose {
+    width: 800px;
+  }
 }
