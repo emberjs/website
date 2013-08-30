@@ -1,5 +1,3 @@
-## Bindings
-
 A binding creates a link between two properties such that when one changes, the
 other one is updated to the new value automatically. Bindings can connect
 properties on the same object, or across two different objects. Unlike most other

@@ -1,5 +1,3 @@
-## Specifying a Route's Model
-
 In the router, each URL is associated with one or more _route handlers_.
 The route handler is responsible for converting the URL into a model
 object, telling a controller to represent that model, then rendering a

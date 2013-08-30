@@ -1,5 +1,3 @@
-## Handling Events
-
 Instead of having to register event listeners on elements you'd like to
 respond to, simply implement the name of the event you want to respond to
 as a method on your view.

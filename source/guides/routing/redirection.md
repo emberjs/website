@@ -1,5 +1,3 @@
-## Redirecting to a Different URL
-
 If you want to redirect from one route to another, simply implement the
 `redirect` hook in your route handler.
 

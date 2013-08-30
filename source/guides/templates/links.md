@@ -1,4 +1,4 @@
-## Links (The `{{link-to}}` Helper)
+## The `{{link-to}}` Helper
 
 You create a link to a route using the `{{link-to}}` helper.
 

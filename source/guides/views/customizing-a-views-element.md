@@ -1,5 +1,3 @@
-## Customizing a View's Element
-
 A view is represented by a single DOM element on the page. You can change what kind of element is created by
 changing the `tagName` property.
 

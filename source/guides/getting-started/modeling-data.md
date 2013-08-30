@@ -1,5 +1,3 @@
-## Modeling Your Data
-
 Next we will create a model class to describe todo items and a data store to track them locally. 
 
 Create a file at `js/models/todo.js` and put the following code inside:

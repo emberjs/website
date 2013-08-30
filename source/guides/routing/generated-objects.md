@@ -1,5 +1,3 @@
-## Generated Objects
-
 As explained in the [routing guide][1], whenever you define a new route,
 Ember.js attempts to find corresponding Route, Controller, View, and Template
 classes named according to naming conventions. If an implementation of any of

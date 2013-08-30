@@ -1,5 +1,3 @@
-## Changing Scope
-
 Sometimes you may want to invoke a section of your template with a
 different context.
 

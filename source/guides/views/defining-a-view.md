@@ -1,5 +1,3 @@
-## Defining a View
-
 You can use `Ember.View` to render a Handlebars template and insert it into the DOM.
 
 To tell the view which template to use, set its `templateName` property. For example, if I had a `<script>` tag like this:

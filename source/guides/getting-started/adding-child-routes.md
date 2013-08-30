@@ -1,5 +1,3 @@
-## Adding Child Routes
-
 Next we will split our single template into a set of nested templates so we can transition between different lists of todos in reaction to user interaction.
 
 In `index.html` move the entire `<ul>` of todos into a new template named `todos/index` by adding a new Handlebars template `<script>` tag inside the `<body>` of the document:

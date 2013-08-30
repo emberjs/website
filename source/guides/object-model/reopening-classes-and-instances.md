@@ -1,5 +1,3 @@
-### Reopening Classes and Instances
-
 You don't need to define a class all at once. You can reopen a class and
 define new properties using the `reopen` method.
 

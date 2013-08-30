@@ -1,5 +1,3 @@
-## Sending Router Events from Templates
-
 Use the `{{action}}` helper to attach a handler in your view class to an event triggered on an element.
 
 To attach an element's `click` event to the `edit()` handler in the current view:

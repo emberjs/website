@@ -1,5 +1,3 @@
-## The Basic Adapter
-
 The most basic way to use Ember Data is to make your own Ajax requests
 using jQuery's Ajax helpers and process the data yourself before loading
 it into your records.

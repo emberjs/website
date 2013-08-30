@@ -1,5 +1,3 @@
-## Embedding Applications
-
 In most cases, your application's entire UI will be created by templates
 that are managed by the router.
 

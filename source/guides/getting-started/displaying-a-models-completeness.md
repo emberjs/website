@@ -1,5 +1,3 @@
-## Displaying a Model's Complete State
-
 TodoMVC strikes through completed todos by applying a CSS class `completed` to the `<li>` element. Update `index.html` to apply a CSS class to this element when a todo's `isCompleted` property is true:
 
 ```handlebars

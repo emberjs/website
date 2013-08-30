@@ -1,5 +1,3 @@
-## Finding Models
-
 You can retrieve a record by passing its unique ID to the `find()` method:
 
 ```js

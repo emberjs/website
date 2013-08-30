@@ -1,5 +1,3 @@
-## Observers
-
 Ember supports observing any property, including computed properties.
 You can set up an observer on an object by using the `addObserver`
 method.

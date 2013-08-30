@@ -1,5 +1,3 @@
-## Binding Element Class Names
-
 An HTML element's `class` attribute can be bound like any other
 attribute:
 
