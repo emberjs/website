@@ -1,0 +1,1 @@
+1. [Displaying Only Committed DS.Model Records](/guides/cookbook/ember_data/displaying_only_committed_records)
