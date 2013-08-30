@@ -1,5 +1,3 @@
-## Transitioning back to showing all todos
-
 Next we can update the application to allow navigating back to the list of all todos. 
 
 In `index.html` convert the `<a>` tag for 'All' todos into a Handlebars `{{link-to}}` helper:

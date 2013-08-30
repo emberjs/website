@@ -1,5 +1,3 @@
-## Computed Properties
-
 Often, you will want a property that is computed based on other
 properties. Ember's object model allows you to define computed
 properties easily in a normal class definition.

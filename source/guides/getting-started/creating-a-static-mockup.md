@@ -1,5 +1,3 @@
-## Creating a Static Mockup
-
 Before adding any code, we can roughly sketch out the layout of our application. In your text editor, create a new file and name it `index.html`. This file will contain the HTML templates of our completed application and trigger requests for the additional image, stylesheet, and JavaScript resources.
 
 To start, add the following text to `index.html`:

@@ -1,5 +1,3 @@
-## Conditionals
-
 Sometimes you may only want to display part of your template if a property
 exists.
 

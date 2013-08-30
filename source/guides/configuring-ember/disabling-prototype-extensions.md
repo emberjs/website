@@ -1,5 +1,3 @@
-## Disabling Prototype Extensions
-
 By default, Ember.js will extend the prototypes of native JavaScript
 objects in the following ways:
 

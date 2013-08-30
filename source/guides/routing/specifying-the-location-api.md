@@ -1,5 +1,3 @@
-## Specifying the location API
-
 By default the Router uses the browser's hash to load the starting state of your
 application and will keep it in sync as you move around. At present, this relies
 on a [hashchange](http://caniuse.com/hashchange) event existing in the browser.

@@ -1,5 +1,3 @@
-## Inserting Views in Templates
-
 So far, we've discussed writing templates for a single view. However, as your application grows, you will often want to create a hierarchy of views to encapsulate different areas on the page. Each view is responsible for handling events and maintaining the properties needed to display it.
 
 ### {{view}}

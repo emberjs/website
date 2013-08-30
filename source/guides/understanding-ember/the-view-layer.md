@@ -1,5 +1,3 @@
-## The Ember.js View Layer
-
 This guide goes into extreme detail about the Ember.js view layer. It is
 intended for an experienced Ember developer, and includes details that
 are unnecessary for getting started with Ember.

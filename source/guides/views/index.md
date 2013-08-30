@@ -1,5 +1,3 @@
-## Introduction to Views
-
 Because Handlebars templates in Ember.js are so powerful, the majority
 of your application's user interface will be described using them. If
 you are coming from other JavaScript libraries, you may be surprised at

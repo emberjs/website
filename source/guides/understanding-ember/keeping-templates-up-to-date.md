@@ -1,5 +1,3 @@
-## Keeping Templates Up-to-Date
-
 In order to know which part of your HTML to update when an underlying property changes, Handlebars will insert marker elements with a unique ID. If you look at your application while it's running, you might notice these extra elements:
 
 ```html

@@ -1,5 +1,3 @@
-## Rendering a Template
-
 One of the most important jobs of a route handler is rendering the
 appropriate template to the screen.
 

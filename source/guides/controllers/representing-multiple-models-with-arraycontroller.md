@@ -1,5 +1,3 @@
-## Representing Multiple Models
-
 You can use `Ember.ArrayController` to represent an array of models. To tell an
 `ArrayController` which model to represent, set its `model` property
 in your route's `setupController` method.

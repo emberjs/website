@@ -1,5 +1,3 @@
-## Representing a Single Model
-
 Use `Ember.ObjectController` to represent a single model. To tell an
 `ObjectController` which model to represent, set its `model`
 property in your route's `setupController` method.

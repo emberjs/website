@@ -1,5 +1,3 @@
-## Displaying a List of Items
-
 If you need to enumerate over a list of objects, use Handlebars' `{{#each}}` helper:
 
 ```handlebars

@@ -1,5 +1,3 @@
-## Replacing the Fixture Adapter with Another Adapter
-
 Finally we'll replace our fixture data with real persistence so todos will remain between application loads by replacing the fixture adapter with a `localstorage`-aware adapter instead.
 
 Change `js/models/store.js` to:

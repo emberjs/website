@@ -1,5 +1,3 @@
-## Defining Models
-
 For every type of model you'd like to represent, create a new subclass of
 `DS.Model`:
 

@@ -1,5 +1,3 @@
-## Defining Your Routes
-
 When your application starts, the router is responsible for displaying
 templates, loading data, and otherwise setting up application state.
 It does so by matching the current URL to the _routes_ that you've

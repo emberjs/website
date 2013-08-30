@@ -1,5 +1,3 @@
-## Defining a Store
-
 Every application using Ember Data has a store. The store is the
 repository that holds loaded models, and is responsible for retrieving
 models that have not yet been loaded.

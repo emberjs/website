@@ -1,5 +1,3 @@
-## Naming Conventions
-
 Ember.js uses naming conventions to wire up your objects without a
 lot  of boilerplate. You will want to  use the conventional names
 for your routes, controllers and templates.

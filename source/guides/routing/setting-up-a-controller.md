@@ -1,5 +1,3 @@
-## Setting Up a Controller
-
 Changing the URL may also change which template is displayed on
 screen. Templates, however, are usually only useful if they have some
 source of information to display.

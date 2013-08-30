@@ -1,5 +1,3 @@
-## Managing Asynchrony in Ember
-
 Many Ember concepts, like bindings and computed properties, are designed
 to help manage asynchronous behavior.
 

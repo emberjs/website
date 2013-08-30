@@ -1,5 +1,3 @@
-## The REST Adapter
-
 By default, your store will use `DS.RESTAdapter` to load and save
 records. The REST adapter assumes that the URLs and JSON associated with
 each model are conventional; this means that, if you follow the rules,

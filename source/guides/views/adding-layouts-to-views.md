@@ -1,5 +1,3 @@
-## Adding Layouts to Views
-
 Views can have a secondary template that wraps their main template. Like templates,
 layouts are Handlebars templates that will be inserted inside the
 view's tag.

@@ -1,5 +1,3 @@
-## What Do I Use When?
-
 Sometimes new users are confused about when to use computed properties,
 bindings and observers. Here are some guidelines to help:
 

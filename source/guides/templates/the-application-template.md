@@ -1,5 +1,3 @@
-## The Application Template
-
 The application template is the default template that is rendered when
 your application starts. 
 

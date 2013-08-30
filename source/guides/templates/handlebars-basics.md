@@ -1,5 +1,3 @@
-## Handlebars Basics
-
 Ember.js uses the [Handlebars templating library](http://www.handlebarsjs.com)
 to power your app's user interface. Handlebars templates are just like
 regular HTML, but also give you the ability to embed expressions that
