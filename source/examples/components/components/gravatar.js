@@ -1,9 +1,12 @@
 App.GravatarImageComponent = Ember.Component.extend({
+  size: 200,
+
   gravatarUrl: function() {
-    var size = this.get('size');
-    if (!size) {
-      this.set('size', '200');
-    }
-    return "http://www.gravatar.com/avatar/" + hex_md5(this.get('email')) + '?s=' + this.get('size');
+    var email = this.get('email'),
+        size = this.get('size');
+
+    if (!email) { return; }
+
+    return "http://www.gravatar.com/avatar/" + hex_md5(email) + '?s=' + size;
   }.property('email', 'size')
 });

@@ -151,6 +151,15 @@
 
 .example-app {
   margin: 70px 0;
+
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 55px;
+  }
 }
 
 .example-viewer .tabs {
@@ -170,23 +179,15 @@
   margin: 0;
   padding: 0;
 
+  text-align: center;
+
   .email-input input {
     width: 210px;
   }
 
   li {
-    float: left;
-    padding-right: 6em;
-
-    &:last-child {
-      float: right;
-      padding-right: 0;
-    }
-
-    &:nth-child(2) {
-      position: absolute;
-      right: 30%;
-    }
+    margin: 0 30px;
+    display: inline-block;
   }
 
   img {
