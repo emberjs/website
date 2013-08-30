@@ -270,7 +270,7 @@ Cookbook:
     url: "cookbook/user_interface_and_interaction/displaying_formatted_dates_with_moment_js"
     skip_sidebar_item: true
   - title: "Specifying Data-Driven Areas of Templates That Do Not Need To Update"
-    url: "cookbook/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
+    url: "cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
     skip_sidebar_item: true
   # events and bindings
   - title: "Event Handling & Data Binding"
@@ -307,6 +307,9 @@ Cookbook:
     url: "cookbook/helpers_and_components"
   - title: "Writing a Custom Handlebars Helper"
     url: "cookbook/helpers_and_components/writing_a_custom_handlebars_helper"
+    skip_sidebar_item: true
+  - title: "Creating a Handlebars Helper to Truncate Text"
+    url: "cookbook/helpers_and_components/creating_a_handlebars_helper_to_truncate_text"
     skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
