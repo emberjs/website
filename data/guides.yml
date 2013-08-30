@@ -273,7 +273,7 @@ Cookbook:
     url: "cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
     skip_sidebar_item: true
   - title: "Converting Strings to Currency With Accounting.js"
-    url: "cookbook/converting_strings_to_currency_with_accounting_js"
+    url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
     skip_sidebar_item: true
   # events and bindings
   - title: "Event Handling & Data Binding"
@@ -281,27 +281,27 @@ Cookbook:
   - title: "Binding Properties of an Object to Its Own Properties"
     url: "cookbook/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties"
     skip_sidebar_item: true
-  - title: "Responding to User Events"
-    url: "cookbook/event_handling_and_data_binding/responding_to_user_events"
-    skip_sidebar_item: true
-  - title: "Toggling A Boolean Property"
-    url: "cookbook/event_handling_and_data_binding/toggling_a_boolean_property"
-    skip_sidebar_item: true
-  - title: "Using Computed Properties"
-    url: "cookbook/event_handling_and_data_binding/using_computed_properties"
-    skip_sidebar_item: true
-  - title: "Setting The Attributes of a View's Element"
-    url: "cookbook/event_handling_and_data_binding/setting_the_attributes_of_a_views_element"
-    skip_sidebar_item: true
+  # - title: "Responding to User Events"
+  #   url: "cookbook/event_handling_and_data_binding/responding_to_user_events"
+  #   skip_sidebar_item: true
+  # - title: "Toggling A Boolean Property"
+  #   url: "cookbook/event_handling_and_data_binding/toggling_a_boolean_property"
+  #   skip_sidebar_item: true
+  # - title: "Using Computed Properties"
+  #   url: "cookbook/event_handling_and_data_binding/using_computed_properties"
+  #   skip_sidebar_item: true
+  # - title: "Setting The Attributes of a View's Element"
+  #   url: "cookbook/event_handling_and_data_binding/setting_the_attributes_of_a_views_element"
+  #   skip_sidebar_item: true
   # client/server
   - title: "Client/Server Interaction"
     url: "cookbook/client_server_interaction"
   - title: "Loading Data From A Server"
     url: "cookbook/client_server_interaction/loading_data_from_a_server"
     skip_sidebar_item: true
-  - title: "Sending Data To A Server"
-    url: "cookbook/client_server_interaction/sending_data_to_a_server"
-    skip_sidebar_item: true
+  # - title: "Sending Data To A Server"
+  #   url: "cookbook/client_server_interaction/sending_data_to_a_server"
+  #   skip_sidebar_item: true
   - title: "Serving Compiled Handlebars Templates Using Node.js"
     url: "cookbook/client_server_interaction/serving_compiled_templates_using_nodejs"
     skip_sidebar_item: true
@@ -329,18 +329,18 @@ Cookbook:
   - title: "Setting Multiple Properties At Once"
     url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
     skip_sidebar_item: true
-  - title: "Continuous Redrawing of Views"
-    url: "cookbook/working_with_objects/continuous_redrawing_of_views"
-    skip_sidebar_item: true
-  - title: "Naming Your Child Views"
-    url: "cookbook/working_with_objects/naming_your_child_views"
-    skip_sidebar_item: true
+  # - title: "Continuous Redrawing of Views"
+  #   url: "cookbook/working_with_objects/continuous_redrawing_of_views"
+  #   skip_sidebar_item: true
+  # - title: "Naming Your Child Views"
+  #   url: "cookbook/working_with_objects/naming_your_child_views"
+  #   skip_sidebar_item: true
   # debugging
-  - title: "Debugging & Configuration"
-    url: "cookbook/debugging_and_configuration"
-  - title: "Setting Ember Global Flags"
-    url: "cookbook/debugging_and_configuration/setting_ember_global_flags"
-    skip_sidebar_item: true
+  # - title: "Debugging & Configuration"
+  #   url: "cookbook/debugging_and_configuration"
+  # - title: "Setting Ember Global Flags"
+  #   url: "cookbook/debugging_and_configuration/setting_ember_global_flags"
+  #   skip_sidebar_item: true
 
 Understanding Ember.js:
   - title: "The View Layer"
