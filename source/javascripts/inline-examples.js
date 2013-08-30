@@ -58,7 +58,7 @@ Ember.Handlebars.helper('syntax-highlight', function(value, options) {
   output += lineNumbers;
   output += '</td><td class="code"><pre>' + highlighted + '</pre></td></tr></table>';
 
-  output = "<div class='highlight'>" + output + "</div>";
+  output = "<div class='example-highlight'>" + output + "</div>";
   return new Ember.Handlebars.SafeString(output);
 });
 
