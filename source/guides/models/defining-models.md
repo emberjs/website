@@ -86,8 +86,8 @@ App.Person = DS.Model.extend({
 });
 ```
 
-The default adapter supports attribute types of `String`,
-`Number`, `Boolean`, and `Date`. Custom adapters may offer additional
+The default adapter supports attribute types of `string`,
+`number`, `boolean`, and `date`. Custom adapters may offer additional
 attribute types, and new types can be registered as transforms. See the
 [documentation section on the REST Adapter](/guides/models/the-rest-adapter).
 
