@@ -1,7 +1,8 @@
 ## Problem
 
-You're displaying formatted values in user inputs and need to remove the
-decoration to set the attributes upstream.
+You're displaying formatted values in user inputs as currency with
+[Accounting.js][accounting] and need to remove the decoration to set the
+attributes upstream.
 
 ## Solution
 
@@ -22,7 +23,8 @@ formattedAmount: function(key, value) {
 
 ### Example
 
-<a class="jsbin-embed" href="http://jsbin.com/AqeVuZI/2/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/AqeVuZI/2/embed?live,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 [setters]: http://emberjs.com/guides/object-model/computed-properties/
+[accounting]: http://josscrowcroft.github.io/accounting.js/
 
