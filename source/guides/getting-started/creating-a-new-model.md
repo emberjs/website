@@ -1,5 +1,3 @@
-## Creating New Model Instance
-
 Next we'll update our static HTML `<input>` to an Ember view that can expose more complex behaviors.  Update `index.html` to replace the new todo `<input>` with an `Ember.TextField`:
 
 ```handlebars

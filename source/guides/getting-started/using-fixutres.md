@@ -1,5 +1,3 @@
-## Using Fixtures
-
 Now we'll add fixture data. Fixtures are a way to put sample data into an application before connecting the application to long-term persistence.
 
 Update the file at `js/models/todo.js` to include the following fixture data:

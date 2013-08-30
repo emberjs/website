@@ -1,5 +1,3 @@
-## Managing Dependencies Between Controllers
-
 Sometimes, especially when nesting resources, we find ourselves needing
 to have some kind of connection between two controllers. Let's take this
 router as an example:

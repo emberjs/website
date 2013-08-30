@@ -1,5 +1,3 @@
-## Indicating When All Todos Are Complete
-
 Next we'll update our template to indicate when all todos have been completed. In `index.html` replace the static checkbox `<input>` with `Ember.Checkbox`:
 
 ```handlebars

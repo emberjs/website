@@ -1,5 +1,3 @@
-## Model Lifecycle
-
 Since models must be loaded and saved asynchronously, there are several
 possible states that a record may be in at a given time. Each instance
 of `DS.Model` has a set of Boolean properties that you can use to

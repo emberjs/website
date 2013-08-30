@@ -1,5 +1,3 @@
-## Planning The Application
-
 TodoMVC, despite its small size, contains most of the behaviors typical in modern single page applications. Before continuing, take a moment to understand how TodoMVC works from the user's perspective.
 
 TodoMVC has the following main features:

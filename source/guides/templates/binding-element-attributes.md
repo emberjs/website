@@ -1,5 +1,3 @@
-## Binding Element Attributes
-
 In addition to normal text, you may also want to have your templates
 contain HTML elements whose attributes are bound to the controller.
 

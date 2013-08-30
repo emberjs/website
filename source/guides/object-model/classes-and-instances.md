@@ -1,5 +1,3 @@
-## Classes and Instances
-
 To define a new Ember _class_, call the `extend()` method on
 `Ember.Object`:
 

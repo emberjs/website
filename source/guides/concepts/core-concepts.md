@@ -1,5 +1,3 @@
-## Core Concepts
-
 To get started with Ember.js, there are a few core concepts you
 should understand. 
 

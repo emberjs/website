@@ -1,5 +1,3 @@
-## Built-in Views
-
 Ember comes pre-packaged with a set of views for building a few basic controls like text inputs, check boxes, and select lists.
 
 They are:

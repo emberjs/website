@@ -1,5 +1,3 @@
-## Deleting A Model
-
 TodoMVC displays a button for removing todos next to each todo when its `<li>` is hovered. Clicking this button will remove the todo and update the display of remaining incomplete todos and remaining completed todos appropriately.
 
 In `index.html` update the static `<button>` element to include an `{{action}}` Handlebars helper:

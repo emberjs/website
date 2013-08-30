@@ -1,5 +1,3 @@
-## Marking a Model as Complete or Incomplete
-
 In this step we'll update our application to allow a user to mark a todo as complete or incomplete and persist the updated information.
 
 In `index.html` update your template to wrap each todo in its own controller by adding an `itemController` argument to the `{{each}}` Handlebars helper. Then convert our static `<input type="checkbox">` into an `Ember.Checkbox`:

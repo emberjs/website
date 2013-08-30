@@ -1,5 +1,3 @@
-## The Fixture Adapter
-
 When developing client-side applications, your server may not have an API ready
 to develop against. The FixtureAdapter allows you to begin developing Ember.js
 apps now, and switch to another adapter when your API is ready to consume

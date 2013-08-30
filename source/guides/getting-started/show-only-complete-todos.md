@@ -1,5 +1,3 @@
-## Transitioning to show only complete todos
-
 Next we'll update the application so a user can navigate to a url where only todos that have already been completed are displayed.
 
 In `index.html` convert the `<a>` tag for 'Completed' todos into a Handlebars `{{link-to}}` helper:

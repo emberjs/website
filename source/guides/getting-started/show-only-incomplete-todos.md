@@ -1,5 +1,3 @@
-## Transitioning to show only incomplete todos
-
 Next we'll update the application so a user can navigate to a url where only todos that are not complete are displayed.
 
 In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{link-to}}` helper:

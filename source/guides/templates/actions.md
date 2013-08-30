@@ -1,4 +1,4 @@
-## Actions (The `{{action}}` Helper)
+## The `{{action}}` Helper
 
 Your app will often need a way to let users interact with controls that
 change application state. For example, imagine that you have a template

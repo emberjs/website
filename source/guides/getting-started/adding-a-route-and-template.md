@@ -1,5 +1,3 @@
-## Adding the First Route and Template
-
 Next, we will create an Ember.js application, a route ('`/`'), and convert our static mockup into a Handlebars template.
 
 Inside your `js` directory, add a file for the application at `js/application.js` and a file for the router at `js/router.js`. You may place these files anywhere you like (even just putting all code into the same file), but this guide will assume you have separated them into their own files and named them as indicated.
