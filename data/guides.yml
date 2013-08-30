@@ -311,6 +311,9 @@ Cookbook:
   - title: "Creating a Handlebars Helper to Truncate Text"
     url: "cookbook/helpers_and_components/creating_a_handlebars_helper_to_truncate_text"
     skip_sidebar_item: true
+  - title: "Creating Reusable Social Share Buttons"
+    url: "cookbook/helpers_and_components/creating_reusable_social_share_buttons"
+    skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
     url: "cookbook/working_with_objects"
