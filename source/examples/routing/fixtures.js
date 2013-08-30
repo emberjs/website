@@ -1,4 +1,4 @@
-Mailbox.DATA = [
+App.FIXTURES = [
   {
     name: "Inbox",
     id: "inbox",
@@ -43,3 +43,4 @@ Mailbox.DATA = [
     ]
   }
 ];
+
