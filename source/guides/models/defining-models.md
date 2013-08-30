@@ -143,7 +143,7 @@ App.Tag = DS.Model.extend({
 
 #### Explicit Inverses
 
-Ember Data will do its bed to discover which relationships map to one
+Ember Data will do its best to discover which relationships map to one
 another. In the one-to-many code above, for example, Ember Data can figure out that
 changing the `comments` relationship should update the `post`
 relationship on the inverse because `post` is the only relationship to
