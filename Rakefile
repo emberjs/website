@@ -1,5 +1,6 @@
 require "bundler/setup"
 require 'yaml'
+load 'lib/versions.rb'
 
 def git_initialize(repository)
   unless File.exist?(".git")
@@ -18,6 +19,11 @@ end
 
 def ember_path
   File.expand_path(ENV['EMBER_PATH'] || File.expand_path("../../ember.js", __FILE__))
+end
+
+task :checkout_ember do
+  repo = "git://github.com/emberjs/ember.js.git"
+  system "git clone #{repo} #{ember_path}"
 end
 
 def generate_docs

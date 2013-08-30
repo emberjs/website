@@ -1,0 +1,10 @@
+<br>
+<h1>Ember.js Versioned Documentation</h1>
+
+<ul>
+  <% WebsiteVersions.each_tag do |version,bucket,url| %>
+    <li>
+      <a href="<%= url %>">Version <%= version %></a>
+    </li>
+  <% end %>
+</ul>

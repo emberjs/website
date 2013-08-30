@@ -11,6 +11,7 @@ gem "thin"
 gem "rack"
 gem "listen"
 gem "builder"
+gem 'website_versions', :github => "mharris717/website_versions", :branch => "master"
 
 group :development do
   gem "pry"

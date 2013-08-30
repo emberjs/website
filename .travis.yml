@@ -1,0 +1,11 @@
+---
+before_install:
+- sudo apt-get update -qq
+- sudo apt-get install -qq s3cmd
+script: bundle exec rake checkout_ember build
+after_success: bundle exec rake versions:deploy_edge
+env:
+  global:
+  - secure: "cDzdsDPvC6YmYzuOsYXcXXRRadXLGIki6WuuaV6IuVTv0V+x+qSFNZ/KLk97\n4HOmklgM+ub0Nwxs+JhL2sh1ElhXi9hdXMFkSqIYutL6iJwJs6XA89Xfw5wu\nAxSeMzRMQHFugpEMC3Z/Q0G41C5N/bFCX3H2cNdmpFc86qQDZEs="
+  - secure: "BtJpzh/QjoWue6NXg3nJQcPOfJ19V3Xp0o66hyO3YQphQ1xgKTxIlJSANYDV\nEtzIqUhtvEdeT+WP7btcssjSX+xVh/rhU+iHo5jcIAC+i5mHzOK+FFeZ9Wbu\nkItX3qPxwE+82SotO9jyWaECE/QjpmKlhB54nR0TvgVCdWHhSBI="
+  
