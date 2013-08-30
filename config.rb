@@ -30,6 +30,20 @@ activate :blog do |blog|
   blog.tag_template = 'blog/tag.html'
 end
 
+###
+# Activate sync extension
+###
+activate :sync do |sync|
+  sync.fog_provider = 'AWS'
+  sync.fog_directory = ENV['AWS_BUCKET']
+  sync.fog_region = ENV['AWS_REGION'] || 'us-east-1'
+  sync.aws_access_key_id = ENV['AWS_ACCESS_KEY']
+  sync.aws_secret_access_key = ENV['AWS_SECRET_ACCESS_KEY']
+  sync.existing_remote_files = 'keep'
+  sync.gzip_compression = true
+  sync.after_build = false
+end
+
 page '/blog/feed.xml', layout: false
 
 ###
