@@ -163,6 +163,8 @@
   image: silveregg.png
 - url: https://owner.urbanspoon.com
   image: urbanspoon.png
+- url: http://basho.com
+  image: basho.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
