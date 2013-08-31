@@ -21,7 +21,7 @@ each song:
 <h1>Playlist</h1>
 
 <ul>
-  {{#each controller}}
+  {{#each}}
     <li>{{name}} by {{artist}}</li>
   {{/each}}
 </ul>
@@ -47,7 +47,7 @@ Now we can use this property in our template:
 
 ```handlebars
 <ul>
-  {{#each controller}}
+  {{#each}}
     <li>{{name}} by {{artist}}</li>
   {{/each}}
 </ul>
