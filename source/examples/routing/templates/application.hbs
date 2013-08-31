@@ -1,11 +1,11 @@
-<div class='url'>URL: {{target.url}}</div>
+<div class="url">URL: {{target.url}}</div>
 <aside>
     
     <ul>
         <li><h2>Mailboxes</h2></li>
         {{#each}}
             <li>
-                {{#link-to 'mailbox' this}}
+                {{#link-to "mailbox" this}}
                     <span class="count">
                         {{messages.length}}
                     </span>
@@ -16,6 +16,6 @@
     </ul>
 </aside>
 
-<section class='main'>
+<section class="main">
     {{outlet}}
 </section>
