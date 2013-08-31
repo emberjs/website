@@ -1,20 +1,22 @@
+// Model
+
 App.Mailbox = Em.Object.extend();
 
 App.Mailbox.reopenClass({
-  find: function(name) {
-    var result;
-    result = name != null ? App.FIXTURES.findProperty('id', name) : App.FIXTURES;
-
-    return new Em.RSVP.Promise(function(resolve) {
-      // Simulate the latency of a network request
-      return Em.run.later(this, resolve, result, 1000);
-    });
+  find: function(id) {
+    if (id) {
+      return App.FIXTURES.findBy('id', id);
+    } else {
+      return App.FIXTURES;
+    }
   }
 });
 
+// Routes
+
 App.Router.map(function() {
-  return this.resource('mailbox', { path: '/:id' }, function() {
-    return this.resource('mail', { path: '/:index' });
+  return this.resource('mailbox', { path: '/:mailbox_id' }, function() {
+    return this.resource('mail', { path: '/:message_id' });
   });
 });
 
@@ -24,31 +26,13 @@ App.ApplicationRoute = Em.Route.extend({
   }
 });
 
-App.MailboxRoute = Em.Route.extend({
-  model: function(params) {
-    return App.Mailbox.find(params.id);
-  },
-
-  serialize: function(mailbox) {
-    return {
-      id: mailbox.id
-    };
-  }
-});
-
 App.MailRoute = Em.Route.extend({
   model: function(params) {
-    return this.modelFor('mailbox').messages[params.index];
-  },
-
-  serialize: function(mail) {
-    return {
-      index: this.modelFor('mailbox').messages.indexOf(mail)
-    };
+    return this.modelFor('mailbox').messages.findBy('id', params.message_id);
   }
 });
 
-App.LoadingRoute = Em.Route.extend();
+// Handlebars helper
 
 Ember.Handlebars.registerBoundHelper('date', function(date) {
   return moment(date).format('MMM Do');

@@ -4,12 +4,14 @@ App.FIXTURES = [
     id: "inbox",
     messages: [
       {
+        id: 1,
         subject: "Welcome to Ember",
         from: "tomster@emberjs.com",
         to: "user@example.com",
         date: new Date(),
         body: "Welcome to Ember. We hope you enjoy your stay"
       }, {
+        id: 2,
         subject: "Great Ember Resources",
         from: "tomster@emberjs.com",
         to: "user@example.com",
@@ -22,6 +24,7 @@ App.FIXTURES = [
     id: "spam",
     messages: [
       {
+        id: 3,
         subject: "You have one the Nigerian lottery!!!111ONEONE",
         from: "419@thereallotteryhonest.ng",
         to: "user@example.com",
@@ -34,6 +37,7 @@ App.FIXTURES = [
     id: "sent-mail",
     messages: [
       {
+        id: 4,
         subject: "Should I use Ember",
         from: "user@example.com",
         to: "tomster@emberjs.com",
