@@ -535,6 +535,7 @@ ol {
 
   .social {
     margin-top: 25px;
+    margin-bottom: 0;
     text-align: center;
     list-style: none;
     padding: 0;
@@ -559,13 +560,12 @@ ol {
 }
 
 .section {
-  margin-top: 60px;
   overflow: hidden;
 
   h2 {
     width: 100%;
     text-align: center;
-    margin-bottom: 28px;
+    margin: 40px 0;
   }
 
   table.columns {
