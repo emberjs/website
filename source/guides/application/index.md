@@ -15,8 +15,8 @@ What does creating an `Ember.Application` instance get you?
 
 1. It is your application's namespace. All of the classes in your
    application will be defined as properties on this object (e.g.,
-`App.PostsView` and `App.PostsController`). This helps to prevent
-polluting of the global scope.
+   `App.PostsView` and `App.PostsController`). This helps to prevent
+   polluting the global scope.
 2. It adds event listeners to the document and is responsible for
    delegating events to your views. (See [The View
    Layer](/guides/understanding-ember/the-view-layer)
