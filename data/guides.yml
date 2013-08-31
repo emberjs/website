@@ -146,6 +146,8 @@ Components:
     url: "components/customizing-a-components-element"
   - title: "Handling User Interaction with Actions"
     url: "components/handling-user-interaction-with-actions"
+  - title: "Sending Actions from Components to Your Application"
+    url: "components/sending-actions-from-components-to-your-application"
 
 Controllers:
   - title: "Introduction"
