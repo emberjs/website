@@ -141,7 +141,7 @@ function generateOutputApp($elem, files) {
         }
       }
     },
-    resolver: Ember.DefaultResolver.extend({
+    Resolver: Ember.DefaultResolver.extend({
       resolveTemplate: function(name) {
         return templates[name.name];
       }
