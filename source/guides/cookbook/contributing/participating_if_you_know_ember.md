@@ -1,6 +1,6 @@
 ## Problem
 
-You are know Ember and wish to support the creation of this document.
+You know Ember and wish to support the creation of this document.
 
 ## Solution
 
