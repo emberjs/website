@@ -348,6 +348,11 @@ Configuring Ember.js:
   ##   url: "cookbook/debugging_and_configuration/setting_ember_global_flags"
   ##   skip_sidebar_item: true
 
+Contributing to Ember.js:
+  - title: "Contributing"
+  - url: "contributing"
+  - title: "Updating the Getting Started Guide"
+  - url: "updating-the-getting-started-guide"
 Understanding Ember.js:
   - title: "The View Layer"
     url: "understanding-ember/the-view-layer"
