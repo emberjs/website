@@ -33,7 +33,7 @@ model, and the template automatically updates itself if the model changes.
 In addition to plain HTML, templates can contain:
 
 * **Expressions**, like `{{firstName}}`, which take information from
-  the template's model and puts it into HTML.
+  the template's model and put it into HTML.
 * **Outlets**, which are placeholders for other templates. As users
   move around your app, different templates can be plugged into the
   outlet by the router. You can put outlets into your template using the
