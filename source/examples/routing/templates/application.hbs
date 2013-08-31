@@ -5,12 +5,12 @@
         <li><h2>Mailboxes</h2></li>
         {{#each}}
             <li>
-                {{#linkTo 'mailbox' this}}
+                {{#link-to 'mailbox' this}}
                     <span class="count">
                         {{messages.length}}
                     </span>
                     {{name}}
-                {{/linkTo}}
+                {{/link-to}}
             </li>
         {{/each}}
     </ul>
