@@ -366,6 +366,9 @@ Cookbook:
   - title: "Adding Google Analytics Tracking"
     url: "cookbook/helpers_and_components/adding_google_analytics_tracking"
     skip_sidebar_item: true
+  - title: "Rendering Views Dynamically According To Model Properties"
+    url: "cookbook/helpers_and_components/rendering_views_dynamically_according_to_model_properties"
+    skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
     url: "cookbook/working_with_objects"
