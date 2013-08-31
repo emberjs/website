@@ -1,10 +1,10 @@
-Next we'll update our static HTML `<input>` to an Ember view that can expose more complex behaviors.  Update `index.html` to replace the new todo `<input>` with an `Ember.TextField`:
+Next we'll update our static HTML `<input>` to an Ember view that can expose more complex behaviors.  Update `index.html` to replace the new todo `<input>` with a `{{input}}` helper:
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <h1>todos</h1>
-{{view Ember.TextField id="new-todo" placeholder="What needs to be done?"
-       valueBinding="newTitle" action="createTodo"}}
+{{input type="text" id="new-todo" placeholder="What needs to be done?" 
+              value=newTitle action="createTodo"}}
 <!--- ... additional lines truncated for brevity ... -->
 ```
 
@@ -20,28 +20,29 @@ Inside `js/controllers/todos_controller.js` implement the controller Ember.js ex
 
 ```javascript
 Todos.TodosController = Ember.ArrayController.extend({
-  newTitle: '',
-  createTodo: function () {
-    // Get the todo title set by the "New Todo" text field
-    var title = this.get('newTitle');
-    if (!title.trim()) { return; }
+  actions: {
+    createTodo: function () {
+      // Get the todo title set by the "New Todo" text field
+      var title = this.get('newTitle');
+      if (!title.trim()) { return; }
 
-    // Create the new Todo model
-    var todo = Todos.Todo.createRecord({
-      title: title,
-      isCompleted: false
-    });
+      // Create the new Todo model
+      var todo = this.store.createRecord('todo', {
+        title: title,
+        isCompleted: false
+      });
 
-    // Clear the "New Todo" text field
-    this.set('newTitle', '');
+      // Clear the "New Todo" text field
+      this.set('newTitle', '');
 
-    // Save the new model
-    todo.save();
+      // Save the new model
+      todo.save();
+    }
   }
 });
 ```
 
-This controller will now respond to user interaction by using its `newTitle` property as the title of a new todo whose `isCompleted` property is false.  Then it will clear its `newTitle` property which will synchronize to the template and reset the textfield. Finally, it persists any unsaved changes on the todo.
+This controller will now respond to user action by using its `newTitle` property as the title of a new todo whose `isCompleted` property is false.  Then it will clear its `newTitle` property which will synchronize to the template and reset the textfield. Finally, it persists any unsaved changes on the todo.
 
 In `index.html` include `js/controllers/todos_controller.js` as a dependency:
 
@@ -57,11 +58,11 @@ In `index.html` include `js/controllers/todos_controller.js` as a dependency:
 Reload your web browser to ensure that all files have been referenced correctly and no errors occur. You should now be able to add additional todos by entering a title in the `<input>` and hitting the `<enter>` key.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/irutag/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script> 
+<a class="jsbin-embed" href="http://jsbin.com/ImukUZO/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/39443bce54a8a7465221ae443b83d3c4a1e3980f)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/60feb5f369c8eecd9df3f561fbd01595353ce803)
   * [Ember.TextField API documention](/api/classes/Ember.TextField.html)
   * [Ember Controller Guide](/guides/controllers)
   * [Naming Conventions Guide](/guides/concepts/naming-conventions)
