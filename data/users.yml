@@ -167,6 +167,8 @@
   image: basho.png
 - url: http://gaslight.co
   image: gaslight.png
+- url: http://www.tictail.com
+  image: tictail.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
