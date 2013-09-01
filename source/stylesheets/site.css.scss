@@ -202,10 +202,14 @@ ol {
         > a {
           display: block;
           color: #443331;
-          outline: 1px solid #d5ccc8;
+          border-top: 1px solid #d5ccc8;
+          border-bottom: 1px solid #d5ccc8;
           padding: 12px 12px 10px 12px;
-          margin-top: 1px;
           background-color: rgb(244, 236, 233);
+        }
+
+        & + .level-1 > a {
+          margin-top: -1px;
         }
 
         &.selected > a {
