@@ -5,13 +5,13 @@ In `index.html` convert the `<a>` tag for 'Completed' todos into a Handlebars `{
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <li>
-  <a href="all" class="selected">All</a>
+  <a href="all">All</a>
 </li>
 <li>
-  {{#link-to 'todos.active' activeClass="selected"}}Active{{/link-to}}
+  {{#link-to "todos.active" activeClass="selected"}}Active{{/link-to}}
 </li>
 <li>
-  {{#link-to 'todos.completed' activeClass="selected"}}Completed{{/link-to}}
+  {{#link-to "todos.completed" activeClass="selected"}}Completed{{/link-to}}
 </li>
 <!--- ... additional lines truncated for brevity ... -->
 ```
@@ -31,8 +31,8 @@ Todos.Router.map(function () {
 
 Todos.TodosCompletedRoute = Ember.Route.extend({
   model: function(){
-    return Todos.Todo.filter(function (todo) {
-      if (todo.get('isCompleted')) { return true; }
+    return this.store.filter('todo', function (todo) {
+      return todo.get('isCompleted');
     });
   },
   renderTemplate: function(controller){
@@ -48,11 +48,11 @@ Normally transitioning into a new route changes the template rendered into the p
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/oxiqux/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/OzUvuPu/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/a76c1efc5a3573242a1b7ae6a53519108190cccf)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/bba939a11197552e3a927bcb3a3adb9430e4f331)
   * [link-to API documentation](/api/classes/Ember.Handlebars.helpers.html#method_link-to)
   * [Route#renderTemplate API documentation](/api/classes/Ember.Route.html#method_renderTemplate)
   * [Route#render API documentation](/api/classes/Ember.Route.html#method_render)

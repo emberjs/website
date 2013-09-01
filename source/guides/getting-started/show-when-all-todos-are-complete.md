@@ -1,11 +1,10 @@
-Next we'll update our template to indicate when all todos have been completed. In `index.html` replace the static checkbox `<input>` with `Ember.Checkbox`:
+Next we'll update our template to indicate when all todos have been completed. In `index.html` replace the static checkbox `<input>` with an `{{input}}`:
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
 <section id="main">
   {{outlet}}
-
-  {{view Ember.Checkbox id="toggle-all" checkedBinding="allAreDone"}}
+  {{input type="checkbox" id="toggle-all" checked=allAreDone}}
 </section>
 <!--- ... additional lines truncated for brevity ... -->
 ```
@@ -27,9 +26,9 @@ This property will be `true` if the controller has any todos and every todo's `i
 Reload your web browser to ensure that there are no errors and the behavior described above occurs. 
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/aqurok/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
-    
+<a class="jsbin-embed" href="http://jsbin.com/IcItARE/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/41b9e0b07edcf20fef76970944fb7345af2a8853)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/9bf8a430bc4afb06f31be55f63f1d9806e6ab01c)
   * [Ember.Checkbox API documentation](/api/classes/Ember.Checkbox.html)

@@ -1,14 +1,11 @@
 Finally we'll replace our fixture data with real persistence so todos will remain between application loads by replacing the fixture adapter with a `localstorage`-aware adapter instead.
 
-Change `js/models/store.js` to:
+Change `js/application.js` to:
 
 ```javascript
-Todos.Store = DS.Store.extend({
-  revision: 12,
-  adapter: 'Todos.LSAdapter'
-});
+window.Todos = Ember.Application.create();
 
-Todos.LSAdapter = DS.LSAdapter.extend({
+Todos.ApplicationAdapter = DS.LSAdapter.extend({
   namespace: 'todos-emberjs'
 });
 ```
@@ -28,9 +25,9 @@ In `index.html` include `js/libs/local_storage_adapter.js` as a dependency:
 Reload your application. Todos you manage will now persist after the application has been closed.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/aqexej/3/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/aZIXaYo/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/4830fbe41ed41326ac26025cb98104a0c258dd03)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/81801d87da42d0c83685ff946c46de68589ce38f)
   * [LocalStorage Adapter on GitHub](https://github.com/rpflorence/ember-localstorage-adapter)

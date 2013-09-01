@@ -16,30 +16,30 @@ In `js/controllers/todos_controller.js` implement the matching properties and a 
 
 ```javascript
 // ... additional lines truncated for brevity ...
+actions: {
+  clearCompleted: function () {
+    var completed = this.filterProperty('isCompleted', true);
+    completed.invoke('deleteRecord');
+    completed.invoke('save');
+  }
+},
 hasCompleted: function () {
   return this.get('completed') > 0;
 }.property('completed'),
 
 completed: function () {
   return this.filterProperty('isCompleted', true).get('length');
-}.property('@each.isCompleted'),
-
-clearCompleted: function () {
-  var completed = this.filterProperty('isCompleted', true);
-  completed.invoke('deleteRecord');
-
-  this.get('store').commit();
-}
+}.property('@each.isCompleted')
 // ... additional lines truncated for brevity ...
 ```
 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs. 
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/obagub/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/ULovoJI/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/0ba41cdcbca5cf36bd052d75b91f9dd1b405154c)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/1da450a8d693f083873a086d0d21e031ee3c129e)
   * [Handlebars Conditionals Guide](/guides/templates/conditionals)
   * [Enumerables Guide](/guides/enumerables)
