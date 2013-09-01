@@ -140,7 +140,7 @@ so keep an eye out!
 ### Docs, Docs, Docs
 
 The early lack of good documentation for Ember seriously pained us, as we're all
-big believers in the idea that user confusion should be considered bug in the
+big believers in the idea that user confusion should be considered a bug in the
 framework.
 
 Over the past year, we've significantly improved both the [API documentation][9]
@@ -243,14 +243,14 @@ a number of companies over the years.
   Ember as early as you did.
 * McGraw-Hill Education Labs, which has been funding Ember work for over a year,
   with great patience, resolve and vision.
-* Tilde, which employees Tom, Yehuda, Peter and Leah, and which handles much of
+* Tilde, which employs Tom, Yehuda, Peter and Leah, and which handles much of
   the (unseen) administrative work of the project.
 * Billy's Billings, which has given Sebastian Selund time to work on Ember, and
   hosted the work on `ember-animated-outlet`, which will make its way into a
   future version of Ember.
 
 Finally, a number of large open source projects have bet on Ember. These
-projects contribute significantly to Ember's devleopment, and also give Ember
+projects contribute significantly to Ember's development, and also give Ember
 users a place to look at large, real-world projects.
 
 * [Travis CI][18]: A very early Ember adopter. The Ember project makes heavy use of
