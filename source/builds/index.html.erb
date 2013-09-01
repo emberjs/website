@@ -6,12 +6,12 @@
 
 <script type="text/x-handlebars" data-template-name="application">
   <div id="sidebar">
-    <ul id="nav">
-      <li>{{#link-to 'index'}}Home{{/link-to}}</li>
-      <li>{{#link-to 'release'}}Release{{/link-to}}</li>
-      <li>{{#link-to 'beta'}}Beta{{/link-to}}</li>
-      <li>{{#link-to 'canary'}}Canary{{/link-to}}</li>
-    </ul>
+    <ol id="toc-list">
+      <li class="level-1">{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'release'}}Release{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'beta'}}Beta{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'canary'}}Canary{{/link-to}}</li>
+    </ol>
   </div>
 
   <div id="content" class="has-sidebar">
