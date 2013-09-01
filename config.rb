@@ -26,7 +26,7 @@ activate :api_docs,
 
 configure :build do
   activate :minify_css
-  activate :minify_javascript, :ignore => /example\/.*\.js/
+  #activate :minify_javascript
 end
 
 ###
