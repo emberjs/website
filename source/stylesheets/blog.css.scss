@@ -1,6 +1,15 @@
-.blog-post {
+article.blog-post {
+  h1 {
+    height: 24px;
+    padding-left: 25px;
+  }
+
   h2 {
     margin: 35px 0;
+  }
+
+  h3.blog-post-author {
+    margin-left: 25px;
   }
 
   li {
