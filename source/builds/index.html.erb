@@ -8,9 +8,16 @@
   <div id="sidebar">
     <ol id="toc-list">
       <li class="level-1">{{#link-to 'index'}}Home{{/link-to}}</li>
-      <li class="level-1">{{#link-to 'release'}}Release{{/link-to}}</li>
-      <li class="level-1">{{#link-to 'beta'}}Beta{{/link-to}}</li>
-      <li class="level-1">{{#link-to 'canary'}}Canary{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'tagged'}}Tagged Releases{{/link-to}}</li>
+      <li class="level-1">
+        <a>Channels</a>
+        <ol style="display:block">
+          <li class="level-3">{{#link-to 'release'}}Release{{/link-to}}</li>
+          <li class="level-3">{{#link-to 'beta'}}Beta{{/link-to}}</li>
+          <li class="level-3">{{#link-to 'canary'}}Canary{{/link-to}}</li>
+        </ol>
+      </li>
+      <li class="level-1">{{#link-to 'daily'}}Daily Builds{{/link-to}}</li>
     </ol>
   </div>
 
@@ -90,6 +97,15 @@
   {{partial 'fileListing'}}
 </script>
 
+<script type="text/x-handlebars" data-template-name="tagged">
+  <h2>{{title}}</h2>
+  {{partial 'fileListing'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="daily">
+  <h2>{{title}}</h2>
+  {{partial 'fileListing'}}
+</script>
 
 <script type="text/x-handlebars" data-template-name="components/copy-clipboard">
   <a {{bindAttr data-clipboard-text=text}} title="Copy URL">{{label}}</a>
