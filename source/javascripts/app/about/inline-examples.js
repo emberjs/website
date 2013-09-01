@@ -24,7 +24,7 @@ $(function loadExamples() {
     fileNames = fileNames.split(' ');
 
     var files = fileNames.map(function(file) {
-      return $.ajax('/examples/'+name+'/'+file, {
+      return $.ajax('/javascripts/app/examples/'+name+'/'+file, {
         dataType: 'text'
       });
     });
