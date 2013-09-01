@@ -4,10 +4,10 @@
   <li>
     <div class="issue-number">#{{number}}</div>
     <div class="issue-title">
-      <a {{bindAttr href="url"}}>{{title}}</a>
+      <a {{bindAttr href=html_url}}>{{title}}</a>
     </div>
     <div class="author-name">
-      Opened by <a {{bindAttr href="head.user.html_url"}}><strong>@{{head.user.login}}</strong></a>
+      Opened by <a {{bindAttr href=head.user.html_url}}><strong>@{{head.user.login}}</strong></a>
     </div>
   </li>
 {{/each}}
