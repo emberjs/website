@@ -1,7 +1,12 @@
 #builds-application {
   #sidebar {
-    width: 140px;
-    min-height: 400px;
+    $sidebar-width: 140px;
+
+    width: $sidebar-width;
+
+    &:after {
+      width: $sidebar-width;
+    }
   }
 
   .features {
