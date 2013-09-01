@@ -243,7 +243,7 @@ a number of companies over the years.
   Ember as early as you did.
 * McGraw-Hill Education Labs, which has been funding Ember work for over a year,
   with great patience, resolve and vision.
-* Tilde, which employees Tom, Yehuda, Peter and Leah, and which handles much of
+* Tilde, which employs Tom, Yehuda, Peter and Leah, and which handles much of
   the (unseen) administrative work of the project.
 * Billy's Billings, which has given Sebastian Selund time to work on Ember, and
   hosted the work on `ember-animated-outlet`, which will make its way into a
