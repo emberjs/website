@@ -12,11 +12,13 @@ In `js/controllers/todo_controller.js` implement the `removeTodo` method referen
 
 ```javascript
 // ... additional lines truncated for brevity ...
-removeTodo: function () {
-  var todo = this.get('model');
-  todo.deleteRecord();
-  todo.save();
-},
+actions: {
+  removeTodo: function () {
+    var todo = this.get('model');
+    todo.deleteRecord();
+    todo.save();
+  },
+}
 // ... additional lines truncated for brevity ...
 ```
 
@@ -27,9 +29,9 @@ Because the todo is no longer part of the collection of all todos, its `<li>` el
 Reload your web browser to ensure that there are no errors and the behaviors described above occurs. 
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/asokal/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/eREkanA/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/dfffa6edfa98d8948715a755e04cd03890336969)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/14e1f129f76bae8f8ea6a73de1e24d810678a8fe)
   * [action API documention](/api/classes/Ember.Handlebars.helpers.html#method_action)

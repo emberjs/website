@@ -4,12 +4,12 @@ We'll update the application to allow users to toggle into this editing state fo
 
 ```handlebars
  <!--- ... additional lines truncated for brevity ... -->
-{{#each controller itemController="todo"}}
+{{#each itemController="todo"}}
   <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
     {{#if isEditing}}
       <input class='edit'>
     {{else}}
-      {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
+      {{input type="checkbox" checked=isCompleted class="toggle"}}
       <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button class="destroy"></button>
     {{/if}}
   </li>
@@ -24,11 +24,14 @@ Inside `js/controllers/todo_controller.js` we'll implement the matching logic fo
 
 ```javascript
 // ... additional lines truncated for brevity ...
+actions: {
+   editTodo: function () {
+     this.set('isEditing', true);
+   }
+ },
+ 
 isEditing: false,
 
-editTodo: function () {
-  this.set('isEditing', true);
-},
 // ... additional lines truncated for brevity ...
 ```
 
@@ -37,11 +40,11 @@ Above we defined an initial `isEditing` value of `false` for controllers of this
 Reload your web browser to ensure that no errors occur. You can now double-click a todo to edit it.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/ururuc/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script> 
+<a class="jsbin-embed" href="http://jsbin.com/usiXemu/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
   
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/7eb87f8f987714385e8381197ec7c77215df8cf9)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/616bc4f22900bbaa2bf9bdb8de53ba41209d8cc0)
   * [Handlebars Conditionals Guide](/guides/templates/conditionals)
   * [bind-attr API documentation](/api/classes/Ember.Handlebars.helpers.html#method_bind-attr)
   * [action API documentation](/api/classes/Ember.Handlebars.helpers.html#method_action)
