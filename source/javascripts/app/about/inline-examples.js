@@ -1,3 +1,9 @@
+//= require ../../vendor/handlebars-1.0
+//= require ../../vendor/ember-1.0-rc-8
+//= require ../../vendor/moment
+//= require ../../vendor/highlight
+//= require ../../vendor/md5
+
 $(function loadExamples() {
   // Find all of the examples on the page
   var $examples = $('.example-app');

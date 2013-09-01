@@ -23,61 +23,11 @@
     </script>
 
 <!--[if lt IE 9]>
-    <script type="text/javascript" src="/javascripts/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/javascripts/common-old-ie.js"></script>
 <![endif]-->
 <!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="/javascripts/jquery-2.0.2.js"></script>
+    <script type="text/javascript" src="/javascripts/common-modern.js"></script>
 <!--<![endif]-->
-
-    <script type="text/javascript" src="/javascripts/jquery.bxSlider.min.js"></script>
-
-    <script type="text/javascript">
-      $(function() {
-        var backToTop = $('#back-to-top');
-        var doc = $(document);
-        var offset = backToTop.offset();
-        var marginTop = 90;
-        var showing = false;
-
-        positionBackToTop = function(reset) {
-          if (reset) {
-            backToTop.css({
-              top: '',
-              position: ''
-            });
-            offset = backToTop.offset();
-          }
-
-          if (!showing && doc.scrollTop() > offset.top+200) {
-            showing = true;
-            backToTop.css({
-              position: 'fixed',
-              top: 20,
-              left: offset.left,
-              display:' block'
-            });
-          } else if (showing && doc.scrollTop() <= offset.top+200) {
-            showing = false;
-            backToTop.css({
-              display:'none'
-            });
-          }
-        };
-
-        if (backToTop.length) {
-          backToTop.on('click', function(evt) {
-            $('html,body').animate({scrollTop: 0}, 200);
-            return false;
-          });
-
-          doc.on('scroll', function() {
-            positionBackToTop();
-          });
-        }
-
-        $('.bx-wrapper, .bx-window').width(940);
-      });
-    </script>
 
     <%= yield_content :head %>
   </head>
@@ -92,31 +42,12 @@
           <%= link_to_page "api", "/api" %>
           <%= link_to_page "community", "/community" %>
           <%= link_to_page "blog", "/blog" %>
-
           <li id="search">
             <form>
               <input type="text" id="st-search-input" class="st-search-input" />
             </form>
             <div id="st-results-container"></div>
-            <script type="text/javascript">
-              var Swiftype = window.Swiftype || {};
-              (function() {
-                Swiftype.key = 'HTNahKf4xmo8GgFbTz4n';
-                Swiftype.inputElement = '#st-search-input';
-                Swiftype.resultContainingElement = '#st-results-container';
-                Swiftype.attachElement = '#st-search-input';
-                Swiftype.renderStyle = "overlay";
-
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.async = true;
-                script.src = "//swiftype.com/embed.js";
-                var entry = document.getElementsByTagName('script')[0];
-                entry.parentNode.insertBefore(script, entry);
-              }());
-            </script>
           </li>
-
         </ul>
 
         <div id="github">
