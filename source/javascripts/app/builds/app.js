@@ -3,9 +3,11 @@ var App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-                this.route('release');
-                this.route('beta');
-                this.route('canary');
+  this.route('release');
+  this.route('beta');
+  this.route('canary');
+  this.route('tagged');
+  this.route('daily');
 });
 
 App.CopyClipboardComponent = Ember.Component.extend({
@@ -152,6 +154,35 @@ App.ReleaseRoute = Ember.Route.extend({
       endpoint: 's3.amazonaws.com',
       prefix: 'stable/',
       delimiter: '/',
+      useSSL: false
+    });
+    return bucket;
+  }
+});
+
+App.TaggedRoute = Ember.Route.extend({
+  model: function() {
+    var bucket = App.S3Bucket.create({
+      title: 'Tagged Release Builds',
+      bucket: 'builds.emberjs.com',
+      endpoint: 's3.amazonaws.com',
+      prefix: 'tags/',
+      delimiter: '',
+      useSSL: false
+    });
+    return bucket;
+  }
+});
+
+App.DailyRoute = Ember.Route.extend({
+  model: function() {
+    var bucket = App.S3Bucket.create({
+      title: 'Daily Release Builds',
+      bucket: 'builds.emberjs.com',
+      endpoint: 's3.amazonaws.com',
+      prefix: 'daily/',
+      delimiter: '',
+      marker: 'daily/' + moment().subtract('days', 5).format("YYYYMMDD"),
       useSSL: false
     });
     return bucket;
