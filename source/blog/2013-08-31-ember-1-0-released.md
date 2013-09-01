@@ -116,7 +116,7 @@ Teddy Zeenny's relentless work on the Ember Inspector has been some of the most
 awe-inspiring work we've seen in open source.
 
 The [Ember Inspector](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi) that ships with Ember 1.0 makes it easy to see how an
-Ember application is laid out, and and presents all of the naming conventions in an easy-to-read table.
+Ember application is laid out, and presents all of the naming conventions in an easy-to-read table.
 If you're using Ember Data, it also lets you see all of the records that your application has loaded at
 a glance.
 
