@@ -78,7 +78,11 @@
     </table>
   {{ else }}
     <br/>
-    <p>There are currently no builds for {{title}}. Please check back soon.</p>
+    {{#if isLoading}}
+      Loading...
+    {{else}}
+      <p>There are currently no builds for {{title}}. Please check back soon.</p>
+    {{/if}}
   {{/if}}
 </script>
 
