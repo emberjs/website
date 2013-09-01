@@ -326,6 +326,6 @@ leading up to Ember 1.0:
 * Teddy Zeenny, for the Ember Inspector
 * The 300 people who submitted code and documentation to Ember 1.0
 * The 131 people who submitted code and documentation to Ember Data 1.0 Beta 1
-* The 269 people who helped with [emberjs.com](emberjs.com)
+* The 269 people who helped with [emberjs.com](http://emberjs.com)
 
 Go forth and build great things!
