@@ -21,6 +21,15 @@ activate :api_docs,
   repo_url: 'https://github.com/emberjs/ember.js'
 
 ###
+# Build
+###
+
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+end
+
+###
 # Blog
 ###
 
