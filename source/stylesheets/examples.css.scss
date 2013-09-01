@@ -10,6 +10,33 @@
   border-radius:3px;
 }
 
+.example-loading {
+  ul {
+    margin-left: 0 !important;
+    li {
+      padding: 10px 0;
+
+      .issue-number {
+        float: left;
+        padding-right: 15px;
+        color: #888;
+      }
+
+      .author-name {
+        font-size: 12px;
+        margin-top: 6px;
+        a {
+          color: black;
+
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
+
 #content .example-highlight {
   background-image: url("/images/code_background.gif");
   -webkit-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
