@@ -1,3 +1,5 @@
+
+
 App.GravatarImageComponent = Ember.Component.extend({
   size: 200,
   email: '',
