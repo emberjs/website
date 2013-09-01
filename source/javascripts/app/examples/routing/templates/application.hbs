@@ -5,7 +5,7 @@
         <li><h2>Mailboxes</h2></li>
         {{#each}}
             <li>
-                {{#link-to "mailbox" this}}
+                {{#link-to "mailbox" this currentWhen="mailbox"}}
                     <span class="count">
                         {{messages.length}}
                     </span>
