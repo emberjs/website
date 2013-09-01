@@ -1,0 +1,44 @@
+#builds-application {
+  #sidebar {
+    width: 140px;
+    min-height: 400px;
+  }
+
+  .features {
+    margin-top: 15%;
+  }
+
+  .feature {
+    margin-left: 20px;
+  }
+
+  .table {
+    margin-top: 2em;
+    width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    thead {
+      th {
+        vertical-align: bottom;
+      }
+    }
+
+    th, td {
+      padding: 8px;
+      line-height: 20px;
+      text-align: left;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    td {
+      vertical-align: top;
+      border-top: 1px solid #dddddd;
+    }
+  }
+}
+

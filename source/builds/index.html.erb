@@ -1,0 +1,97 @@
+<% content_for :head do %>
+  <script type="text/javascript" src="/javascripts/builds.js"></script>
+<% end %>
+
+<div id="builds-application"></div>
+
+<script type="text/x-handlebars" data-template-name="application">
+  <div id="sidebar">
+    <ol id="toc-list">
+      <li class="level-1">{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'release'}}Release{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'beta'}}Beta{{/link-to}}</li>
+      <li class="level-1">{{#link-to 'canary'}}Canary{{/link-to}}</li>
+    </ol>
+  </div>
+
+  <div id="content" class="has-sidebar">
+    {{render 'mainIntro'}}
+
+    {{outlet}}
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="index">
+  <div class="features section">
+    <div class="feature">
+      {{#link-to 'release'}}
+      <img class="tomster" src="/images/tomster-sm.png" alt="Release Builds">
+      {{/link-to}}
+      <h2>Release</h2>
+      <p>Release builds have been hardend through our multi-tiered release process. These builds are perfect for use in production environments.</p>
+    </div>
+    <div class="feature">
+      {{#link-to 'beta'}}
+      <img class="tomster" src="/images/tomster-beta-sm.png" alt="Beta Builds">
+      {{/link-to}}
+      <h2>Beta</h2>
+      <p>Beta builds will incorporate new feature that are ready for more review. They will include new features that have been more thoroughly tested. We do not recommend using Beta builds in production.</p>
+    </div>
+    <div class="feature">
+      {{#link-to 'canary'}}
+      <img class="tomster" src="/images/tomster-under-construction-sm.png" alt="Canary Builds">
+      {{/link-to}}
+      <h2>Canary</h2>
+      <p>Canary builds are the bleeding edge of Ember development. Please do not use these builds unless you are absolutely certain that you need fixes and/or features not available in the Release or Beta builds.</p>
+    </div>
+  </div>
+</script>
+
+<script type="text/x-handlebars" data-template-name="_file_listing">
+  {{#if filesPresent }}
+    <table class="table">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Modified</th>
+          <th>Size</th>
+          <th>Quick Copy</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model.files}}
+          <tr>
+            <td><a {{bind-attr href=url }}>{{name}}</a></td>
+            <td>{{format-date-time lastModified}}</td>
+            <td>{{format-bytes size}}</td>
+            <td>{{copy-clipboard label="Url" text=url}} | {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{ else }}
+    <br/>
+    <p>There are currently no builds for {{title}}. Please check back soon.</p>
+  {{/if}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="release">
+  <h2>{{title}}</h2>
+  {{partial 'fileListing'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="beta">
+  <h2>{{title}}</h2>
+  {{partial 'fileListing'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="canary">
+  <h2>{{title}}</h2>
+  {{partial 'fileListing'}}
+</script>
+
+
+<script type="text/x-handlebars" data-template-name="components/copy-clipboard">
+  <a {{bindAttr data-clipboard-text=text}} title="Copy URL">{{label}}</a>
+</script>
+
