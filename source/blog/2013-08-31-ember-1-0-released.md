@@ -130,7 +130,7 @@ quirky behavior of Promises.
 A number of community members, especially Kris Selden, Erik Bryn and Robin Ward
 have done heroic work lately on performance.
 
-Over the years, the Ember's internals have been significantly sped up time and
+Over the years, Ember's internals have been significantly sped up time and
 time again, and we will continue to hone the performance of Ember going forward.
 
 In the 1.x timeframe, we have a number of ideas that should significantly
@@ -144,7 +144,7 @@ big believers in the idea that user confusion should be considered bug in the
 framework.
 
 Over the past year, we've significantly improved both the [API documentation][9]
-and the [Guides][10]. Trek Glowaki has led up the effort, which has resulted in
+and the [Guides][10]. Trek Glowacki has led up the effort, which has resulted in
 comprehensive coverage of how to use Ember, an excellent, up-to-date Getting
 Started Guide, and most recently, a Cookbook section for common scenarios.
 
