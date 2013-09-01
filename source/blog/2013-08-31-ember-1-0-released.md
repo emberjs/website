@@ -239,7 +239,7 @@ a number of companies over the years.
 * Yapp, whose employees have been working on Ember (and SproutCore before
   Ember) for years, and which has dedicated countless man-hours to making Ember
   better.
-* ZenDesk, an early user and contributor to Ember. Thank you for betting on
+* Zendesk, an early user and contributor to Ember. Thank you for betting on
   Ember as early as you did.
 * McGraw-Hill Education Labs, which has been funding Ember work for over a year,
   with great patience, resolve and vision.
