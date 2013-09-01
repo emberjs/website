@@ -165,6 +165,8 @@
   image: urbanspoon.png
 - url: http://basho.com
   image: basho.png
+- url: http://maginatics.com
+  image: maginatics.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
