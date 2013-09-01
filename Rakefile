@@ -1,3 +1,13 @@
+# Deploy with new API:
+# - rake preview
+# - visit http://0.0.0.0:4567 and verify everything was generated correctly
+# - ensure data/api.yml has the correct sha/tag, if not just simply update it and use middleman to re-preview
+
+# Deploy without updating the API:
+# - middleman
+# - visit http://0.0.0.0:4567 and verify everything was generated correctly
+# - rake deploy
+
 require "bundler/setup"
 require 'yaml'
 
