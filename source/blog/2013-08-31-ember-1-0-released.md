@@ -214,10 +214,11 @@ churning out a number of awesome Ember-related projects.
 * [The Ember Hot Seat][17]: A regular podcast brought to you by DeVaris Brown.
   It regularly features members of the Ember Core Team and prominent members of
   the Ember community.
-* [EmberWatch][23]: Owain Williams's EmberWatch Twitter account and website will
+* [EmberWatch][23]: Philip Poot's EmberWatch Twitter account and website will
   keep you up-to-date on the latest projects and news.
-* [Ember Weekly][24]: Also by the inimitable Owain Williams, Ember Weekly packs all
-  the Ember news that's fit to print into your inbox every week.
+* [Ember Weekly][24]: Ember Weekly, curated by the inimitable Owain
+  Williams, packs all the Ember news that's fit to print into your inbox
+  every week.
 * And way more projects. Keep an eye out on this blog, or follow us on the
   official @emberjs Twitter account. We plan to feature more projects like these
   in the future.
