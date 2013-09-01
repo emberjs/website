@@ -27,6 +27,7 @@ App.CopyClipboardComponent = Ember.Component.extend({
 App.S3Bucket = Ember.Object.extend({
 
   files: [],
+  isLoading: false,
 
   protocol: function() {
     return this.get('useSSL') ? 'https://' : 'http://';
@@ -76,7 +77,9 @@ App.S3Bucket = Ember.Object.extend({
     var self = this,
     baseUrl = this.get('baseUrl');
 
+    this.set('isLoading', true);
     Ember.$.get(this.get('url'), function(data){
+      self.set('isLoading', false);
       self.set('response', data);
 
       var contents = data.getElementsByTagName('Contents'),
@@ -189,7 +192,7 @@ App.DailyRoute = Ember.Route.extend({
   }
 });
 
-/* 
+/*
  * Handlebars Helpers
  */
 Ember.Handlebars.helper('format-bytes', function(bytes){
