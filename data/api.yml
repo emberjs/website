@@ -2,10 +2,19 @@
 project:
   name: The Ember API
   description: ! 'The Ember API: a framework for building ambitious web applications'
-  version: 1.0.0
+  version: 1.0 pre
   url: http://emberjs.com/
   sha: v1.0.0
 files:
+  ../packages/container/lib/main.js:
+    name: ../packages/container/lib/main.js
+    modules:
+      container: 1
+    classes:
+      InheritingDict: 1
+      Container: 1
+    fors: {}
+    namespaces: {}
   ../packages/ember-application/lib/ext/controller.js:
     name: ../packages/ember-application/lib/ext/controller.js
     modules:
@@ -971,7 +980,24 @@ files:
     classes: {}
     fors: {}
     namespaces: {}
+  ../packages/metamorph/lib/main.js:
+    name: ../packages/metamorph/lib/main.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
 modules:
+  container:
+    name: container
+    submodules: {}
+    classes:
+      InheritingDict: 1
+      Container: 1
+    fors: {}
+    namespaces: {}
+    tag: module
+    file: ../packages/container/lib/main.js
+    line: 127
   ember:
     name: ember
     submodules:
@@ -1318,6 +1344,32 @@ modules:
     requires:
     - name: ember-application
 classes:
+  InheritingDict:
+    name: InheritingDict
+    shortname: InheritingDict
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: container
+    namespace: ''
+    file: ../packages/container/lib/main.js
+    line: 16
+    description: A safe and simple inheriting object.
+  Container:
+    name: Container
+    shortname: Container
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: container
+    namespace: ''
+    file: ../packages/container/lib/main.js
+    line: 127
+    description: A lightweight container that helps to assemble and decouple components.
   Ember.ControllerMixin:
     name: Ember.ControllerMixin
     shortname: Ember.ControllerMixin
@@ -1429,7 +1481,7 @@ classes:
     description: ! "The DefaultResolver defines the default lookup rules to resolve\ncontainer
       lookups before consulting the container for registered\nitems:\n\n* templates
       are looked up on `Ember.TEMPLATES`\n* other names are looked up on the application
-      after converting\n  the name. For example, `controller:post` looks up\n  `App.PostController`
+      after converting\nthe name. For example, `controller:post` looks up\n`App.PostController`
       by default.\n* there are some nuances (see examples below)\n\n### How Resolving
       Works\n\nThe container calls this object's `resolve` method with the\n`fullName`
       argument.\n\nIt first parses the fullName into an object using `parseName`.\n\nThen
@@ -1628,10 +1680,10 @@ classes:
       and `value` property of each `<option>` element within the\n`<select>` element
       are populated from the objects in the `Element.Select`'s\n`content` property.
       The underlying data object of the selected `<option>` is\nstored in the `Element.Select`'s
-      `value` property.\n\n### `content` as an array of Strings\n\nThe simplest version
-      of an `Ember.Select` takes an array of strings as its\n`content` property. The
-      string will be used as both the `value` property and\nthe inner text of each
-      `<option>` element inside the rendered `<select>`.\n\nExample:\n\n```javascript\nApp.ApplicationController
+      `value` property.\n\n## The Content Property (array of strings)\n\nThe simplest
+      version of an `Ember.Select` takes an array of strings as its\n`content` property.
+      The string will be used as both the `value` property and\nthe inner text of
+      each `<option>` element inside the rendered `<select>`.\n\nExample:\n\n```javascript\nApp.ApplicationController
       = Ember.Controller.extend({\n  names: [\"Yehuda\", \"Tom\"]\n});\n```\n\n```handlebars\n{{view
       Ember.Select contentBinding=\"names\"}}\n```\n\nWould result in the following
       HTML:\n\n```html\n<select class=\"ember-select\">\n  <option value=\"Yehuda\">Yehuda</option>\n
@@ -1644,7 +1696,7 @@ classes:
       class=\"ember-select\">\n  <option value=\"Yehuda\">Yehuda</option>\n  <option
       value=\"Tom\" selected=\"selected\">Tom</option>\n</select>\n```\n\nA user interacting
       with the rendered `<select>` to choose \"Yehuda\" would\nupdate the value of
-      `selectedName` to \"Yehuda\".\n\n### `content` as an Array of Objects\n\nAn
+      `selectedName` to \"Yehuda\".\n\n## The Content Property (array of Objects)\n\nAn
       `Ember.Select` can also take an array of JavaScript or Ember objects as\nits
       `content` property.\n\nWhen using objects you need to tell the `Ember.Select`
       which property should\nbe accessed on each object to supply the `value` attribute
@@ -1682,7 +1734,7 @@ classes:
       \ <option value=\"1\">Yehuda</option>\n  <option value=\"2\" selected=\"selected\">Tom</option>\n</select>\n```\n\nInteracting
       with the rendered element by selecting the first option\n('Yehuda') will update
       the `selectedPerson` to match the object of \nthe newly selected `<option>`.
-      In this case it is the first object\nin the `programmers`\n\n### Supplying a
+      In this case it is the first object\nin the `programmers`\n\n## Supplying a
       Prompt\n\nA `null` value for the `Ember.Select`'s `value` or `selection` property\nresults
       in there being no `<option>` with a `selected` attribute:\n\n```javascript\nApp.ApplicationController
       = Ember.Controller.extend({\n  selectedProgrammer: null,\n  programmers: [\n
@@ -2932,7 +2984,7 @@ classes:
       the following json:\n{\n  firstName: 'Stefan',\n  lastName: 'Penner'\n}\n\n//
       both properties will accessible on the controller\ncontroller.get('firstName')
       //=> 'Stefan'\ncontroller.get('lastName')  //=> 'Penner'\n```\n\nIf the controller
-      is backing a template, the attributes are \nbindable from within that template\n```handlebars\n{{#if
+      is backing a template, the attributes are \nbindable from within that template\n\n```handlebars\n{{#if
       isPending}}\n  loading...\n{{else}}\n  firstName: {{firstName}}\n  lastName:
       {{lastName}}\n{{/if}}\n```"
   Ember.SortableMixin:
@@ -3920,6 +3972,682 @@ classes:
       additional information."
     extends: Ember.CoreView
 classitems:
+- file: ../packages/container/lib/main.js
+  line: 28
+  itemtype: property
+  name: parent
+  type: InheritingDict
+  default: 'null'
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 36
+  description: Object used to store the current nodes data.
+  itemtype: property
+  name: dict
+  type: Object
+  default: Object
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 45
+  description: ! 'Retrieve the value given a key, if the value is present at the current
+
+    level use it, otherwise walk up the parent hierarchy and try again. If
+
+    no matching key is found, return undefined.'
+  itemtype: method
+  name: get
+  return:
+    description: ''
+    type: Any
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 65
+  description: Set the given value for the given key, at the current level.
+  itemtype: method
+  name: set
+  params:
+  - name: key
+    description: ''
+    type: String
+  - name: value
+    description: ''
+    type: Any
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 76
+  description: Delete the given key
+  itemtype: method
+  name: remove
+  params:
+  - name: key
+    description: ''
+    type: String
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 86
+  description: ! 'Check for the existence of given a key, if the key is present at
+    the current
+
+    level return true, otherwise walk up the parent hierarchy and try again. If
+
+    no matching key is found, return false.'
+  itemtype: method
+  name: has
+  params:
+  - name: key
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: Boolean
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 109
+  description: Iterate and invoke a callback for each local key-value pair.
+  itemtype: method
+  name: eachLocal
+  params:
+  - name: callback
+    description: ''
+    type: Function
+  - name: binding
+    description: ''
+    type: Object
+  class: InheritingDict
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 153
+  itemtype: property
+  name: parent
+  type: Container
+  default: 'null'
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 160
+  itemtype: property
+  name: children
+  type: Array
+  default: ! '[]'
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 167
+  itemtype: property
+  name: resolver
+  type: function
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 173
+  itemtype: property
+  name: registry
+  type: InheritingDict
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 179
+  itemtype: property
+  name: cache
+  type: InheritingDict
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 185
+  itemtype: property
+  name: typeInjections
+  type: InheritingDict
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 191
+  itemtype: property
+  name: injections
+  type: Object
+  default: ! '{}'
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 198
+  access: private
+  tagname: ''
+  itemtype: property
+  name: _options
+  type: InheritingDict
+  default: 'null'
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 207
+  access: private
+  tagname: ''
+  itemtype: property
+  name: _typeOptions
+  type: InheritingDict
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 215
+  description: ! 'Returns a new child of the current container. These children are
+    configured
+
+    to correctly inherit from the current container.'
+  itemtype: method
+  name: child
+  return:
+    description: ''
+    type: Container
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 228
+  description: ! 'Sets a key-value pair on the current container. If a parent container,
+
+    has the same key, once set on a child, the parent and child will diverge
+
+    as expected.'
+  itemtype: method
+  name: set
+  params:
+  - name: object
+    description: ''
+    type: Object
+  - name: key
+    description: ''
+    type: String
+  - name: value
+    description: ''
+    type: Any
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 242
+  description: ! 'Registers a factory for later injection.
+
+
+    Example:
+
+
+    ```javascript
+
+    var container = new Container();
+
+
+    container.register(''model:user'', Person, {singleton: false });
+
+    container.register(''fruit:favorite'', Orange);
+
+    container.register(''communication:main'', Email, {singleton: false});
+
+    ```'
+  itemtype: method
+  name: register
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: name
+    description: ''
+    type: String
+  - name: factory
+    description: ''
+    type: Function
+  - name: options
+    description: ''
+    type: Object
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 279
+  description: ! 'Unregister a fullName
+
+
+    ```javascript
+
+    var container = new Container();
+
+    container.register(''model:user'', User);
+
+
+    container.lookup(''model:user'') instanceof User //=> true
+
+
+    container.unregister(''model:user'')
+
+    container.lookup(''model:user'') === undefined //=> true
+
+    ```'
+  itemtype: method
+  name: unregister
+  params:
+  - name: fullName
+    description: ''
+    type: String
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 304
+  description: ! "Given a fullName return the corresponding factory.\n\nBy default
+    `resolve` will retrieve the factory from\nits container's registry.\n\n```javascript\nvar
+    container = new Container();\ncontainer.register('api:twitter', Twitter);\n\ncontainer.resolve('api:twitter')
+    // => Twitter\n```\n\nOptionally the container can be provided with a custom resolver.\nIf
+    provided, `resolve` will first provide the custom resolver\nthe oppertunity to
+    resolve the fullName, otherwise it will fallback\nto the registry.\n\n```javascript\nvar
+    container = new Container();\ncontainer.resolver = function(fullName) {\n  //
+    lookup via the module system of choice\n};\n\n// the twitter factory is added
+    to the module system\ncontainer.resolve('api:twitter') // => Twitter\n```"
+  itemtype: method
+  name: resolve
+  params:
+  - name: fullName
+    description: ''
+    type: String
+  return:
+    description: fullName's factory
+    type: Function
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 340
+  description: ! 'A hook that can be used to describe how the resolver will
+
+    attempt to find the factory.
+
+
+    For example, the default Ember `.describe` returns the full
+
+    class name (including namespace) where Ember''s resolver expects
+
+    to find the `fullName`.'
+  itemtype: method
+  name: describe
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 354
+  description: A hook to enable custom fullName normalization behaviour
+  itemtype: method
+  name: normalize
+  params:
+  - name: fullName
+    description: ''
+    type: String
+  return:
+    description: normalized fullName
+    type: String
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 365
+  itemtype: method
+  name: makeToString
+  params:
+  - name: factory
+    description: ''
+    type: Any
+  - name: fullNae
+    description: ''
+    type: String
+  return:
+    description: toString function
+    type: Function
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 376
+  description: ! 'Given a fullName return a corresponding instance.
+
+
+    The default behaviour is for lookup to return a singleton instance.
+
+    The singleton is scoped to the container, allowing multiple containers
+
+    to all have their own locally scoped singletons.
+
+
+    ```javascript
+
+    var container = new Container();
+
+    container.register(''api:twitter'', Twitter);
+
+
+    var twitter = container.lookup(''api:twitter'');
+
+
+    twitter instanceof Twitter; // => true
+
+
+    // by default the container will return singletons
+
+    twitter2 = container.lookup(''api:twitter'');
+
+    twitter instanceof Twitter; // => true
+
+
+    twitter === twitter2; //=> true
+
+    ```
+
+
+    If singletons are not wanted an optional flag can be provided at lookup.
+
+
+    ```javascript
+
+    var container = new Container();
+
+    container.register(''api:twitter'', Twitter);
+
+
+    var twitter = container.lookup(''api:twitter'', { singleton: false });
+
+    var twitter2 = container.lookup(''api:twitter'', { singleton: false });
+
+
+    twitter === twitter2; //=> false
+
+    ```'
+  itemtype: method
+  name: lookup
+  params:
+  - name: fullName
+    description: ''
+    type: String
+  - name: options
+    description: ''
+    type: Object
+  return:
+    description: ''
+    type: Any
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 435
+  description: Given a fullName return the corresponding factory.
+  itemtype: method
+  name: lookupFactory
+  params:
+  - name: fullName
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: Any
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 446
+  description: ! 'Given a fullName check if the container is aware of its factory
+
+    or singleton instance.'
+  itemtype: method
+  name: has
+  params:
+  - name: fullName
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: Boolean
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 462
+  description: ! 'Allow registering options for all factories of a type.
+
+
+    ```javascript
+
+    var container = new Container();
+
+
+    // if all of type `connection` must not be singletons
+
+    container.optionsForType(''connection'', { singleton: false });
+
+
+    container.register(''connection:twitter'', TwitterConnection);
+
+    container.register(''connection:facebook'', FacebookConnection);
+
+
+    var twitter = container.lookup(''connection:twitter'');
+
+    var twitter2 = container.lookup(''connection:twitter'');
+
+
+    twitter === twitter2; // => false
+
+
+    var facebook = container.lookup(''connection:facebook'');
+
+    var facebook2 = container.lookup(''connection:facebook'');
+
+
+    facebook === facebook2; // => false
+
+    ```'
+  itemtype: method
+  name: optionsForType
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: options
+    description: ''
+    type: Object
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 495
+  itemtype: method
+  name: options
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: options
+    description: ''
+    type: Object
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 504
+  access: private
+  tagname: ! 'Used only via `injection`.
+
+
+    Provides a specialized form of injection, specifically enabling
+
+    all objects of one type to be injected with a reference to another
+
+    object.
+
+
+    For example, provided each object of type `controller` needed a `router`.
+
+    one would do the following:
+
+
+    ```javascript
+
+    var container = new Container();
+
+
+    container.register(''router:main'', Router);
+
+    container.register(''controller:user'', UserController);
+
+    container.register(''controller:post'', PostController);
+
+
+    container.typeInjection(''controller'', ''router'', ''router:main'');
+
+
+    var user = container.lookup(''controller:user'');
+
+    var post = container.lookup(''controller:post'');
+
+
+    user.router instanceof Router; //=> true
+
+    post.router instanceof Router; //=> true
+
+
+    // both controllers share the same router
+
+    user.router === post.router; //=> true
+
+    ```'
+  itemtype: method
+  name: typeInjection
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: property
+    description: ''
+    type: String
+  - name: fullName
+    description: ''
+    type: String
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 546
+  description: ! "Defines injection rules.\n\nThese rules are used to inject dependencies
+    onto objects when they\nare instantiated.\n\nTwo forms of injections are possible:\n\n
+    \     * Injecting one fullName on another fullName\n      * Injecting one fullName
+    on a type\n\nExample:\n\n```javascript\nvar container = new Container();\n\ncontainer.register('source:main',
+    Source);\ncontainer.register('model:user', User);\ncontainer.register('model:post',
+    Post);\n\n// injecting one fullName on another fullName\n// eg. each user model
+    gets a post model\ncontainer.injection('model:user', 'post', 'model:post');\n\n//
+    injecting one fullName on another type\ncontainer.injection('model', 'source',
+    'source:main');\n\nvar user = container.lookup('model:user');\nvar post = container.lookup('model:post');\n\nuser.source
+    instanceof Source; //=> true\npost.source instanceof Source; //=> true\n\nuser.post
+    instanceof Post; //=> true\n\n// and both models share the same source\nuser.source
+    === post.source; //=> true\n```"
+  itemtype: method
+  name: injection
+  params:
+  - name: factoryName
+    description: ''
+    type: String
+  - name: property
+    description: ''
+    type: String
+  - name: injectionName
+    description: ''
+    type: String
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 601
+  access: private
+  tagname: ! 'Used only via `factoryInjection`.
+
+
+    Provides a specialized form of injection, specifically enabling
+
+    all factory of one type to be injected with a reference to another
+
+    object.
+
+
+    For example, provided each factory of type `model` needed a `store`.
+
+    one would do the following:
+
+
+    ```javascript
+
+    var container = new Container();
+
+
+    container.registerFactory(''model:user'', User);
+
+    container.register(''store:main'', SomeStore);
+
+
+    container.factoryTypeInjection(''model'', ''store'', ''store:main'');
+
+
+    var store = container.lookup(''store:main'');
+
+    var UserFactory = container.lookupFactory(''model:user'');
+
+
+    UserFactory.store instanceof SomeStore; //=> true
+
+    ```'
+  itemtype: method
+  name: factoryTypeInjection
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: property
+    description: ''
+    type: String
+  - name: fullName
+    description: ''
+    type: String
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 638
+  description: ! "Defines factory injection rules.\n\nSimilar to regular injection
+    rules, but are run against factories, via\n`Container#lookupFactory`.\n\nThese
+    rules are used to inject objects onto factories when they\nare looked up.\n\nTwo
+    forms of injections are possible:\n\n      * Injecting one fullName on another
+    fullName\n      * Injecting one fullName on a type\n\nExample:\n\n```javascript\nvar
+    container = new Container();\n\ncontainer.register('store:main', Store);\ncontainer.register('store:secondary',
+    OtherStore);\ncontainer.register('model:user', User);\ncontainer.register('model:post',
+    Post);\n\n// injecting one fullName on another type\ncontainer.factoryInjection('model',
+    'store', 'store:main');\n\n// injecting one fullName on another fullName\ncontainer.factoryInjection('model:post',
+    'secondaryStore', 'store:secondary');\n\nvar UserFactory = container.lookupFactory('model:user');\nvar
+    PostFactory = container.lookupFactory('model:post');\nvar store = container.lookup('store:main');\n\nUserFactory.store
+    instanceof Store; //=> true\nUserFactory.secondaryStore instanceof OtherStore;
+    //=> false\n\nPostFactory.store instanceof Store; //=> true\nPostFactory.secondaryStore
+    instanceof OtherStore; //=> true\n\n// and both models share the same source instance\nUserFactory.store
+    === PostFactory.store; //=> true\n```"
+  itemtype: method
+  name: factoryInjection
+  params:
+  - name: factoryName
+    description: ''
+    type: String
+  - name: property
+    description: ''
+    type: String
+  - name: injectionName
+    description: ''
+    type: String
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 697
+  description: ! 'A depth first traversal, destroying the container, its descendant
+    containers and all
+
+    their managed objects.'
+  itemtype: method
+  name: destroy
+  class: Container
+  module: container
+- file: ../packages/container/lib/main.js
+  line: 720
+  itemtype: method
+  name: reset
+  class: Container
+  module: container
 - file: ../packages/ember-application/lib/ext/controller.js
   line: 31
   description: ! "An array of other controller objects available inside\ninstances
@@ -4284,10 +5012,9 @@ classitems:
 - file: ../packages/ember-application/lib/system/application.js
   line: 610
   access: private
-  tagname: ! 'If the application has a router, use it to route to the current URL,
-    and
+  tagname: ! 'trigger a new call to `route` whenever the URL changes.
 
-    trigger a new call to `route` whenever the URL changes.'
+    If the application has a router, use it to route to the current URL, and'
   itemtype: property
   name: router
   type: Ember.Router
@@ -4309,8 +5036,9 @@ classitems:
 - file: ../packages/ember-application/lib/system/application.js
   line: 640
   deprecated: true
-  deprecationMessage: ! "Use 'Resolver' instead\n    Set this to provide an alternate
-    class to `Ember.DefaultResolver`"
+  deprecationMessage: ! 'Use ''Resolver'' instead
+
+    Set this to provide an alternate class to `Ember.DefaultResolver`'
   itemtype: property
   name: resolver
   class: Ember.Application
@@ -4709,7 +5437,7 @@ classitems:
   submodule: ember-handlebars-compiler
   namespace: Ember
 - file: ../packages/ember-handlebars-compiler/lib/main.js
-  line: 163
+  line: 162
   access: private
   tagname: ! 'Override the default buffer for Ember Handlebars. By default, Handlebars
 
@@ -4727,7 +5455,7 @@ classitems:
   submodule: ember-handlebars-compiler
   namespace: Ember.Handlebars
 - file: ../packages/ember-handlebars-compiler/lib/main.js
-  line: 179
+  line: 178
   access: private
   tagname: ! 'Rewrite simple mustaches from `{{foo}}` to `{{bind "foo"}}`. This means
     that
@@ -4745,7 +5473,7 @@ classitems:
   submodule: ember-handlebars-compiler
   namespace: Ember.Handlebars
 - file: ../packages/ember-handlebars-compiler/lib/main.js
-  line: 212
+  line: 211
   description: ! 'Used for precompilation of Ember Handlebars templates. This will
     not be used
 
@@ -4762,7 +5490,7 @@ classitems:
   submodule: ember-handlebars-compiler
   namespace: Ember
 - file: ../packages/ember-handlebars-compiler/lib/main.js
-  line: 243
+  line: 242
   description: ! 'The entry point for Ember Handlebars. This replaces the default
 
     `Handlebars.compile` and turns on template-local data and String
@@ -5930,34 +6658,34 @@ classitems:
     \ `text` will be the default value applied. The attributes of `{{input}}`\n  match
     those of the native HTML tag as closely as possible for these two types.\n## Use
     as text field\n  An `{{input}}` with no `type` or a `type` of `text` will render
-    an HTML text input.\n  The following HTML attributes can be set via the helper:\n
-    \ * `value`\n    * `size`\n    * `name`\n    * `pattern`\n    * `placeholder`\n
-    \   * `disabled`\n    * `maxlength`\n    * `tabindex`\nWhen set to a quoted string,
-    these values will be directly applied to the HTML\n  element. When left unquoted,
-    these values will be bound to a property on the\n  template's current rendering
-    context (most typically a controller instance).\nUnbound:\n```handlebars\n  {{input
-    value=\"http://www.facebook.com\"}}\n  ```\n```html\n  <input type=\"text\" value=\"http://www.facebook.com\"/>\n
-    \ ```\nBound:\n```javascript\n  App.ApplicationController = Ember.Controller.extend({\n
-    \   firstName: \"Stanley\",\n    entryNotAllowed: true\n  });\n  ```\n```handlebars\n
-    \ {{input type=\"text\" value=firstName disabled=entryNotAllowed size=\"50\"}}\n
-    \ ```\n```html\n  <input type=\"text\" value=\"Stanley\" disabled=\"disabled\"
-    size=\"50\"/>\n  ```\n### Extension\n  Internally, `{{input type=\"text\"}}` creates
-    an instance of `Ember.TextField`, passing\n  arguments from the helper to `Ember.TextField`'s
-    `create` method. You can extend the\n  capablilties of text inputs in your applications
-    by reopening this class. For example,\n  if you are deploying to browsers where
-    the `required` attribute is used, you\n  can add this to the `TextField`'s `attributeBindings`
-    property:\n```javascript\n  Ember.TextField.reopen({\n    attributeBindings: ['required']\n
-    \ });\n  ```\n## Use as checkbox\n  An `{{input}}` with a `type` of `checkbox`
-    will render an HTML checkbox input.\n  The following HTML attributes can be set
-    via the helper:\n  * `checked`\n    * `disabled`\n    * `tabindex`\n    * `indeterminate`\n
-    \   * `name`\nWhen set to a quoted string, these values will be directly applied
+    an HTML text input.\n  The following HTML attributes can be set via the helper:\n\n*
+    `value`\n* `size`\n* `name`\n* `pattern`\n* `placeholder`\n* `disabled`\n* `maxlength`\n*
+    `tabindex`\n\nWhen set to a quoted string, these values will be directly applied
     to the HTML\n  element. When left unquoted, these values will be bound to a property
-    on the\n  template's current rendering context (most typically a controller instance).\nUnbound:\n```handlebars\n
+    on the\n  template's current rendering context (most typically a controller instance).\n##
+    Unbound:\n```handlebars\n  {{input value=\"http://www.facebook.com\"}}\n  ```\n\n```html\n
+    \ <input type=\"text\" value=\"http://www.facebook.com\"/>\n  ```\n## Bound:\n```javascript\n
+    \ App.ApplicationController = Ember.Controller.extend({\n    firstName: \"Stanley\",\n
+    \   entryNotAllowed: true\n  });\n  ```\n\n```handlebars\n  {{input type=\"text\"
+    value=firstName disabled=entryNotAllowed size=\"50\"}}\n  ```\n\n```html\n  <input
+    type=\"text\" value=\"Stanley\" disabled=\"disabled\" size=\"50\"/>\n  ```\n##
+    Extension\nInternally, `{{input type=\"text\"}}` creates an instance of `Ember.TextField`,
+    passing\n  arguments from the helper to `Ember.TextField`'s `create` method. You
+    can extend the\n  capablilties of text inputs in your applications by reopening
+    this class. For example,\n  if you are deploying to browsers where the `required`
+    attribute is used, you\n  can add this to the `TextField`'s `attributeBindings`
+    property:\n```javascript\n  Ember.TextField.reopen({\n    attributeBindings: ['required']\n
+    \ });\n  ```\n## Use as checkbox\nAn `{{input}}` with a `type` of `checkbox` will
+    render an HTML checkbox input.\n  The following HTML attributes can be set via
+    the helper:\n\n* `checked`\n* `disabled`\n* `tabindex`\n* `indeterminate`\n* `name`\nWhen
+    set to a quoted string, these values will be directly applied to the HTML\n  element.
+    When left unquoted, these values will be bound to a property on the\n  template's
+    current rendering context (most typically a controller instance).\n## Unbound:\n```handlebars\n
     \ {{input type=\"checkbox\" name=\"isAdmin\"}}\n  ```\n```html\n  <input type=\"checkbox\"
-    name=\"isAdmin\" />\n  ```\nBound:\n```javascript\n  App.ApplicationController
-    = Ember.Controller.extend({\n    isAdmin: true\n  });\n  ```\n```handlebars\n
-    \ {{input type=\"checkbox\" checked=isAdmin }}\n  ```\n```html\n  <input type=\"checkbox\"
-    checked=\"checked\" />\n  ```\n### Extension\n  Internally, `{{input type=\"checkbox\"}}`
+    name=\"isAdmin\" />\n  ```\n## Bound:\n```javascript\n  App.ApplicationController
+    = Ember.Controller.extend({\n    isAdmin: true\n  });\n  ```\n\n```handlebars\n
+    \ {{input type=\"checkbox\" checked=isAdmin }}\n  ```\n\n```html\n  <input type=\"checkbox\"
+    checked=\"checked\" />\n  ```\n## Extension\nInternally, `{{input type=\"checkbox\"}}`
     creates an instance of `Ember.Checkbox`, passing\n  arguments from the helper
     to `Ember.Checkbox`'s `create` method. You can extend the\n  capablilties of checkbox
     inputs in your applications by reopening this class. For example,\n  if you wanted
@@ -5971,10 +6699,10 @@ classitems:
     type: Hash
   class: Ember.Handlebars.helpers
   module: ember
-  submodule: ember-handlebars
+  submodule: ember-handlebars-compiler
   namespace: Ember.Handlebars
 - file: ../packages/ember-handlebars/lib/controls.js
-  line: 163
+  line: 172
   description: ! "`{{textarea}}` inserts a new instance of `<textarea>` tag into the
     template.\nThe attributes of `{{textarea}}` match those of the native HTML tags
     as\nclosely as possible.\n\nThe following HTML attributes can be set:\n\n  * `value`\n
@@ -6008,7 +6736,7 @@ classitems:
     value=writtenWords}}\n{{textarea value=twoWayWrittenWords}}\n```\n\n```html\n<textarea
     id=\"ember1\" class=\"ember-text-area\">\n  Lots of text that IS bound\n</textarea>\n\n<--
     both updated in real time -->\n\n<textarea id=\"ember2\" class=\"ember-text-area\">\n
-    \ Lots of text that IS bound\n</textarea>\n```\n\n### Extension\n\nInternally,
+    \ Lots of text that IS bound\n</textarea>\n```\n\n## Extension\n\nInternally,
     `{{textarea}}` creates an instance of `Ember.TextArea`, passing\narguments from
     the helper to `Ember.TextArea`'s `create` method. You can\nextend the capabilities
     of text areas in your application by reopening this\nclass. For example, if you
@@ -6025,7 +6753,7 @@ classitems:
     type: Hash
   class: Ember.Handlebars.helpers
   module: ember
-  submodule: ember-handlebars
+  submodule: ember-handlebars-compiler
   namespace: Ember.Handlebars
 - file: ../packages/ember-handlebars/lib/ext.js
   line: 5
@@ -9879,12 +10607,14 @@ classitems:
   tagname: ! 'This method is invoked by observers installed during `init` that fire
 
     whenever the helpers'
+  itemtype: method
+  name: _paramsChanged
   class: Ember.LinkView
   module: ember
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 212
+  line: 213
   access: private
   tagname: ! 'Even though this isn''t a virtual view, we want to treat it as if it
     is
@@ -9897,7 +10627,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 224
+  line: 225
   description: ! "Accessed as a classname binding to apply the `LinkView`'s `disabledClass`\n
     \     CSS `class` to the element when the link is disabled.\nWhen `true` interactions
     with the element will not trigger route changes."
@@ -9908,7 +10638,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 238
+  line: 239
   description: ! 'Accessed as a classname binding to apply the `LinkView`''s `activeClass`
 
     CSS `class` to the element when the link is active.
@@ -9926,7 +10656,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 263
+  line: 264
   description: ! 'Accessed as a classname binding to apply the `LinkView`''s `loadingClass`
 
     CSS `class` to the element when the link is loading.
@@ -9946,7 +10676,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 278
+  line: 279
   access: private
   tagname: Returns the application's main router from the container.
   itemtype: property
@@ -9956,7 +10686,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 289
+  line: 290
   access: private
   tagname: Event handler that invokes the link, activating the associated route.
   itemtype: method
@@ -9970,7 +10700,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 320
+  line: 321
   access: private
   tagname: Computed property that returns the resolved parameters.
   itemtype: property
@@ -9983,7 +10713,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 337
+  line: 338
   access: private
   tagname: ! 'Computed property that returns the current route name and
 
@@ -9998,7 +10728,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 370
+  line: 371
   description: ! 'Sets the element''s `href` attribute to the url for
 
     the `LinkView`''s targeted route.
@@ -10014,7 +10744,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 388
+  line: 389
   description: ! 'The default href value to use while a link-to is loading.
 
     Only applies when tagName is ''a'''
@@ -10027,7 +10757,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 401
+  line: 402
   description: ! "The `{{link-to}}` helper renders a link to the supplied\n`routeName`
     passing an optionally supplied model to the\nroute as its `model` context of the
     route. The block\nfor `{{link-to}}` becomes the innerHTML of the rendered\nelement:\n\n```handlebars\n{{#link-to
@@ -10103,7 +10833,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember.Handlebars
 - file: ../packages/ember-routing/lib/helpers/link_to.js
-  line: 597
+  line: 598
   description: See `link-to`
   itemtype: method
   name: linkTo
@@ -10707,12 +11437,14 @@ classitems:
   line: 256
   deprecated: true
   deprecationMessage: Please use `actions` instead.
+  itemtype: method
+  name: events
   class: Ember.Route
   module: ember
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 265
+  line: 266
   description: ! 'This hook is executed when the router completely exits this route.
     It is
 
@@ -10724,7 +11456,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 273
+  line: 274
   description: ! 'This hook is executed when the router enters the route for the first
     time.
 
@@ -10736,7 +11468,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 281
+  line: 282
   description: ! "Transition into another route. Optionally supply a model for the\nroute
     in question. The model will be serialized into the URL\nusing the `serialize`
     hook.\n\nExample\n\n```javascript\nApp.Router.map(function() {\n  this.route(\"index\");\n
@@ -10758,7 +11490,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 316
+  line: 317
   description: ! "Transition into another route while replacing the current URL if\npossible.
     Identical to `transitionTo` in all other respects.\n\nExample\n\n```javascript\nApp.Router.map(function()
     {\n  this.route(\"index\");\n  this.route(\"secret\");\n});\n\nApp.SecretRoute
@@ -10778,7 +11510,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 346
+  line: 347
   description: ! "Sends an action to the router, which will delegate it to the currently\nactive
     route hierarchy per the bubbling rules explained under `actions`.\n\nExample\n\n```javascript\nApp.Router.map(function()
     {\n  this.route(\"index\");\n});\n\nApp.ApplicationRoute = Ember.Route.extend({\n
@@ -10800,7 +11532,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 384
+  line: 385
   access: private
   tagname: This hook is the entry point for router.js
   itemtype: method
@@ -10810,7 +11542,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 417
+  line: 418
   deprecated: true
   deprecationMessage: ! 'A hook you can implement to optionally redirect to another
     route.
@@ -10835,7 +11567,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 433
+  line: 434
   description: ! "This hook is the first of the route entry validation hooks\ncalled
     when an attempt is made to transition into a route\nor one of its children. It
     is called before `model` and\n`afterModel`, and is appropriate for cases when:\n\n1)
@@ -10882,7 +11614,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 511
+  line: 512
   description: ! "This hook is called after this route's model has resolved.\nIt follows
     identical async/promise semantics to `beforeModel`\nbut is provided the route's
     resolved model in addition to\nthe `transition`, and is therefore suited to performing\nlogic
@@ -10911,7 +11643,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 547
+  line: 548
   access: private
   tagname: Called when the context is changed by router.js.
   itemtype: method
@@ -10921,7 +11653,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 558
+  line: 559
   description: ! "A hook you can implement to convert the URL into the model for\nthis
     route.\n\n```js\nApp.Router.map(function() {\n  this.resource('post', {path: '/posts/:post_id'});\n});\n```\n\nThe
     model for the `post` route is `App.Post.find(params.post_id)`.\n\nBy default,
@@ -10956,7 +11688,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 624
+  line: 625
   itemtype: method
   name: findModel
   params:
@@ -10971,7 +11703,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 635
+  line: 636
   description: ! 'Store property provides a hook for data persistence libraries to
     inject themselves.
 
@@ -10996,7 +11728,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 664
+  line: 665
   description: ! "A hook you can implement to convert the route's model into parameters\nfor
     the URL.\n\n```js\nApp.Router.map(function() {\n  this.resource('post', {path:
     '/posts/:post_id'});\n});\n\nApp.PostRoute = Ember.Route.extend({\n  model: function(params)
@@ -11026,7 +11758,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 714
+  line: 715
   description: ! "A hook you can use to setup the controller for the current route.\n\nThis
     method is called with the controller for the current route and the\nmodel supplied
     by the `model` hook.\n\nBy default, the `setupController` hook sets the `content`
@@ -11057,7 +11789,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 767
+  line: 768
   description: ! "Returns the controller for a particular route or name.\n\nThe controller
     instance must already have been created, either through entering the\nassociated
     route or using `generateController`.\n\n```js\nApp.PostRoute = Ember.Route.extend({\n
@@ -11077,7 +11809,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 805
+  line: 806
   description: ! "Generates a controller for a route.\n\nIf the optional model is
     passed then the controller type is determined automatically,\ne.g., an ArrayController
     for arrays.\n\nExample\n\n```js\nApp.PostRoute = Ember.Route.extend({\n  setupController:
@@ -11097,7 +11829,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 834
+  line: 835
   description: ! "Returns the current model for a given route.\n\nThis is the object
     returned by the `model` hook of the route\nin question.\n\nExample\n\n```js\nApp.Router.map(function()
     {\n    this.resource('post', { path: '/post/:post_id' }, function() {\n        this.resource('comments');\n
@@ -11117,7 +11849,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 877
+  line: 878
   description: ! "A hook you can use to render the template for the current route.\n\nThis
     method is called with the controller for the current route and the\nmodel supplied
     by the `model` hook. By default, it renders the route's\ntemplate, configured
@@ -11141,7 +11873,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 911
+  line: 912
   description: ! "Renders a template into an outlet.\n\nThis method has a number of
     defaults, based on the name of the\nroute specified in the router.\n\nFor example:\n\n```js\nApp.Router.map(function()
     {\n  this.route('index');\n  this.resource('post', {path: '/posts/:post_id'});\n});\n\nApp.PostRoute
@@ -11171,7 +11903,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 1001
+  line: 1002
   description: ! "Disconnects a view that has been rendered into an outlet.\n\nYou
     may pass any or all of the following options to `disconnectOutlet`:\n\n* `outlet`:
     the name of the outlet to clear (default: 'main')\n* `parentView`: the name of
@@ -11192,7 +11924,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: ../packages/ember-routing/lib/system/route.js
-  line: 1047
+  line: 1048
   access: private
   tagname: ''
   itemtype: method
@@ -16016,15 +16748,17 @@ classitems:
     `callback` will be called for each operation and will be passed the following
     arguments:
 
-    - {array} items The items for the given operation
 
-    - {number} offset The computed offset of the items, ie the index in the
+    * {array} items The items for the given operation
+
+    * {number} offset The computed offset of the items, ie the index in the
 
     array of the first item for this operation.
 
-    - {string} operation The type of the operation.  One of
+    * {string} operation The type of the operation.  One of `Ember.TrackedArray.{RETAIN,
+    DELETE, INSERT}`
 
-    `Ember.TrackedArray.{RETAIN, DELETE, INSERT}`'
+    *'
   itemtype: method
   name: apply
   params:
@@ -18443,3 +19177,13 @@ classitems:
   class: Ember
   module: ember
   submodule: ember-views
+- file: ../packages/metamorph/lib/main.js
+  line: 123
+  access: public
+  tagname: ! 'Remove this object (including starting and ending
+
+    placeholders).'
+  itemtype: method
+  name: remove
+  class: ''
+  module: ember
