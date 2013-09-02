@@ -3,11 +3,22 @@ var App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-  this.route('release');
-  this.route('beta');
-  this.route('canary');
+  this.resource('release', function(){
+    this.route('latest');
+    this.route('daily');
+  });
+
+  this.resource('beta', function(){
+    this.route('latest');
+    this.route('daily');
+  });
+
+  this.resource('canary', function(){
+    this.route('latest');
+    this.route('daily');
+  });
+
   this.route('tagged');
-  this.route('daily');
 });
 
 App.CopyClipboardComponent = Ember.Component.extend({
@@ -28,6 +39,13 @@ App.S3Bucket = Ember.Object.extend({
 
   files: [],
   isLoading: false,
+
+  // Setup these as default values.
+  // They can be overridden on create.
+  useSSL: false,
+  delimiter: '/',
+  bucket: 'builds.emberjs.com',
+  endpoint: 's3.amazonaws.com',
 
   protocol: function() {
     return this.get('useSSL') ? 'https://' : 'http://';
@@ -121,72 +139,64 @@ App.S3File = Ember.Object.extend({
   }.property('baseUrl', 'relativePath')
 });
 
-App.BetaRoute = Ember.Route.extend({
+App.BetaLatestRoute = Ember.Route.extend({
   model: function() {
-    var bucket = App.S3Bucket.create({
-      title: 'Latest Beta Builds',
-      bucket: 'builds.emberjs.com',
-      endpoint: 's3.amazonaws.com',
-      prefix: 'beta/',
-      delimiter: '/',
-      useSSL: false
-    });
-    return bucket;
+    return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
 });
 
-App.CanaryRoute = Ember.Route.extend({
+App.BetaDailyRoute = Ember.Route.extend({
   model: function() {
-    var bucket = App.S3Bucket.create({
-      title: 'Latest Canary Builds',
-      bucket: 'builds.emberjs.com',
-      endpoint: 's3.amazonaws.com',
-      prefix: 'latest/',
-      delimiter: '/',
-      useSSL: false
+    return App.S3Bucket.create({
+      title: 'Beta Builds',
+      delimiter: '',
+      prefix: 'beta/daily',
+      marker: 'beta/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
     });
-    return bucket;
   }
 });
 
-App.ReleaseRoute = Ember.Route.extend({
+App.CanaryLatestRoute = Ember.Route.extend({
   model: function() {
-    var bucket = App.S3Bucket.create({
-      title: 'Latest Release Builds',
-      bucket: 'builds.emberjs.com',
-      endpoint: 's3.amazonaws.com',
-      prefix: 'stable/',
-      delimiter: '/',
-      useSSL: false
-    });
-    return bucket;
+    return App.S3Bucket.create({title: 'Canary Builds', prefix: 'latest/',});
   }
 });
+
+App.CanaryDailyRoute = Ember.Route.extend({
+  model: function() {
+    return App.S3Bucket.create({
+      title: 'Canary Builds',
+      delimiter: '',
+      prefix: 'canary/daily',
+      marker: 'canary/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
+    });
+  }
+});
+
+App.ReleaseLatestRoute = Ember.Route.extend({
+  model: function() {
+    return App.S3Bucket.create({title: 'Release Builds', prefix: 'stable/'});
+  }
+});
+
+App.ReleaseDailyRoute = Ember.Route.extend({
+  model: function() {
+    return App.S3Bucket.create({
+      title: 'Release Builds',
+      delimiter: '',
+      prefix: 'stable/daily',
+      marker: 'stable/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
+    });
+  }
+});
+
 
 App.TaggedRoute = Ember.Route.extend({
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
-      bucket: 'builds.emberjs.com',
-      endpoint: 's3.amazonaws.com',
       prefix: 'tags/',
       delimiter: '',
-      useSSL: false
-    });
-    return bucket;
-  }
-});
-
-App.DailyRoute = Ember.Route.extend({
-  model: function() {
-    var bucket = App.S3Bucket.create({
-      title: 'Daily Release Builds',
-      bucket: 'builds.emberjs.com',
-      endpoint: 's3.amazonaws.com',
-      prefix: 'daily/',
-      delimiter: '',
-      marker: 'daily/' + moment().subtract('days', 5).format("YYYYMMDD"),
-      useSSL: false
     });
     return bucket;
   }
