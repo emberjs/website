@@ -1,4 +1,4 @@
-TodoMVC has a few dependecnies:
+TodoMVC has a few dependencies:
   
   * [jQuery](http://code.jquery.com/jquery-1.10.2.min.js)
   * [Handlebars](http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-1.0.0.js)
