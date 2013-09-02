@@ -12,12 +12,11 @@
       <li class="level-1">
         <a>Channels</a>
         <ol style="display:block">
-          <li class="level-3">{{#link-to 'release'}}Release{{/link-to}}</li>
-          <li class="level-3">{{#link-to 'beta'}}Beta{{/link-to}}</li>
-          <li class="level-3">{{#link-to 'canary'}}Canary{{/link-to}}</li>
+          <li class="level-3">{{#link-to 'release.latest'}}Release{{/link-to}}</li>
+          <li class="level-3">{{#link-to 'beta.latest'}}Beta{{/link-to}}</li>
+          <li class="level-3">{{#link-to 'canary.latest'}}Canary{{/link-to}}</li>
         </ol>
       </li>
-      <li class="level-1">{{#link-to 'daily'}}Daily Builds{{/link-to}}</li>
     </ol>
   </div>
 
@@ -86,18 +85,70 @@
   {{/if}}
 </script>
 
-<script type="text/x-handlebars" data-template-name="release">
+<script type="text/x-handlebars" data-template-name="release/latest">
   <h2>{{title}}</h2>
+  <div class="tabs">
+    <ul>
+      <li class="active">{{#link-to 'release.latest'}}Latest{{/link-to}}</li>
+      <li>{{#link-to 'release.daily' }}Daily{{/link-to}}</li>
+    </ul>
+  </div>
   {{partial 'fileListing'}}
 </script>
 
-<script type="text/x-handlebars" data-template-name="beta">
+<script type="text/x-handlebars" data-template-name="release/daily">
   <h2>{{title}}</h2>
+  {{build-type-selector latest="release.latest" daily="release.daily"}}
+  <div class="tabs">
+    <ul>
+      <li>{{#link-to 'release.latest'}}Latest{{/link-to}}</li>
+      <li class="active">{{#link-to 'release.daily' }}Daily{{/link-to}}</li>
+    </ul>
+  </div>
   {{partial 'fileListing'}}
 </script>
 
-<script type="text/x-handlebars" data-template-name="canary">
+<script type="text/x-handlebars" data-template-name="beta/latest">
   <h2>{{title}}</h2>
+  <div class="tabs">
+    <ul>
+      <li class="active">{{#link-to 'beta.latest'}}Latest{{/link-to}}</li>
+      <li>{{#link-to 'beta.daily' }}Daily{{/link-to}}</li>
+    </ul>
+  </div>
+  {{partial 'fileListing'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="beta/daily">
+  <h2>{{title}}</h2>
+  <div class="tabs">
+    <ul>
+      <li>{{#link-to 'beta.latest'}}Latest{{/link-to}}</li>
+      <li class="active">{{#link-to 'beta.daily' }}Daily{{/link-to}}</li>
+    </ul>
+  </div>
+  {{partial 'fileListing'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="canary/latest">
+  <h2>{{title}}</h2>
+  <div class="tabs">
+    <ul>
+      <li class="active">{{#link-to 'canary.latest'}}Latest{{/link-to}}</li>
+      <li>{{#link-to 'canary.daily' }}Daily{{/link-to}}</li>
+    </ul>
+  </div>
+  {{partial 'fileListing'}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="canary/daily">
+  <h2>{{title}}</h2>
+  <div class="tabs">
+    <ul>
+      <li>{{#link-to 'canary.latest'}}Latest{{/link-to}}</li>
+      <li class="active">{{#link-to 'canary.daily' }}Daily{{/link-to}}</li>
+    </ul>
+  </div>
   {{partial 'fileListing'}}
 </script>
 

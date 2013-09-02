@@ -45,5 +45,22 @@
       border-top: 1px solid #dddddd;
     }
   }
-}
 
+  .tabs {
+    ul {
+      border-bottom: none;
+
+      li.active {
+        border-right: 1px solid #f67862;
+      }
+    }
+    a.active {
+      background-color: #f67862;
+      @include background-image(linear-gradient(0deg, #e7624b, #f67862));
+      border-right: 1px solid #f67862;
+      border-top: none;
+      color: white;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+    }
+  }
+}
