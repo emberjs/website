@@ -16,7 +16,7 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return App.Post.find();
+    return this.get('store').find('post');
   }
 });
 ```
@@ -40,7 +40,7 @@ App.Router.map(function() {
 
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return App.Post.find(params.post_id);
+    return this.get('store').find('post', params.post_id);
   }
 });
 ```
