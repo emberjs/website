@@ -40,11 +40,11 @@ To declare a one-to-one relationship between two models, use
 
 ```js
 App.User = DS.Model.extend({
-  profile: DS.belongsTo('App.Profile')
+  profile: DS.belongsTo('profile')
 });
 
 App.Profile = DS.Model.extend({
-  user: DS.belongsTo('App.User')
+  user: DS.belongsTo('user')
 });
 ```
 
@@ -55,11 +55,11 @@ To declare a one-to-many relationship between two models, use
 
 ```js
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('App.Comment')
+  comments: DS.hasMany('comment')
 });
 
 App.Comment = DS.Model.extend({
-  post: DS.belongsTo('App.Post')
+  post: DS.belongsTo('post')
 });
 ```
 
@@ -70,11 +70,11 @@ To declare a many-to-many relationship between two models, use
 
 ```js
 App.Post = DS.Model.extend({
-  tags: DS.hasMany('App.Tag')
+  tags: DS.hasMany('tag')
 });
 
 App.Tag = DS.Model.extend({
-  posts: DS.hasMany('App.Post')
+  posts: DS.hasMany('post')
 });
 ```
 
@@ -89,15 +89,15 @@ Because it's reasonable for people to have multiple `belongsTo`/`hasMany`s for t
 
 ```javascript
 App.Comment = DS.Model.extend({
-  onePost: DS.belongsTo("App.Post"),
-  twoPost: DS.belongsTo("App.Post"),
-  redPost: DS.belongsTo("App.Post"),
-  bluePost: DS.belongsTo("App.Post")
+  onePost: DS.belongsTo("post"),
+  twoPost: DS.belongsTo("post"),
+  redPost: DS.belongsTo("post"),
+  bluePost: DS.belongsTo("post")
 });
 
 
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('App.Comment', {
+  comments: DS.hasMany('comment', {
     inverse: 'redPost'
   })
 });
@@ -115,10 +115,10 @@ To do this, you need to extend the adapter that your app is using to load the da
 App.Comment = DS.Model.extend({});
 
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('App.Comment')
+  comments: DS.hasMany('comment')
 });
 
-App.Adapter.map('App.Post', {
+App.Adapter.map('post', {
   comments: { embedded: 'always' }
 });
 ```
