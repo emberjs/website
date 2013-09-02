@@ -42,7 +42,7 @@ usernamesPromise.then(fetchPhotosOfUsers)
                 .then(displaySuccessMessage, handleErrors);
 ```
 
-In the above example, if any of the methods `fetchUsernames`,
+In the above example, if any of the methods
 `fetchPhotosOfUsers`, `applyInstagramFilters`, or
 `uploadTrendyPhotoAlbum` reject (either by throwing an exception or
 returning `Ember.RSVP.reject()`), `handleErrors` will be called with
