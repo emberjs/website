@@ -175,6 +175,8 @@
   image: tictail.png
 - url: http://caxanuma.com
   image: caxanuma.png
+- url: http://next.fatsoma.com
+  image: fatsoma.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
