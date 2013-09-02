@@ -29,7 +29,7 @@ For example, imagine we want to preload some data into the store when
 the application boots for the first time.
 
 We can use the `ApplicationRoute` to do so. The `ApplicationRoute` is
-the top-most route in the route hierarchy, and its `activate` hook gets
+the top-most route in the route hierarchy, and its `model` hook gets
 called once when the app starts up.
 
 ```js
@@ -42,7 +42,7 @@ App.Album = DS.Model.extend({
 });
 
 App.ApplicationRoute = Ember.Route.extend({
-  activate: function() {
+  model: function() {
     var store = this.get('store'); 
 
     store.push('album', {
