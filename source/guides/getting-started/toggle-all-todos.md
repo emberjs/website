@@ -9,7 +9,7 @@ allAreDone: function (key, value) {
     return !!this.get('length') && this.everyProperty('isCompleted', true);
   } else {
     this.setEach('isCompleted', value);
-    this.get('store').save();
+    this.invoke('save');
     return value;
   }
 }.property('@each.isCompleted')
