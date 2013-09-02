@@ -1,7 +1,7 @@
 TodoMVC has a few dependecnies:
   
   * [jQuery](http://code.jquery.com/jquery-1.10.2.min.js)
-  * [Handlebars](http://builds.handlebarsjs.com.s3.amazonaws.com/ember-1.0.0-rc.1.1.min.js)
+  * [Handlebars](http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-1.0.0.js)
   * [Ember.js 1.0](http://builds.emberjs.com/tags/v1.0.0/ember.js)
   * [Ember Data 1.0 alpha](http://emberjs.com.s3.amazonaws.com/getting-started/ember-data.js)
 
