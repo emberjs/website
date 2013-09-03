@@ -183,6 +183,8 @@
   image: edgycircle.png
 - url: http://www.thoughtbot.com
   image: thoughtbot.png
+- url: http://www.elastic.io
+  image: elasticio.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
