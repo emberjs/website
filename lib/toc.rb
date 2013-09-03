@@ -251,13 +251,13 @@ module TOC
     WARNINGS = {
         "ember-data"=>  %Q{
           <div class="under_construction_warning">
-            <h1>
+            <h3>
               <div class="msg">
                 Warning: ember-data is a work in progress and under rapid development.
                 <br/>
                 <span class="more_caution">Use with caution!!!</span>
               </div>
-            </h1>
+            </h3>
           </div>
         }
     }
