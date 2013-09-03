@@ -17,10 +17,6 @@ Another use case for pushing in records is if your application has a
 streaming connection to a backend. If a record is created or modified,
 you want to update the UI immediately.
 
-For more discussion of using Ember Data with a streaming API, see
-[Connecting to a Streaming
-API](/guides/models/connecting-to-a-streaming-api).
-
 ### Pushing Records
 
 To push a record into the store, call the store's `push()` method.

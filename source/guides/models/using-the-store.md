@@ -19,8 +19,6 @@ For more about pushing records into the store, see:
 
 * [Pushing Records into the
   Store](/guides/models/pushing-records-into-the-store)
-* [Connecting to a Streaming
-  API](/guides/models/connecting-to-a-streaming-api)
 
 Second, you can ask the store for a record. If the store doesn't already
 have the record loaded, it will ask its _adapter_ to load it from the
@@ -53,15 +51,3 @@ App.IndexRoute = Ember.Route.extend({
 
 For more about finding records, see [Finding a
 Record](/guides/models/finding-a-record).
-
-If you want to customize the store, you can do so by creating a subclass
-of `DS.Store`.
-
-For example, if you want to use an adapter other than the default
-`DS.RESTAdapter`, you would would define a new subclass like this:
-
-```js
-App.Store = DS.Store.extend({
-  adapter: 'my-custom-adapter'
-});
-```

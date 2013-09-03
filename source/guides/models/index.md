@@ -1,22 +1,37 @@
 ## Models
 
-Most Ember.js apps use [Ember Data][emberdata] to load records from a
-remote server. Ember Data is a library that integrates tightly with
-Ember.js to make it easy to retrieve records from a server, make changes
-in the browser, then save those changes back.
+In Ember, every route has an associated model. This model is set by
+implementing a route's `model` hook, by passing the model as an argument
+to `{{link-to}}`, or by calling a route's `transitionTo()` method.
 
-It provides many of the facilities you'd find in server-side ORMs like
-ActiveRecord, but is designed specifically for the unique environment of
-JavaScript in the browser.
+See [Specifying a Route's
+Model](/guides/routing/specifying-a-routes-model) for more information
+on setting a route's model.
+
+For simple applications, you can get by using jQuery to load JSON data
+from a server, then use those JSON objects as models.
+
+However, using a model library that manages finding models, making
+changes, and saving them back to the server can dramatically simplify
+your code while improving the robustness and performance of your
+application.
+
+Many Ember apps use [Ember Data][emberdata] to handle this.
+Ember Data is a library that integrates tightly with Ember.js to make it
+easy to retrieve records from a server, cache them for performance,
+save updates back to the server, and create new records on the client.
 
 Without any configuration, Ember Data can load and save records and
 their relationships served via a RESTful JSON API, provided it follows
 certain conventions.
 
-We also understand that you may have to integrate your Ember.js app with
-existing APIs, many of them inconsistent and out of your control. Ember
-Data is designed to be easily configurable to work with whatever
-persistence layer you want, from the ordinary to the exotic.
+If you need to integrate your Ember.js app with existing JSON APIs that
+do not follow strong conventions, Ember Data is designed to be easily
+configurable to work with whatever data your server returns.
+
+Ember Data is also designed to work with streaming APIs like
+socket.io, Firebase, or WebSockets. You can open a socket to your server
+and push changes to records into the store whenever they occur.
 
 Currently, Ember Data ships as a separate library from Ember.js.  Until
 Ember Data is included as part of the standard distribution, you can get

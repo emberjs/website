@@ -16,6 +16,4 @@ Data. By default, these options will be sent to your server as the body
 of an HTTP `GET` request.
 
 **Using this feature requires that your server knows how to interpret
-query responses.** If you would rather search records that your
-application has cached locally, see [Filtering
-Records](/guides/models/filtering-records).
+query responses.**
