@@ -1570,9 +1570,9 @@ body.not-found #content {
   -webkit-border-radius: 8px;
 }
 
-.under_construction_warning h1 {
+.under_construction_warning h3 {
   height: 64px;
-  font-size: 14px;
+  font-size: 14px !important;
   border: 1px solid #dfd7d4;
   border-radius: 8px;
   -moz-border-radius: 8px;
@@ -1582,7 +1582,7 @@ body.not-found #content {
   margin-bottom: 1.5em;
   background: no-repeat url("/images/ember-construction-57.png") top left; }
 
-.under_construction_warning h1 .msg {
+.under_construction_warning h3 .msg {
   margin-top: 12px;
   margin-left: 40px;
 }
