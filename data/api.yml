@@ -974,9 +974,12 @@ files:
     name: ../packages/ember/lib/main.js
     modules:
       ember: 1
-    classes: {}
+    classes:
+      Ember.StateManager: 1
+      Ember.State: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   ../packages/metamorph/lib/main.js:
     name: ../packages/metamorph/lib/main.js
     modules: {}
@@ -1066,6 +1069,8 @@ modules:
       Ember.ContainerView: 1
       Ember.CoreView: 1
       Ember.View: 1
+      Ember.StateManager: 1
+      Ember.State: 1
     fors:
       Ember.Handlebars: 1
       Ember.Handlebars.Compiler: 1
@@ -1082,8 +1087,8 @@ modules:
       Ember.Handlebars: 1
       Ember.Test: 1
     tag: module
-    file: ../packages/ember-views/lib/views/view.js
-    line: 287
+    file: ../packages/ember/lib/main.js
+    line: 35
     description: Ember
   ember-application:
     name: ember-application
@@ -3931,6 +3936,34 @@ classes:
       [Ember.Handlebars.helpers.view](/api/classes/Ember.Handlebars.helpers.html#method_view)\nfor
       additional information."
     extends: Ember.CoreView
+  Ember.StateManager:
+    name: Ember.StateManager
+    shortname: Ember.StateManager
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember
+    namespace: Ember
+    file: ../packages/ember/lib/main.js
+    line: 26
+    description: ! 'This was exported to ember-states plugin for v 1.0.0 release.
+      See: https://github.com/emberjs/ember-states'
+  Ember.State:
+    name: Ember.State
+    shortname: Ember.State
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember
+    namespace: Ember
+    file: ../packages/ember/lib/main.js
+    line: 35
+    description: ! 'This was exported to ember-states plugin for v 1.0.0 release.
+      See: https://github.com/emberjs/ember-states'
 classitems:
 - file: ../packages/container/lib/main.js
   line: 1
@@ -7458,8 +7491,8 @@ classitems:
   description: ! "A computed property that returns the inverse boolean value\nof the
     original value for the dependent property.\n\nExample\n\n```javascript\nvar User
     = Ember.Object.extend({\n  isAnonymous: Ember.computed.not('loggedIn')\n});\nvar
-    user = User.create({loggedIn: false});\nuser.get('isAnonymous'); // false\nuser.set('loggedIn',
-    true);\nuser.get('isAnonymous'); // true\n```"
+    user = User.create({loggedIn: false});\nuser.get('isAnonymous'); // true\nuser.set('loggedIn',
+    true);\nuser.get('isAnonymous'); // false\n```"
   itemtype: method
   name: computed.not
   params:
@@ -11571,7 +11604,7 @@ classitems:
   description: ! "This hook is called after this route's model has resolved.\nIt follows
     identical async/promise semantics to `beforeModel`\nbut is provided the route's
     resolved model in addition to\nthe `transition`, and is therefore suited to performing\nlogic
-    that can only take place after the model has already\nresolved.\n\n```js\nApp.PostRoute
+    that can only take place after the model has already\nresolved.\n\n```js\nApp.PostsRoute
     = Ember.Route.extend({\n  afterModel: function(posts, transition) {\n    if (posts.length
     === 1) {\n      this.transitionTo('post.show', posts[0]);\n    }\n  }\n});\n```\n\nRefer
     to documentation for `beforeModel` for a description\nof transition-pausing semantics
@@ -19140,3 +19173,4 @@ classitems:
   name: remove
   class: ''
   module: ember
+  namespace: Ember
