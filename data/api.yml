@@ -8,11 +8,8 @@ project:
 files:
   ../packages/container/lib/main.js:
     name: ../packages/container/lib/main.js
-    modules:
-      container: 1
-    classes:
-      InheritingDict: 1
-      Container: 1
+    modules: {}
+    classes: {}
     fors: {}
     namespaces: {}
   ../packages/ember-application/lib/ext/controller.js:
@@ -987,17 +984,6 @@ files:
     fors: {}
     namespaces: {}
 modules:
-  container:
-    name: container
-    submodules: {}
-    classes:
-      InheritingDict: 1
-      Container: 1
-    fors: {}
-    namespaces: {}
-    tag: module
-    file: ../packages/container/lib/main.js
-    line: 127
   ember:
     name: ember
     submodules:
@@ -1344,32 +1330,6 @@ modules:
     requires:
     - name: ember-application
 classes:
-  InheritingDict:
-    name: InheritingDict
-    shortname: InheritingDict
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: container
-    namespace: ''
-    file: ../packages/container/lib/main.js
-    line: 16
-    description: A safe and simple inheriting object.
-  Container:
-    name: Container
-    shortname: Container
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: container
-    namespace: ''
-    file: ../packages/container/lib/main.js
-    line: 127
-    description: A lightweight container that helps to assemble and decouple components.
   Ember.ControllerMixin:
     name: Ember.ControllerMixin
     shortname: Ember.ControllerMixin
@@ -3973,24 +3933,39 @@ classes:
     extends: Ember.CoreView
 classitems:
 - file: ../packages/container/lib/main.js
-  line: 28
+  line: 1
+  access: private
+  tagname: ! 'Public api for the container is still in flux.
+
+    The public api, specified on the application namespace should be considered the
+    stable api.
+
+    // @module container'
+  class: Ember.ControllerMixin
+- file: ../packages/container/lib/main.js
+  line: 19
+  description: ! 'A safe and simple inheriting object.
+
+
+    // @class InheritingDict'
+  class: Ember.ControllerMixin
+- file: ../packages/container/lib/main.js
+  line: 31
   itemtype: property
   name: parent
   type: InheritingDict
   default: 'null'
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 36
+  line: 39
   description: Object used to store the current nodes data.
   itemtype: property
   name: dict
   type: Object
   default: Object
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 45
+  line: 48
   description: ! 'Retrieve the value given a key, if the value is present at the current
 
     level use it, otherwise walk up the parent hierarchy and try again. If
@@ -4001,10 +3976,9 @@ classitems:
   return:
     description: ''
     type: Any
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 65
+  line: 68
   description: Set the given value for the given key, at the current level.
   itemtype: method
   name: set
@@ -4015,10 +3989,9 @@ classitems:
   - name: value
     description: ''
     type: Any
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 76
+  line: 79
   description: Delete the given key
   itemtype: method
   name: remove
@@ -4026,10 +3999,9 @@ classitems:
   - name: key
     description: ''
     type: String
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 86
+  line: 89
   description: ! 'Check for the existence of given a key, if the key is present at
     the current
 
@@ -4045,10 +4017,9 @@ classitems:
   return:
     description: ''
     type: Boolean
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 109
+  line: 112
   description: Iterate and invoke a callback for each local key-value pair.
   itemtype: method
   name: eachLocal
@@ -4059,81 +4030,82 @@ classitems:
   - name: binding
     description: ''
     type: Object
-  class: InheritingDict
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 153
+  line: 130
+  description: A lightweight container that helps to assemble and decouple components.
+  access: private
+  tagname: ! 'Public api for the container is still in flux.
+
+    The public api, specified on the application namespace should be considered the
+    stable api.
+
+    // @class Container'
+  class: Ember.ControllerMixin
+- file: ../packages/container/lib/main.js
+  line: 159
   itemtype: property
   name: parent
   type: Container
   default: 'null'
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 160
+  line: 166
   itemtype: property
   name: children
   type: Array
   default: ! '[]'
-  class: Container
-  module: container
-- file: ../packages/container/lib/main.js
-  line: 167
-  itemtype: property
-  name: resolver
-  type: function
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
   line: 173
   itemtype: property
-  name: registry
-  type: InheritingDict
-  class: Container
-  module: container
+  name: resolver
+  type: function
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
   line: 179
   itemtype: property
-  name: cache
+  name: registry
   type: InheritingDict
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
   line: 185
   itemtype: property
-  name: typeInjections
+  name: cache
   type: InheritingDict
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
   line: 191
+  itemtype: property
+  name: typeInjections
+  type: InheritingDict
+  class: Ember.ControllerMixin
+- file: ../packages/container/lib/main.js
+  line: 197
   itemtype: property
   name: injections
   type: Object
   default: ! '{}'
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 198
+  line: 204
   access: private
   tagname: ''
   itemtype: property
   name: _options
   type: InheritingDict
   default: 'null'
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 207
+  line: 213
   access: private
   tagname: ''
   itemtype: property
   name: _typeOptions
   type: InheritingDict
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 215
+  line: 221
   description: ! 'Returns a new child of the current container. These children are
     configured
 
@@ -4143,10 +4115,9 @@ classitems:
   return:
     description: ''
     type: Container
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 228
+  line: 234
   description: ! 'Sets a key-value pair on the current container. If a parent container,
 
     has the same key, once set on a child, the parent and child will diverge
@@ -4164,10 +4135,9 @@ classitems:
   - name: value
     description: ''
     type: Any
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 242
+  line: 248
   description: ! 'Registers a factory for later injection.
 
 
@@ -4201,10 +4171,9 @@ classitems:
   - name: options
     description: ''
     type: Object
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 279
+  line: 285
   description: ! 'Unregister a fullName
 
 
@@ -4229,10 +4198,9 @@ classitems:
   - name: fullName
     description: ''
     type: String
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 304
+  line: 310
   description: ! "Given a fullName return the corresponding factory.\n\nBy default
     `resolve` will retrieve the factory from\nits container's registry.\n\n```javascript\nvar
     container = new Container();\ncontainer.register('api:twitter', Twitter);\n\ncontainer.resolve('api:twitter')
@@ -4251,10 +4219,9 @@ classitems:
   return:
     description: fullName's factory
     type: Function
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 340
+  line: 346
   description: ! 'A hook that can be used to describe how the resolver will
 
     attempt to find the factory.
@@ -4267,10 +4234,9 @@ classitems:
     to find the `fullName`.'
   itemtype: method
   name: describe
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 354
+  line: 360
   description: A hook to enable custom fullName normalization behaviour
   itemtype: method
   name: normalize
@@ -4281,10 +4247,9 @@ classitems:
   return:
     description: normalized fullName
     type: String
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 365
+  line: 371
   itemtype: method
   name: makeToString
   params:
@@ -4297,10 +4262,9 @@ classitems:
   return:
     description: toString function
     type: Function
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 376
+  line: 382
   description: ! 'Given a fullName return a corresponding instance.
 
 
@@ -4366,10 +4330,9 @@ classitems:
   return:
     description: ''
     type: Any
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 435
+  line: 441
   description: Given a fullName return the corresponding factory.
   itemtype: method
   name: lookupFactory
@@ -4380,10 +4343,9 @@ classitems:
   return:
     description: ''
     type: Any
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 446
+  line: 452
   description: ! 'Given a fullName check if the container is aware of its factory
 
     or singleton instance.'
@@ -4396,10 +4358,9 @@ classitems:
   return:
     description: ''
     type: Boolean
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 462
+  line: 468
   description: ! 'Allow registering options for all factories of a type.
 
 
@@ -4443,10 +4404,9 @@ classitems:
   - name: options
     description: ''
     type: Object
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 495
+  line: 501
   itemtype: method
   name: options
   params:
@@ -4456,10 +4416,9 @@ classitems:
   - name: options
     description: ''
     type: Object
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 504
+  line: 510
   access: private
   tagname: ! 'Used only via `injection`.
 
@@ -4518,10 +4477,9 @@ classitems:
   - name: fullName
     description: ''
     type: String
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 546
+  line: 552
   description: ! "Defines injection rules.\n\nThese rules are used to inject dependencies
     onto objects when they\nare instantiated.\n\nTwo forms of injections are possible:\n\n
     \     * Injecting one fullName on another fullName\n      * Injecting one fullName
@@ -4546,10 +4504,9 @@ classitems:
   - name: injectionName
     description: ''
     type: String
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 601
+  line: 607
   access: private
   tagname: ! 'Used only via `factoryInjection`.
 
@@ -4599,10 +4556,9 @@ classitems:
   - name: fullName
     description: ''
     type: String
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 638
+  line: 644
   description: ! "Defines factory injection rules.\n\nSimilar to regular injection
     rules, but are run against factories, via\n`Container#lookupFactory`.\n\nThese
     rules are used to inject objects onto factories when they\nare looked up.\n\nTwo
@@ -4630,24 +4586,21 @@ classitems:
   - name: injectionName
     description: ''
     type: String
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 697
+  line: 703
   description: ! 'A depth first traversal, destroying the container, its descendant
     containers and all
 
     their managed objects.'
   itemtype: method
   name: destroy
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/container/lib/main.js
-  line: 720
+  line: 726
   itemtype: method
   name: reset
-  class: Container
-  module: container
+  class: Ember.ControllerMixin
 - file: ../packages/ember-application/lib/ext/controller.js
   line: 31
   description: ! "An array of other controller objects available inside\ninstances
@@ -8031,8 +7984,8 @@ classitems:
   itemtype: method
   name: assert
   params:
-  - name: ! '@param'
-    description: bool Value to test
+  - name: bool
+    description: Value to test
     type: Boolean
   class: Ember.Logger
   module: ember
@@ -10895,7 +10848,7 @@ classitems:
     template).\n\nIf a view class with the same name exists, the view class also will
     be used.\n\nNote: A given controller may only be used *once* in your app in this
     manner.\nA singleton instance of the controller will be created for you.\n\nExample:\n\n```javascript\nApp.NavigationController
-    = Ember.Controller.extned({\n  who: \"world\"\n});\n```\n\n```handelbars\n<!--
+    = Ember.Controller.extend({\n  who: \"world\"\n});\n```\n\n```handelbars\n<!--
     navigation.hbs -->\nHello, {{who}}.\n```\n\n```handelbars\n<!-- applications.hbs
     -->\n<h1>My great app</h1>\n{{render navigaton}}\n```\n\n```html\n<h1>My great
     app</h1>\n<div class='ember-view'>\n  Hello, world.\n</div>\n```\n\nOptionally
