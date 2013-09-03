@@ -34,3 +34,16 @@ App.Router = Ember.Router.extend({
   location: 'none'
 });
 ```
+
+### Enabling HTML5 History pushState ###
+
+You can set up Ember to use HTML5 History by default. It will work on [all modern browsers](http://caniuse.com/#feat=history).
+(For older HTML4 browsers you can add [History.js polyfill](https://github.com/browserstate/history.js))
+
+```js
+if (window.history && window.history.pushState) {
+    App.Router.reopen({
+        location: 'history'
+    });
+}
+```
