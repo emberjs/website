@@ -32,12 +32,3 @@ person.set('isAdmin', true);
 person.get('isDirty');
 //=> true
 ```
-
-Make sure that a record has finished loading before you try to modify.
-If you attempt to modify a record before it has finished loading, Ember
-Data will raise an exception. For more information, see [Model
-Lifecycle][1].
-
-[1]: /guides/models/model-lifecycle
-
-### Modifying Relationships
