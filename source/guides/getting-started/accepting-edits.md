@@ -1,6 +1,6 @@
 In the previous step we updated TodoMVC to allow a user to toggle the display of a text `<input>` for editing a todo's title. Next, we'll add the behavior that immediately focuses the `<input>` when it appears, accepts user input and, when the user presses the `<enter>` key or moves focus away from the editing `<input>` element, persists these changes, then redisplays the todo with its newly updated text.
 
-To accomplish this, we'll create a new custom component and register it with Handelbars to make it available to our templates.
+To accomplish this, we'll create a new custom component and register it with Handlebars to make it available to our templates.
 
 Create a new file `js/views/edit_todo_view.js`. You may place this file anywhere you like (even just putting all code into the same file), but this guide will assume you have created the file and named it as indicated.
 
