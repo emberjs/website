@@ -52,7 +52,9 @@ App.S3Bucket = Ember.Object.extend({
   }.property('useSSL'),
 
   hostname: function(){
-    return (!this.get('bucket')) ? this.get('endpoint') : this.get('bucket') + '.' + this.get('endpoint');
+    // Since the bucket has periods, the s3 wildcard cert won't work. Have to
+    // use a subdirectory.
+    return (!this.get('bucket')) ? this.get('endpoint') : this.get('endpoint') + '/' + this.get('bucket');
   }.property('bucket','endpoint'),
 
   delimiterParameter: function(){
@@ -76,6 +78,11 @@ App.S3Bucket = Ember.Object.extend({
     return this.get('protocol') + this.get('hostname');
   }.property('protocol', 'hostname'),
 
+  objectBaseUrl: function(){
+    return this.get('protocol') + this.get('bucket');
+  }.property('protocol', 'bucket'),
+
+
   queryParams: function(){
     return this.get('delimiterParameter')  + '&' +
       this.get('markerParameter')     + '&' +
@@ -93,7 +100,7 @@ App.S3Bucket = Ember.Object.extend({
 
   load: function(){
     var self = this,
-    baseUrl = this.get('baseUrl');
+    baseUrl = this.get('objectBaseUrl');
 
     this.set('isLoading', true);
     Ember.$.get(this.get('url'), function(data){
@@ -139,6 +146,9 @@ App.S3File = Ember.Object.extend({
   }.property('baseUrl', 'relativePath')
 });
 
+App.BetaRoute = Ember.Route.extend({
+  redirect: function() { this.transitionTo('beta.latest'); }
+});
 App.BetaLatestRoute = Ember.Route.extend({
   model: function() {
     return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
@@ -156,6 +166,9 @@ App.BetaDailyRoute = Ember.Route.extend({
   }
 });
 
+App.CanaryRoute = Ember.Route.extend({
+  redirect: function() { this.transitionTo('canary.latest'); }
+});
 App.CanaryLatestRoute = Ember.Route.extend({
   model: function() {
     return App.S3Bucket.create({title: 'Canary Builds', prefix: 'latest/',});
@@ -173,6 +186,9 @@ App.CanaryDailyRoute = Ember.Route.extend({
   }
 });
 
+App.ReleaseRoute = Ember.Route.extend({
+  redirect: function() { this.transitionTo('release.latest'); }
+});
 App.ReleaseLatestRoute = Ember.Route.extend({
   model: function() {
     return App.S3Bucket.create({title: 'Release Builds', prefix: 'stable/'});
