@@ -30,21 +30,21 @@
 <script type="text/x-handlebars" data-template-name="index">
   <div class="features section">
     <div class="feature">
-      {{#link-to 'release'}}
+      {{#link-to 'release.latest'}}
       <img class="tomster" src="/images/tomster-sm.png" alt="Release Builds">
       {{/link-to}}
       <h2>Release</h2>
       <p>Release builds have been hardened through our multi-tiered release process. These builds are perfect for use in production environments.</p>
     </div>
     <div class="feature">
-      {{#link-to 'beta'}}
+      {{#link-to 'beta.latest'}}
       <img class="tomster" src="/images/tomster-beta-sm.png" alt="Beta Builds">
       {{/link-to}}
       <h2>Beta</h2>
       <p>Beta builds will incorporate new features that are ready for more review. They will include new features that have been more thoroughly tested. We do not recommend using Beta builds in production.</p>
     </div>
     <div class="feature">
-      {{#link-to 'canary'}}
+      {{#link-to 'canary.latest'}}
       <img class="tomster" src="/images/tomster-under-construction-sm.png" alt="Canary Builds">
       {{/link-to}}
       <h2>Canary</h2>
