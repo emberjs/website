@@ -224,7 +224,8 @@ p {
           background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
           background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
           background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
-          outline: 1px solid #b23e2a;
+          margin-left: -1px;
+          margin-right: -1px;
           color: white;
           border-top: 1px solid rgba(255, 255, 255, 0.4);
         }
