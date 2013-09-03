@@ -181,6 +181,8 @@
   image: wanapi.png
 - url: http://edgycircle.com/leistungen/emberjs-entwicklung-und-beratung/
   image: edgycircle.png
+- url: http://www.thoughtbot.com
+  image: thoughtbot.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
