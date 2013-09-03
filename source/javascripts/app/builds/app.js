@@ -171,7 +171,7 @@ App.CanaryRoute = Ember.Route.extend({
 });
 App.CanaryLatestRoute = Ember.Route.extend({
   model: function() {
-    return App.S3Bucket.create({title: 'Canary Builds', prefix: 'latest/',});
+    return App.S3Bucket.create({title: 'Canary Builds', prefix: 'canary/',});
   }
 });
 
@@ -191,7 +191,7 @@ App.ReleaseRoute = Ember.Route.extend({
 });
 App.ReleaseLatestRoute = Ember.Route.extend({
   model: function() {
-    return App.S3Bucket.create({title: 'Release Builds', prefix: 'stable/'});
+    return App.S3Bucket.create({title: 'Release Builds', prefix: 'release/'});
   }
 });
 
@@ -200,8 +200,8 @@ App.ReleaseDailyRoute = Ember.Route.extend({
     return App.S3Bucket.create({
       title: 'Release Builds',
       delimiter: '',
-      prefix: 'stable/daily',
-      marker: 'stable/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
+      prefix: 'release/daily',
+      marker: 'release/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
     });
   }
 });
