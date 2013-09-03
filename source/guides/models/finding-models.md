@@ -1,7 +1,7 @@
 You can retrieve a record by passing its unique ID to the `find()` method:
 
 ```js
-var post = App.Post.find(1);
+var post = this.store.find('post', 1);
 ```
 
 If a record with that ID has already been created, it will be returned
@@ -18,7 +18,7 @@ You can find all records for a given model by calling `find()` without
 arguments:
 
 ```js
-var posts = App.Post.find();
+var posts = this.store.find('post');
 ```
 
 This will return an instance of `DS.RecordArray`. Like with records, the
@@ -41,7 +41,7 @@ For more information, see [Ember.Enumerable][1] and [Ember.Array][2].
 You can query the server by passing a hash  to `find()`.
 
 ```js
-var people = App.Person.find({ name: "Peter" });
+var people = this.store.find('post', { name: "Peter" });
 ```
 
 The contents of the hash is opaque to Ember Data; it is up to your
