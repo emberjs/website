@@ -36,15 +36,15 @@ and push changes to records into the store whenever they occur.
 Currently, Ember Data ships as a separate library from Ember.js.  Until
 Ember Data is included as part of the standard distribution, you can get
 a copy of the latest passing build from
-[builds.emberjs.com][builds]:
+[emberjs.com/builds][builds]:
 
 * [Development][development-build]
 * [Minified][minified-build]
 
 [emberdata]: https://github.com/emberjs/data
-[builds]: http://builds.emberjs.com
-[development-build]: http://builds.emberjs.com/latest/ember-data.js
-[minified-build]: http://builds.emberjs.com/latest/ember-data.min.js
+[builds]: http://emberjs.com/builds
+[development-build]: http://builds.emberjs.com/canary/ember-data.js
+[minified-build]: http://builds.emberjs.com/canary/ember-data.min.js
 
 ### Core Concepts
 

@@ -316,7 +316,7 @@ leading up to Ember 1.0:
 * Domenic Denicola, for putting us on the right path with promises
 * Dan Gebhardt, for website infrastructure
 * David Hamilton, for the Array Computed feature
-* Robert Jackson, for the new builds.emberjs.com
+* Robert Jackson, for the new emberjs.com/builds
 * Julien Knebel, for design work
 * Alex Matchneer, for the async router guide
 * Luke Melia, for `actions` namespacing, last minute bugfix work, and the Ember NYC community
