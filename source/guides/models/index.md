@@ -137,7 +137,7 @@ they couldn't be binary data stored in a `Blob` or
 
 #### Automatic Caching
 
-The store will automatically caches records for you. If a record had already
+The store will automatically cache records for you. If a record had already
 been loaded, asking for it a second time will always return the same
 object instance. This minimizes the number of round-trips to the
 server, and allows your application to render UI to the user as fast as
