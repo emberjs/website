@@ -60,12 +60,12 @@ the promise library that Ember uses.
 
 When transitioning between routes, the Ember router collects all of the
 models (via the `model` hook) that will be passed to the route's
-controllers at the end of the transition. If each of the `model` hooks
-return normal (non-promise) objects or arrays, the transition will
-complete immediately. But if one (or more) of the `model` hooks returns
-a promise (or if a promise was provided as an argument to
-`transitionTo`), the transition will pause until that promise fulfills
-or rejects.
+controllers at the end of the transition. If the `model` hook (or the related
+`beforeModel` or `afterModel` hooks) return normal (non-promise) objects or 
+arrays, the transition will complete immediately. But if the `model` hook 
+(or the related `beforeModel` or `afterModel` hooks) returns a promise (or 
+if a promise was provided as an argument to `transitionTo`), the transition 
+will pause until that promise fulfills or rejects.
 
 <aside>
 **Note:** the router considers any object with a `then` method
