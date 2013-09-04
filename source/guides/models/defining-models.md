@@ -46,9 +46,9 @@ You can specify which attributes a model has by using `DS.attr`.
 var attr = DS.attr;
 
 App.Person = DS.Model.extend({
-  firstName: attr(),
-  lastName: attr(),
-  birthday: attr()
+  firstName: DS.attr(),
+  lastName: DS.attr(),
+  birthday: DS.attr()
 });
 ```
 
@@ -64,8 +64,8 @@ properties that combine or transform primitive attributes.
 var attr = DS.attr;
 
 App.Person = DS.Model.extend({
-  firstName: attr(),
-  lastName: attr(),
+  firstName: DS.attr(),
+  lastName: DS.attr(),
 
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
@@ -82,7 +82,7 @@ coerced into a particular type by passing a `type` option to `attr`:
 
 ```js
 App.Person = DS.Model.extend({
-  birthday: attr({ type: Date })
+  birthday: DS.attr({ type: Date })
 });
 ```
 
