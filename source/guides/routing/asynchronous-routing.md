@@ -85,13 +85,13 @@ App.TardyRoute = Ember.Route.extend({
   model: function() {
     return new Ember.RSVP.Promise(function(resolve) {
       Ember.run.later(function() {
-        resolve({ msg: "Hold Your Horse Is" });
+        resolve({ msg: "Hold Your Horses" });
       }, 3000);
     });
   }, 
 
   setupController: function(model) {
-    console.log(model.msg); // "Hold Your Horse Is"
+    console.log(model.msg); // "Hold Your Horses"
   }
 });
 ```
