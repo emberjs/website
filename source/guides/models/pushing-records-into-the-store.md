@@ -33,7 +33,7 @@ var attr = DS.attr;
 
 App.Album = DS.Model.extend({
   title: attr(),
-  artist: attr()
+  artist: attr(),
   songCount: attr()
 });
 
