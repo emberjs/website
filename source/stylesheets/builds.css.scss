@@ -119,4 +119,8 @@
   button.loading {
     @include rotateX(180deg);
   }
+
+  .loading-spinner {
+    text-align: center;
+  }
 }
