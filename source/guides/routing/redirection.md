@@ -1,3 +1,6 @@
+
+### Before the model is known
+
 If you want to redirect from one route to another, you can do the transition in
 the `beforeModel` hook of your route handler.
 
@@ -12,6 +15,8 @@ App.IndexRoute = Ember.Route.extend({
   }
 });
 ```
+
+### After the model is known
 
 If you need some information about the current model in order to decide about
 the redirection, you should use the `afterModel` hook, where the model is
@@ -36,6 +41,8 @@ App.PostsRoute = Ember.Route.extend({
 When transitioning to the `PostsRoute` it turns out that there is only one post,
 the current transition is aborted in favor of redirecting to the `PostRoute`
 with the single post object being its model.
+
+### Based on other application state
 
 You can conditionally transition based on some other application state.
 
