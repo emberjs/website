@@ -191,6 +191,8 @@
   image: onepercentclub.png
 - url: http://www.terracycle.com
   image: terracycle.png
+- url: http://scan.me
+  image: scan.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
