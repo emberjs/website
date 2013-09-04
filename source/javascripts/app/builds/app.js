@@ -160,13 +160,75 @@ App.S3File = Ember.Object.extend({
 App.BetaRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('beta.latest'); }
 });
+
 App.BetaLatestRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
     return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
 });
 
+App.TabItemController = Ember.ObjectController.extend({
+  needs: ['application'],
+  isSelectedProject: function() {
+    return this.get('model.filter') === this.get('controllers.application.selectedProject');
+  }.property('controllers.application.selectedProject')
+});
+
+App.ApplicationController = Ember.ObjectController.extend({
+  selectedProject: ''
+});
+
+App.TabMixin = Ember.Mixin.create({
+  init: function() {
+    this._super();
+    this.set('currentFilter', '');
+  },
+  needs: ['application'],
+  currentFilter: '',
+  filters: [{
+    name: 'All',
+    filter: ''
+  }, {
+    name: 'Ember.Js',
+    filter: 'ember.',
+  }, {
+    name: 'Ember Data',
+    filter: 'ember-data.'
+  }, {
+    name: 'Ember Runtime',
+    filter: 'ember-runtime.'
+  }],
+  filteredFiles: function() {
+    var files = this.get('model.files'),
+        selectedFilter = this.get('currentFilter');
+
+    return files.filter(function(e) {
+      return e.get('name').indexOf(selectedFilter) !== -1;
+    });
+  }.property('currentFilter'),
+  ifFilteredFiles: true,
+  actions: {
+    setFilter: function(filterName) {
+      this.set('currentFilter', filterName);
+      this.set('ifFilteredFiles', this.get('filteredFiles').length > 0);
+      this.get('controllers.application').set('selectedProject', filterName);
+    }
+  }
+});
+
+App.BetaLatestController = Ember.ObjectController.extend(App.TabMixin);
+
 App.BetaDailyRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
     return App.S3Bucket.create({
       title: 'Beta Builds',
@@ -177,16 +239,31 @@ App.BetaDailyRoute = Ember.Route.extend({
   }
 });
 
+App.BetaDailyController = Ember.ObjectController.extend(App.TabMixin);
+
 App.CanaryRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('canary.latest'); }
 });
+
 App.CanaryLatestRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
-    return App.S3Bucket.create({title: 'Canary Builds', prefix: 'canary/',});
+    return App.S3Bucket.create({title: 'Canary Builds', prefix: 'canary/' });
   }
 });
 
-App.CanaryDailyRoute = Ember.Route.extend({
+App.CanaryLatestController = Ember.ObjectController.extend(App.TabMixin);
+
+App.CanaryDailyRoute = Ember.Route.extend(App.TabMixin, {
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
     return App.S3Bucket.create({
       title: 'Canary Builds',
@@ -197,16 +274,33 @@ App.CanaryDailyRoute = Ember.Route.extend({
   }
 });
 
+App.CanaryDailyController = Ember.ObjectController.extend(App.TabMixin);
+
 App.ReleaseRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('release.latest'); }
 });
+
+App.ReleaseLatestController = Ember.ObjectController.extend(App.TabMixin);
+
 App.ReleaseLatestRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
     return App.S3Bucket.create({title: 'Release Builds', prefix: 'release/'});
   }
 });
 
+App.ReleaseDailyController = Ember.ObjectController.extend(App.TabMixin);
+
 App.ReleaseDailyRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
     return App.S3Bucket.create({
       title: 'Release Builds',
@@ -216,7 +310,6 @@ App.ReleaseDailyRoute = Ember.Route.extend({
     });
   }
 });
-
 
 App.TaggedRoute = Ember.Route.extend({
   model: function() {

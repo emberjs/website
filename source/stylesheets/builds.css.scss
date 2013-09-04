@@ -19,6 +19,41 @@
     margin-left: 20px;
   }
 
+  .extra-margin {
+    margin-top: 5em;
+  }
+
+  .project-pills {
+    margin: 1em 0 3em 0;
+    padding: 0;
+
+    li {
+      float: left;
+      margin-right: 10px;
+      border-radius: 3px;
+      padding: 5px;
+      width: 111px;
+      text-align: center;
+      cursor: pointer;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: #f6d5cd;
+      }
+
+      &.active {
+        background-color: #f23818;
+        background-image: linear-gradient(0deg, #e7624b, #f67862);
+        color: white;
+        border: 1px solid transparent;
+
+        &:hover {
+          border: 1px solid transparent;
+        }
+      }
+    }
+  }
+
   .table {
     margin-top: 2em;
     width: 100%;
@@ -43,7 +78,7 @@
     }
 
     td {
-      vertical-align: top;
+      vertical-align: middle;
       border-top: 1px solid #dddddd;
     }
   }
@@ -85,7 +120,7 @@
   button,
   button:after,
   button:before {
-    padding: 3px;
+    padding: 7px 3px;
     @include transition(0.75s,background-color .125s);
     @include transform-style(preserve-3d);
   }
