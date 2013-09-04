@@ -3,6 +3,7 @@ Next we'll update our application to display dynamic todos, replacing our hard c
 Inside the file `js/router.js` implement a `TodosRoute` object with a `model` function that returns all the existing todos:
 
 ```javascript
+<!--- ... additional lines truncated for brevity ... -->
 Todos.TodosRoute = Ember.Route.extend({
   model: function () {
     return this.store.find('todo');
