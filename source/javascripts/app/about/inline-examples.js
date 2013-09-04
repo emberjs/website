@@ -57,6 +57,11 @@ function buildLineNumbers(source) {
 }
 
 Ember.Handlebars.helper('syntax-highlight', function(value, options) {
+
+  if ( value.indexOf('class=') === -1 && value.indexOf('FIXTURES =') === -1 ) {
+    value = 'var App = Ember.Application.create();' + value;
+  }
+
   var highlighted = hljs.highlightAuto(value).value;
   var lineNumbers = buildLineNumbers(highlighted);
 
