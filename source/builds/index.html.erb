@@ -53,35 +53,47 @@
   </div>
 </script>
 
+<script type="text/x-handlebars" data-template-name="_filters">
+  <ul class="project-pills">
+    {{#each filters itemController="tabItem"}}
+      <li {{action "setFilter" filter}} {{bind-attr class="isSelectedProject:active"}}>{{name}}</li>
+    {{/each}}
+  </ul>
+</script>
+
 <script type="text/x-handlebars" data-template-name="_file_listing">
-  {{#if filesPresent }}
-    <table class="table">
-      <thead>
-        <tr>
-          <th>File</th>
-          <th>Modified</th>
-          <th>Size</th>
-          <th>Quick Copy</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{#each model.files}}
+  {{#if ifFilteredFiles}}
+    {{#if filesPresent }}
+      <table class="table">
+        <thead>
           <tr>
-            <td><a {{bind-attr href=url }}>{{name}}</a></td>
-            <td>{{format-date-time lastModified}}</td>
-            <td>{{format-bytes size}}</td>
-            <td>{{copy-clipboard label="Url" text=url}} | {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
+            <th>File</th>
+            <th>Modified</th>
+            <th>Size</th>
+            <th>Quick Copy</th>
           </tr>
-        {{/each}}
-      </tbody>
-    </table>
-  {{ else }}
-    <br/>
-    {{#if isLoading}}
-      Loading...
-    {{else}}
-      <p>There are currently no builds for {{title}}. Please check back soon.</p>
+        </thead>
+        <tbody>
+          {{#each filteredFiles}}
+            <tr>
+              <td><a {{bind-attr href=url }}>{{name}}</a></td>
+              <td>{{format-date-time lastModified}}</td>
+              <td>{{format-bytes size}}</td>
+              <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    {{ else }}
+      <br/>
+      {{#if isLoading}}
+        Loading...
+      {{else}}
+        <p>There are currently no builds for {{title}}. Please check back soon.</p>
+      {{/if}}
     {{/if}}
+  {{ else }}
+    <p class="extra-margin">Theere are currently no builds for {{title}}. Please check back soon.</p>
   {{/if}}
 </script>
 
@@ -93,6 +105,7 @@
       <li>{{#link-to 'release.daily' }}Daily{{/link-to}}</li>
     </ul>
   </div>
+  {{partial 'filters'}}
   {{partial 'fileListing'}}
 </script>
 
@@ -104,6 +117,7 @@
       <li class="active">{{#link-to 'release.daily' }}Daily{{/link-to}}</li>
     </ul>
   </div>
+  {{partial 'filters'}}
   {{partial 'fileListing'}}
 </script>
 
@@ -115,6 +129,7 @@
       <li>{{#link-to 'beta.daily' }}Daily{{/link-to}}</li>
     </ul>
   </div>
+  {{partial 'filters'}}
   {{partial 'fileListing'}}
 </script>
 
@@ -137,6 +152,7 @@
       <li>{{#link-to 'canary.daily' }}Daily{{/link-to}}</li>
     </ul>
   </div>
+  {{partial 'filters'}}
   {{partial 'fileListing'}}
 </script>
 
@@ -148,6 +164,7 @@
       <li class="active">{{#link-to 'canary.daily' }}Daily{{/link-to}}</li>
     </ul>
   </div>
+  {{partial 'filters'}}
   {{partial 'fileListing'}}
 </script>
 
@@ -164,4 +181,3 @@
 <script type="text/x-handlebars" data-template-name="components/copy-clipboard">
   <button {{bind-attr data-clipboard-text=text}} {{bind-attr data-label=label}}>{{label}}</button>
 </script>
-
