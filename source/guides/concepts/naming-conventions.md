@@ -93,7 +93,7 @@ Here's an example:
 App.FavoritesRoute = Ember.Route.extend({
   model: function() {
     // the model is an Array of all of the posts
-    return App.Post.find();
+    return this.store.find('post');
   }
 });
 ```
@@ -151,7 +151,7 @@ generating a link for a model object).
 ```javascript
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return App.Post.find(params.post_id);
+    return this.store.find('post', params.post_id);
   },
 
   serialize: function(post) {
