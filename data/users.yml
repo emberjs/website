@@ -187,6 +187,8 @@
   image: thoughtbot.png
 - url: http://www.elastic.io
   image: elasticio.png
+- url: http://www.onepercentclub.com
+  image: onepercentclub.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
