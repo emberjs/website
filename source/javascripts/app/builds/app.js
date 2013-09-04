@@ -47,7 +47,6 @@ App.CopyClipboardComponent = Ember.Component.extend({
 });
 
 App.S3Bucket = Ember.Object.extend({
-
   files: [],
   isLoading: false,
 
@@ -159,12 +158,18 @@ App.BetaRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('beta.latest'); }
 });
 
-App.BetaLatestRoute = Ember.Route.extend({
+App.BuildCategoryMixin = Ember.Mixin.create({
   setupController: function(controller, model) {
     controller.set('currentFilter', '');
     controller.set('model', model);
     this.controllerFor('application').set('selectedProject', '');
   },
+  renderTemplate: function() {
+    this.render('build-list');
+  }
+});
+
+App.BetaLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
@@ -179,6 +184,18 @@ App.TabItemController = Ember.ObjectController.extend({
 
 App.ApplicationController = Ember.ObjectController.extend({
   selectedProject: ''
+});
+
+App.CategoryLinkMixin = Ember.Mixin.create({
+  linkPrefix: null,
+
+  latestLink: function() {
+    return this.get('linkPrefix') + ".latest";
+  }.property('linkPrefix'),
+
+  dailyLink: function() {
+    return this.get('linkPrefix') + ".daily";
+  }.property('linkPrefix')
 });
 
 App.TabMixin = Ember.Mixin.create({
@@ -216,14 +233,9 @@ App.TabMixin = Ember.Mixin.create({
   }
 });
 
-App.BetaLatestController = Ember.ObjectController.extend(App.TabMixin);
+App.BetaLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'beta' });
 
-App.BetaDailyRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
+App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({
       title: 'Beta Builds',
@@ -234,31 +246,21 @@ App.BetaDailyRoute = Ember.Route.extend({
   }
 });
 
-App.BetaDailyController = Ember.ObjectController.extend(App.TabMixin);
+App.BetaDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'beta' });
 
 App.CanaryRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('canary.latest'); }
 });
 
-App.CanaryLatestRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
+App.CanaryLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Canary Builds', prefix: 'canary/' });
   }
 });
 
-App.CanaryLatestController = Ember.ObjectController.extend(App.TabMixin);
+App.CanaryLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'canary' });
 
-App.CanaryDailyRoute = Ember.Route.extend(App.TabMixin, {
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
+App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({
       title: 'Canary Builds',
@@ -269,33 +271,23 @@ App.CanaryDailyRoute = Ember.Route.extend(App.TabMixin, {
   }
 });
 
-App.CanaryDailyController = Ember.ObjectController.extend(App.TabMixin);
+App.CanaryDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'canary' });
 
 App.ReleaseRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('release.latest'); }
 });
 
-App.ReleaseLatestController = Ember.ObjectController.extend(App.TabMixin);
+App.ReleaseLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'release' });
 
-App.ReleaseLatestRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
+App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Release Builds', prefix: 'release/'});
   }
 });
 
-App.ReleaseDailyController = Ember.ObjectController.extend(App.TabMixin);
+App.ReleaseDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'release' });
 
-App.ReleaseDailyRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
+App.ReleaseDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({
       title: 'Release Builds',

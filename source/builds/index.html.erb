@@ -100,75 +100,16 @@ title: Builds
       {{/if}}
     {{/if}}
   {{ else }}
-    <p class="extra-margin">Theere are currently no builds for {{title}}. Please check back soon.</p>
+    <p class="extra-margin">There are currently no builds for {{title}}. Please check back soon.</p>
   {{/if}}
 </script>
 
-<script type="text/x-handlebars" data-template-name="release/latest">
+<script type="text/x-handlebars" data-template-name="build-list">
   <h2>{{title}}</h2>
   <div class="tabs">
     <ul>
-      <li class="active">{{#link-to 'release.latest'}}Latest{{/link-to}}</li>
-      <li>{{#link-to 'release.daily' }}Daily{{/link-to}}</li>
-    </ul>
-  </div>
-  {{partial 'filters'}}
-  {{partial 'fileListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="release/daily">
-  <h2>{{title}}</h2>
-  <div class="tabs">
-    <ul>
-      <li>{{#link-to 'release.latest'}}Latest{{/link-to}}</li>
-      <li class="active">{{#link-to 'release.daily' }}Daily{{/link-to}}</li>
-    </ul>
-  </div>
-  {{partial 'filters'}}
-  {{partial 'fileListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="beta/latest">
-  <h2>{{title}}</h2>
-  <div class="tabs">
-    <ul>
-      <li class="active">{{#link-to 'beta.latest'}}Latest{{/link-to}}</li>
-      <li>{{#link-to 'beta.daily' }}Daily{{/link-to}}</li>
-    </ul>
-  </div>
-  {{partial 'filters'}}
-  {{partial 'fileListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="beta/daily">
-  <h2>{{title}}</h2>
-  <div class="tabs">
-    <ul>
-      <li>{{#link-to 'beta.latest'}}Latest{{/link-to}}</li>
-      <li class="active">{{#link-to 'beta.daily' }}Daily{{/link-to}}</li>
-    </ul>
-  </div>
-  {{partial 'fileListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="canary/latest">
-  <h2>{{title}}</h2>
-  <div class="tabs">
-    <ul>
-      <li class="active">{{#link-to 'canary.latest'}}Latest{{/link-to}}</li>
-      <li>{{#link-to 'canary.daily' }}Daily{{/link-to}}</li>
-    </ul>
-  </div>
-  {{partial 'filters'}}
-  {{partial 'fileListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="canary/daily">
-  <h2>{{title}}</h2>
-  <div class="tabs">
-    <ul>
-      <li>{{#link-to 'canary.latest'}}Latest{{/link-to}}</li>
-      <li class="active">{{#link-to 'canary.daily' }}Daily{{/link-to}}</li>
+      <li>{{#link-to latestLink}}Latest{{/link-to}}</li>
+      <li>{{#link-to dailyLink}}Daily{{/link-to}}</li>
     </ul>
   </div>
   {{partial 'filters'}}
@@ -178,11 +119,6 @@ title: Builds
 <script type="text/x-handlebars" data-template-name="tagged">
   <h2>{{title}}</h2>
   {{partial 'filters'}}
-  {{partial 'fileListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="daily">
-  <h2>{{title}}</h2>
   {{partial 'fileListing'}}
 </script>
 
