@@ -48,7 +48,6 @@ In `index.html` include `js/controllers/todos_controller.js` as a dependency:
 
 ```html
 <!--- ... additional lines truncated for brevity ... -->
-   <script src="js/models/store.js"></script>
    <script src="js/models/todo.js"></script>
    <script src="js/controllers/todos_controller.js"></script>
  </body>
