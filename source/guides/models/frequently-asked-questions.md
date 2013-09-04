@@ -72,7 +72,7 @@ App.PostsFavoritedRoute = Ember.Route.extend({
     // the user has favorited. Note that we're ignoring the results
     // of the query; we're just relying on the side-effect that they
     // will be loaded into the store so we can filter them.
-    store.query('posts', { favorited: true });
+    store.findQuery('posts', { favorited: true });
 
     // Create a filter for all favorited posts that will be displayed in
     // the template. Any favorited posts that are already in the store
