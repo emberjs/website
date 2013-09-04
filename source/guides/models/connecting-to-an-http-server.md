@@ -120,8 +120,8 @@ Requests for a `person` with ID `1`  would now go to `/api/v1/people/1`.
 
 #### URL Host
 
-If your JSON API runs on a different domain than the one serving the
-your Ember app, you can change the host used to make HTTP requests.
+If your JSON API runs on a different domain than the one serving your
+Ember app, you can change the host used to make HTTP requests.
 
 Note that in order for this to work, you will need to be using a browser
 that supports [CORS](http://www.html5rocks.com/en/tutorials/cors/), and
