@@ -25,12 +25,23 @@ App.CopyClipboardComponent = Ember.Component.extend({
   tagName: 'span',
 
   didInsertElement: function () {
-    var clip = new ZeroClipboard(this.$('a'), {
+    var clip = new ZeroClipboard(this.$('button'), {
       // This would normally be a relative path
       moviePath: "/images/ZeroClipboard.swf",
 
       trustedDomains: ["*"],
       allowScriptAccess: "always"
+    });
+
+    clip.on('mousedown', function(client, e) {
+      Em.run.later(this, function() {
+        $(this).removeClass('loading');
+        $(this).removeAttr('disabled');
+      }, 1000);
+      Em.run.next(this, function() {
+        $(this).addClass('loading');
+        $(this).attr('disabled', 'disabled');
+      });
     });
   }
 });

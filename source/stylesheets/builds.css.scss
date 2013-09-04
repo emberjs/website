@@ -65,4 +65,58 @@
       border-top: 1px solid rgba(255, 255, 255, 0.4);
     }
   }
+
+  button {
+    position:relative;
+    border:0;
+    margin:0;
+    padding:0;
+    width: 70px;
+    cursor:pointer;
+    font-size:11px;
+    font-weight:normal;
+    color:rgba(0,0,0,0);
+    background:transparent;
+    border-radius:.25rem;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+  }
+
+  button,
+  button:after,
+  button:before {
+    padding: 3px;
+    @include transition(0.75s,background-color .125s);
+    @include transform-style(preserve-3d);
+  }
+
+  button:after,
+  button:before {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius:.25rem;
+    @include backface-visibility( hidden);
+  }
+
+  button:before {
+    z-index:2;
+    color:#fff;
+    background-color:#f67862;
+    content:attr(data-label);
+  }
+
+  button:after {
+    z-index:1;
+    background-color:#999;
+    color: #fff;
+    @include rotateX(180deg);
+    content:'Copied';
+  }
+
+  button.loading {
+    @include rotateX(180deg);
+  }
 }
