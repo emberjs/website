@@ -1,4 +1,4 @@
-By default, a component does not have access to properties in the
+By default a component does not have access to properties in the
 template scope in which it is used.
 
 For example, imagine you have a `blog-post` component that is used to
