@@ -53,20 +53,11 @@ App.S3Bucket = Ember.Object.extend({
 
   // Setup these as default values.
   // They can be overridden on create.
-  useSSL: false,
+  queryUseSSL: true,
+  objectUseSSL: false,
   delimiter: '/',
   bucket: 'builds.emberjs.com',
   endpoint: 's3.amazonaws.com',
-
-  protocol: function() {
-    return this.get('useSSL') ? 'https://' : 'http://';
-  }.property('useSSL'),
-
-  hostname: function(){
-    // Since the bucket has periods, the s3 wildcard cert won't work. Have to
-    // use a subdirectory.
-    return (!this.get('bucket')) ? this.get('endpoint') : this.get('endpoint') + '/' + this.get('bucket');
-  }.property('bucket','endpoint'),
 
   delimiterParameter: function(){
     var delimiter = this.getWithDefault('delimiter','').toString();
@@ -85,14 +76,21 @@ App.S3Bucket = Ember.Object.extend({
     return 'prefix=' + this.getWithDefault('prefix','').toString();
   }.property('prefix'),
 
-  baseUrl: function(){
-    return this.get('protocol') + this.get('hostname');
-  }.property('protocol', 'hostname'),
+  queryProtocol: function() {
+    return this.get('queryUseSSL') ? 'https://' : 'http://';
+  }.property('queryUseSSL'),
+
+  queryBaseUrl: function(){
+    return this.get('queryProtocol') + this.get('endpoint') + '/' + this.get('bucket')
+  }.property('queryProtocol', 'endpoint', 'bucket'),
+
+  objectProtocol: function() {
+    return this.get('objectUseSSL') ? 'https://' : 'http://';
+  }.property('objectUseSSL'),
 
   objectBaseUrl: function(){
-    return this.get('protocol') + this.get('bucket');
-  }.property('protocol', 'bucket'),
-
+    return this.get('objectProtocol') + this.get('bucket');
+  }.property('objectProtocol', 'bucket'),
 
   queryParams: function(){
     return this.get('delimiterParameter')  + '&' +
@@ -101,9 +99,9 @@ App.S3Bucket = Ember.Object.extend({
       this.get('prefixParameter');
   }.property('delimiterParameter','markerParameter','maxKeysParameter','prefixParameter'),
 
-  url: function(){
-    return this.get('baseUrl') + '?' + this.get('queryParams');
-  }.property('baseUrl','queryParams'),
+  queryUrl: function(){
+    return this.get('queryBaseUrl') + '?' + this.get('queryParams');
+  }.property('queryBaseUrl','queryParams'),
 
   filesPresent: function(){
     return this.get('files').length;
@@ -114,7 +112,7 @@ App.S3Bucket = Ember.Object.extend({
     baseUrl = this.get('objectBaseUrl');
 
     this.set('isLoading', true);
-    Ember.$.get(this.get('url'), function(data){
+    Ember.$.get(this.get('queryUrl'), function(data){
       self.set('isLoading', false);
       self.set('response', data);
 
