@@ -5,7 +5,7 @@ project:
   version: Revision 12
   logo: http://f.cl.ly/items/1A1L432s022u1O1q1V3p/ember%20logo.png
   url: https://github.com/emberjs/data
-  sha: c08101e
+  sha: v1.0.0-beta.2
 files:
   ../packages/ember-data/lib/adapters/fixture_adapter.js:
     name: ../packages/ember-data/lib/adapters/fixture_adapter.js
@@ -1563,7 +1563,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/model/model.js
-  line: 368
+  line: 372
   description: ! 'The goal of this method is to temporarily disable specific observers
 
     that take action in response to application changes.
@@ -1594,7 +1594,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/model/model.js
-  line: 401
+  line: 405
   description: Save the record.
   itemtype: method
   name: save
@@ -1602,7 +1602,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/model/model.js
-  line: 416
+  line: 420
   description: ! 'Reload the record from the adapter.
 
 
@@ -1617,7 +1617,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/model/model.js
-  line: 471
+  line: 475
   description: ! 'Override the default event firing from Ember.Evented to
 
     also call methods with the given name.'
@@ -1632,7 +1632,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/model/model.js
-  line: 500
+  line: 504
   description: ! 'Alias DS.Model''s `create` method to `_create`. This allows us to
     create DS.Model
 
@@ -1648,7 +1648,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/model/model.js
-  line: 511
+  line: 515
   description: ! 'Override the class'' `create()` method to raise an error. This prevents
     end users
 
@@ -1695,7 +1695,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/relationships/belongs_to.js
-  line: 73
+  line: 80
   itemtype: method
   name: belongsToWillChange
   access: private
@@ -1709,7 +1709,7 @@ classitems:
   class: DS.Model
   module: ember-data
 - file: ../packages/ember-data/lib/system/relationships/belongs_to.js
-  line: 93
+  line: 100
   itemtype: method
   name: belongsToDidChange
   access: private
@@ -2958,13 +2958,16 @@ classitems:
     type: DS.Model
   - name: data
     description: ''
-  - name: prematerialized
-    description: ''
+    type: Object
+  - name: partial
+    description: ! "the data should be merged into\n  the existing fata, not replace
+      it."
+    type: Boolean
   class: DS.Store
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 974
+  line: 975
   description: ! 'Returns a model class for a particular key. Used by
 
     methods that take a type key (like `find`, `createRecord`,
@@ -2981,7 +2984,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 997
+  line: 998
   description: ! "Push some data for a given type into the store.\n\nThis method expects
     normalized data:\n\n* The ID is a key named `id` (an ID is mandatory)\n* The names
     of attributes are the ones you used in\n  your model's `DS.attr`s.\n* Your relationships
@@ -3010,7 +3013,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 1069
+  line: 1079
   description: ! 'If you have an Array of normalized data to push,
 
     you can call `pushMany` with the Array, and it will
@@ -3032,7 +3035,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 1085
+  line: 1095
   description: ! 'If you have some metadata to set for a type
 
     you can call `metaForType`.'
@@ -3049,7 +3052,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 1099
+  line: 1109
   description: ! 'Build a brand new record for a given type, ID, and
 
     initial data.'
@@ -3073,7 +3076,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 1140
+  line: 1150
   description: ! 'When a record is destroyed, this un-indexes it and
 
     removes it from any record arrays so it can be GCed.'
@@ -3089,7 +3092,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 1218
+  line: 1228
   description: Returns the adapter for a given type.
   itemtype: method
   name: adapterForType
@@ -3105,7 +3108,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: ../packages/ember-data/lib/system/store.js
-  line: 1240
+  line: 1250
   description: ! 'Returns an instance of the serializer for a given type. For
 
     example, `serializerFor(''person'')` will return an instance of
