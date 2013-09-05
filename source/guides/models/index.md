@@ -171,11 +171,10 @@ record served from an HTTP server.
 
 ![Diagram showing process for finding an unloaded record](/images/guides/models/finding-unloaded-record-step1-diagram.png)
 
-As illustrated in the diagram above, the adapter cannot always
-immediately return the requested record immediately. In this case, the
-adapter must make an _asynchronous_ request to the server, and only when
-that request finishes loading can the record be created with its backing
-data.
+As illustrated in the diagram above, the adapter cannot always return the 
+requested record immediately. In this case, the adapter must make an 
+_asynchronous_ request to the server, and only when that request finishes 
+loading can the record be created with its backing data.
 
 Because of this asynchronicity, the store immediately returns a
 _promise_ from the `find()` method. Similarly, any requests that the
