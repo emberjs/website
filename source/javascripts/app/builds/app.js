@@ -194,7 +194,7 @@ App.TabMixin = Ember.Mixin.create({
     name: 'All',
     filter: ''
   }, {
-    name: 'Ember.Js',
+    name: 'Ember.js',
     filter: 'ember.',
   }, {
     name: 'Ember Data',
@@ -312,6 +312,11 @@ App.ReleaseDailyRoute = Ember.Route.extend({
 });
 
 App.TaggedRoute = Ember.Route.extend({
+  setupController: function(controller, model) {
+    controller.set('currentFilter', '');
+    controller.set('model', model);
+    this.controllerFor('application').set('selectedProject', '');
+  },
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
@@ -322,6 +327,7 @@ App.TaggedRoute = Ember.Route.extend({
   }
 });
 
+App.TaggedController = Ember.ObjectController.extend(App.TabMixin);
 /*
  * Handlebars Helpers
  */
