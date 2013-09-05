@@ -9,8 +9,8 @@ For this example, all of these resources should be stored in the folder `js/libs
 
 ```html
 <!-- ... additional lines truncated for brevity ... -->
-  <script src="js/libs/jquery.min.js"></script>
-  <script src="js/libs/handlebars.js"></script>
+  <script src="js/libs/jquery-1.10.2.min.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
   <script src="js/libs/ember.js"></script>
   <script src="js/libs/ember-data.js"></script>
 </body>
