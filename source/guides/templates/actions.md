@@ -211,7 +211,7 @@ is most commonly used to send actions to a view instead of a controller.
 </p>
 ```
 
-You would handle it this in an `actions` hash on your view.
+You would handle this in an `actions` hash on your view.
 
 ```javascript
 App.PostsIndexView = Ember.View.extend({
