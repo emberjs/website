@@ -199,16 +199,13 @@ App.TabMixin = Ember.Mixin.create({
   }, {
     name: 'Ember Data',
     filter: 'ember-data.'
-  }, {
-    name: 'Ember Runtime',
-    filter: 'ember-runtime.'
   }],
   filteredFiles: function() {
     var files = this.get('model.files'),
         selectedFilter = this.get('currentFilter');
 
     return files.filter(function(e) {
-      return e.get('name').indexOf(selectedFilter) !== -1;
+      return e.get('name').indexOf(selectedFilter) !== -1 && e.get('name').indexOf('ember-runtime.') === -1;
     });
   }.property('currentFilter'),
   ifFilteredFiles: true,
