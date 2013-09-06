@@ -374,7 +374,7 @@ App.Router.map(function() {
 });
 ```
 
-This router creates following routes:
+This router creates the following routes:
 
 <div style="overflow: auto">
   <table>
