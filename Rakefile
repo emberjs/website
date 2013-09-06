@@ -30,31 +30,45 @@ def ember_path
   File.expand_path(ENV['EMBER_PATH'] || File.expand_path("../../ember.js", __FILE__))
 end
 
+def ember_data_path
+  File.expand_path(ENV['EMBER_DATA_PATH'] || File.expand_path("../../ember-data", __FILE__))
+end
+
+
 def generate_docs
-  print "Generating docs data from #{ember_path}... "
+  projects = {
+    "Ember.js" => { out: "api.yml", path: ember_path },
+    "Ember Data" => { out: "data_api.yml", path: ember_data_path }
+  }
 
-  sha = nil
+  projects.each do |name, options|
+    path = options[:path]
 
-  Dir.chdir(ember_path) do
-    # returns either `tag` or `tag-numcommits-gSHA`
-    describe = `git describe --tags --always`.strip
-    sha = describe =~ /-g(.+)/ ? $1 : describe
+    print "Generating #{name} docs data from #{path}... "
 
-    Dir.chdir("docs") do
-      system("npm install") unless File.exist?('node_modules')
-      # Unfortunately -q doesn't always work so we get output
-      system("./node_modules/.bin/yuidoc -p -q")
+    sha = nil
+
+    Dir.chdir(path) do
+      # returns either `tag` or `tag-numcommits-gSHA`
+      describe = `git describe --tags --always`.strip
+      sha = describe =~ /-g(.+)/ ? $1 : describe
+
+      Dir.chdir("docs") do
+        system("npm install") unless File.exist?('node_modules')
+        # Unfortunately -q doesn't always work so we get output
+        system("./node_modules/.bin/yuidoc -p -q")
+      end
     end
-  end
 
-  # JSON is valid YAML
-  data = YAML.load_file(File.join(ember_path, "docs/build/data.json"))
-  data["project"]["sha"] = sha
-  File.open(File.expand_path("../data/api.yml", __FILE__), "w") do |f|
-    YAML.dump(data, f)
-  end
+    # JSON is valid YAML
+    data = YAML.load_file(File.join(path, "docs/build/data.json"))
+    data["project"]["sha"] = sha
+    File.open(File.expand_path("../data/#{options[:out]}", __FILE__), "w") do |f|
+      YAML.dump(data, f)
+    end
 
-  puts "Built #{sha}"
+    puts "Built #{name} with SHA #{sha}"
+  end
 end
 
 def build
@@ -77,7 +91,8 @@ task :preview do
 
   generate_docs
 
-  paths = Dir.glob(File.join(ember_path, "packages/*/lib"))
+  paths = Dir.glob(File.join(ember_path, "packages/*/lib")) +
+    Dir.glob(File.join(ember_data_path, "packages/*/lib"))
   listener = Listen.to(*paths, :filter => /\.js$/)
   listener.change { generate_docs }
   listener.start(false)
