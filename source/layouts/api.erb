@@ -5,6 +5,17 @@
 
   <% content_for :sidebar do %>
     <ol id='toc-list'>
+      <li class='level-1'>
+        <a href="#">Projects</a>
+        <ol>
+          <% @apis.each do |key, opts| %>
+          <li class='level-3 <%= api_li_class(key) %>'>
+            <a href="/<%= opts[:root] %>"><%= opts[:name] %></a>
+          </li>
+          <% end %>
+        </ol>
+      </li>
+
       <li class='level-1'><a href="<%= sha_url %>" target="_blank"> Tag: <%= sha %></a></li>
 
       <% li_for(:modules) do %>
