@@ -1,4 +1,4 @@
-The application template is the default template that is rendered when
+The `application` template is the default template that is rendered when
 your application starts. 
 
 You should put your header, footer, and any other decorative content
