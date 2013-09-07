@@ -344,6 +344,10 @@ Understanding Ember.js:
   - title: "Debugging"
     url: "understanding-ember/debugging"
 
+Contributing to Ember.js:
+  - title: "Adding New Features"
+    url: "contributing/adding-new-features"
+
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
     #url: "understanding-ember-data/record-lifecycle"
