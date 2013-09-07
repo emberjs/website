@@ -1,7 +1,8 @@
 ---
 title: The Post-1.0 Release Cycle
 author: Yehuda Katz
-tags: 
+tags: Recent Posts
+published: false
 ---
 
 Now that we've shipped Ember 1.0 final, it's time to look forward to future 
@@ -120,3 +121,14 @@ Go/No-Go decision for each new feature still remaining on the branch.
 
 This decision is made every six weeks, and the features that make the cut
 will end up in the next release of Ember.js!
+
+### New Release Management Team
+
+A number of Ember contributors have really stepped up to automate the
+process and build out tooling: Stanley Stuart (fivetanley), Robert
+Jackson (rwjblue), Alex Navasardyan (twokul) and Thomas Boyt (tboyt).
+
+They are now the (drumroll please) Ember.js release management team!
+
+Thanks for all your hard work in making the new release process
+possible.
