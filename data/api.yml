@@ -2,16 +2,10 @@
 project:
   name: The Ember API
   description: ! 'The Ember API: a framework for building ambitious web applications'
-  version: 1.0 pre
+  version: 1.0.0
   url: http://emberjs.com/
   sha: v1.0.0
 files:
-  ../packages/container/lib/main.js:
-    name: ../packages/container/lib/main.js
-    modules: {}
-    classes: {}
-    fors: {}
-    namespaces: {}
   ../packages/ember-application/lib/ext/controller.js:
     name: ../packages/ember-application/lib/ext/controller.js
     modules:
