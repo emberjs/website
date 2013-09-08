@@ -35,7 +35,7 @@ at runtime.
 Beta and Stable releases will only ship with features that the core team
 believes are stable.
 
-Read on for more details about how we plan to organize the details. If
+Read on for more details about how we plan to organize new features. If
 you plan to contribute features to Ember.js, or are just interested in
 the full nitty-gritty, you should check out the [Adding New
 Features](/guides/contributing/adding-new-features) guide, which lays
