@@ -40,3 +40,16 @@ App = Ember.Application.create({
   LOG_TRANSITIONS: true
 });
 ```
+
+###Specifying a Root URL
+If your Ember application is one of multiple web applications served from the same domain, it may be necessary to indicate to the router what the root URL for your Ember application is. By default, Ember will assume it is served from the root of your domain.
+
+If for example, you wanted to serve your blogging application from www.emberjs.com/blog/, it would be necessary to specify a root URL of `/blog/`.
+
+This can be achieved by setting the rootURL on the router:
+
+```js
+App.Router.reopen({
+  rootURL: '/blog/'
+});
+```
