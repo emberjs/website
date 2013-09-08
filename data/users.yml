@@ -193,6 +193,8 @@
   image: terracycle.png
 - url: http://scan.me
   image: scan.png
+- url: https://5apps.com
+  image: 5apps.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
