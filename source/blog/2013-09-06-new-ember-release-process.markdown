@@ -51,7 +51,7 @@ along they are.
 ```js
 if (Ember.FEATURES.isEnabled('link-to')) {
   // implementation here
-});
+}
 ```
 
 ### Cross Browser Builds
