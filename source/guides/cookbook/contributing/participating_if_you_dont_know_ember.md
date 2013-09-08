@@ -2,9 +2,9 @@
 You are entirely or mostly new to Ember but wish to support the creation of this document.
 
 ## Solution
-Watch this project on Github. You'll be notified through your Github account as we move through phases of the project.
+Suggest and/or submit pull requests with a _problem_ statement (see [Suggesting a Recipe][suggesting_a_recipe]). You do not need to worry about providing a solution or discussion. Someone with more experience with Ember will then be able to take your _problem_ and provide a _solution_ and _discussion_.
 
 ## Discussion
-The initial version of the Ember Cookbook will have a few phases. During the first phase you can suggest possible recipes by forking this project and submitting a pull request (See _Suggesting a Recipe_). During later phases we'll be asking for you help in proof reading and testing the recipes.
+Sometimes it is difficult for developers who have been using Ember for a long time to know what others who are new to Ember are struggling with. By providing a pull request with just the _problem_ filled out will help out a lot!
 
-See ["Watch a project"](http://help.github.com/be-social/) on Github for information on watching projects.
+[suggesting_a_recipe]: /guides/cookbook/contributing/suggesting_a_recipe
