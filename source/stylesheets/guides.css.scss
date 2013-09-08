@@ -47,4 +47,13 @@ body.guides, body.blog {
       margin: 8px 0;
     }
   }
+
+  dt {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  dd {
+    padding-left: 10px;
+    margin-bottom: 15px;
+  }
 }
