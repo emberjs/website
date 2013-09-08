@@ -11,6 +11,8 @@ Next we'll update our template's hard-coded count of completed todos to reflect 
 Implement these properties as part of this template's controller, the `Todos.TodosController`:
 
 ```javascript
+// Hint: these lines must not go into the 'actions' object.
+
 // ... additional lines truncated for brevity ...
 remaining: function () {
   return this.filterProperty('isCompleted', false).get('length');
