@@ -40,7 +40,7 @@ Handlebars:
 This tells the `my-button` component that it should send the `showUser`
 action when it triggers its primary action.
 
-So how do you trigger sending the a component's primary action? After
+So how do you trigger sending a component's primary action? After
 the relevant event occurs, you can call the `sendAction()` method
 without arguments:
 
