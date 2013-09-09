@@ -2,7 +2,7 @@
 
 In a nutshell, computed properties let you declare functions as properties. You create one by defining a computed property as a function, which Ember will automatically call when you ask for the property. You can then use it the same way you would any normal, static property.
 
-It's super handy for taking one or more normal properties and transforming or manipulating their data to create a new value.
+It's super handy for taking one or more normal properties and transforming or manipulating their data to create a new value. 
 
 ### Computed properties in action
 
@@ -28,19 +28,6 @@ ironMan.get('fullName') // "Tony Stark"
 Notice that the `fullName` function calls `property`. This declares the function to be a computed property, and the arguments tell Ember that it depends on the `firstName` and `lastName` attributes.
 
 Whenever you access the `fullName` property, this function gets called, and it returns the value of the function, which simply calls `firstName` + `lastName`.
-
-You can define properties by using the `Ember.computed` method if you are using Ember [without prototype extensions](/guides/configuring-ember/disabling-prototype-extensions):
-
-```javascript
-App.Person = Ember.Object.extend({
-  firstName: null,
-  lastName: null,
-
-  fullName: Ember.computed(function() {
-    return this.get('firstName') + ' ' + this.get('lastName');
-  }).property('firstName', 'lastName')
-});
-```
 
 ### Chaining computed properties
 
@@ -74,7 +61,7 @@ captainAmerica.get('description'); // "Steve Rogers; Age: 80; Country: USA"
 
 ### Dynamic updating
 
-Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update .
+Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update . 
 
 ```javascript
 captainAmerica.set('firstName', 'William')
