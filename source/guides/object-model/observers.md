@@ -43,7 +43,7 @@ Person.reopen({
 ```
 
 You can define inline observers by using the `Ember.observer` method if you
-are using Ember without prototype extensions:
+are using Ember [without prototype extensions](/guides/configuring-ember/disabling-prototype-extensions):
 
 ```javascript
 Person.reopen({
