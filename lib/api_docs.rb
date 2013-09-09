@@ -273,7 +273,7 @@ module APIDocs
     def sha_url
       #"#{APIDocs.repo_url}/tree/#{sha}"
       repo_url = _metadataForResource(current_resource)[:repo_url]
-      "#{repo_url}/commit/#{sha}"
+      "#{repo_url}/commits/#{sha}"
     end
 
     def api_modules
