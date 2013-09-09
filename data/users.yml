@@ -7,8 +7,8 @@
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace.
 
-# These logos are in a particular order, most recently, that being the 
-# order in which people made their requests. Be respectful to those who 
+# These logos are in a particular order, most recently, that being the
+# order in which people made their requests. Be respectful to those who
 # came before you and add your name to the *bottom*.
 
 - url: http://www.mhelabs.com/
@@ -89,8 +89,8 @@
   image: crowdstrike.png
 - url: http://www.playtin.com
   image: playtin.png
-# - url:  http://www.visualsupply.co 
-#   image: visualsupplyco.png —company contact info required, email listings@!
+- url:  http://vsco.co
+  image: visualsupplyco.png
 - url:  http://www.crowdcompass.com
   image: crowdcompass.png
 - url:  http://www.totango.com
