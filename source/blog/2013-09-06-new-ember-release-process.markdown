@@ -29,7 +29,7 @@ Ember website.
 [1]: http://emberjs.com/builds/
 
 All new features will start out on master, behind a feature flag. Canary
-and `latest` builds will ship will all experimental features, enable-able
+and `latest` builds will ship with all experimental features, enable-able
 at runtime.
 
 Beta and Stable releases will only ship with features that the core team
