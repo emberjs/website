@@ -197,6 +197,8 @@
   image: noesissoftware.png
 - url: https://5apps.com
   image: 5apps.png
+- url: http://www.getfeedback.com
+  image: getfeedback.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
