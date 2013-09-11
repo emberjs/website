@@ -1654,14 +1654,14 @@ body.not-found #content {
 }
 
 .under_construction_warning h3 {
-  height: 64px;
+  min-height: 64px;
   font-size: 14px !important;
   border: 1px solid #dfd7d4;
   @include border-radius(8px);
   color: #e1563f;
   padding: 0px 0px 1em 2em;
   margin-bottom: 1.5em;
-  background: no-repeat url("/images/ember-construction-57.png") top left; }
+  background: no-repeat url("/images/ember-construction-57.png") 0.5em 0.5em; }
 
 .under_construction_warning h3 .msg {
   text-transform: none;
