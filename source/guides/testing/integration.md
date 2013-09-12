@@ -43,7 +43,7 @@ module("Integration Tests", {
  - Fills in the selected input with the given text and returns a promise that fulfills when all resulting async behavior is complete.
 * `click(selector)`
   - Clicks an element and triggers any actions triggered by the element's `click` event and returns a promise that fulfills when all resulting async behavior is complete.
-* `keyDown(selector, type, keyCode)`
+* `keyEvent(selector, type, keyCode)`
   - Simulates a key event type, e.g. `keypress`, `keydown`, `keyup` with the desired keyCode on element found by the selector.
 * `wait()`
   - Returns a promise that fulfills when all async behavior is complete.
