@@ -12,7 +12,7 @@ the default behavior of the adapter is, including what URLs it will
 request records from and what format it expects the JSON to be in.
 
 The second section covers how to override these default settings to
-customer things like which URLs data is requested from and how the JSON
+customize things like which URLs data is requested from and how the JSON
 data is structured.
 
 ### URL Conventions
