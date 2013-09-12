@@ -827,6 +827,30 @@ p {
   margin-top: 10px;
 }
 
+.anchorable-toc {
+  position: relative;
+
+  &:hover a.toc-anchor {
+    display: block;
+  }
+}
+
+a.toc-anchor {
+  display: none;
+  position: absolute;
+  text-decoration: none;
+  border: none;
+  left: -1em;
+  width: 30px;
+  height: 13px;
+  background: url('/images/link.png') no-repeat;
+  background-size: 18px 9px;
+  left: -22px;
+  opacity: 0.5;
+  top: 50%;
+  margin-top: -5px;
+}
+
 /**
   Guides Page
 **/
@@ -853,30 +877,6 @@ p {
         }
       }
     }
-  }
-
-  .anchorable-toc {
-    position: relative;
-
-    &:hover a.toc-anchor {
-      display: block;
-    }
-  }
-
-  a.toc-anchor {
-    display: none;
-    position: absolute;
-    text-decoration: none;
-    border: none;
-    left: -1em;
-    width: 30px;
-    height: 13px;
-    background: url('/images/link.png') no-repeat;
-    background-size: 18px 9px;
-    left: -22px;
-    opacity: 0.5;
-    top: 50%;
-    margin-top: -5px;
   }
 
   table {
