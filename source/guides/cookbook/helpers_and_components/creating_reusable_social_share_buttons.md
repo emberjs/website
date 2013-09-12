@@ -1,45 +1,50 @@
 ## Problem
-
-You want to have a [Tweet button](https://dev.twitter.com/docs/tweet-button) on your Handlebars template and have it use dynamic content (URL, message, hashtag).
+You want to create a reusable [Tweet button](https://dev.twitter.com/docs/tweet-button)
+for your application.
 
 ## Solution
+Write a custom component that renders the Tweet button with specific attributes
+passed in.
 
-Write a custom component which renders the Tweet button with provided attributes.
+```handlebars
+{{share-twitter data-url="http://emberjs.com" 
+                data-text="EmberJS Components are Amazing!" 
+                data-size="large" 
+                data-hashtags="emberjs"}}
 
-```hbs
-<script type="text/x-handlebars">
-  {{share-twitter data-url="http://emberjs.com" 
-                  data-text="EmberJS Components are Amazing!" 
-                  data-size="large" 
-                  data-hashtags="emberjs"}}
-</script>
-
-<!-- Necessary for components -->
-<script type="text/x-handlebars" 
-        id="components/share-twitter"></script>
 ```
 
-```js
+```javascript
 App.ShareTwitterComponent = Ember.Component.extend({
   tagName: 'a',
   classNames: 'twitter-share-button',
-
-  // Allow these attributes to be bound the those defined in the template
-  attributeBindings: [
-    'data-size', 'data-url', 
-    'data-text', 'data-hashtags'
-  ],
-  
-  // Trigger the Twitter javascript to run after the element is rendered
-  displayButton: function() {
-    // Extracted from twitter share js
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-  }.on('didInsertElement')
+  attributeBindings: ['data-size', 'data-url', 'data-text', 'data-hashtags']
 });
 ```
 
+Include Twitter's widget code in your HTML:
+
+```javascript
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js" id="twitter-wjs"></script>
+```
+
 ## Discussion
+Twitter's widget library expects to find an `<a>` tag on the page with specific `data-` attributes applied.
+It takes the values of these attributes and, when the `<a>` tag is clicked, opens an iFrame for twitter sharing.
 
-This code example demonstrates a great use case for Ember Components. This is a direct extraction from Twitter's [Tweet Button](https://dev.twitter.com/docs/tweet-button) API and uses the attribute bindings and the `didInsertElement` event to build the button.
+The `share-twitter` component takes four options that match the four attributes for the resulting `<a>` tag:
+`data-url`, `data-text`, `data-size`, `data-hashtags`. These options and their values become properties on the
+component object. 
 
-<a class="jsbin-embed" href="http://jsbin.com/OMOgUzo/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+The component defines certain attributes of its HTML representation as bound to properties of the object through
+it's `attributeBindings` property. When the values of these properties change, the component's HTML element's
+attributes will be updated to match the new values.
+
+
+An appropriate tag and css class are applied through the `tagName` and `classNames` properties.
+
+
+Note: Your component must have a matching template named `share-twitter`. Because there is no HTML inside our
+`<a>` tag, this template will be empty.
+
+<a class="jsbin-embed" href="http://jsbin.com/EwumuVI/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
