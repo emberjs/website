@@ -65,43 +65,47 @@ title: Builds
   </ul>
 </script>
 
-<script type="text/x-handlebars" data-template-name="_file_listing">
-  {{#if ifFilteredFiles}}
-    {{#if filesPresent }}
-      <table class="table">
-        <thead>
-          <tr>
-            <th>File</th>
-            <th>Modified</th>
-            <th>Size</th>
-            <th>Quick Copy</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{#each filteredFiles}}
-            <tr>
-              <td><a {{bind-attr href=url }}>{{name}}</a></td>
-              <td>{{format-date-time lastModified}}</td>
-              <td>{{format-bytes size}}</td>
-              <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
-            </tr>
-          {{/each}}
-        </tbody>
-      </table>
-    {{ else }}
-      <br/>
-      {{#if isLoading}}
-        <p class="loading-spinner">
-          Loading...<br/><br/>
-          <img src="/images/ajax-loader.gif" />
-        </p>
-      {{else}}
-        <p>There are currently no builds for {{title}}. Please check back soon.</p>
-      {{/if}}
-    {{/if}}
+<script type="text/x-handlebars" data-template-name="_project_listing">
+  {{#if filesPresent }}
+    {{#each projects}}
+      {{partial 'filesTable'}}
+    {{/each}}
   {{ else }}
-    <p class="extra-margin">There are currently no builds for {{title}}. Please check back soon.</p>
+    <br/>
+    {{#if isLoading}}
+      <p class="loading-spinner">
+        Loading...<br/><br/>
+        <img src="/images/ajax-loader.gif" />
+      </p>
+    {{else}}
+      <p>There are currently no builds for {{title}}. Please check back soon.</p>
+    {{/if}}
   {{/if}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="_files_table">
+  <h2 class="project-name">{{projectName}}</h2>
+  <p>{{description}}</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>File</th>
+        <th>Modified</th>
+        <th>Size</th>
+        <th>Quick Copy</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each files}}
+        <tr>
+          <td><a {{bind-attr href=url }}>{{name}}</a></td>
+          <td>{{format-date-time lastModified}}</td>
+          <td>{{format-bytes size}}</td>
+          <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
 </script>
 
 <script type="text/x-handlebars" data-template-name="build-list">
@@ -112,14 +116,12 @@ title: Builds
       <li>{{#link-to dailyLink}}Daily{{/link-to}}</li>
     </ul>
   </div>
-  {{partial 'filters'}}
-  {{partial 'fileListing'}}
+  {{partial 'projectListing'}}
 </script>
 
 <script type="text/x-handlebars" data-template-name="tagged">
   <h2>{{title}}</h2>
-  {{partial 'filters'}}
-  {{partial 'fileListing'}}
+  {{partial 'projectListing'}}
 </script>
 
 <script type="text/x-handlebars" data-template-name="components/copy-clipboard">
