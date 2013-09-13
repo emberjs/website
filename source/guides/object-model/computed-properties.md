@@ -86,6 +86,7 @@ App.Person = Ember.Object.extend({
   fullName: function(key, value, oldValue) {
     // setter
     if (arguments.length > 1) {
+      var fullNameString = value;
       var nameParts = fullNameString.split(/\s+/);
       this.set('firstName', nameParts[0]);
       this.set('lastName',  nameParts[1]);
