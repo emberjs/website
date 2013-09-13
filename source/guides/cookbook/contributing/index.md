@@ -1,6 +1,11 @@
-The Ember Cookbook section is for common Ember problems and solutions. Anyone is welcome to [contribute](/guides/cookbook/understanding_the_cookbook_format).
+The Ember Cookbook provides answers and solutions to common Ember questions and problems. Anyone is welcome to
+[contribute](/guides/cookbook/understanding_the_cookbook_format).
 
-People new to the technology (i.e. "novices") should work through guides and tutorials before reading a Cookbook. People with advanced or expert knowledge should be contributing to discussion sections of recipes. 
+If you are new to Ember, we recommend that you spend some time reading the guides and tutorials before coming
+to the Cookbook. Cookbook recipes assume that you have a basic understanding of Ember's concepts.
+
+If you have experience with Ember and would like to contribute to the Cookbook, the discussion section of each
+recipe is a great place to start.
 
 ### Recipes
 

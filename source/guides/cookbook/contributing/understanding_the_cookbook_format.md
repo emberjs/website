@@ -1,28 +1,34 @@
 ## Problem
-You want to contribute to the Ember Cookbook but are unsure of how the contribution should be formatted and what type of content it should contain.
+You want to contribute, but aren't familiar with the Cookbook format or don't know
+how your contribution should be formatted.
 
 ## Solution
-Programming Cookbooks contain "recipes" that guide a programmer who understands the beginnings of a topic into stronger skill with a technology by answering specific "how-to" style questions.  Cookbook recipes cover a single desired outcome across many different areas of concern within a single technology: they cover more topics than [API documentation for a class][api_docs_for_class] but are smaller in scope than [a topic-based guide][topic_based_guide].
+Cookbook-style guides contain recipes that guide a beginning programmer to a deeper knowledge of the subject
+by answering specific, "how-to" style questions. Cookbook recipes address more topics than
+[API documentation for a class](http://docs.emberjs.com/#doc=Ember.StateManager&src=fal), but are smaller in
+scope than [a topic-based guide](http://emberjs.com/guides/view_layer/).
 
-Recipes follow a patterned format: 
+All recipes follow the same format:
 
 <dl>
   <dt>Title</dt>
-  <dd>The title should explain the broad topic of the recipe. The title often, but not always, begins with a gerund ("Creating", "Managing", "Updating", "Accessing", "Using", etc).</dd>
+  <dd>Broadly explains the topic of the recipe</dd>
   <dt>Problem</dt>
-  <dd>The problem statement should outline a reader's goal.</dd>
+  <dd>Outlines the recipe's goals</dd>
   <dt>Solution</dt>
-  <dd>The solution should quickly summarize the correct approach to address the problem statement.</dd>
+  <dd>Summarizes the correct approach to addressing the problem</dd>
   <dt>Discussion</dt>
-  <dd>The discussion should explore the solution in detail.</dd>
+  <dd>Explores the solution in detail</dd>
 </dl>
 
-A Cookbook does not need to be read in any particular order and each recipe should contain all the information necessary for someone with beginner skills to address the _problem_ statement. 
-
-*Referring to other recipes that are considered prerequisite knowledge is encouraged.*
+A Cookbook does not need to be read in any particular order, and each recipe should contain all the information
+necessary for a beginner to address the _problem statement_. Referring to other recipes that are considered
+prerequisite knowledge is encouraged.
 
 ## Discussion
-For a better understanding and to see some examples, peruse some [O'Reilly Cookbooks][oreilly_cookbooks] or the [Coffeescript Cookbook][coffeescript_cookbook] to understand the format.
+Take a look at an [O'Reilly Cookbook](http://shop.oreilly.com/category/series/cookbooks.do) or the
+[Coffeescript Cookbook](http://coffeescriptcookbook.com/). Both of these are great examples of the Cookbook
+format.
 
 [api_docs_for_class]: http://docs.emberjs.com/#doc=Ember.StateManager&src=fal
 [topic_based_guide]: http://emberjs.com/guides/view_layer/
