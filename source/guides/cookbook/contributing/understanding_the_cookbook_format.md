@@ -1,8 +1,8 @@
-## Problem
+### Problem
 You want to contribute, but aren't familiar with the Cookbook format or don't know
 how your contribution should be formatted.
 
-## Solution
+### Solution
 Cookbook-style guides contain recipes that guide a beginning programmer to a deeper knowledge of the subject
 by answering specific, "how-to" style questions. Cookbook recipes address more topics than
 [API documentation for a class](http://docs.emberjs.com/#doc=Ember.StateManager&src=fal), but are smaller in
@@ -25,7 +25,7 @@ A Cookbook does not need to be read in any particular order, and each recipe sho
 necessary for a beginner to address the _problem statement_. Referring to other recipes that are considered
 prerequisite knowledge is encouraged.
 
-## Discussion
+### Discussion
 Take a look at an [O'Reilly Cookbook](http://shop.oreilly.com/category/series/cookbooks.do) or the
 [Coffeescript Cookbook](http://coffeescriptcookbook.com/). Both of these are great examples of the Cookbook
 format.

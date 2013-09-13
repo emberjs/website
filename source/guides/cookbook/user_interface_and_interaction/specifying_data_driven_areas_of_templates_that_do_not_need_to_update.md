@@ -1,7 +1,7 @@
-## Problem
+### Problem
 You have a section of a template that is based on a data but you don't need the template to update
 
-## Solution
+### Solution
 Use the `{{unbound}}` Handlebars helper.
 
 ```handlebars
@@ -28,4 +28,4 @@ that is not bound will avoid adding unncessary observers on a property.
 
 #### Example
 
-<a class="jsbin-embed" href="http://jsbin.com/UDAnuLu/2/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/ayUkOWo/3/edit?output">JS Bin</a>

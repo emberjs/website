@@ -1,10 +1,10 @@
-## Problem
+### Problem
 You have portions of your views layer that use the same or similar HTML in many places.
 
-## Solution
+### Solution
 Write a custom Handlebars helper that can be called from any template and gets updated when the model changes.
 
-## Discussion
+### Discussion
 
 ```hbs
 <script type="text/x-handlebars">

@@ -1,13 +1,13 @@
-## Problem
+### Problem
 You'd like to submit a recipe to the Ember Cookbook.
 
-## Solution
+### Solution
 [Fork the repository][fork_repo] and create a feature branch named after your
 recipe. New recipes should have four sections: a _title_, a _problem statement_, a _solution statement_, and
 an empty _discussion section_.
 >>>>>>> 45e1ae13f82eced4f7f9cfd47cc9d43addf6910c
 
-## Discussion
+### Discussion
 A [feature branch](http://nvie.com/posts/a-successful-git-branching-model/) is a branch in a local git
 repository. Its name should be the camel-cased or underscored name of your recipe. For example, the branch
 name for this recipe &ndash; "Suggesting a Recipe" &ndash; would be `SuggestingARecipe` or `suggesting_a_recipe`.

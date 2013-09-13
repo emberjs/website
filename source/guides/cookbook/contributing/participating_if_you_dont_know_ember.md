@@ -1,10 +1,10 @@
-## Problem
+### Problem
 You are new to Ember, but want to help write the Cookbook.
 
-## Solution
+### Solution
 Suggest and/or submit pull requests with a _problem_ statement (see [Suggesting a Recipe][suggesting_a_recipe]). You do not need to worry about providing a solution or discussion. Someone with more experience with Ember will then be able to take your _problem_ and provide a _solution_ and _discussion_.
 
-## Discussion
+### Discussion
 The first version of the Ember Cookbook will be completed in a few phases. First, we will be accepting
 recipe suggestions. You can suggest a recipe by forking this repository and submitting a pull request
 (see _Suggesting a Recipe_). Once we have written recipes, we'll be asking for help to proofread and test

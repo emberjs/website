@@ -1,7 +1,7 @@
-## Problem
+### Problem
 You have an Ember.TextField instance that you would like become focused after it's been inserted.
 
-## Solution
+### Solution
 Subclass `Ember.TextField` and define a method marked with
 `.on('didInsertElement')`. Inside this method apply `focus`
 to the text field by accessing the components's jQuery `$` property:
@@ -9,7 +9,7 @@ to the text field by accessing the components's jQuery `$` property:
 ```javascript
 App.FocusInputComponent = Ember.TextField.extend({
   becomeFocused: function() {
-    this.$.focus();
+    this.$().focus();
   }.on('didInsertElement')
 });
 ```
@@ -18,7 +18,7 @@ App.FocusInputComponent = Ember.TextField.extend({
 {{focus-input}}
 ```
 
-## Discussion
+### Discussion
 Custom components provide a way to extend native HTML elements with new behavior
 like autofocusing.
 
@@ -43,4 +43,4 @@ Prototype extension can be disabled by setting the `Ember.EXTEND_PROTOTYPES` pro
 
 #### Example
 
-<a class="jsbin-embed" href="http://jsbin.com/ePiCiVa/7/embed?html,js,output>JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/iZiWaZE/2/edit?js,output">JS Bin</a>

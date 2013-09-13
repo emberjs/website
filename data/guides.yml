@@ -227,112 +227,114 @@ Configuring Ember.js:
   - title: "Embedding Applications"
     url: "configuring-ember/embedding-applications"
 
-# Cookbook:
-#   # contributing
-#   - title: "Contributing"
-#     url: "cookbook/contributing"
-#   - title: "Understanding the Cookbook Format"
-#     url: "cookbook/contributing/understanding_the_cookbook_format"
-#     skip_sidebar_item: true
-#   - title: "Participating If You Know Ember"
-#     url: "cookbook/contributing/participating_if_you_know_ember"
-#     skip_sidebar_item: true
-#   - title: "Participating If You Don't Know Ember"
-#     url: "cookbook/contributing/participating_if_you_dont_know_ember"
-#     skip_sidebar_item: true
-#   - title: "Deciding If A Recipe is a Good Fit"
-#     url: "cookbook/contributing/deciding_if_a_recipe_is_a_good_fit"
-#     skip_sidebar_item: true
-#   - title: "Suggesting A Recipe"
-#     url: "cookbook/contributing/suggesting_a_recipe"
-#     skip_sidebar_item: true
-#   # ui and ux
-#   - title: "User Interface and Interaction"
-#     url: "cookbook/user_interface_and_interaction"
-#   - title: "Adding CSS Classes to Your Components"
-#     url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_components"
-#     skip_sidebar_item: true
-#   - title: "Adding CSS Classes to Your Components Based on Properties"
-#     url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_components_based_on_properties"
-#     skip_sidebar_item: true
-#   - title: "Focusing a Textfield after It's Been Inserted"
-#     url: "cookbook/user_interface_and_interaction/focusing_a_textfield_after_its_been_inserted"
-#     skip_sidebar_item: true
-#   - title: "Displaying Formatted Dates With Moment.js"
-#     url: "cookbook/user_interface_and_interaction/displaying_formatted_dates_with_moment_js"
-#     skip_sidebar_item: true
-#   - title: "Specifying Data-Driven Areas of Templates That Do Not Need To Update"
-#     url: "cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
-#     skip_sidebar_item: true
-#   - title: "Converting Strings to Currency With Accounting.js"
-#     url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
-#     skip_sidebar_item: true
-#   # events and bindings
-#   - title: "Event Handling & Data Binding"
-#     url: "cookbook/event_handling_and_data_binding"
-#   - title: "Binding Properties of an Object to Its Own Properties"
-#     url: "cookbook/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties"
-#     skip_sidebar_item: true
-#   # - title: "Responding to User Events"
-#   #   url: "cookbook/event_handling_and_data_binding/responding_to_user_events"
-#   #   skip_sidebar_item: true
-#   # - title: "Toggling A Boolean Property"
-#   #   url: "cookbook/event_handling_and_data_binding/toggling_a_boolean_property"
-#   #   skip_sidebar_item: true
-#   # - title: "Using Computed Properties"
-#   #   url: "cookbook/event_handling_and_data_binding/using_computed_properties"
-#   #   skip_sidebar_item: true
-#   # - title: "Setting The Attributes of a View's Element"
-#   #   url: "cookbook/event_handling_and_data_binding/setting_the_attributes_of_a_views_element"
-#   #   skip_sidebar_item: true
-#   # client/server
-#   - title: "Client/Server Interaction"
-#     url: "cookbook/client_server_interaction"
-#   - title: "Loading Data From A Server"
-#     url: "cookbook/client_server_interaction/loading_data_from_a_server"
-#     skip_sidebar_item: true
-#   # - title: "Sending Data To A Server"
-#   #   url: "cookbook/client_server_interaction/sending_data_to_a_server"
-#   #   skip_sidebar_item: true
-#   - title: "Serving Compiled Handlebars Templates Using Node.js"
-#     url: "cookbook/client_server_interaction/serving_compiled_templates_using_nodejs"
-#     skip_sidebar_item: true
-#   # helpers & components
-#   - title: "Helpers & Components"
-#     url: "cookbook/helpers_and_components"
-#   - title: "Writing a Custom Handlebars Helper"
-#     url: "cookbook/helpers_and_components/writing_a_custom_handlebars_helper"
-#     skip_sidebar_item: true
-#   - title: "Creating a Handlebars Helper to Truncate Text"
-#     url: "cookbook/helpers_and_components/creating_a_handlebars_helper_to_truncate_text"
-#     skip_sidebar_item: true
-#   - title: "Creating Reusable Social Share Buttons"
-#     url: "cookbook/helpers_and_components/creating_reusable_social_share_buttons"
-#     skip_sidebar_item: true
-#   # objects
-#   - title: "Working with Objects"
-#     url: "cookbook/working_with_objects"
-#   - title: "Displaying Content Arrays in Reverse Order"
-#     url: "cookbook/working_with_objects/displaying_content_arrays_in_reverse_order"
-#     skip_sidebar_item: true
-#   - title: "Incrementing Or Decrementing A Property"
-#     url: "cookbook/working_with_objects/incrementing_or_decrementing_a_property"
-#     skip_sidebar_item: true
-#   - title: "Setting Multiple Properties At Once"
-#     url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
-#     skip_sidebar_item: true
-#   # - title: "Continuous Redrawing of Views"
-#   #   url: "cookbook/working_with_objects/continuous_redrawing_of_views"
-#   #   skip_sidebar_item: true
-#   # - title: "Naming Your Child Views"
-#   #   url: "cookbook/working_with_objects/naming_your_child_views"
-#   #   skip_sidebar_item: true
-#   # debugging
-#   # - title: "Debugging & Configuration"
-#   #   url: "cookbook/debugging_and_configuration"
-#   # - title: "Setting Ember Global Flags"
-#   #   url: "cookbook/debugging_and_configuration/setting_ember_global_flags"
-#   #   skip_sidebar_item: true
+Cookbook:
+  - title: "Introduction"
+    url: "cookbook"
+  # contributing
+  - title: "Contributing"
+    url: "cookbook/contributing"
+  - title: "Understanding the Cookbook Format"
+    url: "cookbook/contributing/understanding_the_cookbook_format"
+    skip_sidebar_item: true
+  - title: "Participating If You Know Ember"
+    url: "cookbook/contributing/participating_if_you_know_ember"
+    skip_sidebar_item: true
+  - title: "Participating If You Don't Know Ember"
+    url: "cookbook/contributing/participating_if_you_dont_know_ember"
+    skip_sidebar_item: true
+  - title: "Deciding If A Recipe is a Good Fit"
+    url: "cookbook/contributing/deciding_if_a_recipe_is_a_good_fit"
+    skip_sidebar_item: true
+  - title: "Suggesting A Recipe"
+    url: "cookbook/contributing/suggesting_a_recipe"
+    skip_sidebar_item: true
+  # ui and ux
+  - title: "User Interface and Interaction"
+    url: "cookbook/user_interface_and_interaction"
+  - title: "Adding CSS Classes to Your Components"
+    url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_components"
+    skip_sidebar_item: true
+  - title: "Adding CSS Classes to Your Components Based on Properties"
+    url: "cookbook/user_interface_and_interaction/adding_css_classes_to_your_components_based_on_properties"
+    skip_sidebar_item: true
+  - title: "Focusing a Textfield after It's Been Inserted"
+    url: "cookbook/user_interface_and_interaction/focusing_a_textfield_after_its_been_inserted"
+    skip_sidebar_item: true
+  - title: "Displaying Formatted Dates With Moment.js"
+    url: "cookbook/user_interface_and_interaction/displaying_formatted_dates_with_moment_js"
+    skip_sidebar_item: true
+  - title: "Specifying Data-Driven Areas of Templates That Do Not Need To Update"
+    url: "cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
+    skip_sidebar_item: true
+  # - title: "Converting Strings to Currency With Accounting.js"
+  #   url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
+  #   skip_sidebar_item: true
+  # events and bindings
+  - title: "Event Handling & Data Binding"
+    url: "cookbook/event_handling_and_data_binding"
+  - title: "Binding Properties of an Object to Its Own Properties"
+    url: "cookbook/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties"
+    skip_sidebar_item: true
+  # - title: "Responding to User Events"
+  #   url: "cookbook/event_handling_and_data_binding/responding_to_user_events"
+  #   skip_sidebar_item: true
+  # - title: "Toggling A Boolean Property"
+  #   url: "cookbook/event_handling_and_data_binding/toggling_a_boolean_property"
+  #   skip_sidebar_item: true
+  # - title: "Using Computed Properties"
+  #   url: "cookbook/event_handling_and_data_binding/using_computed_properties"
+  #   skip_sidebar_item: true
+  # - title: "Setting The Attributes of a View's Element"
+  #   url: "cookbook/event_handling_and_data_binding/setting_the_attributes_of_a_views_element"
+  #   skip_sidebar_item: true
+  # client/server
+  # - title: "Client/Server Interaction"
+  #   url: "cookbook/client_server_interaction"
+  # - title: "Loading Data From A Server"
+  #   url: "cookbook/client_server_interaction/loading_data_from_a_server"
+  #   skip_sidebar_item: true
+  # - title: "Sending Data To A Server"
+  #   url: "cookbook/client_server_interaction/sending_data_to_a_server"
+  #   skip_sidebar_item: true
+  # - title: "Serving Compiled Handlebars Templates Using Node.js"
+  #   url: "cookbook/client_server_interaction/serving_compiled_templates_using_nodejs"
+  #   skip_sidebar_item: true
+  # helpers & components
+  - title: "Helpers & Components"
+    url: "cookbook/helpers_and_components"
+  # - title: "Writing a Custom Handlebars Helper"
+  #   url: "cookbook/helpers_and_components/writing_a_custom_handlebars_helper"
+  #   skip_sidebar_item: true
+  # - title: "Creating a Handlebars Helper to Truncate Text"
+  #   url: "cookbook/helpers_and_components/creating_a_handlebars_helper_to_truncate_text"
+  #   skip_sidebar_item: true
+  - title: "Creating Reusable Social Share Buttons"
+    url: "cookbook/helpers_and_components/creating_reusable_social_share_buttons"
+    skip_sidebar_item: true
+  # objects
+  - title: "Working with Objects"
+    url: "cookbook/working_with_objects"
+  # - title: "Displaying Content Arrays in Reverse Order"
+  #   url: "cookbook/working_with_objects/displaying_content_arrays_in_reverse_order"
+  #   skip_sidebar_item: true
+  - title: "Incrementing Or Decrementing A Property"
+    url: "cookbook/working_with_objects/incrementing_or_decrementing_a_property"
+    skip_sidebar_item: true
+  - title: "Setting Multiple Properties At Once"
+    url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
+    skip_sidebar_item: true
+  # - title: "Continuous Redrawing of Views"
+  #   url: "cookbook/working_with_objects/continuous_redrawing_of_views"
+  #   skip_sidebar_item: true
+  # - title: "Naming Your Child Views"
+  #   url: "cookbook/working_with_objects/naming_your_child_views"
+  #   skip_sidebar_item: true
+  # debugging
+  # - title: "Debugging & Configuration"
+  #   url: "cookbook/debugging_and_configuration"
+  # - title: "Setting Ember Global Flags"
+  #   url: "cookbook/debugging_and_configuration/setting_ember_global_flags"
+  #   skip_sidebar_item: true
 
 Understanding Ember.js:
   - title: "The View Layer"

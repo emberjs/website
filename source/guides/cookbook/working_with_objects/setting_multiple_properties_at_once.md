@@ -1,7 +1,7 @@
-## Problem
+### Problem
 You want to set multiple properties on an object with a single method call.
 
-## Solution
+### Solution
 Use the `setProperties` method of `Ember.Object`.
 
 ```js
@@ -13,5 +13,5 @@ person.setProperties({
 
 #### Example
 
-<a class="jsbin-embed" href="http://jsbin.com/uBiYELO/3/embed?live,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/uPaPEcO/2/edit?js,output">JS Bin</a>
 

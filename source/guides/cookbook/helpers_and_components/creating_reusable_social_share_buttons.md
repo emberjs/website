@@ -1,8 +1,8 @@
-## Problem
+### Problem
 You want to create a reusable [Tweet button](https://dev.twitter.com/docs/tweet-button)
 for your application.
 
-## Solution
+### Solution
 Write a custom component that renders the Tweet button with specific attributes
 passed in.
 
@@ -28,7 +28,7 @@ Include Twitter's widget code in your HTML:
 <script type="text/javascript" src="http://platform.twitter.com/widgets.js" id="twitter-wjs"></script>
 ```
 
-## Discussion
+### Discussion
 Twitter's widget library expects to find an `<a>` tag on the page with specific `data-` attributes applied.
 It takes the values of these attributes and, when the `<a>` tag is clicked, opens an iFrame for twitter sharing.
 
@@ -47,4 +47,6 @@ An appropriate tag and css class are applied through the `tagName` and `classNam
 Note: Your component must have a matching template named `share-twitter`. Because there is no HTML inside our
 `<a>` tag, this template will be empty.
 
-<a class="jsbin-embed" href="http://jsbin.com/EwumuVI/2/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+#### Example
+
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/OriZITU/3/edit?js,output">JS Bin</a>

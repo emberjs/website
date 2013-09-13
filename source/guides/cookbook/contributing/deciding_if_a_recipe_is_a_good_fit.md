@@ -1,14 +1,14 @@
-## Problem
+### Problem
 You have an idea for a recipe, but aren't sure it is a good fit for the Cookbook.
 
-## Solution
+### Solution
 Read existing cookbook solutions and compare them to yours. You may also want to borrow or buy a cookbook-style
 book for another technology to better understand the format.
 
 Cookbook recipes are usually quick answers to focused questions. Your recipe should be narrowly tailored to
 solve a single problem.
 
-## Discussion
+### Discussion
 The Cookbook format best serves beginners who have a basic knowledge of Ember.js and have ideally completed a
 small application of their own. Recipes in the Cookbook should teach intermediate and advanced topics, or present
 skills an Ember.js developer should know. Popular topics on StackOverflow are great examples of what a Cookbook
