@@ -154,6 +154,37 @@ App.S3File = Ember.Object.extend({
   }.property('baseUrl', 'relativePath')
 });
 
+App.Project = Ember.Object.extend();
+
+App.Project.reopenClass({
+  FIXTURES:
+    [{
+      projectName: 'All',
+      projectFilter: ''
+    }, {
+      projectName: 'Ember',
+      projectFilter: 'ember.',
+    }, {
+      projectName: 'Ember Data',
+      projectFilter: 'ember-data.'
+    }],
+
+  all: function(){
+    return this.FIXTURES.map(function(obj) {
+      return App.Project.create(obj);
+    });
+  },
+
+  find: function(name) {
+    var allProjects = this.all();
+
+    if (!name)
+      return allProjects;
+    else
+      return allProjects.filterBy('name', name);
+  }
+});
+
 App.BetaRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('beta.latest'); }
 });
@@ -178,7 +209,7 @@ App.BetaLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 App.TabItemController = Ember.ObjectController.extend({
   needs: ['application'],
   isSelectedProject: function() {
-    return this.get('model.filter') === this.get('controllers.application.selectedProject');
+    return this.get('model.projectFilter') === this.get('controllers.application.selectedProject');
   }.property('controllers.application.selectedProject')
 });
 
@@ -205,16 +236,7 @@ App.TabMixin = Ember.Mixin.create({
   },
   needs: ['application'],
   currentFilter: '',
-  filters: [{
-    name: 'All',
-    filter: ''
-  }, {
-    name: 'Ember',
-    filter: 'ember.',
-  }, {
-    name: 'Ember Data',
-    filter: 'ember-data.'
-  }],
+  filters: App.Project.find(),
   filteredFiles: function() {
     var files = this.get('model.files'),
         selectedFilter = this.get('currentFilter');

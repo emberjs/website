@@ -60,7 +60,7 @@ title: Builds
 <script type="text/x-handlebars" data-template-name="_filters">
   <ul class="project-pills">
     {{#each filters itemController="tabItem"}}
-      <li {{action "setFilter" filter}} {{bind-attr class="isSelectedProject:active"}}>{{name}}</li>
+      <li {{action "setFilter" projectFilter}} {{bind-attr class="isSelectedProject:active"}}>{{projectName}}</li>
     {{/each}}
   </ul>
 </script>
