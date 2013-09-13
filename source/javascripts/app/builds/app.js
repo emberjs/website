@@ -158,25 +158,76 @@ App.Project = Ember.Object.extend();
 
 App.Project.reopenClass({
   FIXTURES:
-    [{
+    [ {
       projectName: 'All',
-      projectFilter: ''
+      projectFilter: '',
+      channel: "release"
+    }, {
+      projectName: 'All',
+      projectFilter: '',
+      channel: "beta"
+    }, {
+      projectName: 'All',
+      projectFilter: '',
+      channel: "canary"
+    }, {
+      projectName: 'All',
+      projectFilter: '',
+      channel: "tagged"
     }, {
       projectName: 'Ember',
-      projectFilter: 'ember.',
+      projectFilter: 'ember',
+      channel: "tagged"
     }, {
       projectName: 'Ember Data',
-      projectFilter: 'ember-data.'
+      projectFilter: 'ember-data',
+      channel: "tagged"
+    }, {
+      projectName: "Ember",
+      projectFilter: "ember",
+      lastRelease: "1.0.0",
+      futureVersion: "1.0.0",
+      channel: "release",
+      date: "2013-08-31"
+    }, {
+      projectName: "Ember",
+      projectFilter: "ember",
+      lastRelease: "",
+      futureVersion: "1.1.0",
+      channel: "beta",
+      date: "2013-09-10"
+    }, {
+      projectName: "Ember Data",
+      projectFilter: "ember-data",
+      lastRelease: "1.0.0-beta.2",
+      futureVersion: "1.0.0",
+      channel: "beta",
+      date: "2013-09-13"
+    }, {
+      projectName: "Ember",
+      projectFilter: "ember",
+      channel: "canary",
+    }, {
+      projectName: "Ember Data",
+      projectFilter: "ember-data",
+      channel: "canary",
     }],
 
-  all: function(){
-    return this.FIXTURES.map(function(obj) {
+  all: function(channel){
+    var projects;
+
+    if (channel)
+      projects = this.FIXTURES.filterBy('channel', channel);
+    else
+      projects = this.FIXTURES;
+
+    return projects.map(function(obj) {
       return App.Project.create(obj);
     });
   },
 
-  find: function(name) {
-    var allProjects = this.all();
+  find: function(channel, name) {
+    var allProjects = this.all(channel);
 
     if (!name)
       return allProjects;
@@ -236,13 +287,17 @@ App.TabMixin = Ember.Mixin.create({
   },
   needs: ['application'],
   currentFilter: '',
-  filters: App.Project.find(),
+  filters: function(){
+    var currentChannel = this.get('channel');
+    return App.Project.find(currentChannel);
+  }.property(),
+
   filteredFiles: function() {
     var files = this.get('model.files'),
         selectedFilter = this.get('currentFilter');
 
     return files.filter(function(e) {
-      return e.get('name').indexOf(selectedFilter) !== -1 && e.get('name').indexOf('ember-runtime.') === -1;
+      return e.get('name').indexOf(selectedFilter + '.') !== -1 && e.get('name').indexOf('ember-runtime.') === -1;
     });
   }.property('currentFilter'),
   ifFilteredFiles: true,
@@ -336,7 +391,7 @@ App.TaggedRoute = Ember.Route.extend({
   }
 });
 
-App.TaggedController = Ember.ObjectController.extend(App.TabMixin);
+App.TaggedController = Ember.ObjectController.extend(App.TabMixin, {channel: 'tagged'});
 /*
  * Handlebars Helpers
  */
