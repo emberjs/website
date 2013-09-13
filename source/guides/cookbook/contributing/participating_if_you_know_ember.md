@@ -1,8 +1,9 @@
 ## Problem
-You know Ember and wish to support the creation of this document.
+You are familiar with Ember and want to help write the Cookbook.
 
 ## Solution
-[Fork the repository][fork_repo], enhance or add new recipes, and send a pull request.
+Get started by [forking the repository][fork_repo]. Send a pull request with an
+update to an existing recipe or a new recipe.
 
 ## Discussion
 Based on your experience and knowledge of Ember, we recommend submitting pull requests with the following:
