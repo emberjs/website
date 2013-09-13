@@ -1,10 +1,14 @@
 ## Problem
-You are entirely or mostly new to Ember but wish to support the creation of this document.
+You are new to Ember, but want to help write the Cookbook.
 
 ## Solution
-Watch this project on Github. You'll be notified through your Github account as we move through phases of the project.
+Watch this project on Github. Github will notify you as changes are made to the project, and you may
+find a place where you are able to help.
 
 ## Discussion
-The initial version of the Ember Cookbook will have a few phases. During the first phase you can suggest possible recipes by forking this project and submitting a pull request (See _Suggesting a Recipe_). During later phases we'll be asking for you help in proof reading and testing the recipes.
+The first version of the Ember Cookbook will be completed in a few phases. First, we will be accepting
+recipe suggestions. You can suggest a recipe by forking this repository and submitting a pull request
+(see _Suggesting a Recipe_). Once we have written recipes, we'll be asking for help to proofread and test
+them.
 
 See ["Watch a project"](http://help.github.com/be-social/) on Github for information on watching projects.
