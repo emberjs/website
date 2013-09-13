@@ -106,6 +106,14 @@ App.S3Bucket = Ember.Object.extend({
     return this.get('files').length;
   }.property('files.@each'),
 
+  filterFiles: function(filter){
+    var files = this.get('files');
+
+    return files.filter(function(e) {
+      return e.get('name').indexOf(filter + '.') !== -1;
+    });
+  },
+
   load: function(){
     var self = this,
     baseUrl = this.get('objectBaseUrl');
@@ -154,16 +162,77 @@ App.S3File = Ember.Object.extend({
   }.property('baseUrl', 'relativePath')
 });
 
+App.Project = Ember.Object.extend();
+
+App.Project.reopenClass({
+  FIXTURES:
+    [ {
+      projectName: 'Ember',
+      projectFilter: 'ember',
+      channel: "tagged"
+    }, {
+      projectName: 'Ember Data',
+      projectFilter: 'ember-data',
+      channel: "tagged"
+    }, {
+      projectName: "Ember",
+      projectFilter: "ember",
+      lastRelease: "1.0.0",
+      futureVersion: "1.0.1",
+      channel: "release",
+      date: "2013-08-31"
+    }, {
+      projectName: "Ember",
+      projectFilter: "ember",
+      lastRelease: "1.1.0-beta.1",
+      futureVersion: "1.1.0",
+      channel: "beta",
+      date: "2013-09-10"
+    }, {
+      projectName: "Ember Data",
+      projectFilter: "ember-data",
+      lastRelease: "1.0.0-beta.2",
+      futureVersion: "1.0.0",
+      channel: "beta",
+      date: "2013-09-13"
+    }, {
+      projectName: "Ember",
+      projectFilter: "ember",
+      channel: "canary",
+    }, {
+      projectName: "Ember Data",
+      projectFilter: "ember-data",
+      channel: "canary",
+    }],
+
+  all: function(channel){
+    var projects;
+
+    if (channel)
+      projects = this.FIXTURES.filterBy('channel', channel);
+    else
+      projects = this.FIXTURES;
+
+    return projects.map(function(obj) {
+      return App.Project.create(obj);
+    });
+  },
+
+  find: function(channel, name) {
+    var allProjects = this.all(channel);
+
+    if (!name)
+      return allProjects;
+    else
+      return allProjects.filterBy('name', name);
+  }
+});
+
 App.BetaRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('beta.latest'); }
 });
 
 App.BuildCategoryMixin = Ember.Mixin.create({
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
   renderTemplate: function() {
     this.render('build-list');
   }
@@ -178,7 +247,7 @@ App.BetaLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 App.TabItemController = Ember.ObjectController.extend({
   needs: ['application'],
   isSelectedProject: function() {
-    return this.get('model.filter') === this.get('controllers.application.selectedProject');
+    return this.get('model.projectFilter') === this.get('controllers.application.selectedProject');
   }.property('controllers.application.selectedProject')
 });
 
@@ -187,53 +256,58 @@ App.ApplicationController = Ember.ObjectController.extend({
 });
 
 App.CategoryLinkMixin = Ember.Mixin.create({
-  linkPrefix: null,
+  channel: null,
 
   latestLink: function() {
-    return this.get('linkPrefix') + ".latest";
-  }.property('linkPrefix'),
+    return this.get('channel') + ".latest";
+  }.property('channel'),
 
   dailyLink: function() {
-    return this.get('linkPrefix') + ".daily";
-  }.property('linkPrefix')
+    return this.get('channel') + ".daily";
+  }.property('channel')
 });
 
-App.TabMixin = Ember.Mixin.create({
-  init: function() {
-    this._super();
-    this.set('currentFilter', '');
-  },
-  needs: ['application'],
-  currentFilter: '',
-  filters: [{
-    name: 'All',
-    filter: ''
-  }, {
-    name: 'Ember.js',
-    filter: 'ember.',
-  }, {
-    name: 'Ember Data',
-    filter: 'ember-data.'
-  }],
-  filteredFiles: function() {
-    var files = this.get('model.files'),
-        selectedFilter = this.get('currentFilter');
+App.ProjectsMixin = Ember.Mixin.create({
+  projects: function(){
+    var projects = App.Project.find(this.get('channel')),
+        bucket   = this.get('model'),
+        self = this;
 
-    return files.filter(function(e) {
-      return e.get('name').indexOf(selectedFilter) !== -1 && e.get('name').indexOf('ember-runtime.') === -1;
+    projects.forEach(function(project){
+      project.files = bucket.filterFiles(project.projectFilter);
+      project.description = self.description(project);
+      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.js');
+      project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.prod.js');
+      project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.min.js');
     });
-  }.property('currentFilter'),
-  ifFilteredFiles: true,
-  actions: {
-    setFilter: function(filterName) {
-      this.set('currentFilter', filterName);
-      this.set('ifFilteredFiles', this.get('filteredFiles').length > 0);
-      this.get('controllers.application').set('selectedProject', filterName);
+
+    return projects;
+  }.property('channel', 'model'),
+
+  description: function(project){
+    var lastRelease = project.lastRelease,
+        futureVersion = project.futureVersion,
+        value;
+
+    if (this.get('channel') === 'tagged') {
+      value = '';
+    } else if (lastRelease) {
+      value = 'These builds are incremental improvements made since ' + lastRelease + ' and may become ' + futureVersion + '.'
+    } else if (futureVersion) {
+      value = 'These builds are not based on a tagged release. Upon the next release cycle they will become ' + futureVersion + '.';
+    } else {
+      value = 'These builds are based on the most recent development.';
     }
+
+    return new Handlebars.SafeString(value);
+  },
+
+  lastReleaseUrl: function(project, lastRelease, extension){
+    return 'http://builds.emberjs.com/tags/v' + lastRelease + '/' + project + extension;
   }
 });
 
-App.BetaLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'beta' });
+App.BetaLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
 
 App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -246,7 +320,7 @@ App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.BetaDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'beta' });
+App.BetaDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
 
 App.CanaryRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('canary.latest'); }
@@ -258,7 +332,7 @@ App.CanaryLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.CanaryLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'canary' });
+App.CanaryLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'canary' });
 
 App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -271,13 +345,13 @@ App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.CanaryDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'canary' });
+App.CanaryDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'canary' });
 
 App.ReleaseRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('release.latest'); }
 });
 
-App.ReleaseLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'release' });
+App.ReleaseLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'release' });
 
 App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -285,7 +359,7 @@ App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.ReleaseDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'release' });
+App.ReleaseDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'release' });
 
 App.ReleaseDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -299,11 +373,6 @@ App.ReleaseDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 });
 
 App.TaggedRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    controller.set('currentFilter', '');
-    controller.set('model', model);
-    this.controllerFor('application').set('selectedProject', '');
-  },
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
@@ -314,7 +383,7 @@ App.TaggedRoute = Ember.Route.extend({
   }
 });
 
-App.TaggedController = Ember.ObjectController.extend(App.TabMixin);
+App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {channel: 'tagged'});
 /*
  * Handlebars Helpers
  */
