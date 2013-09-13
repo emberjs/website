@@ -184,7 +184,7 @@ App.Project.reopenClass({
     }, {
       projectName: "Ember",
       projectFilter: "ember",
-      lastRelease: "",
+      lastRelease: "1.1.0-beta.1",
       futureVersion: "1.1.0",
       channel: "beta",
       date: "2013-09-10"
@@ -276,6 +276,9 @@ App.ProjectsMixin = Ember.Mixin.create({
     projects.forEach(function(project){
       project.files = bucket.filterFiles(project.projectFilter);
       project.description = self.description(project);
+      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.js');
+      project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.prod.js');
+      project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.min.js');
     });
 
     return projects;
@@ -289,8 +292,7 @@ App.ProjectsMixin = Ember.Mixin.create({
     if (this.get('channel') === 'tagged') {
       value = '';
     } else if (lastRelease) {
-      value = 'These builds are incremental improvements made since ' + lastRelease + ' and may become ' + futureVersion + '. ' +
-        'The most recent tagged version can be downloaded from <a href="#/tagged">here</a>.' ;
+      value = 'These builds are incremental improvements made since ' + lastRelease + ' and may become ' + futureVersion + '.'
     } else if (futureVersion) {
       value = 'These builds are not based on a tagged release. Upon the next release cycle they will become ' + futureVersion + '.';
     } else {
@@ -298,6 +300,10 @@ App.ProjectsMixin = Ember.Mixin.create({
     }
 
     return new Handlebars.SafeString(value);
+  },
+
+  lastReleaseUrl: function(project, lastRelease, extension){
+    return 'http://builds.emberjs.com/tags/v' + lastRelease + '/' + project + extension;
   }
 });
 
