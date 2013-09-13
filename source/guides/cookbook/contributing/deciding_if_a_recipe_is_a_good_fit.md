@@ -1,10 +1,20 @@
 ## Problem
-You have a possible recipe but aren't sure it is a good fit for a Cookbook.
+You have an idea for a recipe, but aren't sure it is a good fit for the Cookbook.
 
 ## Solution
-Borrow or buy an existing Cookbook or read sample chapters of cookbooks online. Scope the recipe so it explores a single problem.
+Read existing cookbook solutions and compare them to yours. You may also want to borrow or buy a cookbook-style
+book for another technology to better understand the format.
+
+Cookbook recipes are usually quick answers to focused questions. Your recipe should be narrowly tailored to
+solve a single problem.
 
 ## Discussion
-*The Cookbook format is targeted at an audience with beginner skills.* They have ideally read through a few tutorials and built a small demonstration application using Ember. Recipes are intended to guide them towards better understanding of intermediate and advanced topics. Recipes should focus on skills a beginner should ideally know. Especially good possibilities for recipes are frequently asked Ember questions on sites like StackOverflow.
+The Cookbook format best serves beginners who have a basic knowledge of Ember.js and have ideally completed a
+small application of their own. Recipes in the Cookbook should teach intermediate and advanced topics, or present
+skills an Ember.js developer should know. Popular topics on StackOverflow are great examples of what a Cookbook
+recipe should cover.
 
-The scope of a recipe should be the solution to a single problem addressed in a problem statement and should not cover multiple topics. "Syncing Data With One-way Bindings" or "Integrating Ember with moment.js" are excellent single problem recipes. "Building An Entire Ember Application with Node.js as a backend" or "Creating a GridView with Sortable Fields and A Searchbar and Connecting It To Rails" are scoped too large and should be broken into their component recipes (e.g. "Organizing an Ember Application", "Responding to User Events", "Connecting to Remote Data", etc).
+A good recipe solves a single problem. Topics like "Syncing data with one-way bindings" or "Integrating Ember with
+moment.js" make great recipes. Broader topics like "Building an Ember application with Node.js" or "Creating a GridView
+with sortable fields and search" are not. If your topic is too big, consider breaking it into multiple recipes (e.g.
+"Organizing an Ember application," "Responding to user events," "Connecting to remote data").
