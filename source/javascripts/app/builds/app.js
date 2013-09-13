@@ -187,15 +187,15 @@ App.ApplicationController = Ember.ObjectController.extend({
 });
 
 App.CategoryLinkMixin = Ember.Mixin.create({
-  linkPrefix: null,
+  channel: null,
 
   latestLink: function() {
-    return this.get('linkPrefix') + ".latest";
-  }.property('linkPrefix'),
+    return this.get('channel') + ".latest";
+  }.property('channel'),
 
   dailyLink: function() {
-    return this.get('linkPrefix') + ".daily";
-  }.property('linkPrefix')
+    return this.get('channel') + ".daily";
+  }.property('channel')
 });
 
 App.TabMixin = Ember.Mixin.create({
@@ -209,7 +209,7 @@ App.TabMixin = Ember.Mixin.create({
     name: 'All',
     filter: ''
   }, {
-    name: 'Ember.js',
+    name: 'Ember',
     filter: 'ember.',
   }, {
     name: 'Ember Data',
@@ -233,7 +233,7 @@ App.TabMixin = Ember.Mixin.create({
   }
 });
 
-App.BetaLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'beta' });
+App.BetaLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { channel: 'beta' });
 
 App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -246,7 +246,7 @@ App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.BetaDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'beta' });
+App.BetaDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { channel: 'beta' });
 
 App.CanaryRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('canary.latest'); }
@@ -258,7 +258,7 @@ App.CanaryLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.CanaryLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'canary' });
+App.CanaryLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { channel: 'canary' });
 
 App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -271,13 +271,13 @@ App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.CanaryDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'canary' });
+App.CanaryDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { channel: 'canary' });
 
 App.ReleaseRoute = Ember.Route.extend({
   redirect: function() { this.transitionTo('release.latest'); }
 });
 
-App.ReleaseLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'release' });
+App.ReleaseLatestController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { channel: 'release' });
 
 App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
@@ -285,7 +285,7 @@ App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.ReleaseDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { linkPrefix: 'release' });
+App.ReleaseDailyController = Ember.ObjectController.extend(App.TabMixin, App.CategoryLinkMixin, { channel: 'release' });
 
 App.ReleaseDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
