@@ -244,15 +244,35 @@ App.BetaLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.TabItemController = Ember.ObjectController.extend({
-  needs: ['application'],
-  isSelectedProject: function() {
-    return this.get('model.projectFilter') === this.get('controllers.application.selectedProject');
-  }.property('controllers.application.selectedProject')
-});
-
 App.ApplicationController = Ember.ObjectController.extend({
-  selectedProject: ''
+  isIndexActive: function(){
+    return this.isActiveChannel('index');
+  }.property('currentRouteName'),
+
+  isTaggedActive: function(){
+    return this.isActiveChannel('tagged');
+  }.property('currentRouteName'),
+
+  isChannelsActive: function(){
+    var self = this;
+    return !['index','tagged'].some(function(name){ return name === self.get('currentRouteName'); })
+  }.property('currentRouteName'),
+
+  isReleaseActive: function(){
+    return this.isActiveChannel('release');
+  }.property('currentRouteName'),
+
+  isBetaActive: function(){
+    return this.isActiveChannel('beta');
+  }.property('currentRouteName'),
+
+  isCanaryActive: function(){
+    return this.isActiveChannel('canary');
+  }.property('currentRouteName'),
+
+  isActiveChannel: function(channel){
+    return this.get('currentRouteName').indexOf(channel) !== -1;
+  }
 });
 
 App.CategoryLinkMixin = Ember.Mixin.create({
