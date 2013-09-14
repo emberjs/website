@@ -203,7 +203,8 @@
   image: instructure.png
 - url: http://radflex.pt
   image: radflex.png
-  
+- url: http://www.runtastic.com
+  image: runtastic.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
