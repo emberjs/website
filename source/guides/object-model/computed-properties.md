@@ -18,7 +18,7 @@ App.Person = Ember.Object.extend({
   }.property('firstName', 'lastName')
 });
 
-var ironMan = Person.create({
+var ironMan = App.Person.create({
   firstName: "Tony",
   lastName:  "Stark"
 });
@@ -34,7 +34,7 @@ Whenever you access the `fullName` property, this function gets called, and it r
 You can use computed properties as values to create new computed properties. Let's add a `description` computed property to the previous example, and use the existing `fullName` property and add in some other properties:
 
 ```javascript
-Person = Ember.Object.extend({
+App.Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
   age: null,
@@ -49,7 +49,7 @@ Person = Ember.Object.extend({
   }.property('fullName', 'age', 'country')
 });
 
-var captainAmerica = Person.create({
+var captainAmerica = App.Person.create({
   firstName: 'Steve',
   lastName: 'Rogers',
   age: 80,
@@ -97,7 +97,7 @@ App.Person = Ember.Object.extend({
 });
 
 
-var captainAmerica = Person.create();
+var captainAmerica = App.Person.create();
 captainAmerica.set('fullName', "William Burnside");
 captainAmerica.get('firstName') // William
 captainAmerica.get('lastName') // Burnside
