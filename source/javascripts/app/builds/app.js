@@ -185,14 +185,14 @@ App.Project.reopenClass({
       projectName: "Ember",
       projectFilter: "ember",
       lastRelease: "1.1.0-beta.1",
-      futureVersion: "1.1.0",
+      futureVersion: "1.1.0-beta.2",
       channel: "beta",
       date: "2013-09-10"
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
       lastRelease: "1.0.0-beta.2",
-      futureVersion: "1.0.0",
+      futureVersion: "1.0.0-beta.3",
       channel: "beta",
       date: "2013-09-13"
     }, {
@@ -292,11 +292,11 @@ App.ProjectsMixin = Ember.Mixin.create({
     if (this.get('channel') === 'tagged') {
       value = '';
     } else if (lastRelease) {
-      value = 'These builds are incremental improvements made since ' + lastRelease + ' and may become ' + futureVersion + '.'
+      value = 'The builds listed below are incremental improvements made since ' + lastRelease + ' and may become ' + futureVersion + '.'
     } else if (futureVersion) {
-      value = 'These builds are not based on a tagged release. Upon the next release cycle they will become ' + futureVersion + '.';
+      value = 'The builds listed below are not based on a tagged release. Upon the next release cycle they will become ' + futureVersion + '.';
     } else {
-      value = 'These builds are based on the most recent development.';
+      value = 'The builds listed below are based on the most recent development.';
     }
 
     return new Handlebars.SafeString(value);
