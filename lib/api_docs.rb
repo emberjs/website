@@ -360,6 +360,7 @@ module APIDocs
       unless string.nil?
         Redcarpet::Markdown.new(CodeRenderer,
           :layout_engine => :erb,
+          :autolink => true,
           :fenced_code_blocks => true,
           :lax_html_blocks => true).render(string)
       end
