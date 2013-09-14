@@ -1,5 +1,5 @@
 The Ember Cookbook provides answers and solutions to common Ember questions and problems. Anyone is welcome to
-[contribute](/guides/cookbook/understanding_the_cookbook_format).
+[contribute](/guides/cookbook/contributing/understanding_the_cookbook_format).
 
 If you are new to Ember, we recommend that you spend some time reading the guides and tutorials before coming
 to the Cookbook. Cookbook recipes assume that you have a basic understanding of Ember's concepts.
