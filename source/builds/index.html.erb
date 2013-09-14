@@ -11,14 +11,14 @@ title: Builds
 <script type="text/x-handlebars" data-template-name="application">
   <div id="sidebar">
     <ol id="toc-list">
-      <li class="level-1">{{#link-to 'index'}}Home{{/link-to}}</li>
-      <li class="level-1">{{#link-to 'tagged'}}Tagged Releases{{/link-to}}</li>
-      <li class="level-1">
+      <li {{bind-attr class=":level-1 isIndexActive:selected"}}>{{#link-to 'index'}}Home{{/link-to}}</li>
+      <li {{bind-attr class=":level-1 isTaggedActive:selected"}}>{{#link-to 'tagged'}}Tagged Releases{{/link-to}}</li>
+      <li {{bind-attr class=":level-1 isChannelsActive:selected"}}>
         <a>Channels</a>
         <ol style="display:block">
-          <li class="level-3">{{#link-to 'release.latest'}}Release{{/link-to}}</li>
-          <li class="level-3">{{#link-to 'beta.latest'}}Beta{{/link-to}}</li>
-          <li class="level-3">{{#link-to 'canary.latest'}}Canary{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isReleaseActive:sub-selected"}}>{{#link-to 'release.latest'}}Release{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isBetaActive:sub-selected"}}>{{#link-to 'beta.latest'}}Beta{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isCanaryActive:sub-selected"}}>{{#link-to 'canary.latest'}}Canary{{/link-to}}</li>
         </ol>
       </li>
     </ol>
