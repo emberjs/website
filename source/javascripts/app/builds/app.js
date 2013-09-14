@@ -296,9 +296,12 @@ App.ProjectsMixin = Ember.Mixin.create({
     projects.forEach(function(project){
       project.files = bucket.filterFiles(project.projectFilter);
       project.description = self.description(project);
-      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.js');
-      project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.prod.js');
-      project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.lastRelease, '.min.js');
+      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
+      project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.prod.js');
+      project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.min.js');
+
+      if (project.channel === 'canary')
+        project.lastRelease = 'latest';
     });
 
     return projects;
@@ -322,9 +325,14 @@ App.ProjectsMixin = Ember.Mixin.create({
     return new Handlebars.SafeString(value);
   },
 
-  lastReleaseUrl: function(project, lastRelease, extension){
-    return 'http://builds.emberjs.com/tags/v' + lastRelease + '/' + project + extension;
+  lastReleaseUrl: function(project, channel, lastRelease, extension){
+    if (channel === 'canary')
+      return 'http://builds.emberjs.com/canary/' + project + extension;
+    else
+      return 'http://builds.emberjs.com/tags/v' + lastRelease + '/' + project + extension;
   }
+
+
 });
 
 App.BetaLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
