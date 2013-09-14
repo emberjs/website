@@ -12,7 +12,7 @@ App.TodosController = Ember.Controller.extend({
 
   remaining: function() {
     var todos = this.get('todos');
-    return todos.filterProperty('isDone', false).get('length');
+    return todos.filterBy('isDone', false).get('length');
   }.property('todos.@each.isDone')
 });
 ```
