@@ -23,6 +23,7 @@ App.Router.map(function() {
 
 App.CopyClipboardComponent = Ember.Component.extend({
   tagName: 'span',
+  hasFlash: ZeroClipboard.detectFlashSupport(),
 
   didInsertElement: function () {
     var clip = new ZeroClipboard(this.$('button'), {
@@ -42,6 +43,10 @@ App.CopyClipboardComponent = Ember.Component.extend({
         $(this).addClass('loading');
         $(this).attr('disabled', 'disabled');
       });
+    });
+
+    this.$('input').on('click', function() {
+      $(this).select();
     });
   }
 });
