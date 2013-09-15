@@ -78,11 +78,11 @@ Properties](/guides/object-model/computed-properties).
 
 If you don't specify the type of the attribute, it will be whatever was
 provided by the server. You can make sure that an attribute is always
-coerced into a particular type by passing a `type` option to `attr`:
+coerced into a particular type by passing a `type` to `attr`:
 
 ```js
 App.Person = DS.Model.extend({
-  birthday: attr({ type: Date })
+  birthday: DS.attr('date')
 });
 ```
 
