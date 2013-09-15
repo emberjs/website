@@ -104,7 +104,6 @@ title: Builds
       <tr>
         <th>File</th>
         <th>Modified</th>
-        <th>Size</th>
         <th>Quick Copy</th>
       </tr>
     </thead>
@@ -113,7 +112,6 @@ title: Builds
         <tr>
           <td><a {{bind-attr href=url }}>{{name}}</a></td>
           <td>{{format-date-time lastModified}}</td>
-          <td>{{format-bytes size}}</td>
           <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
         </tr>
       {{/each}}
