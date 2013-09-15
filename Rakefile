@@ -127,3 +127,5 @@ task :deploy do |t, args|
     system "git push origin master" unless ENV['NODEPLOY']
   end
 end
+
+task :default => :preview
