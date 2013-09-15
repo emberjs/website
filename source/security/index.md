@@ -54,8 +54,7 @@ Ember.js has a 5 step disclosure policy.
    committed to the public repository but rather held locally pending the
    announcement.
 
-2. A suggested embargo date for this vulnerability is chosen and a CVE
-   is assigned for the vulnerability.
+2. A suggested embargo date for this vulnerability is chosen and a [CVE](http://cve.mitre.org/)(Common Vulnerabilities and  Exposures (CVE®)) is assigned for the vulnerability.
 
 3. On the embargo date, the Ember.js security mailing list is sent a copy of
    the announcement. The changes are pushed to the public repository and
