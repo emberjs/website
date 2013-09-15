@@ -146,5 +146,9 @@ title: Builds
 </script>
 
 <script type="text/x-handlebars" data-template-name="components/copy-clipboard">
-  <button {{bind-attr data-clipboard-text=text}} {{bind-attr data-label=label}}>{{label}}</button>
+  {{#if hasFlash}}
+    <button {{bind-attr data-clipboard-text=text}} {{bind-attr data-label=label}}>{{label}}</button>
+  {{else}}
+    <input type="text" class="name-input" readonly="readonly" {{bind-attr value=text}}>
+  {{/if}}
 </script>
