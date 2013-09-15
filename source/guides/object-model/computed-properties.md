@@ -10,6 +10,7 @@ We'll start with a simple example:
 
 ```javascript
 App.Person = Ember.Object.extend({
+  // these will be supplied by `create`
   firstName: null,
   lastName: null,
 
@@ -64,7 +65,7 @@ captainAmerica.get('description'); // "Steve Rogers; Age: 80; Country: USA"
 Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update . 
 
 ```javascript
-captainAmerica.set('firstName', 'William')
+captainAmerica.set('firstName', 'William');
 
 captainAmerica.get('description'); // "William Rogers; Age: 80; Country: USA"
 ```
@@ -79,7 +80,6 @@ You can also define what Ember should do when setting a computed property. If yo
 
 ```javascript
 App.Person = Ember.Object.extend({
-  // these will be supplied by `create`
   firstName: null,
   lastName: null,
 
@@ -99,8 +99,8 @@ App.Person = Ember.Object.extend({
 
 var captainAmerica = App.Person.create();
 captainAmerica.set('fullName', "William Burnside");
-captainAmerica.get('firstName') // William
-captainAmerica.get('lastName') // Burnside
+captainAmerica.get('firstName'); // William
+captainAmerica.get('lastName'); // Burnside
 ```
 
 Ember will call the computed property for both setters and getters, so if you want to call use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter.
