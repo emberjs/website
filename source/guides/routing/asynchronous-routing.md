@@ -215,7 +215,7 @@ App.SecretArticlesRoute  = Ember.Route.extend({
 
 #### `afterModel`
 
-The `afterModel` hook as called after a route's model (which might be a
+The `afterModel` hook is called after a route's model (which might be a
 promise) is resolved, and follows the same pause-on-promise semantics as
 `model` and `beforeModel`. It is passed the already-resolved model 
 and can therefore perform any additional logic that
