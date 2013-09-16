@@ -207,6 +207,8 @@
   image: mantra.png
 - url: http://www.runtastic.com
   image: runtastic.png
+- url: http://www.enthuse.me
+  image: enthuseme.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
