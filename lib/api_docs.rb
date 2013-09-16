@@ -51,14 +51,6 @@ module APIDocs
     alias :included :registered
   end
 
-  class CodeRenderer < Redcarpet::Render::HTML
-    include Highlighter::Helpers
-
-    def block_code(code, language)
-      _highlight(code, language || 'javascript')
-    end
-  end
-
   class ApiClass
     @cache = {}
 
@@ -358,7 +350,7 @@ module APIDocs
 
     def api_markdown(string)
       unless string.nil?
-        Redcarpet::Markdown.new(CodeRenderer,
+        Redcarpet::Markdown.new(Highlighter::HighlightedHTML,
           :layout_engine => :erb,
           :autolink => true,
           :fenced_code_blocks => true,
