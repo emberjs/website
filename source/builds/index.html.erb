@@ -84,25 +84,19 @@ title: Builds
 </script>
 
 <script type="text/x-handlebars" data-template-name="_files_table">
-  <h2 class="project-name">{{projectName}}</h2>
+  <h2 class="project-name">{{projectName}} Downloads</h2>
   {{#if lastRelease}}
   <div id="download">
     <div id="download-ember">
-      <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}}>
-        Download {{lastRelease}}
+      <a class="orange button" {{bind-attr href=lastReleaseProdUrl}}>
+        Production {{lastRelease}}
       </a>
-      <div class="info">
-        {{lastRelease}}:
-        <a class="debug" {{bind-attr href=lastReleaseProdUrl}}>
-          production
-        </a>
-        <a class="debug" {{bind-attr href=lastReleaseMinUrl}}>
-          (min)
-        </a> |
-        <a class="debug" {{bind-attr href=lastReleaseDebugUrl}}>
-          debug
-        </a>
-      </div>
+      <a class="orange button" {{bind-attr href=lastReleaseMinUrl}}>
+        Prod(minified) {{lastRelease}}
+      </a>
+      <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}}>
+        Development {{lastRelease}}
+      </a>
     </div>
   </div>
   {{/if}}
