@@ -37,7 +37,7 @@ The `share-twitter` component takes four options that match the four attributes 
 component object. 
 
 The component defines certain attributes of its HTML representation as bound to properties of the object through
-it's `attributeBindings` property. When the values of these properties change, the component's HTML element's
+its `attributeBindings` property. When the values of these properties change, the component's HTML element's
 attributes will be updated to match the new values.
 
 
