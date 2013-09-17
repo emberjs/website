@@ -24,9 +24,28 @@ isActive: function() {
 
 Another way would be to bind the class name to a bound property.
 
+```handlebars
+// content here is an object with an "isRelated" boolean property
+{{stooge content=content}}
+```
+
 ```js
-classNameBindings: ['isEnabled:enabled:disabled'],
-isRelatedBinding: "content.isRelated" // value resolves to boolean
+classNameBindings: ['isRelated:related:not-related'],
+
+// value resolves to boolean
+// "Binding" suffix is required here
+isRelatedBinding: "content.isRelated"
+```
+
+Alternatively, a value (preferably a boolean) passed to the component _can_ be used directly in the classNameBindings array.  Although, you should not let this bloat your
+component invocations when an object could be passed instead:
+
+```handlebars
+{{stooge isRelated=content.isRelated}}
+```
+
+```js
+classNameBindings: ['isRelated:related:not-related']
 ```
 
 #### Example
