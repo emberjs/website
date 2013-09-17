@@ -1539,6 +1539,14 @@ a.edit-page {
     }
   }
 
+  ol#toc-list {
+    li a {
+      display: block;
+      overflow: hidden;
+      @include ellipsis;
+    }
+  }
+
   div.method, div.property, div.event {
     padding-bottom: 1em;
     border-bottom: solid 1px #e0e0e0;
