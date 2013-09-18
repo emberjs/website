@@ -77,9 +77,7 @@ return the JSON in the following format:
     "id": 1
     "title": "Rails is omakase",
     "comments": ["1", "2"],
-    "_links": {
-      "user": "/people/dhh"
-    },
+    "user" : "dhh"
   },
 
   "comments": [{
