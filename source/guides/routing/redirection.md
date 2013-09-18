@@ -7,7 +7,7 @@ App.Router.map(function() {
 });
 
 App.IndexRoute = Ember.Route.extend({
-  redirect: function() {
+  afterModel: function() {
     this.transitionTo('posts');
   }
 });
@@ -27,7 +27,7 @@ App.Router.map(function() {
 });
 
 App.TopChartsChooseRoute = Ember.Route.extend({
-  redirect: function() {
+  afterModel: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
     this.transitionTo('topCharts.' + lastFilter || 'songs');
   }
