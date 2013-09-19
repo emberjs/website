@@ -96,18 +96,6 @@ window.App = Ember.Application.create({
 
 ## Ember Data
 
-#### Get the state history of an ember-data record
-
-```javascript
-record.stateManager.get('currentPath')
-```
-
-#### Log state transitions
-
-```javascript
-record.set("stateManager.enableLogging", true)
-```
-
 #### View ember-data's identity map
 
 ```javascript
