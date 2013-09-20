@@ -25,7 +25,7 @@ isActive: function() {
 Another way would be to bind the class name to a bound property.
 
 ```js
-classNameBindings: ['isEnabled:enabled:disabled'],
+classNameBindings: ['isRelated:relative'],
 isRelatedBinding: "content.isRelated" // value resolves to boolean
 ```
 
