@@ -6,8 +6,8 @@ Display JavaScript Date objects in human readable format.
 
 There are two ways of formatting the value:
 
-+ Create a Handlebars helper `{{format-date}}` and use it in your template
-+ Create a computed property `formattedDate` that will return a transformed date
+1. Create a Handlebars helper `{{format-date}}` and use it in your template
+2. Create a computed property `formattedDate` that will return a transformed date
 
 We will use [MomentJs](http://momentjs.com) for formatting dates.
 
