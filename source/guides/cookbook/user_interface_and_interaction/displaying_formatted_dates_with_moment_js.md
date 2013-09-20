@@ -22,11 +22,13 @@ Ember.Handlebars.registerBoundHelper('currentDate', function() {
 ```
 
 Your template will look like:
+
 ```html
 Today's date: {{currentDate}}  // Today's date: August 30 2013
 ```
 
 You can even enhance your code and pass in the date format to the helper:
+
 ```javascript
 Ember.Handlebars.registerBoundHelper('currentDate', function(format) {
   return moment().format(format);
@@ -34,6 +36,7 @@ Ember.Handlebars.registerBoundHelper('currentDate', function(format) {
 ```
 
 Now you would need to pass an additional parameter to the helper:
+
 ```html
 Today's date: {{currentDate 'LL'}}  // Today's date: August 30 2013
 ```
