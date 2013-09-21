@@ -11418,9 +11418,9 @@ classitems:
   description: ! "Returns an array mapped to the specified key.\n\nExample\n\n```javascript\nApp.Person
     = Ember.Object.extend({\n  childAges: Ember.computed.mapBy('children', 'age'),\n
     \ minChildAge: Ember.computed.min('childAges')\n});\n\nvar lordByron = App.Person.create({children:
-    []});\nlordByron.get('childAge'); // []\nlordByron.get('children').pushObject({name:
-    'Augusta Ada Byron', age: 7});\nlordByron.get('childAge'); // [7]\nlordByron.get('children').pushObjects([{name:
-    'Allegra Byron', age: 5}, {name: 'Elizabeth Medora Leigh', age: 8}]);\nlordByron.get('childAge');
+    []});\nlordByron.get('childAges'); // []\nlordByron.get('children').pushObject({name:
+    'Augusta Ada Byron', age: 7});\nlordByron.get('childAges'); // [7]\nlordByron.get('children').pushObjects([{name:
+    'Allegra Byron', age: 5}, {name: 'Elizabeth Medora Leigh', age: 8}]);\nlordByron.get('childAges');
     // [7, 5, 8]\n```"
   itemtype: method
   name: computed.mapBy
