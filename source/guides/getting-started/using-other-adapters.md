@@ -17,7 +17,7 @@ In `index.html` include `js/libs/local_storage_adapter.js` as a dependency:
 ```html
 <!--- ... additional lines truncated for brevity ... -->
 <script src="js/libs/ember-data.js"></script>
-<script src="js/libs/local_storage_adapter.js"></script>
+<script src="js/libs/localstorage_adapter.js"></script>
 <script src="js/application.js"></script>
  <!--- ... additional lines truncated for brevity ... -->
 ```
