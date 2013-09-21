@@ -104,7 +104,7 @@ to the `model` property of the associated controller. For example, if your
 `App.PostsRoute` returns an object from its `model` hook, that object
 will be set as the `model` property of the `App.PostsController`.
 
-(This, under the hood, is how template's know which model to render: they
+(This, under the hood, is how templates know which model to render: they
 look at their associated controller's `model` property. For example, the
 `photos` template will render whatever the `App.PhotosController`'s
 `model` property is set to.)
