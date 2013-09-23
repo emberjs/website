@@ -69,3 +69,7 @@
   - location: San Juan, Puerto Rico
     url:      http://www.meetup.com/Ember-PR/
     image:    21puertorico.png
+    image:
+  - location: Oslo, Norway
+    url:      http://www.meetup.com/Ember-js-Oslo/
+    image:
