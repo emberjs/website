@@ -633,6 +633,11 @@ p {
       margin: 0;
     }
 
+    .browsers {
+      margin-left: 19%;
+      display: inline-block;
+    }
+
     .bx-wrapper,
     .bx-window {
       width: 940px;
@@ -711,6 +716,20 @@ p {
           }
         }
       }
+    }
+  }
+
+  .browser-header {
+    margin-top: 150px;
+  }
+
+  .browser {
+    float: left;
+    margin-right: 5em;
+
+    img {
+      width: 55px;
+      height: 55px;
     }
   }
 
