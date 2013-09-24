@@ -5,8 +5,9 @@ Display JavaScript Date objects in human readable format.
 ### Solution
 
 There are two ways of formatting the value:
-+ create a Handlebars helper `{{format-date}}` and use it in your template
-+ create a computed property `formattedDate` that will return a transformed date
+
+1. Create a Handlebars helper `{{format-date}}` and use it in your template
+2. Create a computed property `formattedDate` that will return a transformed date
 
 We will use [MomentJs](http://momentjs.com) for formatting dates.
 
@@ -21,11 +22,13 @@ Ember.Handlebars.registerBoundHelper('currentDate', function() {
 ```
 
 Your template will look like:
+
 ```html
 Today's date: {{currentDate}}  // Today's date: August 30 2013
 ```
 
 You can even enhance your code and pass in the date format to the helper:
+
 ```javascript
 Ember.Handlebars.registerBoundHelper('currentDate', function(format) {
   return moment().format(format);
@@ -33,6 +36,7 @@ Ember.Handlebars.registerBoundHelper('currentDate', function(format) {
 ```
 
 Now you would need to pass an additional parameter to the helper:
+
 ```html
 Today's date: {{currentDate 'LL'}}  // Today's date: August 30 2013
 ```

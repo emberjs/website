@@ -24,14 +24,17 @@
     url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
     image:    08seattle.png
   - location: Austin, TX
-    url:      http://emberatx.org/
+    url:      http://www.meetup.com/Ember-ATX/
     image:    16austin.png
   - location: Washington, DC
     url: http://www.meetup.com/Ember-JS-DC/
     image:    19washington.png
   - location: Salt Lake City, UT
     url: http://www.meetup.com/EmberJS-SLC
-    image:    
+    image:
+  - location: Cincinnati, OH
+    url: http://www.meetup.com/Embernati
+    image:
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
@@ -65,4 +68,11 @@
     image:    20telaviv.png
   - location: Budapest, Hungary
     url:      http://www.meetup.com/ember-bp/
-    image:    
+    image:
+  - location: San Juan, Puerto Rico
+    url:      http://www.meetup.com/Ember-PR/
+    image:    21puertorico.png
+    image:
+  - location: Oslo, Norway
+    url:      http://www.meetup.com/Ember-js-Oslo/
+    image:

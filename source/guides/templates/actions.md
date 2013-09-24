@@ -86,6 +86,12 @@ current route's ancestors, an error will be thrown.
 
 ![Action Bubbling](/images/template-guide/action-bubbling.png)
 
+This allows you to create a button that has different behavior based on
+where you are in the application. For example, you might want to have a
+button in a sidebar that does one thing if you are somewhere inside of
+the `/posts` route, and another thing if you are inside of the `/about`
+route.
+
 ### Action Parameters
 
 You can optionally pass arguments to the action handler. Any values
@@ -170,30 +176,6 @@ to the link.
 
 With `bubbles=false`, Ember.js will stop the browser from propagating
 the event.
-
-### Target Bubbling
-
-If the action is not found on the current controller, it will bubble up
-to the current route handler. From there, it will bubble up to parent
-route handlers until it reaches the application route.
-
-Define actions on the route's `actions` property.
-
-```javascript
-App.PostsIndexRoute = Ember.Route.extend({
-  actions: {
-    myCoolAction: function() {
-      // do your business.
-    }
-  }
-});
-```
-
-This allows you to create a button that has different behavior based on
-where you are in the application. For example, you might want to have a
-button in a sidebar that does one thing if you are somewhere inside of
-the `/posts` route, and another thing if you are inside of the `/about`
-route.
 
 ### Specifying a Target
 

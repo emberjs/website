@@ -13,7 +13,7 @@ classNameBindings: ['active'],
 active: true
 ```
 
-You can also set the class name based on a computed property. In this example, the
+You can also set the class name based on a computed property.
 
 ```js
 classNameBindings: ['isActive'],
@@ -45,7 +45,8 @@ component invocations when an object could be passed instead:
 ```
 
 ```js
-classNameBindings: ['isRelated:related:not-related']
+classNameBindings: ['isRelated:relative'],
+isRelatedBinding: "content.isRelated" // value resolves to boolean
 ```
 
 #### Example
