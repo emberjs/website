@@ -57,7 +57,7 @@ App.ApplicationController = Ember.Controller.extend({
     var date = this.get('date'),
         format = this.get('format');
     return moment(date).format(format);
-  }.property('format')
+  }.property('date', 'format')
 });
 ```
 
