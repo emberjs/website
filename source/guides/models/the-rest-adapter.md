@@ -34,18 +34,15 @@ REST adapter:
 
 #### Pluralization Customization
 
-Irregular pluralizations can be specified via the adapter's `configure`
-API:
+Irregular or uncountable pluralizations can be specified via `Ember.Inflector.inflector`:
 
 ```js
-DS.RESTAdapter.configure("plurals", {
-  person: "people",
-  owner_reply: "owner_replies"
-});
+Ember.Inflector.inflector.irregular('formula', 'formulae');
+Ember.Inflector.inflector.uncountable('advice');
 ```
 
-This will tell the REST adapter that requests for `App.Person` requests
-should go to `/people/1` instead of `/persons/1`.
+This will tell the REST adapter that requests for `App.Formula` requests
+should go to `/formulae/1` instead of `/formulas/1`.
 
 #### Endpoint Path Customization
 
