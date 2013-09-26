@@ -23,4 +23,4 @@ TodoMVC has the following main features:
 
   1. It retains a user's todos between application loads by using the browser's `localstorage` mechanism.
 
-You can interact with a completed version of the application by visiting the [the TodoMVC site](http://addyosmani.github.com/todomvc/).
+You can interact with a completed version of the application by visiting the [TodoMVC site](http://addyosmani.github.com/todomvc/).
