@@ -90,7 +90,7 @@ App.TardyRoute = Ember.Route.extend({
     });
   }, 
 
-  setupController: function(model) {
+  setupController: function(controller, model) {
     console.log(model.msg); // "Hold Your Horses"
   }
 });
