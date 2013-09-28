@@ -189,10 +189,10 @@ App.Project.reopenClass({
     }, {
       projectName: "Ember",
       projectFilter: "ember",
-      lastRelease: "1.1.0-beta.1",
-      futureVersion: "1.1.0-beta.2",
+      lastRelease: "1.1.0-beta.2",
+      futureVersion: "1.1.0-beta.3",
       channel: "beta",
-      date: "2013-09-10"
+      date: "2013-09-28"
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
