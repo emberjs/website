@@ -196,10 +196,10 @@ App.Project.reopenClass({
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
-      lastRelease: "1.0.0-beta.2",
-      futureVersion: "1.0.0-beta.3",
+      lastRelease: "1.0.0-beta.3",
+      futureVersion: "1.0.0-beta.4",
       channel: "beta",
-      date: "2013-09-13"
+      date: "2013-09-28"
     }, {
       projectName: "Ember",
       projectFilter: "ember",
