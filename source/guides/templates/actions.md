@@ -138,7 +138,7 @@ In general, two-word event names (like `keypress`) become `keyPress`.
 
 ### Specifying Whitelisted Modifier Keys
 
-By default the `{{action}}` helper will ignore click event with
+By default the `{{action}}` helper will ignore click events with
 pressed modifier keys. You can supply an `allowedKeys` option
 to specify which keys should not be ignored.
 
