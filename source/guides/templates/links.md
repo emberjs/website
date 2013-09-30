@@ -44,6 +44,17 @@ The `{{link-to}}` helper takes:
   value of the corresponding object's `id` property.
 * An optional title which will be bound to the `a` title attribute
 
+If there is no model to pass to the helper, you can provide an explicit identifier value instead.
+The value will be filled into the [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments)
+of the route, and will make sure that the `model` hook is triggered.
+```handlebars
+<!-- photos.handlebars -->
+
+{{#link-to 'photo.edit' 1}}
+  First Photo Ever
+{{/link-to}}
+```
+
 ### Example for Multiple Segments
 
 If the route is nested, you can supply a model for each dynamic
