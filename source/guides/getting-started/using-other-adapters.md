@@ -12,7 +12,7 @@ Todos.ApplicationAdapter = DS.LSAdapter.extend({
 
 The local storage adapter, written by Ryan Florence, can be downloaded [from its source](https://github.com/rpflorence/ember-localstorage-adapter). Add it to your project as `js/libs/localstorage_adapter.js`. You may place this file anywhere you like (even just putting all code into the same file), but this guide will assume you have created the file and named it as indicated.
 
-In `index.html` include `js/libs/local_storage_adapter.js` as a dependency:
+In `index.html` include `js/libs/localstorage_adapter.js` as a dependency:
 
 ```html
 <!--- ... additional lines truncated for brevity ... -->
