@@ -168,7 +168,7 @@ Ember = {
 #### Errors within an `RSVP.Promise`
 
 There are times when dealing with promises that it seems like any errors
-are being 'swallowed', and not properly raised. This makes is extremely
+are being 'swallowed', and not properly raised. This makes it extremely
 difficult to track down where a given issue is coming from. Thankfully,
 `RSVP` has a solution for this problem built in.
 
