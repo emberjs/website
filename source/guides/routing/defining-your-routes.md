@@ -205,22 +205,22 @@ specifying URLs for posts (a noun), the route was defined with
 One of the responsibilities of a resource's route handler is to convert a URL
 into a model.
 
-For example, if we have the resource `this.resource('/blog_posts')`, our
+For example, if we have the resource `this.resource('posts');`, our
 route handler might look like this:
 
 ```js
-App.BlogPostsRoute = Ember.Route.extend({
+App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return this.get('store').find('blogPost');
+    return this.get('store').find('posts');
   }
 });
 ```
 
-The `blog_posts` template will then receive a list of all available posts as
+The `posts` template will then receive a list of all available posts as
 its context.
 
-Because `/blog_posts` represents a fixed model, we don't need any
-additional information to know what to use.  However, if we want a route
+Because `/posts` represents a fixed model, we don't need any
+additional information to know what to retrieve.  However, if we want a route
 to represent a single post, we would not want to have to hardcode every
 possible post into the router.
 
