@@ -244,43 +244,6 @@ model for this route, so `model` wouldn't be called in these cases.
 
 [See the API Docs for `afterModel`](/api/classes/Ember.Route.html#method_afterModel)
 
-### Using `LoadingRoute` to Display UI While the Router is Loading
-
-The Ember Router will enter a loading state if, during a transition, it
-encounters a promise that does not immediately resolve. (Technically
-speaking, a promise is considered to resolve "immediately" if it 
-resolves within the same [run loop](/api/classes/Ember.run.html) in which 
-it was created.)
-
-While the router is in this loading state, you may want to give your
-users some visual indication that your app is loading. One way to do 
-this is to define `LoadingRoute` on your application's namespace:
-
-```js
-App.LoadingRoute = Ember.Route.extend();
-```
-
-By default, `LoadingRoute` will attempt to render a template called
-"loading". 
-
-```handlebars
-<div id="loading-modal">
-  <p>
-    <img src="/images/loading-spinner.png"/> Loading
-  </p>
-</div>
-```
-
-Note that this template will be rendered at the top level in your
-application, as opposed to being nested in an outlet.
-
-Like any other route, you can make use of `LoadingRoute`'s `activate`
-and `deactivate` hooks to further configure what happens when the router
-enters and exits a loading state. The router will enter a loading state
-for the first promise encountered within a transition that does not
-immediately resolve, and it exits this loading state when the transition
-runs to completion or aborts.
-
 ### More Resources
 
 - [Embercasts: Client-side Authentication Part 2](http://www.embercasts.com/episodes/client-side-authentication-part-2)
