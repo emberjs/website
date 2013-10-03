@@ -1,5 +1,5 @@
 If you want to redirect from one route to another, simply implement the
-`redirect` hook in your route handler.
+`beforeModel` or `afterModel` hook in your route handler.
 
 ```javascript
 App.Router.map(function() {
@@ -7,7 +7,7 @@ App.Router.map(function() {
 });
 
 App.IndexRoute = Ember.Route.extend({
-  redirect: function() {
+  beforeModel: function() {
     this.transitionTo('posts');
   }
 });
@@ -27,7 +27,7 @@ App.Router.map(function() {
 });
 
 App.TopChartsChooseRoute = Ember.Route.extend({
-  redirect: function() {
+  beforeModel: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
     this.transitionTo('topCharts.' + lastFilter || 'songs');
   }
@@ -51,6 +51,6 @@ In this example, navigating to the `/` URL immediately transitions into
 the last filter URL that the user was at. The first time, it transitions
 to the `/songs` URL.
 
-Your route can also choose to transition only in some cases. If the
-`redirect` hook does not transition to a new route, the remaining hooks
-(`model`, `setupController`, `renderTemplate`) will execute as usual.
+Your route can also choose to transition only in some cases. For example, if the
+`beforeModel` hook does not transition to a new route, the remaining hooks
+(`model`, `afterModel`, `setupController`, `renderTemplate`) will execute as usual.
