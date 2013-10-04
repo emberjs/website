@@ -211,6 +211,8 @@
   image: enthuseme.png
 - url: https://www.chronosave.com
   image: chronosave.png
+- url: http://pluckit.io
+  image: pluck.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
