@@ -215,6 +215,8 @@
   image: coschedule.png
 - url: http://www.iorahealth.com/
   image: iorahealth.png
+- url: http://www.locbox.com
+  image: locbox.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
