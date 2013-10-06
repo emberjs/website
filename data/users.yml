@@ -217,6 +217,8 @@
   image: centroy.png
 - url: http://pluckit.io
   image: pluck.png
+- url: http://www.locbox.com
+  image: locbox.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
