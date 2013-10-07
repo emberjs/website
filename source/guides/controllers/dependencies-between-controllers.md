@@ -38,10 +38,9 @@ its parent `PostController`, which can be done via `controllers.post`
 </ul>
 ```
 
-We can also create a binding to give ourselves a shorter way to access
+We can also create an aliased property to give ourselves a shorter way to access
 the `PostController` (since it is an `ObjectController`, we don't need
 or want the `Post` instance directly).
-
 
 ```javascript
 App.CommentsController = Ember.ArrayController.extend({
@@ -49,6 +48,6 @@ App.CommentsController = Ember.ArrayController.extend({
   post: Ember.computed.alias("controllers.post")
 });
 ```
-For more information about bindings, see the API docs for
-`Ember.Binding`.
 
+For more information about aliased property, see the API docs for
+[aliased properties](http://emberjs.com/api/#method_computed_alias).
