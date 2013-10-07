@@ -35,7 +35,7 @@ completed: function () {
 
 The `completed` and `clearCompleted` methods both invoke the `filterProperty` method, which is part of the [ArrayController](http://emberjs.com/api/classes/Ember.ArrayController.html#method_filterProperty) API and returns an instance of [EmberArray](http://emberjs.com/api/classes/Ember.Array.html) which contains only the items for which the callback returns true.  The `clearCompleted` method also invokes the `invoke` method which is part of the [EmberArray](http://emberjs.com/api/classes/Ember.Array.html#method_invoke) API.  `invoke` will execute a method on each object in the Array if the method exists on that object.
 
-Reload your web browser to ensure that there are no errors and the behavior described above occurs. 
+Reload your web browser to ensure that there are no errors and the behavior described above occurs. NOTE: 'filterProperty' method is deprecated as of October 07 2013.
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/ULovoJI/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
