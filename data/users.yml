@@ -217,6 +217,8 @@
   image: iorahealth.png
 - url: http://www.locbox.com
   image: locbox.png
+- url: http://www.khelkund.com/football
+  image: khelkund.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
