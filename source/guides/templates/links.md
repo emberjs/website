@@ -11,7 +11,7 @@ App.Router.map(function() {
 ```
 
 ```handlebars
-<!-- photos.handlebars -->
+{{! photos.handlebars }}
 
 <ul>
 {{#each photo in photos}}
