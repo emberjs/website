@@ -172,7 +172,7 @@ arr.filter(function(item, index, self) {
 // returns [1,2,3]
 ```
 
-When working with a collection of Ember objects, you will often want to filter a set of objects based upon the value of some property. The `filterProperty` method provides a shortcut.
+When working with a collection of Ember objects, you will often want to filter a set of objects based upon the value of some property. The `filterBy` method provides a shortcut.
 
 ```javascript
 Todo = Ember.Object.extend({
@@ -185,12 +185,12 @@ todos = [
   Todo.create({ title: 'Go to sleep' })
 ];
 
-todos.filterProperty('isDone', true);
+todos.filterBy('isDone', true);
 
 // returns an Array containing only items with `isDone == true`
 ```
 
-If you want to return just the first matched value, rather than an Array containing all of the matched values, you can use `find` and `findProperty`, which work just like `filter` and `filterProperty`, but return only one item.
+If you want to return just the first matched value, rather than an Array containing all of the matched values, you can use `find` and `findProperty`, which work just like `filter` and `filterBy`, but return only one item.
 
 #### Aggregate Information (All or Any)
 

@@ -15,7 +15,7 @@ Implement these properties as part of this template's controller, the `Todos.Tod
 
 // ... additional lines truncated for brevity ...
 remaining: function () {
-  return this.filterProperty('isCompleted', false).get('length');
+  return this.filterBy('isCompleted', false).get('length');
 }.property('@each.isCompleted'),
 
 inflection: function () {
