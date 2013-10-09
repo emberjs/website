@@ -7,13 +7,10 @@
 #
 #     http://edgeguides.rubyonrails.org/rails_application_templates.html
 
-run "rm public/index.html"
-
 # Install required gems
 gem "active_model_serializers"
-gem_group :assets do
-  gem "ember-rails"
-end
+gem "ember-rails"
+gem "ember-source", "1.0.0"
 
 run "bundle install"
 
