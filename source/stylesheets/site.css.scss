@@ -1604,6 +1604,7 @@ body.not-found #content {
   background: no-repeat url("/images/ember-construction-57.png") top left; }
 
 .under_construction_warning h3 .msg {
+  text-transform: none;
   margin-top: 12px;
   margin-left: 40px;
 }
