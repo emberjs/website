@@ -52,8 +52,13 @@ actions: {
      this.set('isEditing', true);
    },
    acceptChanges: function () {
-     this.set('isEditing', false);
-     this.get('model').save();
+      this.set('isEditing', false);
+
+      if (Ember.isEmpty(this.get('model.title'))) {
+        this.send('removeTodo');
+      } else {
+        this.get('model').save();
+      }
    }
 }
 // ... additional lines truncated for brevity ...
