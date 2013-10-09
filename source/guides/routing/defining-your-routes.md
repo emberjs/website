@@ -245,7 +245,7 @@ default behavior.
 For example, if the dynamic segment is `:post_id`, Ember.js is smart
 enough to know that it should use the model `App.Post` (with the ID
 provided in the URL). Specifically, unless you override `model`, the route will
-return `App.Post.find(params.post_id)` automatically.
+return `this.get('store').find('post', params.post_id)` automatically.
 
 Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
