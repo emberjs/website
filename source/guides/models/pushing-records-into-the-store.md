@@ -42,12 +42,14 @@ App.ApplicationRoute = Ember.Route.extend({
     var store = this.get('store'); 
 
     store.push('album', {
+      id: 1,
       title: "Fewer Moving Parts",
       artist: "David Bazan",
       songCount: 10
     });
 
     store.push('album', {
+      id: 2,
       title: "Calgary b/w I Can't Make You Love Me/Nick Of Time",
       artist: "Bon Iver",
       songCount: 2
