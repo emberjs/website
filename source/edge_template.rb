@@ -29,8 +29,6 @@ environment <<-RUBY.strip_heredoc, :env => :production
 RUBY
 
 # Configure the app to serve Ember.js and app assets from an AssetsController
-generate "ember:bootstrap"
-generate "ember:install", "--head"
 generate :controller, "Assets", "index"
 run "rm app/views/assets/index.html.erb"
 file 'app/views/assets/index.html.erb', <<-CODE
