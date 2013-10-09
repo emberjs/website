@@ -249,13 +249,20 @@ module TOC
 
 
     WARNINGS = {
-        "ember-data"=>  %Q{
+        "canary"=>  %Q{
           <div class="under_construction_warning">
             <h3>
               <div class="msg">
-                Warning: ember-data is a work in progress and under rapid development.
-                <br/>
-                <span class="more_caution">Use with caution!!!</span>
+                WARNING: this guide refers to a feature only available in canary (nightly/unstable) builds of Ember.js.
+              </div>
+            </h3>
+          </div>
+        },
+        "canary-data"=>  %Q{
+          <div class="under_construction_warning">
+            <h3>
+              <div class="msg">
+                WARNING: this guide refers to a feature only available in canary (nightly/unstable) builds of Ember Data.
               </div>
             </h3>
           </div>
