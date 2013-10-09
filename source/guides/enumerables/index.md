@@ -224,10 +224,10 @@ people.some(function(person, index, self) {
 // returns true
 ```
 
-Just like the filtering methods, the `every` and `some` methods have analogous `everyProperty` and `someProperty` methods.
+Just like the filtering methods, the `every` and `some` methods have analogous `everyBy` and `anyBy` methods.
 
 ```javascript
-people.everyProperty('isHappy', true) // false
-people.someProperty('isHappy', true)  // true
+people.everyBy('isHappy', true) // false
+people.anyBy('isHappy', true)  // true
 ```
 
