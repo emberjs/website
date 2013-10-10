@@ -220,7 +220,9 @@
 - url: http://www.khelkund.com/football
   image: khelkund.png
 - url: https://centroy.com
-  image: centroy.png  
+  image: centroy.png
+- url: http://pluckit.io
+  image: pluck.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
