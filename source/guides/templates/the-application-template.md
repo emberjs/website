@@ -30,7 +30,7 @@ For more information about how outlets are filled in by the router, see
 [Routing](/guides/routing).
 
 If you are keeping your templates in HTML, create a `<script>` tag
-without a template name. It will automatically be compiled and appended
+without a template name. Ember will use the template without a name as the application template and it will automatically be compiled and appended
 to the screen.
 
 ```html
