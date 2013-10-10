@@ -54,7 +54,7 @@ of the route, and will make sure that the `model` hook is triggered.
   First Photo Ever
 {{/link-to}}
 ```
-
+ 
 ### Example for Multiple Segments
 
 If the route is nested, you can supply a model for each dynamic
