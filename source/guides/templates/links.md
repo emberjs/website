@@ -48,7 +48,7 @@ If there is no model to pass to the helper, you can provide an explicit identifi
 The value will be filled into the [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments)
 of the route, and will make sure that the `model` hook is triggered.
 ```handlebars
-<!-- photos.handlebars -->
+{{! photos.handlebars }}
 
 {{#link-to 'photo.edit' 1}}
   First Photo Ever
