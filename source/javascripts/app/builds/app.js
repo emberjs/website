@@ -197,7 +197,7 @@ App.Project.reopenClass({
       futureVersion: "1.1.0",
       changelog: 'false',
       channel: "beta",
-      date: "2013-09-28"
+      date: "2013-10-11"
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
