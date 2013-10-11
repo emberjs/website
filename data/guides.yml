@@ -176,7 +176,6 @@ Models:
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
     url: "models/handling-metadata"
-    warning: "canary-data"
   - title: "Frequently Asked Questions"
     url: "models/frequently-asked-questions"
 
