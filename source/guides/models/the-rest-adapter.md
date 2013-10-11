@@ -215,14 +215,14 @@ Ember Data can have new JSON transforms
 registered for use as attributes:
 
 ```js
-DS.JSONTransforms.coordinatePoint = {
+App.CoordinatePointTransform = DS.Transform.extend({
   serialize: function(value) {
     return [value.get('x'), value.get('y')];
   },
   deserialize: function(value) {
     return Ember.create({ x: value[0], y: value[1] });
   }
-};
+});
 App.Cursor = DS.Model.extend({
   position: DS.attr('coordinatePoint')
 });
