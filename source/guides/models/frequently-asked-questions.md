@@ -56,8 +56,9 @@ memory and search before you start hitting performance issues.
 Finally, keep in mind that you can combine queries and filters to take
 advantage of their respective strengths and weaknesses. Remember that
 records returned by a query to the server are cached in the store. You
-can use this fact to perform a query that starts matching records into
-the store, then create a filter that matches the same records.
+can use this fact to perform a filter, passing it a query that starts
+matching records into the store, and a filter function that matches the 
+same records.
 
 This will offload searching all of the possible records to the server,
 while still creating a live updating list that includes records created
@@ -68,20 +69,15 @@ App.PostsFavoritedRoute = Ember.Route.extend({
   model: function() {
     var store = this.get('store');
 
-    // Kick off a query to the server for all posts that
-    // the user has favorited. Note that we're ignoring the results
-    // of the query; we're just relying on the side-effect that they
-    // will be loaded into the store so we can filter them.
-    store.findQuery('posts', { favorited: true });
-
     // Create a filter for all favorited posts that will be displayed in
     // the template. Any favorited posts that are already in the store
-    // will be displayed immediately; as // results from the above query are
+    // will be displayed immediately;
+    // Kick off a query to the server for all posts that
+    // the user has favorited. As results from the query are
     // returned from the server, they will also begin to appear.
-    return store.filter('posts', function(post) {
+    return store.filter('posts', { favorited: true }, function(post) {
       return post.get('isFavorited');
     });
   }
 });
 ```
-
