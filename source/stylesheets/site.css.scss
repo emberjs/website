@@ -1,6 +1,7 @@
 @import 'compass';
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
+@import 'mixins/hidpi';
 @import 'fonts';
 @import 'colors';
 @import 'examples';
@@ -350,11 +351,9 @@ p {
     top: 6px;
     width: 103px;
     height: 40px;
-    background: url('/images/ember_logo.png');
-    @include filter(drop-shadow(rgba(0, 0, 0, 0.3) 0 1px 2px));
+    @include hidpi('ember_logo', 'png');
 
     &:hover {
-      @include filter(drop-shadow(rgba(0, 0, 0, 0.7) 0 1px 3px));
       border: 0;
     }
   }
