@@ -30,7 +30,8 @@ body.guides, body.blog {
     font-size: 22px;
     color: $orange-color;
     padding: 0px 0px 3.5em 2em;
-    background: no-repeat url('/images/chapter-mark.png') top left;
+    background: no-repeat top left;
+    @include hidpi('chapter-mark', 'png');
 
     &.api-header {
       padding-bottom: 0.5em;
