@@ -353,8 +353,11 @@ p {
     width: 103px;
     height: 40px;
     @include hidpi('ember_logo', 'png');
+    @include transform(scale(1));
+    @include transition(0.2s);
 
-    &:hover {
+    &:hover, &:focus {
+      @include transform(scale(1.05));
       border: 0;
     }
   }
