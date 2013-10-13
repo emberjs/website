@@ -533,7 +533,7 @@ p {
     left: 0;
 
     .button {
-      margin: 0 auto;
+      margin: 3px auto 6px;
       font-size: 13px; /* Due to long version name */
     }
   }
@@ -1349,29 +1349,44 @@ body.security #content {
 
 .button {
   display: block;
-  width: 226px;
-  height: 46px;
+  width: 220px;
+  height: 40px;
   font-family: 'Maven Pro';
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 47px;
+  line-height: 40px;
   font-size: 14px;
   color: #f6ece8;
   text-align: center;
   @include text-shadow(rgba(0, 0, 0, 0.3) 0 1px 0);
 
   &.orange {
-    background-image: url('/images/orange_buttons.png');
+    border: 1px solid #cb6352;
+    border-top-color: #ea7a68;
+    border-bottom-color: #a04332;
 
-    &:hover {
-      background-position: 0 -46px;
-      border-bottom: none;
+    @include filter-gradient(#fe845a, #d14e37, vertical);
+    @include background-image( linear-gradient(top, #fe845a, #d14e37) );
+    @include border-radius(5px);
+    @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.35));
+
+    &:hover, &:focus {
+      border-color: #e27260;
+      border-top-color: #ea7a68;
+      border-bottom-color: #c1513d;
+      @include filter-gradient(#fc906b, #e2654e, vertical);
+      @include background-image( linear-gradient(top, #fc906b, #e2654e) );
     }
 
     &:active {
-      background-position: 0 -92px;
-      @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
+      border-color: #c9533d;
+      border-top-color: #92473a;
+      border-bottom-color: #e1583f;
+      @include filter-gradient(#b2412e, #ed7249, vertical);
+      @include background-image( linear-gradient(top, #b2412e, #ed7249) );
+      @include box-shadow(none);
+      @include text-shadow(rgba(0, 0, 0, 0.2) 0 -1px 0);
     }
   }
 
@@ -1387,13 +1402,6 @@ body.security #content {
       background-position: 0 -92px;
       @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
     }
-  }
-
-  &:hover {
-    background-position: 0 -46px;
-  }
-
-  &:active {
   }
 }
 
