@@ -1449,16 +1449,19 @@ body.security #content {
 }
 
 a.edit-page {
-  background: no-repeat url('/images/pencil-icon.png');
-  width: 16px;
+  font-size: 18px;
+  color: #444;
+  margin: 0;
+  width: 24px;
   height: 16px;
   display: inline-block;
-  text-indent: 9999px;
   float: right;
   overflow: hidden;
   opacity: 0.4;
+
   &:hover {
     opacity: 1;
+    border-bottom: 0;
   }
 }
 
