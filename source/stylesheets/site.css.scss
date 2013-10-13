@@ -1317,6 +1317,8 @@ body.security #content {
       margin: 0 10px;
       border-bottom: none;
       opacity: 0.7;
+      @include transition(0.4s);
+
       &:hover {
         opacity: 1;
       }
@@ -1324,7 +1326,8 @@ body.security #content {
   }
 
   .twitter, .github, .googleplus {
-    background: no-repeat url('/images/footer-links.png');
+    background: no-repeat;
+    @include hidpi('footer-links', 'png');
     height: 35px;
     width: 35px;
     display: inline-block;
