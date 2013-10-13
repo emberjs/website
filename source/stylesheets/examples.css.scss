@@ -38,10 +38,10 @@
 }
 
 #content .example-highlight {
-  background-image: url("/images/code_background.gif");
   -webkit-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+  @include hidpi('code_background', 'gif');
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;

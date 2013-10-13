@@ -29,7 +29,7 @@ code {
 }
 
 #content .highlight {
-  background-image: url("/images/code_background.gif");
+  @include hidpi('code_background', 'gif');
   border: 1px solid #d1d1d1;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -158,6 +158,6 @@ code {
 }
 
 @mixin well {
-  background-image: url('/images/code_background.gif');
+  @include hidpi('code_background', 'gif');
   @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
 }
