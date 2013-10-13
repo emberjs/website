@@ -38,13 +38,13 @@ body.guides .highlight {
   }
 
   &.javascript .ribbon, &.js .ribbon {
-    background-image: url('/images/js-ribbon.png');
+    @include hidpi('js-ribbon', png);
   }
   &.html .ribbon {
-    background-image: url('/images/html-ribbon.png');
+    @include hidpi('html-ribbon', png);
   }
   &.handlebars .ribbon {
-    background-image: url('/images/handlebars-ribbon.png');
+    @include hidpi('handlebars-ribbon', png);
   }
 }
 
