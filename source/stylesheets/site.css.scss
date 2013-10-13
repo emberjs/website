@@ -441,7 +441,7 @@ p {
       @include text-shadow(rgba(0, 0, 0, 0.3) 0px 1px 0px);
 
       display: block;
-      padding: 0px 1em;
+      padding: 0px 1em 0 0.5em;
       height: 28px;
       line-height: 28px;
 
@@ -459,6 +459,12 @@ p {
         color: #ffffff;
         background: #f86c55;
       }
+    }
+
+    .icon-fork {
+      font-size: 1.4em;
+      margin-left: 0;
+      vertical-align: middle;
     }
   }
 }
