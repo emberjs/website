@@ -1,8 +1,13 @@
 Ember.js uses naming conventions to wire up your objects without a
-lot  of boilerplate. You will want to  use the conventional names
+lot of boilerplate. You will want to use these conventional names
 for your routes, controllers and templates.
 
-You can usually guess the names, but this guide outlines, in one place, all of the naming conventions.
+You can usually guess the names, but this guide outlines, in one place, 
+all of the naming conventions. In the following examples 'App' is a name 
+that we chose to namespace or represent our Ember application when it was 
+created, but you can theoretically choose any name you want for your 
+application. We will show you later how to create an Ember application, 
+but for now we will focus on conventions.
 
 ## The Application
 
