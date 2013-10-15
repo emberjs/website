@@ -208,11 +208,11 @@ In some circumstances, the built in attribute types of `string`,
 `number`, `boolean`, and `date` may be inadequate. For example, a
 server may return a non-standard date format.
 
-The `RESTAdapter`, like any Ember adapter, can have new transforms
+Ember Data can have new JSON transforms
 registered for use as attributes:
 
 ```js
-DS.RESTAdapter.registerTransform('coordinatePoint', {
+App.CoordinatePointTransform = DS.Transform.extend({
   serialize: function(value) {
     return [value.get('x'), value.get('y')];
   },
