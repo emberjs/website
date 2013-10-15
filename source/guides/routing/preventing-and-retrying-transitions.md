@@ -8,7 +8,7 @@ later time by calling `transition.retry()`.
 ### Preventing Transitions via `willTransition`
 
 When a transition is attempted, whether via `{{link-to}}`, `transitionTo`,
-or a URL change, a `willTransition` event is fired on the currently
+or a URL change, a `willTransition` action is fired on the currently
 active routes. This gives each active route, starting with the leaf-most
 route, the opportunity to decide whether or not the transition should occur.
 
@@ -27,7 +27,7 @@ App.FormRoute = Ember.Route.extend({
           !confirm("Are you sure you want to abandon progress?")) {
         transition.abort();
       } else {
-        // Bubble the `willTransition` event so that
+        // Bubble the `willTransition` action so that
         // parent routes can decide whether or not to abort.
         return true;
       }
