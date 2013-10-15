@@ -19,8 +19,9 @@ App.IndexRoute = Ember.Route.extend({
 ### After the model is known
 
 If you need some information about the current model in order to decide about
-the redirection, you should use the `afterModel` hook, where the model is
-already resolved.
+the redirection, you should either use the `afterModel` or the `redirect` hook. They
+receive the resolved model as the first parameter and the transition as the second one,
+and thus function as aliases. (In fact, the default implementation of `afterModel` just calls `redirect`.)
 
 ```javascript
 
