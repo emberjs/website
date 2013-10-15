@@ -65,6 +65,22 @@ Concepts:
   #- title: "Understanding Web Apps"
     #url: "getting-started/understanding-web-apps"
 
+The Object Model:
+  - title: "Classes and Instances"
+    url: "object-model/classes-and-instances"
+  - title: "Computed Properties"
+    url: "object-model/computed-properties"
+  - title: "Computed Properties and Aggregate Data with @each"
+    url: "object-model/computed-properties-and-aggregate-data"
+  - title: "Observers"
+    url: "object-model/observers"
+  - title: "Bindings"
+    url: "object-model/bindings"
+  - title: "Reopening Classes and Instances"
+    url: "object-model/reopening-classes-and-instances"
+  - title: "Bindings, Observers, Computed Properties: What Do I Use When?"
+    url: "object-model/what-do-i-use-when"
+
 Application:
   - title: "Introduction"
     url: "application"
@@ -198,22 +214,6 @@ Views:
     url: "views/manually-managing-view-hierarchy"
   #- title: "Building Reusable Views"
     #url: "views/building-reusable-views"
-
-The Object Model:
-  - title: "Classes and Instances"
-    url: "object-model/classes-and-instances"
-  - title: "Computed Properties"
-    url: "object-model/computed-properties"
-  - title: "Computed Properties and Aggregate Data with @each"
-    url: "object-model/computed-properties-and-aggregate-data"
-  - title: "Observers"
-    url: "object-model/observers"
-  - title: "Bindings"
-    url: "object-model/bindings"
-  - title: "Reopening Classes and Instances"
-    url: "object-model/reopening-classes-and-instances"
-  - title: "Bindings, Observers, Computed Properties: What Do I Use When?"
-    url: "object-model/what-do-i-use-when"
 
 Enumerables:
   - title: "Introduction"
