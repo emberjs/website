@@ -68,7 +68,7 @@ if a promise was provided as an argument to `transitionTo`), the transition
 will pause until that promise fulfills or rejects.
 
 <aside>
-**Note:** the router considers any object with a `then` method
+**Note:** The router considers any object with a `then` method
 defined on it to be a promise.
 </aside>
 
