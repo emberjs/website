@@ -133,7 +133,7 @@ var emphaticWords = words.map(function(item) {
 // ["goodbye!", "cruel!", "world!"]
 ```
 
-If your enumerable is composed of objects, there is a `mapProperty()`
+If your enumerable is composed of objects, there is a `mapBy()`
 method that will extract the named property from each of those objects
 in turn and return a new array:
 
@@ -148,7 +148,7 @@ var california = Ember.Object.create({
 
 var states = [hawaii, california];
 
-states.mapProperty('capital');
+states.mapBy('capital');
 //=> ["Honolulu", "Sacramento"]
 ```
 
@@ -190,7 +190,7 @@ todos.filterBy('isDone', true);
 // returns an Array containing only items with `isDone == true`
 ```
 
-If you want to return just the first matched value, rather than an Array containing all of the matched values, you can use `find` and `findProperty`, which work just like `filter` and `filterBy`, but return only one item.
+If you want to return just the first matched value, rather than an Array containing all of the matched values, you can use `find` and `findBy`, which work just like `filter` and `filterBy`, but return only one item.
 
 #### Aggregate Information (All or Any)
 
