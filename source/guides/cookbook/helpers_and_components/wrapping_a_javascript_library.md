@@ -34,10 +34,10 @@ App.VideoPlayerComponent = Ember.Component.extend({
     this.player = videojs('player', { controls: true });
   },
 
-  // `willDestroy` gets called when our component will be removed
+  // `willDestroyElement` gets called when our component will be removed
   // from the DOM. Video.js provides a `dispose` method that
   // destroys the video player and does any necessary cleanup.
-  willDestroy: function() {
+  willDestroyElement: function() {
     this.player.dispose();
   },
 
