@@ -268,6 +268,9 @@ Cookbook:
   - title: "Specifying Data-Driven Areas of Templates That Do Not Need To Update"
     url: "cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
     skip_sidebar_item: true
+  - title: "Using Modal Dialogs"
+    url: "cookbook/user_interface_and_interaction/using_modal_dialogs"
+    skip_sidebar_item: true
   # - title: "Converting Strings to Currency With Accounting.js"
   #   url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
   #   skip_sidebar_item: true
