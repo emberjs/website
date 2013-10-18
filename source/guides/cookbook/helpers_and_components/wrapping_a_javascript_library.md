@@ -21,7 +21,9 @@ Include [Video.js](http://www.videojs.com/)'s code in your HTML:
 Create a `components/video-player` template:
 
 ```handlebars
-<video {{bindAttr src=src}} id="player" class="video-js vjs-default-skin" type="video/mp4"/>
+<video id="player" class="video-js vjs-default-skin">
+  <source {{bindAttr src=src}} type="video/mp4"></source>
+</video>
 ```
 
 Create a component to interact with [Video.js](http://www.videojs.com/):
@@ -34,19 +36,24 @@ App.VideoPlayerComponent = Ember.Component.extend({
     this.player = videojs('player', { controls: true });
   },
 
-  // `willDestroyElement` gets called when our component will be removed
-  // from the DOM. Video.js provides a `dispose` method that
-  // destroys the video player and does any necessary cleanup.
+  // `willDestroyElement` gets called when our component will be removed from the DOM.
+  // Video.js provides a `dispose` method to do any necessary cleanup.
   willDestroyElement: function() {
     this.player.dispose();
   },
 
-  // Here, we observe the `src` property of our component.
-  // Whenever this changes, our player will load the new video.
-  loadVideo: function(){
+  // Register an observer on the `src` attribute. When `src` changes, we schedule
+  // a method to be called after the template is rendered with the new src value.
+  srcDidChange: function(){
+    Ember.run.scheduleOnce('afterRender', this, 'updateSrc');
+  }.observes('src'),
+
+  // After rendering, we tell video.js to load the new video.
+  updateSrc: function(){
+    if (!this.player) { return; } // in case `player` isn't yet initialized
     this.player.src(this.get('src'));
     this.player.load();
-  }.observes('src')
+  }
 });
 ```
 
