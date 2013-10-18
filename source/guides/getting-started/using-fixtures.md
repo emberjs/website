@@ -14,7 +14,7 @@ Next, update the file at `js/models/todo.js` to include the following fixture da
 
 ```javascript
 // ... additional lines truncated for brevity ...
-Todos.Todo.FIXTURES = [
+Todos.todo.FIXTURES = [
  {
    id: 1,
    title: 'Learn Ember.js',
