@@ -11,7 +11,6 @@ To start, add the following text to `index.html`:
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <script type="text/x-handlebars" data-template-name="todos">
     <section id="todoapp">
       <header id="header">
         <h1>todos</h1>
@@ -62,7 +61,6 @@ To start, add the following text to `index.html`:
     <footer id="info">
       <p>Double-click to edit a todo</p>
     </footer>
-    </script>
   </body>
 </html>
 ```
