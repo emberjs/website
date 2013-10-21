@@ -224,11 +224,7 @@ p {
 
         &.selected > a {
           background-color: #f16f58;
-          background-image:         linear-gradient(-90deg, #f67862, #e7624b);
-          background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
-          background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
-          background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
-          background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+          @include background-image(linear-gradient(-90deg, #f67862, #e7624b));
           margin-left: -1px;
           margin-right: -1px;
           color: white;
@@ -1604,7 +1600,7 @@ a.edit-page {
   span.flag {
     background-color: gray;
     color: white;
-    border-radius: 3px;
+    @include border-radius(3px);
   }
 
   #sidebar ol#toc-list li > ol {
@@ -1624,18 +1620,14 @@ body.not-found #content {
 .under_construction_warning {
   background-color: #FFFFCC;
   width: 100%;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  @include border-radius(8px);
 }
 
 .under_construction_warning h3 {
   height: 64px;
   font-size: 14px !important;
   border: 1px solid #dfd7d4;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  @include border-radius(8px);
   color: #e1563f;
   padding: 0px 0px 1em 2em;
   margin-bottom: 1.5em;
@@ -1666,7 +1658,7 @@ body.not-found #content {
     background-color: $orange-color;
     border-top: 1px solid darken($orange-color, 20%);
     border-bottom: 1px solid darken($orange-color, 20%);
-    -webkit-box-shadow: 0 1px 0 #C0242D inset;
+    @include box-shadow(0 1px 0 #C0242D inset);
 
     .sections {
       color: white;

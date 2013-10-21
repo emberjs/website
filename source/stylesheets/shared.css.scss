@@ -7,11 +7,7 @@ code {
   color: #666;
   background-color: rgba(0, 0, 0, 0.04);
   padding: 3px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  @include border-radius(5px);
 }
 
 #content .tabs > ul {
@@ -31,30 +27,20 @@ code {
 #content .highlight {
   @include hidpi('code_background', 'gif');
   border: 1px solid #d1d1d1;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+  @include border-radius(5px);
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;
   overflow: hidden;
   position: relative;
   margin: 2em 0;
-  -webkit-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+  @include box-shadow(0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
 }
 
 .tabs {
   margin-top: 1em;
   border: 1px solid #e0e0e0;
-          border-radius: 5px;
-       -o-border-radius: 5px;
-      -ms-border-radius: 5px;
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  @include border-radius(5px);
 
   overflow: hidden;
 
@@ -125,11 +111,7 @@ code {
         border-top: solid 1px rgb(250, 250, 250);
         border-right: solid 1px #e6e4e3;
         background-color: #f3f3f3;
-        background-image:         linear-gradient( #f3f3f3, #ebebeb);
-        background-image:      -o-linear-gradient( #f3f3f3, #ebebeb);
-        background-image:    -moz-linear-gradient( #f3f3f3, #ebebeb);
-        background-image:     -ms-linear-gradient( #f3f3f3, #ebebeb);
-        background-image: -webkit-linear-gradient( #f3f3f3, #ebebeb);
+        @include background-image(linear-gradient(0deg, #f3f3f3, #ebebeb));
         padding: 0.5em 1em;
         text-align: center;
         font-weight: normal;
@@ -138,11 +120,7 @@ code {
 
         &:hover {
           background-color: #ebebeb;
-          background-image:         linear-gradient( #ebebeb, #f3f3f3);
-          background-image:      -o-linear-gradient( #ebebeb, #f3f3f3);
-          background-image:    -moz-linear-gradient( #ebebeb, #f3f3f3);
-          background-image:     -ms-linear-gradient( #ebebeb, #f3f3f3);
-          background-image: -webkit-linear-gradient( #ebebeb, #f3f3f3);
+          @include background-image(linear-gradient(0deg, #ebebeb, #f3f3f3));
           color: black;
           border-bottom: none;
         }
