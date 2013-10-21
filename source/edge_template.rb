@@ -10,7 +10,7 @@
 # Install required gems
 gem "active_model_serializers"
 gem "ember-rails"
-gem "ember-source", "1.0.0"
+gem "ember-source", "1.1.0"
 
 run "bundle install"
 
