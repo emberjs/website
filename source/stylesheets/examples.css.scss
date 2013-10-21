@@ -47,6 +47,13 @@
   position: relative;
 }
 
+.example-arrow {
+  margin: 17px auto;
+  width: image-width('about/example-arrow.png');
+  height: image-height('about/example-arrow.png');
+  @include hidpi('about/example-arrow', png);
+}
+
 .name-input {
   background-color: transparent;
   border: none;
