@@ -522,6 +522,12 @@ p {
 .about-header-text {
   display: block;
   margin: 60px auto 0 auto;
+  width: image-width('about/header-text.png');
+  height: image-height('about/header-text.png');
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  @include hidpi('about/header-text', png);
 }
 
 #download {
