@@ -8,11 +8,6 @@ Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
   
-  // consume fullName
-  init: function() {
-	  this.get('fullName');
-	},
-
   fullName: function() {
     var firstName = this.get('firstName');
     var lastName = this.get('lastName');
@@ -22,7 +17,7 @@ Person = Ember.Object.extend({
 
   fullNameChanged: function() {
     // deal with the change
-  }.observes('fullName')
+  }.observes('fullName').on('init')
 });
 
 var person = Person.create({
