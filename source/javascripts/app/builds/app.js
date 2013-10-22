@@ -437,3 +437,6 @@ Ember.Handlebars.helper('format-date-time', function(date) {
   return moment(date).fromNow();
 });
 
+Ember.Handlebars.helper('isHiDPIScreen', function() {
+  return window.getDevicePixelRatio() > 1;
+});

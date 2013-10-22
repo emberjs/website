@@ -1,6 +1,7 @@
 @import 'compass';
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
+@import 'mixins/hidpi';
 @import 'fonts';
 @import 'colors';
 @import 'examples';
@@ -223,11 +224,7 @@ p {
 
         &.selected > a {
           background-color: #f16f58;
-          background-image:         linear-gradient(-90deg, #f67862, #e7624b);
-          background-image:      -o-linear-gradient(-90deg, #f67862, #e7624b);
-          background-image:    -moz-linear-gradient(-90deg, #f67862, #e7624b);
-          background-image:     -ms-linear-gradient(-90deg, #f67862, #e7624b);
-          background-image: -webkit-linear-gradient(-90deg, #f67862, #e7624b);
+          @include background-image(linear-gradient(-90deg, #f67862, #e7624b));
           margin-left: -1px;
           margin-right: -1px;
           color: white;
@@ -331,7 +328,8 @@ p {
   min-width: $page-width;
   top: 0;
   height: 60px;
-  background: $orange-color url('/images/navigation_background.png') top center;
+  background: $orange-color top center;
+  @include hidpi('navigation_background', png);
   border-bottom: 1px solid #aa412f;
   z-index: 10; /* The header is on top to have proper drop-shadow. */
   @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 3px);
@@ -350,11 +348,12 @@ p {
     top: 6px;
     width: 103px;
     height: 40px;
-    background: url('/images/ember_logo.png');
-    @include filter(drop-shadow(rgba(0, 0, 0, 0.3) 0 1px 2px));
+    @include hidpi('ember_logo', 'png');
+    @include transform(scale(1));
+    @include transition(0.2s);
 
-    &:hover {
-      @include filter(drop-shadow(rgba(0, 0, 0, 0.7) 0 1px 3px));
+    &:hover, &:focus {
+      @include transform(scale(1.05));
       border: 0;
     }
   }
@@ -442,7 +441,7 @@ p {
       @include text-shadow(rgba(0, 0, 0, 0.3) 0px 1px 0px);
 
       display: block;
-      padding: 0px 1em;
+      padding: 0px 1em 0 0.5em;
       height: 28px;
       line-height: 28px;
 
@@ -460,6 +459,12 @@ p {
         color: #ffffff;
         background: #f86c55;
       }
+    }
+
+    .icon-fork {
+      font-size: 1.4em;
+      margin-left: 0;
+      vertical-align: middle;
     }
   }
 }
@@ -517,6 +522,12 @@ p {
 .about-header-text {
   display: block;
   margin: 60px auto 0 auto;
+  width: image-width('about/header-text.png');
+  height: image-height('about/header-text.png');
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 100%;
+  @include hidpi('about/header-text', png);
 }
 
 #download {
@@ -533,7 +544,7 @@ p {
     left: 0;
 
     .button {
-      margin: 0 auto;
+      margin: 3px auto 6px;
       font-size: 13px; /* Due to long version name */
     }
   }
@@ -642,7 +653,8 @@ p {
 
       .bx-prev,
       .bx-next {
-        background: url('/images/about/carousel_controls.png') no-repeat;
+        background: no-repeat;
+        @include hidpi('about/carousel_controls', png);
         float: left;
         height: 28px;
         width: 30px;
@@ -679,7 +691,8 @@ p {
 
       .bx-pager {
         @include clearfix;
-        background: url('/images/about/carousel_pager_bg.png') bottom repeat-x #f4f4f4;
+        background: bottom repeat-x #f4f4f4;
+        @include hidpi('about/carousel_pager_bg', png);
         border-left: 1px solid #fafafa;
         border-right: 1px solid #fafafa;
         border-top: 1px solid #fefefe;
@@ -691,7 +704,8 @@ p {
         text-align: center;
 
         .pager-link {
-          background: url('/images/about/carousel_dots.png') 0 0 no-repeat;
+          background: 0 0 no-repeat;
+          @include hidpi('about/carousel_dots', png);
           height: 11px;
           width: 10px;
           margin-left: 10px;
@@ -1315,27 +1329,45 @@ body.security #content {
     float: right;
 
     a {
-      margin: 0 10px;
+      margin: 3px 10px 0;
       border-bottom: none;
       opacity: 0.7;
+      @include transition(0.4s);
+
       &:hover {
         opacity: 1;
+      }
+
+      i {
+        margin: 0;
+      }
+
+      /*
+        This is for hiding text from users with normal vision
+        but keeping the text for screen readers
+      */
+      span {
+        display: inline-block;
+        width: 1px;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden;
       }
     }
   }
 
   .twitter, .github, .googleplus {
-    background: no-repeat url('/images/footer-links.png');
+    font-size: 33px;
+    line-height: 35px;
+    color: #464646;
     height: 35px;
     width: 35px;
     display: inline-block;
-    text-indent: 9999px;
-    overflow: hidden;
   }
 
-  .twitter { background-position: 0 2px }
-  .github { background-position: -59px 2px }
-  .googleplus { background-position: -119px 2px }
+  .googleplus {
+    font-size: 29px;
+  }
 
 }
 
@@ -1349,29 +1381,44 @@ body.security #content {
 
 .button {
   display: block;
-  width: 226px;
-  height: 46px;
+  width: 220px;
+  height: 40px;
   font-family: 'Maven Pro';
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 47px;
+  line-height: 40px;
   font-size: 14px;
   color: #f6ece8;
   text-align: center;
   @include text-shadow(rgba(0, 0, 0, 0.3) 0 1px 0);
 
   &.orange {
-    background-image: url('/images/orange_buttons.png');
+    border: 1px solid #cb6352;
+    border-top-color: #ea7a68;
+    border-bottom-color: #a04332;
 
-    &:hover {
-      background-position: 0 -46px;
-      border-bottom: none;
+    @include filter-gradient(#fe845a, #d14e37, vertical);
+    @include background-image( linear-gradient(top, #fe845a, #d14e37) );
+    @include border-radius(5px);
+    @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.35));
+
+    &:hover, &:focus {
+      border-color: #e27260;
+      border-top-color: #ea7a68;
+      border-bottom-color: #c1513d;
+      @include filter-gradient(#fc906b, #e2654e, vertical);
+      @include background-image( linear-gradient(top, #fc906b, #e2654e) );
     }
 
     &:active {
-      background-position: 0 -92px;
-      @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
+      border-color: #c9533d;
+      border-top-color: #92473a;
+      border-bottom-color: #e1583f;
+      @include filter-gradient(#b2412e, #ed7249, vertical);
+      @include background-image( linear-gradient(top, #b2412e, #ed7249) );
+      @include box-shadow(none);
+      @include text-shadow(rgba(0, 0, 0, 0.2) 0 -1px 0);
     }
   }
 
@@ -1387,13 +1434,6 @@ body.security #content {
       background-position: 0 -92px;
       @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
     }
-  }
-
-  &:hover {
-    background-position: 0 -46px;
-  }
-
-  &:active {
   }
 }
 
@@ -1418,16 +1458,19 @@ body.security #content {
 }
 
 a.edit-page {
-  background: no-repeat url('/images/pencil-icon.png');
-  width: 16px;
+  font-size: 18px;
+  color: #444;
+  margin: 0;
+  width: 24px;
   height: 16px;
   display: inline-block;
-  text-indent: 9999px;
   float: right;
   overflow: hidden;
   opacity: 0.4;
+
   &:hover {
     opacity: 1;
+    border-bottom: 0;
   }
 }
 
@@ -1566,7 +1609,7 @@ a.edit-page {
   span.flag {
     background-color: gray;
     color: white;
-    border-radius: 3px;
+    @include border-radius(3px);
   }
 
   #sidebar ol#toc-list li > ol {
@@ -1586,18 +1629,14 @@ body.not-found #content {
 .under_construction_warning {
   background-color: #FFFFCC;
   width: 100%;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  @include border-radius(8px);
 }
 
 .under_construction_warning h3 {
   height: 64px;
   font-size: 14px !important;
   border: 1px solid #dfd7d4;
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
+  @include border-radius(8px);
   color: #e1563f;
   padding: 0px 0px 1em 2em;
   margin-bottom: 1.5em;
@@ -1628,7 +1667,7 @@ body.not-found #content {
     background-color: $orange-color;
     border-top: 1px solid darken($orange-color, 20%);
     border-bottom: 1px solid darken($orange-color, 20%);
-    -webkit-box-shadow: 0 1px 0 #C0242D inset;
+    @include box-shadow(0 1px 0 #C0242D inset);
 
     .sections {
       color: white;

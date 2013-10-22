@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Ember.js - <%= data.page.title || @title %></title>
     <link rel="shortcut icon" href="/images/favicon.png" />
+    <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
     <%= stylesheet_link_tag "highlight" %>
     <link href="http://emberjs.com/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
@@ -52,7 +53,7 @@
         </ul>
 
         <div id="github">
-          <a href="https://github.com/emberjs/ember.js"><img src="/images/fork-us.png">Fork Us!</a>
+          <a href="https://github.com/emberjs/ember.js"><i class="icon-fork"></i>Fork Us!</a>
         </div>
       </div>
     </div>
@@ -79,9 +80,15 @@
         </div>
         <div class="statement">Ember.js is free, open source and always will be.</div>
         <div class="links">
-          <a class="twitter" href="http://twitter.com/emberjs">Twitter</a>
-          <a class="github" href="https://github.com/emberjs/ember.js">GitHub</a>
-          <a class="googleplus" href="https://plus.google.com/communities/106387049790387471205">Google+</a>
+          <a class="twitter" href="http://twitter.com/emberjs">
+            <i class="icon-twitter"></i><span>Twitter</span>
+          </a>
+          <a class="github" href="https://github.com/emberjs/ember.js">
+            <i class="icon-github"></i><span>GitHub</span>
+          </a>
+          <a class="googleplus" href="https://plus.google.com/communities/106387049790387471205">
+            <i class="icon-gplus"></i><span>Google+</span>
+          </a>
         </div>
       </div>
     </div>

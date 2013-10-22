@@ -87,9 +87,8 @@ module TOC
       return if name.blank?
 
       %Q{
-        <h1>#{name} 
-          <a href="#{chapter_github_source_url}" target="_blank" class="edit-page">
-            Edit Page</a>
+        <h1>#{name}
+          <a href="#{chapter_github_source_url}" target="_blank" class="edit-page icon-pencil">Edit Page</a>
         </h1>
       }
     end
