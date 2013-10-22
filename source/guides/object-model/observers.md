@@ -7,6 +7,11 @@ Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
+  
+  // consume fullName
+  init: function() {
+	  this.get('fullName');
+	},
 
   fullName: function() {
     var firstName = this.get('firstName');
@@ -24,7 +29,6 @@ var person = Person.create({
   firstName: "Yehuda",
   lastName: "Katz"
 });
-
 
 person.set('firstName', "Brohuda"); // observer will fire
 ```
