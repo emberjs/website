@@ -44,8 +44,8 @@ usernamesPromise.then(fetchPhotosOfUsers)
 
 In the above example, if any of the methods
 `fetchPhotosOfUsers`, `applyInstagramFilters`, or
-`uploadTrendyPhotoAlbum` reject (either by throwing an exception or
-returning `Ember.RSVP.reject()`), `handleErrors` will be called with
+`uploadTrendyPhotoAlbum` returns a promise that rejects, 
+`handleErrors` will be called with
 the reason for the failure. In this manner, promises approximate an
 asynchronous form of try-catch statements that prevent the rightward
 flow of nested callback after nested callback and facilitate a saner
@@ -124,9 +124,6 @@ along the way, e.g.:
 App.GoodForNothingRoute = Ember.Route.extend({
   model: function() {
     return Ember.RSVP.reject("FAIL");
-
-    // The following would have the same effect:
-    // throw "FAIL";
   },
 
   actions: {
