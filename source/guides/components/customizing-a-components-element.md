@@ -93,7 +93,7 @@ This would render this HTML:
 <div class="ember-view disabled">
 ```
 
-You can also specify a class should only be added when the property is
+You can also specify a class which should only be added when the property is
 `false` by declaring `classNameBindings` like this:
 
 ```javascript
