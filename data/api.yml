@@ -2,9 +2,9 @@
 project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
-  version: 1.1.0
+  version: 1.1.1
   url: http://emberjs.com/
-  sha: v1.1.0
+  sha: v1.1.1
 files:
   ../packages/container/lib/main.js:
     name: ../packages/container/lib/main.js
@@ -3520,7 +3520,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: ../packages/ember-runtime/lib/system/core_object.js
-    line: 162
+    line: 165
   Ember.EachProxy:
     name: Ember.EachProxy
     shortname: Ember.EachProxy
@@ -18376,7 +18376,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 175
+  line: 178
   description: |-
     An overridable method called when objects are instantiated. By default,
     does nothing unless it is overridden during class definition.
@@ -18410,33 +18410,68 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 206
-  description: "Defines the properties that will be concatenated from the superclass\n(instead
-    of overridden).\n\nBy default, when you extend an Ember class a property defined
-    in\nthe subclass overrides a property with the same name that is defined\nin the
-    superclass. However, there are some cases where it is preferable\nto build up
-    a property's value by combining the superclass' property\nvalue with the subclass'
-    value. An example of this in use within Ember\nis the `classNames` property of
-    `Ember.View`.\n\nHere is some sample code showing the difference between a concatenated\nproperty
-    and a normal one:\n\n```javascript\nApp.BarView = Ember.View.extend({\n  someNonConcatenatedProperty:
-    ['bar'],\n  classNames: ['bar']\n});\n\nApp.FooBarView = App.BarView.extend({\n
-    \ someNonConcatenatedProperty: ['foo'],\n  classNames: ['foo'],\n});\n\nvar fooBarView
-    = App.FooBarView.create();\nfooBarView.get('someNonConcatenatedProperty'); //
-    ['foo']\nfooBarView.get('classNames'); // ['ember-view', 'bar', 'foo']\n```\n\nThis
-    behavior extends to object creation as well. Continuing the\nabove example:\n\n```javascript\nvar
-    view = App.FooBarView.create({\n  someNonConcatenatedProperty: ['baz'],\n  classNames:
-    ['baz']\n})\nview.get('someNonConcatenatedProperty'); // ['baz']\nview.get('classNames');
-    // ['ember-view', 'bar', 'foo', 'baz']\n```\nAdding a single property that is
-    not an array will just add it in the array:\n\n```javascript\nvar view = App.FooBarView.create({\n
-    \ classNames: 'baz'\n})\nview.get('classNames'); // ['ember-view', 'bar', 'foo',
-    'baz']\n```\n\nUsing the `concatenatedProperties` property, we can tell to Ember
-    that mix\nthe content of the properties.\n\nIn `Ember.View` the `classNameBindings`
-    and `attributeBindings` properties\nare also concatenated, in addition to `classNames`.\n\nThis
-    feature is available for you to use throughout the Ember object model,\nalthough
-    typical app developers are likely to use it infrequently. Since\nit changes expectations
-    about behavior of properties, you should properly\ndocument its usage in each
-    individual concatenated property (to not \nmislead your users to think they can
-    override the property in a subclass)."
+  line: 209
+  description: |-
+    Defines the properties that will be concatenated from the superclass
+    (instead of overridden).
+
+    By default, when you extend an Ember class a property defined in
+    the subclass overrides a property with the same name that is defined
+    in the superclass. However, there are some cases where it is preferable
+    to build up a property's value by combining the superclass' property
+    value with the subclass' value. An example of this in use within Ember
+    is the `classNames` property of `Ember.View`.
+
+    Here is some sample code showing the difference between a concatenated
+    property and a normal one:
+
+    ```javascript
+    App.BarView = Ember.View.extend({
+      someNonConcatenatedProperty: ['bar'],
+      classNames: ['bar']
+    });
+
+    App.FooBarView = App.BarView.extend({
+      someNonConcatenatedProperty: ['foo'],
+      classNames: ['foo'],
+    });
+
+    var fooBarView = App.FooBarView.create();
+    fooBarView.get('someNonConcatenatedProperty'); // ['foo']
+    fooBarView.get('classNames'); // ['ember-view', 'bar', 'foo']
+    ```
+
+    This behavior extends to object creation as well. Continuing the
+    above example:
+
+    ```javascript
+    var view = App.FooBarView.create({
+      someNonConcatenatedProperty: ['baz'],
+      classNames: ['baz']
+    })
+    view.get('someNonConcatenatedProperty'); // ['baz']
+    view.get('classNames'); // ['ember-view', 'bar', 'foo', 'baz']
+    ```
+    Adding a single property that is not an array will just add it in the array:
+
+    ```javascript
+    var view = App.FooBarView.create({
+      classNames: 'baz'
+    })
+    view.get('classNames'); // ['ember-view', 'bar', 'foo', 'baz']
+    ```
+
+    Using the `concatenatedProperties` property, we can tell to Ember that mix
+    the content of the properties.
+
+    In `Ember.View` the `classNameBindings` and `attributeBindings` properties
+    are also concatenated, in addition to `classNames`.
+
+    This feature is available for you to use throughout the Ember object model,
+    although typical app developers are likely to use it infrequently. Since
+    it changes expectations about behavior of properties, you should properly
+    document its usage in each individual concatenated property (to not
+    mislead your users to think they can override the property in a subclass).
   itemtype: property
   name: concatenatedProperties
   type: Array
@@ -18446,7 +18481,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 274
+  line: 277
   description: |-
     Destroyed object property flag.
 
@@ -18460,7 +18495,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 285
+  line: 288
   description: |-
     Destruction scheduled flag. The `destroy()` method has been called.
 
@@ -18474,7 +18509,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 296
+  line: 299
   description: |-
     Destroys an object by setting the `isDestroyed` flag and removing its
     metadata, which effectively destroys observers and bindings.
@@ -18494,7 +18529,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 318
+  line: 321
   description: Override to implement teardown.
   itemtype: method
   name: willDestroy
@@ -18503,7 +18538,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 325
+  line: 328
   access: private
   tagname: |-
     Invoked by the run loop to actually destroy the object. This is
@@ -18515,7 +18550,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 345
+  line: 348
   description: |-
     Returns a string representation which attempts to provide more information
     than Javascript's `toString` typically does, in a generic way for all Ember
@@ -18552,7 +18587,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 406
+  line: 409
   description: |-
     Creates a new subclass.
 
@@ -18645,7 +18680,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 508
+  line: 511
   description: |-
     Equivalent to doing `extend(arguments).create()`.
     If possible use the normal `create` method instead.
@@ -18662,7 +18697,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 522
+  line: 525
   description: |-
     Creates an instance of a class. Accepts either no arguments, or an object
     containing values to initialize the newly instantiated object with.
@@ -18708,7 +18743,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 565
+  line: 568
   description: |-
     Augments a constructor's prototype with additional
         properties and functions:
@@ -18716,20 +18751,16 @@ classitems:
         MyObject = Ember.Object.extend({
           name: 'an object'
         });
-
-        o = MyObject.create();
+    o = MyObject.create();
         o.get('name'); // 'an object'
-
-        MyObject.reopen({
+    MyObject.reopen({
           say: function(msg){
             console.log(msg);
           }
         })
-
-        o2 = MyObject.create();
+    o2 = MyObject.create();
         o2.say("hello"); // logs "hello"
-
-        o.say("goodbye"); // logs "goodbye"
+    o.say("goodbye"); // logs "goodbye"
         ```
     To add functions and properties to the constructor itself,
         see `reopenClass`
@@ -18740,22 +18771,60 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 601
-  description: "Augments a constructor's own properties and functions:\n\n```javascript\nMyObject
-    = Ember.Object.extend({\n  name: 'an object'\n});\n\n\nMyObject.reopenClass({\n
-    \ canBuild: false\n});\n\nMyObject.canBuild; // false\no = MyObject.create();\n```\n\nIn
-    other words, this creates static properties and functions for the class. These
-    are only available on the class \nand not on any instance of that class.\n\n```javascript\nApp.Person
-    = Ember.Object.extend({\n  name : \"\",\n  sayHello : function(){\n    alert(\"Hello.
-    My name is \" + this.get('name'));\n  }\n});\n\nApp.Person.reopenClass({\n  species
-    : \"Homo sapiens\",\n  createPerson: function(newPersonsName){\n    return App.Person.create({\n
-    \     name:newPersonsName\n    });\n  }\n});\n\nvar tom = App.Person.create({\n
-    \ name : \"Tom Dale\"\n});\nvar yehuda = App.Person.createPerson(\"Yehuda Katz\");\n\ntom.sayHello();
-    // \"Hello. My name is Tom Dale\"\nyehuda.sayHello(); // \"Hello. My name is Yehuda
-    Katz\"\nalert(App.Person.species); // \"Homo sapiens\"\n```\n\nNote that `species`
-    and `createPerson` are *not* valid on the `tom` and `yehuda` \nvariables. They
-    are only valid on `App.Person`.\n\nTo add functions and properties to instances
-    of\na constructor by extending the constructor's prototype\nsee `reopen`"
+  line: 604
+  description: |-
+    Augments a constructor's own properties and functions:
+
+    ```javascript
+    MyObject = Ember.Object.extend({
+      name: 'an object'
+    });
+
+
+    MyObject.reopenClass({
+      canBuild: false
+    });
+
+    MyObject.canBuild; // false
+    o = MyObject.create();
+    ```
+
+    In other words, this creates static properties and functions for the class. These are only available on the class
+    and not on any instance of that class.
+
+    ```javascript
+    App.Person = Ember.Object.extend({
+      name : "",
+      sayHello : function(){
+        alert("Hello. My name is " + this.get('name'));
+      }
+    });
+
+    App.Person.reopenClass({
+      species : "Homo sapiens",
+      createPerson: function(newPersonsName){
+        return App.Person.create({
+          name:newPersonsName
+        });
+      }
+    });
+
+    var tom = App.Person.create({
+      name : "Tom Dale"
+    });
+    var yehuda = App.Person.createPerson("Yehuda Katz");
+
+    tom.sayHello(); // "Hello. My name is Tom Dale"
+    yehuda.sayHello(); // "Hello. My name is Yehuda Katz"
+    alert(App.Person.species); // "Homo sapiens"
+    ```
+
+    Note that `species` and `createPerson` are *not* valid on the `tom` and `yehuda`
+    variables. They are only valid on `App.Person`.
+
+    To add functions and properties to instances of
+    a constructor by extending the constructor's prototype
+    see `reopen`
   itemtype: method
   name: reopenClass
   class: Ember.CoreObject
@@ -18763,7 +18832,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 676
+  line: 679
   description: |-
     In some cases, you may want to annotate computed properties with additional
     metadata about how they function or what values they operate on. For
@@ -18798,7 +18867,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: ../packages/ember-runtime/lib/system/core_object.js
-  line: 710
+  line: 713
   description: |-
     Iterate over each computed property for the class, passing its name
     and any associated metadata (see `metaForProperty`) to the callback.
