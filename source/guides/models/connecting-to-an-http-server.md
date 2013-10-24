@@ -74,7 +74,7 @@ return the JSON in the following format:
 ```js
 {
   "post": {
-    "id": 1
+    "id": 1,
     "title": "Rails is omakase",
     "comments": ["1", "2"],
     "user" : "dhh"
