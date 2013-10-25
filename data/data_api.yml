@@ -1,0 +1,4010 @@
+---
+project:
+  name: The ember-data API
+  description: 'The ember-data API: a data persistence library for Ember.js'
+  version: Revision 12
+  logo: http://f.cl.ly/items/1A1L432s022u1O1q1V3p/ember%20logo.png
+  url: https://github.com/emberjs/data
+  sha: v1.0.0-beta.3
+files:
+  ../packages/ember-data/lib/adapters/fixture_adapter.js:
+    name: ../packages/ember-data/lib/adapters/fixture_adapter.js
+    modules: {}
+    classes:
+      DS.FixtureAdapter: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/adapters/rest_adapter.js:
+    name: ../packages/ember-data/lib/adapters/rest_adapter.js
+    modules: {}
+    classes:
+      DS.RESTAdapter: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/ext/date.js:
+    name: ../packages/ember-data/lib/ext/date.js
+    modules: {}
+    classes:
+      Ember.Date: 1
+    fors: {}
+    namespaces:
+      Ember: 1
+  ../packages/ember-data/lib/serializers/json_serializer.js:
+    name: ../packages/ember-data/lib/serializers/json_serializer.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/serializers/rest_serializer.js:
+    name: ../packages/ember-data/lib/serializers/rest_serializer.js
+    modules: {}
+    classes:
+      DS.RESTSerializer: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/changes/attribute_change.js:
+    name: ../packages/ember-data/lib/system/changes/attribute_change.js
+    modules: {}
+    classes:
+      DS.AttributeChange: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/changes/relationship_change.js:
+    name: ../packages/ember-data/lib/system/changes/relationship_change.js
+    modules: {}
+    classes:
+      DS.RelationshipChange: 1
+      DS.RelationshipChangeAdd: 1
+      DS.RelationshipChangeRemove: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/debug/debug_adapter.js:
+    name: ../packages/ember-data/lib/system/debug/debug_adapter.js
+    modules: {}
+    classes:
+      DS.DebugAdapter: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/debug/debug_info.js:
+    name: ../packages/ember-data/lib/system/debug/debug_info.js
+    modules: {}
+    classes: {}
+    fors:
+      DS.Model: 1
+    namespaces: {}
+  ../packages/ember-data/lib/system/mixins/mappable.js:
+    name: ../packages/ember-data/lib/system/mixins/mappable.js
+    modules: {}
+    classes:
+      DS._Mappable: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/model/attributes.js:
+    name: ../packages/ember-data/lib/system/model/attributes.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/model/model.js:
+    name: ../packages/ember-data/lib/system/model/model.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/model/states.js:
+    name: ../packages/ember-data/lib/system/model/states.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/record_arrays/adapter_populated_record_array.js:
+    name: ../packages/ember-data/lib/system/record_arrays/adapter_populated_record_array.js
+    modules: {}
+    classes:
+      DS.AdapterPopulatedRecordArray: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/record_arrays/filtered_record_array.js:
+    name: ../packages/ember-data/lib/system/record_arrays/filtered_record_array.js
+    modules: {}
+    classes:
+      DS.FilteredRecordArray: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/record_arrays/many_array.js:
+    name: ../packages/ember-data/lib/system/record_arrays/many_array.js
+    modules: {}
+    classes:
+      DS.ManyArray: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/record_arrays/record_array.js:
+    name: ../packages/ember-data/lib/system/record_arrays/record_array.js
+    modules: {}
+    classes:
+      DS.RecordArray: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/relationships/belongs_to.js:
+    name: ../packages/ember-data/lib/system/relationships/belongs_to.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/relationships/ext.js:
+    name: ../packages/ember-data/lib/system/relationships/ext.js
+    modules: {}
+    classes:
+      DS.Model: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/relationships/has_many.js:
+    name: ../packages/ember-data/lib/system/relationships/has_many.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/adapter.js:
+    name: ../packages/ember-data/lib/system/adapter.js
+    modules: {}
+    classes:
+      DS.Adapter: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/changes.js:
+    name: ../packages/ember-data/lib/system/changes.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/debug.js:
+    name: ../packages/ember-data/lib/system/debug.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/model.js:
+    name: ../packages/ember-data/lib/system/model.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/record_array_manager.js:
+    name: ../packages/ember-data/lib/system/record_array_manager.js
+    modules: {}
+    classes:
+      DS.RecordArrayManager: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/system/record_arrays.js:
+    name: ../packages/ember-data/lib/system/record_arrays.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/relationships.js:
+    name: ../packages/ember-data/lib/system/relationships.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/system/store.js:
+    name: ../packages/ember-data/lib/system/store.js
+    modules: {}
+    classes:
+      DS.Store: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  ../packages/ember-data/lib/adapters.js:
+    name: ../packages/ember-data/lib/adapters.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/core.js:
+    name: ../packages/ember-data/lib/core.js
+    modules: {}
+    classes:
+      DS: 1
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/initializers.js:
+    name: ../packages/ember-data/lib/initializers.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
+  ../packages/ember-data/lib/main.js:
+    name: ../packages/ember-data/lib/main.js
+    modules:
+      ember-data: 1
+    classes: {}
+    fors: {}
+    namespaces: {}
+modules:
+  ember-data:
+    name: ember-data
+    submodules: {}
+    classes:
+      DS.FixtureAdapter: 1
+      DS.RESTAdapter: 1
+      Ember.Date: 1
+      DS.RESTSerializer: 1
+      DS.AttributeChange: 1
+      DS.RelationshipChange: 1
+      DS.RelationshipChangeAdd: 1
+      DS.RelationshipChangeRemove: 1
+      DS.DebugAdapter: 1
+      DS.Model: 1
+      DS._Mappable: 1
+      DS.AdapterPopulatedRecordArray: 1
+      DS.FilteredRecordArray: 1
+      DS.ManyArray: 1
+      DS.RecordArray: 1
+      DS.Adapter: 1
+      DS.RecordArrayManager: 1
+      DS.Store: 1
+      DS: 1
+    fors:
+      DS.Model: 1
+    namespaces:
+      DS: 1
+      Ember: 1
+    tag: main
+    file: ../packages/ember-data/lib/core.js
+    line: 5
+    description: Ember Data
+    itemtype: main
+classes:
+  DS.FixtureAdapter:
+    name: DS.FixtureAdapter
+    shortname: DS.FixtureAdapter
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+    line: 13
+    description: |-
+      `DS.FixtureAdapter` is an adapter that loads records from memory.
+      Its primarily used for development and testing. You can also use
+      `DS.FixtureAdapter` while working on the API but are not ready to
+      integrate yet. It is a fully functioning adapter. All CRUD methods
+      are implemented. You can also implement query logic that a remote
+      system would do. Its possible to do develop your entire application
+      with `DS.FixtureAdapter`.
+    extends: DS.Adapter
+  DS.RESTAdapter:
+    name: DS.RESTAdapter
+    shortname: DS.RESTAdapter
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/adapters/rest_adapter.js
+    line: 13
+    description: |-
+      The REST adapter allows your store to communicate with an HTTP server by
+      transmitting JSON via XHR. Most Ember.js apps that consume a JSON API
+      should use the REST adapter.
+
+      This adapter is designed around the idea that the JSON exchanged with
+      the server should be conventional.
+
+      ## JSON Structure
+
+      The REST adapter expects the JSON returned from your server to follow
+      these conventions.
+
+      ### Object Root
+
+      The JSON payload should be an object that contains the record inside a
+      root property. For example, in response to a `GET` request for
+      `/posts/1`, the JSON should look like this:
+
+      ```js
+      {
+        "post": {
+          title: "I'm Running to Reform the W3C's Tag",
+          author: "Yehuda Katz"
+        }
+      }
+      ```
+
+      ### Conventional Names
+
+      Attribute names in your JSON payload should be the camelcased versions of
+      the attributes in your Ember.js models.
+
+      For example, if you have a `Person` model:
+
+      ```js
+      App.Person = DS.Model.extend({
+        firstName: DS.attr('string'),
+        lastName: DS.attr('string'),
+        occupation: DS.attr('string')
+      });
+      ```
+
+      The JSON returned should look like this:
+
+      ```js
+      {
+        "person": {
+          "firstName": "Barack",
+          "lastName": "Obama",
+          "occupation": "President"
+        }
+      }
+      ```
+
+      ## Customization
+
+      ### Endpoint path customization
+
+      Endpoint paths can be prefixed with a `namespace` by setting the namespace
+      property on the adapter:
+
+      ```js
+      DS.RESTAdapter.reopen({
+        namespace: 'api/1'
+      });
+      ```
+      Requests for `App.Person` would now target `/api/1/people/1`.
+
+      ### Host customization
+
+      An adapter can target other hosts by setting the `host` property.
+
+      ```js
+      DS.RESTAdapter.reopen({
+        host: 'https://api.example.com'
+      });
+      ```
+
+      ### Headers customization
+
+      Some APIs require HTTP headers, eg to provide an API key. An array of
+      headers can be added to the adapter which are passed with every request:
+
+      ```js
+      DS.RESTAdapter.reopen({
+        headers: {
+          "API_KEY": "secret key",
+          "ANOTHER_HEADER": "asdsada"
+        }
+      });
+      ```
+    is_constructor: 1
+    extends: DS.Adapter
+  Ember.Date:
+    name: Ember.Date
+    shortname: Ember.Date
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: Ember
+    file: ../packages/ember-data/lib/ext/date.js
+    line: 5
+    description: |-
+      Date.parse with progressive enhancement for ISO 8601 <https://github.com/csnover/js-iso8601>
+
+      © 2011 Colin Snover <http://zetafleet.com>
+
+      Released under MIT license.
+    static: 1
+  DS.RESTSerializer:
+    name: DS.RESTSerializer
+    shortname: DS.RESTSerializer
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/serializers/rest_serializer.js
+    line: 15
+    description: |-
+      Normally, applications will use the `RESTSerializer` by implementing
+      the `normalize` method and individual normalizations under
+      `normalizeHash`.
+
+      This allows you to do whatever kind of munging you need, and is
+      especially useful if your server is inconsistent and you need to
+      do munging differently for many different kinds of responses.
+
+      See the `normalize` documentation for more information.
+
+      ## Across the Board Normalization
+
+      There are also a number of hooks that you might find useful to defined
+      across-the-board rules for your payload. These rules will be useful
+      if your server is consistent, or if you're building an adapter for
+      an infrastructure service, like Parse, and want to encode service
+      conventions.
+
+      For example, if all of your keys are underscored and all-caps, but
+      otherwise consistent with the names you use in your models, you
+      can implement across-the-board rules for how to convert an attribute
+      name in your model to a key in your JSON.
+
+      ```js
+      App.ApplicationSerializer = DS.RESTSerializer.extend({
+        keyForAttribute: function(attr) {
+          return Ember.String.underscore(attr).toUpperCase();
+        }
+      });
+      ```
+
+      You can also implement `keyForRelationship`, which takes the name
+      of the relationship as the first parameter, and the kind of
+      relationship (`hasMany` or `belongsTo`) as the second parameter.
+    extends: DS.JSONSerializer
+  DS.AttributeChange:
+    name: DS.AttributeChange
+    shortname: DS.AttributeChange
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/changes/attribute_change.js
+    line: 5
+    description: |-
+      An AttributeChange object is created whenever a record's
+      attribute changes value. It is used to track changes to a
+      record between transaction commits.
+    access: private
+    tagname: ''
+    is_constructor: 1
+  DS.RelationshipChange:
+    name: DS.RelationshipChange
+    shortname: DS.RelationshipChange
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/changes/relationship_change.js
+    line: 285
+    access: private
+    tagname: ''
+    construtor: ''
+  DS.RelationshipChangeAdd:
+    name: DS.RelationshipChangeAdd
+    shortname: DS.RelationshipChangeAdd
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/changes/relationship_change.js
+    line: 29
+    access: private
+    tagname: ''
+    construtor: ''
+  DS.RelationshipChangeRemove:
+    name: DS.RelationshipChangeRemove
+    shortname: DS.RelationshipChangeRemove
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/changes/relationship_change.js
+    line: 39
+    access: private
+    tagname: ''
+    construtor: ''
+  DS.DebugAdapter:
+    name: DS.DebugAdapter
+    shortname: DS.DebugAdapter
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/debug/debug_adapter.js
+    line: 6
+    description: Extend `Ember.DataAdapter` with ED specific code.
+    extends: Ember.DataAdapter
+    access: private
+    tagname: ''
+  DS.Model:
+    name: DS.Model
+    shortname: DS.Model
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/relationships/ext.js
+    line: 14
+    description: The model class that all Ember Data records descend from.
+    extends: Ember.Object
+    uses:
+    - Ember.Evented
+  DS._Mappable:
+    name: DS._Mappable
+    shortname: DS._Mappable
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - DS.Adapter
+    - DS.Store
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/mixins/mappable.js
+    line: 20
+    description: |-
+      The Mappable mixin is designed for classes that would like to
+      behave as a map for configuration purposes.
+
+      For example, the DS.Adapter class can behave like a map, with
+      more semantic API, via the `map` API:
+
+        DS.Adapter.map('App.Person', { firstName: { key: 'FIRST' } });
+
+      Class configuration via a map-like API has a few common requirements
+      that differentiate it from the standard Ember.Map implementation.
+
+      First, values often are provided as strings that should be normalized
+      into classes the first time the configuration options are used.
+
+      Second, the values configured on parent classes should also be taken
+      into account.
+
+      Finally, setting the value of a key sometimes should merge with the
+      previous value, rather than replacing it.
+
+      This mixin provides a instance method, `createInstanceMapFor`, that
+      will reify all of the configuration options set on an instance's
+      constructor and provide it for the instance to use.
+
+      Classes can implement certain hooks that allow them to customize
+      the requirements listed above:
+
+      * `resolveMapConflict` - called when a value is set for an existing
+        value
+      * `transformMapKey` - allows a key name (for example, a global path
+        to a class) to be normalized
+      * `transformMapValue` - allows a value (for example, a class that
+        should be instantiated) to be normalized
+
+      Classes that implement this mixin should also implement a class
+      method built using the `generateMapFunctionFor` method:
+
+        DS.Adapter.reopenClass({
+          map: DS.Mappable.generateMapFunctionFor('attributes', function(key, newValue, map) {
+            var existingValue = map.get(key);
+
+            for (var prop in newValue) {
+              if (!newValue.hasOwnProperty(prop)) { continue; }
+              existingValue[prop] = newValue[prop];
+            }
+          })
+        });
+
+      The function passed to `generateMapFunctionFor` is invoked every time a
+      new value is added to the map.
+    access: private
+    tagname: ''
+  DS.AdapterPopulatedRecordArray:
+    name: DS.AdapterPopulatedRecordArray
+    shortname: DS.AdapterPopulatedRecordArray
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/record_arrays/adapter_populated_record_array.js
+    line: 9
+    extends: DS.RecordArray
+  DS.FilteredRecordArray:
+    name: DS.FilteredRecordArray
+    shortname: DS.FilteredRecordArray
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/record_arrays/filtered_record_array.js
+    line: 9
+    extends: DS.RecordArray
+  DS.ManyArray:
+    name: DS.ManyArray
+    shortname: DS.ManyArray
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/record_arrays/many_array.js
+    line: 10
+    description: |-
+      A ManyArray is a RecordArray that represents the contents of a has-many
+      relationship.
+
+      The ManyArray is instantiated lazily the first time the relationship is
+      requested.
+
+      ### Inverses
+
+      Often, the relationships in Ember Data applications will have
+      an inverse. For example, imagine the following models are
+      defined:
+
+          App.Post = DS.Model.extend({
+            comments: DS.hasMany('comment')
+          });
+
+          App.Comment = DS.Model.extend({
+            post: DS.belongsTo('post')
+          });
+
+      If you created a new instance of `App.Post` and added
+      a `App.Comment` record to its `comments` has-many
+      relationship, you would expect the comment's `post`
+      property to be set to the post that contained
+      the has-many.
+
+      We call the record to which a relationship belongs the
+      relationship's _owner_.
+    extends: DS.RecordArray
+  DS.RecordArray:
+    name: DS.RecordArray
+    shortname: DS.RecordArray
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/record_arrays/record_array.js
+    line: 7
+    description: |-
+      A record array is an array that contains records of a certain type. The record
+      array materializes records as needed when they are retrieved for the first
+      time. You should not create record arrays yourself. Instead, an instance of
+      DS.RecordArray or its subclasses will be returned by your application's store
+      in response to queries.
+    extends: Ember.ArrayProxy
+    uses:
+    - Ember.Evented
+  DS.Adapter:
+    name: DS.Adapter
+    shortname: DS.Adapter
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/adapter.js
+    line: 20
+    description: |-
+      An adapter is an object that receives requests from a store and
+      translates them into the appropriate action to take against your
+      persistence layer. The persistence layer is usually an HTTP API, but may
+      be anything, such as the browser's local storage.
+
+      ### Creating an Adapter
+
+      First, create a new subclass of `DS.Adapter`:
+
+          App.MyAdapter = DS.Adapter.extend({
+            // ...your code here
+          });
+
+      To tell your store which adapter to use, set its `adapter` property:
+
+          App.store = DS.Store.create({
+            adapter: App.MyAdapter.create()
+          });
+
+      `DS.Adapter` is an abstract base class that you should override in your
+      application to customize it for your backend. The minimum set of methods
+      that you should implement is:
+
+        * `find()`
+        * `createRecord()`
+        * `updateRecord()`
+        * `deleteRecord()`
+
+      To improve the network performance of your application, you can optimize
+      your adapter by overriding these lower-level methods:
+
+        * `findMany()`
+        * `createRecords()`
+        * `updateRecords()`
+        * `deleteRecords()`
+        * `commit()`
+
+      For an example implementation, see `DS.RESTAdapter`, the
+      included REST adapter.
+    extends: Ember.Object
+    uses:
+    - DS._Mappable
+  DS.RecordArrayManager:
+    name: DS.RecordArrayManager
+    shortname: DS.RecordArrayManager
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/record_array_manager.js
+    line: 9
+    access: private
+    tagname: ''
+    extends: Ember.Object
+  DS.Store:
+    name: DS.Store
+    shortname: DS.Store
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: ../packages/ember-data/lib/system/store.js
+    line: 44
+    description: |-
+      The store contains all of the data for records loaded from the server.
+      It is also responsible for creating instances of DS.Model that wrap
+      the individual data for a record, so that they can be bound to in your
+      Handlebars templates.
+
+      Define your application's store like this:
+
+           MyApp.Store = DS.Store.extend();
+
+      Most Ember.js applications will only have a single `DS.Store` that is
+      automatically created by their `Ember.Application`.
+
+      You can retrieve models from the store in several ways. To retrieve a record
+      for a specific id, use `DS.Model`'s `find()` method:
+
+           var person = App.Person.find(123);
+
+      If your application has multiple `DS.Store` instances (an unusual case), you can
+      specify which store should be used:
+
+          var person = store.find(App.Person, 123);
+
+      In general, you should retrieve models using the methods on `DS.Model`; you should
+      rarely need to interact with the store directly.
+
+      By default, the store will talk to your backend using a standard REST mechanism.
+      You can customize how the store talks to your backend by specifying a custom adapter:
+
+           MyApp.store = DS.Store.create({
+             adapter: 'MyApp.CustomAdapter'
+           });
+
+      You can learn more about writing a custom adapter by reading the `DS.Adapter`
+      documentation.
+    extends: Ember.Object
+    uses:
+    - DS._Mappable
+  DS:
+    name: DS
+    shortname: DS
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: ''
+    file: ../packages/ember-data/lib/core.js
+    line: 5
+    description: All Ember Data methods and functions are defined inside of this namespace.
+    static: 1
+classitems:
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 34
+  description: Implement this method in order to provide data associated with a type
+  itemtype: method
+  name: fixturesForType
+  params:
+  - name: type
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 55
+  description: Implement this method in order to query fixtures data
+  itemtype: method
+  name: queryFixtures
+  params:
+  - name: fixture
+    description: ''
+  - name: query
+    description: ''
+  - name: type
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 67
+  itemtype: method
+  name: updateFixtures
+  params:
+  - name: type
+    description: ''
+  - name: fixture
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 84
+  description: Implement this method in order to provide provide json for CRUD methods
+  itemtype: method
+  name: mockJSON
+  params:
+  - name: type
+    description: ''
+  - name: record
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 95
+  itemtype: method
+  name: generateIdForRecord
+  params:
+  - name: store
+    description: ''
+  - name: record
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 104
+  itemtype: method
+  name: find
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: id
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 127
+  itemtype: method
+  name: findMany
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: ids
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 151
+  itemtype: method
+  name: findAll
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 166
+  itemtype: method
+  name: findQuery
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: query
+    description: ''
+  - name: array
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 187
+  itemtype: method
+  name: createRecord
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: record
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 203
+  itemtype: method
+  name: updateRecord
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: record
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/fixture_adapter.js
+  line: 219
+  itemtype: method
+  name: deleteRecord
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: record
+    description: ''
+  class: DS.FixtureAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 114
+  description: |-
+    Called by the store in order to fetch the JSON for a given
+    type and ID.
+
+    It makes an Ajax request to a URL computed by `buildURL`, and returns a
+    promise for the resulting payload.
+  itemtype: method
+  name: find
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: id
+    description: ''
+    type: String
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 133
+  description: |-
+    Called by the store in order to fetch a JSON array for all
+    of the records for a given type.
+
+    It makes an Ajax request to a URL computed by `buildURL`, and returns a
+    promise for the resulting payload.
+  itemtype: method
+  name: findAll
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: sinceToken
+    description: ''
+    type: String
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 158
+  description: |-
+    Called by the store in order to fetch a JSON array for
+    the records that match a particular query.
+
+    The query is a simple JavaScript object that will be passed directly
+    to the server as parameters.
+
+    It makes an Ajax request to a URL computed by `buildURL`, and returns a
+    promise for the resulting payload.
+  itemtype: method
+  name: findQuery
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: query
+    description: ''
+    type: Object
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 180
+  description: |-
+    Called by the store in order to fetch a JSON array for
+    the unloaded records in a has-many relationship that were originally
+    specified as IDs.
+
+    For example, if the original payload looks like:
+
+    ```js
+    {
+      "id": 1,
+      "title": "Rails is omakase",
+      "comments": [ 1, 2, 3 ]
+    }
+    ```
+
+    The IDs will be passed as a URL-encoded Array of IDs, in this form:
+
+    ```
+    ids[]=1&ids[]=2&ids[]=3
+    ```
+
+    Many servers, such as Rails and PHP, will automatically convert this
+    into an Array for you on the server-side. If you want to encode the
+    IDs, differently, just override this (one-line) method.
+
+    It makes an Ajax request to a URL computed by `buildURL`, and returns a
+    promise for the resulting payload.
+  itemtype: method
+  name: findMany
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: ids
+    description: ''
+    type: Array<String>
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 220
+  description: |-
+    Called by the store in order to fetch a JSON array for
+    the unloaded records in a has-many relationship that were originally
+    specified as a URL (inside of `links`).
+
+    For example, if your original payload looks like this:
+
+    ```js
+    {
+      "post": {
+        "id": 1,
+        "title": "Rails is omakase",
+        "links": { "comments": "/posts/1/comments" }
+      }
+    }
+    ```
+
+    This method will be called with the parent record and `/posts/1/comments`.
+
+    It will make an Ajax request to the originally specified URL.
+  itemtype: method
+  name: findHasMany
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: url
+    description: ''
+    type: String
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 256
+  description: |-
+    Called by the store in order to fetch a JSON array for
+    the unloaded records in a belongs-to relationship that were originally
+    specified as a URL (inside of `links`).
+
+    For example, if your original payload looks like this:
+
+    ```js
+    {
+      "person": {
+        "id": 1,
+        "name": "Tom Dale",
+        "links": { "group": "/people/1/group" }
+      }
+    }
+    ```
+
+    This method will be called with the parent record and `/people/1/group`.
+
+    It will make an Ajax request to the originally specified URL.
+  itemtype: method
+  name: findBelongsTo
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: url
+    description: ''
+    type: String
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 292
+  description: |-
+    Called by the store when a newly created record is
+    `save`d.
+
+    It serializes the record, and `POST`s it to a URL generated by `buildURL`.
+
+    See `serialize` for information on how to customize the serialized form
+    of a record.
+  itemtype: method
+  name: createRecord
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  - RESTAdapter/serialize
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 319
+  description: |-
+    Called by the store when an existing record is `save`d.
+
+    It serializes the record, and `POST`s it to a URL generated by `buildURL`.
+
+    See `serialize` for information on how to customize the serialized form
+    of a record.
+  itemtype: method
+  name: updateRecord
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  - RESTAdapter/serialize
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 347
+  description: |-
+    Called by the store when an deleted record is `save`d.
+
+    It serializes the record, and `POST`s it to a URL generated by `buildURL`.
+  itemtype: method
+  name: deleteRecord
+  see:
+  - RESTAdapter/buildURL
+  - RESTAdapter/ajax
+  - RESTAdapter/serialize
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  return:
+    description: Promise
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 367
+  description: |-
+    Builds a URL for a given type and optional ID.
+
+    By default, it pluralizes the type's name (for example,
+    'post' becomes 'posts' and 'person' becomes 'people').
+
+    If an ID is specified, it adds the ID to the path generated
+    for the type, separated by a `/`.
+  itemtype: method
+  name: buildURL
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: id
+    description: ''
+    type: String
+  return:
+    description: String
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 425
+  description: |-
+    Determines the pathname for a given type.
+
+    By default, it pluralizes the type's name (for example,
+    'post' becomes 'posts' and 'person' becomes 'people').
+
+    ### Pathname customization
+
+    For example if you have an object LineItem with an
+    endpoint of "/line_items/".
+
+    ```js
+    DS.RESTAdapter.reopen({
+      pathForType: function(type) {
+        var decamelized = Ember.String.decamelize(type);
+        return Ember.String.pluralize(decamelized);
+      };
+    });
+    ```
+  itemtype: method
+  name: pathForType
+  params:
+  - name: type
+    description: ''
+    type: String
+  return:
+    description: String
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 453
+  description: |-
+    Takes an ajax response, and returns a relavant error.
+
+    By default, it has the following behavior:
+
+    * It simply returns the ajax response.
+  itemtype: method
+  name: ajaxError
+  params:
+  - name: jqXHR
+    description: ''
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/adapters/rest_adapter.js
+  line: 471
+  description: |-
+    Takes a URL, an HTTP method and a hash of data, and makes an
+    HTTP request.
+
+    When the server responds with a payload, Ember Data will call into `extractSingle`
+    or `extractArray` (depending on whether the original query was for one record or
+    many records).
+
+    By default, it has the following behavior:
+
+    * It sets the response `dataType` to `"json"`
+    * If the HTTP method is not `"GET"`, it sets the `Content-Type` to be
+      `application/json; charset=utf-8`
+    * If the HTTP method is not `"GET"`, it stringifies the data passed in. The
+      data is the serialized record in the case of a save.
+    * Registers success and failure handlers.
+  itemtype: method
+  name: ajax
+  access: private
+  tagname: ''
+  params:
+  - name: url
+    description: ''
+  - name: type
+    description: ''
+  - name: hash
+    description: ''
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/ext/date.js
+  line: 20
+  itemtype: method
+  name: parse
+  params:
+  - name: date
+    description: ''
+  class: Ember.Date
+  module: ember-data
+  namespace: Ember
+- file: ../packages/ember-data/lib/serializers/json_serializer.js
+  line: 103
+  description: You can use this method to customize how polymorphic objects are serialized.
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: Ember
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 56
+  description: |-
+    Normalizes a part of the JSON payload returned by
+    the server. You should override this method, munge the hash
+    and call super if you have generic normalization to do.
+
+    It takes the type of the record that is being normalized
+    (as a DS.Model class), the property where the hash was
+    originally found, and the hash to normalize.
+
+    For example, if you have a payload that looks like this:
+
+    ```js
+    {
+      "post": {
+        "id": 1,
+        "title": "Rails is omakase",
+        "comments": [ 1, 2 ]
+      },
+      "comments": [{
+        "id": 1,
+        "body": "FIRST"
+      }, {
+        "id": 2,
+        "body": "Rails is unagi"
+      }]
+    }
+    ```
+
+    The `normalize` method will be called three times:
+
+    * With `App.Post`, `"posts"` and `{ id: 1, title: "Rails is omakase", ... }`
+    * With `App.Comment`, `"comments"` and `{ id: 1, body: "FIRST" }`
+    * With `App.Comment`, `"comments"` and `{ id: 2, body: "Rails is unagi" }`
+
+    You can use this method, for example, to normalize underscored keys to camelized
+    or other general-purpose normalizations.
+
+    If you want to do normalizations specific to some part of the payload, you
+    can specify those under `normalizeHash`.
+
+    For example, if the `IDs` under `"comments"` are provided as `_id` instead of
+    `id`, you can specify how to normalize just the comments:
+
+    ```js
+    App.PostSerializer = DS.RESTSerializer.extend({
+      normalizeHash: {
+        comments: function(hash) {
+          hash.id = hash._id;
+          delete hash._id;
+          return hash;
+        }
+      }
+    });
+    ```
+
+    The key under `normalizeHash` is just the original key that was in the original
+    payload.
+  itemtype: method
+  name: normalize
+  params:
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: prop
+    description: ''
+    type: String
+  - name: hash
+    description: ''
+    type: Object
+  return:
+    description: Object
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 133
+  description: |-
+    You can use this method to normalize all payloads, regardless of whether they
+    represent single records or an array.
+
+    For example, you might want to remove some extraneous data from the payload:
+
+    ```js
+    App.ApplicationSerializer = DS.RESTSerializer.extend({
+      normalizePayload: function(type, payload) {
+        delete payload.version;
+        delete payload.status;
+        return payload;
+      }
+    });
+    ```
+  itemtype: method
+  name: normalizePayload
+  params:
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: hash
+    description: ''
+    type: Object
+  return:
+    description: Object the normalized payload
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 158
+  itemtype: method
+  name: normalizeId
+  access: private
+  tagname: ''
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 171
+  itemtype: method
+  name: normalizeUsingDeclaredMapping
+  access: private
+  tagname: ''
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 188
+  itemtype: method
+  name: normalizeAttributes
+  access: private
+  tagname: ''
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 206
+  itemtype: method
+  name: normalizeRelationships
+  access: private
+  tagname: ''
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 224
+  description: |-
+    Called when the server has returned a payload representing
+    a single record, such as in response to a `find` or `save`.
+
+    It is your opportunity to clean up the server's response into the normalized
+    form expected by Ember Data.
+
+    If you want, you can just restructure the top-level of your payload, and
+    do more fine-grained normalization in the `normalize` method.
+
+    For example, if you have a payload like this in response to a request for
+    post 1:
+
+    ```js
+    {
+      "id": 1,
+      "title": "Rails is omakase",
+
+      "_embedded": {
+        "comment": [{
+          "_id": 1,
+          "comment_title": "FIRST"
+        }, {
+          "_id": 2,
+          "comment_title": "Rails is unagi"
+        }]
+      }
+    }
+    ```
+
+    You could implement a serializer that looks like this to get your payload
+    into shape:
+
+    ```js
+    App.PostSerializer = DS.RESTSerializer.extend({
+      // First, restructure the top-level so it's organized by type
+      extractSingle: function(store, type, payload, id, requestType) {
+        var comments = payload._embedded.comment;
+        delete payload._embedded;
+
+        payload = { comments: comments, post: payload };
+        return this._super(store, type, payload, id, requestType);
+      },
+
+      normalizeHash: {
+        // Next, normalize individual comments, which (after `extract`)
+        // are now located under `comments`
+        comments: function(hash) {
+          hash.id = hash._id;
+          hash.title = hash.comment_title;
+          delete hash._id;
+          delete hash.comment_title;
+          return hash;
+        }
+      }
+    })
+    ```
+
+    When you call super from your own implementation of `extractSingle`, the
+    built-in implementation will find the primary record in your normalized
+    payload and push the remaining records into the store.
+
+    The primary record is the single hash found under `post` or the first
+    element of the `posts` array.
+
+    The primary record has special meaning when the record is being created
+    for the first time or updated (`createRecord` or `updateRecord`). In
+    particular, it will update the properties of the record that was saved.
+  itemtype: method
+  name: extractSingle
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: payload
+    description: ''
+    type: Object
+  - name: id
+    description: ''
+    type: String
+  - name: requestType
+    description: ''
+    type: '''find''|''createRecord''|''updateRecord''|''deleteRecord'''
+  return:
+    description: Object the primary response to the original request
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 347
+  description: |-
+    Called when the server has returned a payload representing
+    multiple records, such as in response to a `findAll` or `findQuery`.
+
+    It is your opportunity to clean up the server's response into the normalized
+    form expected by Ember Data.
+
+    If you want, you can just restructure the top-level of your payload, and
+    do more fine-grained normalization in the `normalize` method.
+
+    For example, if you have a payload like this in response to a request for
+    all posts:
+
+    ```js
+    {
+      "_embedded": {
+        "post": [{
+          "id": 1,
+          "title": "Rails is omakase"
+        }, {
+          "id": 2,
+          "title": "The Parley Letter"
+        }],
+        "comment": [{
+          "_id": 1,
+          "comment_title": "Rails is unagi"
+          "post_id": 1
+        }, {
+          "_id": 2,
+          "comment_title": "Don't tread on me",
+          "post_id": 2
+        }]
+      }
+    }
+    ```
+
+    You could implement a serializer that looks like this to get your payload
+    into shape:
+
+    ```js
+    App.PostSerializer = DS.RESTSerializer.extend({
+      // First, restructure the top-level so it's organized by type
+      // and the comments are listed under a post's `comments` key.
+      extractArray: function(store, type, payload, id, requestType) {
+        var posts = payload._embedded.post;
+        var comments = [];
+        var postCache = {};
+
+        posts.forEach(function(post) {
+          post.comments = [];
+          postCache[post.id] = post;
+        });
+
+        payload._embedded.comment.forEach(function(comment) {
+          comments.push(comment);
+          postCache[comment.post_id].comments.push(comment);
+          delete comment.post_id;
+        }
+
+        payload = { comments: comments, posts: payload };
+
+        return this._super(store, type, payload, id, requestType);
+      },
+
+      normalizeHash: {
+        // Next, normalize individual comments, which (after `extract`)
+        // are now located under `comments`
+        comments: function(hash) {
+          hash.id = hash._id;
+          hash.title = hash.comment_title;
+          delete hash._id;
+          delete hash.comment_title;
+          return hash;
+        }
+      }
+    })
+    ```
+
+    When you call super from your own implementation of `extractArray`, the
+    built-in implementation will find the primary array in your normalized
+    payload and push the remaining records into the store.
+
+    The primary array is the array found under `posts`.
+
+    The primary record has special meaning when responding to `findQuery`
+    or `findHasMany`. In particular, the primary array will become the
+    list of records in the record array that kicked off the request.
+
+    If your primary array contains secondary (embedded) records of the same type,
+    you cannot place these into the primary array `posts`. Instead, place the
+    secondary items into an underscore prefixed property `_posts`, which will
+    push these items into the store and will not affect the resulting query.
+  itemtype: method
+  name: extractArray
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: payload
+    description: ''
+    type: Object
+  - name: requestType
+    description: ''
+    type: '''findAll''|''findMany''|''findHasMany''|''findQuery'''
+  return:
+    description: |-
+      The primary array that was returned in response
+        to the original query.
+    type: Array<Object>
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 483
+  description: |-
+    This method allows you to push a payload containing top-level
+    collections of records organized per type.
+
+    ```js
+    {
+      "posts": [{
+        "id": "1",
+        "title": "Rails is omakase",
+        "author", "1",
+        "comments": [ "1" ]
+      }],
+      "comments": [{
+        "id": "1",
+        "body": "FIRST
+      }],
+      "users": [{
+        "id": "1",
+        "name": "@d2h"
+      }]
+    }
+    ```
+
+    It will first normalize the payload, so you can use this to push
+    in data streaming in from your server structured the same way
+    that fetches and saves are structured.
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: payload
+    description: ''
+    type: Object
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 529
+  description: |-
+    You can use this method to normalize the JSON root keys returned
+    into the model type expected by your store.
+
+    For example, your server may return underscored root keys rather than
+    the expected camelcased versions.
+
+    ```js
+    App.ApplicationSerializer = DS.RESTSerializer.extend({
+      typeForRoot: function(root) {
+        var camelized = Ember.String.camelize(root);
+        return Ember.String.singularize(camelized);
+      }
+    });
+    ```
+  itemtype: method
+  name: typeForRoot
+  params:
+  - name: root
+    description: ''
+    type: String
+  return:
+    description: String the model's typeKey
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 555
+  description: |-
+    Called when a record is saved in order to convert the
+    record into JSON.
+
+    By default, it creates a JSON object with a key for
+    each attribute and belongsTo relationship.
+
+    For example, consider this model:
+
+    ```js
+    App.Comment = DS.Model.extend({
+      title: DS.attr(),
+      body: DS.attr(),
+
+      author: DS.belongsTo('user')
+    });
+    ```
+
+    The default serialization would create a JSON object like:
+
+    ```js
+    {
+      "title": "Rails is unagi",
+      "body": "Rails? Omakase? O_O",
+      "author": 12
+    }
+    ```
+
+    By default, attributes are passed through as-is, unless
+    you specified an attribute type (`DS.attr('date')`). If
+    you specify a transform, the JavaScript value will be
+    serialized when inserted into the JSON hash.
+
+    By default, belongs-to relationships are converted into
+    IDs when inserted into the JSON hash.
+
+    ## IDs
+
+    `serialize` takes an options hash with a single option:
+    `includeId`. If this option is `true`, `serialize` will,
+    by default include the ID in the JSON object it builds.
+
+    The adapter passes in `includeId: true` when serializing
+    a record for `createRecord`, but not for `updateRecord`.
+
+    ## Customization
+
+    Your server may expect a different JSON format than the
+    built-in serialization format.
+
+    In that case, you can implement `serialize` yourself and
+    return a JSON hash of your choosing.
+
+    ```js
+    App.PostSerializer = DS.RESTSerializer.extend({
+      serialize: function(post, options) {
+        var json = {
+          POST_TTL: post.get('title'),
+          POST_BDY: post.get('body'),
+          POST_CMS: post.get('comments').mapProperty('id')
+        }
+
+        if (options.includeId) {
+          json.POST_ID_ = post.get('id');
+        }
+
+        return json;
+      }
+    });
+    ```
+
+    ## Customizing an App-Wide Serializer
+
+    If you want to define a serializer for your entire
+    application, you'll probably want to use `eachAttribute`
+    and `eachRelationship` on the record.
+
+    ```js
+    App.ApplicationSerializer = DS.RESTSerializer.extend({
+      serialize: function(record, options) {
+        var json = {};
+
+        record.eachAttribute(function(name) {
+          json[serverAttributeName(name)] = record.get(name);
+        })
+
+        record.eachRelationship(function(name, relationship) {
+          if (relationship.kind === 'hasMany') {
+            json[serverHasManyName(name)] = record.get(name).mapBy('id');
+          }
+        });
+
+        if (options.includeId) {
+          json.ID_ = record.get('id');
+        }
+
+        return json;
+      }
+    });
+
+    function serverAttributeName(attribute) {
+      return attribute.underscore().toUpperCase();
+    }
+
+    function serverHasManyName(name) {
+      return serverAttributeName(name.singularize()) + "_IDS";
+    }
+    ```
+
+    This serializer will generate JSON that looks like this:
+
+    ```js
+    {
+      "TITLE": "Rails is omakase",
+      "BODY": "Yep. Omakase.",
+      "COMMENT_IDS": [ 1, 2, 3 ]
+    }
+    ```
+
+    ## Tweaking the Default JSON
+
+    If you just want to do some small tweaks on the default JSON,
+    you can call super first and make the tweaks on the returned
+    JSON.
+
+    ```js
+    App.PostSerializer = DS.RESTSerializer.extend({
+      serialize: function(record, options) {
+        var json = this._super(record, options);
+
+        json.subject = json.title;
+        delete json.title;
+
+        return json;
+      }
+    });
+    ```
+  itemtype: method
+  name: serialize
+  params:
+  - name: record
+    description: ''
+  - name: options
+    description: ''
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 701
+  description: |-
+    You can use this method to customize the root keys serialized into the JSON.
+    By default the REST Serializer sends camelized root keys.
+    For example, your server may expect underscored root objects.
+
+    ```js
+    App.ApplicationSerializer = DS.RESTSerializer.extend({
+      serializeIntoHash: function(data, type, record, options) {
+        var root = Ember.String.decamelize(type.typeKey);
+        data[root] = this.serialize(record, options);
+      }
+    });
+    ```
+  itemtype: method
+  name: serializeIntoHash
+  params:
+  - name: hash
+    description: ''
+    type: Object
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: options
+    description: ''
+    type: Object
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/serializers/rest_serializer.js
+  line: 725
+  description: |-
+    You can use this method to customize how polymorphic objects are serialized.
+    By default the JSON Serializer creates the key by appending `Type` to
+    the attribute and value from the model's camelcased model name.
+  itemtype: method
+  name: serializePolymorphicType
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: json
+    description: ''
+    type: Object
+  - name: relationship
+    description: ''
+  class: DS.RESTSerializer
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/changes/attribute_change.js
+  line: 38
+  description: |-
+    If the AttributeChange is destroyed (either by being rolled back
+    or being committed), remove it from the list of pending changes
+    on the record.
+  itemtype: method
+  name: destroy
+  class: DS.AttributeChange
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/changes/relationship_change.js
+  line: 306
+  description: Get the name of the relationship on the belongsTo side.
+  itemtype: method
+  name: getFirstRecordName
+  return:
+    description: ''
+    type: String
+  class: DS.RelationshipChange
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/changes/relationship_change.js
+  line: 317
+  itemtype: method
+  name: destroy
+  access: private
+  tagname: ''
+  class: DS.RelationshipChange
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/changes/relationship_change.js
+  line: 334
+  itemtype: method
+  name: getFirstRecord
+  access: private
+  tagname: ''
+  class: DS.RelationshipChange
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/debug/debug_info.js
+  line: 5
+  description: |-
+    Provides info about the model for debugging purposes
+    by grouping the properties into more semantic groups.
+
+    Meant to be used by debugging tools such as the Chrome Ember Extension.
+
+    - Groups all attributes in "Attributes" group.
+    - Groups all belongsTo relationships in "Belongs To" group.
+    - Groups all hasMany relationships in "Has Many" group.
+    - Groups all flags in "Flags" group.
+    - Flags relationship CPs as expensive properties.
+  itemtype: method
+  name: _debugInfo
+  access: private
+  tagname: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/attributes.js
+  line: 85
+  description: |-
+    `DS.attr` defines an attribute on a DS.Model.
+    By default, attributes are passed through as-is, however you can specify an
+    optional type to have the value automatically transformed.
+    Ember Data ships with four basic transform types:
+      'string', 'number', 'boolean' and 'date'.
+    You can define your own transforms by subclassing DS.Transform.
+
+    DS.attr takes an optional hash as a second parameter, currently
+    supported options are:
+      'defaultValue': Pass a string or a function to be called to set the attribute
+                      to a default value if none is supplied.
+  itemtype: method
+  name: attr
+  params:
+  - name: type
+    description: the attribute type
+    type: String
+  - name: options
+    description: a hash of options
+    type: Object
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 43
+  description: |-
+    Create a JSON representation of the record, using the serialization
+    strategy of the store's adapter.
+  itemtype: method
+  name: serialize
+  params:
+  - name: options
+    description: |-
+      Available options:
+
+      * `includeId`: `true` if the record's ID should be included in the
+        JSON representation.
+    type: Object
+  return:
+    description: an object whose values are primitive JSON values only
+    type: Object
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 60
+  description: |-
+    Use {{#crossLink "DS.JSONSerializer"}}DS.JSONSerializer{{/crossLink}} to
+    get the JSON representation of a record.
+  itemtype: method
+  name: toJSON
+  params:
+  - name: options
+    description: |-
+      Available options:
+
+      * `includeId`: `true` if the record's ID should be included in the
+        JSON representation.
+    type: Object
+  return:
+    description: A JSON representation of the object.
+    type: Object
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 78
+  description: Fired when the record is loaded from the server.
+  itemtype: event
+  name: didLoad
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 85
+  description: Fired when the record is reloaded from the server.
+  itemtype: event
+  name: didReload
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 92
+  description: Fired when the record is updated.
+  itemtype: event
+  name: didUpdate
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 99
+  description: Fired when the record is created.
+  itemtype: event
+  name: didCreate
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 106
+  description: Fired when the record is deleted.
+  itemtype: event
+  name: didDelete
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 113
+  description: Fired when the record becomes invalid.
+  itemtype: event
+  name: becameInvalid
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 120
+  description: Fired when the record enters the error state.
+  itemtype: event
+  name: becameError
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 255
+  description: Gets the diff for the current model.
+  itemtype: method
+  name: changedAttributes
+  return:
+    description: |-
+      an object, whose keys are changed properties,
+        and value is an [oldProp, newProp] array.
+    type: Object
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 280
+  description: |-
+    If the adapter did not return a hash in response to a commit,
+    merge the changed attributes and relationships into the existing
+    saved data.
+  itemtype: method
+  name: adapterDidCommit
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 406
+  description: |-
+    The goal of this method is to temporarily disable specific observers
+    that take action in response to application changes.
+
+    This allows the system to make changes (such as materialization and
+    rollback) that should not trigger secondary behavior (such as setting an
+    inverse relationship or marking records as dirty).
+
+    The specific implementation will likely change as Ember proper provides
+    better infrastructure for suspending groups of observers, and if Array
+    observation becomes more unified with regular observers.
+  itemtype: method
+  name: suspendRelationshipObservers
+  access: private
+  tagname: ''
+  params:
+  - name: callback
+    description: ''
+  - name: binding
+    description: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 439
+  description: Save the record.
+  itemtype: method
+  name: save
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 454
+  description: |-
+    Reload the record from the adapter.
+
+    This will only work if the record has already finished loading
+    and has not yet been modified (`isLoaded` but not `isDirty`,
+    or `isSaving`).
+  itemtype: method
+  name: reload
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 509
+  description: |-
+    Override the default event firing from Ember.Evented to
+    also call methods with the given name.
+  itemtype: method
+  name: trigger
+  access: private
+  tagname: ''
+  params:
+  - name: name
+    description: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 538
+  description: |-
+    Alias DS.Model's `create` method to `_create`. This allows us to create DS.Model
+    instances from within the store, but if end users accidentally call `create()`
+    (instead of `createRecord()`), we can raise an error.
+  itemtype: method
+  name: _create
+  access: private
+  tagname: ''
+  static: 1
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/model/model.js
+  line: 549
+  description: |-
+    Override the class' `create()` method to raise an error. This prevents end users
+    from inadvertently calling `create()` instead of `createRecord()`. The store is
+    still able to create instances by calling the `_create()` method.
+  itemtype: method
+  name: create
+  access: private
+  tagname: ''
+  static: 1
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_arrays/many_array.js
+  line: 50
+  description: The record to which this relationship belongs.
+  itemtype: property
+  name: ''
+  type: DS.Model
+  access: private
+  tagname: ''
+  class: DS.ManyArray
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_arrays/many_array.js
+  line: 58
+  description: '`true` if the relationship is polymorphic, `false` otherwise.'
+  itemtype: property
+  name: ''
+  type: Boolean
+  access: private
+  tagname: ''
+  class: DS.ManyArray
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_arrays/record_array.js
+  line: 21
+  description: The model type contained by this record array.
+  itemtype: property
+  name: type
+  type: DS.Model
+  class: DS.RecordArray
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/belongs_to.js
+  line: 84
+  itemtype: method
+  name: belongsToWillChange
+  access: private
+  tagname: ''
+  static: 1
+  params:
+  - name: record
+    description: ''
+  - name: key
+    description: ''
+  class: DS.Model
+  module: ember-data
+- file: ../packages/ember-data/lib/system/relationships/belongs_to.js
+  line: 105
+  itemtype: method
+  name: belongsToDidChange
+  access: private
+  tagname: ''
+  static: 1
+  params:
+  - name: record
+    description: ''
+  - name: key
+    description: ''
+  class: DS.Model
+  module: ember-data
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 20
+  description: |-
+    This Ember.js hook allows an object to be notified when a property
+    is defined.
+
+    In this case, we use it to be notified when an Ember Data user defines a
+    belongs-to relationship. In that case, we need to set up observers for
+    each one, allowing us to track relationship changes and automatically
+    reflect changes in the inverse has-many array.
+
+    This hook passes the class being set up, as well as the key and value
+    being defined. So, for example, when the user does this:
+
+      DS.Model.extend({
+        parent: DS.belongsTo('user')
+      });
+
+    This hook would be called with "parent" as the key and the computed
+    property returned by `DS.belongsTo` as the value.
+  itemtype: method
+  name: didDefineProperty
+  params:
+  - name: proto
+    description: ''
+  - name: key
+    description: ''
+  - name: value
+    description: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 81
+  description: |-
+    For a given relationship name, returns the model type of the relationship.
+
+    For example, if you define a model like this:
+
+        App.Post = DS.Model.extend({
+          comments: DS.hasMany('comment')
+        });
+
+    Calling `App.Post.typeForRelationship('comments')` will return `App.Comment`.
+  itemtype: method
+  name: typeForRelationship
+  static: 1
+  params:
+  - name: name
+    description: the name of the relationship
+    type: String
+  return:
+    description: the type of the relationship, or undefined
+    type: subclass of DS.Model
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 152
+  description: |-
+    The model's relationships as a map, keyed on the type of the
+    relationship. The value of each entry is an array containing a descriptor
+    for each relationship with that type, describing the name of the relationship
+    as well as the type.
+
+    For example, given the following model definition:
+
+        App.Blog = DS.Model.extend({
+          users: DS.hasMany('user'),
+          owner: DS.belongsTo('user'),
+          posts: DS.hasMany('post')
+        });
+
+    This computed property would return a map describing these
+    relationships, like this:
+
+        var relationships = Ember.get(App.Blog, 'relationships');
+        relationships.get(App.User);
+        //=> [ { name: 'users', kind: 'hasMany' },
+        //     { name: 'owner', kind: 'belongsTo' } ]
+        relationships.get(App.Post);
+        //=> [ { name: 'posts', kind: 'hasMany' } ]
+  itemtype: property
+  name: relationships
+  static: 1
+  type: Ember.Map
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 205
+  description: |-
+    A hash containing lists of the model's relationships, grouped
+    by the relationship kind. For example, given a model with this
+    definition:
+
+        App.Blog = DS.Model.extend({
+          users: DS.hasMany('user'),
+          owner: DS.belongsTo('user'),
+
+          posts: DS.hasMany('post')
+        });
+
+    This property would contain the following:
+
+       var relationshipNames = Ember.get(App.Blog, 'relationshipNames');
+       relationshipNames.hasMany;
+       //=> ['users', 'posts']
+       relationshipNames.belongsTo;
+       //=> ['owner']
+  itemtype: property
+  name: relationshipNames
+  static: 1
+  type: Object
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 242
+  description: "An array of types directly related to a model. Each type will be\nincluded
+    once, regardless of the number of relationships it has with\nthe model.\n\nFor
+    example, given a model with this definition:\n\n    App.Blog = DS.Model.extend({\n
+    \     users: DS.hasMany('user'),\n      owner: DS.belongsTo('user'),\n  \n      posts:
+    DS.hasMany('post')\n    });\n\nThis property would contain the following:\n\n
+    \  var relatedTypes = Ember.get(App.Blog, 'relatedTypes');\n   //=> [ App.User,
+    App.Post ]"
+  itemtype: property
+  name: relatedTypes
+  static: 1
+  type: Ember.Array
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 293
+  description: |-
+    A map whose keys are the relationships of a model and whose values are
+    relationship descriptors.
+
+    For example, given a model with this
+    definition:
+
+        App.Blog = DS.Model.extend({
+          users: DS.hasMany('user'),
+          owner: DS.belongsTo('user'),
+
+          posts: DS.hasMany('post')
+        });
+
+    This property would contain the following:
+
+       var relationshipsByName = Ember.get(App.Blog, 'relationshipsByName');
+       relationshipsByName.get('users');
+       //=> { key: 'users', kind: 'hasMany', type: App.User }
+       relationshipsByName.get('owner');
+       //=> { key: 'owner', kind: 'belongsTo', type: App.User }
+  itemtype: property
+  name: relationshipsByName
+  static: 1
+  type: Ember.Map
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 345
+  description: |-
+    A map whose keys are the fields of the model and whose values are strings
+    describing the kind of the field. A model's fields are the union of all of its
+    attributes and relationships.
+
+    For example:
+
+        App.Blog = DS.Model.extend({
+          users: DS.hasMany('user'),
+          owner: DS.belongsTo('user'),
+
+          posts: DS.hasMany('post'),
+
+          title: DS.attr('string')
+        });
+
+        var fields = Ember.get(App.Blog, 'fields');
+        fields.forEach(function(field, kind) {
+          console.log(field, kind);
+        });
+
+        // prints:
+        // users, hasMany
+        // owner, belongsTo
+        // posts, hasMany
+        // title, attribute
+  itemtype: property
+  name: fields
+  static: 1
+  type: Ember.Map
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 391
+  description: |-
+    Given a callback, iterates over each of the relationships in the model,
+    invoking the callback with the name of each relationship and its relationship
+    descriptor.
+  itemtype: method
+  name: eachRelationship
+  static: 1
+  params:
+  - name: callback
+    description: the callback to invoke
+    type: Function
+  - name: binding
+    description: the value to which the callback's `this` should be bound
+    type: Any
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 407
+  description: |-
+    Given a callback, iterates over each of the types related to a model,
+    invoking the callback with the related type's class. Each type will be
+    returned just once, regardless of how many different relationships it has
+    with a model.
+  itemtype: method
+  name: eachRelatedType
+  static: 1
+  params:
+  - name: callback
+    description: the callback to invoke
+    type: Function
+  - name: binding
+    description: the value to which the callback's `this` should be bound
+    type: Any
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/relationships/ext.js
+  line: 426
+  description: |-
+    Given a callback, iterates over each of the relationships in the model,
+    invoking the callback with the name of each relationship and its relationship
+    descriptor.
+  itemtype: method
+  name: eachRelationship
+  params:
+  - name: callback
+    description: the callback to invoke
+    type: Function
+  - name: binding
+    description: the value to which the callback's `this` should be bound
+    type: Any
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 69
+  description: |-
+    The `find()` method is invoked when the store is asked for a record that
+    has not previously been loaded. In response to `find()` being called, you
+    should query your persistence layer for a record with the given ID. Once
+    found, you can asynchronously call the store's `push()` method to push
+    the record into the store.
+
+    Here is an example `find` implementation:
+
+        find: function(store, type, id) {
+          var url = type.url;
+          url = url.fmt(id);
+
+          jQuery.getJSON(url, function(data) {
+              // data is a hash of key/value pairs. If your server returns a
+              // root, simply do something like:
+              // store.push(type, id, data.person)
+              store.push(type, id, data);
+          });
+        }
+  itemtype: method
+  name: find
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 94
+  description: Optional
+  itemtype: method
+  name: findAll
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: since
+    description: ''
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 104
+  description: Optional
+  itemtype: method
+  name: findQuery
+  params:
+  - name: store
+    description: ''
+  - name: type
+    description: ''
+  - name: query
+    description: ''
+  - name: recordArray
+    description: ''
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 115
+  description: |-
+    If the globally unique IDs for your records should be generated on the client,
+    implement the `generateIdForRecord()` method. This method will be invoked
+    each time you create a new record, and the value returned from it will be
+    assigned to the record's `primaryKey`.
+
+    Most traditional REST-like HTTP APIs will not use this method. Instead, the ID
+    of the record will be set by the server, and your adapter will update the store
+    with the new ID when it calls `didCreateRecord()`. Only implement this method if
+    you intend to generate record IDs on the client-side.
+
+    The `generateIdForRecord()` method will be invoked with the requesting store as
+    the first parameter and the newly created record as the second parameter:
+
+        generateIdForRecord: function(store, record) {
+          var uuid = App.generateUUIDWithStatisticallyLowOddsOfCollision();
+          return uuid;
+        }
+  itemtype: method
+  name: generateIdForRecord
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 140
+  description: Proxies to the serializer's `serialize` method.
+  itemtype: method
+  name: serialize
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: options
+    description: ''
+    type: Object
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 151
+  description: |-
+    Implement this method in a subclass to handle the creation of
+    new records.
+
+    Serializes the record and send it to the server.
+
+    This implementation should call the adapter's `didCreateRecord`
+    method on success or `didError` method on failure.
+  itemtype: method
+  name: createRecord
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: the DS.Model class of the record
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 167
+  description: |-
+    Implement this method in a subclass to handle the updating of
+    a record.
+
+    Serializes the record update and send it to the server.
+  itemtype: method
+  name: updateRecord
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: the DS.Model class of the record
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 180
+  description: |-
+    Implement this method in a subclass to handle the deletion of
+    a record.
+
+    Sends a delete request for the record to the server.
+  itemtype: method
+  name: deleteRecord
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: the DS.Model class of the record
+    type: subclass of DS.Model
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/adapter.js
+  line: 193
+  description: |-
+    Find multiple records at once.
+
+    By default, it loops over the provided ids and calls `find` on each.
+    May be overwritten to improve performance and reduce the number of
+    server requests.
+  itemtype: method
+  name: findMany
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: type
+    description: the DS.Model class of the records
+    type: subclass of DS.Model
+  - name: ids
+    description: ''
+    type: Array
+  class: DS.Adapter
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_array_manager.js
+  line: 34
+  description: |-
+    This method is invoked whenever data is loaded into the store
+    by the adapter or updated by the adapter, or when an attribute
+    changes on a record.
+
+    It updates all filters that a record belongs to.
+
+    To avoid thrashing, it only runs once per run loop per record.
+  itemtype: method
+  name: updateRecordArrays
+  params:
+  - name: type
+    description: ''
+    type: Class
+  - name: clientId
+    description: ''
+    type: Number|String
+  class: DS.RecordArrayManager
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_array_manager.js
+  line: 74
+  description: Update an individual filter.
+  itemtype: method
+  name: updateRecordArray
+  params:
+  - name: array
+    description: ''
+    type: DS.FilteredRecordArray
+  - name: filter
+    description: ''
+    type: Function
+  - name: type
+    description: ''
+    type: Class
+  - name: clientId
+    description: ''
+    type: Number|String
+  class: DS.RecordArrayManager
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_array_manager.js
+  line: 103
+  description: |-
+    When a record is deleted, it is removed from all its
+    record arrays.
+  itemtype: method
+  name: remove
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.RecordArrayManager
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_array_manager.js
+  line: 120
+  description: |-
+    This method is invoked if the `filterFunction` property is
+    changed on a `DS.FilteredRecordArray`.
+
+    It essentially re-runs the filter from scratch. This same
+    method is invoked when the filter is created in th first place.
+  itemtype: method
+  name: updateFilter
+  params:
+  - name: array
+    description: ''
+  - name: type
+    description: ''
+  - name: filter
+    description: ''
+  class: DS.RecordArrayManager
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_array_manager.js
+  line: 145
+  description: |-
+    Create a `DS.ManyArray` for a type and list of record references, and index
+    the `ManyArray` under each reference. This allows us to efficiently remove
+    records from `ManyArray`s when they are deleted.
+  itemtype: method
+  name: createManyArray
+  params:
+  - name: type
+    description: ''
+    type: Class
+  - name: references
+    description: ''
+    type: Array
+  return:
+    description: ''
+    type: DS.ManyArray
+  class: DS.RecordArrayManager
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/record_array_manager.js
+  line: 170
+  description: |-
+    Register a RecordArray for a given type to be backed by
+    a filter function. This will cause the array to update
+    automatically when records of that type change attribute
+    values or states.
+  itemtype: method
+  name: registerFilteredRecordArray
+  params:
+  - name: array
+    description: ''
+    type: DS.RecordArray
+  - name: type
+    description: ''
+    type: Class
+  - name: filter
+    description: ''
+    type: Function
+  class: DS.RecordArrayManager
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 87
+  itemtype: method
+  name: init
+  access: private
+  tagname: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 101
+  description: |-
+    The adapter to use to communicate to a backend server or other persistence layer.
+
+    This can be specified as an instance, class, or string.
+
+    If you want to specify `App.CustomAdapter` as a string, do:
+
+    ```js
+    adapter: 'custom'
+    ```
+  itemtype: property
+  name: adapter
+  default: DS.RESTAdapter
+  type: '{DS.Adapter|String}'
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 118
+  description: |-
+    Returns a JSON representation of the record using a custom
+    type-specific serializer, if one exists.
+
+    The available options are:
+
+    * `includeId`: `true` if the record's ID should be included in
+      the JSON representation
+  itemtype: method
+  name: serialize
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: the record to serialize
+    type: DS.Model
+  - name: options
+    description: an options hash
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 136
+  description: |-
+    This property returns the adapter, after resolving a possible
+    string key.
+
+    If the supplied `adapter` was a class, or a String property
+    path resolved to a class, this property will instantiate the
+    class.
+
+    This property is cacheable, so the same instance of a specified
+    adapter class should be used for the lifetime of the store.
+  itemtype: property
+  name: defaultAdapter
+  access: private
+  tagname: ''
+  return:
+    description: DS.Adapter
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 171
+  description: |-
+    Create a new record in the current store. The properties passed
+    to this method are set on the newly created record.
+
+    To create a new instance of `App.Post`:
+
+    ```js
+    store.createRecord('post', {
+      title: "Rails is omakase"
+    });
+    ```
+  itemtype: method
+  name: createRecord
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: properties
+    description: |-
+      a hash of properties to set on the
+        newly created record.
+    type: Object
+  return:
+    description: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 218
+  description: |-
+    If possible, this method asks the adapter to generate an ID for
+    a newly created record.
+  itemtype: method
+  name: generateId
+  params:
+  - name: type
+    description: ''
+    type: String
+  return:
+    description: String if the adapter can generate one, an ID
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 240
+  description: For symmetry, a record can be deleted via the store.
+  itemtype: method
+  name: deleteRecord
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 250
+  description: For symmetry, a record can be unloaded via the store.
+  itemtype: method
+  name: unloadRecord
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 264
+  description: |-
+    This is the main entry point into finding records. The first parameter to
+    this method is the model's name as a string.
+
+    ---
+
+    To find a record by ID, pass the `id` as the second parameter:
+
+        store.find('person', 1);
+
+    The `find` method will always return a **promise** that will be resolved
+    with the record. If the record was already in the store, the promise will
+    be resolved immediately. Otherwise, the store will ask the adapter's `find`
+    method to find the necessary data.
+
+    The `find` method will always resolve its promise with the same object for
+    a given type and `id`.
+
+    ---
+
+    To find all records for a type, call `find` with no additional parameters:
+
+        store.find('person');
+
+    This will ask the adapter's `findAll` method to find the records for the
+    given type, and return a promise that will be resolved once the server
+    returns the values.
+
+    ---
+
+    To find a record by a query, call `find` with a hash as the second
+    parameter:
+
+        store.find(App.Person, { page: 1 });
+
+    This will ask the adapter's `findQuery` method to find the records for
+    the query, and return a promise that will be resolved once the server
+    responds.
+  itemtype: method
+  name: find
+  params:
+  - name: type
+    description: ''
+    type: DS.Model
+  - name: id
+    description: ''
+    type: Object|String|Integer|null
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 320
+  description: This method returns a record for a given type and id combination.
+  itemtype: method
+  name: findById
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+  - name: id
+    description: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 337
+  description: |-
+    This method makes a series of requests to the adapter's `find` method
+    and returns a promise that resolves once they are all loaded.
+  itemtype: method
+  name: findByIds
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: ids
+    description: ''
+    type: Array
+  return:
+    description: Promise
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 356
+  description: |-
+    This method is called by `findById` if it discovers that a particular
+    type/id pair hasn't been loaded yet to kick off a request to the
+    adapter.
+  itemtype: method
+  name: fetchRecord
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  return:
+    description: Promise
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 387
+  description: |-
+    Get a record by a given type and ID without triggering a fetch.
+
+    This method will synchronously return the record if it's available.
+    Otherwise, it will return null.
+
+    ```js
+    var post = store.getById('post', 1);
+    ```
+  itemtype: method
+  name: getById
+  params:
+  - name: type
+    description: ''
+  - name: id
+    description: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 411
+  description: |-
+    This method is called by the record's `reload` method. The record's `reload`
+    passes in a resolver for the promise it returns.
+
+    This method calls the adapter's `find` method, which returns a promise. When
+    **that** promise resolves, `reloadRecord` will resolve the promise returned
+    by the record's `reload`.
+  itemtype: method
+  name: reloadRecord
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: resolver
+    description: ''
+    type: Resolver
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 436
+  description: |-
+    This method takes a list of records, groups the records by type,
+    converts the records into IDs, and then invokes the adapter's `findMany`
+    method.
+
+    The records are grouped by type to invoke `findMany` on adapters
+    for each unique type in records.
+
+    It is used both by a brand new relationship (via the `findMany`
+    method) or when the data underlying an existing relationship
+    changes.
+  itemtype: method
+  name: fetchMany
+  access: private
+  tagname: ''
+  params:
+  - name: records
+    description: ''
+  - name: owner
+    description: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 476
+  description: Returns true if a record for a given type and ID is already loaded.
+  itemtype: method
+  name: hasRecordForId
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: id
+    description: ''
+    type: String|Integer
+  return:
+    description: Boolean
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 490
+  description: |-
+    Returns id record for a given type and ID. If one isn't already loaded,
+    it builds a new record and leaves it in the `empty` state.
+  itemtype: method
+  name: recordForId
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: id
+    description: ''
+    type: String|Integer
+  return:
+    description: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 513
+  itemtype: method
+  name: findMany
+  access: private
+  tagname: ''
+  params:
+  - name: owner
+    description: ''
+    type: DS.Model
+  - name: records
+    description: ''
+    type: Array<DS.Model>
+  - name: type
+    description: ''
+    type: String
+  - name: resolver
+    description: ''
+    type: Resolver
+  return:
+    description: DS.ManyArray
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 551
+  description: |-
+    If a relationship was originally populated by the adapter as a link
+    (as opposed to a list of IDs), this method is called when the
+    relationship is fetched.
+
+    The link (which is usually a URL) is passed through unchanged, so the
+    adapter can make whatever request it wants.
+
+    The usual use-case is for the server to register a URL as a link, and
+    then use that URL in the future to make a request for the relationship.
+  itemtype: method
+  name: findHasMany
+  access: private
+  tagname: ''
+  params:
+  - name: owner
+    description: ''
+    type: DS.Model
+  - name: link
+    description: ''
+    type: Any
+  - name: type
+    description: ''
+    type: String
+  - name: resolver
+    description: ''
+    type: Resolver
+  return:
+    description: DS.ManyArray
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 590
+  description: |-
+    This method delegates a query to the adapter. This is the one place where
+    adapter-level semantics are exposed to the application.
+
+    Exposing queries this way seems preferable to creating an abstract query
+    language for all server-side queries, and then require all adapters to
+    implement them.
+
+    This method returns a promise, which is resolved with a `RecordArray`
+    once the server returns.
+  itemtype: method
+  name: findQuery
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: query
+    description: an opaque query to be used by the adapter
+    type: Any
+  return:
+    description: Promise
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 628
+  description: |-
+    This method returns an array of all records adapter can find.
+    It triggers the adapter's `findAll` method to give it an opportunity to populate
+    the array with records of that type.
+  itemtype: method
+  name: findAll
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+    type: Class
+  return:
+    description: ''
+    type: DS.AdapterPopulatedRecordArray
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 644
+  itemtype: method
+  name: fetchAll
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+  - name: array
+    description: ''
+  return:
+    description: Promise
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 666
+  itemtype: method
+  name: didUpdateAll
+  params:
+  - name: type
+    description: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 675
+  description: |-
+    This method returns a filtered array that contains all of the known records
+    for a given type.
+
+    Note that because it's just a filter, it will have any locally
+    created records of the type.
+
+    Also note that multiple calls to `all` for a given type will always
+    return the same RecordArray.
+  itemtype: method
+  name: all
+  params:
+  - name: type
+    description: ''
+    type: Class
+  return:
+    description: ''
+    type: DS.RecordArray
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 711
+  description: This method unloads all of the known records for a given type.
+  itemtype: method
+  name: unloadAll
+  params:
+  - name: type
+    description: ''
+    type: Class
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 728
+  description: |-
+    Takes a type and filter function, and returns a live RecordArray that
+    remains up to date as new records are loaded into the store or created
+    locally.
+
+    The callback function takes a materialized record, and returns true
+    if the record should be included in the filter and false if it should
+    not.
+
+    The filter function is called once on all records for the type when
+    it is created, and then once on each newly loaded or created record.
+
+    If any of a record's properties change, or if it changes state, the
+    filter function will be invoked again to determine whether it should
+    still be in the array.
+  itemtype: method
+  name: filter
+  params:
+  - name: type
+    description: ''
+    type: Class
+  - name: filter
+    description: ''
+    type: Function
+  return:
+    description: ''
+    type: DS.FilteredRecordArray
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 778
+  description: |-
+    This method returns if a certain record is already loaded
+    in the store. Use this function to know beforehand if a find()
+    will result in a request or that it will be a cache hit.
+  itemtype: method
+  name: recordIsLoaded
+  params:
+  - name: type
+    description: ''
+    type: Class
+  - name: id
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: Boolean
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 793
+  description: This method returns the metadata for a specific type.
+  itemtype: method
+  name: metadataFor
+  params:
+  - name: type
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 809
+  description: |-
+    If the adapter updates attributes or acknowledges creation
+    or deletion, the record will notify the store to update its
+    membership in any filters.
+
+    To avoid thrashing, this method is invoked only once per
+    run loop per record.
+  itemtype: method
+  name: dataWasUpdated
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+    type: Class
+  - name: clientId
+    description: ''
+    type: Number|String
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 844
+  description: |-
+    This method is called by `record.save`, and gets passed a
+    resolver for the promise that `record.save` returns.
+
+    It schedules saving to happen at the end of the run loop.
+  itemtype: method
+  name: scheduleSave
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: resolver
+    description: ''
+    type: Resolver
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 861
+  description: |-
+    This method is called at the end of the run loop, and
+    flushes any records passed into `scheduleSave`
+  itemtype: method
+  name: flushPendingSave
+  access: private
+  tagname: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 889
+  description: |-
+    This method is called once the promise returned by an
+    adapter's `createRecord`, `updateRecord` or `deleteRecord`
+    is resolved.
+
+    If the data provides a server-generated ID, it will
+    update the record and the store's indexes.
+  itemtype: method
+  name: didSaveRecord
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: the in-flight record
+    type: DS.Model
+  - name: data
+    description: optional data (see above)
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 913
+  description: |-
+    This method is called once the promise returned by an
+    adapter's `createRecord`, `updateRecord` or `deleteRecord`
+    is rejected with a `DS.InvalidError`.
+  itemtype: method
+  name: recordWasInvalid
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: errors
+    description: ''
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 927
+  description: |-
+    This method is called once the promise returned by an
+    adapter's `createRecord`, `updateRecord` or `deleteRecord`
+    is rejected (with anything other than a `DS.InvalidError`).
+  itemtype: method
+  name: recordWasError
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 940
+  description: |-
+    When an adapter's `createRecord`, `updateRecord` or `deleteRecord`
+    resolves with data, this method extracts the ID from the supplied
+    data.
+  itemtype: method
+  name: updateId
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: data
+    description: ''
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 961
+  description: Returns a map of IDs to client IDs for a given type.
+  itemtype: method
+  name: typeMapFor
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 992
+  description: This internal method is used by `push`.
+  itemtype: method
+  name: _load
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+    type: DS.Model
+  - name: data
+    description: ''
+    type: Object
+  - name: partial
+    description: |-
+      the data should be merged into
+        the existing data, not replace it.
+    type: Boolean
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1012
+  description: |-
+    Returns a model class for a particular key. Used by
+    methods that take a type key (like `find`, `createRecord`,
+    etc.)
+  itemtype: method
+  name: modelFor
+  params:
+  - name: key
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: subclass of DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1036
+  description: |-
+    Push some data for a given type into the store.
+
+    This method expects normalized data:
+
+    * The ID is a key named `id` (an ID is mandatory)
+    * The names of attributes are the ones you used in
+      your model's `DS.attr`s.
+    * Your relationships must be:
+      * represented as IDs or Arrays of IDs
+      * represented as model instances
+      * represented as URLs, under the `links` key
+
+    For this model:
+
+    ```js
+    App.Person = DS.Model.extend({
+      firstName: DS.attr(),
+      lastName: DS.attr(),
+
+      children: DS.hasMany('person')
+    });
+    ```
+
+    To represent the children as IDs:
+
+    ```js
+    {
+      id: 1,
+      firstName: "Tom",
+      lastName: "Dale",
+      children: [1, 2, 3]
+    }
+    ```
+
+    To represent the children relationship as a URL:
+
+    ```js
+    {
+      id: 1,
+      firstName: "Tom",
+      lastName: "Dale",
+      links: {
+        children: "/people/1/children"
+      }
+    }
+    ```
+
+    If you're streaming data or implementing an adapter,
+    make sure that you have converted the incoming data
+    into this form.
+
+    This method can be used both to push in brand new
+    records, as well as to update existing records.
+  itemtype: method
+  name: push
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: data
+    description: ''
+    type: Object
+  return:
+    description: |-
+      DS.Model the record that was created or
+        updated.
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1114
+  description: |-
+    Push some raw data into the store.
+
+    The data will be automatically deserialized using the
+    serializer for the `type` param.
+
+    This method can be used both to push in brand new
+    records, as well as to update existing records.
+
+    You can push in more than one type of object at once.
+    All objects should be in the format expected by the
+    serializer.
+
+    ```js
+    App.ApplicationSerializer = DS.ActiveModelSerializer;
+
+    var pushData = {
+      posts: [
+        {id: 1, post_title: "Great post", comment_ids: [2]}
+      ],
+      comments: [
+        {id: 2, comment_body: "Insightful comment"}
+      ]
+    }
+
+    store.pushPayload('post', pushData);
+    ```
+  itemtype: method
+  name: push
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: payload
+    description: ''
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1158
+  description: |-
+    If you have an Array of normalized data to push,
+    you can call `pushMany` with the Array, and it will
+    call `push` repeatedly for you.
+  itemtype: method
+  name: pushMany
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: datas
+    description: ''
+    type: Array
+  return:
+    description: ''
+    type: Array<DS.Model>
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1174
+  description: |-
+    If you have some metadata to set for a type
+    you can call `metaForType`.
+  itemtype: method
+  name: metaForType
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: metadata
+    description: ''
+    type: Object
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1188
+  description: |-
+    Build a brand new record for a given type, ID, and
+    initial data.
+  itemtype: method
+  name: buildRecord
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  - name: id
+    description: ''
+    type: String
+  - name: data
+    description: ''
+    type: Object
+  return:
+    description: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1232
+  description: |-
+    When a record is destroyed, this un-indexes it and
+    removes it from any record arrays so it can be GCed.
+  itemtype: method
+  name: dematerializeRecord
+  access: private
+  tagname: ''
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1310
+  description: Returns the adapter for a given type.
+  itemtype: method
+  name: adapterFor
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: ''
+    type: subclass of DS.Model
+  return:
+    description: DS.Adapter
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: ../packages/ember-data/lib/system/store.js
+  line: 1332
+  description: |-
+    Returns an instance of the serializer for a given type. For
+    example, `serializerFor('person')` will return an instance of
+    `App.PersonSerializer`.
+
+    If no `App.PersonSerializer` is found, this method will look
+    for an `App.ApplicationSerializer` (the default serializer for
+    your entire application).
+
+    If no `App.ApplicationSerializer` is found, it will fall back
+    to an instance of `DS.JSONSerializer`.
+  itemtype: method
+  name: serializerFor
+  access: private
+  tagname: ''
+  params:
+  - name: type
+    description: the record to serialize
+    type: String
+  class: DS.Store
+  module: ember-data
+  namespace: DS
