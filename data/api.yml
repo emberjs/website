@@ -2,9 +2,9 @@
 project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
-  version: 1.1.1
+  version: 1.1.2
   url: http://emberjs.com/
-  sha: v1.1.1
+  sha: v1.1.2
 files:
   ../packages/container/lib/main.js:
     name: ../packages/container/lib/main.js
@@ -2490,7 +2490,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: ../packages/ember-metal/lib/mixin.js
-    line: 370
+    line: 368
     description: |-
       The `Ember.Mixin` class allows you to create mixins, whose properties can be
       added to other classes. For instance,
@@ -6144,7 +6144,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: ../packages/ember-application/lib/system/application.js
-  line: 687
+  line: 694
   access: private
   tagname: |-
     This creates a container with the default Ember naming conventions.
@@ -6180,7 +6180,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: ../packages/ember-application/lib/system/application.js
-  line: 746
+  line: 753
   access: private
   tagname: |-
     This function defines the default lookup rules for container lookups:
@@ -10717,7 +10717,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 357
+  line: 355
   itemtype: method
   name: mixin
   params:
@@ -10732,7 +10732,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 445
+  line: 443
   itemtype: method
   name: create
   static: 1
@@ -10745,7 +10745,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 458
+  line: 456
   itemtype: method
   name: reopen
   params:
@@ -10757,7 +10757,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 492
+  line: 490
   itemtype: method
   name: apply
   params:
@@ -10770,7 +10770,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 519
+  line: 517
   itemtype: method
   name: detect
   params:
@@ -10784,7 +10784,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 583
+  line: 581
   description: Denotes a required property for a mixin
   itemtype: method
   name: required
@@ -10792,7 +10792,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 598
+  line: 596
   description: |-
     Makes a property or method available via an additional name.
 
@@ -10825,7 +10825,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 627
+  line: 625
   description: |-
     Makes a method available via an additional name.
 
@@ -10852,7 +10852,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 654
+  line: 652
   description: |-
     Specify a method that observes property changes.
 
@@ -10885,7 +10885,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 683
+  line: 681
   description: |-
     Specify a method that observes property changes.
 
@@ -10918,7 +10918,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: ../packages/ember-metal/lib/mixin.js
-  line: 715
+  line: 713
   description: |-
     When observers fire, they are called with the arguments `obj`, `keyName`.
 
