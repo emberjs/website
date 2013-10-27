@@ -37,7 +37,7 @@ access a property from the outer scope within the loop.
   {{#each friend in friends}}
     <li>{{name}}'s friend {{friend.name}}</li>
   {{/each}}
-<ul>
+</ul>
 ```
 
 This would print a list like this:
