@@ -1,6 +1,6 @@
 Next we'll update the application so a user can navigate to a url where only todos that are not complete are displayed.
 
-In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{link-to}}` helper:
+In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{linkTo}}` helper:
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
@@ -8,7 +8,7 @@ In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{li
   <a href="all">All</a>
 </li>
 <li>
-  {{#link-to "todos.active" activeClass="selected"}}Active{{/link-to}}
+  {{#linkTo "todos.active" activeClass="selected"}}Active{{/linkTo}}
 </li>
 <li>
   <a href="completed">Completed</a>
@@ -51,7 +51,7 @@ Reload your web browser to ensure that there are no errors and the behavior desc
 ### Additional Resources
 
   * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/2a1d35293a52e40d0125f552a1a8b2c01f759313)
-  * [link-to API documentation](/api/classes/Ember.Handlebars.helpers.html#method_link-to)
+  * [linkTo API documentation](/api/classes/Ember.Handlebars.helpers.html#method_linkTo)
   * [Route#renderTemplate API documentation](/api/classes/Ember.Route.html#method_renderTemplate)
   * [Route#render API documentation](/api/classes/Ember.Route.html#method_render)
   * [Ember Router Guide](/guides/routing)

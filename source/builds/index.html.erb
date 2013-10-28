@@ -11,14 +11,14 @@ title: Builds
 <script type="text/x-handlebars" data-template-name="application">
   <div id="sidebar">
     <ol id="toc-list">
-      <li {{bind-attr class=":level-1 isIndexActive:selected"}}>{{#link-to 'index'}}Home{{/link-to}}</li>
-      <li {{bind-attr class=":level-1 isTaggedActive:selected"}}>{{#link-to 'tagged'}}Tagged Releases{{/link-to}}</li>
+      <li {{bind-attr class=":level-1 isIndexActive:selected"}}>{{#linkTo 'index'}}Home{{/linkTo}}</li>
+      <li {{bind-attr class=":level-1 isTaggedActive:selected"}}>{{#linkTo 'tagged'}}Tagged Releases{{/linkTo}}</li>
       <li {{bind-attr class=":level-1 isChannelsActive:selected"}}>
         <a>Channels</a>
         <ol style="display:block">
-          <li {{bind-attr class=":level-3 isReleaseActive:sub-selected"}}>{{#link-to 'release.latest'}}Release{{/link-to}}</li>
-          <li {{bind-attr class=":level-3 isBetaActive:sub-selected"}}>{{#link-to 'beta.latest'}}Beta{{/link-to}}</li>
-          <li {{bind-attr class=":level-3 isCanaryActive:sub-selected"}}>{{#link-to 'canary.latest'}}Canary{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isReleaseActive:sub-selected"}}>{{#linkTo 'release.latest'}}Release{{/linkTo}}</li>
+          <li {{bind-attr class=":level-3 isBetaActive:sub-selected"}}>{{#linkTo 'beta.latest'}}Beta{{/linkTo}}</li>
+          <li {{bind-attr class=":level-3 isCanaryActive:sub-selected"}}>{{#linkTo 'canary.latest'}}Canary{{/linkTo}}</li>
         </ol>
       </li>
     </ol>
@@ -34,23 +34,23 @@ title: Builds
 <script type="text/x-handlebars" data-template-name="index">
   <div class="features section">
     <div class="feature">
-      {{#link-to 'release.latest'}}
+      {{#linkTo 'release.latest'}}
       <img class="tomster" src="/images/tomster-sm.png" alt="Release Builds">
-      {{/link-to}}
+      {{/linkTo}}
       <h2>Release</h2>
       <p>Release builds have been hardened through our multi-tiered release process. These builds are perfect for use in production environments.</p>
     </div>
     <div class="feature">
-      {{#link-to 'beta.latest'}}
+      {{#linkTo 'beta.latest'}}
       <img class="tomster" src="/images/tomster-beta-sm.png" alt="Beta Builds">
-      {{/link-to}}
+      {{/linkTo}}
       <h2>Beta</h2>
       <p>Beta builds will incorporate new features that are ready for more review. They will include new features that have been more thoroughly tested. We do not recommend using Beta builds in production.</p>
     </div>
     <div class="feature">
-      {{#link-to 'canary.latest'}}
+      {{#linkTo 'canary.latest'}}
       <img class="tomster" src="/images/tomster-under-construction-sm.png" alt="Canary Builds">
-      {{/link-to}}
+      {{/linkTo}}
       <h2>Canary</h2>
       <p>Canary builds are the bleeding edge of Ember development. Please do not use these builds unless you are absolutely certain that you need fixes and/or features not available in the Release or Beta builds.</p>
     </div>
@@ -126,8 +126,8 @@ title: Builds
   <h2>{{title}}</h2>
   <div class="tabs">
     <ul>
-      <li>{{#link-to latestLink}}Latest{{/link-to}}</li>
-      <li>{{#link-to dailyLink}}Daily{{/link-to}}</li>
+      <li>{{#linkTo latestLink}}Latest{{/linkTo}}</li>
+      <li>{{#linkTo dailyLink}}Daily{{/linkTo}}</li>
     </ul>
   </div>
   {{partial 'projectListing'}}
