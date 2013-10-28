@@ -67,7 +67,7 @@ setting this value after Ember has been loaded will have no affect.
 Example:
 
 ```javascript
-ENV = {FEATURES: {'link-to': true}};
+ENV = {FEATURES: {'linkTo': true}};
 ```
 
 ### After Loading Ember
@@ -79,5 +79,5 @@ modify a features availability.
 Example:
 
 ```javascript
-Ember.FEATURES['link-to'] = true;
+Ember.FEATURES['linkTo'] = true;
 ```

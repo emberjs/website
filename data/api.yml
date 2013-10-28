@@ -2641,11 +2641,11 @@ classes:
       a supplied route by name.
 
       Instances of `LinkView` will most likely be created through
-      the `link-to` Handlebars helper, but properties of this class
+      the `linkTo` Handlebars helper, but properties of this class
       can be overridden to customize application-wide behavior.
     extends: Ember.View
     see:
-    - '{Handlebars.helpers.link-to}'
+    - '{Handlebars.helpers.linkTo}'
   Ember.Location:
     name: Ember.Location
     shortname: Ember.Location
@@ -12752,7 +12752,7 @@ classitems:
 - file: ../packages/ember-routing/lib/helpers/link_to.js
   line: 107
   description: |-
-    By default the `{{link-to}}` helper will bind to the `href` and
+    By default the `{{linkTo}}` helper will bind to the `href` and
     `title` attributes. It's discourage that you override these defaults,
     however you can push onto the array if needed.
   itemtype: property
@@ -12766,7 +12766,7 @@ classitems:
 - file: ../packages/ember-routing/lib/helpers/link_to.js
   line: 118
   description: |-
-    By default the `{{link-to}}` helper will bind to the `active`, `loading`, and
+    By default the `{{linkTo}}` helper will bind to the `active`, `loading`, and
     `disabled` classes. It is discouraged to override these directly.
   itemtype: property
   name: classNameBindings
@@ -12779,7 +12779,7 @@ classitems:
 - file: ../packages/ember-routing/lib/helpers/link_to.js
   line: 128
   description: |-
-    By default the `{{link-to}}` helper responds to the `click` event. You
+    By default the `{{linkTo}}` helper responds to the `click` event. You
     can override this globally by setting this property to your custom
     event name.
 
@@ -12969,7 +12969,7 @@ classitems:
 - file: ../packages/ember-routing/lib/helpers/link_to.js
   line: 389
   description: |-
-    The default href value to use while a link-to is loading.
+    The default href value to use while a linkTo is loading.
     Only applies when tagName is 'a'
   itemtype: property
   name: loadingHref
@@ -12981,47 +12981,47 @@ classitems:
   namespace: Ember
 - file: ../packages/ember-routing/lib/helpers/link_to.js
   line: 402
-  description: "The `{{link-to}}` helper renders a link to the supplied\n`routeName`
+  description: "The `{{linkTo}}` helper renders a link to the supplied\n`routeName`
     passing an optionally supplied model to the\nroute as its `model` context of the
-    route. The block\nfor `{{link-to}}` becomes the innerHTML of the rendered\nelement:\n\n```handlebars\n{{#link-to
-    'photoGallery'}}\n  Great Hamster Photos\n{{/link-to}}\n```\n\n```html\n<a href=\"/hamster-photos\">\n
-    \ Great Hamster Photos\n</a>\n```\n\n### Supplying a tagName\nBy default `{{link-to}}`
-    renders an `<a>` element. This can\nbe overridden for a single use of `{{link-to}}`
-    by supplying\na `tagName` option:\n\n```handlebars\n{{#link-to 'photoGallery'
-    tagName=\"li\"}}\n  Great Hamster Photos\n{{/link-to}}\n```\n\n```html\n<li>\n
+    route. The block\nfor `{{linkTo}}` becomes the innerHTML of the rendered\nelement:\n\n```handlebars\n{{#linkTo
+    'photoGallery'}}\n  Great Hamster Photos\n{{/linkTo}}\n```\n\n```html\n<a href=\"/hamster-photos\">\n
+    \ Great Hamster Photos\n</a>\n```\n\n### Supplying a tagName\nBy default `{{linkTo}}`
+    renders an `<a>` element. This can\nbe overridden for a single use of `{{linkTo}}`
+    by supplying\na `tagName` option:\n\n```handlebars\n{{#linkTo 'photoGallery'
+    tagName=\"li\"}}\n  Great Hamster Photos\n{{/linkTo}}\n```\n\n```html\n<li>\n
     \ Great Hamster Photos\n</li>\n```\n\nTo override this option for your entire
     application, see\n\"Overriding Application-wide Defaults\".\n\n### Disabling the
-    `link-to` helper\nBy default `{{link-to}}` is enabled. \nany passed value to `disabled`
-    helper property will disable the `link-to` helper.\n \nstatic use: the `disabled`
-    option:\n \n```handlebars\n{{#link-to 'photoGallery' disabled=true}}\n  Great
-    Hamster Photos\n{{/link-to}}\n```\n \ndynamic use: the `disabledWhen` option:\n\n```handlebars\n{{#link-to
-    'photoGallery' disabledWhen=controller.someProperty}}\n  Great Hamster Photos\n{{/link-to}}\n```\n\nany
+    `linkTo` helper\nBy default `{{linkTo}}` is enabled. \nany passed value to `disabled`
+    helper property will disable the `linkTo` helper.\n \nstatic use: the `disabled`
+    option:\n \n```handlebars\n{{#linkTo 'photoGallery' disabled=true}}\n  Great
+    Hamster Photos\n{{/linkTo}}\n```\n \ndynamic use: the `disabledWhen` option:\n\n```handlebars\n{{#linkTo
+    'photoGallery' disabledWhen=controller.someProperty}}\n  Great Hamster Photos\n{{/linkTo}}\n```\n\nany
     passed value to `disabled` will disable it except `undefined`.\nto ensure that
-    only `true` disable the `link-to` helper you can\noverride the global behaviour
+    only `true` disable the `linkTo` helper you can\noverride the global behaviour
     of `Ember.LinkView`.\n     \n```javascript  \nEmber.LinkView.reopen({\n  disabled:
     Ember.computed(function(key, value) {\n    if (value !== undefined) { \n      this.set('_isDisabled',
     value === true); \n    }\n    return value === true ? get(this, 'disabledClass')
     : false;\n  })\n});\n```\n \nsee \"Overriding Application-wide Defaults\" for
-    more.\n\n### Handling `href`\n`{{link-to}}` will use your application's Router
+    more.\n\n### Handling `href`\n`{{linkTo}}` will use your application's Router
     to\nfill the element's `href` property with a url that\nmatches the path to the
     supplied `routeName` for your\nrouters's configured `Location` scheme, which defaults\nto
-    Ember.HashLocation.\n\n### Handling current route\n`{{link-to}}` will apply a
+    Ember.HashLocation.\n\n### Handling current route\n`{{linkTo}}` will apply a
     CSS class name of 'active'\nwhen the application's current route matches\nthe
     supplied routeName. For example, if the application's\ncurrent route is 'photoGallery.recent'
-    the following\nuse of `{{link-to}}`:\n\n```handlebars\n{{#link-to 'photoGallery.recent'}}\n
-    \ Great Hamster Photos from the last week\n{{/link-to}}\n```\n\nwill result in\n\n```html\n<a
+    the following\nuse of `{{linkTo}}`:\n\n```handlebars\n{{#linkTo 'photoGallery.recent'}}\n
+    \ Great Hamster Photos from the last week\n{{/linkTo}}\n```\n\nwill result in\n\n```html\n<a
     href=\"/hamster-photos/this-week\" class=\"active\">\n  Great Hamster Photos\n</a>\n```\n\nThe
     CSS class name used for active classes can be customized\nfor a single use of
-    `{{link-to}}` by passing an `activeClass`\noption:\n\n```handlebars\n{{#link-to
+    `{{linkTo}}` by passing an `activeClass`\noption:\n\n```handlebars\n{{#linkTo
     'photoGallery.recent' activeClass=\"current-url\"}}\n  Great Hamster Photos from
-    the last week\n{{/link-to}}\n```\n\n```html\n<a href=\"/hamster-photos/this-week\"
+    the last week\n{{/linkTo}}\n```\n\n```html\n<a href=\"/hamster-photos/this-week\"
     class=\"current-url\">\n  Great Hamster Photos\n</a>\n```\n\nTo override this
     option for your entire application, see\n\"Overriding Application-wide Defaults\".\n\n###
     Supplying a model\nAn optional model argument can be used for routes whose\npaths
     contain dynamic segments. This argument will become\nthe model context of the
     linked route:\n\n```javascript\nApp.Router.map(function() {\n  this.resource(\"photoGallery\",
-    {path: \"hamster-photos/:photo_id\"});\n});\n```\n\n```handlebars\n{{#link-to
-    'photoGallery' aPhoto}}\n  {{aPhoto.title}}\n{{/link-to}}\n```\n\n```html\n<a
+    {path: \"hamster-photos/:photo_id\"});\n});\n```\n\n```handlebars\n{{#linkTo
+    'photoGallery' aPhoto}}\n  {{aPhoto.title}}\n{{/linkTo}}\n```\n\n```html\n<a
     href=\"/hamster-photos/42\">\n  Tomster\n</a>\n```\n\n### Supplying multiple models\nFor
     deep-linking to route paths that contain multiple\ndynamic segments, multiple
     model arguments can be used.\nAs the router transitions through the route path,
@@ -13029,30 +13029,30 @@ classitems:
     dynamic segments:\n\n```javascript\nApp.Router.map(function() {\n  this.resource(\"photoGallery\",
     {path: \"hamster-photos/:photo_id\"}, function() {\n    this.route(\"comment\",
     {path: \"comments/:comment_id\"});\n  });\n});\n```\nThis argument will become
-    the model context of the linked route:\n\n```handlebars\n{{#link-to 'photoGallery.comment'
-    aPhoto comment}}\n  {{comment.body}}\n{{/link-to}}\n```\n\n```html\n<a href=\"/hamster-photos/42/comment/718\">\n
+    the model context of the linked route:\n\n```handlebars\n{{#linkTo 'photoGallery.comment'
+    aPhoto comment}}\n  {{comment.body}}\n{{/linkTo}}\n```\n\n```html\n<a href=\"/hamster-photos/42/comment/718\">\n
     \ A+++ would snuggle again.\n</a>\n```\n\n### Supplying an explicit dynamic segment
-    value\nIf you don't have a model object available to pass to `{{link-to}}`,\nan
+    value\nIf you don't have a model object available to pass to `{{linkTo}}`,\nan
     optional string or integer argument can be passed for routes whose\npaths contain
     dynamic segments. This argument will become the value\nof the dynamic segment:\n\n```javascript\nApp.Router.map(function()
-    {\n  this.resource(\"photoGallery\", {path: \"hamster-photos/:photo_id\"});\n});\n```\n\n```handlebars\n{{#link-to
-    'photoGallery' aPhotoId}}\n  {{aPhoto.title}}\n{{/link-to}}\n```\n\n```html\n<a
+    {\n  this.resource(\"photoGallery\", {path: \"hamster-photos/:photo_id\"});\n});\n```\n\n```handlebars\n{{#linkTo
+    'photoGallery' aPhotoId}}\n  {{aPhoto.title}}\n{{/linkTo}}\n```\n\n```html\n<a
     href=\"/hamster-photos/42\">\n  Tomster\n</a>\n```\n\nWhen transitioning into
     the linked route, the `model` hook will\nbe triggered with parameters including
     this passed identifier.\n\n### Overriding attributes\nYou can override any given
-    property of the Ember.LinkView\nthat is generated by the `{{link-to}}` helper
-    by passing\nkey/value pairs, like so:\n\n```handlebars\n{{#link-to  aPhoto tagName='li'
+    property of the Ember.LinkView\nthat is generated by the `{{linkTo}}` helper
+    by passing\nkey/value pairs, like so:\n\n```handlebars\n{{#linkTo  aPhoto tagName='li'
     title='Following this link will change your life' classNames=['pic', 'sweet']}}\n
-    \ Uh-mazing!\n{{/link-to}}\n```\n\nSee [Ember.LinkView](/api/classes/Ember.LinkView.html)
+    \ Uh-mazing!\n{{/linkTo}}\n```\n\nSee [Ember.LinkView](/api/classes/Ember.LinkView.html)
     for a\ncomplete list of overrideable properties. Be sure to also\ncheck out inherited
-    properties of `LinkView`.\n\n### Overriding Application-wide Defaults\n``{{link-to}}``
+    properties of `LinkView`.\n\n### Overriding Application-wide Defaults\n``{{linkTo}}``
     creates an instance of Ember.LinkView\nfor rendering. To override options for
     your entire\napplication, reopen Ember.LinkView and supply the\ndesired values:\n\n```
     javascript\nEmber.LinkView.reopen({\n  activeClass: \"is-active\",\n  tagName:
     'li'\n})\n```\n\nIt is also possible to override the default event in\nthis manner:\n\n```
     javascript\nEmber.LinkView.reopen({\n  eventName: 'customEventName'\n});\n```"
   itemtype: method
-  name: link-to
+  name: linkTo
   params:
   - name: routeName
     description: ''
@@ -13078,7 +13078,7 @@ classitems:
   namespace: Ember.Handlebars
 - file: ../packages/ember-routing/lib/helpers/link_to.js
   line: 664
-  description: See [link-to](/api/classes/Ember.Handlebars.helpers.html#method_link-to)
+  description: See [linkTo](/api/classes/Ember.Handlebars.helpers.html#method_linkTo)
   itemtype: method
   name: linkTo
   deprecated: true
