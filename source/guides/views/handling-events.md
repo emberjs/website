@@ -64,3 +64,5 @@ App.PlaybackRoute = Ember.Route.extend({
 });
 ````
 
+To see a full listing of the `Ember.View` built-in events, see the
+documentation section on [Event Names](/api/classes/Ember.View.html#toc_event-names).
