@@ -228,6 +228,8 @@ Configuring Ember.js:
     url: "configuring-ember/disabling-prototype-extensions"
   - title: "Embedding Applications"
     url: "configuring-ember/embedding-applications"
+  - title: "Feature Flags"
+    url: "configuring-ember/feature-flags"
 
 Cookbook:
   - title: "Introduction"
