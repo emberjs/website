@@ -50,19 +50,16 @@ This listing is kept current, and reflects what is available in each branch
 
 ## Enabling At Runtime
 
-Remember that the only time a feature can be enabled at runtime is if the
+The only time a feature can be enabled at runtime is if the
 `features.json` for that build contains `null` (technically, anything other
-than `true` or `false` will do, but `null` is the chosen value). If the feature
-is present in `features.json` with a `null` value there are a couple different
-ways to enable it at runtime.
+than `true` or `false` will do, but `null` is the chosen value).
 
-### Before Loading Ember
-
-A global `ENV` object will be used to initialize the `Ember.ENV` object, and any
-feature flags that are enabled/disabled under `ENV.FEATURES` will be migrated to
-`Ember.FEATURES`, and that corresponding feature will be enabled based on the flag
-value.  Please note that Ember only reads the `ENV` value upon initial load so
-setting this value after Ember has been loaded will have no affect.
+A global `ENV` object will be used to initialize the `Ember.ENV`
+object, and any feature flags that are enabled/disabled under
+`ENV.FEATURES` will be migrated to `Ember.FEATURES`, those features
+will be enabled based on the flag value. **Ember only reads** the
+`ENV` value upon initial load so setting this value after Ember has
+been loaded will have no affect.
 
 Example:
 
@@ -70,14 +67,5 @@ Example:
 ENV = {FEATURES: {'link-to': true}};
 ```
 
-### After Loading Ember
-
-Once Ember is fully loaded (once `Ember` is available to your code, not when your
-application is initialized) you will need to update the `Ember.FEATURES` object directly
-modify a features availability.
-
-Example:
-
-```javascript
-Ember.FEATURES['link-to'] = true;
-```
+Additionally you can define `ENV.ENABLE_ALL_FEATURES` to force all
+features to be enabled.
