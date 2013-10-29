@@ -353,7 +353,7 @@ p {
     @include transition(0.2s);
 
     &:hover, &:focus {
-      @include transform(scale(1.05));
+      @include transform(scale(1.06));
       border: 0;
     }
   }
