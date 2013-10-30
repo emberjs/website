@@ -14340,6 +14340,7 @@ classitems:
     instance would be used.
 
     Example
+
     ```js
     App.PostRoute = Ember.Route.extend({
       setupController: function(controller, model) {
