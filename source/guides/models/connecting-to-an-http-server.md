@@ -106,11 +106,11 @@ you can set a prefix that will be added to all requests.
 For example, if you are using a versioned JSON API, a request for a
 particular person might go to `/api/v1/people/1`.
 
-In that case, set `namespace` property to `/api/v1`.
+In that case, set `namespace` property to `api/v1`.
 
 ```js
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-  namespace: '/api/v1'
+  namespace: 'api/v1'
 });
 ```
 
