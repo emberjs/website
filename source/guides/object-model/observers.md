@@ -25,7 +25,7 @@ var person = Person.create({
   lastName: "Katz"
 });
 
-person.set('firstName', "Brohuda"); // observer will fire
+person.set('fullName', "Brohuda"); // observer will fire
 ```
 
 Because the `fullName` computed property depends on `firstName`,
