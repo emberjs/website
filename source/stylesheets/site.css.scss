@@ -1063,14 +1063,34 @@ body.community #content {
 
   .section {
     width: auto;
-    img {
+    div {
+      @include hidpi('community/give', 'png');
       float: left;
       margin: 0 20px 15px 0;
+      width: 220px;
+      height: 142px;
     }
 
-    &.bugs img {
+    .sos {
+      @include hidpi('community/sos', 'png');
+    }
+
+    .bug {
+      @include hidpi('community/bug', 'png');
+    }
+    &.bugs div {
       float: right;
       margin: 0 0 15px 20px;
+    }
+    .meetup {
+      width: 221px;
+      height: 185px;
+      @include hidpi('community/meetup', 'png');
+    }
+    .campster {
+      @include hidpi('community/campster', 'png');
+      width: 201px;
+      height: 179px;
     }
     table {
       margin: 2em auto;
