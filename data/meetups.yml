@@ -69,10 +69,12 @@
   - location: Budapest, Hungary
     url:      http://www.meetup.com/ember-bp/
     image:
+  - location: São Paulo, Brazil
+    url:      http://www.meetup.com/Ember-js-Sao-Paulo/
+    image:
   - location: San Juan, Puerto Rico
     url:      http://www.meetup.com/Ember-PR/
     image:    21puertorico.png
-    image:
   - location: Oslo, Norway
     url:      http://www.meetup.com/Ember-js-Oslo/
     image:
