@@ -194,7 +194,7 @@ Note: The `{{control}}` helper is currently disabled by default. To enable it se
   </thead>
   <tbody>
   <tr>
-    <td><code>{{partial author}}</code></td>
+    <td><code>{{partial "author"}}</code></td>
     <td><code>author.hbs</code></td>
     <td>Post</td>
     <td><code>App.PostView</code></td>
