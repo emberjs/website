@@ -208,7 +208,7 @@ Note: The `{{control}}` helper is currently disabled by default. To enable it se
     <td><code>App.PostController</code></td>
   </tr>
   <tr>
-    <td><code>{{render author author}}</code></td>
+    <td><code>{{render "author" author}}</code></td>
     <td><code>author.hbs</code></td>
     <td>Author</td>
     <td><code>App.AuthorView</code></td>
