@@ -38,7 +38,7 @@ If we change the todo's `isDone` property, the `remaining` property is updated
 automatically:
 
 ```javascript
-var todos = App.todosController.get('todos');
+var todos = App.TodosController.get('todos');
 var todo = todos.objectAt(0);
 todo.set('isDone', true);
 
