@@ -227,6 +227,8 @@
   image: pluck.png
 - url: http://flockler.com
   image: flockler_x2.png
+- url: http://www.astonishdesign.com
+  image: astonishdesign.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
