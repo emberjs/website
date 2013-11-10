@@ -27,7 +27,7 @@ saved by checking its `isDirty` property.
 person.get('isDirty');
 //=> false
 
-person.set('isAdmin', true);
+person.set('isDirty', true);
 
 person.get('isDirty');
 //=> true
