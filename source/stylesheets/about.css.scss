@@ -7,6 +7,27 @@ body.index, body.about {
     margin-top: 1.5em;
   }
 
+  .feature .handlebars {
+    @include hidpi('about/ember-handlebars-sm', 'png');
+    background-size: 221px 210px !important;
+    width: 221px;
+    height: 210px;
+  }
+
+  .feature .structure {
+    @include hidpi('about/ember-structure-sm', 'png');
+    background-size: 221px 210px !important;
+    width: 221px;
+    height: 210px;
+  }
+
+  .feature .productivity {
+    @include hidpi('about/ember-productivity-sm', 'png');
+    background-size: 221px 220px !important;
+    width: 221px;
+    height: 210px;
+  }
+
   .getting-started {
     h2.sub {
       color: #F23818;
