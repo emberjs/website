@@ -1,6 +1,6 @@
 `store.find()` allows you to find all records, single records, and query for records.
  The first argument to `.find` is always the type of record in question. E.g. `post`. The second
- argument is optional and can either be a plain object of search options. Below are some examples:
+ argument is optional and can either be a plain object of search options or an id. Below are some examples:
 
 ### Finding All Records of a Type
 
@@ -30,8 +30,8 @@ another network request, use `store.all('post')` instead.
 ### Finding a Single Record
 
 You can retrieve a record by passing its model and unique ID to the `find()`
-method. This will return a promise that resolves to the requested
-record:
+method. The ID can be either a string or a number. This will return a promise that
+resolves to the requested record:
 
 ```js
 store.find('post', 1).then(function(post) {
