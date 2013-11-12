@@ -180,6 +180,8 @@ Models:
     url: "models/finding-a-record"
   - title: "Finding All Records of a Type"
     url: "models/finding-all-records-of-a-type"
+  - title: "Creating and Deleting Records"
+    url: "models/creating-and-deleting-records"
   - title: "Pushing Records into the Store"
     url: "models/pushing-records-into-the-store"
   - title: "Querying the Server for Records"
