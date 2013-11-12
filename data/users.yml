@@ -231,6 +231,8 @@
   image: astonishdesign.png
 - url: http://www.rankinity.com
   image: rankinity.png
+- url: http://swink.tv
+  image: swinktv.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
