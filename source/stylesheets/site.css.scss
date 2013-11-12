@@ -1629,6 +1629,7 @@ a.edit-page {
   span.flag {
     background-color: gray;
     color: white;
+    padding: 2px 7px;
     @include border-radius(3px);
   }
 
