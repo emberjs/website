@@ -59,12 +59,17 @@ actions: {
       } else {
         this.get('model').save();
       }
+   },
+   removeTodo: function () {
+      var todo = this.get('model');
+      todo.deleteRecord();
+      todo.save();
    }
 }
 // ... additional lines truncated for brevity ...
 ```
 
-This method will set the controller's `isEditing` property to false and commit all changes made to the todo.
+`acceptChanges` will set the controller's `isEditing` property to false and commit all changes made to the todo. If the todo becomes empty, we invoke `removeTodo` to delete its corresponding model.
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/USOlAna/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
