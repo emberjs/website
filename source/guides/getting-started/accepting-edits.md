@@ -66,6 +66,8 @@ actions: {
 
 This method will set the controller's `isEditing` property to false and commit all changes made to the todo.
 
+We will cover `removeTodo` in the next step.
+
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/USOlAna/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
