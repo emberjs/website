@@ -31,7 +31,7 @@ another network request, use `store.all('post')` instead.
 
 You can retrieve a record by passing its model and unique ID to the `find()`
 method. The ID can be either a string or a number. This will return a promise that
-resolves to the requested record:
+fulfills with the requested record:
 
 ```js
 store.find('post', 1).then(function(post) {
@@ -47,7 +47,7 @@ responsible for telling their template which model to render.
 
 `Ember.Route`'s `model` hook supports asynchronous values
 out-of-the-box. If you return a promise from the `model` hook, the
-router will wait until the promise has resolved to render the
+router will wait until the promise has fulfilled to render the
 template.
 
 This makes it easy to write apps with asynchronous data using Ember
@@ -75,7 +75,7 @@ to return a model different from the record with the provided ID.
 
 You can query the server by calling the store's `find()` method and
 passing a hash of search options. This method returns a promise that
-resolves to an array of the search results.
+fulfills with an array of the search results.
 
 For example, we could search for all `person` models who had the name of
 `Peter`:
