@@ -1991,7 +1991,7 @@ classes:
     description: |-
       The internal class used to create text inputs when the `{{input}}`
         helper is used with `type` of `text`.
-      See [handlebars.helpers.input](api/classes/Ember.Handlebars.helpers.html#method_input)  for usage details.
+      See [handlebars.helpers.input](/api/classes/Ember.Handlebars.helpers.html#method_input)  for usage details.
       ## Layout and LayoutName properties
       Because HTML `input` elements are self closing `layout` and `layoutName`
         properties will not be applied. See [Ember.View](/api/classes/Ember.View.html)'s
