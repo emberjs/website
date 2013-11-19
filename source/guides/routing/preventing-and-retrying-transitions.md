@@ -21,9 +21,10 @@ Here's one way this situation could be handled:
 
 ```js
 App.FormRoute = Ember.Route.extend({
+  needs: ["form"],
   actions: {
     willTransition: function(transition) {
-      if (this.controllerFor('form').get('userHasEnteredData') &&
+      if (this.get('controllers.form.userHasEnteredData') &&
           !confirm("Are you sure you want to abandon progress?")) {
         transition.abort();
       } else {
@@ -63,10 +64,10 @@ they've logged in.
 
 ```js
 App.SomeAuthenticatedRoute = Ember.Route.extend({
+  needs: ["auth","login"],
   beforeModel: function(transition) {
-    if (!this.controllerFor('auth').get('userIsLoggedIn')) {
-      var loginController = this.controllerFor('login');
-      loginController.set('previousTransition', transition);
+    if (!this.get('controllers.auth.userIsLoggedIn')) {
+      this.set('controllers.login.previousTransition', transition);
       this.transitionTo('login');
     }
   }
