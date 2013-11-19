@@ -13,20 +13,22 @@
 
 - url: http://www.mhelabs.com/
   image: mhelabs.png
-- url: https://addepar.com/
-  image: addepar.png
+- url: https://www.yapp.us/
+  image: yapp.png
 - url: http://tilde.io/
   image: tilde.png
+- url: http://yahoo.com
+  image: yahoo.png
 - url: http://www.zendesk.com/
   image: zendesk.png
 - url: http://squareup.com/
   image: square.png
 - url: http://www.discourse.org
   image: discourse.png
+- url: https://addepar.com/
+  image: addepar.png
 - url: http://livingsocial.com/
   image: livingsocial.png
-- url: https://www.yapp.us/
-  image: yapp.png
 - url: http://www.groupon.com
   image: groupon.png
 - url: http://www.timbuk2.com/
@@ -233,8 +235,6 @@
   image: rankinity.png
 - url: http://swink.tv
   image: swinktv.png
-- url: http://yahoo.com
-  image: yahoo.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
