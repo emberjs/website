@@ -183,6 +183,8 @@ Models:
     url: "models/finding-records"
   - title: "Pushing Records into the Store"
     url: "models/pushing-records-into-the-store"
+  - title: "Persisting Records"
+    url: "models/persisting-records"
   #- title: "Filtering Records"
     #url: "models/filtering-records"
   - title: "Working with Records"
