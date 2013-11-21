@@ -54,9 +54,26 @@ concepts that underpin its design.
 #### Store
 
 The **store** is the central repository of records in your application.
-Both your application's controllers and routes have access to this
+You can think of the store as a cache of all of the records available in
+your app. Both your application's controllers and routes have access to this
 shared store; when they need to display or modify a record, they will
 first ask the store for it.
+
+This instance of `DS.Store` is created for you automatically and is shared
+among all of the objects in your application.
+
+You will use the store to retrieve records, as well to create new ones.
+For example, we might want to find an `App.Person` model with the ID of
+`1` from our route's `model` hook:
+
+```js
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    var store = this.get('store');
+    return store.find('person', 1)
+  }
+});
+```
 
 #### Models
 
@@ -69,13 +86,36 @@ For example, if you were writing a web application for placing orders at
 a restaurant, you might have models like `Order`, `LineItem`, and
 `MenuItem`.
 
+Fetching orders becomes very easy:
+
+```js
+this.store.find('order');
+```
+
 Models define the type of data that will be provided by your server. For
 example, a `Person` model might have a `firstName` attribute that is a
-string, and a `birthday` attribute that is a date.
+string, and a `birthday` attribute that is a date:
+
+```js
+App.Person = DS.Model.extend({
+  firstName: DS.attr('string'),
+  birthday:  DS.attr('date')
+});
+```
 
 A model also describes its relationships with other objects. For
 example, an `Order` may have many `LineItems`, and a `LineItem` may
 belong to a particular `Order`.
+
+```js
+App.LineItem = DS.Model.extend({
+	orders: DS.hasMany('order')
+});
+
+App.Order = DS.Model.extend({
+  lineItems: DS.belongsTo('lineItem')
+});
+```
 
 Models don't have any data themselves; they just define the properties and
 behavior of specific instances, which are called _records_.
@@ -94,6 +134,10 @@ Records are uniquely identified by two things:
 For example, if you were writing a contact management app, you might
 have a model called `Person`. An individual record in your app might
 have a type of `Person` and an ID of `1` or `steve-buscemi`.
+
+```js
+this.store.find('person', 1); // => { id: 1, name: 'steve-buscemi' }
+```
 
 IDs are usually assigned by the server when you save them for the first
 time, but you can also generate IDs client-side.
