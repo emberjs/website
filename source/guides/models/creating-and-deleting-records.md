@@ -40,16 +40,25 @@ store.set('author', store.find('user', 1))
 ### Deleting Records
 
 Deleting records is just as straightforward as creating records. Just call `.deleteRecord()`
- on any instace of `DS.Model`. This flags the record as `isDeleted` and thus removes
- it from `.all()` queries on the `store`. The deletion can then be persisted using `model.save()`.
+on any instace of `DS.Model`. This flags the record as `isDeleted` and thus removes
+it from `.all()` queries on the `store`. The deletion can then be persisted using `model.save()`.
+Alternatively, you can use the `destroyRecord` method to delete and persist at the same time.
 
 ```js
 var post = store.find('post', 1);
 
-post.deleteRecord()
+post.deleteRecord();
 
-post.get('isDeleted')
+post.get('isDeleted');
 // => true
 
-post.save()
+post.save();
 // => DELETE to /posts/1
+
+// OR
+
+var post = store.find('post', 2);
+
+post.destroyRecord();
+// => DELETE to /posts/1
+```
