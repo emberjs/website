@@ -73,7 +73,8 @@ example showing how to retry persisting:
 ```javascript
 function retry(promise, retryCallback, nTimes) {
   // if the promise fails,
-  return promise.then(null, function(reason) {
+
+  return promise.fail(function(reason) {
     // if we haven't hit the retry limit
     if (nTimes-- > 0) {
       // retry again with the result of calling the retry callback
