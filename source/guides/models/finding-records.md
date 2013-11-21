@@ -1,12 +1,11 @@
 `store.find()` allows you to find all records, single records, and query for records.
- The first argument to `.find` is always the type of record in question. E.g. `post`. The second
- argument is optional and can either be a plain object of search options or an id. Below are some examples:
+The first argument to `store.find()` is always the type of record in question, e.g. `post`. The second
+argument is optional and can either be a plain object of search options or an id. Below are some examples:
 
 ### Finding All Records of a Type
 
-
 ```js
-var posts = store.find('post');
+var posts = this.store.find('post');
 ```
 
 This will return an instance of `DS.RecordArray`. As with records, the
@@ -14,17 +13,17 @@ record array will start in a loading state with a `length` of `0`.
 When the server responds with results, any references to the record array
 will update automatically.
 
-**Note** `DS.RecordArray` is not a JavaScript array, it is an object that
+**Note**: `DS.RecordArray` is not a JavaScript array, it is an object that
 implements `Ember.Enumerable`. If you want to, for example, retrieve
 records by index, you must use the `objectAt(index)` method. Since the
 object is not a JavaScript array, using the `[]` notation will not work.
 For more information, see [Ember.Enumerable][1] and [Ember.Array][2].
 
+To get a list of records already loaded into the store, without firing
+another network request, use `store.all('post')` instead.
+
 [1]: http://emberjs.com/api/classes/Ember.Enumerable.html
 [2]: http://emberjs.com/api/classes/Ember.Array.html
-
-**Another Note** To get a list of records already loaded into the store, without firing
-another network request, use `store.all('post')` instead.
 
 ### Finding a Single Record
 
@@ -60,7 +59,7 @@ App.Router.map(function() {
 
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return this.get('store').find('post', params.post_id);
+    return this.store.find('post', params.post_id);
   }
 });
 ```

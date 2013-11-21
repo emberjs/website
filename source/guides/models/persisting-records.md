@@ -1,6 +1,7 @@
-Records in Ember Data are persisted on a per-instance
- basis. Call `model.save()` on any instance of `DS.Model` and it will make a network request.
- Here are a few examples:
+Records in Ember Data are persisted on a per-instance basis.
+Call `save()` on any instance of `DS.Model` and it will make a network request.
+
+Here are a few examples:
 
 ```javascript
 var post = store.createRecord('post', {
@@ -8,28 +9,23 @@ var post = store.createRecord('post', {
   body: 'Lorem ipsum'
 });
 
-post.save()
-
-// => POST to '/posts'
+post.save(); // => POST to '/posts'
 ```
 
 ```javascript
-var post = store.find('post', 1)
+var post = store.find('post', 1);
 
-post.get('title')
-// => "Rails is Omakase"
+post.get('title') // => "Rails is Omakase"
 
-post.set('title', 'A new post')
+post.set('title', 'A new post');
 
-post.save()
-
-// => PUT to '/posts/1'
+post.save(); // => PUT to '/posts/1'
 ```
 
 ### Promises
 
-Every `.save()` return a promise, so it is extremely easy to deal with success/failure
- of the network request. Here's a common pattern:
+`save()` returns a promise, so it is extremely easy to handle success and failure scenarios.
+ Here's a common pattern:
 
 ```javascript
 var post = store.createRecord('post', {
@@ -71,24 +67,23 @@ You can read more about promises [here](https://github.com/tildeio/rsvp.js), but
 example showing how to retry persisting:
 
 ```javascript
-function retry(promise, retryCallback, nTimes) {
-  // if the promise fails,
-
-  return promise.fail(function(reason) {
+function retry(callback, nTimes) {
+  // if the promise fails
+  return callback().fail(function(reason) {
     // if we haven't hit the retry limit
     if (nTimes-- > 0) {
       // retry again with the result of calling the retry callback
       // and the new retry limit
-      return retry(retryCallback(), retryCallback, nTimes);
+      return retry(callback, nTimes);
     }
-
+ 
     // otherwise, if we hit the retry limit, rethrow the error
     throw reason;
   });
 }
-
+ 
 // try to save the post up to 5 times
-retry(post.save(), function() {
+retry(function() {
   return post.save();
 }, 5);
 ```

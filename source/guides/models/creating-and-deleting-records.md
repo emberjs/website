@@ -12,8 +12,8 @@ The store object is available in controllers and routes using `this.store`.
 Although `createRecord` is fairly straightforward, the only thing to watch out for
 is that you cannot assign a promise as a relationship, currently.
 
-For example, if you wanted to set the author of a post, this would **not** work
- if the `user` with id wasn't already loaded into the store:
+For example, if you want to set the `author` property of a post, this would **not** work
+if the `user` with id isn't already loaded into the store:
 
 ```js
 var store = this.store;
@@ -42,9 +42,9 @@ store.find('user', 1).then(function(user) {
 
 ### Deleting Records
 
-Deleting records is just as straightforward as creating records. Just call `.deleteRecord()`
+Deleting records is just as straightforward as creating records. Just call `deleteRecord()`
 on any instace of `DS.Model`. This flags the record as `isDeleted` and thus removes
-it from `.all()` queries on the `store`. The deletion can then be persisted using `model.save()`.
+it from `all()` queries on the `store`. The deletion can then be persisted using `save()`.
 Alternatively, you can use the `destroyRecord` method to delete and persist at the same time.
 
 ```js
@@ -52,16 +52,13 @@ var post = store.find('post', 1);
 
 post.deleteRecord();
 
-post.get('isDeleted');
-// => true
+post.get('isDeleted'); // => true
 
-post.save();
-// => DELETE to /posts/1
+post.save(); // => DELETE to /posts/1
 
 // OR
 
 var post = store.find('post', 2);
 
-post.destroyRecord();
-// => DELETE to /posts/1
+post.destroyRecord(); // => DELETE to /posts/1
 ```
