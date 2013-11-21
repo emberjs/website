@@ -34,7 +34,8 @@ store.createRecord('post', {
   title: 'Rails is Omakase',
   body: 'Lorem ipsum'
 });
-store.set('author', store.find('user', 1))
+
+post.set('author', store.find('user', 1))
 ```
 
 ### Deleting Records
