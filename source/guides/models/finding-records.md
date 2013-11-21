@@ -32,7 +32,7 @@ method. The ID can be either a string or a number. This will return a promise th
 fulfills with the requested record:
 
 ```js
-store.find('post', 1).then(function(post) {
+this.store.find('post', 1).then(function(post) {
   post.set('title', "My Dark Twisted Fantasy");
 });
 ```
@@ -79,7 +79,7 @@ For example, we could search for all `person` models who have the name of
 `Peter`:
 
 ```js
-store.find('person', { name: "Peter" }).then(function(people) {
+this.store.find('person', { name: "Peter" }).then(function(people) {
   console.log("Found " + people.get('length') + " people named Peter.");
 });
 ```
