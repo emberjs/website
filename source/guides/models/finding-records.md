@@ -9,11 +9,10 @@
 var posts = store.find('post');
 ```
 
-This will return an instance of `DS.RecordArray`. Like with records, the
-record array will start in a loading state with a `length` of `0`, but
-you can immediately use it in your templates. When the server responds
-with results, the templates will watch for changes in the length of the
-array and update themselves automatically.
+This will return an instance of `DS.RecordArray`. As with records, the
+record array will start in a loading state with a `length` of `0`.
+When the server responds with results, any references to the record array
+will update automatically.
 
 **Note** `DS.RecordArray` is not a JavaScript array, it is an object that
 implements `Ember.Enumerable`. If you want to, for example, retrieve
@@ -77,7 +76,7 @@ You can query the server by calling the store's `find()` method and
 passing a hash of search options. This method returns a promise that
 fulfills with an array of the search results.
 
-For example, we could search for all `person` models who had the name of
+For example, we could search for all `person` models who have the name of
 `Peter`:
 
 ```js
