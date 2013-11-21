@@ -25,17 +25,19 @@ store.createRecord('post', {
 });
 ```
 
-However, you can easily get by this by setting the relationship afterwards:
+However, you can easily set the relationship after the promise has fulfilled:
 
 ```js
 var store = this.store;
 
-store.createRecord('post', {
+var post = store.createRecord('post', {
   title: 'Rails is Omakase',
   body: 'Lorem ipsum'
 });
 
-post.set('author', store.find('user', 1))
+store.find('user', 1).then(function(user) {
+  post.set('author', user);
+});
 ```
 
 ### Deleting Records
