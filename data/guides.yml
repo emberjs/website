@@ -135,6 +135,8 @@ Routing:
     warning: "query-params-warning"
   - title: "Asynchronous Routing"
     url: "routing/asynchronous-routing"
+  - title: "Loading / Error Substates"
+    url: "routing/loading-and-error-substates"
   - title: "Preventing and Retrying Transitions"
     url: "routing/preventing-and-retrying-transitions"
   #- title: "Dynamic Segments"
