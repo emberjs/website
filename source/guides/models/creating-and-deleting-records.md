@@ -60,5 +60,5 @@ post.save(); // => DELETE to /posts/1
 
 var post = store.find('post', 2);
 
-post.destroyRecord(); // => DELETE to /posts/1
+post.destroyRecord(); // => DELETE to /posts/2
 ```
