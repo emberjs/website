@@ -53,7 +53,7 @@ App.AuthorView = Ember.View.extend({
 <script type="text/x-handlebars" data-template-name='post'>
   <h1>{{title}}</h1>
   <div>{{body}}</div>
-  {{view App.AuthorView authorBinding=author}}
+  {{view App.AuthorView}}
 </script>
 ```
 
