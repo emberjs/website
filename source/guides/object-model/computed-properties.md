@@ -62,7 +62,7 @@ captainAmerica.get('description'); // "Steve Rogers; Age: 80; Country: USA"
 
 ### Dynamic updating
 
-Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update . 
+Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update. 
 
 ```javascript
 captainAmerica.set('firstName', 'William');
