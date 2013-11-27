@@ -124,7 +124,7 @@ In this example, render will:
 
 `{{render}}` does not require the presence of a matching route.
 
-`{{render}}` is similar to `{{outlet}}`. Both tell Ember to devote this portion of the page to something.
+`{{render}}` is similar to `{{outlet}}`. Both tell Ember.js to devote this portion of the page to something.
 
 `{{outlet}}`: The router determines the route and sets up the appropriate controllers/views/models.
 `{{render}}`: You specify (directly and indirectly) the appropriate controllers/views/models.
