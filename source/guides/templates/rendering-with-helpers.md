@@ -1,4 +1,4 @@
-Ember provides several helpers that allow you to render other views and templates in different ways.
+Ember.js provides several helpers that allow you to render other views and templates in different ways.
 
 ### The `{{partial}}` Helper
 
