@@ -58,7 +58,7 @@ instances:
 
 ```javascript
 var person = Person.create();
-person.say("Hello") // alerts "Hello"
+person.say("Hello") // alerts " says: Hello"
 ```
 
 When creating an instance, you can initialize the value of its properties
