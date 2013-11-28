@@ -315,7 +315,7 @@ App.ProjectsMixin = Ember.Mixin.create({
       if (project.channel === 'canary')
         project.lastRelease = 'latest';
       else if (project.changelog !== 'false')
-        project.lastReleaseChangelogUrl   = 'https://github.com/' + project.projectRepo + '/blob/v' + project.lastRelease + '/CHANGELOG';
+        project.lastReleaseChangelogUrl   = 'https://github.com/' + project.projectRepo + '/blob/v' + project.lastRelease + '/CHANGELOG.md';
     });
 
     return projects;
