@@ -86,7 +86,7 @@ properties, create a new subclass and instantiate that.
 
 By convention, properties or variables that hold classes are
 CamelCased, while instances are not. So, for example, the variable
-`Person` would contain a class, while `person` would contain an instance
+`Person` would point to a class, while `person` would point to an instance
 (usually of the `Person` class). You should stick to these naming
 conventions in your Ember applications.
 
