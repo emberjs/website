@@ -202,7 +202,7 @@ modifying those nouns.
 One of the responsibilities of a resource's route handler is to convert a URL
 into a model.
 
-For example, if we have the resource `this.resource('/blog_posts');`, our
+For example, if we have the resource `this.resource('/blog_posts')`, our
 route handler might look like this:
 
 ```js
@@ -251,7 +251,7 @@ Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
 as expected out of the box.
 
-If your model does not use the `id` property in the url, you should
+If your model does not use the `id` property in the URL, you should
 define a serialize method on your route:
 
 ```javascript
