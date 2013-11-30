@@ -126,9 +126,9 @@ are using Ember without prototype extensions:
 
 ```javascript
 Person.reopen({
-  fullNameChanged: Ember.observer(function() {
+  fullNameChanged: Ember.observer('fullName', function() {
     // deal with the change
-  }, 'fullName')
+  })
 });
 ```
 
