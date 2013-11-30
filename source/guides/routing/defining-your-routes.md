@@ -195,7 +195,10 @@ then render the `posts/new` template into its outlet.
 
 NOTE: You should use `this.resource` for URLs that represent a **noun**,
 and `this.route` for URLs that represent **adjectives** or **verbs**
-modifying those nouns.
+modifying those nouns. For example, in the code sample above, when
+specifying URLs for posts (a noun), the route was defined with
+`this.resource('posts')`. However, when defining the `new` action
+(a verb), the route was defined with `this.route('new')`.
 
 ### Dynamic Segments
 
