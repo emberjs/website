@@ -35,6 +35,9 @@
   - location: Cincinnati, OH
     url: http://www.meetup.com/Embernati
     image:
+  - location: Minneapolis / St. Paul, MN
+    url: http://www.meetup.com/Ember-Twin-Cities
+    image:
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
