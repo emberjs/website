@@ -166,11 +166,19 @@ module TOC
       }
       elsif whats_next = next_guide
         next_chapter = whats_next[1][0]
-        %Q{
-          <a class="next-guide" href="/guides/#{next_chapter.url}">
-             We're done with #{current_section[0]}. Next up: #{whats_next[0]} - #{next_chapter.title} \u2192
-          </a>
-        }
+        if section_slug == 'index.html'
+          %Q{
+            <a class="next-guide" href="/guides/#{next_chapter.url}">
+              #{next_chapter.title} \u2192
+            </a>
+          }
+        else
+          %Q{
+            <a class="next-guide" href="/guides/#{next_chapter.url}">
+               We're done with #{current_section[0]}. Next up: #{whats_next[0]} - #{next_chapter.title} \u2192
+            </a>
+          }
+        end
       else
         ''
       end
