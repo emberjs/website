@@ -12,7 +12,7 @@ There are two ways of formatting the value:
 We will use [MomentJs](http://momentjs.com) for formatting dates.
 
 Let's look at a simple example. You're working on a website for your
-client, and one of the requirements is to have the current date on the index page in human readble format. This is a perfect place to use a
+client, and one of the requirements is to have the current date on the index page in human readable format. This is a perfect place to use a
 Handlebars helper that "pretty prints" the current date:
 
 ```javascript
