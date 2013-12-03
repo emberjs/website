@@ -1,4 +1,5 @@
 @import "compass";
+@import "mixins/hidpi";
 
 #builds-application {
   #sidebar {
@@ -9,6 +10,39 @@
     &:after {
       width: $sidebar-width;
     }
+  }
+
+  @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
+    .feature .release {
+      background-size: 198px 263px !important;
+    }
+    .feature .beta {
+      background-size: 198px 263px !important;
+    }
+    .feature .canary {
+      background-size: 198px 263px !important;
+    }
+  }
+
+  .feature .release {
+    @include hidpi('builds/release', 'png');
+    width: 198px;
+    height: 263px;
+    margin: 0 auto;
+  }
+
+  .feature .beta {
+    @include hidpi('builds/beta', 'png');
+    width: 198px;
+    height: 263px;
+    margin: 0 auto;
+  }
+
+  .feature .canary {
+    @include hidpi('builds/canary', 'png');
+    width: 198px;
+    height: 263px;
+    margin: 0 auto;
   }
 
   .features {
