@@ -17,12 +17,14 @@ In `js/controllers/todos_controller.js` implement the matching properties and a 
 ```javascript
 // ... additional lines truncated for brevity ...
 actions: {
+  // ... additional lines truncated for brevity ...
   clearCompleted: function () {
     var completed = this.filterBy('isCompleted', true);
     completed.invoke('deleteRecord');
     completed.invoke('save');
   }
 },
+// ... additional lines truncated for brevity ...
 hasCompleted: function () {
   return this.get('completed') > 0;
 }.property('completed'),
