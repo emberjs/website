@@ -14,9 +14,9 @@ Now, when the user visits `/about`, Ember.js will render the `about`
 template. Visiting `/favs` will render the `favorites` template.
 
 <aside>
-**Heads up!** You get a few routes for free: the `ApplicationRoute`, the `IndexRoute`
-(corresponding to the `/` path), and the `LoadingRoute` (useful for
-AJAX requests). [See below](#toc_initial-routes) for more details.
+**Heads up!** You get a few routes for free: the `ApplicationRoute` and
+the `IndexRoute` (corresponding to the `/` path).
+[See below](#toc_initial-routes) for more details.
 </aside>
 
 Note that you can leave off the path if it is the same as the route
@@ -69,7 +69,7 @@ Now that you've set `title`, you can use it in the template:
 (If you don't explicitly define an `App.IndexController`, Ember.js will
 automatically generate one for you.)
 
-Ember.js automatically figures out the names of routes and controllers based on
+Ember.js automatically figures out the names of the routes and controllers based on
 the name you pass to `this.route`.
 
 <table>
