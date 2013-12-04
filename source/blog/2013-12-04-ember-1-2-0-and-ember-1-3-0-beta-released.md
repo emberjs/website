@@ -53,7 +53,7 @@ In the non-block form, the first argument is the text to wrap in an
 #### sortBy
 
 All objects that implement the `Ember.Enumerable` protocol now have a
-`sortyBy` method that sorts the enumerable based on a property of each
+`sortBy` method that sorts the enumerable based on a property of each
 ot the members.
 
 For an example, see [this JSBin](http://emberjs.jsbin.com/OFozANOz/1/).
