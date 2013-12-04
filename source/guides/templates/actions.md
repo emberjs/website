@@ -75,6 +75,24 @@ App.PostRoute = Ember.Route.extend({
 As you can see in this example, the action handlers are called such
 that when executed, `this` is the route, not the `actions` hash.
 
+To continue bubbling the action, you must return true from the handler:
+
+```js
+App.PostRoute = Ember.Route.extend({
+  actions: {
+    expand: function() {
+      this.controller.set('isExpanded', true);
+    },
+
+    contract: function() {
+      // ...
+      if (actionShouldAlsoBeTriggeredOnParentRoute) {
+        return true;
+    }
+  }
+});
+```
+
 If neither the template's controller nor the currently active route
 implements a handler, the action will continue to bubble to any parent
 routes. Ultimately, if an `ApplicationRoute` is defined, it will have an
