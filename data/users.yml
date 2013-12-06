@@ -239,6 +239,8 @@
   image: bondable.png
 - url: https://asknative.com
   image: asknative.png
+- url: http://vijo.inn.ac
+  image: vijo.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
