@@ -276,6 +276,9 @@ Cookbook:
   - title: "Using Modal Dialogs"
     url: "cookbook/user_interface_and_interaction/using_modal_dialogs"
     skip_sidebar_item: true
+  - title: "Resetting scroll on route changes"
+    url: "cookbook/user_interface_and_interaction/resetting_scroll_on_route_changes"
+    skip_sidebar_item: true
   # - title: "Converting Strings to Currency With Accounting.js"
   #   url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
   #   skip_sidebar_item: true
