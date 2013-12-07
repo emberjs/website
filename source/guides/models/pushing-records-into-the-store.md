@@ -39,9 +39,7 @@ App.Album = DS.Model.extend({
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
-    var store = this.get('store'); 
-
-    store.push('album', {
+    this.store.push('album', {
       id: 1,
       title: "Fewer Moving Parts",
       artist: "David Bazan",

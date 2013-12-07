@@ -211,7 +211,7 @@ route handler might look like this:
 ```js
 App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return this.get('store').find('posts');
+    return this.store.find('posts');
   }
 });
 ```
@@ -237,7 +237,7 @@ App.Router.map(function() {
 
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return this.get('store').find('post', params.post_id);
+    return this.store.find('post', params.post_id);
   }
 });
 ```
@@ -248,7 +248,7 @@ default behavior.
 For example, if the dynamic segment is `:post_id`, Ember.js is smart
 enough to know that it should use the model `App.Post` (with the ID
 provided in the URL). Specifically, unless you override `model`, the route will
-return `this.get('store').find('post', params.post_id)` automatically.
+return `this.store.find('post', params.post_id)` automatically.
 
 Not coincidentally, this is exactly what Ember Data expects. So if you
 use the Ember router with Ember Data, your dynamic segments will work
