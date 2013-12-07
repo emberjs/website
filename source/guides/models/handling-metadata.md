@@ -9,7 +9,7 @@ this.get("store").findQuery("post", {
 });
 ```
 
-To get different *pages* of data, you'd simply change your offset in increments of 100. So far, so good. But how do you know how many pages of data you have? Your server would need to return the total number of records as a piece of metadata.
+To get different *pages* of data, you'd simply change your offset in increments of 10. So far, so good. But how do you know how many pages of data you have? Your server would need to return the total number of records as a piece of metadata.
 
 By default, Ember Data's JSON deserializer looks for a `meta` key:
 
@@ -46,7 +46,7 @@ You can also customize metadata extraction by overriding the `extractMeta` metho
   "post": [
     // ...
   ],
-  "total": 10
+  "total": 100
 }
 ```
 
