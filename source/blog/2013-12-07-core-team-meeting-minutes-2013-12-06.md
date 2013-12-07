@@ -38,7 +38,7 @@ Resolutions:
 
 Resolutions:
   
-  * @kselden will come a bit early to the face to face to get mind-dumped. @machty
+  * @krisselden will come a bit early to the face to face to get mind-dumped. @machty
     is already familiar with writing Handlebars runtime compatible template languages
     from his work on [Emblem.js](http://emblemjs.com/) so can also help get this
     over the last few hurdles.
