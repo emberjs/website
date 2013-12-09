@@ -69,7 +69,7 @@ For example, we might want to find an `App.Person` model with the ID of
 ```js
 App.IndexRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('person', 1)
+    return this.store.find('person', 1);
   }
 });
 ```
