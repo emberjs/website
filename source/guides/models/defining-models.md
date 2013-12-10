@@ -91,6 +91,28 @@ The default adapter supports attribute types of `string`,
 attribute types, and new types can be registered as transforms. See the
 [documentation section on the REST Adapter](/guides/models/the-rest-adapter).
 
+#### Options
+`DS.attr` takes an optional hash as a second parameter, current options are:
+
+- `defaultValue`: Pass a string or a function to be called to set the
+                  attribute to a default value if none is supplied.
+
+  Example
+
+  ```JavaScript
+  var attr = DS.attr;
+
+  App.User = DS.Model.extend({
+      username: attr('string'),
+      email: attr('string'),
+      verified: attr('boolean', {defaultValue: false}),
+      createdAt: DS.attr('string', {
+          defaultValue: function() { return new Date(); }
+      }
+  });
+  ```
+
+
 ### Defining Relationships
 
 Ember Data includes several built-in relationship types to help you
