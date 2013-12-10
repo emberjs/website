@@ -333,6 +333,9 @@ Cookbook:
   - title: "Setting Multiple Properties At Once"
     url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
     skip_sidebar_item: true
+  - title: "Continuous Redrawing of Views"
+    url: "cookbook/working_with_objects/continuous_redrawing_of_views"
+    skip_sidebar_item: true
   # - title: "Continuous Redrawing of Views"
   #   url: "cookbook/working_with_objects/continuous_redrawing_of_views"
   #   skip_sidebar_item: true
