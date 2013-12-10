@@ -28,6 +28,8 @@ Here are all of the available recipes:
 
 1. [Creating Reusable Social Share Buttons](/guides/cookbook/helpers_and_components/creating_reusable_social_share_buttons)
 
+2. [A Spinning Button for Asynchronous Actions](/guides/cookbook/helpers_and_components/spin_button_for_asynchronous_actions)
+
 ### Working with Objects
 
 1. [Incrementing Or Decrementing A Property](/guides/cookbook/working_with_objects/incrementing_or_decrementing_a_property)
