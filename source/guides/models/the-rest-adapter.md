@@ -84,16 +84,15 @@ be nested inside a property called `person`:
 ```js
 {
   "person": {
-    "first_name": "Jeff",
-    "last_name": "Atwood"
+    "firstName": "Jeff",
+    "lastName": "Atwood"
   }
 }
 ```
 
-#### Underscored Attribute Names
+#### Attribute Names
 
-Attribute names should be the underscored version of the attribute name
-in your Ember Data models. For example, if you have a model like this:
+Attribute names should be  camelized.  For example, if you have a model like this:
 
 ```js
 App.Person = DS.Model.extend({
@@ -109,9 +108,9 @@ The JSON returned from your server should look like this:
 ```js
 {
   "person": {
-    "first_name": "Barack",
-    "last_name": "Obama",
-    "is_person_of_the_year": true
+    "firstName": "Barack",
+    "lastName": "Obama",
+    "isPersonOfTheYear": true
   }
 }
 ```
@@ -136,7 +135,7 @@ have a model with a `hasMany` relationship:
 
 ```js
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('App.Comment')
+  comments: DS.hasMany('App.Comment', {async: true})
 });
 ```
 
@@ -145,7 +144,7 @@ The JSON should encode the relationship as an array of IDs:
 ```js
 {
   "post": {
-    "comment_ids": [1, 2, 3]
+    "commentIds": [1, 2, 3]
   }
 }
 ```
@@ -154,8 +153,8 @@ The JSON should encode the relationship as an array of IDs:
 will send a `GET` request to `/comments?ids[]=1&ids[]=2&ids[]=3`.
 
 Any `belongsTo` relationships in the JSON representation should be the
-underscored version of the Ember Data model's name, with the string
-`_id` appended. For example, if you have a model:
+camelized version of the Ember Data model's name, with the string
+`Id` appended. For example, if you have a model:
 
 ```js
 App.Comment = DS.Model.extend({
@@ -168,7 +167,7 @@ The JSON should encode the relationship as an ID to another record:
 ```js
 {
   "comment": {
-    "post_id": 1
+    "postId": 1
   }
 }
 ```
@@ -183,8 +182,8 @@ outside the JSON root, and are represented as an array of hashes:
 {
   "post": {
     "id": 1,
-    "title": "Rails is omakase",
-    "comment_ids": [1, 2, 3]
+    "title": "Node is not omakase",
+    "commentIds": [1, 2, 3]
   },
 
   "comments": [{
