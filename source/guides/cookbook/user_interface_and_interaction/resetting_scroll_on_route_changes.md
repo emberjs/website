@@ -21,7 +21,7 @@ Only if you need do something on the `enter` method you must call `this._super()
 App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
   //I need to do other things with enter
   enter: function() {
-    this._super(); // Call super at the beginning
+    this._super.apply(this, arguments); // Call super at the beginning
     // Your stuff
   }
 });
@@ -29,4 +29,4 @@ App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
 
 #### Example
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/IxERoxoy/2/embed?html,css,js,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/IxERoxoy/4/embed?html,css,js,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
