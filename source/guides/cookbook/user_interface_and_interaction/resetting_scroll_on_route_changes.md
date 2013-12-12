@@ -4,10 +4,10 @@ The page scroller keeps in the same position when you go from one page to anothe
 
 ### Solution
 
-Reopen the `Ember.Route` object and override the `enter`method:
+Add the following mixin to the affected Routes:
 
 ```js
-Ember.Route.reopen({
+App.ResetScroll = Ember.Mixin.create({
   enter: function() {
     this._super();
     window.scrollTo(0,0);
@@ -15,6 +15,18 @@ Ember.Route.reopen({
 });
 ```
 
+Only if you need do something on the `enter` method you must call `this._super()` at the beginning:
+
+```js
+App.IndexRoute = Ember.Route.extend(App.ResetScroll, {
+  //I need to do other things with enter
+  enter: function() {
+    this._super(); // Call super at the beginning
+    // Your stuff
+  }
+});
+```
+
 #### Example
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/IxERoxoy/1/embed?html,css,js,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/IxERoxoy/2/embed?html,css,js,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
