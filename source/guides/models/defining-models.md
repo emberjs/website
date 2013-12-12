@@ -33,7 +33,7 @@ The table below shows how model names map to model classes.
     <td><code>App.Photo</code></td>
   </tr>
   <tr>
-    <td><code>admin-user-profile</code></td>
+    <td><code>adminUserProfile</code></td>
     <td><code>App.AdminUserProfile</code></td>
   </tr>
 </table>
