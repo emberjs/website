@@ -107,12 +107,12 @@ example, an `Order` may have many `LineItems`, and a `LineItem` may
 belong to a particular `Order`.
 
 ```js
-App.LineItem = DS.Model.extend({
-	orders: DS.hasMany('order')
+App.Order = DS.Model.extend({
+  lineItems: DS.hasMany('lineItem')
 });
 
-App.Order = DS.Model.extend({
-  lineItems: DS.belongsTo('lineItem')
+App.LineItem = DS.Model.extend({
+  order: DS.belongsTo('order')
 });
 ```
 
