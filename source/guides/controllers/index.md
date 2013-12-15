@@ -51,12 +51,12 @@ new `isExpanded` property is true.
 <hr>
 
 {{#if isExpanded}}
-  <button {{action toggleProperty 'isExpanded'}}>Hide Body</button>
+  <button {{action 'toggleProperty' 'isExpanded'}}>Hide Body</button>
   <div class='body'>
     {{body}}
   </div>
 {{else}}
-  <button {{action toggleProperty 'isExpanded'}}>Show Body</button>
+  <button {{action 'toggleProperty' 'isExpanded'}}>Show Body</button>
 {{/if}}
 ```
 
