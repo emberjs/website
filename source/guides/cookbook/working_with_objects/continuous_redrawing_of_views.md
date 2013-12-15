@@ -130,7 +130,7 @@ has a few properties to select a component to render, `fullSecond`,
   {{nyan-middle}}
 {{/if}}
 <h3>You&apos;ve nyaned for {{digital_clock seconds}} (h:m:s)</h3>
-{{render comments}}
+{{render 'comments'}}
 ```
 
 A template for a list of comments
