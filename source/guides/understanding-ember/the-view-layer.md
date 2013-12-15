@@ -218,7 +218,7 @@ please use the form below to submit a complaint to the FDA.
 
   {{#if controller.allowComplaints}}
     {{view Ember.TextArea valueBinding="controller.complaint"}}
-    <button {{action submitComplaint}}>Submit</button>
+    <button {{action 'submitComplaint'}}>Submit</button>
   {{/if}}
 {{/view}}
 ```

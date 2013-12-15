@@ -162,7 +162,7 @@ to specify which keys should not be ignored.
 
 ```handlebars
 <script type="text/x-handlebars" data-template-name='a-template'>
-  <div {{action anActionName allowedKeys="alt"}}>
+  <div {{action 'anActionName' allowedKeys="alt"}}>
     click me
   </div>
 </script>
@@ -184,7 +184,7 @@ clicked.
 ```handlebars
 {{#link-to 'post'}}
   Post
-  <button {{action close bubbles=false}}>✗</button>
+  <button {{action 'close' bubbles=false}}>✗</button>
 {{/link-to}}
 ```
 

@@ -355,8 +355,8 @@ Let's create the `_form` template in `app/assets/javascripts/templates/photos/_f
 <label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.model.title"}}
 <label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.model.url"}}
 
-<button {{action save target="Photoblog.stateManager"}}>Save</button>
-<button {{action cancel target="Photoblog.stateManager"}}>Cancel</button>
+<button {{action 'save' target="Photoblog.stateManager"}}>Save</button>
+<button {{action 'cancel' target="Photoblog.stateManager"}}>Cancel</button>
 ```
 
 We create two Ember.TextField views, and we bind the value property (which will be the text in the text field) to that of our controllers' model's title and url objects, respectively. The controller is is the PhotoController, which we created above. Its model will be a photo object.
@@ -457,7 +457,7 @@ Now we define the `save` and `cancel` actions we referenced in our create view t
 Finally, we will add a button to the index template, at the very bottom, which tells our state manager to show the create view.
 
 ```handlebars
-<button {{action showCreate target="Photoblog.stateManager"}}>Add Photo</button>
+<button {{action 'showCreate' target="Photoblog.stateManager"}}>Add Photo</button>
 ```
 
 With all of this in place, ensure your server is running, and reload the index page. You should see a button at the bottom which takes you to our new create view and lets you add photos!
@@ -531,7 +531,7 @@ Ensure that you add a comma to the previous `showCreate`. In this action, we're 
 Lastly, lets add an edit button to each photo on the page. Below the `<img>` tag, add the following button, which targets our state manager's new `showEdit` action.
 
 ```handlebars
-<a href="#" {{action showEdit target="Photoblog.stateManager"}}>Edit Photo</a>
+<a href="#" {{action 'showEdit' target="Photoblog.stateManager"}}>Edit Photo</a>
 ```
 
 Reload the page. There should now be an "Edit Photo" link below each photo that will take you to our new Edit Photo view.

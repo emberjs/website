@@ -137,7 +137,7 @@ A template for a list of comments
 
 ```handlebars
 <input type="text" id="comment" />
-<button {{action add}}>Add Comment</button>
+<button {{action 'add'}}>Add Comment</button>
 <ul>
   {{#each}}
     <li>{{comment}} ({{digital_clock clock.pulse}})</li>

@@ -3,19 +3,19 @@ Use the `{{action}}` helper to attach a handler in your view class to an event t
 To attach an element's `click` event to the `edit()` handler in the current view:
 
 ```handlebars
-<a href="#" {{action edit on="click"}}>Edit</a>
+<a href="#" {{action 'edit' on="click"}}>Edit</a>
 ```
 
 Because the default event is `click`, this could be written more concisely as:
 
 ```handlebars
-<a href="#" {{action edit}}>Edit</a>
+<a href="#" {{action 'edit'}}>Edit</a>
 ```
 
 Although the view containing the `{{action}}` helper will be targeted by default, it is possible to target a different view:
 
 ```handlebars
-<a href="#" {{action edit target="parentView"}}>Edit</a>
+<a href="#" {{action 'edit' target="parentView"}}>Edit</a>
 ```
 
 The action handler can optionally accept a jQuery event object, which will be extended to include `view` and `context` properties. These properties can be useful when targeting a different view with your action. For instance:
