@@ -243,6 +243,8 @@
   image: vijo.png
 - url: http://www.brightin.nl
   image: brightin.png
+- url: http://www.codeschool.com
+  image: codeschool.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
