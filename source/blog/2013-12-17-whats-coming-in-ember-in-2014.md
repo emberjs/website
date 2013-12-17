@@ -408,6 +408,11 @@ app, please keep those questions in `#emberjs`.)
 If there's anything we've forgotten to mention here, please feel free to
 let us know what you'd like to see in the comments below!
 
+## Ember Data
+
+We've got lots of exciting stuff coming in Ember Data. Expect an update
+on our roadmap there in a separate blog post soon.
+
 <img src="/images/blog/2013-12-17-whats-coming-in-ember-in-2014/1.jpg">
 <img src="/images/blog/2013-12-17-whats-coming-in-ember-in-2014/2.jpg">
 <img src="/images/blog/2013-12-17-whats-coming-in-ember-in-2014/3.jpg">
