@@ -53,10 +53,8 @@ def generate_docs
       describe = `git describe --tags --always`.strip
       sha = describe =~ /-g(.+)/ ? $1 : describe
 
-      Dir.chdir("docs") do
-        system("npm install") unless File.exist?('node_modules')
-        # Unfortunately -q doesn't always work so we get output
-        system("./node_modules/.bin/yuidoc -p -q")
+      Bundler.with_clean_env do
+        sh("rake docs")
       end
     end
 
