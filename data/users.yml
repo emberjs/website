@@ -245,6 +245,8 @@
   image: brightin.png
 - url: http://www.codeschool.com
   image: codeschool.png
+- url: http://www.gooddata.com/
+  image: gooddata.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
