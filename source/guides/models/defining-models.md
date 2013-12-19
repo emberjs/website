@@ -173,7 +173,7 @@ that model.
 
 However, sometimes you may have multiple `belongsTo`/`hasMany`s for the
 same type. You can specify which property on the related model is the
-inverse using `DS.attr`'s `inverse` option:
+inverse using `DS.hasMany`'s `inverse` option:
 
 ```javascript
 var belongsTo = DS.belongsTo,
