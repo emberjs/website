@@ -3,21 +3,9 @@ var App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-  this.resource('release', function(){
-    this.route('latest');
-    this.route('daily');
-  });
-
-  this.resource('beta', function(){
-    this.route('latest');
-    this.route('daily');
-  });
-
-  this.resource('canary', function(){
-    this.route('latest');
-    this.route('daily');
-  });
-
+  this.route('release');
+  this.route('beta');
+  this.route('canary');
   this.route('tagged');
 });
 
@@ -243,19 +231,9 @@ App.Project.reopenClass({
   }
 });
 
-App.BetaRoute = Ember.Route.extend({
-  redirect: function() { this.transitionTo('beta.latest'); }
-});
-
 App.BuildCategoryMixin = Ember.Mixin.create({
   renderTemplate: function() {
     this.render('build-list');
-  }
-});
-
-App.BetaLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
-  model: function() {
-    return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
 });
 
@@ -288,18 +266,6 @@ App.ApplicationController = Ember.ObjectController.extend({
   isActiveChannel: function(channel){
     return this.get('currentRouteName').indexOf(channel) !== -1;
   }
-});
-
-App.CategoryLinkMixin = Ember.Mixin.create({
-  channel: null,
-
-  latestLink: function() {
-    return this.get('channel') + ".latest";
-  }.property('channel'),
-
-  dailyLink: function() {
-    return this.get('channel') + ".daily";
-  }.property('channel')
 });
 
 App.ProjectsMixin = Ember.Mixin.create({
@@ -352,72 +318,40 @@ App.ProjectsMixin = Ember.Mixin.create({
 
 });
 
-App.BetaLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
-
-App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
-  model: function() {
-    return App.S3Bucket.create({
-      title: 'Beta Builds',
-      delimiter: '',
-      prefix: 'beta/daily',
-      marker: 'beta/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
-    });
-  }
-});
-
-App.BetaDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
-
-App.CanaryRoute = Ember.Route.extend({
-  redirect: function() { this.transitionTo('canary.latest'); }
-});
-
-App.CanaryLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.CanaryRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Canary Builds', prefix: 'canary/' });
   }
 });
 
-App.CanaryLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'canary' });
+App.CanaryController = Ember.ObjectController.extend(App.ProjectsMixin, { 
+  templateName: 'buildList', 
+  channel: 'canary'
+});
 
-App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.BetaRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
-    return App.S3Bucket.create({
-      title: 'Canary Builds',
-      delimiter: '',
-      prefix: 'canary/daily',
-      marker: 'canary/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
-    });
+    return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
 });
 
-App.CanaryDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'canary' });
-
-App.ReleaseRoute = Ember.Route.extend({
-  redirect: function() { this.transitionTo('release.latest'); }
+App.BetaController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  templateName: 'buildList',
+  channel: 'beta'
 });
 
-App.ReleaseLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'release' });
-
-App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.ReleaseRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Release Builds', prefix: 'release/'});
   }
 });
 
-App.ReleaseDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'release' });
-
-App.ReleaseDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
-  model: function() {
-    return App.S3Bucket.create({
-      title: 'Release Builds',
-      delimiter: '',
-      prefix: 'release/daily',
-      marker: 'release/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
-    });
-  }
+App.ReleaseController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  templateName: 'buildList',
+  channel: 'release'
 });
 
-App.TaggedRoute = Ember.Route.extend({
+App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
@@ -428,7 +362,9 @@ App.TaggedRoute = Ember.Route.extend({
   }
 });
 
-App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {channel: 'tagged'});
+App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  channel: 'tagged'
+});
 /*
  * Handlebars Helpers
  */
