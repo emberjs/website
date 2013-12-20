@@ -45,8 +45,6 @@ module("Integration Tests", {
   - Clicks an element and triggers any actions triggered by the element's `click` event and returns a promise that fulfills when all resulting async behavior is complete.
 * `keyEvent(selector, type, keyCode)`
   - Simulates a key event type, e.g. `keypress`, `keydown`, `keyup` with the desired keyCode on element found by the selector.
-* `wait()`
-  - Returns a promise that fulfills when all async behavior is complete.
 
 ### Writing tests
 
@@ -56,39 +54,23 @@ Examples:
 
 ```javascript
 test("root lists first page of posts", function(){
-  visit("/").then(function() {
+  visit("/");
+  andThen(function() {
     equal(find(".post").length, 5, "The first page should have 5 posts");
     // Assuming we know that 5 posts display per page and that there are more than 5 posts
   });
 });
 ```
 
-The helpers that perform actions return a promise that fulfills when all asynchronous behavior has completed.
+The helpers that perform actions use a global promise object and automatically chain onto that promise object if it exists. This allows you write your tests without worrying about async behaviour your helper might trigger.
 
 ```javascript
 test("creating a post displays the new post", function(){
-  visit("/posts/new").then(function() {
-    return fillIn(".post-title", "A new post");
-  }).then(function() {
-    return fillIn(".post-author", "John Doe");
-  }).then(function() {
-    return click("button.create");
-  }).then(function() {
-    ok(find("h1:contains('A new post')").length, "The post's title should display");
-    ok(find("a[rel=author]:contains('John Doe')").length, "A link to the author should display");
-  });
-});
-```
-
-For convenience, helpers can be chained:
-
-```javascript
-test("creating a post displays the new post", function() {
-  visit("/posts/new")
-  .fillIn(".post-title", "A new post")
-  .fillIn(".post-author", "John Doe")
-  .click("button.create")
-  .then(function() {
+  visit("/posts/new");
+  fillIn(".post-title", "A new post");
+  fillIn(".post-author", "John Doe");
+  click("button.create");
+  andThen(function() {
     ok(find("h1:contains('A new post')").length, "The post's title should display");
     ok(find("a[rel=author]:contains('John Doe')").length, "A link to the author should display");
   });
@@ -96,18 +78,18 @@ test("creating a post displays the new post", function() {
 ```
 
 ### Creating your own test helpers
-`Ember.Test.registerHelper` is used to register a test helper that will be injected when `App.injectTestHelpers` is called.
-The helper method will always be called with the current Application as the first parameter. Helpers that cause asynchronous behavior should return `wait()` to return a promise that will resolve when that asynchronous behavior is complete.
+`Ember.Test.registerHelper` and `Ember.test.registerAsyncHelper` are used to register test helpers that will be injected when `App.injectTestHelpers` is called. The difference between `Ember.Test.registerHelper` and `Ember.test.registerAsyncHelper` is that the latter will not run until any previous async helper has completed and any subsequent async helper will wait for it to finish before running.
+
+The helper method will always be called with the current Application as the first parameter. 
 
 For example:
 
 ```javascript
-Ember.Test.registerHelper('dblclick', function(app, selector, context) {
+Ember.Test.registerAyncHelper('dblclick', function(app, selector, context) {
   var $el = findWithAssert(selector, context);
   Ember.run(function() {
     $el.dblclick();
   });
-  return wait();
 });
 ```
 
