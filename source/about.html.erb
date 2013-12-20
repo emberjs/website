@@ -58,7 +58,7 @@ title: "About"
   <script type="text/x-handlebars" id="application">
       <div class="example-tabs">
         {{#each itemController="tabItem"}}
-          <a {{action "selectTab" this}} {{bindAttr class="isSelected:active"}} href="#">{{unbound name}}</a>
+          <a {{action "selectTab" this}} {{bind-attr class="isSelected:active"}} href="#">{{unbound name}}</a>
         {{/each}}
         <span class="tabs-footer"></span>
       </div>
