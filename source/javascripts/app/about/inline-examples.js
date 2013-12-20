@@ -88,8 +88,10 @@ function generateViewerApp($elem, files) {
   });
 
   App.ApplicationController = Ember.ArrayController.extend({
-    selectTab: function(tab) {
-      this.set('selectedTab', tab);
+    actions: {
+      selectTab: function(tab) {
+        this.set('selectedTab', tab);
+      }
     }
   });
 
