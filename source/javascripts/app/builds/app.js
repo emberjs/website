@@ -21,6 +21,17 @@ App.Router.map(function() {
   this.route('tagged');
 });
 
+App.Router.reopen({
+  notifyGoogleAnalytics: function() {
+    var url = this.get('url');
+
+    // Add a slash if neccesary
+    if (!/^\//.test(url)){ url = '/' + url; }
+
+    _gaq.push(['_trackPageview', '/builds' + url]);
+  }.on('didTransition')
+});
+
 App.CopyClipboardComponent = Ember.Component.extend({
   tagName: 'span',
   hasFlash: ZeroClipboard.detectFlashSupport(),
