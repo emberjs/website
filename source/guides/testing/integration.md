@@ -54,7 +54,7 @@ Examples:
 
 ```javascript
 test("root lists first page of posts", function(){
-  visit("/")
+  visit("/");
   andThen(function() {
     equal(find(".post").length, 5, "The first page should have 5 posts");
     // Assuming we know that 5 posts display per page and that there are more than 5 posts
@@ -66,7 +66,7 @@ The helpers that perform actions use a global promise object and automatically c
 
 ```javascript
 test("creating a post displays the new post", function(){
-  visit("/posts/new")
+  visit("/posts/new");
   fillIn(".post-title", "A new post");
   fillIn(".post-author", "John Doe");
   click("button.create");
