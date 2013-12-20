@@ -1,5 +1,5 @@
-//= require ../../vendor/handlebars-1.0
-//= require ../../vendor/ember-1.0-rc-8
+//= require ../../vendor/handlebars-1.1.2
+//= require ../../vendor/ember-1.2
 //= require ../../vendor/moment
 //= require ../../vendor/highlight
 //= require ../../vendor/md5
