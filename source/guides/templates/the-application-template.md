@@ -33,7 +33,7 @@ If you are keeping your templates in HTML, create a `<script>` tag
 without a template name. Ember will use the template without a name as the application template and it will automatically be compiled and appended
 to the screen.
 
-```html
+```handlebars
 <script type="text/x-handlebars">
   <div>
     {{outlet}}
