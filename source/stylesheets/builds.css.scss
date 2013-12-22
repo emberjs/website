@@ -22,8 +22,36 @@
     .feature .canary {
       background-size: 198px 263px !important;
     }
+
+    .beta-image {
+      background-size: 112px 150px !important;
+    }
+    .release-image {
+      background-size: 112px 150px !important;
+    }
+  }
+  .beta-image {
+    @include hidpi('builds/beta', 'png');
+    width: 112px;
+    height: 150px;
+    margin: 0 auto;
+    float: left;
   }
 
+  .release-image {
+    @include hidpi('builds/release', 'png');
+    width: 112px;
+    height: 150px;
+    margin: 0 auto;
+    float: right;
+  }
+
+  .release-progress {
+  }
+
+  .clear {
+    clear: both;
+  }
   .feature .release {
     @include hidpi('builds/release', 'png');
     width: 198px;
@@ -86,6 +114,21 @@
         }
       }
     }
+  }
+
+  .progress-circle {
+    width: 20px;
+    height: 20px;
+    @include border-radius(10px);
+    background: transparent;
+    border:1px solid #C4C4C4;
+    margin-top: 75px;
+    margin-right: 70px;
+    float: left;
+  }
+
+  .progress-circle.completed {
+    background: rgb(248, 176, 85);
   }
 
   .project-name {

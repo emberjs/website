@@ -195,7 +195,13 @@ App.Project.reopenClass({
       projectRepo: 'emberjs/ember.js',
       lastRelease: "1.3.0-beta.3",
       futureVersion: "1.3.0-beta.4",
+      finalVersion: '1.3.0',
       channel: "beta",
+      beta1Completed: true,
+      beta2Completed: true,
+      beta3Completed: true,
+      cycleStartDate: '2013-11-25',
+      cycleEstimatedFinishDate: '2014-01-06',
       date: "2013-12-20",
       changelogPath: "CHANGELOG.md"
     }, {
@@ -286,6 +292,7 @@ App.ProjectsMixin = Ember.Mixin.create({
         self = this;
 
     projects.forEach(function(project){
+      project.isEmber = project.projectName == 'Ember';
       project.files = bucket.filterFiles(project.projectFilter);
       project.description = self.description(project);
       project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
