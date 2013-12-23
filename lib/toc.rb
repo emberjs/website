@@ -121,6 +121,8 @@ module TOC
     end
 
     def current_guide
+      return unless current_section
+
       if guide_slug == '' && section_slug == 'index.html'
         current_section[1][0]
       else
