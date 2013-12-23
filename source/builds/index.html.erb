@@ -81,11 +81,13 @@ title: Builds
         The {{finalVersion}} beta cycle began on {{cycleStartDate}} with a final release planned for {{cycleEstimatedFinishDate}}.
       </p>
       <div class="beta-image" title="Beta"></div>
-      <div {{bind-attr class=":progress-circle beta1Completed:completed"}}></div>
-      <div {{bind-attr class=":progress-circle beta2Completed:completed"}}></div>
-      <div {{bind-attr class=":progress-circle beta3Completed:completed"}}></div>
-      <div {{bind-attr class=":progress-circle beta4Completed:completed"}}></div>
-      <div {{bind-attr class=":progress-circle beta5Completed:completed"}}></div>
+      <div class="float-left-container">
+        <div {{bind-attr class=":progress-circle beta1Completed:completed"}}></div>
+        <div {{bind-attr class=":progress-circle beta2Completed:completed"}}></div>
+        <div {{bind-attr class=":progress-circle beta3Completed:completed"}}></div>
+        <div {{bind-attr class=":progress-circle beta4Completed:completed"}}></div>
+        <div {{bind-attr class=":progress-circle beta5Completed:completed"}}></div>
+      </div>
       <div class="release-image" title="Release"></div>
       <div class="clear"></div>
     </div>

@@ -12,6 +12,10 @@
     }
   }
 
+  .float-left-container {
+    float: left;
+  }
+
   @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
     .feature .release {
       background-size: 198px 263px !important;
@@ -22,36 +26,28 @@
     .feature .canary {
       background-size: 198px 263px !important;
     }
-
-    .beta-image {
-      background-size: 112px 150px !important;
-    }
-    .release-image {
-      background-size: 112px 150px !important;
-    }
   }
+
   .beta-image {
     @include hidpi('builds/beta', 'png');
-    width: 112px;
-    height: 150px;
+    width: 198px;
+    height: 263px;
     margin: 0 auto;
     float: left;
   }
 
   .release-image {
     @include hidpi('builds/release', 'png');
-    width: 112px;
-    height: 150px;
+    width: 198px;
+    height: 263px;
     margin: 0 auto;
     float: right;
-  }
-
-  .release-progress {
   }
 
   .clear {
     clear: both;
   }
+
   .feature .release {
     @include hidpi('builds/release', 'png');
     width: 198px;
@@ -117,13 +113,14 @@
   }
 
   .progress-circle {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     @include border-radius(10px);
     background: transparent;
     border:1px solid #C4C4C4;
-    margin-top: 75px;
-    margin-right: 70px;
+    margin-top: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
     float: left;
   }
 
