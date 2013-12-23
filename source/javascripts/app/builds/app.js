@@ -292,7 +292,7 @@ App.ProjectsMixin = Ember.Mixin.create({
         self = this;
 
     projects.forEach(function(project){
-      project.isEmber = project.projectName == 'Ember';
+      project.isEmberBeta = project.projectName == 'Ember' && project.channel == 'beta';
       project.files = bucket.filterFiles(project.projectFilter);
       project.description = self.description(project);
       project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
