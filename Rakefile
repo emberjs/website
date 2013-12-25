@@ -111,7 +111,10 @@ task :deploy do |t, args|
     git_initialize("emberjs.github.com")
     git_update
 
-    build
+    unless build
+      puts "The build failed, stopping deploy. Please fix build errors before re-deploying."
+      exit 1
+    end
 
     # This screws up the build and isn't necessary
     # rm_r "source/examples"
