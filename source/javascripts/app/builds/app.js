@@ -197,12 +197,9 @@ App.Project.reopenClass({
       futureVersion: "1.3.0-beta.4",
       finalVersion: '1.3.0',
       channel: "beta",
-      beta1Completed: true,
-      beta2Completed: true,
-      beta3Completed: true,
-      cycleStartDate: '2013-11-25',
       cycleEstimatedFinishDate: '2014-01-06',
       date: "2013-12-20",
+      nextDate: "2013-12-27",
       changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember Data",
@@ -244,7 +241,7 @@ App.Project.reopenClass({
     if (!name)
       return allProjects;
     else
-      return allProjects.filterBy('name', name);
+      return allProjects.filterBy('projectName', name);
   }
 });
 
@@ -292,7 +289,25 @@ App.ProjectsMixin = Ember.Mixin.create({
         self = this;
 
     projects.forEach(function(project){
-      project.isEmberBeta = project.projectName == 'Ember' && project.channel == 'beta';
+      if (project.channel === 'beta'){
+        project.isEmberBeta = project.projectName === 'Ember';
+
+        [1,2,3,4,5].forEach(function(increment){
+          var versionParts = project.lastRelease.split('.');
+          var currentBetaNumber = parseInt(versionParts[versionParts.length - 1], 10);
+          project['beta' + increment + 'Completed'] = increment <= currentBetaNumber;
+          project['isBeta' + increment] = increment === currentBetaNumber;
+        });
+
+        var release = App.Project.find('release', project.projectName)[0];
+
+        // no releases exist for ember-data (yet)
+        if (release) {
+          project.lastStableVersion = release.lastRelease;
+          project.lastStableDate = release.date;
+        }
+      }
+
       project.files = bucket.filterFiles(project.projectFilter);
       project.description = self.description(project);
       project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
@@ -390,8 +405,17 @@ Ember.Handlebars.helper('format-bytes', function(bytes){
   return (bytes / 1024).toFixed(2) + ' KB';
 });
 
-Ember.Handlebars.helper('format-date-time', function(date) {
-  return moment(date).fromNow();
+Ember.Handlebars.helper('format-date-time', function(date, format, options) {
+  if (!options) {
+    options = format;
+    format = null;
+  }
+
+  if (format){
+    return moment(date).format(format);
+  } else {
+    return moment(date).fromNow();
+  }
 });
 
 Ember.Handlebars.helper('isHiDPIScreen', function() {

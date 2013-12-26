@@ -28,24 +28,73 @@
     }
   }
 
-  .beta-image {
-    @include hidpi('builds/beta', 'png');
-    width: 198px;
-    height: 263px;
-    margin: 0 auto;
+  .left {
     float: left;
   }
 
-  .release-image {
-    @include hidpi('builds/release', 'png');
-    width: 198px;
-    height: 263px;
-    margin: 0 auto;
+  .right {
     float: right;
+  }
+
+  .tiny-beta-image {
+    @include hidpi('builds/tiny_beta', 'png');
+    width: 48px;
+    height: 64px;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .small-release-image {
+    @include hidpi('builds/small_release', 'png');
+    width: 99px;
+    height: 132px;
+    margin: 0 auto;
+  }
+
+  .release-progress {
+    padding-top: 40px;
+    display: table;
+  }
+
+  .beta-version {
+    margin-top: 5px;
+    text-align: center;
+    font-size: smaller;
+    color: rgb(138,89,52);
+  }
+
+  .beta-current-version {
+    margin-top: -5px;
+    color: rgb(178,133,91);
+    text-align: center;
+    font-size: x-small;
+  }
+
+  .release-version {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .release-date {
+    margin-top: -2px;
+    text-align: center;
+    font-size: smaller;
+  }
+
+  .future-image {
+    @include opacity(0.35);
   }
 
   .clear {
     clear: both;
+  }
+
+  .release-cycle-title {
+    text-align: center;
+    font-weight: bolder;
   }
 
   .feature .release {
@@ -112,24 +161,8 @@
     }
   }
 
-  .progress-circle {
-    width: 15px;
-    height: 15px;
-    @include border-radius(10px);
-    background: transparent;
-    border:1px solid #C4C4C4;
-    margin-top: 50%;
-    margin-right: 20px;
-    margin-left: 20px;
-    float: left;
-  }
-
-  .progress-circle.completed {
-    background: rgb(248, 176, 85);
-  }
-
   .project-name {
-    margin-top: 1.5em;
+    margin-top: 0.5em;
     float: left;
   }
 

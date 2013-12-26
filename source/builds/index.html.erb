@@ -74,21 +74,69 @@ title: Builds
 </script>
 
 <script type="text/x-handlebars" data-template-name="_files_table">
-  <h2 class="project-name">{{projectName}}</h2>
+  <h2 class="project-name">{{projectName}} {{channel}} Builds</h2>
   {{#if isEmberBeta}}
     <div class="release-progress clear">
-      <p>
-        The {{finalVersion}} beta cycle began on {{cycleStartDate}} with a final release planned for {{cycleEstimatedFinishDate}}.
-      </p>
-      <div class="beta-image" title="Beta"></div>
-      <div class="float-left-container">
-        <div {{bind-attr class=":progress-circle beta1Completed:completed"}}></div>
-        <div {{bind-attr class=":progress-circle beta2Completed:completed"}}></div>
-        <div {{bind-attr class=":progress-circle beta3Completed:completed"}}></div>
-        <div {{bind-attr class=":progress-circle beta4Completed:completed"}}></div>
-        <div {{bind-attr class=":progress-circle beta5Completed:completed"}}></div>
+      <div class="left">
+        <div class="small-release-image" {{bind-attr title=lastStableVersion}}></div>
+        <div class="release-version">{{lastStableVersion}}</div>
+        <div class="release-date">Released {{format-date-time lastStableDate "MMM Do"}}</div>
       </div>
-      <div class="release-image" title="Release"></div>
+      <div class="float-left-container">
+        <div class="release-cycle-title">The path to {{finalVersion}}...</div>
+        <div {{bind-attr class=":left beta1Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 1</div>
+          {{#if isBeta1}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta2Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 2</div>
+          {{#if isBeta2}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta1}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta3Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 3</div>
+          {{#if isBeta3}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta2}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta4Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 4</div>
+          {{#if isBeta4}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta3}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta5Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 5</div>
+          {{#if isBeta5}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta4}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="right future-image">
+        <div class="small-release-image" {{bind-attr title=finalVersion}}></div>
+        <div class="release-version">{{finalVersion}}</div>
+        <div class="release-date">Coming {{format-date-time cycleEstimatedFinishDate "MMM Do"}}</div>
+      </div>
       <div class="clear"></div>
     </div>
   {{/if}}
@@ -130,8 +178,6 @@ title: Builds
 </script>
 
 <script type="text/x-handlebars" data-template-name="build-list">
-  <h2>{{title}}</h2>
-
   {{partial 'projectListing'}}
 </script>
 
