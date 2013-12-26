@@ -249,6 +249,8 @@
   image: gooddata.png
 - url: http://www.cruxandco.com/
   image: crux.png
+- url: https://huboard.com
+  image: huboard.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
