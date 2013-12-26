@@ -23,9 +23,9 @@ For example a button to save data could be as
 ```
 
 ```javascript
-window.SpinEg = Ember.Application.create({});
+var App = Ember.Application.create({});
 
-SpinEg.ApplicationController = Ember.Controller.extend({
+App.ApplicationController = Ember.Controller.extend({
     isLoading:false,
     buttonText:"Submit",
     actions:{
@@ -40,7 +40,7 @@ SpinEg.ApplicationController = Ember.Controller.extend({
     }
 });
 
-SpinEg.SpinButtonComponent = Ember.Component.extend({
+App.SpinButtonComponent = Ember.Component.extend({
 	classNames: ['button'],
     buttonText:"Save",
     actions:{
@@ -65,4 +65,4 @@ For safety and sanity of the component, one can add a settimeout of however much
 Also note that the component does not let multiple clicks get in the way of loading status.
 
 #### Example
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/EXaxEfE/6/embed?html,css,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/EXaxEfE/8">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
