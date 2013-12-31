@@ -51,6 +51,10 @@
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
 
+"Getting Ember":
+  - title: "Getting Ember"
+    url: "getting-ember"
+
 Concepts:
   - title: "Core Concepts"
     url: "concepts/core-concepts"

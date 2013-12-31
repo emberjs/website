@@ -19,6 +19,8 @@ For this example, all of these resources should be stored in the folder `js/libs
 
 Reload your web browser to ensure that all files have been referenced correctly and no errors occur.
 
+If you are using a package manager, such as [bower](http://bower.io), make sure to checkout the [Getting Ember](/guides/getting-ember) guide for info on other ways to get Ember.js.
+
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/ijefig/2/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
  
