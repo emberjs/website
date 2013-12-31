@@ -365,6 +365,8 @@ Understanding Ember.js:
 Contributing to Ember.js:
   - title: "Adding New Features"
     url: "contributing/adding-new-features"
+  - title: "Repositories"
+    url: "contributing/repositories"
 
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
