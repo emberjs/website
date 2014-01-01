@@ -85,7 +85,7 @@ The helper method will always be called with the current Application as the firs
 For example:
 
 ```javascript
-Ember.Test.registerAyncHelper('dblclick', function(app, selector, context) {
+Ember.Test.registerAsyncHelper('dblclick', function(app, selector, context) {
   var $el = findWithAssert(selector, context);
   Ember.run(function() {
     $el.dblclick();
