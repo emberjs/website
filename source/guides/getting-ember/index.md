@@ -18,9 +18,10 @@ Adding Ember to your application with Bower is easy simply run `bower install em
 
 ```json
 {
+	"name": "your-app",
 	"dependencies": {
 		"ember": "~1.2",
-		"ember-data" "~1.0.0-beta.4"
+		"ember-data": "~1.0.0-beta.4"
 	}
 }
 
