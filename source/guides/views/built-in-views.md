@@ -27,8 +27,8 @@ App.MyText = Ember.TextField.extend({
 ```handlebars
 {{view Ember.Select viewName="select"
                     content=people
-                    optionLabelPath="model.fullName"
-                    optionValuePath="model.id"
+                    optionLabelPath="content.fullName"
+                    optionValuePath="content.id"
                     prompt="Pick a person:"
                     selection=selectedPerson}}
 ```
