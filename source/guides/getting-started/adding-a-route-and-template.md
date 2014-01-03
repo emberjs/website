@@ -37,11 +37,6 @@ Next, update your `index.html` to wrap the inner contents of `<body>` in a Handl
   
   </script>
 
-  <script src="js/libs/jquery.min.js"></script>
-  <script src="js/libs/handlebars.js"></script>
-  <script src="js/libs/ember.js"></script>
-  <script src="js/libs/ember-data.js"></script>
-  
   <script src="js/application.js"></script>
   <script src="js/router.js"></script>
 <!-- ... additional lines truncated for brevity ... -->
