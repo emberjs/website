@@ -60,7 +60,7 @@ actions: {
         this.get('model').save();
       }
    }
-}
+},
 // ... additional lines truncated for brevity ...
 ```
 
