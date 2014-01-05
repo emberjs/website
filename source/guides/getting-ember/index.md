@@ -29,7 +29,7 @@ Adding Ember to your application with Bower is easy simply run `bower install em
 
 ##RubyGems
 
-If you application uses a Ruby based build system you can use the [ember-source](http://rubygems.org/gems/ember-source) and [ember-data-source](http://rubygems.org/gems/ember-data-source) RubyGems to access ember and ember data sources from Ruby.
+If your application uses a Ruby based build system you can use the [ember-source](http://rubygems.org/gems/ember-source) and [ember-data-source](http://rubygems.org/gems/ember-data-source) RubyGems to access ember and ember data sources from Ruby.
 
 If your application is built in rails the [ember-rails](http://rubygems.org/gems/ember-rails) RubyGem makes it easy to integrate Ember into your Ruby on Rails application.
 
