@@ -11,6 +11,8 @@ Ember is made up several libraries. If you wish to add a feature or fix a bug pl
 
 **Ember Website** - Source for [http://www.emberjs.com](http://www.emberjs.com) including these guides.
 
+* [https://github.com/emberjs/website](https://github.com/emberjs/website)
+
 # Libraries Used By Ember
 
 These libraries are part of the Ember.js source, but development of them takes place in a seperate repository.
