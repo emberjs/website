@@ -54,7 +54,7 @@ def generate_docs
       sha = describe =~ /-g(.+)/ ? $1 : describe
 
       Bundler.with_clean_env do
-        sh("rake docs")
+        sh("bundle exec rake docs")
       end
     end
 
