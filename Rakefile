@@ -35,38 +35,34 @@ def ember_data_path
 end
 
 
-def generate_docs
-  projects = {
-    "Ember.js" => { out: "api.yml", path: ember_path },
-    "Ember Data" => { out: "data_api.yml", path: ember_data_path }
-  }
+def generate_docs(output_path, repo_path, sha = nil)
+  print "Generating docs data from #{repo_path}... "
 
-  projects.each do |name, options|
-    path = options[:path]
-
-    print "Generating #{name} docs data from #{path}... "
-
-    sha = nil
-
-    Dir.chdir(path) do
-      # returns either `tag` or `tag-numcommits-gSHA`
+  Dir.chdir(repo_path) do
+    # returns either `tag` or `tag-numcommits-gSHA`
+    unless sha
       describe = `git describe --tags --always`.strip
       sha = describe =~ /-g(.+)/ ? $1 : describe
+    end
 
-      Bundler.with_clean_env do
-        sh("bundle exec rake docs")
+    Bundler.with_clean_env do
+      unless system('bundle check')
+        puts "You are missing dependencies for #{repo_path}. Attempting to install now."
+        sh('bundle install')
       end
-    end
 
-    # JSON is valid YAML
-    data = YAML.load_file(File.join(path, "docs/build/data.json"))
-    data["project"]["sha"] = sha
-    File.open(File.expand_path("../data/#{options[:out]}", __FILE__), "w") do |f|
-      YAML.dump(data, f)
+      sh("bundle exec rake docs")
     end
-
-    puts "Built #{name} with SHA #{sha}"
   end
+
+  # JSON is valid YAML
+  data = YAML.load_file(File.join(repo_path, "docs/build/data.json"))
+  data["project"]["sha"] = sha
+  File.open(File.expand_path("../data/#{output_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
+
+  puts "Built #{repo_path} with SHA #{sha}"
 end
 
 def build
@@ -75,7 +71,8 @@ end
 
 desc "Generate API Docs"
 task :generate_docs do
-  generate_docs
+  generate_docs 'api.yml', ember_path, ENV['EMBER_SHA']
+  generate_docs 'data_api.yml', ember_data_path, ENV['EMBER_DATA_SHA']
 end
 
 desc "Build the website"
