@@ -39,14 +39,12 @@ The `{{link-to}}` helper takes:
 
 * The name of a route. In this example, it would be `index`, `photos`, or
   `photos.edit`.
-* At most one model* for each [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments).
-  By default, Ember.js will replace each segment with the
-  value of the corresponding object's `id` property.
+* At most one model for each [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments).
+  By default, Ember.js will replace each segment with the value of the corresponding object's `id` property.
+  If there is no model to pass to the helper, you can provide an explicit identifier value instead.
+  The value will be filled into the [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments)
+  of the route, and will make sure that the `model` hook is triggered.
 * An optional title which will be bound to the `a` title attribute
-
-*If there is no model to pass to the helper, you can provide an explicit identifier value instead.
-The value will be filled into the [dynamic segment](/guides/routing/defining-your-routes/#toc_dynamic-segments)
-of the route, and will make sure that the `model` hook is triggered.
 
 ```handlebars
 {{! photos.handlebars }}
