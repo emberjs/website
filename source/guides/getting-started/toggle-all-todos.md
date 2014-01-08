@@ -6,7 +6,7 @@ To implement this behavior update the `allAreDone` property in `js/controllers/t
 // ... additional lines truncated for brevity ...
 allAreDone: function (key, value) {
   if (value === undefined) {
-    return !!this.get('length') && this.everyBy('isCompleted', true);
+    return !!this.get('length') && this.isEvery('isCompleted', true);
   } else {
     this.setEach('isCompleted', value);
     this.invoke('save');
