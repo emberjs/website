@@ -65,6 +65,9 @@
   - location: Göteborg, Sweden
     url:      http://www.meetup.com/ember-js-goteborg/
     image:    17goteborg.png
+  - location: Adelaide, Australia
+    url:      http://www.meetup.com/Ember-js-Adelaide
+    image:
   - location: Melbourne, Australia
     url:      http://www.meetup.com/Ember-Melb-JS/
     image:    18melbourne.png
