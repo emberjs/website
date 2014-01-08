@@ -23,6 +23,8 @@
   - location: Seattle, WA
     url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
     image:    08seattle.png
+  - location: St. Louis, MO
+    url:      http://www.meetup.com/STLEmber
   - location: Austin, TX
     url:      http://www.meetup.com/Ember-ATX/
     image:    16austin.png
