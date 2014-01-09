@@ -43,7 +43,7 @@ store.find('user', 1).then(function(user) {
 ### Deleting Records
 
 Deleting records is just as straightforward as creating records. Just call `deleteRecord()`
-on any instace of `DS.Model`. This flags the record as `isDeleted` and thus removes
+on any instance of `DS.Model`. This flags the record as `isDeleted` and thus removes
 it from `all()` queries on the `store`. The deletion can then be persisted using `save()`.
 Alternatively, you can use the `destroyRecord` method to delete and persist at the same time.
 
