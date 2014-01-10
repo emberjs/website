@@ -96,3 +96,17 @@ Alternatively, you could pass both a photo and a comment to the helper:
 In the above example, the model hook for `PhotoRoute` will run with `params.photo_id = 5`.  The `model` hook for
 `CommentRoute` _won't_ run since you supplied a model object for the `comment` segment. The comment's id will
 populate the url according to `CommentRoute`'s `serialize` hook.
+
+### Adding additional attributes on a link
+
+When generating a link you might want to set additional attributes for it. You can do this with additional
+arguments to the `link-to` helper:
+
+```handlebars
+<p>
+  {{link-to 'photo.edit' photo class="btn btn-primary"}}
+</p>
+```
+
+Many of the common HTML properties you would want to use like `class`, and `rel` will work. When
+adding class names, Ember will also apply the standard `ember-view` and possibly `active` class names.
