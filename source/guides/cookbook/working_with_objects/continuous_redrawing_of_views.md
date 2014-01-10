@@ -12,7 +12,7 @@ generated within the application, like a list of comments.
 
 ## Discussion
 
-<a class="jsbin-embed" href="http://jsbin.com/iLETUTI/10/embed?output">
+<a class="jsbin-embed" href="http://jsbin.com/iLETUTI/17/embed?output">
 Cookbook: Continuous Redrawing of Views
 </a><script src="http://static.jsbin.com/js/embed.js"></script>
 
@@ -85,25 +85,24 @@ App.IntervalController = Ember.ObjectController.extend({
 });
 ```
 
-A controller for a list of comments, which creates a new clock instance
-for each comment. Each comment in the list also has a controller. When a
-comment is created the `init` method adds a clock instance to the comment.
+A controller for a list of comments, each comment will have a new clock
+instance when added to the list. The comment item controller sets up
+the `seconds` binding, used by the template to show the time since the
+comment was created.
 
 ```javascript
 App.CommentItemController = Ember.ObjectController.extend({
-  init: function() {
-    this.set('clock', ClockService.create());
-  }
-})
+  seconds: Ember.computed.oneWay('clock.pulse').readOnly()
+});
 
 App.CommentsController = Ember.ArrayController.extend({
   needs: ['interval'],
-  clockBinding: 'controllers.interval.clock',
   itemController: 'commentItem',
   actions: {
     add: function () {
       this.addObject(Em.Object.create({
-        comment: $('#comment').val()
+        comment: $('#comment').val(),
+        clock: ClockService.create()
       }));
     }
   }
@@ -179,7 +178,7 @@ after waking.
 
 The source code:
 
-* <http://jsbin.com/iLETUTI/8/>
+* <http://jsbin.com/iLETUTI/17/edit?html,js,output>
 
 Further reading:
 
