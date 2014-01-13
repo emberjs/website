@@ -6,7 +6,7 @@ To implement this behavior update the `allAreDone` property in `js/controllers/t
 // ... additional lines truncated for brevity ...
 allAreDone: function (key, value) {
   if (value === undefined) {
-    return !!this.get('length') && this.isEvery('isCompleted', true);
+    return !!this.get('length') && this.everyProperty('isCompleted', true);
   } else {
     this.setEach('isCompleted', value);
     this.invoke('save');
@@ -20,7 +20,7 @@ If no `value` argument is passed this property is being used to populate the cur
 
 The count of remaining todos and completed todos used elsewhere in the template automatically re-render for us if necessary.
 
-Reload your web browser to ensure that there are no errors and the behavior described above occurs. 
+Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/AViZATE/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
