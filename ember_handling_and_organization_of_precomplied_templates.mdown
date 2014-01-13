@@ -4,7 +4,7 @@
 ### Problem:
 The examples in the guide and in the API docs tend to default to having multiple handlebard templates encapsulated within `<script></script>` tags on the same page. This eventually leads to an extremely ugly codebase and it is a nightmare to maintain. 
 
-**There should be an accepted standard on the best way to precomplie and organize Handlebar templates. 
+**There should be an accepted standard on the best way to precomplie and organize Handlebar templates.** 
 
 Some Relevant StackOverflow discussions: 
 - [Emberjs Handlebars precompiling](http://stackoverflow.com/questions/9860512/emberjs-handlebars-precompiling)
