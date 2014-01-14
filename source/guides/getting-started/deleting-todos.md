@@ -13,6 +13,7 @@ In `js/controllers/todo_controller.js` implement the `removeTodo` method referen
 ```javascript
 // ... additional lines truncated for brevity ...
 actions: {
+  // ... additional lines truncated for brevity ...
   removeTodo: function () {
     var todo = this.get('model');
     todo.deleteRecord();
@@ -26,7 +27,7 @@ This method will delete the todo locally and then persist this data change.
 
 Because the todo is no longer part of the collection of all todos, its `<li>` element in the page will be automatically removed for us. If the deleted todo was incomplete, the count of remaining todos will be decreased by one and the display of this number will be automatically re-rendered. If the new count results in an inflection change between "item" and "items" this area of the page will be automatically re-rendered.
 
-Reload your web browser to ensure that there are no errors and the behaviors described above occurs. 
+Reload your web browser to ensure that there are no errors and the behaviors described above occurs.
 
 ### Live Preview
 <a class="jsbin-embed" href="http://jsbin.com/eREkanA/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
