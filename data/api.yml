@@ -2,9 +2,9 @@
 project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
-  version: 1.3.1
+  version: 1.3.2+pre.773be0ec
   url: http://emberjs.com/
-  sha: v1.3.1
+  sha: v1.3.0
 files:
   "../packages/container/lib/main.js":
     name: "../packages/container/lib/main.js"
@@ -1012,9 +1012,10 @@ files:
     classes:
       Ember.RSVP: 1
       Ember.RSVP.EventTarget: 1
+      Ember.RSVP.Promise: 1
     fors:
       Ember.RSVP: 1
-      RSVP.Promise: 1
+      Ember.RSVP.Promise: 1
     namespaces: {}
 modules:
   ember:
@@ -1373,11 +1374,11 @@ modules:
       Ember.RSVP.Promise: 1
     fors:
       Ember.RSVP: 1
-      RSVP.Promise: 1
+      Ember.RSVP.Promise: 1
     namespaces: {}
     tag: module
     file: "../packages/rsvp/lib/main.js"
-    line: 242
+    line: 950
 classes:
   Ember.ControllerMixin:
     name: Ember.ControllerMixin
@@ -2615,7 +2616,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: "../packages/ember-metal/lib/mixin.js"
-    line: 374
+    line: 376
     description: |-
       The `Ember.Mixin` class allows you to create mixins, whose properties can be
       added to other classes. For instance,
@@ -3741,7 +3742,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: "../packages/ember-runtime/lib/system/core_object.js"
-    line: 169
+    line: 170
   Ember.EachProxy:
     name: Ember.EachProxy
     shortname: Ember.EachProxy
@@ -5276,6 +5277,116 @@ classes:
     extension_for: []
     module: RSVP
     namespace: Ember
+    file: "../packages/rsvp/lib/main.js"
+    line: 950
+    description: |-
+      Promise objects represent the eventual result of an asynchronous operation. The
+      primary way of interacting with a promise is through its `then` method, which
+      registers callbacks to receive either a promise’s eventual value or the reason
+      why the promise cannot be fulfilled.
+
+      Terminology
+      -----------
+
+      - `promise` is an object or function with a `then` method whose behavior conforms to this specification.
+      - `thenable` is an object or function that defines a `then` method.
+      - `value` is any legal JavaScript value (including undefined, a thenable, or a promise).
+      - `exception` is a value that is thrown using the throw statement.
+      - `reason` is a value that indicates why a promise was rejected.
+      - `settled` the final resting state of a promise, fulfilled or rejected.
+
+      A promise can be in one of three states: pending, fulfilled, or rejected.
+
+      Promises that are fulfilled have a fulfillment value and are in the fulfilled
+      state.  Promises that are rejected have a rejection reason and are in the
+      rejected state.  A fulfillment value is never a thenable.  Similarly, a
+      rejection reason is never a thenable.
+
+      Promises can also be said to *resolve* a value.  If this value is also a
+      promise, then the original promise's settled state will match the value's
+      settled state.  So a promise that *resolves* a promise that rejects will
+      itself reject, and a promise that *resolves* a promise that fulfills will
+      itself fulfill.
+
+
+      Basic Usage:
+      ------------
+
+      ```js
+      var promise = new Promise(function(resolve, reject) {
+        // on success
+        resolve(value);
+
+        // on failure
+        reject(reason);
+      });
+
+      promise.then(function(value) {
+        // on fulfillment
+      }, function(reason) {
+        // on rejection
+      });
+      ```
+
+      Advanced Usage:
+      ---------------
+
+      Promises shine when abstracting away asynchronous interactions such as
+      `XMLHttpRequest`s.
+
+      ```js
+      function getJSON(url) {
+        return new Promise(function(resolve, reject){
+          var xhr = new XMLHttpRequest();
+
+          xhr.open('GET', url);
+          xhr.onreadystatechange = handler;
+          xhr.responseType = 'json';
+          xhr.setRequestHeader('Accept', 'application/json');
+          xhr.send();
+
+          function handler() {
+            if (this.readyState === this.DONE) {
+              if (this.status === 200) {
+                resolve(this.response);
+              } else {
+                reject(new Error("getJSON: `" + url + "` failed with status: [" + this.status + "]");
+              }
+            }
+          };
+        });
+      }
+
+      getJSON('/posts.json').then(function(json) {
+        // on fulfillment
+      }, function(reason) {
+        // on rejection
+      });
+      ```
+
+      Unlike callbacks, promises are great composable primitives.
+
+      ```js
+      Promise.all([
+        getJSON('/posts'),
+        getJSON('/comments')
+      ]).then(function(values){
+        values[0] // => postsJSON
+        values[1] // => commentsJSON
+
+        return values;
+      });
+      ```
+    params:
+    - name: UNKNOWN
+      description: ''
+      type: Function
+    - name: label
+      description: |-
+        optional string for labeling the promise.
+        Useful for tooling.
+      type: String
+    is_constructor: 1
 classitems:
 - file: "../packages/container/lib/main.js"
   line: 1
@@ -10048,7 +10159,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 586
+  line: 587
   description: |-
     A computed property that returns true if the value of the dependent
     property is null, an empty string, empty array, or empty function.
@@ -10082,7 +10193,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 616
+  line: 617
   description: |-
     A computed property that returns true if the value of the dependent
     property is NOT null, an empty string, empty array, or empty function.
@@ -10116,7 +10227,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 646
+  line: 647
   description: |-
     A computed property that returns true if the value of the dependent
     property is null or undefined. This avoids errors from JSLint complaining
@@ -10149,7 +10260,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 675
+  line: 676
   description: |-
     A computed property that returns the inverse boolean value
     of the original value for the dependent property.
@@ -10179,7 +10290,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 701
+  line: 702
   description: |-
     A computed property that converts the provided dependent property
     into a boolean value.
@@ -10211,7 +10322,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 729
+  line: 730
   description: |-
     A computed property which matches the original value for the
     dependent property against a given RegExp, returning `true`
@@ -10247,7 +10358,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 760
+  line: 761
   description: |-
     A computed property that returns true if the provided dependent property
     is equal to the given value.
@@ -10282,7 +10393,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 789
+  line: 790
   description: |-
     A computed property that returns true if the provied dependent property
     is greater than the provided value.
@@ -10317,7 +10428,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 818
+  line: 819
   description: |-
     A computed property that returns true if the provided dependent property
     is greater than or equal to the provided value.
@@ -10352,7 +10463,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 847
+  line: 848
   description: |-
     A computed property that returns true if the provided dependent property
     is less than the provided value.
@@ -10387,7 +10498,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 876
+  line: 877
   description: |-
     A computed property that returns true if the provided dependent property
     is less than or equal to the provided value.
@@ -10422,7 +10533,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 905
+  line: 906
   description: |-
     A computed property that performs a logical `and` on the
     original values for the provided dependent properties.
@@ -10455,7 +10566,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 938
+  line: 939
   description: |-
     A computed property which performs a logical `or` on the
     original values for the provided dependent properties.
@@ -10486,7 +10597,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 969
+  line: 970
   description: |-
     A computed property that returns the first truthy value
     from a list of dependent properties.
@@ -10517,7 +10628,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 1000
+  line: 1001
   description: |-
     A computed property that returns the array of values
     for the provided dependent properties.
@@ -10549,7 +10660,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 1037
+  line: 1038
   description: |-
     Creates a new property that is an alias for another property
     on an object. Calls to `get` or `set` this property behave as
@@ -10582,7 +10693,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 1072
+  line: 1073
   description: |-
     Where `computed.alias` aliases `get` and `set`, and allows for bidirectional
     data flow, `computed.oneWay` only provides an aliased `get`. The `set` will
@@ -10627,7 +10738,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/computed.js"
-  line: 1116
+  line: 1117
   description: |-
     A computed property that acts like a standard getter and setter,
     but returns the value at the provided `defaultPath` if the
@@ -11591,7 +11702,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 361
+  line: 363
   itemtype: method
   name: mixin
   params:
@@ -11606,7 +11717,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 449
+  line: 451
   itemtype: method
   name: create
   static: 1
@@ -11619,7 +11730,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 462
+  line: 464
   itemtype: method
   name: reopen
   params:
@@ -11631,7 +11742,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 497
+  line: 499
   itemtype: method
   name: apply
   params:
@@ -11644,7 +11755,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 524
+  line: 526
   itemtype: method
   name: detect
   params:
@@ -11658,7 +11769,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 588
+  line: 592
   description: Denotes a required property for a mixin
   itemtype: method
   name: required
@@ -11666,7 +11777,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 603
+  line: 607
   description: |-
     Makes a property or method available via an additional name.
 
@@ -11699,7 +11810,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 632
+  line: 636
   description: |-
     Makes a method available via an additional name.
 
@@ -11726,7 +11837,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 659
+  line: 663
   description: |-
     Specify a method that observes property changes.
 
@@ -11759,7 +11870,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 721
+  line: 725
   description: |-
     Specify a method that observes property changes.
 
@@ -11792,7 +11903,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 753
+  line: 757
   description: |-
     When observers fire, they are called with the arguments `obj`, `keyName`.
 
@@ -20234,7 +20345,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 182
+  line: 183
   description: |-
     An overridable method called when objects are instantiated. By default,
     does nothing unless it is overridden during class definition.
@@ -20267,7 +20378,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 212
+  line: 213
   description: |-
     Defines the properties that will be concatenated from the superclass
     (instead of overridden).
@@ -20338,7 +20449,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 280
+  line: 281
   description: |-
     Destroyed object property flag.
 
@@ -20352,7 +20463,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 291
+  line: 292
   description: |-
     Destruction scheduled flag. The `destroy()` method has been called.
 
@@ -20366,7 +20477,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 302
+  line: 303
   description: |-
     Destroys an object by setting the `isDestroyed` flag and removing its
     metadata, which effectively destroys observers and bindings.
@@ -20386,7 +20497,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 324
+  line: 325
   description: Override to implement teardown.
   itemtype: method
   name: willDestroy
@@ -20395,7 +20506,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 331
+  line: 332
   description: |-
     Invoked by the run loop to actually destroy the object. This is
     scheduled for execution by the `destroy` method.
@@ -20408,7 +20519,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 350
+  line: 351
   description: |-
     Returns a string representation which attempts to provide more information
     than Javascript's `toString` typically does, in a generic way for all Ember
@@ -20451,7 +20562,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 417
+  line: 418
   description: |-
     Creates a new subclass.
 
@@ -20544,7 +20655,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 519
+  line: 520
   description: |-
     Equivalent to doing `extend(arguments).create()`.
     If possible use the normal `create` method instead.
@@ -20561,7 +20672,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 533
+  line: 534
   description: |-
     Creates an instance of a class. Accepts either no arguments, or an object
     containing values to initialize the newly instantiated object with.
@@ -20607,7 +20718,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 576
+  line: 577
   description: |-
     Augments a constructor's prototype with additional
     properties and functions:
@@ -20641,7 +20752,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 611
+  line: 612
   description: |-
     Augments a constructor's own properties and functions:
 
@@ -20701,7 +20812,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 685
+  line: 686
   description: |-
     In some cases, you may want to annotate computed properties with additional
     metadata about how they function or what values they operate on. For
@@ -20736,7 +20847,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: "../packages/ember-runtime/lib/system/core_object.js"
-  line: 719
+  line: 721
   description: |-
     Iterate over each computed property for the class, passing its name
     and any associated metadata (see `metaForProperty`) to the callback.
@@ -23013,7 +23124,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/component.js"
-  line: 137
+  line: 136
   description: |-
     If the component is currently inserted into the DOM of a parent view, this
     property will point to the controller of the parent view.
@@ -23026,7 +23137,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/component.js"
-  line: 150
+  line: 149
   description: "Triggers a named action on the controller context where the component
     is used if\nthis controller has registered for notifications of the action.\n\nFor
     example a component for playing or pausing music may translate click events\ninto
@@ -25224,6 +25335,7 @@ classitems:
   static: 1
   class: Ember.RSVP.Promise
   module: RSVP
+  namespace: Ember
 - file: "../packages/rsvp/lib/main.js"
   line: 1660
   description: |-
@@ -25301,6 +25413,7 @@ classitems:
   static: 1
   class: Ember.RSVP.Promise
   module: RSVP
+  namespace: Ember
 - file: "../packages/rsvp/lib/main.js"
   line: 1750
   description: |-
@@ -25379,6 +25492,7 @@ classitems:
   static: 1
   class: Ember.RSVP.Promise
   module: RSVP
+  namespace: Ember
 - file: "../packages/rsvp/lib/main.js"
   line: 1847
   description: |-
@@ -25425,6 +25539,7 @@ classitems:
   static: 1
   class: Ember.RSVP.Promise
   module: RSVP
+  namespace: Ember
 - file: "../packages/rsvp/lib/main.js"
   line: 1895
   description: |-
@@ -25469,6 +25584,7 @@ classitems:
   static: 1
   class: Ember.RSVP.Promise
   module: RSVP
+  namespace: Ember
 - file: "../packages/rsvp/lib/main.js"
   line: 1942
   description: This is a convenient alias for `RSVP.Promise.race`.
@@ -25486,6 +25602,7 @@ classitems:
   static: 1
   class: Ember.RSVP.Promise
   module: RSVP
+  namespace: Ember
 - file: "../packages/rsvp/lib/main.js"
   line: 1961
   description: This is a convenient alias for `RSVP.Promise.reject`.
