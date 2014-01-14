@@ -20,14 +20,16 @@ Today we are announcing the release of Ember.js 1.0.1, 1.1.3, 1.2.1,
 * 1.1.3 -- [Compare View](https://github.com/emberjs/ember.js/compare/v1.1.2...v1.1.3)
 * 1.0.1 -- [Compare View](https://github.com/emberjs/ember.js/compare/v1.0.0...v1.0.1)
 
-These releases contain only a fix for two potential XSS vulnerabilities
-that you can learn more about by following these links:
+These releases contain fixes for two potential XSS vulnerabilities that
+you can learn more about by following these links:
 
 * [CVE-2014-0013](https://groups.google.com/forum/#!topic/ember-security/2kpXXCxISS4)
 * [CVE-2014-0014](https://groups.google.com/forum/#!topic/ember-security/PSE4RzTi6l4)
 
 It is recommended that you update immediately. In order to ease
-upgrading, the only major change in each release is the security fix.
+upgrading, the only major change in each release is the security fix
+(other than 1.4.0-beta.2, which is a normal beta channel release with
+the fixes rolled in).
 
 We would like to thank Edward Faulkner of [CleriCare](http://clericare.com/)
 for responsibly disclosing CVE-2014-0014 and working with us on the patch
@@ -35,7 +37,7 @@ and the advisory.
 
 Additionally, I would like to extend a very deep thanks to Robert
 Jackson of [DockYard](http://dockyard.com/) who dedicated his weekend
-and significant amounts of work time to auditing related code (which
+and significant amounts of time to auditing related code (which
 lead to the discovery of CVE-2014-0013) and preparing the advisories,
 patches, releases and this blog post.
 
