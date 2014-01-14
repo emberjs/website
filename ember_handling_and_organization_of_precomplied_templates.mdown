@@ -9,7 +9,7 @@ The examples in the guide and in the API docs tend to default to having multiple
 Some Relevant StackOverflow discussions: 
 - [Emberjs Handlebars precompiling](http://stackoverflow.com/questions/9860512/emberjs-handlebars-precompiling)
 - [Loading Handlebars Template Asynchronously](http://stackoverflow.com/questions/16118974/loading-handlebars-template-asynchronously)
-
+- [Asset pipeline for Ember.js, Express.js and Node.js?](http://stackoverflow.com/questions/15302221/asset-pipeline-for-ember-js-express-js-and-node-js)
 
 ### Solution Statement
 
