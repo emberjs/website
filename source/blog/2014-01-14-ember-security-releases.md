@@ -1,5 +1,5 @@
 ---
-title: Security Releases - Ember 1.0.1, 1.1.3, 1.2.1, 1.3.1 and 1.4.0-beta.2 Released
+title: Security Releases - Ember 1.0.1, 1.1.3, 1.2.1, and 1.3.1
 author: Tom Dale
 tags: Releases, Security, Recent Posts
 ---
