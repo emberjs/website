@@ -52,7 +52,7 @@ equivalent to the one above:
 ```javascript
 var container = Ember.ContainerView.extend({
   childViews: [App.FirstView, App.SecondView]
-};
+});
 
 container.objectAt(0).toString(); //=> '<App.FirstView:ember123>'
 container.objectAt(1).toString(); //=> '<App.SecondView:ember124>'
