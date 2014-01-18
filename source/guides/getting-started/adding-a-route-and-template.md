@@ -20,7 +20,7 @@ Todos.Router.map(function () {
 
 This will tell Ember.js to detect when the application's URL matches `'/'` and to render the `todos` template.
 
-Next, update your `index.html` to wrap the inner contents of `<body>` in a Handlebars script tag and include `js/application.js` and `js/router.js`:
+Next, update your `index.html` to wrap the inner contents of `<body>` in a Handlebars script tag and include `js/application.js` and `js/router.js` after Ember.js and other javascript dependencies:
 
 ```html
 <!-- ... additional lines truncated for brevity ... -->
@@ -34,11 +34,13 @@ Next, update your `index.html` to wrap the inner contents of `<body>` in a Handl
     <footer id="info">
       <p>Double-click to edit a todo</p>
     </footer>
-  
+
   </script>
 
+  <!-- ... Ember.js and other javascript dependencies ... -->
   <script src="js/application.js"></script>
   <script src="js/router.js"></script>
+</body>
 <!-- ... additional lines truncated for brevity ... -->
 ```
 
