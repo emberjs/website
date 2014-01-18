@@ -251,6 +251,8 @@
   image: crux.png
 - url: https://huboard.com
   image: huboard.png
+- url: http://www.fasteragile.com
+  image: fasteragile.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
