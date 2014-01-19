@@ -143,7 +143,7 @@ have a model with a `hasMany` relationship:
 
 ```js
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('App.Comment', {async: true})
+  comments: DS.hasMany('comment', {async: true})
 });
 ```
 
@@ -166,7 +166,7 @@ camelized version of the Ember Data model's name, with the string
 
 ```js
 App.Comment = DS.Model.extend({
-  post: DS.belongsTo('App.Post')
+  post: DS.belongsTo('post')
 });
 ```
 
