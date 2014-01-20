@@ -84,12 +84,12 @@ desc "Preview"
 task :preview do
   require 'listen'
 
-  generate_docs
+  Rake::Task["generate_docs"].execute
 
   paths = Dir.glob(File.join(ember_path, "packages/*/lib")) +
     Dir.glob(File.join(ember_data_path, "packages/*/lib"))
   listener = Listen.to(*paths, :filter => /\.js$/)
-  listener.change { generate_docs }
+  listener.change { Rake::Task["generate_docs"].execute }
   listener.start(false)
 
   system "middleman server"

@@ -1,8 +1,9 @@
-By default, your store will use `DS.RESTAdapter` to load and save
-records. The REST adapter assumes that the URLs and JSON associated with
-each model are conventional; this means that, if you follow the rules,
-you will not need to configure the adapter or write any code in order to
-get started.
+By default, your store will use
+[DS.RESTAdapter](/api/data/classes/DS.RESTAdapter.html) to load and
+save records. The RESTAdapter assumes that the URLs and JSON
+associated with each model are conventional; this means that, if you
+follow the rules, you will not need to configure the adapter or write
+any code in order to get started.
 
 ### URL Conventions
 
@@ -11,7 +12,7 @@ with based on the name of the model. For example, if you ask for a
 `Post` by ID:
 
 ```js
-var post = App.Post.find(1);
+var post = store.find('post', 1);
 ```
 
 The REST adapter will automatically send a `GET` request to `/posts/1`.
@@ -92,7 +93,7 @@ be nested inside a property called `person`:
 
 #### Attribute Names
 
-Attribute names should be  camelized.  For example, if you have a model like this:
+Attribute names should be camelized.  For example, if you have a model like this:
 
 ```js
 App.Person = DS.Model.extend({
@@ -115,16 +116,23 @@ The JSON returned from your server should look like this:
 }
 ```
 
-Irregular keys can be mapped on the adapter. If the JSON
-has a key of `lastNameOfPerson`, and the desired attribute
-name is simply `lastName`, inform the adapter:
+Irregular keys can be mapped with a custom serializer. If the JSON for
+the `Person` model has a key of `lastNameOfPerson`, and the desired
+attribute name is simply `lastName`, then create a custom Serializer
+for the model and override the `normalizeHash` property.
 
 ```js
 App.Person = DS.Model.extend({
   lastName: DS.attr('string')
 });
-DS.RESTAdapter.map('App.Person', {
-  lastName: { key: 'lastNameOfPerson' }
+App.PersonSerializer = DS.RESTSerializer.extend({
+  normalizeHash: {
+    lastNameOfPerson: function(hash) {
+      hash.lastName = hash.lastNameOfPerson;
+      delete hash.lastNameOfPerson;
+      return hash;
+    }
+  }
 });
 ```
 
@@ -135,7 +143,7 @@ have a model with a `hasMany` relationship:
 
 ```js
 App.Post = DS.Model.extend({
-  comments: DS.hasMany('App.Comment', {async: true})
+  comments: DS.hasMany('comment', {async: true})
 });
 ```
 
@@ -144,7 +152,7 @@ The JSON should encode the relationship as an array of IDs:
 ```js
 {
   "post": {
-    "commentIds": [1, 2, 3]
+    "comments": [1, 2, 3]
   }
 }
 ```
@@ -158,7 +166,7 @@ camelized version of the Ember Data model's name, with the string
 
 ```js
 App.Comment = DS.Model.extend({
-  post: DS.belongsTo('App.Post')
+  post: DS.belongsTo('post')
 });
 ```
 
@@ -167,10 +175,21 @@ The JSON should encode the relationship as an ID to another record:
 ```js
 {
   "comment": {
-    "postId": 1
+    "post": 1
   }
 }
 ```
+
+If needed these naming conventions can be overwritten by implementing
+the `keyForRelationship` method.
+
+```js
+ App.ApplicationSerializer = DS.RESTSerializer.extend({
+   keyForRelationship: function(key, relationship) {
+      return key + 'Ids';
+   }
+ });
+ ```
 
 #### Sideloaded Relationships
 
@@ -183,7 +202,7 @@ outside the JSON root, and are represented as an array of hashes:
   "post": {
     "id": 1,
     "title": "Node is not omakase",
-    "commentIds": [1, 2, 3]
+    "comments": [1, 2, 3]
   },
 
   "comments": [{

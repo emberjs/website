@@ -33,13 +33,16 @@
     image:    19washington.png
   - location: Salt Lake City, UT
     url: http://www.meetup.com/EmberJS-SLC
-    image:
   - location: Cincinnati, OH
     url: http://www.meetup.com/Embernati
-    image:
   - location: Minneapolis / St. Paul, MN
     url: http://www.meetup.com/Ember-Twin-Cities
-    image:
+  - location: Portland, OR
+    url: http://www.meetup.com/Ember-PDX/
+  - location: Pittsburgh, PA
+    url:      http://www.meetup.com/Ember-js-Pittsburgh/
+  - location: Denver, CO
+    url:      http://www.meetup.com/Ember-js-Denver/
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.torontoemberjs.com/
@@ -67,7 +70,6 @@
     image:    17goteborg.png
   - location: Adelaide, Australia
     url:      http://www.meetup.com/Ember-js-Adelaide
-    image:
   - location: Melbourne, Australia
     url:      http://www.meetup.com/Ember-Melb-JS/
     image:    18melbourne.png
@@ -76,22 +78,23 @@
     image:    20telaviv.png
   - location: Budapest, Hungary
     url:      http://www.meetup.com/ember-bp/
-    image:
   - location: São Paulo, Brazil
     url:      http://www.meetup.com/Ember-js-Sao-Paulo/
-    image:
   - location: San Juan, Puerto Rico
     url:      http://www.meetup.com/Ember-PR/
     image:    21puertorico.png
   - location: Oslo, Norway
     url:      http://www.meetup.com/Ember-js-Oslo/
-    image:
   - location: Brussels, Belgium
     url:      http://www.meetup.com/Ember-js-Brussels/
-    image:
   - location: Barcelona, Spain
     url:      http://www.meetup.com/Ember-js-Barcelona/
     image:    22barcelona.png
   - location: Kyiv, Ukraine
     url:      http://ember-club.kiev.ua
-    image:
+  - location: Belo Horizonte, Brazil
+    url:      http://www.meetup.com/Ember-BH/
+  - location: Zürich, Switzerland
+    url:      http://www.meetup.com/Ember-js-Zurich/
+  - location: Vancouver, BC
+    url:      http://www.meetup.com/Vancouver-Ember-js/
