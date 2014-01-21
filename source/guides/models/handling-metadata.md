@@ -19,7 +19,7 @@ By default, Ember Data's JSON deserializer looks for a `meta` key:
     "id": 1,
     "title": "Progressive Enhancement is Dead",
     "comments": ["1", "2"],
-    "_links": {
+    "links": {
       "user": "/people/tomdale"
     },
     // ...
