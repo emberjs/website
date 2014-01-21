@@ -199,21 +199,22 @@ more control, but if you'd like to emulate something similar to legacy
 `LoadingRoute` behavior, you could do as follows:
 
 ```js
+App.LoadingView = Ember.View.extend({
+  templateName: 'global-loading',
+  elementId: 'global-loading'
+});
+
 App.ApplicationRoute = Ember.Route.extend({
   actions: {
     loading: function() {
-      var view = Ember.View.create({
-        templateName: 'global-loading',
-        elementId: 'global-loading'
-      }).append();
-      
-      this.router.one('didTransition', function() {
-        view.destroy();
-      });
+      var view = this.container.lookup('view:loading').append();
+      this.router.one('didTransition', view, 'destroy');
     }
   }
 });
 ```
+
+[Example JSBin](http://emberjs.jsbin.com/ucanam/3307)
 
 This will, like legacy `LoadingRoute`, append a top-level view when the
 router goes into a loading state, and tear down the view once the
