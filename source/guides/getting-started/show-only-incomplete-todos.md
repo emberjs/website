@@ -33,7 +33,7 @@ Todos.TodosActiveRoute = Ember.Route.extend({
       return !todo.get('isCompleted');
     });
   },
-  renderTemplate: function(controller){
+  renderTemplate: function (controller) {
     this.render('todos/index', {controller: controller});
   }
 });
