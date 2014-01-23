@@ -17,18 +17,18 @@ In `js/controllers/todos_controller.js` implement the matching properties and a 
 ```javascript
 // ... additional lines truncated for brevity ...
 actions: {
-  clearCompleted: function () {
+  clearCompleted: function() {
     var completed = this.filterBy('isCompleted', true);
     completed.invoke('deleteRecord');
     completed.invoke('save');
   },
   // ... additional lines truncated for brevity ...
 },
-hasCompleted: function () {
+hasCompleted: function() {
   return this.get('completed') > 0;
 }.property('completed'),
 
-completed: function () {
+completed: function() {
   return this.filterBy('isCompleted', true).get('length');
 }.property('@each.isCompleted'),
 // ... additional lines truncated for brevity ...

@@ -25,7 +25,7 @@ Inside `js/controllers/todo_controller.js` we'll implement the matching logic fo
 ```javascript
 // ... additional lines truncated for brevity ...
 actions: {
-   editTodo: function () {
+   editTodo: function() {
      this.set('isEditing', true);
    }
  },
