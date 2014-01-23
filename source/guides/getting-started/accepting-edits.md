@@ -8,7 +8,7 @@ In `js/views/edit_todo_view.js` create an extension of `Ember.TextField`:
 
 ```javascript
 Todos.EditTodoView = Ember.TextField.extend({
-  didInsertElement: function () {
+  didInsertElement: function() {
     this.$().focus();
   }
 });
@@ -48,10 +48,10 @@ In `js/controllers/todo_controller.js`, add the method `acceptChanges` that we c
 ```javascript
 // ... additional lines truncated for brevity ...
 actions: {
-  editTodo: function () {
+  editTodo: function() {
     this.set('isEditing', true);
   },
-  acceptChanges: function () {
+  acceptChanges: function() {
     this.set('isEditing', false);
 
     if (Ember.isEmpty(this.get('model.title'))) {

@@ -4,7 +4,7 @@ To implement this behavior update the `allAreDone` property in `js/controllers/t
 
 ```javascript
 // ... additional lines truncated for brevity ...
-allAreDone: function (key, value) {
+allAreDone: function(key, value) {
   if (value === undefined) {
     return !!this.get('length') && this.everyProperty('isCompleted', true);
   } else {

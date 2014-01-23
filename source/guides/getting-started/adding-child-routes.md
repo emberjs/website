@@ -39,8 +39,8 @@ The `{{outlet}}` Handlebars helper designates an area of a template that will dy
 In `js/router.js` update the router to change the `todos` mapping so it can accept child routes and add this first `index` route:
 
 ```javascript
-Todos.Router.map(function () {
-  this.resource('todos', { path: '/' }, function () {
+Todos.Router.map(function() {
+  this.resource('todos', { path: '/' }, function() {
     // additional child routes
   });
 });
@@ -48,7 +48,7 @@ Todos.Router.map(function () {
 // ... additional lines truncated for brevity ...
 
 Todos.TodosIndexRoute = Ember.Route.extend({
-  model: function () {
+  model: function() {
     return this.modelFor('todos');
   }
 });

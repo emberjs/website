@@ -13,7 +13,7 @@ This will create a new instance of `Ember.Application` and make it available as 
 Inside `js/router.js` add the following code:
 
 ```javascript
-Todos.Router.map(function () {
+Todos.Router.map(function() {
   this.resource('todos', { path: '/' });
 });
 ```

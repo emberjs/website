@@ -5,7 +5,7 @@ Inside the file `js/router.js` implement a `TodosRoute` class with a `model` fun
 ```javascript
 // ... additional lines truncated for brevity ...
 Todos.TodosRoute = Ember.Route.extend({
-  model: function () {
+  model: function() {
     return this.store.find('todo');
   }
 });

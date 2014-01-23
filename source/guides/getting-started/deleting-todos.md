@@ -14,7 +14,7 @@ In `js/controllers/todo_controller.js` implement the `removeTodo` method referen
 // ... additional lines truncated for brevity ...
 actions: {
   // ... additional lines truncated for brevity ...
-  removeTodo: function () {
+  removeTodo: function() {
     var todo = this.get('model');
     todo.deleteRecord();
     todo.save();
