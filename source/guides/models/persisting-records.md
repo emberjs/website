@@ -33,8 +33,10 @@ var post = store.createRecord('post', {
   body: 'Lorem ipsum'
 });
 
+var _self = this; // When the promise returns 'this' may no longer reference the controller, so keep a pointer to the context when invoking the promise.
+
 post.save().then(function(post) {
-  this.transitionToRoute('posts/show', post);
+  _self.transitionToRoute('posts/show', post);
 });
 
 // => POST to '/posts'
@@ -49,8 +51,10 @@ var post = store.createRecord('post', {
   body: 'Lorem ipsum'
 });
 
+var _self = this;
+
 var onSuccess = function(post) {
-  this.transitionToRoute('posts/show', post);
+  _self.transitionToRoute('posts/show', post);
 };
 
 var onFail = function(post) {
