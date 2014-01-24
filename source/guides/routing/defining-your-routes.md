@@ -227,7 +227,8 @@ possible post into the router.
 Enter _dynamic segments_.
 
 A dynamic segment is a portion of a URL that starts with a `:` and is
-followed by an identifier.
+followed by an identifier. Using a `*` instead of a `:` will match until the end of
+the url, including slashes.
 
 ```js
 App.Router.map(function() {
