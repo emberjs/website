@@ -33,14 +33,17 @@ var post = store.createRecord('post', {
   body: 'Lorem ipsum'
 });
 
-var self = this,
-    success = function(post) {
-      self.transitionToRoute('posts/show', post);
-    }, fail = function() {
-      // handle the error
-    };
+var self = this;
 
-post.save().then(sucess, fail);
+function transitionToPost(post) {
+  self.transitionToRoute('posts/show', post);
+}
+
+function failure(reason) {
+  // handle the error
+}
+
+post.save().then(transitionToPost).catch(failure);
 
 // => POST to '/posts'
 // => transitioning to posts.show route
