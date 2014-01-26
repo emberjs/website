@@ -49,4 +49,4 @@ Note: Your component must have a matching template named `share-twitter`. Becaus
 
 #### Example
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/OriZITU/3/edit?js,output">JS Bin</a>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/OpocEPu/1/edit?js,output">JS Bin</a>
