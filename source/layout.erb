@@ -58,6 +58,8 @@
       </div>
     </div>
 
+    <%= yield_content :outside_wrapper %>
+
     <div id="content-wrapper">
       <% sidebar = rendered_partial_for(:sidebar) || yield_content(:sidebar) %>
       <% if sidebar %>
