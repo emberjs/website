@@ -36,7 +36,7 @@ var post = store.createRecord('post', {
 var self = this;
 
 function transitionToPost(post) {
-  self.transitionToRoute('posts/show', post);
+  self.transitionToRoute('posts.show', post);
 }
 
 function failure(reason) {
@@ -58,7 +58,7 @@ var post = store.createRecord('post', {
 });
 
 var onSuccess = function(post) {
-  this.transitionToRoute('posts/show', post);
+  this.transitionToRoute('posts.show', post);
 };
 
 var onFail = function(post) {
