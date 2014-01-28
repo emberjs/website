@@ -5,7 +5,7 @@ project:
   version: 1.0.0-beta.6
   logo: http://f.cl.ly/items/1A1L432s022u1O1q1V3p/ember%20logo.png
   url: https://github.com/emberjs/data
-  sha: 1.0.0-beta.6
+  sha: v1.0.0-beta.6
 files:
   "../packages/activemodel-adapter/lib/system/active_model_adapter.js":
     name: "../packages/activemodel-adapter/lib/system/active_model_adapter.js"
