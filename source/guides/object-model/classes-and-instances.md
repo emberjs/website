@@ -30,7 +30,6 @@ method:
 App.Person = Ember.Object.extend({
   say: function(thing) {
     var name = this.get('name');
-
     alert(name + " says: " + thing);
   }
 });
@@ -45,8 +44,7 @@ var yehuda = App.Soldier.create({
   name: "Yehuda Katz"
 });
 
-yehuda.say("Yes");
-// alerts "Yehuda Katz says: Yes, sir!"
+yehuda.say("Yes"); // alerts "Yehuda Katz says: Yes, sir!"
 ```
 
 ### Creating Instances
@@ -57,25 +55,25 @@ computed properties you defined on the class will be available to
 instances:
 
 ```javascript
-var person = Person.create();
-person.say("Hello") // alerts " says: Hello"
+var person = App.Person.create();
+person.say("Hello"); // alerts " says: Hello"
 ```
 
 When creating an instance, you can initialize the value of its properties
 by passing an optional hash to the `create()` method:
 
 ```javascript
-Person = Ember.Object.extend({
+App.Person = Ember.Object.extend({
   helloWorld: function() {
     alert("Hi, my name is " + this.get('name'));
   }
 });
 
-var tom = Person.create({
+var tom = App.Person.create({
   name: "Tom Dale"
 });
 
-tom.helloWorld() // alerts "Hi my name is Tom Dale"
+tom.helloWorld(); // alerts "Hi my name is Tom Dale"
 ```
 
 For performance reasons, note that you cannot redefine an instance's
@@ -86,8 +84,8 @@ properties, create a new subclass and instantiate that.
 
 By convention, properties or variables that hold classes are
 PascalCased, while instances are not. So, for example, the variable
-`Person` would point to a class, while `person` would point to an instance
-(usually of the `Person` class). You should stick to these naming
+`App.Person` would point to a class, while `person` would point to an instance
+(usually of the `App.Person` class). You should stick to these naming
 conventions in your Ember applications.
 
 ### Initializing Instances
@@ -97,14 +95,14 @@ automatically. This is the ideal place to do setup required on new
 instances:
 
 ```js
-Person = Ember.Object.extend({
+App.Person = Ember.Object.extend({
   init: function() {
     var name = this.get('name');
     alert(name + ", reporting for duty!");
   }
 });
 
-Person.create({
+App.Person.create({
   name: "Stefan Penner"
 });
 
