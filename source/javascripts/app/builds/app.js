@@ -184,6 +184,8 @@ App.Project.reopenClass({
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
+      initialVersion: "1.3.0",
+      initialReleaseDate: "2014-01-06",
       lastRelease: "1.3.1",
       futureVersion: "1.3.2",
       channel: "release",
@@ -303,8 +305,8 @@ App.ProjectsMixin = Ember.Mixin.create({
 
         // no releases exist for ember-data (yet)
         if (release) {
-          project.lastStableVersion = release.lastRelease;
-          project.lastStableDate = release.date;
+          project.lastStableVersion = release.initialVersion;
+          project.lastStableDate = release.initialReleaseDate;
         }
       }
 
