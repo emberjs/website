@@ -14,7 +14,7 @@ are inconvenient to store in normal dynamic segments. This might apply
 when you have a map view and need to store X, Y, and zoom coordinates
 along with a set of visible layers on the map. Although this is possible
 to do with dynamic segments, it can be inconvenient. For any of these use
-case, you can consider using query params instead.
+cases, you can consider using query params instead.
 
 ### Query Parameters are Controller-Driven
 
