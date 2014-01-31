@@ -292,6 +292,9 @@ Cookbook:
   - title: "Binding Properties of an Object to Its Own Properties"
     url: "cookbook/event_handling_and_data_binding/binding_properties_of_an_object_to_its_own_properties"
     skip_sidebar_item: true
+  - title: "Adding Page View Analytics"
+    url: "cookbook/event_handling_and_data_binding/adding_page_view_analytics"
+    skip_sidebar_item: true
   # - title: "Responding to User Events"
   #   url: "cookbook/event_handling_and_data_binding/responding_to_user_events"
   #   skip_sidebar_item: true
