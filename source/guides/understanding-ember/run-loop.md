@@ -1,11 +1,10 @@
-The TL;DR, lots of Ember's magic is powered by a run-loop. The run-loop is used to
+Ember's internals and most of the code you will write in your applications takes place in a run loop. The run loop is used to
 batch, and order (or reorder) work in a way that is most effective and efficient.
 
 It does so by scheduling work on specific queues. These queues have a priority,
 and are processed to completion in priority order.
 
 ## Why is this useful?
-
 
 Very often, batching similar work has benefits. Web browsers do something quite similar
 by batching changes to the DOM.
@@ -146,51 +145,34 @@ Working with this API directly is not common in most Ember apps, but understandi
 help you to understand the run-loops algorithm, which will make you a better Ember developer.
 
 
-<a class="jsbin-embed" href="http://jsbin.com/ugUJAKAN/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/ugUJAKAN/1/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
--- below this is mostly just ideas, that must be fleshed out more.
 
-# Run Loop FAQs
+## FAQs
 
-## What do I need to know to get started with Ember?
+
+### What do I need to know to get started with Ember?
 
 For basic Ember app development scenarios, nothing. All common paths are paved nicely
 for you and don't require working with the run loop directly.
 
-## What do I need to know to actually build an app?
+### What do I need to know to actually build an app?
 
 It is possible to build good apps without working with the run loop directly, so if
 you don't feel the need to do so, don't.
 
-## What scenarios will require me to understand the run loop?
+### What scenarios will require me to understand the run loop?
 
 The most common case you will run into is integrating with a non-Ember API
 that includes some sort of asynchronous callback. For example:
 
-- $.ajax success and failure handlers
-- animation complete handler
-- setTimeout
-- setInterval
-- postMessage
-- MessageChannel
-- custom jQuery event handling, $('a').on('click', function() { ... }); or  $('a').on('scroll', function() { ... });
-- MutationObserver
-- websocket
+- AJAX callbacks
+- DOM update and event callbacks
+- Websocket callbacks
+- `setTimeout` and `setInterval` callbacks
+- `postMessage` and `messageChannel` event handlers
 
-You should begin a run loop when the new frame begins.
-
-## What is a "frame" in Javascript?
-
-Internally, a JS runtime has a queue of messages to be processed and the function
-to be called to handle it. These messages are queued when certain external events
-occur, such as user touching the screen, or an XMLHttpRequest changing state.
-
-Remember that JavaScript runtimes are single-threaded. That means that only one
-message is handled at a time. When there is no more Javascript left to immediately
-execute resulting from the current message, the next message is processed.
-
-The callback function associated with each message serves as the initial "frame" in
-the call stack.
+You should begin a run loop when the callback fires.
 
 ## How do I tell Ember to start a run loop? 
 
@@ -224,14 +206,4 @@ $('a').click(function(){
 
 This is suboptimal because current JS frame is allowed to end before the run loop is
 flushed, which sometimes means the browser will take the opportunity to do other things,
-like garbage collection. Usually, you don't want GC to occur between your data changing
-and your DOM updating.
-
-
-// alex had some good Q/A in his SO response: http://stackoverflow.com/questions/13597869/what-is-ember-runloop-and-how-does-it-work/14296339#14296339
-// I should steal some of them..
-
-
-// additions: perhaps add 'Testing' to 'What scenarios will require me to understand the run loop?'
- 
-
+like garbage collection. GC running in between data changing and DOM rerendering can cause visual lag and should be minimized.
