@@ -206,3 +206,7 @@ $('a').click(function(){
 This is suboptimal because the current JS frame is allowed to end before the run loop is
 flushed, which sometimes means the browser will take the opportunity to do other things,
 like garbage collection. GC running in between data changing and DOM rerendering can cause visual lag and should be minimized.
+
+#### When I am in testing mode, why are run-loop autoruns disabled?
+
+Some of Ember's test helpers are promises that wait for the run loop to empty before resolving. This leads to resolving too early if there is code that is outside the run loop and gives erroneous test failures. Disabling autoruns help you identify these scenarios and helps both your testing and your application!
