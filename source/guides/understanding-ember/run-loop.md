@@ -124,7 +124,7 @@ Because the priority is first to last, the "sync" queue has higher priority than
 * The `actions` queue is the general work queue and will typically contain scheduled tasks e.g. promises
 * The `routerTransitions` queue contains transition jobs in the router
 * The `render` queue contains jobs meant for rendering, these will typically update the DOM
-* The `afterRender` contains jobs meant to be run after all previously scheduled render tasks are complete. This is often good for 3rd-party DOM manipulation libraries, that should only be run after an entire of tree of DOM has been updated
+* The `afterRender` contains jobs meant to be run after all previously scheduled render tasks are complete. This is often good for 3rd-party DOM manipulation libraries, that should only be run after an entire tree of DOM has been updated
 * The `destroy` queue contains jobs to finish the teardown of objects other jobs have scheduled to destroy
 
 ## In what order are jobs executed on the queues?
