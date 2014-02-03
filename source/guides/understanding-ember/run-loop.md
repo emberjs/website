@@ -145,8 +145,7 @@ Working with this API directly is not common in most Ember apps, but understandi
 help you to understand the run-loops algorithm, which will make you a better Ember developer.
 
 
-<a class="jsbin-embed" href="http://jsbin.com/ugUJAKAN/1/embed?output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
-
+<iframe src="http://bfbriggs.github.io/ember-run-loop-visual/dist/" width="678" height="410" style="border:1px solid rgb(170, 170, 170);margin-bottom:1.5em;"></iframe>
 
 ## FAQs
 
