@@ -24,10 +24,10 @@ foo.style.height = "500px" // write
 foo.offsetHeight // read (recalculate style, layout, expensive!)
 
 bar.style.height = "400px" // write
-foo.offsetHeight // read (recalculate style, layout, expensive!)
+bar.offsetHeight // read (recalculate style, layout, expensive!)
 
 baz.style.height = "200px" // write
-foo.offsetHeight // read (recalculate style, layout, expensive!)
+baz.offsetHeight // read (recalculate style, layout, expensive!)
 ```
 
 In this example, the sequence of code forced the browser to recalculate style,
@@ -48,7 +48,7 @@ baz.offsetHeight // read (fast since style and layout is already known)
 Interestingly, this pattern holds true for many other types of work. Essentially,
 batching similar work allows for better pipelining, and further optimization.
 
-Let's look at similar example that is optimized in Ember, starting with a User object:
+Let's look at a similar example that is optimized in Ember, starting with a User object:
 
 ```js
 var User = Ember.Object.extend({
@@ -116,15 +116,15 @@ Ember.run.queues
 // => ["sync", "actions", "routerTransitions", "render", "afterRender", "destroy"]
 ```
 
-Because the priority is first to last, the "sync" queue has higher priority then the "render" or "destroy" queue.
+Because the priority is first to last, the "sync" queue has higher priority than the "render" or "destroy" queue.
 
 ## What happens in these queues?
 
 * The `sync` queue contains binding synchronization jobs
-* The `actions` queue is the general work queue, and will typically contain scheduled tasks e.g. promises
+* The `actions` queue is the general work queue and will typically contain scheduled tasks e.g. promises
 * The `routerTransitions` queue contains transition jobs in the router
 * The `render` queue contains jobs meant for rendering, these will typically update the DOM
-* The `afterRender` contains jobs meant to be run after all previously scheduled render tasks are complete. This is often good for 3rd-party DOM manipulation libraries, that should only be run an entire of tree of DOM has been updated
+* The `afterRender` contains jobs meant to be run after all previously scheduled render tasks are complete. This is often good for 3rd-party DOM manipulation libraries, that should only be run after an entire of tree of DOM has been updated
 * The `destroy` queue contains jobs to finish the teardown of objects other jobs have scheduled to destroy
 
 ## In what order are jobs executed on the queues?
@@ -151,17 +151,17 @@ help you to understand the run-loops algorithm, which will make you a better Emb
 ## FAQs
 
 
-### What do I need to know to get started with Ember?
+#### What do I need to know to get started with Ember?
 
 For basic Ember app development scenarios, nothing. All common paths are paved nicely
 for you and don't require working with the run loop directly.
 
-### What do I need to know to actually build an app?
+#### What do I need to know to actually build an app?
 
 It is possible to build good apps without working with the run loop directly, so if
 you don't feel the need to do so, don't.
 
-### What scenarios will require me to understand the run loop?
+#### What scenarios will require me to understand the run loop?
 
 The most common case you will run into is integrating with a non-Ember API
 that includes some sort of asynchronous callback. For example:
@@ -174,7 +174,7 @@ that includes some sort of asynchronous callback. For example:
 
 You should begin a run loop when the callback fires.
 
-## How do I tell Ember to start a run loop? 
+#### How do I tell Ember to start a run loop? 
 
 ```js
 $('a').click(function(){
@@ -184,7 +184,7 @@ $('a').click(function(){
 })
 ```
 
-## What happens if I forget to start a run loop in an async handler?
+#### What happens if I forget to start a run loop in an async handler?
 
 As mentioned above, you should wrap any non-Ember async callbacks in `Ember.run`.
 If you don't, Ember will try to approximate a beginning and end for you. Here
@@ -204,6 +204,6 @@ $('a').click(function(){
 })
 ```
 
-This is suboptimal because current JS frame is allowed to end before the run loop is
+This is suboptimal because the current JS frame is allowed to end before the run loop is
 flushed, which sometimes means the browser will take the opportunity to do other things,
 like garbage collection. GC running in between data changing and DOM rerendering can cause visual lag and should be minimized.

@@ -30,6 +30,7 @@ GEM
     daemons (1.1.9)
     diff-lcs (1.2.4)
     eventmachine (1.0.3)
+    eventmachine (1.0.3-x86-mingw32)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faye-websocket (0.4.7)
@@ -40,6 +41,7 @@ GEM
     highline (1.6.19)
     hike (1.2.3)
     http_parser.rb (0.5.3)
+    http_parser.rb (0.5.3-x86-mingw32)
     http_router (0.10.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -86,6 +88,7 @@ GEM
     mime-types (1.23)
     multi_json (1.7.6)
     nokogiri (1.5.9)
+    nokogiri (1.5.9-x86-mingw32)
     padrino-core (0.10.7)
       activesupport (~> 3.2.0)
       http_router (~> 0.10.2)
@@ -104,6 +107,12 @@ GEM
       method_source (>= 0.6.5)
       ruby_parser (>= 2.0.5)
       slop (~> 2.1.0)
+    pry (0.9.6-x86-mingw32)
+      coderay (>= 0.9.8)
+      method_source (>= 0.6.5)
+      ruby_parser (>= 2.0.5)
+      slop (~> 2.1.0)
+      win32console (>= 1.3.0)
     rack (1.4.5)
     rack-protection (1.5.0)
       rack
@@ -152,11 +161,13 @@ GEM
       multi_json (~> 1.3)
     url_mount (0.2.1)
       rack
+    win32console (1.3.2-x86-mingw32)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   activesupport
