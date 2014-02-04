@@ -195,13 +195,13 @@ App.Project.reopenClass({
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
-      lastRelease: "1.4.0-beta.4",
-      futureVersion: "1.4.0-beta.5",
+      lastRelease: "1.4.0-beta.5",
+      futureVersion: "1.4.0",
       finalVersion: '1.4.0',
       channel: "beta",
       cycleEstimatedFinishDate: '2014-02-10',
-      date: "2014-01-30",
-      nextDate: "2014-02-03",
+      date: "2014-02-03",
+      nextDate: "2014-02-10",
       changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember Data",
