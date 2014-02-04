@@ -35,7 +35,11 @@ def ember_data_path
 end
 
 
-def generate_docs(output_path, repo_path, sha = nil)
+def generate_ember_docs
+  output_path = 'api.yml'
+  repo_path = ember_path
+  sha = ENV['EMBER_SHA']
+
   print "Generating docs data from #{repo_path}... "
 
   Dir.chdir(repo_path) do
@@ -65,14 +69,41 @@ def generate_docs(output_path, repo_path, sha = nil)
   puts "Built #{repo_path} with SHA #{sha}"
 end
 
+def generate_ember_data_docs
+  output_path = 'data_api.yml'
+  repo_path = ember_data_path
+  sha = ENV['EMBER_DATA_SHA']
+
+  print "Generating docs data from #{repo_path}... "
+
+  Dir.chdir(repo_path) do
+    # returns either `tag` or `tag-numcommits-gSHA`
+    unless sha
+      describe = `git describe --tags --always`.strip
+      sha = describe =~ /-g(.+)/ ? $1 : describe
+    end
+
+    sh("npm install && grunt docs")
+  end
+
+  # JSON is valid YAML
+  data = YAML.load_file(File.join(repo_path, "docs/build/data.json"))
+  data["project"]["sha"] = sha
+  File.open(File.expand_path("../data/#{output_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
+
+  puts "Built #{repo_path} with SHA #{sha}"
+end
+
 def build
   system "middleman build"
 end
 
 desc "Generate API Docs"
 task :generate_docs do
-  generate_docs 'api.yml', ember_path, ENV['EMBER_SHA']
-  generate_docs 'data_api.yml', ember_data_path, ENV['EMBER_DATA_SHA']
+  generate_ember_docs
+  generate_ember_data_docs
 end
 
 desc "Build the website"
