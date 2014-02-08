@@ -19,7 +19,7 @@ describe "TOC", :type => :feature do
     unless `which phantomjs`.empty?
       Capybara.current_driver = :poltergeist
     else
-      Capybara.current_driver = :selemium
+      Capybara.current_driver = :selenium
     end
     Capybara.run_server = false
   end
