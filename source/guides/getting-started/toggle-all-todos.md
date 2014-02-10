@@ -6,13 +6,13 @@ To implement this behavior update the `allAreDone` property in `js/controllers/t
 // ... additional lines truncated for brevity ...
 allAreDone: function(key, value) {
   if (value === undefined) {
-    return !!this.get('length') && this.everyProperty('isCompleted', true);
+    return this.get('length') > 0 && this.get('completed') === this.get('length');
   } else {
     this.setEach('isCompleted', value);
     this.invoke('save');
     return value;
   }
-}.property('@each.isCompleted')
+}.property('@completed')
 // ... additional lines truncated for brevity ...
 ```
 
