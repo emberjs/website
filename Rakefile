@@ -14,7 +14,7 @@ require 'yaml'
 def git_initialize(repository)
   unless File.exist?(".git")
     system "git init"
-    system "git remote add origin https://github.com/emberjs/#{repository}.git"
+    system "git remote add origin git@github.com:emberjs/#{repository}.git"
   end
 end
 
