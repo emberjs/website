@@ -259,6 +259,8 @@
   image: balanced.png
 - url: https://www.livenation.com/
   image: livenationlabs.png
+- url: http://www.midokura.com/
+  image: midokura.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
