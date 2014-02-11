@@ -365,6 +365,8 @@ Understanding Ember.js:
     url: "understanding-ember/keeping-templates-up-to-date"
   - title: "Debugging"
     url: "understanding-ember/debugging"
+  - title: "The Run Loop"
+    url: "understanding-ember/run-loop"
 
 Contributing to Ember.js:
   - title: "Adding New Features"
