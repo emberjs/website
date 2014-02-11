@@ -110,6 +110,8 @@ Templates:
     url: "templates/actions"
   - title: "Input Helpers"
     url: "templates/input-helpers"
+  - title: "Development Helpers"
+    url: "templates/development-helpers"
   - title: "Rendering with Helpers"
     url: "templates/rendering-with-helpers"
   #- title: "Keywords"
