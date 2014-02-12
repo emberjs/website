@@ -203,7 +203,7 @@ App.Button = Ember.View.extend({
   template: Ember.Handlebars.compile("{{view.title}}"),
 
   didInsertElement: function() {
-    this.$().button();
+    return this.$().button();
   }
 });
 
