@@ -48,7 +48,7 @@ baz.offsetHeight // read (fast since style and layout is already known)
 Interestingly, this pattern holds true for many other types of work. Essentially,
 batching similar work allows for better pipelining, and further optimization.
 
-Let's look at a similar example that is optimized in Ember, starting with a User object:
+Let's look at a similar example that is optimized in Ember, starting with a `User` object:
 
 ```js
 var User = Ember.Object.extend({
