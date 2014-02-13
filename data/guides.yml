@@ -405,6 +405,8 @@ Understanding Ember.js:
     url: "understanding-ember/debugging"
   - title: "The Run Loop"
     url: "understanding-ember/run-loop"
+  - title: "Dependency Injection & Service Lookup"
+    url: "understanding-ember/dependency-injection-and-service-lookup"
 
 Contributing to Ember.js:
   - title: "Adding New Features"

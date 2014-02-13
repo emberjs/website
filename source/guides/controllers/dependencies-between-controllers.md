@@ -59,5 +59,7 @@ App.AnotherController = Ember.Controller.extend({
 });
 ```
 
-For more information about aliased property, see the API docs for
+For more information about dependecy injection and `needs` in Ember.js,
+see the [dependency injection guide](/guides/understanding-ember/dependency-injection).
+For more information about aliases, see the API docs for
 [aliased properties](http://emberjs.com/api/#method_computed_alias).
