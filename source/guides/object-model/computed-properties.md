@@ -103,4 +103,4 @@ captainAmerica.get('firstName'); // William
 captainAmerica.get('lastName'); // Burnside
 ```
 
-Ember will call the computed property for both setters and getters, so if you want to use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter.
+Ember will call the computed property for both setters and getters, so if you want to use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter. Notice if value returned from the setter it will be cached as the property’s value.
