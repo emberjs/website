@@ -70,7 +70,7 @@ jQuery(window).on('resize', Ember.run.bind(this, this.handleResize));
 ```
 
 For more details please reference the recently added [run-loop guide](/guides/understanding-ember/run-loop/)
-(much thanks to [@bfbriggs](https://github.com/bfbriggs)).
+(much thanks to [Brendan Briggs](https://github.com/bfbriggs)).
 
 #### With Controller
 
