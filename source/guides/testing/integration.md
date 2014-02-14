@@ -80,7 +80,7 @@ test("creating a post displays the new post", function(){
 ### Creating your own test helpers
 `Ember.Test.registerHelper` and `Ember.Test.registerAsyncHelper` are used to register test helpers that will be injected when `App.injectTestHelpers` is called. The difference between `Ember.Test.registerHelper` and `Ember.Test.registerAsyncHelper` is that the latter will not run until any previous async helper has completed and any subsequent async helper will wait for it to finish before running.
 
-The helper method will always be called with the current Application as the first parameter. 
+The helper method will always be called with the current Application as the first parameter. Helpers need to be registered prior to calling `App.injectTestHelpers()`. 
 
 For example:
 
