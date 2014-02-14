@@ -144,12 +144,13 @@ Ember.LOG_STACKTRACE_ON_DEPRECATION = true
 
 ```javascript
 Ember.onerror = function(error) {
-    Em.$.ajax('/error-notification',
-              {type: 'POST', 
-               data: {
-                   stack: error.stack,
-                   otherInformation: 'exception message'
-               }});
+    Em.$.ajax('/error-notification', {
+      type: 'POST',
+      data: {
+        stack: error.stack,
+        otherInformation: 'exception message'
+      }
+    });
 }
 ```
 
