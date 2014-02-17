@@ -57,7 +57,7 @@ var User = Ember.Object.extend({
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName');
   }.property('firstName', 'lastName')
-})
+});
 ```
 
 and a template to display its attributes:
@@ -173,14 +173,14 @@ that includes some sort of asynchronous callback. For example:
 
 You should begin a run loop when the callback fires.
 
-#### How do I tell Ember to start a run loop? 
+#### How do I tell Ember to start a run loop?
 
 ```js
 $('a').click(function(){
   Ember.run(function(){  // begin loop
     // Code that results in jobs being scheduled goes here
   }); // end loop, jobs are flushed and executed
-})
+});
 ```
 
 #### What happens if I forget to start a run loop in an async handler?
@@ -193,14 +193,14 @@ is some pseudocode to describe what happens:
 $('a').click(function(){
   // Ember or runloop related code.
   Ember.run.start();
-  
+
   // 1. we detect you need a run-loop
   // 2. we start one for you, but we don't really know when it ends, so we guess
-  
-  nextTick(function() { 
+
+  nextTick(function() {
     Ember.run.end()
   }, 0);
-})
+});
 ```
 
 This is suboptimal because the current JS frame is allowed to end before the run loop is
