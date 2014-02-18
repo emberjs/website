@@ -15,37 +15,42 @@ By passing the controller's `sortProperties` and `sortAscending` properties we'r
 The sorting is done by the controller. The passed property indicated the key the content needs to be sorted on. If the content is already sorted on this property and assume we want to sort in reverse order. Otherwise we sort ascending. Hence the `return false` (since CoffeeScript always the last returned statement) to prevent errors when calling the sort action from a component (see later):
 
 ```javascript
-App.PostsController = Ember.ArrayController.extend
-  actions:
-    sort: (property) ->
-      if @get('isSorted') and (@get('sortProperties')[0] is property)
-          @toggleProperty('sortAscending')
-      else
-        @set('sortProperties', [property])
-        @set('sortAscending', yes)
-
-      # Returning false prevents the action from bubbling
-      return false
-```
+App.PostsController = Ember.ArrayController.extend({
+  actions: {
+    sort: function(property) {
+      if (this.get('isSorted') && (this.get('sortProperties')[0] === property)) {
+        this.toggleProperty('sortAscending');
+      } else {
+        this.set('sortProperties', [property]);
+        this.set('sortAscending', true);
+      }
+    }
+  }
+});```
 
 Instead of calling the `sort` action from an `{{action}}` helper, we create a component `sorting-key` and have this component delegate the event to the controller:
 
 ```javascript
-App.SortingKeyComponent = Ember.Component.extend
-  tagName: 'dd'
-  classNameBindings: ['isSorted:active', 'isAsc:asc', 'isDesc:desc']
-  isSorted: (->
-    @get('sortProperties')?[0] is @get('key')
-  ).property('sortProperties')
-  isAsc: (->
-    @get('isSorted') and @get('sortAscending')
-  ).property('isSorted', 'sortAscending')
-  isDesc: (->
-    @get('isSorted') and not @get('sortAscending')
-  ).property('isSorted', 'sortAscending')
-  click: ->
-    @sendAction 'action', @get('key')
-```
+App.SortingKeyComponent = Ember.Component.extend({
+  tagName: 'dd',
+  classNameBindings: ['isSorted:active', 'isAsc:asc', 'isDesc:desc'],
+  isSorted: (function() {
+    if this.get('sortProperties') {
+      return this.get('sortProperties')[0] === this.get('key');
+    } else {
+      return false;
+    }
+  }).property('sortProperties'),
+  isAsc: (function() {
+    return this.get('isSorted') && this.get('sortAscending');
+  }).property('isSorted', 'sortAscending'),
+  isDesc: (function() {
+    return this.get('isSorted') && !this.get('sortAscending');
+  }).property('isSorted', 'sortAscending'),
+  click: function() {
+    this.sendAction('action', this.get('key'));
+  }
+});```
 
 The corresponding template:
 
