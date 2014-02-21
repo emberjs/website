@@ -2,14 +2,14 @@
 You want to base the value of one property on the value of another property.
 
 ### Solution
-Use one of the computed property macros like `Ember.computed.alias` or `Ember.computed.equal`
+Use one of the computed property macros like `Ember.computed.alias` or `Ember.computed.gte`
 
 ```js
 App.Person = Ember.Object.extend({
 	firstName : null,
 	lastName : null,
 	surname : Ember.computed.alias("lastName"),
-	eligibleForRetirement: Ember.computed.get("age", 65)
+	eligibleForRetirement: Ember.computed.gte("age", 65)
 });
 ```
 
