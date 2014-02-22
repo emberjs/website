@@ -96,6 +96,24 @@ To customize the REST adapter, define a subclass of `DS.RESTAdapter` and
 name it `App.ApplicationAdapter`. You can then override its properties
 and methods to customize how records are retrieved and saved.
 
+#### Customizing a Specific Model
+
+It's entirely possible that you need to define options for just one model instead of an application-wide customization. In that case, you can create an adapter named after the model you are specifying:
+
+```js
+App.PostAdapter = DS.RESTAdapter.extend({
+  namespace: 'api/v2',
+  host: 'https://api.example2.com'
+});
+
+App.PhotoAdapter = DS.RESTAdapter.extend({
+  namespace: 'api/v1'
+  host: 'https://api.example.com'
+});
+```
+
+This allows you to easily connect to multiple API versions simultaneously or interact with different domains on a per model basis.
+
 ### Customizing URLs
 
 #### URL Prefix
@@ -134,3 +152,4 @@ App.ApplicationAdapter = DS.RESTAdapter.extend({
 ```
 
 Requests for a `person` with ID `1` would now target `https://api.example.com/people/1`.
+
