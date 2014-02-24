@@ -43,8 +43,8 @@ App.ApplicationController = Ember.Controller.extend({
 App.SpinButtonComponent = Ember.Component.extend({
 	classNames: ['button'],
     buttonText:"Save",
+    isLoading:false,
     actions:{
-        isLoading:false,
         showLoading:function(){
             if(!this.get('isLoading')){
                 this.set('isLoading', true);
