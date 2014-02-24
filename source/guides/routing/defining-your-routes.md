@@ -181,7 +181,7 @@ and `resource` template.
 
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
-via `transitionTo` or `{{#link-to}}`, make sure to use the full route
+via `transitionTo` or `{{#link-to}}`), make sure to use the full route
 name (`posts.new`, not `new`).
 
 Visiting `/` renders the `index` template, as you would expect.
