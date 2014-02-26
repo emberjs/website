@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Ember.js - <%= current_page.data.title || @title %></title>
+    <meta property="st:title" content="<%= current_page.data.title || @title %>" />
     <link rel="shortcut icon" href="/images/favicon.png" />
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
