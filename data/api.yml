@@ -6396,7 +6396,7 @@ classitems:
     type: Function
   - name: options
     description: "(optional)"
-    type: String
+    type: Object
   class: Ember.Application
   module: ember
   submodule: ember-application
