@@ -1,0 +1,1 @@
+Testing models can be done using the `moduleForModel` test helper.
