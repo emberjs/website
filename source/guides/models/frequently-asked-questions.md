@@ -75,7 +75,7 @@ App.PostsFavoritedRoute = Ember.Route.extend({
     // Kick off a query to the server for all posts that
     // the user has favorited. As results from the query are
     // returned from the server, they will also begin to appear.
-    return store.filter('posts', { favorited: true }, function(post) {
+    return store.filter('post', { favorited: true }, function(post) {
       return post.get('isFavorited');
     });
   }
