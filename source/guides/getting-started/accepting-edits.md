@@ -59,6 +59,11 @@ actions: {
     } else {
       this.get('model').save();
     }
+  },
+  removeTodo: function () {
+    var todo = this.get('model');
+    todo.deleteRecord();
+    todo.save();
   }
 },
 // ... additional lines truncated for brevity ...
