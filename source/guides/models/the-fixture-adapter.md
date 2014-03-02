@@ -13,14 +13,12 @@ Using the fixture adapter entails three very simple setup steps:
 
 #### Creating a Fixture Adapter
 
-Simply attach it to your instance of `Ember.Store`:
+Simply attach it as the `ApplicationAdapter` property on your instance
+of `Ember.Application`:
 
 ```JavaScript
 var App = Ember.Application.create();
-App.Store = DS.Store.extend({
-  revision: 13,
-  adapter: DS.FixtureAdapter
-});
+App.ApplicationAdapter = DS.FixtureAdapter;
 ```
 
 #### Define Your Model
