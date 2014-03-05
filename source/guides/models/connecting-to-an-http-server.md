@@ -153,3 +153,26 @@ App.ApplicationAdapter = DS.RESTAdapter.extend({
 
 Requests for a `person` with ID `1` would now target `https://api.example.com/people/1`.
 
+#### Custom HTTP Headers
+
+Some APIs require HTTP headers, e.g. to provide an API key. Arbitrary
+headers can be set as key/value pairs on the `RESTAdapter`'s `headers`
+property and Ember Data will send them along with each ajax request.
+
+For Example
+
+```js
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+  headers: {
+    "API_KEY": "secret key",
+    "ANOTHER_HEADER": "Some header value"
+  }
+});
+```
+
+Requests for any resource will include the following HTTP headers.
+
+```http
+ANOTHER_HEADER: Some header value
+API_KEY: secret key
+```
