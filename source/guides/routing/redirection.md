@@ -43,7 +43,7 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   afterModel: function(posts, transition) {
-    if (posts.length === 1) {
+    if (posts.get('length') === 1) {
       this.transitionTo('post', posts[0]);
     }
   }
