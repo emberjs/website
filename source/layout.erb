@@ -8,14 +8,6 @@
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
     <link href="http://emberjs.com/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
-
-<!--[if lt IE 9]>
-    <script type="text/javascript" src="/javascripts/common-old-ie.js"></script>
-<![endif]-->
-<!--[if gte IE 9]><!-->
-    <script type="text/javascript" src="/javascripts/common-modern.js"></script>
-<!--<![endif]-->
-
     <%= yield_content :head %>
   </head>
 
@@ -81,6 +73,13 @@
       </div>
     </div>
 
+<!--[if lt IE 9]>
+    <script type="text/javascript" src="/javascripts/common-old-ie.js"></script>
+<![endif]-->
+<!--[if gte IE 9]><!-->
+    <script type="text/javascript" src="/javascripts/common-modern.js"></script>
+<!--<![endif]-->
+    <%= yield_content :foot %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
