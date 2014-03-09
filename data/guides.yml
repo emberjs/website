@@ -197,6 +197,8 @@ Models:
     #url: "models/filtering-records"
   - title: "Working with Records"
     url: "models/working-with-records"
+  - title: "Using Fixtures"
+    url: "models/the-fixture-adapter"
   - title: "Connecting to an HTTP Server"
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
