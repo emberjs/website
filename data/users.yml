@@ -265,6 +265,8 @@
   image: unlockable.png
 - url: http://orchestrate.io
   image: orchestrate.png
+- url: http://www.aspireauctions.com
+  image: aspireauctions.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
