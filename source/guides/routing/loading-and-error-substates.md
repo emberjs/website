@@ -195,7 +195,7 @@ a transition and exited upon completion of the transition. Because the
 `loading` template rendered as a top-level view and not within an
 outlet, it could be used for little more than displaying a loading
 spinner during slow transitions. Loading events/substates give you far
-more control, but if you'd like to emulate something similar to legacy
+more control, but if you'd like to emulate something similar to the legacy
 `LoadingRoute` behavior, you could do as follows:
 
 ```js
@@ -216,6 +216,6 @@ App.ApplicationRoute = Ember.Route.extend({
 
 [Example JSBin](http://emberjs.jsbin.com/ucanam/3307)
 
-This will, like legacy `LoadingRoute`, append a top-level view when the
+This will, like the legacy `LoadingRoute`, append a top-level view when the
 router goes into a loading state, and tear down the view once the
 transition finishes.
