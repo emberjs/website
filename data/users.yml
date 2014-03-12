@@ -267,6 +267,9 @@
   image: orchestrate.png
 - url: http://www.aspireauctions.com
   image: aspireauctions.png
+- url: http://planetargon.com/what-we-do/development/emberjs-development
+  image: planetargon.png
+
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
