@@ -241,7 +241,7 @@ This affects query param behavior in two ways:
 
 1. The type of the default value is used to cast changed query param
    values in the URL before setting values on the controller. So, given
-   the above example, is user clicks the back button to change from
+   the above example, if the user clicks the back button to change from
    `/?page=3` to `/?page=2`, Ember will update the `page` controller
    property to the properly cast number `2` rather than the string `"2"`, which it
    knows to do because the default value (`1`) is a number. This also
