@@ -80,9 +80,9 @@ the following loading substate behavior we've been alluding to.
 
 ```js
 App.Router.map(function() {
-  this.resource('foo', function() {   // -> FooRoute
-    this.resource('bar', function() { // -> BarRoute
-      this.route('baz');              // -> BarBazRoute
+  this.resource('foo', function() {       // -> FooRoute
+    this.resource('foo.bar', function() { // -> FooBarRoute
+      this.route('baz');                  // -> FooBarBazRoute
     });
   });
 });
@@ -100,13 +100,13 @@ above `foo.bar.baz` that it can transition into, starting with
 Ember will find a loading route at the above location if either a) a 
 Route subclass has been defined for such a route, e.g.
 
-1. `App.BarLoadingRoute`
+1. `App.FooBarLoadingRoute`
 2. `App.FooLoadingRoute`
 3. `App.LoadingRoute`
 
 or b) a properly-named loading template has been found, e.g.
 
-1. `bar/loading`
+1. `foo/bar/loading`
 2. `foo/loading`
 3. `loading`
 
