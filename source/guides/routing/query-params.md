@@ -73,7 +73,7 @@ App.ArticlesController = Ember.ArrayController.extend({
     var articles = this.get('model');
 
     if (category) {
-      return articles.filterProperty('category', category);
+      return articles.filterBy('category', category);
     } else {
       return articles;
     }
@@ -99,7 +99,7 @@ The `link-to` helper supports specifying query params by way of the
 `query-params` subexpression helper.
 
 ```handlebars
-// Explicitly set target query para
+// Explicitly set target query parameter
 {{#link-to 'posts' (query-params direction="asc")}}Sort{{/link-to}}
 
 // Binding is also supported
