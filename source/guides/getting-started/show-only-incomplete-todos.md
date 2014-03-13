@@ -46,11 +46,11 @@ Normally transitioning into a new route changes the template rendered into the p
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/arITiZu/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/xukut/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/2a1d35293a52e40d0125f552a1a8b2c01f759313)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/b9faa7bd35cc116862c8682f6aed8630905fba93)
   * [link-to API documentation](/api/classes/Ember.Handlebars.helpers.html#method_link-to)
   * [Route#renderTemplate API documentation](/api/classes/Ember.Route.html#method_renderTemplate)
   * [Route#render API documentation](/api/classes/Ember.Route.html#method_render)

@@ -25,9 +25,9 @@ In `index.html` include `js/libs/localstorage_adapter.js` as a dependency:
 Reload your application. Todos you manage will now persist after the application has been closed.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/aZIXaYo/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/rotey/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/81801d87da42d0c83685ff946c46de68589ce38f)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/19d38fb43dc9bdb41501ad0f0b0b6834a1fa6ffc)
   * [LocalStorage Adapter on GitHub](https://github.com/rpflorence/ember-localstorage-adapter)

@@ -30,9 +30,9 @@ Because the todo is no longer part of the collection of all todos, its `<li>` el
 Reload your web browser to ensure that there are no errors and the behaviors described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/eREkanA/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/gatul/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/14e1f129f76bae8f8ea6a73de1e24d810678a8fe)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/6d987a7601d2f7466d48674f20c0b73f88b7d25b)
   * [action API documention](/api/classes/Ember.Handlebars.helpers.html#method_action)

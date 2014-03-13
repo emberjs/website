@@ -60,11 +60,11 @@ model for this route is the same model as for the `TodosRoute`.
 This mapping is described in more detail in the [Naming Conventions Guide](/guides/concepts/naming-conventions).
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/oweNovo/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/homug/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/3bab8f1519ffc1ca2d5a12d1de35e4c764c91f05)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/72f19ea2a8661572e41166bcc04ecdb8529caf9a)
   * [Ember Router Guide](/guides/routing)
   * [Ember Controller Guide](/guides/controllers)
   * [outlet API documentation](/api/classes/Ember.Handlebars.helpers.html#method_outlet)
