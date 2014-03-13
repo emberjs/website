@@ -13,20 +13,22 @@
 
 - url: http://www.mhelabs.com/
   image: mhelabs.png
-- url: https://addepar.com/
-  image: addepar.png
+- url: https://www.yapp.us/
+  image: yapp.png
 - url: http://tilde.io/
   image: tilde.png
+- url: http://yahoo.com
+  image: yahoo.png
 - url: http://www.zendesk.com/
   image: zendesk.png
 - url: http://squareup.com/
   image: square.png
 - url: http://www.discourse.org
   image: discourse.png
+- url: https://addepar.com/
+  image: addepar.png
 - url: http://livingsocial.com/
   image: livingsocial.png
-- url: https://www.yapp.us/
-  image: yapp.png
 - url: http://www.groupon.com
   image: groupon.png
 - url: http://www.timbuk2.com/
@@ -193,6 +195,8 @@
   image: terracycle.png
 - url: http://scan.me
   image: scan.png
+- url: http://www.brandingbrand.com/
+  image: brandingbrand.png
 - url: http://noesissoftware.com
   image: noesissoftware.png
 - url: https://5apps.com
@@ -220,7 +224,49 @@
 - url: http://www.khelkund.com/football
   image: khelkund.png
 - url: https://centroy.com
-  image: centroy.png  
+  image: centroy.png
+- url: http://pluckit.io
+  image: pluck.png
+- url: http://flockler.com
+  image: flockler_x2.png
+- url: http://www.astonishdesign.com
+  image: astonishdesign.png
+- url: http://rankinity.com
+  image: rankinity.png
+- url: http://swink.tv
+  image: swinktv.png
+- url: https://beta.bondable.com
+  image: bondable.png
+- url: https://asknative.com
+  image: asknative.png
+- url: http://vijo.inn.ac
+  image: vijo.png
+- url: http://www.brightin.nl
+  image: brightin.png
+- url: http://www.codeschool.com
+  image: codeschool.png
+- url: http://www.gooddata.com/
+  image: gooddata.png
+- url: http://www.cruxandco.com/
+  image: crux.png
+- url: https://huboard.com
+  image: huboard.png
+- url: http://www.fasteragile.com
+  image: fasteragile.png
+- url: http://www.theworkinggroup.ca/
+  image: theworkinggroup.png
+- url: https://www.balancedpayments.com/
+  image: balanced.png
+- url: https://www.livenation.com/
+  image: livenationlabs.png
+- url: http://www.midokura.com/
+  image: midokura.png
+- url: http://www.unlockable.com/
+  image: unlockable.png
+- url: http://orchestrate.io
+  image: orchestrate.png
+- url: http://www.aspireauctions.com
+  image: aspireauctions.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the

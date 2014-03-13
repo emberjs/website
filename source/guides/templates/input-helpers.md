@@ -1,6 +1,6 @@
 ## Input Helpers
 
-The `{{input}}` and `{{textarea}}` helpers in Ember are the easiest way to
+The `{{input}}` and `{{textarea}}` helpers in Ember.js are the easiest way to
 create common form controls. The `{{input}}` helper wraps the built-in
 [Ember.TextField][1] and [Ember.Checkbox][2] views, while `{{textarea}}` wraps
 [Ember.TextArea][3]. Using these helpers, you can create these views with

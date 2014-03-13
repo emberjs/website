@@ -5,9 +5,9 @@
         <th>From</th>
         <th>To</th>
     </tr>
-        
+
     {{#each messages}}
-        {{#link-to "mail" this tagName=tr}}
+        {{#link-to "mail" this tagName="tr"}}
             <td>{{date date}}</td>
             <td>{{view.isActive}}{{subject}}</td>
             <td>{{from}}</td>

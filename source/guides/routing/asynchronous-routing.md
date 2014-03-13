@@ -44,8 +44,8 @@ usernamesPromise.then(fetchPhotosOfUsers)
 
 In the above example, if any of the methods
 `fetchPhotosOfUsers`, `applyInstagramFilters`, or
-`uploadTrendyPhotoAlbum` reject (either by throwing an exception or
-returning `Ember.RSVP.reject()`), `handleErrors` will be called with
+`uploadTrendyPhotoAlbum` returns a promise that rejects, 
+`handleErrors` will be called with
 the reason for the failure. In this manner, promises approximate an
 asynchronous form of try-catch statements that prevent the rightward
 flow of nested callback after nested callback and facilitate a saner
@@ -68,7 +68,7 @@ if a promise was provided as an argument to `transitionTo`), the transition
 will pause until that promise fulfills or rejects.
 
 <aside>
-**Note:** the router considers any object with a `then` method
+**Note:** The router considers any object with a `then` method
 defined on it to be a promise.
 </aside>
 
@@ -124,9 +124,6 @@ along the way, e.g.:
 App.GoodForNothingRoute = Ember.Route.extend({
   model: function() {
     return Ember.RSVP.reject("FAIL");
-
-    // The following would have the same effect:
-    // throw "FAIL";
   },
 
   actions: {
@@ -166,7 +163,7 @@ App.FunkyRoute = Ember.Route.extend({
 });
 ```
 
-### `beforeModel` and `afterModel`
+### beforeModel and afterModel
 
 The `model` hook covers many use cases for pause-on-promise transitions,
 but sometimes you'll need the help of the related hooks `beforeModel`

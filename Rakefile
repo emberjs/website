@@ -14,7 +14,7 @@ require 'yaml'
 def git_initialize(repository)
   unless File.exist?(".git")
     system "git init"
-    system "git remote add origin https://github.com/emberjs/#{repository}.git"
+    system "git remote add origin git@github.com:emberjs/#{repository}.git"
   end
 end
 
@@ -35,40 +35,65 @@ def ember_data_path
 end
 
 
-def generate_docs
-  projects = {
-    "Ember.js" => { out: "api.yml", path: ember_path },
-    "Ember Data" => { out: "data_api.yml", path: ember_data_path }
-  }
+def generate_ember_docs
+  output_path = 'api.yml'
+  repo_path = ember_path
+  sha = ENV['EMBER_SHA']
 
-  projects.each do |name, options|
-    path = options[:path]
+  print "Generating docs data from #{repo_path}... "
 
-    print "Generating #{name} docs data from #{path}... "
-
-    sha = nil
-
-    Dir.chdir(path) do
-      # returns either `tag` or `tag-numcommits-gSHA`
+  Dir.chdir(repo_path) do
+    # returns either `tag` or `tag-numcommits-gSHA`
+    unless sha
       describe = `git describe --tags --always`.strip
       sha = describe =~ /-g(.+)/ ? $1 : describe
+    end
 
-      Dir.chdir("docs") do
-        system("npm install") unless File.exist?('node_modules')
-        # Unfortunately -q doesn't always work so we get output
-        system("./node_modules/.bin/yuidoc -p -q")
+    Bundler.with_clean_env do
+      unless system('bundle check')
+        puts "You are missing dependencies for #{repo_path}. Attempting to install now."
+        sh('bundle install')
       end
-    end
 
-    # JSON is valid YAML
-    data = YAML.load_file(File.join(path, "docs/build/data.json"))
-    data["project"]["sha"] = sha
-    File.open(File.expand_path("../data/#{options[:out]}", __FILE__), "w") do |f|
-      YAML.dump(data, f)
+      sh("bundle exec rake docs")
     end
-
-    puts "Built #{name} with SHA #{sha}"
   end
+
+  # JSON is valid YAML
+  data = YAML.load_file(File.join(repo_path, "docs/build/data.json"))
+  data["project"]["sha"] = sha
+  File.open(File.expand_path("../data/#{output_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
+
+  puts "Built #{repo_path} with SHA #{sha}"
+end
+
+def generate_ember_data_docs
+  output_path = 'data_api.yml'
+  repo_path = ember_data_path
+  sha = ENV['EMBER_DATA_SHA']
+
+  print "Generating docs data from #{repo_path}... "
+
+  Dir.chdir(repo_path) do
+    # returns either `tag` or `tag-numcommits-gSHA`
+    unless sha
+      describe = `git describe --tags --always`.strip
+      sha = describe =~ /-g(.+)/ ? $1 : describe
+    end
+
+    sh("npm install && grunt docs")
+  end
+
+  # JSON is valid YAML
+  data = YAML.load_file(File.join(repo_path, "docs/build/data.json"))
+  data["project"]["sha"] = sha
+  File.open(File.expand_path("../data/#{output_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
+
+  puts "Built #{repo_path} with SHA #{sha}"
 end
 
 def build
@@ -77,7 +102,8 @@ end
 
 desc "Generate API Docs"
 task :generate_docs do
-  generate_docs
+  generate_ember_docs
+  generate_ember_data_docs
 end
 
 desc "Build the website"
@@ -89,12 +115,12 @@ desc "Preview"
 task :preview do
   require 'listen'
 
-  generate_docs
+  Rake::Task["generate_docs"].execute
 
   paths = Dir.glob(File.join(ember_path, "packages/*/lib")) +
     Dir.glob(File.join(ember_data_path, "packages/*/lib"))
   listener = Listen.to(*paths, :filter => /\.js$/)
-  listener.change { generate_docs }
+  listener.change { Rake::Task["generate_docs"].execute }
   listener.start(false)
 
   system "middleman server"
@@ -113,7 +139,10 @@ task :deploy do |t, args|
     git_initialize("emberjs.github.com")
     git_update
 
-    build
+    unless build
+      puts "The build failed, stopping deploy. Please fix build errors before re-deploying."
+      exit 1
+    end
 
     # This screws up the build and isn't necessary
     # rm_r "source/examples"

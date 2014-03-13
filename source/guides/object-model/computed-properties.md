@@ -62,7 +62,7 @@ captainAmerica.get('description'); // "Steve Rogers; Age: 80; Country: USA"
 
 ### Dynamic updating
 
-Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update . 
+Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update. 
 
 ```javascript
 captainAmerica.set('firstName', 'William');
@@ -103,4 +103,4 @@ captainAmerica.get('firstName'); // William
 captainAmerica.get('lastName'); // Burnside
 ```
 
-Ember will call the computed property for both setters and getters, so if you want to call use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter.
+Ember will call the computed property for both setters and getters, so if you want to use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter. Note that if a value is returned from the setter, it will be cached as the property’s value.

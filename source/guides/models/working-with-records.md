@@ -16,19 +16,16 @@ modifying attributes. For example, you can use `Ember.Object`'s
 `incrementProperty` helper:
 
 ```js
-person.incrementProperty('age');
-// Happy birthday!
+person.incrementProperty('age'); // Happy birthday!
 ```
 
 You can tell if a record has outstanding changes that have not yet been
 saved by checking its `isDirty` property.
 
 ```js
-person.get('isDirty');
-//=> false
+person.get('isDirty'); //=> false
 
 person.set('isAdmin', true);
 
-person.get('isDirty');
-//=> true
+person.get('isDirty'); //=> true
 ```

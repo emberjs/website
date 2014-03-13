@@ -10,3 +10,4 @@ build/
 /b
 *.swp
 .rvmrc
+.cache

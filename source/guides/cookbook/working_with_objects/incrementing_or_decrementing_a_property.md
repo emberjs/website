@@ -5,19 +5,21 @@ You want to increment or decrement a property.
 Use the `incrementProperty` or `decrementProperty` methods of `Ember.Object`.
 
 To increment:
-```js
+
+```javascript
 person.incrementProperty('age');
 ```
 
 To decrement:
-```js
+
+```javascript
 person.decrementProperty('age');
 ```
 
 ### Discussion
 You can optionally specify a value to increment or decrement by:
 
-```js
+```javascript
 person.incrementProperty('age', 10);
 ```
 

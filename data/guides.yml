@@ -1,4 +1,4 @@
-"Ember.js Guides":
+"Guides and Tutorials":
   - title: "Ember.js Guides"
     url: "index.html"
     skip_sidebar: true
@@ -51,6 +51,10 @@
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
 
+"Getting Ember":
+  - title: "Getting Ember"
+    url: "getting-ember"
+
 Concepts:
   - title: "Core Concepts"
     url: "concepts/core-concepts"
@@ -64,6 +68,22 @@ Concepts:
     #url: "getting-started/build-tools"
   #- title: "Understanding Web Apps"
     #url: "getting-started/understanding-web-apps"
+
+The Object Model:
+  - title: "Classes and Instances"
+    url: "object-model/classes-and-instances"
+  - title: "Computed Properties"
+    url: "object-model/computed-properties"
+  - title: "Computed Properties and Aggregate Data with @each"
+    url: "object-model/computed-properties-and-aggregate-data"
+  - title: "Observers"
+    url: "object-model/observers"
+  - title: "Bindings"
+    url: "object-model/bindings"
+  - title: "Reopening Classes and Instances"
+    url: "object-model/reopening-classes-and-instances"
+  - title: "Bindings, Observers, Computed Properties: What Do I Use When?"
+    url: "object-model/what-do-i-use-when"
 
 Application:
   - title: "Introduction"
@@ -90,6 +110,8 @@ Templates:
     url: "templates/actions"
   - title: "Input Helpers"
     url: "templates/input-helpers"
+  - title: "Development Helpers"
+    url: "templates/development-helpers"
   - title: "Rendering with Helpers"
     url: "templates/rendering-with-helpers"
   #- title: "Keywords"
@@ -114,8 +136,13 @@ Routing:
     url: "routing/redirection"
   - title: "Specifying the URL Type"
     url: "routing/specifying-the-location-api"
+  - title: "Query Parameters"
+    url: "routing/query-params"
+    warning: "query-params-warning"
   - title: "Asynchronous Routing"
     url: "routing/asynchronous-routing"
+  - title: "Loading / Error Substates"
+    url: "routing/loading-and-error-substates"
   - title: "Preventing and Retrying Transitions"
     url: "routing/preventing-and-retrying-transitions"
   #- title: "Dynamic Segments"
@@ -156,18 +183,16 @@ Controllers:
 Models:
   - title: "Introduction"
     url: "models"
-  - title: "Using the Store"
-    url: "models/using-the-store"
   - title: "Defining Models"
     url: "models/defining-models"
-  - title: "Finding a Record"
-    url: "models/finding-a-record"
-  - title: "Finding All Records of a Type"
-    url: "models/finding-all-records-of-a-type"
+  - title: "Creating and Deleting Records"
+    url: "models/creating-and-deleting-records"
   - title: "Pushing Records into the Store"
     url: "models/pushing-records-into-the-store"
-  - title: "Querying the Server for Records"
-    url: "models/querying-the-server-for-records"
+  - title: "Persisting Records"
+    url: "models/persisting-records"
+  - title: "Finding Records"
+    url: "models/finding-records"
   #- title: "Filtering Records"
     #url: "models/filtering-records"
   - title: "Working with Records"
@@ -176,7 +201,6 @@ Models:
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
     url: "models/handling-metadata"
-    warning: "canary-data"
   - title: "Frequently Asked Questions"
     url: "models/frequently-asked-questions"
 
@@ -200,22 +224,6 @@ Views:
   #- title: "Building Reusable Views"
     #url: "views/building-reusable-views"
 
-The Object Model:
-  - title: "Classes and Instances"
-    url: "object-model/classes-and-instances"
-  - title: "Computed Properties"
-    url: "object-model/computed-properties"
-  - title: "Computed Properties and Aggregate Data with @each"
-    url: "object-model/computed-properties-and-aggregate-data"
-  - title: "Observers"
-    url: "object-model/observers"
-  - title: "Bindings"
-    url: "object-model/bindings"
-  - title: "Reopening Classes and Instances"
-    url: "object-model/reopening-classes-and-instances"
-  - title: "Bindings, Observers, Computed Properties: What Do I Use When?"
-    url: "object-model/what-do-i-use-when"
-
 Enumerables:
   - title: "Introduction"
     url: "enumerables"
@@ -229,6 +237,8 @@ Configuring Ember.js:
     url: "configuring-ember/disabling-prototype-extensions"
   - title: "Embedding Applications"
     url: "configuring-ember/embedding-applications"
+  - title: "Feature Flags"
+    url: "configuring-ember/feature-flags"
 
 Cookbook:
   - title: "Introduction"
@@ -268,6 +278,12 @@ Cookbook:
     skip_sidebar_item: true
   - title: "Specifying Data-Driven Areas of Templates That Do Not Need To Update"
     url: "cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update"
+    skip_sidebar_item: true
+  - title: "Using Modal Dialogs"
+    url: "cookbook/user_interface_and_interaction/using_modal_dialogs"
+    skip_sidebar_item: true
+  - title: "Resetting scroll on route changes"
+    url: "cookbook/user_interface_and_interaction/resetting_scroll_on_route_changes"
     skip_sidebar_item: true
   # - title: "Converting Strings to Currency With Accounting.js"
   #   url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
@@ -326,6 +342,9 @@ Cookbook:
   - title: "Setting Multiple Properties At Once"
     url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
     skip_sidebar_item: true
+  - title: "Continuous Redrawing of Views"
+    url: "cookbook/working_with_objects/continuous_redrawing_of_views"
+    skip_sidebar_item: true
   # - title: "Continuous Redrawing of Views"
   #   url: "cookbook/working_with_objects/continuous_redrawing_of_views"
   #   skip_sidebar_item: true
@@ -348,10 +367,14 @@ Understanding Ember.js:
     url: "understanding-ember/keeping-templates-up-to-date"
   - title: "Debugging"
     url: "understanding-ember/debugging"
+  - title: "The Run Loop"
+    url: "understanding-ember/run-loop"
 
 Contributing to Ember.js:
   - title: "Adding New Features"
     url: "contributing/adding-new-features"
+  - title: "Repositories"
+    url: "contributing/repositories"
 
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
