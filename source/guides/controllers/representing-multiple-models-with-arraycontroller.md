@@ -1,4 +1,4 @@
-You can use `Ember.ArrayController` to represent an array of models. To tell an
+You can use [Ember.ArrayController](/api/classes/Ember.ArrayController.html) to represent an array of models. To tell an
 `ArrayController` which model to represent, set its `model` property
 in your route's `setupController` method.
 
@@ -57,7 +57,7 @@ Now we can use this property in our template:
 
 ### Sorting
 
-The `Ember.ArrayController` uses the `Ember.SortableMixin` to allow sorting
+The `Ember.ArrayController` uses the [Ember.SortableMixin](/api/classes/Ember.SortableMixin.html) to allow sorting
 of content. There are two properties that can be set in order to set up sorting:
 
 ```javascript
