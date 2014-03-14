@@ -104,7 +104,7 @@ arguments to the `link-to` helper:
 
 ```handlebars
 <p>
-  {{link-to 'photo.edit' photo class="btn btn-primary"}}
+  {{link-to 'Edit this photo' 'photo.edit' photo class="btn btn-primary"}}
 </p>
 ```
 
