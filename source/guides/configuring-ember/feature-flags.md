@@ -30,11 +30,11 @@ status.
 
 A feature can have one of a few different statuses:
 
-* `true` - The feature is enabled: the code behind the flag is always enabled in
+* `true` - The feature is **enabled**: the code behind the flag is always enabled in
   the generated build.
-* `false` - The feature is disabled the code behind the flag is not present in
+* `false` - The feature is **disabled**: the code behind the flag is not present in
   the generated build at all.
-* `null` - The feature is present in the build output, but must be enabled at
+* `null` - The feature is **present** in the build output, but must be enabled at
   runtime (it is still behind feature flags).
 
 The process of removing the feature flags from the resulting build output is
