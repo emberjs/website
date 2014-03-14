@@ -56,7 +56,7 @@ than `true` or `false` will do, but `null` is the chosen value).
 
 A global `ENV` object will be used to initialize the `Ember.ENV`
 object, and any feature flags that are enabled/disabled under
-`ENV.FEATURES` will be migrated to `Ember.FEATURES`, those features
+`ENV.FEATURES` will be migrated to `Ember.FEATURES`; those features
 will be enabled based on the flag value. **Ember only reads** the
 `ENV` value upon initial load so setting this value after Ember has
 been loaded will have no affect.
