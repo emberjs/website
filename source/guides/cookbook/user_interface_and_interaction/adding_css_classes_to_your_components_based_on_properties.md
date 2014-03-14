@@ -6,7 +6,7 @@ Add property names to the `classNameBindings` property of subclassed components.
 
 ### Discussion
 
-You can apply classes based on properties of the component, or even by properties bound to data passed into the component.This is done by binding the class attribute using `classNameBindings`.
+You can apply classes based on properties of the component, or even by properties bound to data passed into the component. This is done by binding the class attribute using `classNameBindings`.
 
 ```js
 classNameBindings: ['active'],
