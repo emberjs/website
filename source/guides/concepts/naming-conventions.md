@@ -26,7 +26,7 @@ the controller.
 If your app provides an `App.ApplicationRoute`, Ember.js will invoke
 [the][1] [router's][2] [hooks][3] first, before rendering the
 `application` template. Hooks are implemented as methods and provide 
-you access points within an Ember objects lifecycle to intercept and 
+you access points within an Ember object's lifecycle to intercept and 
 execute code to modify the default behavior at these points to meet 
 your needs. Ember provides several hooks for you to utilize for various
 purposes (e.g. `model`, `setupController`, etc). In the example below 
