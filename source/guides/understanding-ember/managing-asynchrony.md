@@ -295,7 +295,7 @@ App.PostView = Ember.View.extend({
   template: Ember.Handlebars.compile("<h1>{{title}}</h1><h2>{{author}}</h2><div>{{body}}</div>"),
 
   didInsertElement: function() {
-    this.addObserver('controller.name', function() {
+    this.addObserver('controller.author', function() {
       alert("New author name: " + this.get('controller.author'));
     });
   }
