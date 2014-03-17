@@ -219,7 +219,7 @@ work you want.
 The lifecycle callbacks approach has several benefits, even if we didn't
 have to worry about deferred insertion.
 
-First, relying on synchronous insertion means leaving it up to the
+*First*, relying on synchronous insertion means leaving it up to the
 caller of `appendTo` to trigger any behavior that needs to run
 immediately after appending. As your application grows, you may find
 that you create the same view in many places, and now need to worry
@@ -230,7 +230,7 @@ instantiates the view and its post-append behavior. In general, we find
 that making it impossible to rely on synchronous side-effects leads to
 better design in general.
 
-Second, because everything about the lifecycle of a view is inside the
+*Second*, because everything about the lifecycle of a view is inside the
 view itself, it is very easy for Ember to re-render parts of the DOM
 on-demand.
 
