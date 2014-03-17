@@ -2,7 +2,7 @@ An HTML element's `class` attribute can be bound like any other
 attribute:
 
 ```handlebars
-<div {{bind-attr class="priority"}}>
+<div {{bindAttr class="priority"}}>
   Warning!
 </div>
 ```
@@ -21,7 +21,7 @@ If the value to which you bind is a Boolean, Ember.js will apply the
 dasherized version of the property name as a class:
 
 ```handlebars
-<div {{bind-attr class="isUrgent"}}>
+<div {{bindAttr class="isUrgent"}}>
   Warning!
 </div>
 ```
@@ -46,7 +46,7 @@ If you want to explicitly provide a class name (instead of Ember.js
 dasherizing the property name), use the following syntax:
 
 ```handlebars
-<div {{bind-attr class="isUrgent:urgent"}}>
+<div {{bindAttr class="isUrgent:urgent"}}>
   Warning!
 </div>
 ```
@@ -62,7 +62,7 @@ Instead of the dasherized name, this will produce:
 You can also specify a class name to add when the property is `false`:
 
 ```handlebars
-<div {{bind-attr class="isEnabled:enabled:disabled"}}>
+<div {{bindAttr class="isEnabled:enabled:disabled"}}>
   Warning!
 </div>
 ```
@@ -75,7 +75,7 @@ This syntax can also be used to add a class if a property is `false`
 and remove it if the property is `true`, so this:
 
 ```handlebars
-<div {{bind-attr class="isEnabled::disabled"}}>
+<div {{bindAttr class="isEnabled::disabled"}}>
   Warning!
 </div>
 ```
@@ -90,7 +90,7 @@ classes, you should include the static class in the list of bound
 properties, prefixed by a colon:
 
 ```handlebars
-<div {{bind-attr class=":high-priority isUrgent"}}>
+<div {{bindAttr class=":high-priority isUrgent"}}>
   Warning!
 </div>
 ```
@@ -107,7 +107,7 @@ Bound class names and static class names cannot be combined. The
 following example **will not work**:
 
 ```handlebars
-<div class="high-priority" {{bind-attr class="isUrgent"}}>
+<div class="high-priority" {{bindAttr class="isUrgent"}}>
   Warning!
 </div>
 ```
@@ -117,7 +117,7 @@ following example **will not work**:
 Unlike other element attributes, you can bind multiple classes:
 
 ```handlebars
-<div {{bind-attr class="isUrgent priority"}}>
+<div {{bindAttr class="isUrgent priority"}}>
   Warning!
 </div>
 ```
