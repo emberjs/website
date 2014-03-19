@@ -12,7 +12,7 @@ Past release and beta builds  of Ember and Ember Data are available at [Tagged R
 
 ##Bower
 
-Bower is a package manager for the web. Bower makes it easy to manage dependencies in your application including Ember and Ember Data. To learn more about Bower vist [http://bower.io/](http://bower.io/).
+Bower is a package manager for the web. Bower makes it easy to manage dependencies in your application including Ember and Ember Data. To learn more about Bower visit [http://bower.io/](http://bower.io/).
 
 Adding Ember to your application with Bower is easy simply run `bower install ember --save`. For Ember Data run `bower install ember-data --save`. You can also add `ember` or `ember-data` to your `bower.json` file as follows.
 
