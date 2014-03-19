@@ -140,14 +140,17 @@ Ember.LOG_STACKTRACE_ON_DEPRECATION = true
 ```
 
 
-#### Implement a `Ember.onerror` hook to log all errors in production
+#### Implement an Ember.onerror hook to log all errors in production
 
 ```javascript
 Ember.onerror = function(error) {
-  Em.$.ajax('/error-notification', 'POST', {
-    stack: error.stack,
-    otherInformation: 'exception message'
-  });
+    Em.$.ajax('/error-notification', {
+      type: 'POST',
+      data: {
+        stack: error.stack,
+        otherInformation: 'exception message'
+      }
+    });
 }
 ```
 

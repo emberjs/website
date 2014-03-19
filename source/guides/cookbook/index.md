@@ -31,6 +31,8 @@ Here are all of the available recipes:
 
 2. [A Spinning Button for Asynchronous Actions](/guides/cookbook/helpers_and_components/spin_button_for_asynchronous_actions)
 
+3. [Adding Google Analytics Tracking](/guides/cookbook/helpers_and_components/adding_google_analytics_tracking)
+
 ### Working with Objects
 
 1. [Incrementing Or Decrementing A Property](/guides/cookbook/working_with_objects/incrementing_or_decrementing_a_property)

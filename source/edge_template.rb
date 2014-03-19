@@ -1,6 +1,6 @@
-# This script is designed to be used with Ruby on Rails' new project generator:
+# This script is used with the Ruby on Rails' new project generator:
 #
-#     rails new my_app -m http://emberjs.com/template.rb
+#     rails new my_app -m http://emberjs.com/edge_template.rb
 #
 # For more information about the template API, please see the following Rails
 # guide:

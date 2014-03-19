@@ -261,6 +261,14 @@
   image: livenationlabs.png
 - url: http://www.midokura.com/
   image: midokura.png
+- url: http://www.unlockable.com/
+  image: unlockable.png
+- url: http://orchestrate.io
+  image: orchestrate.png
+- url: http://www.aspireauctions.com
+  image: aspireauctions.png
+- url: http://speedpos.com/
+  image: speedpos.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the

@@ -21,11 +21,11 @@ Person = Ember.Object.extend({
 });
 
 var person = Person.create({
-  firstName: "Yehuda",
-  lastName: "Katz"
+  firstName: 'Yehuda',
+  lastName: 'Katz'
 });
 
-person.set('firstName', "Brohuda"); // observer will fire
+person.set('firstName', 'Brohuda'); // observer will fire
 ```
 
 Because the `fullName` computed property depends on `firstName`,

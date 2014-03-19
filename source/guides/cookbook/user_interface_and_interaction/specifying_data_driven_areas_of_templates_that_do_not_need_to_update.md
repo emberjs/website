@@ -22,8 +22,8 @@ For example, the two following uses of Handlebars are identical in an Ember.js a
 ```
 
 If you know that a property accessed in Handlebars will not change for the duration of the application's
-life, you can specifiy that the property is not bound by applying the ``{{unbound}}` helper. A property
-that is not bound will avoid adding unncessary observers on a property.
+life, you can specifiy that the property is not bound by applying the `{{unbound}}` helper. A property
+that is not bound will avoid adding unnecessary observers on a property.
 
 
 #### Example

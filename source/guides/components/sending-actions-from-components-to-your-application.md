@@ -62,7 +62,7 @@ handling an action. For example, a button component may want to tell a
 controller not only that _an_ item was deleted, but also _which_ item.
 
 To send parameters with the primary action, call `sendAction()` with the
-string `"action"` as the first argument and any additional parameters
+string `'action'` as the first argument and any additional parameters
 following it:
 
 ```js

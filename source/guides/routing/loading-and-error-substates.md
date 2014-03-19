@@ -80,9 +80,9 @@ the following loading substate behavior we've been alluding to.
 
 ```js
 App.Router.map(function() {
-  this.resource('foo', function() {   // -> FooRoute
-    this.resource('bar', function() { // -> BarRoute
-      this.route('baz');              // -> BarBazRoute
+  this.resource('foo', function() {       // -> FooRoute
+    this.resource('foo.bar', function() { // -> FooBarRoute
+      this.route('baz');                  // -> FooBarBazRoute
     });
   });
 });
@@ -100,13 +100,13 @@ above `foo.bar.baz` that it can transition into, starting with
 Ember will find a loading route at the above location if either a) a 
 Route subclass has been defined for such a route, e.g.
 
-1. `App.BarLoadingRoute`
+1. `App.FooBarLoadingRoute`
 2. `App.FooLoadingRoute`
 3. `App.LoadingRoute`
 
 or b) a properly-named loading template has been found, e.g.
 
-1. `bar/loading`
+1. `foo/bar/loading`
 2. `foo/loading`
 3. `loading`
 
@@ -195,7 +195,7 @@ a transition and exited upon completion of the transition. Because the
 `loading` template rendered as a top-level view and not within an
 outlet, it could be used for little more than displaying a loading
 spinner during slow transitions. Loading events/substates give you far
-more control, but if you'd like to emulate something similar to legacy
+more control, but if you'd like to emulate something similar to the legacy
 `LoadingRoute` behavior, you could do as follows:
 
 ```js
@@ -216,6 +216,6 @@ App.ApplicationRoute = Ember.Route.extend({
 
 [Example JSBin](http://emberjs.jsbin.com/ucanam/3307)
 
-This will, like legacy `LoadingRoute`, append a top-level view when the
+This will, like the legacy `LoadingRoute`, append a top-level view when the
 router goes into a loading state, and tear down the view once the
 transition finishes.

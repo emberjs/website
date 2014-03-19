@@ -6,7 +6,7 @@ The Ember Release Management Team maintains a variety of ways to get  Ember and 
 The latest [Release](/builds#/release), [Beta](/builds#/beta), and [Canary](/builds#/canary) builds of Ember and Ember data can be found [here](/builds). For each channel a development, minified, and production version is available. For more on the different channels read the [Post 1.0 Release Cycle](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html) blog post.
 
 ###Tagged Releases
-Past release and beta builds  of Ember and Ember Data are availabe at [Tagged Releases](/builds#/tagged). These builds can be useful to track down regressions in your application, but it is recommended to use the latest stable release in production.
+Past release and beta builds  of Ember and Ember Data are available at [Tagged Releases](/builds#/tagged). These builds can be useful to track down regressions in your application, but it is recommended to use the latest stable release in production.
 
 
 

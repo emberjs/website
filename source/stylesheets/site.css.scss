@@ -581,6 +581,9 @@ p {
     img {
       vertical-align: middle;
     }
+    .gplus a img {
+      border: 0;
+    }
   }
 }
 
@@ -1713,3 +1716,5 @@ body.not-found #content {
     color: lighten($orange-color, 20%);
   }
 }
+
+@import 'highlight';
