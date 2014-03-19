@@ -34,7 +34,7 @@ The `inflection` property will return either a plural or singular version of the
  Reload your web browser to ensure that no errors occur. You should now see an accurate number for remaining todos.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/onOCIrA/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/onOCIrA/74/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
