@@ -188,6 +188,47 @@ The only way in which `loading`/`error` substate resolution differs is
 that `error` events will continue to bubble above a transition's pivot
 route.
 
+### `error` substates with dynamic segments
+
+Routes with dynamic segments are often mapped to a mental model of "two
+separate levels." Take for example:
+
+```js
+App.Router.map(function() {
+  this.resource('foo', {path: '/foo/:id'}, function() {
+    this.route('baz');
+  });
+});
+
+App.FooRoute = Ember.Route.extend({
+  model: function(params) {
+    return new Ember.RSVP.Promise(function(resolve, reject) {
+       reject("Error");
+    });
+  }
+});
+```
+
+In the URL hierarchy you would visit `/foo/12` which would result in rendering
+the `foo` template into the `application` template's `outlet`. In the event of
+an error while attempting to load the `foo` route you would also render the
+top-level `error` template into the `application` template's `outlet`. This is
+intentionally parallel behavior as the `foo` route is never successfully
+entered. In order to create a `foo` scope for errors and render `foo/error`
+into `foo`'s `outlet` you would need to split the dynamic segment:
+
+```js
+App.Router.map(function() {
+  this.resource('foo', {path: '/foo'}, function() {
+    this.resource('elem', {path: ':id'}, function() {
+      this.route('baz');
+    });
+  });
+});
+```
+
+[Example JSBin](http://emberjs.jsbin.com/ucanam/4279)
+
 ## Legacy `LoadingRoute`
 
 Previous versions of Ember (somewhat inadvertently) allowed you to define a global `LoadingRoute`
