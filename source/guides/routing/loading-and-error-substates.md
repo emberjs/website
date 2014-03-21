@@ -139,7 +139,8 @@ once the transition is complete. But once you provide a destination
 route loading substate, you are opting into an "eager" transition, which
 is to say that, unlike the "lazy" default, you will eagerly exit the
 source routes (and tear down their templates, etc) in order to
-transition into this substate. 
+transition into this substate. URLs always update immediately unless the
+transition was aborted or redirected within the same run loop.
 
 This has implications on error handling, i.e. when a transition into
 another route fails, a lazy transition will (by default) just remain on the
