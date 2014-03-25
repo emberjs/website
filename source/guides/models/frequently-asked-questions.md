@@ -123,7 +123,7 @@ socket.on('message', function (message) {
 is a convenience wrapper for `store#push` that will deserialize
 payloads if the model's Serializer implements a `pushPayload`
 method. It is important to note this method will not work with the
-`JSONSerializer` because it does not implement a `pushPlayload`
+`JSONSerializer` because it does not implement a `pushPayload`
 method.
 
 ```js
