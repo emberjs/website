@@ -5,3 +5,5 @@ Here are some recipes to help you encapsulate your code into Components and buil
 2. [A Spinning Button for Asynchronous Actions](/guides/cookbook/helpers_and_components/spin_button_for_asynchronous_actions)
 
 3. [Adding Google Analytics Tracking](/guides/cookbook/helpers_and_components/adding_google_analytics_tracking)
+
+4. [Creating an Unbound Select](/guides/cookbook/helpers_and_components/creating_unbound_select)
