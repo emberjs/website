@@ -271,6 +271,8 @@
   image: speedpos.png
 - url: http://selleo.com/
   image: selleo.png
+- url: http://devmynd.com
+  image: devmynd.png
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
