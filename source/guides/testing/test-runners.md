@@ -63,6 +63,13 @@ That is it. Everything that you need is installed and configured. Let's go over 
  - This allows you to configure which browsers to launch and run the tests. This can be one or more browsers. When multiple are specified your tests will run in all browsers concurrently.
 
 
+There are plenty of other options that you can configure as well if you would like. To see a list of available options you can check out the [Karma documentation][karma] or instead of manually creating `karma.conf.js` you can run the following command.
+
+```bash
+karma init
+```
+
+
 To start `karma` run
 
 ```bash
