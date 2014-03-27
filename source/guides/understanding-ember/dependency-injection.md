@@ -27,7 +27,7 @@ There are two APIs we will consider here:
 ##### Simple Dependency Injection with needs
 
 A common use-case for dependency injection is that of a singleton service. For
-instance, a controller maintaining the session state may exposed to many other
+instance, a controller maintaining the session state may be exposed to many other
 controllers.
 
 ```javascript
@@ -45,7 +45,7 @@ App.IndexController = Ember.Controller.extend({
 
 When the `IndexController` is instantiated (likely by the route when rendering the
 corresponding template), Ember will look for controllers matching those listed in
-`needs`. Controllers in Ember are singletons (excepting item controllers, which should
+`needs`. Controllers in Ember are singletons (except item controllers, which should
 be disregarded for this explanation), so if an instance is already available it is
 returned. If not the controller is resolved, instantiated, and cached before being
 returned from the container. This instance is then added to the `controllers` object.
