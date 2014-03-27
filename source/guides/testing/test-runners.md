@@ -2,6 +2,18 @@
 When it comes to running your tests there are multiple approaches that you can take depending on what best suits your work flow. Finding a low friction method of running your tests is important because it is something that you will be doing quite often.
 
 
+### The Browser
+
+The simplest way of running your tests is just opening a page in the browser.
+
+* Get a copy of qunit.
+* Create an html file that includes qunit and it's css .
+* Include your application code.
+* Include your test code.
+* Open the html file in the web browser of your choice.
+
+This is often a bit to much of a manual process. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching. Luckily there are tools to help out. These tools allow you to run your tests in actual browsers and then report back the results to a consolidated view that is easy for you to see. They require a bit more setup than creating a simple html file, but they will likely save time in the long run.
+
 ### The Testem Runner
 
 The [Testem runner][testem] is one approach. To get started using `testem` you will need to install the `testem` node.js module. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
