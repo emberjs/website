@@ -6,6 +6,8 @@ When it comes to running your tests there are multiple approaches that you can t
 
 The simplest way of running your tests is just opening a page in the browser.
 
+#TODO
+
 * Get a copy of qunit.
 * Create an html file that includes qunit and it's css .
 * Include your application code.
@@ -159,24 +161,27 @@ karma start
 Depending on your configuration it will either run the tests and exit or run the tests and wait for file changes to run the tests again.
 
 
-### Generating Reports
-
-* XML for Jenins / Other CI servers
-* Coverage data to terminal or services like Coveralls
-
-
 ### Build Integration
 
 Both `testem` and `karma` are capable of being integrated into a larger build processes. For example, you may be using [CoffeeScript][coffee], [ES6][es6] or something else and need to [transpile][transpile] your source into `JavaScript`. If you happen to be using `grunt` you can use `grunt-contrib-testem` for `testem` or `grunt-karma` for `karma` integration into your existing build process. Both `testem` and `karma` have preprocessing configuration options available as well. For more information on other available configuration options see the docs for [karma][karma] or [testem][testem].
 
 
+### Generating Reports
 
-[transpile]: ????
-[es6]: ????
-[ci]: ????
-[testem]: ????
-[coffee]: ????
-[karma]:http://karma-runner.github.io/
+# TODO
+
+* XML for Jenins / Other CI servers
+* Coverage data to terminal or services like Coveralls
+
+
+
+
+[transpile]: http://en.wikipedia.org/wiki/Source-to-source_compiler
+[es6]: http://square.github.io/es6-module-transpiler/
+[ci]: http://en.wikipedia.org/wiki/Continuous_integration 
+[testem]: https://github.com/airportyh/testem
+[coffee]: http://coffeescript.org/
+[karma]: http://karma-runner.github.io/
 [package.json]: https://www.npmjs.org/doc/json.html
 [sauce_labs]: https://saucelabs.com/
 [karma_github]: https://github.com/karma-runner?query=launcher
