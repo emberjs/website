@@ -6,13 +6,30 @@ When it comes to running your tests there are multiple approaches that you can t
 
 The simplest way of running your tests is just opening a page in the browser.
 
-#TODO
+* Get a copy of `qunit` (both the JavaScript and the css) from [here][qunit].
+* Create an html file that includes qunit and it's css that looks like the following example.
 
-* Get a copy of qunit.
-* Create an html file that includes qunit and it's css .
-* Include your application code.
-* Include your test code.
-* Open the html file in the web browser of your choice.
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit Example</title>
+  <link rel="stylesheet" href="qunit.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="qunit.js"></script>
+  <script src="your_ember_code_here.js"></script>
+  <script src="your_test_code_here.js"></script>
+</body>
+</html>
+```
+
+* Open your browser of choice and open the above html file.
+
+That's it. You're done and your tests are running. After adding or updating tests and/or code just reload the page and you're off to the races running your tests.
 
 This is often a bit to much of a manual process. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching. Luckily there are tools to help out. These tools allow you to run your tests in actual browsers and then report back the results to a consolidated view that is easy for you to see. They require a bit more setup than creating a simple html file, but they will likely save time in the long run.
 
@@ -176,6 +193,7 @@ Both `testem` and `karma` are capable of being integrated into a larger build pr
 
 
 
+[qunit]: http://qunitjs.com/
 [transpile]: http://en.wikipedia.org/wiki/Source-to-source_compiler
 [es6]: http://square.github.io/es6-module-transpiler/
 [ci]: http://en.wikipedia.org/wiki/Continuous_integration 
