@@ -267,12 +267,15 @@
   image: orchestrate.png
 - url: http://www.aspireauctions.com
   image: aspireauctions.png
+- url: http://planetargon.com/what-we-do/development/emberjs-development
+  image: planetargon.png
 - url: http://speedpos.com/
   image: speedpos.png
 - url: http://selleo.com/
   image: selleo.png
 - url: http://devmynd.com
   image: devmynd.png
+
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
