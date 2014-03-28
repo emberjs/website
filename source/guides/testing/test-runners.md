@@ -1,4 +1,3 @@
-
 When it comes to running your tests there are multiple approaches that you can take depending on what best suits your work flow. Finding a low friction method of running your tests is important because it is something that you will be doing quite often.
 
 
@@ -185,15 +184,79 @@ Both `testem` and `karma` are capable of being integrated into a larger build pr
 
 ### Generating Reports
 
-# TODO
+Often times it is useful to be able to get the results of your tests in different formats. For example, if you happen to use [Jenkins][jenkins] for a [ci][ci] server, you may want to get your test results in XML format so that Jenkins can build some graphs of your test results over time. Also, you may want to measure your [code coverage][coverage] and have Jenkins track that over time as well. Using these test runners, it is possible to generate the results of your tests as well as record other information, like code coverage, as well.
 
-* XML for Jenins / Other CI servers
+#### XML Test Results from Karma
+
+To get [junit xml][junitxml] from the `karma` test runner you will need to install a new node.js module. You can do so with the following command.
+
+```bash
+npm install --save-dev karma-junit-reporter
+```
+
+Once that is done you will need to update your karma configuration to include the following.
+
+```javascript
+module.exports = function(config) {
+  config.set({
+    /* snip */
+    reporters: ['progress', 'junit'],
+    /* snip */
+  });
+};
+```
+
+The reporters option determines how your test results are communicated back to you. The `progress` reporter will display a line that says something like this.
+
+```
+PhantomJS 1.9.7 (Mac OS X): Executed 2 of 2 SUCCESS (0.008 secs / 0.002 secs)
+```
+
+The `junit` reporter will create an xml file called `test-results.xml` in the current directory that contains junit xml which can be used as input to other tools. This file can be renamed to whatever you would like. For more information see the docs for [karma junit reporter][karma_junit_reporter].
+
+
+#### Code Coverage from Karma
+
+To measure your [code coverage][coverage] from the `karma` test runner you will need to install a new node.js module. You can do so with the following command.
+
+```bash
+npm install --save-dev karma-coverage
+```
+
+Once that is done you will need to update your karma configuration to include the following.
+
+```javascript
+module.exports = function(config) {
+  config.set({
+    /* snip */
+    reporters: ['progress', 'coverage'],
+    preprocessors: {
+      "your_ember_code_here.js": "coverage",
+      "your_test_code_here.js": "coverage"
+    },
+    coverageReporter: {
+        type: "text",
+    }
+    /* snip */
+  });
+};
+```
+
+That is it. Now, running `karma` normally will display code coverage information in the terminal. The `coverageReporter.type` option can be set to a number of different values. The value in the example, `text`, will only display to the console. Some other options are `lcov`, `html` and `cobertura` which can be used as input to other tools. For additional configuration options on coverage reporting from `karma` check out their [docs][karma_coverage_docs].
+
+
+# TODO
 * Coverage data to terminal or services like Coveralls
 
 
 
 
+[karma_coverage_docs]: http://karma-runner.github.io/0.8/config/coverage.html
+[karma_junit_reporter]: https://github.com/karma-runner/karma-junit-reporter
+[junitxml]: http://ant.apache.org/manual/Tasks/junitreport.html
+[coverage]: http://en.wikipedia.org/wiki/Code_coverage
 [qunit]: http://qunitjs.com/
+[jenkins]: http://jenkins-ci.org/
 [transpile]: http://en.wikipedia.org/wiki/Source-to-source_compiler
 [es6]: http://square.github.io/es6-module-transpiler/
 [ci]: http://en.wikipedia.org/wiki/Continuous_integration 
