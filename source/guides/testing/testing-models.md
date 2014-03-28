@@ -2,7 +2,45 @@ Testing models can be done using the `moduleForModel` test helper.
 
 ## Testing Functions
 
-TBD
+Let's assume we have a `Player` model that has `level` and `levelName`
+attributes, and we want to call `levelUp()` to increment the `level` 
+and assign a new `levelName` at level 5.
+
+```javascript
+App.Player = Ember.Object.extend({
+  level: 0,
+  levelName: 'Noob',
+  levelUp: function(){
+    var properties = { level : this.get('level') + 1 };
+    if(properties.level == 5){
+      properties.levelName = "Professional";
+    }
+    this.setProperties(properties);
+  }
+});
+```
+
+It's easy to create a `Player` object and test the method.
+
+```javascript
+emq.globalize();
+setResolver(App.__container__);
+App.setupForTesting();
+
+moduleForModel('player', 'Player Model', {});
+
+
+test('levelUp', function() {
+  var player = App.Player.create({ level : 4 });
+  player.levelUp();
+  equal(player.get('level'),5,'level should increment');
+  equal(player.get('levelName'),"Professional",'levelName should change');
+});
+```
+
+#### Example
+
+<a class="jsbin-embed" href="http://jsbin.com/weyol/2/embed?js,output">Unit Testing Models (Functions)</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ## Testing Computed Properties
 
