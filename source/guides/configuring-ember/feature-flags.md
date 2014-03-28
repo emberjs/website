@@ -30,11 +30,11 @@ status.
 
 A feature can have one of a few different statuses:
 
-* `true` - The feature is enabled: the code behind the flag is always enabled in
+* `true` - The feature is **enabled**: the code behind the flag is always enabled in
   the generated build.
-* `false` - The feature is disabled the code behind the flag is not present in
+* `false` - The feature is **disabled**: the code behind the flag is not present in
   the generated build at all.
-* `null` - The feature is present in the build output, but must be enabled at
+* `null` - The feature is **present** in the build output, but must be enabled at
   runtime (it is still behind feature flags).
 
 The process of removing the feature flags from the resulting build output is
@@ -54,18 +54,18 @@ The only time a feature can be enabled at runtime is if the
 `features.json` for that build contains `null` (technically, anything other
 than `true` or `false` will do, but `null` is the chosen value).
 
-A global `ENV` object will be used to initialize the `Ember.ENV`
+A global `EmberENV` object will be used to initialize the `Ember.ENV`
 object, and any feature flags that are enabled/disabled under
-`ENV.FEATURES` will be migrated to `Ember.FEATURES`, those features
+`EmberENV.FEATURES` will be migrated to `Ember.FEATURES`; those features
 will be enabled based on the flag value. **Ember only reads** the
-`ENV` value upon initial load so setting this value after Ember has
+`EmberENV` value upon initial load so setting this value after Ember has
 been loaded will have no affect.
 
 Example:
 
 ```javascript
-ENV = {FEATURES: {'link-to': true}};
+EmberENV = {FEATURES: {'link-to': true}};
 ```
 
-Additionally you can define `ENV.ENABLE_ALL_FEATURES` to force all
+Additionally you can define `EmberENV.ENABLE_ALL_FEATURES` to force all
 features to be enabled.

@@ -57,7 +57,7 @@ Finally, keep in mind that you can combine queries and filters to take
 advantage of their respective strengths and weaknesses. Remember that
 records returned by a query to the server are cached in the store. You
 can use this fact to perform a filter, passing it a query that starts
-matching records into the store, and a filter function that matches the 
+matching records into the store, and a filter function that matches the
 same records.
 
 This will offload searching all of the possible records to the server,
@@ -79,5 +79,77 @@ App.PostsFavoritedRoute = Ember.Route.extend({
       return post.get('isFavorited');
     });
   }
+});
+```
+
+#### How do I inform Ember Data about new records created on the backend?
+
+When you request a record using Ember Data's `store.find` method, Ember
+will automatically load the data into the store. This allows Ember to
+avoid the latency of making a round trip to the backend next time
+that record is requested. Additionally, loading a record into the
+store will update any `RecordArray`s (e.g. the result of
+`store.filter` or `store.all`) that should include that record. This
+means any data bindings or computed properties that depend on the
+`RecordArray` will automatically be synced to include the new or
+updated record values.
+
+Some applications may want to add or update records in the store
+without requesting the record via `store.find`. To accomplish this you
+can use the `DS.Store`'s `push`, `pushPayload`, or `update`
+methods. This is useful for web applications that have a channel
+(such as [SSE](http://dev.w3.org/html5/eventsource/) or
+[Web Sockets](http://www.w3.org/TR/2009/WD-websockets-20091222/)) to
+notify it of new or updated records on the backend.
+
+[push](http://emberjs.com/api/data/classes/DS.Store.html#method_push)
+is the simplest way to load records to Ember Data's store. When using
+`push` it is important to remember to deserialize the JSON object
+before pushing it into the store. `push` only accepts one record at a
+time. If you would like to load an array of records to the store you
+can call
+[pushMany](http://emberjs.com/api/data/classes/DS.Store.html#method_pushMany).
+
+```js
+socket.on('message', function (message) {
+  var type = store.modelFor(message.model);
+  var serializer = store.serializerFor(type.typeKey);
+  var record = serializer.extractSingle(store, type, message.data);
+  store.push(message.model, record);
+});
+```
+
+[pushPayload](http://emberjs.com/api/data/classes/DS.Store.html#method_pushPayload)
+is a convenience wrapper for `store#push` that will deserialize
+payloads if the model's Serializer implements a `pushPayload`
+method. It is important to note this method will not work with the
+`JSONSerializer` because it does not implement a `pushPayload`
+method.
+
+```js
+socket.on('message', function (message) {
+  store.pushPayload(message.model, message.data);
+});
+```
+
+[update](http://emberjs.com/api/data/classes/DS.Store.html#method_update)
+works likea `push` except it can handle partial attributes without
+overwriting the existing record properties. This method is useful if
+your web application only receives notifications of the changed
+attributes on a model. Like `push` it is important to remember to
+deserialize the JSON object before calling `update`.
+
+```js
+socket.on('message', function (message) {
+  var hash = message.data;
+  var type = store.modelFor(message.model);
+  var fields = Ember.get(type, 'fields');
+  fields.forEach(function(field) {
+    var payloadField = Ember.String.underscore(field);
+    if (field === payloadField) { return; }
+      hash[field] = hash[payloadField];
+      delete hash[payloadField];
+  });
+  store.push(message.model, hash);
 });
 ```

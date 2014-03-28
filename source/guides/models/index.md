@@ -183,7 +183,7 @@ they couldn't be binary data stored in a `Blob` or
 The store will automatically cache records for you. If a record had already
 been loaded, asking for it a second time will always return the same
 object instance. This minimizes the number of round-trips to the
-server, and allows your application to render UI to the user as fast as
+server, and allows your application to render its UI to the user as fast as
 possible.
 
 For example, the first time your application asks the store for a

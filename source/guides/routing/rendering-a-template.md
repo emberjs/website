@@ -78,8 +78,8 @@ If you want to render two different templates into outlets of two different rend
 App.PostRoute = App.Route.extend({
   renderTemplate: function() {
     this.render('favoritePost', {   // the template to render
-      into: 'posts',                // the route to render into
-      outlet: 'posts',              // the name of the outlet in the route's template
+      into: 'posts',                // the template to render into
+      outlet: 'posts',              // the name of the outlet in that template
       controller: 'blogPost'        // the controller to use for the template
     });
     this.render('comments', {

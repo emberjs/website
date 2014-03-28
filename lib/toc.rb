@@ -106,7 +106,7 @@ module TOC
       if section_slug == guide_slug
         return "#{base_guide_url}/#{current_guide['url']}/index.md"
       else
-        return "#{base_guide_url}/#{current_guide['url']}.md"
+        return "#{base_guide_url}/#{current_guide['url'].gsub(/.html/, '')}.md"
       end
     end
 

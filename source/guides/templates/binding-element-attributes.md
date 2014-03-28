@@ -51,7 +51,7 @@ By default, view helpers do not accept *data attributes*. For example
 renders the following HTML:
 
 ```html
-<a id="ember239" class="ember-view" href="#/photos">Link</a>
+<a id="ember239" class="ember-view" href="#/photos">Photos</a>
 
 <input id="ember257" class="ember-view ember-text-field" type="text">
 ```
