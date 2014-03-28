@@ -407,7 +407,7 @@
   }
 
   tr.active {
-    @include background(linear-gradient(top, #7db9e8, #267dc9));
+    @include background(linear-gradient(to bottom, #7db9e8, #267dc9));
     color: white;
     text-shadow: 1px 1px 0px #666;
   }
