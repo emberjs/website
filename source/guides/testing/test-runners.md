@@ -186,6 +186,17 @@ Both `testem` and `karma` are capable of being integrated into a larger build pr
 
 Often times it is useful to be able to get the results of your tests in different formats. For example, if you happen to use [Jenkins][jenkins] for a [ci][ci] server, you may want to get your test results in XML format so that Jenkins can build some graphs of your test results over time. Also, you may want to measure your [code coverage][coverage] and have Jenkins track that over time as well. Using these test runners, it is possible to generate the results of your tests as well as record other information, like code coverage, as well.
 
+#### XML Test Results from Testem
+
+To get [junit xml][junitxml] from the `testem` test runner you can simply add a flag to the command when you run `testem` and pipe the output to a file like the following command.
+
+```bash
+testem ci -R xunit > test-results.xml
+```
+
+That's it! Now you can use `test-results.xml` to feed into another tool.
+
+
 #### XML Test Results from Karma
 
 To get [junit xml][junitxml] from the `karma` test runner you will need to install a new node.js module. You can do so with the following command.
@@ -213,6 +224,11 @@ PhantomJS 1.9.7 (Mac OS X): Executed 2 of 2 SUCCESS (0.008 secs / 0.002 secs)
 ```
 
 The `junit` reporter will create an xml file called `test-results.xml` in the current directory that contains junit xml which can be used as input to other tools. This file can be renamed to whatever you would like. For more information see the docs for [karma junit reporter][karma_junit_reporter].
+
+
+#### Code Coverage from Testem
+
+Getting coverage from `testem` is a bit more involved at the moment. There is a way to do it. Check the [testem docs][testem_coverage] for more information.
 
 
 #### Code Coverage from Karma
@@ -245,12 +261,7 @@ module.exports = function(config) {
 That is it. Now, running `karma` normally will display code coverage information in the terminal. The `coverageReporter.type` option can be set to a number of different values. The value in the example, `text`, will only display to the console. Some other options are `lcov`, `html` and `cobertura` which can be used as input to other tools. For additional configuration options on coverage reporting from `karma` check out their [docs][karma_coverage_docs].
 
 
-# TODO
-* Coverage data to terminal or services like Coveralls
-
-
-
-
+[testem_coverage]: https://github.com/airportyh/testem/tree/master/examples/coverage_istanbul
 [karma_coverage_docs]: http://karma-runner.github.io/0.8/config/coverage.html
 [karma_junit_reporter]: https://github.com/karma-runner/karma-junit-reporter
 [junitxml]: http://ant.apache.org/manual/Tasks/junitreport.html
