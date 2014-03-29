@@ -1,9 +1,12 @@
-Dependency Injection is a big part of what Ember provides as a framework. For
-example, all routes can access the router of an application. When using Ember-Data
-there is a `store` property made available on all controllers and routes. Ember
-uses dependency injection and lookup to allow the layers of its MVC architecture
-to communicate. At the same time, the dependency injection tools provided by Ember
-make it easy to create custom dependency rules.
+Ember.js provides a complete dependency injection and service lookup toolset via
+containers. Internally, Ember applications use a container to organize basic
+framework components. For example, all route objects have the property `router`
+set on them upon instantiation. When using Ember-Data, there is a `store` property
+made available on all controller and route objects. Ember uses dependency injection
+and service lookup to allow the layers of its MVC architecture to communicate.
+
+Though direct use of the container API is discouaged, Ember provides you with several
+other ways to use dependency injection in your application.
 
 #### How does dependency injection work?
 
@@ -16,9 +19,9 @@ factory, it uses a resolver to discover that factory (in a variable like
 dependencies to the requested factory, the factory is cached and returned.
 
 To accomplish most of your goals, using the container directly should not be necessary.
-Instead Ember provides a set of high-level APIs on top of the container itself.
+Instead Ember provides a set of high-level APIs on top of the container.
 
-There are two APIs we will consider here:
+There two APIs suggested for application use:
 
 * `needs`, a way to inject controllers onto other controllers
 * `App.register/inject`, an API for arbitrary factory registration and dependency
@@ -50,87 +53,60 @@ be disregarded for this explanation), so if an instance is already available it 
 returned. If not the controller is resolved, instantiated, and cached before being
 returned from the container. This instance is then added to the `controllers` object.
 
-##### In Practice: A Service for Audio Playback
+##### Exmample Use of Needs: An Audio Playback Service
 
-Here, we will create an audioservice that is defined once but can be used by many
-other controllers to play audio. A controller object can be defined as -
+To demonstrate how `needs` can create light-weight services, let's build a controller
+that manages audio playback an make it available to another controller.
+
+HTML5 audio tags provide an easy way to play audio on the web. In the application
+template, we will use `{{render` to render a template containing the audio tag.
+`{{render` backs its template with a controller of the same name.
+
+```hbs
+{{! application.hbs }}
+{{render "audio"}}
+{{outlet}}
+```
+
+```hbs
+{{! audio.hbs }}
+<audio id="audio" controls loop>
+  <source {{bind-attr src=currentSrc}} type="audio/mpeg"></source>
+</audio>
+<div>{{currentSrc}}</div>
+```
+
+Th controller itself will maintain `currentSrc` property:
 
 ```javascript
 App.AudioController = Ember.Controller.extend({
-  play:function(trackSrc){
-    this.set('trackSrc', trackSrc);
-    this.set('playnow', true);
-  },
-  trackSrc:"defaultTrack.mp3"
+  currentSrc: null,
+  play: function(src){
+    this.set('currentSrc', src);
+  }
 });
 ```
 
-This object can be injected into any other controller as below -
+This `AudioController` can be referenced by other controllers via
+`needs`:
 
 ```javascript
 App.IndexController = Ember.Controller.extend({
-  needs:['audio'],
-  first:'Sound1.mp3',
-  second:"Sound2.mp3",
-  actions:{
-    play:function(songUrl){
-      this.get('controllers.audio').play(songUrl);
+  needs: ['audio'],
+  actions: {
+    selectSrc: function(src){
+      this.get('controllers.audio').play(src);
     }
   }
 });
 ```
 
-When the index controller is created by Ember, it notes that there is a `needs`
-dependency and looksup/creates an instance of AudioController. This object is made
-available in a list called `controllers`
+In this same manner, any other controller could access the `audio` controller
+instance.
 
-`needs:['audio']` leads to the audio controller being available in
-`this.get('controllers.audio')`
+A functional version of this demo is provided below:
 
-A view and template are defined to create the audio html tag.
-
-```hbs
-<audio id='audio' controls loop>
-  <source {{bind-attr src=trackSrc}} type='audio/mpeg'></source>
-</audio>
-<div> Now Playing - {{trackSrc}} </div>
-```
-
-The `trackSrc` is a binding to the controller variable. The view picks up the
-element in the dom and plays the audio.
-
-```javascript
-App.AudioView = Ember.View.extend({
-  templateName:'audio',
-  playAudio:function(){
-    if(this.get('controller.playnow')){
-      Ember.run.schedule('afterRender', function(){
-        //Play the audio after the src in audio tag has been updated.
-      });
-    this.set('controller.playnow', false);
-    }
-  }.observes('controller.playnow')
-});
-```
-
-A template is created for users to play songs.
-
-```hbs
-<div class='link' {{action 'play' first}}>First Song</div>
-<div class='link' {{action 'play' second}}>Second Song</div>
-```
-
-Only one instance of this audio service can be defined in the application template
-using
-
-```javascript
-{{render 'audio'}}
-```
-
-This now enables us to play audio from any other controller by `needs:['audio']`
-and `this.get('controllers.audio').play(trackUrl);`
-
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/mayul/4/embed?html,js,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/depar/1/embed?js,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ##### Defining New Framework Components
 
