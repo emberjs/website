@@ -1,6 +1,5 @@
 When it comes to running your tests there are multiple approaches that you can take depending on what best suits your work flow. Finding a low friction method of running your tests is important because it is something that you will be doing quite often.
 
-
 ### The Browser
 
 The simplest way of running your tests is just opening a page in the browser.
@@ -26,32 +25,20 @@ The simplest way of running your tests is just opening a page in the browser.
 </html>
 ```
 
-* Open your browser of choice and open the above html file.
+* Launch your browser of choice and open the above html file.
 
-That's it. You're done and your tests are running. After adding or updating tests and/or code just reload the page and you're off to the races running your tests.
+That's it. You're done and your tests are running. No need to install and configure any other tools or have any other processes running. After adding or updating tests and/or code just reload the page and you're off to the races running your tests.
 
-This is often a bit to much of a manual process. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching. Luckily there are tools to help out. These tools allow you to run your tests in actual browsers and then report back the results to a consolidated view that is easy for you to see. They require a bit more setup than creating a simple html file, but they will likely save time in the long run.
+If that meets your needs, read no further. However, if you would like a more automated way of running your tests, read on. 
+
+Manually opening and refreshing a browser may be prove to be a bit tedious for your work flow. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching and then refreshing each time you make a change. Luckily there are tools to help with that. These tools allow you to run your tests in actual browsers (yes browsers - as in more than one at the same time) as well and then report the results back to a consolidated view that is easy for you to see. You can run these tools from the command line and they are capable of not only opening multiple browsers at once but also automatically re-running tests when changes are made. They require a bit more setup than creating a simple html file but they will likely save time in the long run.
 
 ### The Testem Runner
 
-The [Testem runner][testem] is one approach. To get started using `testem` you will need to install the `testem` node.js module. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
-
-```javascript
-// package.json
-{
-  "name": "your_project_name",
-  "version": "0.1.0",
-  "devDependencies": {
-    "testem": "0.6.12"
-  }
-}
-```
-
-Now that you've got a `package.json` containing everything that you will need to get started with `testem` run the following command (in the same directory as your `package.json` file) to download and install
-`testem`.
+The [Testem runner][testem] is one approach. To get started using `testem` you will need to install the `testem` node.js module. To install `testem` run the following command.
 
 ```bash
-npm install
+npm install -g --save-dev testem
 ```
 
 `Testem` is now available to run your tests. There is just a little bit of configuration that needs to be done first.
@@ -102,7 +89,7 @@ Much like running `testem` with no arguments, the `ci` option will use your same
 
 ### The Karma Test Runner
 
-The [Karma test runner][karma] is a different approach. To get started using `karma` you will need to install a few node modules. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
+The [Karma test runner][karma] is another approach. To get started using `karma` you will need to install a few node modules. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
 
 ```javascript
 // package.json
