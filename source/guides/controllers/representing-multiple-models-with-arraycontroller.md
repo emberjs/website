@@ -66,3 +66,23 @@ App.SongsController = Ember.ArrayController.extend({
   sortAscending: true // false for descending
 });
 ```
+
+### Item Controller
+
+It is often useful to specify a controller to decorate individual items in
+the `ArrayController` while iterating over them. This can be done in the
+`ArrayController` definition:
+
+```javascript
+App.SongsController = Ember.ArrayController.extend({
+  itemController: 'song'
+});
+```
+
+or directly in the template:
+
+```handlebars
+{{#each itemController="song"}}
+  <li>{{name}} by {{artist}}</li>
+{{/each}}
+```
