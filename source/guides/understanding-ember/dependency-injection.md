@@ -1,12 +1,9 @@
 Ember.js provides a complete dependency injection and service lookup toolset via
-containers. Internally, Ember applications use a container to organize basic
+containers. Internally, Ember applications uses a container to organize basic
 framework components. For example, all route objects have the property `router`
 set on them upon instantiation. When using Ember-Data, there is a `store` property
 made available on all controller and route objects. Ember uses dependency injection
 and service lookup to allow the layers of its MVC architecture to communicate.
-
-Though direct use of the container API is discouaged, Ember provides you with several
-other ways to use dependency injection in your application.
 
 #### How does dependency injection work?
 
@@ -19,7 +16,7 @@ factory, it uses a resolver to discover that factory (in a variable like
 dependencies to the requested factory, the factory is cached and returned.
 
 To accomplish most of your goals, using the container directly should not be necessary.
-Instead Ember provides a set of high-level APIs on top of the container.
+Instead Ember provides a set of high-level APIs on top of the container to use dependency injection in your application.
 
 There two APIs suggested for application use:
 
@@ -110,7 +107,7 @@ A functional version of this demo is provided below:
 
 ##### Defining New Framework Components
 
-`needs` provides a way of injecting only controller type. To inject any other
+`needs` provides a way of injecting only controller type objects. To inject any other
 type of object, Ember provides a thin abstraction on the container in the form
 of `App.register` and `App.inject`. We can create custom type of factories,
 register them to the container and inject them to other objects using this api.
@@ -153,7 +150,7 @@ can be passed to this api. They are -
 * `singleton:boolean (default:true)` - A single instance will be created
   if none and cached. Only the cached instance will be returned.
 
-Injecting the logger into my controller and views.
+Now inject the logger into the controller and views.
 
 ```javascript
 App.inject('controller', 'logger', 'logger:main');
