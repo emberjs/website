@@ -67,6 +67,8 @@ The `andThen` helper will wait for all preceding asynchronous helpers to complet
 
 ```javascript
 test("simple test", function(){
+  expect(1); // Ensure that we will perform one assertion
+
   visit("/posts/new");
   fillIn("input.title", "My new post");
   click("button.submit");
@@ -78,7 +80,7 @@ test("simple test", function(){
 });
 ```
 
-Note that on line 7 above, we use the `andThen` helper. This will wait for the preceding asynchronous test helpers to complete and then calls the function which was passed to it as an argument.
+Note that in the example above we are using the `andThen` helper. This will wait for the preceding asynchronous test helpers to complete and then calls the function which was passed to it as an argument.
 
 ### Writing tests
 
