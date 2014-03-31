@@ -78,7 +78,7 @@ test("simple test", function(){
 });
 ```
 
-Note that on line 6, we use the `andThen` helper. This will wait for the preceding asynchronous test helpers to complete and then calls the function which was passed to it as an argument.
+Note that on line 7 above, we use the `andThen` helper. This will wait for the preceding asynchronous test helpers to complete and then calls the function which was passed to it as an argument.
 
 ### Writing tests
 
