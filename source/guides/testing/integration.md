@@ -33,18 +33,52 @@ module("Integration Tests", {
 });
 ```
 
-### Helpers
+### Asynchronous Helpers
+
+Asynchronous helpers will wait for other asynchronous helpers triggered prior to complete before starting.
 
 * `visit(url)`
  - Visits the given route and returns a promise that fulfills when all resulting async behavior is complete.
-* `find(selector, context)`
- - Finds an element within the app's root element and within the context (optional). Scoping to the root element is especially useful to avoid conflicts with the test framework's reporter.
 * `fillIn(input_selector, text)`
  - Fills in the selected input with the given text and returns a promise that fulfills when all resulting async behavior is complete.
 * `click(selector)`
   - Clicks an element and triggers any actions triggered by the element's `click` event and returns a promise that fulfills when all resulting async behavior is complete.
 * `keyEvent(selector, type, keyCode)`
   - Simulates a key event type, e.g. `keypress`, `keydown`, `keyup` with the desired keyCode on element found by the selector.
+* `triggerEvent(selector, type, options)`
+  - Triggers the given event, e.g. `blur`, `dblclick` on the element identified by the provided selector.
+
+### Synchronous Helpers
+
+Synchronous helpers are performed immediately when triggered.
+
+* `find(selector, context)`
+ - Finds an element within the app's root element and within the context (optional). Scoping to the root element is especially useful to avoid conflicts with the test framework's reporter.
+* `currentPath()`
+  - Returns the current path.
+* `currentRouteName()`
+  - Returns the currently active route name.
+* `currentURL()`
+  - Returns the current URL.
+
+### Wait Helpers
+
+The `andThen` helper will wait for all preceding asynchronous helpers to complete prior to progressing forward. Let's take a look at the following example.
+
+```javascript
+test("simple test", function(){
+  visit("/posts/new");
+  fillIn("input.title", "My new post");
+  click("button.submit");
+
+  // Wait for asynchronous helpers above to complete
+  andThen(function() {
+    equal(find("ul.posts li:last").text(), "My new post");
+  });
+});
+```
+
+Note that on line 7 above, we use the `andThen` helper. This will wait for the preceding asynchronous test helpers to complete and then calls the function which was passed to it as an argument.
 
 ### Writing tests
 
