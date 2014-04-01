@@ -11,7 +11,7 @@ Lets take a look at a passing test for a method on a controller:
 <a class="jsbin-embed" href="http://jsbin.com/hobuq/2/embed?javascript">Unit Testing Controllers "Methods"</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
-We start by looking at a simple array controller. It has a method `somFunc` that we would like to test.
+We start by looking at a simple array controller. It has a method `someFunc` that we would like to test.
 
 ```javascript
 

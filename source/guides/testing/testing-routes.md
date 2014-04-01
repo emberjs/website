@@ -45,8 +45,8 @@ test('transition is aborted if model is undefined', function() {
 
   //  stub up transitionTo and validate that transitionTo 'bar' is called
   indexRoute.transitionTo = function(location){
-        equal(location, 'bar', 'route attempted to transition login');
-      },
+    equal(location, 'bar', 'route attempted to transition login');
+  },
 
   indexRoute.beforeModel(transition);
 
