@@ -147,6 +147,37 @@ but also breaks the edge-case of using `_super` out of line. For instance:
 Is no longer a supported use of `_super`. See [this jsbin](http://emberjs.jsbin.com/xuroy/1/edit?html,js,output)
 for a live example. If this change impacts you, please comment on [#4632](https://github.com/emberjs/ember.js/pull/4301).
 
+#### Handlebars {{each}} Helper Checks Markup
+
+In some cases, the browser may add or fix tags, which change the parentage of metamorph tags. This problem happens frequently when the
+developer doesn't include the TBODY tag inside a table for example.  This prevents the framework from updating or cleaning the underlying DOM
+elements.
+
+An assertion has been added in non-production builds that indicates that the metamorph start and end tags have different parents.
+This is most commonly caused by using an `{{each}}` inside of a `<table>` tag without specifying a `<tbody>`.
+
+Example demonstrating the assertion ([JSBin here](http://emberjs.jsbin.com/fotin/3/edit)):
+
+```handlebars
+<table>
+  {{#each}}
+    <tr></tr>
+  {{/each}}
+</table>
+```
+
+And the resolution is to include a `<tbody>` ([JSBin here](http://emberjs.jsbin.com/fotin/2/edit)):
+
+```handlebars
+<table>
+  <tbody>
+    {{#each}}
+      <tr></tr>
+    {{/each}}
+  </tbody>
+</table>
+```
+
 ### Other Improvements
 
 As usual, there are a ton of bug fixes and small improvements in this
