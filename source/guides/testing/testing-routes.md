@@ -2,66 +2,138 @@ Testing routes can be done both via integration and unit tests. Integration test
 
 Unit tests are possible using `moduleFor`. A common example of what may be tested in a route would be actions which are bubbled up to from nested routes.
 
-For example, let's say we have an application which displays an alert from anywhere in the application. The alert function `displayAlert` resides in the `ApplicationRoute` because it receives the action from any sub-route, controller, or view.
+Because Ember.Route just extends Ember.Object using 'ember-qunit' makes it simple to unit test our methods and actions.
+
+####Testing before model example
+
+Lets take a look at a passing test for a Route method:
+
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/1/embed?javascript">Unit Testing Route "Methods"</a>
+<script src="http://static.jsbin.com/js/embed.js"></script>
+
+We start by looking at a simple route with a beforeModel method (hook)
 
 ```javascript
-App.ApplicationRoute = Em.Route.extend({
-  actions: {
-    displayAlert: function(text) {
-      this._displayAlert(text);
+App.IndexRoute = Ember.Route.extend({
+
+  beforeModel: function(transition){
+    if(transition.targetName === 'foo'){
+      this.transitionTo('bar');
     }
   },
-
-  _displayAlert: function(text) {
-    alert(text);
+  model: function() {
+    return this.store.find('post');
   }
 });
 ```
+After initial testing setup, we start by using the `moduleFor` helper to setup our container for our `IndexRoute`
 
-In this route, we have an action `displayAlert` which calls a _private_ function on the route. This allows us to keep our action logic minimal and makes the logic inside `_displayAlert` more testable.
-
-Here is an example of how to unit test this route:
+***Note moduleFor only needs to be setup once per module and not per test.***
 
 ```javascript
-// common unit testing setup
-emq.globalize();
-setResolver(App.__container__);
-App.setupForTesting();
+moduleFor('route:index', 'IndexRoute');
+```
+Next we write an assertion using the `qunit` test method
 
-// we need to save the window.alert function in order to be able to stub the
-// action and then restore it afterwards to it's original function
-var originalAlert; 
-
-moduleFor('route:application', 'Unit: route/application', {
-  setup: function() { 
-    originalAlert = window.alert; // save original function
-  },
-  teardown: function() {
-    window.alert = originalAlert; // restore original functions
-  }
-});
-
-test('Alert is called on displayAlert', function() {
+```javascript
+test('transition is aborted if model is undefined', function() {
   expect(1);
+  var indexRoute = this.subject(),
+      transition = {
+        targetName : 'foo'
+      };
 
-  // with moduleFor, the subject returns an instance of the route
-  var route = this.subject();
+  //  stub up transitionTo and validate that transitionTo 'bar' is called
+  indexRoute.transitionTo = function(location){
+        equal(location, 'bar', 'route attempted to transition login');
+      },
 
-  var expectedText = 'foo';
+  indexRoute.beforeModel(transition);
 
-  // stub window.alert to perform a qunit test
-  window.alert = function(text) {
-    equal(text, expectedText, 'expected ' + text + ' to be ' + expectedText);
-  }
-
-  // call the _displayAlert function which triggers the qunit test above
-  route._displayAlert(expectedText);
 });
 ```
+The `this.subject()` is a helper from the `ember-qunit` library that returns an instance of the `IndexRoute` we injected into the container. For this test we are also mocking a transition object that is expected by beforeModel method.
 
-#### Example
+```javascript
 
-Here's the above example:
+var indexRoute = this.subject(),
+    transition = { targetName : 'foo' };
 
-<a class="jsbin-embed" href="http://jsbin.com/witac/2/embed?output">Custom Test Helpers</a>
+```
+
+Now we can override our transitionTo method and assert the location when we call the beforeModel hook with the stubbed transition object.
+
+```javascript
+
+indexRoute.transitionTo = function(location){
+  equal(location, 'bar', 'route attempted to transition login');
+}
+
+indexRoute.beforeModel(transition);
+
+```
+
+Again this is a way to unit test a method on a Route, but these hooks are better candidates for Integration testing.
+
+####Testing after model example
+
+Lets take a look at a passing test for an afterModel:
+
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/1/embed?javascript">Unit Testing Route "Methods"</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
+
+We start by looking at a simple route with an afterModel hook
+
+```javascript
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('post');
+  },
+  afterModel: function(model, transition){
+    if(model === undefined){
+      transition.abort();
+    }
+  }
+});
+```
+After initial testing setup, we start by using the `moduleFor` helper to setup our container for our `IndexRoute`
+
+***Note moduleFor only needs to be setup once per module and not per test.***
+
+```javascript
+moduleFor('route:index', 'IndexRoute');
+```
+Next we write an assertion using the `qunit` test method
+
+```javascript
+test('transition is aborted if model is undefined', function() {
+  expect(1);
+  var indexRoute = this.subject(),
+      aborted = false,
+      transition = {
+        abort : function() { aborted = true; }
+      };
+
+  indexRoute.afterModel(undefined, transition);
+  ok(aborted, "Make sure that if undefined is sent into afterModel");
+});
+```
+The `this.subject()` is a helper from the `ember-qunit` library that returns an instance of the `IndexRoute` we injected into the container. For this test we are also mocking a transition object that is used by afterModel.
+
+```javascript
+var indexRoute = this.subject(),
+    aborted = false,
+    transition = {
+      abort : function() { aborted = true; }
+    };
+
+```
+
+Now we can call our afterModel method and passed undefined as the model and our stubbed transition object.
+
+```javascript
+indexRoute.afterModel(undefined, transition);
+ok(aborted, "Make sure that if undefined is sent into afterModel");
+
+```
+
