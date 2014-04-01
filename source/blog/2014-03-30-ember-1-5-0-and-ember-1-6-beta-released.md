@@ -70,7 +70,7 @@ Ember.isBlank([1,2,3]);         // false
 
 #### Eager Updating URL
 
-Previously, the URL in the address bar would only update at the very end up
+Previously, the URL in the address bar would only update at the very end of
 the transition. This change causes the URL update to happen immediately unless
 the transition was aborted/redirected within the same run loop, which provides
 for a better UX 99% of the time.
@@ -126,6 +126,8 @@ App.PostEditRoute = Ember.Route.extend({
 Now in 1.5, you do not have to define the `model` hook for `PostEditRoute` as the default implementation
 is to use the parent routes model.
 
+### Other Notable Changes
+
 #### Ever-present \_super (Breaking Bugfix)
 
 Prior versions of Ember.js used a super mechanism that was un-safe for mixins. If more than
@@ -145,7 +147,7 @@ but also breaks the edge-case of using `_super` out of line. For instance:
 Is no longer a supported use of `_super`. See [this jsbin](http://emberjs.jsbin.com/xuroy/1/edit?html,js,output)
 for a live example. If this change impacts you, please comment on [#4632](https://github.com/emberjs/ember.js/pull/4301).
 
-#### Other Improvements
+### Other Improvements
 
 As usual, there are a ton of bug fixes and small improvements in this
 release. You can see a list of all the changes in the CHANGELOG:
