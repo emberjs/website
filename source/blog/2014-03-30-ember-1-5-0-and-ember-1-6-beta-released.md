@@ -126,6 +126,25 @@ App.PostEditRoute = Ember.Route.extend({
 Now in 1.5, you do not have to define the `model` hook for `PostEditRoute` as the default implementation
 is to use the parent routes model.
 
+#### Ever-present \_super (Breaking Bugfix)
+
+Prior versions of Ember.js used a super mechanism that was un-safe for mixins. If more than
+one `_super` was called for a given function name and there was no terminating function, an
+infinite loop would occur. See [#3523](https://github.com/emberjs/ember.js/issues/3523) for
+further discussion.
+
+The solution released in 1.5 fixes this behavior (see [#3683](https://github.com/emberjs/ember.js/pull/3683)),
+but also breaks the edge-case of using `_super` out of line. For instance:
+
+```JavaScript
+  doIt: function(){
+    Ember.run.once(this, this._super);
+  }
+```
+
+Is no longer a supported use of `_super`. See [this jsbin](http://emberjs.jsbin.com/xuroy/1/edit?html,js,output)
+for a live example. If this change impacts you, please comment on [#4632](https://github.com/emberjs/ember.js/pull/4301).
+
 #### Other Improvements
 
 As usual, there are a ton of bug fixes and small improvements in this
