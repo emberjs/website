@@ -275,6 +275,8 @@
   image: selleo.png
 - url: http://devmynd.com
   image: devmynd.png
+- url: http://www.radiumcrm.com
+  image: radiumcrm.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
