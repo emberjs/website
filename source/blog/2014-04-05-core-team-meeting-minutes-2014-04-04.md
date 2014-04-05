@@ -32,7 +32,7 @@ core team member and let them know!
 
   Using `get(obj, keyName)` might resolve. But was quite nervous to do that as it may involve some additional function calls
 
-  +1 by @stefanpenner, but he requests @kselden to review.
+  +1 by @stefanpenner, but he requests @krisselden to review.
 
   **Resolution**
 
