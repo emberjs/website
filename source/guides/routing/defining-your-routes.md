@@ -435,3 +435,31 @@ A few routes are immediately available within your application:
 
 Remember, these routes are part of every application, so you don't need to
 specify them in `App.Router.map`.
+
+### Wildcard / globbing routes
+
+You can define wildcard routes that will match mutliple routes. This could be used, for example,
+if you'd like a catchall route which is useful when the user enters an incorrect URL not managed
+by your app.
+
+```javascript
+App.Router.map(function() {
+  this.route('catchall', {path: '/*wildcard'});
+});
+```
+
+Like all routes with a dynamic segment, you must provide a context when using a `{{link-to}}`
+or `transitionTo` to programatically enter this route.
+
+```javascript
+App.ApplicationRoute = Ember.Route.extend({
+  actions:
+    error: function () {
+      this.transitionTo('catchall', "application-error");
+    }
+  }
+});
+```
+
+With this code, if an error bubbles up to the Application route, your application will enter
+the `catchall` route and display `/application-error` in the URL.
