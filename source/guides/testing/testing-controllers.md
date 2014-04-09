@@ -1,8 +1,8 @@
 Unit testing controllers is very simple using the unit test helper `moduleFor`.
 
-***It can become very easy to let your controllers perform most of the business logic in an Ember application. It is considered best practice to extract out any logic that does not directly impact the template into it's own library.***
+***It can become very easy to let your controllers perform most of the business logic in an Ember application. It is considered best practice to extract out any logic that does not directly impact the template into its own library.***
 
-Because Ember.Controller just extends Ember.Object using 'ember-qunit' makes it simple to unit test our methods, actions, and computed properties
+Because Ember.Controller extends Ember.Object unit testing methods and computed properties follows previous patterns.
 
 #### Testing Controller Methods
 
@@ -34,19 +34,19 @@ After initial testing setup, we start by using the `moduleFor` helper to setup o
 moduleFor('controller:posts', 'PostsController');
 
 ```
-Next we write an assertion using the `qunit` test method
+Next we write a test using the `qunit` test method utilizing the `equal` assertion.
 
 ```javascript
 
 test('someFunc returns expected value', function() {
-  expect(1);
+  expect(1);// the call to expect tells qunit exactly one test assertion should be occur during this test's lifetime 
   var postsController = this.subject();
   equal(postsController.someFunc(), 'someFunc return value');
 });
 
 ```
 
-The `this.subject()` is a helper from the `ember-qunit` library that returns an instance of the `PostsController` we injected into the container.
+The `this.subject()` is a helper from the `ember-qunit` library that returns a singleton instance of the `PostsController` from the test container.
 
 ```javascript
 
@@ -59,11 +59,11 @@ Now we can use the `equal` assertion to test that our `someFunc` method on the i
 equal(postsController.someFunc(), 'someFunc return value');
 ```
 
-Well that nice but what about actions? Let's look at how we can test an action on a controller.
+Well that nice, but what about actions? Let's look at how we can test an action on a controller.
 
 #### Testing Controller Actions
 
-Lets start again with a passing test.
+Let's start again with a passing test.
 
 <a class="jsbin-embed" href="http://jsbin.com/laqed/1/embed?javascript">Unit Testing Controllers "Actions"</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
@@ -92,7 +92,7 @@ App.PostsController = Ember.ArrayController.extend({
 });
 
 ```
-Our `someAction` does a few things. Its sets a property on the controller and also calls a method. Let's write a test!
+Our `someAction` does a few things. It sets a property on the controller and also calls a method. Let's write a test for it!
 
 Again start by using the `moduleFor` helper to setup our container for our `PostsController`
 
@@ -122,7 +122,7 @@ A few things are going on here. First we get our controller instance
 ```javascript
 var postsController = this.subject();
 ```
-Next were checking the values before the action is triggered
+Next we're checking the values before the action is triggered
 
 ```javascript
 equal(postsController.get('somePropertySetByAction'), 'You need to write tests', 'somePropertySetByAction has correct initial value');
@@ -168,7 +168,7 @@ App.PostsController = Ember.ArrayController.extend({
 
 ```
 
-Setup your moduleFor and write a test. This time were testing that our `someProperty`, when set, triggers other properties to update. Pretty common use case.
+Setup your moduleFor and write a test. This time we're testing that our `someProperty`, when set, triggers other properties to update. 
 
 ```javascript
 test('PostsController - Testing Computed Properties', function() {
@@ -209,13 +209,13 @@ postsController.set('someProperty', 'Testing is awesome!');
 Finally we assert that our values have been updated from updating our `someProperty`.
 
 ```javascript
-equal(postsController.get('someProperty'), 'Original Value', 'someProperty has correct initial value');
+equal(postsController.get('someProperty'), 'Testing is awesome!', 'someProperty has correct initial value');
 equal(postsController.get('someComputedProperty'), postsController.get('someProperty') + ' concat stuff', 'someComputedProperty has correct initial value');
 equal(postsController.get('someOtherComputedProperty'), postsController.get('someProperty'), 'someOtherComputedProperty has correct initial value');
 
 ```
 
-Hopefully you can see how easy it is to Unit test. But wait... what about `needs`? What if I want to test that everything is working?
+Hopefully you can see how easy it is to unit test. But wait... what about `needs`? What if I want to test that everything is working?
 
 #### Testing Controller Needs
 
@@ -224,7 +224,7 @@ Lets start again with a passing test
 <a class="jsbin-embed" href="http://jsbin.com/fixil/2/embed?javascript">Unit Testing Controllers "Needs"</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
-Our `PostsController` with a `needs` that interacts our `OtherController`.
+Our `PostsController` with a `needs` that interacts with our `OtherController`.
 
 ```javascript
 App.PostsController = Ember.ArrayController.extend({
@@ -259,7 +259,7 @@ moduleFor('controller:posts', 'PostsController', {
   needs: ['controller:other']
 });
 ```
-Now lest write a test that sets a property on our `needs` controller that updates properties on our `PostsController`
+Now let's write a test that sets a property on our `needs` controller that updates properties on our `PostsController`
 
 ```javascript
 test('PostsController - Testing Needs', function() {
