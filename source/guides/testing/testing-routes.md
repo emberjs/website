@@ -1,8 +1,8 @@
-Testing routes can be done both via integration and unit tests. Integration tests will likely provide better tests for routes because the routes typically are used to perform transitions and load data, all of which is more easily tested via integration tests.
+Testing routes can be done both via integration and unit tests. Integration tests will likely provide better tests for routes because the routes typically are used to perform transitions and load data, all of which are more easily tested via integration tests.
 
-Unit tests are possible using `moduleFor`. A common example of what may be tested in a route would be actions which are bubbled up to from nested routes.
+It's possible to unit test routes using `moduleFor`. Actions that have bubbled up from nested routes would be a common thing to unit test in routes.
 
-For example, let's say we have an application which displays an alert from anywhere in the application. The alert function `displayAlert` resides in the `ApplicationRoute` because it receives the action from any sub-route, controller, or view.
+For example, let's say we'd like to have an alert that can be triggered from anywhere within our application. The alert function `displayAlert` should be put into the `ApplicationRoute` because all actions & events bubble up to it from any sub-route, controller or view.
 
 ```javascript
 App.ApplicationRoute = Em.Route.extend({
@@ -28,8 +28,8 @@ emq.globalize();
 setResolver(App.__container__);
 App.setupForTesting();
 
-// we need to save the window.alert function in order to be able to stub the
-// action and then restore it afterwards to it's original function
+// we need to store a reference to the window.alert function in order to be able 
+// to stub the action and then restore it afterwards to its original function
 var originalAlert; 
 
 moduleFor('route:application', 'Unit: route/application', {

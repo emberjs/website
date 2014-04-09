@@ -12,7 +12,7 @@ test("root lists first page of posts", function(){
 });
 ```
 
-The helpers that perform actions use a global promise object and automatically chain onto that promise object if it exists. This allows you write your tests without worrying about async behaviour your helper might trigger.
+The helpers that perform actions use a global promise object and automatically chain onto that promise object if it exists. This allows you to write your tests without worrying about async behaviour your helper might trigger.
 
 ```javascript
 test("creating a post displays the new post", function(){
@@ -20,7 +20,7 @@ test("creating a post displays the new post", function(){
   fillIn(".post-title", "A new post");
   fillIn(".post-author", "John Doe");
   click("button.create");
-  andThen(function() {
+  andThen(function() { // wait for the async helpers above to complete
     ok(find("h1:contains('A new post')").length, "The post's title should display");
     ok(find("a[rel=author]:contains('John Doe')").length, "A link to the author should display");
   });

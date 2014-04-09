@@ -5,7 +5,7 @@ application to be running.
 ### Globals vs Modules
 
 In the past, it has been difficult to test portions of your Ember application without loading the
-entire app as a global. By having your application written using modules (CJS, AMD, etc), you are able
+entire app as a global. By having your application written using modules ([CommonJS], [AMD], etc), you are able
 to require the code that is to be tested without having to pluck the pieces off of your global
 application.
 
@@ -46,6 +46,8 @@ In order to unit test the Ember application, you need to let Ember know it is in
 Ember.setupForTesting();
 ```
 
+The `setupForTesting()` function call makes ember turn off its automatic run loop execution. This gives us an ability to control the flow of the run loop ourselves, to a degree. Its default behaviour of resolving all promises and completing all async behaviour are suspended to give you a chance to set up state and make assertions in a known state. In other words, you know that if you run "visit" to get to a particular URL, you can be sure the URL has been visited and that's the only behaviour that has transpired. If we didn't use this mode, our assertions wouldn't be executed after the async behaviour had transpired, so our assertion results would be unpredictable.
+
 With a module-based application, you have access to the unit test helpers simply by requiring the exports of the module. However, if you are testing a global Ember application, you are still able to use the unit test helpers. Instead of importing the `ember-qunit` module, you need to make the unit test helpers global with `emq.globalize()`:
 
 ```javascript
@@ -70,3 +72,6 @@ If you are using modules, you would require the `ember-qunit` module and call `s
 var resolver = require('path/to/test/resolver')['default'];
 require('ember-qunit').setResolver(resolver);
 ```
+
+[CommonJS]: http://wiki.commonjs.org/wiki/CommonJS  "CommonJS"
+[AMD]: http://requirejs.org/docs/whyamd.html "AMD"
