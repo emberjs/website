@@ -6,7 +6,7 @@ They are:
 
 ```handlebars
 <label>
-  {{view Ember.Checkbox checkedBinding="model.isDone"}}
+  {{view Ember.Checkbox checked=model.isDone}}
   {{model.title}}
 </label>
 ```
@@ -26,11 +26,11 @@ App.MyText = Ember.TextField.extend({
 
 ```handlebars
 {{view Ember.Select viewName="select"
-                    contentBinding="people"
+                    content=people
                     optionLabelPath="model.fullName"
                     optionValuePath="model.id"
                     prompt="Pick a person:"
-                    selectionBinding="selectedPerson"}}
+                    selection=selectedPerson}}
 ```
 
 #### Ember.TextArea
