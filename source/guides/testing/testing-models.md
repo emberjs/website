@@ -23,12 +23,14 @@ App.Player = Ember.Object.extend({
 It's easy to create a `Player` object and test the method.
 
 ```javascript
+// Globalize ember-qunit. For more info, see http://emberjs.com/guides/testing/unit#toc_unit-testing-setup
 emq.globalize();
-setResolver(App.__container__);
+// Set the resolver for the global context. For more info, see http://emberjs.com/guides/testing/unit#toc_the-resolver
+setResolver(App.__container__)
+// Place Ember in test mode. For more info, see http://emberjs.com/guides/testing/unit#toc_unit-testing-setup
 App.setupForTesting();
 
 moduleForModel('player', 'Player Model', {});
-
 
 test('levelUp', function() {
   var player = App.Player.create({ level : 4 });
@@ -62,8 +64,11 @@ correctly and that it is updated when either `firstName` or `lastName`
 change.
 
 ```javascript
+// Globalize ember-qunit. For more info, see http://emberjs.com/guides/testing/unit#toc_unit-testing-setup
 emq.globalize();
-setResolver(App.__container__);
+// Set the resolver for the global context. For more info, see http://emberjs.com/guides/testing/unit#toc_the-resolver
+setResolver(App.__container__)
+// Place Ember in test mode. For more info, see http://emberjs.com/guides/testing/unit#toc_unit-testing-setup
 App.setupForTesting();
 
 moduleForModel('person', 'moduleForModel with person', {});
@@ -111,14 +116,16 @@ Then you could test that the relationship is wired up correctly
 with this test.
 
 ```javascript
+// Globalize ember-qunit. For more info, see http://emberjs.com/guides/testing/unit#toc_unit-testing-setup
 emq.globalize();
-setResolver(App.__container__);
+// Set the resolver for the global context. For more info, see http://emberjs.com/guides/testing/unit#toc_the-resolver
+setResolver(App.__container__)
+// Place Ember in test mode. For more info, see http://emberjs.com/guides/testing/unit#toc_unit-testing-setup
 App.setupForTesting();
 
 moduleForModel('user', 'User Model', {
   needs: ['model:profile']
 });
-
 
 test('profile relationship', function() {
   var relationships = Ember.get(App.User, 'relationships');
