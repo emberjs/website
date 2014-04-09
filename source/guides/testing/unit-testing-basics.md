@@ -28,17 +28,15 @@ module('Unit: SomeThing');
 
 test('computedFoo correctly concats foo', function() {
   var someThing = App.SomeThing.create();
-  Ember.run(function(){
-    someThing.set('foo', 'baz');
-  });
+  someThing.set('foo', 'baz');
   equal(someThing.get('computedFoo'), 'computed baz');
 });
 ```
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/holux/7/embed?output">Unit Testing Basics: Computed Properties</a>
-<script src="http://jsbin.com/holux/7/"></script>
+<a class="jsbin-embed" href="http://jsbin.com/holux/11/embed?output">Unit Testing Basics: Computed Properties</a>
+<script src="http://jsbin.com/holux/11/"></script>
 
 ### Testing object Methods
 
