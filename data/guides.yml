@@ -334,6 +334,12 @@ Cookbook:
   - title: "Creating Reusable Social Share Buttons"
     url: "cookbook/helpers_and_components/creating_reusable_social_share_buttons"
     skip_sidebar_item: true
+  - title: "A Spinning Button for Asynchronous Actions"
+    url: "cookbook/helpers_and_components/spin_button_for_asynchronous_actions"
+    skip_sidebar_item: true
+  - title: "Adding Google Analytics Tracking"
+    url: "cookbook/helpers_and_components/adding_google_analytics_tracking"
+    skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
     url: "cookbook/working_with_objects"
