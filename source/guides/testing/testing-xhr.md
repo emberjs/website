@@ -22,7 +22,7 @@ Using the promise from above
       alert(result);
     });
 
-This only needs to be running in the run loop if you attach to the promise after it's been fulfilled.
+This only needs to be wrapped up in the run loop if you attach to the promise after it's been fulfilled.
 
 ###Testing promises and the run loop
 
@@ -51,14 +51,14 @@ If we imagine that the above promise has already resolved, but in the code you w
 If you're using a promise, but it resolves immediately then you can simply follow the ideas above.  In this example we wrap the resolve and the chained promise (due to the promise resolving immediately).
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/45/embed?output">Simple promise example</a>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/45/embed?js,output">Simple promise example</a>
 
 
 ####Asynchronous Example using promises
 
 If you're using a promise, but it resolves after the test would finish you'll need to use the `stop` and `start` global methods.  These methods will give you the ability to tell qunit to stop on the current test and start on command.  In this example we delay and wrap the resolve.  Since the chained promise is attached before the promise is resolved you won't need to wrap it in the run loop.
 
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/46/embed?output">Async promise example</a>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/46/embed?js,output">Async promise example</a>
 
 
 ###ic-ajax
@@ -95,16 +95,16 @@ This of course is an asynchronous call which will return a promise, which upon r
     });
 
 
-<a class="jsbin-embed" href="http://jsbin.com/OxIDiVU/366/embed?output">Using ic-ajax</a>
+<a class="jsbin-embed" href="http://jsbin.com/OxIDiVU/366/embed?js,output">Using ic-ajax</a>
 
 ####Simple ic-ajax example with Ember Data:
 
 Ember Data can be dealt with just as easily, you will just need to define the fixtures in the same format that Ember Data is expecting it.
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/361/embed?output">Using ic-ajax</a>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/361/embed?js,output">Using ic-ajax</a>
 
 ####Integration test using ic-ajax and Ember Data
 
 Often while doing integration tests you don't actually want to hit the server.  Using the previously established patterns you can set up fixture data which will be used in place of real ajax calls.  Below a simple test using ic-ajax and Ember Data has been provided.
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/365/embed?output">Using ic-ajax</a>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/365/embed?js,output">Using ic-ajax</a>
