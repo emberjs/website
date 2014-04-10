@@ -1,38 +1,44 @@
-Testing with asynchronous calls, promises, and Ember may seem tricky at first, but with a little explanation we hope to alleviate some confusion. 
+###Promise, Ember, and the run loop
 
-Promises (TODO link http://emberjs.com/api/classes/Ember.RSVP.Promise.html) in Ember work in conjunction with the run loop (TODO link http://emberjs.com/guides/understanding-ember/run-loop/).
+Testing with asynchronous calls, [Promises](/api/classes/Ember.RSVP.Promise.html), and Ember may seem tricky at first, but with a little explanation we hope to alleviate some confusion. 
 
-There are two important sections of the promise that works with the run loop.  
+Promises work in conjunction with the [run loop](/guides/understanding-ember/run-loop/). In order for your promises to properly work the run loop must be running during a few key parts in the code. Specifically these are when the promise is resolved, and when you attach observes through the `then` method (also known as chaining promises).  
 
-####The first is when the promise resolves.  
+####Promise Resolution
 
     var promise = new Ember.RSVP.Promise(function(resolve){
-      // this will schedule an action to fulfill the promise and call observers/chained promises.
+      // this will schedule an action to fulfill the promise 
+      // and call observers/chained promises.
       resolve('hello world'); 
     });
 
-####The second is when you attempt to chain a promise (which will become an observer if the promise has yet to fulfill).
+####Chaining Promises
 
 Using the promise from above
 
-    // once the above promise has resolved it will then schedule in the actions queue the chained promise/observers.
+    // once the above promise has resolved it will then schedule 
+    // in the actions queue the chained promise.
     promise.then(function(result){
       alert(result);
     });
 
-When you are using Ember in non-testing mode the run loop is actively running, so you don't need to worry about wrapping these events in the run loop.  In testing mode the run loop is passive and must be turned on manually.
+This only needs to be running in the run loop if you attach to the promise after it's been fulfilled.
 
-####Examples of how to properly setup promises to work with the run loop
+###Testing promises and the run loop
+
+When you are using Ember in non-testing mode the run loop is actively running, so you don't need to worry about wrapping these events in the run loop.  In testing mode the run loop is passive and must be turned on manually.  While testing using asynchronous code not in the run loop will often result in this error `Uncaught Error: Assertion Failed: You have turned on testing mode, which disabled the run-loop's autorun. You will need to wrap any code with asynchronous side-effects in an Ember.run`.
+
+####General Example
 
 Here we are setting up a promise, and intentionally using `setTimeout` to mimic a delayed response from a fake server.  Once our fake server has responded we need to spin up the run loop manually, by wrapping the statement in a run command.
 
     var promise = new Ember.RSVP.Promise(function(resolve){
       setTimeout(function(){
-        Em.run(function(){ resolve('hello world'); });
+        Em.run(this, resolve, 'hello world');
       }, 20);
     });
 
-If we imagine that this promise has already resolved, but in the code you want to chain another promise you will once again want to wrap the chained promise in a run loop.
+If we imagine that the above promise has already resolved, but in the code you want to chain another promise you will once again want to wrap the chained promise in a run loop.
 
     Em.run(function(){
       promise.then(function(result){
@@ -40,24 +46,65 @@ If we imagine that this promise has already resolved, but in the code you want t
       });
     });
 
+####Synchronous Example using promises
 
-// remove most of this
-Ember uses promises in an asynchronous fashion in conjunction with the run loop.  As a promise is resolved the promise schedules a task to fulfill the promise in the run loop asynchronously.  This is the first reason the run loop must be running in order for your promise to properly resolve.  As you can imagine, most ajax calls do not resolve immediately, in this case once your ajax has resolved the promise must be resolved within the run loop in order to schedule the fulfillment of the promise.  Additionally chained promises must also be placed in the run loop due to the fact that they will also be scheduled to run asynchronously, regardless of whether or not the promise has already fulfilled.
+If you're using a promise, but it resolves immediately then you can simply follow the ideas above.  In this example we wrap the resolve and the chained promise (due to the promise resolving immediately).
+
+<script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/45/embed?output">Simple promise example</a>
+
+
+####Asynchronous Example using promises
+
+If you're using a promise, but it resolves after the test would finish you'll need to use the `stop` and `start` global methods.  These methods will give you the ability to tell qunit to stop on the current test and start on command.  In this example we delay and wrap the resolve.  Since the chained promise is attached before the promise is resolved you won't need to wrap it in the run loop.
+
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/46/embed?output">Async promise example</a>
+
+
+###ic-ajax
+
+All this being said, the most common example is when you're making an asynchronous call to a server.
 
 ic-ajax is an Ember-friendly `jQuery-ajax` wrapper, which is very convenient for building up fixture data and mocking ajax calls for unit/integration testing.
 
-###Simple ic-ajax example:
+####Simple ic-ajax example:
 
-<script src="http://static.jsbin.com/js/embed.js"></script>
+Imagine you wanted to request a list of colors from a server.  Using ic-ajax you would use the following syntax
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/363/embed?output">Using ic-ajax</a>
+    ic.ajax.request('/colors');
 
-###Example using Ember Data:
+This of course is an asynchronous call which will return a promise, which upon resolution will contain the list of colors.  The convenient thing about ic-ajax is it wraps the resolve of your ajax call in the run loop so you don't need to worry about it.  We're going to set up some fixture data that can be returned instead of making an ajax call.
+
+    ic.ajax.defineFixture('/colors', {
+      response: [
+        {
+          id: 1,
+          color: "red"
+        },
+        {
+          id: 2,
+          color: "green"
+        },
+        {
+          id: 3,
+          color: "blue"
+        }
+      ],
+      jqXHR: {},
+      textStatus: 'success'
+    });
+
+
+<a class="jsbin-embed" href="http://jsbin.com/OxIDiVU/366/embed?output">Using ic-ajax</a>
+
+####Simple ic-ajax example with Ember Data:
+
+Ember Data can be dealt with just as easily, you will just need to define the fixtures in the same format that Ember Data is expecting it.
 
 <a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/361/embed?output">Using ic-ajax</a>
 
-###Integration using ic-ajax and Ember Data
+####Integration test using ic-ajax and Ember Data
+
+Often while doing integration tests you don't actually want to hit the server.  Using the previously established patterns you can set up fixture data which will be used in place of real ajax calls.  Below a simple test using ic-ajax and Ember Data has been provided.
 
 <a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/365/embed?output">Using ic-ajax</a>
-
-* ??? what is endorsed by ember?
