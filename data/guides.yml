@@ -243,6 +243,8 @@ Testing:
     url: "testing/testing-user-interaction"
   - title: "Unit Tests"
     url: "testing/unit"
+  - title: "Unit Testing Basics"
+    url: "testing/unit-testing-basics"
   - title: "Testing Components"
     url: "testing/testing-components"
   # - title: "Testing Handlebars Helpers"
