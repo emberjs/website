@@ -503,6 +503,7 @@ p {
     margin: 1.5em 0;
     text-align: center;
     border: 1px solid #cccccc;
+    overflow-x: auto;
   }
 
   aside {
@@ -1241,7 +1242,7 @@ body.security #content {
     margin-top: 0px;
 
     .headshots {
-      width: 590px;
+      width: 760px;
       margin: 0 auto;
 
       a:hover {

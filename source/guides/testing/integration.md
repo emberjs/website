@@ -1,4 +1,4 @@
-Integration tests are generally used to test important work flows within your application. They emulate user interaction and confirms expected results.
+Integration tests are generally used to test important workflows within your application. They emulate user interaction and confirm expected results.
 
 ### Setup
 

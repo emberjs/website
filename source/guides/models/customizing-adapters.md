@@ -1,6 +1,3 @@
-# Adapter Customization Guide
-
-
 In Ember Data, the logic for communicating with a backend data store
 lives in the `Adapter`. Ember Data's Adapter has some built-in
 assumptions of how a [REST API](http://jsonapi.org/) should look. If

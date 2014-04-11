@@ -1,12 +1,17 @@
-Testing is a core part of Ember framework and development cycle.
+Testing is a core part of the Ember framework and its development cycle.
 
-Let's assume you are writing an Ember application which serves as a blog. This application would likely include models such as `user` and `post`. It would also include interactions such as _login_ and _create post_. Let's finally assume that you would like to have tests in place for your application. 
+Let's assume you are writing an Ember application which will serve as a blog. 
+This application would likely include models such as `user` and `post`. It would 
+also include interactions such as _login_ and _create post_. Let's finally 
+assume that you would like to have [automated tests] in place for your application. 
 
-There are two different classifications of tests that you will need: **Integration** and **Unit**.
+There are two different classifications of tests that you will need: 
+**Integration** and **Unit**.
 
 ### Integration Tests
 
-Integration tests are used to test user interaction and application flow. With the example scenario above, some integration tests you may write are:
+Integration tests are used to test user interaction and application flow. With 
+the example scenario above, some integration tests you might write are:
 
 * A user is able to log in via the login form.
 * A user is able to create a blog post.
@@ -14,12 +19,21 @@ Integration tests are used to test user interaction and application flow. With t
 
 ### Unit Tests
 
-Unit tests are used to test isolated functions or "units" without worrying about it's dependencies. Some examples of unit tests for the scenario above may be:
+Unit tests are used to test isolated chunks of functionality, or "units" without 
+worrying about their dependencies. Some examples of unit tests for the scenario 
+above might be:
 
-* A user with the role of 'admin' can edit a post.
-* A post requires a title.
-* A user can have many posts.
+* A user has a role
+* A user has a username
+* A user has a fullname attribute which is the aggregate of its first and last 
+  names with a space between
+* A post has a title
+* A post's title must be no longer than 50 characters
 
 ### Testing Frameworks
 
-[QUnit](http://qunitjs.com/) is the default testing framework for this package, but others are supported through third-party adapters.
+[QUnit] is the default testing framework for this package, but others are 
+supported through third-party adapters.
+
+[automated tests]: http://en.wikipedia.org/wiki/Test_automation
+[QUnit]: http://qunitjs.com/

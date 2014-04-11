@@ -60,7 +60,7 @@ test("template", function(){
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
-<a class="jsbin-embed" href="http://jsbin.com/witut/1/embed?output">Unit Testing Components</a>
+<a class="jsbin-embed" href="http://jsbin.com/witut/1/embed?js,output">Unit Testing Components</a>
 
 
 ###Interacting with components in the dom
@@ -72,7 +72,7 @@ In this example we are
     3. clicking a button in the component
     4. validating the expected effects from the click have occurred
 
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/37/embed?output">Unit Testing Components</a>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/37/embed?js,output">Unit Testing Components</a>
 
 ###Components with built in layout
 
@@ -85,7 +85,7 @@ In this example we are
     5. clicking a button in the component
     6. validating the text in the component
 
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/41/embed?output">Unit Testing Components</a>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/41/embed?js,output">Unit Testing Components</a>
 
 ###Programmatically interacting with components
 
@@ -96,7 +96,7 @@ In this example we are
     3. programmatically calling an action 
     4. validating the text in the component
 
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/40/embed?output">Unit Testing Components</a>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/40/embed?js,output">Unit Testing Components</a>
 
 ###sendAction validation in components
 
@@ -110,4 +110,4 @@ In this example we are
     5. inserting the component into the dom
     6. clicking the button
     7. validating the action was sent
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/38/embed?output">Unit Testing Components</a>
+<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/38/embed?js,output">Unit Testing Components</a>

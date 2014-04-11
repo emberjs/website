@@ -1,8 +1,8 @@
 When it comes to running your tests there are multiple approaches that you can take depending on what best suits your work flow. Finding a low friction method of running your tests is important because it is something that you will be doing quite often.
 
-### The Browser
+### <a name="browser"></a>The Browser
 
-The simplest way of running your tests is just opening a page in the browser.
+The simplest way of running your tests is just opening a page in the browser. The following is how to put a test "harness" around your app with qunit so you can run tests against it:
 
 * Get a copy of `qunit` (both the JavaScript and the css) from [here][qunit].
 * Create an html file that includes qunit and it's css that looks like the following example.
@@ -29,13 +29,17 @@ The simplest way of running your tests is just opening a page in the browser.
 
 That's it. You're done and your tests are running. No need to install and configure any other tools or have any other processes running. After adding or updating tests and/or code just reload the page and you're off to the races running your tests.
 
-If that meets your needs, read no further. However, if you would like a more automated way of running your tests, read on. 
+If that meets your needs, read no further. However, if you would like a more automated way of running your tests, read on.
 
-Manually opening and refreshing a browser may be prove to be a bit tedious for your work flow. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching and then refreshing each time you make a change. Luckily there are tools to help with that. These tools allow you to run your tests in actual browsers (yes browsers - as in more than one at the same time) as well and then report the results back to a consolidated view that is easy for you to see. You can run these tools from the command line and they are capable of not only opening multiple browsers at once but also automatically re-running tests when changes are made. They require a bit more setup than creating a simple html file but they will likely save time in the long run.
+Manually opening and refreshing a browser may prove to be a bit tedious for your work flow. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching (and then refreshing) each time you make a change. Getting rid of repetition is why we use computers, so this can be a problem.
+
+Luckily there are tools to help with this. These tools allow you to run your tests in actual browsers (yes browsers - as in more than one at the same time) and then report the results back to you in a consolidated view. These tools are run from the command line and they are also capable of automatically re-running tests when changes are made to files. They require a bit more setup than creating a simple html file but they will likely save time in the long run.
 
 ### The Testem Runner
 
-The [Testem runner][testem] is one approach. To get started using `testem` you will need to install the `testem` node.js module. To install `testem` run the following command.
+[Testem][testem] is a simple tool to setup and use. In a nutshell it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically.  It will then launch each browser (that you specify), run the tests and report the results back to you. It has a nice terminal based user interface that will display test results for each browser. There are many features built into testem, but it does not seem to have any 3rd party plugins or extensions available.
+
+To get started using `testem` you will need to install the `testem` node.js module. To install `testem` run the following command.
 
 ```bash
 npm install -g --save-dev testem
@@ -56,7 +60,7 @@ npm install -g --save-dev testem
 }
 ```
 
-That is it. Everything that you need is installed and configured. Let's go over the configuration in more detail.
+That's it. Everything you need is installed and configured. Let's go over the configuration in more detail.
 
 * `framework`
  - This represents the testing framework that you are going to be using. Qunit is what we are using in this example. `Testem` takes care of getting the qunit library loaded up so you don't have to worry about it.
@@ -89,7 +93,9 @@ Much like running `testem` with no arguments, the `ci` option will use your same
 
 ### The Karma Test Runner
 
-The [Karma test runner][karma] is another approach. To get started using `karma` you will need to install a few node modules. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
+[Karma][karma] is another simple tool to setup and use. It is similar to testem in that it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically. It will then launch each browser (that you specify), run the tests and report the results back to you. The terminal user interface is not as fancy as testem, but tere is a colored display of test results for each browser. Karma has many features as well as many plugins. For information about writing karma plugins checkout [the docs][karma_plugins]. To find some available karma plugins start with [karma_runner][karma_github] on github.
+
+To get started using `karma` you will need to install a few node modules. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
 
 ```javascript
 // package.json
@@ -112,7 +118,7 @@ Now that you've got a `package.json` containing everything that you will need to
 npm install
 ```
 
-`Karma` along with everything else that you need to start running your tests is now available. There is a little bit of configuration that  needs to be done first. If you want to generate the default `karma` configuration you can run `karma init` and that will create a `karma.conf.js` file in your current directory. There is a lot more configuration than what is required, so here is a paired down version of the minimum configuration that Karma requires to run your tests.
+`Karma` along with everything else that you need to start running your tests is now available. There is a little bit of configuration that needs to be done first. If you want to generate the default `karma` configuration you can run `karma init` and that will create a `karma.conf.js` file in your current directory. There are many configuration options available, so here's a pared down version: ie, the minimum configuration that Karma requires to run your tests.
 
 ```javascript
 // karma.conf.js
@@ -129,22 +135,22 @@ module.exports = function(config) {
   });
 };
 ```
-There is one last thing that you need to install which is Karma's command line interface.
+There is one last thing that you need to install: Karma's command line interface.
 
 ```bash
 npm install -g karma-cli
 ```
 
-That is it. Everything that you need is installed and configured. Let's go over the configuration in more detail.
+That's it. Everything you need is installed and configured. Let's go over the configuration in more detail.
 
 * `frameworks`
- - This represents the testing frameworks that you are going to be using. Qunit is what we are using in this example. `Karma` takes care of getting the qunit library loaded up so you don't have to worry about it.
+ - This represents the testing frameworks that you're going to use. We're using QUnit in this example. Karma takes care of loading up the QUnit library for you.
 * `files`
  - This represents which of your source files (including both production and test code) that you want `karma` to load when running tests.
 * `autoWatch`
  - A value of `true` will mean that `karma` will watch all of the `files` for changes and rerun the tests only when `singleRun` is `false`.
 * `singleRun`
- - A value of `true` will run all of the tests once time and shut down, whereas a value of `false` will run all of the tests and wait for files to change and will run them again.
+ - A value of `true` will run all of the tests once time and shut down, whereas a value of `false` will run all of your tests once, then wait for any files to change which will trigger re-running all your tests.
 * `browsers`
  - This allows you to configure which browsers to launch and run the tests. This can be one or more browsers. When multiple are specified your tests will run in all browsers concurrently.
 
@@ -166,12 +172,12 @@ Depending on your configuration it will either run the tests and exit or run the
 
 ### Build Integration
 
-Both `testem` and `karma` are capable of being integrated into a larger build processes. For example, you may be using [CoffeeScript][coffee], [ES6][es6] or something else and need to [transpile][transpile] your source into `JavaScript`. If you happen to be using `grunt` you can use `grunt-contrib-testem` for `testem` or `grunt-karma` for `karma` integration into your existing build process. Both `testem` and `karma` have preprocessing configuration options available as well. For more information on other available configuration options see the docs for [karma][karma] or [testem][testem].
+Both `testem` and `karma` are capable of being integrated into larger build processes. For example, you may be using [CoffeeScript][coffee], [ES6][es6] or something else and need to [transpile][transpile] your source into `JavaScript`. If you happen to be using `grunt` you can use `grunt-contrib-testem` for `testem` or `grunt-karma` for `karma` integration into your existing build process. Both `testem` and `karma` have preprocessing configuration options available as well. For more information on other available configuration options see the docs for [karma][karma] or [testem][testem].
 
 
 ### Generating Reports
 
-Often times it is useful to be able to get the results of your tests in different formats. For example, if you happen to use [Jenkins][jenkins] for a [ci][ci] server, you may want to get your test results in XML format so that Jenkins can build some graphs of your test results over time. Also, you may want to measure your [code coverage][coverage] and have Jenkins track that over time as well. Using these test runners, it is possible to generate the results of your tests as well as record other information, like code coverage, as well.
+Oftentimes it's useful get the results of your tests in different formats. For example, if you happen to use [Jenkins][jenkins] as a [ci][ci] server, you may want to get your test results in XML format so Jenkins can build some graphs of your test results over time. Also, you may want to measure your [code coverage][coverage] and have Jenkins track that over time as well. With these test runners, it's possible to generate reports from the results in various formats, as well as record other information such as code-test coverage, etc.
 
 #### XML Test Results from Testem
 
@@ -215,7 +221,7 @@ The `junit` reporter will create an xml file called `test-results.xml` in the cu
 
 #### Code Coverage from Testem
 
-Getting coverage from `testem` is a bit more involved at the moment. There is a way to do it. Check the [testem docs][testem_coverage] for more information.
+Getting coverage from `testem` is a bit more involved at the moment, though there **is** a way to do it. Check the [testem docs][testem_coverage] for more information.
 
 
 #### Code Coverage from Karma
@@ -226,7 +232,7 @@ To measure your [code coverage][coverage] from the `karma` test runner you will 
 npm install --save-dev karma-coverage
 ```
 
-Once that is done you will need to update your karma configuration to include the following.
+Once that's done you will need to update your karma configuration to include the following.
 
 ```javascript
 module.exports = function(config) {
@@ -245,7 +251,7 @@ module.exports = function(config) {
 };
 ```
 
-That is it. Now, running `karma` normally will display code coverage information in the terminal. The `coverageReporter.type` option can be set to a number of different values. The value in the example, `text`, will only display to the console. Some other options are `lcov`, `html` and `cobertura` which can be used as input to other tools. For additional configuration options on coverage reporting from `karma` check out their [docs][karma_coverage_docs].
+That's it. Now, running `karma` normally will display code coverage information in the terminal. The `coverageReporter.type` option can be set to a number of different values. The value in the example, `text`, will only display to the console. Some other options are `lcov`, `html` and `cobertura` which can be used as input to other tools. For additional configuration options on coverage reporting from `karma` check out their [docs][karma_coverage_docs].
 
 
 [testem_coverage]: https://github.com/airportyh/testem/tree/master/examples/coverage_istanbul
@@ -257,10 +263,12 @@ That is it. Now, running `karma` normally will display code coverage information
 [jenkins]: http://jenkins-ci.org/
 [transpile]: http://en.wikipedia.org/wiki/Source-to-source_compiler
 [es6]: http://square.github.io/es6-module-transpiler/
-[ci]: http://en.wikipedia.org/wiki/Continuous_integration 
+[ci]: http://en.wikipedia.org/wiki/Continuous_integration
 [testem]: https://github.com/airportyh/testem
 [coffee]: http://coffeescript.org/
 [karma]: http://karma-runner.github.io/
 [package.json]: https://www.npmjs.org/doc/json.html
 [sauce_labs]: https://saucelabs.com/
 [karma_github]: https://github.com/karma-runner?query=launcher
+[karma_plugins]: http://karma-runner.github.io/0.10/config/plugins.html
+[karma_runner]: https://github.com/karma-runner
