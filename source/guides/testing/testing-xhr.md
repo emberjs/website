@@ -1,4 +1,4 @@
-###Promise, Ember, and the run loop
+###Promise, Ember and the run loop
 
 Testing with asynchronous calls and [Promises](/api/classes/Ember.RSVP.Promise.html) in Ember may seem tricky at first, but with a little explanation things should become clearer.
 
@@ -6,7 +6,7 @@ In order to fully explain testing Promises & asynchronous code, it's important t
 
 Now that you grasp the general concepts regarding the run loop, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode.  This helps ensure the procedure of your code and the tests you write around that code. Note that in testing Promises and asynchronous code, you're effectively "stepping through" your application in chunks.
 
-In order for Promises to work properly, the run loop must be running. This is because when a Promise runs, it's logic works asynchronously using the run loop's scheduler, inviting the run loop to execute it in its own time. In short: no run loop, no promise code resolution/rejection.
+When a Promise runs, its logic is triggered to execute by the run loop's scheduler, therefore in order for Promises to work the run loop must execute. In short: no run loop, no Promise resolution/rejection.
 
 Using the "then" function (eg promise1.then(fulfillmentCallback, rejectionCallback)) gives you access to the results or rejection of the promise. Let's call this observing the promise.  Additionally you can "chain" two promises together (eg promise1.then(promise2, promise3)): promise1 will resolve or reject.  If promise 1 resolves promise 2 will be executed, if promise 1 rejects promise 3 will be executed.  Both of these situations involve a callback which is scheduled asynchronously on the run loop.
 

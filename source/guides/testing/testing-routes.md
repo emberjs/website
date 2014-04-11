@@ -1,8 +1,8 @@
-Testing routes can be done both via integration and unit tests. Integration tests will likely provide better tests for routes because the routes typically are used to perform transitions and load data, all of which are tested more easily via integration tests.
+Testing routes can be done both via integration or unit tests. Integration tests will likely provide better tests for routes because routes are typically used to perform transitions and load data, both of which are tested more easily in full context rather than isolation.
 
 It's possible to unit test routes using `moduleFor`. Actions that have bubbled up from nested routes would be a common thing to unit test in routes.
 
-For example, let's say we'd like to have an alert that can be triggered from anywhere within our application. The alert function `displayAlert` should be put into the `ApplicationRoute` because all actions & events bubble up to it from any sub-route, controller or view.
+For example, let's say we'd like to have an alert that can be triggered from anywhere within our application. The alert function `displayAlert` should be put into the `ApplicationRoute` because all actions and events bubble up to it from sub-routes, controllers and views.
 
 ```javascript
 App.ApplicationRoute = Em.Route.extend({
@@ -18,23 +18,15 @@ App.ApplicationRoute = Em.Route.extend({
 });
 ```
 
-In this route we've [separated our concerns][http://en.wikipedia.org/wiki/Separation_of_concerns]: The action `displayAlert` contains the code that is called when the action is received, and the private function `_displayAlert` performs the work. Separating code into small chunks, or "concerns", allows it to be more easily tested, and allows you to catch bugs more easily.
+In this route we've [separated our concerns][http://en.wikipedia.org/wiki/Separation_of_concerns]: The action `displayAlert` contains the code that is called when the action is received, and the private function `_displayAlert` performs the work. While not necessarily obvious here because of the small size of the functions, separating code into smaller chunks (or "concerns"), allows it to be more readily isolated for testing, which in turn allows you to catch bugs more easily.
 
 Here is an example of how to unit test this route:
 
 ```javascript
-// common unit testing setup
-emq.globalize();
-setResolver(App.__container__);
-App.setupForTesting();
-
-// we need to store a reference to the window.alert function in order to be able 
-// to stub the action and then restore it afterwards to its original function
-var originalAlert; 
 
 moduleFor('route:application', 'Unit: route/application', {
-  setup: function() { 
-    originalAlert = window.alert; // save original function
+  setup: function() {
+    originalAlert = window.alert; // store a reference to the window.alert
   },
   teardown: function() {
     window.alert = originalAlert; // restore original functions
@@ -45,9 +37,8 @@ test('Alert is called on displayAlert', function() {
   expect(1);
 
   // with moduleFor, the subject returns an instance of the route
-  var route = this.subject();
-
-  var expectedText = 'foo';
+  var route = this.subject(),
+      expectedText = 'foo';
 
   // stub window.alert to perform a qunit test
   window.alert = function(text) {
