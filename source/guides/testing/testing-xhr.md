@@ -1,10 +1,10 @@
-###Promises, Ember and the run loop
+###Promises, Ember and the Run Loop
 
 Testing with asynchronous calls and Promises in Ember may seem tricky at first, but with a little explanation things should become clearer. 
 
 In order to fully explain testing Promises & asynchronous code, it's important that you have a clear grasp of the Ember run loop. If you haven't yet done so, please read about them in the [Promises](/api/classes/Ember.RSVP.Promise.html) and [Understanding Ember run loop guide](/guides/understanding-ember/run-loop/).
 
-Now that you grasp the general concepts regarding the run loop and Promises, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode. This helps ensure that your code and the tests you write for that code will execute in an expected sequence: one that you can depend on when running tests around that code. Note that in testing Promises and asynchronous code, you're effectively "stepping through" your application in chunks, running your test assertion code in appropriate places to ensure that things are as you would expect, and exactly when you expect them to be.
+Now that you grasp the general concepts regarding the run loop, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode.  This helps ensure the procedure of your code and the tests you write around that code. Note that in testing Promises and asynchronous code, you're effectively "stepping through" your application in chunks.
 
 When a Promise runs, it schedules fulfillment/rejection to be executed by the run loop, therefore in order for Promises to work the run loop must be on. In short: no run loop, no Promise fulfillment/rejection.
 
