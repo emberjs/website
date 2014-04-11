@@ -72,7 +72,7 @@ test('calling testMethod updates foo', function() {
 <script src="http://jsbin.com/holux/3"></script>
 
 In the event the object's method returns a value you can simply assert that the
-return value is calculated correctly. Suppose our object has a `calc` property
+return value is calculated correctly. Suppose our object has a `calc` method
 that returns a value based on some internal state.
 
 ```javascript
