@@ -1,4 +1,4 @@
-When it comes to running your tests there are multiple approaches that you can take depending on what best suits your work flow. Finding a low friction method of running your tests is important because it is something that you will be doing quite often.
+When it comes to running your tests there are multiple approaches that you can take depending on what best suits your workflow. Finding a low friction method of running your tests is important because it is something that you will be doing quite often.
 
 ### <a name="browser"></a>The Browser
 
@@ -31,15 +31,15 @@ That's it. You're done and your tests are running. No need to install and config
 
 If that meets your needs, read no further. However, if you would like a more automated way of running your tests, read on.
 
-Manually opening and refreshing a browser may prove to be a bit tedious for your work flow. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it is still up to you to do the launching (and then refreshing) each time you make a change. Getting rid of repetition is why we use computers, so this can be a problem.
+Manually opening and refreshing a browser may prove to be a bit of a tedious workflow for you. While you get the benefit of knowing that your code (and your tests) work in every browser that you are able to launch, it's still up to you to do the launching (and then refreshing) each time you make a change. Getting rid of repetition is why we use computers, so this can be a problem.
 
 Luckily there are tools to help with this. These tools allow you to run your tests in actual browsers (yes browsers - as in more than one at the same time) and then report the results back to you in a consolidated view. These tools are run from the command line and they are also capable of automatically re-running tests when changes are made to files. They require a bit more setup than creating a simple html file but they will likely save time in the long run.
 
 ### The Testem Runner
 
-[Testem][testem] is a simple tool to setup and use. In a nutshell it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically.  It will then launch each browser (that you specify), run the tests and report the results back to you. It has a nice terminal based user interface that will display test results for each browser. There are many features built into testem, but it does not seem to have any 3rd party plugins or extensions available.
+[Testem][testem] is a simple tool to setup and use. In a nutshell it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically.  It will then launch each browser (that you specify), run the tests and report the results back to you. It has a nice terminal-based user interface that will display test results for each browser. There are many features built into testem, but it does not seem to have any 3rd party plugins or extensions available.
 
-To get started using `testem` you will need to install the `testem` node.js module. To install `testem` run the following command.
+To get started using `testem`, you'll need to install the `testem` node.js module. Assuming you have node installed, run the following command:
 
 ```bash
 npm install -g --save-dev testem
@@ -150,7 +150,7 @@ That's it. Everything you need is installed and configured. Let's go over the co
 * `autoWatch`
  - A value of `true` will mean that `karma` will watch all of the `files` for changes and rerun the tests only when `singleRun` is `false`.
 * `singleRun`
- - A value of `true` will run all of the tests once time and shut down, whereas a value of `false` will run all of your tests once, then wait for any files to change which will trigger re-running all your tests.
+ - A value of `true` will run all of the tests one time and shut down, whereas a value of `false` will run all of your tests once, then wait for any files to change which will trigger re-running all your tests.
 * `browsers`
  - This allows you to configure which browsers to launch and run the tests. This can be one or more browsers. When multiple are specified your tests will run in all browsers concurrently.
 

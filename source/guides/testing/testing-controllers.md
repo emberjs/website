@@ -1,8 +1,8 @@
-Unit testing controllers is very simple using the unit test helper `moduleFor` which is part of the ember-qunit framework.
+Unit testing controllers is very simple using the unit test helper [moduleFor](/guides/testing/unit) which is part of the ember-qunit framework.
 
 ***It can become very easy to let your controllers perform most of the business logic in an Ember application. It is considered best practice to extract out any logic that does not directly impact the template into its own library.***
 
-Because Ember.Controller extends Ember.Object unit testing methods and computed properties follows previous patterns show in [Unit Testing Basics](/guides/testing/unit-testing-basics).
+Unit testing methods and computed properties follows previous patterns shown in [Unit Testing Basics](/guides/testing/unit-testing-basics) because Ember.Controller extends Ember.Object.
 
 ### Testing Controller Actions
 
@@ -68,7 +68,7 @@ test('PostsController - someAction', function() {
 
 ### Testing Controller Needs
 
-`needs` allows a controller to access another controller.  This becomes trickier when we're trying to unit test a controller that has a dependency on another controller.  Fortunately there is a simple solution.
+`needs` allows a controller to access another controller. You might think things would become trickier when trying to unit test a controller that has a dependency on another controller. Fortunately, there's a simple solution:
 
 Here we have a `PostsController` with a `needs` that interacts with our `OtherController`.
 
@@ -100,7 +100,8 @@ App.OtherController = Ember.Controller.extend({
 
 ```
 
-This time when we setup our moduleFor we need to pass an object as our third argument that has the controller's `needs`.
+This time when we setup our moduleFor we need to pass an options object as
+our third argument that has the controller's `needs`.
 
 ```javascript
 moduleFor('controller:posts', 'PostsController', {
@@ -113,7 +114,7 @@ Now let's write a test that sets a property on our `needs` controller that updat
 test('PostsController - Testing Needs', function() {
   expect(6);
   // grab an instance of `PostsController` and `OtherController`
-  // note: we can grab `OtherController` using `otherController` 
+  // note: we can grab `OtherController` using `otherController`
   // because of the Alias in `PostsController`
   var postCtrl = this.subject(),
       otherCtrl = postCtrl.get('otherController');
