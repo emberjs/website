@@ -1,4 +1,4 @@
-###Promise, Ember and the run loop
+###Promise, Ember and the Run Loop
 
 Testing with asynchronous calls and [Promises](/api/classes/Ember.RSVP.Promise.html) in Ember may seem tricky at first, but with a little explanation things should become clearer.
 
