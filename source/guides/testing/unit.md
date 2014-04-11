@@ -28,8 +28,6 @@ the concepts and examples should translate easily to other frameworks.***
 
 ### Available Helpers
 
-[Ember-QUnit] 
-
 By including [Ember-QUnit], you will have access to a number of test helpers.
 
 * `moduleFor(fullName [, description [, callbacks]])`
