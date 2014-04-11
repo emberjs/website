@@ -1,4 +1,4 @@
-Testing routes can be done both via integration and unit tests. Integration tests will likely provide better tests for routes because the routes typically are used to perform transitions and load data, all of which are more easily tested via integration tests.
+Testing routes can be done both via integration and unit tests. Integration tests will likely provide better tests for routes because the routes typically are used to perform transitions and load data, all of which are tested more easily via integration tests.
 
 It's possible to unit test routes using `moduleFor`. Actions that have bubbled up from nested routes would be a common thing to unit test in routes.
 
@@ -18,7 +18,7 @@ App.ApplicationRoute = Em.Route.extend({
 });
 ```
 
-In this route, we have an action `displayAlert` which calls a _private_ function on the route. This allows us to keep our action logic minimal and makes the logic inside `_displayAlert` more testable.
+In this route we've [separated our concerns][http://en.wikipedia.org/wiki/Separation_of_concerns]: The action `displayAlert` contains the code that is called when the action is received, and the private function `_displayAlert` performs the work. Separating code into small chunks, or "concerns", allows it to be more easily tested, and allows you to catch bugs more easily.
 
 Here is an example of how to unit test this route:
 

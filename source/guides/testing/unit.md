@@ -1,54 +1,89 @@
-Unit tests are generally used to test a small piece of code and ensure that it is doing what was
-intended. Unlike integration tests, they are narrow in scope and do not require the Ember
-application to be running.
+Unit tests are generally used to test a small piece of code and ensure that it 
+is doing what was intended. Unlike integration tests, they are narrow in scope 
+and do not require the Ember application to be running.
 
 ### Globals vs Modules
 
-In the past, it has been difficult to test portions of your Ember application without loading the
-entire app as a global. By having your application written using modules ([CommonJS], [AMD], etc), you are able
-to require the code that is to be tested without having to pluck the pieces off of your global
-application.
+In the past, it has been difficult to test portions of your Ember application 
+without loading the entire app as a global. By having your application written 
+using modules ([CommonJS], [AMD], etc), you are able to require the code that is 
+to be tested without having to pluck the pieces off of your global application.
 
 ### Unit Testing Helpers
 
-[Ember-QUnit](https://github.com/rpflorence/ember-qunit) is the default *unit* testing helper suite for
-Ember. It can and should be used as a template for other test framework helpers.
+[Ember-QUnit] is the default *unit* testing helper suite for Ember. It can and 
+should be used as a template for other test framework helpers. It uses your 
+application's resolver to find and automatically create test subjects for you 
+with the `moduleFor` and `test` helpers.
 
 <!--
-* [Ember-QUnit](https://github.com/rpflorence/ember-qunit) - Unit test helpers written for QUnit
+* [Ember-QUnit](https://github.com/rpflorence/ember-qunit) - Unit test helpers 
+  written for QUnit
 * [Ember-Mocha](#) - Unit test helpers written for Mocha (to be written)
 * [Ember-Jasmine](#) - Unit test helpers written for Jasmine (to be written)
 -->
 
-***The unit testing section of this guide will use the Ember-QUnit library, but the concepts and
-examples should translate easily to other frameworks.***
+***The unit testing section of this guide will use the Ember-QUnit library, but 
+the concepts and examples should translate easily to other frameworks.***
 
 ### Available Helpers
 
-By including [Ember-QUnit](), you will have access to a number of test helpers.
+[Ember-QUnit] 
 
-* `moduleFor(fullName, description, callbacks)`
- - description goes here ....
-* `moduleForComponent(fullName, description, callbacks)`
- - description goes here ....
-* `moduleForModel(fullName, description, callbacks)`
- - description goes here ....
+By including [Ember-QUnit], you will have access to a number of test helpers.
+
+* `moduleFor(fullName [, description [, callbacks]])`
+ - **fullName**: The full name of the unit, (ie. `controller:application`, 
+    `route:index`, etc.)
+ - **description**: the description of the module
+ - **callbacks**: normal QUnit callbacks (setup and teardown), with addition to 
+    needs, which allows you specify the other units the tests will need.
+
+* `moduleForComponent(name [, description [, callbacks]])`
+ - **name**: the short name of the component that you'd use in a template, (ie. 
+    `x-foo`, `ic-tabs`, etc.)
+ - **description**: the description of the module
+ - **callbacks**: normal QUnit callbacks (setup and teardown), with addition to 
+    needs, which allows you specify the other units the tests will need.
+
+* `moduleForModel(fullName [, description [, callbacks]])`
+ - **name**: the short name of the model you'd use in store 
+    operations (ie. `user`, `assignmentGroup`, etc.)
+ - **description**: the description of the module
+ - **callbacks**: normal QUnit callbacks (setup and teardown), with addition to 
+    needs, which allows you specify the other units the tests will need.
+
 * `test`
- - description goes here ....
+ - Same as QUnit `test` except it includes the `subject` function which is used
+   to create the test subject.
 * `setResolver`
- - description goes here ....
+ - Sets the resolver which will be used to lookup objects from the application 
+   container.
 
 ### Unit Testing Setup
 
-In order to unit test the Ember application, you need to let Ember know it is in test mode. To do so, you must call `Ember.setupForTesting()`.
+In order to unit test the Ember application, you need to let Ember know it is in 
+test mode. To do so, you must call `Ember.setupForTesting()`.
 
 ```javascript
 Ember.setupForTesting();
 ```
 
-The `setupForTesting()` function call makes ember turn off its automatic run loop execution. This gives us an ability to control the flow of the run loop ourselves, to a degree. Its default behaviour of resolving all promises and completing all async behaviour are suspended to give you a chance to set up state and make assertions in a known state. In other words, you know that if you run "visit" to get to a particular URL, you can be sure the URL has been visited and that's the only behaviour that has transpired. If we didn't use this mode, our assertions wouldn't be executed after the async behaviour had transpired, so our assertion results would be unpredictable.
+The `setupForTesting()` function call makes ember turn off its automatic run 
+loop execution. This gives us an ability to control the flow of the run loop 
+ourselves, to a degree. Its default behaviour of resolving all promises and 
+completing all async behaviour are suspended to give you a chance to set up 
+state and make assertions in a known state. In other words, you know that if you 
+run "visit" to get to a particular URL, you can be sure the URL has been visited 
+and that's the only behaviour that has transpired. If we didn't use this mode, 
+our assertions wouldn't be executed after the async behaviour had transpired, so 
+our assertion results would be unpredictable.
 
-With a module-based application, you have access to the unit test helpers simply by requiring the exports of the module. However, if you are testing a global Ember application, you are still able to use the unit test helpers. Instead of importing the `ember-qunit` module, you need to make the unit test helpers global with `emq.globalize()`:
+With a module-based application, you have access to the unit test helpers simply 
+by requiring the exports of the module. However, if you are testing a global 
+Ember application, you are still able to use the unit test helpers. Instead of 
+importing the `ember-qunit` module, you need to make the unit test helpers 
+global with `emq.globalize()`:
 
 ```javascript
 emq.globalize();
@@ -58,20 +93,26 @@ This will make the above helpers available globally.
 
 ### The Resolver
 
-The Ember resolver plays a huge role when unit testing your application. It provides the lookup functionality based on name, such as `route:index` or `model:post`.
+The Ember resolver plays a huge role when unit testing your application. It 
+provides the lookup functionality based on name, such as `route:index` or 
+`model:post`.
 
-If you are testing a global Ember application, the `App.__container__` serves as the resolver.
+If you do not have a custom resolver or are testing a global Ember application, 
+the resolver should be set like this:
 
 ```javascript
-setResolver(App.__container__)
+setResolver(Ember.DefaultResolver.create({ namespace: App })
 ```
 
-If you are using modules, you would require the `ember-qunit` module and call `setResolver` directly on it.
+Otherwise, you would require the custom resolver and pass it to `setResolver` 
+like this _(ES6 example)_:
 
 ```javascript
-var resolver = require('path/to/test/resolver')['default'];
-require('ember-qunit').setResolver(resolver);
+import Resolver from './path/to/resolver';
+import { setResolver } from 'ember-qunit';
+setResolver(Resolver.create());
 ```
 
 [CommonJS]: http://wiki.commonjs.org/wiki/CommonJS  "CommonJS"
 [AMD]: http://requirejs.org/docs/whyamd.html "AMD"
+[Ember-QUnit]: https://github.com/rpflorence/ember-qunit "Ember QUnit"
