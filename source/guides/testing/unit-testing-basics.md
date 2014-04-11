@@ -1,7 +1,7 @@
-As the basic object type in Ember, being able to test a simple
+As it is the basic object type in Ember, being able to test a simple
 `Ember.Object` sets the foundation for testing more specific parts of your
 Ember application such as controllers, components, etc. Testing an `Ember.Object`
-is as simple as creating an instance of the object, setting it's state, and
+is as simple as creating an instance of the object, setting its state, and
 running assertions against the object. By way of example lets look at a few
 common cases.
 
@@ -38,9 +38,9 @@ test('computedFoo correctly concats foo', function() {
 <a class="jsbin-embed" href="http://jsbin.com/holux/11/embed?output">Unit Testing Basics: Computed Properties</a>
 <script src="http://jsbin.com/holux/11/"></script>
 
-### Testing object Methods
+### Testing Object Methods
 
-Next lets look at testing logic found within an object's method. In this case
+Next let's look at testing logic found within an object's method. In this case
 the `testMethod` method alters some internal state of the object (by updating
 the `foo` property).
 
@@ -53,7 +53,7 @@ App.SomeThing = Em.Object.extend({
 });
 ```
 
-To test it we create an instance of `SomeThing`, call the `testMethod` method
+To test it, we create an instance of our class `SomeThing` as defined above, call the `testMethod` method
 and assert that the internal state is correct as a result of the method call.
 
 ```javascript
@@ -118,8 +118,7 @@ App.SomeThing = Em.Object.extend({
 ```
 
 In order to test the `doSomething` method we create an instance of `SomeThing`,
-update the observed property (`foo`), and assert that the effects of the method
-are working correctly.
+update the observed property (`foo`), and assert that the expected effects are present.
 
 ```javascript
 module('Unit: SomeThing');
