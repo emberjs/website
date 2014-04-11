@@ -30,7 +30,7 @@ Using the promise from above
 
 *Note: Chaining/Observing only needs to be implicitely wrapped in a run call statement (eg `Ember.run(...)`) if there is a possibility you will chain/observe the promise after it's been fulfilled.  Walking through a quick example will help explain why.
 
-##Example of Observing/Chaining before the promise has fulfilled
+#####Walkthrough Example of Observing/Chaining before the promise has fulfilled
 
 1. Run loop is off
 2. Code: Create Promise1
@@ -40,7 +40,7 @@ Using the promise from above
 6. Run loop: run "fulfill the promise" task (which includes notifying all chained promises/observers of fulfillment)
 7. Run loop is off since there are no more tasks
  
-##Example of Observing/Chaining before the promise has fulfilled
+#####Walkthrough Example of Observing/Chaining before the promise has fulfilled
 
 1. Run loop is off
 2. Code: Create Promise1
