@@ -1,48 +1,120 @@
-###Promise, Ember and the Run Loop
+###Promises, Ember and the run loop
 
-Testing with asynchronous calls and [Promises](/api/classes/Ember.RSVP.Promise.html) in Ember may seem tricky at first, but with a little explanation things should become clearer.
+Testing with asynchronous calls and Promises in Ember may seem tricky at first, but with a little explanation things should become clearer. 
 
-In order to fully explain testing Promises & asynchronous code, it's important that you have a clear grasp of the Ember run loop. If you haven't yet done so, please read about them in the [Understanding Ember run loop guide](/guides/understanding-ember/run-loop/).
+In order to fully explain testing Promises & asynchronous code, it's important that you have a clear grasp of the Ember run loop. If you haven't yet done so, please read about them in the [Promises](/api/classes/Ember.RSVP.Promise.html) and [Understanding Ember run loop guide](/guides/understanding-ember/run-loop/).
 
-Now that you grasp the general concepts regarding the run loop, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode.  This helps ensure the procedure of your code and the tests you write around that code. Note that in testing Promises and asynchronous code, you're effectively "stepping through" your application in chunks.
+Now that you grasp the general concepts regarding the run loop and Promises, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode. This helps ensure that your code and the tests you write for that code will execute in an expected sequence: one that you can depend on when running tests around that code. Note that in testing Promises and asynchronous code, you're effectively "stepping through" your application in chunks, running your test assertion code in appropriate places to ensure that things are as you would expect, and exactly when you expect them to be.
 
-When a Promise runs, its logic is triggered to execute by the run loop's scheduler, therefore in order for Promises to work the run loop must execute. In short: no run loop, no Promise resolution/rejection.
+When a Promise runs, it schedules fulfillment/rejection to be executed by the run loop, therefore in order for Promises to work the run loop must be on. In short: no run loop, no Promise fulfillment/rejection.
 
-Using the "then" function (eg promise1.then(fulfillmentCallback, rejectionCallback)) gives you access to the results or rejection of the promise. Let's call this observing the promise.  Additionally you can "chain" two promises together (eg promise1.then(promise2, promise3)): promise1 will resolve or reject.  If promise 1 resolves promise 2 will be executed, if promise 1 rejects promise 3 will be executed.  Both of these situations involve a callback which is scheduled asynchronously on the run loop.
+Getting the results of a promise requires you to use the `then` method. Calling the `then` function on an existing promise:
+
+``` javascript
+// let's call the existing promise promise1, so you'd write:
+promise1.then(fulfillmentCallback, rejectionCallback);
+
+function fulfillmentCallback(successfulResults) {
+  // do something wonderful with the results
+}
+
+function rejectionCallback(failureResults) {
+  // tell someone important about the failure
+}
+```
+
+In the case that `promise1` succeeds, then the `fulfillmentCallback` function will be called and passed the successful results of `promise1` as its argument. If the promise rejects (ie failure), then the `rejectionCallback` will be called with the failure reason as its argument.
+
+If you pass in a function to `then` it casts the function into a promise and returns the promise.  The results of that promise will be what's returned from the function.
+
+``` javascript
+// let's call the existing promise promise1 and will have the result `3`, so you'd write:
+var promise2 = promise1.then(function(results){
+  return results + 2;
+});
+
+// the results of this promise would be 10
+var promise3a = promise2.then(function(results){
+  return results + 5;
+});
+
+// the results of this promise would be 6
+var promise3b = promise2.then(function(results){
+ return results + 1;
+});
+
+// or we can chain without the intermediary variables like so,
+var promise4 = promise1.then(function(results){
+  return results + 2;
+}).then(function(results){
+  return results + 5;
+}).then(function(results){
+  return results + 90;
+}).then(function(results){
+  alert(results); // this will alert `100`
+});
+```
+
+If you pass a Promise into `then` it will return the results of that Promise.
+
+``` javascript
+// let's call the existing promises promise1 and promise2, so you'd write:
+var promise3 = promise1.then(promise2);
+
+promise3.then(function(result){
+  // this will be the results from promise2
+  // this callback won't be called until promise1 and promise2 have fulfilled
+  alert(result);
+});
+```
+
+***None of this will work if the run loop isn't running due to these callbacks and/or chained promises getting scheduled on the run loop.  ***
+
+###Where the run loop and Promises intersect
 
 ####Promise Resolution
 
     var promise = new Ember.RSVP.Promise(function(resolve){
-      // calling resolve will schedule an action to fulfill the promise
+      // calling resolve will schedule an action to fulfill the promise 
       // and call observers/chained promises.
-      resolve('hello world');
+      resolve('hello world'); // Run loop needs to be on here
     });
 
 ####Chaining/Observing Promises
 
 Using the promise from above
 
-    // once the above promise has been resolved it will then schedule
-    // the observers/chained promises in the run loop.
-    promise.then(function(result){
+    // once the above promise has been resolved it will then notify 
+    // the observers/chained promises to.
+    promise.then(function(result){  // Run loop might* need to be on here
       alert(result);
     });
 
-*Note: Chaining/Observing only needs to be implicitely wrapped in a run call statement (eg `Ember.run(...)`) if there is a possibility you will chain/observe the promise after it's been fulfilled.  Walking through a quick example will help explain why.
+* Calling `then` (observing/chaining) only needs to be implicitely wrapped in a run call statement (eg `Ember.run(...)`) if there is a possibility you will chain/observe the promise after it's been fulfilled.  See the examples below which will help explain the different scenarios.
 
-#####Walkthrough Example of Observing/Chaining before the promise has fulfilled
+#####Walk through example of observing/chaining before the promise has fulfilled
 
-1. Run loop is off
-2. Code: Create Promise1
-3. Code: Observe Promise1
+1. Run loop is off (testing mode)
+2. Code: Create Promise1 (new Ember.RSVP.Promise....)
+3. Code: Observe Promise1 (promise.then(....))
 4. Code: Begin run loop (this will only finish once the run loop has cleared out all of the scheduled items)
 5. Code: Resolve Promise1 (this will scheduled a task in the run loop to fulfill the promise)
 6. Run loop: run "fulfill the promise" task (which includes notifying all chained promises/observers of fulfillment)
 7. Run loop is off since there are no more tasks
 
-#####Walkthrough Example of Observing/Chaining before the promise has fulfilled
+``` javascript
+new Ember.RSVP.Promise(function(resolve){
+  // resolve will run ~10 ms after the then has been called and is observing
+  Ember.run.later(this, resolve, 'hello', 10);
+}).then(function(result){
+  alert(result);
+});
+```
 
-1. Run loop is off
+ 
+#####Walk through example of observing/chaining after the promise has fulfilled
+
+1. Run loop is off (testing mode)
 2. Code: Create Promise1
 4. Code: Begin run loop (this will finish once all scheduled tasks have been executed)
 5. Code: Resolve Promise1 (this will add a scheduled task to fulfill the promise)
@@ -51,6 +123,25 @@ Using the promise from above
 8. Code: Observe Promise1 (since the promise has already fulfilled, schedule an async task to notify this observer of fulfillment)
 9. Uncaught Error: Assertion Failed: You have turned on testing mode, which disabled the run-loop's autorun. You will need to wrap any code with asynchronous side-effects in an Ember.run
 
+``` javascript
+var promise = new Ember.RSVP.Promise(function(resolve){
+  // this will run before the then has happened below
+  // and finish the triggered run loop
+  Ember.run(this, resolve, 'hello');
+});
+
+// incorrect the run loop isn't on any more
+promise.then(function(result){
+  alert(result);
+});
+  
+// correct, start the run loop again
+Ember.run(function(){
+  promise.then(function(result){
+    alert(result);
+  });
+});
+```
 
 ###Testing promises and the run loop
 
@@ -62,13 +153,13 @@ Here we are setting up a promise, and intentionally using `setTimeout` to mimic 
 
     var promise = new Ember.RSVP.Promise(function(resolve){
       setTimeout(function(){
-        Em.run(this, resolve, 'hello world');
+        Ember.run(this, resolve, 'hello world');
       }, 20);
     });
 
 If you were to pass the above promise around to multiple methods, and they choose to observe/chain to the promise, it is likely that at some point the promise may already be resolved.  In that case you will need to wrap the observer/chained promise in a run call.
 
-    Em.run(function(){
+    Ember.run(function(){
       promise.then(function(result){
         alert(result);
       });
@@ -76,7 +167,7 @@ If you were to pass the above promise around to multiple methods, and they choos
 
 ####Synchronous Example using promises
 
-If you're using a promise, but it resolves immediately hen you can simply follow the pattern above of wrapping the `resolve` and observer/chained promises in a run call without harm.  In this example we wrap the resolve and the observer (due to the promise resolving immediately) in a run call.
+If you're using a promise, but it resolves immediately then you can simply follow the pattern above of wrapping the resolve and observer/chained promises in a run call without harm.  In this example we wrap the resolve and the observer (due to the promise resolving immediately) in a run call.
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 <a class="jsbin-embed" href="http://jsbin.com/qoyinucu/45/embed?js,output">Simple promise example</a>
@@ -84,7 +175,7 @@ If you're using a promise, but it resolves immediately hen you can simply follow
 
 ####Asynchronous Example using promises
 
-If you're using a promise, but there's a change it might resolve after the test has finished, you'll need to use the `stop` and `start` global methods.  These methods will give you the ability to tell qunit to stop the test run on the current test (puts qunit into a holding pattern) and start again when ready.  In this example we delay and wrap the resolve.  Since the chained promise is attached before the promise is resolved you won't need to wrap it in the run loop.
+If you're using a promise, but there's a chance it might resolves after the test would finish you'll need to use the `stop` and `start` global qunit methods.  These methods will give you the ability to tell qunit to stop the test run on the current test (makes qunit wait) and start again when ready.  In this example we delay execution and wrap the resolve in a run call.  Since the chained promise begins observing before the promise has been resolved you won't need to wrap  the chained promise in a run call.
 
 <a class="jsbin-embed" href="http://jsbin.com/qoyinucu/46/embed?js,output">Async promise example</a>
 
