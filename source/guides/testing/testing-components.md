@@ -140,7 +140,7 @@ App.MyFooComponent = Ember.Component.extend({
 
   // layout supercedes template when rendered
   layout: Ember.Handlebars.compile(
-    "I'm a little {{noun}}<br/>" +
+    "<h2>I'm a little {{noun}}</h2><br/>" +
     "<button {{action 'clickFoo'}}>Click Me</button>"
   ),
 
