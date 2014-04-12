@@ -1,4 +1,4 @@
-###Promises, Ember and the Run Loop
+##Promises, Ember and the Run Loop
 
 Testing with asynchronous calls and Promises in Ember may seem tricky at first, but with a little explanation things should become clearer. 
 
@@ -81,8 +81,6 @@ promise3.then(function(result){
     });
 
 ####Chaining/Observing Promises
-
-Using the promise from above
 
     // once the above promise has been resolved it will then notify 
     // the observers/chained promises to.
@@ -179,10 +177,13 @@ If you're using a promise, but there's a chance it might resolves after the test
 
 <a class="jsbin-embed" href="http://jsbin.com/qoyinucu/46/embed?js,output">Async promise example</a>
 
+## AJAX
+
+AJAX requests are the most prevelant use case where you will be creating promises.  While testing it's likely you will want to mock your AJAX requests to the server.  Below we've included examples for [ic-ajax](https://github.com/instructure/ic-ajax). Feel free to use other mocking libraries such as [Mockjax](https://github.com/appendto/jquery-mockjax), but it's important to note, that Mockjax and other libraries are unaware of the run loop and won't wrap their resolve in a run call.  This may resolve in promises being run outside the realm of the run loop and will result in errors.
 
 ###ic-ajax
 
-[ic-ajax](https://github.com/instructure/ic-ajax) is an Ember-friendly `jQuery-ajax` wrapper, which is very convenient for building up fixture data and mocking ajax calls for unit/integration testing. The most common use case for Promises is when you're making an asynchronous call to a server, and ic-ajax can help alleviate having to worry about wrapping `resolve` in a run call.
+[ic-ajax] is an Ember-friendly `jQuery-ajax` wrapper, which is very convenient for building up fixture data and mocking ajax calls for unit/integration testing. The most common use case for Promises is when you're making an asynchronous call to a server, and ic-ajax can help alleviate having to worry about wrapping `resolve` in a run call.
 
 ####Simple ic-ajax example:
 
