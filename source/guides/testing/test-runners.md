@@ -39,7 +39,7 @@ Luckily there are tools to help with this. These tools allow you to run your tes
 
 [Testem][testem] is a simple tool to setup and use. In a nutshell it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically.  It will then launch each browser (that you specify), run the tests and report the results back to you. It has a nice terminal-based user interface that will display test results for each browser. There are many features built into testem, but it does not seem to have any 3rd party plugins or extensions available.
 
-To get started using `testem`, you'll need to install the `testem` node.js module. Assuming you have node installed, run the following command:
+To get started using `testem`, you'll need to install the `testem` node.js module. Assuming you have [node][node] installed, run the following command:
 
 ```bash
 npm install -g --save-dev testem
@@ -254,6 +254,7 @@ module.exports = function(config) {
 That's it. Now, running `karma` normally will display code coverage information in the terminal. The `coverageReporter.type` option can be set to a number of different values. The value in the example, `text`, will only display to the console. Some other options are `lcov`, `html` and `cobertura` which can be used as input to other tools. For additional configuration options on coverage reporting from `karma` check out their [docs][karma_coverage_docs].
 
 
+[node]: http://nodejs.org/download/
 [testem_coverage]: https://github.com/airportyh/testem/tree/master/examples/coverage_istanbul
 [karma_coverage_docs]: http://karma-runner.github.io/0.8/config/coverage.html
 [karma_junit_reporter]: https://github.com/karma-runner/karma-junit-reporter
