@@ -226,3 +226,62 @@ Ember Data can be dealt with just as easily, you will just need to define the fi
 Often while doing integration tests, you don't actually want to hit the server because its state won't be consistent. Using the previously established patterns you can set up fixture data which will be returned in place of real ajax call responses so you can isolate your code as being the only thing under test. Below we'e provided you with a simple example test using ic-ajax and Ember Data.
 
 <a class="jsbin-embed" href="http://emberjs.jsbin.com/OxIDiVU/365/embed?js,output">Using ic-ajax</a>
+
+###jquery-mockjax
+
+[jquery-mockjax](https://github.com/appendto/jquery-mockjax) is a `jQuery` plugin that provides the ability to simulate ajax requests.
+
+####Simple jquery-mockjax example:
+
+Imagine you wanted to request a list of colors from a server.  Using vanilla `jQuery` you would use the following syntax
+
+    $.getJSON('/colors', function(response){ /* ... */ });
+
+This is an asynchronous call which will pass the server's response to the callback provided. Unlike `ic-ajax`, with vanilla `jQuery` you need to wrap the callback syntax in a promise.
+
+    var promise = new Ember.RSVP.Promise(function(resolve){
+      $.getJSON('/colors', function(data){
+        resolve(data.response);
+      });
+    });
+
+We're going to set up some fixture data that can be returned instead of making an ajax call to fake the server so we can test our code
+
+    $.mockjax({
+      type: 'GET',
+      url: '/colors',
+      status: '200',
+      dataType: 'json',
+      responseText: {
+        response: [
+          {
+            id: 1,
+            color: "red"
+          },
+          {
+            id: 2,
+            color: "green"
+          },
+          {
+            id: 3,
+            color: "blue"
+          }
+         ]
+      }
+    });
+
+As you can see, there is a lot of flexibility in the `jquery-mockjax` api. You can specify not only the url and the response but the method, status code and data type. For the full jquery-mockax api check [their docs](https://github.com/appendto/jquery-mockjax).
+
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/wotib/1/embed?js,output">Using jquery-mockjax</a>
+
+####Simple jquery-mockjax example with Ember Data:
+
+Ember Data can be dealt with just as easily. You will just need to define the fixtures in the format that Ember Data is expecting.
+
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/vojas/5/embed?js,output">Using jquery-mockjax</a>
+
+####Integration test using jquery-mockjax and Ember Data
+
+Often while writing integration tests, you don't actually want to hit the server because its state won't be consistent. Using the previously established patterns you can set up fixture data which will be returned in place of real ajax call responses so you can isolate your code as being the only thing under test. Below we've provided you with a simple example test using jquery-mockjax and Ember Data.
+
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/hoxub/5/embed?js,output">Using jquery-mockjax</a>
