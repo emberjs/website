@@ -277,6 +277,8 @@
   image: devmynd.png
 - url: http://www.radiumcrm.com
   image: radiumcrm.png
+- url: http://www.acentera.com
+  image: acentera.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
