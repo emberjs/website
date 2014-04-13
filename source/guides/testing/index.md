@@ -35,5 +35,12 @@ above might be:
 [QUnit] is the default testing framework for this package, but others are 
 supported through third-party adapters.
 
+### Contributing
+
+The Ember testing guide provides best practices and examples on how to test your
+Ember applications. If you find any errors or believe the documentation can be
+improved, please feel free to [contribute].
+
 [automated tests]: http://en.wikipedia.org/wiki/Test_automation
 [QUnit]: http://qunitjs.com/
+[contribute]: https://github.com/emberjs/website

@@ -11,7 +11,7 @@ Let's start by looking at an object that has a `computedFoo` computed property
 based on a `foo` property.
 
 ```javascript
-App.SomeThing = Em.Object.extend({
+App.SomeThing = Ember.Object.extend({
   foo: 'bar',
   computedFoo: function(){
     return 'computed ' + this.get('foo');
@@ -45,7 +45,7 @@ the `testMethod` method alters some internal state of the object (by updating
 the `foo` property).
 
 ```javascript
-App.SomeThing = Em.Object.extend({
+App.SomeThing = Ember.Object.extend({
   foo: 'bar',
   testMethod: function() {
     this.set('foo', 'baz');
@@ -76,7 +76,7 @@ return value is calculated correctly. Suppose our object has a `calc` method
 that returns a value based on some internal state.
 
 ```javascript
-App.SomeThing = Em.Object.extend({
+App.SomeThing = Ember.Object.extend({
   count: 0,
   calc: function() {
     this.incrementProperty('count');
@@ -108,7 +108,7 @@ Suppose we have an object that has an observable method based on the `foo`
 property.
 
 ```javascript
-App.SomeThing = Em.Object.extend({
+App.SomeThing = Ember.Object.extend({
   foo: 'bar',
   other: 'no',
   doSomething: function(){

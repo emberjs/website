@@ -1,141 +1,134 @@
-Unit testing controllers is very simple using the unit test helper [moduleFor](/guides/testing/unit) which is part of the ember-qunit framework.
+_Unit testing methods and computed properties follows previous patterns shown 
+in [Unit Testing Basics] because Ember.Controller extends Ember.Object._
 
-***It can become very easy to let your controllers perform most of the business logic in an Ember application. It is considered best practice to extract out any logic that does not directly impact the template into its own library.***
-
-Unit testing methods and computed properties follows previous patterns shown in [Unit Testing Basics](/guides/testing/unit-testing-basics) because Ember.Controller extends Ember.Object.
+Unit testing controllers is very simple using the unit test helper 
+[moduleFor](/guides/testing/unit) which is part of the ember-qunit framework.
 
 ### Testing Controller Actions
 
-Here we have a controller `PostsController` with some computed properties and an action `someAction`.
+Here we have a controller `PostsController` with some computed properties and an 
+action `setProps`.
 
 ```javascript
 App.PostsController = Ember.ArrayController.extend({
 
-  somePropertySetByAction: 'You need to write tests',
-  someOtherProperty: 'And write one for me too',
+  propA: 'You need to write tests',
+  propB: 'And write one for me too',
 
-  someFunctionTriggeredByAction: function(stringPassed) {
-    this.set('someOtherProperty', stringPassed);
+  setPropB: function(str) {
+    this.set('propB', str);
   },
 
   actions: {
-
-    someAction: function(stringPassed) {
-      this.set('somePropertySetByAction', 'Testing is cool');
-      this.someFunctionTriggeredByAction(stringPassed);
+    setProps: function(str) {
+      this.set('propA', 'Testing is cool');
+      this.setPropB(str);
     }
-
   }
-
 });
-
 ```
-`someAction` sets a property on the controller and also calls a method. Let's write a test for it!
 
-After initial testing setup, we start by using the `moduleFor` helper to setup a test container for our `PostsController`.
-
-***Note moduleFor only needs to be setup once per module and not per test.***
+`setProps` sets a property on the controller and also calls a method. To write a
+test for this action, we would use the `moduleFor` helper to setup a test 
+container:
 
 ```javascript
-moduleFor('controller:posts', 'PostsController');
+moduleFor('controller:posts', 'Posts Controller');
 ```
-Next we use `this.subject()` to get an instance of the `PostsController` and write a test to check the action. `this.subject()` is a helper method from the `ember-qunit` library that returns a singleton instance of the module set up using `moduleFor`.
+
+Next we use `this.subject()` to get an instance of the `PostsController` and 
+write a test to check the action. `this.subject()` is a helper method from the 
+`ember-qunit` library that returns a singleton instance of the module set up 
+using `moduleFor`.
 
 ```javascript
-test('PostsController - someAction', function() {
+test('calling the action setProps updates props A and B', function() {
   expect(4);
+  
   // get the controller instance
-  var postCtrl = this.subject();
+  var ctrl = this.subject();
 
   // check the properties before the action is triggered
-  equal(postCtrl.get('somePropertySetByAction'), 'You need to write tests', 'somePropertySetByAction has correct initial value');
-  equal(postCtrl.get('someOtherProperty'), 'And write one for me too', 'someOtherProperty has correct initial value');
+  equal(ctrl.get('propA'), 'You need to write tests');
+  equal(ctrl.get('propB'), 'And write one for me too');
 
-  // trigger the action on the controller by using the `send` method, passing in any params that our action may be expecting
-  postCtrl.send('someAction', 'Testing Rocks!');
+  // trigger the action on the controller by using the `send` method, 
+  // passing in any params that our action may be expecting
+  ctrl.send('setProps', 'Testing Rocks!');
 
-  // finally we assert that our values have been updated by triggering our action.
-  equal(postCtrl.get('somePropertySetByAction'), 'Testing is cool', 'somePropertySetByAction has correct updated value from action');
-  equal(postCtrl.get('someOtherProperty'), 'Testing Rocks!', 'someOtherProperty has correct updated value from param passed to action');
+  // finally we assert that our values have been updated 
+  // by triggering our action.
+  equal(ctrl.get('propA'), 'Testing is cool');
+  equal(ctrl.get('propB'), 'Testing Rocks!');
 });
-
 ```
 
-####Live Passing Test
+#### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/laqed/1/embed?javascript,output">Unit Testing Controllers "Actions"</a>
-<script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/xijik/1/embed?output">Unit Testing 
+Controllers "Actions"</a>
 
 ### Testing Controller Needs
 
-`needs` allows a controller to access another controller. You might think things would become trickier when trying to unit test a controller that has a dependency on another controller. Fortunately, there's a simple solution:
-
-Here we have a `PostsController` with a `needs` that interacts with our `OtherController`.
+Sometimes controllers have dependencies on other controllers. This is 
+accomplished by using [needs]. For example, here are two simple controllers. The
+`PostController` is a dependency of the `CommentsController`:
 
 ```javascript
-App.PostsController = Ember.ArrayController.extend({
-
-  needs: ['other'],
-  otherController: Ember.computed.alias('controllers.other'),
-
-  someProperty: Ember.computed.alias('otherController.someProperty'),
-  someComputedProperty: Ember.computed.alias('otherController.someComputedProperty'),
-  someOtherComputedProperty: Ember.computed.alias('otherController.otherAnotherComputedProperty')
-
+App.PostController = Ember.ObjectController.extend({
+  // ...
 });
 
-it may look something like this
-
-App.OtherController = Ember.Controller.extend({
-
-  someProperty: 'Original Value',
-
-  someComputedProperty: function() {
-    return this.get('someProperty') + ' concat stuff';
-  }.property('someProperty'),
-
-  otherAnotherComputedProperty: Ember.computed.alias('someProperty')
-
+App.CommentsController = Ember.ArrayController.extend({
+  needs: 'post',
+  title: Ember.computed.alias('controllers.post.title'),
 });
-
 ```
 
-This time when we setup our moduleFor we need to pass an options object as
+This time when we setup our `moduleFor` we need to pass an options object as
 our third argument that has the controller's `needs`.
 
 ```javascript
-moduleFor('controller:posts', 'PostsController', {
-  needs: ['controller:other']
+moduleFor('controller:comments', 'Comments Controller', {
+  needs: ['controller:post']
 });
 ```
-Now let's write a test that sets a property on our `needs` controller that updates properties on our `PostsController`
+
+Now let's write a test that sets a property on our `post` model in the 
+`PostController` that would be available on the `CommentsController`.
 
 ```javascript
-test('PostsController - Testing Needs', function() {
-  expect(6);
-  // grab an instance of `PostsController` and `OtherController`
-  // note: we can grab `OtherController` using `otherController`
-  // because of the Alias in `PostsController`
-  var postCtrl = this.subject(),
-      otherCtrl = postCtrl.get('otherController');
+test('modify the post', function() {
+  expect(2);
 
-  // check the values before we set the property
-  equal(postCtrl.get('someProperty'), otherCtrl.get('someProperty'), 'someProperty has correct initial value using needs');
-  equal(postCtrl.get('someComputedProperty'), otherCtrl.get('someComputedProperty'), 'someComputedProperty has correct initial value using needs');
-  equal(postCtrl.get('someOtherComputedProperty'), otherCtrl.get('otherAnotherComputedProperty'), 'someOtherComputedProperty has correct initial value using needs');
+  // grab an instance of `CommentsController` and `PostController`
+  var ctrl = this.subject(),
+      postCtrl = ctrl.get('controllers.post');
 
-  // set the value of the computed that is on our `needs` controller.
-  otherCtrl.set('someProperty', 'Testing is awesome!');
+  // wrap the test in the run loop because we are dealing with async functions
+  Ember.run(function() {
 
-  // check that the properties have updated correctly.
-  equal(postCtrl.get('someProperty'), otherCtrl.get('someProperty'), 'someProperty has correct updated value using needs');
-  equal(postCtrl.get('someComputedProperty'), otherCtrl.get('someComputedProperty'), 'someComputedProperty has correct updated value using needs');
-  equal(postCtrl.get('someOtherComputedProperty'), otherCtrl.get('otherAnotherComputedProperty'), 'someOtherComputedProperty has correct updated value using needs');
+    // set a generic model on the post controller
+    postCtrl.set('model', Ember.Object.create({ title: 'foo' }));
+
+    // check the values before we modify the post
+    equal(ctrl.get('title'), 'foo');
+
+    // modify the title of the post
+    postCtrl.get('model').set('title', 'bar');
+
+    // assert that the controllers title has changed
+    equal(ctrl.get('title'), 'bar');
+
+  });
 });
-
 ```
 
-####Live Passing Test
+#### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/fixil/2/embed?javascript">Unit Testing Controllers "Needs"</a>
+<a class="jsbin-embed" href="http://jsbin.com/wuyah/3/embed?output">Unit Testing Controllers "Needs"</a>
+
 <script src="http://static.jsbin.com/js/embed.js"></script>
+
+[Unit Testing Basics]: /guides/testing/unit-testing-basics
+[needs]: /guides/controllers/dependencies-between-controllers

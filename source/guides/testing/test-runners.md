@@ -4,8 +4,9 @@ When it comes to running your tests there are multiple approaches that you can t
 
 The simplest way of running your tests is just opening a page in the browser. The following is how to put a test "harness" around your app with qunit so you can run tests against it:
 
-* Get a copy of `qunit` (both the JavaScript and the css) from [here][qunit].
-* Create an html file that includes qunit and it's css that looks like the following example.
+First, get a copy of `qunit` (both the JavaScript and the css) from [here][qunit].
+
+Next, create an HTML file that includes qunit and it's css that looks like the following example.
 
 ```html
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ The simplest way of running your tests is just opening a page in the browser. Th
 </html>
 ```
 
-* Launch your browser of choice and open the above html file.
+Finally, launch your browser of choice and open the above html file.
 
 That's it. You're done and your tests are running. No need to install and configure any other tools or have any other processes running. After adding or updating tests and/or code just reload the page and you're off to the races running your tests.
 

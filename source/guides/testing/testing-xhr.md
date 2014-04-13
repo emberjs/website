@@ -1,12 +1,12 @@
-##RSVP Promises, Ember and the Run Loop
+Testing with asynchronous calls and promises in Ember may seem tricky at first, but with a little explanation things should become clearer.
 
-Testing with asynchronous calls and RSVP Promises in Ember may seem tricky at first, but with a little explanation things should become clearer. 
+### Promises, Ember and the Run Loop
 
-In order to fully explain testing RSVP Promises & asynchronous code, it's important that you have a clear grasp of the Ember run loop. If you haven't yet done so, please read about them in the [RSVP Promises](/api/classes/Ember.RSVP.Promise.html) and [Understanding Ember run loop guide](/guides/understanding-ember/run-loop/).
+In order to fully explain testing promises & asynchronous code, it's important that you have a clear grasp of the Ember run loop. If you haven't yet done so, please read about them in the [Promises](/api/classes/Ember.RSVP.Promise.html) and [Understanding Ember run loop guide](/guides/understanding-ember/run-loop/).
 
-Now that you grasp the general concepts regarding the run loop, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode.  This helps ensure the procedure of your code and the tests you write around that code. Note that in testing RSVP Promises and asynchronous code, you're effectively "stepping through" your application in chunks.
+Now that you grasp the general concepts regarding the run loop, recall from reading about the basics of testing Ember applications that the run loop is suspended when in testing mode.  This helps ensure the procedure of your code and the tests you write around that code. Note that in testing promises and asynchronous code, you're effectively "stepping through" your application in chunks.
 
-When a RSVP Promise runs, it schedules fulfillment/rejection to be executed by the run loop, therefore in order for RSVP Promises to work the run loop must be on. In short: no run loop, no RSVP Promise fulfillment/rejection.
+When a promise runs, it schedules fulfillment/rejection to be executed by the run loop, therefore in order for promises to work the run loop must be on. In short: no run loop, no promise fulfillment/rejection.
 
 Getting the results of a promise requires you to use the `then` method. Calling the `then` function on an existing promise:
 
@@ -55,7 +55,7 @@ var promise4 = promise1.then(function(results){
 });
 ```
 
-If you pass a Promise into `then` it will return the results of that Promise.
+If you pass a promise into `then` it will return the results of that promise.
 
 ``` javascript
 // let's call the existing promises promise1 and promise2, so you'd write:
@@ -70,9 +70,9 @@ promise3.then(function(result){
 
 ***None of this will work if the run loop isn't running due to these callbacks and/or chained promises getting scheduled on the run loop.  ***
 
-###Where the run loop and RSVP Promises intersect
+###Where the run loop and Promises intersect
 
-####RSVP Promise Resolution
+####Promise Resolution
 
     var promise = new Ember.RSVP.Promise(function(resolve){
       // calling resolve will schedule an action to fulfill the promise 
@@ -179,11 +179,11 @@ If you're using a promise, but there's a chance it might resolves after the test
 
 ## AJAX
 
-AJAX requests are the most prevelant use case where you will be creating promises.  While testing it's likely you will want to mock your AJAX requests to the server.  Below we've included examples for [ic-ajax](https://github.com/instructure/ic-ajax) and [jquery-mockjax](https://github.com/appendto/jquery-mockjax), but it's important to note, that jquery-mockjax and other libraries are unaware of the run loop and won't wrap their resolve in a run call.  While running in test mode if a RSVP Promise resolves and the run loop isn't in it will result in errors.
+AJAX requests are the most prevelant use case where you will be creating promises.  While testing it's likely you will want to mock your AJAX requests to the server.  Below we've included examples for [ic-ajax](https://github.com/instructure/ic-ajax). Feel free to use other mocking libraries such as [Mockjax](https://github.com/appendto/jquery-mockjax), but it's important to note, that Mockjax and other libraries are unaware of the run loop and won't wrap their resolve in a run call.  This may resolve in promises being run outside the realm of the run loop and will result in errors.
 
 ###ic-ajax
 
-[ic-ajax] is an Ember-friendly `jQuery-ajax` wrapper, which is very convenient for building up fixture data and mocking ajax calls for unit/integration testing. The most common use case for RSVP Promises is when you're making an asynchronous call to a server, and ic-ajax can help alleviate having to worry about wrapping `resolve` in a run call.
+[ic-ajax] is an Ember-friendly `jQuery-ajax` wrapper, which is very convenient for building up fixture data and mocking ajax calls for unit/integration testing. The most common use case for promises is when you're making an asynchronous call to a server, and ic-ajax can help alleviate having to worry about wrapping `resolve` in a run call.
 
 ####Simple ic-ajax example:
 

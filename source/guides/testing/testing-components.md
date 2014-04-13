@@ -1,3 +1,6 @@
+_Unit testing methods and computed properties follows previous patterns shown 
+in [Unit Testing Basics] because Ember.Component extends Ember.Object._
+
 Components can be testing using the `moduleForComponent` helper. Here is a 
 simple Ember component:
 
@@ -276,5 +279,6 @@ Validation in Components</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
+[Unit Testing Basics]: /guides/testing/unit-testing-basics
 [Integration Test Helpers]: /guides/testing/test-helpers
 [layout]: http://emberjs.com/api/classes/Ember.Component.html#property_layout
