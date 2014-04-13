@@ -32,7 +32,7 @@ above might be:
 
 ### Testing Frameworks
 
-[QUnit] is the default testing framework for this package, but others are 
+[QUnit] is the default testing framework for this guide, but others are 
 supported through third-party adapters.
 
 ### Contributing
