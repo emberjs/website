@@ -65,7 +65,7 @@ test('calling the action setProps updates props A and B', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/xijik/1/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/sanaf/embed?output">Unit Testing 
 Controllers "Actions"</a>
 
 ### Testing Controller Needs
@@ -126,7 +126,7 @@ test('modify the post', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/wuyah/3/embed?output">Unit Testing Controllers "Needs"</a>
+<a class="jsbin-embed" href="http://jsbin.com/busoz/embed?output">Unit Testing Controllers "Needs"</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 

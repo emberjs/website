@@ -80,7 +80,7 @@ test('template is rendered with the color name', function(){
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/witut/8/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/hihef/embed?output">Unit Testing 
 Components</a>
 
 ### Interacting with Components in the DOM
@@ -130,7 +130,7 @@ test('clicking link updates the title', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/49/embed?output">Unit 
+<a class="jsbin-embed" href="http://jsbin.com/liqog/embed?output">Unit 
 Testing Components</a>
 
 ### Components with built in layout
@@ -182,7 +182,7 @@ test('clicking link updates the title', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/qoyinucu/51/embed?output">Testing 
+<a class="jsbin-embed" href="http://jsbin.com/mazef/embed?output">Testing 
 Components with Built-in Layout</a>
 
 ### Programmatically interacting with components
@@ -214,7 +214,7 @@ test('clicking link updates the title', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/ladup/2/embed?output">Programatically 
+<a class="jsbin-embed" href="http://jsbin.com/davuf/embed?output">Programatically 
 Testing Components</a>
 
 ### `sendAction` validation in components
@@ -274,7 +274,7 @@ test('trigger external action when button is clicked', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/nabah/2/embed?output">sendAction 
+<a class="jsbin-embed" href="http://jsbin.com/siwil/embed?output">sendAction 
 Validation in Components</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>

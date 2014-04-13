@@ -43,7 +43,7 @@ test('levelUp', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/sucen/3/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/naqif/embed?output">Unit Testing 
 Ember Data Models</a>
 
 ## Testing Relationships
@@ -72,21 +72,21 @@ moduleForModel('user', 'User Model', {
 test('profile relationship', function() {
   var relationships = Ember.get(App.User, 'relationships');
   deepEqual(relationships.get(App.Profile), [
-    { name: "profile", kind: "belongsTo" }
+    { name: 'profile', kind: 'belongsTo' }
   ]);
 });
 ```
 
-#### Example
+#### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/zoxoz/1/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
+<a class="jsbin-embed" href="http://jsbin.com/ziboq/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
-Ember Data contains extensive tests around the functionality of
+_Ember Data contains extensive tests around the functionality of
 relationships, so you probably don't need to duplicate those tests.  You could
 look to the [Ember Data tests] for examples of deeper relationship testing if you
-feel the need to do it.
+feel the need to do it._
 
 [Ember Data]: https://github.com/emberjs/data
 [Unit Testing Basics]: /guides/testing/unit-testing-basics

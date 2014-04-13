@@ -36,10 +36,10 @@ test('add new post', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/vusaz/17/embed?output">Custom Test Helpers</a>
-<script src="http://jsbin.com/vusaz/17/"></script>
+<a class="jsbin-embed" href="http://jsbin.com/gokor/embed?output">Testing User 
+Interaction</a>
 
-### Testing transitions
+### Testing Transitions
 
 Suppose we have an application which requires authentication. When a visitor
 visits a certain URL as an unauthenticated user, we expect them to be transitioned
@@ -80,5 +80,6 @@ test('redirect to login if not authenticated', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/goruc/3/embed?output">Testing Transitions</a>
-<script src="http://jsbin.com/goruc/3/"></script>
+<a class="jsbin-embed" href="http://jsbin.com/nulif/embed?output">Testing Transitions</a>
+
+<script src="http://static.jsbin.com/js/embed.js"></script>

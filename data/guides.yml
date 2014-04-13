@@ -257,8 +257,8 @@ Testing:
   #   url: "testing/testing-views"
   - title: "Testing Models"
     url: "testing/testing-models"
-  - title: "Testing XHR"
-    url: "testing/testing-xhr"
+  # - title: "Testing XHR"
+  #   url: "testing/testing-xhr"
   - title: "Automating Tests with Runners"
     url: "testing/test-runners"
 
