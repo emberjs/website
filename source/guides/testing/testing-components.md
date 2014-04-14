@@ -277,6 +277,78 @@ test('trigger external action when button is clicked', function() {
 <a class="jsbin-embed" href="http://jsbin.com/siwil/embed?output">sendAction 
 Validation in Components</a>
 
+### Components Using Other Components
+
+Sometimes components are easier to maintain when broken up into parent and child
+components. Here is a simple example:
+
+```javascript
+App.MyAlbumComponent = Ember.Component.extend({
+  tagName: 'section',
+  layout: Ember.Handlebars.compile(
+      "<section>" +
+      "  <h3>{{title}}</h3>" +
+      "  {{yield}}" +
+      "</section>"
+  ),
+  titleBinding: ['title']
+});
+
+App.MyKittenComponent = Ember.Component.extend({
+  tagName: 'img',
+  attributeBindings: ['width', 'height', 'src'],
+  src: function() {
+    return 'http://placekitten.com/' + this.get('width') + '/' + this.get('height');
+  }.property('width', 'height')
+});
+```
+
+Usage of this component might look something like this:
+
+```handlebars
+{{#my-album title="Cats"}}
+  {{my-kitten width="200" height="300"}}
+  {{my-kitten width="100" height="100"}}
+  {{my-kitten width="50" height="50"}}
+{{/my-album}}
+```
+
+Testing components like these which include child components is very simple using
+the `needs` callback.
+
+```javascript
+moduleForComponent('my-album', 'MyAlbumComponent', {
+  needs: ['component:my-kitten']
+});
+
+test('renders kittens', function() {
+  expect(2);
+  
+  // component instance
+  var component = this.subject({
+    template: Ember.Handlebars.compile(
+      '{{#my-album title="Cats"}}' +
+      '  {{my-kitten width="200" height="300"}}' +
+      '  {{my-kitten width="100" height="100"}}' +
+      '  {{my-kitten width="50" height="50"}}' +
+      '{{/my-album}}'
+    )
+  });
+  
+  // append component to the dom
+  var $component = this.append();
+  
+  // perform assertions
+  equal($component.find('h3:contains("Cats")').length, 1);
+  equal($component.find('img').length, 3);
+});
+```
+
+#### Live Example
+
+<a class="jsbin-embed" href="http://jsbin.com/xebih/embed?output">Components 
+with Embedded Components</a>
+
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
 [Unit Testing Basics]: /guides/testing/unit-testing-basics
