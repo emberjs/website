@@ -233,8 +233,34 @@ Enumerables:
     url: "enumerables"
 
 Testing:
-  - title: "Integration Testing"
+  - title: "Introduction"
+    url: "testing"
+  - title: "Integration Tests"
     url: "testing/integration"
+  - title: "Test Helpers"
+    url: "testing/test-helpers"
+  - title: "Testing User Interaction"
+    url: "testing/testing-user-interaction"
+  - title: "Unit Tests"
+    url: "testing/unit"
+  - title: "Unit Testing Basics"
+    url: "testing/unit-testing-basics"
+  - title: "Testing Components"
+    url: "testing/testing-components"
+  # - title: "Testing Handlebars Helpers"
+  #   url: "testing/testing-handlebars-helpers"
+  - title: "Testing Controllers"
+    url: "testing/testing-controllers"
+  - title: "Testing Routes"
+    url: "testing/testing-routes"
+  # - title: "Testing Views"
+  #   url: "testing/testing-views"
+  - title: "Testing Models"
+    url: "testing/testing-models"
+  # - title: "Testing XHR"
+  #   url: "testing/testing-xhr"
+  - title: "Automating Tests with Runners"
+    url: "testing/test-runners"
 
 Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
@@ -389,4 +415,3 @@ Contributing to Ember.js:
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
     #url: "understanding-ember-data/record-lifecycle"
-
