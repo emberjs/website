@@ -50,7 +50,8 @@ Synchronous helpers are performed immediately when triggered.
 * `find(selector, context)`
   - Finds an element within the app's root element and within the context 
     (optional). Scoping to the root element is especially useful to avoid 
-    conflicts with the test framework's reporter.
+    conflicts with the test framework's reporter, and this is done by default
+    if the context is not specified.
 * `currentPath()`
   - Returns the current path.
 * `currentRouteName()`
