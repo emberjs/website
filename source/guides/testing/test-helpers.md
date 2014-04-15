@@ -13,7 +13,7 @@ synchronized state. In the button example above, the system is synchronized
 when both servers have returned data to your application.
 
 Ember's test helpers are wrapped in code that ensures your application is in
-a synchronized state before your test make their assertions. This removes
+a synchronized state before your tests make their assertions. This removes
 boilerplate and makes your tests easy to read. Ember has two types of
 integration test helpers: **asynchronous** and **synchronous**.
 
@@ -64,7 +64,7 @@ Synchronous helpers are performed immediately when triggered.
 
 All of your tests will include both synchronous and asynchronous helpers.
 Here's an example of how the different test helpers are intended to work
-together.
+together:
 
 ```javascript
 test("simple test", function(){
