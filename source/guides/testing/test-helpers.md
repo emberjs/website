@@ -19,8 +19,7 @@ types of helpers: **asynchronous** and **synchronous**.
 
 All of Ember's test helpers ensure that your application is back in a synchronized
 state when your test makes its assertions. This saves you from having to wrap
-your code with code that ensures synchronicity by hand, and it makes it easier
-to read your tests because there's less boilerplate.
+your code with boilerplate test code that makes your tests more difficult to read.
 
 ### Asynchronous Helpers
 
