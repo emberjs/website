@@ -1,26 +1,27 @@
-One of the major hurdles to testing web applications is that all javascript code
-is event driven. Event driven code is asynchronous, which means that your code can
-be executed out of an intended order.
+One of the major hurdles to integration testing a web application is that the browser
+environment is highly asynchronous. This means that the results of certain functions
+will not be available immediately when the function returns, but instead will be
+available some time later when the asynchronous code has finished executing.
 
 Here's a simple example of asynchronicity: A user clicks two buttons, one after
 the other. The buttons load data from two different servers. One server takes 1
 second to respond, and the other takes 100ms.
 
 How can you be sure that both servers have returned data before making assertions
-about your application's state in your tests? Simple -- the assertion code (the
-"tester") needs to wait for the code being tested (the "testee") to return to a
-synchronized state. In the button example above, the system is synchronized
-when both servers have returned data to your application.
+about the results of both button clicks? Simple -- we need to wait for the
+asynchronous code to finish executing before we run our assertions.
 
-Ember's test helpers are wrapped in code that ensures your application is in
-a synchronized state before your tests make their assertions. This removes
-boilerplate and makes your tests easy to read. Ember has two types of
-integration test helpers: **asynchronous** and **synchronous**.
+Thankfully, Ember's test helpers take care of this automatically for you. The test
+helpers are wrapped in code that ensures all previous asynchronous code has finished
+executing before running your assertions. This removes boilerplate and makes your
+tests easier to read.
+
+Ember has two types of integration test helpers: **asynchronous** and **synchronous**.
 
 ### Asynchronous Helpers
 
 Asynchronous helpers are "aware" of asynchronous behavior within your application,
-and wait for it to complete before proceeding, making it possible to write
+and wait for it to complete before proceeding, making it easier to write
 deterministic tests.
 
 * `visit(url)`
@@ -60,11 +61,11 @@ Synchronous helpers are performed immediately when triggered.
 * `currentURL()`
   - Returns the current URL.
 
-### Using sync and async helpers together
+### Using synchronous and asynchronous helpers together
 
-All of your tests will include both synchronous and asynchronous helpers.
-Here's an example of how the different test helpers are intended to work
-together:
+All of your integration tests will include both synchronous and asynchronous
+helpers. Here's an example of how the different test helpers are intended to
+work together:
 
 ```javascript
 test("simple test", function(){
@@ -80,7 +81,7 @@ test("simple test", function(){
     equal(currentPath(), "post");
     equal(currentURL(), "/posts/my-new-post");
 
-    equal(find("ul.posts li:last").text(), "My new post");
+    equal(find("h1.post-title").text(), "My new post");
   });
 });
 ```
