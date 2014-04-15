@@ -7,18 +7,15 @@ the other. The buttons load data from two different servers. One server takes 1
 second to respond, and the other takes 100ms.
 
 How can you be sure that both servers have returned data before making assertions
-about your application's state in your tests?
-
-Simple -- the assertion code (the "tester") needs to wait for the code being 
-tested (the "testee") to return to a synchronized state. In the button example
-above, the system is synchronized when both servers have returned data to your
-application.
+about your application's state in your tests? Simple -- the assertion code (the
+"tester") needs to wait for the code being tested (the "testee") to return to a
+synchronized state. In the button example above, the system is synchronized
+when both servers have returned data to your application.
 
 Ember's test helpers are wrapped in code that ensures your application is in
 a synchronized state before your test make their assertions. This removes
-boilerplate and makes your tests easy to read.
-
-Ember has two types of integration test helpers: **asynchronous** and **synchronous**.
+boilerplate and makes your tests easy to read. Ember has two types of
+integration test helpers: **asynchronous** and **synchronous**.
 
 ### Asynchronous Helpers
 
