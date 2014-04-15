@@ -1,6 +1,6 @@
 One of the major hurdles to testing web applications is that all javascript code
 is event driven. Event driven code is asynchronous, which means that your code can
-be executed out of the intended order.
+be executed out of an intended order.
 
 Here's a simple example of asynchronicity: A user clicks two buttons, one after
 the other. The buttons load data from two different servers. One server takes 1
@@ -14,12 +14,11 @@ tested (the "testee") to return to a synchronized state. In the button example
 above, the system is synchronized when both servers have returned data to your
 application.
 
-Ember includes several helpers to facilitate integration testing. There are two 
-types of helpers: **asynchronous** and **synchronous**.
+Ember's test helpers are wrapped in code that ensures your application is in
+a synchronized state before your test make their assertions. This removes
+boilerplate and makes your tests easy to read.
 
-All of Ember's test helpers ensure that your application is back in a synchronized
-state when your test makes its assertions. This saves you from having to wrap
-your code with boilerplate test code that makes your tests more difficult to read.
+Ember has two types of integration test helpers: **asynchronous** and **synchronous**.
 
 ### Asynchronous Helpers
 
