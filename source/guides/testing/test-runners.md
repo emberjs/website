@@ -94,7 +94,7 @@ Much like running `testem` with no arguments, the `ci` option will use your same
 
 ### The Karma Test Runner
 
-[Karma][karma] is another simple tool to setup and use. It is similar to testem in that it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically. It will then launch each browser (that you specify), run the tests and report the results back to you. The terminal user interface is not as fancy as testem, but tere is a colored display of test results for each browser. Karma has many features as well as many plugins. For information about writing karma plugins checkout [the docs][karma_plugins]. To find some available karma plugins start with [karma_runner][karma_github] on github.
+[Karma][karma] is another simple tool to setup and use. It is similar to testem in that it will collect all of your application code, your test code, your testing framework of choice and build a test ["harness"](#browser) automatically. It will then launch each browser (that you specify), run the tests and report the results back to you. The terminal user interface is not as fancy as testem, but there is a colored display of test results for each browser. Karma has many features as well as many plugins. For information about writing karma plugins checkout [the docs][karma_plugins]. To find some available karma plugins start with [karma_runner][karma_github] on github.
 
 To get started using `karma` you will need to install a few node modules. Here is an example of a [package.json][package.json] file which includes everything that you will need to get started.
 
@@ -178,7 +178,7 @@ Both `testem` and `karma` are capable of being integrated into larger build proc
 
 ### Generating Reports
 
-Oftentimes it's useful get the results of your tests in different formats. For example, if you happen to use [Jenkins][jenkins] as a [ci][ci] server, you may want to get your test results in XML format so Jenkins can build some graphs of your test results over time. Also, you may want to measure your [code coverage][coverage] and have Jenkins track that over time as well. With these test runners, it's possible to generate reports from the results in various formats, as well as record other information such as code-test coverage, etc.
+Oftentimes it's useful to get the results of your tests in different formats. For example, if you happen to use [Jenkins][jenkins] as a [ci][ci] server, you may want to get your test results in XML format so Jenkins can build some graphs of your test results over time. Also, you may want to measure your [code coverage][coverage] and have Jenkins track that over time as well. With these test runners, it's possible to generate reports from the results in various formats, as well as record other information such as code-test coverage, etc.
 
 #### XML Test Results from Testem
 

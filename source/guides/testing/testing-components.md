@@ -1,7 +1,7 @@
 _Unit testing methods and computed properties follows previous patterns shown 
 in [Unit Testing Basics] because Ember.Component extends Ember.Object._
 
-Components can be testing using the `moduleForComponent` helper. Here is a 
+Components can be tested using the `moduleForComponent` helper. Here is a 
 simple Ember component:
 
 ```javascript
