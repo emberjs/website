@@ -453,7 +453,7 @@ or `transitionTo` to programatically enter this route.
 
 ```javascript
 App.ApplicationRoute = Ember.Route.extend({
-  actions:
+  actions: {
     error: function () {
       this.transitionTo('catchall', "application-error");
     }
