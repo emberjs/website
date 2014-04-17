@@ -57,7 +57,7 @@ npm install -g --save-dev testem
       "your_test_code_here.js"
     ],
     "launch_in_dev": ["PhantomJS"],
-    "launch_in_ci": ["PhantomJS"],
+    "launch_in_ci": ["PhantomJS"]
 }
 ```
 
