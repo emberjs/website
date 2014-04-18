@@ -1,3 +1,7 @@
+Unit tests are generally used to test a small piece of code and ensure that it
+is doing what was intended. Unlike integration tests, they are narrow in scope
+and do not require the Ember application to be running.
+
 As it is the basic object type in Ember, being able to test a simple
 `Ember.Object` sets the foundation for testing more specific parts of your
 Ember application such as controllers, components, etc. Testing an `Ember.Object`
