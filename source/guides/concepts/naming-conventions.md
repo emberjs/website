@@ -68,7 +68,7 @@ your entire application shares a single instance of each controller.
 
 ## Simple Routes
 
-Each of your routes will have a controller and a template with the 
+Each of your routes will have a controller, and a template with the 
 same name as the route.
 
 Let's start with a simple router:
