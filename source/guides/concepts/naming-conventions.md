@@ -179,8 +179,7 @@ handlers.
   application's namespace (`post` becomes `App.Post`). It will
   then call `find` on that class with the value of the dynamic
   segment.
-* The default `serialize` hook will pull the dynamic
-  segment with the `id` property of the model object.
+* The default behaviour of the `serialize` hook will replace the route's dynamic segment with the value of the model object's `id` property.
 
 ## Route, Controller and Template Defaults
 
