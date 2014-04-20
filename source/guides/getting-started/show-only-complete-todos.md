@@ -31,7 +31,7 @@ Todos.Router.map(function() {
 
 Todos.TodosCompletedRoute = Ember.Route.extend({
   model: function() {
-    return this.store.filter('todo', function(todo) {
+    return store.filter('todo', function(todo) {
       return todo.get('isCompleted');
     });
   },

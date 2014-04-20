@@ -8,14 +8,14 @@ argument determines if a request is made for all records, a single record, or a 
 ### Finding All Records of a Type
 
 ```javascript
-var posts = this.store.find('post'); // => GET /posts
+var posts = store.find('post'); // => GET /posts
 ```
 
 To get a list of records already loaded into the store, without making
 another network request, use `all` instead.
 
 ```javascript
-var posts = this.store.all('post'); // => no network request
+var posts = store.all('post'); // => no network request
 ```
 
 `find` returns a `DS.PromiseArray` that fulfills to a `DS.RecordArray` and `all`
@@ -35,7 +35,7 @@ Ember Data will attempt to retrieve a record of that with that ID. This will
 return a promise that fulfills with the requested record:
 
 ```javascript
-var aSinglePost = this.store.find('post', 1); // => GET /posts/1
+var aSinglePost = store.find('post', 1); // => GET /posts/1
 ```
 
 ### Querying For Records
@@ -48,7 +48,7 @@ For example, we could search for all `person` models who have the name of
 `Peter`:
 
 ```javascript
-var peters = this.store.find('person', { name: "Peter" }); // => GET to /persons?name='Peter'
+var peters = store.find('person', { name: "Peter" }); // => GET to /persons?name='Peter'
 ```
 
 ### Integrating with the Route's Model Hook
@@ -75,13 +75,13 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('post');
+    return store.find('post');
   }
 });
 
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('post', params.post_id);
+    return store.find('post', params.post_id);
   }
 })
 ```

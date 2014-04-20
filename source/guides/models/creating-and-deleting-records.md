@@ -7,7 +7,7 @@ store.createRecord('post', {
 });
 ```
 
-The store object is available in controllers and routes using `this.store`.
+The store object is available in controllers and routes using `store..
 
 Although `createRecord` is fairly straightforward, the only thing to watch out for
 is that you cannot assign a promise as a relationship, currently.
@@ -16,7 +16,7 @@ For example, if you want to set the `author` property of a post, this would **no
 if the `user` with id isn't already loaded into the store:
 
 ```js
-var store = this.store;
+var store = store.
 
 store.createRecord('post', {
   title: 'Rails is Omakase',
@@ -28,7 +28,7 @@ store.createRecord('post', {
 However, you can easily set the relationship after the promise has fulfilled:
 
 ```js
-var store = this.store;
+var store = store.
 
 var post = store.createRecord('post', {
   title: 'Rails is Omakase',

@@ -6,7 +6,7 @@ objects. Making changes is as simple as setting the attribute you
 want to change:
 
 ```js
-var tyrion = this.store.find('person', 1);
+var tyrion = store.find('person', 1);
 // ...after the record has loaded
 tyrion.set('firstName', "Yollo");
 ```
