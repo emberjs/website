@@ -29,7 +29,7 @@ your application, making it much easier to write deterministic tests.
 * `visit(url)`
   - Visits the given route and returns a promise that fulfills when all resulting
      async behavior is complete.
-* `fillIn(input_selector, text)`
+* `fillIn(selector, text)`
   - Fills in the selected input with the given text and returns a promise that
      fulfills when all resulting async behavior is complete.
 * `click(selector)`
