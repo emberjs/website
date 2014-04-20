@@ -1,4 +1,16 @@
 Ember.js uses naming conventions to wire up your objects without a
+<<<<<<< HEAD
+lot  of boilerplate. You will want to  use these conventional names
+for your routes, controllers and templates.
+
+You can usually guess the names, but this guide outlines, in one 
+place, all of the naming conventions. In the following examples 
+'App' is a name that we chose to namespace or represent our Ember 
+application when it was created, but you can theoretically choose 
+any name you want for your application. We will show you later 
+how to create an Ember application, but for now we will focus 
+on conventions.
+=======
 lot of boilerplate. You will want to use these conventional names
 for your routes, controllers and templates.
 
@@ -8,6 +20,7 @@ that we chose to namespace or represent our Ember application when it was
 created, but you can choose any name you want for your application.
 We will show you later how to create an Ember application, but for now we
 will focus on conventions.
+>>>>>>> c479e10d0bd38cee99560cb8b7dc99e69b65c2f2
 
 ## The Application
 
@@ -104,7 +117,7 @@ Here's an example:
 App.FavoritesRoute = Ember.Route.extend({
   model: function() {
     // the model is an Array of all of the posts
-    return this.store.find('post');
+    return store.find('post');
   }
 });
 ```
@@ -162,7 +175,7 @@ generating a link for a model object).
 ```javascript
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('post', params.post_id);
+    return store.find('post', params.post_id);
   },
 
   serialize: function(post) {

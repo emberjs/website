@@ -25,7 +25,7 @@ For example, if you ask for an `App.Photo` record by ID:
 ```js
 App.PhotoRoute = Ember.Route.extend({
   model: function(params) {
-    return this.store.find('photo', params.photo_id);
+    return store.find('photo', params.photo_id);
   }
 });
 ```

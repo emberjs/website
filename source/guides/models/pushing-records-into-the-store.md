@@ -39,14 +39,14 @@ App.Album = DS.Model.extend({
 
 App.ApplicationRoute = Ember.Route.extend({
   model: function() {
-    this.store.push('album', {
+    store.push('album', {
       id: 1,
       title: "Fewer Moving Parts",
       artist: "David Bazan",
       songCount: 10
     });
 
-    this.store.push('album', {
+    store.push('album', {
       id: 2,
       title: "Calgary b/w I Can't Make You Love Me/Nick Of Time",
       artist: "Bon Iver",

@@ -69,7 +69,7 @@ For example, we might want to find an `App.Person` model with the ID of
 ```js
 App.IndexRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('person', 1);
+    return store.find('person', 1);
   }
 });
 ```
@@ -88,7 +88,7 @@ a restaurant, you might have models like `Order`, `LineItem`, and
 Fetching orders becomes very easy:
 
 ```js
-this.store.find('order');
+store.find('order');
 ```
 
 Models define the type of data that will be provided by your server. For
@@ -135,7 +135,7 @@ have a model called `Person`. An individual record in your app might
 have a type of `Person` and an ID of `1` or `steve-buscemi`.
 
 ```js
-this.store.find('person', 1); // => { id: 1, name: 'steve-buscemi' }
+store.find('person', 1); // => { id: 1, name: 'steve-buscemi' }
 ```
 
 IDs are usually assigned by the server when you save them for the first

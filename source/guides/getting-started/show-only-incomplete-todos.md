@@ -29,7 +29,7 @@ Todos.Router.map(function() {
 // ... additional lines truncated for brevity ...
 Todos.TodosActiveRoute = Ember.Route.extend({
   model: function(){
-    return this.store.filter('todo', function(todo) {
+    return store.filter('todo', function(todo) {
       return !todo.get('isCompleted');
     });
   },

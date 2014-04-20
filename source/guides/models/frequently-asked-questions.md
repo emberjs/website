@@ -67,7 +67,7 @@ and modified on the client.
 ```js
 App.PostsFavoritedRoute = Ember.Route.extend({
   model: function() {
-    var store = this.store;
+    var store = store.
 
     // Create a filter for all favorited posts that will be displayed in
     // the template. Any favorited posts that are already in the store
