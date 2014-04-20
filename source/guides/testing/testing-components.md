@@ -1,6 +1,21 @@
 _Unit testing methods and computed properties follows previous patterns shown 
 in [Unit Testing Basics] because Ember.Component extends Ember.Object._
 
+#### Setup
+
+Before testing components, be sure to add testing application div to your testing html file:
+
+```html
+<!-- as of time writing, ID attribute needs to be named exactly ember-testing -->
+<div id="ember-testing"></div>
+```
+
+and then you'll also need to tell Ember to use this element for rendering the application in
+
+```javascript
+App.rootElement = '#ember-testing'
+```
+
 Components can be tested using the `moduleForComponent` helper. Here is a 
 simple Ember component:
 
