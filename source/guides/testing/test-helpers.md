@@ -80,9 +80,21 @@ test("simple test", function(){
 });
 ```
 
-Note that in the example above we are using the `andThen` helper. This will wait
-for the preceding asynchronous test helpers to complete and then calls the
-function which was passed to it as an argument.
+First we tell qunit that this test should have one assertion made by the end 
+of the test by calling `expect` with an argument of `1`. We then visit the new
+posts URL "/posts/new", enter the text "My new post" into an input control
+with the CSS class "title", and click on a button whose class is "submit".
+
+We then make a call to the `andThen` helper which will wait for the preceding
+asynchronous test helpers to complete (specifically, `andThen` will only be
+called **after** the new posts URL was visited, the text filled in and the
+submit button was clicked, **and** the browser has returned from doing whatever
+those actions required). Note `andThen` has a single argument of the function
+that contains the code to execute after the other test helpers have finished.
+
+In the `andThen` helper, we finally make our call to equal which makes an
+assertion that the text found in the last li of the ul whose class is "posts"
+is equal to "My new post".
 
 ### Custom Test Helpers
 
