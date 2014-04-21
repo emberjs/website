@@ -106,7 +106,7 @@ the resolver should be set like this:
 ***Make sure to replace "App" with your application's namespace in the following line***
 
 ```javascript
-setResolver(Ember.DefaultResolver.create({ namespace: App })
+setResolver(Ember.DefaultResolver.create({ namespace: App }))
 ```
 
 Otherwise, you would require the custom resolver and pass it to `setResolver`
