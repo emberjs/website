@@ -3,7 +3,7 @@ You can set up an observer on an object by using the `observes`
 method on a function:
 
 ```javascript
-Person = Ember.Object.extend({
+App.Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
@@ -39,7 +39,7 @@ as soon as one of the properties they observe changes. Because of this, it
 is easy to introduce bugs where properties are not yet synchronized:
 
 ```javascript
-Person.reopen({
+App.Person.reopen({
   lastNameChanged: function() {
     // The observer depends on lastName and so does fullName. Because observers
     // are synchronous, when this function is called the value of fullName is
@@ -53,7 +53,7 @@ This synchronous behaviour can also lead to observers being fired multiple
 times when observing multiple properties:
 
 ```javascript
-Person.reopen({
+App.Person.reopen({
   partOfNameChanged: function() {
     // Because both firstName and lastName were set, this observer will fire twice.
   }.observes('firstName', 'lastName')
@@ -68,7 +68,7 @@ ensure that any processing you need to do only happens once, and happens in the
 next run loop once all bindings are synchronized:
 
 ```javascript
-Person.reopen({
+App.Person.reopen({
   partOfNameChanged: function() {
     Ember.run.once(this, 'processFullName');
   }.observes('firstName', 'lastName'),
@@ -125,7 +125,7 @@ You can define inline observers by using the `Ember.observer` method if you
 are using Ember without prototype extensions:
 
 ```javascript
-Person.reopen({
+App.Person.reopen({
   fullNameChanged: Ember.observer('fullName', function() {
     // deal with the change
   })
