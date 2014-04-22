@@ -39,7 +39,7 @@ In `index.html` replace the static `<input>` element with our custom `{{edit-tod
 
 Pressing the `<enter>` key  will trigger the `acceptChanges` event on the instance of `TodoController`. Moving focus away from the `<input>` will trigger the `focus-out` event, calling a method `acceptChanges` on this view's instance of `TodoController`.
 
-Additionally, we connect the `value` property of this `<input>` to the `title` property of this instance of `TodoController`. We will not implement a `title` property on the controller so it will retain the default behavior of [proxying all requests](../controllers/#toc_representing-models) to its `model`.
+Additionally, we connect the `value` property of this `<input>` to the `title` property of this instance of `TodoController`. We will not implement a `title` property on the controller so it will retain the default behavior of [proxying all requests](/guides/controllers/#toc_representing-models) to its `model`.
 
 A CSS class `edit` is applied for styling.
 
