@@ -47,17 +47,17 @@ When the `IndexController` is instantiated (likely by the route when rendering t
 corresponding template), Ember will look for controllers matching those listed in
 `needs`. Controllers in Ember are singletons (except item controllers, which should
 be disregarded for this explanation), so if an instance is already available it is
-returned. If not the controller is resolved, instantiated, and cached before being
+returned. If not, the controller is resolved, instantiated, and cached before being
 returned from the container. This instance is then added to the `controllers` object.
 
 ##### Exmample Use of Needs: An Audio Playback Service
 
 To demonstrate how `needs` can create light-weight services, let's build a controller
-that manages audio playback an make it available to another controller.
+that manages audio playback and makes it available to another controller.
 
 HTML5 audio tags provide an easy way to play audio on the web. In the application
-template, we will use `{{render` to render a template containing the audio tag.
-`{{render` backs its template with a controller of the same name.
+template, we will use the `render` helper to render a template containing the audio
+tag. `render` backs its template with a controller of the same name.
 
 ```hbs
 {{! application.hbs }}
@@ -73,7 +73,7 @@ template, we will use `{{render` to render a template containing the audio tag.
 <div>{{currentSrc}}</div>
 ```
 
-Th controller itself will maintain `currentSrc` property:
+The controller itself will maintain the `currentSrc` property:
 
 ```javascript
 App.AudioController = Ember.Controller.extend({
@@ -98,7 +98,7 @@ App.IndexController = Ember.Controller.extend({
 });
 ```
 
-In this same manner, any other controller could access the `audio` controller
+In the same manner, any other controller could access the `audio` controller
 instance.
 
 A functional version of this demo is provided below:
@@ -107,12 +107,13 @@ A functional version of this demo is provided below:
 
 ##### Defining New Framework Components
 
-`needs` provides a way of injecting only controller type objects. To inject any other
-type of object, Ember provides a thin abstraction on the container in the form
-of `App.register` and `App.inject`. We can create custom type of factories,
-register them to the container and inject them to other objects using this api.
+`needs` only provides a way of injecting controller objects onto other
+controller objects. To inject any other type of object, Ember provides a
+thin abstraction on the container in the form of `App.register` and `App.inject`.
+We can create custom factory types, register them into the container and
+inject them to other objects using this API.
 
-A new object can be created as
+Here, a logger class is defined:
 
 ```javascript
 App.Logger = Ember.Object.extend({
@@ -141,14 +142,14 @@ Now, to register it
 App.register('logger:main', App.Logger, {});
 ```
 
-This snippet creates a new type called `logger`. The factoryname is `main`.
+This snippet creates a new type called `logger`. The factory's name is `main`.
 The second parameter is the object definition. A third parameter of options
-can be passed to this api. They are -
+can be passed to this API. They are -
 
 * `instantiate: boolean (default:false)` - Every lookup will create a new
   instance if set to true.
-* `singleton:boolean (default:true)` - A single instance will be created
-  if none and cached. Only the cached instance will be returned.
+* `singleton:boolean (default:true)` - A single instance will be created and
+  re-used for all injections.
 
 Now inject the logger into the controller and views.
 
@@ -166,7 +167,8 @@ Further granularity can be achieved by
 App.inject('controller:index', 'indexLogger', 'logger:main');
 ```
 
-This will inject the logger instance only into the index controller.
+This will inject the logger instance onto the index controller, and no
+other controllers.
 
 Here is the full implementation of the above logger service.
 
