@@ -133,7 +133,7 @@ socket.on('message', function (message) {
 ```
 
 [update](http://emberjs.com/api/data/classes/DS.Store.html#method_update)
-works likea `push` except it can handle partial attributes without
+works like a `push` except it can handle partial attributes without
 overwriting the existing record properties. This method is useful if
 your web application only receives notifications of the changed
 attributes on a model. Like `push` it is important to remember to
