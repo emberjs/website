@@ -1,3 +1,7 @@
+---
+alias: guides/testing/unit/
+---
+
 ### Globals vs Modules
 
 In the past, it has been difficult to test portions of your Ember application
