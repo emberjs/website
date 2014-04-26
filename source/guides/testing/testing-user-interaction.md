@@ -18,7 +18,7 @@ without worrying about async behaviour your helper might trigger.
 
 ```javascript
 module('Integration: Transitions', {
-  setup: function() {
+  teardown: function() {
     App.reset();
   }
 });
@@ -61,7 +61,7 @@ when the restricted URL is visited.
 
 ```javascript
 module('Integration: Transitions', {
-  setup: function() {
+  teardown: function() {
     App.reset();
   }
 });
