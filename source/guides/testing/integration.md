@@ -22,11 +22,11 @@ App.injectTestHelpers();
 
 With QUnit, `setup` and `teardown` functions can be defined in each test module's configuration. These functions are called for each test in the module. If you are using a framework other than QUnit, use the hook that is called before each individual test.
 
-Before each test, reset the application: `App.reset()` completely resets the state of the application.
+After each test, reset the application: `App.reset()` completely resets the state of the application.
 
 ```javascript
 module("Integration Tests", {
-  setup: function() {
+  teardown: function() {
     App.reset();
   }
 });
