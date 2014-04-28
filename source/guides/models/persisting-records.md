@@ -57,8 +57,10 @@ var post = store.createRecord('post', {
   body: 'Lorem ipsum'
 });
 
+var self = this;
+
 var onSuccess = function(post) {
-  this.transitionToRoute('posts.show', post);
+  self.transitionToRoute('posts.show', post);
 };
 
 var onFail = function(post) {
