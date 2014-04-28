@@ -3,7 +3,7 @@ Along with the records returned from your store, you'll likely need to handle so
 Pagination is a common example of using metadata. Imagine a blog with far more posts than you can display at once. You might query it like so:
 
 ```js
-this.store.findQuery("post", {
+var result = this.store.find("post", {
   limit: 10,
   offset: 0
 });
@@ -31,10 +31,16 @@ By default, Ember Data's JSON deserializer looks for a `meta` key:
 }
 ```
 
-The metadata for a specific type is then set to the contents of `meta`. You can access it with `store.metadataFor`:
+The metadata for a specific type is then set to the contents of `meta`. You can access it either with `store.metadataFor`, which is updated any time any query is made against the same type:
 
 ```js
 var meta = this.store.metadataFor("post");
+```
+
+Or you can access the metadata just for this query:
+
+```js
+var meta = result.get("content.meta");
 ```
 
 Now, `meta.total` can be used to calculate how many pages of posts you'll have.
