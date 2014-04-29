@@ -120,7 +120,7 @@ Requests for `App.UserProfile` would now target `/user_profile/1`.
 #### Authoring Adapters
 
 The `defaultSerializer` property can be used to specify the serializer
-that will be used by this adapter. This is only used when an model
+that will be used by this adapter. This is only used when a model
 specific serializer or ApplicationSerializer are not defined.
 
 In an application, it is often easier to specify an
