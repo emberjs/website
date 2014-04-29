@@ -1,6 +1,6 @@
-Unit tests are generally used to test a small piece of code and ensure that it
-is doing what was intended. Unlike integration tests, they are narrow in scope
-and do not require the Ember application to be running.
+---
+alias: guides/testing/unit/
+---
 
 ### Globals vs Modules
 
