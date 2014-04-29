@@ -125,10 +125,7 @@ A **record** is an instance of a model that contains data loaded from a
 server. Your application can also create new records and save them back
 to the server.
 
-Records are uniquely identified by two things:
-
-1. A model type.
-2. A globally unique ID.
+A record is uniquely identified by its model type and id.
 
 For example, if you were writing a contact management app, you might
 have a model called `Person`. An individual record in your app might
