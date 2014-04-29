@@ -26,6 +26,12 @@ types of helpers: **asynchronous** and **synchronous**.
 Asynchronous helpers are "aware" of (and wait for) asynchronous behavior within
 your application, making it much easier to write deterministic tests.
 
+Also, these helpers register themselves in the order that you call them and will
+be run in a chain; each one is only called after the previous one finishes, in a
+chain. You can rest assured, therefore, that the order you call them in will also
+be their execution order, and that the previous helper has finished before the
+next one starts.
+
 * `visit(url)`
   - Visits the given route and returns a promise that fulfills when all resulting
      async behavior is complete.
