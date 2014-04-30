@@ -40,11 +40,11 @@ REST adapter:
     <tr><th>Action</th><th>HTTP Verb</th><th>URL</th></tr>
   </thead>
   <tbody>
-    <tr><th>Find</th><td>GET</td><td>/people/123</td></tr>
-    <tr><th>Find All</th><td>GET</td><td>/people</td></tr>
-    <tr><th>Update</th><td>PUT</td><td>/people/123</td></tr>
-    <tr><th>Create</th><td>POST</td><td>/people</td></tr>
-    <tr><th>Delete</th><td>DELETE</td><td>/people/123</td></tr>
+    <tr><th>Find</th><td>GET</td><td>/photos/123</td></tr>
+    <tr><th>Find All</th><td>GET</td><td>/photos</td></tr>
+    <tr><th>Update</th><td>PUT</td><td>/photos/123</td></tr>
+    <tr><th>Create</th><td>POST</td><td>/photos</td></tr>
+    <tr><th>Delete</th><td>DELETE</td><td>/photos/123</td></tr>
   </tbody>
 </table>
 
