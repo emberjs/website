@@ -18,8 +18,8 @@ actions: {
     var todo = this.get('model');
     todo.deleteRecord();
     todo.save();
-  },
-}
+  }
+},
 // ... additional lines truncated for brevity ...
 ```
 
