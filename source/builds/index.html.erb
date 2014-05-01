@@ -143,12 +143,12 @@ title: Builds
   {{#if lastRelease}}
   <div id="download">
     <div id="download-ember">
-      <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}}>Download {{lastRelease}}</a>
+      <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}} download>Download {{lastRelease}}</a>
       <div class="info">
         {{lastRelease}}:
-        <a class="debug" {{bind-attr href=lastReleaseProdUrl}}>production</a>
-        <a class="debug" {{bind-attr href=lastReleaseMinUrl}}>(min)</a> |
-        <a class="debug" {{bind-attr href=lastReleaseDebugUrl}}>debug</a>
+        <a class="debug" {{bind-attr href=lastReleaseProdUrl}} download>production</a>
+        <a class="debug" {{bind-attr href=lastReleaseMinUrl}} download>(min)</a> |
+        <a class="debug" {{bind-attr href=lastReleaseDebugUrl}} download>debug</a>
         {{#if lastReleaseChangelogUrl }} |
           <a class="debug" {{bind-attr href=lastReleaseChangelogUrl}}>changelog</a>
         {{/if}}
