@@ -7,7 +7,9 @@ Here's what that computed property might look like:
 ```javascript
 App.TodosController = Ember.Controller.extend({
   todos: [
-    Ember.Object.create({ isDone: false })
+    Ember.Object.create({ isDone: true }),
+    Ember.Object.create({ isDone: false }),
+    Ember.Object.create({ isDone: true })
   ],
 
   remaining: function() {
