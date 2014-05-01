@@ -41,7 +41,7 @@ automatically:
 
 ```javascript
 var todos = App.todosController.get('todos');
-var todo = todos.objectAt(0);
+var todo = todos.objectAt(1);
 todo.set('isDone', true);
 
 App.todosController.get('remaining');
