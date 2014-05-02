@@ -9423,7 +9423,7 @@ classitems:
     ```html
     <label>
       First name: <input type="text" />
-    <label>
+    </label>
     ```
   itemtype: method
   name: yield
