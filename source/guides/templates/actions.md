@@ -188,7 +188,7 @@ clicked.
 {{/link-to}}
 ```
 
-Without `bubbles=false`, if the user clicked on the button, Ember.js
+Without `bubbles=true`, if the user clicked on the button, Ember.js
 will trigger the action, and then the browser will propagate the click
 to the link.
 
