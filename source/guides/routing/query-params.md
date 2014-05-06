@@ -255,17 +255,16 @@ This affects query param behavior in two ways:
 
 ## Examples
 
-- [Search queries](http://emberjs.jsbin.com/ucanam/4059)
+- [Search queries](http://emberjs.jsbin.com/ucanam/3008)
 - [Sort: client-side, no refiring of model hook](http://emberjs.jsbin.com/ucanam/2937)
-- [Sort: server-side, refire model hook](http://emberjs.jsbin.com/ucanam/4073)
-- [Pagination + Sorting](http://emberjs.jsbin.com/ucanam/4075)
-- [Boolean values](http://emberjs.jsbin.com/ucanam/4076/edit)
-- [Global query params on app route](http://emberjs.jsbin.com/ucanam/4077/edit)
-- [Opt-in to full transition via refreshModel:true](http://emberjs.jsbin.com/ucanam/4079/edit)
-- [opt into replaceState via replace:true](http://emberjs.jsbin.com/ucanam/4080/edit)
-- [w/ {{partial}} helper for easy tabbing](http://emberjs.jsbin.com/ucanam/4081)
-- [link-to with no route name, only QP change](http://emberjs.jsbin.com/ucanam/4082#/about?showThing=true)
-- [Complex: serializing textarea content into URL (and subexpressions))](http://emberjs.jsbin.com/ucanam/4083/edit)
-- [Arrays](http://emberjs.jsbin.com/ucanam/4084)
-- [Map to different URL key with colon syntax](http://emberjs.jsbin.com/ucanam/4090/edit)
+- [Sort: server-side, refire model hook](http://emberjs.jsbin.com/ucanam/2942)
+- [Pagination + Sorting](http://emberjs.jsbin.com/ucanam/2950)
+- [Boolean values. False value removes QP from URL](http://emberjs.jsbin.com/ucanam/2708/edit)
+- [Global query params on app route](http://emberjs.jsbin.com/ucanam/2719/edit)
+- [Opt-in to full transition via refresh()](http://emberjs.jsbin.com/ucanam/2711/edit)
+- [replaceUrl by changing controller QP property](http://emberjs.jsbin.com/ucanam/2710/edit)
+- [w/ {{partial}} helper for easy tabbing](http://emberjs.jsbin.com/ucanam/2706)
+- [link-to with no route name, only QP change](http://emberjs.jsbin.com/ucanam/2718#/about?about[showThing])
+- [Complex: serializing textarea content into URL (and subexpressions))](http://emberjs.jsbin.com/ucanam/2703/edit)
+- [Arrays](http://emberjs.jsbin.com/ucanam/2849)
 
