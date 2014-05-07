@@ -1525,6 +1525,23 @@ a.edit-page {
     }
   }
 
+  .deprecation {
+    background-color: #FFFFCC;
+    border: 1px solid #dfd7d4;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    margin: 1.5em 0;
+    padding: 10px;
+    p {
+      color: $orange-color;
+      font-family: 'Helvetica Neue';
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+
   ul.index-list {
     margin-left: 1.5em;
     overflow: hidden; /* Clearfix */
