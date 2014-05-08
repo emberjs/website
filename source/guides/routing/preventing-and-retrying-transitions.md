@@ -23,7 +23,7 @@ Here's one way this situation could be handled:
 App.FormRoute = Ember.Route.extend({
   actions: {
     willTransition: function(transition) {
-      if (this.controllerFor('form').get('userHasEnteredData') &&
+      if (this.controller.get('userHasEnteredData') &&
           !confirm("Are you sure you want to abandon progress?")) {
         transition.abort();
       } else {
