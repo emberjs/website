@@ -23,14 +23,14 @@ this todo's controller. Finally, we wrap our todo in a Handlebars `{{if}}` helpe
 Inside `js/controllers/todo_controller.js` we'll implement the matching logic for this template behavior:
 
 ```javascript
-// ... additional lines truncated for brevity ...
-actions: {
-   editTodo: function() {
-     this.set('isEditing', true);
-   }
- },
+Todos.TodoController = Ember.ObjectController.extend({
+  actions: {
+    editTodo: function() {
+      this.set('isEditing', true);
+    }
+  },
  
-isEditing: false,
+  isEditing: false,
 
 // ... additional lines truncated for brevity ...
 ```
