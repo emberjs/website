@@ -88,6 +88,7 @@ App.PostRoute = Ember.Route.extend({
       // ...
       if (actionShouldAlsoBeTriggeredOnParentRoute) {
         return true;
+      }
     }
   }
 });
