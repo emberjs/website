@@ -3,6 +3,7 @@
 $hidpi-min-pixel-ratio: 1.3 !default;
 
 .callout-image {
+  z-index: 99999;
   position: absolute;
   left: 20px;
   text-decoration: none !important;
