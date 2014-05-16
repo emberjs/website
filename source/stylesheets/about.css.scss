@@ -2,6 +2,16 @@
 
 $hidpi-min-pixel-ratio: 1.3 !default;
 
+.callout-image {
+  position: absolute;
+  left: 20px;
+  text-decoration: none !important;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
 body.index, body.about {
   background: no-repeat top center #faf4f1;
   background-image: url('/images/background-shades.png');
