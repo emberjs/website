@@ -45,7 +45,7 @@ user = Ember.Object.create({
 
 userView = Ember.View.create({
   user: user,
-  userNameBinding: Ember.computed.oneWay('user.fullName')
+  userName: Ember.computed.oneWay('user.fullName')
 });
 
 // Changing the name of the user object changes
