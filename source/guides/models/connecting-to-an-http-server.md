@@ -107,7 +107,7 @@ App.PostAdapter = DS.RESTAdapter.extend({
 });
 
 App.PhotoAdapter = DS.RESTAdapter.extend({
-  namespace: 'api/v1'
+  namespace: 'api/v1',
   host: 'https://api.example.com'
 });
 ```
