@@ -6,8 +6,8 @@ alias: guides/testing/unit/
 
 In the past, it has been difficult to test portions of your Ember application
 without loading the entire app as a global. By having your application written
-using modules ([CommonJS], [AMD], etc), you are able to require just code that 
-is to be tested without having to pluck the pieces out of your global 
+using modules ([CommonJS], [AMD], etc), you are able to require just code that
+is to be tested without having to pluck the pieces out of your global
 application.
 
 ### Unit Testing Helpers
@@ -17,8 +17,8 @@ should be used as a template for other test framework helpers. It uses your
 application's resolver to find and automatically create test subjects for you
 using the `moduleFor` and `test` helpers.
 
-A test subject is simply an instance of the object that a particular test is 
-making assertions about. Usually test subjects are manually created by the 
+A test subject is simply an instance of the object that a particular test is
+making assertions about. Usually test subjects are manually created by the
 writer of the test.
 
 <!--
@@ -49,7 +49,7 @@ By including [Ember-QUnit], you will have access to a number of test helpers.
  - **callbacks**: normal QUnit callbacks (setup and teardown), with addition to
     needs, which allows you specify the other units the tests will need.
 
-* `moduleForModel(fullName [, description [, callbacks]])`
+* `moduleForModel(name [, description [, callbacks]])`
  - **name**: the short name of the model you'd use in store
     operations (ie. `user`, `assignmentGroup`, etc.)
  - **description**: the description of the module
