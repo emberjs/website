@@ -10,3 +10,5 @@ build/
 /b
 *.swp
 .rvmrc
+.ruby-gemset
+.cache
