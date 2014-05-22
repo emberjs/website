@@ -33,7 +33,7 @@ The table below shows how model names map to model classes.
     <td><code>App.Photo</code></td>
   </tr>
   <tr>
-    <td><code>admin-user-profile</code></td>
+    <td><code>adminUserProfile</code></td>
     <td><code>App.AdminUserProfile</code></td>
   </tr>
 </table>
@@ -90,6 +90,28 @@ The default adapter supports attribute types of `string`,
 `number`, `boolean`, and `date`. Custom adapters may offer additional
 attribute types, and new types can be registered as transforms. See the
 [documentation section on the REST Adapter](/guides/models/the-rest-adapter).
+
+#### Options
+`DS.attr` takes an optional hash as a second parameter, current options are:
+
+- `defaultValue`: Pass a string or a function to be called to set the
+                  attribute to a default value if none is supplied.
+
+  Example
+
+  ```JavaScript
+  var attr = DS.attr;
+
+  App.User = DS.Model.extend({
+      username: attr('string'),
+      email: attr('string'),
+      verified: attr('boolean', {defaultValue: false}),
+      createdAt: DS.attr('string', {
+          defaultValue: function() { return new Date(); }
+      })
+  });
+  ```
+
 
 ### Defining Relationships
 
@@ -151,7 +173,7 @@ that model.
 
 However, sometimes you may have multiple `belongsTo`/`hasMany`s for the
 same type. You can specify which property on the related model is the
-inverse using `DS.attr`'s `inverse` option:
+inverse using `DS.hasMany`'s `inverse` option:
 
 ```javascript
 var belongsTo = DS.belongsTo,
@@ -173,21 +195,3 @@ App.Post = DS.Model.extend({
 ```
 
 You can also specify an inverse on a `belongsTo`, which works how you'd expect.
-
-#### Embedded Objects
-
-When you have a data structure where the embedded data doesn't use or need ids, you have to specify that the `belongsTo` relationship is contained by the `hasMany` relationship.
-
-To do this, you need to extend the adapter that your app is using to load the data with the embedded structure.
-
-```javascript
-App.Comment = DS.Model.extend({});
-
-App.Post = DS.Model.extend({
-  comments: DS.hasMany('comment')
-});
-
-App.Adapter.map('post', {
-  comments: { embedded: 'always' }
-});
-```

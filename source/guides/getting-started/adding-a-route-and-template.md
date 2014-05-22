@@ -8,19 +8,19 @@ Inside `js/application.js` add the following code:
 window.Todos = Ember.Application.create();
 ```
 
-This will create a new instance of `Ember.Application` and make it available as a variable within your browser's JavaScript environment.
+This will create a new instance of `Ember.Application` and make it available as a variable named `Todos` within your browser's JavaScript environment.
 
 Inside `js/router.js` add the following code:
 
 ```javascript
-Todos.Router.map(function () {
+Todos.Router.map(function() {
   this.resource('todos', { path: '/' });
 });
 ```
 
 This will tell Ember.js to detect when the application's URL matches `'/'` and to render the `todos` template.
 
-Next, update your `index.html` to wrap the inner contents of `<body>` in a Handlebars script tag and include `js/application.js` and `js/router.js`:
+Next, update your `index.html` to wrap the inner contents of `<body>` in a Handlebars script tag and include `js/application.js` and `js/router.js` after Ember.js and other javascript dependencies:
 
 ```html
 <!-- ... additional lines truncated for brevity ... -->
@@ -34,16 +34,13 @@ Next, update your `index.html` to wrap the inner contents of `<body>` in a Handl
     <footer id="info">
       <p>Double-click to edit a todo</p>
     </footer>
-  
+
   </script>
 
-  <script src="js/libs/jquery.min.js"></script>
-  <script src="js/libs/handlebars.js"></script>
-  <script src="js/libs/ember.js"></script>
-  <script src="js/libs/ember-data.js"></script>
-  
+  <!-- ... Ember.js and other javascript dependencies ... -->
   <script src="js/application.js"></script>
   <script src="js/router.js"></script>
+</body>
 <!-- ... additional lines truncated for brevity ... -->
 ```
 

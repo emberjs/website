@@ -18,6 +18,8 @@ Here are all of the available recipes:
 1. [Focusing a Textfield after It's Been Inserted](/guides/cookbook/user_interface_and_interaction/focusing_a_textfield_after_its_been_inserted)
 1. [Displaying Formatted Dates With Moment.js](/guides/cookbook/user_interface_and_interaction/displaying_formatted_dates_with_moment_js)
 1. [Specifying Data-Driven Areas of Templates That Do Not Need To Update](/guides/cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update)
+1. [Using Modal Dialogs](/guides/cookbook/user_interface_and_interaction/using_modal_dialogs)
+1. [Resetting scroll on route changes](/guides/cookbook/user_interface_and_interaction/resetting_scroll_on_route_changes)
 
 ### Event Handling &amp; Data Binding
 
@@ -26,11 +28,14 @@ Here are all of the available recipes:
 ### Helpers &amp; Components
 
 1. [Creating Reusable Social Share Buttons](/guides/cookbook/helpers_and_components/creating_reusable_social_share_buttons)
+2. [A Spinning Button for Asynchronous Actions](/guides/cookbook/helpers_and_components/spin_button_for_asynchronous_actions)
+3. [Adding Google Analytics Tracking](/guides/cookbook/helpers_and_components/adding_google_analytics_tracking)
 
 ### Working with Objects
 
 1. [Incrementing Or Decrementing A Property](/guides/cookbook/working_with_objects/incrementing_or_decrementing_a_property)
 1. [Setting Multiple Properties At Once](/guides/cookbook/working_with_objects/setting_multiple_properties_at_once)
+1. [Continuous Redrawing of Views](/guides/cookbook/working_with_objects/continuous_redrawing_of_views)
 
 
 If you would like to see more recipes, take a look at the <a href="/guides/cookbook/contributing/suggesting_a_recipe">Suggesting A Recipe</a> section.

@@ -7,7 +7,7 @@ Person = Ember.Object.extend({
   // these will be supplied by `create`
   firstName: null,
   lastName: null,
-
+  
   fullName: function() {
     var firstName = this.get('firstName');
     var lastName = this.get('lastName');
@@ -17,16 +17,15 @@ Person = Ember.Object.extend({
 
   fullNameChanged: function() {
     // deal with the change
-  }.observes('fullName')
+  }.observes('fullName').on('init')
 });
 
 var person = Person.create({
-  firstName: "Yehuda",
-  lastName: "Katz"
+  firstName: 'Yehuda',
+  lastName: 'Katz'
 });
 
-
-person.set('firstName', "Brohuda"); // observer will fire
+person.set('firstName', 'Brohuda'); // observer will fire
 ```
 
 Because the `fullName` computed property depends on `firstName`,
@@ -127,9 +126,9 @@ are using Ember without prototype extensions:
 
 ```javascript
 Person.reopen({
-  fullNameChanged: Ember.observer(function() {
+  fullNameChanged: Ember.observer('fullName', function() {
     // deal with the change
-  }, 'fullName')
+  })
 });
 ```
 

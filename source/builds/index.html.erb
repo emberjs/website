@@ -2,7 +2,7 @@
 title: Builds
 ---
 
-<% content_for :head do %>
+<% content_for :foot do %>
   <script type="text/javascript" src="/javascripts/builds.js"></script>
 <% end %>
 
@@ -16,17 +16,15 @@ title: Builds
       <li {{bind-attr class=":level-1 isChannelsActive:selected"}}>
         <a>Channels</a>
         <ol style="display:block">
-          <li {{bind-attr class=":level-3 isReleaseActive:sub-selected"}}>{{#link-to 'release.latest'}}Release{{/link-to}}</li>
-          <li {{bind-attr class=":level-3 isBetaActive:sub-selected"}}>{{#link-to 'beta.latest'}}Beta{{/link-to}}</li>
-          <li {{bind-attr class=":level-3 isCanaryActive:sub-selected"}}>{{#link-to 'canary.latest'}}Canary{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isReleaseActive:sub-selected"}}>{{#link-to 'release'}}Release{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isBetaActive:sub-selected"}}>{{#link-to 'beta'}}Beta{{/link-to}}</li>
+          <li {{bind-attr class=":level-3 isCanaryActive:sub-selected"}}>{{#link-to 'canary'}}Canary{{/link-to}}</li>
         </ol>
       </li>
     </ol>
   </div>
 
   <div id="content" class="has-sidebar">
-    {{render 'mainIntro'}}
-
     {{outlet}}
   </div>
 </script>
@@ -34,35 +32,27 @@ title: Builds
 <script type="text/x-handlebars" data-template-name="index">
   <div class="features section">
     <div class="feature">
-      {{#link-to 'release.latest'}}
-      <img class="tomster" src="/images/tomster-sm.png" alt="Release Builds">
+      {{#link-to 'release'}}
+        <div class="release" title="Release Builds"></div>
       {{/link-to}}
       <h2>Release</h2>
       <p>Release builds have been hardened through our multi-tiered release process. These builds are perfect for use in production environments.</p>
     </div>
     <div class="feature">
-      {{#link-to 'beta.latest'}}
-      <img class="tomster" src="/images/tomster-beta-sm.png" alt="Beta Builds">
+      {{#link-to 'beta'}}
+        <div class="beta" title="Beta Builds"></div>
       {{/link-to}}
       <h2>Beta</h2>
       <p>Beta builds will incorporate new features that are ready for more review. They will include new features that have been more thoroughly tested. We do not recommend using Beta builds in production.</p>
     </div>
     <div class="feature">
-      {{#link-to 'canary.latest'}}
-      <img class="tomster" src="/images/tomster-under-construction-sm.png" alt="Canary Builds">
+      {{#link-to 'canary'}}
+        <div class="canary" title="Canary Builds"></div>
       {{/link-to}}
       <h2>Canary</h2>
       <p>Canary builds are the bleeding edge of Ember development. Please do not use these builds unless you are absolutely certain that you need fixes and/or features not available in the Release or Beta builds.</p>
     </div>
   </div>
-</script>
-
-<script type="text/x-handlebars" data-template-name="_filters">
-  <ul class="project-pills">
-    {{#each filters itemController="tabItem"}}
-      <li {{action "setFilter" projectFilter}} {{bind-attr class="isSelectedProject:active"}}>{{projectName}}</li>
-    {{/each}}
-  </ul>
 </script>
 
 <script type="text/x-handlebars" data-template-name="_project_listing">
@@ -84,16 +74,81 @@ title: Builds
 </script>
 
 <script type="text/x-handlebars" data-template-name="_files_table">
-  <h2 class="project-name">{{projectName}}</h2>
+  <h2 class="project-name">{{projectName}} {{channel}} Builds</h2>
+  {{#if isEmberBeta}}
+    <div class="release-progress clear">
+      <div class="left">
+        <div class="small-release-image" {{bind-attr title=lastStableVersion}}></div>
+        <div class="release-version">{{lastStableVersion}}</div>
+        <div class="release-date">Released {{format-date-time lastStableDate "MMM Do"}}</div>
+      </div>
+      <div class="float-left-container">
+        <div class="release-cycle-title">The path to {{finalVersion}}...</div>
+        <div {{bind-attr class=":left beta1Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 1</div>
+          {{#if isBeta1}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta2Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 2</div>
+          {{#if isBeta2}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta1}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta3Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 3</div>
+          {{#if isBeta3}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta2}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta4Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 4</div>
+          {{#if isBeta4}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta3}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+        <div {{bind-attr class=":left beta5Completed::future-image"}}>
+          <div class="tiny-beta-image"></div>
+          <div class="beta-version">beta 5</div>
+          {{#if isBeta5}}
+            <div class="beta-current-version">(current beta)</div>
+          {{/if}}
+          {{#if isBeta4}}
+            <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+          {{/if}}
+        </div>
+      </div>
+      <div class="right future-image">
+        <div class="small-release-image" {{bind-attr title=finalVersion}}></div>
+        <div class="release-version">{{finalVersion}}</div>
+        <div class="release-date">Coming {{format-date-time cycleEstimatedFinishDate "MMM Do"}}</div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  {{/if}}
   {{#if lastRelease}}
   <div id="download">
     <div id="download-ember">
-      <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}}>Download {{lastRelease}}</a>
+      <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}} download>Download {{lastRelease}}</a>
       <div class="info">
         {{lastRelease}}:
-        <a class="debug" {{bind-attr href=lastReleaseProdUrl}}>production</a>
-        <a class="debug" {{bind-attr href=lastReleaseMinUrl}}>(min)</a> |
-        <a class="debug" {{bind-attr href=lastReleaseDebugUrl}}>debug</a>
+        <a class="debug" {{bind-attr href=lastReleaseProdUrl}} download>production</a>
+        <a class="debug" {{bind-attr href=lastReleaseMinUrl}} download>(min)</a> |
+        <a class="debug" {{bind-attr href=lastReleaseDebugUrl}} download>debug</a>
         {{#if lastReleaseChangelogUrl }} |
           <a class="debug" {{bind-attr href=lastReleaseChangelogUrl}}>changelog</a>
         {{/if}}
@@ -123,18 +178,6 @@ title: Builds
 </script>
 
 <script type="text/x-handlebars" data-template-name="build-list">
-  <h2>{{title}}</h2>
-  <div class="tabs">
-    <ul>
-      <li>{{#link-to latestLink}}Latest{{/link-to}}</li>
-      <li>{{#link-to dailyLink}}Daily{{/link-to}}</li>
-    </ul>
-  </div>
-  {{partial 'projectListing'}}
-</script>
-
-<script type="text/x-handlebars" data-template-name="tagged">
-  <h2>{{title}}</h2>
   {{partial 'projectListing'}}
 </script>
 

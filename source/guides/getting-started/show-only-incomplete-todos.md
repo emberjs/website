@@ -19,8 +19,8 @@ In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{li
 In `js/router.js` update the router to recognize this new path and implement a matching route:
 
 ```javascript
-Todos.Router.map(function () {
-  this.resource('todos', { path: '/' }, function () {
+Todos.Router.map(function() {
+  this.resource('todos', { path: '/' }, function() {
     // additional child routes    
     this.route('active');
   });
@@ -29,11 +29,11 @@ Todos.Router.map(function () {
 // ... additional lines truncated for brevity ...
 Todos.TodosActiveRoute = Ember.Route.extend({
   model: function(){
-    return this.store.filter('todo', function (todo) {
+    return this.store.filter('todo', function(todo) {
       return !todo.get('isCompleted');
     });
   },
-  renderTemplate: function(controller){
+  renderTemplate: function(controller) {
     this.render('todos/index', {controller: controller});
   }
 });

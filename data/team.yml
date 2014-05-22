@@ -1,27 +1,30 @@
 - name: Yehuda Katz
-  github: http://github.com/wycats
+  github: https://github.com/wycats
   image: ykatz.jpg
 - name: Tom Dale
-  github: http://github.com/tdale
+  github: https://github.com/tomdale
   image: tdale.jpg
 - name: Peter Wagenet
-  github: http://github.com/wagenet
+  github: https://github.com/wagenet
   image: pwagenet.jpg
 - name: Trek Glowacki
-  github: http://github.com/trek
+  github: https://github.com/trek
   image: tglowaki.jpg
 - name: Erik Bryn
-  github: http://github.com/ebryn
+  github: https://github.com/ebryn
   image: ebryn.jpg
 - name: Kris Selden
-  github: http://github.com/kselden
+  github: https://github.com/krisselden
   image: kselden.jpg
 - name: Stefan Penner
-  github: http://github.com/stefanpenner
+  github: https://github.com/stefanpenner
   image: spenner.jpg
 - name: Leah Silber
-  github: http://github.com/wifelette
+  github: https://github.com/wifelette
   image: lsilber.jpg
 - name: Alex Matchneer
-  github: http://github.com/machty
+  github: https://github.com/machty
   image: amatchneer.jpg
+- name: Robert Jackson
+  github: https://github.com/rjackson
+  image: rjackson.jpg

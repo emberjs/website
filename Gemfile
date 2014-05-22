@@ -11,9 +11,10 @@ gem "thin"
 gem "rack"
 gem "listen"
 gem "builder"
+gem "middleman-alias"
 
-group :development do
-  gem "pry"
+group :development, :test do
+  gem 'pry'
 end
 
 group :test do
@@ -21,3 +22,4 @@ group :test do
   gem "capybara"
   gem "poltergeist"
 end
+

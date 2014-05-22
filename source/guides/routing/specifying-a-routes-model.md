@@ -68,7 +68,7 @@ While this example looks like it's synchronous, making it easy to read
 and reason about, it's actually completely asynchronous. That's because
 jQuery's `getJSON()` method returns a promise. Ember will detect the
 fact that you've returned a promise from the `model` hook, and wait
-until that promise resolves to render the `pullRequest` template.
+until that promise resolves to render the `pullRequests` template.
 
 (For more information on jQuery's XHR functionality, see
 [jQuery.ajax](http://api.jquery.com/jQuery.ajax/) in the jQuery

@@ -1,4 +1,4 @@
-"Ember.js Guides":
+"Guides and Tutorials":
   - title: "Ember.js Guides"
     url: "index.html"
     skip_sidebar: true
@@ -50,6 +50,10 @@
     url: "getting-started/toggle-all-todos"
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
+
+"Getting Ember":
+  - title: "Getting Ember"
+    url: "getting-ember"
 
 Concepts:
   - title: "Core Concepts"
@@ -106,6 +110,8 @@ Templates:
     url: "templates/actions"
   - title: "Input Helpers"
     url: "templates/input-helpers"
+  - title: "Development Helpers"
+    url: "templates/development-helpers"
   - title: "Rendering with Helpers"
     url: "templates/rendering-with-helpers"
   #- title: "Keywords"
@@ -130,8 +136,13 @@ Routing:
     url: "routing/redirection"
   - title: "Specifying the URL Type"
     url: "routing/specifying-the-location-api"
+  - title: "Query Parameters"
+    url: "routing/query-params"
+    warning: "query-params-warning"
   - title: "Asynchronous Routing"
     url: "routing/asynchronous-routing"
+  - title: "Loading / Error Substates"
+    url: "routing/loading-and-error-substates"
   - title: "Preventing and Retrying Transitions"
     url: "routing/preventing-and-retrying-transitions"
   #- title: "Dynamic Segments"
@@ -172,26 +183,28 @@ Controllers:
 Models:
   - title: "Introduction"
     url: "models"
-  - title: "Using the Store"
-    url: "models/using-the-store"
   - title: "Defining Models"
     url: "models/defining-models"
-  - title: "Finding a Record"
-    url: "models/finding-a-record"
-  - title: "Finding All Records of a Type"
-    url: "models/finding-all-records-of-a-type"
+  - title: "Creating and Deleting Records"
+    url: "models/creating-and-deleting-records"
   - title: "Pushing Records into the Store"
     url: "models/pushing-records-into-the-store"
-  - title: "Querying the Server for Records"
-    url: "models/querying-the-server-for-records"
+  - title: "Persisting Records"
+    url: "models/persisting-records"
+  - title: "Finding Records"
+    url: "models/finding-records"
   #- title: "Filtering Records"
     #url: "models/filtering-records"
   - title: "Working with Records"
     url: "models/working-with-records"
+  - title: "Using Fixtures"
+    url: "models/the-fixture-adapter"
   - title: "Connecting to an HTTP Server"
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
     url: "models/handling-metadata"
+  - title: "Customizing Adapters"
+    url: "models/customizing-adapters"
   - title: "Frequently Asked Questions"
     url: "models/frequently-asked-questions"
 
@@ -220,14 +233,42 @@ Enumerables:
     url: "enumerables"
 
 Testing:
-  - title: "Integration Testing"
+  - title: "Introduction"
+    url: "testing"
+  - title: "Integration Tests"
     url: "testing/integration"
+  - title: "Test Helpers"
+    url: "testing/test-helpers"
+  - title: "Testing User Interaction"
+    url: "testing/testing-user-interaction"
+  - title: "Unit Testing Basics"
+    url: "testing/unit-testing-basics"
+  - title: "Unit Test Helpers"
+    url: "testing/unit-test-helpers"
+  - title: "Testing Components"
+    url: "testing/testing-components"
+  # - title: "Testing Handlebars Helpers"
+  #   url: "testing/testing-handlebars-helpers"
+  - title: "Testing Controllers"
+    url: "testing/testing-controllers"
+  - title: "Testing Routes"
+    url: "testing/testing-routes"
+  # - title: "Testing Views"
+  #   url: "testing/testing-views"
+  - title: "Testing Models"
+    url: "testing/testing-models"
+  # - title: "Testing XHR"
+  #   url: "testing/testing-xhr"
+  - title: "Automating Tests with Runners"
+    url: "testing/test-runners"
 
 Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
     url: "configuring-ember/disabling-prototype-extensions"
   - title: "Embedding Applications"
     url: "configuring-ember/embedding-applications"
+  - title: "Feature Flags"
+    url: "configuring-ember/feature-flags"
 
 Cookbook:
   - title: "Introduction"
@@ -270,6 +311,9 @@ Cookbook:
     skip_sidebar_item: true
   - title: "Using Modal Dialogs"
     url: "cookbook/user_interface_and_interaction/using_modal_dialogs"
+    skip_sidebar_item: true
+  - title: "Resetting scroll on route changes"
+    url: "cookbook/user_interface_and_interaction/resetting_scroll_on_route_changes"
     skip_sidebar_item: true
   # - title: "Converting Strings to Currency With Accounting.js"
   #   url: "cookbook/user_interface_and_interaction/converting_strings_to_currency_with_accounting_js"
@@ -316,6 +360,12 @@ Cookbook:
   - title: "Creating Reusable Social Share Buttons"
     url: "cookbook/helpers_and_components/creating_reusable_social_share_buttons"
     skip_sidebar_item: true
+  - title: "A Spinning Button for Asynchronous Actions"
+    url: "cookbook/helpers_and_components/spin_button_for_asynchronous_actions"
+    skip_sidebar_item: true
+  - title: "Adding Google Analytics Tracking"
+    url: "cookbook/helpers_and_components/adding_google_analytics_tracking"
+    skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
     url: "cookbook/working_with_objects"
@@ -327,6 +377,9 @@ Cookbook:
     skip_sidebar_item: true
   - title: "Setting Multiple Properties At Once"
     url: "cookbook/working_with_objects/setting_multiple_properties_at_once"
+    skip_sidebar_item: true
+  - title: "Continuous Redrawing of Views"
+    url: "cookbook/working_with_objects/continuous_redrawing_of_views"
     skip_sidebar_item: true
   # - title: "Continuous Redrawing of Views"
   #   url: "cookbook/working_with_objects/continuous_redrawing_of_views"
@@ -350,12 +403,15 @@ Understanding Ember.js:
     url: "understanding-ember/keeping-templates-up-to-date"
   - title: "Debugging"
     url: "understanding-ember/debugging"
+  - title: "The Run Loop"
+    url: "understanding-ember/run-loop"
 
 Contributing to Ember.js:
   - title: "Adding New Features"
     url: "contributing/adding-new-features"
+  - title: "Repositories"
+    url: "contributing/repositories"
 
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
     #url: "understanding-ember-data/record-lifecycle"
-

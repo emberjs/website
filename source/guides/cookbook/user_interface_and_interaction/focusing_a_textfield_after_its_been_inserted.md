@@ -14,6 +14,12 @@ App.FocusInputComponent = Ember.TextField.extend({
 });
 ```
 
+For the component's template:
+
+```handlebars
+Focus Input component!
+```
+
 ```handlebars
 {{focus-input}}
 ```
@@ -43,4 +49,4 @@ Prototype extension can be disabled by setting the `Ember.EXTEND_PROTOTYPES` pro
 
 #### Example
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/iZiWaZE/2/edit?js,output">JS Bin</a>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/OlUGODo/4/edit?html,js,output">JS Bin</a>

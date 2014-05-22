@@ -7,7 +7,7 @@
 <% end %>
 
 <% if @module['requires'] %>
-  <p>Requires: <%= @module['requires'].map{|r| link_to(r['name'], "#{r['name']}.html") }.join(", ") %></p>
+  <p>Requires: <%= @module['requires'].map{|r| link_to(r, "#{r}.html") }.join(", ") %></p>
 <% end %>
 
 <p><%= api_markdown @module['description'] %></p>

@@ -244,7 +244,6 @@ p {
           display: block;
           text-transform: none;
           color: #d84a32;
-          font-weight: normal;
           font-size: 13px;
           &:hover {
             background-color: #f2d1cb;
@@ -353,7 +352,7 @@ p {
     @include transition(0.2s);
 
     &:hover, &:focus {
-      @include transform(scale(1.05));
+      @include transform(scale(1.06));
       border: 0;
     }
   }
@@ -503,6 +502,7 @@ p {
     margin: 1.5em 0;
     text-align: center;
     border: 1px solid #cccccc;
+    overflow-x: auto;
   }
 
   aside {
@@ -580,6 +580,9 @@ p {
 
     img {
       vertical-align: middle;
+    }
+    .gplus a img {
+      border: 0;
     }
   }
 }
@@ -1063,14 +1066,34 @@ body.community #content {
 
   .section {
     width: auto;
-    img {
+    div {
+      @include hidpi('community/give', 'png');
       float: left;
       margin: 0 20px 15px 0;
+      width: 220px;
+      height: 142px;
     }
 
-    &.bugs img {
+    .sos {
+      @include hidpi('community/sos', 'png');
+    }
+
+    .bug {
+      @include hidpi('community/bug', 'png');
+    }
+    &.bugs div {
       float: right;
       margin: 0 0 15px 20px;
+    }
+    .meetup {
+      width: 221px;
+      height: 185px;
+      @include hidpi('community/meetup', 'png');
+    }
+    .campster {
+      @include hidpi('community/campster', 'png');
+      width: 201px;
+      height: 179px;
     }
     table {
       margin: 2em auto;
@@ -1218,7 +1241,7 @@ body.security #content {
     margin-top: 0px;
 
     .headshots {
-      width: 590px;
+      width: 760px;
       margin: 0 auto;
 
       a:hover {
@@ -1562,7 +1585,7 @@ a.edit-page {
 
   .description {
     p {
-      font-family: 'Helvetica Neue';
+      font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
       font-weight: 200;
       margin: 1.5em 0;
     }
@@ -1609,6 +1632,7 @@ a.edit-page {
   span.flag {
     background-color: gray;
     color: white;
+    padding: 2px 7px;
     @include border-radius(3px);
   }
 
@@ -1633,14 +1657,14 @@ body.not-found #content {
 }
 
 .under_construction_warning h3 {
-  height: 64px;
+  min-height: 64px;
   font-size: 14px !important;
   border: 1px solid #dfd7d4;
   @include border-radius(8px);
   color: #e1563f;
   padding: 0px 0px 1em 2em;
   margin-bottom: 1.5em;
-  background: no-repeat url("/images/ember-construction-57.png") top left; }
+  background: no-repeat url("/images/ember-construction-57.png") 0.5em 0.5em; }
 
 .under_construction_warning h3 .msg {
   text-transform: none;
@@ -1692,3 +1716,5 @@ body.not-found #content {
     color: lighten($orange-color, 20%);
   }
 }
+
+@import 'highlight';

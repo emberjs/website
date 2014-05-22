@@ -10,4 +10,4 @@ recipe suggestions. You can suggest a recipe by forking this repository and subm
 (see _Suggesting a Recipe_). Once we have written recipes, we'll be asking for help to proofread and test
 them.
 
-See ["Watch a project"](http://help.github.com/be-social/) on Github for information on watching projects.
+See ["Watch a project"](https://help.github.com/articles/be-social#watch-a-project) on Github for information on watching projects.

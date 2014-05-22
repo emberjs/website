@@ -23,7 +23,7 @@ Here's one way this situation could be handled:
 App.FormRoute = Ember.Route.extend({
   actions: {
     willTransition: function(transition) {
-      if (this.controllerFor('form').get('userHasEnteredData') &&
+      if (this.controller.get('userHasEnteredData') &&
           !confirm("Are you sure you want to abandon progress?")) {
         transition.abort();
       } else {
@@ -35,6 +35,14 @@ App.FormRoute = Ember.Route.extend({
   }
 });
 ```
+
+When the user clicks on a `{{link-to}}` helper, or when the app initiates a 
+transition by using `transitionTo`, the transition will be aborted and the URL
+will remain unchanged. However, if the browser back button is used to 
+navigate away from `FormRoute`, or if the user manually changes the URL, the 
+new URL will be navigated to before the `willTransition` action is 
+called. This will result in the browser displaying the new URL, even if 
+`willTransition` calls `transition.abort()`.
 
 ### Aborting Transitions Within `model`, `beforeModel`, `afterModel`
 

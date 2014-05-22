@@ -15,8 +15,8 @@ In `js/controllers/todos_controller.js` implement the matching `allAreDone` prop
 
 ```javascript
 // ... additional lines truncated for brevity ...
-allAreDone: function (key, value) {
-  return !!this.get('length') && this.everyBy('isCompleted', true);
+allAreDone: function(key, value) {
+  return !!this.get('length') && this.isEvery('isCompleted');
 }.property('@each.isCompleted')
 // ... additional lines truncated for brevity ...
 ```

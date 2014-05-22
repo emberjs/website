@@ -1,6 +1,6 @@
-# This script is designed to be used with Ruby on Rails' new project generator:
+# This script is used with the Ruby on Rails' new project generator:
 #
-#     rails new my_app -m http://emberjs.com/template.rb
+#     rails new my_app -m http://emberjs.com/edge_template.rb
 #
 # For more information about the template API, please see the following Rails
 # guide:
@@ -9,24 +9,10 @@
 
 # Install required gems
 gem "active_model_serializers"
-gem "ember-rails"
-gem "ember-source", "1.1.0"
+gem "ember-rails", "~>0.14"
+gem "ember-source", "~>1.1"
 
 run "bundle install"
-
-# This needs to be done outside the bootstrap generator
-# to avoid an initial "unknown variant" error.
-environment <<-RUBY.strip_heredoc, :env => :development
-  config.ember.variant = :development
-RUBY
-
-environment <<-RUBY.strip_heredoc, :env => :test
-  config.ember.variant = :development
-RUBY
-
-environment <<-RUBY.strip_heredoc, :env => :production
-  config.ember.variant = :production
-RUBY
 
 # Configure the app to serve Ember.js and app assets from an AssetsController
 generate :controller, "Assets", "index"

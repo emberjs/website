@@ -2,9 +2,9 @@
 
 In Ember.js, an Enumerable is any object that contains a number of child
 objects, and which allows you to work with those children using the
-`Ember.Enumerable` API. The most common Enumerable in the majority of
-apps is the native JavaScript array, which Ember.js extends to conform
-to the Enumerable interface.
+[Ember.Enumerable](/api/classes/Ember.Enumerable.html) API. The most common
+Enumerable in the majority of apps is the native JavaScript array, which
+Ember.js extends to conform to the Enumerable interface.
 
 By providing a standardized interface for dealing with enumerables,
 Ember.js allows you to completely change the way your underlying data is
@@ -224,10 +224,10 @@ people.some(function(person, index, self) {
 // returns true
 ```
 
-Just like the filtering methods, the `every` and `some` methods have analogous `everyBy` and `anyBy` methods.
+Just like the filtering methods, the `every` and `some` methods have analogous `isEvery` and `isAny` methods.
 
 ```javascript
-people.everyBy('isHappy', true) // false
-people.anyBy('isHappy', true)  // true
+people.isEvery('isHappy', true) // false
+people.isAny('isHappy', true)  // true
 ```
 

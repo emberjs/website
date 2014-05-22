@@ -3,22 +3,21 @@ var App = Ember.Application.create({
 });
 
 App.Router.map(function() {
-  this.resource('release', function(){
-    this.route('latest');
-    this.route('daily');
-  });
-
-  this.resource('beta', function(){
-    this.route('latest');
-    this.route('daily');
-  });
-
-  this.resource('canary', function(){
-    this.route('latest');
-    this.route('daily');
-  });
-
+  this.route('release');
+  this.route('beta');
+  this.route('canary');
   this.route('tagged');
+});
+
+App.Router.reopen({
+  notifyGoogleAnalytics: function() {
+    var url = this.get('url');
+
+    // Add a slash if neccesary
+    if (!/^\//.test(url)){ url = '/' + url; }
+
+    _gaq.push(['_trackPageview', '/builds' + url]);
+  }.on('didTransition')
 });
 
 App.CopyClipboardComponent = Ember.Component.extend({
@@ -185,26 +184,34 @@ App.Project.reopenClass({
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
-      lastRelease: "1.1.0",
-      futureVersion: "1.1.1",
+      initialVersion: "1.5.0",
+      initialReleaseDate: "2014-03-29",
+      lastRelease: "1.5.1",
+      futureVersion: "1.5.2",
       channel: "release",
-      date: "2013-10-21"
+      date: "2014-04-22",
+      changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
-      lastRelease: "1.2.0-beta.1",
-      futureVersion: "1.2.0-beta.2",
+      lastRelease: "1.6.0-beta.4",
+      futureVersion: "1.6.0-beta.5",
+      finalVersion: '1.6.0',
       channel: "beta",
-      date: "2013-10-21"
+      cycleEstimatedFinishDate: '2014-05-20',
+      date: "2014-05-15",
+      nextDate: "2014-05-22",
+      changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
       projectRepo: 'emberjs/data',
-      lastRelease: "1.0.0-beta.3",
-      futureVersion: "1.0.0-beta.4",
+      lastRelease: "1.0.0-beta.7",
+      futureVersion: "1.0.0-beta.8",
       channel: "beta",
-      date: "2013-09-28"
+      date: "2014-02-20",
+      changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember",
       projectFilter: "ember",
@@ -236,23 +243,13 @@ App.Project.reopenClass({
     if (!name)
       return allProjects;
     else
-      return allProjects.filterBy('name', name);
+      return allProjects.filterBy('projectName', name);
   }
-});
-
-App.BetaRoute = Ember.Route.extend({
-  redirect: function() { this.transitionTo('beta.latest'); }
 });
 
 App.BuildCategoryMixin = Ember.Mixin.create({
   renderTemplate: function() {
     this.render('build-list');
-  }
-});
-
-App.BetaLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
-  model: function() {
-    return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
 });
 
@@ -287,18 +284,6 @@ App.ApplicationController = Ember.ObjectController.extend({
   }
 });
 
-App.CategoryLinkMixin = Ember.Mixin.create({
-  channel: null,
-
-  latestLink: function() {
-    return this.get('channel') + ".latest";
-  }.property('channel'),
-
-  dailyLink: function() {
-    return this.get('channel') + ".daily";
-  }.property('channel')
-});
-
 App.ProjectsMixin = Ember.Mixin.create({
   projects: function(){
     var projects = App.Project.find(this.get('channel')),
@@ -306,6 +291,25 @@ App.ProjectsMixin = Ember.Mixin.create({
         self = this;
 
     projects.forEach(function(project){
+      if (project.channel === 'beta'){
+        project.isEmberBeta = project.projectName === 'Ember';
+
+        [1,2,3,4,5].forEach(function(increment){
+          var versionParts = project.lastRelease.split('.');
+          var currentBetaNumber = parseInt(versionParts[versionParts.length - 1], 10);
+          project['beta' + increment + 'Completed'] = increment <= currentBetaNumber;
+          project['isBeta' + increment] = increment === currentBetaNumber;
+        });
+
+        var release = App.Project.find('release', project.projectName)[0];
+
+        // no releases exist for ember-data (yet)
+        if (release) {
+          project.lastStableVersion = release.initialVersion;
+          project.lastStableDate = release.initialReleaseDate;
+        }
+      }
+
       project.files = bucket.filterFiles(project.projectFilter);
       project.description = self.description(project);
       project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
@@ -315,7 +319,7 @@ App.ProjectsMixin = Ember.Mixin.create({
       if (project.channel === 'canary')
         project.lastRelease = 'latest';
       else if (project.changelog !== 'false')
-        project.lastReleaseChangelogUrl   = 'https://github.com/' + project.projectRepo + '/blob/v' + project.lastRelease + '/CHANGELOG';
+        project.lastReleaseChangelogUrl   = 'https://github.com/' + project.projectRepo + '/blob/v' + project.lastRelease + '/' + project.changelogPath;
     });
 
     return projects;
@@ -349,72 +353,40 @@ App.ProjectsMixin = Ember.Mixin.create({
 
 });
 
-App.BetaLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
-
-App.BetaDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
-  model: function() {
-    return App.S3Bucket.create({
-      title: 'Beta Builds',
-      delimiter: '',
-      prefix: 'beta/daily',
-      marker: 'beta/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
-    });
-  }
-});
-
-App.BetaDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'beta' });
-
-App.CanaryRoute = Ember.Route.extend({
-  redirect: function() { this.transitionTo('canary.latest'); }
-});
-
-App.CanaryLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.CanaryRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Canary Builds', prefix: 'canary/' });
   }
 });
 
-App.CanaryLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'canary' });
+App.CanaryController = Ember.ObjectController.extend(App.ProjectsMixin, { 
+  templateName: 'buildList', 
+  channel: 'canary'
+});
 
-App.CanaryDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.BetaRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
-    return App.S3Bucket.create({
-      title: 'Canary Builds',
-      delimiter: '',
-      prefix: 'canary/daily',
-      marker: 'canary/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
-    });
+    return App.S3Bucket.create({title: 'Beta Builds', prefix: 'beta/'});
   }
 });
 
-App.CanaryDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'canary' });
-
-App.ReleaseRoute = Ember.Route.extend({
-  redirect: function() { this.transitionTo('release.latest'); }
+App.BetaController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  templateName: 'buildList',
+  channel: 'beta'
 });
 
-App.ReleaseLatestController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'release' });
-
-App.ReleaseLatestRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.ReleaseRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     return App.S3Bucket.create({title: 'Release Builds', prefix: 'release/'});
   }
 });
 
-App.ReleaseDailyController = Ember.ObjectController.extend(App.ProjectsMixin, App.CategoryLinkMixin, { channel: 'release' });
-
-App.ReleaseDailyRoute = Ember.Route.extend(App.BuildCategoryMixin, {
-  model: function() {
-    return App.S3Bucket.create({
-      title: 'Release Builds',
-      delimiter: '',
-      prefix: 'release/daily',
-      marker: 'release/daily/' + moment().subtract('days', 14).format("YYYYMMDD"),
-    });
-  }
+App.ReleaseController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  templateName: 'buildList',
+  channel: 'release'
 });
 
-App.TaggedRoute = Ember.Route.extend({
+App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
@@ -425,7 +397,9 @@ App.TaggedRoute = Ember.Route.extend({
   }
 });
 
-App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {channel: 'tagged'});
+App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  channel: 'tagged'
+});
 /*
  * Handlebars Helpers
  */
@@ -433,8 +407,17 @@ Ember.Handlebars.helper('format-bytes', function(bytes){
   return (bytes / 1024).toFixed(2) + ' KB';
 });
 
-Ember.Handlebars.helper('format-date-time', function(date) {
-  return moment(date).fromNow();
+Ember.Handlebars.helper('format-date-time', function(date, format, options) {
+  if (!options) {
+    options = format;
+    format = null;
+  }
+
+  if (format){
+    return moment(date).format(format);
+  } else {
+    return moment(date).fromNow();
+  }
 });
 
 Ember.Handlebars.helper('isHiDPIScreen', function() {

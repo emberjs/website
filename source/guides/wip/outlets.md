@@ -55,7 +55,7 @@ The template will look like this:
 
 ```handlebars
 {{#each post in controller}}
-<h1><a {{action showPost post href=true}}>{{post.title}}</a></h1>
+<h1><a {{action 'showPost' post href=true}}>{{post.title}}</a></h1>
 <div>{{post.intro}}</div>
 {{/each}}
 ```
@@ -219,7 +219,7 @@ current template.
 
 ```handlebars
 {{#each post in controller}}
-  <h1><a {{action showPost post href=true}}>{{post.title}}</a></h1>
+  <h1><a {{action 'showPost' post href=true}}>{{post.title}}</a></h1>
 {{/each}}
 ```
 
@@ -332,8 +332,8 @@ Here's the template for an individual post.
 </div>
 
 <p>
-  <a {{action showComments href=true}}>Comments</a> |
-  <a {{action showTrackbacks href=true}}>Trackbacks</a>
+  <a {{action 'showComments' href=true}}>Comments</a> |
+  <a {{action 'showTrackbacks' href=true}}>Trackbacks</a>
 </p>
 
 {{outlet}}

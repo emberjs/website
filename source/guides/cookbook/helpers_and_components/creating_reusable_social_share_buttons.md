@@ -40,13 +40,8 @@ The component defines certain attributes of its HTML representation as bound to 
 its `attributeBindings` property. When the values of these properties change, the component's HTML element's
 attributes will be updated to match the new values.
 
-
 An appropriate tag and css class are applied through the `tagName` and `classNames` properties.
-
-
-Note: Your component must have a matching template named `share-twitter`. Because there is no HTML inside our
-`<a>` tag, this template will be empty.
 
 #### Example
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/OriZITU/3/edit?js,output">JS Bin</a>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/OpocEPu/1/edit?js,output">JS Bin</a>

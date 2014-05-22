@@ -5,9 +5,9 @@ for your routes, controllers and templates.
 You can usually guess the names, but this guide outlines, in one place, 
 all of the naming conventions. In the following examples 'App' is a name 
 that we chose to namespace or represent our Ember application when it was 
-created, but you can theoretically choose any name you want for your 
-application. We will show you later how to create an Ember application, 
-but for now we will focus on conventions.
+created, but you can choose any name you want for your application.
+We will show you later how to create an Ember application, but for now we
+will focus on conventions.
 
 ## The Application
 
@@ -25,7 +25,13 @@ the controller.
 
 If your app provides an `App.ApplicationRoute`, Ember.js will invoke
 [the][1] [router's][2] [hooks][3] first, before rendering the
-`application` template.
+`application` template. Hooks are implemented as methods and provide 
+you access points within an Ember object's lifecycle to intercept and 
+execute code to modify the default behavior at these points to meet 
+your needs. Ember provides several hooks for you to utilize for various
+purposes (e.g. `model`, `setupController`, etc). In the example below 
+`App.ApplicationRoute`, which is a `Ember.Route` object, implements 
+the `setupController` hook.
 
 [1]: /guides/routing/specifying-a-routes-model
 [2]: /guides/routing/setting-up-a-controller
@@ -62,7 +68,7 @@ your entire application shares a single instance of each controller.
 
 ## Simple Routes
 
-Each of your routes will have a controller and a template with the 
+Each of your routes will have a controller, and a template with the 
 same name as the route.
 
 Let's start with a simple router:

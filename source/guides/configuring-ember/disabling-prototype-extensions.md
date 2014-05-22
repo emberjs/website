@@ -100,9 +100,9 @@ fullName: function() {
 
 
 // Instead, do this:
-fullName: Ember.computed(function() {
+fullName: Ember.computed('firstName', 'lastName', function() {
   return this.get('firstName') + ' ' + this.get('lastName');
-}).property('firstName', 'lastName')
+})
 ```
 
 Observers are annotated using `Ember.observer()`:
@@ -115,8 +115,8 @@ fullNameDidChange: function() {
 
 
 // Instead, do this:
-fullNameDidChange: Ember.observer(function() {
+fullNameDidChange: Ember.observer('fullName', function() {
   console.log("Full name changed");
-}, 'fullName')
+})
 ```
 

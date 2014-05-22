@@ -75,6 +75,25 @@ App.PostRoute = Ember.Route.extend({
 As you can see in this example, the action handlers are called such
 that when executed, `this` is the route, not the `actions` hash.
 
+To continue bubbling the action, you must return true from the handler:
+
+```js
+App.PostRoute = Ember.Route.extend({
+  actions: {
+    expand: function() {
+      this.controller.set('isExpanded', true);
+    },
+
+    contract: function() {
+      // ...
+      if (actionShouldAlsoBeTriggeredOnParentRoute) {
+        return true;
+      }
+    }
+  }
+});
+```
+
 If neither the template's controller nor the currently active route
 implements a handler, the action will continue to bubble to any parent
 routes. Ultimately, if an `ApplicationRoute` is defined, it will have an
@@ -104,7 +123,7 @@ For example, if the `post` argument was passed:
 <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
 ```
 
-The route's `select` action handler would be called with a single argument
+The controller's `select` action handler would be called with a single argument
 containing the post model:
 
 ```js
@@ -144,7 +163,7 @@ to specify which keys should not be ignored.
 
 ```handlebars
 <script type="text/x-handlebars" data-template-name='a-template'>
-  <div {{action anActionName allowedKeys="alt"}}>
+  <div {{action 'anActionName' allowedKeys="alt"}}>
     click me
   </div>
 </script>
@@ -166,7 +185,7 @@ clicked.
 ```handlebars
 {{#link-to 'post'}}
   Post
-  <button {{action close bubbles=false}}>✗</button>
+  <button {{action 'close' bubbles=false}}>✗</button>
 {{/link-to}}
 ```
 

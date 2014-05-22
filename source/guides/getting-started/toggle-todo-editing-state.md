@@ -7,7 +7,7 @@ We'll update the application to allow users to toggle into this editing state fo
 {{#each itemController="todo"}}
   <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
     {{#if isEditing}}
-      <input class='edit'>
+      <input class="edit">
     {{else}}
       {{input type="checkbox" checked=isCompleted class="toggle"}}
       <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button class="destroy"></button>
@@ -25,7 +25,7 @@ Inside `js/controllers/todo_controller.js` we'll implement the matching logic fo
 ```javascript
 // ... additional lines truncated for brevity ...
 actions: {
-   editTodo: function () {
+   editTodo: function() {
      this.set('isEditing', true);
    }
  },

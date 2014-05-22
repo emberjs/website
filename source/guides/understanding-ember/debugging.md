@@ -140,14 +140,17 @@ Ember.LOG_STACKTRACE_ON_DEPRECATION = true
 ```
 
 
-#### Implement a `Ember.onerror` hook to log all errors in production
+#### Implement an Ember.onerror hook to log all errors in production
 
 ```javascript
 Ember.onerror = function(error) {
-  Em.$.ajax('/error-notification', 'POST', {
-    stack: error.stack,
-    otherInformation: 'exception message'
-  });
+    Em.$.ajax('/error-notification', {
+      type: 'POST',
+      data: {
+        stack: error.stack,
+        otherInformation: 'exception message'
+      }
+    });
 }
 ```
 
@@ -181,4 +184,16 @@ console.
 Ember.RSVP.configure('onerror', function(error) {
   Ember.Logger.assert(false, error);
 });
+```
+
+#### Errors within `Ember.run.later` ([Backburner.js](https://github.com/ebryn/backburner.js))
+
+Backburner has support for stitching the stacktraces together so that you can
+track down where an erroring `Ember.run.later` is being initiated from. Unfortunately,
+this is quite slow and is not appropriate for production or even normal development.
+
+To enable this mode you can set:
+
+```javascript
+Ember.run.backburner.DEBUG = true;
 ```

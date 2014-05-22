@@ -30,6 +30,16 @@ Notice that the `fullName` function calls `property`. This declares the function
 
 Whenever you access the `fullName` property, this function gets called, and it returns the value of the function, which simply calls `firstName` + `lastName`.
 
+#### Alternate invocation
+
+At this point, you might be wondering how you are able to call the `.property` function on a function.  This is possible because Ember extends the `function` prototype.  Read more on that [here](http://emberjs.com/guides/configuring-ember/disabling-prototype-extensions/). If you'd like to replicate the declaration from above without using these extensions you could do so with the following:
+
+```javascript
+  fullName: Ember.computed('firstName', 'lastName', function() {
+    return this.get('firstName') + ' ' + this.get('lastName');
+  })
+```
+
 ### Chaining computed properties
 
 You can use computed properties as values to create new computed properties. Let's add a `description` computed property to the previous example, and use the existing `fullName` property and add in some other properties:
@@ -62,7 +72,7 @@ captainAmerica.get('description'); // "Steve Rogers; Age: 80; Country: USA"
 
 ### Dynamic updating
 
-Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update . 
+Computed properties, by default, observe any changes made to the properties they depend on and are dynamically updated when they're called. Let's use computed properties to dynamically update. 
 
 ```javascript
 captainAmerica.set('firstName', 'William');
@@ -83,7 +93,7 @@ App.Person = Ember.Object.extend({
   firstName: null,
   lastName: null,
 
-  fullName: function(key, value) {
+  fullName: function(key, value, previousValue) {
     // setter
     if (arguments.length > 1) {
       var nameParts = value.split(/\s+/);
@@ -103,4 +113,4 @@ captainAmerica.get('firstName'); // William
 captainAmerica.get('lastName'); // Burnside
 ```
 
-Ember will call the computed property for both setters and getters, so if you want to use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter.
+Ember will call the computed property for both setters and getters, so if you want to use a computed property as a setter, you'll need to check the number of arguments to determine whether it is being called as a getter or a setter. Note that if a value is returned from the setter, it will be cached as the property’s value.

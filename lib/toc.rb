@@ -103,10 +103,10 @@ module TOC
 
     def chapter_github_source_url
       base_guide_url = "https://github.com/emberjs/website/tree/master/source/guides"
-      if current_guide
-        return "#{base_guide_url}/#{current_guide['url']}.md"
+      if section_slug == guide_slug
+        return "#{base_guide_url}/#{current_guide['url']}/index.md"
       else
-        return "#{base_guide_url}/index.md"
+        return "#{base_guide_url}/#{current_guide['url'].gsub(/.html/, '')}.md"
       end
     end
 
@@ -121,6 +121,8 @@ module TOC
     end
 
     def current_guide
+      return unless current_section
+
       if guide_slug == '' && section_slug == 'index.html'
         current_section[1][0]
       else
@@ -166,11 +168,19 @@ module TOC
       }
       elsif whats_next = next_guide
         next_chapter = whats_next[1][0]
-        %Q{
-          <a class="next-guide" href="/guides/#{next_chapter.url}">
-             We're done with #{current_section[0]}. Next up: #{whats_next[0]} - #{next_chapter.title} \u2192
-          </a>
-        }
+        if section_slug == 'index.html'
+          %Q{
+            <a class="next-guide" href="/guides/#{next_chapter.url}">
+              #{next_chapter.title} \u2192
+            </a>
+          }
+        else
+          %Q{
+            <a class="next-guide" href="/guides/#{next_chapter.url}">
+               We're done with #{current_section[0]}. Next up: #{whats_next[0]} - #{next_chapter.title} \u2192
+            </a>
+          }
+        end
       else
         ''
       end
@@ -262,6 +272,15 @@ module TOC
             <h3>
               <div class="msg">
                 WARNING: this guide refers to a feature only available in canary (nightly/unstable) builds of Ember Data.
+              </div>
+            </h3>
+          </div>
+        },
+        "query-params-warning"=> %Q{
+          <div class="under_construction_warning">
+            <h3>
+              <div class="msg">
+                <strong>WARNING:</strong> query params are an experimental feature. You must be using a recent canary build of Ember, and enable the <code>query-params-new</code> feature flag. For more info on enabling feature flags visit <a href="http://emberjs.com/guides/configuring-ember/feature-flags/">the Feature Flags guide</a>
               </div>
             </h3>
           </div>

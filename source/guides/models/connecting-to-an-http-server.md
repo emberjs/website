@@ -40,11 +40,11 @@ REST adapter:
     <tr><th>Action</th><th>HTTP Verb</th><th>URL</th></tr>
   </thead>
   <tbody>
-    <tr><th>Find</th><td>GET</td><td>/people/123</td></tr>
-    <tr><th>Find All</th><td>GET</td><td>/people</td></tr>
-    <tr><th>Update</th><td>PUT</td><td>/people/123</td></tr>
-    <tr><th>Create</th><td>POST</td><td>/people</td></tr>
-    <tr><th>Delete</th><td>DELETE</td><td>/people/123</td></tr>
+    <tr><th>Find</th><td>GET</td><td>/photos/123</td></tr>
+    <tr><th>Find All</th><td>GET</td><td>/photos</td></tr>
+    <tr><th>Update</th><td>PUT</td><td>/photos/123</td></tr>
+    <tr><th>Create</th><td>POST</td><td>/photos</td></tr>
+    <tr><th>Delete</th><td>DELETE</td><td>/photos/123</td></tr>
   </tbody>
 </table>
 
@@ -74,7 +74,7 @@ return the JSON in the following format:
 ```js
 {
   "post": {
-    "id": 1
+    "id": 1,
     "title": "Rails is omakase",
     "comments": ["1", "2"],
     "user" : "dhh"
@@ -96,6 +96,24 @@ To customize the REST adapter, define a subclass of `DS.RESTAdapter` and
 name it `App.ApplicationAdapter`. You can then override its properties
 and methods to customize how records are retrieved and saved.
 
+#### Customizing a Specific Model
+
+It's entirely possible that you need to define options for just one model instead of an application-wide customization. In that case, you can create an adapter named after the model you are specifying:
+
+```js
+App.PostAdapter = DS.RESTAdapter.extend({
+  namespace: 'api/v2',
+  host: 'https://api.example2.com'
+});
+
+App.PhotoAdapter = DS.RESTAdapter.extend({
+  namespace: 'api/v1',
+  host: 'https://api.example.com'
+});
+```
+
+This allows you to easily connect to multiple API versions simultaneously or interact with different domains on a per model basis.
+
 ### Customizing URLs
 
 #### URL Prefix
@@ -106,11 +124,11 @@ you can set a prefix that will be added to all requests.
 For example, if you are using a versioned JSON API, a request for a
 particular person might go to `/api/v1/people/1`.
 
-In that case, set `namespace` property to `/api/v1`.
+In that case, set `namespace` property to `api/v1`.
 
 ```js
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-  namespace: '/api/v1'
+  namespace: 'api/v1'
 });
 ```
 
@@ -134,3 +152,27 @@ App.ApplicationAdapter = DS.RESTAdapter.extend({
 ```
 
 Requests for a `person` with ID `1` would now target `https://api.example.com/people/1`.
+
+#### Custom HTTP Headers
+
+Some APIs require HTTP headers, e.g. to provide an API key. Arbitrary
+headers can be set as key/value pairs on the `RESTAdapter`'s `headers`
+property and Ember Data will send them along with each ajax request.
+
+For Example
+
+```js
+App.ApplicationAdapter = DS.RESTAdapter.extend({
+  headers: {
+    "API_KEY": "secret key",
+    "ANOTHER_HEADER": "Some header value"
+  }
+});
+```
+
+Requests for any resource will include the following HTTP headers.
+
+```http
+ANOTHER_HEADER: Some header value
+API_KEY: secret key
+```

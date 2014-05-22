@@ -163,7 +163,7 @@ App.FunkyRoute = Ember.Route.extend({
 });
 ```
 
-### `beforeModel` and `afterModel`
+### beforeModel and afterModel
 
 The `model` hook covers many use cases for pause-on-promise transitions,
 but sometimes you'll need the help of the related hooks `beforeModel`

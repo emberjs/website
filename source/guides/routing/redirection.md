@@ -1,3 +1,14 @@
+### Transitioning and Redirecting
+
+Calling `transitionTo` from a route or `transitionToRoute` from a controller
+will stop any transition currently in progress and start a new one, functioning
+as a redirect. `transitionTo` takes parameters and behaves exactly like the [link-to](/guides/templates/links) helper:
+
+* If you transition into a route without dynamic segments that route's `model` hook
+will always run.
+
+* If the new route has dynamic segments, you need to pass either a _model_ or an _identifier_ for each segment.
+Passing a model will skip that segment's `model` hook.  Passing an identifier will run the `model` hook and you'll be able to access the identifier in the params. See [Links](/guides/templates/links) for more detail.
 
 ### Before the model is known
 
@@ -32,15 +43,15 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   afterModel: function(posts, transition) {
-    if (posts.length === 1) {
-      this.transitionTo('post', posts[0]);
+    if (posts.get('length') === 1) {
+      this.transitionTo('post', posts.get('firstObject'));
     }
   }
 });
 ```
 
-When transitioning to the `PostsRoute` it turns out that there is only one post,
-the current transition is aborted in favor of redirecting to the `PostRoute`
+When transitioning to the `PostsRoute` if it turns out that there is only one post,
+the current transition will be aborted in favor of redirecting to the `PostRoute`
 with the single post object being its model.
 
 ### Based on other application state
@@ -61,7 +72,7 @@ App.Router.map(function() {
 App.TopChartsChooseRoute = Ember.Route.extend({
   beforeModel: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
-    this.transitionTo('topCharts.' + lastFilter || 'songs');
+    this.transitionTo('topCharts.' + (lastFilter || 'songs'));
   }
 });
 

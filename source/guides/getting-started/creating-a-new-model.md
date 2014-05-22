@@ -21,7 +21,7 @@ Inside `js/controllers/todos_controller.js` implement the controller Ember.js ex
 ```javascript
 Todos.TodosController = Ember.ArrayController.extend({
   actions: {
-    createTodo: function () {
+    createTodo: function() {
       // Get the todo title set by the "New Todo" text field
       var title = this.get('newTitle');
       if (!title.trim()) { return; }

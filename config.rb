@@ -15,6 +15,7 @@ set :markdown, :layout_engine => :erb,
 activate :directory_indexes
 activate :toc
 activate :highlighter
+activate :alias
 
 activate :api_docs,
   ember: {
