@@ -277,6 +277,8 @@
   image: garagesocial.png
 - url: http://sush.io
   image: sushio.png
+- url: http://www.hstry.co
+  image: hstry.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
