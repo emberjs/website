@@ -17,6 +17,9 @@ body.index, body.about {
   background: no-repeat top center #faf4f1;
   background-image: url('/images/background-shades.png');
   background-image: url('/images/background-shades.svg'), none; // See: http://css-tricks.com/svg-fallbacks/
+  @media screen and (min-width: 2000px) { // Stretch background width when wider than source image
+    background-size: 100% auto;
+  }
 
   .feature p {
     margin-top: 1.5em;
