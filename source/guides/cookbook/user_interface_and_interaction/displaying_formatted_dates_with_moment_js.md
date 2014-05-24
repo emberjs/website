@@ -9,7 +9,7 @@ There are two ways of formatting the value:
 1. Create a Handlebars helper `{{format-date}}` and use it in your template
 2. Create a computed property `formattedDate` that will return a transformed date
 
-We will use [MomentJs](http://momentjs.com) for formatting dates.
+We will use [Moment.js](http://momentjs.com) for formatting dates.
 
 Let's look at a simple example. You're working on a website for your
 client, and one of the requirements is to have the current date on the index page in human readable format. This is a perfect place to use a
