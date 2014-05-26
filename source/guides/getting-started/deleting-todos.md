@@ -19,7 +19,7 @@ actions: {
     todo.deleteRecord();
     todo.save();
   }
-}
+},
 // ... additional lines truncated for brevity ...
 ```
 
