@@ -24,7 +24,7 @@ var ironMan = App.Person.create({
   lastName:  "Stark"
 });
 
-ironMan.get('fullName') // "Tony Stark"
+ironMan.get('fullName'); // "Tony Stark"
 ```
 Notice that the `fullName` function calls `property`. This declares the function to be a computed property, and the arguments tell Ember that it depends on the `firstName` and `lastName` attributes.
 
