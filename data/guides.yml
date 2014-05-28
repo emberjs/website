@@ -366,6 +366,9 @@ Cookbook:
   - title: "Adding Google Analytics Tracking"
     url: "cookbook/helpers_and_components/adding_google_analytics_tracking"
     skip_sidebar_item: true
+  - title: "Creating Drag and Drop components"
+    url: "cookbook/helpers_and_components/drag_and_drop_components"
+    skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
     url: "cookbook/working_with_objects"
