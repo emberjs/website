@@ -2,10 +2,10 @@
 project:
   name: The ember-data API
   description: 'The ember-data API: a data persistence library for Ember.js'
-  version: 1.0.0-beta.9+canary.da8194a2
+  version: 1.0.0-beta.8.2a68c63a
   logo: http://f.cl.ly/items/1A1L432s022u1O1q1V3p/ember%20logo.png
   url: https://github.com/emberjs/data
-  sha: da8194a
+  sha: v1.0.0-beta.8
 files:
   packages/ember-data/lib/adapters/fixture_adapter.js:
     name: packages/ember-data/lib/adapters/fixture_adapter.js
