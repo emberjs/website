@@ -125,10 +125,7 @@ A **record** is an instance of a model that contains data loaded from a
 server. Your application can also create new records and save them back
 to the server.
 
-Records are uniquely identified by two things:
-
-1. A model type.
-2. A globally unique ID.
+A record is uniquely identified by its model type and id.
 
 For example, if you were writing a contact management app, you might
 have a model called `Person`. An individual record in your app might
@@ -183,7 +180,7 @@ they couldn't be binary data stored in a `Blob` or
 The store will automatically cache records for you. If a record had already
 been loaded, asking for it a second time will always return the same
 object instance. This minimizes the number of round-trips to the
-server, and allows your application to render UI to the user as fast as
+server, and allows your application to render its UI to the user as fast as
 possible.
 
 For example, the first time your application asks the store for a

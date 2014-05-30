@@ -22,19 +22,19 @@ remaining: function() {
 
 inflection: function() {
   var remaining = this.get('remaining');
-  return remaining === 1 ? 'item' : 'items';
+  return remaining === 1 ? 'todo' : 'todos';
 }.property('remaining')
 // ... additional lines truncated for brevity ...
 ```
 
 The `remaining` property will return the number of todos whose `isCompleted` property is false. If the `isCompleted` value of any todo changes, this property will be recomputed. If the value has changed, the section of the template displaying the count will be automatically updated to reflect the new value.
 
-The inflection property will return either a plural or singular version of the word "item" depending on how many todos are currently in the list. The section of the template displaying the count will be automatically updated to reflect the new value.
+The `inflection` property will return either a plural or singular version of the word "todo" depending on how many todos are currently in the list. The section of the template displaying the count will be automatically updated to reflect the new value.
 
  Reload your web browser to ensure that no errors occur. You should now see an accurate number for remaining todos.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/onOCIrA/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/onOCIrA/74/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 

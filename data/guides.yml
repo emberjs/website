@@ -197,10 +197,14 @@ Models:
     #url: "models/filtering-records"
   - title: "Working with Records"
     url: "models/working-with-records"
+  - title: "Using Fixtures"
+    url: "models/the-fixture-adapter"
   - title: "Connecting to an HTTP Server"
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
     url: "models/handling-metadata"
+  - title: "Customizing Adapters"
+    url: "models/customizing-adapters"
   - title: "Frequently Asked Questions"
     url: "models/frequently-asked-questions"
 
@@ -229,8 +233,34 @@ Enumerables:
     url: "enumerables"
 
 Testing:
-  - title: "Integration Testing"
+  - title: "Introduction"
+    url: "testing"
+  - title: "Integration Tests"
     url: "testing/integration"
+  - title: "Test Helpers"
+    url: "testing/test-helpers"
+  - title: "Testing User Interaction"
+    url: "testing/testing-user-interaction"
+  - title: "Unit Testing Basics"
+    url: "testing/unit-testing-basics"
+  - title: "Unit Test Helpers"
+    url: "testing/unit-test-helpers"
+  - title: "Testing Components"
+    url: "testing/testing-components"
+  # - title: "Testing Handlebars Helpers"
+  #   url: "testing/testing-handlebars-helpers"
+  - title: "Testing Controllers"
+    url: "testing/testing-controllers"
+  - title: "Testing Routes"
+    url: "testing/testing-routes"
+  # - title: "Testing Views"
+  #   url: "testing/testing-views"
+  - title: "Testing Models"
+    url: "testing/testing-models"
+  # - title: "Testing XHR"
+  #   url: "testing/testing-xhr"
+  - title: "Automating Tests with Runners"
+    url: "testing/test-runners"
 
 Configuring Ember.js:
   - title: "Disabling Prototype Extensions"
@@ -330,6 +360,12 @@ Cookbook:
   - title: "Creating Reusable Social Share Buttons"
     url: "cookbook/helpers_and_components/creating_reusable_social_share_buttons"
     skip_sidebar_item: true
+  - title: "A Spinning Button for Asynchronous Actions"
+    url: "cookbook/helpers_and_components/spin_button_for_asynchronous_actions"
+    skip_sidebar_item: true
+  - title: "Adding Google Analytics Tracking"
+    url: "cookbook/helpers_and_components/adding_google_analytics_tracking"
+    skip_sidebar_item: true
   # objects
   - title: "Working with Objects"
     url: "cookbook/working_with_objects"
@@ -379,4 +415,3 @@ Contributing to Ember.js:
 #Understanding Ember Data:
   #- title: "Record Lifecycle"
     #url: "understanding-ember-data/record-lifecycle"
-

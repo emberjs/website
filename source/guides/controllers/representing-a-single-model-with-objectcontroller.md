@@ -1,13 +1,10 @@
-Use `Ember.ObjectController` to represent a single model. To tell an
+Use `Ember.ObjectController` to represent a single model. To tell an 
 `ObjectController` which model to represent, set its `model`
 property in your route's `setupController` method.
 
-When a template asks an `ObjectController` for a property, it will first
-check to see if it has its own property with that name defined. If so, it will
-return its current value.
-
-However, if the controller does not have a property with that name defined, it
-will return the value of the property on the model.
+When a template asks an `ObjectController` for the value of a property, the controller 
+looks for a property with the same name on itself first before checking 
+the model.
 
 For example, imagine you are writing a music player. You have defined
 your `SongController` to represent the currently playing song.

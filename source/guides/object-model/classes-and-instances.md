@@ -73,7 +73,7 @@ var tom = App.Person.create({
   name: "Tom Dale"
 });
 
-tom.helloWorld(); // alerts "Hi my name is Tom Dale"
+tom.helloWorld(); // alerts "Hi, my name is Tom Dale"
 ```
 
 For performance reasons, note that you cannot redefine an instance's

@@ -19,6 +19,9 @@ App.Router.map(function() {
 });
 
 App.PostRoute = Ember.Route.extend({
+  // The code below is the default behavior, so if this is all you
+  // need, you do not need to provide a setupController implementation
+  // at all.
   setupController: function(controller, model) {
     controller.set('model', model);
   }
@@ -29,6 +32,15 @@ The `setupController` hook receives the route handler's associated
 controller as its first argument. In this case, the `PostRoute`'s
 `setupController` receives the application's instance of
 `App.PostController`.
+
+To specify a controller other than the default, set the route's
+`controllerName` property:
+
+```js
+App.SpecialPostRoute = Ember.Route.extend({
+  controllerName: 'post'
+});
+```
 
 As a second argument, it receives the route handler's model. For more
 information, see [Specifying a Route's Model][1].

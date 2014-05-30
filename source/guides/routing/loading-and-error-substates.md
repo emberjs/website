@@ -80,9 +80,9 @@ the following loading substate behavior we've been alluding to.
 
 ```js
 App.Router.map(function() {
-  this.resource('foo', function() {   // -> FooRoute
-    this.resource('bar', function() { // -> BarRoute
-      this.route('baz');              // -> BarBazRoute
+  this.resource('foo', function() {       // -> FooRoute
+    this.resource('foo.bar', function() { // -> FooBarRoute
+      this.route('baz');                  // -> FooBarBazRoute
     });
   });
 });
@@ -100,13 +100,13 @@ above `foo.bar.baz` that it can transition into, starting with
 Ember will find a loading route at the above location if either a) a 
 Route subclass has been defined for such a route, e.g.
 
-1. `App.BarLoadingRoute`
+1. `App.FooBarLoadingRoute`
 2. `App.FooLoadingRoute`
 3. `App.LoadingRoute`
 
 or b) a properly-named loading template has been found, e.g.
 
-1. `bar/loading`
+1. `foo/bar/loading`
 2. `foo/loading`
 3. `loading`
 
@@ -139,7 +139,8 @@ once the transition is complete. But once you provide a destination
 route loading substate, you are opting into an "eager" transition, which
 is to say that, unlike the "lazy" default, you will eagerly exit the
 source routes (and tear down their templates, etc) in order to
-transition into this substate. 
+transition into this substate. URLs always update immediately unless the
+transition was aborted or redirected within the same run loop.
 
 This has implications on error handling, i.e. when a transition into
 another route fails, a lazy transition will (by default) just remain on the
@@ -187,6 +188,47 @@ The only way in which `loading`/`error` substate resolution differs is
 that `error` events will continue to bubble above a transition's pivot
 route.
 
+### `error` substates with dynamic segments
+
+Routes with dynamic segments are often mapped to a mental model of "two
+separate levels." Take for example:
+
+```js
+App.Router.map(function() {
+  this.resource('foo', {path: '/foo/:id'}, function() {
+    this.route('baz');
+  });
+});
+
+App.FooRoute = Ember.Route.extend({
+  model: function(params) {
+    return new Ember.RSVP.Promise(function(resolve, reject) {
+       reject("Error");
+    });
+  }
+});
+```
+
+In the URL hierarchy you would visit `/foo/12` which would result in rendering
+the `foo` template into the `application` template's `outlet`. In the event of
+an error while attempting to load the `foo` route you would also render the
+top-level `error` template into the `application` template's `outlet`. This is
+intentionally parallel behavior as the `foo` route is never successfully
+entered. In order to create a `foo` scope for errors and render `foo/error`
+into `foo`'s `outlet` you would need to split the dynamic segment:
+
+```js
+App.Router.map(function() {
+  this.resource('foo', {path: '/foo'}, function() {
+    this.resource('elem', {path: ':id'}, function() {
+      this.route('baz');
+    });
+  });
+});
+```
+
+[Example JSBin](http://emberjs.jsbin.com/ucanam/4279)
+
 ## Legacy `LoadingRoute`
 
 Previous versions of Ember (somewhat inadvertently) allowed you to define a global `LoadingRoute`
@@ -195,7 +237,7 @@ a transition and exited upon completion of the transition. Because the
 `loading` template rendered as a top-level view and not within an
 outlet, it could be used for little more than displaying a loading
 spinner during slow transitions. Loading events/substates give you far
-more control, but if you'd like to emulate something similar to legacy
+more control, but if you'd like to emulate something similar to the legacy
 `LoadingRoute` behavior, you could do as follows:
 
 ```js
@@ -216,6 +258,6 @@ App.ApplicationRoute = Ember.Route.extend({
 
 [Example JSBin](http://emberjs.jsbin.com/ucanam/3307)
 
-This will, like legacy `LoadingRoute`, append a top-level view when the
+This will, like the legacy `LoadingRoute`, append a top-level view when the
 router goes into a loading state, and tear down the view once the
 transition finishes.

@@ -17,8 +17,7 @@
 <% end %>
 
 <% if item['deprecated'] %>
-  <%# TODO: Handle deprecation message %>
-  <span class="flag deprecated">deprecated</span>
+  <span class="flag deprecated" <% if item['deprecationMessage'] %>title="<%= item['deprecationMessage'] %>"<% end %>>deprecated</span>
 <% end %>
 
 <% if item['access'] %>
@@ -60,12 +59,16 @@
       <% end %>
       <%= api_file_link item %>
 
-    <%# TODO: Handle deprecation message %>
-
     <% if item['since'] %>
       <br/>Available since <%= item['since'] %>
     <% end %>
   </div>
+
+  <% if item['deprecationMessage'] %>
+    <div class="deprecation">
+      <%= api_markdown item['deprecationMessage'] %>
+    </div>
+  <% end %>
 
   <% if item['description'] %>
     <div class="description">

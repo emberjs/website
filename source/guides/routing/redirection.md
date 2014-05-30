@@ -43,8 +43,8 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   afterModel: function(posts, transition) {
-    if (posts.length === 1) {
-      this.transitionTo('post', posts[0]);
+    if (posts.get('length') === 1) {
+      this.transitionTo('post', posts.get('firstObject'));
     }
   }
 });
@@ -72,7 +72,7 @@ App.Router.map(function() {
 App.TopChartsChooseRoute = Ember.Route.extend({
   beforeModel: function() {
     var lastFilter = this.controllerFor('application').get('lastFilter');
-    this.transitionTo('topCharts.' + lastFilter || 'songs');
+    this.transitionTo('topCharts.' + (lastFilter || 'songs'));
   }
 });
 

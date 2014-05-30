@@ -64,5 +64,5 @@ This example shows:
   1. Wrapping the common modal markup and actions in a component.
   1. Handling events to close the modal when the overlay is clicked.
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/iluLOto/1/embed?output">JS Bin</a>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/lokozegi/110/edit">JS Bin</a>
 

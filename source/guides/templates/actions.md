@@ -88,6 +88,7 @@ App.PostRoute = Ember.Route.extend({
       // ...
       if (actionShouldAlsoBeTriggeredOnParentRoute) {
         return true;
+      }
     }
   }
 });
@@ -122,7 +123,7 @@ For example, if the `post` argument was passed:
 <p><button {{action "select" post}}>✓</button> {{post.title}}</p>
 ```
 
-The route's `select` action handler would be called with a single argument
+The controller's `select` action handler would be called with a single argument
 containing the post model:
 
 ```js

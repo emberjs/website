@@ -255,10 +255,10 @@ candidates for slimming action.
 
 There are a number of open issues around distributing reusable,
 third-party components and libraries of components. Typically we defer
-to the Web Components spec, but there are areas where the spec does not
-currently provide any guidance. As we deal with them, we are keen to
-provide feedback to the Web Components spec authors with how we have
-chosen to solve the problems.
+to the [Web Components spec](http://www.w3.org/TR/components-intro/), but
+there are areas where the spec does not currently provide any guidance.
+As we deal with them, we are keen to provide feedback to the Web Components
+spec authors with how we have chosen to solve the problems.
 
 Other limitations are due to certain features not being available in
 older browsers, and we are working on polyfilling and working around

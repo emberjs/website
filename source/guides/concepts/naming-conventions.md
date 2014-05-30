@@ -26,7 +26,7 @@ the controller.
 If your app provides an `App.ApplicationRoute`, Ember.js will invoke
 [the][1] [router's][2] [hooks][3] first, before rendering the
 `application` template. Hooks are implemented as methods and provide 
-you access points within an Ember objects lifecycle to intercept and 
+you access points within an Ember object's lifecycle to intercept and 
 execute code to modify the default behavior at these points to meet 
 your needs. Ember provides several hooks for you to utilize for various
 purposes (e.g. `model`, `setupController`, etc). In the example below 
@@ -68,7 +68,7 @@ your entire application shares a single instance of each controller.
 
 ## Simple Routes
 
-Each of your routes will have a controller and a template with the 
+Each of your routes will have a controller, and a template with the 
 same name as the route.
 
 Let's start with a simple router:
@@ -179,8 +179,9 @@ handlers.
   application's namespace (`post` becomes `App.Post`). It will
   then call `find` on that class with the value of the dynamic
   segment.
-* The default `serialize` hook will pull the dynamic
-  segment with the `id` property of the model object.
+* The default behaviour of the `serialize` hook is to replace 
+  the route's dynamic segment with the value of the model 
+  object's `id` property.
 
 ## Route, Controller and Template Defaults
 

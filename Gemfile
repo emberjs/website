@@ -11,6 +11,7 @@ gem "thin"
 gem "rack"
 gem "listen"
 gem "builder"
+gem "middleman-alias"
 
 group :development, :test do
   gem 'pry'

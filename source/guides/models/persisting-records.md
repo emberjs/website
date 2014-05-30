@@ -57,8 +57,10 @@ var post = store.createRecord('post', {
   body: 'Lorem ipsum'
 });
 
+var self = this;
+
 var onSuccess = function(post) {
-  this.transitionToRoute('posts.show', post);
+  self.transitionToRoute('posts.show', post);
 };
 
 var onFail = function(post) {
@@ -77,7 +79,7 @@ example showing how to retry persisting:
 ```javascript
 function retry(callback, nTimes) {
   // if the promise fails
-  return callback().fail(function(reason) {
+  return callback().catch(function(reason) {
     // if we haven't hit the retry limit
     if (nTimes-- > 0) {
       // retry again with the result of calling the retry callback

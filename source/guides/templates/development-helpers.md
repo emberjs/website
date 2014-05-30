@@ -10,7 +10,7 @@ The `{{log}}` helper makes it easy to output variables or expressions in the
 current rendering context into your browser's console:
 
 ```handlebars
-{{log 'Name is:', name}}
+{{log 'Name is:' name}}
 ```
 
 The `{{log}}` helper also accepts primitive types such as strings or numbers.

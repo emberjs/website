@@ -182,11 +182,10 @@ The source code:
 
 Further reading:
 
-* <http://emberjs.com/api/classes/Ember.Object.html>
-* <http://emberjs.com/api/classes/Ember.Application.html>, See section on
-  "Initializers"
-* <http://emberjs.com/api/classes/Ember.Application.html#method_inject>
-* <http://emberjs.com/guides/templates/conditionals/>
-* <http://emberjs.com/guides/templates/writing-helpers/>
-* <http://emberjs.com/guides/components/defining-a-component/>
-* <http://emberjs.com/api/classes/Ember.ArrayController.html>
+* [Ember Object](http://emberjs.com/api/classes/Ember.Object.html)
+* [Ember Application Initializers](http://emberjs.com/api/classes/Ember.Application.html#toc_initializers)
+* [Method Inject](http://emberjs.com/api/classes/Ember.Application.html#method_inject)
+* [Conditionals](http://emberjs.com/guides/templates/conditionals/)
+* [Writing Helpers](http://emberjs.com/guides/templates/writing-helpers/)
+* [Defining a Component](http://emberjs.com/guides/components/defining-a-component/)
+* [Ember Array Controller](http://emberjs.com/api/classes/Ember.ArrayController.html)
