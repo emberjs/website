@@ -1,7 +1,7 @@
 # Sorting displayed data
 
 ## Problem
-You have a collection of `Post` model object displayed in a template and you want to be able to sort ascending or descending on one or more keys.
+You have a collection of `Post` model objects displayed in a template and you want to be able to sort ascending or descending on one or more keys.
 
 Please see this [jsFiddle](http://jsfiddle.net/bazzel/wdr7j/) for a working example.
 
@@ -10,7 +10,7 @@ Create (or if you already have one: update) a `PostsController` that contains an
 
 For this element you create an Ember component that [implements a click event](http://emberjs.com/guides/components/handling-user-interaction-with-actions/) handler and [delegates the event to the controller](http://emberjs.com/guides/components/sending-actions-from-components-to-your-application/). The main reason for creating a component for the sort element is that you want to update the state of the element with an appropriate icon (or color or whatever) indicating which key is used for sorting and if sorting happened in an ascending or descending order.
 
-By passing the controller's `sortProperties` and `sortAscending` properties we're able to remember the state and update and look of the element accordingly.
+By passing the controller's `sortProperties` and `sortAscending` properties we're able to remember the state and update the look of the element accordingly.
 
 The sorting is done by the controller. The passed property indicated the key the content needs to be sorted on. If the content is already sorted on this property and assume we want to sort in reverse order. Otherwise we sort ascending. Hence the `return false` (since CoffeeScript always the last returned statement) to prevent errors when calling the sort action from a component (see later):
 
@@ -50,7 +50,8 @@ App.SortingKeyComponent = Ember.Component.extend({
   click: function() {
     this.sendAction('action', this.get('key'));
   }
-});```
+});
+```
 
 The corresponding template:
 
@@ -66,7 +67,7 @@ If you find the property names used by the component confusing, feel free to use
 
 The component uses these properties in turn to update other properties such as `isSorted` (is the content sorted by the key used by a component), `isAsc` and `isDesc` (when the content is sorted by the component's key is it then sorted ascending or descending). These properties are used to update the classNames of the component via the `classNameBindings`.
 
-The value used for `tagName` can vary, here we use `dd`, since we wrap the component elements in a definition list (`<dl>`) element. 
+The value used for `tagName` can vary, here we use `dd`, since we wrap the component elements in a definition list (`<dl>`) element.
 
 To add a sort section to our posts template we can use the following code:
 
@@ -93,15 +94,15 @@ To add a sort section to our posts template we can use the following code:
 
 The generated markup (ignoring the ember `script` tags, `id` and `class` attributes) for the Title element looks like the following:
 
-```handlebars
+```html
 <dd>
   <a>Title</a>
 </dd>
 ```
 
-When you click the Title key, `classNameBindings` adds the proper classnames:
+When you click the `Title` key, `classNameBindings` adds the proper classnames:
 
-```handlebars
+```html
 <dd class='active asc'>
   <a>Title</a>
 </dd>
@@ -109,7 +110,7 @@ When you click the Title key, `classNameBindings` adds the proper classnames:
 
 By using CSS or Sass you can sorting arrows or other indicators to the elements:
 
-```handlebars
+```css
 .sub-nav dd {
   a:after {
     content: " \25B4\25BE";
