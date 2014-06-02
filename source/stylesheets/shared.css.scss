@@ -15,8 +15,11 @@ code {
   padding: 0 0;
 }
 
-#content ul {
+#content ul, #content ol {
   margin: 1em 1.5em;
+}
+
+#content ul {
   list-style-type: none;
 }
 
