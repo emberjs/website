@@ -43,7 +43,7 @@ Todos.TodosCompletedRoute = Ember.Route.extend({
 
 The model data for this route is the collection of todos whose `isCompleted` property is `true`. Just like we recently saw with the similar function for the active todos, changes to a todo's `isCompleted` property will automatically cause this collection to refresh, updating the UI accordingly.
 
-Similarly, the raison-d'être for the `TodosCompletedRoute` is the same as with the active todos - to reuse the existing `todos/index` template, rather than changing to another template.
+`TodosCompletedRoute` has a similar purpose to the active todos - to reuse the existing `todos/index` template, rather than having to create a new template.
 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
