@@ -285,6 +285,8 @@
   image: thinkific.png
 - url: http://app.getwashio.com/
   image: washio.png
+- url: http://www.jebbit.com
+  image: jebbit.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
