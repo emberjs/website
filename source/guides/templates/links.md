@@ -110,3 +110,17 @@ arguments to the `link-to` helper:
 
 Many of the common HTML properties you would want to use like `class`, and `rel` will work. When
 adding class names, Ember will also apply the standard `ember-view` and possibly `active` class names.
+
+### Replacing history entries
+
+The default behavior for `link-to` is to add entries to the browser's history
+when transitioning between the routes. However, to replace the current entry in
+the browser's history you can use the `replace=true` option:
+
+```handlebars
+<p>
+  {{#link-to 'photo.comment' 5 primaryComment replace=true}}
+    Main Comment for the Next Photo
+  {{/link-to}}
+</p>
+```
