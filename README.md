@@ -53,6 +53,8 @@ rvm install 2.0.0
 rvm use 2.0.0
 ```
 
+### Troubleshooting tips for Windows devs
+
 For Windows developers using [RubyInstaller](http://rubyinstaller.org/), you'll need to [download the DevKit](http://rubyinstaller.org/downloads) and install it using instructions:
 https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
 
