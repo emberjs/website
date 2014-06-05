@@ -200,6 +200,19 @@ will always execute the model hook.
 [2]: /guides/templates/links
 
 
+### Refreshing your model
+
+If your data represented by your model is being updated frequently, you may
+want to refresh it periodically:
+
+<a class="jsbin-embed" href="http://jsbin.com/sefuv/2/embed?js">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+The controller can send an action to the Route; in this example above, the
+IndexController exposes an action `getLatest` which sends the route an
+action called `invalidateModel`. Calling the route's `refresh` method will force
+Ember to execute the model hook again.
+
+
 ### Ember Data
 
 Many Ember developers use a model library to make finding and saving
