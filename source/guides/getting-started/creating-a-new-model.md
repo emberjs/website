@@ -1,4 +1,4 @@
-Next we'll update our static HTML `<input>` to an Ember view that can expose more complex behaviors.  Update `index.html` to replace the new todo `<input>` with a `{{input}}` helper:
+Next we'll update our static HTML `<input>` to an Ember view that can expose more complex behaviors.  Update `index.html` to replace the new todo `<input>` with an `{{input}}` helper:
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->
