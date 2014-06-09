@@ -159,14 +159,62 @@ App.Router.map(function() {
   });
 });
 ```
+### The `error` event
 
 If `ArticlesOverviewRoute#model` returns a promise that rejects (because, for
 instance, the server returned an error, or the user isn't logged in,
 etc.), an `error` event will fire on `ArticlesOverviewRoute` and bubble upward.
 This `error` event can be handled and used to display an error message,
-redirect to a login page, etc., but similar to how the default `loading`
-event handlers are implemented, the default `error` handlers
-will look for an appropriate error substate to
+redirect to a login page, etc. 
+
+
+```js
+App.ArticlesOverviewRoute = Ember.Route.extend({
+  model: function(params) {
+    return new Ember.RSVP.Promise(function(resolve, reject) {
+       reject("Error");
+    });
+  },
+  actions: {
+    error: function(error, transition) {
+
+      if (error && error.status === 400) {
+        // Parent routes do not handle this error 
+        return this.transitionTo('modelNotFound');
+      }
+
+      // Return true to bubble this event to any parent route.
+      return true;
+    }
+  }
+});
+```
+
+The only way in which `loading`/`error` substate resolution differs is
+that `error` events will continue to bubble above a transition's pivot
+route, providing the `ApplicationRoute` the opportunity to manage
+not handled errors and bubbling errors.
+
+```js
+App.ApplicationRoute = Ember.Route.extend({
+  actions: {
+    error: function(error, transition) {
+
+      // Manage your errors
+      Ember.onerror(error);
+
+      // Return to the default implementation for `ErrorRoute`
+      return true;
+
+    }
+  }
+});
+```
+
+### The default implementation of the `error` event
+
+But similar to how the default `loading` event handlers are implemented, 
+the default `error` handlers will look for an appropriate error substate to
 enter, if one can be found.
 
 For instance, an error thrown or rejecting promise returned from
@@ -183,10 +231,6 @@ to that error state as its `model`.
 
 If no viable error substates can be found, an error message will be
 logged.
-
-The only way in which `loading`/`error` substate resolution differs is
-that `error` events will continue to bubble above a transition's pivot
-route.
 
 ### `error` substates with dynamic segments
 
@@ -228,6 +272,7 @@ App.Router.map(function() {
 ```
 
 [Example JSBin](http://emberjs.jsbin.com/ucanam/4279)
+
 
 ## Legacy `LoadingRoute`
 
