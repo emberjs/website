@@ -70,19 +70,43 @@ App.SongsController = Ember.ArrayController.extend({
 ### Item Controller
 
 It is often useful to specify a controller to decorate individual items in
-the `ArrayController` while iterating over them. This can be done in the
-`ArrayController` definition:
-
+the `ArrayController` while iterating over them. This can be done by
+creating an `ObjectController`:
+ 
+```javascript
+App.SongController = Ember.ObjectController.extend({
+  fullName: function() {
+ 
+    return this.get('name') + ' by ' + this.get('artist');
+ 
+  }.property('name', 'artist')
+});
+```
+ 
+Then, the `ArrayController` `itemController` property must be set to
+the decorated controller.
+ 
 ```javascript
 App.SongsController = Ember.ArrayController.extend({
   itemController: 'song'
 });
 ```
-
-or directly in the template:
-
+ 
 ```handlebars
-{{#each itemController="song"}}
-  <li>{{name}} by {{artist}}</li>
+{{#each controller}}
+  <li>{{fullName}}</li>
+{{/each}}
+```
+ 
+or you could setup the `itemController` directly in the template:
+ 
+```javascript
+App.SongsController = Ember.ArrayController.extend({
+});
+```
+ 
+```handlebars
+{{#each controller itemController="song"}}
+  <li>{{fullName}}</li>
 {{/each}}
 ```
