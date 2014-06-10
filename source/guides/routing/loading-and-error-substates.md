@@ -7,43 +7,13 @@ substates.
 
 ## `loading` substates
 
-Consider the following:
-
-```js
-App.Router.map(function() {
-  this.resource('articles', function() { // -> ArticlesRoute
-    this.route('overview');              // -> ArticlesOverviewRoute
-  });
-});
-```
-
-If you navigate to `articles/overview`, and in `ArticlesRoute#model`, 
-you return an AJAX query promise to load all of
-the articles that takes a long time to complete.
-During this time, your UI isn't really giving you any feedback as to
-what's happening; if you're entering this route after a full page
-refresh, your UI will be entirely blank, as you have not actually
-finished fully entering any route and haven't yet displayed any
-templates; if you're navigating to `articles/overview` from another
-route, you'll continue to see the templates from the previous route
-until the articles finish loading, and then, boom, suddenly all the
-templates for `articles/overview` load. 
-
-So, how can we provide some visual feedback during the transition?
-
-### The `loading` event
-
-Before going into detail about loading substates, it's important
-to understand the behavior of the `loading` event.
-
 The Ember Router allows you to return promises from the various
 `beforeModel`/`model`/`afterModel` hooks in the course of a transition
 (described [here](http://emberjs.com/guides/routing/asynchronous-routing/)).
 These promises pause the transition until they fulfill, at which point
-the transition will resume. If you return a promise from
-one of these hooks, and it doesn't immediately resolve, a `loading`
-event will be fired on that route and bubble upward to
-`ApplicationRoute`. For example:
+the transition will resume.
+
+Consider the following:
 
 ```js
 App.Router.map(function() {
@@ -55,28 +25,25 @@ App.Router.map(function() {
 App.FooSlowModelRoute = Ember.Route.extend({
   model: function() {
     return somePromiseThatTakesAWhileToResolve();
-  },
-  actions: {
-    loading: function(transition, originRoute) {
-      // displayLoadingSpinner();
-
-      // Return true to bubble this event to `FooRoute`
-      // or `ApplicationRoute`.
-      return true;
-    }
   }
 });
 ```
 
-If `FooRoute#model` had returned the slow promise, the `loading`
-event would have fired on `FooRoute` (and not `FooSlowModelRoute`).
+If you navigate to `foo/slow_model`, and in `FooSlowModelRoute#model`, 
+you return an AJAX query promise that takes a long time to complete.
+During this time, your UI isn't really giving you any feedback as to
+what's happening; if you're entering this route after a full page
+refresh, your UI will be entirely blank, as you have not actually
+finished fully entering any route and haven't yet displayed any
+templates; if you're navigating to `foo/slow_model` from another
+route, you'll continue to see the templates from the previous route
+until the model finish loading, and then, boom, suddenly all the
+templates for `foo/slow_model` load. 
 
-### The default implementation of the `loading` event
+So, how can we provide some visual feedback during the transition?
 
-So already, you have a hook to allow you to configure loading
-behavior in a hierarchical manner. But in addition to this, Ember
-provides a default implementation of the `loading` handler that implements
-the following loading substate behavior we've been alluding to.
+Ember provides a default implementation of the `loading` process that implements
+the following loading substate behavior.
 
 ```js
 App.Router.map(function() {
@@ -147,10 +114,58 @@ another route fails, a lazy transition will (by default) just remain on the
 previous route, whereas an eager transition will have already left the
 pre-transition route to enter a loading substate.
 
+### The `loading` event
+
+If you return a promise from the various `beforeModel`/`model`/`afterModel` hooks, 
+and it doesn't immediately resolve, a `loading` event will be fired on that route 
+and bubble upward to `ApplicationRoute`.
+
+If the `loading` handler is not defined at the specific route,
+the event will continue to bubble above a transition's pivot
+route, providing the `ApplicationRoute` the opportunity to manage it.
+
+```js
+App.FooSlowModelRoute = Ember.Route.extend({
+  model: function() {
+    return somePromiseThatTakesAWhileToResolve();
+  },
+  actions: {
+    loading: function(transition, originRoute) {
+      //displayLoadingSpinner();
+
+      // Return true to bubble this event to `FooRoute`
+      // or `ApplicationRoute`.
+      return true;
+    }
+  }
+});
+```
+
+The `loading` handler provides the ability to decide what to do during 
+the loading process. If the last loading handler is not defined 
+or returns `true`, Ember will perform the loading substate behavior.
+
+```js
+App.ApplicationRoute = Ember.Route.extend({
+  actions: {
+    loading: function(transition, originRoute) {
+      displayLoadingSpinner();
+      
+      // substate implementation when returning `true`
+      return true;
+    }
+  }
+});
+```
+
 ## `error` substates
 
-Ember provides an analogous approach to `loading` events/substates in
+Ember provides an analogous approach to `loading` substates in
 the case of errors encountered during a transition.
+
+Similar to how the default `loading` event handlers are implemented, 
+the default `error` handlers will look for an appropriate error substate to
+enter, if one can be found.
 
 ```js
 App.Router.map(function() {
@@ -159,63 +174,6 @@ App.Router.map(function() {
   });
 });
 ```
-### The `error` event
-
-If `ArticlesOverviewRoute#model` returns a promise that rejects (because, for
-instance, the server returned an error, or the user isn't logged in,
-etc.), an `error` event will fire on `ArticlesOverviewRoute` and bubble upward.
-This `error` event can be handled and used to display an error message,
-redirect to a login page, etc. 
-
-
-```js
-App.ArticlesOverviewRoute = Ember.Route.extend({
-  model: function(params) {
-    return new Ember.RSVP.Promise(function(resolve, reject) {
-       reject("Error");
-    });
-  },
-  actions: {
-    error: function(error, transition) {
-
-      if (error && error.status === 400) {
-        // Parent routes do not handle this error 
-        return this.transitionTo('modelNotFound');
-      }
-
-      // Return true to bubble this event to any parent route.
-      return true;
-    }
-  }
-});
-```
-
-The only way in which `loading`/`error` substate resolution differs is
-that `error` events will continue to bubble above a transition's pivot
-route, providing the `ApplicationRoute` the opportunity to manage
-not handled errors and bubbling errors.
-
-```js
-App.ApplicationRoute = Ember.Route.extend({
-  actions: {
-    error: function(error, transition) {
-
-      // Manage your errors
-      Ember.onerror(error);
-
-      // Return to the default implementation for `ErrorRoute`
-      return true;
-
-    }
-  }
-});
-```
-
-### The default implementation of the `error` event
-
-But similar to how the default `loading` event handlers are implemented, 
-the default `error` handlers will look for an appropriate error substate to
-enter, if one can be found.
 
 For instance, an error thrown or rejecting promise returned from
 `ArticlesOverviewRoute#model` (or `beforeModel` or `afterModel`) 
@@ -231,6 +189,7 @@ to that error state as its `model`.
 
 If no viable error substates can be found, an error message will be
 logged.
+
 
 ### `error` substates with dynamic segments
 
@@ -272,6 +231,59 @@ App.Router.map(function() {
 ```
 
 [Example JSBin](http://emberjs.jsbin.com/ucanam/4279)
+
+
+### The `error` event
+
+If `ArticlesOverviewRoute#model` returns a promise that rejects (because, for
+instance, the server returned an error, or the user isn't logged in,
+etc.), an `error` event will fire on `ArticlesOverviewRoute` and bubble upward.
+This `error` event can be handled and used to display an error message,
+redirect to a login page, etc. 
+
+
+```js
+App.ArticlesOverviewRoute = Ember.Route.extend({
+  model: function(params) {
+    return new Ember.RSVP.Promise(function(resolve, reject) {
+       reject("Error");
+    });
+  },
+  actions: {
+    error: function(error, transition) {
+
+      if (error && error.status === 400) {
+        // error substate and parent routes do not handle this error 
+        return this.transitionTo('modelNotFound');
+      }
+
+      // Return true to bubble this event to any parent route.
+      return true;
+    }
+  }
+});
+```
+
+In analogy with the `loading` event, you could manage the `error` event
+at the Application level to perform any app logic and based on the
+result of the last `error` handler, Ember will decide if substate behavior 
+must be performed or not.
+
+```js
+App.ApplicationRoute = Ember.Route.extend({
+  actions: {
+    error: function(error, transition) {
+
+      // Manage your errors
+      Ember.onerror(error);
+
+      // substate implementation when returning `true`
+      return true;
+
+    }
+  }
+});
+```
 
 
 ## Legacy `LoadingRoute`
