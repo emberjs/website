@@ -34,7 +34,7 @@ To have the click event from `App.ClickableView` affect the state of your applic
 ````javascript
 App.ClickableView = Ember.View.extend({
   click: function(evt) {
-    this.get('controller').send('turnItUp', 11);
+    this.get('targetObject').send('turnItUp', 11);
   }
 });
 ````
