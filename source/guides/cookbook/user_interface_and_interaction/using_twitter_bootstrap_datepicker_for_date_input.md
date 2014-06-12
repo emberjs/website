@@ -16,21 +16,20 @@ App.DatePickerField = Em.View.extend({
   templateName: 'datepicker',
 
 // Decorator function for formatting data output
-  value_as_date: function() {
+  valueAsDate: function() {
     return moment(this.get('value')).format('DD.MM.YYYY');;
   }.property('view.value'),
 
 //Callback function feeding back the changes that happened
 //to the value in the datepicker
   didInsertElement: function() {
-    var onChangeDate, self;
-    self = this;
+    var onChangeDate, self = this;
     onChangeDate = function(ev) {
-      return self.set("value", moment(ev.date).format("MM-DD-YYYY"));
+      return self.set('value', moment(ev.date).format('MM-DD-YYYY'));
     };
     return this.$('.datepicker').datepicker({
-      separator: "."
-    }).on("changeDate", onChangeDate);
+      separator: '.'
+    }).on('changeDate', onChangeDate);
   },
 });
 
@@ -43,13 +42,13 @@ Ember.TextField.reopen({
 The template looks like this:
 
 ```handlebars
-<script type="text/x-handlebars" data-template-name="datepicker">
-  <div class="input-group" style="width:10em;">
-    {{input value=view.value_as_date class="datepicker form-control"
-                                     data-provide="datepicker"
-                                     data-date-format="dd.mm.yyyy"}}
-    <span class="input-group-addon">
-      <i class="glyphicon glyphicon-calendar"></i>
+<script type='text/x-handlebars' data-template-name='datepicker'>
+  <div class='input-group' style='width:10em;'>
+    {{input value=view.valueAsDate class='datepicker form-control'
+                                   data-provide='datepicker'
+                                   data-date-format='dd.mm.yyyy'}}
+    <span class='input-group-addon'>
+      <i class='glyphicon glyphicon-calendar'></i>
     </span>
   </div>
 </script>
