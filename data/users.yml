@@ -279,6 +279,8 @@
   image: sushio.png
 - url: http://www.hstry.co
   image: hstry.png
+- url: http://www.jebbit.com
+  image: jebbit.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
