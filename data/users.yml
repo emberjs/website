@@ -279,6 +279,8 @@
   image: sushio.png
 - url: http://www.hstry.co
   image: hstry.png
+- url: http://www.netuitive.com
+  image: netuitive_ember_logo.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
