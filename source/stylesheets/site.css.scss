@@ -446,7 +446,7 @@ p {
 
       background-color: #ff6e56;
       @include filter-gradient(#ff6e56, #ed4f35, vertical);
-      @include background-image(linear-gradient(top, #ff6e56 0%, #ed4f35 100%));
+      @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
 
       border: 1px solid #a93926;
       @include border-radius(4px);
@@ -1422,7 +1422,7 @@ body.security #content {
     border-bottom-color: #a04332;
 
     @include filter-gradient(#fe845a, #d14e37, vertical);
-    @include background-image( linear-gradient(top, #fe845a, #d14e37) );
+    @include background-image( linear-gradient(to bottom, #fe845a, #d14e37) );
     @include border-radius(5px);
     @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.35));
 
@@ -1431,7 +1431,7 @@ body.security #content {
       border-top-color: #ea7a68;
       border-bottom-color: #c1513d;
       @include filter-gradient(#fc906b, #e2654e, vertical);
-      @include background-image( linear-gradient(top, #fc906b, #e2654e) );
+      @include background-image( linear-gradient(to bottom, #fc906b, #e2654e) );
     }
 
     &:active {
@@ -1439,7 +1439,7 @@ body.security #content {
       border-top-color: #92473a;
       border-bottom-color: #e1583f;
       @include filter-gradient(#b2412e, #ed7249, vertical);
-      @include background-image( linear-gradient(top, #b2412e, #ed7249) );
+      @include background-image( linear-gradient(to bottom, #b2412e, #ed7249) );
       @include box-shadow(none);
       @include text-shadow(rgba(0, 0, 0, 0.2) 0 -1px 0);
     }
