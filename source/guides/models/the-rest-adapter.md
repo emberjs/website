@@ -91,6 +91,19 @@ be nested inside a property called `person`:
 }
 ```
 
+_Note: Although after `destroyRecord` or `deleteRecord`/`save` the adapter expects an empty object e.g. `{}` to be returned from the server after destroying a record._
+
+If you don't have the option to change the data that the server responds with, you can override the 
+[DS.JSONSerializer#extractDeleteRecord](/api/data/classes/DS.JSONSerializer.html#method_extractDeleteRecord), like so:
+
+```js
+extractDeleteRecord: function(store, type, payload) {
+  // payload is {delete: true} and then ember data wants to go ahead and set
+  // the new properties, return null so it doesn't try to do that
+  return null;
+}
+```
+
 #### Attribute Names
 
 Attribute names should be camelized.  For example, if you have a model like this:
