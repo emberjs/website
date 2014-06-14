@@ -96,17 +96,23 @@ window.App = Ember.Application.create({
 
 ## Ember Data
 
-#### View ember-data's identity map
+#### View ember-data's type maps
 
 ```javascript
-// all records in memory
-App.__container__.lookup('store:main').recordCache 
+// all type maps in memory
+App.__container__.lookup('store:main').typeMaps 
 
-// attributes
-App.__container__.lookup('store:main').recordCache[2].get('data.attributes')
+// specific type map in memory
+App.__container__.lookup('store:main').typeMapFor(App.Color)
 
-// loaded associations
-App.__container__.lookup('store:main').recordCache[2].get('comments')
+// map of id to record for all cached records for a type
+App.__container__.lookup('store:main').typeMapFor(App.Color).idToRecord
+
+// array of all cached records for a type
+App.__container__.lookup('store:main').typeMapFor(App.Color).records
+
+// grab a property off record id "33"
+App.__container__.lookup('store:main').typeMapFor(App.Color).idToRecord["33"].get('color')
 ```
 
 ## Observers / Binding
