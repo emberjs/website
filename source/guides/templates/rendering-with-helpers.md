@@ -53,7 +53,7 @@ App.AuthorView = Ember.View.extend({
 <script type="text/x-handlebars" data-template-name='post'>
   <h1>{{title}}</h1>
   <div>{{body}}</div>
-  {{view App.AuthorView}}
+  {{view "author"}}
 </script>
 ```
 
@@ -70,7 +70,7 @@ When using `{{partial "author"}}`:
 * No instance of App.AuthorView will be created
 * The given template will be rendered
 
-When using `{{view App.AuthorView}}`:
+When using `{{view "author"}}`:
 
 * An instance of App.AuthorView will be created
 * It will be rendered here, using the template associated with that view (the default template being "author")
@@ -109,8 +109,8 @@ Modifying the post / author example slightly:
 ```javascript
 App.AuthorController = Ember.ObjectController.extend({
   postCount: function() {
-    return App.Post.countForAuthor(this.get("model"));
-  }.property("model","App.Post.@each.author")
+    return this.get("model.posts.length");
+  }.property("model.posts.[]")
 })
 ```
 
@@ -193,7 +193,7 @@ Note: `{{render}}` cannot be called multiple times for the same route when not s
     <td><code>App.PostController</code></td>
   </tr>
   <tr>
-    <td><code>{{view App.AuthorView}}</code></td>
+    <td><code>{{view "author"}}</code></td>
     <td><code>author.hbs</code></td>
     <td>Post</td>
     <td><code>App.AuthorView</code></td>
