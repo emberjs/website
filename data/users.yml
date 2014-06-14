@@ -281,6 +281,8 @@
   image: hstry.png
 - url: http://www.netuitive.com
   image: netuitive_ember_logo.png
+- url: http://www.thinkific.com
+  image: thinkific.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
