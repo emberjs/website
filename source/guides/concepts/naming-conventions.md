@@ -136,7 +136,7 @@ The template can iterate over the elements of the controller:
 
 ## Dynamic Segments
 
-If a route uses a dynamic segment, the route's model will be based
+If a route uses a dynamic segment (a URL that includes a parameter), the route's model will be based
 on the value of that segment provided by the user.
 
 Consider this router definition:
