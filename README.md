@@ -15,6 +15,8 @@ bundle exec middleman
 
 Then visit [http://localhost:4567/](http://localhost:4567/)
 
+**Note**: unless you're working with the API docs, don't use `rake preview`—use `middleman` (aka `middleman server`) instead.
+
 #### API Documentation
 
 You can preview api documention, by generating docs from the source code.
