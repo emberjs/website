@@ -51,7 +51,7 @@ Endpoint paths can be prefixed with a namespace by setting the `namespace`
 property on the adapter:
 
 ```js
-DS.RESTAdapter.reopen({
+App.ApplicationAdapter = DS.RESTAdapter.extend({
   namespace: 'api/1'
 });
 ```
@@ -63,7 +63,7 @@ Requests for `App.Person` would now target `/api/1/people/1`.
 An adapter can target other hosts by setting the `host` property.
 
 ```js
-DS.RESTAdapter.reopen({
+App.ApplicationAdapter = DS.RESTAdapter.extend({
   host: 'https://api.example.com'
 });
 ```
