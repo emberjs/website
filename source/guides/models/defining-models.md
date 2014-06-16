@@ -91,6 +91,11 @@ The default adapter supports attribute types of `string`,
 attribute types, and new types can be registered as transforms. See the
 [documentation section on the REST Adapter](/guides/models/the-rest-adapter).
 
+**Please note:** Ember Data serializes and deserializes dates according to
+                 [ISO 8601][]. For example: `2014-05-27T12:54:01`
+
+[ISO 8601]: http://en.wikipedia.org/wiki/ISO_8601
+
 #### Options
 `DS.attr` takes an optional hash as a second parameter, current options are:
 
