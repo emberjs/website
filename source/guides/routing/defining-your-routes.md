@@ -174,11 +174,6 @@ This router creates three routes:
 `posts` is equivalent to transitioning to `posts.index` or linking to
 `posts.index`</small>
 
-NOTE: If you define a resource using `this.resource` and **do not** supply
-a function, then the implicit `resource.index` route is **not** created. In
-that case, `/resource` will only use the `ResourceRoute`, `ResourceController`,
-and `resource` template.
-
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
 via `transitionTo` or `{{#link-to}}`), make sure to use the full route
