@@ -1,41 +1,20 @@
-In general, the dynamic segments of a URL are a serialized representation
-of a model, commonly a model's ID. However, sometimes you
-need to serialize other application state into the URL. This could be
-further parameters that affect the loading of the model from the server,
-e.g. what page of a result set you are viewing, or it could be
-information about client side state, e.g. sort order when the records
-are sorted on the client.
+Query parameters are optional key-value pairs that appear to the right of
+the `?` in a URL. For example, the following URL has two query params,
+`sort` and `page`, which respective values `ASC` and `2`:
 
-There can also be more global information that you want to serialize into
-the url, for example if you want to store an auth token in the URL, or
-filter all models in your application globally. It's also possible that
-there are a lot of parameters that you want to serialize in the url that
-are inconvenient to store in normal dynamic segments. This might apply
-when you have a map view and need to store X, Y, and zoom coordinates
-along with a set of visible layers on the map. Although this is possible
-to do with dynamic segments, it can be inconvenient. For any of these use
-cases, you can consider using query params instead.
+    http://example.com/articles?sort=ASC&page=2
 
-### Query Parameters are Controller-Driven
-
-Support for query parameters is built right into controllers, unlike
-other aspects of the URL which are specified and managed entirely at
-the router level. First class support for query params at the
-controller level allows for a simple yet powerful API for updating and
-responding to changes in query params without requiring the developer to
-manually install and manage bindings/observers to keep the URL and
-controller state in sync.
+Query params allow for additional application state to be serialized
+into the URL that can't otherwise fit into the _path_ of the URL (i.e.
+everything to the left of the `?`). Common use cases include
+representing the current page, filter criteria, or sorting criteria in
+the URL as query params.
 
 ### Specifying Query Parameters
 
-Query params can be specified by route-driven controllers. Recall that,
-given a route specified by `this.route('articles');`, the value resolved
-from the `ArticlesRoute`'s `model` hook will be loaded into
-`ArticlesController` as its `model` property. While `ArticlesRoute` has
-the option of loading data into different controllers in the
-`setupController` hook, `ArticlesController` is considered to be the
-"route-driven" controller in this case, and therefore has the ability to
-specify query params.
+Query params can be declared on route-driven controllers, e.g. to
+configure query params that are active within the `articles` route,
+they must be declared on `ArticlesController`.
 
 <aside>
   **Note:** The controller associated with a given route can be changed
@@ -211,19 +190,34 @@ you opt into a `replaceState` transition via `replace=true`.
 
 By default, specifying `foo` as a controller query param property will
 bind to a query param whose key is `foo`, e.g. `?foo=123`. You can also map
-a controller property to a different query param key using an optional
-colon syntax similar to the `classNameBindings` syntax 
-[demonstrated here](/guides/views/customizing-a-views-element/).
+a controller property to a different query param key using the
+following configuration syntax:
 
 ```js
 App.ArticlesController = Ember.ArrayController.extend({
-  queryParams: ['category:articles_category'],
+  queryParams: {
+    category: "articles_category"
+  },
   category: null
 });
 ```
 
 This will cause changes to the `ArticlesController`'s `category`
 property to update the `articles_category` query param, and vice versa.
+
+Note that query params that require additional customization can
+be provided along with strings in the `queryParams` array.
+
+```js
+App.ArticlesController = Ember.ArrayController.extend({
+  queryParams: [ "page", "filter", {
+    category: "articles_category"
+  }],
+  category: null,
+  page: 1,
+  filter: "recent"
+});
+```
 
 ### Default values and deserialization
 
