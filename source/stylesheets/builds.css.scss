@@ -1,6 +1,20 @@
 @import "compass";
 @import "mixins/hidpi";
 
+// the builds page is an ember app inserted into the master layout, replicate styling
+// content -> builds page ( sidebar / subcontent ) 
+#subcontent {
+  @extend #content;
+}
+
+// styles applied to ul/ol under #content are not meant for #sidebar styling
+// this needs to be reset on builds page as the sidebar is nested inside the content
+#content #sidebar {
+  ul, ol {
+    margin: 0;
+  }
+}
+
 #builds-application {
   #sidebar {
     $sidebar-width: 140px;
