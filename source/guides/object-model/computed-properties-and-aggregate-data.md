@@ -7,7 +7,9 @@ Here's what that computed property might look like:
 ```javascript
 App.TodosController = Ember.Controller.extend({
   todos: [
-    Ember.Object.create({ isDone: false })
+    Ember.Object.create({ isDone: true }),
+    Ember.Object.create({ isDone: false }),
+    Ember.Object.create({ isDone: true })
   ],
 
   remaining: function() {
@@ -39,7 +41,7 @@ automatically:
 
 ```javascript
 var todos = App.todosController.get('todos');
-var todo = todos.objectAt(0);
+var todo = todos.objectAt(1);
 todo.set('isDone', true);
 
 App.todosController.get('remaining');
