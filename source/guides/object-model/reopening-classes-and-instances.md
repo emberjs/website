@@ -2,7 +2,7 @@ You don't need to define a class all at once. You can reopen a class and
 define new properties using the `reopen` method.
 
 ```javascript
-Person.reopen({
+App.Person.reopen({
   isPerson: true
 });
 
@@ -14,7 +14,7 @@ call `this._super`.
 
 
 ```javascript
-Person.reopen({
+App.Person.reopen({
   // override `say` to add an ! at the end
   say: function(thing) {
     this._super(thing + "!");
@@ -28,11 +28,11 @@ methods and properties to a particular instance of a class as in vanilla JavaScr
 But when you need to create class methods or add properties to the class itself you can use `reopenClass`.
 
 ```javascript
-Person.reopenClass({
+App.Person.reopenClass({
   createMan: function() {
     return Person.create({isMan: true})
   }
 });
 
-Person.createMan().get('isMan') // true
+App.Person.createMan().get('isMan') // true
 ```
