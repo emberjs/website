@@ -59,6 +59,9 @@ App.FooSlowModelRoute = Ember.Route.extend({
   actions: {
     loading: function(transition, originRoute) {
       // displayLoadingSpinner();
+      this.router.one('didTransition', function () {
+        // hideLoadingSpinner();
+      });
 
       // Return true to bubble this event to `FooRoute`
       // or `ApplicationRoute`.
