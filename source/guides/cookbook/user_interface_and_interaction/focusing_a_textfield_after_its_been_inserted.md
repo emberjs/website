@@ -24,6 +24,20 @@ Focus Input component!
 {{focus-input}}
 ```
 
+### Cleaner solution
+Extend the textfield to allow HTML Autofocus
+```javascript
+Ember.TextField.reopen({
+  attributeBindings: ['autofocus']
+});
+```
+This will allow you to add the autofocus attribute to the regular input
+```handlebars
+{{input value=someField type="text" placeholder="Your Name here" autofocus="autofocus"}}
+```
+** Please note that autofocus is not supported in Internet Explorer 9 and lower. **
+
+
 ### Discussion
 Custom components provide a way to extend native HTML elements with new behavior
 like autofocusing.
