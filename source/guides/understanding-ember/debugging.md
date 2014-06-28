@@ -131,6 +131,20 @@ Ember.LOG_BINDINGS = true
 
 ## Miscellaneous
 
+#### Turn on resolver resolution logging
+
+This option logs all the lookups that are done to the console. Custom objects
+you've created yourself have a tick, and Ember generated ones don't.
+
+It's useful for understanding which objects Ember is finding when it does a lookup
+and which it is generating automatically for you.
+
+```javascript
+App = Ember.Application.create({
+  LOG_RESOLVER: true
+});
+```
+
 #### View an instance of something from the container
 
 ```javascript
