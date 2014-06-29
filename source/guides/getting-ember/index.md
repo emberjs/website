@@ -24,7 +24,6 @@ Adding Ember to your application with Bower is easy simply run `bower install em
 		"ember-data": "~1.0.0-beta.4"
 	}
 }
-
 ```
 
 ##RubyGems

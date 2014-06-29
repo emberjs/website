@@ -34,15 +34,15 @@ completed: function() {
 // ... additional lines truncated for brevity ...
 ```
 
-The `completed` and `clearCompleted` methods both invoke the `filterBy` method, which is part of the [ArrayController](http://emberjs.com/api/classes/Ember.ArrayController.html#method_filterProperty) API and returns an instance of [EmberArray](http://emberjs.com/api/classes/Ember.Array.html) which contains only the items for which the callback returns true.  The `clearCompleted` method also invokes the `invoke` method which is part of the [EmberArray](http://emberjs.com/api/classes/Ember.Array.html#method_invoke) API.  `invoke` will execute a method on each object in the Array if the method exists on that object.
+The `completed` and `clearCompleted` methods both invoke the `filterBy` method, which is part of the [ArrayController](http://emberjs.com/api/classes/Ember.ArrayController.html#method_filterBy) API and returns an instance of [EmberArray](http://emberjs.com/api/classes/Ember.Array.html) which contains only the items for which the callback returns true.  The `clearCompleted` method also invokes the `invoke` method which is part of the [EmberArray](http://emberjs.com/api/classes/Ember.Array.html#method_invoke) API.  `invoke` will execute a method on each object in the Array if the method exists on that object.
 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/ULovoJI/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/xamet/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/1da450a8d693f083873a086d0d21e031ee3c129e)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/91e1aea23cffc78c5fba361a3e8baa1285985101)
   * [Handlebars Conditionals Guide](/guides/templates/conditionals)
   * [Enumerables Guide](/guides/enumerables)

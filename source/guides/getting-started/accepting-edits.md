@@ -52,12 +52,14 @@ actions: {
     this.set('isEditing', true);
   },
   acceptChanges: function() {
-    this.set('isEditing', false);
+    if (this.get('isEditing')) {
+      this.set('isEditing', false);
 
-    if (Ember.isEmpty(this.get('model.title'))) {
-      this.send('removeTodo');
-    } else {
-      this.get('model').save();
+      if (Ember.isEmpty(this.get('model.title'))) {
+        this.send('removeTodo');
+      } else {
+        this.get('model').save();
+      }
     }
   },
   removeTodo: function () {
@@ -69,13 +71,13 @@ actions: {
 // ... additional lines truncated for brevity ...
 ```
 
-This method will set the controller's `isEditing` property to false and commit all changes made to the todo.
+This method will set the controller's `isEditing` property to false and commit all changes made to the todo if the controller is in the edit mode.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/USOlAna/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/jorav/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
-  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/a7e2f40da4d75342358acdfcbda7a05ccc90f348)
+  * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/662cd9671a9119dec7274631783d4a78e073e9cc)
   * [Controller Guide](/guides/controllers)
   * [Ember.TextField API documentation](/api/classes/Ember.TextField.html)
