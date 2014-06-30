@@ -78,7 +78,7 @@ The `link-to` helper supports specifying query params by way of the
 `query-params` subexpression helper.
 
 ```handlebars
-// Explicitly set target query para
+// Explicitly set target query params
 {{#link-to 'posts' (query-params direction="asc")}}Sort{{/link-to}}
 
 // Binding is also supported
