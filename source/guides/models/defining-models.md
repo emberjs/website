@@ -204,7 +204,7 @@ You can also specify an inverse on a `belongsTo`, which works how you'd expect.
 
 #### Model Inheritance and Polymorphic Relationships 
 
-Ember Data allows inheritance by extending a base model. Using a polymorphic realtionships, a model can relate to base model or a model that extends it, on a single relationship. For example, you might have a picture model that belongs to either a user model or a product model. Here is how this could be declared:
+Ember Data allows inheritance by extending a base model. Using a polymorphic relationship, a model can relate to a base model or a model that extends it, on a single relationship. For example, you might have a picture model that belongs to either a user model or a product model. Here is how this could be declared:
 
 ```javascript
 App.Picture = DS.Model.extend({
