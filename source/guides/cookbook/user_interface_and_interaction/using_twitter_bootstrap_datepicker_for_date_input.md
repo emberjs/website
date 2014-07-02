@@ -17,25 +17,28 @@ App.DatePickerField = Em.View.extend({
 
 // Decorator function for formatting data output
   valueAsDate: function() {
-    return moment(this.get('value')).format('DD.MM.YYYY');;
+    return moment(this.get('value')).format('DD.MM.YYYY');
   }.property('view.value'),
 
-//Callback function feeding back the changes that happened
-//to the value in the datepicker
+// Callback function feeding back the changes that happened
+// to the value in the datepicker
   didInsertElement: function() {
     var onChangeDate, self = this;
     onChangeDate = function(ev) {
-      return self.set('value', moment(ev.date).format('MM-DD-YYYY'));
+// If you dont want to disappear the datepicker after selecting a date,
+// comment the next line!
+      self.$('.datepicker').datepicker('hide');
+      return self.set('value', moment(ev.date));
     };
-    return this.$('.datepicker').datepicker({
+    this.$('.datepicker').datepicker({
       separator: '.'
     }).on('changeDate', onChangeDate);
   },
-});
 
-// Allow some more attributes to be bound
-Ember.TextField.reopen({
-    attributeBindings: ['data-provide', 'data-date-format']
+// Cleaning up
+  willDestroyElement: function(){
+    this.$('.datepicker').off('changeDate', onChangeDate);
+  }
 });
 ```
 
@@ -68,3 +71,5 @@ So now the date picker can be invoked and bound to the object we want to change:
 
 #### Example
 
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/sotuf/10/embed?html,js,output">Ember Datepicker Demo</a>
+<script src="http://static.jsbin.com/js/embed.js"></script>
