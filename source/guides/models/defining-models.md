@@ -3,6 +3,13 @@ data that you present to the user. Anything that the user expects to see
 if they leave your app and come back later (or if they refresh the page)
 should be represented by a model.
 
+Make sure to include `ember-data.js` after `ember.js`
+
+```html
+<script type="text/javascript" src="ember.js"></script>
+<script type="text/javascript" src="ember-data.js"></script>
+```
+
 For every model in your application, create a subclass of `DS.Model`:
 
 ```javascript
