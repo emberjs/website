@@ -30,7 +30,7 @@ discussion of all things Ember-Data.
 [@terzicigor](https://twitter.com/terzicigor)
 
 ### PushPayload discussion
-We discussed the [PushPayload proposal](discuss.emberjs.com/t/adding-a-function-to-ed-store-to-normalize-push-a-single-type/5321)
+We discussed the [PushPayload proposal](http://discuss.emberjs.com/t/adding-a-function-to-ed-store-to-normalize-push-a-single-type/5321)
 
 @wycats concluded that the original decision for `pushPayload` on the store to accept a `type` argument was a mistake.
 Decided that instead of creating several new hooks, the best course of actions seems to be to add a `normalize` method to the store.
