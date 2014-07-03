@@ -25,7 +25,7 @@ discussion of all things Ember-Data.
   [@terzicigor](https://twitter.com/terzicigor) -->
 
 [@tomdale](https://twitter.com/tomdale),
-[@wycats](https://twitter.com/wycats)
+[@wycats](https://twitter.com/wycats),
 [@terzicigor](https://twitter.com/terzicigor)
 
 ### Serializer refactor
@@ -45,7 +45,7 @@ a Zalgo Proxy, a proxy that would be passed to the serialize hook and would prox
 
 Decided it is a good idea but needs to be fully specced out and needs a better name.
 
-### Sync setting - support template setting promises but not user space
+### Sync setting of async relationships
 
 Discussed the problem of how to set/bind two async relationships. For example currently binding an async belongsTo
 to an async hasMany does not work because the binding tries to set a promiseProxy and not a model.
