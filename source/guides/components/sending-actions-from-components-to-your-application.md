@@ -49,7 +49,7 @@ App.MyButtonComponent = Ember.Component.extend({
   click: function() {
     this.sendAction();
   }
-}
+});
 ```
 
 In the above example, the `my-button` component will send the `showUser`
