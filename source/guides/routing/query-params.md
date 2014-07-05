@@ -52,7 +52,7 @@ App.ArticlesController = Ember.ArrayController.extend({
     var articles = this.get('model');
 
     if (category) {
-      return articles.filterProperty('category', category);
+      return articles.filterBy('category', category);
     } else {
       return articles;
     }
