@@ -53,7 +53,7 @@ Before:
 
 ```javascript
 App.HomeRoute = Ember.Route.extend({
-  renderTemplate: function(){
+  renderTemplate: function(controller, model){
     this.controllerFor('bio').set('content', model);
     this.render('bio');
   }
@@ -64,7 +64,7 @@ After:
 
 ```javascript
 App.HomeRoute = Ember.Route.extend({
-  renderTemplate: function(){
+  renderTemplate: function(controller, model){
     this.render('bio', {
       model: model
     });
