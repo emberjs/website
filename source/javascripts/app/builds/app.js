@@ -184,12 +184,12 @@ App.Project.reopenClass({
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
-      initialVersion: "1.5.0",
-      initialReleaseDate: "2014-03-29",
-      lastRelease: "1.5.1",
-      futureVersion: "1.5.2",
+      initialVersion: "1.6.0",
+      initialReleaseDate: "2014-07-07",
+      lastRelease: "1.6.0",
+      futureVersion: "1.6.1",
       channel: "release",
-      date: "2014-04-22",
+      date: "2014-07-07",
       changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember",
