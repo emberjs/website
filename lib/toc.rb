@@ -280,7 +280,7 @@ module TOC
           <div class="under_construction_warning">
             <h3>
               <div class="msg">
-                <strong>WARNING:</strong> query params are only available in recent canary builds of Ember.
+                <strong>WARNING:</strong> query params are only available in recent beta builds of Ember.
               </div>
             </h3>
           </div>
