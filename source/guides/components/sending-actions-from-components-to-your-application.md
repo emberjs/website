@@ -198,7 +198,7 @@ effect if the user clicks it:
 
 In general, you should think of component actions as translating a
 _primitive event_ (like a mouse click or an `<audio>` element's `pause`
-event) into actions that have semantic meaning in your application.
+event) into actions that have meaning within your application.
 
 This allows your routes and controllers to implement action handlers
 with names like `deleteTodo` or `songDidPause` instead of vague names
