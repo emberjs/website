@@ -2,9 +2,9 @@
 project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
-  version: 1.6.0
+  version: 1.6.1
   url: http://emberjs.com/
-  sha: v1.6.0
+  sha: v1.6.1
 files:
   "../packages/ember/lib/main.js":
     name: "../packages/ember/lib/main.js"
