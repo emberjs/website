@@ -12,4 +12,4 @@ For more details review the following links:
 
 * Failing [JSBin](http://emberjs.jsbin.com/juqij/2/edit?html,js,output) from the original [bug report](https://github.com/emberjs/ember.js/issues/5148).
 * [Fixing PR](https://github.com/emberjs/ember.js/pull/5166)
-* [Ember.js 1.6.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v1.6.0/CHANGELOG.md)
+* [Ember.js 1.6.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v1.6.1/CHANGELOG.md)
