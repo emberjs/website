@@ -201,7 +201,7 @@ but a common practice is to call `console.assert` to dump the error to the
 console.
 
 ```javascript
-Ember.RSVP.configure('onerror', function(error) {
+Ember.RSVP.on('error', function(error) {
   Ember.Logger.assert(false, error);
 });
 ```
