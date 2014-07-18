@@ -23,7 +23,7 @@ specific Adapters.
 
 ```js
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-    // Application specific overrides go here
+  // Application specific overrides go here
 });
 ```
 
