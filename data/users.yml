@@ -287,6 +287,8 @@
   image: washio.png
 - url: http://www.jebbit.com
   image: jebbit.png
+- url: https://www.picdoctors.com
+  image: picdoctors.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
