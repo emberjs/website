@@ -40,4 +40,4 @@ Note: The current action may be invoked twice (via `acceptChanges`) leading to a
 ### Additional Resources
 
   * [Changes in this step in `diff` format](https://github.com/emberjs/quickstart-code-sample/commit/14e1f129f76bae8f8ea6a73de1e24d810678a8fe)
-  * [action API documention](/api/classes/Ember.Handlebars.helpers.html#method_action)
+  * [action API documentation](/api/classes/Ember.Handlebars.helpers.html#method_action)
