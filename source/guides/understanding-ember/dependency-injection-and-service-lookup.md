@@ -151,7 +151,7 @@ There are two ways to access this API. Many Ember applications can access this A
 
 ```JavaScript
 App = Ember.Application.create();
-App.register('logger:main', {log: function(m){ console.log(n); }}, {instantiate: false});
+App.register('logger:main', {log: function(m){ console.log(m); }}, {instantiate: false});
 App.inject('route', 'logger', 'logger:main');
 ```
 
