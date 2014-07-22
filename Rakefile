@@ -49,14 +49,7 @@ def generate_ember_docs
       sha = describe =~ /-g(.+)/ ? $1 : describe
     end
 
-    Bundler.with_clean_env do
-      unless system('bundle check')
-        puts "You are missing dependencies for #{repo_path}. Attempting to install now."
-        sh('bundle install')
-      end
-
-      sh("bundle exec rake docs")
-    end
+    sh("node bin/generate_docs.js")
   end
 
   # JSON is valid YAML
@@ -123,7 +116,7 @@ task :preview do
   listener.change { Rake::Task["generate_docs"].execute }
   listener.start(false)
 
-  system "middleman server"
+  system "middleman server --reload-paths data/"
 end
 
 desc "Deploy the website to github pages"

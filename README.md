@@ -38,7 +38,7 @@ the same directory:
 
 Notice that the name of the data project needs to use `ember-data` not `data`
 
-* In the ember.js directory execute `bundle exec rake ember:docs`
+* In the ember.js directory execute `node bin/generate_docs.js`
 * In the ember-data directory execute `grunt docs`
 * Finally, in the website directory execute `bundle exec rake generate_docs`
 
