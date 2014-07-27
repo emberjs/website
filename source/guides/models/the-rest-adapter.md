@@ -12,7 +12,8 @@ with based on the name of the model. For example, if you ask for a
 `Post` by ID:
 
 ```js
-var post = store.find('post', 1);
+store.find('post', 1).then(function (post) {
+});
 ```
 
 The REST adapter will automatically send a `GET` request to `/posts/1`.
