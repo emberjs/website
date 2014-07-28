@@ -1,7 +1,7 @@
 ---
 title: Security Releases - Ember 1.0.1, 1.1.3, 1.2.1, and 1.3.1
 author: Tom Dale
-tags: Releases, Security, Recent Posts
+tags: Releases, Security
 ---
 
 Because developers trust Ember.js to handle sensitive customer data in

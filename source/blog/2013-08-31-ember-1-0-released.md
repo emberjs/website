@@ -1,7 +1,7 @@
 ---
 title: Ember 1.0 Released
 author: The Core Team
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 Today, we're excited to announce the final release of Ember.js 1.0.

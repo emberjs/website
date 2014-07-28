@@ -1,7 +1,7 @@
 ---
 title: Security Releases - Ember 1.2.2, and 1.3.2
 author: Robert Jackson
-tags: Releases, Security, Recent Posts
+tags: Releases, Security
 ---
 
 Because developers trust Ember.js to handle sensitive customer data in

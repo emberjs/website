@@ -1,7 +1,7 @@
 ---
 title: Ember 1.2.0 and 1.3 Beta Released
 author: Tom Dale
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 What better way to celebrate the holiday season than with two

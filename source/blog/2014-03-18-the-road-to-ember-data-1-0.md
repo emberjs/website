@@ -1,7 +1,6 @@
 ---
 title: The Road to Ember Data 1.0
 author: Tom Dale & Yehuda Katz
-tags: Recent Posts
 ---
 
 **TL;DR** Ember Data 1.0 is coming soon. We have a few last features to land before we

@@ -1,7 +1,7 @@
 ---
 title: Ember Data 1.0.0 Beta 2 Released
 author: Yehuda Katz
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 [Ember Data 1.0.0-beta.2][1] has been released.

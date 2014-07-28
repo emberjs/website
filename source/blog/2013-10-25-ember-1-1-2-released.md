@@ -1,7 +1,7 @@
 ---
 title: Ember 1.1.2 Released
 author: Peter Wagenet
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 Unfortunately, there was a second regression in 1.1 that didn't get
