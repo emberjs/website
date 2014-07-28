@@ -64,7 +64,7 @@ With this code, we have established the following behaviors:
 
 1. If the user navigates to `/articles`, `category` will be `null`, so
    the articles won't be filtered.
-2. If the user navigates to `/articles?articles[category]=recent`,
+2. If the user navigates to `/articles?category=recent`,
    `category` will be set to `"recent"`, so articles will be filtered.
 3. Once inside the `articles` route, any changes to the `category`
    property on `ArticlesController` will cause the URL to update the
