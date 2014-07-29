@@ -43,6 +43,9 @@
     url:      http://www.meetup.com/Ember-js-Pittsburgh/
   - location: Denver, CO
     url:      http://www.meetup.com/Ember-js-Denver/
+  - location: Orlando, FL
+    url:      http://www.meetup.com/Ember-js-Orlando/
+    image:    01orlando.png
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
