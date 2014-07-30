@@ -45,8 +45,7 @@ that meeting in the coming weeks. Thank you to our friends at [Pivotal
 Labs](http://pivotallabs.com/) for hosting us in their awesome new office.
 
 ### Built With Ember
-A few months ago we [began tracking](https://docs.google.com/document/d/1ZWYq3
-gwkPTzUiyqr4x_asSj8wIgfvg8XyLmU3Yx_FPE/edit) some of the ambitious apps made
+A few months ago we [began tracking](https://docs.google.com/document/d/1ZWYq3gwkPTzUiyqr4x_asSj8wIgfvg8XyLmU3Yx_FPE/edit) some of the ambitious apps made
 with Ember.js. The folks at [Blimp](http://www.getblimp.com/) have turned that
 document into a curated list of awesome Ember.js applications. [Check it
 out](http://builtwithember.io/).
