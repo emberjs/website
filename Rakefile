@@ -76,11 +76,11 @@ def generate_ember_data_docs
       sha = describe =~ /-g(.+)/ ? $1 : describe
     end
 
-    sh("npm install && grunt docs")
+    sh("npm install && npm run dist")
   end
 
   # JSON is valid YAML
-  data = YAML.load_file(File.join(repo_path, "docs/build/data.json"))
+  data = YAML.load_file(File.join(repo_path, "dist/docs/data.json"))
   data["project"]["sha"] = sha
   File.open(File.expand_path("../data/#{output_path}", __FILE__), "w") do |f|
     YAML.dump(data, f)
