@@ -203,6 +203,8 @@ Models:
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
     url: "models/handling-metadata"
+  - title: "The Active Model Adapter"
+    url: "models/the-active-model-adapter"
   - title: "Customizing Adapters"
     url: "models/customizing-adapters"
   - title: "Frequently Asked Questions"
