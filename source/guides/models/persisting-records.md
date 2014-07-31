@@ -14,7 +14,7 @@ post.save(); // => POST to '/posts'
 
 ```javascript
 store.find('post', 1).then(function (post) {
-  post.get('title') // => "Rails is Omakase"
+  post.get('title'); // => "Rails is Omakase"
 
   post.set('title', 'A new post');
 
