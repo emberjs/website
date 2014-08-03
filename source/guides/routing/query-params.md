@@ -148,8 +148,8 @@ App.ArticlesRoute = Ember.Route.extend({
   },
   model: function(params) {
     // This gets called upon entering 'articles' route
-    // for the first time, and we opt in refiring it
-    // upon query param changes via `queryParamsDidChange` action
+    // for the first time, and we opt into refiring it upon 
+    // query param changes by setting `refreshModel:true` above.
 
     // params has format of { category: "someValueOrJustNull" },
     // which we can just forward to the server.
