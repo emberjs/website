@@ -26,14 +26,18 @@ Will become:
 You can pass the following standard `<input>` attributes within the input
 helper:
 
-* `value`
-* `size`
-* `name`
-* `pattern`
-* `placeholder`
-* `disabled`
-* `maxlength`
-* `tabindex`
+<table>
+  <tr><td>`readonly`</td><td>`required`</td><td>`autofocus`</td></tr>
+  <tr><td>`value`</td><td>`placeholder`</td><td>`disabled`</td></tr>
+  <tr><td>`size`</td><td>`tabindex`</td><td>`maxlength`</td></tr>
+  <tr><td>`name`</td><td>`min`</td><td>`max`</td></tr>
+  <tr><td>`pattern`</td><td>`accept`</td><td>`autocomplete`</td></tr>
+  <tr><td>`autosave`</td><td>`formaction`</td><td>`formenctype`</td></tr>
+  <tr><td>`formmethod`</td><td>`formnovalidate`</td><td>`formtarget`</td></tr>
+  <tr><td>`height`</td><td>`inputmode`</td><td>`multiple`</td></tr>
+  <tr><td>`step`</td><td>`width`</td><td>`form`</td></tr>
+  <tr><td>`selectionDirection`</td><td>`spellcheck`</td><td>&nbsp;</td></tr>
+</table>
 
 If these attributes are set to a quoted string, their values will be set
 directly on the element, as in the previous example. However, when left
@@ -63,6 +67,9 @@ Checkboxes support the following properties:
 * `tabindex`
 * `indeterminate`
 * `name`
+* `autofocus`
+* `form`
+
 
 Which can be bound or set as described in the previous section.
 
@@ -76,12 +83,23 @@ Will bind the value of the text area to `name` on the current context.
 
 `{{textarea}}` supports binding and/or setting the following properties:
 
+* `value`
+* `name`
 * `rows`
 * `cols`
 * `placeholder`
 * `disabled`
 * `maxlength`
 * `tabindex`
+* `selectionEnd`
+* `selectionStart`
+* `selectionDirection`
+* `wrap`
+* `readonly`
+* `autofocus`
+* `form`
+* `spellcheck`
+* `required`
 
 ### Extending Built-In Controls
 
