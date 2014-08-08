@@ -14,7 +14,7 @@ Past release and beta builds  of Ember and Ember Data are available at [Tagged R
 
 Bower is a package manager for the web. Bower makes it easy to manage dependencies in your application including Ember and Ember Data. To learn more about Bower visit [http://bower.io/](http://bower.io/).
 
-Adding Ember to your application with Bower is easy simply run `bower install ember --save`. For Ember Data run `bower install ember-data --save`. You can also add `ember` or `ember-data` to your `bower.json` file as follows.
+Adding Ember to your application with Bower is easy; simply run `bower install ember --save`. For Ember Data, run `bower install ember-data --save`. You can also add `ember` or `ember-data` to your `bower.json` file as follows.
 
 ```json
 {
@@ -29,7 +29,7 @@ Adding Ember to your application with Bower is easy simply run `bower install em
 
 ##RubyGems
 
-If your application uses a Ruby based build system you can use the [ember-source](http://rubygems.org/gems/ember-source) and [ember-data-source](http://rubygems.org/gems/ember-data-source) RubyGems to access ember and ember data sources from Ruby.
+If your application uses a Ruby based build system, you can use the [ember-source](http://rubygems.org/gems/ember-source) and [ember-data-source](http://rubygems.org/gems/ember-data-source) RubyGems to access ember and ember data sources from Ruby.
 
-If your application is built in rails the [ember-rails](http://rubygems.org/gems/ember-rails) RubyGem makes it easy to integrate Ember into your Ruby on Rails application.
+If your application is built in Rails, the [ember-rails](http://rubygems.org/gems/ember-rails) RubyGem makes it easy to integrate Ember into your Ruby on Rails application.
 
