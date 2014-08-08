@@ -199,6 +199,8 @@ Models:
     url: "models/working-with-records"
   - title: "Using Fixtures"
     url: "models/the-fixture-adapter"
+  - title: "The Rest Adapter"
+    url: "models/the-rest-adapter"
   - title: "Connecting to an HTTP Server"
     url: "models/connecting-to-an-http-server"
   - title: "Handling Metadata"
