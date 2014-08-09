@@ -1,6 +1,6 @@
 ## New Ember Features
 
-The Ember core team is strongly commited to maintaining backwards compatibility and following semantic versioning. However, occasionally there is a need to add new features to the framework. We implement these features in a backwards compatible way by wrapping and only exposing them to via [feature flags](/guides/configuring-ember/feature-flags/).
+The Ember core team is strongly committed to maintaining backwards compatibility and following semantic versioning. However, occasionally there is a need to add new features to the framework. We implement these features in a backwards compatible way by wrapping and only exposing them to via [feature flags](/guides/configuring-ember/feature-flags/).
 You can use these flags to selectively enable specific features as you see fit for your application.
 
 This guide is a comprehensive list of the new features added to the Ember JS Framework since the 1.0 release. 
