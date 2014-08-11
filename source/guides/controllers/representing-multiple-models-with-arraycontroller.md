@@ -1,9 +1,9 @@
 You can use [Ember.ArrayController](/api/classes/Ember.ArrayController.html) to represent an array of models. To tell an
-`ArrayController` which model to represent, set its `model` property
+`ArrayController` which models to represent, set its `model` property
 in your route's `setupController` method.
 
 You can treat an `ArrayController` just like its underlying array. For
-example, imagine we want to display the current playlist. In our router,
+example, imagine we want to display the current playlist. In our route,
 we setup our `SongsController` to represent the songs in the playlist:
 
 ```javascript
@@ -84,7 +84,7 @@ App.SongController = Ember.ObjectController.extend({
 ```
  
 Then, the `ArrayController` `itemController` property must be set to
-the decorated controller.
+the decorating controller.
  
 ```javascript
 App.SongsController = Ember.ArrayController.extend({
