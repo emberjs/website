@@ -51,6 +51,14 @@ rendering context. For example:
 Will bind the `disabled` attribute to the value of `entryNotAllowed` in the
 current context.
 
+### Actions
+
+To dispatch an action on specific events, such as `enter` or `key-press`, use the following
+
+```js
+{{input value=firstName action="updateFirstName" on="key-press"}}
+```
+
 ### Checkboxes
 
 You can also use the `{{input}}` helper to create a checkbox by setting its
