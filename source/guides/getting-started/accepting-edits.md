@@ -4,7 +4,8 @@ To accomplish this, we'll create a new custom component and register it with Han
 
 Create a new file `js/views/edit_todo_view.js`. You may place this file anywhere you like (even just putting all code into the same file), but this guide will assume you have created the file and named it as indicated.
 
-In `js/views/edit_todo_view.js` create an extension of `Ember.TextField`:
+In `js/views/edit_todo_view.js` create an extension of `Ember.TextField` and register it as
+a [helper](http://emberjs.com/api/classes/Ember.Handlebars.html#method_helper):
 
 ```javascript
 Todos.EditTodoView = Ember.TextField.extend({
