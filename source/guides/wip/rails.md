@@ -11,7 +11,7 @@ In this guide, we'll show you how to build a simple, personal photoblog applicat
 
 Ember.js is a front-end javascript model-view-controller framework. It is designed to help you create ambitious web applications which run inside the browser. These applications can use AJAX as their primary mechanism for communicating with an API, much like a desktop or mobile application.
 
-Ruby on Rails is a Ruby-based full stack web framework. It also uses a model-view-controller paradigm to architect applications built on top of it, but in a much different way than Ember.js. The differences are beyond the scope of this guide, but you can read about them in our [Ember MVC guide](http://emberjs.com/guides/ember_mvc/). What is critical to understand is that Ruby on Rails runs on the server, not the client. It is an excellent platform to build websites and APIs.
+Ruby on Rails is a Ruby-based full stack web framework. It also uses a model-view-controller paradigm to architect applications built on top of it, but in a much different way than Ember.js. The differences are beyond the scope of this guide, but you can read about them in our [Ember MVC guide](/guides/ember_mvc/). What is critical to understand is that Ruby on Rails runs on the server, not the client. It is an excellent platform to build websites and APIs.
 
 In the next few steps, we'll create a Ruby on Rails application which does two distinct but equally important things: It acts as a host for the Ember.js application we will write, and it acts as an API with which the application will communicate. 
 

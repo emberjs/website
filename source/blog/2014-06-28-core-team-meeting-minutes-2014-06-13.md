@@ -34,7 +34,7 @@ core team member and let them know!
 
 ### Query parameters
 This has been [enabled by default](https://github.com/emberjs/ember.js/commit/4130e556132eabad11aa619092c8ea840ba4957b)
-in beta and nightly builds. Check out [Query Parameters Guide](http://emberjs.com/guides/routing/query-params/)
+in beta and nightly builds. Check out [Query Parameters Guide](/guides/routing/query-params/)
 for usage details.
 
 ### Keeping the train moving

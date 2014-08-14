@@ -8,7 +8,7 @@ Because many Ember.js apps allow users to interact with private data, we
 take security issues very seriously.
 
 In fact, we're one of the few JavaScript projects that has a
-[clearly outlined security policy](http://emberjs.com/security/) and a
+[clearly outlined security policy](/security/) and a
 [low-traffic mailing list exclusively for security
 announcements](https://groups.google.com/forum/#!forum/ember-security).
 
@@ -47,7 +47,7 @@ traditional server-side framework.
 That being said, we will remain vigilant in ensuring that even small
 security issues are taken care of properly. If you discover what you
 believe may be a security issue in Ember.js, we ask that you follow
-our [responsible disclosure policy](http://emberjs.com/security/).
+our [responsible disclosure policy](/security/).
 
 Lastly, thanks to Yehuda Katz, Stefan Penner and Kris Selden, who
 donated their valuable time to reviewing the patch, auditing other code

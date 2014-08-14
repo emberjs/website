@@ -51,7 +51,7 @@ will be our official library.
 ### Ember Builds
 
 Each successful [CI](https://travis-ci.org/emberjs/ember.js) run now publishes its build results to
-[http://emberjs.com/builds](http://emberjs.com/builds). This should make
+[http://emberjs.com/builds](/builds). This should make
 it much simpler to reference and use the [the latest ember build](http://builds.emberjs.com/canary/ember.js).
 
 Thanks to Stanley Stuart, Luke Melia, Erik Bryn and others for getting this set up.

@@ -1,5 +1,5 @@
 In addition to the techniques described in the
-[Asynchronous Routing Guide](http://emberjs.com/guides/routing/asynchronous-routing/),
+[Asynchronous Routing Guide](/guides/routing/asynchronous-routing/),
 the Ember Router provides powerful yet overridable
 conventions for customizing asynchronous transitions
 between routes by making use of `error` and `loading`
@@ -9,7 +9,7 @@ substates.
 
 The Ember Router allows you to return promises from the various
 `beforeModel`/`model`/`afterModel` hooks in the course of a transition
-(described [here](http://emberjs.com/guides/routing/asynchronous-routing/)).
+(described [here](/guides/routing/asynchronous-routing/)).
 These promises pause the transition until they fulfill, at which point
 the transition will resume.
 

@@ -5,7 +5,7 @@ tags: Ember Data
 ---
 
 Just over a month ago, we told you about our [plans for stabilizing Ember
-Data](http://emberjs.com/blog/2013/03/22/stabilizing-ember-data.html). I'd like
+Data](/blog/2013/03/22/stabilizing-ember-data.html). I'd like
 to give you an update on the status of those efforts.
 
 First, though, I'd like to thank everyone who has been contributing to Ember

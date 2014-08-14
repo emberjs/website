@@ -34,7 +34,7 @@ completed: function() {
 // ... additional lines truncated for brevity ...
 ```
 
-The `completed` and `clearCompleted` methods both invoke the `filterBy` method, which is part of the [ArrayController](http://emberjs.com/api/classes/Ember.ArrayController.html#method_filterProperty) API and returns an instance of [EmberArray](http://emberjs.com/api/classes/Ember.Array.html) which contains only the items for which the callback returns true.  The `clearCompleted` method also invokes the `invoke` method which is part of the [EmberArray](http://emberjs.com/api/classes/Ember.Array.html#method_invoke) API.  `invoke` will execute a method on each object in the Array if the method exists on that object.
+The `completed` and `clearCompleted` methods both invoke the `filterBy` method, which is part of the [ArrayController](/api/classes/Ember.ArrayController.html#method_filterProperty) API and returns an instance of [EmberArray](http://emberjs.com/api/classes/Ember.Array.html) which contains only the items for which the callback returns true.  The `clearCompleted` method also invokes the `invoke` method which is part of the [EmberArray](http://emberjs.com/api/classes/Ember.Array.html#method_invoke) API.  `invoke` will execute a method on each object in the Array if the method exists on that object.
 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
