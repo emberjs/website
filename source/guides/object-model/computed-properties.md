@@ -32,7 +32,7 @@ Whenever you access the `fullName` property, this function gets called, and it r
 
 #### Alternate invocation
 
-At this point, you might be wondering how you are able to call the `.property` function on a function.  This is possible because Ember extends the `function` prototype.  Read more on that [here](http://emberjs.com/guides/configuring-ember/disabling-prototype-extensions/). If you'd like to replicate the declaration from above without using these extensions you could do so with the following:
+At this point, you might be wondering how you are able to call the `.property` function on a function.  This is possible because Ember extends the `function` prototype.  More information about extending native prototypes is available in the [disabling prototype extensions guide](/guides/configuring-ember/disabling-prototype-extensions/). If you'd like to replicate the declaration from above without using these extensions you could do so with the following:
 
 ```javascript
   fullName: Ember.computed('firstName', 'lastName', function() {

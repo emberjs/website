@@ -59,7 +59,7 @@ core team member and let them know!
 
 * [BUGFIX beta {{view}} helper no longer uses Ember.View global, instead uses container view:default](https://github.com/emberjs/ember.js/pull/4598)
 
-  During the ES6-ify process @rjackson left a comment mentioning that the {{view}} helper needs to not look up
+  During the ES6-ify process @rwjblue left a comment mentioning that the {{view}} helper needs to not look up
   Ember.View globally. This PR fixes this by looking up view:default from the container (which Ember.View is
   registered at, by default).
 

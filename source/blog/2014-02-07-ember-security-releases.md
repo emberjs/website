@@ -1,13 +1,13 @@
 ---
 title: Security Releases - Ember 1.2.2, and 1.3.2
 author: Robert Jackson
-tags: Releases, Security, Recent Posts
+tags: Releases, Security
 ---
 
 Because developers trust Ember.js to handle sensitive customer data in
 production, we take the security of the project extremely seriously.  In
 fact, we're one of the few JavaScript projects that has a [clearly
-outlined security policy](http://emberjs.com/security/) and a
+outlined security policy](/security/) and a
 [low-traffic mailing list exclusively for security
 announcements](https://groups.google.com/forum/#!forum/ember-security).
 
@@ -34,7 +34,7 @@ and the advisory.
 
 If you discover what you believe may be a security issue in Ember.js, we
 ask that you follow our [responsible disclosure
-policy](http://emberjs.com/security/).
+policy](/security/).
 
 If you are using Ember.js in production, please consider subscribing to
 our [security announcements mailing
@@ -43,6 +43,6 @@ extremely low-traffic and only contains announcements such as these.
 
 ## Additional Reading
 
-* [Ember.js Security Policy Announcement](http://emberjs.com/blog/2013/04/05/announcing-the-ember-security-policy.html)
-* [Ember.js Security Policy](http://emberjs.com/security/)
+* [Ember.js Security Policy Announcement](/blog/2013/04/05/announcing-the-ember-security-policy.html)
+* [Ember.js Security Policy](/security/)
 * [Ember.js Security Group](https://groups.google.com/forum/#!forum/ember-security)

@@ -211,7 +211,7 @@ You can see our progress on Ember Data's master branch, by looking at
 [2]: https://github.com/emberjs/data/blob/master/packages/ember-data/lib/adapters/basic_adapter.js
 
 Over the next few weeks, we will be writing documentation that will be
-available in the [Ember.js Guides](http://emberjs.com/guides/). Once a
+available in the [Ember.js Guides](/guides/). Once a
 few people have had the opportunity to use the Basic Adapter and
 sanity-check our work, we will start cutting beta releases of Ember
 Data. We think that this will be a lot easier for new developers than "make

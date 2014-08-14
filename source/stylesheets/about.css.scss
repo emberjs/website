@@ -2,11 +2,17 @@
 
 $hidpi-min-pixel-ratio: 1.3 !default;
 
-.callout-image {
+.job-board-banner {
   z-index: 99998;
   position: absolute;
   left: 20px;
+  width: 125px;
+  height: 170px;
+
   text-decoration: none !important;
+  text-indent: -99999px;
+
+  @include hidpi('about/job-board-banner', png);
 
   &:hover {
     border-bottom: none;

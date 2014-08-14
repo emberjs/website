@@ -15,7 +15,7 @@ App.SongController = Ember.ObjectController.extend({
 });
 ```
 
-In your router, you set the `model` of the controller to the
+In the Song route, you set the `model` of the controller to the
 currently playing song:
 
 ```javascript

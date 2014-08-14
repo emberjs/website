@@ -97,6 +97,24 @@ In the above example, the model hook for `PhotoRoute` will run with `params.phot
 `CommentRoute` _won't_ run since you supplied a model object for the `comment` segment. The comment's id will
 populate the url according to `CommentRoute`'s `serialize` hook.
 
+### Using link-to as an inline helper
+
+In addition to being used as a block expression, the `link-to` helper
+can also be used in inline form by specifying the link text as the first
+argument to the helper:
+
+```handlebars
+A link in {{#link-to 'index'}}Block Expression Form{{/link-to}},
+and a link in {{link-to 'Inline Form' 'index'}}.
+```
+
+The output of the above would be:
+
+```html
+A link in <a href='/'>Block Expression Form</a>,
+and a link in <a href='/'>Inline Form</a>.
+```
+
 ### Adding additional attributes on a link
 
 When generating a link you might want to set additional attributes for it. You can do this with additional
@@ -110,3 +128,17 @@ arguments to the `link-to` helper:
 
 Many of the common HTML properties you would want to use like `class`, and `rel` will work. When
 adding class names, Ember will also apply the standard `ember-view` and possibly `active` class names.
+
+### Replacing history entries
+
+The default behavior for `link-to` is to add entries to the browser's history
+when transitioning between the routes. However, to replace the current entry in
+the browser's history you can use the `replace=true` option:
+
+```handlebars
+<p>
+  {{#link-to 'photo.comment' 5 primaryComment replace=true}}
+    Main Comment for the Next Photo
+  {{/link-to}}
+</p>
+```

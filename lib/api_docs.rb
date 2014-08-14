@@ -336,6 +336,12 @@ module APIDocs
     end
     alias :api_namespace_link :api_class_link
 
+    def api_param_type(item)
+      type = api_class_link item['type']
+      type = "[#{type}]" if item['optional']
+      type
+    end
+
     def api_classes_for_item(item)
       classes = [item['access']]
       classes << 'deprecated' if item['deprecated']

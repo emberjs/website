@@ -1,6 +1,6 @@
 Next we'll update the application so a user can navigate to a url where only todos that are not complete are displayed.
 
-In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{link-to}}` helper:
+In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{link-to}}` helper and remove the active class from the `<a>` tag for 'All':
 
 ```handlebars
 <!--- ... additional lines truncated for brevity ... -->

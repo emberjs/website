@@ -280,7 +280,7 @@ module TOC
           <div class="under_construction_warning">
             <h3>
               <div class="msg">
-                <strong>WARNING:</strong> query params are an experimental feature. You must be using a recent canary build of Ember, and enable the <code>query-params-new</code> feature flag. For more info on enabling feature flags visit <a href="http://emberjs.com/guides/configuring-ember/feature-flags/">the Feature Flags guide</a>
+                <strong>WARNING:</strong> query params are only available in recent beta builds of Ember.
               </div>
             </h3>
           </div>

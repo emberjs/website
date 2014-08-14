@@ -13,13 +13,13 @@ post.save(); // => POST to '/posts'
 ```
 
 ```javascript
-var post = store.find('post', 1);
+store.find('post', 1).then(function (post) {
+  post.get('title'); // => "Rails is Omakase"
 
-post.get('title') // => "Rails is Omakase"
+  post.set('title', 'A new post');
 
-post.set('title', 'A new post');
-
-post.save(); // => PUT to '/posts/1'
+  post.save(); // => PUT to '/posts/1'
+});
 ```
 
 ### Promises

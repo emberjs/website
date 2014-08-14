@@ -42,7 +42,7 @@ a copy of the latest passing build from
 * [Minified][minified-build]
 
 [emberdata]: https://github.com/emberjs/data
-[builds]: http://emberjs.com/builds
+[builds]: /builds
 [development-build]: http://builds.emberjs.com/canary/ember-data.js
 [minified-build]: http://builds.emberjs.com/canary/ember-data.min.js
 

@@ -100,8 +100,19 @@
 
       <dl>
         <% item['params'].each do |param| %>
-          <dt><strong><%= param['name'] %></strong> <span class="type"><%= api_class_link param['type'] %></span></dt>
-          <dd><%= param['description'] %></dd>
+          <dt><strong><%= param['name'] %></strong> <span class="type"><%= api_param_type param %></span></dt>
+          <dd>
+            <%= param['description'] %>
+
+            <% if param['props'] %>
+              <dl>
+                <% param['props'].each do |prop| %>
+                  <dt><strong><%= prop['name'] %></strong> <span class="type"><%= api_param_type prop %></span></dt>
+                  <dd><%= prop['description'] %></dd>
+                <% end %>
+              </dl>
+            <% end %>
+          </dd>
         <% end %>
       </dl>
     </div>

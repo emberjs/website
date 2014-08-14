@@ -47,7 +47,7 @@ from scratch.
 The build tools story is significantly improved from those days! We're fortunate enough to
 have several competing systems, all JavaScript based, that help streamline this workflow.
 
-Work is [in progress](https://github.com/rjackson/ember.js/tree/broccolify) to unify our builds
+Work is [in progress](https://github.com/rwjblue/ember.js/tree/broccolify) to unify our builds
 and better declare and manage our external dependencies.
 
 ### PR's/Issues To Review

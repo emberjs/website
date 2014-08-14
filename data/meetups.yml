@@ -45,15 +45,18 @@
     url:      http://www.meetup.com/Ember-js-Denver/
   - location: Dallas, TX
     url:      http://www.meetup.com/Ember-Dallas   
+  - location: Orlando, FL
+    url:      http://www.meetup.com/Ember-js-Orlando/
+    image:    01orlando.png
 "Worldwide":
   - location: Toronto, Canada
-    url:      http://www.torontoemberjs.com/
+    url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
     image:    15toronto.png
   - location: Paris, France
     url:      http://www.meetup.com/EmberJS-Paris/
     image:    14paris.png
   - location: London, UK
-    url:      http://www.meetup.com/London-Emberjs-User-Group/
+    url:      http://emberlondon.com
     image:    11london.png
   - location: Dublin, Ireland
     url:      http://www.meetup.com/emberjsdublin/
@@ -106,3 +109,5 @@
     url:      http://www.meetup.com/EmberJS-Bangalore/
   - location: Tokyo, Japan
     url:      http://emberjs.doorkeeper.jp/
+  - location: Wellington, New Zealand
+    url:      http://www.meetup.com/ember-js-wellington/

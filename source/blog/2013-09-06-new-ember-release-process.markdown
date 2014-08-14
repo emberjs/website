@@ -26,7 +26,7 @@ The Ember.js 1.x Schedule:
 All builds will be available on the new [Ember.js Builds][1] section of the
 Ember website.
 
-[1]: http://emberjs.com/builds/
+[1]: /builds/
 
 All new features will start out on master, behind a feature flag. Canary
 and `latest` builds will ship with all experimental features, enable-able
@@ -65,7 +65,7 @@ the build on any browser we support.
 Every time the build passes across all browsers, the `ember-latest` build
 will be updated. This is the most bleeding of bleeding-edge builds.
 
-You can get all of the latest builds at http://emberjs.com/builds/#/canary/latest.
+You can get all of the latest builds at [http://emberjs.com/builds/#/canary/latest](/builds/#/canary/latest).
 
 ### Canary Builds
 
@@ -115,7 +115,7 @@ features that looked ready originally but which aren't going to make the
 cut for the next stable build.
 
 You can get the latest successful build off of the beta branch at
-http://emberjs.com/builds/#/beta/latest.
+[http://emberjs.com/builds/#/beta/latest](/builds/#/beta/latest).
 
 ### Release Build
 

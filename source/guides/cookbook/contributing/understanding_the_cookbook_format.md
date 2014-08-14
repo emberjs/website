@@ -6,7 +6,7 @@ how your contribution should be formatted.
 Cookbook-style guides contain recipes that guide a beginning programmer to a deeper knowledge of the subject
 by answering specific, "how-to" style questions. Cookbook recipes address more topics than
 [API documentation for a class](http://docs.emberjs.com/#doc=Ember.StateManager&src=fal), but are smaller in
-scope than [a topic-based guide](http://emberjs.com/guides/view_layer/).
+scope than [a topic-based guide](/guides/view_layer/).
 
 All recipes follow the same format:
 
@@ -31,6 +31,6 @@ Take a look at an [O'Reilly Cookbook](http://shop.oreilly.com/category/series/co
 format.
 
 [api_docs_for_class]: http://docs.emberjs.com/#doc=Ember.StateManager&src=fal
-[topic_based_guide]: http://emberjs.com/guides/view_layer/
+[topic_based_guide]: /guides/view_layer/
 [oreilly_cookbooks]: http://shop.oreilly.com/category/series/cookbooks.do
 [coffeescript_cookbook]: http://coffeescriptcookbook.com/

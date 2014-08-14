@@ -1,7 +1,6 @@
 ---
 title: The Road to Ember Data 1.0
 author: Tom Dale & Yehuda Katz
-tags: Recent Posts
 ---
 
 **TL;DR** Ember Data 1.0 is coming soon. We have a few last features to land before we
@@ -208,7 +207,7 @@ Once the issues we've outlined above are complete, we'll be releasing a 1.0 of E
 
 For example, if Ember.js 1.7 is the current stable version at the time of Ember Data's first stable release, it will be Ember Data 1.7.
 
-As with Ember.js, we intend Ember Data to follow the same [Chrome-inspired six-week release process](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html). That release process has paid dividends in terms of predictability and momentum, and the feedback has been overwhelmingly positive. Importantly, having separate stable, beta and canary releases also allows us to clearly [communicate which features are stable](http://emberjs.com/builds/#/beta) and ready for production, and which are still being worked on.
+As with Ember.js, we intend Ember Data to follow the same [Chrome-inspired six-week release process](/blog/2013/09/06/new-ember-release-process.html). That release process has paid dividends in terms of predictability and momentum, and the feedback has been overwhelmingly positive. Importantly, having separate stable, beta and canary releases also allows us to clearly [communicate which features are stable](http://emberjs.com/builds/#/beta) and ready for production, and which are still being worked on.
 
 ## A Framework for Data
 

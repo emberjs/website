@@ -23,9 +23,9 @@ Last month we completed the migration of [ember-data](https://github.com/emberjs
 
 Work has started on the [porting Ember.js to ES6 module syntax as well!](https://github.com/emberjs/ember.js/commit/8c0a52cb10efbaede8e14cca24fa5c05bcf121ff).
 
-Thanks to @thomasABoyt and @Square for work on the [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler), @fivetanley for converting ember-data, and @rjackson for starting the process in Ember.js core.
+Thanks to @thomasABoyt and @Square for work on the [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler), @fivetanley for converting ember-data, and @rwjblue for starting the process in Ember.js core.
 
-Resolution: @rjackson hands off the grunt work to @trek and @fivetanley so he's not overextended. @rjackson says "you're good to start with ember-metal"
+Resolution: @rwjblue hands off the grunt work to @trek and @fivetanley so he's not overextended. @rwjblue says "you're good to start with ember-metal"
 
 
 #### Ghost.js Admin

@@ -283,6 +283,14 @@
   image: netuitive_ember_logo.png
 - url: http://www.thinkific.com
   image: thinkific.png
+- url: http://app.getwashio.com/
+  image: washio.png
+- url: http://www.jebbit.com
+  image: jebbit.png
+- url: http://zing.co
+  image: zing.png
+- url: http://screenlight.tv
+  image: screenlight.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
