@@ -133,7 +133,7 @@ will the URL.
 
 But some query param changes necessitate loading data from the server,
 in which case it is desirable to opt into a full-on transition. To opt
-into a full transition when a controller query param property changes, 
+into a full transition when a controller query param property changes,
 you can use the optional `queryParams` configuration hash on the `Route`
 associated with that controller, and set that query param's
 `refreshModel` config property to `true`:
@@ -148,7 +148,7 @@ App.ArticlesRoute = Ember.Route.extend({
   },
   model: function(params) {
     // This gets called upon entering 'articles' route
-    // for the first time, and we opt into refiring it upon 
+    // for the first time, and we opt into refiring it upon
     // query param changes by setting `refreshModel:true` above.
 
     // params has format of { category: "someValueOrJustNull" },
@@ -184,7 +184,7 @@ App.ArticlesRoute = Ember.Route.extend({
 
 Note that the name of this config property and its default value of
 `false` is similar to the `link-to` helper's, which also lets
-you opt into a `replaceState` transition via `replace=true`. 
+you opt into a `replaceState` transition via `replace=true`.
 
 ### Map a controller's property to a different query param key
 
@@ -222,7 +222,7 @@ App.ArticlesController = Ember.ArrayController.extend({
 ### Default values and deserialization
 
 In the following example, the controller query param property `page` is
-considered to have a default value of `1`. 
+considered to have a default value of `1`.
 
 ```js
 App.ArticlesController = Ember.ArrayController.extend({
@@ -233,19 +233,103 @@ App.ArticlesController = Ember.ArrayController.extend({
 
 This affects query param behavior in two ways:
 
-1. The type of the default value is used to cast changed query param
-   values in the URL before setting values on the controller. So, given
-   the above example, if the user clicks the back button to change from
-   `/?page=3` to `/?page=2`, Ember will update the `page` controller
-   property to the properly cast number `2` rather than the string `"2"`, which it
-   knows to do because the default value (`1`) is a number. This also
-   allows boolean default values to be correctly cast when deserializing
-   from URL changes.
+1. Query param values are cast to the same datatype as the default
+   value, e.g. a URL change from `/?page=3` to `/?page=2` will set
+   `ArticlesController`'s `page` property to the number `2`, rather than
+   the string `"2"`. The same also applies to boolean default values.
 2. When a controller's query param property is currently set to its
    default value, this value won't be serialized into the URL. So in the
    above example, if `page` is `1`, the URL might look like `/articles`,
    but once someone sets the controller's `page` value to `2`, the URL
    will become `/articles?page=2`.
+
+### Sticky Query Param Values
+
+By default, query param values in Ember are "sticky", in that if you
+make changes to a query param and then leave and re-enter the route, the
+new value of that query param will be preserved (rather than reset to
+its default). This is a particularly handy default for preserving sort/filter
+parameters as you navigate back and forth between routes.
+
+Furthermore, these sticky query param values are remembered/restored
+according to the model loaded into the route. So, given a `team` route
+with dynamic segment `/:team_name` and controller query param "filter",
+if you navigate to `/badgers` and filter by `"rookies"`, then navigate
+to `/bears` and filter by `"best"`, and then navigate to `/potatoes` and
+filter by `"lamest"`, then given the following nav bar links,
+
+```hbs
+{{#link-to 'team' 'badgers '}}Badgers{{/link-to}}
+{{#link-to 'team' 'bears'   }}Bears{{/link-to}}
+{{#link-to 'team' 'potatoes'}}Potatoes{{/link-to}}
+```
+
+the generated links would be
+
+```hbs
+<a href="/badgers?filter=rookies">Badgers</a>
+<a href="/bears?filter=best">Bears</a>
+<a href="/potatoes?filter=lamest">Potatoes</a>
+```
+
+This illustrates that once you change a query param, it is stored and
+tied to the model loaded into the route.
+
+If you wish to reset a query param, you have two options:
+
+1. explicitly pass in the default value for that query param into
+   `link-to` or `transitionTo`
+2. use the `Route.resetController` hook to set query param values back to
+   their defaults before exiting the route or changing the route's model
+
+In the following example, the controller's `page` query param is reset
+to 1, _while still scoped to the pre-transition `ArticlesRoute` model_.
+The result of this is that all links pointing back into the exited route
+will use the newly reset value `1` as the value for the `page` query
+param.
+
+```js
+App.ArticlesRoute = Ember.Route.extend({
+  resetController: function (controller, isExiting, transition) {
+    if (isExiting) {
+      // isExiting would be false if only the route's model was changing
+      controller.set('page', 1);
+    }
+  }
+});
+```
+
+In some cases, you might not want the sticky query param value to be
+scoped to the route's model but would rather reuse a query param's value
+even as a route's model changes. This can be accomplished by setting the
+`scope` option to `"controller"` within the controller's `queryParams`
+config hash:
+
+```js
+App.ArticlesRoute = Ember.Route.extend({
+  queryParams: {
+    showMagnifyingGlass: {
+      scope: "controller"
+    }
+  }
+});
+```
+
+The following demonstrates how you can override both the scope and the
+query param URL key of a single controller query param property:
+
+```js
+App.ArticlesController = Ember.Controller.extend({
+  queryParams: [ "page", "filter",
+    {
+      showMagnifyingGlass: {
+        scope: "controller",
+        as: "glass",
+      }
+    }
+  ]
+});
+```
 
 ## Examples
 
