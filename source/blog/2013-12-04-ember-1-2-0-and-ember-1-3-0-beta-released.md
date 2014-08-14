@@ -72,7 +72,7 @@ hours of their free time into automating the infrastructure around the
 release process.
 
 As usual, you can always find the latest stable, beta, and canary
-releases at [emberjs.com/builds](http://emberjs.com/builds).
+releases at [emberjs.com/builds](/builds).
 
 While you're there, check out the new illustrations, courtesy of [Leah
 Silber](https://twitter.com/wifelette) and [Design

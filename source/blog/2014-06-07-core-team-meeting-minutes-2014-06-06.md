@@ -77,7 +77,7 @@ should be sure to thank [Brian Donovan](https://twitter.com/eventualbuddha) and 
 #### Query Parameters
 When we released 1.0 we pledged to follow [Semantic Versioning](http://semver.org/) and not break public-facing API until 2.0. Because of this, we're hesitant to release extensions to Ember.js's
 public API until we feel confident supporting it for the foreseeable future. We've taken several stabs
-at adding query parameters to our router. People have been very happy with the [latest incarnation](http://emberjs.com/guides/routing/query-params/) available on canary builds, but there have been a few
+at adding query parameters to our router. People have been very happy with the [latest incarnation](/guides/routing/query-params/) available on canary builds, but there have been a few
 edge cases we wanted to address. The last of these (providing a hook for overriding parameter resets
 on route exit) is about to land and we should hopefully include query parameters in the first 1.7.beta release.
 

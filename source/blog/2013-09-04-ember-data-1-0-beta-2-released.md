@@ -23,4 +23,4 @@ Nick Ragaz, Ricardo Mendes, Ryunosuke SATO, Sylvain Mina, and ssured
 
 Thanks to everyone who has been porting adapters to Ember Data 1.0!
 
-[1]: http://emberjs.com/builds/#/beta/latest
+[1]: /builds/#/beta/latest

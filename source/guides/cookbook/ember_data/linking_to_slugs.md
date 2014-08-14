@@ -8,13 +8,13 @@ a record in a url in place of an id.
 ## Solution
 
 Ember makes it easy to override the Route's default
-[model](http://emberjs.com/api/classes/Ember.Route.html#method_model)
+[model](/api/classes/Ember.Route.html#method_model)
 hook. You can define a custom model function to look up records by a
 `slug` property instead of by the `id`.
 
 Changing the `link-to` to use a slug instead of an `id` is easy and
 only requires creating a custom
-[serialize](http://emberjs.com/api/classes/Ember.Route.html#method_serialize)
+[serialize](/api/classes/Ember.Route.html#method_serialize)
 function on the route.
 
 ## Discussion

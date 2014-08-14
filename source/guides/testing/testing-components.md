@@ -368,4 +368,4 @@ with Embedded Components</a>
 
 [Unit Testing Basics]: /guides/testing/unit-testing-basics
 [Integration Test Helpers]: /guides/testing/test-helpers
-[layout]: http://emberjs.com/api/classes/Ember.Component.html#property_layout
+[layout]: /api/classes/Ember.Component.html#property_layout
