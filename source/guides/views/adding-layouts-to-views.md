@@ -72,14 +72,14 @@ App.PopupView = Ember.View.extend({
 Now you can re-use your popup with different templates:
 
 ```html
-{{#view App.PopupView}}
+{{#view "popup"}}
   <form>
     <label for="name">Name:</label>
     <input id="name" type="text" />
   </form>
 {{/view}}
 
-{{#view App.PopupView}}
+{{#view "popup"}}
   <p> Thank you for signing up! </p>
 {{/view}}
 ```

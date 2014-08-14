@@ -76,5 +76,5 @@ Which is functionally equivalent to, and accepts all the same
 arguments as:
 
 ```handlebars
-{{view App.CalendarView}}
+{{view "calendar"}}
 ```

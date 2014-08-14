@@ -352,8 +352,8 @@ We use the handlebars expression `template` to refer to another template we'd li
 Let's create the `_form` template in `app/assets/javascripts/templates/photos/_form.handlebars`. It will include only the form elements for our photo, like so:
 
 ```handlebars
-<label for="title-field">Title:</label>{{view Ember.TextField id="title-field" valueBinding="controller.model.title"}}
-<label for="url-field">URL:</label>{{view Ember.TextField id="url-field" valueBinding="controller.model.url"}}
+<label for="title-field">Title:</label>{{input id="title-field" value=model.title}}
+<label for="url-field">URL:</label>{{input id="url-field" value=model.url}}
 
 <button {{action 'save' target="Photoblog.stateManager"}}>Save</button>
 <button {{action 'cancel' target="Photoblog.stateManager"}}>Cancel</button>
