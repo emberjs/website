@@ -134,13 +134,13 @@ By default, new instances of `Ember.View` create a `<div>` element. You can
 override this by passing a `tagName` parameter:
 
 ```handlebars
-{{view App.InfoView tagName="span"}}
+{{view "info" tagName="span"}}
 ```
 
 You can also assign an ID attribute to the view's HTML element by passing an `id` parameter:
 
 ```handlebars
-{{view App.InfoView id="info-view"}}
+{{view "info" id="info-view"}}
 ```
 
 This makes it easy to style using CSS ID selectors:
@@ -155,7 +155,7 @@ This makes it easy to style using CSS ID selectors:
 You can assign class names similarly:
 
 ```handlebars
-{{view App.InfoView class="info urgent"}}
+{{view "info" class="info urgent"}}
 ```
 
 You can bind class names to a property of the view by using `classBinding` instead of `class`. The same behavior as described in `bind-attr` applies:
@@ -168,7 +168,7 @@ App.AlertView = Ember.View.extend({
 ```
 
 ```handlebars
-{{view App.AlertView classBinding="isUrgent priority"}}
+{{view "alert" classBinding="isUrgent priority"}}
 ```
 
 This yields a view wrapper that will look something like this:

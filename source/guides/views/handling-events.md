@@ -5,7 +5,7 @@ as a method on your view.
 For example, imagine we have a template like this:
 
 ```handlebars
-{{#view App.ClickableView}}
+{{#view "clickable"}}
 This is a clickable area!
 {{/view}}
 ```

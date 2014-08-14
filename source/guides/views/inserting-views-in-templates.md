@@ -2,7 +2,7 @@ So far, we've discussed writing templates for a single view. However, as your ap
 
 ### {{view}}
 
-To add a child view to a parent, use the `{{view}}` helper, which takes a path to a view class.
+To add a child view to a parent, use the `{{view}}` helper. The `{{view}}` helper takes a string used to look up the view class.
 
 ```javascript
 // Define parent view
@@ -25,7 +25,7 @@ App.InfoView = Ember.View.extend({
 ```html
 <script type="text/x-handlebars" data-template-name="user">
   User: {{view.firstName}} {{view.lastName}}
-  {{view App.InfoView}}
+  {{view "info"}}
 </script>
 ```
 
@@ -76,9 +76,7 @@ User: {{view.firstName}} {{view.lastName}}
 {{view view.infoView}}
 ```
 
-When nesting a view class like this, make sure to use a lowercase
-letter, as Ember will interpret a property with a capital letter as a
-global property.
+When using the view helper with a property, prefer starting the property name with a lowercase letter. Using an uppercase letter, such as in `{{view MyClass}}` may trigger a deprecated use-case.
 
 ### Setting Child View Templates
 
@@ -102,7 +100,7 @@ App.InfoView = Ember.View.extend({
 
 ```handlebars
 User: {{view.firstName}} {{view.lastName}}
-{{#view App.InfoView}}
+{{#view "info"}}
   <b>Posts:</b> {{view.posts}}
   <br>
   <b>Hobbies:</b> {{view.hobbies}}

@@ -140,15 +140,16 @@ The process looks something like:
 As Ember renders a templated view, it will generate a view hierarchy. Let's assume we have a template `form`.
 
 ```handlebars
-{{view App.Search placeholder="Search"}}
-{{#view Ember.Button}}Go!{{/view}}
+{{view "search" placeholder="Search"}}
+{{#view view.buttonView}}Go!{{/view}}
 ```
 
 And we insert it into the DOM like this:
 
 ```javascript
 var view = Ember.View.create({
-  templateName: 'form'
+  templateName: 'form',
+  buttonView: Ember.Button
 }).append();
 ```
 
@@ -210,15 +211,15 @@ For example, consider the following Handlebars template:
 
 ```handlebars
 <h1>Joe's Lamprey Shack</h1>
-{{controller.restaurantHours}}
+{{restaurantHours}}
 
-{{#view App.FDAContactForm}}
+{{#view "fdaContactForm"}}
   If you are experiencing discomfort from eating at Joe's Lamprey Shack,
 please use the form below to submit a complaint to the FDA.
 
-  {{#if controller.allowComplaints}}
-    {{view Ember.TextArea valueBinding="controller.complaint"}}
-    <button {{action 'submitComplaint'}}>Submit</button>
+  {{#if allowComplaints}}
+    {{input value="complaint"}}
+    <button {{action "submitComplaint"}}>Submit</button>
   {{/if}}
 {{/view}}
 ```
@@ -237,7 +238,7 @@ Handlebars expressions:
 </figure>
 
 From inside of the `TextArea`, the `parentView` would point to the
-`FDAContactForm` and the `FDAContactForm`'s `childViews` would be an
+`FdaContactForm` and the `FdaContactForm`'s `childViews` would be an
 array of the single `TextArea` view.
 
 You can see the internal view hierarchy by asking for the `_parentView`
@@ -252,7 +253,7 @@ console.log(_childViews.objectAt(0).toString());
 **Warning!** You may not rely on these internal APIs in application code.
 They may change at any time and have no public contract. The return
 value may not be observable or bindable. It may not be an Ember object.
-If you feel the need to use them, please contact us so we can expose a better 
+If you feel the need to use them, please contact us so we can expose a better
 public API for your use-case.
 
 Bottom line: This API is like XML. If you think you have a use for it,
@@ -323,9 +324,9 @@ App.ChildView = Ember.View.extend({
 And here's the Handlebars template that uses them:
 
 ```handlebars
-{{#view App.GrandparentView}}
-  {{#view App.ParentView}}
-    {{#view App.ChildView}}
+{{#view "grandparent"}}
+  {{#view "parent"}}
+    {{#view "child"}}
       <h1>Click me!</h1>
     {{/view}}
   {{/view}}
@@ -363,9 +364,9 @@ App.FormView = Ember.View.extend({
 ```
 
 ```handlebars
-{{#view App.FormView}}
-  {{view Ember.TextField valueBinding="controller.firstName"}}
-  {{view Ember.TextField valueBinding="controller.lastName"}}
+{{#view "form"}}
+  {{input value=firstName}}
+  {{input value=lastName}}
   <button type="submit">Done</button>
 {{/view}}
 ```
