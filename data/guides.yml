@@ -397,6 +397,8 @@ Cookbook:
   #   skip_sidebar_item: true
 
 Understanding Ember.js:
+  - title: "Deprecations"
+    url: "deprecations"
   - title: "The View Layer"
     url: "understanding-ember/the-view-layer"
   - title: "Managing Asynchrony"
