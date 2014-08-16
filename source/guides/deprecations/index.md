@@ -42,7 +42,7 @@ Most of Ember's provided views are already accessed via helpers. For example,
 the [Ember.TextField](/api/classes/Ember.TextField.html) view is used via the
 [input helper](/api/classes/Ember.Handlebars.helpers.html#method_input).
 
-The [Ember.Select](/api/classes/Ember.Select.html) view has not be upgraded to
+The [Ember.Select](/api/classes/Ember.Select.html) view has not been upgraded to
 have a helper. Instead, it was suggested that you call it via the global
 class name:
 
@@ -64,7 +64,7 @@ and examples.
 ##### Ember.js libraries and plugins
 
 If the code triggering this deprecation is being fired from a library, that
-library my need to update its suggested usage.
+library may need to update its suggested usage.
 
 One solution for such a library is to provide mixins instead of classes:
 
