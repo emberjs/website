@@ -90,6 +90,8 @@ return the JSON in the following format:
 }
 ```
 
+To quickly prototype a model and see the expected JSON, try using the [Ember Data Model Maker](http://andycrum.github.io/ember-data-model-maker/) by Andy Crum.
+
 ### Customizing the Adapter
 
 To customize the REST adapter, define a subclass of `DS.RESTAdapter` and
