@@ -31,7 +31,7 @@ will not work--you'll have to use `objectAt(index)` instead.
 ### Finding a Single Record
 
 If you provide a number or string as the second argument to `store.find()`,
-Ember Data will attempt to retrieve a record of that with that ID. This will
+Ember Data will assume that you are passing in an ID and attempt to retrieve a record of the type passed in as the first argument with that ID. This will
 return a promise that fulfills with the requested record:
 
 ```javascript
