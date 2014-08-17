@@ -161,6 +161,7 @@ Ember.Test.registerAsyncHelper('addContact',
 
 #### Example
 
-Here is an example of using both `registerHelper` and `registerAsyncHelper`.
+Here is an example using both `registerHelper` and
+`registerAsyncHelper`.
 
-<a class="jsbin-embed" href="http://jsbin.com/jesuyeri/embed?output">Custom Test Helpers</a>
+<a class="jsbin-embed" href="http://jsbin.com/jesuyeri/20/embed?output">Custom Test Helpers</a>
