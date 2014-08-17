@@ -57,7 +57,7 @@ Assume that a `User` can own a `Profile`.
 App.Profile = DS.Model.extend({});
 
 App.User = DS.Model.extend({
-  profile: DS.belongsTo(App.Profile)
+  profile: DS.belongsTo('profile')
 });
 ```
 
@@ -70,16 +70,17 @@ moduleForModel('user', 'User Model', {
 });
 
 test('profile relationship', function() {
-  var relationships = Ember.get(App.User, 'relationships');
-  deepEqual(relationships.get(App.Profile), [
-    { name: 'profile', kind: 'belongsTo' }
-  ]);
+  var User = this.store().modelFor('user');
+  var relationship = Ember.get(User, 'relationshipsByName').get('profile');
+
+  equal(relationship.key, 'profile');
+  equal(relationship.kind, 'belongsTo');
 });
 ```
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/ziboq/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
+<a class="jsbin-embed" href="http://jsbin.com/zuvak/3/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
