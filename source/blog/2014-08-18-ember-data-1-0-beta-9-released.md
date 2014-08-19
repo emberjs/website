@@ -70,8 +70,7 @@ this.store.getById('author', '1').get('posts');
 // $.ajax GET /posts?ids[]=1&ids[]=2&ids[]=3
 ```
 
-Unless you opt in using the information below, Ember Data
-will instead fire 3 requests:
+Unless you opt in, Ember Data will instead fire 3 requests:
 
 ```javascript
 this.store.getById('author', '1').get('posts');
@@ -80,6 +79,8 @@ this.store.getById('author', '1').get('posts');
 // $.ajax GET /posts/2
 // $.ajax GET /posts/3
 ```
+
+See the section below on "Coalescing Find Requests" for more information.
 
 ## New Features and Improvements
 
