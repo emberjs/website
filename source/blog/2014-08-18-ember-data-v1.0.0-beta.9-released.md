@@ -323,6 +323,8 @@ continued contributions to Ember Data:
   [ember-indexeddb-adapter][ember-indexeddb-adapter].
 * Jonathan Collins (Github @jcollins1991)
 * Stefan Penner (@stefanpenner)
+* Tom Dale (@tomdale)
+* Yehuda Katz (@wycats)
 
 We’d also like to thank Instructure and PrecisionNutrition for sponsoring
 some of Igor’s development on Ember Data.
