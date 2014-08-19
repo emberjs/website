@@ -29,7 +29,7 @@ If you are using stable builds of Ember, we recommend using
 You can refer to [Kangax's Compatibility Tables][es5-compat-object-create] to
 see if you need the shim.
 
-Ember Data uses Object.create under the hood for faster and collision-free
+Ember Data uses `Object.create` under the hood for faster and collision-free
 caches.
 
 ### Dates Serialized with ISO8601 by Default
@@ -49,23 +49,23 @@ the `findMany` method in your adapter.
 
 ### HasMany Coalescing Now Opt-In
 
-See the section below on “Coalescing Find Requests” for more information.
+See the section below on "Coalescing Find Requests" for more information.
 Previously, if you did not sideload data for a hasMany relationship, but
 did provide IDs, Ember Data would attempt to get all the records in one request.
 
 For example:
 
-```
+```javascript
 // Given this payload:
 {
-  “author”: {
-    “id”: “1”,
-    “name”: “Lon Ingram”,
-    “post_ids”: [“1”, “2”, “3”]
+  "author": {
+    "id": "1",
+    "name": "Lon Ingram",
+    "post_ids": ["1", "2", "3"]
   }
 }
 
-this.store.getById(‘author’, ‘1’).get(‘posts’);
+this.store.getById('author', '1').get('posts');
 
 // $.ajax GET /posts?ids[]=1&ids[]=2&ids[]=3
 ```
@@ -73,8 +73,8 @@ this.store.getById(‘author’, ‘1’).get(‘posts’);
 Unless you opt in using the information below, Ember Data
 will instead fire 3 requests:
 
-```
-this.store.getById(‘author’, ‘1’).get(‘posts’);
+```javascript
+this.store.getById('author', '1').get('posts');
 
 // $.ajax GET /posts/1
 // $.ajax GET /posts/2
@@ -89,12 +89,14 @@ this.store.getById(‘author’, ‘1’).get(‘posts’);
 
 Thanks to Igor Terzic, Brendan Mcloughlin, and Bill Heaton, the
 `DS.EmbeddedRecordsMixin` was extracted out of `DS.ActiveModelSerializer` in
-Ember Data v1.0.0-beta.8 so that users of `JSONSerializer, `RESTSerializer`, and
+Ember Data v1.0.0-beta.8 so that users of `JSONSerializer`, `RESTSerializer`, and
 `ActiveModelSerializer` could easily serialize and deserialize relationships. To
-use the code in your app, you can include the EmbeddedRecordsMixin into your
+use the code in your app, you can include the `EmbeddedRecordsMixin` into your
 serializer:
 
-`App.PostSerializer = DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin);`
+```javascript
+App.PostSerializer = DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin);
+```
 
 This means that your `PostSerializer` will now correctly bring in data for
 relationships if they are embedded in the response, rather than sideloaded.
@@ -102,7 +104,7 @@ relationships if they are embedded in the response, rather than sideloaded.
 For example, here is the previous JSON data response Ember Data expected for the
 RESTAdapter:
 
-```
+```javascript
 // GET /posts/1
 {
   "post": {
@@ -126,7 +128,7 @@ this.store.find('post', '1').then(function(post){
 Now, if you mixin the EmbeddedRecordsMixin, Ember Data will understand the
 following payload:
 
-```
+```javascript
 // GET /posts/1
 {
   "post": {
@@ -139,7 +141,7 @@ following payload:
   }
 }
 
-this.store.find('post', '1']).then(function(post){
+this.store.find('post', '1').then(function(post) {
   console.log(post.get('author.name')); // => CHVRCHES
 });
 ```
@@ -155,8 +157,8 @@ EmbeddedRecordsMixin by defining an `attrs` object on your serializer
 definition. For example, to serialize the complete record when serializing to
 the server:
 
-```
-App.PostSerialize = DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+```javascript
+App.PostSerializer = DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
   attrs: {
     author: {
       serialize: 'records'
@@ -181,7 +183,7 @@ post.save();
 ```
 
 To see even more ways to customize serializing and deserializing behavior, check
-out the [documentation][embedded-docs] for the EmbeddedRecordsMixin.
+out the [documentation][embedded-docs] for the `EmbeddedRecordsMixin`.
 
 ### Coalescing Find Requests
 
@@ -199,7 +201,7 @@ on the repository and view the Ember.js [Run Loop Guide][run-loop-guide].
 Without "Coalescing Find Requests" turned on, the previous code would result in
 multiple network requests:
 
-```
+```javascript
 this.store.find('post', '1');
 this.store.find('post', '2');
 this.store.find('post', '3');
@@ -216,7 +218,7 @@ By coalescing (also known as batching) these requests, Ember Data will observe
 that you requested several records of the same type and only send one request
 instead of 3.
 
-```
+```javascript
 this.store.find('post', '1');
 this.store.find('post', '2');
 this.store.find('post', '3');
@@ -227,7 +229,7 @@ this.store.find('post', '3');
 **Coalescing find requests is currently turned off by default**. To turn it on,
 you can use the following code:
 
-```
+```javascript
 DS.RESTAdapter.reopen({
   coalesceFindRequests: true
 });
@@ -267,7 +269,7 @@ Ember-Inflector. You should now not need definitions for `dasherized` and
 
 You can now use `pluralize` and `singularize` in your Handlebars templates:
 
-```
+```handlebars
 {{pluralize "octopus"}}
 {{singularize "oxen"}}
 ```
@@ -275,7 +277,9 @@ You can now use `pluralize` and `singularize` in your Handlebars templates:
 The Handlebars helpers are bound, so they will stay up to date if you bind to a
 property:
 
-`{{pluralize type}}`
+```handlebars
+{{pluralize type}}
+```
 
 ### Performance Improvements
 
@@ -289,20 +293,20 @@ Stef landing some commits on improving `pushPayload` calls and a [commit
 to Backburner][backburner-commit] improving many hot code paths in Ember Data.
 
 ### Better Support for Nested Records.
-`buildUrl` now takes a record, on which you can look up the relationship if you
+`buildURL` now takes a record, on which you can look up the relationship if you
 need to build a nested URL. For example:
 
 ```javascript
 App.CommentAdapter = DS.RestAdapter.extend({
-  buildUrl: function(type, id, record) {
-    return “/posts/” + record.get(‘post.id’) + “/comments/” + id;
+  buildURL: function(type, id, record) {
+    return '/posts/' + record.get('post.id') + '/comments/' + id;
   }
 })
 ```
 
 ### Added support for preloading records
 
-For more information, go to https://github.com/emberjs/data/blob/master/packages/ember-data/lib/system/store.js#L356
+For more information, go to [Store documentation][store-docs].
 
 ## Special Thanks
 
@@ -317,7 +321,7 @@ continued contributions to Ember Data:
 * Bill Heaton (@pixelhandler)
 * Paul Chavard (@tchak)
 * Sylvain Mina (GH @sly7-7)
-* Ryunosuke Sato (@tricknotes)	
+* Ryunosuke Sato (@tricknotes)
 * Alexandre de Oliveira (@kurko) for his awesome work on the
   [ember-localstorage-adapter][ember-localstorage-adapter] and
   [ember-indexeddb-adapter][ember-indexeddb-adapter].
@@ -354,3 +358,4 @@ some of Igor’s development on Ember Data.
 [ember-data-model-maker]: http://andycrum.github.io/ember-data-model-maker/
 [pixelhandler]: https://twitter.com/pixelhandler
 [backburner-commit]: https://github.com/ebryn/backburner.js/pull/97
+[store-docs]: https://github.com/emberjs/data/blob/master/packages/ember-data/lib/system/store.js#L356
