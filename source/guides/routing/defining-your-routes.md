@@ -3,6 +3,13 @@ templates, loading data, and otherwise setting up application state.
 It does so by matching the current URL to the _routes_ that you've
 defined.
 
+The [map](http://emberjs.com/api/classes/Ember.Router.html#method_map) method
+of your Ember application's router can be invoked to define URL mappings. When
+calling `map`, you should pass a function that will be invoked with the value
+`this` set to an object which you can use to create
+[routes](http://emberjs.com/guides/routing/defining-your-routes/) and
+[resources](http://emberjs.com/guides/routing/defining-your-routes/#toc_resources).
+
 ```js
 App.Router.map(function() {
   this.route("about", { path: "/about" });
