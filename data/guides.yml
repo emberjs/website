@@ -138,7 +138,6 @@ Routing:
     url: "routing/specifying-the-location-api"
   - title: "Query Parameters"
     url: "routing/query-params"
-    warning: "query-params-warning"
   - title: "Asynchronous Routing"
     url: "routing/asynchronous-routing"
   - title: "Loading / Error Substates"
