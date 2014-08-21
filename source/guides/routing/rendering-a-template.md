@@ -62,7 +62,7 @@ App.PostsRoute = Ember.Route.extend({
     var controller = this.controllerFor('favoritePost');
 
     // Render the `favoritePost` template into
-    // the outlet `posts`, and display the `favoritePost`
+    // the outlet `posts`, and use the `favoritePost`
     // controller.
     this.render('favoritePost', {
       outlet: 'posts',
