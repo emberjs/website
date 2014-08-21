@@ -53,18 +53,14 @@ REST adapter:
 Given the following models:
 
 ```js
-var attr = DS.attr,
-    hasMany = DS.hasMany,
-    belongsTo = DS.belongsTo;
-
 App.Post = DS.Model.extend({
-  title: attr(),
-  comments: hasMany('comment'),
-  user: belongsTo('user')
+  title: DS.attr(),
+  comments: DS.hasMany('comment'),
+  user: DS.belongsTo('user')
 });
 
 App.Comment = DS.Model.extend({
-  body: attr()
+  body: DS.attr()
 });
 ```
 
