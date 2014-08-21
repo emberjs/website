@@ -166,8 +166,8 @@ For Example
 ```js
 App.ApplicationAdapter = DS.RESTAdapter.extend({
   headers: {
-    "API_KEY": "secret key",
-    "ANOTHER_HEADER": "Some header value"
+    'API_KEY': 'secret key',
+    'ANOTHER_HEADER': 'Some header value'
   }
 });
 ```
