@@ -54,9 +54,9 @@ Given the following models:
 
 ```js
 App.Post = DS.Model.extend({
-  title: DS.attr(),
+  title:    DS.attr(),
   comments: DS.hasMany('comment'),
-  user: DS.belongsTo('user')
+  user:     DS.belongsTo('user')
 });
 
 App.Comment = DS.Model.extend({
