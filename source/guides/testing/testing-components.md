@@ -219,7 +219,7 @@ test('clicking link updates the title', function() {
   equal($component.find('h2').text(), "I'm a little teapot");
   
   // send action programmatically
-  Em.run(function(){
+  Ember.run(function(){
     component.send('changeName');
   });
   
