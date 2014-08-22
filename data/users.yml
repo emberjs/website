@@ -291,6 +291,8 @@
   image: zing.png
 - url: http://screenlight.tv
   image: screenlight.png
+- url: http://www.navigator.ba
+  image: navigator.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
