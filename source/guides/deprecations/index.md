@@ -8,7 +8,30 @@ of change management is commonly referred to as [Semantic Versioning](http://sem
 What follows is a list of deprecations introduced to Ember.js during the 1.x
 cycle.
 
-#### Global lookup of views (since 1.8)
+### Deprecations Added in 1.7
+
+#### Deprecate observing container views like arrays.
+
+ContainerViews have been observable as arrays, where the items in
+the array are childViews. This introduces complexity into container
+views despite the feature being a rarely used one.
+
+#### Deprecate Ember.DeferredMixin and Ember.Deferred.
+
+`Ember.DeferredMixin` and `Ember.Deferred` have been deprecated in favor
+of using `RSVP.Promise`'s.
+
+#### Deprecate `.then` on Ember.Application.
+
+As part of the `Ember.DeferredMixin` deprecation, using `.then` on an
+Ember.Application instance itself has been deprecated.
+
+You can use the `ready` hook or initializers to defer/advance readiness
+instead.
+
+### Deprecations Added in 1.8
+
+#### Global lookup of views
 
 Previous to Ember 1.8, views would commonly be fetched from the global
 scope:
