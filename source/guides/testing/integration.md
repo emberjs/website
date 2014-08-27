@@ -25,7 +25,7 @@ With QUnit, `setup` and `teardown` functions can be defined in each test module'
 After each test, reset the application: `App.reset()` completely resets the state of the application.
 
 ```javascript
-module("Integration Tests", {
+module('Integration Tests', {
   teardown: function() {
     App.reset();
   }
