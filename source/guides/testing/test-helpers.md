@@ -72,16 +72,16 @@ complete prior to progressing forward. Let's take a look at the following
 example.
 
 ```javascript
-test("simple test", function(){
+test('simple test', function() {
   expect(1); // Ensure that we will perform one assertion
 
-  visit("/posts/new");
-  fillIn("input.title", "My new post");
-  click("button.submit");
+  visit('/posts/new');
+  fillIn('input.title', 'My new post');
+  click('button.submit');
 
   // Wait for asynchronous helpers above to complete
   andThen(function() {
-    equal(find("ul.posts li:last").text(), "My new post");
+    equal(find('ul.posts li:last').text(), 'My new post');
   });
 });
 ```
