@@ -127,8 +127,8 @@ module.exports = function(config) {
   config.set({
     frameworks: ['qunit'],
     files: [
-      "your_ember_code_here.js",
-      "your_test_code_here.js"
+      'your_ember_code_here.js',
+      'your_test_code_here.js'
     ],
     autoWatch: true,
     singleRun: true,
