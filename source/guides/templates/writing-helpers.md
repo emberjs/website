@@ -3,7 +3,7 @@ Sometimes, you may use the same HTML in your application multiple times. In thos
 For example, imagine you are frequently wrapping certain values in a `<span>` tag with a custom class. You can register a helper from your JavaScript like this:
 
 ```javascript
-Ember.Handlebars.helper('highlight', function(value, options) {
+Ember.Handlebars.registerHelper('highlight', function(value, options) {
   var escaped = Handlebars.Utils.escapeExpression(value);
   return new Ember.Handlebars.SafeString('<span class="highlight">' + escaped + '</span>');
 });
@@ -36,7 +36,7 @@ case, you will want to update the output if the person itself changes,
 or if the `firstName` or `lastName` properties change.
 
 ```js
-Ember.Handlebars.helper('fullName', function(person) {
+Ember.Handlebars.registerHelper('fullName', function(person) {
   return person.get('firstName') + ' ' + person.get('lastName');
 }, 'firstName', 'lastName');
 ```
@@ -63,7 +63,7 @@ For example, let’s say you have a view called `App.CalendarView`.
 You can register a helper like this:
 
 ```javascript
-Ember.Handlebars.helper('calendar', App.CalendarView);
+Ember.Handlebars.registerHelper('calendar', App.CalendarView);
 ```
 
 Using `App.CalendarView` in a template then becomes as simple as:
