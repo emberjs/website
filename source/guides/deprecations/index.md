@@ -19,7 +19,7 @@ views despite the feature being a rarely used one.
 #### Deprecate Ember.DeferredMixin and Ember.Deferred.
 
 `Ember.DeferredMixin` and `Ember.Deferred` have been deprecated in favor
-of using `RSVP.Promise`'s.
+of using `RSVP.Promise`s.
 
 #### Deprecate `.then` on Ember.Application.
 
