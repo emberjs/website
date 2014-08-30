@@ -6,9 +6,8 @@ the `?` in a URL. For example, the following URL has two query params,
 
 Query params allow for additional application state to be serialized
 into the URL that can't otherwise fit into the _path_ of the URL (i.e.
-everything to the left of the `?`). Common use cases include
-representing the current page, filter criteria, or sorting criteria in
-the URL as query params.
+everything to the left of the `?`). Common use cases for query params include
+representing the current page, filter criteria, or sorting criteria.
 
 ### Specifying Query Parameters
 
@@ -40,7 +39,7 @@ once the `articles` route has been entered, any changes to the
 on `ArticlesController`, and vice versa.
 
 Now we just need to define a computed property of our category-filtered
-array that `articles` template will render:
+array that the `articles` template will render:
 
 ```js
 App.ArticlesController = Ember.ArrayController.extend({
@@ -86,7 +85,7 @@ The `link-to` helper supports specifying query params by way of the
 ```
 
 In the above examples, `direction` is presumably a query param property
-on `PostsController`, but it could also refer to a `direction` property
+on the `PostsController`, but it could also refer to a `direction` property
 on any of the controllers associated with the `posts` route hierarchy,
 matching the leaf-most controller with the supplied property name.
 
@@ -97,8 +96,8 @@ matching the leaf-most controller with the supplied property name.
 
 The link-to helper takes into account query parameters when determining
 its "active" state, and will set the class appropriately. The active state
-is determined by working out if you clicked on the link, would the query
-params end up the same? You don't have to supply all of the current,
+is determined by calculating whether the query params end up the same after 
+clicking a link. You don't have to supply all of the current,
 active query params for this to be true.
 
 ### transitionTo
