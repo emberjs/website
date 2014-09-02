@@ -287,7 +287,7 @@ dynamic segment (in this case, `:post_id`).
 
 ### Nested Resources
 
-You cannot nest routes, but you can nest resources:
+You can nest both routes and resources:
 
 ```javascript
 App.Router.map(function() {
