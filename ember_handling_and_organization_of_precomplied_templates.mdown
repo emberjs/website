@@ -1,0 +1,17 @@
+### Title: 
+##### The proper way to handle multiple handlebar template precompliation and organization.  
+
+### Problem:
+The examples in the guide and in the API docs tend to default to having multiple handlebard templates encapsulated within `<script></script>` tags on the same page. This eventually leads to an extremely ugly codebase and it is a nightmare to maintain. 
+
+**There should be an accepted standard on the best way to precomplie and organize Handlebar templates.** 
+
+Some Relevant StackOverflow discussions: 
+- [Emberjs Handlebars precompiling](http://stackoverflow.com/questions/9860512/emberjs-handlebars-precompiling)
+- [Loading Handlebars Template Asynchronously](http://stackoverflow.com/questions/16118974/loading-handlebars-template-asynchronously)
+- [Asset pipeline for Ember.js, Express.js and Node.js?](http://stackoverflow.com/questions/15302221/asset-pipeline-for-ember-js-express-js-and-node-js)
+
+### Solution Statement
+
+
+### Discussion
