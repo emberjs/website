@@ -32,7 +32,9 @@ module('Unit: SomeThing');
 
 test('computedFoo correctly concats foo', function() {
   var someThing = App.SomeThing.create();
-  someThing.set('foo', 'baz');
+  Ember.run(function() {
+    someThing.set('foo', 'baz');
+  });
   equal(someThing.get('computedFoo'), 'computed baz');
 });
 ```
@@ -66,7 +68,7 @@ module('Unit: SomeThing');
 
 test('calling testMethod updates foo', function() {
   var someThing = App.SomeThing.create();
-  someThing.testMethod();
+  Ember.run(someThing, 'testMethod');
   equal(someThing.get('foo'), 'baz');
 });
 ```
@@ -97,8 +99,10 @@ module('Unit: SomeThing');
 
 test('testMethod returns incremented count', function() {
   var someThing = App.SomeThing.create();
-  equal(someThing.calc(), 'count: 1');
-  equal(someThing.calc(), 'count: 2');
+  Ember.run(function () {
+    equal(someThing.calc(), 'count: 1');
+    equal(someThing.calc(), 'count: 2');
+  });
 });
 ```
 
@@ -130,7 +134,9 @@ module('Unit: SomeThing');
 
 test('doSomething observer sets other prop', function() {
   var someThing = App.SomeThing.create();
-  someThing.set('foo', 'baz');
+  Ember.run(function() {
+    someThing.set('foo', 'baz');
+  });
   equal(someThing.get('other'), 'yes');
 });
 ```
