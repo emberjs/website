@@ -293,6 +293,8 @@
   image: screenlight.png
 - url: http://www.navigator.ba
   image: navigator.png
+- url: http://expresscheckoutapp.com
+  image: expresscheckout.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
