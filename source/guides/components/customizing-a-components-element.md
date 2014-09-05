@@ -115,7 +115,7 @@ If the `isEnabled` property is set to `true`, no class name is added:
 <div class="ember-view">
 ```
 
-If the bound value is a string, that value will be added as a class name without
+If the bound property's value is a string, that value will be added as a class name without
 modification:
 
 ```javascript
