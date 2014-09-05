@@ -12,8 +12,8 @@ Bubbling](/guides/templates/actions/#toc_action-bubbling).
 
 Components are designed to be reusable across different parts of your
 application. In order to achieve this reusability, it's important that
-the actions that your components send be specified when the component is
-used in a template.
+the actions that your components send can be specified when the component
+is used in a template.
 
 In other words, if you were writing a button component, you would not
 want to send a `click` action, because it is ambiguous and likely to
@@ -125,6 +125,8 @@ App.ConfirmButtonComponent = Ember.Component.extend({
 ```
 
 ```handlebars
+{{! templates/components/confirm-button }}
+
 {{#if isShowingConfirmation}}
   <button {{action "confirm"}}>Click again to confirm</button>
 {{else}}
@@ -136,6 +138,8 @@ Now we can update our initial template and replace the `{{action}}`
 helper with our new component:
 
 ```handlebars
+{{! index.handlebars }}
+
     {{#each todo in todos}}
       <p>{{todo.title}} {{confirm-button title="Delete" action="deleteTodo" param=todo}}</p>
     {{/each}}
