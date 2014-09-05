@@ -125,7 +125,7 @@ App.ConfirmButtonComponent = Ember.Component.extend({
 ```
 
 ```handlebars
-{{! templates/components/confirm-button }}
+{{! templates/components/confirm-button.handlebars }}
 
 {{#if isShowingConfirmation}}
   <button {{action "confirm"}}>Click again to confirm</button>
