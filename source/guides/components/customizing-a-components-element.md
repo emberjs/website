@@ -115,7 +115,7 @@ If the `isEnabled` property is set to `true`, no class name is added:
 <div class="ember-view">
 ```
 
-If the bound property's value is a string, that value will be added as a class name without
+If the bound value is a string, that value will be added as a class name without
 modification:
 
 ```javascript
@@ -160,3 +160,8 @@ Here is an example todo application that shows completed todos with a
 red background:
 
 <a class="jsbin-embed" href="http://jsbin.com/utonef/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+
+<aside>
+  **Note:** The binding functionality in this very simple example could also be implemented without
+  the use of `Ember.Component` but by simply [binding element attributes](/guides/templates/binding-element-attributes) or [binding element class names](/guides/templates/binding-element-class-names).
+</aside>
