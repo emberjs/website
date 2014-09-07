@@ -9,7 +9,7 @@ App.Person = Ember.Object.extend({
 	firstName : null,
 	lastName : null,
 	surname : Ember.computed.alias("lastName"),
-	eligibleForRetirement: Ember.computed.gte("age", 65)
+	eligibleForRetirement: Ember.computed.get("age", 65)
 });
 ```
 
