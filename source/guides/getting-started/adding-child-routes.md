@@ -4,6 +4,7 @@ In `index.html` move the entire `<ul>` of todos into a new template named `todos
 
 ```html
 <!--- ... additional lines truncated for brevity ... -->
+<body>
 <script type="text/x-handlebars" data-template-name="todos/index">
   <ul id="todo-list">
     {{#each itemController="todo"}}
