@@ -8,22 +8,7 @@ In `index.html` update the static `<button>` element to include an `{{action}}` 
 <!--- ... additional lines truncated for brevity ... -->
 ```
 
-In `js/controllers/todo_controller.js` implement the `removeTodo` method referenced in the template's `{{action}}` Handlebars helper:
-
-```javascript
-// ... additional lines truncated for brevity ...
-actions: {
-  // ... additional lines truncated for brevity ...
-  removeTodo: function() {
-    var todo = this.get('model');
-    todo.deleteRecord();
-    todo.save();
-  }
-},
-// ... additional lines truncated for brevity ...
-```
-
-This method will delete the todo locally and then persist this data change.
+This will call the `removeTodo` method that will delete the todo locally and then persist this data change.
 
 Because the todo is no longer part of the collection of all todos, its `<li>` element in the page will be automatically removed for us. If the deleted todo was incomplete, the count of remaining todos will be decreased by one and the display of this number will be automatically re-rendered. If the new count results in an inflection change between "todo" and "todos" this area of the page will be automatically re-rendered.
 
