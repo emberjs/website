@@ -216,6 +216,7 @@ other side, set the inverse to null.
 
 ```javascript
 var belongsTo = DS.belongsTo,
+    hasMany = DS.hasMany;
 
 App.Folder = DS.Model.extend({
   children: hasMany('folder', {inverse: 'parent'}),
