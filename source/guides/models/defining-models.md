@@ -207,3 +207,29 @@ App.Post = DS.Model.extend({
 ```
 
 You can also specify an inverse on a `belongsTo`, which works how you'd expect.
+
+#### Reflexive relation
+
+When you want to define a reflexive relation, you must either explicitly define
+the other side, and set the explicit inverse accordingly, and if you don't need the
+other side, set the inverse to null.
+
+```javascript
+var belongsTo = DS.belongsTo,
+
+App.Folder = DS.Model.extend({
+  children: hasMany('folder', {inverse: 'parent'}),
+  parent: belongsTo('folder', {inverse: 'children'})
+});
+```
+
+or
+
+```javascript
+var belongsTo = DS.belongsTo,
+
+App.Folder = DS.Model.extend({
+  parent: belongsTo('folder', {inverse: null})
+});
+```
+
