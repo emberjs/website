@@ -28,7 +28,7 @@ Next, update your `index.html` to wrap the inner contents of `<body>` in a Handl
   <script type="text/x-handlebars" data-template-name="todos">
 
     <section id="todoapp">
-      ... additional lines truncated for brevity ...
+      <!-- ... additional lines truncated for brevity ... -->
     </section>
 
     <footer id="info">
