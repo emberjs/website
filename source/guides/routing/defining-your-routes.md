@@ -372,6 +372,10 @@ This router creates five routes:
 The `comments` template will be rendered in the `post` outlet.
 All templates under `comments` (`comments/index` and `comments/new`) will be rendered in the `comments` outlet.
 
+The route, controller, and view class names for the comments resource are not prefixed with `Post`. Resources
+always reset the namespace, ensuring that the classes can be re-used between multiple parent resources and that
+class names don't get longer the deeper nested the resources are.
+
 You are also able to create deeply nested resources in order to preserve the namespace on your routes:
 
 ```javascript
