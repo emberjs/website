@@ -185,17 +185,50 @@ $('a').click(function(){
 
 #### What happens if I forget to start a run loop in an async handler?
 
-As mentioned above, you should wrap any non-Ember async callbacks in `Ember.run`.
-If you don't, Ember will try to approximate a beginning and end for you. Here
-is some pseudocode to describe what happens:
+As mentioned above, you should wrap any non-Ember async callbacks in
+`Ember.run`. To understand what happens if you forget to do this lets consider:
 
 ```js
 $('a').click(function(){
-  // Ember or runloop related code.
+  console.log('Doing things...');
+
+  Ember.run.schedule('actions', this, function() {
+    // Do more things
+  });
+  Ember.run.scheduleOnce('afterRender', this, function() {
+    // Yet more things
+  });
+});
+```
+
+The above will run in response to a `click` event from the Browser and will most
+likely run before Ember finds out about the `click`.
+
+In Ember calls to any of
+
+* `run.schedule`
+* `run.scheduleOnce`
+* `run.once`
+
+have the property that they will approximate a runloop for you if one does not
+already exist. These automatically (implicitly) created runloops are called
+_autoruns_.
+
+Here is some pseudocode to describe what happens using the example above:
+
+```js
+$('a').click(function(){
+  console.log('Doing things...'); // <-- Not within the autorun
+
   Ember.run.start();
 
-  // 1. we detect you need a run-loop
-  // 2. we start one for you, but we don't really know when it ends, so we guess
+  Ember.run.schedule('actions', this, function() {
+    // Do more things
+  });
+
+  Ember.run.scheduleOnce('afterRender', this, function() {
+    // Yet more things
+  });
 
   nextTick(function() {
     Ember.run.end()
@@ -203,10 +236,43 @@ $('a').click(function(){
 });
 ```
 
-This is suboptimal because the current JS frame is allowed to end before the run loop is
-flushed, which sometimes means the browser will take the opportunity to do other things,
-like garbage collection. GC running in between data changing and DOM rerendering can cause visual lag and should be minimized.
+Although autoruns are convenient they are suboptimal because
 
-#### When I am in testing mode, why are run-loop autoruns disabled?
+1. The current JS frame is allowed to end before the run loop is flushed, which
+sometimes means the browser will take the opportunity to do other things, like
+garbage collection. GC running in between data changing and DOM rerendering can
+cause visual lag and should be minimized.
+2. Only calls to `run.schedule`, `run.scheduleOnce` and `run.once` are wrapped
+in autoruns.  All other code in your callback will happen outside Ember. This
+can lead to unexpected and confusing behavior.
 
-Some of Ember's test helpers are promises that wait for the run loop to empty before resolving. This leads to resolving too early if there is code that is outside the run loop and gives erroneous test failures. Disabling autoruns help you identify these scenarios and helps both your testing and your application!
+Relying on autoruns is not rigorous or efficient way to use the runloop.
+Wrapping event handlers manually is preferred.
+
+#### How is runloop behaviour different when testing?
+
+As mentioned above, Ember provides three API functions that schedule work on the
+currently open runloop:
+
+* `run.schedule`
+* `run.scheduleOnce`
+* `run.once`
+
+These functions will create a new runloop if one does not exist. These
+automatically (implicitly) created runloops are called _autoruns_. If
+`Ember.testing` is set then that behaviour is disabled. In fact when
+`Ember.testing` is set these three functions will throw an error if you run them
+at a time when there is not an existing runloop available.
+
+The reasons for this are:
+
+1. Autoruns are Embers way of not punishing you in production if you forget to
+open a runloop before you schedule callbacks on it. While this is useful in
+production, these are still errors and are revealed as such in testing mode to
+help you find and fix them.
+2. Some of Ember's test helpers are promises that wait for the run loop to empty
+before resolving. If your application has code that runs _outside_ a runloop,
+these will resolve too early and gives erroneous test failures which are
+difficult to find. Disabling autoruns help you identify these scenarios and
+helps both your testing and your application!
+
