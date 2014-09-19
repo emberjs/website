@@ -297,6 +297,8 @@
   image: expresscheckout.png
 - url: https://www.pushmote.com
   image: pushmote.png
+- url: http://echobind.com
+  image: echobind.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
