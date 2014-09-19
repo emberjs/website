@@ -3,14 +3,14 @@ In this step we'll update our application to allow a user to mark a todo as comp
 In `index.html` update your template to wrap each todo in its own controller by adding an `itemController` argument to the `{{each}}` Handlebars helper. Then convert our static `<input type="checkbox">` into a `{{input}}` helper:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 {{#each itemController="todo"}}
   <li {{bind-attr class="isCompleted:completed"}}>
     {{input type="checkbox" checked=isCompleted class="toggle"}}
     <label>{{title}}</label><button class="destroy"></button>
   </li>
 {{/each}}
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 When this `{{input}}` is rendered it will ask for the current value of the controller's `isCompleted` property. When a user clicks this input, it will set the value of the controller's `isCompleted` property to either `true` or `false` depending on the new checked value of the input.

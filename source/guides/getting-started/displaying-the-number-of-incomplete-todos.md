@@ -1,11 +1,11 @@
 Next we'll update our template's hard-coded count of completed todos to reflect the actual number of completed todos. Update `index.html` to use two properties:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <span id="todo-count">
   <strong>{{remaining}}</strong> {{inflection}} left
 </span>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 Implement these properties as part of this template's controller, the `Todos.TodosController`:

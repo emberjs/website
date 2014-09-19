@@ -26,13 +26,13 @@ Still within `index.html` place a Handlebars `{{outlet}}` helper where the `<ul>
 
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <section id="main">
   {{outlet}}
 
   <input type="checkbox" id="toggle-all">
 </section>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 The `{{outlet}}` Handlebars helper designates an area of a template that will dynamically update as we transition between routes. Our first new child route will fill this area with the list of all todos in the application.

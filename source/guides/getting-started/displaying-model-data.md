@@ -18,7 +18,7 @@ Now that we need custom behavior (returning a specific set of models), we implem
 Update `index.html` to replace the static `<li>` elements with a Handlebars `{{each}}` helper and a dynamic `{{title}}` for each item.
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <ul id="todo-list">
   {{#each}}
     <li>
@@ -27,7 +27,7 @@ Update `index.html` to replace the static `<li>` elements with a Handlebars `{{e
     </li>
   {{/each}}
 </ul>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 The template loops over the content of its controller. This controller is an instance of `ArrayController` that Ember.js has provided for us as the container for our models. Because we don't need custom behavior for this object yet, we can use the default object provided by the framework.
