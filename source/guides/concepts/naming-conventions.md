@@ -30,7 +30,7 @@ you access points within an Ember object's lifecycle to intercept and
 execute code to modify the default behavior at these points to meet 
 your needs. Ember provides several hooks for you to utilize for various
 purposes (e.g. `model`, `setupController`, etc). In the example below 
-`App.ApplicationRoute`, which is a `Ember.Route` object, implements 
+`App.ApplicationRoute`, which is an `Ember.Route` object, implements 
 the `setupController` hook.
 
 [1]: /guides/routing/specifying-a-routes-model
