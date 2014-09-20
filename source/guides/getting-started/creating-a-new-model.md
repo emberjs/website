@@ -1,11 +1,11 @@
 Next we'll update our static HTML `<input>` to an Ember view that can expose more complex behaviors.  Update `index.html` to replace the new todo `<input>` with an `{{input}}` helper:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <h1>todos</h1>
 {{input type="text" id="new-todo" placeholder="What needs to be done?" 
               value=newTitle action="createTodo"}}
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 This will render an `<input>` element at this location with the same `id` and `placeholder` attributes applied. It will also connect the `newTitle` property of this template's controller to the `value` attribute of the `<input>`. When one changes, the other will automatically update to remain synchronized.

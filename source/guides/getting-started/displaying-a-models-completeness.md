@@ -1,12 +1,12 @@
 TodoMVC strikes through completed todos by applying a CSS class `completed` to the `<li>` element. Update `index.html` to apply a CSS class to this element when a todo's `isCompleted` property is true:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <li {{bind-attr class="isCompleted:completed"}}>
   <input type="checkbox" class="toggle">
   <label>{{title}}</label><button class="destroy"></button>
 </li>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 This code will apply the CSS class `completed` when the todo's `isCompleted` property is `true` and remove it when the property becomes `false`.

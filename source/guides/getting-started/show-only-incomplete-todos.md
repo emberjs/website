@@ -3,7 +3,7 @@ Next we'll update the application so a user can navigate to a url where only tod
 In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{link-to}}` helper and remove the active class from the `<a>` tag for 'All':
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <li>
   <a href="all">All</a>
 </li>
@@ -13,7 +13,7 @@ In `index.html` convert the `<a>` tag for 'Active' todos into a Handlebars `{{li
 <li>
   <a href="completed">Completed</a>
 </li>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 In `js/router.js` update the router to recognize this new path and implement a matching route:

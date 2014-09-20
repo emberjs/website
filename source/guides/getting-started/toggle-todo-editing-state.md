@@ -3,7 +3,7 @@ TodoMVC allows users to double click each todo to display a text `<input>` eleme
 We'll update the application to allow users to toggle into this editing state for a todo. In `index.html` update the contents of the `{{each}}` Handlebars helper to:
 
 ```handlebars
- <!--- ... additional lines truncated for brevity ... -->
+ {{! ... additional lines truncated for brevity ... }}
 {{#each itemController="todo"}}
   <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
     {{#if isEditing}}
@@ -14,7 +14,7 @@ We'll update the application to allow users to toggle into this editing state fo
     {{/if}}
   </li>
 {{/each}}
- <!--- ... additional lines truncated for brevity ... -->
+ {{! ... additional lines truncated for brevity ... }}
 ```
 
 The above code applies three new behaviors to our application: it applies the CSS class `editing` when the controller's `isEditing` property is true and removes it when the `isEditing` property is false. We add a new `{{action}}` helper to the `<label>` so double-clicks will call `editTodo` on 

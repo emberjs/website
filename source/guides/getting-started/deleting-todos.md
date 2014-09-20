@@ -3,9 +3,9 @@ TodoMVC displays a button for removing todos next to each todo when its `<li>` i
 In `index.html` update the static `<button>` element to include an `{{action}}` Handlebars helper:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <button {{action "removeTodo"}} class="destroy"></button>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 This will call the `removeTodo` action defined in the previous chapter and will delete the todo locally and then persist this data change.

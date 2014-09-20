@@ -3,13 +3,13 @@ TodoMVC allows users to delete all completed todos at once by clicking a button.
 In this step, we'll implement that behavior. In `index.html` update the static `<button>` for clearing all completed todos:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 {{#if hasCompleted}}
   <button id="clear-completed" {{action "clearCompleted"}}>
     Clear completed ({{completed}})
   </button>
 {{/if}}
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 In `js/controllers/todos_controller.js` implement the matching properties and a method that will clear completed todos and persist these changes when the button is clicked:

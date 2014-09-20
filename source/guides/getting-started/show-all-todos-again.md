@@ -3,7 +3,7 @@ Next we can update the application to allow navigating back to the list of all t
 In `index.html` convert the `<a>` tag for 'All' todos into a Handlebars `{{link-to}}` helper:
 
 ```handlebars
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 <li>
   {{#link-to "todos.index" activeClass="selected"}}All{{/link-to}}
 </li>
@@ -13,7 +13,7 @@ In `index.html` convert the `<a>` tag for 'All' todos into a Handlebars `{{link-
 <li>
   {{#link-to "todos.completed" activeClass="selected"}}Completed{{/link-to}}
 </li>
-<!--- ... additional lines truncated for brevity ... -->
+{{! ... additional lines truncated for brevity ... }}
 ```
 
 Reload your web browser to ensure that there are no errors. You should be able to navigate between urls for all, active, and completed todos.
