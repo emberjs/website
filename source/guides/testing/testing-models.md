@@ -70,7 +70,8 @@ moduleForModel('user', 'User Model', {
 });
 
 test('profile relationship', function() {
-  var User = this.store().modelFor('user');
+  var model = this.subject();
+  var User = model.store.modelFor('user');
   var relationship = Ember.get(User, 'relationshipsByName').get('profile');
 
   equal(relationship.key, 'profile');
@@ -80,7 +81,7 @@ test('profile relationship', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/zuvak/3/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
+<a class="jsbin-embed" href="http://jsbin.com/jejaxu/3/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
