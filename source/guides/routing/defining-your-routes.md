@@ -432,6 +432,59 @@ This router creates the following routes:
   </table>
 </div>
 
+### Nestable `this.route`
+
+`this.route` can be nested like `this.resource`. Unlike `this.resource`, this
+preserves the namespace. For example:
+
+```javascript
+this.route('foo', function() {
+  this.route('bar', function() {
+    this.route('baz', function() {
+      // uses FooBar.Baz.IndexRoute
+      // generates foo/bar.baz.index
+      // generates FooBar.Baz.IndexRoute
+    });
+  });
+});
+```
+
+This router creates the following routes:
+
+<div style="overflow: auto">
+  <table>
+    <thead>
+    <tr>
+      <th>URL</th>
+      <th>Route Name</th>
+      <th>Controller</th>
+      <th>Route</th>
+      <th>Template</th>
+    </tr>
+    </thead>
+    <tr>
+      <td><code>/foo</code></td>
+      <td><code>foo.index</code></td>
+      <td><code>App.FooIndexController</code></td>
+      <td><code>App.FooIndexRoute</code></td>
+      <td><code>foo/index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo/bar</code></td>
+      <td><code>foo.bar.index</code></td>
+      <td><code>App.FooBar.IndexController</code></td>
+      <td><code>App.FooBar.IndexRoute</code></td>
+      <td><code>foo/bar.index</code></td>
+    </tr>
+    <tr>
+      <td><code>/foo/bar/baz</code></td>
+      <td><code>foo.bar.baz.index</code></td>
+      <td><code>App.FooBar.Baz.IndexController</code></td>
+      <td><code>App.FooBar.Baz.IndexRoute</code></td>
+      <td><code>foo/bar.baz.index</code></td>
+    </tr>
+  </table>
+</div>
 
 ### Initial routes
 
