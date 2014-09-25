@@ -270,6 +270,8 @@ Configuring Ember.js:
     url: "configuring-ember/embedding-applications"
   - title: "Feature Flags"
     url: "configuring-ember/feature-flags"
+  - title: "List of New Features"
+    url: "configuring-ember/new-features"
 
 Cookbook:
   - title: "Introduction"
