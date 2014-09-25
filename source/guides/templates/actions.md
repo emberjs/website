@@ -221,7 +221,7 @@ is most commonly used to send actions to a view instead of a controller.
 
 ```handlebars
 <p>
-  <button {{action "select" post target="view"}}>✓</button>
+  <button {{action "select" post target=view}}>✓</button>
   {{post.title}}
 </p>
 ```
@@ -236,4 +236,15 @@ App.PostsIndexView = Ember.View.extend({
     }
   }
 });
+```
+
+Note that actions sent to views in this way do not bubble up the 
+currently rendered view hierarchy. If you want to handle the action in
+a parent view, use the following:
+
+```handlebars
+<p>
+  <button {{action "select" post target=view.parentView}}>✓</button>
+  {{post.title}}
+</p>
 ```
