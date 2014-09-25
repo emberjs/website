@@ -41,6 +41,20 @@ App.PostController = Ember.ObjectController.extend({
 });
 ```
 
+Note that actions may be attached to any element of the DOM, but not all
+respond to the `click` event. For example, if an action is attached to an `a`
+link without an `href` attribute, or to a `div`, some browsers won't execute
+the associated function. If it's really needed to define actions over such
+elements, a CSS workaround exists to make them clickable, `cursor: pointer`.
+For example:
+
+```css
+[data-ember-action] {
+  cursor: pointer;
+}
+```
+
+
 ### Action Bubbling
 
 By default, the `{{action}}` helper triggers a method on the template's
