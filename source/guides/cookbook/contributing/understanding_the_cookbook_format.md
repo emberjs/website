@@ -5,8 +5,8 @@ how your contribution should be formatted.
 ### Solution
 Cookbook-style guides contain recipes that guide a beginning programmer to a deeper knowledge of the subject
 by answering specific, "how-to" style questions. Cookbook recipes address more topics than
-[API documentation for a class](http://docs.emberjs.com/#doc=Ember.StateManager&src=fal), but are smaller in
-scope than [a topic-based guide](/guides/view_layer/).
+[API documentation for a class](http://emberjs.com/api/classes/Ember.Application.html), but are smaller in
+scope than [a topic-based guide](http://emberjs.com/guides/).
 
 All recipes follow the same format:
 
@@ -29,8 +29,3 @@ prerequisite knowledge is encouraged.
 Take a look at an [O'Reilly Cookbook](http://shop.oreilly.com/category/series/cookbooks.do) or the
 [Coffeescript Cookbook](http://coffeescriptcookbook.com/). Both of these are great examples of the Cookbook
 format.
-
-[api_docs_for_class]: http://docs.emberjs.com/#doc=Ember.StateManager&src=fal
-[topic_based_guide]: /guides/view_layer/
-[oreilly_cookbooks]: http://shop.oreilly.com/category/series/cookbooks.do
-[coffeescript_cookbook]: http://coffeescriptcookbook.com/
