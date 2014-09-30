@@ -301,8 +301,6 @@
   image: echobind.png
 - url: https://idobata.io
   image: idobata.png
-  - url: http://closealert.com
-  image: closealert.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
