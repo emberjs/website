@@ -449,7 +449,7 @@ specify them in `App.Router.map`.
 
 ### Wildcard / globbing routes
 
-You can define wildcard routes that will match mutliple routes. This could be used, for example,
+You can define wildcard routes that will match multiple routes. This could be used, for example,
 if you'd like a catchall route which is useful when the user enters an incorrect URL not managed
 by your app.
 
