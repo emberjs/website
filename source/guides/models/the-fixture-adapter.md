@@ -36,14 +36,16 @@ App.Documenter = DS.Model.extend({
 
 #### Attach Fixtures to the Model Class
 
-Attaching fixtures couldn't be simpler. Just attach a collection of plain
-JavaScript objects to your Model's class under the `FIXTURES` property:
+In order to attach fixtures to your model, you have to use `reopenClass` method and define
+fixtures:
 
 ```JavaScript
-App.Documenter.FIXTURES = [
-  { id: 1, firstName: 'Trek', lastName: 'Glowacki' },
-  { id: 2, firstName: 'Tom' , lastName: 'Dale'     }
-];
+App.Documenter.reopenClass({
+  FIXTURES: [
+    { id: 1, firstName: 'Trek', lastName: 'Glowacki' },
+    { id: 2, firstName: 'Tom' , lastName: 'Dale'     }
+  ]
+});
 ```
 
 That's it! You can now use all of methods for [Finding Records][2] in your
