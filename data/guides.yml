@@ -395,9 +395,11 @@ Cookbook:
   #   url: "cookbook/debugging_and_configuration/setting_ember_global_flags"
   #   skip_sidebar_item: true
 
-Understanding Ember.js:
+Deprecations:
   - title: "Deprecations"
     url: "deprecations"
+
+Understanding Ember.js:
   - title: "The View Layer"
     url: "understanding-ember/the-view-layer"
   - title: "Managing Asynchrony"
