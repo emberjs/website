@@ -207,10 +207,10 @@ App.Project.reopenClass({
       projectName: "Ember Data",
       projectFilter: "ember-data",
       projectRepo: 'emberjs/data',
-      lastRelease: "1.0.0-beta.10",
-      futureVersion: "1.0.0-beta.11",
+      lastRelease: "1.0.0-beta.11",
+      futureVersion: "1.0.0-beta.12",
       channel: "beta",
-      date: "2014-09-09",
+      date: "2014-10-13",
       changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember",
@@ -359,8 +359,8 @@ App.CanaryRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.CanaryController = Ember.ObjectController.extend(App.ProjectsMixin, { 
-  templateName: 'buildList', 
+App.CanaryController = Ember.ObjectController.extend(App.ProjectsMixin, {
+  templateName: 'buildList',
   channel: 'canary'
 });
 
