@@ -82,7 +82,7 @@ Let's build a controller that manages audio playback and makes it available to o
 
 First, we create `AudioController` and attach it to the DOM by using the `render` helper. This helper renders a template, and backs that template with a controller of the same name.
 
-```hbs
+```handlebars
 {{! application.hbs }}
 {{render "audio"}}
 {{outlet}}
@@ -90,7 +90,7 @@ First, we create `AudioController` and attach it to the DOM by using the `render
 
 And we must create an `audio.hbs` template to render:
 
-```hbs
+```handlebars
 {{! audio.hbs }}
 <audio id="audio" controls loop>
   <source {{bind-attr src=currentSrc}} type="audio/mpeg"></source>

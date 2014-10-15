@@ -6,7 +6,7 @@ Write a custom Handlebars helper that can be called from any template and gets u
 
 ### Discussion
 
-```hbs
+```html
 <script type="text/x-handlebars">
    $ {{dollar model}}
 </script>

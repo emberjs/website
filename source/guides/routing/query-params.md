@@ -257,7 +257,7 @@ if you navigate to `/badgers` and filter by `"rookies"`, then navigate
 to `/bears` and filter by `"best"`, and then navigate to `/potatoes` and
 filter by `"lamest"`, then given the following nav bar links,
 
-```hbs
+```handlebars
 {{#link-to 'team' 'badgers '}}Badgers{{/link-to}}
 {{#link-to 'team' 'bears'   }}Bears{{/link-to}}
 {{#link-to 'team' 'potatoes'}}Potatoes{{/link-to}}
@@ -265,7 +265,7 @@ filter by `"lamest"`, then given the following nav bar links,
 
 the generated links would be
 
-```hbs
+```html
 <a href="/badgers?filter=rookies">Badgers</a>
 <a href="/bears?filter=best">Bears</a>
 <a href="/potatoes?filter=lamest">Potatoes</a>
