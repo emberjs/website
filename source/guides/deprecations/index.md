@@ -36,7 +36,7 @@ instead.
 Previous to Ember 1.8, views would commonly be fetched from the global
 scope:
 
-```hbs
+```handlebars
 {{view App.SomeView}}
 {{each itemViewClass=App.SomeView}}
 ```
@@ -44,14 +44,14 @@ scope:
 Since Ember 1.8, views are more appropriately resolved on the application
 via strings:
 
-```hbs
+```handlebars
 {{view "some"}}
 {{each itemViewClass="some"}}
 ```
 
 They may also be fetched via a binding:
 
-```hbs
+```handlebars
 {{view view.someViewViaTheCurrentView}}
 {{each itemViewClass=someViewViaAControllerProperty}}
 ```
@@ -69,14 +69,14 @@ The [Ember.Select](/api/classes/Ember.Select.html) view has not been upgraded to
 have a helper. Instead, it was suggested that you call it via the global
 class name:
 
-```hbs
+```handlebars
 {{view Ember.Select content=manyItems}}
 ```
 
 Since this lookup is now deprecated, the select view has been registered
 on an application as `select`. The new usage is:
 
-```hbs
+```handlebars
 {{view "select" content=manyItems}}
 ```
 
