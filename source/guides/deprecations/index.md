@@ -103,8 +103,8 @@ views on the the application:
 // usage is {{view "list"}}
 Ember.Application.initializer({
   name: 'list-view',
-  initialize: function(application, container) {
-    application.register('view:list', ListView);
+  initialize: function(container, application) {
+    container.register('view:list', ListView);
   }
 });
 ```
