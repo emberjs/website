@@ -207,6 +207,10 @@ specifying URLs for posts (a noun), the route was defined with
 `this.resource('posts')`. However, when defining the `new` action
 (a verb), the route was defined with `this.route('new')`.
 
+### Multi-word Model Names
+
+For multi-word models all the names are camel cased except for the dynamic segment. For example, a model named `BigMac` would have a resource path of `/bigMacs/:big_mac_id`, route named `bigMac`, template named `bigMac`.
+
 ### Dynamic Segments
 
 One of the responsibilities of a resource's route handler is to convert a URL
