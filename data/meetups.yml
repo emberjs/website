@@ -48,6 +48,8 @@
   - location: Orlando, FL
     url:      http://www.meetup.com/Ember-js-Orlando/
     image:    01orlando.png
+  - location: Indianapolis, IN
+    url:      http://www.meetup.com/Ember-js-Indianapolis/
 "Worldwide":
   - location: Toronto, Canada
     url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
