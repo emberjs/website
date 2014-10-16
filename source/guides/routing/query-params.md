@@ -305,12 +305,12 @@ even as a route's model changes. This can be accomplished by setting the
 config hash:
 
 ```js
-App.ArticlesRoute = Ember.Route.extend({
-  queryParams: {
+App.ArticlesController = Ember.Route.extend({
+  queryParams: [{
     showMagnifyingGlass: {
       scope: "controller"
     }
-  }
+  ]
 });
 ```
 
