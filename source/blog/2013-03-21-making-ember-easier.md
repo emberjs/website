@@ -36,7 +36,7 @@ To call out a few of the big ones:
 * [NetTuts' Getting into Ember.js series](http://net.tutsplus.com/tutorials/javascript-ajax/getting-into-ember-js/) by Rey Bango
 * The guides on the Ember.js website have been dramatically expanded
 
-Additionally, great open source examples built on top of RC1 are out in the wild, like [TodoMVC](https://github.com/addyosmani/todomvc/tree/gh-pages/architecture-examples/emberjs) and the "Big Kahuna," [Discourse](https://github.com/discourse/discourse).
+Additionally, great open source examples built on top of RC1 are out in the wild, like [TodoMVC](https://github.com/addyosmani/todomvc/tree/gh-pages/examples/emberjs) and the "Big Kahuna," [Discourse](https://github.com/discourse/discourse).
 
 We've also been working on tooling to make the process of developing Ember.js apps easier. For example, [Ryan Florence's ember-tools](https://github.com/rpflorence/ember-tools) significantly improves bootstrapping a new project, and the [Ember Inspector plugin for Chrome](https://github.com/tildeio/ember-extension) (which we [demoed at EmberCamp](https://www.youtube.com/watch?feature=player_detailpage&v=RYAD2arvysU#t=1924s)) should make debugging and understanding apps much easier.
 
