@@ -16,7 +16,7 @@ Reload your web browser to ensure that there are no errors and the behaviors des
 
 
 <aside>
-Note: The current action may be invoked twice (via `acceptChanges`) leading to an exception. For details on how to handle this situation, please see [the latest version of the TodoMVC source](https://github.com/tastejs/todomvc/blob/gh-pages/architecture-examples/emberjs/js/controllers/todo_controller.js).
+Note: The current action may be invoked twice (via `acceptChanges`) leading to an exception. For details on how to handle this situation, please see [the latest version of the TodoMVC source](https://github.com/tastejs/todomvc/blob/gh-pages/examples/emberjs/js/controllers/todo_controller.js).
 </aside>
 
 ### Live Preview
