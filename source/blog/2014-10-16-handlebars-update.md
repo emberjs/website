@@ -46,7 +46,7 @@ To upgrade please use the following rough steps as a guide:
 
 If you happen to be using Ember CLI the following steps should work properly:
 
-* `npm uninstall --save broccoli-ember-hbs-template-compiler`
+* `npm uninstall --save-dev broccoli-ember-hbs-template-compiler`
 * `npm install --save-dev ember-cli-htmlbars`
 * `rm -rf bower_components`
 * `bower install --save handlebars#2.0.0`
