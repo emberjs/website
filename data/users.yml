@@ -307,6 +307,8 @@
   image: exportToChina.png
 - url: https://www.tailorbrands.com
   image: tailorBrands.png
+- url: https://www.skedda.com
+  image: skedda.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
