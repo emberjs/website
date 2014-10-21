@@ -10,7 +10,7 @@ For this example, all of these resources should be stored in the folder `js/libs
 ```html
 <!-- ... additional lines truncated for brevity ... -->
   <script src="js/libs/jquery-1.10.2.min.js"></script>
-  <script src="js/libs/handlebars-1.3.0.js"></script>
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
   <script src="js/libs/ember.js"></script>
   <script src="js/libs/ember-data.js"></script>
 </body>
