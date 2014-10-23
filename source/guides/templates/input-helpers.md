@@ -59,6 +59,8 @@ To dispatch an action on specific events, such as `enter` or `key-press`, use th
 {{input value=firstName action="updateFirstName" on="key-press"}}
 ```
 
+[Event Names](/api/classes/Ember.View.html#toc_event-names) must be dasherized when assigned to `on`.
+
 ### Checkboxes
 
 You can also use the `{{input}}` helper to create a checkbox by setting its
