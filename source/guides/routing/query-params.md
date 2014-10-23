@@ -64,7 +64,7 @@ With this code, we have established the following behaviors:
 1. If the user navigates to `/articles`, `category` will be `null`, so
    the articles won't be filtered.
 2. If the user navigates to `/articles?category=recent`,
-   `category` will be set to `"recent"`, so articles will be filtered.
+   `category` will be set to `'recent'`, so articles will be filtered.
 3. Once inside the `articles` route, any changes to the `category`
    property on `ArticlesController` will cause the URL to update the
    query param. By default, a query param property change won't cause a
@@ -151,7 +151,7 @@ App.ArticlesRoute = Ember.Route.extend({
     // for the first time, and we opt into refiring it upon
     // query param changes by setting `refreshModel:true` above.
 
-    // params has format of { category: "someValueOrJustNull" },
+    // params has format of { category: 'someValueOrJustNull'' },
     // which we can just forward to the server.
     return this.store.findQuery('articles', params);
   }
@@ -236,7 +236,7 @@ This affects query param behavior in two ways:
 1. Query param values are cast to the same datatype as the default
    value, e.g. a URL change from `/?page=3` to `/?page=2` will set
    `ArticlesController`'s `page` property to the number `2`, rather than
-   the string `"2"`. The same also applies to boolean default values.
+   the string `'2'`. The same also applies to boolean default values.
 2. When a controller's query param property is currently set to its
    default value, this value won't be serialized into the URL. So in the
    above example, if `page` is `1`, the URL might look like `/articles`,
@@ -254,9 +254,9 @@ parameters as you navigate back and forth between routes.
 Furthermore, these sticky query param values are remembered/restored
 according to the model loaded into the route. So, given a `team` route
 with dynamic segment `/:team_name` and controller query param "filter",
-if you navigate to `/badgers` and filter by `"rookies"`, then navigate
-to `/bears` and filter by `"best"`, and then navigate to `/potatoes` and
-filter by `"lamest"`, then given the following nav bar links,
+if you navigate to `/badgers` and filter by `'rookies'`, then navigate
+to `/bears` and filter by `'best'`, and then navigate to `/potatoes` and
+filter by `'lamest'`, then given the following nav bar links,
 
 ```handlebars
 {{#link-to 'team' 'badgers'}}Badgers{{/link-to}}
@@ -302,7 +302,7 @@ App.ArticlesRoute = Ember.Route.extend({
 In some cases, you might not want the sticky query param value to be
 scoped to the route's model but would rather reuse a query param's value
 even as a route's model changes. This can be accomplished by setting the
-`scope` option to `"controller"` within the controller's `queryParams`
+`scope` option to `'controller'` within the controller's `queryParams`
 config hash:
 
 ```javascript
