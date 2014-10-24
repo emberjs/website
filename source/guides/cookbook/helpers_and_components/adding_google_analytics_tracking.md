@@ -52,5 +52,4 @@ changes, in this example we are getting the path after the hash in the url so we
 can notify Google Analytics about moving between areas of the site.
 
 
-### Example
-<a class="jsbin-embed" href="http://jsbin.com/AjeDehO/2/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+[JSBin Example](http://jsbin.com/xebevu)

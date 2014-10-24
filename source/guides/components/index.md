@@ -29,4 +29,4 @@ To highlight the power of components, here is a short example of turning a blog 
 application. Keep reading this section for more details on building
 components.
 
-<a class="jsbin-embed" href="http://jsbin.com/ifuxey/2/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/juvic/embed?js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
