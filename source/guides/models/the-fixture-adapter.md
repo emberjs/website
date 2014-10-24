@@ -9,7 +9,7 @@ Using the fixture adapter entails three very simple setup steps:
 
 1. Create a new store using the fixture adapter and attach it to your app.
 2. Define your model using `DS.Model.extend`.
-3. Attach fixtures(also known as sample data) to the model's class.
+3. Attach fixtures (also known as sample data) to the model's class.
 
 #### Creating a Fixture Adapter
 
