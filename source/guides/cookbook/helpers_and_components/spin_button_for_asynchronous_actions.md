@@ -4,7 +4,7 @@ You want a button component that spins to show asynchronous action till completi
 ### Solution
 Write an Ember Component to change to loading state when action is taking place.
 
-For example a button to save data could be as 
+For example a button to save data could be as
 
 ```handlebars
 <script type='text/x-handlebars' id='application'>
@@ -65,4 +65,4 @@ For safety and sanity of the component, one can add a settimeout of however much
 Also note that the component does not let multiple clicks get in the way of loading status.
 
 #### Example
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/EXaxEfE/14/">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/EXaxEfE/14/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>

@@ -36,7 +36,7 @@ Running this code, you will see that the first `<h1>` (from the outer
 template) displays the `title` property, but the second `<h1>` (from
 inside the component) is empty.
 
-<a class="jsbin-embed" href="http://jsbin.com/ufedet/2/embed?live">JS Bin</a>
+<a class="jsbin-embed" href="http://jsbin.com/japiv/1/embed?live">JS Bin</a>
 
 We can fix this by making the `title` property available to the
 component:
@@ -48,7 +48,7 @@ component:
 This will make the `title` property in the outer template scope
 available inside the component's template using the same name, `title`.
 
-<a class="jsbin-embed" href="http://jsbin.com/ufedet/3/embed?live">JS Bin</a>
+<a class="jsbin-embed" href="http://jsbin.com/japiv/2/embed?live">JS Bin</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
 If, in the above example, the model's `title` property was instead
@@ -58,7 +58,7 @@ called `name`, we would change the component usage to:
 {{blog-post title=name}}
 ```
 
-<a class="jsbin-embed" href="http://jsbin.com/ufedet/4/embed?live">JS Bin</a>
+<a class="jsbin-embed" href="http://jsbin.com/japiv/3/embed?live">JS Bin</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
 In other words, you are binding a named property from the outer scope to
@@ -72,7 +72,7 @@ text field either in the outer template or inside the component and note
 how they stay in sync.
 
 
-<a class="jsbin-embed" href="http://jsbin.com/ufedet/5/embed?live">JS Bin</a>
+<a class="jsbin-embed" href="http://jsbin.com/fehewu/embed?live">JS Bin</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
 You can also bind properties from inside an `{{#each}}` loop. This will
@@ -83,6 +83,5 @@ create a component for each item and bind it to each model in the loop.
   {{blog-post title=title}}
 {{/each}}
 ```
-<a class="jsbin-embed" href="http://jsbin.com/ifuxey/2/embed?live">JS Bin</a>
+<a class="jsbin-embed" href="http://jsbin.com/yexeyi/embed?live">JS Bin</a>
 <script src="http://static.jsbin.com/js/embed.js"></script>
-

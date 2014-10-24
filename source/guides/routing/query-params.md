@@ -96,7 +96,7 @@ matching the leaf-most controller with the supplied property name.
 
 The link-to helper takes into account query parameters when determining
 its "active" state, and will set the class appropriately. The active state
-is determined by calculating whether the query params end up the same after 
+is determined by calculating whether the query params end up the same after
 clicking a link. You don't have to supply all of the current,
 active query params for this to be true.
 
@@ -332,17 +332,16 @@ App.ArticlesController = Ember.Controller.extend({
 
 ## Examples
 
-- [Search queries](http://emberjs.jsbin.com/ucanam/6046)
-- [Sort: client-side, no refiring of model hook](http://emberjs.jsbin.com/ucanam/6048)
-- [Sort: server-side, refire model hook](http://emberjs.jsbin.com/ucanam/6049)
-- [Pagination + Sorting](http://emberjs.jsbin.com/ucanam/6050)
-- [Boolean values. False value removes QP from URL](http://emberjs.jsbin.com/ucanam/6051)
-- [Global query params on app route](http://emberjs.jsbin.com/ucanam/6052)
-- [Opt-in to full transition via refresh()](http://emberjs.jsbin.com/ucanam/6054)
-- [update query params by changing controller QP property](http://emberjs.jsbin.com/ucanam/6055)
-- [update query params with replaceState by changing controller QP property](http://emberjs.jsbin.com/ucanam/6056/edit)
-- [w/ {{partial}} helper for easy tabbing](http://emberjs.jsbin.com/ucanam/6058)
-- [link-to with no route name, only QP change](http://emberjs.jsbin.com/ucanam/6060)
-- [Complex: serializing textarea content into URL (and subexpressions))](http://emberjs.jsbin.com/ucanam/6062/edit)
-- [Arrays](http://emberjs.jsbin.com/ucanam/6064)
-
+- [Search queries](http://jsbin.com/tukoye)
+- [Sort: client-side, no refiring of model hook](http://jsbin.com/joboje)
+- [Sort: server-side, refire model hook](http://jsbin.com/hiyalu)
+- [Pagination + Sorting](http://jsbin.com/fayug)
+- [Boolean values. False value removes QP from URL](http://jsbin.com/sisebi)
+- [Global query params on app route](http://jsbin.com/duhof)
+- [Opt-in to full transition via refresh()](http://jsbin.com/yanigu)
+- [update query params by changing controller QP property](http://jsbin.com/zerojo)
+- [update query params with replaceState by changing controller QP property](http://emberjs.jsbin.com/birugi)
+- [w/ {{partial}} helper for easy tabbing](http://jsbin.com/baguc)
+- [link-to with no route name, only QP change](http://jsbin.com/rujawi)
+- [Complex: serializing textarea content into URL (and subexpressions))](http://emberjs.jsbin.com/tudiz)
+- [Arrays](http://jsbin.com/gacihe)

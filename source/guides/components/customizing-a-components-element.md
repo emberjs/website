@@ -159,7 +159,7 @@ App.LinkItemComponent = Ember.Component.extend({
 Here is an example todo application that shows completed todos with a
 red background:
 
-<a class="jsbin-embed" href="http://jsbin.com/utonef/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/duzala/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 <aside>
   **Note:** The binding functionality in this very simple example could also be implemented without

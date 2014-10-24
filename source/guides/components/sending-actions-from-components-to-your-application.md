@@ -83,7 +83,7 @@ App.IndexRoute = Ember.Route.extend({
       }]
     };
   },
-  
+
   actions: {
     deleteTodo: function(todo) {
       var todos = this.modelFor('index').todos;
@@ -113,9 +113,9 @@ additional argument that the component user can specify:
 App.ConfirmButtonComponent = Ember.Component.extend({
   actions: {
     showConfirmation: function() {
-      this.toggleProperty('isShowingConfirmation'); 
+      this.toggleProperty('isShowingConfirmation');
     },
-    
+
     confirm: function() {
       this.toggleProperty('isShowingConfirmation');
       this.sendAction('action', this.get('param'));
@@ -149,7 +149,7 @@ Note that we've specified the action to send by setting the component's
 `action` attribute, and we've specified which argument should be sent as
 a parameter by setting the component's `param` attribute.
 
-<a class="jsbin-embed" href="http://jsbin.com/atIgUSi/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/mucilo/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Sending Multiple Actions
 
@@ -173,7 +173,7 @@ In this case, you can send the `createUser` action by calling
 `this.sendAction('submit')`, or send the `cancelUserCreation` action by
 calling `this.sendAction('cancel')`.
 
-<a class="jsbin-embed" href="http://jsbin.com/OpebEFO/1/embed?html,js,output">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/qafaq/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Actions That Aren't Specified
 
