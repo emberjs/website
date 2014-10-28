@@ -112,7 +112,7 @@ This makes using anchors with the `history` handler impossible. Ember.js
 ## Breaking Changes
 
 Ember.js strives to maintain strict API compatibility across minor releases.
-In cases of API inconsistency or where behavior is unspecific, breaking changes
+In cases of API inconsistency or where behavior is unspecified, breaking changes
 may be introduced to resolve the issue. Additionally, deprecated APIs may
 be removed if they were from a previous major release (such as pre-1.0
 deprecations).
@@ -155,7 +155,7 @@ In Ember.js 1.9 several new features and changes will be introduced.
 level of the Ember rendering pipeline. They greatly simplify the implementation
 of template helpers and are yet another important step toward the landing of
 HTMLBars.
-* Handlebars 2.0 will be the required for Ember.js 1.9. See [this summary
+* Handlebars 2.0 will be required for Ember.js 1.9. See [this summary
 of the transition](http://emberjs.com/blog/2014/10/16/handlebars-update.html)
 for more details.
 * Further performance improvements and bugfixes.
