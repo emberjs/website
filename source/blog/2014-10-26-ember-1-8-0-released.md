@@ -67,7 +67,7 @@ used, such as pluralizing, singularizing, or changing snake\_case to camelCase.
 1.8 introduces several caches for these operations, resulting in common
 operations being performed far fewer times.
 * The refactoring of commonly de-optimized functions in v8 and other browsers.
-* The conversion of `MANDITORY_SETTER` from a runtime flag into a build-time
+* The conversion of `MANDATORY_SETTER` from a runtime flag into a build-time
 feature flag. This allows relevant code paths in `get` and `set` to be slimmer
 in production builds.
 
@@ -112,7 +112,7 @@ This makes using anchors with the `history` handler impossible. Ember.js
 ## Breaking Changes
 
 Ember.js strives to maintain strict API compatibility across minor releases.
-In cases of API inconsitancy or where behavior is unspecific, breaking changes
+In cases of API inconsistency or where behavior is unspecific, breaking changes
 may be introduced to resolve the issue. Additionally, deprecated APIs may
 be removed if they were from a previous major release (such as pre-1.0
 deprecations).
@@ -123,7 +123,7 @@ application.
 * `didInsertElement` is now always called on a child view before it is called
 on a rendering parent view. In previous releases of Ember.js `didInsertElement`
 would often be called first on a parent view, however this behavior was
-inconsistant. In general, developers are encouraged
+inconsistent. In general, developers are encouraged
 to consider scheduling work into the `afterRender` queue if it includes
 accessing DOM not immediately under that view's control.
 * Actions defined directly on the controller object
@@ -139,7 +139,7 @@ to allow consistent usage across the pre-1.8 and 1.8 API.
 flag enabled, attempts to set an observed object property without the use of
 `Ember.set()` would throw an error (a desirable behavior for development
 builds). This runtime flag has been changed to a
-standard build-time feature flag named `manditory-setter`, allowing it to
+standard build-time feature flag named `mandatory-setter`, allowing it to
 be removed from production builds entirely.
 
 ## Ember.js 1.9 beta
