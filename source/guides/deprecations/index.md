@@ -115,7 +115,7 @@ and the [dependency injection guide](/guides/understanding-ember/dependency-inje
 
 #### Deprecate location: 'hash' paths that don't include a forward slash. e.g. #/foo NOT #foo
 
-Prior to this release, if you were using `location: 'hash'` (which is the default), you were able able to link to a route with a `location.hash` that didn't contain the expected leading forward slash. e.g. `#foo` instead of the correct `#/foo`. Very few, if any, should be impacted by this since the router always produces the correct form.
+Prior to this release, if you were using `location: 'hash'` (which is the default), you were able to link to a route with a `location.hash` that didn't contain the expected leading forward slash. e.g. `#foo` instead of the correct `#/foo`. Very few, if any, should be impacted by this since the router always produces the correct form.
 
 Doing so is ambiguous because you may also be trying to link to an element on the page who's id matches `<div id="foo">` and it also erroneously will create an extra history state if a user clicks on something that transitions to that route again, since it will change `location.hash === '#/foo'`.
 
