@@ -255,14 +255,15 @@ application.inject('route:index', 'logger', 'logger:main');
 Injections can be made onto all of Ember's major framework classes, including views, helpers, components, controllers, routes, and the router.
 
 <aside>
-  **Note:** For injections into models, you need to enable the `MODEL_FACTORY_INJECTIONS` flag before you
-  initialize your application. You can do this like so:
+  **Note:** For injections into models (if not using ember-cli), you need to enable the `MODEL_FACTORY_INJECTIONS` 
+  flag before you initialize your application. You can do this like so:
   
   ```JavaScript
   Ember.MODEL_FACTORY_INJECTIONS = true;
-  var App = Ember.Application.extend({
+  
+  var App = Ember.Application.create({
     // Enable any options
-  }).create();
+  });
   ```
 </aside>
 
