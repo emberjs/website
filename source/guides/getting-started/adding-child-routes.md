@@ -50,7 +50,7 @@ Todos.Router.map(function () {
 
 Todos.TodosIndexRoute = Ember.Route.extend({
   model: function() {
-    return this.modelFor('todos');
+    return this.modelFor('todo');
   }
 });
 ```
