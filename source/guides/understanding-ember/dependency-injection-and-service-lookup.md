@@ -258,13 +258,13 @@ Injections can be made onto all of Ember's major framework classes, including vi
   **Note:** For injections into models (if not using ember-cli), you need to enable the `MODEL_FACTORY_INJECTIONS` 
   flag before you initialize your application. You can do this like so:
   
-  ```JavaScript
-  Ember.MODEL_FACTORY_INJECTIONS = true;
-  
-  var App = Ember.Application.create({
-    // Enable any options
-  });
-  ```
+```JavaScript
+Ember.MODEL_FACTORY_INJECTIONS = true;
+
+var App = Ember.Application.create({
+  // Enable any options
+});
+```
 </aside>
 
 What follows is a full implementation of the above logger service:
