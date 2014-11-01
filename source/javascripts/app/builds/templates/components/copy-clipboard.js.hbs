@@ -1,0 +1,5 @@
+{{#if hasFlash}}
+  <button {{bind-attr data-clipboard-text=text}} {{bind-attr data-label=label}}>{{label}}</button>
+{{else}}
+  <input type="text" class="name-input" readonly="readonly" {{bind-attr value=text}}>
+{{/if}}

@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 gem "redcarpet"
 gem "activesupport"
@@ -12,6 +13,9 @@ gem "rack"
 gem "listen"
 gem "builder"
 gem "middleman-alias"
+gem "ember-middleman"
+gem "rails-assets-js-md5"
+gem "rails-assets-moment"
 
 group :development, :test do
   gem 'pry'

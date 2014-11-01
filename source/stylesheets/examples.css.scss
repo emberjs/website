@@ -190,7 +190,7 @@
     // reverse z-index natural ordering (works for 10 tabs max)
     &:nth-child(1)  { z-index:22; }
     &:nth-child(2)  { z-index:21; }
-    &:nth-child(3)  { z-index:20; margin-left: 21px; }
+    &:nth-child(3)  { z-index:20; }
     &:nth-child(4)  { z-index:19; }
     &:nth-child(5)  { z-index:18; }
     &:nth-child(6)  { z-index:17; }

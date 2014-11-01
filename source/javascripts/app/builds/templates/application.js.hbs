@@ -1,0 +1,18 @@
+<div id="sidebar">
+  <ol id="toc-list">
+    <li {{bind-attr class=":level-1 isIndexActive:selected"}}>{{#link-to 'index'}}Home{{/link-to}}</li>
+    <li {{bind-attr class=":level-1 isTaggedActive:selected"}}>{{#link-to 'tagged'}}Tagged Releases{{/link-to}}</li>
+    <li {{bind-attr class=":level-1 isChannelsActive:selected"}}>
+      <a>Channels</a>
+      <ol style="display:block">
+        <li {{bind-attr class=":level-3 isReleaseActive:sub-selected"}}>{{#link-to 'release'}}Release{{/link-to}}</li>
+        <li {{bind-attr class=":level-3 isBetaActive:sub-selected"}}>{{#link-to 'beta'}}Beta{{/link-to}}</li>
+        <li {{bind-attr class=":level-3 isCanaryActive:sub-selected"}}>{{#link-to 'canary'}}Canary{{/link-to}}</li>
+      </ol>
+    </li>
+  </ol>
+</div>
+
+<div id="subcontent" class="has-sidebar">
+  {{outlet}}
+</div>

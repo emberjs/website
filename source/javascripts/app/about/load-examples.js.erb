@@ -1,0 +1,32 @@
+$(function loadExamples() {
+  var allFiles = <%= load_example_files.to_json %>;
+  // Find all of the examples on the page
+  var $examples = $('.example-app');
+
+  // For each example, create a new Ember.Application
+  $examples.each(function() {
+    var $viewer = $('<div class="example-viewer"></div>');
+    var $output = $('<div class="example-output"></div>');
+
+    $(this).append($viewer)
+           .append($output);
+
+    // Extract configuration options for the example
+    // from attributes on the element
+    var name = this.getAttribute('data-name');
+    var fileNames = this.getAttribute('data-files').split(' ');
+
+    var files = allFiles[name];
+    // Sort by `data-files`
+    files = fileNames.map(function(name) {
+      for (var i = 0, length = files.length; i < length; i++) {
+        if (files[i].name == name) {
+          return files[i];
+        }
+      }
+    });
+
+    generateViewerApp($viewer, files);
+    generateOutputApp($output, files);
+  });
+});

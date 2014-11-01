@@ -1,3 +1,5 @@
+//= require_tree ./templates
+
 var App = Ember.Application.create({
   rootElement: '#builds-application'
 });
