@@ -1,11 +1,10 @@
 <div class="url">URL: {{target.url}}</div>
 <aside>
-    
     <ul>
         <li><h2>Mailboxes</h2></li>
         {{#each}}
             <li>
-                {{#link-to "mailbox" this currentWhen="mailbox"}}
+                {{#link-to "mailbox" this current-when="mailbox"}}
                     <span class="count">
                         {{messages.length}}
                     </span>

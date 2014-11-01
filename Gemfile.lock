@@ -58,7 +58,7 @@ GEM
       middleman (~> 3.0)
       middleman-sprockets (~> 3.0)
       sass
-    ember-source (1.7.1)
+    ember-source (1.8.0)
       handlebars-source (~> 1.0)
     erubis (2.7.0)
     eventmachine (1.0.3)
