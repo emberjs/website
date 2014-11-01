@@ -12,6 +12,7 @@ gem "rack"
 gem "listen"
 gem "builder"
 gem "middleman-alias"
+gem "ember-middleman"
 
 group :development, :test do
   gem 'pry'

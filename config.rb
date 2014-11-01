@@ -16,6 +16,7 @@ activate :directory_indexes
 activate :toc
 activate :highlighter
 activate :alias
+activate :ember
 
 activate :api_docs,
   ember: {
@@ -75,6 +76,9 @@ ignore '*_layout.erb'
 ignore 'api/class.html.erb'
 ignore 'api/module.html.erb'
 
+# Don't build templates for example apps because they are embedded in other JS
+ignore 'javascripts/app/examples/*/templates/*'
+
 ###
 # Helpers
 ###
@@ -112,5 +116,21 @@ helpers do
     classes = super
     return 'not-found' if classes == '404'
     classes
+  end
+
+  def load_example_files
+    root = Pathname(__FILE__).join('../source/javascripts/app/examples')
+    all_files = Hash.new {|hash, key| hash[key] = [] }
+
+    Dir[root.join('**/*.*').to_s].each do |path|
+      relative_path = Pathname(path).relative_path_from(root)
+      match_data = relative_path.to_s.match(%r{^([^/]+)/(.+)$})
+      name = match_data[1]
+      file = match_data[2]
+
+      all_files[name] << {name: file, contents: File.read(path)}
+    end
+
+    all_files
   end
 end
