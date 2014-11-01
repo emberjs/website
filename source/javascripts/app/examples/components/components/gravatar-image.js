@@ -6,6 +6,6 @@ App.GravatarImageComponent = Ember.Component.extend({
     var email = this.get('email'),
         size = this.get('size');
 
-    return 'http://www.gravatar.com/avatar/' + hex_md5(email) + '?s=' + size;
+    return 'http://www.gravatar.com/avatar/' + md5(email) + '?s=' + size;
   }.property('email', 'size')
 });

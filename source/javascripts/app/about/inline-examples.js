@@ -1,8 +1,8 @@
 //= require handlebars
 //= require ember
-//= require ../../vendor/moment
+//= require moment
+//= require js-md5
 //= require ../../vendor/highlight
-//= require ../../vendor/md5
 //= require ./load-examples
 
 function buildLineNumbers(source) {
