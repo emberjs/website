@@ -16,7 +16,9 @@ activate :directory_indexes
 activate :toc
 activate :highlighter
 activate :alias
-activate :ember
+activate :ember do |config|
+  config.templates_root = 'app/builds/templates'
+end
 
 activate :api_docs,
   ember: {

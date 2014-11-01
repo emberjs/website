@@ -1,0 +1,101 @@
+<h2 class="project-name">{{projectName}} {{channel}} Builds</h2>
+{{#if isEmberBeta}}
+  <div class="release-progress clear">
+    <div class="left">
+      <div class="small-release-image" {{bind-attr title=lastStableVersion}}></div>
+      <div class="release-version">{{lastStableVersion}}</div>
+      <div class="release-date">Released {{format-date-time lastStableDate "MMM Do"}}</div>
+    </div>
+    <div class="float-left-container">
+      <div class="release-cycle-title">The path to {{finalVersion}}...</div>
+      <div {{bind-attr class=":left beta1Completed::future-image"}}>
+        <div class="tiny-beta-image"></div>
+        <div class="beta-version">beta 1</div>
+        {{#if isBeta1}}
+          <div class="beta-current-version">(current beta)</div>
+        {{/if}}
+      </div>
+      <div {{bind-attr class=":left beta2Completed::future-image"}}>
+        <div class="tiny-beta-image"></div>
+        <div class="beta-version">beta 2</div>
+        {{#if isBeta2}}
+          <div class="beta-current-version">(current beta)</div>
+        {{/if}}
+        {{#if isBeta1}}
+          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{/if}}
+      </div>
+      <div {{bind-attr class=":left beta3Completed::future-image"}}>
+        <div class="tiny-beta-image"></div>
+        <div class="beta-version">beta 3</div>
+        {{#if isBeta3}}
+          <div class="beta-current-version">(current beta)</div>
+        {{/if}}
+        {{#if isBeta2}}
+          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{/if}}
+      </div>
+      <div {{bind-attr class=":left beta4Completed::future-image"}}>
+        <div class="tiny-beta-image"></div>
+        <div class="beta-version">beta 4</div>
+        {{#if isBeta4}}
+          <div class="beta-current-version">(current beta)</div>
+        {{/if}}
+        {{#if isBeta3}}
+          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{/if}}
+      </div>
+      <div {{bind-attr class=":left beta5Completed::future-image"}}>
+        <div class="tiny-beta-image"></div>
+        <div class="beta-version">beta 5</div>
+        {{#if isBeta5}}
+          <div class="beta-current-version">(current beta)</div>
+        {{/if}}
+        {{#if isBeta4}}
+          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{/if}}
+      </div>
+    </div>
+    <div class="right future-image">
+      <div class="small-release-image" {{bind-attr title=finalVersion}}></div>
+      <div class="release-version">{{finalVersion}}</div>
+      <div class="release-date">Coming {{format-date-time cycleEstimatedFinishDate "MMM Do"}}</div>
+    </div>
+    <div class="clear"></div>
+  </div>
+{{/if}}
+{{#if lastRelease}}
+<div id="download">
+  <div id="download-ember">
+    <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}} download>Download {{lastRelease}}</a>
+    <div class="info">
+      {{lastRelease}}:
+      <a class="debug" {{bind-attr href=lastReleaseProdUrl}} download>production</a>
+      <a class="debug" {{bind-attr href=lastReleaseMinUrl}} download>(min)</a> |
+      <a class="debug" {{bind-attr href=lastReleaseDebugUrl}} download>debug</a>
+      {{#if lastReleaseChangelogUrl }} |
+        <a class="debug" {{bind-attr href=lastReleaseChangelogUrl}}>changelog</a>
+      {{/if}}
+    </div>
+  </div>
+</div>
+{{/if}}
+<p class="description">{{description}}</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>File</th>
+      <th>Modified</th>
+      <th>Quick Copy</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each files}}
+      <tr>
+        <td><a {{bind-attr href=url }}>{{name}}</a></td>
+        <td>{{format-date-time lastModified}}</td>
+        <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
