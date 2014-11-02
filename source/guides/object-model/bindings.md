@@ -12,9 +12,12 @@ wife = Ember.Object.create({
   householdIncome: 80000
 });
 
-husband = Ember.Object.create({
-  wife: wife,
+Husband = Ember.Object.extend({
   householdIncome: Ember.computed.alias('wife.householdIncome')
+});
+
+husband = Husband.create({
+  wife: wife
 });
 
 husband.get('householdIncome'); // 80000
@@ -43,9 +46,12 @@ user = Ember.Object.create({
   fullName: "Kara Gates"
 });
 
-userView = Ember.View.create({
-  user: user,
+UserView = Ember.View.extend({
   userName: Ember.computed.oneWay('user.fullName')
+});
+
+userView = UserView.create({
+  user: user
 });
 
 // Changing the name of the user object changes
