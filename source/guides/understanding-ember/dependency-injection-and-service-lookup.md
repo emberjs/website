@@ -151,22 +151,33 @@ There are two ways to access this API. Many Ember applications can access this A
 
 ```JavaScript
 App = Ember.Application.create();
-App.register('logger:main', {log: function(m){ console.log(m); }}, {instantiate: false});
+
+App.register('logger:main', {
+  log: function(m) {
+    console.log(m);
+  }
+}, { instantiate: false });
+
 App.inject('route', 'logger', 'logger:main');
 ```
 
 But ember-cli applications (and libraries) will need to use a more flexible hook, an initializer:
 
 ```JavaScript
-App = Ember.Application.extend();
 Ember.Application.initializer({
   name: 'logger',
-  initialize: function(container, application){
-    application.register('logger:main', {log: function(m){ console.log(m); }}, {instantiate: false});
+  
+  initialize: function(container, application) {
+    var logger = {
+      log: function(m) {
+        console.log(m);
+      }
+    };
+    
+    application.register('logger:main', logger, { instantiate: false });
     application.inject('route', 'logger', 'logger:main');
   }
 });
-App.create();
 ```
 
 Initializers can be declared at any time before an application is instantiated, making them easier to declare than directly registering factories on the application.
@@ -174,8 +185,13 @@ Initializers can be declared at any time before an application is instantiated, 
 Any dependency injection is comprised of two parts. The first is the **factory registration**:
 
 ```JavaScript
-var logger = {log: function(m){ console.log(m); }};
-application.register('logger:main', logger, {instantiate: false});
+var logger = {
+  log: function(m) {
+    console.log(m);
+  }
+};
+
+application.register('logger:main', logger, { instantiate: false });
 ```
 
 The `register` function adds the factory (`logger`) into the container. It adds it with the full name of `logger:main`, and with the option not to instantiate. When the factory is injected onto another object, it will be injected "as-is".
@@ -183,7 +199,12 @@ The `register` function adds the factory (`logger`) into the container. It adds 
 Often, it is preferable to register a factory that can be instantiated:
 
 ```JavaScript
-var Logger = Ember.Object.extend({ log: function(m){ console.log(m); } });
+var Logger = Ember.Object.extend({
+  log: function(m) {
+    console.log(m);
+  }
+});
+
 application.register('logger:main', Logger);
 ```
 
@@ -199,9 +220,13 @@ This is an example of a *type injection*. Onto all factories of the type `route`
 
 ```JavaScript
 App = Ember.Application.extend();
+
 App.Logger = Ember.Object.extend({
-  log: function(m){ console.log(m); }
+  log: function(m) {
+    console.log(m);
+  }
 });
+
 App.IndexRoute = Ember.Route.extend({
   activate: function(){
     // The logger property is injected into all routes
@@ -211,7 +236,8 @@ App.IndexRoute = Ember.Route.extend({
 
 Ember.Application.initializer({
   name: 'logger',
-  initialize: function(container, application){
+  
+  initialize: function(container, application) {
     application.register('logger:main', App.Logger);
     application.inject('route', 'logger', 'logger:main');
   }
@@ -227,6 +253,19 @@ application.inject('route:index', 'logger', 'logger:main');
 ```
 
 Injections can be made onto all of Ember's major framework classes, including views, helpers, components, controllers, routes, and the router.
+
+<aside>
+  **Note:** For injections into models (if not using ember-cli), you need to enable the `MODEL_FACTORY_INJECTIONS` 
+  flag before you initialize your application. You can do this like so:
+  
+```JavaScript
+Ember.MODEL_FACTORY_INJECTIONS = true;
+
+var App = Ember.Application.create({
+  // Enable any options
+});
+```
+</aside>
 
 What follows is a full implementation of the above logger service:
 
