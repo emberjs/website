@@ -24,10 +24,10 @@ This class can also be customized by extending it. To use the select view bundle
 
 ```handlebars
 {{view "select" content=people
-                    optionLabelPath="content.fullName"
-                    optionValuePath="content.id"
-                    prompt="Pick a person:"
-                    selection=selectedPerson}}
+                optionLabelPath="content.fullName"
+                optionValuePath="content.id"
+                prompt="Pick a person:"
+                selection=selectedPerson}}
 ```
 
 The select view is extremely feature-rich, and may perform badly when rendering many items. Due to this, it has not yet been converted into an component or helper like other inputs.
