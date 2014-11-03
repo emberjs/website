@@ -23,11 +23,11 @@ Ember itself provides one additional view not covered by the input helpers, and 
 This class can also be customized by extending it. To use the select view bundled with Ember, call it via the view helper:
 
 ```handlebars
-{{view Ember.Select content=people
-                    optionLabelPath="content.fullName"
-                    optionValuePath="content.id"
-                    prompt="Pick a person:"
-                    selection=selectedPerson}}
+{{view "select" content=people
+                optionLabelPath="content.fullName"
+                optionValuePath="content.id"
+                prompt="Pick a person:"
+                selection=selectedPerson}}
 ```
 
 The select view is extremely feature-rich, and may perform badly when rendering many items. Due to this, it has not yet been converted into an component or helper like other inputs.
