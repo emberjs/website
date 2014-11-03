@@ -311,6 +311,8 @@
   image: skedda.png
 - url: http://poeticsystems.com
   image: poetic.png
+- url: http://redowlanalytics.com
+  image: redowlanalytics.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
