@@ -33,12 +33,15 @@ The intent of this code is unclear and the pre-1.8 behavior was unintentional. I
 Passing view instances to the `{{view` helper was broken in Ember.js 1.8. This behavior
 has been restored.
 
-### Work-around provided for more iOS8 ARM bugs
+### Work-around provided for more iOS8 ARMv7 JIT Bugs
 
-iOS8 has introduced a severe bug in optimized ARM code. In 1.8.1 even more potential
-occurrences of this bug have been protected against.
+iOS8 has introduced a severe bug in optimized ARMv7 code. In 1.8.0 we worked around the issue
+in a number of modules, and we have expanded our work around for more modules in 1.8.1
 
-(note: link to issue at JSC)
+Further Reading:
+
+* https://bugs.webkit.org/show_bug.cgi?id=138038
+* https://github.com/emberjs/ember.js/issues/5606
 
 ### Support rendering of null-prototype objects
 
