@@ -2483,7 +2483,7 @@ classes:
       `.property()` on the fullName function) and setup the properties
       dependencies (depending on firstName and lastName). The fullName function
       will be called once (regardless of how many times it is accessed) as long
-      as it's dependencies have not been changed. Once firstName or lastName are updated
+      as its dependencies have not been changed. Once firstName or lastName are updated
       any future calls (or anything bound) to fullName will incorporate the new
       values.
 
@@ -7949,7 +7949,7 @@ classitems:
   line: 400
   description: |-
     In single selection mode (when `multiple` is `false`), value can be used to
-    get the current selection's value or set the selection by it's value.
+    get the current selection's value or set the selection by its value.
 
     It is not currently supported in multiple selection mode.
   itemtype: property
@@ -14889,7 +14889,7 @@ classitems:
   line: 121
   description: |-
     By default the `{{link-to}}` helper will bind to the `href` and
-    `title` attributes. It's discourage that you override these defaults,
+    `title` attributes. It's discouraged that you override these defaults,
     however you can push onto the array if needed.
   itemtype: property
   name: attributeBindings
@@ -19024,7 +19024,7 @@ classitems:
   description: |-
     Returns the index of the given object's first occurrence.
     If no `startAt` argument is given, the starting location to
-    search is 0. If it's negative, will count backward from
+    search is 0. If it's negative, it will count backward from
     the end of the array. Returns -1 if no match is found.
 
     ```javascript

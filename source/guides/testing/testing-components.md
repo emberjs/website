@@ -36,7 +36,7 @@ Pretty Color: {{name}}
 ```
 
 Unit testing this component can be done using the `moduleForComponent` helper.
-This helper will find the component by name (pretty-color) and it's template (if
+This helper will find the component by name (pretty-color) and its template (if
 available).
 
 ```javascript
@@ -105,7 +105,7 @@ custom HTML elements. Because of this, it is important to not only test the
 methods on the component itself, but also the user's interaction with the
 component.
 
-Let's look at a very simple component which does nothing more than set it's own
+Let's look at a very simple component which does nothing more than set its own
 title when clicked:
 
 ```javascript
@@ -279,7 +279,7 @@ test('trigger external action when button is clicked', function() {
   component.set('internalAction', 'externalAction');
   
   // set the targetObject to our dummy object (this
-  // is where sendAction will send it's action to)
+  // is where sendAction will send its action to)
   component.set('targetObject', targetObject);
   
   // click the button

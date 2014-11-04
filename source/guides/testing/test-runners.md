@@ -6,7 +6,7 @@ The simplest way of running your tests is just opening a page in the browser. Th
 
 First, get a copy of `qunit` (both the JavaScript and the css) from [here][qunit].
 
-Next, create an HTML file that includes qunit and it's css that looks like the following example.
+Next, create an HTML file that includes qunit and its css that looks like the following example.
 
 ```html
 <!DOCTYPE html>
