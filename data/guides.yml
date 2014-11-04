@@ -233,6 +233,10 @@ Enumerables:
   - title: "Introduction"
     url: "enumerables"
 
+Initializers:
+  - title: "Introduction"
+    url: "initializers"
+
 Testing:
   - title: "Introduction"
     url: "testing"
