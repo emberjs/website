@@ -2,9 +2,9 @@
 project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
-  version: 1.8.0
+  version: 1.8.1
   url: http://emberjs.com/
-  sha: v1.8.0
+  sha: v1.8.1
 files:
   "../bower_components/rsvp/lib/rsvp/promise/all.js":
     name: "../bower_components/rsvp/lib/rsvp/promise/all.js"
@@ -3208,7 +3208,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: "../packages/ember-metal/lib/mixin.js"
-    line: 426
+    line: 431
     description: |-
       The `Ember.Mixin` class allows you to create mixins, whose properties can be
       added to other classes. For instance,
@@ -10671,7 +10671,7 @@ classitems:
   submodule: ember-handlebars
   namespace: Ember.Handlebars
 - file: "../packages/ember-handlebars/lib/helpers/view.js"
-  line: 224
+  line: 230
   description: |-
     `{{view}}` inserts a new instance of an `Ember.View` into a template passing its
     options to the `Ember.View`'s `create` method and using the supplied block as
@@ -11795,7 +11795,7 @@ classitems:
   class: Ember.String
   module: ember
 - file: "../packages/ember-handlebars/lib/string.js"
-  line: 25
+  line: 28
   description: |-
     Mark a string as being safe for unescaped output with Handlebars.
 
@@ -13479,7 +13479,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/events.js"
-  line: 113
+  line: 118
   description: Add an event listener
   itemtype: method
   name: addListener
@@ -13501,7 +13501,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 147
+  line: 152
   description: |-
     Remove an event listener
 
@@ -13523,7 +13523,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 194
+  line: 199
   description: |-
     Suspend listener during callback.
 
@@ -13553,7 +13553,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 231
+  line: 236
   description: Suspends multiple listeners during a callback.
   itemtype: method
   name: suspendListeners
@@ -13577,7 +13577,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 278
+  line: 283
   description: Return a list of currently watched events
   access: private
   tagname: ''
@@ -13589,7 +13589,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 297
+  line: 302
   description: |-
     Send an event. The execution of suspended listeners
     is skipped, and once listeners are removed. A listener without
@@ -13614,7 +13614,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 347
+  line: 352
   access: private
   tagname: ''
   itemtype: method
@@ -13628,7 +13628,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 361
+  line: 366
   access: private
   tagname: ''
   itemtype: method
@@ -13642,7 +13642,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/events.js"
-  line: 384
+  line: 389
   description: |-
     Define a property as a function that should be executed when
     a specified event or events are triggered.
@@ -14407,7 +14407,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 413
+  line: 418
   itemtype: method
   name: mixin
   params:
@@ -14422,7 +14422,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 500
+  line: 505
   itemtype: method
   name: create
   static: 1
@@ -14435,7 +14435,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 514
+  line: 519
   itemtype: method
   name: reopen
   params:
@@ -14447,7 +14447,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 551
+  line: 556
   itemtype: method
   name: apply
   params:
@@ -14460,7 +14460,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 579
+  line: 584
   itemtype: method
   name: detect
   params:
@@ -14474,7 +14474,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 648
+  line: 653
   description: Denotes a required property for a mixin
   itemtype: method
   name: required
@@ -14482,7 +14482,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 664
+  line: 669
   description: |-
     Makes a method available via an additional name.
 
@@ -14512,7 +14512,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 694
+  line: 699
   description: |-
     Specify a method that observes property changes.
 
@@ -14545,7 +14545,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 745
+  line: 750
   description: |-
     Specify a method that observes property changes.
 
@@ -14578,7 +14578,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: "../packages/ember-metal/lib/mixin.js"
-  line: 777
+  line: 782
   description: |-
     When observers fire, they are called with the arguments `obj`, `keyName`.
 
@@ -14935,7 +14935,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/property_set.js"
-  line: 139
+  line: 142
   description: |-
     Error-tolerant form of `Ember.set`. Will not blow up if any part of the
     chain is `undefined`, `null`, or destroyed.
@@ -15650,7 +15650,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 17
+  line: 22
   description: |-
     Previously we used `Ember.$.uuid`, however `$.uuid` has been removed from
     jQuery master. We'll just bootstrap our own uuid now.
@@ -15662,7 +15662,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 26
+  line: 31
   description: |-
     Generates a universally unique identifier. This method
     is used internally by Ember for assisting with
@@ -15676,7 +15676,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 39
+  line: 44
   description: Prefix used for guids through out Ember.
   access: private
   tagname: ''
@@ -15687,7 +15687,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 54
+  line: 59
   description: |-
     Strongly hint runtimes to intern the provided string.
 
@@ -15731,7 +15731,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 102
+  line: 107
   description: |-
     A unique key used to assign guids and other private metadata to objects.
     If you inspect an object in your browser debugger you will often see these.
@@ -15748,7 +15748,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 125
+  line: 130
   description: |-
     Generates a new guid, optionally saving the guid to the object that you
     pass in. You will rarely need to use this method. Instead you should
@@ -15779,7 +15779,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 156
+  line: 161
   description: |-
     Returns a unique id for the object. If the object does not yet have a guid,
     one will be assigned to it. You can call this on any object,
@@ -15801,7 +15801,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 266
+  line: 271
   description: |-
     Retrieves the meta hash for an object. If `writable` is true ensures the
     hash is writable for this object as well.
@@ -15831,7 +15831,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 337
+  line: 342
   deprecated: true
   access: private
   tagname: |-
@@ -15873,7 +15873,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 394
+  line: 399
   description: |-
     Wraps the passed function so that `this._super` will point to the superFunc
     when the function is invoked. This is the primitive we use to implement
@@ -15895,7 +15895,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 431
+  line: 436
   description: |-
     Returns true if the passed object is an array or Array-like.
 
@@ -15925,7 +15925,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 475
+  line: 480
   description: |-
     Forces the passed object to be part of an array. If the object is already
     an array or array-like, returns the object. Otherwise adds the object to
@@ -15954,7 +15954,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 502
+  line: 507
   description: |-
     Checks to see if the `methodName` exists on the `obj`.
 
@@ -15980,7 +15980,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 523
+  line: 528
   description: |-
     Checks to see if the `methodName` exists on the `obj`,
     and if it does, invokes it with the arguments passed.
@@ -16012,7 +16012,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 562
+  line: 567
   description: |-
     Provides try/finally functionality, while working
     around Safari's double finally bug.
@@ -16051,7 +16051,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 626
+  line: 631
   description: |-
     Provides try/catch/finally functionality, while working
     around Safari's double finally bug.
@@ -16105,7 +16105,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 720
+  line: 725
   description: |-
     Returns a consistent type for the passed item.
 
@@ -16164,7 +16164,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: "../packages/ember-metal/lib/utils.js"
-  line: 796
+  line: 801
   description: |-
     Convenience method to inspect an object. This method will attempt to
     convert the object into a useful string description.
@@ -19266,7 +19266,7 @@ classitems:
     });
     ```
 
-    The model for the `post` route is `App.Post.find(params.post_id)`.
+    The model for the `post` route is `store.find('post', params.post_id)`.
 
     By default, if your route has a dynamic segment ending in `_id`:
 
@@ -19309,7 +19309,7 @@ classitems:
     ```js
     App.PostRoute = Ember.Route.extend({
       model: function(params) {
-        return App.Post.find(params.post_id);
+        return this.store.find('post', params.post_id);
       }
     });
     ```
@@ -19463,7 +19463,7 @@ classitems:
     ```js
     App.PhotosRoute = Ember.Route.extend({
       model: function() {
-        return App.Photo.find();
+        return this.store.find('photo');
       },
 
       setupController: function (controller, model) {
@@ -19696,7 +19696,7 @@ classitems:
     // posts route
     Ember.Route.extend({
       renderTemplate: function(){
-        this.render('posts', {
+        this.render('photos', {
           into: 'application',
           outlet: 'anOutletName'
         })
@@ -27016,7 +27016,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/system/render_buffer.js"
-  line: 534
+  line: 536
   description: Generates the HTML content for this buffer.
   itemtype: method
   name: string
@@ -27811,7 +27811,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1221
+  line: 1223
   description: |-
     We're using setUnknownProperty as a hook to setup attributeBinding observers for
     properties that aren't defined on a view at initialization time.
@@ -27831,7 +27831,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1244
+  line: 1246
   description: |-
     Given a property name, returns a dasherized version of that
     property name if the property evaluates to a non-falsy value.
@@ -27850,7 +27850,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1271
+  line: 1273
   description: Returns the current DOM element for the view.
   itemtype: property
   name: element
@@ -27860,7 +27860,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1279
+  line: 1281
   description: |-
     Returns a jQuery object for this view's element. If you pass in a selector
     string, this method will return a jQuery object, using the current element
@@ -27883,7 +27883,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1324
+  line: 1326
   description: |-
     Appends the view's element to the specified parent element.
 
@@ -27913,7 +27913,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1355
+  line: 1357
   description: |-
     Replaces the content of the specified parent element with this view's
     element. If the view does not have an HTML representation yet,
@@ -27936,7 +27936,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1379
+  line: 1381
   description: |-
     Appends the view's element to the document body. If the view does
     not have an HTML representation yet, `createElement()` will be called
@@ -27959,7 +27959,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1399
+  line: 1401
   description: Removes the view's element from the element to which it is attached.
   itemtype: method
   name: remove
@@ -27971,7 +27971,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1416
+  line: 1418
   description: |-
     Attempts to discover the element in the parent element. The default
     implementation looks for an element with an ID of `elementId` (or the
@@ -27992,7 +27992,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1432
+  line: 1434
   description: |-
     Creates a DOM representation of the view and all of its child views by
     recursively calling the `render()` method.
@@ -28009,7 +28009,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1451
+  line: 1453
   description: Called when a view is going to insert an element into the DOM.
   itemtype: event
   name: willInsertElement
@@ -28018,7 +28018,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1458
+  line: 1460
   description: |-
     Called when the element of the view has been inserted into the DOM
     or after the view was re-rendered. Override this function to do any
@@ -28033,7 +28033,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1470
+  line: 1472
   description: |-
     Called when the view is about to rerender, but before anything has
     been torn down. This is a good opportunity to tear down any manual
@@ -28045,7 +28045,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1479
+  line: 1481
   description: |-
     Destroys any existing element along with the element for any child views
     as well. If the view does not currently have a element, then this method
@@ -28070,7 +28070,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1501
+  line: 1503
   description: |-
     Called when the element of the view is going to be destroyed. Override
     this function to do any teardown that requires an element, like removing
@@ -28085,7 +28085,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1513
+  line: 1515
   description: Called when the parentView property has changed.
   itemtype: event
   name: parentViewDidChange
@@ -28094,7 +28094,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1564
+  line: 1566
   description: |-
     Tag name for the view's outer element. The tag name is only used when an
     element is first created. If you change the `tagName` for an element, you
@@ -28110,7 +28110,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1580
+  line: 1582
   description: |-
     The WAI-ARIA role of the control represented by this view. For example, a
     button may have a role of type 'button', or a pane may have a role of
@@ -28128,7 +28128,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1595
+  line: 1597
   description: |-
     Standard CSS class names to apply to the view's outer element. This
     property automatically inherits any class names defined by the view's
@@ -28142,7 +28142,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1606
+  line: 1608
   description: |-
     A list of properties of the view to apply as class names. If the property
     is a string value, the value of that string will be applied as a class
@@ -28188,7 +28188,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1649
+  line: 1651
   description: |-
     A list of properties of the view to apply as attributes. If the property is
     a string value, the value of that string will be applied as the attribute.
@@ -28219,7 +28219,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1681
+  line: 1683
   description: |-
     Setup a view, but do not finish waking it up.
 
@@ -28235,7 +28235,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1712
+  line: 1714
   description: Removes the child view from the parent view.
   itemtype: method
   name: removeChild
@@ -28251,7 +28251,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1738
+  line: 1740
   description: Removes all children from the `parentView`.
   itemtype: method
   name: removeAllChildren
@@ -28263,7 +28263,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1756
+  line: 1758
   description: |-
     Removes the view from its `parentView`, if one is found. Otherwise
     does nothing.
@@ -28277,7 +28277,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1773
+  line: 1775
   description: |-
     You must call `destroy` on a view to destroy the view (and all of its
     child views). This will remove the view from any parent node, then make
@@ -28290,7 +28290,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1798
+  line: 1800
   description: |-
     Instantiates a view to be added to the childViews array during view
     initialization. You generally will not call this method directly unless
@@ -28315,7 +28315,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1859
+  line: 1861
   description: |-
     When the view's `isVisible` property changes, toggle the visibility
     element of the actual DOM element.
@@ -28328,7 +28328,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 1945
+  line: 1947
   description: Handle events from `Ember.EventDispatcher`
   itemtype: method
   name: handleEvent
@@ -28346,7 +28346,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 2019
+  line: 2021
   description: |-
     Parse a path and return an object which holds the parsed properties.
 
@@ -28371,7 +28371,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 2061
+  line: 2063
   description: |-
     Get the class name for a given value, based on the path, optional
     `className` and optional `falsyClassName`.
@@ -28406,7 +28406,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: "../packages/ember-views/lib/views/view.js"
-  line: 2139
+  line: 2141
   description: Global views hash
   itemtype: property
   name: views
@@ -28451,14 +28451,14 @@ warnings:
     Missing item type
     Previously we used `Ember.$.uuid`, however `$.uuid` has been removed from
     jQuery master. We'll just bootstrap our own uuid now.
-  line: " ../packages/ember-metal/lib/utils.js:17"
+  line: " ../packages/ember-metal/lib/utils.js:22"
 - message: |-
     Missing item type
     Generates a universally unique identifier. This method
     is used internally by Ember for assisting with
     the generation of GUID's and other unique identifiers
     such as `bind-attr` data attributes.
-  line: " ../packages/ember-metal/lib/utils.js:26"
+  line: " ../packages/ember-metal/lib/utils.js:31"
 - message: |-
     Missing item type
     Strongly hint runtimes to intern the provided string.
@@ -28495,7 +28495,7 @@ warnings:
     Some numbers: http://jsperf.com/eval-vs-keys/8
 
     Known Trick™
-  line: " ../packages/ember-metal/lib/utils.js:54"
+  line: " ../packages/ember-metal/lib/utils.js:59"
 - message: |-
     Missing item type
     Returns a merged query params meta object for a given route.
