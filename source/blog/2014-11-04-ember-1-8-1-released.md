@@ -1,5 +1,5 @@
 ---
-title: Ember.js 1.8.1 and 1.9 Beta Released
+title: Ember.js 1.8.1 Released
 author: Matthew Beale
 tags: Releases, Recent Posts
 ---
