@@ -30,7 +30,7 @@ The intent of this code is unclear and the pre-1.8 behavior was unintentional. I
 
 ### View instances 
 
-Passing view instances to the `{{view` helper was broken in Ember.js 1.8. This behavior
+Passing view instances to the `{{view}}` helper was broken in Ember.js 1.8. This behavior
 has been restored.
 
 ### Work-around provided for more iOS8 ARMv7 JIT Bugs
