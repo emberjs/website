@@ -240,7 +240,7 @@ Let's go break this down and explain what's gong on.
 {{#each controller}}
 ```
 
-Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an Ember.ArrayController, so it implements the Ember.Enumerable interface. This means that we can loop over it's contents (each element of the array) using the `#each` Handlebars expression.
+Our view has a controller, the Photoblog.photosController, which will create in the next step. This is an Ember.ArrayController, so it implements the Ember.Enumerable interface. This means that we can loop over its contents (each element of the array) using the `#each` Handlebars expression.
 
 ```handlebars
 {{#view}}
@@ -421,7 +421,7 @@ create: Ember.State.create({
 	view: Photoblog.CreateView.create(),
 ```
 
-Create a new state called `create`, which uses a new Photoblog.CreateView as it's view.
+Create a new state called `create`, which uses a new Photoblog. CreateView as its view.
 
 ```javascript
 enter: function(manager) {

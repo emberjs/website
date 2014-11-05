@@ -35,9 +35,9 @@ App.PrettyColorComponent = Ember.Component.extend({
 Pretty Color: {{name}}
 ```
 
-... can be done using the `moduleForComponent` helper.
-The following helper will find a component named "pretty-color" and its template
-(if available).
+Unit testing this component can be done using the `moduleForComponent` helper.
+This helper will find the component by name (pretty-color) and its template (if
+available).
 
 ```javascript
 moduleForComponent('pretty-color');
@@ -280,7 +280,7 @@ test('trigger external action when button is clicked', function() {
   component.set('internalAction', 'externalAction');
   
   // set the targetObject to our dummy object (this
-  // is where sendAction will send it's action to)
+  // is where sendAction will send its action to)
   component.set('targetObject', targetObject);
   
   // click the button
