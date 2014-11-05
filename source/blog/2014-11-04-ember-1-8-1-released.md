@@ -7,7 +7,7 @@ tags: Releases, Recent Posts
 Today we are releasing Ember.js 1.8.1, a patch-level release of Ember that
 fixes several minor regressions introduced in the 1.8 release.
 
-### Throw assertion when `attributeBindings` includes `class`
+### Throw exception when `attributeBindings` includes `class`
 
 Prior to 1.8, it was possible to make `class` part of `attributeBindings` and have
 those values merged with `classNameBindings`. For example, with the following template
@@ -26,7 +26,7 @@ App.FooBarComponent = Ember.Component.extend({
 ```
 
 The intent of this code is unclear and the pre-1.8 behavior was unintentional. In Ember
-1.8.1 an assertion is thrown for including `class` in `attributeBindings`.
+1.8.1 an exception is thrown for including `class` in `attributeBindings`.
 
 ### View instances 
 
