@@ -76,12 +76,16 @@ h1 {
   padding-bottom: 20px;
 }
 
+/* This next h1 is so h1s in the middle of the page (ie not the first time) 
+have additional breathing room up top */
+
 h1:not(:first-child) {
-  margin-top: 40px;
+  margin-top: 40px; 
 }
 
 h2 {
   font-size: 22px;
+  margin: .83em 0;
 }
 
 h2, h3{
@@ -539,6 +543,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%;
+  border-bottom: none;
   @include hidpi('about/header-text', png);
 }
 
@@ -1069,13 +1074,6 @@ body.community #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
-  h1, h1:first-child {
-    margin-top: 0;
-    color: $orange-color;
-    border-bottom: solid 1px #d0d0d0;
-    padding-bottom: 20px;
-  }
-
   .section {
     width: auto;
     div {
@@ -1123,13 +1121,6 @@ body.community #content {
 body.security #content {
   margin: 3em auto 0 auto;
   width: 54em;
-
-  h1, h1:first-child {
-    margin-top: 0;
-    color: $orange-color;
-    border-bottom: solid 1px #d0d0d0;
-    padding-bottom: 20px;
-  }
 }
 
 /**
@@ -1142,7 +1133,11 @@ body.security #content {
     width: 100%;
   }
 
-  h1 {
+/* This h1 is because on the user page, the logos
+look a bit claustrophobic by our regular h1 horizontal
+rule. Added some breathing room. */
+
+  h1 { 
     margin-bottom: 10px;
   }
 
@@ -1206,10 +1201,6 @@ body.security #content {
     width: 100%;
     margin-top: 0px;
     padding: 2em;
-  }
-
-  h1 {
-    margin-bottom: 10px;
   }
 
   p {
