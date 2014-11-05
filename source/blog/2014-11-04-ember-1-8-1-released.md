@@ -14,7 +14,7 @@ those values merged with `classNameBindings`. For example, with the following te
 and code "from-template" and "from-class" would be merged into the DOM node's class
 list.
 
-```hbs
+```handlebars
 {{foo-bar class="from-template"}}
 ```
 
@@ -63,7 +63,7 @@ render instead of the first.
 
 We've restored support for templates like this:
 
-```hbs
+```handlebars
 <select>
   <option>First option is selected at render in 1.8.1</option>
   {{#each item in items}}
@@ -78,7 +78,7 @@ Some templates may result in missing whitespace in Chrome. For example,
 if the following template renders initially with no names, then updates
 via data-binding later, the space between names may not be visible.
 
-```hbs
+```handlebars
 {{firstName}} {{lastName}}
 ```
 
