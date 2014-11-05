@@ -68,6 +68,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+  color: $orange-color;
+  border-bottom: solid 1px #d0d0d0;
+  padding-bottom: 20px;
+}
+
+h1:not(:first-child) {
+  margin-top: 40px;
+}
+
 h2 {
   font-size: 22px;
 }
@@ -1231,10 +1243,10 @@ body.security #content {
 }
 
 /**
-  Core Team Page + Guidelines Page + Meetup Assets Page
+  Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
 
-.team, .meetup-assets, .guidelines {
+.team, .meetup-assets, .guidelines, .legal {
 
   .section {
     width: 100%;
