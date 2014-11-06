@@ -7,8 +7,8 @@ Ember comes pre-packaged with a set of views for building a basic controls like 
 For example, here we have created a custom text field that toggles a dirty property:
 
 ```javascript
-// {{view "myText" value=name inputDidChange=nameDidChange}}
-App.MyText = Ember.TextField.extend({
+// {{view "my-text" value=name inputDidChange=nameDidChange}}
+App.MyTextView = Ember.TextField.extend({
   inputDidChange: false,
   change: function() {
     this.set('inputDidChange', true);
