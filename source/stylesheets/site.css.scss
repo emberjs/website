@@ -232,6 +232,10 @@ p {
           border-bottom: 1px solid #d5ccc8;
           padding: 12px 12px 10px 12px;
           background-color: rgb(244, 236, 233);
+          
+          &:hover {
+            background-color: #ECE3E0;
+          }
         }
 
         & + .level-1 > a {
