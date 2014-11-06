@@ -201,9 +201,9 @@ App.Project.reopenClass({
       futureVersion: "1.9.0-beta.2",
       finalVersion: '1.9.0',
       channel: "beta",
-      cycleEstimatedFinishDate: '2014-10-24',
+      cycleEstimatedFinishDate: '2014-12-06',
       date: "2014-11-01",
-      nextDate: "2014-12-06",
+      nextDate: "2014-11-08",
       changelogPath: "CHANGELOG.md"
     }, {
       projectName: "Ember Data",
