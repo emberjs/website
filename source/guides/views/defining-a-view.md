@@ -15,7 +15,7 @@ To tell the view which template to use, set its `templateName` property. For exa
 I would set the `templateName` property to `"say-hello"`.
 
 ```javascript
-var view = Ember.View.create({
+var view = Ember.View.extend({
   templateName: 'say-hello',
   name: "Bob"
 });
