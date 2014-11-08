@@ -73,6 +73,9 @@
       <a class="debug" {{bind-attr href=lastReleaseProdUrl}} download>production</a>
       <a class="debug" {{bind-attr href=lastReleaseMinUrl}} download>(min)</a> |
       <a class="debug" {{bind-attr href=lastReleaseDebugUrl}} download>debug</a>
+      {{#if lastReleaseTestUrl}} |
+        <a class="debug" {{bind-attr href=lastReleaseTestUrl}} target="_blank" >live tests</a>
+      {{/if}}
       {{#if lastReleaseChangelogUrl }} |
         <a class="debug" {{bind-attr href=lastReleaseChangelogUrl}}>changelog</a>
       {{/if}}
