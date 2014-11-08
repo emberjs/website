@@ -7,13 +7,13 @@ In `index.html` move the entire `<ul>` of todos into a new template named `todos
 <body>
 <script type="text/x-handlebars" data-template-name="todos/index">
   <ul id="todo-list">
-    {{#each itemController="todo"}}
-      <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
-        {{#if isEditing}}
-          {{edit-todo class="edit" value=title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    {{#each todo in model itemController="todo"}}
+      <li {{bind-attr class="todo.isCompleted:completed todo.isEditing:editing"}}>
+        {{#if todo.isEditing}}
+          {{edit-todo class="edit" value=todo.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
         {{else}}
-          {{input type="checkbox" checked=isCompleted class="toggle"}}
-          <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button {{action "removeTodo"}} class="destroy"></button>
+          {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
+          <label {{action "editTodo" on="doubleClick"}}>{{todo.title}}</label><button {{action "removeTodo"}} class="destroy"></button>
         {{/if}}
       </li>
     {{/each}}

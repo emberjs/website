@@ -4,13 +4,13 @@ We'll update the application to allow users to toggle into this editing state fo
 
 ```handlebars
  {{! ... additional lines truncated for brevity ... }}
-{{#each itemController="todo"}}
-  <li {{bind-attr class="isCompleted:completed isEditing:editing"}}>
-    {{#if isEditing}}
+{{#each todo in todos itemController="todo"}}
+  <li {{bind-attr class="todo.isCompleted:completed todo.isEditing:editing"}}>
+    {{#if todo.isEditing}}
       <input class="edit">
     {{else}}
-      {{input type="checkbox" checked=isCompleted class="toggle"}}
-      <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button class="destroy"></button>
+      {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
+      <label {{action "editTodo" on="doubleClick"}}>{{todo.title}}</label><button class="destroy"></button>
     {{/if}}
   </li>
 {{/each}}

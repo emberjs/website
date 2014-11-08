@@ -38,7 +38,7 @@ scope:
 
 ```handlebars
 {{view App.SomeView}}
-{{each itemViewClass=App.SomeView}}
+{{each item in items itemViewClass=App.SomeView}}
 ```
 
 Since Ember 1.8, views are more appropriately resolved on the application
@@ -46,7 +46,7 @@ via strings:
 
 ```handlebars
 {{view "some"}}
-{{each itemViewClass="some"}}
+{{each item in items itemViewClass="some"}}
 ```
 
 They may also be fetched via a binding:
@@ -121,6 +121,40 @@ Doing so is ambiguous because you may also be trying to link to an element on th
 
 This ability will be removed quickly to allow us to mimick the browser's behavior of scrolling the page to an element who's id matches, but in our case doing so after the transition ends and everything is rendered. Once this feature is added, you'll be able to link to id's even with doubled up hashes: `#/foo#some-id` as well as the expected `#some-id`.
 
+### Deprecations Added in 1.9
+
+#### Deprecate Context Switching form of {{each}}
+
+In preparation for further work on HTMLBars, the context switching form of `{{each}}` is deprecated. This is mostly a "mechanical" refactor and drammatically
+simplifies how to think about the context in your templates.
+
+In prior versions you may have done one of the following:
+
+```handlebars
+<ul>
+  {{#each}}
+    <li>{{name}}</li>
+  {{/each}}
+</ul>
+```
+
+```handlebars
+<ul>
+  {{#each people}}
+    <li>{{name}}</li>
+  {{/each}}
+</ul>
+```
+
+You should now be using:
+
+```handlebars
+<ul>
+  {{#each person in people}}
+    <li>{{person.name}}</li>
+  {{/each}}
+</ul>
+```
 
 ### Deprecations Added in 1.10
 

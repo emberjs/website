@@ -119,7 +119,7 @@ proxies properties from an Array, and an `Ember.ObjectController`
 proxies properties from an object.
 
 If your controller is an `ArrayController`, you can iterate directly
-over the controller using `{{#each controller}}`. This keeps the
+over the controller using `{{#each item in controller}}`. This keeps the
 template from having to know about how the controller is implemented
 and makes isolation testing and refactoring easier.
 
