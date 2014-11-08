@@ -78,8 +78,8 @@ title: "A framework for creating ambitious web applications."
 <div class="getting-started section">
   <script type="text/x-handlebars" id="application">
       <div class="example-tabs">
-        {{#each itemController="tabItem"}}
-          <a {{action "selectTab" this}} {{bind-attr class="isSelected:active"}} href="#">{{unbound name}}</a>
+        {{#each item in model itemController="tabItem"}}
+          <a {{action "selectTab" item}} {{bind-attr class="item.isSelected:active"}} href="#">{{unbound item.name}}</a>
         {{/each}}
         <span class="tabs-footer"></span>
       </div>

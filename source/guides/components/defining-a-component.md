@@ -27,7 +27,7 @@ component of the same name. Given the above template, you can now use the
 
 ```handlebars
 <h1>My Blog</h1>
-{{#each}}
+{{#each post in model}}
   {{blog-post}}
 {{/each}}
 ```

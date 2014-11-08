@@ -79,8 +79,8 @@ You can also bind properties from inside an `{{#each}}` loop. This will
 create a component for each item and bind it to each model in the loop.
 
 ```handlebars
-{{#each}}
-  {{blog-post title=title}}
+{{#each post in model}}
+  {{blog-post title=post.title}}
 {{/each}}
 ```
 <a class="jsbin-embed" href="http://jsbin.com/yexeyi/embed?live">JS Bin</a>

@@ -6,12 +6,12 @@
         <th>To</th>
     </tr>
 
-    {{#each messages}}
-        {{#link-to "mail" this tagName="tr"}}
-            <td>{{date date}}</td>
-            <td>{{view.isActive}}{{subject}}</td>
-            <td>{{from}}</td>
-            <td>{{to}}</td>
+    {{#each message in messages}}
+        {{#link-to "mail" message tagName="tr"}}
+            <td>{{date message.date}}</td>
+            <td>{{view.isActive}}{{message.subject}}</td>
+            <td>{{message.from}}</td>
+            <td>{{message.to}}</td>
         {{/link-to}}
     {{/each}}
 </table>

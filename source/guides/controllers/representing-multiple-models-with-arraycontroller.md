@@ -21,8 +21,8 @@ each song:
 <h1>Playlist</h1>
 
 <ul>
-  {{#each}}
-    <li>{{name}} by {{artist}}</li>
+  {{#each song in model}}
+    <li>{{song.name}} by {{song.artist}}</li>
   {{/each}}
 </ul>
 ```
@@ -47,8 +47,8 @@ Now we can use this property in our template:
 
 ```handlebars
 <ul>
-  {{#each}}
-    <li>{{name}} by {{artist}}</li>
+  {{#each song in model}}
+    <li>{{song.name}} by {{song.artist}}</li>
   {{/each}}
 </ul>
 
@@ -93,8 +93,8 @@ App.SongsController = Ember.ArrayController.extend({
 ```
  
 ```handlebars
-{{#each controller}}
-  <li>{{fullName}}</li>
+{{#each item in controller}}
+  <li>{{item.fullName}}</li>
 {{/each}}
 ```
  
@@ -106,7 +106,7 @@ App.SongsController = Ember.ArrayController.extend({
 ```
  
 ```handlebars
-{{#each controller itemController="song"}}
-  <li>{{fullName}}</li>
+{{#each item in controller itemController="song"}}
+  <li>{{item.fullName}}</li>
 {{/each}}
 ```

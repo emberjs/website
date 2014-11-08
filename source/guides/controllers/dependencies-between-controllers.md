@@ -32,8 +32,8 @@ its parent `PostController`, which can be done via `controllers.post`
 <h1>Comments for {{controllers.post.title}}</h1>
 
 <ul>
-  {{#each comments}}
-    <li>{{text}}</li>
+  {{#each comment in comments}}
+    <li>{{comment.text}}</li>
   {{/each}}
 </ul>
 ```
