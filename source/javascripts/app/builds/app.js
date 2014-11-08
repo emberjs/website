@@ -219,6 +219,7 @@ App.Project.reopenClass({
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
       channel: "canary",
+      enableTestURL: true
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
@@ -317,6 +318,10 @@ App.ProjectsMixin = Ember.Mixin.create({
       project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
       project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.prod.js');
       project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.min.js');
+
+      if (project.enableTestURL) {
+        project.lastReleaseTestUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '-tests-index.html');
+      }
 
       if (project.channel === 'canary')
         project.lastRelease = 'latest';
