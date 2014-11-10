@@ -32,9 +32,7 @@ object it is bound to changes.
 For a simple example, consider this template:
 
 ```handlebars
-{{#with person}}
-  User {{name}} is {{age}} years old.
-{{/with}}
+User {{person.name}} is {{person.age}} years old.
 ```
 
 As with any templating system, when the template is initially rendered,
