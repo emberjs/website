@@ -542,10 +542,6 @@ is automatically instantiated, if necessary, and added to the
 Standard Handlebars templates have the concept of a *context*--the
 object from which expressions will be looked up.
 
-Some helpers, like `{{#with}}`, change the context inside their block.
-Others, like `{{#if}}`, preserve the context. These are called
-"context-preserving helpers."
-
 When a Handlebars template in an Ember app uses an expression
 (`{{#if foo.bar}}`), Ember will automatically set up an
 observer for that path on the current context.
@@ -560,20 +556,11 @@ path as the context.
 {{#if controller.isAuthenticated}}
   <h1>Welcome {{controller.name}}</h1>
 {{/if}}
-
-{{#with controller.user}}
-  <p>You have {{notificationCount}} notifications.</p>
-{{/with}}
 ```
 
 In the above template, when the `isAuthenticated` property changes from
 false to true, Ember will render the block, using the original outer
 scope as its context.
-
-The `{{#with}}` helper changes the context of its block to the `user`
-property on the current controller. When the `user` property changes,
-Ember re-renders the block, using the new value of `controller.user` as
-its context.
 
 #### View Scope
 
@@ -602,14 +589,10 @@ App.MenuItemView = Ember.View.create({
 …and the following template:
 
 ```handlebars
-{{#with controller}}
-  {{view.bulletText}} {{name}}
-{{/with}}
+{{view.bulletText}} {{name}}
 ```
 
-Even though the Handlebars context has changed to the current
-controller, you can still access the view's `bulletText` by referencing
-`view.bulletText`.
+You can still access the view's `bulletText` by referencing `view.bulletText`.
 
 ### Template Variables
 
@@ -652,15 +635,13 @@ In this form, descendent context have access to the `person` variable,
 but remain in the same scope as where the template invoked the `each`.
 
 ```handlebars
-{{#with controller.preferences}}
-  <h1>Title</h1>
-  <ul>
-  {{#each person in controller.people}}
-    {{! prefix here is controller.preferences.prefix }}
-    <li>{{prefix}}: {{person.fullName}}</li>
-  {{/each}}
-  <ul>
-{{/with}}
+<h1>Title</h1>
+<ul>
+{{#each person in controller.people}}
+  {{! prefix here is controller.preferences.prefix }}
+  <li>{{prefix}}: {{person.fullName}}</li>
+{{/each}}
+<ul>
 ```
 
 Note that these variables inherit through `ContainerView`s, even though

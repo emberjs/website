@@ -98,8 +98,6 @@ Templates:
     url: "templates/conditionals"
   - title: "Displaying a List of Items"
     url: "templates/displaying-a-list-of-items"
-  - title: "Changing Scope"
-    url: "templates/changing-scope"
   - title: "Binding Element Attributes"
     url: "templates/binding-element-attributes"
   - title: "Binding Element Class Names"
