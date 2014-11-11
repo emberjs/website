@@ -2,9 +2,9 @@ TodoMVC strikes through completed todos by applying a CSS class `completed` to t
 
 ```handlebars
 {{! ... additional lines truncated for brevity ... }}
-<li {{bind-attr class="isCompleted:completed"}}>
+<li {{bind-attr class="todo.isCompleted:completed"}}>
   <input type="checkbox" class="toggle">
-  <label>{{title}}</label><button class="destroy"></button>
+  <label>{{todo.title}}</label><button class="destroy"></button>
 </li>
 {{! ... additional lines truncated for brevity ... }}
 ```
