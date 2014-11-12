@@ -4,7 +4,7 @@ In `index.html` update your template to wrap each todo in its own controller by 
 
 ```handlebars
 {{! ... additional lines truncated for brevity ... }}
-{{#each todo in todos itemController="todo"}}
+{{#each todo in model itemController="todo"}}
   <li {{bind-attr class="todo.isCompleted:completed"}}>
     {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
     <label>{{todo.title}}</label><button class="destroy"></button>
