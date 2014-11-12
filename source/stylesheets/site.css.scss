@@ -1083,34 +1083,65 @@ body.community #content {
 
   .section {
     width: auto;
-    div {
-      @include hidpi('community/give', 'png');
+    .image {
       float: left;
       margin: 0 20px 15px 0;
       width: 220px;
       height: 142px;
     }
+    &.contribute .image {
+      @include hidpi('community/give', 'png');
+    }
 
-    .sos {
+    &.help .image {
       @include hidpi('community/sos', 'png');
     }
 
-    .bug {
+    &.bugs .image {
       @include hidpi('community/bug', 'png');
-    }
-    &.bugs div {
       float: right;
       margin: 0 0 15px 20px;
     }
-    .meetup {
-      width: 221px;
-      height: 185px;
-      @include hidpi('community/meetup', 'png');
+    &.meetup {
+      width: 47%;
+      float: left;
+      text-align: center;
+      h2 {
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .image {
+        @include hidpi('community/meetup', 'png');
+        background-position: center top;
+        float: none;
+        margin: 0 0 15px 20px;
+        width: 221px;
+        height: 185px;
+        margin: 0 auto;
+      }
+      .button {
+        margin: 25px auto;
+      }
     }
-    .campster {
-      @include hidpi('community/campster', 'png');
-      width: 201px;
-      height: 179px;
+    &.learn {
+      width: 47%;
+      float: right;
+      text-align: center;
+      h2 {
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+      .image {
+        @include hidpi('community/campster', 'png');
+        background-position: center top;
+        float: none;
+        width: 201px;
+        height: 179px;
+        margin: 0 auto;
+      }
+      .button {
+        margin: 25px auto;
+      }
     }
     table {
       margin: 2em auto;
