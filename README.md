@@ -21,14 +21,14 @@ Then visit [http://localhost:4567/](http://localhost:4567/)
 
 You can preview api documention, by generating docs from the source code.
 Clone the three repositories, then from project executing the specific
-tasks to build the docs locally. 
+tasks to build the docs locally.
 
 * For the ember.js and website projects a rake task will build the docs
 * For the data project the yuidocjs npm library is required to build docs
 
 Node, npm, Ruby, bundler are required to preview documentation locally
 
-The repositories for ember.js, data and the website need be located in
+The repositories for ember.js, data and the website need to be located in
 the same directory:
 
     emberjs/
@@ -38,11 +38,9 @@ the same directory:
 
 Notice that the name of the data project needs to use `ember-data` not `data`
 
-* In the ember.js directory execute `node bin/generate_docs.js`
-* In the ember-data directory execute `npm run dist`
-* Finally, in the website directory execute `bundle exec rake generate_docs`
+In the website directory execute `bundle exec rake generate_docs`
 
-You can launch the website, `bundle exec middleman`, to preview the generated docs.
+You can launch the website via `bundle exec middleman` to preview the generated docs.
 
 
 ### Requirements
