@@ -49,11 +49,11 @@ def generate_ember_docs
       sha = describe =~ /-g(.+)/ ? $1 : describe
     end
 
-    sh("node bin/generate_docs.js")
+    sh('npm run docs')
   end
 
   # JSON is valid YAML
-  data = YAML.load_file(File.join(repo_path, "docs/build/data.json"))
+  data = YAML.load_file(File.join(repo_path, "docs/data.json"))
   data["project"]["sha"] = sha
   File.open(File.expand_path("../data/#{output_path}", __FILE__), "w") do |f|
     YAML.dump(data, f)
