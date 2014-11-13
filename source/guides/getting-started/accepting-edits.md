@@ -53,12 +53,15 @@ actions: {
     this.set('isEditing', true);
   },
   acceptChanges: function() {
-    this.set('isEditing', false);
+    // avoid changes to records curently being deleted!
+    if(this.model.currentState.stateName !== "root.deleted.inFlight") {
+        this.set('isEditing', false);
 
-    if (Ember.isEmpty(this.get('model.title'))) {
-      this.send('removeTodo');
-    } else {
-      this.get('model').save();
+        if (Ember.isEmpty(this.get('model.title'))) {
+            this.send('removeTodo');
+        } else {
+            this.get('model').save();
+        }
     }
   },
   removeTodo: function () {
