@@ -2,6 +2,11 @@
 
 The Ember Release Management Team maintains a variety of ways to get  Ember and Ember Data builds.
 
+###Ember CLI
+The best way to use Ember is with Ember CLI. It is recommended that developers use Ember CLI for any new projects and start migrating their apps to Ember CLI as soon as possible. See the [The Road to Ember 2.0 RFC](https://github.com/emberjs/rfcs/pull/15) for more info.
+
+Begin by installing Ember CLI with npm, `npm install -g ember-cli` and then create your new app using `ember new app-name`. For more information about ember cli and all of its commands visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+
 ###Channels
 The latest [Release](/builds#/release), [Beta](/builds#/beta), and [Canary](/builds#/canary) builds of Ember and Ember data can be found [here](/builds). For each channel a development, minified, and production version is available. For more on the different channels read the [Post 1.0 Release Cycle](/blog/2013/09/06/new-ember-release-process.html) blog post.
 
