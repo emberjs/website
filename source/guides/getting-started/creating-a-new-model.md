@@ -3,8 +3,12 @@ Next we'll update our static HTML `<input>` to an Ember view that can expose mor
 ```handlebars
 {{! ... additional lines truncated for brevity ... }}
 <h1>todos</h1>
-{{input type="text" id="new-todo" placeholder="What needs to be done?" 
-              value=newTitle action="createTodo"}}
+{{input
+  type="text"
+  id="new-todo"
+  placeholder="What needs to be done?"
+  value=newTitle
+  action="createTodo"}}
 {{! ... additional lines truncated for brevity ... }}
 ```
 
