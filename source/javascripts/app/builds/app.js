@@ -197,14 +197,15 @@ App.Project.reopenClass({
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
-      lastRelease: "1.9.0-beta.1",
-      futureVersion: "1.9.0-beta.2",
+      lastRelease: "1.9.0-beta.3",
+      futureVersion: "1.9.0-beta.4",
       finalVersion: '1.9.0',
       channel: "beta",
       cycleEstimatedFinishDate: '2014-12-06',
-      date: "2014-11-01",
-      nextDate: "2014-11-08",
-      changelogPath: "CHANGELOG.md"
+      date: "2014-11-15",
+      nextDate: "2014-11-21",
+      changelogPath: "CHANGELOG.md",
+      enableTestURL: true
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
