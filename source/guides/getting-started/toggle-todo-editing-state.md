@@ -4,7 +4,7 @@ We'll update the application to allow users to toggle into this editing state fo
 
 ```handlebars
  {{! ... additional lines truncated for brevity ... }}
-{{#each todo in todos itemController="todo"}}
+{{#each todo in model itemController="todo"}}
   <li {{bind-attr class="todo.isCompleted:completed todo.isEditing:editing"}}>
     {{#if todo.isEditing}}
       <input class="edit">
