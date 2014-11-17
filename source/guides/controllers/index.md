@@ -92,13 +92,11 @@ the entire application, but the controller's model may change
 throughout the lifetime of the application without requiring that
 the view knows anything about those mechanics.
 
-<aside>
 For example, if the user navigates from `/posts/1` to `/posts/2`,
 the `PostController` will change its model from `Post.find(1)` to
 `Post.find(2)`. The template will update its representations of any
 properties on the model, as well as any computed properties on the
 controller that depend on the model.
-</aside>
 
 This makes it easy to test a template in isolation by rendering it 
 with a controller object that contains the properties the template

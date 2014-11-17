@@ -161,7 +161,5 @@ red background:
 
 <a class="jsbin-embed" href="http://jsbin.com/duzala/1/embed?live">JS Bin</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
-<aside>
-  **Note:** The binding functionality in this very simple example could also be implemented without
-  the use of `Ember.Component` but by simply [binding element attributes](/guides/templates/binding-element-attributes) or [binding element class names](/guides/templates/binding-element-class-names).
-</aside>
+**Note:** The binding functionality in this very simple example could also be implemented without
+the use of `Ember.Component` but by simply [binding element attributes](/guides/templates/binding-element-attributes) or [binding element class names](/guides/templates/binding-element-class-names).
