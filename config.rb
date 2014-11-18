@@ -1,4 +1,5 @@
 require 'redcarpet'
+require 'active_support'
 require 'active_support/core_ext'
 
 Dir['./lib/*'].each { |f| require f }
