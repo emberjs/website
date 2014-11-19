@@ -55,6 +55,16 @@
   - title: "Getting Ember"
     url: "getting-ember"
 
+"Ember CLI":
+  - title: "Overview"
+    url: "ember-cli"
+  - title: "Why?"
+    url: "ember-cli/why"
+  - title: "Getting Started"
+    url: "ember-cli/getting-started"
+  - title: "Using modules & the resolver"
+    url: "ember-cli/using-modules-and-the-resolver"
+
 Concepts:
   - title: "Core Concepts"
     url: "concepts/core-concepts"
