@@ -178,7 +178,7 @@ with:
 ```
 
 
-In preparation for further work on HTMLBars, the context switching form of `{{each}}` is deprecated. This is mostly a "mechanical" refactor and drammatically
+In preparation for further work on HTMLBars, the context switching form of `{{each}}` is deprecated. This is mostly a "mechanical" refactor and dramatically
 simplifies how to think about the context in your templates. This change should be entirely mechanical.
 
 In prior versions you may have done one of the following:
