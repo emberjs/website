@@ -60,13 +60,17 @@ https://github.com/oneclick/rubyinstaller/wiki/Development-Kit
 
 After you have a proper install, you can then run:
 ``` sh
-gem install bundler
-gem update listen
-gem update middleman
-gem install wdm
+gem install bundler wdm tzinfo-data
+gem update listen middleman
 ```
 
-Lastly, you can add the following line to your Gemfile:
+You can then test this with a bundle install. If you get an error installing eventmachine-1.0.3 please see this workaround:
+https://github.com/eventmachine/eventmachine/pull/497#issuecomment-46747587
+
+Lastly (before running `bundle exec middleman`), you can add the following lines to your Gemfile:
 ``` sh
 gem 'wdm'
+gem 'tzinfo-data'
 ```
+
+Once Middleman comes up, you'll be prompted by Windows Firewall. Click "Allow access" and you'll be in business!
