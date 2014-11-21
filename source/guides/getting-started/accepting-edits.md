@@ -31,7 +31,7 @@ In `index.html` replace the static `<input>` element with our custom `{{edit-tod
 
 ```handlebars
 {{! ... additional lines truncated for brevity ... }}
-{{#if isEditing}}
+{{#if todo.isEditing}}
   {{edit-todo class="edit" value=todo.title focus-out="acceptChanges"
                            insert-newline="acceptChanges"}}
 {{else}}
