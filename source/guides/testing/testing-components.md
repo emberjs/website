@@ -342,6 +342,7 @@ test('renders kittens', function() {
   
   // component instance
   var component = this.subject({
+    title: 'Cats',
     template: Ember.Handlebars.compile(
       '{{my-kitten width="200" height="300"}}' +
       '{{my-kitten width="100" height="100"}}' +
@@ -360,7 +361,7 @@ test('renders kittens', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/xebih/embed?output">Components 
+<a class="jsbin-embed" href="http://jsbin.com/diluholaxi/embed?output">Components 
 with Embedded Components</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
