@@ -23,7 +23,7 @@ The count of remaining todos and completed todos used elsewhere in the template 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/AViZATE/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/jipil/1/embed?output">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 

@@ -39,7 +39,7 @@ The `completed` and `clearCompleted` methods both invoke the `filterBy` method, 
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/ULovoJI/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/yoxije/1/embed?output">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
