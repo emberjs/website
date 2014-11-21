@@ -360,7 +360,7 @@ test('renders kittens', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/diluholaxi/">Components 
+<a class="jsbin-embed" href="http://jsbin.com/diluholaxi/embed?output">Components 
 with Embedded Components</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
