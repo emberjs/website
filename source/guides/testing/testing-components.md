@@ -343,11 +343,9 @@ test('renders kittens', function() {
   // component instance
   var component = this.subject({
     template: Ember.Handlebars.compile(
-      '{{#my-album title="Cats"}}' +
-      '  {{my-kitten width="200" height="300"}}' +
-      '  {{my-kitten width="100" height="100"}}' +
-      '  {{my-kitten width="50" height="50"}}' +
-      '{{/my-album}}'
+      '{{my-kitten width="200" height="300"}}' +
+      '{{my-kitten width="100" height="100"}}' +
+      '{{my-kitten width="50" height="50"}}'
     )
   });
   
