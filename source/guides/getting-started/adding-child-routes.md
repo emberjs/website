@@ -61,7 +61,7 @@ model for this route is the same model as for the `TodosRoute`.
 This mapping is described in more detail in the [Naming Conventions Guide](/guides/concepts/naming-conventions).
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/oweNovo/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/teheni/1/embed?output">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 

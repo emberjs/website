@@ -21,7 +21,7 @@ In `js/router.js` update the router to recognize this new path and implement a m
 ```javascript
 Todos.Router.map(function() {
   this.resource('todos', { path: '/' }, function() {
-    // additional child routes    
+    // additional child routes
     this.route('active');
   });
 });
@@ -46,7 +46,7 @@ Normally transitioning into a new route changes the template rendered into the p
 Reload your web browser to ensure that there are no errors and the behavior described above occurs.
 
 ### Live Preview
-<a class="jsbin-embed" href="http://jsbin.com/arITiZu/1/embed?live">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
+<a class="jsbin-embed" href="http://jsbin.com/gaqey/1/embed?output">Ember.js • TodoMVC</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 ### Additional Resources
 
