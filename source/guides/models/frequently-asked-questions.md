@@ -150,6 +150,6 @@ socket.on('message', function (message) {
       hash[field] = hash[payloadField];
       delete hash[payloadField];
   });
-  store.push(message.model, hash);
+  store.update(message.model, hash);
 });
 ```
