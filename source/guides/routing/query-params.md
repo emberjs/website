@@ -15,10 +15,8 @@ Query params can be declared on route-driven controllers, e.g. to
 configure query params that are active within the `articles` route,
 they must be declared on `ArticlesController`.
 
-<aside>
-  **Note:** The controller associated with a given route can be changed
-  by specifying the `controllerName` property on that route.
-</aside>
+**Note:** The controller associated with a given route can be changed
+by specifying the `controllerName` property on that route.
 
 Let's say we'd like to add a `category`
 query parameter that will filter out all the articles that haven't
@@ -89,10 +87,8 @@ on the `PostsController`, but it could also refer to a `direction` property
 on any of the controllers associated with the `posts` route hierarchy,
 matching the leaf-most controller with the supplied property name.
 
-<aside>
-  **Note:** Subexpressions are only available in Handlebars 1.3
-  or later.
-</aside>
+**Note:** Subexpressions are only available in Handlebars 1.3
+or later.
 
 The link-to helper takes into account query parameters when determining
 its "active" state, and will set the class appropriately. The active state

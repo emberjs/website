@@ -20,11 +20,9 @@ App.Router.map(function() {
 Now, when the user visits `/about`, Ember.js will render the `about`
 template. Visiting `/favs` will render the `favorites` template.
 
-<aside>
 **Heads up!** You get a few routes for free: the `ApplicationRoute` and
 the `IndexRoute` (corresponding to the `/` path).
 [See below](#toc_initial-routes) for more details.
-</aside>
 
 Note that you can leave off the path if it is the same as the route
 name. In this case, the following is equivalent to the above example:

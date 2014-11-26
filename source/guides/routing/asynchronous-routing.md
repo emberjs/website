@@ -67,10 +67,8 @@ arrays, the transition will complete immediately. But if the `model` hook
 if a promise was provided as an argument to `transitionTo`), the transition 
 will pause until that promise fulfills or rejects.
 
-<aside>
 **Note:** The router considers any object with a `then` method
 defined on it to be a promise.
-</aside>
 
 If the promise fulfills, the transition will pick up where it left off and
 begin resolving the next (child) route's model, pausing if it too is a
