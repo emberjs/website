@@ -38,7 +38,7 @@ the store, or reloads the record if it doesn't exist:
 
 ```javascript
 model: function(params){
-  return store.fetch('post', params.post_id);
+  return this.store.fetch('post', params.post_id);
 }
 ```
 
