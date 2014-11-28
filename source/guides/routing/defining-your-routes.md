@@ -220,7 +220,7 @@ route handler might look like this:
 ```js
 App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('posts');
+    return this.store.find('post');
   }
 });
 ```
