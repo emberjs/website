@@ -476,3 +476,82 @@ App.ApplicationRoute = Ember.Route.extend({
 
 With this code, if an error bubbles up to the Application route, your application will enter
 the `catchall` route and display `/application-error` in the URL.
+
+### Knowing when to use `this.resource` and `this.route`
+
+`this.resource` and `this.route` are similar in many ways:
+
+* The `index`, `error` and `loading` nested routes are created if (and only if) you pass a callback function as the second argument.
+* You can nest routes within both (this was not the case in Ember 1.6 and older).
+
+The important difference between them is that they they create route names differently.
+
+`this.route` creates a route name by appending the name you pass it to its parent route name e.g.
+
+```js
+this.route("aa", function() {
+    this.route("bb", function() {
+    this.route("cc");
+    });
+});
+```
+
+will create routes named `aa`, `aa.bb`, `aa.bb.cc`.
+
+In contrast, `this.resource` creates a route name using just the provided name paramater - it completely ignores the parent route name.
+
+```js
+this.route("aa", function() {
+    this.resource("bb", function() {
+    this.route("cc");
+    });
+});
+```
+
+will create routes `aa`, `bb`, `bb.cc`.
+
+A more complete example:
+
+```js
+App.Router.map(function() {
+
+  // This creates the following routes:
+  //    * aa
+  //    * aa.loading
+  //    * aa.error
+  //    * aa.index
+  //    * aa.bb
+  //    * aa.bb.loading
+  //    * aa.bb.error
+  //    * aa.bb.index
+  //    * aa.bb.cc
+  // Notice that each `this.route` simply creates a route name by appending the
+  // provided name parameter to its parents name.
+
+  this.route("aa", function() {
+    this.route("bb", function() {
+      this.route("cc");
+    });
+  });
+
+  // This creates the following routes:
+  //   * xx
+  //   * xx.loading
+  //   * xx.error
+  //   * xx.index
+  //   * yy
+  //   * yy.loading
+  //   * yy.error
+  //   * yy.index
+  //   * yy.zz
+  // Notice that the rebellious `this.resource` resets the route namespace by
+  // ignoring any parent route names.
+
+  this.route("xx", function() {
+    this.resource("yy", function() {
+      this.route("zz");
+    });
+  });
+});
+```
+
