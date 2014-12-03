@@ -55,7 +55,7 @@ current context.
 
 To dispatch an action on specific events, such as `enter` or `key-press`, use the following
 
-```js
+```handlebars
 {{input value=firstName action="updateFirstName" on="key-press"}}
 ```
 
