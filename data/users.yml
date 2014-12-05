@@ -317,6 +317,8 @@
   image: redowlanalytics.png
 - url: https://www.solvace.com
   image: solvace.png
+- url: http://dlabs.si
+  image: dlabs.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
