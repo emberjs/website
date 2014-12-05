@@ -51,6 +51,9 @@
   - location: Indianapolis, IN
     url:      http://www.meetup.com/Ember-js-Indianapolis/
 "Worldwide":
+  - location: Calgary, Canada
+    url:      http://www.meetup.com/EmberJS-YYC/
+    image:    23calgary.png
   - location: Toronto, Canada
     url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
     image:    15toronto.png
