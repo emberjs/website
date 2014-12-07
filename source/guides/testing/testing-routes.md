@@ -67,7 +67,7 @@ test('Alert is called on displayAlert', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/xivoy/embed?output">Custom Test Helpers</a>
+<a class="jsbin-embed" href="http://jsbin.com/liratahuzo/1/embed?output">Custom Test Helpers</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 
