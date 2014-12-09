@@ -103,7 +103,7 @@ test execution.
 ```javascript
 test('clicking login authenticates', function(){
   visit('/');
-  pauseTest();
+  return pauseTest();
   // The test will never proceed to execute this click
   click('a:contains(Login)');
 });
