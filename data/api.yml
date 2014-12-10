@@ -16732,7 +16732,7 @@ classitems:
 
     Example
 
-    {#link-to 'posts' (query-params direction="asc")}}Sort{{/link-to}}
+    {{#link-to 'posts' (query-params direction="asc")}}Sort{{/link-to}}
   itemtype: method
   name: query-params
   params:
