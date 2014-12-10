@@ -62,7 +62,7 @@ You could extract it like so:
 App.ApplicationSerializer = DS.RESTSerializer.extend({
   extractMeta: function(store, type, payload) {
     if (payload && payload.total) {
-      store.metaForType(type, { total: payload.total });  // sets the metadata for "post"
+      store.setMetadataFor(type, { total: payload.total });  // sets the metadata for "post"
       delete payload.total;  // keeps ember data from trying to parse "total" as a record
     }
   }
