@@ -57,7 +57,7 @@ Data-binding in Ember.js has traditionally been based on the concept of a key-va
 observer. In Ember 1.x, KVO observers fire immediately upon the change of a value,
 giving them performance characteristics that cannot be changed until Ember 2.0. In
 comparison, streams distinguish change notification from value calculation. The value of
-a stream can be described as "lazy", as is not computed until needed.
+a stream can be described as "lazy", as it is not computed until needed.
 
 The addition of streams to Ember and their use throughout the view layer
 improves the performance of rendering, simplifies many helpers, and prepares
