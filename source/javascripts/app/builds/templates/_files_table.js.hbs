@@ -1,89 +1,89 @@
-<h2 class="project-name">{{projectName}} {{channel}} Builds</h2>
-{{#if isEmberBeta}}
+<h2 class="project-name">{{project.projectName}} {{project.channel}} Builds</h2>
+{{#if project.isEmberBeta}}
   <div class="release-progress clear">
     <div class="left">
-      <div class="small-release-image" {{bind-attr title=lastStableVersion}}></div>
-      <div class="release-version">{{lastStableVersion}}</div>
-      <div class="release-date">Released {{format-date-time lastStableDate "MMM Do"}}</div>
+      <div class="small-release-image" {{bind-attr title=project.lastStableVersion}}></div>
+      <div class="release-version">{{project.lastStableVersion}}</div>
+      <div class="release-date">Released {{format-date-time project.lastStableDate "MMM Do"}}</div>
     </div>
     <div class="float-left-container">
-      <div class="release-cycle-title">The path to {{finalVersion}}...</div>
-      <div {{bind-attr class=":left beta1Completed::future-image"}}>
+      <div class="release-cycle-title">The path to {{project.finalVersion}}...</div>
+      <div {{bind-attr class=":left project.beta1Completed::future-image"}}>
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 1</div>
-        {{#if isBeta1}}
+        {{#if project.isBeta1}}
           <div class="beta-current-version">(current beta)</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left beta2Completed::future-image"}}>
+      <div {{bind-attr class=":left project.beta2Completed::future-image"}}>
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 2</div>
-        {{#if isBeta2}}
+        {{#if project.isBeta2}}
           <div class="beta-current-version">(current beta)</div>
         {{/if}}
-        {{#if isBeta1}}
-          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{#if project.isBeta1}}
+          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left beta3Completed::future-image"}}>
+      <div {{bind-attr class=":left project.beta3Completed::future-image"}}>
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 3</div>
-        {{#if isBeta3}}
+        {{#if project.isBeta3}}
           <div class="beta-current-version">(current beta)</div>
         {{/if}}
-        {{#if isBeta2}}
-          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{#if project.isBeta2}}
+          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left beta4Completed::future-image"}}>
+      <div {{bind-attr class=":left project.beta4Completed::future-image"}}>
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 4</div>
-        {{#if isBeta4}}
+        {{#if project.isBeta4}}
           <div class="beta-current-version">(current beta)</div>
         {{/if}}
-        {{#if isBeta3}}
-          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{#if project.isBeta3}}
+          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left beta5Completed::future-image"}}>
+      <div {{bind-attr class=":left project.beta5Completed::future-image"}}>
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 5</div>
-        {{#if isBeta5}}
+        {{#if project.isBeta5}}
           <div class="beta-current-version">(current beta)</div>
         {{/if}}
-        {{#if isBeta4}}
-          <div class="beta-current-version">(coming {{format-date-time nextDate "MMM Do"}})</div>
+        {{#if project.isBeta4}}
+          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
     </div>
     <div class="right future-image">
-      <div class="small-release-image" {{bind-attr title=finalVersion}}></div>
-      <div class="release-version">{{finalVersion}}</div>
-      <div class="release-date">Coming {{format-date-time cycleEstimatedFinishDate "MMM Do"}}</div>
+      <div class="small-release-image" {{bind-attr title=project.finalVersion}}></div>
+      <div class="release-version">{{project.finalVersion}}</div>
+      <div class="release-date">Coming {{format-date-time project.cycleEstimatedFinishDate "MMM Do"}}</div>
     </div>
     <div class="clear"></div>
   </div>
 {{/if}}
-{{#if lastRelease}}
+{{#if project.lastRelease}}
 <div id="download">
   <div id="download-ember">
-    <a class="orange button" {{bind-attr href=lastReleaseDebugUrl}} download>Download {{lastRelease}}</a>
+    <a class="orange button" {{bind-attr href=project.lastReleaseDebugUrl}} download>Download {{project.lastRelease}}</a>
     <div class="info">
-      {{lastRelease}}:
-      <a class="debug" {{bind-attr href=lastReleaseProdUrl}} download>production</a>
-      <a class="debug" {{bind-attr href=lastReleaseMinUrl}} download>(min)</a> |
-      <a class="debug" {{bind-attr href=lastReleaseDebugUrl}} download>debug</a>
-      {{#if lastReleaseTestUrl}} |
-        <a class="debug" {{bind-attr href=lastReleaseTestUrl}} target="_blank" >live tests</a>
+      {{project.lastRelease}}:
+      <a class="debug" {{bind-attr href=project.lastReleaseProdUrl}} download>production</a>
+      <a class="debug" {{bind-attr href=project.lastReleaseMinUrl}} download>(min)</a> |
+      <a class="debug" {{bind-attr href=project.lastReleaseDebugUrl}} download>debug</a>
+      {{#if project.lastReleaseTestUrl}} |
+        <a class="debug" {{bind-attr href=project.lastReleaseTestUrl}} target="_blank" >live tests</a>
       {{/if}}
-      {{#if lastReleaseChangelogUrl }} |
-        <a class="debug" {{bind-attr href=lastReleaseChangelogUrl}}>changelog</a>
+      {{#if project.lastReleaseChangelogUrl }} |
+        <a class="debug" {{bind-attr href=project.lastReleaseChangelogUrl}}>changelog</a>
       {{/if}}
     </div>
   </div>
 </div>
 {{/if}}
-<p class="description">{{description}}</p>
+<p class="description">{{project.description}}</p>
 <table class="table">
   <thead>
     <tr>
@@ -93,11 +93,11 @@
     </tr>
   </thead>
   <tbody>
-    {{#each files}}
+    {{#each file in project.files}}
       <tr>
-        <td><a {{bind-attr href=url }}>{{name}}</a></td>
-        <td>{{format-date-time lastModified}}</td>
-        <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=scriptTag}}</td>
+        <td><a {{bind-attr href=file.url}}>{{file.name}}</a></td>
+        <td>{{format-date-time file.lastModified}}</td>
+        <td>{{copy-clipboard label="Link" text=file.url}} {{copy-clipboard label="Script Tag" text=file.scriptTag}}</td>
       </tr>
     {{/each}}
   </tbody>
