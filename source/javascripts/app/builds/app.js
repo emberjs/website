@@ -112,11 +112,16 @@ App.S3Bucket = Ember.Object.extend({
     return this.get('files').length;
   }.property('files.@each'),
 
-  filterFiles: function(filter){
+  filterFiles: function(filter, ignoreFiles){
     var files = this.get('files');
+    var ignoreFiles = Ember.A(ignoreFiles);
 
     return files.filter(function(e) {
-      return e.get('name').indexOf(filter + '.') !== -1;
+      var name = e.get('name');
+      var ignored = ignoreFiles.any(function(f) { return name.indexOf(f) >= 0; });
+      var selected = name.indexOf(filter + '.') >= 0;
+
+      return !ignored && selected;
     });
   },
 
@@ -193,7 +198,8 @@ App.Project.reopenClass({
       channel: "release",
       date: "2014-12-08",
       changelogPath: "CHANGELOG.md",
-      enableTestURL: true
+      enableTestURL: true,
+      debugFileName: ".js"
     }, {
       projectName: "Ember",
       projectFilter: "ember",
@@ -206,7 +212,9 @@ App.Project.reopenClass({
       date: "2014-12-10",
       nextDate: "2014-12-17",
       changelogPath: "CHANGELOG.md",
-      enableTestURL: true
+      enableTestURL: true,
+      debugFileName: ".debug.js",
+      ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
@@ -215,18 +223,22 @@ App.Project.reopenClass({
       futureVersion: "1.0.0-beta.13",
       channel: "beta",
       date: "2014-11-26",
-      changelogPath: "CHANGELOG.md"
+      changelogPath: "CHANGELOG.md",
+      debugFileName: ".js"
     }, {
       projectName: "Ember",
       projectFilter: "ember",
       projectRepo: 'emberjs/ember.js',
       channel: "canary",
-      enableTestURL: true
+      enableTestURL: true,
+      debugFileName: ".debug.js",
+      ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
       projectFilter: "ember-data",
       projectRepo: 'emberjs/data',
       channel: "canary",
+      debugFileName: ".js"
     }],
 
   all: function(channel){
@@ -315,9 +327,9 @@ App.ProjectsMixin = Ember.Mixin.create({
         }
       }
 
-      project.files = bucket.filterFiles(project.projectFilter);
+      project.files = bucket.filterFiles(project.projectFilter, project.ignoreFiles);
       project.description = self.description(project);
-      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.js');
+      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, project.debugFileName);
       project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.prod.js');
       project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.min.js');
 
@@ -325,10 +337,11 @@ App.ProjectsMixin = Ember.Mixin.create({
         project.lastReleaseTestUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '-tests-index.html');
       }
 
-      if (project.channel === 'canary')
+      if (project.channel === 'canary') {
         project.lastRelease = 'latest';
-      else if (project.changelog !== 'false')
+      } else if (project.changelog !== 'false') {
         project.lastReleaseChangelogUrl   = 'https://github.com/' + project.projectRepo + '/blob/v' + project.lastRelease + '/' + project.changelogPath;
+      }
     });
 
     return projects;
