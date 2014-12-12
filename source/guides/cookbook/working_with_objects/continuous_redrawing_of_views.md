@@ -170,6 +170,113 @@ Ember.Handlebars.registerBoundHelper('digital-clock', function(seconds) {
 });
 ```
 
+### Testing
+
+The timer created by `Ember.run.later` in the `ClockService` `tick` observer
+is considered a kind of asynchronous behavior and will prevent
+[asynchronous helpers](/guides/testing/test-helpers/#toc_asynchronous-helpers)
+from resolving during test cases.
+
+If you are planning on running tests on functionality that depends on the
+`ClockService`, you can either disable or modify the timer.
+
+#### Disabling the timer while testing
+
+The `Ember.testing` flag can be used to change the `tick` observer into a
+no-op method while testing. This allows tests that depend on asynchronous
+helpers to run without being blocked by the `ClockService` timer.
+
+```javascript
+tick: Ember.testing === true ? Ember.K : function() {
+  . . . original observer code . . .
+}.observes('_seconds').on('init'),
+```
+
+You might also consider providing an alternative non-timer `tick()` method
+during testing that can then be called manually from your unit tests.
+
+```javascript
+tick: Ember.testing === true ?
+  function() {
+    var seconds = this.get('_seconds');
+    if (typeof seconds === 'number') {
+      this.set('_seconds', seconds + (1/4));
+    }
+  } :
+  function() {
+    . . . original observer code . . .
+  }.observes('_seconds').on('init'),
+```
+
+```javascript
+moduleFor('service:clock', 'ClockService');
+
+test("pulse property increments as the clock ticks", function() {
+  var service = this.subject();
+
+  strictEqual(service.get('pulse'), 0);
+  service.tick();
+  service.tick();
+  service.tick();
+  service.tick();
+  strictEqual(service.get('pulse'), 1);
+  service.tick();
+  service.tick();
+  service.tick();
+  service.tick();
+  strictEqual(service.get('pulse'), 2);
+});
+```
+
+#### Providing a hybrid timer implementation to allow testing
+
+If your component testing requires the passage of time, you might consider a
+hybrid timer implementation for the `tick` observer. This would allow
+asynchronous helpers to run *and* faithfully progresses the `ClockService`.
+
+```javascript
+tick: function () {
+  var clock = this;
+  setTimeout(function () {
+    if (clock.isDestroying === false && clock.isDestroyed === false) {
+      Ember.run.later(function () {
+        var seconds = clock.get('_seconds');
+        if (typeof seconds === 'number') {
+          clock.set('_seconds', seconds + (1/4));
+        }
+      }, 125);
+    }
+  }, 125);
+}.observes('_seconds').on('init'),
+```
+
+```javascript
+moduleFor('service:clock', 'ClockService');
+
+test("pulse property should increment every second", function() {
+  var service = this.subject();
+
+  expect(4);
+
+  return new Ember.RSVP.Promise(function(resolve) {
+    strictEqual(service.get('pulse'), 0);
+
+    Ember.run.later(function() {
+      strictEqual(service.get('pulse'), 1);
+    }, 1125);
+
+    Ember.run.later(function() {
+      strictEqual(service.get('pulse'), 2);
+    }, 2125);
+
+    Ember.run.later(function() {
+      strictEqual(service.get('pulse'), 3);
+      resolve();
+    }, 3125);
+  });
+});
+```
+
 ### Note
 
 To explore the concept further, try adding a timestamp and updating the clock's
