@@ -8,9 +8,7 @@
 #     http://edgeguides.rubyonrails.org/rails_application_templates.html
 
 # Install required gems
-gem "active_model_serializers"
-gem "ember-rails", "~>0.14"
-gem "ember-source", "~>1.1"
+gem "ember-rails", "~> 0.15"
 
 run "bundle install"
 
@@ -31,18 +29,6 @@ file 'app/views/assets/index.html.erb', <<-CODE
 </html>
 CODE
 
-remove_file 'app/assets/javascripts/templates/application.handlebars'
-
-file 'app/assets/javascripts/templates/application.handlebars', <<-CODE
-<div style="width: 600px; border: 6px solid #eee; margin: 0 auto; padding: 20px; text-align: center; font-family: sans-serif;">
-  <img src="http://emberjs.com/images/about/ember-productivity-sm.png" style="display: block; margin: 0 auto;">
-  <h1>Welcome to Ember.js!</h1>
-  <p>You're running an Ember.js app on top of Ruby on Rails. To get started, replace this content
-  (inside <code>app/assets/javascripts/templates/application.handlebars</code>) with your application's
-  HTML.</p>
-</div>
-CODE
-
 run "rm -rf app/views/layouts"
 route "root :to => 'assets#index'"
 
@@ -52,3 +38,15 @@ inject_into_class "app/serializers/application_serializer.rb", 'ApplicationSeria
   "  embed :ids, :include => true\n"
 end
 
+remove_file 'app/assets/javascripts/application.js'
+generate "ember:bootstrap"
+
+file 'app/assets/javascripts/templates/index.js.handlebars', <<-CODE
+<div style="width: 600px; border: 6px solid #eee; margin: 0 auto; padding: 20px; text-align: center; font-family: sans-serif;">
+  <img src="http://emberjs.com/images/about/ember-productivity-sm.png" style="display: block; margin: 0 auto;">
+  <h1>Welcome to Ember.js!</h1>
+  <p>You're running an Ember.js app on top of Ruby on Rails. To get started, replace this content
+  (inside <code>app/assets/javascripts/templates/index.js.handlebars</code>) with your application's
+  HTML.</p>
+</div>
+CODE
