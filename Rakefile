@@ -112,9 +112,15 @@ task :preview do
 
   paths = Dir.glob(File.join(ember_path, "packages/*/lib")) +
     Dir.glob(File.join(ember_data_path, "packages/*/lib"))
-  listener = Listen.to(*paths, :filter => /\.js$/)
-  listener.change { Rake::Task["generate_docs"].execute }
-  listener.start(false)
+
+  listener = Listen.to(*paths, :only => /\.js$/) do
+    Rake::Task["generate_docs"].execute
+  end
+  listener.start
+
+  trap :SIGINT do
+    exit 0
+  end
 
   system "middleman server --reload-paths data/"
 end
