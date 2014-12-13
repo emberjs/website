@@ -321,6 +321,8 @@
   image: dlabs.png
 - url: http://www.zenefits.com
   image: zenefits.png
+- url: https://getpoynt.com
+  image: poynt.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
