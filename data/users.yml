@@ -323,6 +323,8 @@
   image: zenefits.png
 - url: https://getpoynt.com
   image: poynt.png
+- url: https://www.ted.com
+  image: ted.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
