@@ -7208,7 +7208,7 @@ classitems:
         // failure
       } else {
         try {
-          findBoooksByAuthor(author, function(books, err) {
+          findBooksByAuthor(author, function(books, err) {
             if (err) {
               failure(err);
             } else {
