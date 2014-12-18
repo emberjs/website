@@ -425,10 +425,6 @@ App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {
 /*
  * Handlebars Helpers
  */
-Ember.Handlebars.helper('format-bytes', function(bytes){
-  return (bytes / 1024).toFixed(2) + ' KB';
-});
-
 Ember.Handlebars.helper('format-date-time', function(date, format, options) {
   if (!options) {
     options = format;
@@ -440,8 +436,4 @@ Ember.Handlebars.helper('format-date-time', function(date, format, options) {
   } else {
     return moment(date).fromNow();
   }
-});
-
-Ember.Handlebars.helper('isHiDPIScreen', function() {
-  return window.getDevicePixelRatio() > 1;
 });
