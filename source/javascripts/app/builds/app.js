@@ -208,7 +208,7 @@ App.Project.reopenClass({
       futureVersion: "1.10.0-beta.2",
       finalVersion: '1.10.0',
       channel: "beta",
-      cycleEstimatedFinishDate: '2015-02-23',
+      cycleEstimatedFinishDate: '2015-01-17',
       date: "2014-12-10",
       nextDate: "2014-12-17",
       changelogPath: "CHANGELOG.md",
