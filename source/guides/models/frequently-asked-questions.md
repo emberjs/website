@@ -96,28 +96,33 @@ updated record values.
 
 Some applications may want to add or update records in the store
 without requesting the record via `store.find`. To accomplish this you
-can use the `DS.Store`'s `push`, `pushPayload`, or `update`
+can use the `DS.Store`'s `push` or `pushPayload`
 methods. This is useful for web applications that have a channel
 (such as [SSE](http://dev.w3.org/html5/eventsource/) or
 [Web Sockets](http://www.w3.org/TR/2009/WD-websockets-20091222/)) to
 notify it of new or updated records on the backend.
 
 [push](/api/data/classes/DS.Store.html#method_push)
-is the simplest way to load records to Ember Data's store. When using
-`push` it is important to remember to deserialize the JSON object
-before pushing it into the store. `push` only accepts one record at a
-time. If you would like to load an array of records to the store you
-can call
+is the simplest way to load or update records in Ember Data's store.
+When using `push` it is important to
+[normalize](/api/data/classes/DS.Store.html#method_normalize)
+the JSON object before pushing it into the store.
+
+`push` only accepts one record at a time. If you would like to load an
+array of records to the store you can call
 [pushMany](/api/data/classes/DS.Store.html#method_pushMany).
 
 ```js
 socket.on('message', function (message) {
-  var type = store.modelFor(message.model);
-  var serializer = store.serializerFor(type.typeKey);
-  var record = serializer.extractSingle(store, type, message.data);
-  store.push(message.model, record);
+  var modelName = message.model;
+  store.push(modelName, store.normalize(modelName, message.data));
 });
 ```
+
+As of `v1.0.0-beta.14` the `push` method accepts partial attributes for
+updating existing records. The `update` method is therefore deprecated.
+Updating partial attributes is useful if your web application only
+receives notifications of the changed attributes on a model.
 
 [pushPayload](/api/data/classes/DS.Store.html#method_pushPayload)
 is a convenience wrapper for `store#push` that will deserialize
@@ -129,27 +134,5 @@ method.
 ```js
 socket.on('message', function (message) {
   store.pushPayload(message.model, message.data);
-});
-```
-
-[update](/api/data/classes/DS.Store.html#method_update)
-works like a `push` except it can handle partial attributes without
-overwriting the existing record properties. This method is useful if
-your web application only receives notifications of the changed
-attributes on a model. Like `push` it is important to remember to
-deserialize the JSON object before calling `update`.
-
-```js
-socket.on('message', function (message) {
-  var hash = message.data;
-  var type = store.modelFor(message.model);
-  var fields = Ember.get(type, 'fields');
-  fields.forEach(function(field) {
-    var payloadField = Ember.String.underscore(field);
-    if (field === payloadField) { return; }
-      hash[field] = hash[payloadField];
-      delete hash[payloadField];
-  });
-  store.push(message.model, hash);
 });
 ```
