@@ -109,8 +109,7 @@ Basics: Method Side Effects</a>
 
 ### Testing Observers
 
-Suppose we have an object that has an observable method based on the `foo`
-property.
+Suppose we have an object that has a property and a method observing that property.
 
 ```javascript
 App.SomeThing = Ember.Object.extend({
