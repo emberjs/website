@@ -84,8 +84,8 @@ export default DS.RESTSerializer.extend({
 });
 ```
 
-
 Or if you want to restore the old behavior for all of your models:
+
 ```javascript
 // app/serializers/application.js
 // or App.ApplicationSerializer
