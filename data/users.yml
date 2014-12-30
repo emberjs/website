@@ -21,6 +21,8 @@
   image: yapp.png
 - url: http://tilde.io/
   image: tilde.png
+- url: http://www.bustle.com
+  image: bustle.png
 - url: http://yahoo.com
   image: yahoo.png
 - url: http://www.zendesk.com/
@@ -149,8 +151,6 @@
   image: inthepocket.png
 - url: http://www.veriskhealth.com
   image: verisk_health.png
-- url: http://www.bustle.com
-  image: bustle.png
 - url: https://uniiverse.com
   image: uniiverse.gif
 - url: http://www.silveregg.com/
