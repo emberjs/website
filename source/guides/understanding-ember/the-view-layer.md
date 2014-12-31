@@ -16,7 +16,7 @@ Views and templates work in tandem to provide a robust system for creating whate
 
 #### Child Views
 
-In a typical client-side application, views may represent elements nested inside of each other in the DOM. In the naïve solution to this problem, separate view objects represent each DOM element, and ad-hoc references help the various view object keep track of the views conceptually nested inside of them.
+In a typical client-side application, views may represent elements nested inside of each other in the DOM. In the naïve solution to this problem, separate view objects represent each DOM element, and ad-hoc references help the various view objects keep track of the views conceptually nested inside of them.
 
 Here is a simple example, representing one main app view, a collection nested inside of it, and individual items nested inside of the collection.
 
@@ -108,7 +108,7 @@ In addition to children (Strings and other `RenderBuffer`s), a `RenderBuffer` al
 
 At the end of the rendering process, the root view asks the `RenderBuffer` for its element. The `RenderBuffer` takes its completed string and uses jQuery to convert it into an element. The view assigns that element to its `element` property and places it into the correct place in the DOM (the location specified in `appendTo` or the application's root element if the application used `append`).
 
-While the parent view assigns its element directly, each child views looks up its element lazily. It does this by looking for an element whose `id` matches its `elementId` property. Unless explicitly provided, the rendering process generates an `elementId` property and assigns its value to the view's `RenderBuffer`, which allows the view to find its element as needed.
+While the parent view assigns its element directly, each child view looks up its element lazily. It does this by looking for an element whose `id` matches its `elementId` property. Unless explicitly provided, the rendering process generates an `elementId` property and assigns its value to the view's `RenderBuffer`, which allows the view to find its element as needed.
 
 ##### 4. Re-Rendering
 
@@ -180,7 +180,7 @@ App.Search = Ember.View.extend({
 
 In order to make it easy to take action at different points during your view's lifecycle, there are several hooks you can implement.
 
-* `willInsertElement`: This hook is called after the view has been rendered but before it has been inserted into the DOM. It does not provide access to the view's `element`.
+* `willInsertElement`: This hook is called after the view has been rendered, but before it has been inserted into the DOM. It does not provide access to the view's `element`.
 * `didInsertElement`: This hook is called immediately after the view has been inserted into the DOM. It provides access to the view's `element` and is most useful for integration with an external library. Any explicit DOM setup code should be limited to this hook.
 * `willDestroyElement`: This hook is called immediately before the element is removed from the DOM. This is your opportunity to tear down any external state associated with the DOM node. Like `didInsertElement`, it is most useful for integration with external libraries.
 * `willClearRender`: This hook is called immediately before a view is re-rendered. This is useful if you want to perform some teardown immediately before a view is re-rendered.
