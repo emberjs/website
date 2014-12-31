@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v1.0.0-beta.14
+  sha: v1.0.0-beta.14.1
 files:
   packages/activemodel-adapter/lib/system/active_model_adapter.js:
     name: packages/activemodel-adapter/lib/system/active_model_adapter.js
@@ -9145,7 +9145,7 @@ classitems:
   itemtype: property
   name: VERSION
   type: String
-  default: "'<%= versionStamp %>'"
+  default: "'VERSION_STRING_PLACEHOLDER'"
   static: 1
   class: DS
   module: ember-data
