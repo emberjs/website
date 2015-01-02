@@ -64,13 +64,4 @@ gem install bundler wdm tzinfo-data
 gem update listen middleman
 ```
 
-You can then test this with a bundle install. If you get an error installing eventmachine-1.0.3 please see this workaround:
-https://github.com/eventmachine/eventmachine/pull/497#issuecomment-46747587
-
-Lastly (before running `bundle exec middleman`), you can add the following lines to your Gemfile:
-``` sh
-gem 'wdm'
-gem 'tzinfo-data'
-```
-
 Once Middleman comes up, you'll be prompted by Windows Firewall. Click "Allow access" and you'll be in business!

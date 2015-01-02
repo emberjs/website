@@ -27,3 +27,6 @@ group :test do
   gem "poltergeist"
 end
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin]
