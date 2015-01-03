@@ -45,7 +45,7 @@ post.get('title'); // => 'Ember.js is fantastic'
 post.get('author'); // => 'Tom Dale'
 ```
 
-This also mean that properties missing in the payload will no longer be
+This also means that properties missing in the payload will no longer be
 reset,
 but stay the same.
 
