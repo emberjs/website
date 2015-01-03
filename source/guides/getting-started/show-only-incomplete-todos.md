@@ -21,7 +21,7 @@ In `js/router.js` update the router to recognize this new path and implement a m
 ```javascript
 Todos.Router.map(function() {
   this.resource('todos', { path: '/' }, function() {
-    // additional child routes
+    // additional child routes will go here later
     this.route('active');
   });
 });
