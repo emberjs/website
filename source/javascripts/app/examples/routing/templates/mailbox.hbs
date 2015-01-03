@@ -9,7 +9,7 @@
   {{#each message in messages}}
     {{#link-to "mail" message tagName="tr"}}
       <td>{{date message.date}}</td>
-      <td>{{view.isActive}}{{message.subject}}</td>
+      <td>{{message.subject}}</td>
       <td>{{message.from}}</td>
       <td>{{message.to}}</td>
     {{/link-to}}
