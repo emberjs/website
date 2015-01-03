@@ -1,19 +1,19 @@
 <table>
-    <tr>
-        <th>Date</th>
-        <th>Subject</th>
-        <th>From</th>
-        <th>To</th>
-    </tr>
+  <tr>
+    <th>Date</th>
+    <th>Subject</th>
+    <th>From</th>
+    <th>To</th>
+  </tr>
 
-    {{#each message in messages}}
-        {{#link-to "mail" message tagName="tr"}}
-            <td>{{date message.date}}</td>
-            <td>{{view.isActive}}{{message.subject}}</td>
-            <td>{{message.from}}</td>
-            <td>{{message.to}}</td>
-        {{/link-to}}
-    {{/each}}
+  {{#each message in messages}}
+    {{#link-to "mail" message tagName="tr"}}
+      <td>{{date message.date}}</td>
+      <td>{{view.isActive}}{{message.subject}}</td>
+      <td>{{message.from}}</td>
+      <td>{{message.to}}</td>
+    {{/link-to}}
+  {{/each}}
 </table>
 
 {{outlet}}

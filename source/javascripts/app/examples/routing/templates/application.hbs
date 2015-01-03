@@ -1,20 +1,20 @@
 <div class="url">URL: {{target.url}}</div>
 <aside>
-    <ul>
-        <li><h2>Mailboxes</h2></li>
-        {{#each mailbox in model}}
-            <li>
-                {{#link-to "mailbox" mailbox current-when="mailbox"}}
-                    <span class="count">
-                        {{mailbox.messages.length}}
-                    </span>
-                    {{mailbox.name}}
-                {{/link-to}}
-            </li>
-        {{/each}}
-    </ul>
+  <ul>
+    <li><h2>Mailboxes</h2></li>
+    {{#each mailbox in model}}
+      <li>
+        {{#link-to "mailbox" mailbox current-when="mailbox"}}
+          <span class="count">
+            {{mailbox.messages.length}}
+          </span>
+          {{mailbox.name}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
 </aside>
 
 <section class="main">
-    {{outlet}}
+  {{outlet}}
 </section>
