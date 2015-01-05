@@ -54,7 +54,7 @@ destination routes to abort attempted transitions.
 ```js
 App.DiscoRoute = Ember.Route.extend({
   beforeModel: function(transition) {
-    if (new Date() < new Date("January 1, 1980")) {
+    if (new Date() > new Date("January 1, 1980")) {
       alert("Sorry, you need a time machine to enter this route.");
       transition.abort();
     }
