@@ -1,60 +1,64 @@
 ### Problem
-You want rails style flash messages to appear in your application when things happen.
+You want Rails style flash messages to appear in your application and alert the user that something has happened.
 
 ### Solution
-Use a simple array controller, view and template.
+Use a simple array controller to keep track of the current messages, a model to hold the message and what type of alert it is, a view with an action to remove the alert and a template to show it on the page.
+
+The page needs a container for the flash messages.
 
 ```handlebars
-<script type='text/x-handlebars' id='application'>
-{{#each flashMessage in flashMessages}}
-{{view "flash" contentBinding="flashMessage"}}
-{{/each}}
-</script>
-
-<script type='text/x-handlebars' id='flash'>
-{{#if flashMessage.isNotice}}
-<div class="alert alert-info alert-dismissible no-left-margin no-right-margin small-margin-bottom small-padding" role="alert">
-	<button type="button" class="close" style="right: 0px;" data-dismiss="alert" {{action "click" flashMessage target=view}}><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	{{flashMessage.message}}
-</div>
-{{/if}}
-{{#if flashMessage.isSuccess}}
-<div class="alert alert-success alert-dismissible no-left-margin no-right-margin small-margin-bottom small-padding" role="alert">
-	<button type="button" class="close" style="right: 0px;" data-dismiss="alert" {{action "click" flashMessage target=view}}><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	{{flashMessage.message}}
-</div>
-{{/if}}
-{{#if flashMessage.isError}}
-<div class="alert alert-danger alert-dismissible no-left-margin no-right-margin small-margin-bottom small-padding" role="alert">
-	<button type="button" class="close" style="right: 0px;" data-dismiss="alert" {{action "click" flashMessage target=view}}><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-	{{flashMessage.message}}
-</div>
-{{/if}}
+<script type="text/x-handlebars">
+    {{#each flashMessage in controllers.flash.content}}
+        {{view "flash" contentBinding="flashMessage"}}
+    {{/each}}
 </script>
 ```
 
-```javascript
-App.FlashController = Ember.ArrayController.extend({
-});
-App.ApplicationController = Ember.Controller.extend({
-    needs: ['flash']
-});
+It also needs a template for a flash message.
 
-App.FlashView = Ember.View.extend({
-    templateName: 'flash',
-    didInsertElement: function() {
-        console.log("flash inserted");
-        var me = this;
-        this.$().fadeIn(700);
-    },
-    actions: {
-        click: function(alert) {
-            this.get('controller').get('controllers.flash').removeObject(this.get('content'));
-            this.destroy();
+```handlebars
+<script type='text/x-handlebars' id='flash'>
+    {{#if flashMessage.isNotice}}
+    <div class="alert notice">
+        {{flashMessage.message}}
+        <button type="button" class="right" {{action "click" flashMessage target=view}}><span>&times;</span></button>
+    </div>
+    {{/if}}
+    {{#if flashMessage.isSuccess}}
+    <div class="alert success">
+        <button type="button" class="right" {{action "click" flashMessage target=view}}><span>&times;</span></button>
+        {{flashMessage.message}}
+    </div>
+    {{/if}}
+    {{#if flashMessage.isError}}
+    <div class="alert error">
+        <button type="button" class="right" {{action "click" flashMessage target=view}}><span>&times;</span></button>
+        {{flashMessage.message}}
+    </div>
+    {{/if}}
+</script>
+```
+
+We need a controller to keep track of all the flash messages
+
+```js
+App.FlashController = Ember.ArrayController.extend({
+    createFlash: function(options) {
+        if (options.type !== null && options.message !== null) {
+            this.pushObject(this.get('store').createRecord(
+                "flashMessage", {
+                    type: options.type,
+                    message: options.message
+                }
+            ));
         }
     }
 });
+```
 
+We also need model for a flash message.
+
+```js
 App.FlashMessage = DS.Model.extend({
     type: DS.attr('string'),
     message: DS.attr('string'),
@@ -70,26 +74,59 @@ App.FlashMessage = DS.Model.extend({
 });
 ```
 
-Include Twitter's widget code in your HTML:
+If a controller wants to create a flash message then it 'needs' the Flash controller. Here the Application controller creates a flash message in response to an action.
 
-```javascript
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js" id="twitter-wjs"></script>
+```js
+App.ApplicationController = Ember.Controller.extend({
+    needs: ['flash'],
+    actions: {
+        createFlashNotice: function() {
+            this.get('controllers.flash').createFlash({
+                type: "notice",
+                message: "I'm a flash notice."
+            });
+        },
+        createFlashError: function() {
+            this.get('controllers.flash').createFlash({
+                type: "error",
+                message: "I'm a flash error."
+            });
+        },
+        createFlashSuccess: function() {
+            this.get('controllers.flash').createFlash({
+                type: "success",
+                message: "I'm a flash success."
+            });
+        }
+    }
+});
 ```
 
-### Discussion
-Twitter's widget library expects to find an `<a>` tag on the page with specific `data-` attributes applied.
-It takes the values of these attributes and, when the `<a>` tag is clicked, opens an iFrame for twitter sharing.
+We need a view for a flash messages which can remove it in response to a user action.
 
-The `share-twitter` component takes four options that match the four attributes for the resulting `<a>` tag:
-`data-url`, `data-text`, `data-size`, `data-hashtags`. These options and their values become properties on the
-component object. 
+```js
+App.FlashView = Ember.View.extend({
+    templateName: 'flash',
+    classNames: ['hide'],
+    didInsertElement: function() {
+        this.$().fadeIn(1000);
+    },
+    actions: {
+        click: function(alert) {
+            this.get('controller').get(
+                'controllers.flash').removeObject(
+                this.get('content'));
+            this.destroy();
+        }
+    }
+});
+```
 
-The component defines certain attributes of its HTML representation as bound to properties of the object through
-its `attributeBindings` property. When the values of these properties change, the component's HTML element's
-attributes will be updated to match the new values.
-
-An appropriate tag and css class are applied through the `tagName` and `classNames` properties.
+#### Discussion
+The HTML needs a template to render all the current messages in the FlashController which is shown in the main handlebars template. Each individual message is then rendered using the second handlebars template with the id of 'flash'. The FlashController is an ArrayController with a list of current flash messages. Each FlashMessage model is created with by calling the 'createFlash' function on the FlashController with an options object. The options object contains the type of the message ('notice', 'success' or 'error') and the message itself. The model also has a helper function to return which type of message it is so that we can style it appropriately. Each flash message has a FlashView which fades the message in when it has been inserted using the didInsertElement handler. The flash message can then be removed by clicking on the 'X' that the handlebars template renders which triggers the 'click' action in the view. This then removes the flash message from the FlashController and also destroys the view. 
 
 #### Example
+Click on one of the buttons to create a flash message and remove it by clicking on the 'x'.
+<a class="jsbin-embed" href="http://jsbin.com/magimicadi/1/embed?output">JS Bin</a>
 
-<a class="jsbin-embed" href="http://emberjs.jsbin.com/OpocEPu/1/edit?js,output">JS Bin</a>
+Thanks to [Eric Berry](http://coderberry.me/blog/2013/06/20/using-flash-messages-with-emberjs/) for the 'flash' of inspiration.
