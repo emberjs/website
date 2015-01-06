@@ -102,6 +102,12 @@ export default DS.RESTSerializer.extend({
 });
 ```
 
+### `store.metaForType()` has been deprecated
+
+`store.metaForType()` has been deprecated because of it's ambiguous naming.
+Please use `store.metadataFor()` to get metadata and `store.setMetadataFor()`
+to set metadata.
+
 ## Special Thanks
 
 A special thanks to [Dockyard][dockyard] for sponsoring Igor during the
