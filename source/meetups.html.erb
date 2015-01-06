@@ -6,13 +6,14 @@ title: "Meetups"
 
 <div class="meetups section map">
   <h2>Find a meetup in your city</h2>
+  <meta name="mapOptions" content='<%= data.meetups.google_map.options.to_json %>'>
   <div id="map"></div>
 </div>
 
 <div class="meetups section list">
   <table class="columns">
     <tr>
-      <% data.meetups.each do |name, groups| %>
+      <% data.meetups.locations.each do |name, groups| %>
         <td>
           <h3><%= name %></h3>
           <ul>

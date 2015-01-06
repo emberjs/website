@@ -1,49 +1,13 @@
 (function() {
-  var handler = Gmaps.build('Google');
-  var styles = [
-    {
-      featureType: "road",
-      elementType: "geometry",
-      stylers: [
-        { lightness: 100 },
-        { visibility: "simplified" }
-      ]
-    },{
-      featureType: "road",
-      elementType: "labels",
-      stylers: [
-        { visibility: "off" }
-      ]
-    },{
-      featureType: "poi",
-      stylers: [
-       { visibility: "off" }
-      ]
-    },{
-      "featureType": "poi",
-      "elementType": "labels.text",
-      "stylers": [
-        { visibility: "off" }
-      ]
-    },{
-      "featureType": "transit",
-      "stylers": [
-        { visibility: "off" }
-      ]
-    }
-  ];
-  handler.buildMap({
-    provider: {
-      styles: styles,
-      streetViewControl: false,
-      panControl: false,
-      zoomControlOptions: {
-        style: google.maps.ZoomControlStyle.SMALL
-      },
-    },
-    internal: {id: 'map'}}, function(){
+  var handler = Gmaps.build('Google'),
+      mapOptions = $('meta[name=mapOptions]').attr('content');
+
+  mapOptions = JSON.parse(mapOptions);
+  mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
+
+  handler.buildMap(mapOptions, function(){
     var markers = handler.addMarkers([
-      { 
+      {
         "lat": 33.7677129,
         "lng": -84.420604,
         "picture": {
