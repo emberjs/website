@@ -25,9 +25,6 @@ Ember.js provides several helpers that allow you to render other views and templ
   Written by Yehuda Katz
 </div>
 ```
-
-The partial's `data-template-name` must start with an underscore (e.g. `data-template-name='_author'` or `data-template-name='foo/_bar'`)
-
 ### The `{{view}}` Helper
 
 This helper works like the partial helper, except instead of providing a template to be rendered within the current template, you provide a view class.  The view controls what template is rendered.
