@@ -42,11 +42,17 @@ scope:
 ```
 
 Since Ember 1.8, views are more appropriately resolved on the application
-via strings:
+via strings. Example for `App.SomeView` (it is important the name ends with "View"):
 
 ```handlebars
 {{view "some"}}
 {{each item in items itemViewClass="some"}}
+```
+
+Names with multiple words should be dasherized. Example for `App.MyTextView`:
+
+```handlebars
+{{view "my-text"}}
 ```
 
 They may also be fetched via a binding:
