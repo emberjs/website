@@ -335,6 +335,10 @@
   image: netural.png
 - url: http://www.ticketfly.com/
   image: ticketfly.png
+- url: http://www.ally.com/
+  image: ally.svg
+- url: http://heroku.com/
+  image: heroku.png  
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
