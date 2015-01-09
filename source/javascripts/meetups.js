@@ -5,7 +5,14 @@
   mapOptions = JSON.parse(mapOptions);
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
-  handler.buildMap(mapOptions, function(){
+  handler.buildMap(mapOptions, function() {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(drawMap);
+    } else {
+      drawMap();
+    }
+  } );
+  function drawMap(position){
     var markers = handler.addMarkers([
       {
         "lat": 33.7677129,
@@ -19,6 +26,14 @@
       },
     ]);
     handler.bounds.extendWith(markers);
+    if (position) {
+      var marker = handler.addMarker({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      });
+      handler.map.centerOn(marker);
+      handler.bounds.extendWith(marker);
+    }
     handler.fitMapToBounds();
-  });
+  }
 })();
