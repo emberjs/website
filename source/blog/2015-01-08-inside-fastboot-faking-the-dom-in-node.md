@@ -5,7 +5,7 @@ tags: Recent Posts, Inside FastBoot
 ---
 
 As we [announced in the inaugural blog post in our Inside FastBoot
-series](/inside-fastboot-the-road-to-server-side-rendering.html), we
+series](/blog/2014/12/22/inside-fastboot-the-road-to-server-side-rendering.html), we
 have begun working on giving Ember.js developers the ability to run
 their apps in Node.js. Once complete, this feature will allow your users
 to see HTML and CSS right away, with the JavaScript downloading
