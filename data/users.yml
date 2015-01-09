@@ -338,7 +338,7 @@
 - url: http://www.ally.com/
   image: ally.svg
 - url: http://heroku.com/
-  image: heroku.png  
+  image: heroku.svg
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
