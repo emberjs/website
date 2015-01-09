@@ -72,10 +72,9 @@ h1 {
   font-size: 24px;
   margin-top: 0;
   color: $orange-color;
-  // Couldn't find why this border-bottom was originally added, and
-  // it was messing other things up. Please ping @wifelette if you 
-  // sort it out :p
   // border-bottom: solid 1px #d0d0d0;
+  // This styling has been removed from everywhere other than
+  // the API and Guides, like at line 1167.
   padding-bottom: 20px;
 }
 
@@ -1163,7 +1162,9 @@ body.meetups #content {
   h1, h1:first-child {
     margin-top: 0;
     color: $orange-color;
-    border-bottom: solid 1px #d0d0d0;
+    // border-bottom: solid 1px #d0d0d0;
+    // This styling has been removed from everywhere other than
+    // the API and Guides, like at line 75.
     padding-bottom: 20px;
   }
 
@@ -1325,14 +1326,6 @@ body.security #content {
 
   .section {
     width: 100%;
-  }
-
-/* This h1 is because on the user page, the logos
-look a bit claustrophobic by our regular h1 horizontal
-rule. Added some breathing room. */
-
-  h1 { 
-    margin-bottom: 10px;
   }
 
   #content {
