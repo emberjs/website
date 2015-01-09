@@ -5,11 +5,23 @@
   mapOptions = JSON.parse(mapOptions);
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
-  handler.buildMap(mapOptions, function(){
+  handler.buildMap(mapOptions, function() {
+    if(navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(drawMap);
+    } else {
+      drawMap({
+        coords: {
+          latitude: 33.7677129,
+          longitude: -84.420604
+        }
+      });
+    }
+  } );
+  function drawMap(position){
     var markers = handler.addMarkers([
       {
-        "lat": 33.7677129,
-        "lng": -84.420604,
+        "lat": position.coords.latitude,
+        "lng": position.coords.longitude,
         "picture": {
           "url": "/images/meetups/map-pin.png",
           "width": 20,
@@ -20,5 +32,5 @@
     ]);
     handler.bounds.extendWith(markers);
     handler.fitMapToBounds();
-  });
+  }
 })();
