@@ -1301,10 +1301,9 @@ body.meetups #content {
       @include hidpi('community/meetup', 'png');
       background-position: center top;
       float: left;
-      margin: 0 0 15px 20px;
       width: 221px;
       height: 185px;
-      margin: 0 auto;
+      margin: -35px auto 0 auto;
     }
   }
 }
