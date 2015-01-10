@@ -1,30 +1,49 @@
 (function() {
   var handler = Gmaps.build('Google'),
       mapOptions = $('meta[name=mapOptions]').attr('content');
+      locations = $('meta[name=locations]').attr('content');
 
   mapOptions = JSON.parse(mapOptions);
+  locations = JSON.parse(locations);
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
+
+  var markerLocations = [];
+
+  var generateMarkerData = function(element) {
+
+    var groups = element.groups;
+    groups.forEach( function(element){
+
+      var markerIcon = {
+          "url": "/images/meetups/map-pin.png",
+          "width": 20,
+          "height": 28
+      };
+      var orgMarkup = "";
+      element.organizers.forEach( function(el){
+        if( typeof el.profileImage == 'undefined'){
+          el.profileImage = "http://photos3.meetupstatic.com/photos/member/d/c/7/0/highres_179096432.jpeg";
+        }
+        orgMarkup += "<div class='organizer'><img src='"+el.profileImage+"' class='profile'><strong>"+el.organizer+"</strong><br>Organizer</div>";
+      });
+
+      element.infowindow = "<div class='map-marker'><h2>"+element.location+"</h2>"+orgMarkup+"<div class='view'><a href='"+element.url+"' target='_blank'>Go to meetup page</a></div></div>";
+      element.picture = markerIcon;
+      markerLocations.push(element);
+    });
+  }
+
+  // locations.forEach( generateMarkerData );
 
   handler.buildMap(mapOptions, function() {
     if(navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(drawMap);
+      var geoLocation = navigator.geolocation.getCurrentPosition(drawMap);
     } else {
       drawMap();
     }
   } );
   function drawMap(position){
-    var markers = handler.addMarkers([
-      {
-        "lat": 33.7677129,
-        "lng": -84.420604,
-        "picture": {
-          "url": "/images/meetups/map-pin.png",
-          "width": 20,
-          "height": 28
-        },
-        "infowindow": "<div class='map-marker'><h2>Atlanta, GA</h2><div class='organizer'><img src='http://photos3.meetupstatic.com/photos/member/d/c/7/0/highres_179096432.jpeg' class='profile'><strong>William Metz</strong><br>Organizer</div><div class='organizer'><img src='http://photos2.meetupstatic.com/photos/member/a/5/3/4/member_238302292.jpeg' class='profile'><strong>Chris McCuller</strong><br>Organizer</div><div class='organizer'><img src='http://photos4.meetupstatic.com/photos/member/b/d/4/e/member_214428462.jpeg' class='profile'><strong>Shane Ballman</strong><br>Organizer</div><div class='view'><a href='#' target='_blank'>Go to meetup page</a></div></div>"
-      },
-    ]);
+    var markers = handler.addMarkers(markerLocations);
     handler.bounds.extendWith(markers);
     if (position) {
       var marker = handler.addMarker({
