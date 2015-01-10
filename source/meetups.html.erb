@@ -14,16 +14,18 @@ title: "Meetups"
 <div class="meetups section list">
   <table class="columns">
     <tr>
-      <% data.meetups.locations.each do |name, groups| %>
-        <td>
-          <h3><%= name %></h3>
-          <ul>
-            <% groups.sort_by(&:location).each do |group| %>
-              <li><%= link_to group.location, group.url %></li>
-            <% end %>
-          </ul>
-        </td>
-      <% end %>
+      <td>
+        <% data.meetups.locations.each  do |locations| %>
+          <td>
+            <h3><%= locations.area %></h3>
+            <ul>
+              <% locations.groups.sort_by(&:location).each do |group| %>
+                <li><%= link_to group.location, group.url %></li>
+              <% end %>
+            </ul>
+          </td>
+        <% end %>
+      </td>
     </tr>
   </table>
 </div>
