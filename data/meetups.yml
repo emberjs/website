@@ -148,6 +148,15 @@ locations:
     groups:
       - location: São Paulo, Brazil
         url:      http://www.meetup.com/Ember-js-Sao-Paulo/
+        lat:      -23.577786
+        lng:      -46.673846
+        organizers:
+          - organizer: Lourenzo Ferreira
+            profileImage: http://photos2.meetupstatic.com/photos/member/b/6/0/0/member_158206592.jpeg
+          - organizer: Paulo Pires
+            profileImage: http://photos1.meetupstatic.com/photos/member/b/0/e/c/member_172305292.jpeg
+          - organizer: Beto Muniz
+            profileImage: http://photos3.meetupstatic.com/photos/member/3/2/2/0/member_154812832.jpeg
       - location: Belo Horizonte, Brazil
         url:      http://www.meetup.com/Ember-BH/
       - location: Montevideo, Uruguay
@@ -160,6 +169,15 @@ locations:
       - location: London, UK
         url:      http://emberlondon.com
         image:    11london.png
+        lat:      51.520860
+        lng:      -0.077703
+        organizers:
+          - organizer: Jamie White
+            profileImage: http://photos4.meetupstatic.com/photos/member/f/3/4/highres_65523892.jpeg
+          - organizer: Karl Freeman
+            profileImage: http://photos1.meetupstatic.com/photos/member/9/9/4/a/highres_240099242.jpeg
+          - organizer: Ken Snyder
+            profileImage: http://photos2.meetupstatic.com/photos/member/1/f/6/member_38040502.jpeg
       - location: Dublin, Ireland
         url:      http://www.meetup.com/emberjsdublin/
         image:    10dublin.png
@@ -194,6 +212,13 @@ locations:
         image:    20telaviv.png
       - location: Bangalore, India
         url:      http://www.meetup.com/EmberJS-Bangalore/
+        lat:      12.922103
+        lng:      77.595324
+        organizers:
+          - organizer: Sivakumar Kailasam
+            profileImage: http://photos2.meetupstatic.com/photos/member/8/a/4/highres_184022212.jpeg
+          - organizer: Sanjay Nambiar
+            profileImage: http://photos1.meetupstatic.com/photos/member/1/1/5/a/highres_184024442.jpeg
       - location: Tokyo, Japan
         url:      http://emberjs.doorkeeper.jp/
   - area: Oceania
@@ -205,4 +230,8 @@ locations:
         image:    18melbourne.png
       - location: Wellington, New Zealand
         url:      http://www.meetup.com/ember-js-wellington/
-
+        lat:      -41.298089
+        lng:      174.778310
+        organizers:
+          - organizer: Eoin Kelly
+            profileImage: http://photos4.meetupstatic.com/photos/member/1/d/6/c/highres_196567532.jpeg
