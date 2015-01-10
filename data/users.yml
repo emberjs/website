@@ -337,6 +337,8 @@
   image: ticketfly.png
 - url: http://www.dudamobile.com/
   image: duda.png
+- url: https://www.bookingsync.com
+  image: bookingsync.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
