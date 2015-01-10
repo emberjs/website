@@ -33,18 +33,51 @@ locations:
       - location: San Francisco, CA
         url:      http://www.meetup.com/Ember-SF/
         image:    07sanfrancisco.png
+        lat:      37.771959
+        lng:      -122.402223
+        organizers:
+          - organizer: Leah Silber
+            profileImage: http://photos1.meetupstatic.com/photos/member/9/1/a/c/highres_107077292.jpeg
+          - organizer: Bear Douglas
+            profileImage: http://photos3.meetupstatic.com/photos/member/5/b/4/d/highres_12323373.jpeg
+          - organizer: Kait Olson
+            profileImage: http://photos2.meetupstatic.com/photos/member/3/4/7/8/highres_163753432.jpeg
       - location: New York, NY
         url:      http://www.meetup.com/EmberJS-NYC/
         image:    04newyork.png
+        lat:      40.740314
+        lng:      -73.995068
+        organizers:
+          - organizer: Luke Melia
+            profileImage: http://photos3.meetupstatic.com/photos/member/5/6/3/8/highres_5902072.jpeg
+          - organizer: Jorge Davila
+            profileImage: http://photos2.meetupstatic.com/photos/member/9/b/6/6/highres_215499782.jpeg
+          - organizer: Kevin Prentiss
+            profileImage: http://photos3.meetupstatic.com/photos/member/8/9/5/3/highres_5855155.jpeg
       - location: Chicago, IL
         url:      http://www.meetup.com/Chicago-Ember-js/
         image:    03chicago.png
       - location: Boston, MA
         url:      http://www.meetup.com/Boston-Ember-js/
         image:    02boston.png
+        lat:      42.353270
+        lng:      -71.052556
+        organizers:
+          - organizer: Brian Cardarella
+          - organizer: Alex Navasardyan
+          - organizer: Dan McClain
+          - organizer: Robert Jackson
       - location: Atlanta, GA
         url:      http://www.meetup.com/Ember-Atlanta-Meetup/
         image:    01atlanta.png
+        lat:      33.759205
+        lng:      -84.331892
+        organizers:
+          - organizer: William Metz
+          - organizer: Chris McCuller
+            profileImage: http://photos2.meetupstatic.com/photos/member/a/5/3/4/highres_238302292.jpeg
+          - organizer: Shane Ballman
+            profileImage: http://photos4.meetupstatic.com/photos/member/b/d/4/e/highres_214428462.jpeg
       - location: Southern California, CA
         url:      http://www.meetup.com/Ember-SC/
         image:    05socal.png
@@ -59,6 +92,11 @@ locations:
       - location: Austin, TX
         url:      http://www.meetup.com/Ember-ATX/
         image:    16austin.png
+        lat:      30.305083
+        lng:      -97.743753
+        organizers:
+          - organizer: Brandon Hays
+            profileImage: http://photos4.meetupstatic.com/photos/member/c/e/2/4/highres_111832772.jpeg
       - location: Washington, DC
         url: http://www.meetup.com/Ember-JS-DC/
         image:    19washington.png
@@ -89,6 +127,13 @@ locations:
         image:    13ottawa.png
       - location: Vancouver, Canada
         url:      http://www.meetup.com/Vancouver-Ember-js/
+        lat:      49.280425
+        lng:      -123.106967
+        organizers:
+          - organizer: Godfrey Chan
+            profileImage: http://photos1.meetupstatic.com/photos/member/7/7/f/8/member_96750712.jpeg
+          - organizer: Paul Ruescher
+            profileImage: http://photos3.meetupstatic.com/photos/member/6/a/d/member_10561709.jpeg
       - location: San Juan, Puerto Rico
         url:      http://www.meetup.com/Ember-PR/
         image:    21puertorico.png
