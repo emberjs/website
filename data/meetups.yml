@@ -64,9 +64,13 @@ locations:
         lng:      -71.052556
         organizers:
           - organizer: Brian Cardarella
+            profileImage: http://photos1.meetupstatic.com/photos/member/1/6/0/a/highres_75605642.jpeg
           - organizer: Alex Navasardyan
+            profileImage: http://photos2.meetupstatic.com/photos/member/8/7/3/e/highres_55654622.jpeg
           - organizer: Dan McClain
+            profileImage: http://photos3.meetupstatic.com/photos/member/7/3/5/c/highres_77009532.jpeg
           - organizer: Robert Jackson
+            profileImage: http://photos1.meetupstatic.com/photos/member/8/2/a/c/member_138033452.jpeg
       - location: Atlanta, GA
         url:      http://www.meetup.com/Ember-Atlanta-Meetup/
         image:    01atlanta.png
