@@ -28,127 +28,132 @@ google_map:
             - visibility: off
 
 locations:
-  "North America":
-    - location: San Francisco, CA
-      url:      http://www.meetup.com/Ember-SF/
-      image:    07sanfrancisco.png
-    - location: New York, NY
-      url:      http://www.meetup.com/EmberJS-NYC/
-      image:    04newyork.png
-    - location: Chicago, IL
-      url:      http://www.meetup.com/Chicago-Ember-js/
-      image:    03chicago.png
-    - location: Boston, MA
-      url:      http://www.meetup.com/Boston-Ember-js/
-      image:    02boston.png
-    - location: Atlanta, GA
-      url:      http://www.meetup.com/Ember-Atlanta-Meetup/
-      image:    01atlanta.png
-    - location: Southern California, CA
-      url:      http://www.meetup.com/Ember-SC/
-      image:    05socal.png
-    - location: Philadelphia, PA
-      url:      http://www.meetup.com/Emberjs-Philly/
-      image:    06philadelphia.png
-    - location: Seattle, WA
-      url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
-      image:    08seattle.png
-    - location: St. Louis, MO
-      url:      http://www.meetup.com/STLEmber
-    - location: Austin, TX
-      url:      http://www.meetup.com/Ember-ATX/
-      image:    16austin.png
-    - location: Washington, DC
-      url: http://www.meetup.com/Ember-JS-DC/
-      image:    19washington.png
-    - location: Salt Lake City, UT
-      url: http://www.meetup.com/EmberJS-SLC
-    - location: Cincinnati, OH
-      url: http://www.meetup.com/Embernati
-    - location: Minneapolis / St. Paul, MN
-      url: http://www.meetup.com/Ember-Twin-Cities
-    - location: Portland, OR
-      url: http://www.meetup.com/Ember-PDX/
-    - location: Pittsburgh, PA
-      url:      http://www.meetup.com/Ember-js-Pittsburgh/
-    - location: Denver, CO
-      url:      http://www.meetup.com/Ember-js-Denver/
-    - location: Dallas, TX
-      url:      http://www.meetup.com/Ember-Dallas
-    - location: Orlando, FL
-      url:      http://www.meetup.com/Ember-js-Orlando/
-      image:    01orlando.png
-    - location: Indianapolis, IN
-      url:      http://www.meetup.com/Ember-js-Indianapolis/
-    - location: Toronto, Canada
-      url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
-      image:    15toronto.png
-    - location: Ottawa, Canada
-      url:      http://www.meetup.com/Ember-js-Ottawa/
-      image:    13ottawa.png
-    - location: Vancouver, Canada
-      url:      http://www.meetup.com/Vancouver-Ember-js/
-    - location: San Juan, Puerto Rico
-      url:      http://www.meetup.com/Ember-PR/
-      image:    21puertorico.png
-    - location: Calgary, Canada
-      url:      http://www.meetup.com/EmberJS-YYC/
-      image:    23calgary.png
-  "South America":
-    - location: São Paulo, Brazil
-      url:      http://www.meetup.com/Ember-js-Sao-Paulo/
-    - location: Belo Horizonte, Brazil
-      url:      http://www.meetup.com/Ember-BH/
-    - location: Montevideo, Uruguay
-      url:      http://www.meetup.com/ember-montevideo/
-  "Europe":
-    - location: Paris, France
-      url:      http://www.meetup.com/EmberJS-Paris/
-      image:    14paris.png
-    - location: London, UK
-      url:      http://emberlondon.com
-      image:    11london.png
-    - location: Dublin, Ireland
-      url:      http://www.meetup.com/emberjsdublin/
-      image:    10dublin.png
-    - location: Berlin, Germany
-      url:      http://www.meetup.com/Ember-js-Berlin/
-      image:    09berlin.png
-    - location: Munich, Germany
-      url:      http://www.meetup.com/Ember-js-Munich/
-      image:    12munich.png
-    - location: Göteborg, Sweden
-      url:      http://www.meetup.com/ember-js-goteborg/
-      image:    17goteborg.png
-    - location: Budapest, Hungary
-      url:      http://www.meetup.com/ember-bp/
-    - location: Oslo, Norway
-      url:      http://www.meetup.com/Ember-js-Oslo/
-    - location: Brussels, Belgium
-      url:      http://www.meetup.com/Ember-js-Brussels/
-    - location: Barcelona, Spain
-      url:      http://www.meetup.com/Ember-js-Barcelona/
-      image:    22barcelona.png
-    - location: Kyiv, Ukraine
-      url:      http://ember-club.kiev.ua
-    - location: Zürich, Switzerland
-      url:      http://www.meetup.com/Ember-js-Zurich/
-    - location: Amsterdam, the Netherlands
-      url:      http://www.meetup.com/Amsterdam-Ember-js/
-  "Asia":
-    - location: Tel Aviv, Israel
-      url:      http://www.meetup.com/Ember-IL/
-      image:    20telaviv.png
-    - location: Bangalore, India
-      url:      http://www.meetup.com/EmberJS-Bangalore/
-    - location: Tokyo, Japan
-      url:      http://emberjs.doorkeeper.jp/
-  "Oceania":
-    - location: Adelaide, Australia
-      url:      http://www.meetup.com/Ember-js-Adelaide
-    - location: Melbourne, Australia
-      url:      http://www.meetup.com/Ember-Melb-JS/
-      image:    18melbourne.png
-    - location: Wellington, New Zealand
-      url:      http://www.meetup.com/ember-js-wellington/
+  - area: North America
+    groups:
+      - location: San Francisco, CA
+        url:      http://www.meetup.com/Ember-SF/
+        image:    07sanfrancisco.png
+      - location: New York, NY
+        url:      http://www.meetup.com/EmberJS-NYC/
+        image:    04newyork.png
+      - location: Chicago, IL
+        url:      http://www.meetup.com/Chicago-Ember-js/
+        image:    03chicago.png
+      - location: Boston, MA
+        url:      http://www.meetup.com/Boston-Ember-js/
+        image:    02boston.png
+      - location: Atlanta, GA
+        url:      http://www.meetup.com/Ember-Atlanta-Meetup/
+        image:    01atlanta.png
+      - location: Southern California, CA
+        url:      http://www.meetup.com/Ember-SC/
+        image:    05socal.png
+      - location: Philadelphia, PA
+        url:      http://www.meetup.com/Emberjs-Philly/
+        image:    06philadelphia.png
+      - location: Seattle, WA
+        url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
+        image:    08seattle.png
+      - location: St. Louis, MO
+        url:      http://www.meetup.com/STLEmber
+      - location: Austin, TX
+        url:      http://www.meetup.com/Ember-ATX/
+        image:    16austin.png
+      - location: Washington, DC
+        url: http://www.meetup.com/Ember-JS-DC/
+        image:    19washington.png
+      - location: Salt Lake City, UT
+        url: http://www.meetup.com/EmberJS-SLC
+      - location: Cincinnati, OH
+        url: http://www.meetup.com/Embernati
+      - location: Minneapolis / St. Paul, MN
+        url: http://www.meetup.com/Ember-Twin-Cities
+      - location: Portland, OR
+        url: http://www.meetup.com/Ember-PDX/
+      - location: Pittsburgh, PA
+        url:      http://www.meetup.com/Ember-js-Pittsburgh/
+      - location: Denver, CO
+        url:      http://www.meetup.com/Ember-js-Denver/
+      - location: Dallas, TX
+        url:      http://www.meetup.com/Ember-Dallas
+      - location: Orlando, FL
+        url:      http://www.meetup.com/Ember-js-Orlando/
+        image:    01orlando.png
+      - location: Indianapolis, IN
+        url:      http://www.meetup.com/Ember-js-Indianapolis/
+      - location: Toronto, Canada
+        url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
+        image:    15toronto.png
+      - location: Ottawa, Canada
+        url:      http://www.meetup.com/Ember-js-Ottawa/
+        image:    13ottawa.png
+      - location: Vancouver, Canada
+        url:      http://www.meetup.com/Vancouver-Ember-js/
+      - location: San Juan, Puerto Rico
+        url:      http://www.meetup.com/Ember-PR/
+        image:    21puertorico.png
+      - location: Calgary, Canada
+        url:      http://www.meetup.com/EmberJS-YYC/
+        image:    23calgary.png
+  - area: South America
+    groups:
+      - location: São Paulo, Brazil
+        url:      http://www.meetup.com/Ember-js-Sao-Paulo/
+      - location: Belo Horizonte, Brazil
+        url:      http://www.meetup.com/Ember-BH/
+      - location: Montevideo, Uruguay
+        url:      http://www.meetup.com/ember-montevideo/
+  - area: Europe
+    groups:
+      - location: Paris, France
+        url:      http://www.meetup.com/EmberJS-Paris/
+        image:    14paris.png
+      - location: London, UK
+        url:      http://emberlondon.com
+        image:    11london.png
+      - location: Dublin, Ireland
+        url:      http://www.meetup.com/emberjsdublin/
+        image:    10dublin.png
+      - location: Berlin, Germany
+        url:      http://www.meetup.com/Ember-js-Berlin/
+        image:    09berlin.png
+      - location: Munich, Germany
+        url:      http://www.meetup.com/Ember-js-Munich/
+        image:    12munich.png
+      - location: Göteborg, Sweden
+        url:      http://www.meetup.com/ember-js-goteborg/
+        image:    17goteborg.png
+      - location: Budapest, Hungary
+        url:      http://www.meetup.com/ember-bp/
+      - location: Oslo, Norway
+        url:      http://www.meetup.com/Ember-js-Oslo/
+      - location: Brussels, Belgium
+        url:      http://www.meetup.com/Ember-js-Brussels/
+      - location: Barcelona, Spain
+        url:      http://www.meetup.com/Ember-js-Barcelona/
+        image:    22barcelona.png
+      - location: Kyiv, Ukraine
+        url:      http://ember-club.kiev.ua
+      - location: Zürich, Switzerland
+        url:      http://www.meetup.com/Ember-js-Zurich/
+      - location: Amsterdam, the Netherlands
+        url:      http://www.meetup.com/Amsterdam-Ember-js/
+  - area: Asia
+    groups:
+      - location: Tel Aviv, Israel
+        url:      http://www.meetup.com/Ember-IL/
+        image:    20telaviv.png
+      - location: Bangalore, India
+        url:      http://www.meetup.com/EmberJS-Bangalore/
+      - location: Tokyo, Japan
+        url:      http://emberjs.doorkeeper.jp/
+  - area: Oceania
+    groups:
+      - location: Adelaide, Australia
+        url:      http://www.meetup.com/Ember-js-Adelaide
+      - location: Melbourne, Australia
+        url:      http://www.meetup.com/Ember-Melb-JS/
+        image:    18melbourne.png
+      - location: Wellington, New Zealand
+        url:      http://www.meetup.com/ember-js-wellington/
 
