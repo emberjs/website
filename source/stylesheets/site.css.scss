@@ -1220,11 +1220,17 @@ body.meetups #content {
         margin: 15px 0;
         height: 40px;
       }
-      .profile {
+      .profile-img-wrapper {
         width: 40px;
         height: 40px;
         float: left;
         margin-right: 10px;
+        overflow: hidden;
+        background-color: #ddd;
+      }
+      .profile-img {
+        max-width: 40px;
+        margin: 0 auto;
       }
       .view {
         text-align: center;
