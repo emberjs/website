@@ -1237,8 +1237,11 @@ body.meetups #content {
   }
 
   .list {
-    h3 {
+    table {
       margin-top: 0.5em;
+    }
+    h3 {
+      margin-top: 1.5em;
     }
     h4 {
       color: #252525;
