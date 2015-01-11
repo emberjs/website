@@ -341,6 +341,13 @@ locations:
         image:    14paris.png
         lat:      48.856614
         lng:      2.3522219
+        organizers:
+          - organizer: Paul Chavard
+            profileImage: http://photos4.meetupstatic.com/photos/member/7/b/e/a/member_32311722.jpeg
+          - organizer: Mathieu Breton
+            profileImage: http://photos4.meetupstatic.com/photos/member/c/6/c/2/highres_51170882.jpeg
+          - organizer: Tom Coquereau
+            profileImage: http://photos2.meetupstatic.com/photos/member/d/0/e/0/highres_234773472.jpeg
       - location: London, UK
         url:      http://emberlondon.com
         image:    11london.png
@@ -358,6 +365,11 @@ locations:
         image:    10dublin.png
         lat:      53.3498053
         lng:      -6.2603097
+        organizers:
+          - organizer: Gavin Joyce
+            profileImage: http://photos3.meetupstatic.com/photos/member/c/b/f/4/highres_94732212.jpeg
+          - organizer: Ciarán Archer
+            profileImage: http://photos3.meetupstatic.com/photos/member/e/6/3/4/member_120538932.jpeg
       - location: Berlin, Germany
         url:      http://www.meetup.com/Ember-js-Berlin/
         image:    09berlin.png
@@ -377,6 +389,11 @@ locations:
         image:    12munich.png
         lat:      48.1351253
         lng:      11.5819806
+        organizers:
+          - organizer: Marco Otte-Witte
+            profileImage: http://photos3.meetupstatic.com/photos/member/9/2/b/a/highres_181417562.jpeg
+          - organizer: Thomas Reppa
+            profileImage: http://photos2.meetupstatic.com/photos/member/2/4/f/6/highres_93189462.jpeg
       - location: Göteborg, Sweden
         url:      http://www.meetup.com/ember-js-goteborg/
         image:    17goteborg.png
@@ -397,6 +414,11 @@ locations:
         url:      http://www.meetup.com/Ember-js-Oslo/
         lat:      59.9138688
         lng:      10.7522454
+        organizers:
+          - organizer: Joacim Haagen Skeie
+            profileImage: http://photos1.meetupstatic.com/photos/member/3/e/3/2/highres_102015922.jpeg
+          - organizer: Flamur Mavraj
+            profileImage: http://photos3.meetupstatic.com/photos/member/2/0/8/2/highres_76328322.jpeg
       - location: Brussels, Belgium
         url:      http://www.meetup.com/Ember-js-Brussels/
         lat:      50.8503396
@@ -420,10 +442,22 @@ locations:
         url:      http://ember-club.kiev.ua
         lat:      50.4501
         lng:      30.5234
+        organizers:
+          - organizer: Alex Opak
+            profileImage: http://www.gravatar.com/avatar/0176cdda497ae370046f1408f83e71bc
+          - organizer: Oleksandr Lapshyn
+            profileImage: http://www.gravatar.com/avatar/f21e9fc4411f39d96e21efb64790b130
+          - organizer: Evgeniy Kurtov
+            profileImage: http://www.gravatar.com/avatar/9aedca736ea2277b591ee4962658caea
+          - organizer: Aminov Vali
+            profileImage: http://www.gravatar.com/avatar/d86bc01af68feecdab84cbf801a52a38
       - location: Zürich, Switzerland
         url:      http://www.meetup.com/Ember-js-Zurich/
         lat:      47.3686498
         lng:      8.539182499999999
+        organizers:
+          - organizer: Claudio Romano
+            profileImage: http://photos3.meetupstatic.com/photos/member/4/f/9/8/highres_241760376.jpeg
       - location: Amsterdam, the Netherlands
         url:      http://www.meetup.com/Amsterdam-Ember-js/
         lat:      52.3702157
@@ -440,6 +474,11 @@ locations:
         image:    20telaviv.png
         lat:      32.0852999
         lng:      34.78176759999999
+        organizers:
+          - organizer: Oren Rubin
+            profileImage: http://photos2.meetupstatic.com/photos/member/d/d/c/4/member_112016772.jpeg
+          - organizer: Sergey Bolshchikov
+            profileImage: http://photos1.meetupstatic.com/photos/member/1/b/d/c/member_69787132.jpeg
       - location: Bangalore, India
         url:      http://www.meetup.com/EmberJS-Bangalore/
         lat:      12.922103
@@ -459,11 +498,19 @@ locations:
         url:      http://www.meetup.com/Ember-js-Adelaide
         lat:      -34.92862119999999
         lng:      138.5999594
+        organizers:
+          - organizer: Rahul Trikha
+            profileImage: http://photos3.meetupstatic.com/photos/member/3/d/5/c/highres_12495708.jpeg
+          - organizer: Jason Sidoryn
+            profileImage: http://photos4.meetupstatic.com/photos/member/c/4/a/6/highres_85790342.jpeg
       - location: Melbourne, Australia
         url:      http://www.meetup.com/Ember-Melb-JS/
         image:    18melbourne.png
         lat:      -37.814107
         lng:      144.96328
+        organizers:
+          - organizer: Tomas Spacek
+            profileImage: http://photos3.meetupstatic.com/photos/member/8/1/1/2/highres_115833042.jpeg
       - location: Wellington, New Zealand
         url:      http://www.meetup.com/ember-js-wellington/
         lat:      -41.298089
