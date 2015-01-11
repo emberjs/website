@@ -1302,21 +1302,16 @@ body.meetups #content {
   }
 
   .start {
-    // padding-top: 0;
-    // margin-top: 36px;
-    // border-left: solid 1px #d0d0d0;
-    h3 {
-      // margin-top: 0;
-      // text-align: center;
-      // color: #f23818;
-    }
     .image {
       @include hidpi('community/meetup', 'png');
       background-position: center top;
       float: left;
       width: 221px;
       height: 185px;
-      margin: -35px auto 0 auto;
+      margin: -35px 20px 0 auto;
+    }
+    p {
+      text-align: left;
     }
   }
 }
