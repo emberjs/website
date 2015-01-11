@@ -12,7 +12,7 @@ to handle the main outlet and a modal outlet:
 
 ```handlebars
 {{outlet}}
-{{outlet modal}}
+{{outlet 'modal'}}
 ```
 
 Then you can render a controller and template into the `modal` outlet.  Sending
