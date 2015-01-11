@@ -15,12 +15,8 @@
 
     groups.forEach( function(element){
 
-      if(typeof element.image == 'undefined'){
-        element.image = "map-pin.png";
-      }
-
       var markerIcon = {
-          "url": '/images/meetups/'+element.image,
+          "url": '/images/meetups/map-pin.png',
           "width": 20,
           "height": 28
       };
