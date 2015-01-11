@@ -24,6 +24,7 @@
           "width": 20,
           "height": 28
       };
+
       var orgMarkup = "";
       if(element.organizers){
         element.organizers.forEach( function(el){
@@ -40,8 +41,9 @@
       if(element.lat && element.lng){
         markerLocations.push(element);
       }
+
     });
-  }
+  };
 
   locations.forEach( generateMarkerData );
 
@@ -52,8 +54,34 @@
       drawMap();
     }
   } );
+
+  function bindLiToMarker(json_array) {
+    _.each(json_array, function(json){
+
+        var markerId = json.location.toLowerCase().replace(/\W/g, '');
+
+        $('#'+markerId).on('click', function(e){
+          e.preventDefault();
+          handler.getMap().setZoom(14);
+          json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
+          json.marker.panTo();
+          google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+        });
+
+      });
+
+  }
+
   function drawMap(position){
+
     var markers = handler.addMarkers(markerLocations);
+
+    _.each(markerLocations, function(json, index){
+      json.marker = markers[index];
+    });
+
+    bindLiToMarker(markerLocations);
+
     handler.bounds.extendWith(markers);
     if (position) {
       var marker = handler.addMarker({
