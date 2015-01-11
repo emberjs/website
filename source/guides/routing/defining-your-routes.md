@@ -186,7 +186,7 @@ and `resource` template.
 
 Routes nested under a resource take the name of the resource plus their
 name as their route name. If you want to transition to a route (either
-via `transitionTo` or `{{#link-to}}`), make sure to use the full route
+via `transitionToRoute` or `{{#link-to}}`), make sure to use the full route
 name (`posts.new`, not `new`).
 
 Visiting `/` renders the `index` template, as you would expect.
@@ -462,13 +462,13 @@ App.Router.map(function() {
 ```
 
 Like all routes with a dynamic segment, you must provide a context when using a `{{link-to}}`
-or `transitionTo` to programatically enter this route.
+or `transitionToRoute` to programatically enter this route.
 
 ```javascript
 App.ApplicationRoute = Ember.Route.extend({
   actions: {
     error: function () {
-      this.transitionTo('catchall', "application-error");
+      this.transitionToRoute('catchall', "application-error");
     }
   }
 });
