@@ -66,6 +66,9 @@
           json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
           json.marker.panTo();
           google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+          $("html, body").animate({
+            scrollTop:0
+          },"slow");
         });
 
       });
