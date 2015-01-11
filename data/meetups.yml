@@ -57,6 +57,14 @@ locations:
       - location: Chicago, IL
         url:      http://www.meetup.com/Chicago-Ember-js/
         image:    03chicago.png
+        lat: 41.896917
+        lng: -87.643547
+        organizers:
+          - organizer: Trek Glowacki
+            profileImage: http://photos2.meetupstatic.com/photos/member/b/2/1/8/member_192885592.jpeg
+          - organizer: Erik Bryn
+          - organizer: Sean Massa
+            profileImage: http://photos3.meetupstatic.com/photos/member/6/f/0/2/highres_9568418.jpeg
       - location: Boston, MA
         url:      http://www.meetup.com/Boston-Ember-js/
         image:    02boston.png
@@ -85,14 +93,22 @@ locations:
       - location: Southern California, CA
         url:      http://www.meetup.com/Ember-SC/
         image:    05socal.png
+        lat:      34.9592083
+        lng:      -116.419389
       - location: Philadelphia, PA
         url:      http://www.meetup.com/Emberjs-Philly/
         image:    06philadelphia.png
+        lat:      39.9525839
+        lng:      -75.1652215
       - location: Seattle, WA
         url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
         image:    08seattle.png
+        lat:      47.6062095
+        lng:      -122.3320708
       - location: St. Louis, MO
         url:      http://www.meetup.com/STLEmber
+        lat:      38.6270025
+        lng:      -90.19940419999999
       - location: Austin, TX
         url:      http://www.meetup.com/Ember-ATX/
         image:    16austin.png
@@ -102,33 +118,57 @@ locations:
           - organizer: Brandon Hays
             profileImage: http://photos4.meetupstatic.com/photos/member/c/e/2/4/highres_111832772.jpeg
       - location: Washington, DC
-        url: http://www.meetup.com/Ember-JS-DC/
+        url:      http://www.meetup.com/Ember-JS-DC/
         image:    19washington.png
+        lat:      38.9071923
+        lng:      -77.0368707
       - location: Salt Lake City, UT
-        url: http://www.meetup.com/EmberJS-SLC
+        url:      http://www.meetup.com/EmberJS-SLC
+        lat:      40.7607793
+        lng:      -111.8910474
       - location: Cincinnati, OH
-        url: http://www.meetup.com/Embernati
+        url:      http://www.meetup.com/Embernati
+        lat:      39.1031182
+        lng:      -84.5120196
       - location: Minneapolis / St. Paul, MN
-        url: http://www.meetup.com/Ember-Twin-Cities
+        url:      http://www.meetup.com/Ember-Twin-Cities
+        lat:      44.9716692
+        lng:      -93.2806134
       - location: Portland, OR
-        url: http://www.meetup.com/Ember-PDX/
+        url:      http://www.meetup.com/Ember-PDX/
+        lat:      45.5230622
+        lng:      -122.6764816
       - location: Pittsburgh, PA
         url:      http://www.meetup.com/Ember-js-Pittsburgh/
+        lat:      40.44062479999999
+        lng:      -79.9958864
       - location: Denver, CO
         url:      http://www.meetup.com/Ember-js-Denver/
+        lat:      39.7384357
+        lng:      -104.9848593
       - location: Dallas, TX
         url:      http://www.meetup.com/Ember-Dallas
+        lat:      32.7802618
+        lng:      -96.8009781
       - location: Orlando, FL
         url:      http://www.meetup.com/Ember-js-Orlando/
         image:    01orlando.png
+        lat:      28.5383355
+        lng:      -81.3792365
       - location: Indianapolis, IN
         url:      http://www.meetup.com/Ember-js-Indianapolis/
+        lat:      39.768403
+        lng:      -86.158068
       - location: Toronto, Canada
         url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
         image:    15toronto.png
+        lat:      43.653226
+        lng:      -79.3831843
       - location: Ottawa, Canada
         url:      http://www.meetup.com/Ember-js-Ottawa/
         image:    13ottawa.png
+        lat:      45.4215296
+        lng:      -75.69719309999999
       - location: Vancouver, Canada
         url:      http://www.meetup.com/Vancouver-Ember-js/
         lat:      49.280425
@@ -144,6 +184,13 @@ locations:
       - location: Calgary, Canada
         url:      http://www.meetup.com/EmberJS-YYC/
         image:    23calgary.png
+        lat:      51.031680
+        lng:      -114.071849
+        organizers:
+          - organizer: Sean Goresht
+            profileImage: http://photos1.meetupstatic.com/photos/member/1/2/4/a/member_118384682.jpeg
+          - organizer: Richard Bezeme
+            profileImage: http://photos3.meetupstatic.com/photos/member/6/a/2/4/highres_241647172.jpeg
   - area: South America
     groups:
       - location: São Paulo, Brazil
@@ -159,13 +206,19 @@ locations:
             profileImage: http://photos3.meetupstatic.com/photos/member/3/2/2/0/member_154812832.jpeg
       - location: Belo Horizonte, Brazil
         url:      http://www.meetup.com/Ember-BH/
+        lat:      -19.9166813
+        lng:      -43.9344931
       - location: Montevideo, Uruguay
         url:      http://www.meetup.com/ember-montevideo/
+        lat:      -34.9011127
+        lng:      -56.16453139999999
   - area: Europe
     groups:
       - location: Paris, France
         url:      http://www.meetup.com/EmberJS-Paris/
         image:    14paris.png
+        lat:      48.856614
+        lng:      2.3522219
       - location: London, UK
         url:      http://emberlondon.com
         image:    11london.png
@@ -181,35 +234,59 @@ locations:
       - location: Dublin, Ireland
         url:      http://www.meetup.com/emberjsdublin/
         image:    10dublin.png
+        lat:      53.3498053
+        lng:      -6.2603097
       - location: Berlin, Germany
         url:      http://www.meetup.com/Ember-js-Berlin/
         image:    09berlin.png
+        lat:      52.52000659999999
+        lng:      13.404954
       - location: Munich, Germany
         url:      http://www.meetup.com/Ember-js-Munich/
         image:    12munich.png
+        lat:      48.1351253
+        lng:      11.5819806
       - location: Göteborg, Sweden
         url:      http://www.meetup.com/ember-js-goteborg/
         image:    17goteborg.png
+        lat:      57.70887
+        lng:      11.97456
       - location: Budapest, Hungary
         url:      http://www.meetup.com/ember-bp/
+        lat:      47.497912
+        lng:      19.040235
       - location: Oslo, Norway
         url:      http://www.meetup.com/Ember-js-Oslo/
+        lat:      59.9138688
+        lng:      10.7522454
       - location: Brussels, Belgium
         url:      http://www.meetup.com/Ember-js-Brussels/
+        lat:      50.8503396
+        lng:      4.3517103
       - location: Barcelona, Spain
         url:      http://www.meetup.com/Ember-js-Barcelona/
         image:    22barcelona.png
+        lat:      41.3850639
+        lng:      2.1734035
       - location: Kyiv, Ukraine
         url:      http://ember-club.kiev.ua
+        lat:      50.4501
+        lng:      30.5234
       - location: Zürich, Switzerland
         url:      http://www.meetup.com/Ember-js-Zurich/
+        lat:      47.3686498
+        lng:      8.539182499999999
       - location: Amsterdam, the Netherlands
         url:      http://www.meetup.com/Amsterdam-Ember-js/
+        lat:      52.3702157
+        lng:      4.895167900000001
   - area: Asia
     groups:
       - location: Tel Aviv, Israel
         url:      http://www.meetup.com/Ember-IL/
         image:    20telaviv.png
+        lat:      32.0852999
+        lng:      34.78176759999999
       - location: Bangalore, India
         url:      http://www.meetup.com/EmberJS-Bangalore/
         lat:      12.922103
@@ -221,13 +298,19 @@ locations:
             profileImage: http://photos1.meetupstatic.com/photos/member/1/1/5/a/highres_184024442.jpeg
       - location: Tokyo, Japan
         url:      http://emberjs.doorkeeper.jp/
+        lat:      35.7090259
+        lng:      139.7319925
   - area: Oceania
     groups:
       - location: Adelaide, Australia
         url:      http://www.meetup.com/Ember-js-Adelaide
+        lat:      -34.92862119999999
+        lng:      138.5999594
       - location: Melbourne, Australia
         url:      http://www.meetup.com/Ember-Melb-JS/
         image:    18melbourne.png
+        lat:      -37.814107
+        lng:      144.96328
       - location: Wellington, New Zealand
         url:      http://www.meetup.com/ember-js-wellington/
         lat:      -41.298089
