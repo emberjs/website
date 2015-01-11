@@ -92,6 +92,6 @@
       handler.map.centerOn(marker);
       handler.bounds.extendWith(marker);
     }
-    handler.fitMapToBounds();
+    handler.getMap().setZoom(8)
   }
 })();
