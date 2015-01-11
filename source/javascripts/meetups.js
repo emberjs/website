@@ -57,6 +57,8 @@
         var markerId = json.location.toLowerCase().replace(/\W/g, '');
 
         $('#'+markerId).on('click', function(e){
+          $('.meetups.list .active').removeClass('active');
+          $(this).addClass("active");
           e.preventDefault();
           handler.getMap().setZoom(14);
           json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker

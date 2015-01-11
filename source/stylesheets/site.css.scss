@@ -1285,6 +1285,9 @@ body.meetups #content {
       a {
         border: none;
         display: inline-block;
+        &.active {
+          font-weight: bold;
+        }
       }
     }
   }
