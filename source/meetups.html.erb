@@ -14,18 +14,18 @@ title: "Meetups"
 <div class="meetups section list">
   <table class="columns">
     <tr>
+      <% balance(data.meetups.locations.map { |l| { l.area => l.groups } }.reduce(:merge), 3).each do |column| %>
       <td>
-        <% data.meetups.locations.each  do |locations| %>
-          <td>
-            <h3><%= locations.area %></h3>
-            <ul>
-              <% locations.groups.sort_by(&:location).each do |group| %>
-                <li><%= link_to group.location, group.url, :id => group.location.downcase.gsub(/[^0-9a-z ]/i, '').delete(' ') %></li>
-              <% end %>
-            </ul>
-          </td>
+        <% column.each do |name, groups| %>
+        <h3><%= name %></h3>
+        <ul>
+          <% groups.sort_by(&:location).each do |group| %>
+          <li><%= link_to group.location, group.url %></li>
+          <% end %>
+        </ul>
         <% end %>
       </td>
+      <% end %>
     </tr>
   </table>
 </div>
@@ -42,4 +42,3 @@ title: "Meetups"
 </div>
 
 <script src="/javascripts/meetups.js"></script>
-
