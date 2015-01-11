@@ -13,14 +13,16 @@ title: "Meetups"
 <div class="meetups section list">
   <table class="columns">
     <tr>
-      <% data.meetups.locations.each do |name, groups| %>
+      <% balance(data.meetups.locations, 3).each do |column| %>
         <td>
-          <h3><%= name %></h3>
-          <ul>
-            <% groups.sort_by(&:location).each do |group| %>
-              <li><%= link_to group.location, group.url %></li>
-            <% end %>
-          </ul>
+          <% column.each do |name, groups| %>
+            <h3><%= name %></h3>
+            <ul>
+              <% groups.sort_by(&:location).each do |group| %>
+                <li><%= link_to group.location, group.url %></li>
+              <% end %>
+            </ul>
+          <% end %>
         </td>
       <% end %>
     </tr>
@@ -39,4 +41,3 @@ title: "Meetups"
 </div>
 
 <script src="/javascripts/meetups.js"></script>
-
