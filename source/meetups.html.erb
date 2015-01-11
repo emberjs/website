@@ -2,28 +2,29 @@
 title: "Meetups"
 ---
 
-<h1>Meetups around the world</h1>
+<h1>Meetups Around the World</h1>
 
 <div class="meetups section map">
   <h2>Find a meetup in your city</h2>
   <meta name="mapOptions" content='<%= data.meetups.google_map.options.to_json %>'>
+  <meta name="locations" content='<%= data.meetups.locations.to_json %>'>
   <div id="map"></div>
 </div>
 
 <div class="meetups section list">
   <table class="columns">
     <tr>
-      <% balance(data.meetups.locations, 3).each do |column| %>
-        <td>
-          <% column.each do |name, groups| %>
-            <h3><%= name %></h3>
-            <ul>
-              <% groups.sort_by(&:location).each do |group| %>
-                <li><%= link_to group.location, group.url %></li>
-              <% end %>
-            </ul>
+      <% balance(data.meetups.locations.map { |l| { l.area => l.groups } }.reduce(:merge), 3).each do |column| %>
+      <td>
+        <% column.each do |name, groups| %>
+        <h3><%= name %></h3>
+        <ul>
+          <% groups.sort_by(&:location).each do |group| %>
+          <li><%= link_to group.location, group.url %></li>
           <% end %>
-        </td>
+        </ul>
+        <% end %>
+      </td>
       <% end %>
     </tr>
   </table>
@@ -32,6 +33,12 @@ title: "Meetups"
 <div class="meetups section start">
   <h2>Start your own meetup</h2>
   <div class="image"></div>
+  <p>
+    Ready to start a Meetup in your area? Fantastic news—appreciate you stepping up! Running a solid meetup isn't all that complicated, but it <em>can</em> be intimidating: <br />we'd love to help you ease into it.
+  </p>
+  <p>
+    <a href="mailto:meetups@emberjs.com">Send us a note</a> and we'll get you some pro tips and starter advice. Also happy to introduce you to other organizers, help brainstorm, find speakers, and be a general sounding board for new ideas. Whatever we can do.
+  </p>
 </div>
 
 <script src="/javascripts/meetups.js"></script>
