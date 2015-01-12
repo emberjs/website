@@ -44,37 +44,35 @@
   locations.forEach( generateMarkerData );
 
   handler.buildMap(mapOptions, function() {
+    drawMap();
+
     if(navigator.geolocation) {
-      var geoLocation = navigator.geolocation.getCurrentPosition(drawMap);
-    } else {
-      drawMap();
+      var geoLocation = navigator.geolocation.getCurrentPosition(function(position) {
+        zoomToPosition(position);
+      });
     }
-  } );
+  });
 
   function bindLiToMarker(json_array) {
     _.each(json_array, function(json){
 
-        var markerId = json.location.toLowerCase().replace(/\W/g, '');
+      var markerId = json.location.toLowerCase().replace(/\W/g, '');
 
-        $('#'+markerId).on('click', function(e){
-          $('.meetups.list .active').removeClass('active');
-          $(this).addClass("active");
-          e.preventDefault();
-          handler.getMap().setZoom(14);
-          json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
-          json.marker.panTo();
-          google.maps.event.trigger(json.marker.getServiceObject(), 'click');
-          $("html, body").animate({
-            scrollTop:0
-          },"slow");
-        });
-
+      $('#'+markerId).on('click', function(e){
+        $('.meetups.list .active').removeClass('active');
+        $(this).addClass("active");
+        e.preventDefault();
+        json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
+        json.marker.panTo();
+        google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+        $("html, body").animate({
+          scrollTop:0
+        },"slow");
       });
-
+    });
   }
 
   function drawMap(position){
-
     var markers = handler.addMarkers(markerLocations);
 
     _.each(markerLocations, function(json, index){
@@ -84,6 +82,10 @@
     bindLiToMarker(markerLocations);
 
     handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  }
+
+  function zoomToPosition(position) {
     if (position) {
       var marker = handler.addMarker({
         lat: position.coords.latitude,
@@ -91,7 +93,7 @@
       });
       handler.map.centerOn(marker);
       handler.bounds.extendWith(marker);
+      handler.getMap().setZoom(8)
     }
-    handler.getMap().setZoom(8)
   }
 })();
