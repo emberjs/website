@@ -44,7 +44,7 @@
   locations.forEach( generateMarkerData );
 
   handler.buildMap(mapOptions, function() {
-    if(navigator.geolocation) {
+    if("geolocation" in navigator && 'geolocation' in window) {
       var geoLocation = navigator.geolocation.getCurrentPosition(function(position) {
         drawMap(position);
       });
