@@ -30,7 +30,7 @@ environment, implemented in pure JavaScript. That's exactly what we've
 done, thanks to the work of Kris Selden and his [simple-dom](https://github.com/krisselden/simple-dom)
 library.
 
-Importantly, `simple-dom` implements a very, very small subset of the W3C
+Importantly, `simple-dom` implements a very, very small subset of the WHATWG
 DOM specification, optimized for performance, and for the requirements
 of the Ember view layer. For example, it does not implement any part of
 the DOM that would require the use of accessors; it's just an attempt to
