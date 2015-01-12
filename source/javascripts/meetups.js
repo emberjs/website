@@ -45,7 +45,9 @@
 
   handler.buildMap(mapOptions, function() {
     if(navigator.geolocation) {
-      var geoLocation = navigator.geolocation.getCurrentPosition(drawMap);
+      var geoLocation = navigator.geolocation.getCurrentPosition(function(position) {
+        drawMap(position);
+      });
     } else {
       drawMap();
     }
