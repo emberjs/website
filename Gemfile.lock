@@ -65,6 +65,7 @@ GEM
     execjs (2.2.2)
     ffi (1.9.6)
     ffi (1.9.6-x86-mingw32)
+    gmaps4rails (2.1.2)
     haml (4.0.6)
       tilt
     handlebars-source (2.0.0)
@@ -194,6 +195,7 @@ GEM
     uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.7.0)
     wdm (0.1.0)
     websocket-driver (0.5.1)
       websocket-extensions (>= 0.1.0)
@@ -212,6 +214,7 @@ DEPENDENCIES
   capybara
   coderay!
   ember-middleman
+  gmaps4rails
   highline
   listen
   middleman (~> 3.0)
@@ -227,4 +230,5 @@ DEPENDENCIES
   rspec
   thin
   tzinfo-data
+  underscore-rails
   wdm (>= 0.1.0)
