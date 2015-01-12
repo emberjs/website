@@ -1,5 +1,25 @@
 (function() {
-  var handler = Gmaps.build('Google'),
+  var handler = Gmaps.build('Google', {
+        markers: {
+          clusterer: {
+            styles: [
+              {
+                textSize: 10,
+                textColor: 'blue',
+                url: '/images/meetups/map-pin_x2.png',
+                height: 26,
+                width: 30
+              }, {
+                textSize: 12,
+                textColor: 'yellow',
+                url: '/images/meetups/map-pin_x2.png',
+                height: 35,
+                width: 40
+              }
+            ]
+          }
+        }
+      }),
       mapOptions = $('meta[name=mapOptions]').attr('content');
       locations = $('meta[name=locations]').attr('content');
 
