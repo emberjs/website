@@ -27,7 +27,7 @@
           if( typeof el.profileImage == 'undefined'){
             el.profileImage = "http://photos3.meetupstatic.com/photos/member/d/c/7/0/highres_179096432.jpeg";
           }
-          orgMarkup += "<div class='organizer'><img src='"+el.profileImage+"' class='profile'><strong>"+el.organizer+"</strong><br>Organizer</div>";
+          orgMarkup += "<div class='organizer'><div class='profile-img-wrapper'><img src='"+el.profileImage+"' class='profile-img'></div><strong>"+el.organizer+"</strong><br>Organizer</div>";
         });
       }
 
@@ -59,6 +59,8 @@
         var markerId = json.location.toLowerCase().replace(/\W/g, '');
 
         $('#'+markerId).on('click', function(e){
+          $('.meetups.list .active').removeClass('active');
+          $(this).addClass("active");
           e.preventDefault();
           handler.getMap().setZoom(14);
           json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
@@ -92,6 +94,6 @@
       handler.map.centerOn(marker);
       handler.bounds.extendWith(marker);
     }
-    handler.fitMapToBounds();
+    handler.getMap().setZoom(8)
   }
 })();
