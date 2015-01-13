@@ -25,6 +25,10 @@ App.Router.reopen({
 });
 ```
 
+You can tell Ember to use the best location option based on browser support by
+specifying `auto` for the location. Ember will then use `history` if supported
+by the user's browser and fall back to `hash` otherwise.
+
 Finally, if you don't want the browser's URL to interact with your application
 at all, you can disable the location API entirely. This is useful for
 testing, or when you need to manage state with your Router, but temporarily
