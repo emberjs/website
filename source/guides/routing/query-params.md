@@ -306,7 +306,7 @@ App.ArticlesController = Ember.ArrayController.extend({
     showMagnifyingGlass: {
       scope: "controller"
     }
-  ]
+  }]
 });
 ```
 
