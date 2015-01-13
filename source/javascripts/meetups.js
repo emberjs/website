@@ -45,7 +45,9 @@
 
   handler.buildMap(mapOptions, function() {
     if(navigator.geolocation) {
-      var geoLocation = navigator.geolocation.getCurrentPosition(drawMap);
+      var geoLocation = navigator.geolocation.getCurrentPosition(drawMap, function(){
+        drawMap();
+      });
     } else {
       drawMap();
     }
@@ -91,7 +93,10 @@
       });
       handler.map.centerOn(marker);
       handler.bounds.extendWith(marker);
+      handler.getMap().setZoom(8)
     }
-    handler.getMap().setZoom(8)
+    else {
+      handler.fitMapToBounds();
+    }
   }
 })();
