@@ -77,15 +77,19 @@ module MeetupsData
     end
 
     def get_organizers(meetup_urlname)
+      api_key = '7b6b15214f6e154232b7f3c6d417762'
 
-      api_call = "https://api.meetup.com/2/groups?group_urlname=#{meetup_urlname}&key=4916132d485b32663336351f342b3d6a"
-
-      conn = Faraday.new(:url => api_call) do |faraday|
-        faraday.request  :url_encoded             # form-encode POST params
-        faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+      conn = Faraday.new(:url => 'https://api.meetup.com') do |faraday|
+        faraday.request  :url_encoded
+        faraday.adapter  Faraday.default_adapter
       end
 
-      group_response = conn.get '/2/groups', { :group_urlname => meetup_urlname, :key => '4916132d485b32663336351f342b3d6a' }
+      group_response = conn.get '/2/groups', { :group_urlname => meetup_urlname, :key => api_key }
+
+      if (group_response.status != 200)
+        puts "Unable to get data from meetup.com check you have a valid API key"
+        return false
+      end
 
       json = JSON.parse(group_response.body)
 
@@ -93,7 +97,7 @@ module MeetupsData
         results = json['results'][0]
         organizer = results['organizer'].to_hash
 
-        profile_response = conn.get '/2/members', { :member_id => organizer['member_id'], :key => '4916132d485b32663336351f342b3d6a' }
+        profile_response = conn.get '/2/members', { :member_id => organizer['member_id'], :key => api_key }
         json = JSON.parse(profile_response.body)
 
         profile = Hash.new
@@ -108,6 +112,7 @@ module MeetupsData
         end
 
         data["organizers"] = profile
+        puts "Found organizer for #{data["location"]}"
 
       end
 
