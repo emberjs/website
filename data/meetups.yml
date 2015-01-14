@@ -50,6 +50,8 @@
     image:    01orlando.png
   - location: Indianapolis, IN
     url:      http://www.meetup.com/Ember-js-Indianapolis/
+  - location: Riverside, CA
+    url:      http://www.meetup.com/Ember-Riverside-Meetup/
 "Worldwide":
   - location: Calgary, Canada
     url:      http://www.meetup.com/EmberJS-YYC/
