@@ -1,3 +1,4 @@
+---
 google_map:
   options:
     internal:
@@ -5,516 +6,520 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
-        - featureType: road
-          elementType: geometry
-          stylers:
-            - lightness: 100
-            - visibility: simplified
-        - featureType: road
-          elementType: labels
-          stylers:
-            - visibility: off
-        - featureType: poi
-          stylers:
-            - visibility: off
-        - featureType: poi
-          elementType: labels.text
-          stylers:
-            - visibility: off
-        - featureType: transit
-          stylers:
-            - visibility: off
-
+      - featureType: road
+        elementType: geometry
+        stylers:
+        - lightness: 100
+        - visibility: simplified
+      - featureType: road
+        elementType: labels
+        stylers:
+        - visibility: false
+      - featureType: poi
+        stylers:
+        - visibility: false
+      - featureType: poi
+        elementType: labels.text
+        stylers:
+        - visibility: false
+      - featureType: transit
+        stylers:
+        - visibility: false
 locations:
-  - area: North America
-    groups:
-      - location: San Francisco, CA
-        url:      http://www.meetup.com/Ember-SF/
-        image:    07sanfrancisco.png
-        lat:      37.771959
-        lng:      -122.402223
-        organizers:
-          - organizer: Leah Silber
-            profileImage: http://photos1.meetupstatic.com/photos/member/9/1/a/c/thumb_107077292.jpeg
-          - organizer: Bear Douglas
-            profileImage: http://photos3.meetupstatic.com/photos/member/5/b/4/d/thumb_12323373.jpeg
-          - organizer: Kait Olson
-            profileImage: http://photos2.meetupstatic.com/photos/member/3/4/7/8/thumb_163753432.jpeg
-      - location: New York, NY
-        url:      http://www.meetup.com/EmberJS-NYC/
-        image:    04newyork.png
-        lat:      40.740314
-        lng:      -73.995068
-        organizers:
-          - organizer: Luke Melia
-            profileImage: http://photos3.meetupstatic.com/photos/member/5/6/3/8/thumb_5902072.jpeg
-          - organizer: Jorge Davila
-            profileImage: http://photos2.meetupstatic.com/photos/member/9/b/6/6/thumb_215499782.jpeg
-          - organizer: Kevin Prentiss
-            profileImage: http://photos3.meetupstatic.com/photos/member/8/9/5/3/thumb_5855155.jpeg
-      - location: Chicago, IL
-        url:      http://www.meetup.com/Chicago-Ember-js/
-        image:    03chicago.png
-        lat: 41.896917
-        lng: -87.643547
-        organizers:
-          - organizer: Trek Glowacki
-            profileImage: http://photos2.meetupstatic.com/photos/member/b/2/1/8/thumb_192885592.jpeg
-          - organizer: Erik Bryn
-          - organizer: Sean Massa
-            profileImage: http://photos3.meetupstatic.com/photos/member/6/f/0/2/thumb_9568418.jpeg
-      - location: Boston, MA
-        url:      http://www.meetup.com/Boston-Ember-js/
-        image:    02boston.png
-        lat:      42.353270
-        lng:      -71.052556
-        organizers:
-          - organizer: Brian Cardarella
-            profileImage: http://photos1.meetupstatic.com/photos/member/1/6/0/a/thumb_75605642.jpeg
-          - organizer: Alex Navasardyan
-            profileImage: http://photos2.meetupstatic.com/photos/member/8/7/3/e/thumb_55654622.jpeg
-          - organizer: Dan McClain
-            profileImage: http://photos3.meetupstatic.com/photos/member/7/3/5/c/thumb_77009532.jpeg
-          - organizer: Robert Jackson
-            profileImage: http://photos1.meetupstatic.com/photos/member/8/2/a/c/thumb_138033452.jpeg
-      - location: Atlanta, GA
-        url:      http://www.meetup.com/Ember-Atlanta-Meetup/
-        image:    01atlanta.png
-        lat:      33.759205
-        lng:      -84.331892
-        organizers:
-          - organizer: William Metz
-          - organizer: Chris McCuller
-            profileImage: http://photos2.meetupstatic.com/photos/member/a/5/3/4/thumb_238302292.jpeg
-          - organizer: Shane Ballman
-            profileImage: http://photos4.meetupstatic.com/photos/member/b/d/4/e/thumb_214428462.jpeg
-      - location: Southern California, CA
-        url:      http://www.meetup.com/Ember-SC/
-        image:    05socal.png
-        lat:      34.9592083
-        lng:      -116.419389
-        organizers:
-          - organizer: Jay Phelps
-            profileImage: http://photos3.meetupstatic.com/photos/member/2/5/0/a/thumb_157329482.jpeg
-          - organizer: Bill Heaton
-            profileImage: http://photos1.meetupstatic.com/photos/member/b/1/9/6/thumb_131385462.jpeg
-          - organizer: Drew Purdy
-            profileImage: http://photos2.meetupstatic.com/photos/member/2/0/8/2/thumb_42788322.jpeg
-      - location: Philadelphia, PA
-        url:      http://www.meetup.com/Emberjs-Philly/
-        image:    06philadelphia.png
-        lat:      39.9525839
-        lng:      -75.1652215
-        organizers:
-          - organizer: Mike Nicholaides­
-            profileImage: http://photos3.meetupstatic.com/photos/member/c/8/1/6/thumb_167391222.jpeg
-          - organizer: Brendan OHara
-            profileImage: http://photos4.meetupstatic.com/photos/member/d/6/0/8/thumb_178194792.jpeg
-          - organizer: Max Minkoff
-            profileImage: http://photos2.meetupstatic.com/photos/member/8/6/e/e/thumb_75454542.jpeg
-      - location: Seattle, WA
-        url:      http://www.meetup.com/Ember-js-Seattle-Meetup/
-        image:    08seattle.png
-        lat:      47.6062095
-        lng:      -122.3320708
-        organizers:
-          - organizer: Gordon Hempton
-            profileImage: http://photos3.meetupstatic.com/photos/member/9/d/1/e/thumb_38560222.jpeg
-          - organizer: Dave Laird
-            profileImage: http://photos1.meetupstatic.com/photos/member/b/8/3/a/thumb_24347162.jpeg
-          - organizer: Kristofor Selden
-            profileImage: http://photos2.meetupstatic.com/photos/member/9/6/f/c/thumb_57458652.jpeg
-          - organizer: Wes Hather
-            profileImage: http://photos4.meetupstatic.com/photos/member/3/f/0/e/thumb_85396142.jpeg
-      - location: St. Louis, MO
-        url:      http://www.meetup.com/STLEmber
-        lat:      38.6270025
-        lng:      -90.19940419999999
-        organizers:
-          - organizer: Kerrick Long
-            profileImage: http://photos2.meetupstatic.com/photos/member/3/4/0/a/thumb_122293322.jpeg
-          - organizer: Blake Mills
-            profileImage: http://photos4.meetupstatic.com/photos/member/2/e/6/0/thumb_24851872.jpeg
-      - location: Austin, TX
-        url:      http://www.meetup.com/Ember-ATX/
-        image:    16austin.png
-        lat:      30.305083
-        lng:      -97.743753
-        organizers:
-          - organizer: Brandon Hays
-            profileImage: http://photos4.meetupstatic.com/photos/member/c/e/2/4/thumb_111832772.jpeg
-      - location: Washington, DC
-        url:      http://www.meetup.com/Ember-JS-DC/
-        image:    19washington.png
-        lat:      38.9071923
-        lng:      -77.0368707
-        organizers:
-          - organizer: Greg Hurlman
-            profileImage: http://photos3.meetupstatic.com/photos/member/5/f/3/4/thumb_201804372.jpeg
-          - organizer: Allison
-            profileImage: http://photos3.meetupstatic.com/photos/member/3/5/e/a/thumb_39973802.jpeg
-          - organizer: Matt Leibel
-            profileImage: http://photos4.meetupstatic.com/photos/member/9/1/d/e/thumb_159757342.jpeg
-      - location: Salt Lake City, UT
-        url:      http://www.meetup.com/EmberJS-SLC
-        lat:      40.7607793
-        lng:      -111.8910474
-        organizers:
-          - organizer: Eric Berry
-            profileImage: http://photos3.meetupstatic.com/photos/member/b/2/2/c/thumb_121245612.jpeg
-          - organizer: Bob Hanson
-            profileImage: http://photos1.meetupstatic.com/photos/member/5/a/8/e/thumb_148523182.jpeg
-          - organizer: Deric Abel
-            profileImage: http://photos3.meetupstatic.com/photos/member/3/f/5/e/thumb_134596222.jpeg
-          - organizer: Jason Madsen
-            profileImage: http://photos4.meetupstatic.com/photos/member/6/7/c/5/thumb_4766565.jpeg
-          - organizer: Ryan Florence
-            profileImage: http://photos1.meetupstatic.com/photos/member/d/c/f/2/thumb_120776562.jpeg
-      - location: Cincinnati, OH
-        url:      http://www.meetup.com/Embernati
-        lat:      39.1031182
-        lng:      -84.5120196
-        organizers:
-          - organizer: Chris Moore
-            profileImage: http://photos1.meetupstatic.com/photos/member/9/2/2/e/thumb_135217422.jpeg
-          - organizer: Mitchell Lloyd
-            profileImage: http://photos2.meetupstatic.com/photos/member/a/a/d/4/thumb_57943732.jpeg
-          - organizer: Merrilee Luke-Ebbeler
-            profileImage: http://photos4.meetupstatic.com/photos/member/5/a/0/c/thumb_157403052.jpeg
-      - location: Minneapolis / St. Paul, MN
-        url:      http://www.meetup.com/Ember-Twin-Cities
-        lat:      44.9716692
-        lng:      -93.2806134
-        organizers:
-          - organizer: Jacob Quant
-            profileImage: http://photos4.meetupstatic.com/photos/member/d/9/5/a/thumb_168415642.jpeg
-          - organizer: Seth Phillips
-            profileImage: http://photos4.meetupstatic.com/photos/member/6/4/3/e/thumb_218605662.jpeg
-      - location: Portland, OR
-        url:      http://www.meetup.com/Ember-PDX/
-        lat:      45.5230622
-        lng:      -122.6764816
-        organizers:
-          - organizer: Leah Silber
-            profileImage: http://photos1.meetupstatic.com/photos/member/9/1/a/c/thumb_107077292.jpeg
-          - organizer: Kait Olson
-            profileImage: http://photos2.meetupstatic.com/photos/member/3/4/7/8/thumb_163753432.jpeg
-      - location: Pittsburgh, PA
-        url:      http://www.meetup.com/Ember-js-Pittsburgh/
-        lat:      40.44062479999999
-        lng:      -79.9958864
-        organizers:
-          - organizer: Craig Teegarden
-            profileImage: http://photos1.meetupstatic.com/photos/member/c/7/8/0/thumb_167211072.jpeg
-          - organizer: Steve Cotter
-            profileImage: http://photos3.meetupstatic.com/photos/member/9/b/a/c/thumb_167979852.jpeg
-          - organizer: Steve McCarthy
-            profileImage: http://photos4.meetupstatic.com/photos/member/d/f/a/4/thumb_126537252.jpeg
-      - location: Denver, CO
-        url:      http://www.meetup.com/Ember-js-Denver/
-        lat:      39.7384357
-        lng:      -104.9848593
-        organizers:
-          - organizer: Ian Storz
-            profileImage: http://photos1.meetupstatic.com/photos/member/4/7/c/e/thumb_130038382.jpeg
-          - organizer: Alex Brinkman
-            profileImage: http://photos2.meetupstatic.com/photos/member/6/1/6/e/thumb_52644942.jpeg
-          - organizer: Bobby Wilson
-            profileImage: http://photos3.meetupstatic.com/photos/member/a/c/1/4/thumb_86924052.jpeg
-          - organizer: Brandon, Frankie
-            profileImage: http://photos3.meetupstatic.com/photos/member/6/a/5/6/thumb_97647222.jpeg
-      - location: Dallas, TX
-        url:      http://www.meetup.com/Ember-Dallas
-        lat:      32.7802618
-        lng:      -96.8009781
-        organizers:
-          - organizer: Matthew Marcum
-          - organizer: Jeremy Brown
-            profileImage: http://photos2.meetupstatic.com/photos/member/2/5/e/6/thumb_200649702.jpeg
-          - organizer: Joshua Cochran
-            profileImage: http://photos4.meetupstatic.com/photos/member/c/b/c/2/thumb_219832162.jpeg
-      - location: Orlando, FL
-        url:      http://www.meetup.com/Ember-js-Orlando/
-        image:    01orlando.png
-        lat:      28.5383355
-        organizers:
-          - organizer: Robert DeLuca
-            profileImage: http://photos3.meetupstatic.com/photos/member/e/9/1/8/thumb_160439672.jpeg
-          - organizer: Ben Hanzl
-            profileImage: http://photos2.meetupstatic.com/photos/member/a/5/2/a/thumb_95742282.jpeg
-        lng:      -81.3792365
-      - location: Indianapolis, IN
-        url:      http://www.meetup.com/Ember-js-Indianapolis/
-        lat:      39.768403
-        lng:      -86.158068
-        organizers:
-          - organizer: Joe Heth
-            profileImage: http://photos4.meetupstatic.com/photos/member/3/c/e/5/thumb_242415589.jpeg
-      - location: Toronto, Canada
-        url:      http://www.meetup.com/Toronto-Ember-JS-Meetup/
-        image:    15toronto.png
-        lat:      43.653226
-        lng:      -79.3831843
-        organizers:
-          - organizer: Meghann Millard
-            profileImage: http://photos3.meetupstatic.com/photos/member/a/d/a/e/thumb_11084462.jpeg
-          - organizer: Robin Ward
-            profileImage: http://photos3.meetupstatic.com/photos/member/1/5/7/4/thumb_177125492.jpeg
-          - organizer: Carsten N.
-            profileImage: http://photos3.meetupstatic.com/photos/member/2/5/5/a/thumb_177129562.jpeg
-          - organizer: Mattia G.
-            profileImage: http://photos4.meetupstatic.com/photos/member/4/c/e/c/thumb_77659692.jpeg
-          - organizer: Justin G.
-            profileImage: http://photos2.meetupstatic.com/photos/member/8/c/d/c/thumb_12036060.jpeg
-      - location: Ottawa, Canada
-        url:      http://www.meetup.com/Ember-js-Ottawa/
-        image:    13ottawa.png
-        lat:      45.4215296
-        lng:      -75.69719309999999
-        organizers:
-          - organizer: Owain
-            profileImage: http://photos2.meetupstatic.com/photos/member/7/9/d/c/thumb_11191196.jpeg
-          - organizer: Thomas Martineau
-            profileImage: http://photos1.meetupstatic.com/photos/member/a/1/2/e/thumb_99701262.jpeg
-      - location: Vancouver, Canada
-        url:      http://www.meetup.com/Vancouver-Ember-js/
-        lat:      49.280425
-        lng:      -123.106967
-        organizers:
-          - organizer: Godfrey Chan
-            profileImage: http://photos1.meetupstatic.com/photos/member/7/7/f/8/thumb_96750712.jpeg
-          - organizer: Paul Ruescher
-            profileImage: http://photos3.meetupstatic.com/photos/member/6/a/d/thumb_10561709.jpeg
-      - location: San Juan, Puerto Rico
-        url:      http://www.meetup.com/Ember-PR/
-        image:    21puertorico.png
-        lat: 18.4663338
-        lng: -66.1057217
-        organizers:
-          - organizer: Giovanni Collazo
-            profileImage: http://photos4.meetupstatic.com/photos/member/a/d/9/9/thumb_241964441.jpeg
-      - location: Calgary, Canada
-        url:      http://www.meetup.com/EmberJS-YYC/
-        image:    23calgary.png
-        lat:      51.031680
-        lng:      -114.071849
-        organizers:
-          - organizer: Sean Goresht
-            profileImage: http://photos1.meetupstatic.com/photos/member/1/2/4/a/thumb_118384682.jpeg
-          - organizer: Richard Bezeme
-            profileImage: http://photos3.meetupstatic.com/photos/member/6/a/2/4/thumb_241647172.jpeg
-  - area: South America
-    groups:
-      - location: São Paulo, Brazil
-        url:      http://www.meetup.com/Ember-js-Sao-Paulo/
-        lat:      -23.577786
-        lng:      -46.673846
-        organizers:
-          - organizer: Lourenzo Ferreira
-            profileImage: http://photos2.meetupstatic.com/photos/member/b/6/0/0/thumb_158206592.jpeg
-          - organizer: Paulo Pires
-            profileImage: http://photos1.meetupstatic.com/photos/member/b/0/e/c/thumb_172305292.jpeg
-          - organizer: Beto Muniz
-            profileImage: http://photos3.meetupstatic.com/photos/member/3/2/2/0/thumb_154812832.jpeg
-      - location: Belo Horizonte, Brazil
-        url:      http://www.meetup.com/Ember-BH/
-        lat:      -19.9166813
-        lng:      -43.9344931
-        organizers:
-          - organizer: Fabrício Tavares
-            profileImage: http://photos4.meetupstatic.com/photos/member/1/1/6/4/thumb_119464452.jpeg
-      - location: Montevideo, Uruguay
-        url:      http://www.meetup.com/ember-montevideo/
-        lat:      -34.9011127
-        lng:      -56.16453139999999
-        organizers:
-          - organizer: Adrián Mugnolo
-            profileImage: http://photos1.meetupstatic.com/photos/member/9/6/a/c/thumb_131018572.jpeg
-          - organizer: Santiago Ferreira
-            profileImage: http://photos4.meetupstatic.com/photos/member/2/6/3/6/thumb_156729782.jpeg
-  - area: Europe
-    groups:
-      - location: Paris, France
-        url:      http://www.meetup.com/EmberJS-Paris/
-        image:    14paris.png
-        lat:      48.856614
-        lng:      2.3522219
-        organizers:
-          - organizer: Paul Chavard
-            profileImage: http://photos4.meetupstatic.com/photos/member/7/b/e/a/thumb_32311722.jpeg
-          - organizer: Mathieu Breton
-            profileImage: http://photos4.meetupstatic.com/photos/member/c/6/c/2/thumb_51170882.jpeg
-          - organizer: Tom Coquereau
-            profileImage: http://photos2.meetupstatic.com/photos/member/d/0/e/0/thumb_234773472.jpeg
-      - location: London, UK
-        url:      http://emberlondon.com
-        image:    11london.png
-        lat:      51.520860
-        lng:      -0.077703
-        organizers:
-          - organizer: Jamie White
-            profileImage: http://photos4.meetupstatic.com/photos/member/f/3/4/thumb_65523892.jpeg
-          - organizer: Karl Freeman
-            profileImage: http://photos1.meetupstatic.com/photos/member/9/9/4/a/thumb_240099242.jpeg
-          - organizer: Ken Snyder
-            profileImage: http://photos2.meetupstatic.com/photos/member/1/f/6/thumb_38040502.jpeg
-      - location: Dublin, Ireland
-        url:      http://www.meetup.com/emberjsdublin/
-        image:    10dublin.png
-        lat:      53.3498053
-        lng:      -6.2603097
-        organizers:
-          - organizer: Gavin Joyce
-            profileImage: http://photos3.meetupstatic.com/photos/member/c/b/f/4/thumb_94732212.jpeg
-          - organizer: Ciarán Archer
-            profileImage: http://photos3.meetupstatic.com/photos/member/e/6/3/4/thumb_120538932.jpeg
-      - location: Berlin, Germany
-        url:      http://www.meetup.com/Ember-js-Berlin/
-        image:    09berlin.png
-        lat:      52.52000659999999
-        lng:      13.404954
-        organizers:
-          - organizer: Matthew Beale
-            profileImage: http://photos4.meetupstatic.com/photos/member/5/8/f/thumb_7501423.jpeg
-          - organizer: Alexandre Sutra
-            profileImage: http://photos1.meetupstatic.com/photos/member/6/2/b/8/thumb_117805272.jpeg
-          - organizer: Robert Barbey
-            profileImage: http://photos2.meetupstatic.com/photos/member/7/5/a/thumb_102061882.jpeg
-          - organizer: Jordane R.
-            profileImage: http://photos4.meetupstatic.com/photos/member/a/f/c/0/thumb_222224992.jpeg
-      - location: Munich, Germany
-        url:      http://www.meetup.com/Ember-js-Munich/
-        image:    12munich.png
-        lat:      48.1351253
-        lng:      11.5819806
-        organizers:
-          - organizer: Marco Otte-Witte
-            profileImage: http://photos3.meetupstatic.com/photos/member/9/2/b/a/thumb_181417562.jpeg
-          - organizer: Thomas Reppa
-            profileImage: http://photos2.meetupstatic.com/photos/member/2/4/f/6/thumb_93189462.jpeg
-      - location: Göteborg, Sweden
-        url:      http://www.meetup.com/ember-js-goteborg/
-        image:    17goteborg.png
-        lat:      57.70887
-        lng:      11.97456
-      - location: Budapest, Hungary
-        url:      http://www.meetup.com/ember-bp/
-        lat:      47.497912
-        lng:      19.040235
-        organizers:
-          - organizer: Gabor Babicz
-            profileImage: http://photos4.meetupstatic.com/photos/member/4/9/c/2/thumb_110778882.jpeg
-          - organizer: Balint Erdi
-            profileImage: http://photos4.meetupstatic.com/photos/member/e/7/8/6/thumb_5099270.jpeg
-          - organizer: Tóth Dávid
-            profileImage: http://photos2.meetupstatic.com/photos/member/4/7/4/c/thumb_105438252.jpeg
-      - location: Oslo, Norway
-        url:      http://www.meetup.com/Ember-js-Oslo/
-        lat:      59.9138688
-        lng:      10.7522454
-        organizers:
-          - organizer: Joacim Haagen Skeie
-            profileImage: http://photos1.meetupstatic.com/photos/member/3/e/3/2/thumb_102015922.jpeg
-          - organizer: Flamur Mavraj
-            profileImage: http://photos3.meetupstatic.com/photos/member/2/0/8/2/thumb_76328322.jpeg
-      - location: Brussels, Belgium
-        url:      http://www.meetup.com/Ember-js-Brussels/
-        lat:      50.8503396
-        lng:      4.3517103
-        organizers:
-          - organizer: Yoran Brondsema
-            profileImage: http://photos2.meetupstatic.com/photos/member/6/b/a/0/thumb_142947552.jpeg
-          - organizer: madnificent
-            profileImage: http://photos2.meetupstatic.com/photos/member/3/1/b/c/thumb_204432732.jpeg
-      - location: Barcelona, Spain
-        url:      http://www.meetup.com/Ember-js-Barcelona/
-        image:    22barcelona.png
-        lat:      41.3850639
-        lng:      2.1734035
-        organizers:
-          - organizer: Tair
-            profileImage: http://photos4.meetupstatic.com/photos/member/1/a/9/2/thumb_166206802.jpeg
-          - organizer: Miguel Camba
-            profileImage: http://photos4.meetupstatic.com/photos/member/5/2/1/f/thumb_12381023.jpeg
-      - location: Kyiv, Ukraine
-        url:      http://ember-club.kiev.ua
-        lat:      50.4501
-        lng:      30.5234
-        organizers:
-          - organizer: Alex Opak
-            profileImage: http://www.gravatar.com/avatar/0176cdda497ae370046f1408f83e71bc
-          - organizer: Oleksandr Lapshyn
-            profileImage: http://www.gravatar.com/avatar/f21e9fc4411f39d96e21efb64790b130
-          - organizer: Evgeniy Kurtov
-            profileImage: http://www.gravatar.com/avatar/9aedca736ea2277b591ee4962658caea
-          - organizer: Aminov Vali
-            profileImage: http://www.gravatar.com/avatar/d86bc01af68feecdab84cbf801a52a38
-      - location: Zürich, Switzerland
-        url:      http://www.meetup.com/Ember-js-Zurich/
-        lat:      47.3686498
-        lng:      8.539182499999999
-        organizers:
-          - organizer: Claudio Romano
-            profileImage: http://photos3.meetupstatic.com/photos/member/4/f/9/8/thumb_241760376.jpeg
-      - location: Amsterdam, the Netherlands
-        url:      http://www.meetup.com/Amsterdam-Ember-js/
-        lat:      52.3702157
-        lng:      4.895167900000001
-        organizers:
-          - organizer: Ben Konrath
-            profileImage: http://photos4.meetupstatic.com/photos/member/9/2/7/e/thumb_84877502.jpeg
-          - organizer: Dennis Tel
-            profileImage: http://photos3.meetupstatic.com/photos/member/d/3/2/4/thumb_162114052.jpeg
-  - area: Asia
-    groups:
-      - location: Tel Aviv, Israel
-        url:      http://www.meetup.com/Ember-IL/
-        image:    20telaviv.png
-        lat:      32.0852999
-        lng:      34.78176759999999
-        organizers:
-          - organizer: Oren Rubin
-            profileImage: http://photos2.meetupstatic.com/photos/member/d/d/c/4/thumb_112016772.jpeg
-          - organizer: Sergey Bolshchikov
-            profileImage: http://photos1.meetupstatic.com/photos/member/1/b/d/c/thumb_69787132.jpeg
-      - location: Bangalore, India
-        url:      http://www.meetup.com/EmberJS-Bangalore/
-        lat:      12.922103
-        lng:      77.595324
-        organizers:
-          - organizer: Sivakumar Kailasam
-            profileImage: http://photos2.meetupstatic.com/photos/member/8/a/4/thumb_184022212.jpeg
-          - organizer: Sanjay Nambiar
-            profileImage: http://photos1.meetupstatic.com/photos/member/1/1/5/a/thumb_184024442.jpeg
-      - location: Tokyo, Japan
-        url:      http://emberjs.doorkeeper.jp/
-        lat:      35.7090259
-        lng:      139.7319925
-  - area: Oceania
-    groups:
-      - location: Adelaide, Australia
-        url:      http://www.meetup.com/Ember-js-Adelaide
-        lat:      -34.92862119999999
-        lng:      138.5999594
-        organizers:
-          - organizer: Rahul Trikha
-            profileImage: http://photos3.meetupstatic.com/photos/member/3/d/5/c/thumb_12495708.jpeg
-          - organizer: Jason Sidoryn
-            profileImage: http://photos4.meetupstatic.com/photos/member/c/4/a/6/thumb_85790342.jpeg
-      - location: Melbourne, Australia
-        url:      http://www.meetup.com/Ember-Melb-JS/
-        image:    18melbourne.png
-        lat:      -37.814107
-        lng:      144.96328
-        organizers:
-          - organizer: Tomas Spacek
-            profileImage: http://photos3.meetupstatic.com/photos/member/8/1/1/2/thumb_115833042.jpeg
-      - location: Wellington, New Zealand
-        url:      http://www.meetup.com/ember-js-wellington/
-        lat:      -41.298089
-        lng:      174.778310
-        organizers:
-          - organizer: Eoin Kelly
-            profileImage: http://photos4.meetupstatic.com/photos/member/1/d/6/c/thumb_196567532.jpeg
+- area: North America
+  groups:
+  - location: San Francisco, CA
+    url: http://www.meetup.com/Ember-SF/
+    image: 07sanfrancisco.png
+    lat: 37.771959
+    lng: -122.402223
+    organizers:
+    - organizer: Leah Silber
+      profileImage: http://photos1.meetupstatic.com/photos/member/9/1/a/c/thumb_107077292.jpeg
+    - organizer: Bear Douglas
+      profileImage: http://photos3.meetupstatic.com/photos/member/5/b/4/d/thumb_12323373.jpeg
+    - organizer: Kait Olson
+      profileImage: http://photos2.meetupstatic.com/photos/member/3/4/7/8/thumb_163753432.jpeg
+  - location: New York, NY
+    url: http://www.meetup.com/EmberJS-NYC/
+    image: 04newyork.png
+    lat: 40.740314
+    lng: -73.995068
+    organizers:
+    - organizer: Luke Melia
+      profileImage: http://photos3.meetupstatic.com/photos/member/5/6/3/8/thumb_5902072.jpeg
+    - organizer: Jorge Davila
+      profileImage: http://photos2.meetupstatic.com/photos/member/9/b/6/6/thumb_215499782.jpeg
+    - organizer: Kevin Prentiss
+      profileImage: http://photos3.meetupstatic.com/photos/member/8/9/5/3/thumb_5855155.jpeg
+  - location: Chicago, IL
+    url: http://www.meetup.com/Chicago-Ember-js/
+    image: 03chicago.png
+    lat: 41.896917
+    lng: -87.643547
+    organizers:
+    - organizer: Trek Glowacki
+      profileImage: http://photos2.meetupstatic.com/photos/member/b/2/1/8/thumb_192885592.jpeg
+    - organizer: Erik Bryn
+    - organizer: Sean Massa
+      profileImage: http://photos3.meetupstatic.com/photos/member/6/f/0/2/thumb_9568418.jpeg
+  - location: Boston, MA
+    url: http://www.meetup.com/Boston-Ember-js/
+    image: 02boston.png
+    lat: 42.35327
+    lng: -71.052556
+    organizers:
+    - organizer: Brian Cardarella
+      profileImage: http://photos1.meetupstatic.com/photos/member/1/6/0/a/thumb_75605642.jpeg
+    - organizer: Alex Navasardyan
+      profileImage: http://photos2.meetupstatic.com/photos/member/8/7/3/e/thumb_55654622.jpeg
+    - organizer: Dan McClain
+      profileImage: http://photos3.meetupstatic.com/photos/member/7/3/5/c/thumb_77009532.jpeg
+    - organizer: Robert Jackson
+      profileImage: http://photos1.meetupstatic.com/photos/member/8/2/a/c/thumb_138033452.jpeg
+  - location: Atlanta, GA
+    url: http://www.meetup.com/Ember-Atlanta-Meetup/
+    image: 01atlanta.png
+    lat: 33.759205
+    lng: -84.331892
+    organizers:
+    - organizer: William Metz
+    - organizer: Chris McCuller
+      profileImage: http://photos2.meetupstatic.com/photos/member/a/5/3/4/thumb_238302292.jpeg
+    - organizer: Shane Ballman
+      profileImage: http://photos4.meetupstatic.com/photos/member/b/d/4/e/thumb_214428462.jpeg
+  - location: Southern California, CA
+    url: http://www.meetup.com/Ember-SC/
+    image: 05socal.png
+    lat: 34.9592083
+    lng: -116.419389
+    organizers:
+    - organizer: Jay Phelps
+      profileImage: http://photos3.meetupstatic.com/photos/member/2/5/0/a/thumb_157329482.jpeg
+    - organizer: Bill Heaton
+      profileImage: http://photos1.meetupstatic.com/photos/member/b/1/9/6/thumb_131385462.jpeg
+    - organizer: Drew Purdy
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/0/8/2/thumb_42788322.jpeg
+  - location: Philadelphia, PA
+    url: http://www.meetup.com/Emberjs-Philly/
+    image: 06philadelphia.png
+    lat: 39.9525839
+    lng: -75.1652215
+    organizers:
+    - organizer: Mike Nicholaides­
+      profileImage: http://photos3.meetupstatic.com/photos/member/c/8/1/6/thumb_167391222.jpeg
+    - organizer: Brendan OHara
+      profileImage: http://photos4.meetupstatic.com/photos/member/d/6/0/8/thumb_178194792.jpeg
+    - organizer: Max Minkoff
+      profileImage: http://photos2.meetupstatic.com/photos/member/8/6/e/e/thumb_75454542.jpeg
+  - location: Seattle, WA
+    url: http://www.meetup.com/Ember-js-Seattle-Meetup/
+    image: 08seattle.png
+    lat: 47.6062095
+    lng: -122.3320708
+    organizers:
+    - organizer: Gordon Hempton
+      profileImage: http://photos3.meetupstatic.com/photos/member/9/d/1/e/thumb_38560222.jpeg
+    - organizer: Dave Laird
+      profileImage: http://photos1.meetupstatic.com/photos/member/b/8/3/a/thumb_24347162.jpeg
+    - organizer: Kristofor Selden
+      profileImage: http://photos2.meetupstatic.com/photos/member/9/6/f/c/thumb_57458652.jpeg
+    - organizer: Wes Hather
+      profileImage: http://photos4.meetupstatic.com/photos/member/3/f/0/e/thumb_85396142.jpeg
+  - location: St. Louis, MO
+    url: http://www.meetup.com/STLEmber
+    lat: 38.6270025
+    lng: -90.19940419999999
+    organizers:
+    - organizer: Kerrick Long
+      profileImage: http://photos2.meetupstatic.com/photos/member/3/4/0/a/thumb_122293322.jpeg
+    - organizer: Blake Mills
+      profileImage: http://photos4.meetupstatic.com/photos/member/2/e/6/0/thumb_24851872.jpeg
+  - location: Austin, TX
+    url: http://www.meetup.com/Ember-ATX/
+    image: 16austin.png
+    lat: 30.305083
+    lng: -97.743753
+    organizers:
+    - organizer: Brandon Hays
+      profileImage: http://photos4.meetupstatic.com/photos/member/c/e/2/4/thumb_111832772.jpeg
+  - location: Washington, DC
+    url: http://www.meetup.com/Ember-JS-DC/
+    image: 19washington.png
+    lat: 38.9071923
+    lng: -77.0368707
+    organizers:
+    - organizer: Greg Hurlman
+      profileImage: http://photos3.meetupstatic.com/photos/member/5/f/3/4/thumb_201804372.jpeg
+    - organizer: Allison
+      profileImage: http://photos3.meetupstatic.com/photos/member/3/5/e/a/thumb_39973802.jpeg
+    - organizer: Matt Leibel
+      profileImage: http://photos4.meetupstatic.com/photos/member/9/1/d/e/thumb_159757342.jpeg
+  - location: Salt Lake City, UT
+    url: http://www.meetup.com/EmberJS-SLC
+    lat: 40.7607793
+    lng: -111.8910474
+    organizers:
+    - organizer: Eric Berry
+      profileImage: http://photos3.meetupstatic.com/photos/member/b/2/2/c/thumb_121245612.jpeg
+    - organizer: Bob Hanson
+      profileImage: http://photos1.meetupstatic.com/photos/member/5/a/8/e/thumb_148523182.jpeg
+    - organizer: Deric Abel
+      profileImage: http://photos3.meetupstatic.com/photos/member/3/f/5/e/thumb_134596222.jpeg
+    - organizer: Jason Madsen
+      profileImage: http://photos4.meetupstatic.com/photos/member/6/7/c/5/thumb_4766565.jpeg
+    - organizer: Ryan Florence
+      profileImage: http://photos1.meetupstatic.com/photos/member/d/c/f/2/thumb_120776562.jpeg
+  - location: Cincinnati, OH
+    url: http://www.meetup.com/Embernati
+    lat: 39.1031182
+    lng: -84.5120196
+    organizers:
+    - organizer: Chris Moore
+      profileImage: http://photos1.meetupstatic.com/photos/member/9/2/2/e/thumb_135217422.jpeg
+    - organizer: Mitchell Lloyd
+      profileImage: http://photos2.meetupstatic.com/photos/member/a/a/d/4/thumb_57943732.jpeg
+    - organizer: Merrilee Luke-Ebbeler
+      profileImage: http://photos4.meetupstatic.com/photos/member/5/a/0/c/thumb_157403052.jpeg
+  - location: Minneapolis / St. Paul, MN
+    url: http://www.meetup.com/Ember-Twin-Cities
+    lat: 44.9716692
+    lng: -93.2806134
+    organizers:
+    - organizer: Jacob Quant
+      profileImage: http://photos4.meetupstatic.com/photos/member/d/9/5/a/thumb_168415642.jpeg
+    - organizer: Seth Phillips
+      profileImage: http://photos4.meetupstatic.com/photos/member/6/4/3/e/thumb_218605662.jpeg
+  - location: Portland, OR
+    url: http://www.meetup.com/Ember-PDX/
+    lat: 45.5230622
+    lng: -122.6764816
+    organizers:
+    - organizer: Leah Silber
+      profileImage: http://photos1.meetupstatic.com/photos/member/9/1/a/c/thumb_107077292.jpeg
+    - organizer: Kait Olson
+      profileImage: http://photos2.meetupstatic.com/photos/member/3/4/7/8/thumb_163753432.jpeg
+  - location: Pittsburgh, PA
+    url: http://www.meetup.com/Ember-js-Pittsburgh/
+    lat: 40.44062479999999
+    lng: -79.9958864
+    organizers:
+    - organizer: Craig Teegarden
+      profileImage: http://photos1.meetupstatic.com/photos/member/c/7/8/0/thumb_167211072.jpeg
+    - organizer: Steve Cotter
+      profileImage: http://photos3.meetupstatic.com/photos/member/9/b/a/c/thumb_167979852.jpeg
+    - organizer: Steve McCarthy
+      profileImage: http://photos4.meetupstatic.com/photos/member/d/f/a/4/thumb_126537252.jpeg
+  - location: Denver, CO
+    url: http://www.meetup.com/Ember-js-Denver/
+    lat: 39.7384357
+    lng: -104.9848593
+    organizers:
+    - organizer: Ian Storz
+      profileImage: http://photos1.meetupstatic.com/photos/member/4/7/c/e/thumb_130038382.jpeg
+    - organizer: Alex Brinkman
+      profileImage: http://photos2.meetupstatic.com/photos/member/6/1/6/e/thumb_52644942.jpeg
+    - organizer: Bobby Wilson
+      profileImage: http://photos3.meetupstatic.com/photos/member/a/c/1/4/thumb_86924052.jpeg
+    - organizer: Brandon, Frankie
+      profileImage: http://photos3.meetupstatic.com/photos/member/6/a/5/6/thumb_97647222.jpeg
+  - location: Dallas, TX
+    url: http://www.meetup.com/Ember-Dallas
+    lat: 32.7802618
+    lng: -96.8009781
+    organizers:
+    - organizer: Matthew Marcum
+    - organizer: Jeremy Brown
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/5/e/6/thumb_200649702.jpeg
+    - organizer: Joshua Cochran
+      profileImage: http://photos4.meetupstatic.com/photos/member/c/b/c/2/thumb_219832162.jpeg
+  - location: Orlando, FL
+    url: http://www.meetup.com/Ember-js-Orlando/
+    image: 01orlando.png
+    lat: 28.5383355
+    organizers:
+    - organizer: Robert DeLuca
+      profileImage: http://photos3.meetupstatic.com/photos/member/e/9/1/8/thumb_160439672.jpeg
+    - organizer: Ben Hanzl
+      profileImage: http://photos2.meetupstatic.com/photos/member/a/5/2/a/thumb_95742282.jpeg
+    lng: -81.3792365
+  - location: Indianapolis, IN
+    url: http://www.meetup.com/Ember-js-Indianapolis/
+    lat: 39.768403
+    lng: -86.158068
+    organizers:
+    - organizer: Joe Heth
+      profileImage: http://photos4.meetupstatic.com/photos/member/3/c/e/5/thumb_242415589.jpeg
+  - location: Toronto, Canada
+    url: http://www.meetup.com/Toronto-Ember-JS-Meetup/
+    image: 15toronto.png
+    lat: 43.653226
+    lng: -79.3831843
+    organizers:
+    - organizer: Meghann Millard
+      profileImage: http://photos3.meetupstatic.com/photos/member/a/d/a/e/thumb_11084462.jpeg
+    - organizer: Robin Ward
+      profileImage: http://photos3.meetupstatic.com/photos/member/1/5/7/4/thumb_177125492.jpeg
+    - organizer: Carsten N.
+      profileImage: http://photos3.meetupstatic.com/photos/member/2/5/5/a/thumb_177129562.jpeg
+    - organizer: Mattia G.
+      profileImage: http://photos4.meetupstatic.com/photos/member/4/c/e/c/thumb_77659692.jpeg
+    - organizer: Justin G.
+      profileImage: http://photos2.meetupstatic.com/photos/member/8/c/d/c/thumb_12036060.jpeg
+  - location: Ottawa, Canada
+    url: http://www.meetup.com/Ember-js-Ottawa/
+    image: 13ottawa.png
+    lat: 45.4215296
+    lng: -75.69719309999999
+    organizers:
+    - organizer: Owain
+      profileImage: http://photos2.meetupstatic.com/photos/member/7/9/d/c/thumb_11191196.jpeg
+    - organizer: Thomas Martineau
+      profileImage: http://photos1.meetupstatic.com/photos/member/a/1/2/e/thumb_99701262.jpeg
+  - location: Vancouver, Canada
+    url: http://www.meetup.com/Vancouver-Ember-js/
+    lat: 49.280425
+    lng: -123.106967
+    organizers:
+    - organizer: Godfrey Chan
+      profileImage: http://photos1.meetupstatic.com/photos/member/7/7/f/8/thumb_96750712.jpeg
+    - organizer: Paul Ruescher
+      profileImage: http://photos3.meetupstatic.com/photos/member/6/a/d/thumb_10561709.jpeg
+  - location: San Juan, Puerto Rico
+    url: http://www.meetup.com/Ember-PR/
+    image: 21puertorico.png
+    lat: 18.4663338
+    lng: -66.1057217
+    organizers:
+    - organizer: Giovanni Collazo
+      profileImage: http://photos4.meetupstatic.com/photos/member/a/d/9/9/thumb_241964441.jpeg
+  - location: Calgary, Canada
+    url: http://www.meetup.com/EmberJS-YYC/
+    image: 23calgary.png
+    lat: 51.03168
+    lng: -114.071849
+    organizers:
+    - organizer: Sean Goresht
+      profileImage: http://photos1.meetupstatic.com/photos/member/1/2/4/a/thumb_118384682.jpeg
+    - organizer: Richard Bezeme
+      profileImage: http://photos3.meetupstatic.com/photos/member/6/a/2/4/thumb_241647172.jpeg
+  - location: Riverside, CA
+    url: http://www.meetup.com/Ember-Riverside-Meetup/
+    organizers:
+      organizer: Judd Lillestrand
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/1/d/6/thumb_59348662.jpeg
+- area: South America
+  groups:
+  - location: São Paulo, Brazil
+    url: http://www.meetup.com/Ember-js-Sao-Paulo/
+    lat: -23.577786
+    lng: -46.673846
+    organizers:
+    - organizer: Lourenzo Ferreira
+      profileImage: http://photos2.meetupstatic.com/photos/member/b/6/0/0/thumb_158206592.jpeg
+    - organizer: Paulo Pires
+      profileImage: http://photos1.meetupstatic.com/photos/member/b/0/e/c/thumb_172305292.jpeg
+    - organizer: Beto Muniz
+      profileImage: http://photos3.meetupstatic.com/photos/member/3/2/2/0/thumb_154812832.jpeg
+  - location: Belo Horizonte, Brazil
+    url: http://www.meetup.com/Ember-BH/
+    lat: -19.9166813
+    lng: -43.9344931
+    organizers:
+    - organizer: Fabrício Tavares
+      profileImage: http://photos4.meetupstatic.com/photos/member/1/1/6/4/thumb_119464452.jpeg
+  - location: Montevideo, Uruguay
+    url: http://www.meetup.com/ember-montevideo/
+    lat: -34.9011127
+    lng: -56.16453139999999
+    organizers:
+    - organizer: Adrián Mugnolo
+      profileImage: http://photos1.meetupstatic.com/photos/member/9/6/a/c/thumb_131018572.jpeg
+    - organizer: Santiago Ferreira
+      profileImage: http://photos4.meetupstatic.com/photos/member/2/6/3/6/thumb_156729782.jpeg
+- area: Europe
+  groups:
+  - location: Paris, France
+    url: http://www.meetup.com/EmberJS-Paris/
+    image: 14paris.png
+    lat: 48.856614
+    lng: 2.3522219
+    organizers:
+    - organizer: Paul Chavard
+      profileImage: http://photos4.meetupstatic.com/photos/member/7/b/e/a/thumb_32311722.jpeg
+    - organizer: Mathieu Breton
+      profileImage: http://photos4.meetupstatic.com/photos/member/c/6/c/2/thumb_51170882.jpeg
+    - organizer: Tom Coquereau
+      profileImage: http://photos2.meetupstatic.com/photos/member/d/0/e/0/thumb_234773472.jpeg
+  - location: London, UK
+    url: http://emberlondon.com
+    image: 11london.png
+    lat: 51.52086
+    lng: -0.077703
+    organizers:
+    - organizer: Jamie White
+      profileImage: http://photos4.meetupstatic.com/photos/member/f/3/4/thumb_65523892.jpeg
+    - organizer: Karl Freeman
+      profileImage: http://photos1.meetupstatic.com/photos/member/9/9/4/a/thumb_240099242.jpeg
+    - organizer: Ken Snyder
+      profileImage: http://photos2.meetupstatic.com/photos/member/1/f/6/thumb_38040502.jpeg
+  - location: Dublin, Ireland
+    url: http://www.meetup.com/emberjsdublin/
+    image: 10dublin.png
+    lat: 53.3498053
+    lng: -6.2603097
+    organizers:
+    - organizer: Gavin Joyce
+      profileImage: http://photos3.meetupstatic.com/photos/member/c/b/f/4/thumb_94732212.jpeg
+    - organizer: Ciarán Archer
+      profileImage: http://photos3.meetupstatic.com/photos/member/e/6/3/4/thumb_120538932.jpeg
+  - location: Berlin, Germany
+    url: http://www.meetup.com/Ember-js-Berlin/
+    image: 09berlin.png
+    lat: 52.52000659999999
+    lng: 13.404954
+    organizers:
+    - organizer: Matthew Beale
+      profileImage: http://photos4.meetupstatic.com/photos/member/5/8/f/thumb_7501423.jpeg
+    - organizer: Alexandre Sutra
+      profileImage: http://photos1.meetupstatic.com/photos/member/6/2/b/8/thumb_117805272.jpeg
+    - organizer: Robert Barbey
+      profileImage: http://photos2.meetupstatic.com/photos/member/7/5/a/thumb_102061882.jpeg
+    - organizer: Jordane R.
+      profileImage: http://photos4.meetupstatic.com/photos/member/a/f/c/0/thumb_222224992.jpeg
+  - location: Munich, Germany
+    url: http://www.meetup.com/Ember-js-Munich/
+    image: 12munich.png
+    lat: 48.1351253
+    lng: 11.5819806
+    organizers:
+    - organizer: Marco Otte-Witte
+      profileImage: http://photos3.meetupstatic.com/photos/member/9/2/b/a/thumb_181417562.jpeg
+    - organizer: Thomas Reppa
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/4/f/6/thumb_93189462.jpeg
+  - location: Göteborg, Sweden
+    url: http://www.meetup.com/ember-js-goteborg/
+    image: 17goteborg.png
+    lat: 57.70887
+    lng: 11.97456
+  - location: Budapest, Hungary
+    url: http://www.meetup.com/ember-bp/
+    lat: 47.497912
+    lng: 19.040235
+    organizers:
+    - organizer: Gabor Babicz
+      profileImage: http://photos4.meetupstatic.com/photos/member/4/9/c/2/thumb_110778882.jpeg
+    - organizer: Balint Erdi
+      profileImage: http://photos4.meetupstatic.com/photos/member/e/7/8/6/thumb_5099270.jpeg
+    - organizer: Tóth Dávid
+      profileImage: http://photos2.meetupstatic.com/photos/member/4/7/4/c/thumb_105438252.jpeg
+  - location: Oslo, Norway
+    url: http://www.meetup.com/Ember-js-Oslo/
+    lat: 59.9138688
+    lng: 10.7522454
+    organizers:
+    - organizer: Joacim Haagen Skeie
+      profileImage: http://photos1.meetupstatic.com/photos/member/3/e/3/2/thumb_102015922.jpeg
+    - organizer: Flamur Mavraj
+      profileImage: http://photos3.meetupstatic.com/photos/member/2/0/8/2/thumb_76328322.jpeg
+  - location: Brussels, Belgium
+    url: http://www.meetup.com/Ember-js-Brussels/
+    lat: 50.8503396
+    lng: 4.3517103
+    organizers:
+    - organizer: Yoran Brondsema
+      profileImage: http://photos2.meetupstatic.com/photos/member/6/b/a/0/thumb_142947552.jpeg
+    - organizer: madnificent
+      profileImage: http://photos2.meetupstatic.com/photos/member/3/1/b/c/thumb_204432732.jpeg
+  - location: Barcelona, Spain
+    url: http://www.meetup.com/Ember-js-Barcelona/
+    image: 22barcelona.png
+    lat: 41.3850639
+    lng: 2.1734035
+    organizers:
+    - organizer: Tair
+      profileImage: http://photos4.meetupstatic.com/photos/member/1/a/9/2/thumb_166206802.jpeg
+    - organizer: Miguel Camba
+      profileImage: http://photos4.meetupstatic.com/photos/member/5/2/1/f/thumb_12381023.jpeg
+  - location: Kyiv, Ukraine
+    url: http://ember-club.kiev.ua
+    lat: 50.4501
+    lng: 30.5234
+    organizers:
+    - organizer: Alex Opak
+      profileImage: http://www.gravatar.com/avatar/0176cdda497ae370046f1408f83e71bc
+    - organizer: Oleksandr Lapshyn
+      profileImage: http://www.gravatar.com/avatar/f21e9fc4411f39d96e21efb64790b130
+    - organizer: Evgeniy Kurtov
+      profileImage: http://www.gravatar.com/avatar/9aedca736ea2277b591ee4962658caea
+    - organizer: Aminov Vali
+      profileImage: http://www.gravatar.com/avatar/d86bc01af68feecdab84cbf801a52a38
+  - location: Zürich, Switzerland
+    url: http://www.meetup.com/Ember-js-Zurich/
+    lat: 47.3686498
+    lng: 8.539182499999999
+    organizers:
+    - organizer: Claudio Romano
+      profileImage: http://photos3.meetupstatic.com/photos/member/4/f/9/8/thumb_241760376.jpeg
+  - location: Amsterdam, the Netherlands
+    url: http://www.meetup.com/Amsterdam-Ember-js/
+    lat: 52.3702157
+    lng: 4.895167900000001
+    organizers:
+    - organizer: Ben Konrath
+      profileImage: http://photos4.meetupstatic.com/photos/member/9/2/7/e/thumb_84877502.jpeg
+    - organizer: Dennis Tel
+      profileImage: http://photos3.meetupstatic.com/photos/member/d/3/2/4/thumb_162114052.jpeg
+- area: Asia
+  groups:
+  - location: Tel Aviv, Israel
+    url: http://www.meetup.com/Ember-IL/
+    image: 20telaviv.png
+    lat: 32.0852999
+    lng: 34.78176759999999
+    organizers:
+    - organizer: Oren Rubin
+      profileImage: http://photos2.meetupstatic.com/photos/member/d/d/c/4/thumb_112016772.jpeg
+    - organizer: Sergey Bolshchikov
+      profileImage: http://photos1.meetupstatic.com/photos/member/1/b/d/c/thumb_69787132.jpeg
+  - location: Bangalore, India
+    url: http://www.meetup.com/EmberJS-Bangalore/
+    lat: 12.922103
+    lng: 77.595324
+    organizers:
+    - organizer: Sivakumar Kailasam
+      profileImage: http://photos2.meetupstatic.com/photos/member/8/a/4/thumb_184022212.jpeg
+    - organizer: Sanjay Nambiar
+      profileImage: http://photos1.meetupstatic.com/photos/member/1/1/5/a/thumb_184024442.jpeg
+  - location: Tokyo, Japan
+    url: http://emberjs.doorkeeper.jp/
+    lat: 35.7090259
+    lng: 139.7319925
+- area: Oceania
+  groups:
+  - location: Adelaide, Australia
+    url: http://www.meetup.com/Ember-js-Adelaide
+    lat: -34.92862119999999
+    lng: 138.5999594
+    organizers:
+    - organizer: Rahul Trikha
+      profileImage: http://photos3.meetupstatic.com/photos/member/3/d/5/c/thumb_12495708.jpeg
+    - organizer: Jason Sidoryn
+      profileImage: http://photos4.meetupstatic.com/photos/member/c/4/a/6/thumb_85790342.jpeg
+  - location: Melbourne, Australia
+    url: http://www.meetup.com/Ember-Melb-JS/
+    image: 18melbourne.png
+    lat: -37.814107
+    lng: 144.96328
+    organizers:
+    - organizer: Tomas Spacek
+      profileImage: http://photos3.meetupstatic.com/photos/member/8/1/1/2/thumb_115833042.jpeg
+  - location: Wellington, New Zealand
+    url: http://www.meetup.com/ember-js-wellington/
+    lat: -41.298089
+    lng: 174.77831
+    organizers:
+    - organizer: Eoin Kelly
+      profileImage: http://photos4.meetupstatic.com/photos/member/1/d/6/c/thumb_196567532.jpeg
