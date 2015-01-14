@@ -10,7 +10,7 @@
 
 require "bundler/setup"
 require 'yaml'
-require 'geocoder'
+require './lib/meetups_data'
 
 def git_initialize(repository)
   unless File.exist?(".git")
@@ -97,17 +97,7 @@ def geocode_meetups
   data = YAML.load_file(File.expand_path("./data/#{data_path}"))
   data["locations"].each do |loc|
     loc["groups"].each do |group|
-      next if group.has_key?("lat") and group.has_key?("lat")
-      coord = Geocoder.coordinates(group["address"]) || Geocoder.coordinates(group["location"])
-      if coord.nil?
-        puts "Unable to find coordinates for #{group["location"]}"
-        next
-      end
-      group["lat"] = coord[0]
-      group["lng"] = coord[1]
-      puts "Found coordinates for #{group["location"]}"
-      #throttle requests to API to avoid errors
-      sleep 0.1
+      MeetupsData::GroupGeocoder.from_hash(group).find_location
     end
   end
 
