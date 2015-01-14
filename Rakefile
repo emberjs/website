@@ -97,7 +97,7 @@ def geocode_meetups
   data = YAML.load_file(File.expand_path("./data/#{data_path}"))
   data["locations"].each do |loc|
     loc["groups"].each do |group|
-      MeetupsData::GroupGeocoder.from_hash(group).find_location
+      MeetupsData::GroupGeocoder.from_hash(group).find_location{|msg| puts msg}
     end
   end
 
