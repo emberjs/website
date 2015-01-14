@@ -18,6 +18,7 @@ gem "rails-assets-js-md5"
 gem "rails-assets-moment"
 gem "underscore-rails"
 gem "gmaps4rails"
+gem "geocoder"
 
 group :development, :test do
   gem 'pry'
