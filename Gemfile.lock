@@ -63,6 +63,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.6)
     ffi (1.9.6-x86-mingw32)
     geocoder (1.2.6)
@@ -73,6 +75,7 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
+    hitimes (1.2.2-x86-mingw32)
     hooks (0.4.0)
       uber (~> 0.0.4)
     i18n (0.6.11)
@@ -121,6 +124,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.0)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     nokogiri (1.6.5-x86-mingw32)
@@ -215,6 +219,7 @@ DEPENDENCIES
   capybara
   coderay!
   ember-middleman
+  faraday
   geocoder
   gmaps4rails
   highline
