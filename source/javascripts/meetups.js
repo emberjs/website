@@ -1,26 +1,28 @@
 (function() {
   var handler = Gmaps.build('Google', {
-        markers: {
-          clusterer: {
-            styles: [
-              {
-                textSize: 10,
-                textColor: 'blue',
-                url: '/images/meetups/map-pin_x2.png',
-                height: 26,
-                width: 30
-              }, {
-                textSize: 12,
-                textColor: 'yellow',
-                url: '/images/meetups/map-pin_x2.png',
-                height: 35,
-                width: 40
-              }
-            ]
-          }
-        }
-      }),
-      mapOptions = $('meta[name=mapOptions]').attr('content');
+                  markers: {
+                    clusterer: {
+                      minimumClusterSize: 4,
+                      enableRetinaIcons: true,
+                      styles: [
+                        {
+                          textSize: 12,
+                          textColor: '#FFF',
+                          url: '/images/meetups/map-cluster-1.png',
+                          height: 28,
+                          width: 28
+                        }, {
+                          textSize: 15,
+                          textColor: '#FFF',
+                          url: '/images/meetups/map-cluster-2.png',
+                          height: 36,
+                          width: 36
+                        }
+                      ]
+                    }
+                  }
+                }),
+      mapOptions = $('meta[name=mapOptions]').attr('content'),
       locations = $('meta[name=locations]').attr('content');
 
   mapOptions = JSON.parse(mapOptions);
@@ -57,7 +59,6 @@
       if(element.lat && element.lng){
         markerLocations.push(element);
       }
-
     });
   };
 
@@ -67,9 +68,7 @@
     drawMap();
 
     if(navigator.geolocation) {
-      var geoLocation = navigator.geolocation.getCurrentPosition(function(position) {
-        zoomToPosition(position);
-      });
+      var geoLocation = navigator.geolocation.getCurrentPosition(zoomToPosition);
     }
   });
 
@@ -92,7 +91,7 @@
     });
   }
 
-  function drawMap(position){
+  function drawMap() {
     var markers = handler.addMarkers(markerLocations);
 
     _.each(markerLocations, function(json, index){
@@ -106,14 +105,12 @@
   }
 
   function zoomToPosition(position) {
-    if (position) {
-      var marker = handler.addMarker({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      });
-      handler.map.centerOn(marker);
-      handler.bounds.extendWith(marker);
-      handler.getMap().setZoom(8)
-    }
+    var marker = handler.addMarker({
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    });
+    handler.map.centerOn(marker);
+    handler.bounds.extendWith(marker);
+    handler.getMap().setZoom(8)
   }
 })();
