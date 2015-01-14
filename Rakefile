@@ -116,6 +116,10 @@ def find_meetup_organizers
       MeetupsData::GroupOrganizer.from_hash(group).find_organizers
     end
   end
+
+  File.open(File.expand_path("../data/#{data_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
 end
 
 def build
