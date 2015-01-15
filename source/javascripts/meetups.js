@@ -76,13 +76,14 @@
   });
 
   function bindLiToMarker(json_array) {
+    var activeMeetups = $('.meetups.list .active');
+
     _.each(json_array, function(json){
 
       var markerId = json.location.toLowerCase().replace(/\W/g, '');
-      var activeMeetups = $('.meetups.list .active');
       var currentMarker = $('#'+markerId);
 
-     currentMarker.on('click', function(e){
+      currentMarker.on('click', function(e){
         activeMeetups.removeClass('active');
         $(this).addClass("active");
         e.preventDefault();
