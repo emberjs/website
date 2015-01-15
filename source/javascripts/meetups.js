@@ -23,7 +23,7 @@
 
       var orgMarkup = "";
       if(element.organizers){
-        element.organizers.forEach( function(el){
+        _.each(element.organizers, function(el){
           if( typeof el.profileImage == 'undefined'){
             el.profileImage = "http://photos3.meetupstatic.com/photos/member/d/c/7/0/highres_179096432.jpeg";
           }
@@ -41,15 +41,18 @@
     });
   };
 
+  function success(pos) {
+      var crd = pos.coords;
+      var latlng = new google.maps.LatLng(crd.latitude, crd.longitude);
+      handler.map.centerOn(latlng);
+  }
+  geoLocation = navigator.geolocation.getCurrentPosition(success);
+
   locations.forEach( generateMarkerData );
 
   handler.buildMap(mapOptions, function() {
-    if(navigator.geolocation) {
-      var geoLocation = navigator.geolocation.getCurrentPosition(drawMap);
-    } else {
-      drawMap();
-    }
-  } );
+    drawMap();
+  });
 
   function bindLiToMarker(json_array) {
     _.each(json_array, function(json){
@@ -92,6 +95,6 @@
       handler.map.centerOn(marker);
       handler.bounds.extendWith(marker);
     }
-    handler.getMap().setZoom(8)
+    handler.getMap().setZoom(8);
   }
 })();
