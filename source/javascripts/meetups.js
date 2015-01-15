@@ -79,18 +79,26 @@
     _.each(json_array, function(json){
 
       var markerId = json.location.toLowerCase().replace(/\W/g, '');
+      var activeMeetups = $('.meetups.list .active');
+      var currentMarker = $('#'+markerId);
 
-      $('#'+markerId).on('click', function(e){
-        $('.meetups.list .active').removeClass('active');
+     currentMarker.on('click', function(e){
+        activeMeetups.removeClass('active');
         $(this).addClass("active");
         e.preventDefault();
         handler.getMap().setZoom(14);
         json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
         json.marker.panTo();
         google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+
         $("html, body").animate({
           scrollTop:0
         },"slow");
+      });
+
+      google.maps.event.addListener(json.marker.getServiceObject(), 'click', function(){
+        $('.meetups.list .active').removeClass('active');
+        currentMarker.addClass("active");
       });
     });
   }
