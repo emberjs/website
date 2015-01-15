@@ -1,6 +1,28 @@
 (function() {
-  var handler = Gmaps.build('Google'),
-      mapOptions = $('meta[name=mapOptions]').attr('content');
+  var handler = Gmaps.build('Google', {
+                  markers: {
+                    clusterer: {
+                      minimumClusterSize: 4,
+                      enableRetinaIcons: true,
+                      styles: [
+                        {
+                          textSize: 12,
+                          textColor: '#FFF',
+                          url: '/images/meetups/map-cluster-1.png',
+                          height: 28,
+                          width: 28
+                        }, {
+                          textSize: 15,
+                          textColor: '#FFF',
+                          url: '/images/meetups/map-cluster-2.png',
+                          height: 36,
+                          width: 36
+                        }
+                      ]
+                    }
+                  }
+                }),
+      mapOptions = $('meta[name=mapOptions]').attr('content'),
       locations = $('meta[name=locations]').attr('content');
 
   mapOptions = JSON.parse(mapOptions);
@@ -37,7 +59,6 @@
       if(element.lat && element.lng){
         markerLocations.push(element);
       }
-
     });
   };
 
@@ -57,27 +78,24 @@
   function bindLiToMarker(json_array) {
     _.each(json_array, function(json){
 
-        var markerId = json.location.toLowerCase().replace(/\W/g, '');
+      var markerId = json.location.toLowerCase().replace(/\W/g, '');
 
-        $('#'+markerId).on('click', function(e){
-          $('.meetups.list .active').removeClass('active');
-          $(this).addClass("active");
-          e.preventDefault();
-          handler.getMap().setZoom(14);
-          json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
-          json.marker.panTo();
-          google.maps.event.trigger(json.marker.getServiceObject(), 'click');
-          $("html, body").animate({
-            scrollTop:0
-          },"slow");
-        });
-
+      $('#'+markerId).on('click', function(e){
+        $('.meetups.list .active').removeClass('active');
+        $(this).addClass("active");
+        e.preventDefault();
+        handler.getMap().setZoom(14);
+        json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
+        json.marker.panTo();
+        google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+        $("html, body").animate({
+          scrollTop:0
+        },"slow");
       });
-
+    });
   }
 
-  function drawMap(position){
-
+  function drawMap() {
     var markers = handler.addMarkers(markerLocations);
 
     _.each(markerLocations, function(json, index){
@@ -87,14 +105,16 @@
     bindLiToMarker(markerLocations);
 
     handler.bounds.extendWith(markers);
-    if (position) {
-      var marker = handler.addMarker({
-        lat: position.coords.latitude,
-        lng: position.coords.longitude
-      });
-      handler.map.centerOn(marker);
-      handler.bounds.extendWith(marker);
-    }
+    handler.getMap().setZoom(8);
+  }
+
+  function zoomToPosition(position) {
+    var marker = handler.addMarker({
+      lat: position.coords.latitude,
+      lng: position.coords.longitude
+    });
+    handler.map.centerOn(marker);
+    handler.bounds.extendWith(marker);
     handler.getMap().setZoom(8);
   }
 })();
