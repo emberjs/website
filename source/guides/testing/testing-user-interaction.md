@@ -36,7 +36,7 @@ test('add new post', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/gokor/embed?output">Testing User 
+<a class="jsbin-embed" href="http://jsbin.com/habekupomu/1/embed?output">Testing User
 Interaction</a>
 
 ### Testing Transitions
@@ -80,6 +80,6 @@ test('redirect to login if not authenticated', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/nulif/embed?output">Testing Transitions</a>
+<a class="jsbin-embed" href="http://jsbin.com/hiyicadewi/1/embed?output">Testing Transitions</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
