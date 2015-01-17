@@ -90,14 +90,14 @@ module MeetupsData
 
       group_response = conn.get '/2/groups', { :group_urlname => meetup_urlname, :key => api_key }
 
-      if (group_response.status != 200)
+      if group_response.status != 200
         puts "Unable to get data from meetup.com check you have a valid API key"
         return false
       end
 
       json = JSON.parse(group_response.body)
 
-      unless (json['results'].empty?)
+      unless json['results'].empty?
         results = json['results'][0]
         organizer = results['organizer'].to_hash
 
@@ -107,12 +107,11 @@ module MeetupsData
         profile = Hash.new
         profile['organizer'] = organizer['name']
 
-        unless (json['results'].empty?)
+        unless json['results'].empty?
           results = json['results'][0]
           photo = results['photo'].to_hash
 
           profile['profileImage'] = photo['thumb_link']
-
         end
 
         data["organizers"] = profile
