@@ -30,6 +30,7 @@
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
   var markerLocations = [];
+  var activeMeetups = $('.meetups.list .active');
 
   var generateMarkerData = function(element) {
 
@@ -45,7 +46,7 @@
 
       var orgMarkup = "";
       if(element.organizers){
-        element.organizers.forEach( function(el){
+        _.each(element.organizers, function(el){
           if( typeof el.profileImage == 'undefined'){
             el.profileImage = "http://photos3.meetupstatic.com/photos/member/d/c/7/0/highres_179096432.jpeg";
           }
@@ -62,31 +63,42 @@
     });
   };
 
+  function success(pos) {
+      var crd = pos.coords;
+      var latlng = new google.maps.LatLng(crd.latitude, crd.longitude);
+      handler.map.centerOn(latlng);
+  }
+  geoLocation = navigator.geolocation.getCurrentPosition(success);
+
   locations.forEach( generateMarkerData );
 
   handler.buildMap(mapOptions, function() {
     drawMap();
-
-    if(navigator.geolocation) {
-      var geoLocation = navigator.geolocation.getCurrentPosition(zoomToPosition);
-    }
   });
 
   function bindLiToMarker(json_array) {
     _.each(json_array, function(json){
 
       var markerId = json.location.toLowerCase().replace(/\W/g, '');
+      var currentMarker = $('#'+markerId);
 
-      $('#'+markerId).on('click', function(e){
-        $('.meetups.list .active').removeClass('active');
+      currentMarker.on('click', function(e){
+        activeMeetups.removeClass('active');
         $(this).addClass("active");
         e.preventDefault();
+        handler.getMap().setZoom(14);
         json.marker.setMap(handler.getMap()); //because clusterer removes map property from marker
         json.marker.panTo();
         google.maps.event.trigger(json.marker.getServiceObject(), 'click');
+
         $("html, body").animate({
           scrollTop:0
         },"slow");
+      });
+
+      google.maps.event.addListener(json.marker.getServiceObject(), 'click', function(){
+        activeMeetups.removeClass('active');
+        currentMarker.addClass("active");
       });
     });
   }
@@ -101,7 +113,7 @@
     bindLiToMarker(markerLocations);
 
     handler.bounds.extendWith(markers);
-    handler.fitMapToBounds();
+    handler.getMap().setZoom(8);
   }
 
   function zoomToPosition(position) {
@@ -111,6 +123,6 @@
     });
     handler.map.centerOn(marker);
     handler.bounds.extendWith(marker);
-    handler.getMap().setZoom(8)
+    handler.getMap().setZoom(8);
   }
 })();
