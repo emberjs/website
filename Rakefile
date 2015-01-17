@@ -108,6 +108,12 @@ end
 
 def find_meetup_organizers(update_all)
   data_path = 'meetups.yml'
+
+  if ENV["MEETUP_API_KEY"].nil?
+    puts "Set ENV['MEETUP_API_KEY'] to connect to the meetup.com API"
+    return false
+  end
+
   puts "Getting organizers data from api.meetup.com for #{data_path}..."
 
   data = YAML.load_file(File.expand_path("./data/#{data_path}"))
@@ -196,6 +202,5 @@ end
 
 desc "Find organizers for meetup user group_urlname"
 task :findorganizers do |t, args|
-  puts ENV['force']
   find_meetup_organizers(ENV['force'])
 end
