@@ -56,14 +56,14 @@ module MeetupsData
       @data = data
     end
 
-    def find_organizers
+    def find_organizers(update_all)
 
       return if !is_group_on_meetup(data["url"])
 
-      return if has_organizers?
-
-      group_urlname = parse_url_name_from_url(data["url"])
-      get_organizers(group_urlname)
+      if(update_all || !has_organizers?)
+        group_urlname = parse_url_name_from_url(data["url"])
+        get_organizers(group_urlname)
+      end
 
     end
 

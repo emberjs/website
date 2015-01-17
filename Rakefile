@@ -106,14 +106,14 @@ def geocode_meetups
   end
 end
 
-def find_meetup_organizers
+def find_meetup_organizers(update_all)
   data_path = 'meetups.yml'
   puts "Getting organizers data from api.meetup.com for #{data_path}..."
 
   data = YAML.load_file(File.expand_path("./data/#{data_path}"))
   data["locations"].each do |loc|
     loc["groups"].each do |group|
-      MeetupsData::GroupOrganizer.from_hash(group).find_organizers
+      MeetupsData::GroupOrganizer.from_hash(group).find_organizers(update_all)
     end
   end
 
@@ -195,6 +195,7 @@ task :geocode do
 end
 
 desc "Find organizers for meetup user group_urlname"
-task :findorganizers do
-  find_meetup_organizers
+task :findorganizers do |t, args|
+  puts ENV['force']
+  find_meetup_organizers(ENV['force'])
 end
