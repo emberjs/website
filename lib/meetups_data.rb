@@ -58,7 +58,7 @@ module MeetupsData
 
     def find_organizers
 
-      return if !data["url"].include? 'http://www.meetup.com/'
+      return if !is_group_on_meetup(data["url"])
 
       return if has_organizers?
 
@@ -67,13 +67,17 @@ module MeetupsData
 
     end
 
+    def is_group_on_meetup(url)
+      return url.match(/(http:\/\/)*(www.)*meetup.com/)
+    end
+
     def has_organizers?
       data.has_key?("organizers")
     end
 
     def parse_url_name_from_url(meetup_url)
-      urlname = meetup_url.split('http://www.meetup.com/')
-      return urlname[1].to_s.chomp("/")
+      urlname = meetup_url.match(/(http:\/\/)*(www.)*meetup.com\/([a-zA-Z-]*)/)
+      return urlname.captures[2]
     end
 
     def get_organizers(meetup_urlname)
