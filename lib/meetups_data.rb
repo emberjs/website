@@ -51,9 +51,15 @@ module MeetupsData
 
   class GroupOrganizer
     attr_reader :data
+    attr_reader :api_key
+    attr_reader :meetup_connection
 
     def initialize(data)
       @data = data
+      @meetup_connection = Faraday.new(:url => 'https://api.meetup.com') do |faraday|
+        faraday.request  :url_encoded
+        faraday.adapter  Faraday.default_adapter
+      end
     end
 
     def find_organizers(update_all)
@@ -81,43 +87,53 @@ module MeetupsData
     end
 
     def get_organizers(meetup_urlname)
-      api_key = '7b6b15214f6e154232b7f3c6d417762'
+      group_response = meetup_connection.get '/2/groups', { :group_urlname => meetup_urlname, :key => ENV["MEETUP_API_KEY"] }
+      assert_ok(group_response)
+    end
 
-      conn = Faraday.new(:url => 'https://api.meetup.com') do |faraday|
+    def meetup_connection
+      Faraday.new(:url => 'https://api.meetup.com') do |faraday|
         faraday.request  :url_encoded
         faraday.adapter  Faraday.default_adapter
       end
+    end
 
-      group_response = conn.get '/2/groups', { :group_urlname => meetup_urlname, :key => api_key }
+    def get_member_data(organizer)
+      member_response = meetup_connection.get '/2/members', { :member_id => organizer['member_id'], :key => ENV["MEETUP_API_KEY"] }
+      assert_member_ok(organizer['name'], member_response)
+    end
 
-      if group_response.status != 200
-        puts "Unable to get data from meetup.com check you have a valid API key"
+    def assert_ok(response)
+      if response.status != 200
+        puts "Unable to get data group from meetup.com"
         return false
       end
 
-      json = JSON.parse(group_response.body)
+      json = JSON.parse(response.body)
 
       unless json['results'].empty?
-        results = json['results'][0]
-        organizer = results['organizer'].to_hash
-
-        profile_response = conn.get '/2/members', { :member_id => organizer['member_id'], :key => api_key }
-        json = JSON.parse(profile_response.body)
-
-        profile = Hash.new
-        profile['organizer'] = organizer['name']
-
-        unless json['results'].empty?
-          results = json['results'][0]
-          photo = results['photo'].to_hash
-
-          profile['profileImage'] = photo['thumb_link']
-        end
-
-        data["organizers"] = profile
-        puts "Found organizer for #{data["location"]}"
-
+        data["organizers"] =  Array.new
+        get_member_data(json['results'][0]['organizer'])
       end
+    end
+
+    def assert_member_ok(member_name, response)
+
+      if response.status != 200
+        puts "Unable to get member from meetup.com"
+      end
+
+      json_member = JSON.parse(response.body)
+
+      profile = {}
+      profile['organizer'] = member_name
+
+      if photo = json_member['results'].first
+        profile['profileImage'] = photo['photo']['thumb_link']
+      end
+
+      data["organizers"] << profile
+      puts "Found organizer for #{data["location"]}"
 
     end
 
