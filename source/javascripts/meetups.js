@@ -30,6 +30,7 @@
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
   var markerLocations = [];
+  var activeMeetups = $('.meetups.list .active');
 
   var generateMarkerData = function(element) {
 
@@ -76,8 +77,6 @@
   });
 
   function bindLiToMarker(json_array) {
-    var activeMeetups = $('.meetups.list .active');
-
     _.each(json_array, function(json){
 
       var markerId = json.location.toLowerCase().replace(/\W/g, '');
@@ -98,7 +97,7 @@
       });
 
       google.maps.event.addListener(json.marker.getServiceObject(), 'click', function(){
-        $('.meetups.list .active').removeClass('active');
+        activeMeetups.removeClass('active');
         currentMarker.addClass("active");
       });
     });
