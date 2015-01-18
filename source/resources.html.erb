@@ -1,0 +1,61 @@
+---
+title: "Resources"
+---
+
+<% content_for :foot do %>
+  <script type="text/javascript">
+    $(function() {
+      $('#slider').bxSlider({
+        displaySlideQty: 3,
+        moveSlideQty: 3,
+        auto: true,
+        pager: true,
+        speed: 700,
+        pause: 5000
+      });
+
+      // Hack to force proper sizing
+      $('.bx-wrapper').css('width', 756);
+      $('.bx-window').css('width', 700);
+    });
+  </script>
+<% end %>
+
+<h1>Resources</h1>
+
+<div class="resources section books">
+  <h2>Books</h2>
+
+  <div class="surround">
+    <ul id="slider">
+    <% data.users.slice(0,12).each do |user| %>
+      <li class="user">
+        <a href="<%= user.url %>" rel="nofollow">
+          <!-- <img src="/images/about/<%= user.image %>" width="210" height="103" /> -->
+          <img src="http://jquery.com/jquery-wp-content/themes/jquery/content/books/learning-jquery-4th-ed.jpg" width="120" height="160">
+          <div>Learning jQuery Fourth Edition<br><small>Karl Swedberg and Jonathan Chaffer</small></div>
+        </a>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- <div class="resources section">
+  <table class="columns">
+    <tr>
+      <% balance(data.meetups.locations.map { |l| { l.area => l.groups } }.reduce(:merge), 2).each do |column| %>
+      <td>
+        <% column.each do |name, groups| %>
+        <h2><%= name %></h2>
+        <ul>
+          <% groups.sort_by(&:location).each do |group| %>
+          <li><%= link_to group.location, group.url, :id => group.location.downcase.gsub(/[^0-9a-z ]/i, '').delete(' ') %></li>
+          <% end %>
+        </ul>
+        <% end %>
+      </td>
+      <% end %>
+    </tr>
+  </table>
+</div> -->

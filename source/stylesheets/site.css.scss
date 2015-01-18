@@ -1161,10 +1161,6 @@ body.meetups #content {
 
   h1, h1:first-child {
     margin-top: 0;
-    color: $orange-color;
-    // border-bottom: solid 1px #d0d0d0;
-    // This styling has been removed from everywhere other than
-    // the API and Guides, like at line 75.
     padding-bottom: 20px;
   }
 
@@ -1312,6 +1308,168 @@ body.meetups #content {
     }
     p {
       text-align: left;
+    }
+  }
+}
+
+/**
+  Resources Page
+**/
+
+body.resources #content {
+  margin: 3em auto 0 auto;
+  width: 54em;
+
+  h1, h1:first-child {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .section {
+    width: auto;
+    @include clearfix;
+    table {
+      margin: 2em auto;
+    }
+    .inline_list a:first-child {
+      margin-left: 20px;
+    }
+  }
+
+  .surround {
+    width: 756px;
+    margin: 0 auto;
+    padding-top: 19px;
+
+    a:hover {
+      border: 0;
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    .bx-wrapper,
+    .bx-window {
+      width: 756px;
+      margin: 0 auto;
+    }
+
+    .bx-wrapper {
+
+      .bx-prev,
+      .bx-next {
+        background: no-repeat;
+        @include hidpi('about/carousel_controls', png);
+        float: left;
+        height: 220px;
+        width: 30px;
+      }
+
+      .bx-prev,
+      .bx-next,
+      .pager-link {
+        text-indent: -9999px;
+      }
+
+      .bx-prev {
+        background-position: left;
+        float: right;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .bx-next {
+        background-position: right;
+        float: right;
+        position: absolute;
+        top: 0;
+        right: 1px;
+      }
+
+      .bx-window {
+        height: 225px;
+      }
+
+      .bx-pager {
+        @include clearfix;
+        font-size: 0;
+        height: 28px;
+        line-height: 0;
+        margin: 0 29px;
+        padding-top: 9px;
+        text-align: center;
+
+        .pager-link {
+          background: 0 0 no-repeat;
+          @include hidpi('about/carousel_dots', png);
+          height: 11px;
+          width: 10px;
+          margin-left: 10px;
+          display: inline-block;
+
+          &.pager-active,
+          &.pager-active:hover {
+            background-position: -22px 0;
+          }
+
+          &:hover {
+            background-position: -11px 0;
+          }
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .user {
+    position: relative;
+    float: left;
+    width: 235px;
+    text-align: center;
+
+    &.empty {
+      display: block;
+      height: 220px;
+      visibility: hidden; /*Take up space, but be invisible*/
+    }
+
+    a {
+      display: block;
+      height: 220px;
+      margin: 0 10px;
+      width: 210px;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .listed {
+    float: left;
+    margin-left: $col-width * 9;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.gears.section {
+  .gear {
+    text-align: center;
+    height: 120px;
+
+    .gearplus {
+      padding: 0px 30px 0px 30px;
+      display: inline;
+      line-height: 120px;
+      img {
+        vertical-align: top;
+        padding-top: 50px;
+      }
     }
   }
 }
