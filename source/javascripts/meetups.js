@@ -30,7 +30,7 @@
   mapOptions.provider.zoomControlOptions = google.maps.ZoomControlStyle.SMALL;
 
   var markerLocations = [];
-  var activeMeetups = $('.meetups.list .active');
+  var meetupList = $('.meetups.list a');
 
   var generateMarkerData = function(element) {
 
@@ -63,14 +63,35 @@
     });
   };
 
-  function success(pos) {
-      var crd = pos.coords;
-      var latlng = new google.maps.LatLng(crd.latitude, crd.longitude);
-      handler.map.centerOn(latlng);
-  }
-  geoLocation = navigator.geolocation.getCurrentPosition(success);
+  function defaultLocation(){
+    var latlng = new google.maps.LatLng(3, -13);
 
-  locations.forEach( generateMarkerData );
+    handler.buildMap(mapOptions, function() {
+      handler.map.centerOn(latlng);
+      handler.getMap().setZoom(2);
+    });
+  }
+
+  function setZoomBasedOnLatitudePosition(latitudePosition){
+    if(latitudePosition != 3){
+      handler.getMap().setZoom(8);
+    }else{
+      handler.getMap().setZoom(2);
+    }
+  }
+
+  function success(pos) {
+    var crd = pos.coords;
+    var latlng = new google.maps.LatLng(crd.latitude, crd.longitude);
+    handler.map.centerOn(latlng);
+    setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
+
+  }
+
+  defaultLocation();
+  navigator.geolocation.getCurrentPosition(success);
+
+  locations.forEach(generateMarkerData);
 
   handler.buildMap(mapOptions, function() {
     drawMap();
@@ -83,7 +104,7 @@
       var currentMarker = $('#'+markerId);
 
       currentMarker.on('click', function(e){
-        activeMeetups.removeClass('active');
+        meetupList.removeClass('active');
         $(this).addClass("active");
         e.preventDefault();
         handler.getMap().setZoom(14);
@@ -97,8 +118,9 @@
       });
 
       google.maps.event.addListener(json.marker.getServiceObject(), 'click', function(){
-        activeMeetups.removeClass('active');
+        meetupList.removeClass('active');
         currentMarker.addClass("active");
+        handler.getMap().setZoom(14);
       });
     });
   }
@@ -113,7 +135,8 @@
     bindLiToMarker(markerLocations);
 
     handler.bounds.extendWith(markers);
-    handler.getMap().setZoom(8);
+
+    setZoomBasedOnLatitudePosition(handler.getMap().getCenter().k);
   }
 
   function zoomToPosition(position) {
