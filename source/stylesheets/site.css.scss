@@ -561,7 +561,7 @@ p {
 
   #download-ember, #download-starter-kit {
     text-align: center;
-    margin: 4em auto 0 auto;
+    margin: 2.5em auto 0 auto;
   }
 
   #download-ember {
@@ -578,8 +578,14 @@ p {
   }
 
   .info {
-    margin-top: 4px;
+    margin-top: 15px;
     color: #888888;
+  }
+
+  .info div ul {
+    text-align:left;
+    display: inline-block;
+    margin: 0;
   }
 
   .social {
