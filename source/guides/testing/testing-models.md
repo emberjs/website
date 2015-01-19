@@ -43,7 +43,7 @@ test('levelUp', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/yuguyibaso/1/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/roqurabiva/1/embed?output">Unit Testing
 Ember Data Models</a>
 
 ## Testing Relationships
@@ -80,7 +80,7 @@ test('profile relationship', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/cequredoke/1/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
+<a class="jsbin-embed" href="http://jsbin.com/luvoyibeba/1/embed?output">Unit Testing Models (Relationships : One-to-One)</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
 

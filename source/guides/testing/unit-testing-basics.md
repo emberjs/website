@@ -39,7 +39,7 @@ test('computedFoo correctly concats foo', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/miziz/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/dubiyexiqe/1/embed?output">Unit Testing
 Basics: Computed Properties</a>
 
 ### Testing Object Methods
@@ -73,7 +73,7 @@ test('calling testMethod updates foo', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/weroh/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/bobaropega/1/embed?output">Unit Testing
 Basics: Method Side Effects</a>
 
 In the event the object's method returns a value you can simply assert that the
@@ -104,7 +104,7 @@ test('testMethod returns incremented count', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/qutar/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/vigehojahi/1/embed?output">Unit Testing
 Basics: Method Side Effects</a>
 
 ### Testing Observers
@@ -136,6 +136,6 @@ test('doSomething observer sets other prop', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/daxok/embed?output">Unit Testing Basics: Observers</a>
+<a class="jsbin-embed" href="http://jsbin.com/yajejicopu/1/embed?output">Unit Testing Basics: Observers</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>

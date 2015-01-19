@@ -95,7 +95,7 @@ test('template is rendered with the color name', function(){
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/bafologixi/1/embed?output">Unit Testing 
+<a class="jsbin-embed" href="http://jsbin.com/xagowicabu/1/embed?output">Unit Testing
 Components</a>
 
 ### Interacting with Components in the DOM
@@ -145,7 +145,7 @@ test('clicking link updates the title', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/xuladiyili/1/embed?output">Unit 
+<a class="jsbin-embed" href="http://jsbin.com/kolumurite/1/embed?output">Unit
 Testing Components</a>
 
 ### Components with embedded layout
@@ -198,7 +198,7 @@ test('clicking link updates the title', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/honuyeyoga/1/embed?output">Testing 
+<a class="jsbin-embed" href="http://jsbin.com/kexeladayo/1/embed?output">Testing
 Components with Built-in Layout</a>
 
 ### Programmatically interacting with components
@@ -230,7 +230,7 @@ test('sending changeName message updates the title', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/zudafevize/1/embed?output">Programatically 
+<a class="jsbin-embed" href="http://jsbin.com/kuwanafale/1/embed?output">Programatically
 Testing Components</a>
 
 ### `sendAction` validation in components
@@ -290,7 +290,7 @@ test('trigger external action when button is clicked', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/zizehimema/1/embed?output">sendAction 
+<a class="jsbin-embed" href="http://jsbin.com/fulibifore/1/embed?output">sendAction
 Validation in Components</a>
 
 ### Components Using Other Components
@@ -361,7 +361,7 @@ test('renders kittens', function() {
 
 #### Live Example
 
-<a class="jsbin-embed" href="http://jsbin.com/kokubexoma/1/embed?output">Components 
+<a class="jsbin-embed" href="http://jsbin.com/jirizimeru/1/embed?output">Components
 with Embedded Components</a>
 
 <script src="http://static.jsbin.com/js/embed.js"></script>
