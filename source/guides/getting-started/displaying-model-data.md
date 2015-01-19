@@ -30,7 +30,7 @@ Update `index.html` to replace the static `<li>` elements with a Handlebars `{{e
 {{! ... additional lines truncated for brevity ... }}
 ```
 
-The template loops over the content of its controller. This controller is an instance of `ArrayController` that Ember.js has provided for us as the container for our models. Because we don't need custom behavior for this object yet, we can use the default object provided by the framework.
+Ember.js has created a controller for us and set the controller's `model` property to our route's model. The template loops over the controller's `model` property. Because we don't need custom behavior for this controller yet, we can use the default object provided by the framework.
 
 Reload your web browser to ensure that all files have been referenced correctly and no errors occur.
 
