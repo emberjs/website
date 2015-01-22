@@ -228,3 +228,51 @@ function fooObserver(obj){
 addObserver(obj, 'foo', fooObserver);
 fooObserver(obj); // Optionally call the observer immediately
 ```
+
+### Deprecations Added in 1.11
+
+#### Deprecate Access to Instances in Initializers
+
+Previously, initializers had access to an object that allowed them to
+both registry new classes and get instances of those classes.
+
+If you have an initializer that gets instances of a class, you need to
+change it to use an instance initializer.
+
+Change code that looks like this:
+
+```js
+App.initializer({
+  name: "clock",
+
+  initialize: function(container) {
+    container.register("clock:main", Clock);
+    var clock = container.lookup("clock:main");
+    clock.setStartTime(Date.now());
+  }
+});
+```
+
+To:
+
+```js
+App.initializer({
+  name: "clock",
+
+  initialize: function(registry) {
+    registry.register("clock:main", Clock);
+  }
+});
+
+App.instanceInitializer({
+  name: "clock",
+
+  initialize: function(instance) {
+    var clock = instance.container.lookup("clock:main");
+    clock.setStartTime(Date.now());
+  }
+});
+```
+
+For more information, see [the instance initializer deprecation
+guide](deprecations/1.11/instance-initializers).
