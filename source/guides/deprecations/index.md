@@ -234,7 +234,7 @@ fooObserver(obj); // Optionally call the observer immediately
 #### Deprecate Access to Instances in Initializers
 
 Previously, initializers had access to an object that allowed them to
-both registry new classes and get instances of those classes.
+both register new classes and get instances of those classes.
 
 If you have an initializer that gets instances of a class, you need to
 change it to use an instance initializer.
