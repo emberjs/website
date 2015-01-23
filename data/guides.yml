@@ -4,14 +4,14 @@
     skip_sidebar: true
 
 "Getting Started":
-  - title: "A solid foundation"
-    url: "ember-cli"
-  - title: "Installing Ember CLI"
+  #- title: "A solid foundation"
+  #  url: "ember-cli"
+  - title: "Installing Ember"
     url: "ember-cli/installing"
-  #- title: "The Inspector tool"
-  #  url: "ember-cli/inspector"
-  #- title: "Glossary"
-  #  url: "ember-cli/glossary"
+  - title: "The Inspector tool"
+    url: "ember-cli/inspector"
+  - title: "Glossary"
+    url: "ember-cli/glossary"
 
 "Tutorial: TodoMVC":
   - title: "Getting Started"

@@ -12,8 +12,8 @@ The CDN will distribute your content geographically with the goal of people bein
 For example, if a user is in India, they'd likely get content served from India faster than from the United States.
 
 
-##CoffeeScript, TypesScript
-These are both "languages" which end up compiling to JavaScript; you're able to write your code using the syntax provided and when ready you compile/transpile your TypesScript or CoffeeScript into JavaScript.
+##CoffeeScript, TypeScript
+These are both languages which end up compiling to JavaScript; you're able to write your code using the syntax provided and when ready you compile/transpile your TypesScript or CoffeeScript into JavaScript.
 
 For more info see: http://www.stoutsystems.com/articles/coffeescript-versus-typescript/
 

@@ -16,23 +16,22 @@ If you **don't** have it installed...
 Once you've got node.js installed, re-run the above ```node --version``` to verify the install.
 
 
-##Installing Ember CLI
+##Installing Ember
 
 Having node.js installed lets you use the Node Package Manager which makes installing easy.
 
-Let's install Ember CLI and its dependencies (globally) by running the following:
+Let's install Ember by running the following:
 
 ```bash
 npm install -g ember-cli
-npm install -g bower
 npm install -g phantomjs
 ```
 
-A quick rundown on what those are:
-
-1. Ember CLI is the toolset that you'll use for developing your Ember.js application
-2. [Bower](http://bower.io/) is a package manager that Ember CLI uses to manage its versions of Ember, jQuery, QUnit, and more.
-3. [PhantomJS](http://phantomjs.org/) is a headless web browser that Ember CLI uses for integration tests.
+* Installing ```ember-cli``` will give you access to all the global ```ember``` commands, like...
+  * ```ember new my-app``` to create a new project "my-app".
+  * ```ember server``` to run your app locally.
+  * ```ember test``` to run your tests (they're optional, but testing is great practice!)
+* [PhantomJS](http://phantomjs.org/) is a headless (no GUI) web browser that Ember uses for integration tests.
 
 
 ##Testing your installation
@@ -55,3 +54,9 @@ ember server
 ```
 
 navigate to `http://localhost:4200` to see your new app in action.
+
+##Troubleshooting
+
+* Permissions issues doing the npm install?
+  * If you're on Mac or Linux, try using sudo (```sudo npm install -g ember-cli```).
+  * Windows users can [open a shell with admin access](https://technet.microsoft.com/en-us/library/cc947813.aspx).
