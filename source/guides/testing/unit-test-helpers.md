@@ -22,7 +22,7 @@ making assertions about. Usually test subjects are manually created by the
 writer of the test.
 
 <!--
-* [Ember-QUnit](https://github.com/rpflorence/ember-qunit) - Unit test helpers
+* [Ember-QUnit](https://github.com/rwjblue/ember-qunit) - Unit test helpers
   written for QUnit
 * [Ember-Mocha](#) - Unit test helpers written for Mocha (to be written)
 * [Ember-Jasmine](#) - Unit test helpers written for Jasmine (to be written)
@@ -120,4 +120,4 @@ setResolver(Resolver.create());
 
 [CommonJS]: http://wiki.commonjs.org/wiki/CommonJS  "CommonJS"
 [AMD]: http://requirejs.org/docs/whyamd.html "AMD"
-[Ember-QUnit]: https://github.com/rpflorence/ember-qunit "Ember QUnit"
+[Ember-QUnit]: https://github.com/rwjblue/ember-qunit "Ember QUnit"
