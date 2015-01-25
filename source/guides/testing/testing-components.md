@@ -50,13 +50,13 @@ We can test to make sure that changing the component's color property updates
 the rendered HTML:
 
 ```javascript
-test('changing colors', function(){
+test('changing colors', function() {
 
   // this.subject() is available because we used moduleForComponent
   var component = this.subject();
 
   // we wrap this with Ember.run because it is an async function
-  Ember.run(function(){
+  Ember.run(function() {
     component.set('name','red');
   });
 
@@ -64,7 +64,7 @@ test('changing colors', function(){
   equal(this.$().attr('style'), 'color: red;');
 
   // another async function, so we need to wrap it with Ember.run
-  Ember.run(function(){
+  Ember.run(function() {
     component.set('name', 'green');
   });
 
@@ -76,7 +76,7 @@ We might also test this component to ensure the template is being
 rendered properly.
 
 ```javascript
-test('template is rendered with the color name', function(){
+test('template is rendered with the color name', function() {
   
   // this.subject() is available because we used moduleForComponent
   var component = this.subject();
@@ -85,7 +85,7 @@ test('template is rendered with the color name', function(){
   equal($.trim(this.$().text()), 'Pretty Color:');
 
   // we wrap this with Ember.run because it is an async function
-  Ember.run(function(){
+  Ember.run(function() {
     component.set('name', 'green');
   });
 
@@ -111,8 +111,8 @@ title when clicked:
 App.MyFooComponent = Em.Component.extend({
   title:'Hello World',
   
-  actions:{
-    updateTitle: function(){
+  actions: {
+    updateTitle: function() {
       this.set('title', 'Hello Ember World');
     }
   }
@@ -164,8 +164,8 @@ App.MyFooComponent = Ember.Component.extend({
 
   noun: 'teapot',
 
-  actions:{
-    changeName: function(){
+  actions: {
+    changeName: function() {
       this.set('noun', 'embereño');
     }
   }
@@ -220,7 +220,7 @@ test('sending changeName message updates the title', function() {
   equal($component.find('h2').text(), "I'm a little teapot");
   
   // send action programmatically
-  Ember.run(function(){
+  Ember.run(function() {
     component.send('changeName');
   });
   
@@ -243,8 +243,8 @@ when a button is clicked:
 App.MyFooComponent = Ember.Component.extend({
   layout:Ember.Handlebars.compile("<button {{action 'doSomething'}}></button>"),
 
-  actions:{
-    doSomething: function(){
+  actions: {
+    doSomething: function() {
       this.sendAction('internalAction');
     }
   }
@@ -268,7 +268,7 @@ test('trigger external action when button is clicked', function() {
   var $component = this.append();
   
   var targetObject = {
-    externalAction: function(){
+    externalAction: function() {
       // we have the assertion here which will be
       // called when the action is triggered
       ok(true, 'external Action was called!');
