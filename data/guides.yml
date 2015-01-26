@@ -4,10 +4,12 @@
     skip_sidebar: true
 
 "Getting Started":
-  #- title: "A solid foundation"
-  #  url: "ember-cli"
+  - title: "A solid foundation"
+    url: "ember-cli"
   - title: "Installing Ember"
     url: "ember-cli/installing"
+#  - title: "Upgrading Ember"
+#    url: "ember-cli/upgrading"
   - title: "The Inspector tool"
     url: "ember-cli/inspector"
   - title: "Glossary"

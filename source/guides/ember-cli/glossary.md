@@ -3,25 +3,23 @@ Joining a web development community can be a challenge within itself, especially
 Our goal is to help you avoid that mess and come up to speed as fast as possible; you can consider us your internet friend.
 
 ##CDN
-Content Delivery Network. This is typically a paid service you can use to get great performance.
+Content Delivery Network
 
-You start by uploading a resource (image, JavaScript file, etc) to a company like Akamai or CloudFlare. You'll have a URL you can reference in your HTML which resolves differently for folks depending on where they're browsing.
+This is typically a paid service you can use to get great performance for your app. You start by uploading a resource (image, JavaScript file, etc) to a company like Akamai or CloudFlare. That uploaded resource will have an absolute URL which you can reference anywhere in your app. This URL will which resolves differently for folks depending on where they're browsing.
 
-The CDN will distribute your content geographically with the goal of people being able to fetch your content with the lowest latency possible.
-
-For example, if a user is in India, they'd likely get content served from India faster than from the United States.
+Behind the scenes, the CDN will distribute your content geographically with the goal of end-users being able to fetch your content with the lowest latency possible. For example, if a user is in India, they'd likely get content served from India faster than from the United States.
 
 
 ##CoffeeScript, TypeScript
 These are both languages which end up compiling to JavaScript; you're able to write your code using the syntax provided and when ready you compile/transpile your TypesScript or CoffeeScript into JavaScript.
 
-For more info see: http://www.stoutsystems.com/articles/coffeescript-versus-typescript/
+[CoffeeScript vs TypeScript](http://www.stoutsystems.com/articles/coffeescript-versus-typescript/)
 
 
 ##Evergreen browsers
 Browsers that update themselves (without user intervention).
 
-[Evergreen Browsers (tomdale.net)](http://tomdale.net/2013/05/evergreen-browsers/)
+[Evergreen Browsers](http://tomdale.net/2013/05/evergreen-browsers/)
 
 
 ##ES3, ES5, ES5.1, ES6, etc
@@ -32,19 +30,23 @@ Most browsers support at least ES5, and some even have ES6 support. You can chec
 * [ES5 support](http://kangax.github.io/compat-table/es5/)
 * [ES6 support](http://kangax.github.io/compat-table/es6/")
 
-[ECMAScript (wikipedia.org)](https://en.wikipedia.org/wiki/ECMAScript)
+[ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
 
 
 ##LESS, Sass
-CSS preprocessor. For example see https://gist.github.com/chriseppstein/674726
+Both LESS and Sass are types of CSS preprocessor markup intended to give you much more control over your CSS. During the build process, the LESS or Sass resources "compile" down to vanilla CSS (which is what the end-user downloads and use in their browser).
+
+[Sass/Less Comparison](https://gist.github.com/chriseppstein/674726)
 
 
 ##Linter, linting, jslint, jshint
-A tool ran against your JavaScript which checks for common issues. An example of some of the options you can configure: <a href="http://jshint.com/docs/options/">http://jshint.com/docs/options/</a>
+A tool ran against your JavaScript which checks for common issues. You'd usually use this in your build process to enforce quality in your codebase. A great example of something to check for: making sure you've always got your semicolons.
+
+[An example of some of the options you can configure](http://jshint.com/docs/options/)
 
 
 ##Polyfill
-This concept typically means providing JavaScript which tests for features that are missing (prototypes not defined, etc) and "fills" them by providing an implementation
+This is concept that typically means providing JavaScript which tests for features that are missing (prototypes not defined, etc) and "fills" them by providing an implementation.
 
 
 ##Promise
@@ -52,22 +54,13 @@ Asynchronous calls typically return a promise (or deferred). This is an object w
 
 Ember makes use of these in places like the model hook for a route. Until the promise resolves, Ember is able to put the route into a "loading" state.
 
-<a href="https://promisesaplus.com/">An open standard for sound, interoperable JavaScript promises (promisesaplus.com)</a>
-
-
-##Run Loop
-<a href="http://stackoverflow.com/questions/13597869/what-is-ember-runloop-and-how-does-it-work">What is Ember RunLoop and how does it work? (stackoverflow.com)</a>
-
-
-##Selectors
-definition: 'Selectors are simply a way to match an element from the DOM, for example what you code against in your CSS.
-It's extremely common for libraries like jQuery to use selectors to grab a DOM element to insert children or update/remove it.
+[An open standard for sound, interoperable JavaScript promises](https://promisesaplus.com/)
 
 
 ##SSR
 Server Side Rendering
 
-[Inside FastBoot: The Road to Server-Side Rendering (emberjs.com)](http://emberjs.com/blog/2014/12/22/inside-fastboot-the-road-to-server-side-rendering.html)
+[Inside FastBoot: The Road to Server-Side Rendering](http://emberjs.com/blog/2014/12/22/inside-fastboot-the-road-to-server-side-rendering.html)
 
 
 ##Transpile
@@ -79,12 +72,12 @@ Besides ES6, you'll see a lot of content about compiling/transpiling CoffeeScrip
 
 
 ##Shadow DOM
-Not to be confused with Virtual DOM! Shadow DOM is still a work in progress, but basically a proposed way to have an "isolated" DOM encapsulated within your app's DOM.
+**Not to be confused with Virtual DOM!** Shadow DOM is still a work in progress, but basically a proposed way to have an "isolated" DOM encapsulated within your app's DOM.
 
 Creating a re-usable "widget" or control might be a good use-case for this. Browsers implement some of their controls using their own version of a shadow DOM.
 
-* <a href="http://www.w3.org/TR/shadow-dom/">W3C Working Draft (w3.org)</a></li>
-* <a href="http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/">What the Heck is Shadow DOM? (glazkov.com)</a>
+* [W3C Working Draft](http://www.w3.org/TR/shadow-dom/)
+* [What the Heck is Shadow DOM?](http://glazkov.com/2011/01/14/what-the-heck-is-shadow-dom/)
 
 
 ##Virtual DOM
