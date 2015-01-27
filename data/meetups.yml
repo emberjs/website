@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
