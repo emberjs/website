@@ -90,11 +90,23 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/a/5/3/4/thumb_238302292.jpeg
     - organizer: Shane Ballman
       profileImage: http://photos4.meetupstatic.com/photos/member/b/d/4/e/thumb_214428462.jpeg
-  - location: Southern California, CA
+  - location: Los Angeles, CA
     url: http://www.meetup.com/Ember-SC/
     image: 05socal.png
-    lat: 34.9592083
-    lng: -116.419389
+    lat: 34.052234
+    lng: -118.243685
+    organizers:
+    - organizer: Jay Phelps
+      profileImage: http://photos3.meetupstatic.com/photos/member/2/5/0/a/thumb_157329482.jpeg
+    - organizer: Bill Heaton
+      profileImage: http://photos1.meetupstatic.com/photos/member/b/1/9/6/thumb_131385462.jpeg
+    - organizer: Drew Purdy
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/0/8/2/thumb_42788322.jpeg
+  - location: Orange County, CA
+    url: http://www.meetup.com/Ember-SC/
+    image: 05socal.png
+    lat: 33.717471
+    lng: -117.831143
     organizers:
     - organizer: Jay Phelps
       profileImage: http://photos3.meetupstatic.com/photos/member/2/5/0/a/thumb_157329482.jpeg
