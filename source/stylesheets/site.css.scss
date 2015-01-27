@@ -1276,7 +1276,10 @@ body.community_meetups #content {
         margin: 2px 0;
         padding: 0;
         &:before {
-          @include hidpi('meetups/map-pin', 'png');
+          // Currently the standard res is good enough for retina, since we're already downscaling
+          // and the automatically added background-size declaration is problematic
+          //@include hidpi('meetups/map-pin', 'png');
+          background-image: url('/images/meetups/map-pin.png');
           background-size: 9px auto;
           width: 9px;
           height: 12px;
