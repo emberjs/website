@@ -1,4 +1,4 @@
-## Got Node?
+## Got Node (and NPM)?
 
 If you're not sure if you have node.js installed, try running the following from your command line:
 
@@ -13,12 +13,12 @@ If you **don't** have it installed...
 * Windows or Mac users [can simply download and run the installer](http://nodejs.org/download/).
 * Linux users [can check out this great guide](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager) by Joyent for install instructions.
 
-Once you've got node.js installed, re-run the above ```node --version``` to verify the install.
+Once you've got node.js installed, re-run the above ```node --version``` to verify your install.
 
 
 ## Installing Ember
 
-Having node.js installed lets you use the Node Package Manager which makes installing easy.
+Node Package Manager (npm) comes bundled with node.js and makes installing easy.
 
 Let's install Ember by running the following:
 
