@@ -1,4 +1,4 @@
-##Got Node?
+## Got Node?
 
 If you're not sure if you have node.js installed, try running the following from your command line:
 
@@ -16,7 +16,7 @@ If you **don't** have it installed...
 Once you've got node.js installed, re-run the above ```node --version``` to verify the install.
 
 
-##Installing Ember
+## Installing Ember
 
 Having node.js installed lets you use the Node Package Manager which makes installing easy.
 
@@ -34,7 +34,7 @@ npm install -g phantomjs
 * [PhantomJS](http://phantomjs.org/) is a headless (no GUI) web browser that Ember uses for integration tests.
 
 
-##Testing your installation
+## Testing your installation
 
 At this point, you should be good to go... but we can test out your install to make sure everything works great.
 
@@ -55,7 +55,7 @@ ember server
 
 navigate to `http://localhost:4200` to see your new app in action.
 
-##Troubleshooting
+## Troubleshooting
 
 * Permissions issues doing the npm install?
   * If you're on Mac or Linux, try using sudo (```sudo npm install -g ember-cli```).

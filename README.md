@@ -64,7 +64,7 @@ gem install bundler wdm tzinfo-data
 gem update listen middleman
 ```
 
-**NOTE**: if you get an error like this:
+If you get an error like this:
 
 ```Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://rubygems.org/latest_specs.4.8.gz)```
 
