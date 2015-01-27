@@ -343,6 +343,8 @@
   image: hotdoc.png
 - url: http://www.xlab.si
   image: xlab.png
+- url: http://blimp.io
+  image: blimp.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
