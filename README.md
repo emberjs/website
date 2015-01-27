@@ -17,6 +17,18 @@ Then visit [http://localhost:4567/](http://localhost:4567/)
 
 **Note**: unless you're working with the API docs, don't use `rake preview`—use `middleman` (aka `middleman server`) instead.
 
+To populate organizers data from meetup.com on http://localhost:4567/meetups
+
+  * get a [meetup API Key](https://secure.meetup.com/meetup_api/key/)
+  * set ENV["MEETUP_API_KEY"]
+  * run the following rake command
+
+`` sh
+rake findorganizers [force=true]
+
+The force=true flag will overwrite all existing organizer data
+```
+
 #### API Documentation
 
 You can preview api documention, by generating docs from the source code.

@@ -10,6 +10,7 @@
 
 require "bundler/setup"
 require 'yaml'
+require './lib/meetups_data'
 
 def git_initialize(repository)
   unless File.exist?(".git")
@@ -89,6 +90,44 @@ def generate_ember_data_docs
   puts "Built #{repo_path} with SHA #{sha}"
 end
 
+def geocode_meetups
+  data_path = 'meetups.yml'
+  puts "Geocoding records from #{data_path}... "
+
+  data = YAML.load_file(File.expand_path("./data/#{data_path}"))
+  data["locations"].each do |loc|
+    loc["groups"].each do |group|
+      MeetupsData::GroupGeocoder.from_hash(group).find_location{|msg| puts msg}
+    end
+  end
+
+  File.open(File.expand_path("../data/#{data_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
+end
+
+def find_meetup_organizers(update_all)
+  data_path = 'meetups.yml'
+
+  if ENV["MEETUP_API_KEY"].nil?
+    puts "Set ENV['MEETUP_API_KEY'] to connect to the meetup.com API"
+    return false
+  end
+
+  puts "Getting organizers data from api.meetup.com for #{data_path}..."
+
+  data = YAML.load_file(File.expand_path("./data/#{data_path}"))
+  data["locations"].each do |loc|
+    loc["groups"].each do |group|
+      MeetupsData::GroupOrganizer.from_hash(group).find_organizers(update_all)
+    end
+  end
+
+  File.open(File.expand_path("../data/#{data_path}", __FILE__), "w") do |f|
+    YAML.dump(data, f)
+  end
+end
+
 def build
   system "middleman build"
 end
@@ -154,4 +193,14 @@ task :deploy do |t, args|
     system "git commit -m '#{message.gsub("'", "\\'")}'"
     system "git push origin master" unless ENV['NODEPLOY']
   end
+end
+
+desc "Find coordinates for meetup locations"
+task :geocode do
+  geocode_meetups
+end
+
+desc "Find organizers for meetup user group_urlname"
+task :findorganizers do |t, args|
+  find_meetup_organizers(ENV['force'])
 end
