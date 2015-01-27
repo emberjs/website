@@ -78,11 +78,11 @@ h1 {
   padding-bottom: 20px;
 }
 
-/* This next h1 is so h1s in the middle of the page (ie not the first time) 
+/* This next h1 is so h1s in the middle of the page (ie not the first time)
 have additional breathing room up top */
 
 h1:not(:first-child) {
-  margin-top: 40px; 
+  margin-top: 40px;
 }
 
 h2 {
@@ -234,7 +234,7 @@ p {
           border-bottom: 1px solid #d5ccc8;
           padding: 12px 12px 10px 12px;
           background-color: rgb(244, 236, 233);
-          
+
           &:hover {
             background-color: #ECE3E0;
           }
@@ -1276,7 +1276,10 @@ body.community_meetups #content {
         margin: 2px 0;
         padding: 0;
         &:before {
-          @include hidpi('meetups/map-pin', 'png');
+          // Currently the standard res is good enough for retina, since we're already downscaling
+          // and the automatically added background-size declaration is problematic
+          //@include hidpi('meetups/map-pin', 'png');
+          background-image: url('/images/meetups/map-pin.png');
           background-size: 9px auto;
           width: 9px;
           height: 12px;
