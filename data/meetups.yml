@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions: 
+      zoomControlOptions:
       styles:
       - featureType: road
         elementType: geometry
@@ -289,6 +289,8 @@ locations:
     organizers:
     - organizer: Taras Mankovski
       profileImage: http://photos2.meetupstatic.com/photos/member/4/d/0/a/thumb_93619722.jpeg
+    - organizer: Jonathan Geiger
+      profileImage: http://photos4.meetupstatic.com/photos/member/1/1/5/c/member_9784444.jpeg
   - location: Ottawa, Canada
     url: http://www.meetup.com/Ember-js-Ottawa/
     image: 13ottawa.png
@@ -328,11 +330,17 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/6/a/2/4/thumb_241647172.jpeg
   - location: Riverside, CA
     url: http://www.meetup.com/Ember-Riverside-Meetup/
-    organizers:
-      organizer: Judd Lillestrand
-      profileImage: http://photos2.meetupstatic.com/photos/member/2/1/d/6/thumb_59348662.jpeg
     lat: 33.9533487
     lng: -117.3961564
+    organizers:
+    - organizer: Judd Lillestrand
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/1/d/6/thumb_59348662.jpeg
+    - organizer: Jack Lucky
+      profileImage: http://photos1.meetupstatic.com/photos/member/a/4/2/6/highres_188922022.jpeg
+    - organizer: Michael Albertson
+      profileImage: http://photos4.meetupstatic.com/photos/member/2/b/1/8/member_173351032.jpeg
+    - organizer: Mustafa Khattab
+      profileImage: http://photos2.meetupstatic.com/photos/member/2/f/5/0/member_122112112.jpeg
 - area: South America
   groups:
   - location: São Paulo, Brazil
