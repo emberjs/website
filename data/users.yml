@@ -343,6 +343,8 @@
   image: hotdoc.png
 - url: http://www.xlab.si
   image: xlab.png
+- url: https://www.netflix.com/
+  image: netflix.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
