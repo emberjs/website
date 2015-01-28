@@ -6,7 +6,7 @@ google_map:
     provider:
       streetViewControl: false
       panControl: false
-      zoomControlOptions:
+      zoomControlOptions: 
       styles:
       - featureType: road
         elementType: geometry
@@ -280,6 +280,15 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/4/c/e/c/thumb_77659692.jpeg
     - organizer: Justin G.
       profileImage: http://photos2.meetupstatic.com/photos/member/8/c/d/c/thumb_12036060.jpeg
+  - location: Toronto, Canada Hack Nights
+    address: Golden Ave. Toronto, ON
+    url: http://www.meetup.com/Ember-Hack-Night/
+    image: 15toronto.png
+    lat: 43.6533101
+    lng: -79.44856759999999
+    organizers:
+    - organizer: Taras Mankovski
+      profileImage: http://photos2.meetupstatic.com/photos/member/4/d/0/a/thumb_93619722.jpeg
   - location: Ottawa, Canada
     url: http://www.meetup.com/Ember-js-Ottawa/
     image: 13ottawa.png
@@ -322,6 +331,8 @@ locations:
     organizers:
       organizer: Judd Lillestrand
       profileImage: http://photos2.meetupstatic.com/photos/member/2/1/d/6/thumb_59348662.jpeg
+    lat: 33.9533487
+    lng: -117.3961564
 - area: South America
   groups:
   - location: São Paulo, Brazil
