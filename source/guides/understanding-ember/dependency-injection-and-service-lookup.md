@@ -19,7 +19,7 @@ App.IndexController = Ember.ObjectController.extend({
     findItems: function(){
       var controller = this;
       // Dependency injection provides the store object to the controller instance.
-      this.store.find('item').then(function(items){
+      this.store.findAll('item').then(function(items){
         controller.set('items', items);
       });
     }
