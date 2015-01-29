@@ -1,14 +1,11 @@
 The Ember Data store provides a simple interface for finding records of a single
-type through the `store` object's `find` method. Internally, the `store`
-uses `find`, `findAll`, and `findQuery` based on the supplied arguments.
+type through the `store` object's `find`, `findAll` and `findQuery` methods.
 
-The first argument to `store.find()` is always the record type. The optional second
-argument determines if a request is made for all records, a single record, or a query.
 
 ### Finding All Records of a Type
 
 ```javascript
-var posts = this.store.find('post'); // => GET /posts
+var posts = this.store.findAll('post'); // => GET /posts
 ```
 
 To get a list of records already loaded into the store, without making
@@ -18,7 +15,7 @@ another network request, use `all` instead.
 var posts = this.store.all('post'); // => no network request
 ```
 
-`find` returns a `DS.PromiseArray` that fulfills to a `DS.RecordArray` and `all`
+`findAll` returns a `DS.PromiseArray` that fulfills to a `DS.RecordArray` and `all`
 directly returns a `DS.RecordArray`.
 
 It's important to note that `DS.RecordArray` is not a JavaScript array.
@@ -30,25 +27,24 @@ will not work--you'll have to use `objectAt(index)` instead.
 
 ### Finding a Single Record
 
-If you provide a number or string as the second argument to `store.find()`,
-Ember Data will assume that you are passing in an ID and attempt to retrieve a record of the type passed in as the first argument with that ID. This will
-return a promise that fulfills with the requested record:
-
 ```javascript
 var aSinglePost = this.store.find('post', 1); // => GET /posts/1
 ```
 
+`find` will return a promise that fulfills with the requested record.
+
+
 ### Querying For Records
 
-If you provide a plain object as the second argument to `find`, Ember Data will
-make a `GET` request with the object serialized as query params. This method returns
-`DS.PromiseArray` in the same way as `find` with no second argument.
+Using `findQuery`, Ember Data will make a `GET` request with the object
+serialized as query params. This method returns `DS.PromiseArray` in the same
+way as `findAll`.
 
 For example, we could search for all `person` models who have the name of
 `Peter`:
 
 ```javascript
-var peters = this.store.find('person', { name: "Peter" }); // => GET to /persons?name='Peter'
+var peters = this.store.findQuery('person', { name: "Peter" }); // => GET to /persons?name='Peter'
 ```
 
 ### Integrating with the Route's Model Hook
@@ -75,7 +71,7 @@ App.Router.map(function() {
 
 App.PostsRoute = Ember.Route.extend({
   model: function() {
-    return this.store.find('post');
+    return this.store.findAll('post');
   }
 });
 

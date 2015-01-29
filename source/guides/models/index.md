@@ -88,7 +88,7 @@ a restaurant, you might have models like `Order`, `LineItem`, and
 Fetching orders becomes very easy:
 
 ```js
-this.store.find('order');
+this.store.findAll('order');
 ```
 
 Models define the type of data that will be provided by your server. For

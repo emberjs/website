@@ -104,7 +104,7 @@ Here's an example:
 App.FavoritesRoute = Ember.Route.extend({
   model: function() {
     // the model is an Array of all of the posts
-    return this.store.find('post');
+    return this.store.findAll('post');
   }
 });
 ```

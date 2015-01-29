@@ -93,9 +93,9 @@ throughout the lifetime of the application without requiring that
 the view knows anything about those mechanics.
 
 For example, if the user navigates from `/posts/1` to `/posts/2`,
-the `PostController` will change its model from `Post.find(1)` to
-`Post.find(2)`. The template will update its representations of any
-properties on the model, as well as any computed properties on the
+the `PostController` will change its model from `store.find('post', 1)`
+to `store.find('post', 2)`. The template will update its representations
+of any properties on the model, as well as any computed properties on the
 controller that depend on the model.
 
 This makes it easy to test a template in isolation by rendering it 
