@@ -23,7 +23,7 @@ To populate organizers data from meetup.com on http://localhost:4567/meetups
   * set ENV["MEETUP_API_KEY"]
   * run the following rake command
 
-`` sh
+``` sh
 rake findorganizers [force=true]
 
 The force=true flag will overwrite all existing organizer data
