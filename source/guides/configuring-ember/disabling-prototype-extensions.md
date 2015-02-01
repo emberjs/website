@@ -30,8 +30,8 @@ described above.
 To do so, simply set the `EXTEND_PROTOTYPES` flag to `false`:
 
 ```javascript
-window.ENV = {};
-ENV.EXTEND_PROTOTYPES = false;
+window.EmberENV = {};
+EmberENV.EXTEND_PROTOTYPES = false;
 ```
 
 Note that the above code must be evaluated **before** Ember.js loads. If
