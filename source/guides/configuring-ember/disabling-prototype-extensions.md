@@ -34,6 +34,14 @@ window.EmberENV = {};
 EmberENV.EXTEND_PROTOTYPES = false;
 ```
 
+Or you can choose class which you want to disable prototype extension.
+``` javascript
+EmberENV.EXTEND_PROTOTYPES = {
+  String: false,
+  Array: true
+};
+```
+
 Note that the above code must be evaluated **before** Ember.js loads. If
 you set the flag after the Ember.js JavaScript file has been evaluated,
 the native prototypes will already have been modified.
