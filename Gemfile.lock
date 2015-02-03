@@ -63,14 +63,19 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.4)
     execjs (2.2.2)
+    faraday (0.9.1)
+      multipart-post (>= 1.2, < 3)
     ffi (1.9.6)
     ffi (1.9.6-x86-mingw32)
+    geocoder (1.2.6)
+    gmaps4rails (2.1.2)
     haml (4.0.6)
       tilt
     handlebars-source (2.0.0)
     highline (1.6.21)
     hike (1.2.3)
     hitimes (1.2.2)
+    hitimes (1.2.2-x86-mingw32)
     hooks (0.4.0)
       uber (~> 0.0.4)
     i18n (0.6.11)
@@ -119,6 +124,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.0)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     nokogiri (1.6.5)
       mini_portile (~> 0.6.0)
     nokogiri (1.6.5-x86-mingw32)
@@ -194,6 +200,7 @@ GEM
     uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.7.0)
     wdm (0.1.0)
     websocket-driver (0.5.1)
       websocket-extensions (>= 0.1.0)
@@ -212,6 +219,9 @@ DEPENDENCIES
   capybara
   coderay!
   ember-middleman
+  faraday
+  geocoder
+  gmaps4rails
   highline
   listen
   middleman (~> 3.0)
@@ -227,4 +237,5 @@ DEPENDENCIES
   rspec
   thin
   tzinfo-data
+  underscore-rails
   wdm (>= 0.1.0)

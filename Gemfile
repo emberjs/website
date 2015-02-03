@@ -16,6 +16,10 @@ gem "middleman-alias"
 gem "ember-middleman"
 gem "rails-assets-js-md5"
 gem "rails-assets-moment"
+gem "underscore-rails"
+gem "gmaps4rails"
+gem "geocoder"
+gem "faraday"
 
 group :development, :test do
   gem 'pry'

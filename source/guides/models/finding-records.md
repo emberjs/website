@@ -48,7 +48,7 @@ For example, we could search for all `person` models who have the name of
 `Peter`:
 
 ```javascript
-var peters = this.store.find('person', { name: "Peter" }); // => GET to /persons?name='Peter'
+var peters = this.store.find('person', { name: "Peter" }); // => GET to /persons?name=Peter
 ```
 
 ### Integrating with the Route's Model Hook

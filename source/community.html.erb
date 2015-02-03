@@ -4,10 +4,11 @@ title: "Community"
 
 <h1>Get Involved: Join the Growing Ember.js Community</h1>
 
-<div class="community section">
+<div class="community section contribute">
   <h2>In a Giving Mood? Contribute to the Project</h2>
 
-  <div></div>
+  <div class="image"></div>
+
   <p>The Ember.js source is hosted on <a href="https://github.com/emberjs/ember.js/">Github</a>.
     To contribute patches, create a fork of the project on GitHub and submit a pull request.
     Please be sure to include unit tests and documentation for any new features you add.
@@ -18,7 +19,8 @@ title: "Community"
 <div class="community section bugs">
   <h2>Something Fishy? Report it to the Team</h2>
 
-  <div class="bug"></div>
+  <div class="image"></div>
+
   <p>If you've found a bug or issue in Ember.js, please let us know. To file a bug, go to the
     <a href="https://github.com/emberjs/ember.js/issues">issue tracker</a> and create a new
     issue. Great bug reports include a clear description of what is not happening and what
@@ -33,13 +35,13 @@ title: "Community"
     <p>The source code for this website is also <a href="https://github.com/emberjs/website">available on GitHub</a>. If you have found a typo or incorrect documentation, please file an issue on the GitHub project page, or even better, submit a pull request.</p>
 
     <p>Ember is an inclusive community that welcomes (and benefits from!) people of all backgrounds. If you're having a non-code issue, <a href="mailto:ombudsman@emberjs.com?subject=Website Help Link">reach out</a>. We do our very best to be sure every Ember user has pleasant interactions and positive experiences. If we can help make you feel more comfortable or help navigate a trying situation, let us know.</p>
-
 </div>
 
-<div class="community section">
+<div class="community section help">
   <h2>Stuck? Lost? Get Help from the Community</h2>
 
-  <div class="sos"></div>
+  <div class="image"></div>
+
   <p><a href="http://stackoverflow.com/questions/tagged/ember.js">StackOverflow</a> is used to
   track questions. Just tag your question with <code>ember.js</code> or
   <a href="http://stackoverflow.com/questions/tagged/ember.js">search for questions with that tag</a>.
@@ -51,45 +53,25 @@ title: "Community"
   <p>You can also check out our IRC channel at <code>#emberjs</code> on chat.freenode.net.</p>
 </div>
 
-<div class="community section bugs">
-  <h2>Meetups Around the World</h2>
+<div class="community section meetup">
+  <h2>Feeling Lonely?<br>Join a Meetup</h2>
 
-  <div class="meetup"></div>
+  <div class="image"></div>
 
-  <p>There are a number of different Ember.js meetups around the world.
-    Going to a meetup is a great way to learn more about Ember.js and meet
-    other developers.</p>
+  <p>
+    There are Ember.js meetups around the world.<br />Joining is a great way to learn more about Ember.js, meet other developers, find jobs, etc. Any and all things Ember and local.</p>
 
-  <table class="columns">
-    <tr>
-      <% data.meetups.each do |name, groups| %>
-        <td>
-          <h3><%= name %></h3>
-
-          <ul>
-            <% groups.sort_by(&:location).each do |group| %>
-              <li><%= link_to group.location, group.url %></li>
-            <% end %>
-          </ul>
-        </td>
-      <% end %>
-    </tr>
-  </table>
+  <a class="orange button" href="/community/meetups">Find a meetup near you</a>
 </div>
 
-<div class="community section">
-  <h2>Looking to Learn? Videos n' More!</h2>
+<div class="community section learn">
+  <h2>Looking to Learn?<br>Videos n' More!</h2>
 
-  <div class="campster"></div>
+  <div class="image"></div>
 
-  <p>Ember is a new and growing community, and we're working to create learning resources as fast as we can.
-  Here are some useful places to look for content other than our documentation:</p>
-    <ul class="inline_list">
-      <li><a href="https://addepar.com/ember/">Videos from EmberCamp 2013</a></li>
-      <li><a href="http://2014.emberconf.com/schedule.html">Videos from EmberConf 2014</a></li>
-      <li><a href="http://emberwatch.com/">EmberWatch</a>, a great aggregator of Ember-related content</li>
-      <li><a href="http://emberweekly.com/">Ember Weekly</a>, an Ember newsletter delivered to your inbox.</li>
-      <li><a href="https://emberflare.com">EmberFlare</a>, a community driven place for all things Ember</li>
-    </ul>
-  <p>...and lastly, there are screencasts and videos sprinkled throughout the docs.</p>
+  <p>
+    Ember is a new and growing community, and we're working to create learning resources as fast as we can. We've compiled a list of useful places to look for content other than our <a href="/guides">documentation</a>.
+  </p>
+
+  <a class="orange button">Coming Soon!</a>
 </div>
