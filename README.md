@@ -50,7 +50,17 @@ the same directory:
 
 Notice that the name of the data project needs to use `ember-data` not `data`
 
-In the website directory execute `bundle exec rake generate_docs`
+To generate docs you should run `npm install` in your `ember.js` and `ember-data` local repos and only after that run `bundle exec rake generate_docs`:
+
+```
+$ cd ember-data
+$ git pull && npm install
+$ cd../ember.js
+$ git pull && npm install
+$ cd ../website
+$ git pull && npm install
+$ bundle exec rake generate_docs
+```
 
 You can launch the website via `bundle exec middleman` to preview the generated docs.
 
