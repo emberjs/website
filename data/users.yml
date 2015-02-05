@@ -345,6 +345,8 @@
   image: xlab.png
 - url: https://www.netflix.com/
   image: netflix.png
+- url: http://roomle.com
+  image: roomle.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
