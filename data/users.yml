@@ -355,6 +355,8 @@
   image: heroku.png
 - url: http://www.kotive.com
   image: kotive.png
+- url: http://gettinderbox.com/
+  image: tinderbox.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
