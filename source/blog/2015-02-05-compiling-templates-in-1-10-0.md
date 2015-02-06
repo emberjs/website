@@ -6,7 +6,7 @@ tags: Recent Posts
 
 As many of you know, Ember 1.10 will be the first version of Ember that uses [HTMLBars](https://github.com/tildeio/htmlbars) as its templating engine. With this change you may need to change the way you compile your templates.
 
-The HTMLBars API is evolving and is not 1.0.0 yet, so to ensure that templates are compiled compatibly with your Ember version we have updated the Ember build system to generate a `ember-template-compiler.js` file alongside every build of Ember. This template compiler can be used server-side for precompilation or in the browser to compile templates on the fly. If you do not need to compile templates at runtime (in the browser) the `ember.debug.js` or `ember.prod.js` file alone is sufficient. There is no need to include a runtime dependency. This is a departure from previous versions, where you would always include either `handlebars.js` or `handlebars.runtime.js`.
+The HTMLBars API is evolving and not 1.0.0 yet, so to ensure that templates are compiled compatibly with your Ember version we have updated the Ember build system to generate a `ember-template-compiler.js` file alongside every build of Ember. This template compiler can be used server-side for precompilation or in the browser to compile templates on the fly. If you do not need to compile templates at runtime (in the browser) the `ember.debug.js` or `ember.prod.js` file alone is sufficient. There is no need to include a runtime dependency. This is a departure from previous versions, where you would always include either `handlebars.js` or `handlebars.runtime.js`.
 
 Most of the time you will use a third party library like [ember-cli](https://github.com/ember-cli/ember-cli), [ember-cli-htmlbars](https://github.com/rondale-sc/ember-cli-htmlbars), or [grunt-ember-templates](https://github.com/dgeb/grunt-ember-templates) to precompile templates, but this post will discuss how libraries like this should work internally.
 
@@ -79,4 +79,4 @@ There are any number of build tool libraries that are intended to make the serve
 * [ember-cli-htmlbars](https://github.com/rondale-sc/ember-cli-htmlbars) - Can be used either as a standalone Broccoli plugin, or as an ember-cli addon.
 * [grunt-ember-templates](https://github.com/dgeb/grunt-ember-templates) - Works as a Grunt plugin. To precompile HTMLBars templates, you must supply specific parameters to your task definition as mentioned in [this PR](https://github.com/dgeb/grunt-ember-templates/pull/77).
 * [mimosa-ember-htmbars](https://github.com/dbashford/mimosa-ember-htmlbars) - A plugin for the [mimosa](http://mimosa.io/) build tool.
-* [ember-rails](https://github.com/emberjs/ember-rails) - The Rails Asset Pipeline plugin supports HTMLBars template.
+* [ember-rails](https://github.com/emberjs/ember-rails) - The Rails Asset Pipeline plugin supports HTMLBars templates.
