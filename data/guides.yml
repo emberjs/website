@@ -4,12 +4,8 @@
     skip_sidebar: true
 
 "Getting Started":
-  - title: "A Solid Foundation"
-    url: "ember-cli"
   - title: "Installing Ember"
-    url: "ember-cli/installing"
-#  - title: "Upgrading Ember"
-#    url: "ember-cli/upgrading"
+    url: "ember-cli"
   - title: "The Inspector Tool"
     url: "ember-cli/inspector"
   - title: "Glossary"
@@ -63,9 +59,9 @@
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
 
-"Getting Ember":
-  - title: "Getting Ember"
-    url: "getting-ember"
+#"Getting Ember":
+#  - title: "Getting Ember"
+#    url: "getting-ember"
 
 Concepts:
   - title: "Core Concepts"

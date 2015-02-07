@@ -1,1 +1,0 @@
-https://github.com/ember-cli/ember-cli/releases
