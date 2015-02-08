@@ -56,6 +56,13 @@ App.ArticlesController = Ember.ArrayController.extend({
   }.property('category', 'model')
 });
 ```
+```handlebars
+<!-- articles.handlebars -->
+
+{{#each filteredArticles}}
+  //Results of filter
+{{/each}}
+```
 
 With this code, we have established the following behaviors:
 
