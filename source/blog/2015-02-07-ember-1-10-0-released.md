@@ -15,7 +15,7 @@ across over 553 commits.
 
 Throughout 2014 the Ember.js community has poured its shared effort into
 a new templating solution. This new library, dubbed HTMLBars, makes available
-new feature and performance improvements impossible to support with Handlebars
+features and performance improvements impossible to support with Handlebars
 (the previous library). We are delighted to announce the inclusion of
 the HTMLBars templating engine in Ember.js 1.10.
 
@@ -45,14 +45,14 @@ library version changes, Ember's template compiler will be packaged as a
 part of the release files. For example, a JSBin in Ember 1.9 would need to be
 updated from:
 
-```
+```html
 <script src="http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v2.0.0.js"></script>
 <script src="http://builds.emberjs.com/tags/v1.9.1/ember.js"></script>
 ```
 
 to
 
-```
+```html
 <script src="http://builds.emberjs.com/tags/v1.10.0/ember-template-compiler.js"></script>
 <script src="http://builds.emberjs.com/tags/v1.10.0/ember.debug.js"></script>
 ```
@@ -60,7 +60,8 @@ to
 The `ember-template-compiler.js` is only required for template compilation. The
 runtime dependencies for HTMLBars are built into the framework file.
 
-Ember-CLI users should update to a version at or after 0.1.12, then remove
+To smoothly upgrade to 1.10 and HTMLBars, Ember-CLI users should update to a
+version at or after 0.1.12 and then remove
 their application's Handlebars dependency. Ember App-Kit users should upgrade
 to Ember-CLI.
 
@@ -95,7 +96,7 @@ HTMLBars is built using the Handlebars parser, and will continue to gain
 features related to template syntax. Ember 1.10 features support for chained
 else helpers, the most common use being `else if`. An example:
 
-```hbs
+```handlebars
 {{#if isAtWork}}
   Ship that code!
 {{else if isReading}}
@@ -127,7 +128,7 @@ For example:
 {{/each}}
 ```
 
-Preserving template scope context results in easier to read templates, and passing
+Preserving template context results in easier to read templates, and passing
 variables into child scopes allows for new patterns of component composition.
 
 Block params are passed from a template via the `yield` helper. For example, this
@@ -171,9 +172,9 @@ Many thanks to [@\_mmun](https://twitter.com/_mmun) for the implementation of th
 
 Ember 1.x has exposed two APIs for managing dependency injection. The first is
 the application initializer API, using `register` and `inject` methods on an
-application instance. The second allows configuration of an injection on the
-class itself via `needs`. You can read more about these patterns in
-[the dependency injection guide](http://emberjs.com/guides/understanding-ember/dependency-injection-and-service-lookup/).
+application instance. The second allows configuration of an injection on
+controllers via `needs`. You can read more about these patterns in
+[the dependency injection guide](/guides/understanding-ember/dependency-injection-and-service-lookup/).
 
 The new injected properties offer a more declarative API for dependency injection.
 
@@ -217,7 +218,7 @@ test("a value is saved on storage", function(){
 });
 ```
 
-Refer to the [API documentation](add this) to read about this new feature in
+Refer to the [API documentation](/api/#method_inject_service) to read about this new feature in
 detail.
 
 Thanks to [slindberg](https://github.com/slindberg) for his implementation of this feature.
@@ -226,7 +227,7 @@ Thanks to [slindberg](https://github.com/slindberg) for his implementation of th
 
 As Ember.js moves forward, various APIs are deprecated to allow for their
 removal in a later major release (such as 2.0). The
-[deprecations guide](http://emberjs.com/guides/deprecations/) summarizes
+[deprecations guide](/guides/deprecations/) summarizes
 deprecations and demonstrates how to update to a new API.
 
 * The explicit `{{bind}}` helper has been deprecated. This helper has
@@ -240,7 +241,7 @@ deprecations and demonstrates how to update to a new API.
   are rarely used, but introduce significant overhead to the observer system
   in general. For observer use that requires the previous value of a property
   be known, implementing a cache is simple and more efficient. Read more about
-  how to do this in [the deprecation guide](http://emberjs.com/guides/deprecations/#toc_deprecate-beforeobservers).
+  how to do this in [the deprecation guide](/guides/deprecations/#toc_deprecate-beforeobservers).
 * Observing the `childViews` array of a `ContainerView` is deprecated.
 * Setting the `childViews` property on a view definition is deprecated in
   1.10. For example:
@@ -311,20 +312,20 @@ motivation for HTMLBars was to improve on this syntax.
 Ember 1.11 introduces a more intuitive API for attribute binding. For
 example, here the `color` variable is bound to the class of a div:
 
-```hbs
+```handlebars
 <div class="{{color}}"></div>
 ```
 
 The inline if helper can also be used in these contexts:
 
-```hbs
+```handlebars
 <div class="{{color}} {{if isEnabled 'active' 'disabled'}}"></div>
 ```
 
 For some attributes, like the `disabled` boolean, passing a literal value
 is desirable. An example:
 
-```hbs
+```handlebars
 <input disabled={{isDisabled}}>
 ```
 
@@ -336,7 +337,7 @@ When binding to an attribute, Ember first checks to see if that attribute is a
 property of the element's DOM node (with normalization of capitalization). If it
 is, the value is set with a property. For example:
 
-```hbs
+```handlebars
 <input disabled={{isDisabled}}>
 ```
 
@@ -348,7 +349,7 @@ input.disabled = true;
 If the attribute is not present as a property, then its value is set as an
 attribute:
 
-```hbs
+```handlebars
 <div class={{color}}>
 ```
 
@@ -386,7 +387,7 @@ Thanks to [@machty](http://twitter.com/machty) for landing this feature.
 Ember components can be bound via the `component` helper. For example this logic
 in a template:
 
-```hbs
+```handlebars
 {{#if isRed}}
   {{x-red}}
 {{/if}}
@@ -400,7 +401,7 @@ in a template:
 
 Can now be replaced by a computed property and the `component` helper.
 
-```hbs
+```handlebars
 {{component colorComponentName}}
 ```
 
