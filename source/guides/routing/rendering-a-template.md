@@ -38,8 +38,8 @@ Ember allows you to name your outlets. For instance, this code allows
 you to specify two outlets with distinct names:
 
 ```handlebars
-<div class="toolbar">{{outlet toolbar}}</div>
-<div class="sidebar">{{outlet sidebar}}</div>
+<div class="toolbar">{{outlet "toolbar"}}</div>
+<div class="sidebar">{{outlet "sidebar"}}</div>
 ```
 
 So, if you want to render your posts into the `sidebar` outlet, use code
