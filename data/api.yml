@@ -4,7 +4,7 @@ project:
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
   version: 1.10.0
-  sha: 
+  sha: v1.10.0
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
