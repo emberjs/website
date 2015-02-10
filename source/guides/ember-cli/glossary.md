@@ -22,10 +22,10 @@ Browsers that update themselves (without user intervention).
 [Evergreen Browsers](http://tomdale.net/2013/05/evergreen-browsers/)
 
 
-## ES3, ES5, ES5.1, ES6, etc
+## ES3, ES5, ES5.1, ES6 (aka ES2015), etc
 The ES standing for EMCAScript and the numeral following being its spec version; basically the version of JavaScript.
 
-Most browsers support at least ES5, and some even have ES6 support. You can check each browser's support (including yours) here:
+Most browsers support at least ES5, and some even have ES6 (also known as ES2015) support. You can check each browser's support (including yours) here:
 
 * [ES5 support](http://kangax.github.io/compat-table/es5/)
 * [ES6 support](http://kangax.github.io/compat-table/es6/")
@@ -72,7 +72,7 @@ Besides ES6, you'll see a lot of content about compiling/transpiling CoffeeScrip
 
 
 ## Shadow DOM
-**Not to be confused with Virtual DOM!** Shadow DOM is still a work in progress, but basically a proposed way to have an "isolated" DOM encapsulated within your app's DOM.
+**Not to be confused with Virtual DOM**. Shadow DOM is still a work in progress, but basically a proposed way to have an "isolated" DOM encapsulated within your app's DOM.
 
 Creating a re-usable "widget" or control might be a good use-case for this. Browsers implement some of their controls using their own version of a shadow DOM.
 
@@ -81,4 +81,4 @@ Creating a re-usable "widget" or control might be a good use-case for this. Brow
 
 
 ## Virtual DOM
-Not to be confused with Shadow DOM. The concept of a virtual DOM means abstracting your code (or in our case, Ember) away from using the browser's DOM in favor of a "virtual" DOM that can easily be accessed for read/writes or even serialized.
+**Not to be confused with Shadow DOM**. The concept of a virtual DOM means abstracting your code (or in our case, Ember) away from using the browser's DOM in favor of a "virtual" DOM that can easily be accessed for read/writes or even serialized.

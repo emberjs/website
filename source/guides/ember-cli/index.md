@@ -1,10 +1,12 @@
-Ember comes with a toolchain called Ember CLI that provides everything you need while developing your app behind a single command:  ```ember```.
+Installing Ember is *easy*! And our new install process includes *Ember CLI*, Ember's build tool
 
-* State of the art asset management (use ```ember build``` to build your entire project)
-* Quick scaffolding like ```ember generate route some-page```
-* ES6 modules to keep your project organized
-* A complete testing framework ( ```ember test``` )
-* Addons to share or use libraries from other Ember developers
+* State of the art asset management (including combining, minifying, and versioning)
+* Built-in generators can help you create components, routes, and more (and their test cases!)
+* A standard project layout. Working on other Ember apps is easy, they're organized similarly
+* Native [JavaScript modules](http://jsmodules.io/) to keep your project organized
+* A complete testing framework (unit tests, integration tests)
+* Access to a growing ecosystem of [Ember Addons](http://www.emberaddons.com/). Add functionality to your app without writing a single line of code! They're already packaged up and ready to add to your app
+
 
 ## Installation
 
