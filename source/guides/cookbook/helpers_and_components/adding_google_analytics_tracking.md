@@ -5,7 +5,7 @@ You want to add analytics to your Ember application.
 ### Solution
 Subscribe to the `didTransition` event inside your application router.
 
-In the following examples we're using Google Analytics but it could be any other analytics product.
+In the following examples we're using Google Analytics (Classic) but it could be any other analytics product.
 Add google analytic's base code to the html file that renders your ember app.
 
 ```html
