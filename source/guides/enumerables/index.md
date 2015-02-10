@@ -166,7 +166,7 @@ final Array, and `false` or `undefined` if Ember should not.
 var arr = [1,2,3,4,5];
 
 arr.filter(function(item, index, self) {
-  if (item < 4) { return true; }
+  if (index < 4) { return true; }
 })
 
 // returns [1,2,3]
