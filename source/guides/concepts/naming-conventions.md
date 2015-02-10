@@ -120,7 +120,7 @@ This has two major benefits:
 * You can replace the controller's model at any time without having
   to directly notify the view of the change.
 * The controller can provide additional computed properties or
-  view-specific state that do not belong in the model layer. This
+  view-specific states that do not belong in the model layer. This
   allows a clean separation of concerns between the view, the
   controller and the model.
 
