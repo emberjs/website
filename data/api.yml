@@ -27553,7 +27553,7 @@ classitems:
     {{play-button play="musicStarted" stop="musicStopped"}}
     ```
 
-    When the component receives a browser `click` event it translate this
+    When the component receives a browser `click` event it translates this
     interaction into application-specific semantics ("play" or "stop") and
     triggers the specified action name on the controller for the template
     where the component is used:
