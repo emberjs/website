@@ -1,5 +1,4 @@
-//= require handlebars
-//= require ember
+//= require ember.debug
 //= require moment
 //= require vendor/ZeroClipboard
 

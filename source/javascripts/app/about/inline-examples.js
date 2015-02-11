@@ -1,5 +1,5 @@
-//= require handlebars
-//= require ember
+//= require ember.debug
+//= require ember-template-compiler.js
 //= require moment
 //= require js-md5
 //= require ../../vendor/highlight

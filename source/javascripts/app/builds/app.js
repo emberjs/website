@@ -163,9 +163,9 @@ App.S3Bucket = Ember.Object.extend({
 
 App.S3File = Ember.Object.extend({
   scriptTag: function(){
-    var escapedURL = Handlebars.Utils.escapeExpression(this.get('url'));
+    var escapedURL = Ember.Handlebars.Utils.escapeExpression(this.get('url'));
 
-    return new Handlebars.SafeString('<script src="' + escapedURL + '"></script>').toString();
+    return new Ember.Handlebars.SafeString('<script src="' + escapedURL + '"></script>').toString();
   }.property('url'),
 
   url: function(){
@@ -362,7 +362,7 @@ App.ProjectsMixin = Ember.Mixin.create({
       value = 'The builds listed below are based on the most recent development.';
     }
 
-    return new Handlebars.SafeString(value);
+    return new Ember.Handlebars.SafeString(value);
   },
 
   lastReleaseUrl: function(project, channel, lastRelease, extension){
