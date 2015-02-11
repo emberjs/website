@@ -1,6 +1,6 @@
 TodoMVC has a few dependencies:
 
-  * [jQuery](http://code.jquery.com/jquery-1.11.1.min.js)
+  * [jQuery](http://code.jquery.com/jquery-1.11.2.min.js)
   * [Handlebars](http://builds.handlebarsjs.com.s3.amazonaws.com/handlebars-v1.3.0.js)
   * [Ember.js](http://builds.emberjs.com/tags/v1.8.1/ember.js)
   * [Ember Data 1.0 beta](http://builds.emberjs.com/tags/v1.0.0-beta.11/ember-data.js)
@@ -9,7 +9,7 @@ For this example, all of these resources should be stored in the folder `js/libs
 
 ```html
 <!-- ... additional lines truncated for brevity ... -->
-  <script src="js/libs/jquery-1.11.1.min.js"></script>
+  <script src="js/libs/jquery-1.11.2.min.js"></script>
   <script src="js/libs/handlebars-v1.3.0.js"></script>
   <script src="js/libs/ember.js"></script>
   <script src="js/libs/ember-data.js"></script>
