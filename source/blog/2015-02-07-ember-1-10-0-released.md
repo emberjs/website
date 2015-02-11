@@ -61,9 +61,12 @@ The `ember-template-compiler.js` is only required for template compilation. The
 runtime dependencies for HTMLBars are built into the framework file.
 
 To smoothly upgrade to 1.10 and HTMLBars, Ember-CLI users should update to a
-version at or after 0.1.12 and then remove
-their application's Handlebars dependency. Ember App-Kit users should upgrade
-to Ember-CLI.
+version at or after 0.1.12, remove
+their application's Handlebars dependency, and modify the Brocfile to not load Handlebars.
+[This diff](https://github.com/rwjblue/components-in-subdirs/commit/78e7ed2d072f42d9cf0fd3d9fc2376f106ab762e)
+shows the changes needed to upgrade an Emeber-CLI app to 1.10.
+
+Ember App-Kit users should upgrade to Ember-CLI.
 
 Ember-Rails users should upgrade to version 0.16.1, then remove their Handlebars
 dependency.
