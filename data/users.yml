@@ -347,6 +347,8 @@
   image: netflix.png
 - url: http://roomle.com
   image: roomle.png
+- url: http://www.claroapps.com
+  image: claroapps.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
