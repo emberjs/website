@@ -349,6 +349,8 @@
   image: roomle.png
 - url: http://www.claroapps.com
   image: claroapps.png
+  - url: http://blimp.io
+  image: blimp.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
