@@ -411,11 +411,6 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/9/2/b/a/thumb_181417562.jpeg
     - organizer: Thomas Reppa
       profileImage: http://photos2.meetupstatic.com/photos/member/2/4/f/6/thumb_93189462.jpeg
-  - location: Göteborg, Sweden
-    url: http://www.meetup.com/ember-js-goteborg/
-    image: 17goteborg.png
-    lat: 57.70887
-    lng: 11.97456
   - location: Budapest, Hungary
     url: http://www.meetup.com/ember-bp/
     lat: 47.497912
