@@ -479,6 +479,13 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/9/2/7/e/thumb_84877502.jpeg
     - organizer: Dennis Tel
       profileImage: http://photos3.meetupstatic.com/photos/member/d/3/2/4/thumb_162114052.jpeg
+  - location: Saint Petersburg, Russia
+    url: http://plus.google.com/b/102274210168727640530/102274210168727640530
+    lat: 59.934280
+    lng: 30.335099
+    organizers:
+    - organizer: Artem Sushchev
+      profileImage: http://gravatar.com/avatar/fcda4a04ab815c1ab9e5b2327a4350f6
 - area: Asia
   groups:
   - location: Tel Aviv, Israel
