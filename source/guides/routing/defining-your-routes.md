@@ -10,10 +10,10 @@ calling `map`, you should pass a function that will be invoked with the value
 [routes](http://emberjs.com/guides/routing/defining-your-routes/) and
 [resources](http://emberjs.com/guides/routing/defining-your-routes/#toc_resources).
 
-```js
+```javascript
 App.Router.map(function() {
-  this.route("about", { path: "/about" });
-  this.route("favorites", { path: "/favs" });
+  this.route('about', { path: '/about' });
+  this.route('favorites', { path: '/favs' });
 });
 ```
 
@@ -27,10 +27,10 @@ the `IndexRoute` (corresponding to the `/` path).
 Note that you can leave off the path if it is the same as the route
 name. In this case, the following is equivalent to the above example:
 
-```js
+```javascript
 App.Router.map(function() {
-  this.route("about");
-  this.route("favorites", { path: "/favs" });
+  this.route('about');
+  this.route('favorites', { path: '/favs' });
 });
 ```
 
@@ -58,7 +58,7 @@ subclass. For example, to customize what happens when your user visits
 App.IndexRoute = Ember.Route.extend({
   setupController: function(controller) {
     // Set the IndexController's `title`
-    controller.set('title', "My App");
+    controller.set('title', 'My App');
   }
 });
 ```
@@ -217,7 +217,7 @@ into a model.
 For example, if we have the resource `this.resource('posts');`, our
 route handler might look like this:
 
-```js
+```javascript
 App.PostsRoute = Ember.Route.extend({
   model: function() {
     return this.store.find('post');
@@ -238,7 +238,7 @@ Enter _dynamic segments_.
 A dynamic segment is a portion of a URL that starts with a `:` and is
 followed by an identifier.
 
-```js
+```javascript
 App.Router.map(function() {
   this.resource('posts');
   this.resource('post', { path: '/post/:post_id' });
@@ -274,7 +274,7 @@ App.Router.map(function() {
 App.PostRoute = Ember.Route.extend({
   model: function(params) {
     // the server returns `{ slug: 'foo-post' }`
-    return jQuery.getJSON("/posts/" + params.post_slug);
+    return Ember.$.getJSON('/posts/' + params.post_slug);
   },
 
   serialize: function(model) {
@@ -367,7 +367,6 @@ This router creates five routes:
   </table>
 </div>
 
-
 <small><sup>2</sup> `:post_id` is the post's id.  For a post with id = 1, the route will be:
 `/post/1`</small>
 
@@ -434,7 +433,6 @@ This router creates the following routes:
   </table>
 </div>
 
-
 ### Initial routes
 
 A few routes are immediately available within your application:
@@ -467,8 +465,8 @@ or `transitionTo` to programatically enter this route.
 ```javascript
 App.ApplicationRoute = Ember.Route.extend({
   actions: {
-    error: function () {
-      this.transitionTo('catchall', "application-error");
+    error: function() {
+      this.transitionTo('catchall', 'application-error');
     }
   }
 });
