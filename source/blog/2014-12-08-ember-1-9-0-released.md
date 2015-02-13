@@ -46,7 +46,7 @@ will require an update:
 
 ```
 npm uninstall --save-dev broccoli-ember-hbs-template-compiler
-npm install --save-dev ember-cli-htmlbars
+npm install --save-dev ember-cli-htmlbars@0.6.0
 ```
 
 Non-CLI applications will likewise require a bump of their Handlebars dependency version.
