@@ -349,7 +349,7 @@
   image: roomle.png
 - url: http://www.claroapps.com
   image: claroapps.png
-  - url: http://blimp.io
+- url: http://blimp.io
   image: blimp.png
 
 # ---- PLEASE READ ----
