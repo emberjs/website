@@ -254,7 +254,7 @@ to `/bears` and filter by `"best"`, and then navigate to `/potatoes` and
 filter by `"lamest"`, then given the following nav bar links,
 
 ```handlebars
-{{#link-to 'team' 'badgers '}}Badgers{{/link-to}}
+{{#link-to 'team' 'badgers' }}Badgers{{/link-to}}
 {{#link-to 'team' 'bears'   }}Bears{{/link-to}}
 {{#link-to 'team' 'potatoes'}}Potatoes{{/link-to}}
 ```
