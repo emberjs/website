@@ -28,7 +28,7 @@ Unfortunately, Ember will not be able to maintain backwards compatibility to 1.x
 supporting 2.0. In Ember 1.9.0 (which will be released to beta on October 24th and stable on December 5th)
 support for Handlebars 1.x will be removed, and support for Handlebars 2.0 introduced.
 
-In order to facilitate users of our canary builds we have published alpha versions of the
+In order to facilitate users of our 1.9.0 builds we have published alpha versions of the
 following template precompiler packages:
 
 * ember-template-compiler (published to NPM as 1.9.0-alpha)
@@ -47,8 +47,8 @@ To upgrade please use the following rough steps as a guide:
 If you happen to be using Ember CLI the following steps should work properly:
 
 * `npm uninstall --save-dev broccoli-ember-hbs-template-compiler`
-* `npm install --save-dev ember-cli-htmlbars`
+* `npm install --save-dev ember-cli-htmlbars@0.6.0`
 * `rm -rf bower_components`
 * `bower install --save handlebars#2.0.0`
-* `bower install --save ember#canary`
+* `bower install --save ember#1.9.1`
 * `bower install`
