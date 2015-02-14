@@ -138,6 +138,11 @@ task :generate_docs do
   generate_ember_data_docs
 end
 
+desc "Generate Ember Data docs only"
+task :generate_ember_data_docs do
+  generate_ember_data_docs
+end
+
 desc "Build the website"
 task :build => :generate_docs do
   build
