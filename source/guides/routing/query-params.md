@@ -62,7 +62,7 @@ With this code, we have established the following behaviors:
 1. If the user navigates to `/articles`, `category` will be `null`, so
    the articles won't be filtered.
 2. If the user navigates to `/articles?category=recent`,
-   `category` will be set to `"recent"`, so articles will be filtered.
+   `category` will be set to `'recent'`, so articles will be filtered.
 3. Once inside the `articles` route, any changes to the `category`
    property on `ArticlesController` will cause the URL to update the
    query param. By default, a query param property change won't cause a
@@ -76,7 +76,7 @@ The `link-to` helper supports specifying query params by way of the
 
 ```handlebars
 // Explicitly set target query params
-{{#link-to 'posts' (query-params direction="asc")}}Sort{{/link-to}}
+{{#link-to 'posts' (query-params direction='asc')}}Sort{{/link-to}}
 
 // Binding is also supported
 {{#link-to 'posts' (query-params direction=otherDirection)}}Sort{{/link-to}}
@@ -103,8 +103,8 @@ accepts a final argument, which is an object with
 the key `queryParams`.
 
 ```javascript
-this.transitionTo('post', object, {queryParams: {showDetails: true}});
-this.transitionTo('posts', {queryParams: {sort: 'title'}});
+this.transitionTo('post', object, { queryParams: { showDetails: true }});
+this.transitionTo('posts', { queryParams: { sort: 'title' }});
 
 // if you just want to transition the query parameters without changing the route
 this.transitionTo({queryParams: {direction: 'asc'}});
@@ -113,7 +113,7 @@ this.transitionTo({queryParams: {direction: 'asc'}});
 You can also add query params to URL transitions:
 
 ```javascript
-this.transitionTo("/posts/1?sort=date&showDetails=true");
+this.transitionTo('/posts/1?sort=date&showDetails=true');
 ```
 
 ### Opting into a full transition
@@ -134,19 +134,20 @@ associated with that controller, and set that query param's
 `refreshModel` config property to `true`:
 
 
-```js
+```javascript
 App.ArticlesRoute = Ember.Route.extend({
   queryParams: {
     category: {
       refreshModel: true
     }
   },
+  
   model: function(params) {
     // This gets called upon entering 'articles' route
     // for the first time, and we opt into refiring it upon
     // query param changes by setting `refreshModel:true` above.
 
-    // params has format of { category: "someValueOrJustNull" },
+    // params has format of { category: 'someValueOrJustNull' },
     // which we can just forward to the server.
     return this.store.findQuery('articles', params);
   }
@@ -167,7 +168,7 @@ additional item from being added to your browser's history), you can
 specify this on the `Route`'s `queryParams` config hash, e.g. (continued
 from the example above):
 
-```js
+```javascript
 App.ArticlesRoute = Ember.Route.extend({
   queryParams: {
     category: {
@@ -188,10 +189,10 @@ bind to a query param whose key is `foo`, e.g. `?foo=123`. You can also map
 a controller property to a different query param key using the
 following configuration syntax:
 
-```js
+```javascript
 App.ArticlesController = Ember.ArrayController.extend({
   queryParams: {
-    category: "articles_category"
+    category: 'articles_category'
   },
   category: null
 });
@@ -203,14 +204,14 @@ property to update the `articles_category` query param, and vice versa.
 Note that query params that require additional customization can
 be provided along with strings in the `queryParams` array.
 
-```js
+```javascript
 App.ArticlesController = Ember.ArrayController.extend({
-  queryParams: [ "page", "filter", {
-    category: "articles_category"
+  queryParams: [ 'page', 'filter', {
+    category: 'articles_category'
   }],
   category: null,
   page: 1,
-  filter: "recent"
+  filter: 'recent'
 });
 ```
 
@@ -219,7 +220,7 @@ App.ArticlesController = Ember.ArrayController.extend({
 In the following example, the controller query param property `page` is
 considered to have a default value of `1`.
 
-```js
+```javascript
 App.ArticlesController = Ember.ArrayController.extend({
   queryParams: 'page',
   page: 1
@@ -231,7 +232,7 @@ This affects query param behavior in two ways:
 1. Query param values are cast to the same datatype as the default
    value, e.g. a URL change from `/?page=3` to `/?page=2` will set
    `ArticlesController`'s `page` property to the number `2`, rather than
-   the string `"2"`. The same also applies to boolean default values.
+   the string `'2'`. The same also applies to boolean default values.
 2. When a controller's query param property is currently set to its
    default value, this value won't be serialized into the URL. So in the
    above example, if `page` is `1`, the URL might look like `/articles`,
@@ -249,13 +250,13 @@ parameters as you navigate back and forth between routes.
 Furthermore, these sticky query param values are remembered/restored
 according to the model loaded into the route. So, given a `team` route
 with dynamic segment `/:team_name` and controller query param "filter",
-if you navigate to `/badgers` and filter by `"rookies"`, then navigate
-to `/bears` and filter by `"best"`, and then navigate to `/potatoes` and
-filter by `"lamest"`, then given the following nav bar links,
+if you navigate to `/badgers` and filter by `'rookies'`, then navigate
+to `/bears` and filter by `'best'`, and then navigate to `/potatoes` and
+filter by `'lamest'`, then given the following nav bar links,
 
 ```handlebars
-{{#link-to 'team' 'badgers '}}Badgers{{/link-to}}
-{{#link-to 'team' 'bears'   }}Bears{{/link-to}}
+{{#link-to 'team' 'badgers'}}Badgers{{/link-to}}
+{{#link-to 'team' 'bears'}}Bears{{/link-to}}
 {{#link-to 'team' 'potatoes'}}Potatoes{{/link-to}}
 ```
 
@@ -283,7 +284,7 @@ The result of this is that all links pointing back into the exited route
 will use the newly reset value `1` as the value for the `page` query
 param.
 
-```js
+```javascript
 App.ArticlesRoute = Ember.Route.extend({
   resetController: function (controller, isExiting, transition) {
     if (isExiting) {
@@ -297,14 +298,14 @@ App.ArticlesRoute = Ember.Route.extend({
 In some cases, you might not want the sticky query param value to be
 scoped to the route's model but would rather reuse a query param's value
 even as a route's model changes. This can be accomplished by setting the
-`scope` option to `"controller"` within the controller's `queryParams`
+`scope` option to `'controller'` within the controller's `queryParams`
 config hash:
 
-```js
+```javascript
 App.ArticlesController = Ember.ArrayController.extend({
   queryParams: [{
     showMagnifyingGlass: {
-      scope: "controller"
+      scope: 'controller'
     }
   }]
 });
@@ -313,13 +314,13 @@ App.ArticlesController = Ember.ArrayController.extend({
 The following demonstrates how you can override both the scope and the
 query param URL key of a single controller query param property:
 
-```js
+```javascript
 App.ArticlesController = Ember.Controller.extend({
-  queryParams: [ "page", "filter",
+  queryParams: [ 'page', 'filter',
     {
       showMagnifyingGlass: {
-        scope: "controller",
-        as: "glass",
+        scope: 'controller',
+        as: 'glass',
       }
     }
   ]
