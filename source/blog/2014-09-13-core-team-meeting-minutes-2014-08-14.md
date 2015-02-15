@@ -1,5 +1,5 @@
 ---
-title: Core Team Meeting Minutes - 2014/08/01
+title: Core Team Meeting Minutes - 2014/08/14
 author: Trek Glowacki
 tags: Core Team Meeting Minutes
 ---
