@@ -20,10 +20,10 @@ Update `index.html` to replace the static `<li>` elements with a Handlebars `{{e
 ```handlebars
 {{! ... additional lines truncated for brevity ... }}
 <ul id="todo-list">
-  {{#each todo in model}}
+  {{#each}}
     <li>
       <input type="checkbox" class="toggle">
-      <label>{{todo.title}}</label><button class="destroy"></button>
+      <label>{{title}}</label><button class="destroy"></button>
     </li>
   {{/each}}
 </ul>
