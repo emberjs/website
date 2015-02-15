@@ -42,7 +42,7 @@ By separating out these two kinds of work, we could improve the
 performance of cases where a single application was used multiple times,
 each with a fresh set of state.
 
-This applies to FastBoot, of course, but is also applies to integration
+This applies to FastBoot, of course, but it also applies to integration
 tests. Today, integration tests spend time executing code in
 initializers that don't change between test runs, simply because of the
 possibility that the initializer may also set up instances.
