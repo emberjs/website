@@ -1,3 +1,8 @@
+First things first: If you're not sure whether to create a View or a
+Component then the answer is almost certainly to create a Component.
+Ember Views exist for historical reasons and [will eventually be
+phased out](https://github.com/emberjs/rfcs/pull/15).
+
 Because Handlebars templates in Ember.js are so powerful, the majority
 of your application's user interface will be described using them. If
 you are coming from other JavaScript libraries, you may be surprised at
