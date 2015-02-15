@@ -351,6 +351,8 @@
   image: claroapps.png
 - url: http://blimp.io
   image: blimp.png
+- url: http://heroku.com/
+  image: heroku.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
