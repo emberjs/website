@@ -2,6 +2,9 @@
 <% partial_for :sidebar, 'blog/sidebar' %>
 
 <% wrap_layout :layout do %>
+  <% content_for :foot do %>
+    <script type="text/javascript" src="/javascripts/blog.js"></script>
+  <% end %>
   <article class="blog-post">
     <h1><%= current_article.title %></h1>
     <% if current_page.data.author %>
