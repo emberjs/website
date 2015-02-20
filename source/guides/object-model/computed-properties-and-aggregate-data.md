@@ -11,11 +11,12 @@ App.TodosController = Ember.Controller.extend({
     Ember.Object.create({ isDone: false }),
     Ember.Object.create({ isDone: true })
   ],
+  
+  incomplete: Ember.computed.filterBy('todos', 'isDone', false),
 
   remaining: function() {
-    var todos = this.get('todos');
-    return todos.filterBy('isDone', false).get('length');
-  }.property('todos.@each.isDone')
+    return this.get('incomplete.length');
+  }.property('incomplete.length')
 });
 ```
 
