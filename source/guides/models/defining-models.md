@@ -80,12 +80,20 @@ App.Person = DS.Model.extend({
 });
 ```
 
-For more about adding computed properties to your classes, see [Computed
-Properties](/guides/object-model/computed-properties).
+For more about adding computed properties to your classes, see
+[Computed Properties](/guides/object-model/computed-properties).
 
-If you don't specify the type of the attribute, it will be whatever was
-provided by the server. You can make sure that an attribute is always
-coerced into a particular type by passing a `type` to `attr`:
+Every Model in Ember Data has a special `id` attribute. You do not
+need to manually define this property. This is how Ember Data will be
+able to uniquely identify records when communicating with you
+backend. The `id` attribute can be set for new records however once a
+record has been saved Ember Data will not allow you to update the
+value of the `id` attribute.
+
+If you don't specify the type of the attribute, it will be whatever
+was provided by the server. You can make sure that an attribute is
+always coerced into a particular type by passing a `type` argument to
+the `attr` function:
 
 ```js
 App.Person = DS.Model.extend({
@@ -95,11 +103,10 @@ App.Person = DS.Model.extend({
 
 The default adapter supports attribute types of `string`,
 `number`, `boolean`, and `date`. Custom adapters may offer additional
-attribute types, and new types can be registered as transforms. See the
-[documentation section on the REST Adapter](/guides/models/the-rest-adapter).
+attribute types, and new types can be registered as transforms.
 
-**Please note:** Ember Data serializes and deserializes dates according to
-                 [ISO 8601][]. For example: `2014-05-27T12:54:01`
+// TODO link to a section on how to define attribute transforms.
+
 
 [ISO 8601]: http://en.wikipedia.org/wiki/ISO_8601
 
@@ -128,7 +135,10 @@ attribute types, and new types can be registered as transforms. See the
 ### Defining Relationships
 
 Ember Data includes several built-in relationship types to help you
-define how your models relate to each other.
+define how your models relate to each other. Ember Data has two
+methods for declaring relationships. `DS.belongsTo` is used to
+indicate a property will hold a single record (or null). `DS.hasMany`
+is used to indicate that a property will hold an array of records.
 
 #### One-to-One
 
@@ -183,16 +193,18 @@ changing the `comments` relationship should update the `post`
 relationship on the inverse because `post` is the only relationship to
 that model.
 
-However, sometimes you may have multiple `belongsTo`/`hasMany`s for the
-same type. You can specify which property on the related model is the
-inverse using `DS.hasMany`'s `inverse` option:
+However, sometimes you may have multiple `belongsTo`/`hasMany`s for
+the same type. You can specify which property on the related model is
+the inverse using `DS.belongsTo` or `DS.hasMany`'s `inverse`
+option. Relationships without an inverse can be indicated as such by
+including `{ inverse: null }`.
 
 ```javascript
 var belongsTo = DS.belongsTo,
     hasMany = DS.hasMany;
 
 App.Comment = DS.Model.extend({
-  onePost: belongsTo('post'),
+  onePost: belongsTo('post', { inverse: null }),
   twoPost: belongsTo('post'),
   redPost: belongsTo('post'),
   bluePost: belongsTo('post')
@@ -206,17 +218,55 @@ App.Post = DS.Model.extend({
 });
 ```
 
-You can also specify an inverse on a `belongsTo`, which works how you'd expect.
+#### Async Relationships
+
+Ember Data expects relevant relationship data to be returned by your
+server when it fetches your record. Often times this is not desirable
+or practical. In these cases you can tell Ember Data that a
+relationship asynchronous by setting the `async` option to true.
+
+```js
+App.User = DS.Model.extend({
+  profile: DS.belongsTo('profile', { async: true })
+});
+
+App.Profile = DS.Model.extend({
+  imageURL: DS.attr('string')
+});
+```
+
+This means the first time you attempt to access a record's
+relationship property Ember Data will make a requests to the server to
+resolve that relationship. This changes the api slightly as now
+accessing the relationship will return a `PromiseObject` for
+`belongsTo` relationships and a `PromiseArray` or `hasMany`
+relationships. `PromiseObject`s and `PromiseArray` are objects that
+act like a promise but will also proxy to the promise's value once the
+promise has resolved.
+
+```js
+// accessing `profile` the first time will trigger the store to ask the adapter for the profile data.
+// `profile.imageURL` will be undefined until that request resolves.
+user.get('profile.imageURL');
+
+// You can use `.then` to ensure profile is loaded before attempting to access its data.
+user.get('profile').then(function(profile) {
+  // profile is now loaded
+  profile.get('imageURL');
+});
+```
 
 #### Reflexive relation
 
-When you want to define a reflexive relation, you must either explicitly define
-the other side, and set the explicit inverse accordingly, and if you don't need the
-other side, set the inverse to null.
+When you want to define a reflexive relation (a model that relation to
+itself), you must explicitly define the inverse relationship. If there
+is no inverse relationship then you can set the inverse to null.
 
-```javascript
-var belongsTo = DS.belongsTo,
-    hasMany = DS.hasMany;
+##### One To Many Reflexive Relationship
+
+```js
+var belongsTo = DS.belongsTo;
+var hasMany = DS.hasMany;
 
 App.Folder = DS.Model.extend({
   children: hasMany('folder', {inverse: 'parent'}),
@@ -224,9 +274,20 @@ App.Folder = DS.Model.extend({
 });
 ```
 
-or
+##### One To One Reflexive Relationship
 
-```javascript
+```js
+var belongsTo = DS.belongsTo;
+
+App.User = DS.Model.extend({
+  name: attr('string'),
+  bestFriend: belongsTo('user', {async: true, inverse: 'bestFriend' }),
+});
+```
+
+##### No Inverse Reflexive Relationship
+
+```js
 var belongsTo = DS.belongsTo,
 
 App.Folder = DS.Model.extend({
