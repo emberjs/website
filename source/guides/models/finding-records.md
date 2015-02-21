@@ -83,5 +83,13 @@ App.PostRoute = Ember.Route.extend({
   model: function(params) {
     return this.store.find('post', params.post_id);
   }
-})
+});
+
+App.PostRoute = Ember.Route.extend({
+  model: function(params) {
+    return this.store.find('person', { name: params.username }).then(function(result){
+      return result.get('firstObject');
+    });
+  }
+});
 ```
