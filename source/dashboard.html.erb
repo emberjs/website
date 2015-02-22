@@ -1,0 +1,149 @@
+---
+title: Dashboard
+---
+
+<div class="dashboard">
+<h2>Ember Feature Dashboard</h2>
+<table>
+  <tr><th>Feature</th><th>Description</th><th>Added</th><th>Status</th></tr>
+  <tr>
+    <td>ember-htmlbars</td>
+    <td>
+      <p>Enable the HTMLBars engine. This is an internals improvement that does not change the public API.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/9684">9684</a></td>
+    <td class="release"></td>
+  </tr>
+  <tr>
+    <td>ember-htmlbars-block-params</td>
+    <td>
+      <p>Enable block parameters for in the templating engine.</p>
+      <p><code>{{#each list as |item|}}&lt;li&gt;{{item.name}}&lt;/li&gt;{{/each}}</code></p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/9684">9684</a></td>
+    <td class="release"></td>
+  </tr>
+  <tr>
+    <td>ember-htmlbars-each-with-index</td>
+    <td>
+      <p>Adds an optional second parameter to <code>{{each}}</code> block parameters that is the index of the item.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10160">10160</a></td>
+    <td class="beta"></td>
+  </tr>
+  <tr>
+    <td>ember-application-initializer-context</td>
+    <td>
+      <p>Sets the context of the initializer function to its object instead of the global object</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10179">10179</a></td>
+    <td class="beta"></td>
+  </tr>
+  <tr>
+    <td>ember-routing-named-substates</td>
+    <td>
+      <p>You can define a <code>foo-loading</code> and <code>foo-error</code> templates that will be displayed while the <code>foo</code> route is loading or errored.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/3655">3655</a></td>
+    <td class="beta"></td>
+  </tr>
+  <tr>
+    <td>ember-views-component-block-info</td>
+    <td>
+      <p>Adds a `hasBlock` keyword in component templates to detect whether a block was provided.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10461">10461</a></td>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>ember-libraries-isregistered</td>
+    <td>
+      <p>Add <code>isRegistered</code> to <code>Ember.libraries</code>. This convenience method checks whether a library is registered with Ember or not.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10482">10482</a></td>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>ember-routing-core-outlet</td>
+    <td>
+      <p>Provides a non-virtual version of OutletView named CoreOutletView. You would use CoreOutletView just like you're use OutletView: by extending it with whatever behavior you want and then passing it to the <code>{{outlet}}</code> helper's <code>view</code> property.</p>
+      <p>The only difference between them is that OutletView has no element of its own (it is a "virtual" view), whereas CoreOutletView has an element.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10441">10441</a></td>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>ember-application-visit</td>
+    <td>
+      <p>Provides an API for creating an application instance and specifying an initial URL that it should route to. This is useful for testing (you can have multiple instances of an app without having to run serially and call <code>reset()</code> each time), as well as being critical to for FastBoot.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10271">10271</a></td>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>ember-application-instance-initializers</td>
+    <td>
+      <p>Separate out initializers that run once on app boot from initializers that run each time the application is visited. This distinction is important for FastBoot and testing.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/10256">10256</a>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>ember-testing-checkbox-helpers</td>
+    <td>
+      <p>Add <code>check</code> and <code>uncheck</code> test helpers</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/9798">9798</a></td>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>ember-htmlbars-component-generation</td>
+    <td>
+      <p>Enables HTMLBars compiler to interpret <code>&lt;x-foo&gt;&lt;/x-foo&gt;</code> as an Ember component.</p>
+    </td>
+    <td><a href="https://github.com/emberjs/ember.js/pull/9673">9673</a></td>
+    <td class="canary"></td>
+  </tr>
+  <tr>
+    <td>rfc-engines</td>
+    <td>
+      <p>Engines allow multiple logical applications to be composed together into a single application from the user's perspective.</p>
+      <p>They also allow addons to provide encapsulated functionality normally associated with apps, such as routes and templates that integrate seamlessly with the primary app</p>
+    </td>
+    <td><a href="https://github.com/emberjs/rfcs/pull/10">rfc#10</a></td>
+    <td class="planning"></td>
+  </tr>
+  <tr>
+    <td>rfc-bound-attributes</td>
+    <td>
+      <p>Support for bound attributes syntax (<code>&lt;a href="{{url}}"&gt;</code>)</p>
+    </td>
+    <td><a href="https://github.com/emberjs/rfcs/pull/24">rfc#24</a></td>
+    <td class="planning"></td>
+  </tr>
+  <tr>
+    <td>rfc-optional-segments</td>
+    <td>
+      <p>Support for optional segments in routing</p>
+    </td>
+    <td><a href="https://github.com/emberjs/rfcs/pull/36">rfc#36</a></td>
+    <td class="planning"></td>
+  </tr>
+  <tr>
+    <td>rfc-element-fragment</td>
+    <td>
+      <p>Introduce `Ember.Fragment` and the `<element>` and `<fragment>` template keywords</p>
+    </td>
+    <td><a href="https://github.com/emberjs/rfcs/pull/37">rfc#37</a></td>
+    <td class="planning"></td>
+  </tr>
+  <tr>
+    <td>rfc-routeable-components</td>
+    <td>
+      <p>Replace controllers in Ember with Routeable components with a transition path</p>
+    </td>
+    <td><a href="https://github.com/emberjs/rfcs/pull/38">rfc#38</a></td>
+    <td class="planning"></td>
+  </tr>
+</table>
+</div>

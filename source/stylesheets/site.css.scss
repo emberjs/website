@@ -9,6 +9,7 @@
 @import 'guides';
 @import 'blog';
 @import 'builds';
+@import 'dashboard';
 @import 'shared';
 
 /* Calculated page dimensions. */
@@ -895,7 +896,7 @@ a.toc-anchor {
   Guides Page
 **/
 
-.guides {
+.guides, .dashboard {
   .chapter {
     $h3-indent: 32px;
     $body-indent: $h3-indent;

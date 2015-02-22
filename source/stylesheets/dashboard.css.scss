@@ -1,0 +1,50 @@
+.dashboard {
+  tr:nth-child(even) td {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  td.beta, td.release, td.canary, td.planning {
+    background-repeat: no-repeat;
+    background-position: 40% 50%;
+    background-size: 43px 64px !important;
+    width: 48px;
+    height: 74px;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  td.beta {
+    @include hidpi('builds/tiny_beta', 'png');
+  }
+
+  td.release {
+    @include hidpi('builds/small_release', 'png');
+  }
+
+  td.canary {
+    @include hidpi('builds/canary', 'png');
+  }
+
+  td.planning {
+    @include hidpi('builds/blueprint', 'png');
+  }
+
+  td:first-child {
+    width: 300px;
+    font-family: Menlo, Courier, monospace;
+    /*vertical-align: top;*/
+  }
+
+  td:nth-child(2) {
+    padding-right: 50px;
+  }
+
+  .small-release-image {
+    @include hidpi('builds/small_release', 'png');
+    width: 99px;
+    height: 132px;
+    margin: 0 auto;
+  }
+}
