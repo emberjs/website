@@ -12,7 +12,7 @@ allAreDone: function(key, value) {
     this.invoke('save');
     return value;
   }
-}.property('@each.isCompleted')
+}.property('@each.isCompleted'),
 // ... additional lines truncated for brevity ...
 ```
 
