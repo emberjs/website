@@ -16107,8 +16107,8 @@ classitems:
     ```
 
     ```handlebars
-    {{#link-to 'photoGallery' aPhotoId}}
-      {{aPhoto.title}}
+    {{#link-to 'photoGallery' 42}}
+      Tomster
     {{/link-to}}
     ```
 
