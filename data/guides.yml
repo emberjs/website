@@ -4,6 +4,14 @@
     skip_sidebar: true
 
 "Getting Started":
+  - title: "Installing Ember"
+    url: "ember-cli"
+  - title: "The Inspector Tool"
+    url: "ember-cli/inspector"
+  - title: "Glossary"
+    url: "ember-cli/glossary"
+
+"Tutorial: TodoMVC":
   - title: "Getting Started"
     url: "getting-started"
   - title: "Planning The Application"
@@ -51,9 +59,9 @@
   - title: "Replacing the Fixture Adapter with Another Adapter"
     url: "getting-started/using-other-adapters"
 
-"Getting Ember":
-  - title: "Getting Ember"
-    url: "getting-ember"
+#"Getting Ember":
+#  - title: "Getting Ember"
+#    url: "getting-ember"
 
 Concepts:
   - title: "Core Concepts"

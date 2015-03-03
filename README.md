@@ -76,4 +76,12 @@ gem install bundler wdm tzinfo-data
 gem update listen middleman
 ```
 
-Once Middleman comes up, you'll be prompted by Windows Firewall. Click "Allow access" and you'll be in business!
+If you get an error like this:
+
+```Unable to download data from https://rubygems.org/ - SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed (https://rubygems.org/latest_specs.4.8.gz)```
+
+1. Follow the [instructions on this post](https://gist.github.com/luislavena/f064211759ee0f806c88) to install the trust cert
+2. If the error still happens, try running ```gem update --system```
+3. Lastly, you can try [downloading this cacert file](http://curl.haxx.se/ca/cacert.pem) locally and setting your ```SSL_CERT_FILE``` environment variable to point to its path (System > Advanced system settings > Environment variables > then "New" under system variables).
+
+After these workarounds, you should finally be able to run ```bundle exec middleman```. You may be prompted by Windows Firewall; Click "Allow access" and you'll be in business!
