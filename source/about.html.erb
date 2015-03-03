@@ -32,16 +32,14 @@ title: "A framework for creating ambitious web applications."
 
 <div id="download">
   <div id="download-ember">
-    <a class="orange button" href="https://github.com/emberjs/starter-kit/archive/v1.10.0.zip" download>
-      Download the Starter Kit
-    </a>
-    <div class="info">
-      1.10.0:
-      <a class="debug" href="http://builds.emberjs.com/tags/v1.10.0/ember.prod.js" download>production</a>
-      <a class="debug" href="http://builds.emberjs.com/tags/v1.10.0/ember.min.js" download>(min + gzip  102kb)</a> |
-      <a class="debug" href="http://builds.emberjs.com/tags/v1.10.0/ember.debug.js" download>debug</a> |
-      <a class="debug" href="/guides/getting-ember">packages</a>
-    </div>
+    <% highlight("shell", "install-ember-cli") do %>
+npm install -g ember-cli
+ember new my-app
+    <% end %>
+  </div>
+
+  <div class="info">
+    <a href="/builds">More downloads</a>
   </div>
 
   <ul class="social">

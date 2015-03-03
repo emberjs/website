@@ -77,4 +77,17 @@ body.index, body.about {
   .section.gears {
     margin-top: 70px;
   }
+
+  .install-ember-cli {
+    border-color: #fa6d55 !important;
+    border-width: 2px !important;
+
+    .line-numbers {
+      display: none;
+    }
+  }
+
+  #download .info {
+    text-align: center;
+  }
 }
