@@ -271,7 +271,7 @@ Any component in Ember 1.10 can use this feature. For example:
 <ul>
   {{#each items as |item|}}
     <li>{{yield item}}</li>
-  {{#each}}
+  {{/each}}
 </ul>
 ```
 
