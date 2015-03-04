@@ -123,6 +123,8 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/6/3/9/4/thumb_235225492.jpeg
     - organizer: Josh Smith
       profileImage: http://photos3.meetupstatic.com/photos/member/5/5/3/e/thumb_83301822.jpeg
+    - organizer: Trey Hunner
+      profileImage: http://photos1.meetupstatic.com/photos/member/3/c/b/6/thumb_43335542.jpeg
   - location: Philadelphia, PA
     url: http://www.meetup.com/Emberjs-Philly/
     image: 06philadelphia.png
