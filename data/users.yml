@@ -359,6 +359,9 @@
   image: tinderbox.png
 - url: http://www.checkmate.io
   image: checkmate.png
+- url: http://www.microsoft.com
+  image: microsoft.png
+
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
