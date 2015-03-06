@@ -342,6 +342,12 @@ locations:
         profileImage: http://photos3.meetupstatic.com/photos/member/c/3/1/6/highres_132229942.jpeg
       - organizer: Christian Reuter
         profileImage: http://photos2.meetupstatic.com/photos/member/a/b/8/8/highres_239803912.jpeg
+  - location: Silicon Valley, CA
+    url: http://www.svemberjs.com
+    lat: 37.389400
+    lng: -122.081900
+    organizers:
+    - organizer: Erik Bryn
 - area: South America
   groups:
   - location: São Paulo, Brazil
