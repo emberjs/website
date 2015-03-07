@@ -7,3 +7,4 @@ Here are some recipes that will help you provide a better user experience.
 1. [Specifying Data-Driven Areas of Templates That Do Not Need To Update](/guides/cookbook/user_interface_and_interaction/specifying_data_driven_areas_of_templates_that_do_not_need_to_update)
 1. [Using Modal Dialogs](/guides/cookbook/user_interface_and_interaction/using_modal_dialogs)
 1. [Resetting scroll on route changes](/guides/cookbook/user_interface_and_interaction/resetting_scroll_on_route_changes)
+1. [Build a basic hierachical navigation with nested templates](/guides/cookbook/user_interface_and_interaction/hierarchical_navigation_with_nested_templates)

@@ -1,0 +1,88 @@
+### Problem
+You want to build a basic hierarchical navigation for a website with a main- and a sub-menu. 
+You don't have underlying data yet, you are starting to build the UI and want to do that by 
+just nesting templates into each other.
+
+### Solution
+
+`Routes.js`:
+
+```javascript
+App.Router.map(function() {
+
+  this.resource('first-section', function () {
+    this.route('part-1');
+    this.route('part-2');
+    this.route('part-3');
+  });
+
+  this.resource('another-section', function () {
+    this.route('part-1');
+    this.route('part-2');
+    this.route('part-3');
+  });
+
+  this.resource('about');
+});
+```
+
+Top level (application) template:
+
+```handlebars
+<script type="text/x-handlebars">
+  <header class="main-app-header">
+    <h1>Ember navigation, subnavigation and nested templates example</h1>
+    <ul class"navigation main-navigation">
+      <li class="nav-item">{{#link-to "first-section"}}First Section{{/link-to}}</li>
+      <li class="nav-item">{{#link-to "another-section"}}Another Section{{/link-to}}</li>
+      <li class="nav-item">{{#link-to "about"}}About{{/link-to}}</li>
+    </ul>
+  </header>
+
+  <div class="main-content">
+    {{outlet}}
+  </div>
+</script>
+```
+
+Mid-level template:
+
+```handlebars
+<script type="text/x-handlebars" id="first-section">
+  <header class="sub-header">
+    <h2>First Section</h2>
+    <ul class"navigation sub-navigation">
+      <li class="nav-item">{{#link-to "first-section.part-1"}}Part 1{{/link-to}}</li>
+      <li class="nav-item">{{#link-to "first-section.part-2"}}Part 2{{/link-to}}</li>
+      <li class="nav-item">{{#link-to "first-section.part-3"}}Part 3{{/link-to}}</li>
+    </ul>
+  </header>
+
+  <div class="main-content">
+    {{outlet}}
+  </div>
+</script>
+```
+
+Low level template:
+
+```handlebars
+<script type="text/x-handlebars" id="first-section/part-1">
+  First section part 1.
+</script>
+```
+
+### Discussion
+In the `routes.js` we first define some resources that will be accessible in the top-level menu. 
+The sections that should have a sub-menu have additional routes associated with them.
+
+In the templates we then define the menus and link the routes to them and we leave outlets for the next template in the 
+hierarchy to be rendered into.
+
+It's important to name the templates right. The low-level templates have to have a name 
+according to their route, e.g. `"first-section/part-1"`. Pay attention that the routes linked in the menu are connected 
+with a `.`, while the template names are nested with a `/`.
+
+#### Example
+
+<a class="jsbin-embed" href="http://emberjs.jsbin.com/gefugosomoru/1/edit?html,js,output">JS Bin</a>
