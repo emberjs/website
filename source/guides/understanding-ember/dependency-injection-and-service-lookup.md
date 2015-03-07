@@ -1,4 +1,4 @@
-Dependency injection and service lookup are two important framework concepts. The first, **dependency injection**, refers to a dependent object being injected onto another object during instantiation. For example, all route objects have the property `router` set on them during instantiation. We say that the dependency of the router has been injected onto the route object.
+Dependency injection and service lookup are two important framework concepts. The first, **dependency injection**, refers to another object being injected onto a dependent object during instantiation. For example, all route objects have the property `router` set on them during instantiation. We say that the dependency of the router has been injected onto the route object or the route object has a dependency on the router.
 
 ```JavaScript
 App.IndexRoute = Ember.Route.extend({
