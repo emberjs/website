@@ -121,19 +121,24 @@ behavior of specific instances, which are called _records_.
 
 #### Records
 
-A **record** is an instance of a model that contains data loaded from a
-server. Your application can also create new records and save them back
-to the server.
+A **record** is an instance of a model.
 
 A record is uniquely identified by its model type and id.
 
 For example, if you were writing a contact management app, you might
 have a model called `Person`. An individual record in your app might
-have a type of `Person` and an ID of `1` or `steve-buscemi`.
+have a type of `Person`, and an id of `1`.
 
 ```js
-this.store.find('person', 1); // => { id: 1, name: 'steve-buscemi' }
+this.store.find('person', 1); // => { id: 1, name: 'Steve Buscemi' }
 ```
+
+Alternatively a record might have a unique string value as its id.
+
+```js
+this.store.find('person', 'steve-buscemi'); // => { id: 'steve-buscemi', name: 'Steve Buscemi' }
+```
+
 
 IDs are usually assigned by the server when you save them for the first
 time, but you can also generate IDs client-side.
