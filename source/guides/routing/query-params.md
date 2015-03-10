@@ -90,7 +90,7 @@ matching the leaf-most controller with the supplied property name.
 **Note:** Subexpressions are only available in Handlebars 1.3
 or later.
 
-The link-to helper takes into account query parameters when determining
+The `link-to` helper takes into account query parameters when determining
 its "active" state, and will set the class appropriately. The active state
 is determined by calculating whether the query params end up the same after
 clicking a link. You don't have to supply all of the current,
