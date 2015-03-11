@@ -219,9 +219,9 @@ depends on the fully resolved value of a model.
 ```js
 App.ArticlesRoute = Ember.Route.extend({
   model: function() {
-    // App.Article.find() returns a promise-like object
+    // `this.store.find('article')` returns a promise-like object
     // (it has a `then` method that can be used like a promise)
-    return App.Article.find();
+    return this.store.find('article');
   },
   afterModel: function(articles) {
     if (articles.get('length') === 1) {
