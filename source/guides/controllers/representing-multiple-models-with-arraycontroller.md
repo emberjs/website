@@ -67,6 +67,16 @@ App.SongsController = Ember.ArrayController.extend({
 });
 ```
 
+To display content in sorted order, loop through `arrangedContent` instead of `model`.
+
+```handlebars
+<ul>
+  {{#each song in arrangedContent}}
+    <li>{{song.name}} by {{song.artist}}</li>
+  {{/each}}
+</ul>
+```
+
 ### Item Controller
 
 It is often useful to specify a controller to decorate individual items in
