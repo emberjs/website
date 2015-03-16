@@ -1,4 +1,4 @@
-Ember comes pre-packaged with a set of views for building a basic controls like text inputs, check boxes, and select lists. Usually, these views will be used via the [input helpers](/guides/templates/input-helpers/). However, the base views may be helpful in creating custom form behaviors.
+Ember comes pre-packaged with a set of views for building basic controls like text inputs, check boxes, and select lists. Usually, these views will be used via the [input helpers](/guides/templates/input-helpers/). However, the base views may be helpful in creating custom form behaviors.
 
 * [Ember.Checkbox](/api/classes/Ember.Checkbox.html)
 * [Ember.TextField](/api/classes/Ember.TextField.html)
