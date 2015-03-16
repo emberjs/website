@@ -6,9 +6,10 @@ objects. Making changes is as simple as setting the attribute you
 want to change:
 
 ```js
-var tyrion = this.store.find('person', 1);
-// ...after the record has loaded
-tyrion.set('firstName', "Yollo");
+this.store.find('post', 1).then(function(post) {
+    // ...after the record has loaded
+    post.set('title', 'A new post title');
+});
 ```
 
 All of the Ember.js conveniences are available for
@@ -16,7 +17,7 @@ modifying attributes. For example, you can use `Ember.Object`'s
 `incrementProperty` helper:
 
 ```js
-person.incrementProperty('age'); // Happy birthday!
+comment.incrementProperty('editCount'); // Happy birthday!
 ```
 
 You can tell if a record has outstanding changes that have not yet been
@@ -27,11 +28,11 @@ whose keys are the changed properties and values are an array of values
 `[oldValue, newValue]`.
 
 ```js
-person.get('isAdmin');      //=> false
-person.get('isDirty');      //=> false
-person.set('isAdmin', true);
-person.get('isDirty');      //=> true
-person.changedAttributes(); //=> { isAdmin: [false, true] }
+post.get('isPublished');      //=> false
+post.get('isDirty');      //=> false
+post.set('isPublished', true);
+post.get('isDirty');      //=> true
+post.changedAttributes(); //=> { isPublished: [false, true] }
 ```
 
 At this point, you can either persist your changes via `save()` or you
@@ -39,12 +40,12 @@ can rollback your changes. Calling `rollback()` reverts all the
 `changedAttributes` to their original value.
 
 ```js
-person.get('isDirty');      //=> true
-person.changedAttributes(); //=> { isAdmin: [false, true] }
+post.get('isDirty');      //=> true
+post.changedAttributes(); //=> { isAdmin: [false, true] }
 
-person.rollback();
+post.rollback();
 
-person.get('isDirty');      //=> false
-person.get('isAdmin');      //=> false
-person.changedAttributes(); //=> {}
+post.get('isDirty');      //=> false
+post.get('isAdmin');      //=> false
+post.changedAttributes(); //=> {}
 ```
