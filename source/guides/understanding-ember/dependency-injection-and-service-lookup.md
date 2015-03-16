@@ -252,7 +252,7 @@ Injections can also be made on a specific factory by using its full name:
 application.inject('route:index', 'logger', 'logger:main');
 ```
 
-Injections can be made onto all of Ember's major framework classes, including views, helpers, components, controllers, routes, and the router.
+Injections can be made onto all of Ember's major framework classes, including views, components, controllers, routes, and the router.
 
 **Note:** For injections into models (if not using ember-cli), you need to enable the `MODEL_FACTORY_INJECTIONS` 
 flag before you initialize your application. You can do this like so:
