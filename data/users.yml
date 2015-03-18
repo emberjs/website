@@ -363,6 +363,8 @@
   image: microsoft.png
 - url: https://www.intercom.io
   image: intercom.png
+- url: http://verdigris.co
+  image: verdigris.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
