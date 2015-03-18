@@ -151,8 +151,6 @@
   image: inthepocket.png
 - url: http://www.veriskhealth.com
   image: verisk_health.png
-- url: https://universe.com
-  image: universe.png
 - url: http://www.silveregg.com/
   image: silveregg.png
 - url: https://owner.urbanspoon.com
@@ -365,6 +363,8 @@
   image: intercom.png
 - url: http://verdigris.co
   image: verdigris.png
+- url: https://universe.com
+  image: universe.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
