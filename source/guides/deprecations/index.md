@@ -208,6 +208,14 @@ You should now be using:
   {{/each}}
 </ul>
 ```
+or, if you're just going off the model rather than a property in the controller:
+```handlebars
+<ul>
+  {{#each person in model}}
+    <li>{{person.name}}</li>
+  {{/each}}
+</ul>
+```
 
 ### Deprecations Added in 1.10
 
