@@ -1,7 +1,5 @@
-## Problem
-You want to control features of Ember by setting specified global flags like `Ember.LOG_BINDINGS`.
-
-## Solution
-Create a `windows.ENV` with these properties set to the desired value before Ember is loaded.
-
-## Discussion
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

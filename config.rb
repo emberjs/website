@@ -62,9 +62,7 @@ page '/blog/feed.xml', layout: false
 # Pages
 ###
 
-page 'guides*', layout: :guide do
-  @guides = data.guides
-end
+page 'guides*', layout: :guide
 
 page 'community.html'
 

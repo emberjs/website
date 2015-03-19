@@ -1,1 +1,5 @@
-1. [Displaying Only Committed DS.Model Records](/guides/cookbook/ember_data/displaying_only_committed_records)
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

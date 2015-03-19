@@ -1,7 +1,5 @@
-### Problem
-You want to respond to user-initialed browser events like clicks or key presses.
-
-### Solution
-Implement event named based methods on your View classes
-
-### Discussion
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

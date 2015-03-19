@@ -1,2 +1,5 @@
-1. [Loading Data From A Server](/guides/cookbook/client_server_interaction/loading_data_from_a_server)
-1. [Serving Compiled Handlebars Templates Using Node.js](/guides/cookbook/client_server_interaction/serving_compiled_templates_using_nodejs)
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->
