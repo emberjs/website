@@ -99,19 +99,24 @@ var App.ListView = Ember.View.extend(ListView);
 A more advanced solution is to use an initializer to register the plugin's
 views on the the application:
 
-```JavaScript
+```app/initializers/list-view.js
+import ListVieuw from 'list-view/list-view';
+
 // usage is {{view "list"}}
-Ember.Application.initializer({
+
+export function initialize(container, application) {
+  container.register('view:list', ListView);
+}
+
+export default {
   name: 'list-view',
-  initialize: function(container, application) {
-    container.register('view:list', ListView);
-  }
-});
+  initialize: initialize
+};
 ```
 
 More details on how to register an Ember.js framework component are available
-in the [initializer API documentation](/api/classes/Ember.Application.html#toc_initializers)
-and the [dependency injection guide](/guides/understanding-ember/dependency-injection-and-service-lookup).
+in the [initializer API documentation](http://emberjs.com/api/classes/Ember.Application.html#toc_initializers)
+and the [dependency injection guide](../../understanding-ember/dependency-injection-and-service-lookup).
 
 #### Deprecate location: 'hash' paths that don't include a forward slash. e.g. #/foo NOT #foo
 
@@ -227,4 +232,38 @@ function fooObserver(obj){
 }
 addObserver(obj, 'foo', fooObserver);
 fooObserver(obj); // Optionally call the observer immediately
+```
+
+### Deprecations Added in 1.12
+
+#### Deprecate non-block-params {{each}} helper syntax
+
+Now that we have the new block params helper syntax, this old syntax has become redundant.
+
+Before:
+
+```js
+{{#each foo in bar}}
+```
+
+After:
+
+```js
+{{#each bar as |foo|}}
+```
+
+#### Deprecate non-block-params {{with}} syntax
+
+Now that we have the new block helper syntax, this old syntax has become redundant.
+
+Before:
+
+```js
+{{#with foo as bar}}
+```
+
+After:
+
+```js
+{{#with foo as |bar|}}
 ```
