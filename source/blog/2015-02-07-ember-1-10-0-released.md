@@ -230,7 +230,7 @@ Thanks to [slindberg](https://github.com/slindberg) for his implementation of th
 
 As Ember.js moves forward, various APIs are deprecated to allow for their
 removal in a later major release (such as 2.0). The
-[deprecations guide](/guides/deprecations/) summarizes
+[deprecations page](/deprecations/) summarizes
 deprecations and demonstrates how to update to a new API.
 
 * The explicit `{{bind}}` helper has been deprecated. This helper has
@@ -244,7 +244,7 @@ deprecations and demonstrates how to update to a new API.
   are rarely used, but introduce significant overhead to the observer system
   in general. For observer use that requires the previous value of a property
   be known, implementing a cache is simple and more efficient. Read more about
-  how to do this in [the deprecation guide](/guides/deprecations/#toc_deprecate-beforeobservers).
+  how to do this on [the deprecations page](/deprecations/v1.x#toc_deprecate-beforeobservers).
 * Observing the `childViews` array of a `ContainerView` is deprecated.
 * Setting the `childViews` property on a view definition is deprecated in
   1.10. For example:
