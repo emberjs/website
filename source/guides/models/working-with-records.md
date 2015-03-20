@@ -17,7 +17,7 @@ modifying attributes. For example, you can use `Ember.Object`'s
 `incrementProperty` helper:
 
 ```js
-comment.incrementProperty('editCount'); // Happy birthday!
+comment.incrementProperty('editCount'); // 2
 ```
 
 You can tell if a record has outstanding changes that have not yet been
@@ -35,9 +35,8 @@ post.get('isDirty');      //=> true
 post.changedAttributes(); //=> { isPublished: [false, true] }
 ```
 
-At this point, you can either persist your changes via `save()` or you
-can rollback your changes. Calling `rollback()` reverts all the
-`changedAttributes` to their original value.
+Changes can be reverted to the last known state from the backend using
+a record's `rollback()` method.
 
 ```js
 post.get('isDirty');      //=> true

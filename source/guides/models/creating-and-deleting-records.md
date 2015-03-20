@@ -59,3 +59,32 @@ store.find('post', 2).then(function (post) {
   post.destroyRecord(); // => DELETE to /posts/2
 });
 ```
+
+
+
+
+Ember Data maintains a state machiene for each record which allows
+your Adapter to run different code for saving a newly created record
+vs updating a record that already exists on your server. For example
+the default `RESTAdapter` will send a `POST` request for creating new
+records and a `PUT` request to update records that the sever already
+knows about.
+
+Records in Ember Data are persisted on a per-instance basis. Ember
+Data maintains a state machiene for each record which allows your
+Adapter to run different code for saving a newly created record vs
+updating a record that already exists on your server. For example the
+default `RESTAdapter` will send a `POST` request for creating new
+records and a `PUT` request to update records that the sever already
+knows about.
+
+
+
+```javascript
+var post = store.createRecord('post', {
+  title: 'Rails is Omakase',
+  body: 'Lorem ipsum'
+});
+
+post.save(); // => POST to '/posts'
+```
