@@ -13,7 +13,7 @@
 @import 'shared';
 
 /* Calculated page dimensions. */
-$page-width: 940px;
+$page-width: 960px;
 $col-width: 40px;
 $col-spacing: 20px;
 $sidebar-width: $col-width * 4 + $col-spacing * 3;
@@ -1674,6 +1674,7 @@ body.security #content {
 **/
 
 #footer {
+  min-width: $page-width;
   margin-top: 60px;
   padding: 25px 0;
   border-top: 1px solid #e5dbd6;
@@ -1683,7 +1684,7 @@ body.security #content {
   font-weight: bold;
 
   #footer-wrapper {
-    width: 940px;
+    width: $page-width;
     margin: 0 auto;
     position: relative;
     @include clearfix;
