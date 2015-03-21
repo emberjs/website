@@ -364,6 +364,13 @@ locations:
     organizers:
     - organizer: Jesse Wolgamott
       profileImage: http://photos4.meetupstatic.com/photos/member/2/c/f/6/member_244331510.jpeg
+  - location: Ann Arbor, Michigan
+    url: http://www.meetup.com/Ember-A2D/
+    lat: 42.281389
+    lng: -83.748333
+    organizers:
+    - organizer: Tom Zellman
+      profileImage: http://photos2.meetupstatic.com/photos/member/d/a/c/c/member_91316012.jpeg
 - area: South America
   groups:
   - location: São Paulo, Brazil
