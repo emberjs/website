@@ -365,6 +365,8 @@
   image: intercom.png
 - url: http://verdigris.co
   image: verdigris.png
+- url: http://www.bittitan.com
+  image: bittitan.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
