@@ -270,3 +270,61 @@ What follows is a full implementation of the above logger service:
 <a class="jsbin-embed" href="http://emberjs.jsbin.com/fajeriwu/1/embed?html,js,console,output">Ember Starter Kit</a><script src="http://static.jsbin.com/js/embed.js"></script>
 
 Dependency injection and service lookup are two powerful tools in your Ember.js toolset, and every mature Ember application will require their use.
+
+### Using and creating services with ember-cli
+
+This feature is only available from Ember 1.10.0-beta.4 onwards.
+
+Some examples when services could be used are:
+- Interfacing with a geolocation API
+- Coordinating drag-and-drop events (between components for example)
+- Consuming push events from a server
+- Using a non-CRUD server API
+
+To create a player service type `ember generate service player` or create a file manually:
+```
+app/
+  services/
+    player.js
+```
+Services are automatically detected and registered by placing them in the services directory.
+
+To implement a service, just export a subclass of `Ember.Service`
+```JavaScript
+import Ember from 'ember';
+export default Ember.Service.extend({
+    currentTime: 1,
+    isPlaying: false,
+    play: function() {
+        console.log('Playing...');
+    }
+});
+```
+To use it in `components` (or `routes`, `controllers` etc.) or any other `Ember Object`:
+
+```JavaScript
+import Ember from 'ember';
+export default Ember.Component.extend({
+    player: Ember.inject.service(),
+    actions: {
+        play: function() {
+            this.get('player').play();
+    },
+});
+```
+The name passed into the service function is not required if property name matches the service name, so it is often omitted and not written like this:
+```JavaScript
+ player: Ember.inject.service('player')
+ ```
+ Services can then be used in the templates like so:
+ ```JavaScript
+ {{audio-control isPlaying=player.isPlaying}}
+ ```
+ or with helpers:
+ ```
+ {{format-duration player.currentTime}}
+ ```
+Services are only instantiated once. This means that there is instance of the service that is never destroyed as long as your application is running.
+ 
+
+
