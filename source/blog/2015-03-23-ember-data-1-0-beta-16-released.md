@@ -31,7 +31,7 @@ passing snapshot instances into all serializers to prevent
 side-effects from occurring when inspecting relationships for
 serialization. This introduces some pain points in 3rd party adapters
 and serializers since they could not easily create snapshot instances
-without using using private APIs. In Ember Data 1.0.0-beta.16 the
+without using private APIs. In Ember Data 1.0.0-beta.16 the
 store will now pass snapshot instances into adapters methods instead
 of record instances.
 
@@ -99,7 +99,7 @@ Model classes as the type argument for relationships.
 
 ```js
 App.Comment = DS.Model.extend({
-  owner: belongsTo('commentable'. { polymorphic: true })
+  owner: belongsTo('commentable', { polymorphic: true })
 });
 
 App.CommentableMixin = Ember.Mixin.create({
