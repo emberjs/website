@@ -367,6 +367,8 @@
   image: verdigris.png
 - url: http://www.bittitan.com
   image: bittitan.png
+- url: http://www.sellfapp.com
+  image: sellf.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
