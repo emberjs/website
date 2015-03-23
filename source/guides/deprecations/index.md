@@ -270,3 +270,48 @@ by the framework, it will only throw a deprecation message if the proxying
 behavior is being used.
 
 Added in [PR #10062](https://github.com/emberjs/ember.js/pull/10062).
+
+#### Access to Instances in Initializers
+
+Previously, initializers had access to an object that allowed them to
+both register new classes and get instances of those classes.
+
+If you have an initializer that gets instances of a class, you need to
+change it to use an instance initializer.
+
+Change code that looks like this:
+
+```js
+App.initializer({
+  name: "clock",
+
+  initialize: function(container, application) {
+    application.register("clock:main", Clock);
+    var clock = container.lookup("clock:main");
+    clock.setStartTime(Date.now());
+  }
+});
+```
+
+To:
+
+```js
+App.initializer({
+  name: "clock",
+
+  initialize: function(registry, application) {
+    application.register("clock:main", Clock);
+  }
+});
+
+App.instanceInitializer({
+  name: "clock",
+
+  initialize: function(instance) {
+    var clock = instance.container.lookup("clock:main");
+    clock.setStartTime(Date.now());
+  }
+});
+```
+
+Added in [PR #10256](https://github.com/emberjs/ember.js/pull/10256).
