@@ -30,6 +30,7 @@ Here are all of the available recipes:
 1. [Creating Reusable Social Share Buttons](/guides/cookbook/helpers_and_components/creating_reusable_social_share_buttons)
 2. [A Spinning Button for Asynchronous Actions](/guides/cookbook/helpers_and_components/spin_button_for_asynchronous_actions)
 3. [Adding Google Analytics Tracking](/guides/cookbook/helpers_and_components/adding_google_analytics_tracking)
+4. [Rendering Views Dynamically According To Model Properties](/guides/cookbook/helpers_and_components/rendering_views_dynamically_according_to_model_properties)
 
 ### Working with Objects
 
