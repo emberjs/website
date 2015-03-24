@@ -251,7 +251,7 @@ this router:
 </table>
 
 The rule of thumb is to use resources for nouns, and routes for
-adjectives (`favorites`) or verbs (`edit`). This ensures that
+filters (`favorites`) or verbs (`edit`). This ensures that
 nesting does not create ridiculously long names, but avoids
 collisions with common adjectives and verbs.
 
