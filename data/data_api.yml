@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v1.0.0-beta.16
+  sha: v1.0.0-beta.16.1
 files:
   packages/activemodel-adapter/lib/system/active-model-adapter.js:
     name: packages/activemodel-adapter/lib/system/active-model-adapter.js
@@ -6315,8 +6315,8 @@ classitems:
   itemtype: method
   name: attributes
   return:
-    description: All attributes for the current snapshot
-    type: Array
+    description: All attributes of the current snapshot
+    type: Object
   class: DS.Snapshot
   module: ember-data
   namespace: DS
@@ -7648,7 +7648,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1835
+  line: 1837
   description: ! 'Returns an instance of the serializer for a given type. For
 
     example, `serializerFor(''person'')` will return an instance of
@@ -7688,7 +7688,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1873
+  line: 1877
   description: ! 'Retrieve a particular instance from the
 
     container cache. If not found, creates it and
@@ -7717,7 +7717,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1932
+  line: 1936
   description: ! 'All typeKeys are camelCase internally. Changing this function may
 
     require changes to other normalization hooks (such as typeForRoot).'
