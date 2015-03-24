@@ -2,12 +2,20 @@
 You want to load data from a server and have it available in your Ember application for observation and manipulation.
 
 ## Solution
-Use `jQuery.ajax` and convert the response into Ember observable objects. You use `reopen` to add a finder method to your model class. The general workflow of the finder method is the following:
+Use `jQuery.ajax` and convert the response into Ember observable objects. You use `reopen` to add a finder method to your model class. There are two possible approaches to implement custom finder methods: with `promises` or without. 
 
-1. You create an empty result object.
+
+### Approach without promise
+The general workflow of the finder method without a promise looks like the following. With this approach you immediately get a object, with which you can start working.
+
+1. You create an **empty result object**.
 2. You make an asynchronous call to your API...
-3. ... and in your success callback you fill your empty object.
+3. ... and in your success callback you **fill your empty object**.
 4. You return your result object.
+
+The flow mentioned above is not the sequence in which those actions are happening. In reality the points 1,2 and 4 are performed first. Then some time later, when the response returns from your server, 3 is executed. **So the real flow of actions is: 1 -> 2 -> 4 -> 3.**
+
+
 
 **Note the slight differences between returning an array and a single object.**
 
@@ -42,8 +50,15 @@ App.User.reopenClass({
 ```
 
 
-## Discussion
-Alternatively you could also return a promise (`Ember.Deferred`) with your finder methods. The code for this approach could look like the following:
+### Approach with promise
+Alternatively you could also return a promise (`Ember.Deferred`) with your finder methods. The workflow for this approach could looks like the following:
+
+1. You **create a promise** (`Ember.Deferred`)
+2. You make an asynchronous call to your API...
+3. ... and in your success callback you **create the result object and resolve the promise with it**.
+4. You return the promise.
+
+The flow mentioned above is not the sequence in which those actions are happening. In reality the points 1,2 and 4 are performed first. Then some time later, when the response returns from your server, 3 is executed. **So the real flow of actions is: 1 -> 2 -> 4 -> 3.**
 
 ```javascript
 App.User.reopenClass({
@@ -80,6 +95,15 @@ App.User.reopenClass({
   }
 });
 ```
+
+With this approach you wait for the finder method to complete its logic. You would use this approach like this:
+
+```javascript
+App.User.findAll().then(function(users){
+  // do something with the retrieved users
+});
+```
+
 
 #### Example
 
