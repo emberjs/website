@@ -48,9 +48,18 @@ the `data-template-name` attribute:
 </html>
 ```
 
-If you are using build tools to manage your application's assets, most
-will know how to precompile Handlebars templates and make them available
-to Ember.js.
+If you are using build tools (e.g. Grunt, Gulp, Middleman…) to manage your
+application's assets, there are plugins out there for precompiling Handlebars
+templates and making them available to Ember.js:
+
+* Grunt: [grunt-ember-templates](https://github.com/dgeb/grunt-ember-templates)
+* Gulp: [gulp-ember-handlebars](https://github.com/fuseelements/gulp-ember-handlebars)
+* Middleman: [middleman-ember](https://github.com/nerdyworm/middleman-ember)
+* Brunch: [ember-handlebars-brunch](https://github.com/bartsqueezy/ember-handlebars-brunch)
+* Broccoli: [broccoli-ember-hbs-template-compile](https://github.com/toranb/broccoli-ember-hbs-template-compiler)
+
+If the plugin for your favorite build tool isn't listed here, try [searching on
+GitHub](https://github.com/search?q=ember+templates+handlebars&ref=opensearch).
 
 ### Handlebars Expressions
 
