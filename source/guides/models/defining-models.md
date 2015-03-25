@@ -210,13 +210,15 @@ You can also specify an inverse on a `belongsTo`, which works how you'd expect.
 
 #### Reflexive relation
 
-When you want to define a reflexive relation, you must either explicitly define
-the other side, and set the explicit inverse accordingly, and if you don't need the
-other side, set the inverse to null.
+When you want to define a reflexive relation, you must explicitly
+define the inverse relationship. If there is no inverse relationship
+then you can set the inverse to null.
 
+
+##### One To Many Reflexive Relationship
 ```javascript
-var belongsTo = DS.belongsTo,
-    hasMany = DS.hasMany;
+var belongsTo = DS.belongsTo;
+var hasMany = DS.hasMany;
 
 App.Folder = DS.Model.extend({
   children: hasMany('folder', {inverse: 'parent'}),
@@ -224,7 +226,17 @@ App.Folder = DS.Model.extend({
 });
 ```
 
-or
+##### One To One Reflexive Relationship
+```javascript
+var belongsTo = DS.belongsTo;
+
+App.User = DS.Model.extend({
+  name: attr('string'),
+  bestFriend: belongsTo('user', {async: true, inverse: 'bestFriend' }),
+});
+```
+
+##### No Inverse Reflexive Relationship
 
 ```javascript
 var belongsTo = DS.belongsTo,
