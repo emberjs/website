@@ -315,3 +315,36 @@ App.instanceInitializer({
 ```
 
 Added in [PR #10256](https://github.com/emberjs/ember.js/pull/10256).
+
+### Deprecations Added in 1.12
+
+#### Deprecate non-block-params {{each}} helper syntax
+
+Now that we have the new block params helper syntax, this old syntax has become redundant.
+
+Before:
+
+```handlebars
+{{#each foo in bar}}
+```
+
+After:
+
+```handlebars
+{{#each bar as |foo|}}
+```
+
+#### Deprecate non-block-params {{with}} syntax
+
+Now that we have the new block helper syntax, this old syntax has become redundant.
+
+Before:
+
+```handlebars
+{{#with foo as bar}}
+```
+
+After:
+
+```handlebars
+{{#with foo as |bar|}}
