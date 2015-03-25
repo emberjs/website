@@ -33,16 +33,15 @@ Ember Data is also designed to work with streaming APIs like
 socket.io, Firebase, or WebSockets. You can open a socket to your server
 and push changes to records into the store whenever they occur.
 
-Currently, Ember Data ships as a separate library from Ember.js.  Until
-Ember Data is included as part of the standard distribution, you can get
-a copy of the latest passing build from
+Currently, Ember Data ships as a separate library from Ember.js. You
+can get a copy of the latest passing build from
 [emberjs.com/builds][builds]:
 
 * [Development][development-build]
 * [Minified][minified-build]
 
 [emberdata]: https://github.com/emberjs/data
-[builds]: /builds
+[builds]: /builds/#/beta
 [development-build]: http://builds.emberjs.com/canary/ember-data.js
 [minified-build]: http://builds.emberjs.com/canary/ember-data.min.js
 
@@ -51,45 +50,17 @@ a copy of the latest passing build from
 Learning to use Ember Data is easiest once you understand some of the
 concepts that underpin its design.
 
-#### Store
-
-The **store** is the central repository of records in your application.
-You can think of the store as a cache of all of the records available in
-your app. Both your application's controllers and routes have access to this
-shared store; when they need to display or modify a record, they will
-first ask the store for it.
-
-This instance of `DS.Store` is created for you automatically and is shared
-among all of the objects in your application.
-
-You will use the store to retrieve records, as well to create new ones.
-For example, we might want to find an `App.Person` model with the ID of
-`1` from our route's `model` hook:
-
-```js
-App.IndexRoute = Ember.Route.extend({
-  model: function() {
-    return this.store.find('person', 1);
-  }
-});
-```
-
 #### Models
 
-A **model** is a class that defines the properties and behavior of the
-data that you present to the user. Anything that the user expects to see
-if they leave your app and come back later (or if they refresh the page)
-should be represented by a model.
+A **Model** is a class that defines the properties, relationships and
+behavior of the data that you present to the user. Anything that the
+user expects to see if they leave your app and come back later (or if
+they refresh the page) should be represented by a model.
 
-For example, if you were writing a web application for placing orders at
-a restaurant, you might have models like `Order`, `LineItem`, and
-`MenuItem`.
-
-Fetching orders becomes very easy:
-
-```js
-this.store.find('order');
-```
+For example, if you were writing a web application for placing orders
+at a restaurant, you might have models like `Order`, `LineItem`, and
+`MenuItem`. Ember Data's naming convention for models is to always
+start with a capital letter and to use the singular form of the name.
 
 Models define the type of data that will be provided by your server. For
 example, a `Person` model might have a `firstName` attribute that is a
@@ -102,7 +73,7 @@ App.Person = DS.Model.extend({
 });
 ```
 
-A model also describes its relationships with other objects. For
+A model also describes its relationships with other models. For
 example, an `Order` may have many `LineItems`, and a `LineItem` may
 belong to a particular `Order`.
 
@@ -129,14 +100,51 @@ A record is uniquely identified by its model type and id.
 
 For example, if you were writing a contact management app, you might
 have a model called `Person`. An individual record in your app might
-have a type of `Person` and an ID of `1` or `steve-buscemi`.
+have a type of `Person` and an ID of `1` or `steve-buscemi`. IDs are
+usually assigned by the server when you save them for the first time,
+but you can also generate IDs client-side.
+
+Records act just like normal Ember.js objects. You can call `get` and
+`set` to update their attributes.
 
 ```js
-this.store.find('person', 1); // => { id: 1, name: 'steve-buscemi' }
+person.get('id'); // 'steve-buscemi'
+person.set('firstName', 'Steve');
 ```
 
-IDs are usually assigned by the server when you save them for the first
-time, but you can also generate IDs client-side.
+Ember Data takes care of tracking the record for you. This can be
+useful for undoing changes that are made locally or using different
+codepaths to save a new record vs updating an existing record.
+
+```js
+person.get('lastName'); // 'Buscemi'
+person.set('lastName', 'Martin');
+person.rollback();
+person.set('lastName'); // 'Buscemi'
+```
+
+#### Store
+
+The **store** is the central repository of records in your application.
+You can think of the store as a cache of all of the records available in
+your app. Both your application's controllers and routes have access to this
+shared store; when they need to display or modify a record, they will
+first ask the store for it.
+
+This instance of `DS.Store` is created for you automatically and is shared
+among all of the objects in your application.
+
+You will use the store to retrieve records, as well to create new ones.
+For example, we might want to find an `App.Person` model with the ID of
+`1` from our route's `model` hook:
+
+```js
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return this.store.find('person', 1);
+  }
+});
+```
 
 #### Adapter
 
