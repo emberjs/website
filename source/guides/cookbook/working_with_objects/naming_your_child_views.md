@@ -1,7 +1,5 @@
-## Problem
-You want to access a particular child view by name from its parent view.
-
-## Solution
-Supply a `viewName` option to the `{{view}}` helper inside your template.
-
-## Discussion
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

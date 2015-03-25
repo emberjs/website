@@ -1,9 +1,5 @@
-## Problem
-
-You want to display only the committed `DS.Model` records from the ArrayController `content` array.
-
-## Solution
-
-In order to not show the uncommitted records of your array, you should filter them on `isNew` property.
-
-## Discussion
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

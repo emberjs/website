@@ -1,7 +1,5 @@
-### Problem
-You want a property on an object whose value is determined programmatically
-
-### Solution
-Create a computer function either with `Ember.computed` or the `property()` function of Function objects
-
-### Discussion
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

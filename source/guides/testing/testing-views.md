@@ -1,5 +1,5 @@
-By the end of this document, the reader should understand:
-
-* when and when not to test views (unit vs integration)
-* how to test views (integration)
-* how to test views (unit)
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->

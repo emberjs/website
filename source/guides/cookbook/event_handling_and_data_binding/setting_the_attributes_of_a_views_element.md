@@ -1,7 +1,5 @@
-### Problem
-You want to set the attributes of an HTML element that is created from an Ember.View
-
-### Solution
-Use either the `{{bindAttr}}` Handlebars helper in your templates or set an attribute binding to a path in your application.
-
-### Discussion
+<!--
+  Guides have moved to http://guides.emberjs.com.
+  This file exists so a <meta> redirect is created
+  via layouts/guide.erb
+-->
