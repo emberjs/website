@@ -142,7 +142,7 @@ efforts on performance tuning.
 
 As Ember.js moves forward, various APIs are deprecated to allow for their
 removal in a later major release (such as 2.0). The
-[deprecations guide](http://emberjs.com/guides/deprecations/) summarizes
+[deprecations page](http://emberjs.com/deprecations/) summarizes
 deprecations and demonstrates how to update to a new API.
 
 Ember 1.9 deprecates context switching in templates. Templates with context
@@ -346,7 +346,7 @@ export default Ember.ContainerView.extend({
   are rarely used, but introduce significant overhead to the observer system
   in general. For observer use that requires the previous value of a property
   be known, implementing a cache is simple and more efficient. Read more about
-  how to do this in [the deprecation guide](http://emberjs.com/guides/deprecations/#toc_deprecate-beforeobservers).
+  how to do this in [the deprecations page](http://emberjs.com/deprecations/v1.x#toc_deprecate-beforeobservers).
 * Quote-less outlet names are deprecated in 1.10. An example of this is
   `{{outlet modal}}`, which would be re-written as `{{outlet "modal"}}`.
   This ensures the outlet helper is consistent with others, where unquoted

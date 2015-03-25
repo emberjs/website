@@ -72,7 +72,7 @@ Please read the [Query Params Guide](/guides/routing/query-params/) for more inf
 ## Breaking Changes and Deprecations
 
 The following are a few deprecation warnings and breaking changes that have been included in 1.7.
-Please review the new [Deprecation Guide](http://emberjs.com/guides/deprecations/) for more details.
+Please review the new [Deprecations Page](http://emberjs.com/deprecations/) for more details.
 
 ### Controller's `model` property
 

@@ -79,7 +79,7 @@ performance tuning.
 
 As Ember.js moves forward, various APIs are deprecated to allow for their
 removal in a later major release (such as 2.0). With this release a
-[deprecations guide](http://emberjs.com/guides/deprecations/) has been added to
+[deprecations page](http://emberjs.com/deprecations/) has been added to
 the Ember.js website. This guide will help developers refactor their code away
 from old APIs.
 
@@ -100,7 +100,7 @@ future.
 looking up views as globals. For example `{{view App.SomeView}}`. In
 Ember.js 1.8 this style of view lookup is deprecated in favor of using a
 string, similar to how other class lookups behave in Ember. [See
-this guide](http://emberjs.com/guides/deprecations/#toc_global-lookup-of-views)
+this page](http://emberjs.com/deprecations/v1.x#toc_global-lookup-of-views)
 for details about transitioning away from global view lookups.
 * URLs containing a hash and no `/`, such as `/foo#bar` are handled by the
 router's `hash` location handler. When using the `auto` location handler, the

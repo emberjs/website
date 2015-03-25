@@ -5,6 +5,14 @@ GIT
   specs:
     coderay (1.1.0.rc1)
 
+GIT
+  remote: git://github.com/wagenet/middleman-alias.git
+  revision: 4efc069125f8820f47653569ef341950425a7739
+  branch: keep-search-and-hash
+  specs:
+    middleman-alias (0.0.9)
+      middleman-core (~> 3.2)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
@@ -97,8 +105,6 @@ GEM
       middleman-sprockets (>= 3.1.2)
       sass (>= 3.4.0, < 4.0)
       uglifier (~> 2.5)
-    middleman-alias (0.0.9)
-      middleman-core (~> 3.2)
     middleman-blog (3.5.3)
       addressable (~> 2.3.5)
       middleman-core (~> 3.2)
@@ -226,7 +232,7 @@ DEPENDENCIES
   highline
   listen
   middleman (~> 3.0)
-  middleman-alias
+  middleman-alias!
   middleman-blog (~> 3.0)
   poltergeist
   pry

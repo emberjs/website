@@ -16,7 +16,6 @@ set :markdown, :layout_engine => :erb,
 activate :directory_indexes
 activate :toc
 activate :highlighter
-activate :alias
 activate :column_balancer
 activate :ember do |config|
   config.templates_root = 'app/builds/templates'
@@ -138,3 +137,9 @@ helpers do
     all_files
   end
 end
+
+###
+# Redirects (These must be last!)
+###
+
+activate :alias
