@@ -179,16 +179,19 @@ App.Project.reopenClass({
   FIXTURES:
     [ {
       projectName: 'Ember',
+      baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       channel: "tagged"
     }, {
       projectName: 'Ember Data',
+      baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       channel: "tagged"
     }, {
       projectName: "Ember",
+      baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       initialVersion: "1.11.0",
@@ -202,6 +205,7 @@ App.Project.reopenClass({
       debugFileName: ".debug.js"
     }, {
       projectName: "Ember",
+      baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       lastRelease: "1.12.0-beta.1",
@@ -217,6 +221,7 @@ App.Project.reopenClass({
       ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
+      baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       lastRelease: "1.0.0-beta.16",
@@ -227,6 +232,7 @@ App.Project.reopenClass({
       debugFileName: ".js"
     }, {
       projectName: "Ember",
+      baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       channel: "canary",
@@ -235,6 +241,7 @@ App.Project.reopenClass({
       ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
+      baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       channel: "canary",
@@ -329,12 +336,12 @@ App.ProjectsMixin = Ember.Mixin.create({
 
       project.files = bucket.filterFiles(project.projectFilter, project.ignoreFiles);
       project.description = self.description(project);
-      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, project.debugFileName);
-      project.lastReleaseProdUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.prod.js');
-      project.lastReleaseMinUrl   = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '.min.js');
+      project.lastReleaseDebugUrl = self.lastReleaseUrl(project.baseFileName, project.channel, project.lastRelease, project.debugFileName);
+      project.lastReleaseProdUrl  = self.lastReleaseUrl(project.baseFileName, project.channel, project.lastRelease, '.prod.js');
+      project.lastReleaseMinUrl   = self.lastReleaseUrl(project.baseFileName, project.channel, project.lastRelease, '.min.js');
 
       if (project.enableTestURL) {
-        project.lastReleaseTestUrl  = self.lastReleaseUrl(project.projectFilter, project.channel, project.lastRelease, '-tests-index.html');
+        project.lastReleaseTestUrl  = self.lastReleaseUrl(project.baseFileName, project.channel, project.lastRelease, '-tests-index.html');
       }
 
       if (project.channel === 'canary') {
