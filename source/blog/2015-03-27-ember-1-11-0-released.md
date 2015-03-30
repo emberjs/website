@@ -193,11 +193,9 @@ in a template:
 ```handlebars
 {{#if isRed}}
   {{x-red}}
-{{/if}}
-{{if isBlue}}
+{{else if isBlue}}
   {{x-blue}}
-{{/if}}
-{{if isGreen}}
+{{else if isGreen}}
   {{x-green}}
 {{/if}}
 ```
@@ -208,7 +206,7 @@ Can now be replaced by a computed property and the `component` helper.
 {{component colorComponentName}}
 ```
 
-The property `colorComponentName` should have a value of `x-red`, `x-blue` etc. As
+The property `colorComponentName` should either have a value of `x-red`, or `x-blue` etc. As
 the value of the property changes, the rendered component will also change.
 
 A big thank you to [@lukemelia](https://twitter.com/lukemelia) for shipping
