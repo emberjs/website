@@ -119,7 +119,7 @@ App.S3Bucket = Ember.Object.extend({
     return files.filter(function(e) {
       var name = e.get('name');
       var ignored = ignoreFiles.any(function(f) { return name.indexOf(f) >= 0; });
-      var selected = name.indexOf(filter + '.') >= 0;
+      var selected = filter.any(function(f) { return name.match(f); });
 
       return !ignored && selected;
     });
@@ -179,17 +179,17 @@ App.Project.reopenClass({
   FIXTURES:
     [ {
       projectName: 'Ember',
-      projectFilter: 'ember',
+      projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       channel: "tagged"
     }, {
       projectName: 'Ember Data',
-      projectFilter: 'ember-data',
+      projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       channel: "tagged"
     }, {
       projectName: "Ember",
-      projectFilter: "ember",
+      projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       initialVersion: "1.11.0",
       initialReleaseDate: "2015-03-28",
@@ -202,7 +202,7 @@ App.Project.reopenClass({
       debugFileName: ".debug.js"
     }, {
       projectName: "Ember",
-      projectFilter: "ember",
+      projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       lastRelease: "1.12.0-beta.1",
       futureVersion: "1.12.0",
@@ -217,7 +217,7 @@ App.Project.reopenClass({
       ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
-      projectFilter: "ember-data",
+      projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       lastRelease: "1.0.0-beta.16",
       futureVersion: "1.0.0-beta.17",
@@ -227,7 +227,7 @@ App.Project.reopenClass({
       debugFileName: ".js"
     }, {
       projectName: "Ember",
-      projectFilter: "ember",
+      projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
       channel: "canary",
       enableTestURL: true,
@@ -235,7 +235,7 @@ App.Project.reopenClass({
       ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
-      projectFilter: "ember-data",
+      projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       channel: "canary",
       debugFileName: ".js"
