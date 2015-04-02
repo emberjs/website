@@ -2,20 +2,20 @@
 {{#if project.isEmberBeta}}
   <div class="release-progress clear">
     <div class="left">
-      <div class="small-release-image" {{bind-attr title=project.lastStableVersion}}></div>
+      <div class="small-release-image" title={{project.lastStableVersion}}></div>
       <div class="release-version">{{project.lastStableVersion}}</div>
       <div class="release-date">Released {{format-date-time project.lastStableDate "MMM Do"}}</div>
     </div>
     <div class="float-left-container">
       <div class="release-cycle-title">The path to {{project.finalVersion}}...</div>
-      <div {{bind-attr class=":left project.beta1Completed::future-image"}}>
+      <div class="left {{if project.beta1Completed '' 'future-image'}}">
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 1</div>
         {{#if project.isBeta1}}
           <div class="beta-current-version">(current beta)</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left project.beta2Completed::future-image"}}>
+      <div class="left {{if project.beta2Completed '' 'future-image'}}">
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 2</div>
         {{#if project.isBeta2}}
@@ -25,7 +25,7 @@
           <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left project.beta3Completed::future-image"}}>
+      <div class="left {{if project.beta3Completed '' 'future-image'}}">
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 3</div>
         {{#if project.isBeta3}}
@@ -35,7 +35,7 @@
           <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left project.beta4Completed::future-image"}}>
+      <div class="left {{if project.beta4Completed '' 'future-image'}}">
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 4</div>
         {{#if project.isBeta4}}
@@ -45,7 +45,7 @@
           <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
         {{/if}}
       </div>
-      <div {{bind-attr class=":left project.beta5Completed::future-image"}}>
+      <div class="left {{if project.beta5Completed '' 'future-image'}}">
         <div class="tiny-beta-image"></div>
         <div class="beta-version">beta 5</div>
         {{#if project.isBeta5}}
@@ -93,7 +93,7 @@
     </tr>
   </thead>
   <tbody>
-    {{#each file in project.files}}
+    {{#each project.files as |file|}}
       <tr>
         <td><a {{bind-attr href=file.url}}>{{file.name}}</a></td>
         <td>{{format-date-time file.lastModified}}</td>
