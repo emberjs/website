@@ -1,13 +1,13 @@
 <h3>Last 3 Pull Requests to Ember.js</h3>
 <ul>
-{{#each pr in model}}
+{{#each model as |pr|}}
   <li>
     <div class="issue-number">#{{pr.number}}</div>
     <div class="issue-title">
-      <a {{bind-attr href=pr.html_url}}>{{pr.title}}</a>
+      <a href={{pr.html_url}}>{{pr.title}}</a>
     </div>
     <div class="author-name">
-      Opened by <a {{bind-attr href=pr.head.user.html_url}}><strong>@{{pr.head.user.login}}</strong></a>
+      Opened by <a href={{pr.head.user.html_url}}><strong>@{{pr.head.user.login}}</strong></a>
     </div>
   </li>
 {{/each}}
