@@ -2,7 +2,7 @@
 <aside>
   <ul>
     <li><h2>Mailboxes</h2></li>
-    {{#each mailbox in model}}
+    {{#each model as |mailbox|}}
       <li>
         {{#link-to "mailbox" mailbox current-when="mailbox"}}
           <span class="count">
