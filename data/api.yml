@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: 1.11.0
-  sha: v1.11.0
+  version: 1.11.1
+  sha: v1.11.1
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
@@ -471,17 +471,8 @@ files:
   packages/ember-metal/lib/streams/stream.js:
     name: packages/ember-metal/lib/streams/stream.js
     modules: {}
-    classes:
-      Ember.stream.Stream: 1
-    fors: {}
-    namespaces:
-      Ember.stream: 1
-  packages/ember-metal/lib/streams/utils.js:
-    name: packages/ember-metal/lib/streams/utils.js
-    modules: {}
     classes: {}
-    fors:
-      Ember.stream: 1
+    fors: {}
     namespaces: {}
   packages/ember-metal/lib/array.js:
     name: packages/ember-metal/lib/array.js
@@ -1789,9 +1780,6 @@ modules:
     submodules: {}
     classes:
       Ember: 1
-      Ember.stream.Stream: 1
-      Ember.stream.Ember.stream: 1
-      Ember.stream: 1
       Ember.Binding: 1
       Ember.ComputedProperty: 1
       Ember.computed: 1
@@ -1810,13 +1798,11 @@ modules:
       Ember.Descriptor: 1
       Ember.run: 1
     fors:
-      Ember.stream: 1
       Ember: 1
       Ember.computed: 1
       Ember.FEATURES: 1
       Ember.Logger: 1
     namespaces:
-      Ember.stream: 1
       Ember: 1
       Ember.Instrumentation: 1
     tag: module
@@ -2607,41 +2593,6 @@ classes:
     file: packages/ember-metal/lib/platform/define_property.js
     line: 3
     static: 1
-  Ember.stream.Stream:
-    name: Ember.stream.Stream
-    shortname: Ember.stream.Stream
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-metal
-    namespace: Ember.stream
-    file: packages/ember-metal/lib/streams/stream.js
-    line: 11
-    access: public
-    tagname: ''
-    is_constructor: 1
-  Ember.stream.Ember.stream:
-    name: Ember.stream.Ember.stream
-    shortname: Ember.stream
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-metal
-    namespace: Ember.stream
-  Ember.stream:
-    name: Ember.stream
-    shortname: Ember.stream
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-metal
-    namespace: ''
   Ember.Binding:
     name: Ember.Binding
     shortname: Ember.Binding
@@ -11426,231 +11377,6 @@ classitems:
   class: Ember.platform
   module: ember
   namespace: Ember
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 3
-  description: Check whether an object is a stream or not
-  access: public
-  tagname: ''
-  itemtype: method
-  name: isStream
-  params:
-  - name: object
-    description: object to check whether it is a stream
-    type: Object|Stream
-  return:
-    description: "`true` if the object is a stream, `false` otherwise"
-    type: Boolean
-  class: Ember.stream.Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 16
-  description: |-
-    A method of subscribing to a stream which is safe for use with a non-stream
-    object. If a non-stream object is passed, the function does nothing.
-  access: public
-  tagname: ''
-  itemtype: method
-  name: subscribe
-  params:
-  - name: object
-    description: object or stream to potentially subscribe to
-    type: Object|Stream
-  - name: callback
-    description: function to run when stream value changes
-    type: Function
-  - name: context
-    description: |-
-      the callback will be executed with this context if it
-                                is provided
-    type: Object
-    optional: true
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 34
-  description: |-
-    A method of unsubscribing from a stream which is safe for use with a non-stream
-    object. If a non-stream object is passed, the function does nothing.
-  access: public
-  tagname: ''
-  itemtype: method
-  name: unsubscribe
-  params:
-  - name: object
-    description: object or stream to potentially unsubscribe from
-    type: Object|Stream
-  - name: callback
-    description: function originally passed to `subscribe()`
-    type: Function
-  - name: context
-    description: object originally passed to `subscribe()`
-    type: Object
-    optional: true
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 51
-  description: |-
-    Retrieve the value of a stream, or in the case a non-stream object is passed,
-    return the object itself.
-  access: public
-  tagname: ''
-  itemtype: method
-  name: read
-  params:
-  - name: object
-    description: object to return the value of
-    type: Object|Stream
-  return:
-    description: the stream's current value, or the non-stream object itself
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 69
-  description: Map an array, replacing any streams with their values.
-  access: public
-  tagname: ''
-  itemtype: method
-  name: readArray
-  params:
-  - name: array
-    description: The array to read values from
-    type: Array
-  return:
-    description: |-
-      a new array of the same length with the values of non-stream
-                      objects mapped from their original positions untouched, and
-                      the values of stream objects retaining their original position
-                      and replaced with the stream's current value.
-    type: Array
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 90
-  description: |-
-    Map a hash, replacing any stream property values with the current value of that
-    stream.
-  access: public
-  tagname: ''
-  itemtype: method
-  name: readHash
-  params:
-  - name: object
-    description: The hash to read keys and values from
-    type: Object
-  return:
-    description: |-
-      a new object with the same keys as the passed object. The
-                       property values in the new object are the original values in
-                       the case of non-stream objects, and the streams' current
-                       values in the case of stream objects.
-    type: Object
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 111
-  description: Check whether an array contains any stream values
-  access: public
-  tagname: ''
-  itemtype: method
-  name: scanArray
-  params:
-  - name: array
-    description: array given to a handlebars helper
-    type: Array
-  return:
-    description: |-
-      `true` if the array contains a stream/bound value, `false`
-                        otherwise
-    type: Boolean
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 135
-  description: Check whether a hash has any stream property values
-  access: public
-  tagname: ''
-  itemtype: method
-  name: scanHash
-  params:
-  - name: hash
-    description: "\"hash\" argument given to a handlebars helper"
-    type: Object
-  return:
-    description: |-
-      `true` if the object contains a stream/bound value, `false`
-                        otherwise
-    type: Boolean
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 158
-  description: Join an array, with any streams replaced by their current values
-  access: public
-  tagname: ''
-  itemtype: method
-  name: concat
-  params:
-  - name: array
-    description: |-
-      An array containing zero or more stream objects and
-                           zero or more non-stream objects
-    type: Array
-  - name: separator
-    description: string to be used to join array elements
-    type: String
-  return:
-    description: |-
-      String with array elements concatenated and joined by the
-                       provided separator, and any stream array members having been
-                       replaced by the current value of the stream
-    type: String
-  class: Ember.stream
-  module: ember-metal
-- file: packages/ember-metal/lib/streams/utils.js
-  line: 191
-  description: |-
-    Generate a new stream by providing a source stream and a function that can
-    be used to transform the stream's value. In the case of a non-stream object,
-    returns the result of the function.
-
-    The value to transform would typically be available to the function you pass
-    to `chain()` via scope. For example:
-
-    ```javascript
-        var source = ...;  // stream returning a number
-                               // or a numeric (non-stream) object
-        var result = chain(source, function() {
-          var currentValue = read(source);
-          return currentValue + 1;
-        });
-    ```
-
-    In the example, result is a stream if source is a stream, or a number of
-    source was numeric.
-  access: public
-  tagname: ''
-  itemtype: method
-  name: chain
-  params:
-  - name: value
-    description: A stream or non-stream object
-    type: Object|Stream
-  - name: fn
-    description: |-
-      function to be run when the stream value changes, or to
-                           be run once in the case of a non-stream object
-    type: Function
-  return:
-    description: |-
-      In the case of a stream `value` parameter, a new
-                              stream that will be updated with the return value of
-                              the provided function `fn`. In the case of a
-                              non-stream object, the return value of the provided
-                              function `fn`.
-    type: Object|Stream
-  class: Ember.stream
-  module: ember-metal
 - file: packages/ember-metal/lib/array.js
   line: 123
   description: Array polyfills to support ES5 features in older browsers.
@@ -16630,7 +16356,7 @@ classitems:
   module: ember
   submodule: ember-routing-htmlbars
 - file: packages/ember-routing-htmlbars/lib/helpers/render.js
-  line: 18
+  line: 19
   description: |-
     Calling ``{{render}}`` from within a template will insert another
     template that matches the provided name. The inserted template will
@@ -17741,7 +17467,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 32
+  line: 33
   description: Used to set state on first call to setURL
   access: private
   tagname: ''
@@ -17752,7 +17478,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 43
+  line: 50
   description: Will be pre-pended to path upon state change
   itemtype: property
   name: rootURL
@@ -17762,7 +17488,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 51
+  line: 58
   description: Returns the current `location.pathname` without `rootURL` or `baseURL`
   access: private
   tagname: ''
@@ -17776,7 +17502,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 76
+  line: 83
   description: Uses `history.pushState` to update the url without a page reload.
   access: private
   tagname: ''
@@ -17791,7 +17517,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 92
+  line: 99
   description: |-
     Uses `history.replaceState` to update the url without a page reload
     or history modification.
@@ -17808,7 +17534,25 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 109
+  line: 116
+  description: |-
+    Get the current `history.state`. Checks for if a polyfill is
+    required and if so fetches this._historyState. The state returned
+    from getState may be null if an iframe has changed a window's
+    history.
+  access: private
+  tagname: ''
+  itemtype: method
+  name: getState
+  return:
+    description: state
+    type: Object
+  class: Ember.HistoryLocation
+  module: ember
+  submodule: ember-routing
+  namespace: Ember
+- file: packages/ember-routing/lib/location/history_location.js
+  line: 134
   description: Pushes a new state.
   access: private
   tagname: ''
@@ -17823,7 +17567,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 127
+  line: 152
   description: Replaces the current state.
   access: private
   tagname: ''
@@ -17838,7 +17582,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 144
+  line: 169
   description: |-
     Register a callback to be invoked whenever the browser
     history changes, including using forward and back buttons.
@@ -17855,7 +17599,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 166
+  line: 191
   description: Used when using `{{action}}` helper.  The url is always appended to
     the rootURL.
   access: private
@@ -17874,7 +17618,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 188
+  line: 213
   description: Cleans up the HistoryLocation event listener.
   access: private
   tagname: ''
@@ -17885,7 +17629,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/history_location.js
-  line: 200
+  line: 225
   access: private
   tagname: Returns normalized location.hash
   itemtype: method
@@ -26739,7 +26483,7 @@ classitems:
   class: Ember.TextSupport
   module: ember
 - file: packages/ember-views/lib/mixins/attribute_bindings_support.js
-  line: 43
+  line: 45
   description: |-
     Iterates through the view's attribute bindings, sets up observers for each,
     then applies the current value of the attributes to the passed render buffer.
@@ -26757,7 +26501,7 @@ classitems:
   class: Ember.TextSupport
   module: ember
 - file: packages/ember-views/lib/mixins/attribute_bindings_support.js
-  line: 90
+  line: 92
   description: |-
     We're using setUnknownProperty as a hook to setup attributeBinding observers for
     properties that aren't defined on a view at initialization time.
@@ -29031,26 +28775,6 @@ classitems:
   module: ember
   submodule: ember-views
 warnings:
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:3"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:16"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:34"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:51"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:69"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:90"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:111"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:135"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:158"
-- message: 'replacing incorrect tag: function with method'
-  line: " packages/ember-metal/lib/streams/utils.js:191"
 - message: 'unknown tag: version'
   line: " packages/ember-metal/lib/core.js:8"
 - message: |-
