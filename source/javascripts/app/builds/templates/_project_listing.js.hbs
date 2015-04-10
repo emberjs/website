@@ -1,15 +1,15 @@
-{{#if filesPresent }}
+{{#if model.filesPresent }}
   {{#each projects as |project|}}
     {{partial 'filesTable'}}
   {{/each}}
 {{ else }}
   <br/>
-  {{#if isLoading}}
+  {{#if model.isLoading}}
     <p class="loading-spinner">
       Loading...<br/><br/>
       <img src="/images/ajax-loader.gif" width="31" height="31" />
     </p>
   {{else}}
-    <p>There are currently no builds for {{title}}. Please check back soon.</p>
+    <p>There are currently no builds for {{model.title}}. Please check back soon.</p>
   {{/if}}
 {{/if}}
