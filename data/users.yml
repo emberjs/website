@@ -373,6 +373,8 @@
   image: healthsparq.png
 - url: https://sparehanger.com
   image: sparehanger.png
+- url: https://aisler.net
+  image: aisler.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
