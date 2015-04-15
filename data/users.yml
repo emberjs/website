@@ -375,6 +375,8 @@
   image: sparehanger.png
 - url: https://mingleville.com
   image: mingleville.png
+- url: https://www.whichledlight.com
+  image: whichledlight.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
