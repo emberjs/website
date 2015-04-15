@@ -6,9 +6,12 @@
 # add a link to the PR, so we don't have to go find it, too :p
 
 # Please be sure the logo you upload has a transparent background,
-# and adequate whitespace so it's not crammed against the edges.
+# and adequate whitespace so it's not crammed against the edges. The size
+# of the space you're filling is max 210 x 103. To best control 
+# appearance, submit an image this exact size that already includes
+# the whitespace you want.
 
-# Please do not post links directly to pages selling Ember consulting
+# Please do not post links to pages selling Ember consulting
 # services. They will be removed.
 
 # These logos are in a particular order, most recently, that being the
@@ -385,4 +388,4 @@
 # to make changes to this page or get logo variants.
 
 # Please also be sure the logo you upload has a transparent background,
-# and adequate whitespace.
+# and adequate whitespace. See further comments atop this file.
