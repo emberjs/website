@@ -163,8 +163,8 @@ export default Ember.Component.extend({
 ```handlebars
 {{! app/templates/index.hbs }}
 <div class="layout">
-  {{#x-customer customer=model birthday=model.birthday as |name age|}}
-    Hello, {{name}}. You are {{age}} years old.
+  {{#x-customer customer=model birthday=model.birthday as |fullName age|}}
+    Hello, {{fullName}}. You are {{age}} years old.
   {{/x-customer}}
 </div>
 ```
