@@ -7,7 +7,7 @@
 
 # Please be sure the logo you upload has a transparent background,
 # and adequate whitespace so it's not crammed against the edges. The size
-# of the space you're filling is max 210 x 103. To best control 
+# of the space you're filling is max 210 x 103. To best control
 # appearance, submit an image this exact size that already includes
 # the whitespace you want.
 
@@ -382,6 +382,8 @@
   image: sakura.png
 - url: https://www.ludu.co
   image: ludu.png
+- url: https://www.whichledlight.com
+  image: whichledlight.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
