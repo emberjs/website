@@ -402,6 +402,17 @@ locations:
     organizers:
     - organizer: Fabrício Tavares
       profileImage: http://photos4.meetupstatic.com/photos/member/1/1/6/4/thumb_119464452.jpeg
+  - location: Medellin, Colombia
+    url: http://www.meetup.com/Ember-Medellin
+    lat: 6.217258
+    lng: -75.570780
+    organizers:
+    - organizer: John Acosta
+      profileImage: http://photos2.meetupstatic.com/photos/member/7/9/1/0/highres_145470992.jpeg
+    - organizer: Juan Pinilla
+      profileImage: http://photos1.meetupstatic.com/photos/member/2/4/d/7/highres_245409431.jpeg
+    - organizer: Alex Urbano
+      profileImage: http://photos2.meetupstatic.com/photos/member/8/f/b/4/highres_245196788.jpeg
   - location: Montevideo, Uruguay
     url: http://www.meetup.com/ember-montevideo/
     lat: -34.9011127
