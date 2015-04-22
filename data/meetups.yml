@@ -357,21 +357,21 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/3/3/4/9/thumb_244333129.jpeg
     - organizer: Chase McCarthy
       profileImage: http://photos4.meetupstatic.com/photos/member/3/3/5/c/thumb_244333148.jpeg
-  - location: Houston, Texas
+  - location: Houston, TX
     url: http://www.meetup.com/EmberJS-Houston/
     lat: 29.7604267
     lng: -95.3698028
     organizers:
     - organizer: Jesse Wolgamott
       profileImage: http://photos4.meetupstatic.com/photos/member/2/c/f/6/member_244331510.jpeg
-  - location: Ann Arbor, Michigan
+  - location: Ann Arbor, MI
     url: http://www.meetup.com/Ember-A2D/
     lat: 42.281389
     lng: -83.748333
     organizers:
     - organizer: Tom Zellman
       profileImage: http://photos2.meetupstatic.com/photos/member/d/a/c/c/member_91316012.jpeg
-  - location: Columbus, Ohio
+  - location: Columbus, OH
     url: http://embercolumbus.com
     lat: 40.098794
     lng: -83.105245
