@@ -371,6 +371,17 @@ locations:
     organizers:
     - organizer: Tom Zellman
       profileImage: http://photos2.meetupstatic.com/photos/member/d/a/c/c/member_91316012.jpeg
+  - location: Columbus, Ohio
+    url: http://embercolumbus.com
+    lat: 40.098794
+    lng: -83.105245
+    organizers:
+    - organizer: Ricky Gilbert
+      profileImage: http://photos2.meetupstatic.com/photos/member/e/1/9/a/highres_245577754.jpeg
+    - organizer: Kevin Pfefferle
+      profileImage: http://photos2.meetupstatic.com/photos/member/d/1/0/8/member_139613512.jpeg
+    - organizer: James Martinez
+      profileImage: http://photos2.meetupstatic.com/photos/member/6/d/7/2/highres_244288018.jpeg
 - area: South America
   groups:
   - location: São Paulo, Brazil
