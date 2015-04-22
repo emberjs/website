@@ -373,8 +373,8 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/d/a/c/c/member_91316012.jpeg
   - location: Columbus, Ohio
     url: http://www.meetup.com/ember-columbus/
-    lat: 39.9833
-    lng: 82.9833
+    lat: 40.098794
+    lng: -83.105245
     organizers:
     - organizer: Ricky Gilbert
       profileImage: http://photos2.meetupstatic.com/photos/member/e/1/9/a/highres_245577754.jpeg
