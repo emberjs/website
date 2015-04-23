@@ -384,6 +384,8 @@
   image: ludu.png
 - url: https://www.whichledlight.com
   image: whichledlight.png
+- url: http://www.foogi.me
+  image: foogi.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
