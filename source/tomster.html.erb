@@ -1,0 +1,36 @@
+---
+title: "Tomster"
+---
+
+<div class="tomster section intro">
+  <h1>Tomster</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada blandit dolor id suscipit. Nulla faucibus lectus sit amet risus placerat, vel malesuada lorem consectetur.
+  </p>
+</div>
+
+<div class="tomster section list">
+  <table id="tomster-list">
+    <% data.tomsters.each_slice(2) do |slice| %>
+      <tr>
+        <% slice.each do |tomster| %>
+          <td>
+            <div class="tomster-container">
+              <div class="tomster-image">
+                <img src="<%= tomster.image %>">
+              </div>
+              <div class="tomster-info">
+                <a href="<%= tomster.url %>" class="title">
+                  <%= tomster.title %>
+                </a>
+                <div class="date">
+                  <%= tomster.date %>
+                </div>
+              </div>
+            </div>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>

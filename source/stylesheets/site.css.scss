@@ -1546,6 +1546,65 @@ body.security #content {
   border-bottom: none;
 }
 
+/**
+  Tomster Page
+**/
+
+.tomster.section.intro {
+  margin: 3em auto 0;
+  width: 54em;
+  h1 {
+    text-align: center;
+  }
+  p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+}
+
+.tomster.section.list {
+  margin: 1em auto 0;
+
+  #tomster-list td {
+    padding: 20px;
+  }
+
+  .tomster-container {
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  }
+
+  .tomster-image {
+    text-align: center;
+    width: 438px;
+    height: 438px;
+    img {
+      margin-bottom: -4px; // Fixes 4px space below image
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .tomster-info {
+    @include clearfix;
+    padding: 12px;
+    height: 41px;
+    .title {
+      float: left;
+      font-size: 15px;
+      font-weight: bold;
+      font-family: 'Maven Pro';
+      text-transform: uppercase;
+    }
+    .date {
+      float: right;
+    }
+  }
+}
 
 /**
   Sponsors Page
