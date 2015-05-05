@@ -109,7 +109,7 @@ rendering model, built on top of HTMLBars.
 First, this allowed us to remove **all** internal views for constructs
 like `{{foo}}`, `{{#if bar}}` and even in `{{#each posts as |post|}}`.
 This view removal has an impact on initial render, because these
-constructs are very common in real-world template.
+constructs are very common in real-world templates.
 
 Second, as we have discussed extensively, this allows us to
 significantly improve the performance of re-rendering, which makes it
@@ -137,8 +137,8 @@ remove in 2.0. That process has continued with Ember 1.13, which will
 contain Glimmer.
 
 However, it's worth noting that Glimmer is the first major change to
-many parts of the view since Ember was called SproutCore 2! As a result,
-perfect compatibility, especially in private features, was more
+many parts of the view layer since SproutCore 2! As a result,
+perfect compatibility, especially in private APIs, was more
 challenging.
 
 During the process of building Glimmer, we found various semantics of
