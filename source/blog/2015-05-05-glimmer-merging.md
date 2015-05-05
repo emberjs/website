@@ -60,7 +60,7 @@ applications.
 
 Please follow these instructions to test Ember-CLI apps with Canary:
 
-* http://www.ember-cli.com/#using-canary-build-instead-of-release
+* [http://www.ember-cli.com/#using-canary-build-instead-of-release](http://www.ember-cli.com/#using-canary-build-instead-of-release)
 
 ## Known Issues
 
