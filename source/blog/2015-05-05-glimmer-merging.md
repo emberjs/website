@@ -9,13 +9,22 @@ After months of work, **Glimmer is landing in Canary today**.
 What this means:
 
 * The test suite passes.
-* We have tested Glimmer on our own apps, and, for the most part, it
-  works.
-* There are still known issues (see below).
-* At this point, we need community help to identify compatibility issues
-  not covered by the test suite.
-* We expect to continue improving compatibility with the pre-Glimmer
-  engine for some time, as new issues come to light.
+* We have tested Glimmer on our own apps, and, for the most part, apps boot and
+  run correctly.
+* There are still known issues (see below), including with the test helpers.
+* At this point, we need community help to identify compatibility issues not
+  covered by the test suite.
+* We expect to continue improving compatibility with the pre-Glimmer engine for
+  some time, as new issues come to light.
+
+Glimmer is the new rendering engine the Ember community has been working on for
+the past several months. It is the first ground-up change to the templating
+engine since SproutCore 2.0, and takes advantage of the groundwork laid by
+HTMLBars to dramatically improve re-rendering performance. It also sets the
+stage for more performance improvements during the 2.x series, and
+React-inspired improvements to the Ember programming model. Best of all, we are
+landing Glimmer in Ember 1.13, compatible with the full public API of Ember
+1.x.
 
 It's also worth noting that while our apps feel faster, not every
 performance benchmark will necessarily show marked improvement. There
@@ -58,12 +67,16 @@ applications.
 There are several known issues that you should consider when evaluating
 Glimmer:
 
-* We are still a few memory leaks that we have identified and are
+* There are still a few memory leaks that we have identified and are
   quickly addressing.
 * The concept of `controller` in templates and actions in Ember 1.x was
   fairly nuanced. Glimmer started with a simpler model and layered
   compatibility on top. There are known gaps in the compatibility layer
   that we are still addressing.
+* There are still a number of issues in the testing helpers (especially
+  the faux unit tests that use "isolated containers") that are causing
+  apps that work correctly to fail tests. We are working to fix the test
+  helpers, and should have that work done before we release 1.13 beta.
 * There are likely a number of not-yet-known compatibility issues in
   Glimmer. You should assume that the vast majority of issues you
   encounter when testing Glimmer over the next few weeks will be addressed
@@ -78,6 +91,15 @@ Glimmer:
   throughout the framework, but that work is not yet done. Expect to see
   continued performance improvements in Ember throughout the 2.x cycle
   as a result of this change.
+
+The most critical of these caveats should be addressed before we release 1.13
+beta, and we expect to continue work on the remaining issues throughout the
+1.13 beta cycle.
+
+Because of the magnitude of this change, and the proximity to the Ember 2.0
+"cruft removal" pass, we plan to aggressively fix reported bugs during the 1.13
+beta period. There will be another post describing our 1.13 and 2.0 release
+plans with more precision in the next few weeks.
 
 ## Performance Gains
 
