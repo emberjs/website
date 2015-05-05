@@ -148,10 +148,11 @@ depending on context (routes, `{{render}}`, `{{#each posts
 itemController='post'}}`, `{{#each posts itemController='post' as
 |post|}}`, `{{#with someController}}`, etc.).
 
-Controllers both controller the template's "context" (called "self" in
-Glimmer) and serve as a target for actions, but the specific details
-vary, and the semantics are effectively derived from implementation
-details of Ember 1.x's rendering engine.
+Controllers and components both mange a template's "context" (called
+"self" in Glimmer) and serve as a target for actions. Mirroring these
+semantics, which are effectively derived from implementation details of
+Ember 1.x's rendering engine, has been a challenge. We're confident they
+are very close, but encourage you to open an issue if they have changed.
 
 Glimmer, through HTMLBars, has a much clearer concept of "scope", and
 features like `{{yield}}` work directly with that scope object. We were
