@@ -58,9 +58,9 @@ hooks, keys in `#each`), but at the moment we are focusing on
 compatibility with 1.x and testing the 1.x API with existing
 applications.
 
-## Upgrading
+Please follow these instructions to test Ember-CLI apps with Canary:
 
-**Someone needs to fill in the steps to use Glimmer with Ember CLI**
+* http://www.ember-cli.com/#using-canary-build-instead-of-release
 
 ## Known Issues
 
