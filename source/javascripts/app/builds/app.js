@@ -277,7 +277,7 @@ App.BuildCategoryMixin = Ember.Mixin.create({
   }
 });
 
-App.ApplicationController = Ember.ObjectController.extend({
+App.ApplicationController = Ember.Controller.extend({
   isIndexActive: function(){
     return this.isActiveChannel('index');
   }.property('currentRouteName'),
@@ -388,7 +388,7 @@ App.CanaryRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.CanaryController = Ember.ObjectController.extend(App.ProjectsMixin, {
+App.CanaryController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
   channel: 'canary'
 });
@@ -399,7 +399,7 @@ App.BetaRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.BetaController = Ember.ObjectController.extend(App.ProjectsMixin, {
+App.BetaController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
   channel: 'beta'
 });
@@ -410,7 +410,7 @@ App.ReleaseRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.ReleaseController = Ember.ObjectController.extend(App.ProjectsMixin, {
+App.ReleaseController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
   channel: 'release'
 });
@@ -426,7 +426,7 @@ App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.TaggedController = Ember.ObjectController.extend(App.ProjectsMixin, {
+App.TaggedController = Ember.Controller.extend(App.ProjectsMixin, {
   channel: 'tagged'
 });
 /*
