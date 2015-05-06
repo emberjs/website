@@ -3,15 +3,15 @@ title: "Tomster"
 ---
 
 <div class="tomster section intro">
-  <h1>Tomster</h1>
+  <h1>The Tomster</h1>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent malesuada blandit dolor id suscipit. Nulla faucibus lectus sit amet risus placerat, vel malesuada lorem consectetur.
+    Tomster is one of the friendly faces of the Ember project and community. Over the years we've dressed and redressed him for all sorts of fun projects and reasons. If you have questions about commissioning a Tomster, <a href="mailto:leah@emberjs.com">get in touch</a>.
   </p>
 </div>
 
 <div class="tomster section list">
   <table id="tomster-list">
-    <% data.tomsters.each_slice(2) do |slice| %>
+    <% data.tomsters.sort_by {|t| Date.parse(t.date) }.reverse.each_slice(2) do |slice| %>
       <tr>
         <% slice.each do |tomster| %>
           <td>
@@ -20,9 +20,13 @@ title: "Tomster"
                 <img src="<%= tomster.image %>">
               </div>
               <div class="tomster-info">
+                <% if tomster.url %>
                 <a href="<%= tomster.url %>" class="title">
                   <%= tomster.title %>
                 </a>
+                <% else %>
+                  <p class="not-yet-url title"><%= tomster.title %></p>
+                <% end %>
                 <div class="date">
                   <%= tomster.date %>
                 </div>

@@ -1582,6 +1582,10 @@ body.security #content {
     text-align: center;
     width: 438px;
     height: 438px;
+    // These next three lines control centering the Tomsters
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       margin-bottom: -4px; // Fixes 4px space below image
       max-width: 100%;
@@ -1602,6 +1606,11 @@ body.security #content {
     }
     .date {
       float: right;
+    }
+    p.not-yet-url {
+      // If the Tomster entry has no URL, this controls the formatting
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 }
