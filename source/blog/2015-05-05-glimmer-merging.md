@@ -148,7 +148,7 @@ depending on context (routes, `{{render}}`, `{{#each posts
 itemController='post'}}`, `{{#each posts itemController='post' as
 |post|}}`, `{{#with someController}}`, etc.).
 
-Controllers and components both mange a template's "context" (called
+Controllers and components both manage a template's "context" (called
 "self" in Glimmer) and serve as a target for actions. Mirroring these
 semantics, which are effectively derived from implementation details of
 Ember 1.x's rendering engine, has been a challenge. We're confident they
