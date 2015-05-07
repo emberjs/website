@@ -31,7 +31,7 @@ The force=true flag will overwrite all existing organizer data
 
 #### API Documentation
 
-You can preview api documention, by generating docs from the source code.
+You can preview api documentation, by generating docs from the source code.
 Clone the three repositories, then from project executing the specific
 tasks to build the docs locally.
 
