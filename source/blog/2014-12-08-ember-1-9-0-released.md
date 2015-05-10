@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.9.0 and 1.10 Beta Released
 author: Matthew Beale
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 We are pleased to announce the release of both Ember.js 1.9.0 and the
@@ -147,7 +147,7 @@ deprecations and demonstrates how to update to a new API.
 
 Ember 1.9 deprecates context switching in templates. Templates with context
 switching are difficult to read, and the concept is challenging for new
-developers. The removal of context switching from templates in 
+developers. The removal of context switching from templates in
 Ember 2.0 aims to make scoping consistent and predictable. This deprecation
 is a step toward that goal.
 

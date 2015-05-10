@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.9.1 Released
 author: Tom Dale
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 Today, the Ember team is pleased to announce the release of Ember.js
