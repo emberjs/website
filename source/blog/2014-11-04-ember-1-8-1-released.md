@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.8.1 Released
 author: Matthew Beale
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 Today we are releasing Ember.js 1.8.1, a patch-level release of Ember that
@@ -28,7 +28,7 @@ App.FooBarComponent = Ember.Component.extend({
 The intent of this code is unclear and the pre-1.8 behavior was unintentional. In Ember
 1.8.1 an exception is thrown for including `class` in `attributeBindings`.
 
-### View instances 
+### View instances
 
 Passing view instances to the `{{view}}` helper was broken in Ember.js 1.8. This behavior
 has been restored.
@@ -49,7 +49,7 @@ meta-data objects in Ember-Data are null-prototype, a special kind of object cre
 with `Object.create(null)`. In 1.8 these objects could not be rendered. 1.8.1 repairs
 this.
 
-### Support non-string unescaped content 
+### Support non-string unescaped content
 
 In Ember 1.8 rendering an unescaped value that was not a string `{{{someNumberLiteral}}}`
 would raise an exception. This has been fixed.

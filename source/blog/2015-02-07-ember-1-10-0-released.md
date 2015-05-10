@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.10.0 and 1.11 Beta Released
 author: Matthew Beale
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 We are pleased to announce the release of both Ember.js 1.10.0 and the
