@@ -10,7 +10,7 @@ time to talk about the transition plan for those of us who have Ember
 
 The high level:
 
-* Ember 1.13-beta.1 will be released on Monday. It will come with the
+* Ember 1.13-beta.1 will be released early this week. It will come with the
   new Glimmer engine and a series of new deprecations, preparing for
   cruft removal in Ember 2.0.
 * Ember 1.13 will ship with support for **angle bracket components**,
