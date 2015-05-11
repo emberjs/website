@@ -389,9 +389,11 @@
 - url: https://www.zesty.com
   image: zesty.png
 - url: http://www.eflexsystems.com
-  image: eflexsystems.png  
+  image: eflexsystems.png
 - url: http://www.vestorly.com
   image: vestorly.png
+- url: https://isleofcode.com
+  image: isleofcode.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
