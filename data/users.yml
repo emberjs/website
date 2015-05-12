@@ -394,6 +394,8 @@
   image: vestorly.png
 - url: https://isleofcode.com
   image: isleofcode.png
+- url: https://aisler.net
+  image: aisler.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
