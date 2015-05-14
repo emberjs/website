@@ -396,6 +396,8 @@
   image: isleofcode.png
 - url: https://aisler.net
   image: aisler.png
+- url: http://locusenergy.com
+  image: locusenergy.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
