@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.11.1 Released
 author: Robert Jackson
-tags: Releases, Recent Posts
+tags: Releases
 ---
 
 Today we are releasing Ember.js 1.11.1, a patch-level release of Ember that
