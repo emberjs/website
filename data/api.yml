@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: 1.11.1
-  sha: v1.11.1
+  version: 1.12.0
+  sha: v1.12.0
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
@@ -679,12 +679,10 @@ files:
   packages/ember-metal/lib/properties.js:
     name: packages/ember-metal/lib/properties.js
     modules: {}
-    classes:
-      Ember.Descriptor: 1
+    classes: {}
     fors:
       Ember: 1
-    namespaces:
-      Ember: 1
+    namespaces: {}
   packages/ember-metal/lib/property_events.js:
     name: packages/ember-metal/lib/property_events.js
     modules: {}
@@ -852,6 +850,12 @@ files:
     fors: {}
     namespaces:
       Ember: 1
+  packages/ember-routing/lib/location/util.js:
+    name: packages/ember-routing/lib/location/util.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces: {}
   packages/ember-routing/lib/system/controller_for.js:
     name: packages/ember-routing/lib/system/controller_for.js
     modules: {}
@@ -1110,11 +1114,9 @@ files:
   packages/ember-runtime/lib/system/each_proxy.js:
     name: packages/ember-runtime/lib/system/each_proxy.js
     modules: {}
-    classes:
-      Ember.EachProxy: 1
+    classes: {}
     fors: {}
-    namespaces:
-      Ember: 1
+    namespaces: {}
   packages/ember-runtime/lib/system/lazy_load.js:
     name: packages/ember-runtime/lib/system/lazy_load.js
     modules: {}
@@ -1299,15 +1301,19 @@ files:
   packages/ember-views/lib/mixins/attribute_bindings_support.js:
     name: packages/ember-views/lib/mixins/attribute_bindings_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.AttributeBindingsSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/class_names_support.js:
     name: packages/ember-views/lib/mixins/class_names_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.ClassNamesSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/component_template_deprecation.js:
     name: packages/ember-views/lib/mixins/component_template_deprecation.js
     modules: {}
@@ -1317,15 +1323,19 @@ files:
   packages/ember-views/lib/mixins/instrumentation_support.js:
     name: packages/ember-views/lib/mixins/instrumentation_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.InstrumentationSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/legacy_view_support.js:
     name: packages/ember-views/lib/mixins/legacy_view_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.LegacyViewSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/normalized_rerender_if_needed.js:
     name: packages/ember-views/lib/mixins/normalized_rerender_if_needed.js
     modules: {}
@@ -1335,9 +1345,11 @@ files:
   packages/ember-views/lib/mixins/template_rendering_support.js:
     name: packages/ember-views/lib/mixins/template_rendering_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.TemplateRenderingSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/text_support.js:
     name: packages/ember-views/lib/mixins/text_support.js
     modules: {}
@@ -1349,15 +1361,19 @@ files:
   packages/ember-views/lib/mixins/view_child_views_support.js:
     name: packages/ember-views/lib/mixins/view_child_views_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.ViewChildViewsSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/view_context_support.js:
     name: packages/ember-views/lib/mixins/view_context_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.ViewsContextSupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/mixins/view_target_action_support.js:
     name: packages/ember-views/lib/mixins/view_target_action_support.js
     modules: {}
@@ -1369,9 +1385,11 @@ files:
   packages/ember-views/lib/mixins/visibility_support.js:
     name: packages/ember-views/lib/mixins/visibility_support.js
     modules: {}
-    classes: {}
+    classes:
+      Ember.VisibilitySupport: 1
     fors: {}
-    namespaces: {}
+    namespaces:
+      Ember: 1
   packages/ember-views/lib/streams/class_name_binding.js:
     name: packages/ember-views/lib/streams/class_name_binding.js
     modules: {}
@@ -1640,7 +1658,6 @@ modules:
       Ember.TargetActionSupport: 1
       Ember.ArrayProxy: 1
       Ember.CoreObject: 1
-      Ember.EachProxy: 1
       Ember.Namespace: 1
       Ember.NativeArray: 1
       Ember.Object: 1
@@ -1652,8 +1669,16 @@ modules:
       Ember.Test.Adapter: 1
       Ember.Test.QUnitAdapter: 1
       Ember.Test: 1
+      Ember.AttributeBindingsSupport: 1
+      Ember.ClassNamesSupport: 1
+      Ember.InstrumentationSupport: 1
+      Ember.LegacyViewSupport: 1
+      Ember.TemplateRenderingSupport: 1
       Ember.TextSupport: 1
+      Ember.ViewChildViewsSupport: 1
+      Ember.ViewsContextSupport: 1
       Ember.ViewTargetActionSupport: 1
+      Ember.VisibilitySupport: 1
       Ember.EventDispatcher: 1
       Ember.Checkbox: 1
       Ember.CollectionView: 1
@@ -1686,7 +1711,7 @@ modules:
       Ember.Test: 1
     tag: module
     file: packages/ember-views/lib/views/view.js
-    line: 64
+    line: 67
     description: Ember
   ember-application:
     name: ember-application
@@ -1719,7 +1744,7 @@ modules:
     module: ember
     namespace: ''
     file: packages/ember-debug/lib/main.js
-    line: 9
+    line: 10
     description: Ember Debug
   ember-extension-support:
     name: ember-extension-support
@@ -1795,7 +1820,6 @@ modules:
       Ember.Map: 1
       Ember.MapWithDefault: 1
       Ember.Mixin: 1
-      Ember.Descriptor: 1
       Ember.run: 1
     fors:
       Ember: 1
@@ -1807,7 +1831,7 @@ modules:
       Ember.Instrumentation: 1
     tag: module
     file: packages/ember-metal/lib/run_loop.js
-    line: 40
+    line: 38
     description: |-
       All Ember methods and functions are defined inside of this namespace. You
       generally should not add new properties to this namespace as it may be
@@ -1883,7 +1907,15 @@ modules:
     name: ember-views
     submodules: {}
     classes:
+      Ember.AttributeBindingsSupport: 1
+      Ember.ClassNamesSupport: 1
+      Ember.InstrumentationSupport: 1
+      Ember.LegacyViewSupport: 1
+      Ember.TemplateRenderingSupport: 1
       Ember.TextSupport: 1
+      Ember.ViewChildViewsSupport: 1
+      Ember.ViewsContextSupport: 1
+      Ember.VisibilitySupport: 1
       Ember.EventDispatcher: 1
       Ember.Checkbox: 1
       Ember.CollectionView: 1
@@ -1903,7 +1935,7 @@ modules:
     module: ember
     namespace: ''
     file: packages/ember-views/lib/views/view.js
-    line: 64
+    line: 67
     description: Ember Views
     requires:
     - ember-runtime
@@ -1936,7 +1968,6 @@ modules:
       Ember.TargetActionSupport: 1
       Ember.ArrayProxy: 1
       Ember.CoreObject: 1
-      Ember.EachProxy: 1
       Ember.Namespace: 1
       Ember.NativeArray: 1
       Ember.Object: 1
@@ -1972,7 +2003,7 @@ modules:
     module: ember
     namespace: ''
     file: packages/ember-testing/lib/test.js
-    line: 16
+    line: 15
     description: Ember Testing
     requires:
     - ember-application
@@ -2741,7 +2772,7 @@ classes:
     module: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/computed.js
-    line: 34
+    line: 33
     description: |-
       A computed property transforms an object's function into a property.
 
@@ -2817,7 +2848,6 @@ classes:
       person.get('firstName'); // 'Peter'
       person.get('lastName');  // 'Wagenet'
       ```
-    extends: Ember.Descriptor
     is_constructor: 1
   Ember.computed:
     name: Ember.computed
@@ -2830,7 +2860,7 @@ classes:
     module: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/computed.js
-    line: 522
+    line: 525
     description: |-
       This helper returns a new property descriptor that wraps the passed
       computed property function. You can use this helper to define properties
@@ -2951,7 +2981,6 @@ classes:
     file: packages/ember-metal/lib/injected_property.js
     line: 7
     description: Read-only property that returns the result of a container lookup.
-    extends: Ember.Descriptor
     is_constructor: 1
     params:
     - name: type
@@ -3062,7 +3091,7 @@ classes:
     submodule: ember-metal
     namespace: ''
     file: packages/ember-metal/lib/main.js
-    line: 369
+    line: 367
     access: private
     tagname: ''
   Ember.OrderedSet:
@@ -3095,7 +3124,7 @@ classes:
     module: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/map.js
-    line: 237
+    line: 234
     description: |-
       A Map stores values indexed by keys. Unlike JavaScript's
       default Objects, the keys of a Map can be any JavaScript
@@ -3124,7 +3153,7 @@ classes:
     module: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/map.js
-    line: 441
+    line: 438
     extends: Ember.Map
     access: private
     tagname: ''
@@ -3150,7 +3179,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/mixin.js
-    line: 497
+    line: 495
     description: |-
       The `Ember.Mixin` class allows you to create mixins, whose properties can be
       added to other classes. For instance,
@@ -3201,26 +3230,6 @@ classes:
         }
       });
       ```
-  Ember.Descriptor:
-    name: Ember.Descriptor
-    shortname: Ember.Descriptor
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-metal
-    namespace: Ember
-    file: packages/ember-metal/lib/properties.js
-    line: 16
-    description: |-
-      Objects of this type can implement an interface to respond to requests to
-      get and set. The default implementation handles simple properties.
-
-      You generally won't need to create or subclass this directly.
-    access: private
-    tagname: ''
-    is_constructor: 1
   Ember.run:
     name: Ember.run
     shortname: Ember.run
@@ -3232,7 +3241,7 @@ classes:
     module: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/run_loop.js
-    line: 40
+    line: 38
     description: |-
       Runs the passed target and method inside of a RunLoop, ensuring any
       deferred actions including bindings and views updates are flushed at the
@@ -3304,7 +3313,7 @@ classes:
     submodule: ember-routing
     namespace: Ember
     file: packages/ember-routing/lib/location/api.js
-    line: 9
+    line: 10
     description: |-
       Ember.Location returns an instance of the correct implementation of
       the `location` API.
@@ -3410,6 +3419,10 @@ classes:
       * replaceURL(path): replace the current URL (optional).
       * onUpdateURL(callback): triggers the callback when the URL changes.
       * formatURL(url): formats `url` to be placed into `href` attribute.
+      * detect() (optional): instructs the location to do any feature detection
+          necessary. If the location needs to redirect to a different URL, it
+          can cancel routing by setting the `cancelRouterSetup` property on itself
+          to `false`.
 
       Calling setURL or replaceURL will not trigger onUpdateURL callbacks.
     static: 1
@@ -3425,7 +3438,7 @@ classes:
     submodule: ember-routing
     namespace: Ember
     file: packages/ember-routing/lib/location/auto_location.js
-    line: 17
+    line: 24
     description: |-
       Ember.AutoLocation will select the best location option based off browser
       support with the priority order: history, hash, none.
@@ -3763,7 +3776,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/array.js
-    line: 57
+    line: 54
     description: |-
       This mixin implements Observer-friendly Array-like behavior. It is not a
       concrete implementation, but it can be used up by other classes that want
@@ -3809,7 +3822,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/comparable.js
-    line: 11
+    line: 8
     description: |-
       Implements some standard methods for comparing objects. Add this mixin to
       any class you create that can compare its instances.
@@ -3869,7 +3882,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/enumerable.js
-    line: 57
+    line: 53
     description: |-
       This mixin defines the common interface implemented by enumerable objects
       in Ember. Most of these methods follow the standard Array iteration
@@ -4030,7 +4043,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/mutable_array.js
-    line: 31
+    line: 28
     description: |-
       This mixin defines the API for modifying array-like objects. These methods
       can be applied only to a collection that keeps its items in an ordered set.
@@ -4114,7 +4127,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/observable.js
-    line: 34
+    line: 31
     description: |-
       ## Overview
 
@@ -4190,7 +4203,7 @@ classes:
     file: packages/ember-runtime/lib/mixins/promise_proxy.js
     line: 36
     description: |-
-      A low level mixin making ObjectProxy, ObjectController or ArrayController's promise aware.
+      A low level mixin making ObjectProxy, ObjectController or ArrayControllers promise-aware.
 
       ```javascript
       var ObjectPromiseController = Ember.ObjectController.extend(Ember.PromiseProxyMixin);
@@ -4351,7 +4364,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/system/array_proxy.js
-    line: 33
+    line: 32
     description: |-
       An ArrayProxy wraps any other object that implements `Ember.Array` and/or
       `Ember.MutableArray,` forwarding all requests. This makes it very useful for
@@ -4400,26 +4413,6 @@ classes:
     namespace: Ember
     file: packages/ember-runtime/lib/system/core_object.js
     line: 225
-  Ember.EachProxy:
-    name: Ember.EachProxy
-    shortname: Ember.EachProxy
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember
-    submodule: ember-runtime
-    namespace: Ember
-    file: packages/ember-runtime/lib/system/each_proxy.js
-    line: 104
-    description: |-
-      This is the object instance returned when you get the `@each` property on an
-      array. It uses the unknownProperty handler to automatically create
-      EachArray instances for property names.
-    access: private
-    tagname: ''
-    extends: Ember.Object
   Ember.Namespace:
     name: Ember.Namespace
     shortname: Ember.Namespace
@@ -4770,7 +4763,7 @@ classes:
     submodule: ember-testing
     namespace: Ember
     file: packages/ember-testing/lib/test.js
-    line: 16
+    line: 15
     description: |-
       This is a container for an assortment of testing related functionality:
 
@@ -4778,6 +4771,76 @@ classes:
       * Register/Unregister additional test helpers.
       * Setup callbacks to be fired when the test helpers are injected into
         your application.
+  Ember.AttributeBindingsSupport:
+    name: Ember.AttributeBindingsSupport
+    shortname: Ember.AttributeBindingsSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/attribute_bindings_support.js
+    line: 14
+  Ember.ClassNamesSupport:
+    name: Ember.ClassNamesSupport
+    shortname: Ember.ClassNamesSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/class_names_support.js
+    line: 24
+  Ember.InstrumentationSupport:
+    name: Ember.InstrumentationSupport
+    shortname: Ember.InstrumentationSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/instrumentation_support.js
+    line: 9
+  Ember.LegacyViewSupport:
+    name: Ember.LegacyViewSupport
+    shortname: Ember.LegacyViewSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/legacy_view_support.js
+    line: 9
+  Ember.TemplateRenderingSupport:
+    name: Ember.TemplateRenderingSupport
+    shortname: Ember.TemplateRenderingSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/template_rendering_support.js
+    line: 17
   Ember.TextSupport:
     name: Ember.TextSupport
     shortname: Ember.TextSupport
@@ -4827,6 +4890,7 @@ classes:
       The following chart is a visual representation of what takes place when the
       escape key is pressed in this scenario:
 
+      ```
       The Template
       +---------------------------+
       |                           |
@@ -4851,6 +4915,7 @@ classes:
       |  }                                        |
       |                                           |
       +-------------------------------------------+
+      ```
 
       Here are the events that we currently support along with the name of the
       attribute you would need to use on your field. To reiterate, you would use the
@@ -4860,6 +4925,7 @@ classes:
         {{input attribute-name='controllerAction'}}
       ```
 
+      ```
       +--------------------+----------------+
       |                    |                |
       | event              | attribute name |
@@ -4880,11 +4946,39 @@ classes:
       |                    |                |
       | keydown            | key-down       |
       +--------------------+----------------+
+      ```
     uses:
     - Ember.TargetActionSupport
     extends: Ember.Mixin
     access: private
     tagname: ''
+  Ember.ViewChildViewsSupport:
+    name: Ember.ViewChildViewsSupport
+    shortname: Ember.ViewChildViewsSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/view_child_views_support.js
+    line: 15
+  Ember.ViewsContextSupport:
+    name: Ember.ViewsContextSupport
+    shortname: Ember.ViewsContextSupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/view_context_support.js
+    line: 10
   Ember.ViewTargetActionSupport:
     name: Ember.ViewTargetActionSupport
     shortname: Ember.ViewTargetActionSupport
@@ -4934,6 +5028,20 @@ classes:
       });
       ```
     extends: Ember.TargetActionSupport
+  Ember.VisibilitySupport:
+    name: Ember.VisibilitySupport
+    shortname: Ember.VisibilitySupport
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for:
+    - Ember.View
+    module: ember
+    submodule: ember-views
+    namespace: Ember
+    file: packages/ember-views/lib/mixins/visibility_support.js
+    line: 14
   Ember.EventDispatcher:
     name: Ember.EventDispatcher
     shortname: Ember.EventDispatcher
@@ -5171,7 +5279,7 @@ classes:
     submodule: ember-views
     namespace: Ember
     file: packages/ember-views/lib/views/component.js
-    line: 21
+    line: 20
     description: |-
       An `Ember.Component` is a view that is completely
       isolated. Properties accessed in its templates go
@@ -5432,6 +5540,8 @@ classes:
       Unless you have specific needs for `CoreView`, you will use `Ember.View`
       in your applications.
     extends: Ember.Object
+    deprecated: true
+    deprecationMessage: Use `Ember.View` instead.
     uses:
     - Ember.Evented
     - Ember.ActionHandler
@@ -5481,7 +5591,7 @@ classes:
     submodule: ember-views
     namespace: Ember
     file: packages/ember-views/lib/views/select.js
-    line: 96
+    line: 82
     description: |-
       The `Ember.Select` view class renders a
       [select](https://developer.mozilla.org/en/HTML/Element/select) HTML element,
@@ -5501,7 +5611,7 @@ classes:
       Example:
 
       ```javascript
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         names: ["Yehuda", "Tom"]
       });
       ```
@@ -5523,7 +5633,7 @@ classes:
       `value` property:
 
       ```javascript
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         selectedName: 'Tom',
         names: ["Yehuda", "Tom"]
       });
@@ -5560,7 +5670,7 @@ classes:
       element's text. Both paths must reference each object itself as `content`:
 
       ```javascript
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         programmers: [
           {firstName: "Yehuda", id: 1},
           {firstName: "Tom",    id: 2}
@@ -5588,7 +5698,7 @@ classes:
       can be bound to a property on another object:
 
       ```javascript
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         programmers: [
           {firstName: "Yehuda", id: 1},
           {firstName: "Tom",    id: 2}
@@ -5631,7 +5741,7 @@ classes:
       var yehuda = {firstName: "Yehuda", id: 1, bff4eva: 'tom'}
       var tom = {firstName: "Tom", id: 2, bff4eva: 'yehuda'};
 
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         selectedPerson: tom,
         programmers: [ yehuda, tom ]
       });
@@ -5665,7 +5775,7 @@ classes:
       results in there being no `<option>` with a `selected` attribute:
 
       ```javascript
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         selectedProgrammer: null,
         programmers: ["Yehuda", "Tom"]
       });
@@ -5694,7 +5804,7 @@ classes:
       with the `prompt` option:
 
       ```javascript
-      App.ApplicationController = Ember.ObjectController.extend({
+      App.ApplicationController = Ember.Controller.extend({
         selectedProgrammer: null,
         programmers: [ "Yehuda", "Tom" ]
       });
@@ -5757,7 +5867,7 @@ classes:
     submodule: ember-views
     namespace: Ember
     file: packages/ember-views/lib/views/text_field.js
-    line: 8
+    line: 68
     description: |-
       The internal class used to create text inputs when the `{{input}}`
         helper is used with `type` of `text`.
@@ -5781,7 +5891,7 @@ classes:
     submodule: ember-views
     namespace: Ember
     file: packages/ember-views/lib/views/view.js
-    line: 64
+    line: 67
     description: |-
       `Ember.View` is the class in Ember responsible for encapsulating templates of
       HTML content, combining templates with data to render as sections of a page's
@@ -6381,6 +6491,15 @@ classes:
       using the `{{view}}` Handlebars helper. See [Ember.Handlebars.helpers.view](/api/classes/Ember.Handlebars.helpers.html#method_view)
       for additional information.
     extends: Ember.CoreView
+    uses:
+    - Ember.ViewContextSupport
+    - Ember.ViewChildViewsSupport
+    - Ember.TemplateRenderingSupport
+    - Ember.ClassNamesSupport
+    - Ember.AttributeBindingsSupport
+    - Ember.LegacyViewSupport
+    - Ember.InstrumentationSupport
+    - Ember.VisibilitySupport
 classitems:
 - file: bower_components/rsvp/lib/rsvp/promise/all.js
   line: 3
@@ -7895,7 +8014,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 12
+  line: 14
   description: |-
     The `ApplicationInstance` encapsulates all of the stateful aspects of a
     running `Application`.
@@ -7919,7 +8038,7 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 34
+  line: 36
   description: |-
     The application instance's container. The container stores all of the
     instance-specific state for this application run.
@@ -7930,7 +8049,7 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 42
+  line: 44
   description: |-
     The application's registry. The registry contains the classes, templates,
     and other code that makes up the application.
@@ -7941,7 +8060,7 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 50
+  line: 52
   description: |-
     The registry for this application instance. It should use the
     `applicationRegistry` as a fallback.
@@ -7952,7 +8071,7 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 58
+  line: 60
   description: |-
     The DOM events for which the event dispatcher should listen.
 
@@ -7969,7 +8088,7 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 71
+  line: 73
   description: |-
     The root DOM element of the Application as an element or a
     [jQuery-compatible selector
@@ -7983,9 +8102,9 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 106
+  line: 112
   description: |-
-    Instantiates and sets up the router, optionally overriding the default
+    Instantiates and sets up the router, specifically overriding the default
     location. This is useful for manually starting the app in FastBoot or
     testing environments, where trying to modify the URL would be
     inappropriate.
@@ -7998,7 +8117,7 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 125
+  line: 128
   description: |-
     This hook is called by the root-most Route (a.k.a. the ApplicationRoute)
     when it has finished creating the root View. By default, we simply take the
@@ -8017,14 +8136,11 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 141
+  line: 144
   description: |-
     Tells the router to start routing. The router will ask the location for the
     current URL of the page to determine the initial URL to start routing to.
     To start the app at a specific URL, call `handleURL` instead.
-
-    Ensure that you have called `setupRouter()` on the instance before using
-    this method.
   access: private
   tagname: ''
   class: Ember.Application
@@ -8032,6 +8148,17 @@ classitems:
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
   line: 159
+  description: |-
+    Sets up the router, initializing the child router and configuring the
+    location before routing begins.
+
+    Because setup should only occur once, multiple calls to `setupRouter`
+    beyond the first call have no effect.
+  class: Ember.Application
+  module: ember
+  submodule: ember-application
+- file: packages/ember-application/lib/system/application-instance.js
+  line: 175
   description: |-
     Directs the router to route to a particular URL. This is useful in tests,
     for example, to tell the app to start at a particular URL. Ensure that you
@@ -8046,14 +8173,14 @@ classitems:
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 173
+  line: 190
   access: private
   tagname: ''
   class: Ember.Application
   module: ember
   submodule: ember-application
 - file: packages/ember-application/lib/system/application-instance.js
-  line: 184
+  line: 200
   access: private
   tagname: ''
   class: Ember.Application
@@ -8174,7 +8301,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 343
+  line: 347
   description: |-
     Automatically initialize the application once the DOM has
     become ready.
@@ -8196,7 +8323,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 367
+  line: 371
   description: |-
     Use this to defer readiness until some condition is true.
 
@@ -8206,6 +8333,7 @@ classitems:
     var App = Ember.Application.create();
 
     App.deferReadiness();
+
     // Ember.$ is a reference to the jQuery object/function
     Ember.$.getJSON('/auth-token', function(token) {
       App.token = token;
@@ -8225,7 +8353,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 397
+  line: 402
   description: |-
     Call `advanceReadiness` after any asynchronous setup logic has completed.
     Each call to `deferReadiness` must be matched by a call to `advanceReadiness`
@@ -8239,7 +8367,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 414
+  line: 419
   description: |-
     Registers a factory that can be used for dependency injection (with
     `App.inject`) or for service lookup. Each factory is registered with
@@ -8282,9 +8410,9 @@ classitems:
     ```javascript
     var App = Ember.Application.create();
 
-    App.Person  = Ember.Object.extend();
-    App.Orange  = Ember.Object.extend();
-    App.Email   = Ember.Object.extend();
+    App.Person = Ember.Object.extend();
+    App.Orange = Ember.Object.extend();
+    App.Email = Ember.Object.extend();
     App.session = Ember.Object.create();
 
     App.register('model:user', App.Person, { singleton: false });
@@ -8309,7 +8437,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 476
+  line: 481
   description: |-
     Define a dependency injection onto a specific factory or all factories
     of a type.
@@ -8370,7 +8498,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 529
+  line: 534
   description: |-
     Calling initialize manually is not supported.
 
@@ -8386,7 +8514,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 543
+  line: 548
   description: |-
     Initialize the application. This happens automatically.
 
@@ -8402,7 +8530,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 580
+  line: 585
   description: |-
     Reset the application. This is typically used only in tests. It cleans up
     the application in the following order:
@@ -8475,7 +8603,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 666
+  line: 671
   access: private
   tagname: ''
   itemtype: method
@@ -8485,7 +8613,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 707
+  line: 712
   access: private
   tagname: ''
   itemtype: method
@@ -8495,7 +8623,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 732
+  line: 737
   description: |-
     Called when the Application has become ready.
     The call will be delayed until the DOM has become ready.
@@ -8506,7 +8634,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 740
+  line: 745
   deprecated: true
   deprecationMessage: |-
     Use 'Resolver' instead
@@ -8518,7 +8646,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 749
+  line: 754
   description: Set this to provide an alternate class to `Ember.DefaultResolver`
   itemtype: property
   name: resolver
@@ -8527,7 +8655,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 768
+  line: 774
   itemtype: method
   name: then
   access: private
@@ -8538,7 +8666,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 798
+  line: 800
   description: |-
     Creates a new instance of the application and instructs it to route to the
     specified initial URL. This method returns a promise that will be resolved
@@ -8559,11 +8687,11 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 837
+  line: 839
   description: |-
     Initializer receives an object which has the following attributes:
     `name`, `before`, `after`, `initialize`. The only required attribute is
-    `initialize, all others are optional.
+    `initialize`, all others are optional.
 
     * `name` allows you to specify under which name the initializer is registered.
     This must be a unique name, as trying to register two initializers with the
@@ -8690,7 +8818,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 962
+  line: 964
   description: |-
     This creates a registry with the default Ember naming conventions.
 
@@ -8727,7 +8855,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 1050
+  line: 1055
   description: |-
     This function defines the default lookup rules for container lookups:
 
@@ -8775,7 +8903,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 150
+  line: 151
   description: |-
     This method is called via the container's resolver method.
     It parses the provided `fullName` and then looks up and
@@ -8794,7 +8922,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 177
+  line: 178
   description: |-
     Convert the string name of the form 'type:name' to
     a Javascript object with the parsed aspects of the name
@@ -8812,7 +8940,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 228
+  line: 231
   description: |-
     Returns a human-readable description for a fullName. Used by the
     Application namespace in assertions to describe the
@@ -8831,7 +8959,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 259
+  line: 262
   description: |-
     Given a parseName object (output from `parseName`), apply
     the conventions expected by `Ember.Router`
@@ -8850,7 +8978,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 274
+  line: 277
   description: Look up the template in Ember.TEMPLATES
   access: protected
   tagname: ''
@@ -8867,7 +8995,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 295
+  line: 298
   description: Lookup the view using `resolveOther`
   access: protected
   tagname: ''
@@ -8884,7 +9012,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 308
+  line: 311
   description: Lookup the controller using `resolveOther`
   access: protected
   tagname: ''
@@ -8901,7 +9029,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 320
+  line: 323
   description: Lookup the route using `resolveOther`
   access: protected
   tagname: ''
@@ -8918,7 +9046,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 333
+  line: 336
   description: Lookup the model on the Application namespace
   access: protected
   tagname: ''
@@ -8935,7 +9063,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 347
+  line: 350
   description: |-
     Look up the specified object (from parsedName) on the appropriate
     namespace (usually on the Application)
@@ -8954,7 +9082,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 359
+  line: 362
   description: |-
     Look up the specified object (from parsedName) on the appropriate
     namespace (usually on the Application)
@@ -8973,7 +9101,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/resolver.js
-  line: 379
+  line: 382
   itemtype: method
   name: _logLookup
   params:
@@ -8990,7 +9118,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-debug/lib/main.js
-  line: 20
+  line: 21
   description: |-
     Define an assertion that will throw an exception if the condition is not
     met. Ember build tools will remove any calls to `Ember.assert()` when
@@ -9014,13 +9142,14 @@ classitems:
   - name: test
     description: |-
       Must be truthy for the assertion to pass. If
-        falsy, an exception will be thrown.
-    type: Boolean
+        falsy, an exception will be thrown. If this is a function, it will be executed and
+        its return value will be used as condition.
+    type: Boolean|Function
   class: Ember
   module: ember
   submodule: ember-debug
 - file: packages/ember-debug/lib/main.js
-  line: 54
+  line: 56
   description: |-
     Display a warning with the provided message. Ember build tools will
     remove any calls to `Ember.warn()` when doing a production build.
@@ -9039,7 +9168,7 @@ classitems:
   module: ember
   submodule: ember-debug
 - file: packages/ember-debug/lib/main.js
-  line: 72
+  line: 74
   description: |-
     Display a debug notice. Ember build tools will remove any calls to
     `Ember.debug()` when doing a production build.
@@ -9057,7 +9186,7 @@ classitems:
   module: ember
   submodule: ember-debug
 - file: packages/ember-debug/lib/main.js
-  line: 87
+  line: 89
   description: |-
     Display a deprecation warning with the provided message and a stack trace
     (Chrome and Firefox only). Ember build tools will remove any calls to
@@ -9071,8 +9200,9 @@ classitems:
   - name: test
     description: |-
       An optional boolean. If falsy, the deprecation
-        will be displayed.
-    type: Boolean
+        will be displayed. If this is a function, it will be executed and its return
+        value will be used as condition.
+    type: Boolean|Function
   - name: options
     description: |-
       An optional object that can be used to pass
@@ -9082,7 +9212,7 @@ classitems:
   module: ember
   submodule: ember-debug
 - file: packages/ember-debug/lib/main.js
-  line: 149
+  line: 152
   description: |-
     Alias an old, deprecated method with its new counterpart.
 
@@ -9112,7 +9242,7 @@ classitems:
   module: ember
   submodule: ember-debug
 - file: packages/ember-debug/lib/main.js
-  line: 175
+  line: 178
   description: |-
     Run a function meant for debugging. Ember build tools will remove any calls to
     `Ember.runInDebug()` when doing a production build.
@@ -9137,7 +9267,7 @@ classitems:
   module: ember
   submodule: ember-debug
 - file: packages/ember-debug/lib/main.js
-  line: 197
+  line: 200
   description: |-
     Will call `Ember.warn()` if ENABLE_ALL_FEATURES, ENABLE_OPTIONAL_FEATURES, or
     any specific FEATURES flag is truthy.
@@ -10420,6 +10550,7 @@ classitems:
     * `focus-in`
     * `focus-out`
     * `key-press`
+    * `key-up`
 
     For example, if you desire an action to be sent when the input is blurred,
       you only need to setup the action name to the event name property.
@@ -11019,12 +11150,12 @@ classitems:
 
     ```handlebars
     // posts might not be
-    {{#with user.posts as blogPosts}}
+    {{#with user.posts as |blogPosts|}}
       <div class="notice">
         There are {{blogPosts.length}} blog posts written by {{user.name}}.
       </div>
 
-      {{#each post in blogPosts}}
+      {{#each blogPosts as |post|}}
         <li>{{post.title}}</li>
       {{/each}}
     {{/with}}
@@ -11033,8 +11164,8 @@ classitems:
     Without the `as` operator, it would be impossible to reference `user.name` in the example above.
 
     NOTE: The alias should not reuse a name from the bound property path.
-    For example: `{{#with foo.bar as foo}}` is not supported because it attempts to alias using
-    the first part of the property path, `foo`. Instead, use `{{#with foo.bar as baz}}`.
+    For example: `{{#with foo as |foo.bar|}}` is not supported because it attempts to alias using
+    the first part of the property path, `foo`. Instead, use `{{#with foo.bar as |baz|}}`.
 
     ### `controller` option
 
@@ -11044,7 +11175,7 @@ classitems:
     This is very similar to using an `itemController` option with the `{{each}}` helper.
 
     ```handlebars
-    {{#with users.posts as posts controller='userBlogPosts'}}
+    {{#with users.posts controller='userBlogPosts' as |posts|}}
       {{!- `posts` is wrapped in our controller instance }}
     {{/with}}
     ```
@@ -11378,7 +11509,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-metal/lib/array.js
-  line: 123
+  line: 121
   description: Array polyfills to support ES5 features in older browsers.
   itemtype: property
   name: ArrayPolyfills
@@ -11608,7 +11739,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/computed.js
-  line: 154
+  line: 155
   description: |-
     Properties are cacheable by default. Computed property will automatically
     cache the return value of your function until one of the dependent keys changes.
@@ -11635,7 +11766,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 176
+  line: 177
   description: |-
     Call on a computed property to set it into non-cached mode. When in this
     mode the computed property will not automatically cache the return value.
@@ -11657,7 +11788,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 197
+  line: 198
   description: |-
     Call on a computed property to set it into read-only mode. When in this
     mode the computed property will throw an error when set.
@@ -11683,7 +11814,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 223
+  line: 226
   description: |-
     Sets the dependent keys on this computed property. Pass any number of
     arguments containing key paths that this computed property depends on.
@@ -11720,7 +11851,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 266
+  line: 269
   description: |-
     In some cases, you may want to annotate computed properties with additional
     metadata about how they function or what values they operate on. For example,
@@ -11751,7 +11882,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 319
+  line: 322
   description: |-
     Access the value of the function backing the computed property.
     If this property has already been cached, return the cached result.
@@ -11786,7 +11917,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 381
+  line: 384
   description: |-
     Set the value of a computed property. If the function that backs your
     computed property does not accept arguments then the default action for
@@ -11847,7 +11978,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 601
+  line: 604
   description: |-
     Returns the cached value for a property, if one exists.
     This can be useful for peeking at the value of a computed
@@ -11870,7 +12001,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 35
+  line: 31
   description: |-
     A computed property that returns true if the value of the dependent
     property is null, an empty string, empty array, or empty function.
@@ -11906,7 +12037,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 68
+  line: 64
   description: |-
     A computed property that returns true if the value of the dependent
     property is NOT null, an empty string, empty array, or empty function.
@@ -11939,7 +12070,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 98
+  line: 94
   description: |-
     A computed property that returns true if the value of the dependent
     property is null or undefined. This avoids errors from JSLint complaining
@@ -11975,7 +12106,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 131
+  line: 127
   description: |-
     A computed property that returns the inverse boolean value
     of the original value for the dependent property.
@@ -12008,7 +12139,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 161
+  line: 157
   description: |-
     A computed property that converts the provided dependent property
     into a boolean value.
@@ -12043,7 +12174,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 193
+  line: 189
   description: |-
     A computed property which matches the original value for the
     dependent property against a given RegExp, returning `true`
@@ -12082,7 +12213,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 229
+  line: 225
   description: |-
     A computed property that returns true if the provided dependent property
     is equal to the given value.
@@ -12120,7 +12251,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 262
+  line: 258
   description: |-
     A computed property that returns true if the provided dependent property
     is greater than the provided value.
@@ -12158,7 +12289,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 295
+  line: 291
   description: |-
     A computed property that returns true if the provided dependent property
     is greater than or equal to the provided value.
@@ -12196,7 +12327,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 328
+  line: 324
   description: |-
     A computed property that returns true if the provided dependent property
     is less than the provided value.
@@ -12234,7 +12365,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 361
+  line: 357
   description: |-
     A computed property that returns true if the provided dependent property
     is less than or equal to the provided value.
@@ -12272,7 +12403,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 394
+  line: 390
   description: |-
     A computed property that performs a logical `and` on the
     original values for the provided dependent properties.
@@ -12310,7 +12441,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 433
+  line: 429
   description: |-
     A computed property which performs a logical `or` on the
     original values for the provided dependent properties.
@@ -12346,7 +12477,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 468
+  line: 464
   description: |-
     A computed property that returns the first truthy value
     from a list of dependent properties.
@@ -12382,7 +12513,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 502
+  line: 498
   description: |-
     A computed property that returns the array of values
     for the provided dependent properties.
@@ -12417,7 +12548,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 541
+  line: 537
   description: |-
     Creates a new property that is an alias for another property
     on an object. Calls to `get` or `set` this property behave as
@@ -12452,7 +12583,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 568
+  line: 564
   description: |-
     Where `computed.alias` aliases `get` and `set`, and allows for bidirectional
     data flow, `computed.oneWay` only provides an aliased `get`. The `set` will
@@ -12493,7 +12624,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 604
+  line: 600
   description: |-
     This is a more semantically meaningful alias of `computed.oneWay`,
     whose name is somewhat ambiguous as to which direction the data flows.
@@ -12512,7 +12643,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 615
+  line: 611
   description: |-
     Where `computed.oneWay` provides oneWay bindings, `computed.readOnly` provides
     a readOnly one way binding. Very often when using `computed.oneWay` one does
@@ -12555,7 +12686,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 653
+  line: 649
   description: |-
     A computed property that acts like a standard getter and setter,
     but returns the value at the provided `defaultPath` if the
@@ -12592,7 +12723,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed_macros.js
-  line: 691
+  line: 690
   description: |-
     Creates a new property that is an alias for another property
     on an object. Calls to `get` or `set` this property behave as
@@ -12638,7 +12769,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/core.js
-  line: 104
+  line: 107
   description: |-
     Test that a feature is enabled. Parsed by Ember's build tools to leave
     experimental features out of beta/stable builds.
@@ -12663,7 +12794,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/core.js
-  line: 139
+  line: 142
   description: |-
     Determines whether Ember should enhance some built-in object prototypes to
     provide a more friendly API. If enabled, a few methods will be added to
@@ -12681,7 +12812,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/core.js
-  line: 160
+  line: 163
   description: Determines whether Ember logs a full stack trace during deprecation
     warnings
   itemtype: property
@@ -12692,7 +12823,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/core.js
-  line: 169
+  line: 172
   description: Determines whether Ember should add ECMAScript 5 Array shims to older
     browsers.
   itemtype: property
@@ -12703,7 +12834,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/core.js
-  line: 178
+  line: 181
   description: Determines whether Ember logs info about version of used libraries
   itemtype: property
   name: LOG_VERSION
@@ -12713,7 +12844,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/core.js
-  line: 187
+  line: 190
   description: Empty function. Useful for some operations. Always returns `this`.
   itemtype: method
   name: K
@@ -12976,7 +13107,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/events.js
-  line: 108
+  line: 106
   description: Add an event listener
   itemtype: method
   name: addListener
@@ -12998,7 +13129,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 146
+  line: 144
   description: |-
     Remove an event listener
 
@@ -13020,7 +13151,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 193
+  line: 191
   description: |-
     Suspend listener during callback.
 
@@ -13050,7 +13181,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 230
+  line: 228
   description: Suspends multiple listeners during a callback.
   itemtype: method
   name: suspendListeners
@@ -13074,7 +13205,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 277
+  line: 275
   description: Return a list of currently watched events
   access: private
   tagname: ''
@@ -13086,7 +13217,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 300
+  line: 298
   description: |-
     Send an event. The execution of suspended listeners
     is skipped, and once listeners are removed. A listener without
@@ -13111,7 +13242,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 353
+  line: 351
   access: private
   tagname: ''
   itemtype: method
@@ -13125,7 +13256,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 367
+  line: 365
   access: private
   tagname: ''
   itemtype: method
@@ -13139,7 +13270,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 390
+  line: 388
   description: |-
     Define a property as a function that should be executed when
     a specified event or events are triggered.
@@ -13186,7 +13317,7 @@ classitems:
     Ember.expandProperties('foo.bar', echo);              //=> 'foo.bar'
     Ember.expandProperties('{foo,bar}', echo);            //=> 'foo', 'bar'
     Ember.expandProperties('foo.{bar,baz}', echo);        //=> 'foo.bar', 'foo.baz'
-    Ember.expandProperties('{foo,bar}.baz', echo);        //=> '{foo,bar}.baz'
+    Ember.expandProperties('{foo,bar}.baz', echo);        //=> 'foo.baz', 'bar.baz'
     Ember.expandProperties('foo.{bar,baz}.@each', echo)   //=> 'foo.bar.@each', 'foo.baz.@each'
     Ember.expandProperties('{foo,bar}.{spam,eggs}', echo) //=> 'foo.spam', 'foo.eggs', 'bar.spam', 'bar.eggs'
     Ember.expandProperties('{foo}.bar.{baz}')             //=> 'foo.bar.baz'
@@ -13238,7 +13369,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/instrumentation.js
-  line: 75
+  line: 77
   description: Notifies event's subscribers, calls `before` and `after` hooks.
   itemtype: method
   name: instrument
@@ -13260,7 +13391,7 @@ classitems:
   module: ember-metal
   namespace: Ember.Instrumentation
 - file: packages/ember-metal/lib/instrumentation.js
-  line: 156
+  line: 158
   description: Subscribes to a particular event or instrumented block of code.
   itemtype: method
   name: subscribe
@@ -13280,7 +13411,7 @@ classitems:
   module: ember-metal
   namespace: Ember.Instrumentation
 - file: packages/ember-metal/lib/instrumentation.js
-  line: 196
+  line: 198
   description: Unsubscribes from a particular event or instrumented block of code.
   itemtype: method
   name: unsubscribe
@@ -13293,7 +13424,7 @@ classitems:
   module: ember-metal
   namespace: Ember.Instrumentation
 - file: packages/ember-metal/lib/instrumentation.js
-  line: 217
+  line: 219
   description: Resets `Ember.Instrumentation` by flushing list of subscribers.
   itemtype: method
   name: reset
@@ -13550,7 +13681,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/main.js
-  line: 403
+  line: 401
   description: |-
     A function may be assigned to `Ember.onerror` to be called when Ember
     internals encounter an error. This is useful for specialized error handling
@@ -13625,7 +13756,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 136
+  line: 133
   since: 1.8.0
   itemtype: method
   name: delete
@@ -13641,7 +13772,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 161
+  line: 158
   itemtype: method
   name: isEmpty
   return:
@@ -13651,7 +13782,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 169
+  line: 166
   itemtype: method
   name: has
   params:
@@ -13664,7 +13795,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 183
+  line: 180
   itemtype: method
   name: forEach
   params:
@@ -13677,7 +13808,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 210
+  line: 207
   itemtype: method
   name: toArray
   return:
@@ -13687,7 +13818,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 218
+  line: 215
   itemtype: method
   name: copy
   return:
@@ -13697,7 +13828,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 270
+  line: 267
   itemtype: method
   name: create
   static: 1
@@ -13705,7 +13836,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 282
+  line: 279
   description: This property will change as the number of objects in the map changes.
   since: 1.8.0
   itemtype: property
@@ -13716,7 +13847,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 292
+  line: 289
   description: Retrieve the value associated with a given key.
   itemtype: method
   name: get
@@ -13731,7 +13862,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 308
+  line: 305
   description: |-
     Adds a value to the map. If a value for the given key has already been
     provided, the new value will replace the old value.
@@ -13751,7 +13882,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 334
+  line: 331
   deprecated: true
   deprecationMessage: |-
     see delete
@@ -13769,7 +13900,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 348
+  line: 345
   description: Removes a value from the map for an associated key.
   since: 1.8.0
   itemtype: method
@@ -13785,7 +13916,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 373
+  line: 370
   description: Check whether a key is present.
   itemtype: method
   name: has
@@ -13800,7 +13931,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 384
+  line: 381
   description: |-
     Iterate over all the keys and values. Calls the function once
     for each key, passing in value, key, and the map being iterated over,
@@ -13822,14 +13953,14 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 421
+  line: 418
   itemtype: method
   name: clear
   class: Ember.Map
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 430
+  line: 427
   itemtype: method
   name: copy
   return:
@@ -13839,7 +13970,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 455
+  line: 452
   itemtype: method
   name: create
   static: 1
@@ -13861,7 +13992,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 476
+  line: 473
   description: Retrieve the value associated with a given key.
   itemtype: method
   name: get
@@ -13876,7 +14007,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/map.js
-  line: 495
+  line: 492
   itemtype: method
   name: copy
   return:
@@ -13911,7 +14042,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 484
+  line: 483
   itemtype: method
   name: mixin
   params:
@@ -13926,7 +14057,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 588
+  line: 586
   itemtype: method
   name: create
   static: 1
@@ -13939,7 +14070,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/mixin.js
-  line: 607
+  line: 600
   itemtype: method
   name: reopen
   params:
@@ -13951,7 +14082,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/mixin.js
-  line: 642
+  line: 635
   itemtype: method
   name: apply
   params:
@@ -13964,7 +14095,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/mixin.js
-  line: 670
+  line: 663
   itemtype: method
   name: detect
   params:
@@ -13978,7 +14109,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/mixin.js
-  line: 741
+  line: 736
   description: Denotes a required property for a mixin
   itemtype: method
   name: required
@@ -13986,7 +14117,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 758
+  line: 754
   description: |-
     Makes a method available via an additional name.
 
@@ -14009,14 +14140,11 @@ classitems:
   - name: methodName
     description: name of the method to alias
     type: String
-  return:
-    description: ''
-    type: Ember.Descriptor
   class: Ember
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 788
+  line: 783
   description: |-
     Specify a method that observes property changes.
 
@@ -14049,7 +14177,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 839
+  line: 834
   description: |-
     Specify a method that observes property changes.
 
@@ -14082,7 +14210,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 872
+  line: 867
   description: |-
     When observers fire, they are called with the arguments `obj`, `keyName`.
 
@@ -14210,7 +14338,14 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/properties.js
-  line: 48
+  line: 16
+  description: |-
+    Objects of this type can implement an interface to respond to requests to
+    get and set. The default implementation handles simple properties.
+  class: Ember
+  module: ember-metal
+- file: packages/ember-metal/lib/properties.js
+  line: 41
   description: |-
     NOTE: This is a low-level method used by other parts of the API. You almost
     never want to call this method directly. Instead you should use
@@ -14221,7 +14356,7 @@ classitems:
     properties and other special descriptors.
 
     Normally this method takes only three parameters. However if you pass an
-    instance of `Ember.Descriptor` as the third param then you can pass an
+    instance of `Descriptor` as the third param then you can pass an
     optional value as the fourth parameter. This is often more efficient than
     creating new descriptor hashes for each property.
 
@@ -14257,10 +14392,10 @@ classitems:
     type: String
   - name: desc
     description: |-
-      an instance of `Ember.Descriptor` (typically a
+      an instance of `Descriptor` (typically a
         computed property) or an ES5 descriptor.
         You must provide this or `data` but not both.
-    type: Ember.Descriptor
+    type: Descriptor
     optional: true
   - name: data
     description: |-
@@ -14392,7 +14527,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_get.js
-  line: 101
+  line: 96
   description: |-
     Normalizes a target/path pair to reflect that actual target/path that should
     be observed, etc. This takes into account passing in global property
@@ -14415,7 +14550,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_set.js
-  line: 16
+  line: 15
   description: |-
     Sets the value of a property on an object, respecting computed properties
     and notifying observers and other listeners of the change. If the
@@ -14439,7 +14574,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_set.js
-  line: 141
+  line: 142
   description: |-
     Error-tolerant form of `Ember.set`. Will not blow up if any part of the
     chain is `undefined`, `null`, or destroyed.
@@ -14461,7 +14596,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/run_loop.js
-  line: 72
+  line: 70
   description: |-
     If no run-loop is present, it creates a new one. If a run loop is
     present it will queue itself to run on the existing run-loops action
@@ -14514,7 +14649,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 113
+  line: 111
   description: |-
     Allows you to specify which context to call the specified function in while
     adding the execution of that function to the Ember run loop. This ability
@@ -14533,12 +14668,12 @@ classitems:
 
     ```javascript
     App.RichTextEditorComponent = Ember.Component.extend({
-      initializeTinyMCE: function() {
+      initializeTinyMCE: Ember.on('didInsertElement', function() {
         tinymce.init({
           selector: '#' + this.$().prop('id'),
           setup: Ember.run.bind(this, this.setupEditor)
         });
-      }.on('didInsertElement'),
+      }),
 
       setupEditor: function(editor) {
         this.set('editor', editor);
@@ -14550,7 +14685,7 @@ classitems:
     });
     ```
 
-    In this example, we use Ember.run.bind to bind the setupEditor message to the
+    In this example, we use Ember.run.bind to bind the setupEditor method to the
     context of the App.RichTextEditorComponent and to have the invocation of that
     method be safely handled and executed by the Ember run loop.
   itemtype: method
@@ -14578,7 +14713,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 173
+  line: 170
   description: |-
     Begins a new RunLoop. Any deferred actions invoked after the begin will
     be buffered until you invoke a matching call to `run.end()`. This is
@@ -14598,7 +14733,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 191
+  line: 188
   description: |-
     Ends a RunLoop. This must be called sometime after you call
     `run.begin()` to flush any deferred actions. This is a lower-level way
@@ -14618,7 +14753,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 209
+  line: 206
   description: |-
     Array of named queues. This array determines the order in which queues
     are flushed at the end of the RunLoop. You can define your own queues by
@@ -14632,7 +14767,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 220
+  line: 217
   description: |-
     Adds the passed target/method and any optional arguments to the named
     queue to be executed at the end of the RunLoop. If you have not already
@@ -14688,7 +14823,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 272
+  line: 269
   description: |-
     Immediately flushes any events scheduled in the 'sync' queue. Bindings
     use this queue so this method is a useful way to immediately force all
@@ -14710,7 +14845,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 294
+  line: 291
   description: |-
     Invokes the passed target/method and optional arguments after a specified
     period of time. The last parameter of this method must always be a number
@@ -14753,7 +14888,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 323
+  line: 320
   description: |-
     Schedule a function to run one time during the current RunLoop. This is equivalent
     to calling `scheduleOnce` with the "actions" queue.
@@ -14781,7 +14916,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 346
+  line: 338
   description: |-
     Schedules a function to run one time in a given queue of the current RunLoop.
     Calling this method with the same queue/target/method combination will have
@@ -14852,7 +14987,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 402
+  line: 394
   description: |-
     Schedules an item to run from within a separate run loop, after
     control has been returned to the system. This is equivalent to calling
@@ -14926,7 +15061,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 466
+  line: 457
   description: |-
     Cancels a scheduled item. Must be a value returned by `run.later()`,
     `run.once()`, `run.next()`, `run.debounce()`, or
@@ -14983,7 +15118,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 518
+  line: 509
   description: |-
     Delay calling the target method until the debounce period has elapsed
     with no additional debounce calls. If `debounce` is called again before
@@ -15072,7 +15207,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 590
+  line: 581
   description: |-
     Ensure that the target method is never called more frequently than
     the specified spacing period. The target method is called immediately.
@@ -15131,7 +15266,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 640
+  line: 631
   description: |-
     Add a new named queue after the specified queue.
 
@@ -15561,6 +15696,8 @@ classitems:
     ```
   itemtype: method
   name: tryFinally
+  deprecated: true
+  deprecationMessage: Use JavaScript's native try/finally
   params:
   - name: tryable
     description: The function to run the try callback
@@ -15581,7 +15718,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 714
+  line: 720
   description: |-
     Provides try/catch/finally functionality, while working
     around Safari's double finally bug.
@@ -15612,6 +15749,8 @@ classitems:
     ```
   itemtype: method
   name: tryCatchFinally
+  deprecated: true
+  deprecationMessage: Use JavaScript's native try/catch/finally instead
   params:
   - name: tryable
     description: The function to run the try callback
@@ -15635,7 +15774,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 808
+  line: 820
   description: |-
     Returns a consistent type for the passed item.
 
@@ -15694,7 +15833,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 890
+  line: 902
   description: |-
     Convenience method to inspect an object. This method will attempt to
     convert the object into a useful string description.
@@ -15714,7 +15853,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 932
+  line: 944
   params:
   - name: target
     description: ''
@@ -15728,7 +15867,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 950
+  line: 962
   params:
   - name: target
     description: ''
@@ -16672,7 +16811,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 282
+  line: 287
   description: |-
     Accessed as a classname binding to apply the `LinkView`'s `activeClass`
     CSS `class` to the element when the link is active.
@@ -16690,7 +16829,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 324
+  line: 329
   description: |-
     Accessed as a classname binding to apply the `LinkView`'s `loadingClass`
     CSS `class` to the element when the link is loading.
@@ -16706,7 +16845,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 339
+  line: 344
   description: Returns the application's main router from the container.
   access: private
   tagname: ''
@@ -16717,7 +16856,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 352
+  line: 357
   description: Event handler that invokes the link, activating the associated route.
   access: private
   tagname: ''
@@ -16732,7 +16871,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 407
+  line: 412
   access: private
   tagname: ''
   itemtype: method
@@ -16747,7 +16886,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 436
+  line: 441
   description: |-
     Computed property that returns an array of the
     resolved parameters passed to the `link-to` helper,
@@ -16774,7 +16913,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 481
+  line: 486
   description: |-
     Computed property that returns the current route name,
     dynamic segments, and query params. Returns falsy if
@@ -16792,7 +16931,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 512
+  line: 517
   description: |-
     Sets the element's `href` attribute to the url for
     the `LinkView`'s targeted route.
@@ -16806,7 +16945,7 @@ classitems:
   submodule: ember-routing-views
   namespace: Ember
 - file: packages/ember-routing-views/lib/views/link.js
-  line: 540
+  line: 545
   description: |-
     The default href value to use while a link-to is loading.
     Only applies when tagName is 'a'
@@ -17055,7 +17194,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/api.js
-  line: 122
+  line: 127
   description: |-
     This is deprecated in favor of using the container to lookup the location
     implementation as desired.
@@ -17087,7 +17226,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/api.js
-  line: 152
+  line: 157
   description: |-
     This is deprecated in favor of using the container to register the
     location implementation as desired.
@@ -17121,7 +17260,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/api.js
-  line: 184
+  line: 189
   description: |-
     Returns the current `location.hash` by parsing location.href since browsers
     inconsistently URL-decode `location.hash`.
@@ -17137,9 +17276,11 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 32
+  line: 39
   access: private
-  tagname: Attached for mocking in tests
+  tagname: |-
+    The browser's `location` object. This is typically equivalent to
+    `window.location`, but may be overridden for testing.
   itemtype: property
   name: location
   default: environment.location
@@ -17148,22 +17289,50 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 42
+  line: 50
   access: private
-  tagname: Attached for mocking in tests
+  tagname: |-
+    The browser's `history` object. This is typically equivalent to
+    `window.history`, but may be overridden for testing.
   since: 1.5.1
   itemtype: property
-  name: _history
+  name: history
   default: environment.history
   class: Ember.AutoLocation
   module: ember
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 53
+  line: 62
+  access: private
+  tagname: The user agent's global variable. In browsers, this will be `window`.
+  since: '1.11'
+  itemtype: property
+  name: global
+  default: environment.global
+  class: Ember.AutoLocation
+  module: ember
+  submodule: ember-routing
+  namespace: Ember
+- file: packages/ember-routing/lib/location/auto_location.js
+  line: 73
   access: private
   tagname: |-
-    This property is used by router:main to know whether to cancel the routing
+    The browser's `userAgent`. This is typically equivalent to
+    `navigator.userAgent`, but may be overridden for testing.
+  since: 1.5.1
+  itemtype: property
+  name: userAgent
+  default: environment.history
+  class: Ember.AutoLocation
+  module: ember
+  submodule: ember-routing
+  namespace: Ember
+- file: packages/ember-routing/lib/location/auto_location.js
+  line: 85
+  access: private
+  tagname: |-
+    This property is used by the router to know whether to cancel the routing
     setup process, which is needed while we redirect the browser.
   since: 1.5.1
   itemtype: property
@@ -17174,7 +17343,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 65
+  line: 97
   access: private
   tagname: Will be pre-pended to path upon state change.
   since: 1.5.1
@@ -17186,145 +17355,39 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 76
-  access: private
-  tagname: Attached for mocking in tests
-  since: 1.5.1
-  itemtype: property
-  name: _HistoryLocation
-  default: Ember.HistoryLocation
+  line: 108
+  description: |-
+    Called by the router to instruct the location to do any feature detection
+    necessary. In the case of AutoLocation, we detect whether to use history
+    or hash concrete implementations.
   class: Ember.AutoLocation
   module: ember
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 87
-  access: private
-  tagname: Attached for mocking in tests
-  since: 1.5.1
-  itemtype: property
-  name: _HashLocation
-  default: Ember.HashLocation
+  line: 163
+  description: |-
+    Given the browser's `location`, `history` and `userAgent`, and a configured
+    root URL, this function detects whether the browser supports the [History
+    API](https://developer.mozilla.org/en-US/docs/Web/API/History) and returns a
+    string representing the Location object to use based on its determination.
+
+    For example, if the page loads in an evergreen browser, this function would
+    return the string "history", meaning the history API and thus HistoryLocation
+    should be used. If the page is loaded in IE8, it will return the string
+    "hash," indicating that the History API should be simulated by manipulating the
+    hash portion of the location.
   class: Ember.AutoLocation
   module: ember
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/location/auto_location.js
-  line: 98
-  access: private
-  tagname: Attached for mocking in tests
-  since: 1.5.1
-  itemtype: property
-  name: _NoneLocation
-  default: Ember.NoneLocation
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 109
-  access: private
-  tagname: Returns location.origin or builds it if device doesn't support it.
-  itemtype: method
-  name: _getOrigin
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 134
-  access: private
-  tagname: ''
-  itemtype: method
-  name: _getSupportsHistory
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 143
-  access: private
-  tagname: ''
-  itemtype: method
-  name: _getSupportsHashChange
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 152
-  access: private
-  tagname: |-
-    Redirects the browser using location.replace, prepending the location.origin
-    to prevent phishing attempts
-  itemtype: method
-  name: _replacePath
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 164
-  since: 1.5.1
-  access: private
-  tagname: ''
-  itemtype: method
-  name: _getRootURL
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 173
-  access: private
-  tagname: Returns the current `location.pathname`, normalized for IE inconsistencies.
-  itemtype: method
-  name: _getPath
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 190
-  access: private
-  tagname: Returns normalized location.hash as an alias to Ember.Location._getHash
-  since: 1.5.1
-  itemtype: method
-  name: _getHash
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 200
-  access: private
-  tagname: Returns location.search
-  since: 1.5.1
-  itemtype: method
-  name: _getQuery
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 212
-  access: private
-  tagname: Returns the full pathname including query and hash
-  itemtype: method
-  name: _getFullPath
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 223
+  line: 228
   access: private
   tagname: |-
     Returns the current path as it should appear for HistoryLocation supported
     browsers. This may very well differ from the real current path (e.g. if it
     starts off as a hashed URL)
-  itemtype: method
-  name: _getHistoryPath
   class: Ember.AutoLocation
   module: ember
   submodule: ember-routing
@@ -17337,19 +17400,6 @@ classitems:
     browsers. This may very well differ from the real current path.
   itemtype: method
   name: _getHashPath
-  class: Ember.AutoLocation
-  module: ember
-  submodule: ember-routing
-  namespace: Ember
-- file: packages/ember-routing/lib/location/auto_location.js
-  line: 297
-  description: |-
-    Selects the best location option based off browser support and returns an
-    instance of that Location class.
-  see:
-  - Ember.AutoLocation
-  itemtype: method
-  name: create
   class: Ember.AutoLocation
   module: ember
   submodule: ember-routing
@@ -17725,6 +17775,43 @@ classitems:
   module: ember
   submodule: ember-routing
   namespace: Ember
+- file: packages/ember-routing/lib/location/util.js
+  line: 1
+  access: private
+  tagname: Returns the current `location.pathname`, normalized for IE inconsistencies.
+  class: Ember
+  module: ember
+  namespace: Ember
+- file: packages/ember-routing/lib/location/util.js
+  line: 16
+  access: private
+  tagname: Returns the current `location.search`.
+  class: Ember
+  module: ember
+  namespace: Ember
+- file: packages/ember-routing/lib/location/util.js
+  line: 25
+  access: private
+  tagname: |-
+    Returns the current `location.hash` by parsing location.href since browsers
+    inconsistently URL-decode `location.hash`.
+
+    Should be passed the browser's `location` object as the first argument.
+
+    https://bugzilla.mozilla.org/show_bug.cgi?id=483304
+  class: Ember
+  module: ember
+  namespace: Ember
+- file: packages/ember-routing/lib/location/util.js
+  line: 104
+  description: |-
+    Replaces the current location, making sure we explicitly include the origin
+    to prevent redirecting to a different origin.
+  access: private
+  tagname: ''
+  class: Ember
+  module: ember
+  namespace: Ember
 - file: packages/ember-routing/lib/system/controller_for.js
   line: 6
   description: Finds a controller instance.
@@ -17776,7 +17863,7 @@ classitems:
   description: |-
     Configuration hash for this route's queryParams. The possible
     configuration options and their defaults are as follows
-    (assuming a query param whose URL key is `page`):
+    (assuming a query param whose controller property is `page`):
 
     ```javascript
     queryParams: {
@@ -17800,7 +17887,12 @@ classitems:
         // hash location equivalent), which causes no browser history
         // item to be added. This options name and default value are
         // the same as the `link-to` helper's `replace` option.
-        replace: false
+        replace: false,
+
+        // By default, the query param URL key is the same name as
+        // the controller property name. Use `as` to specify a
+        // different URL key.
+        as: 'page'
       }
     }
     ```
@@ -17812,7 +17904,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 84
+  line: 89
   access: private
   tagname: ''
   itemtype: property
@@ -17822,7 +17914,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 154
+  line: 159
   access: private
   tagname: ''
   itemtype: property
@@ -17832,7 +17924,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 161
+  line: 166
   access: private
   tagname: ''
   itemtype: method
@@ -17842,7 +17934,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 194
+  line: 199
   access: private
   tagname: ''
   itemtype: property
@@ -17852,7 +17944,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 204
+  line: 209
   access: private
   tagname: ''
   itemtype: property
@@ -17862,7 +17954,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 215
+  line: 220
   access: private
   tagname: ''
   itemtype: method
@@ -17872,7 +17964,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 229
+  line: 234
   description: |-
     Retrieves parameters, for current route using the state.params
     variable and getQueryParamsFor, using the supplied routeName.
@@ -17887,7 +17979,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 254
+  line: 259
   description: Serializes the query parameter key
   itemtype: method
   name: serializeQueryParamKey
@@ -17900,7 +17992,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 264
+  line: 269
   description: Serializes value of the query parameter based on defaultValueType
   itemtype: method
   name: serializeQueryParam
@@ -17919,7 +18011,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 282
+  line: 287
   description: Deserializes value of the query parameter based on defaultValueType
   itemtype: method
   name: deserializeQueryParam
@@ -17938,7 +18030,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 308
+  line: 313
   access: private
   tagname: ''
   itemtype: property
@@ -17948,7 +18040,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 317
+  line: 322
   access: private
   tagname: ''
   itemtype: property
@@ -17958,7 +18050,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 326
+  line: 331
   description: |-
     A hook you can use to reset controller values either when the model
     changes or the route is exiting.
@@ -17992,7 +18084,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 350
+  line: 355
   access: private
   tagname: ''
   itemtype: method
@@ -18002,7 +18094,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 361
+  line: 366
   access: private
   tagname: ''
   itemtype: method
@@ -18013,7 +18105,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 375
+  line: 380
   access: private
   tagname: ''
   itemtype: method
@@ -18023,7 +18115,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 386
+  line: 391
   description: |-
     The name of the view to use by default when rendering this routes template.
 
@@ -18053,7 +18145,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 413
+  line: 418
   description: |-
     The name of the template to use by default when rendering this routes
     template.
@@ -18079,7 +18171,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 436
+  line: 441
   description: |-
     The name of the controller to associate with this route.
 
@@ -18103,7 +18195,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 457
+  line: 462
   description: |-
     The `willTransition` action is fired at the beginning of any
     attempted transition with a `Transition` object as the sole
@@ -18145,7 +18237,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 492
+  line: 497
   description: |-
     The `didTransition` action is fired after a transition has
     successfully been completed. This occurs after the normal model
@@ -18172,7 +18264,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 515
+  line: 520
   description: |-
     The `loading` action is fired on the route when a route's `model`
     hook returns a promise that is not already resolved. The current
@@ -18212,7 +18304,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 546
+  line: 551
   description: |-
     When attempting to transition into a route, any of the hooks
     may return a promise that rejects, at which point an `error`
@@ -18276,7 +18368,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 600
+  line: 605
   description: |-
     This event is triggered when the router enters the route. It is
     not executed when the model for the route changes.
@@ -18296,7 +18388,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 616
+  line: 621
   description: |-
     This event is triggered when the router completely exits this
     route. It is not executed when the model for the route changes.
@@ -18316,7 +18408,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 632
+  line: 637
   description: |-
     The controller associated with this route.
 
@@ -18347,7 +18439,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 759
+  line: 764
   deprecated: true
   deprecationMessage: Please use `actions` instead.
   itemtype: method
@@ -18357,7 +18449,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 767
+  line: 772
   description: |-
     This hook is executed when the router completely exits this route. It is
     not executed when the model for the route changes.
@@ -18368,7 +18460,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 775
+  line: 780
   description: |-
     This hook is executed when the router enters the route. It is not executed
     when the model for the route changes.
@@ -18379,7 +18471,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 783
+  line: 788
   description: |-
     Transition the application into another route. The route may
     be either a single route or route path:
@@ -18550,7 +18642,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 941
+  line: 946
   description: |-
     Perform a synchronous transition into another route without attempting
     to resolve promises, update the URL, or abort any currently active
@@ -18577,7 +18669,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 962
+  line: 967
   description: |-
     Refresh the model on this route and any child routes, firing the
     `beforeModel`, `model`, and `afterModel` hooks in a similar fashion
@@ -18606,7 +18698,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 987
+  line: 992
   description: |-
     Transition into another route while replacing the current URL, if possible.
     This will replace the current history entry instead of adding a new one.
@@ -18650,7 +18742,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1022
+  line: 1027
   description: |-
     Sends an action to the router, which will delegate it to the currently
     active route hierarchy per the bubbling rules explained under `actions`.
@@ -18694,7 +18786,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1069
+  line: 1074
   description: This hook is the entry point for router.js
   access: private
   tagname: ''
@@ -18705,7 +18797,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1116
+  line: 1121
   description: |-
     This hook is the first of the route entry validation hooks
     called when an attempt is made to transition into a route
@@ -18790,7 +18882,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1192
+  line: 1197
   description: |-
     This hook is called after this route's model has resolved.
     It follows identical async/promise semantics to `beforeModel`
@@ -18835,7 +18927,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1225
+  line: 1230
   description: |-
     A hook you can implement to optionally redirect to another route.
 
@@ -18869,7 +18961,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1251
+  line: 1256
   description: Called when the context is changed by router.js.
   access: private
   tagname: ''
@@ -18880,7 +18972,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1261
+  line: 1266
   description: |-
     A hook you can implement to convert the URL into the model for
     this route.
@@ -18959,7 +19051,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1357
+  line: 1362
   access: private
   tagname: ''
   itemtype: method
@@ -18982,7 +19074,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1370
+  line: 1375
   itemtype: method
   name: findModel
   params:
@@ -18997,7 +19089,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1381
+  line: 1386
   description: |-
     Store property provides a hook for data persistence libraries to inject themselves.
 
@@ -19018,7 +19110,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1417
+  line: 1422
   description: |-
     A hook you can implement to convert the route's model into parameters
     for the URL.
@@ -19067,7 +19159,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1473
+  line: 1478
   description: |-
     A hook you can use to setup the controller for the current route.
 
@@ -19145,7 +19237,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1547
+  line: 1552
   description: |-
     Returns the controller for a particular route or name.
 
@@ -19174,7 +19266,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1589
+  line: 1594
   description: |-
     Generates a controller for a route.
 
@@ -19205,7 +19297,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1618
+  line: 1623
   description: |-
     Returns the model of a parent (or any ancestor) route
     in a route hierarchy.  During a transition, all routes
@@ -19244,7 +19336,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1663
+  line: 1668
   description: |-
     A hook you can use to render the template for the current route.
 
@@ -19284,7 +19376,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1697
+  line: 1702
   description: |-
     `render` is used to render a template into a region of another template
     (indicated by an `{{outlet}}`). `render` is used both during the entry
@@ -19430,7 +19522,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1834
+  line: 1839
   description: |-
     Disconnects a view that has been rendered into an outlet.
 
@@ -19481,7 +19573,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 1927
+  line: 1932
   access: private
   tagname: ''
   itemtype: method
@@ -19498,6 +19590,7 @@ classitems:
 
     The following location types are currently available:
 
+    * `auto`
     * `hash`
     * `history`
     * `none`
@@ -19511,7 +19604,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 62
+  line: 63
   description: |-
     Represents the URL of the root of the application, often '/'. This prefix is
     assumed on all routes defined on this router.
@@ -19583,7 +19676,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 295
+  line: 294
   description: Determines if the supplied route is currently active.
   itemtype: method
   name: isActive
@@ -19600,7 +19693,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 308
+  line: 307
   description: |-
     An alternative form of `isActive` that doesn't require
     manual concatenation of the arguments into a single
@@ -19625,7 +19718,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 329
+  line: 328
   description: Does this router instance have the given route.
   itemtype: method
   name: hasRoute
@@ -19639,7 +19732,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 340
+  line: 339
   description: |-
     Resets the state of the router by clearing the current route
     handlers and deactivating them.
@@ -19668,10 +19761,10 @@ classitems:
     supplied callback function using `this.resource` and `this.route`.
 
     ```javascript
-    App.Router.map(function({
+    App.Router.map(function(){
       this.route('about');
       this.resource('article');
-    }));
+    });
     ```
 
     For more detailed examples please see
@@ -20576,7 +20669,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/controllers/array_controller.js
-  line: 221
+  line: 222
   description: |-
     Flag to mark as being "virtual". Used to keep this instance
     from participating in the parentController hierarchy.
@@ -20719,7 +20812,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/ext/function.js
-  line: 115
+  line: 111
   description: |-
     The `observesImmediately` extension of Javascript's Function prototype is
     available when `Ember.EXTEND_PROTOTYPES` or
@@ -20747,14 +20840,14 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/ext/function.js
-  line: 155
+  line: 151
   description: |-
     The `observesBefore` extension of Javascript's Function prototype is
     available when `Ember.EXTEND_PROTOTYPES` or
     `Ember.EXTEND_PROTOTYPES.Function` is true, which is the default.
 
     You can get notified when a property change is about to happen by
-    by adding the `observesBefore` call to the end of your method
+    adding the `observesBefore` call to the end of your method
     declarations in classes that you write. For example:
 
     ```javascript
@@ -20772,7 +20865,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/ext/function.js
-  line: 192
+  line: 188
   description: |-
     The `on` extension of Javascript's Function prototype is available
     when `Ember.EXTEND_PROTOTYPES` or `Ember.EXTEND_PROTOTYPES.Function` is
@@ -21056,8 +21149,10 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 95
+  line: 92
   description: |-
+    __Required.__ You must implement this method to apply this mixin.
+
     Your array must support the `length` property. Your replace methods should
     set this property whenever it changes.
   itemtype: property
@@ -21068,7 +21163,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 103
+  line: 102
   description: |-
     Returns the object at the given `index`. If the given `index` is negative
     or is greater or equal than the array length, returns `undefined`.
@@ -21101,7 +21196,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 134
+  line: 133
   description: |-
     This returns the objects at the specified indexes, using `objectAt`.
 
@@ -21125,7 +21220,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 161
+  line: 160
   description: |-
     This is the handler for the special array content property. If you get
     this property, it will return this. If you set this property to a new
@@ -21141,7 +21236,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 193
+  line: 194
   description: |-
     Returns a new array that is a slice of the receiver. This implementation
     uses the observable array methods to retrieve the objects for the new
@@ -21171,7 +21266,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 238
+  line: 239
   description: |-
     Returns the index of the given object's first occurrence.
     If no `startAt` argument is given, the starting location to
@@ -21205,7 +21300,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 281
+  line: 282
   description: |-
     Returns the index of the given object's last occurrence.
     If no `startAt` argument is given, the search starts from
@@ -21239,7 +21334,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 328
+  line: 329
   description: |-
     Adds an array observer to the receiving array. The array observer object
     normally must implement two methods:
@@ -21276,7 +21371,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 357
+  line: 358
   description: |-
     Removes an array observer from the object if the observer is current
     registered. Calling this method multiple times with the same object will
@@ -21300,7 +21395,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 372
+  line: 373
   description: |-
     Becomes true whenever the array currently has observers watching changes
     on the array.
@@ -21312,7 +21407,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 382
+  line: 383
   description: |-
     If you are implementing an object that supports `Ember.Array`, call this
     method just before the array content changes to notify any observers and
@@ -21342,7 +21437,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 436
+  line: 437
   description: |-
     If you are implementing an object that supports `Ember.Array`, call this
     method just after the array content changes to notify any observers and
@@ -21372,7 +21467,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/array.js
-  line: 502
+  line: 503
   description: |-
     Returns a special object that can be used to observe individual properties
     on the array. Just get an equivalent property on this object and it will
@@ -21388,8 +21483,10 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/comparable.js
-  line: 23
+  line: 20
   description: |-
+    __Required.__ You must implement this method to apply this mixin.
+
     Override to return the result of the comparison of the two parameters. The
     compare method should return:
 
@@ -21473,6 +21570,8 @@ classitems:
 - file: packages/ember-runtime/lib/mixins/copyable.js
   line: 30
   description: |-
+    __Required.__ You must implement this method to apply this mixin.
+
     Override to return a copy of the receiver. Default implementation raises
     an exception.
   itemtype: method
@@ -21489,7 +21588,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/copyable.js
-  line: 40
+  line: 42
   description: |-
     If the object implements `Ember.Freezable`, then this will return a new
     copy if the object is not frozen and the receiver if the object is frozen.
@@ -21546,8 +21645,10 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 96
+  line: 92
   description: |-
+    __Required.__ You must implement this method to apply this mixin.
+
     Implement this method to make your class enumerable.
 
     This method will be called repeatedly during enumeration. The index value
@@ -21594,7 +21695,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 131
+  line: 129
   description: |-
     Helper method returns the first object from a collection. This is usually
     used by bindings and other parts of the framework to extract a single
@@ -21622,7 +21723,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 166
+  line: 164
   description: |-
     Helper method returns the last object from a collection. If your enumerable
     contains only one object, this method should always return that object.
@@ -21645,7 +21746,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 204
+  line: 202
   description: |-
     Returns `true` if the passed object can be found in the receiver. The
     default version will iterate through the enumerable until the object
@@ -21671,7 +21772,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 228
+  line: 226
   description: |-
     Iterates through the enumerable, calling the passed function on each
     item. This method corresponds to the `forEach()` method defined in
@@ -21709,7 +21810,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 278
+  line: 276
   description: Alias for `mapBy`
   itemtype: method
   name: getEach
@@ -21725,7 +21826,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 287
+  line: 285
   description: |-
     Sets the value on the named property for each member. This is more
     efficient than using other methods defined on this helper. If the object
@@ -21748,7 +21849,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 304
+  line: 302
   description: |-
     Maps all of the items in the enumeration to another value, returning
     a new array. This method corresponds to `map()` defined in JavaScript 1.6.
@@ -21787,7 +21888,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 340
+  line: 338
   description: |-
     Similar to map, this specialized function returns the value of the named
     property on all items in the enumeration.
@@ -21805,7 +21906,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 354
+  line: 352
   description: |-
     Similar to map, this specialized function returns the value of the named
     property on all items in the enumeration.
@@ -21825,7 +21926,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 366
+  line: 364
   description: |-
     Returns an array with all of the items in the enumeration that the passed
     function returns true for. This method corresponds to `filter()` defined in
@@ -21866,7 +21967,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 406
+  line: 404
   description: |-
     Returns an array with all of the items in the enumeration where the passed
     function returns true. This method is the inverse of filter().
@@ -21905,7 +22006,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 438
+  line: 436
   description: |-
     Returns an array with just the items with the matched property. You
     can pass an optional second argument with the target value. Otherwise
@@ -21928,7 +22029,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 452
+  line: 450
   description: |-
     Returns an array with just the items with the matched property. You
     can pass an optional second argument with the target value. Otherwise
@@ -21953,7 +22054,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 465
+  line: 463
   description: |-
     Returns an array with the items that do not have truthy values for
     key.  You can pass an optional second argument with the target value.  Otherwise
@@ -21976,7 +22077,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 489
+  line: 487
   description: |-
     Returns an array with the items that do not have truthy values for
     key.  You can pass an optional second argument with the target value.  Otherwise
@@ -22001,7 +22102,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 502
+  line: 500
   description: |-
     Returns the first item in the array for which the callback returns true.
     This method works similar to the `filter()` method defined in JavaScript 1.6
@@ -22042,7 +22143,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 558
+  line: 556
   description: |-
     Returns the first item with a property matching the passed value. You
     can pass an optional second argument with the target value. Otherwise
@@ -22067,7 +22168,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 574
+  line: 572
   description: |-
     Returns the first item with a property matching the passed value. You
     can pass an optional second argument with the target value. Otherwise
@@ -22094,7 +22195,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 589
+  line: 587
   description: |-
     Returns `true` if the passed function returns true for every item in the
     enumeration. This corresponds with the `every()` method in JavaScript 1.6.
@@ -22141,7 +22242,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 629
+  line: 627
   itemtype: method
   name: everyBy
   params:
@@ -22162,7 +22263,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 638
+  line: 636
   itemtype: method
   name: everyProperty
   params:
@@ -22183,7 +22284,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 647
+  line: 645
   description: |-
     Returns `true` if the passed property resolves to `true` for all items in
     the enumerable. This method is often simpler/faster than using a callback.
@@ -22206,7 +22307,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 661
+  line: 659
   description: |-
     Returns `true` if the passed function returns true for any item in the
     enumeration. This corresponds with the `some()` method in JavaScript 1.6.
@@ -22254,7 +22355,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 718
+  line: 716
   description: |-
     Returns `true` if the passed function returns true for any item in the
     enumeration. This corresponds with the `some()` method in JavaScript 1.6.
@@ -22304,7 +22405,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 756
+  line: 754
   description: |-
     Returns `true` if the passed property resolves to `true` for any item in
     the enumerable. This method is often simpler/faster than using a callback.
@@ -22327,7 +22428,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 770
+  line: 768
   itemtype: method
   name: anyBy
   params:
@@ -22348,7 +22449,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 779
+  line: 777
   itemtype: method
   name: someProperty
   params:
@@ -22369,7 +22470,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 788
+  line: 786
   description: |-
     This will combine the values of the enumerator into a single value. It
     is a useful way to collect a summary value from an enumeration. This
@@ -22416,7 +22517,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 835
+  line: 833
   description: |-
     Invokes the named method on every object in the receiver that
     implements it. This method corresponds to the implementation in
@@ -22438,7 +22539,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 864
+  line: 857
   description: |-
     Simply converts the enumerable into a genuine array. The order is not
     guaranteed. Corresponds to the method implemented by Prototype.
@@ -22452,7 +22553,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 881
+  line: 874
   description: |-
     Returns a copy of the array with all `null` and `undefined` elements removed.
 
@@ -22470,7 +22571,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 898
+  line: 891
   description: |-
     Returns a new enumerable that excludes the passed value. The default
     implementation returns an array regardless of the receiver type unless
@@ -22494,7 +22595,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 928
+  line: 921
   description: |-
     Returns a new enumerable that contains only unique values. The default
     implementation returns an array regardless of the receiver type.
@@ -22515,7 +22616,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 954
+  line: 947
   description: |-
     This property will trigger anytime the enumerable's content changes.
     You can observe this property to be notified of changes to the enumerable's
@@ -22533,7 +22634,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 974
+  line: 967
   description: |-
     Registers an enumerable observer. Must implement `Ember.EnumerableObserver`
     mixin.
@@ -22554,7 +22655,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1002
+  line: 995
   description: Removes a registered enumerable observer.
   itemtype: method
   name: removeEnumerableObserver
@@ -22573,7 +22674,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1029
+  line: 1022
   description: |-
     Becomes true whenever the array currently has observers watching changes
     on the array.
@@ -22585,7 +22686,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1041
+  line: 1034
   description: |-
     Invoke this method just before the contents of your enumerable will
     change. You can either omit the parameters completely or pass the objects
@@ -22609,7 +22710,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1093
+  line: 1086
   description: |-
     Invoke this method when the contents of your enumerable has changed.
     This will notify any observers watching for content changes. If you are
@@ -22635,7 +22736,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1147
+  line: 1140
   description: |-
     Converts the enumerable into an array and sorts by the keys
     specified in the argument.
@@ -22748,7 +22849,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/evented.js
-  line: 130
+  line: 123
   description: Cancels subscription for given name, target, and method.
   itemtype: method
   name: 'off'
@@ -22769,7 +22870,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/evented.js
-  line: 144
+  line: 137
   description: Checks to see if object has any subscriptions for named event.
   itemtype: method
   name: has
@@ -22811,7 +22912,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 53
+  line: 50
   description: |-
     __Required.__ You must implement this method to apply this mixin.
 
@@ -22841,13 +22942,14 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 70
+  line: 67
   description: |-
     Remove all elements from the array. This is useful if you
     want to reuse an existing array without having to recreate it.
 
     ```javascript
-    var colors = ["red", "green", "blue"];
+    var colors = ['red', 'green', 'blue'];
+
     color.length();   //  3
     colors.clear();   //  []
     colors.length();  //  0
@@ -22862,15 +22964,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 94
+  line: 92
   description: |-
     This will use the primitive `replace()` method to insert an object at the
     specified index.
 
     ```javascript
-    var colors = ["red", "green", "blue"];
-    colors.insertAt(2, "yellow");  // ["red", "green", "yellow", "blue"]
-    colors.insertAt(5, "orange");  // Error: Index out of range
+    var colors = ['red', 'green', 'blue'];
+
+    colors.insertAt(2, 'yellow');  // ['red', 'green', 'yellow', 'blue']
+    colors.insertAt(5, 'orange');  // Error: Index out of range
     ```
   itemtype: method
   name: insertAt
@@ -22889,7 +22992,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 118
+  line: 117
   description: |-
     Remove an object at the specified index using the `replace()` primitive
     method. You can pass either a single index, or a start and a length.
@@ -22898,9 +23001,10 @@ classitems:
     length this method will throw an `OUT_OF_RANGE_EXCEPTION`.
 
     ```javascript
-    var colors = ["red", "green", "blue", "yellow", "orange"];
-    colors.removeAt(0);     // ["green", "blue", "yellow", "orange"]
-    colors.removeAt(2, 2);  // ["green", "blue"]
+    var colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+
+    colors.removeAt(0);     // ['green', 'blue', 'yellow', 'orange']
+    colors.removeAt(2, 2);  // ['green', 'blue']
     colors.removeAt(4, 2);  // Error: Index out of range
     ```
   itemtype: method
@@ -22926,9 +23030,10 @@ classitems:
     is KVO-compliant.
 
     ```javascript
-    var colors = ["red", "green"];
-    colors.pushObject("black");     // ["red", "green", "black"]
-    colors.pushObject(["yellow"]);  // ["red", "green", ["yellow"]]
+    var colors = ['red', 'green'];
+
+    colors.pushObject('black');     // ['red', 'green', 'black']
+    colors.pushObject(['yellow']);  // ['red', 'green', ['yellow']]
     ```
   itemtype: method
   name: pushObject
@@ -22943,14 +23048,15 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 174
+  line: 175
   description: |-
     Add the objects in the passed numerable to the end of the array. Defers
     notifying observers of the change until all objects are added.
 
     ```javascript
-    var colors = ["red"];
-    colors.pushObjects(["yellow", "orange"]);  // ["red", "yellow", "orange"]
+    var colors = ['red'];
+
+    colors.pushObjects(['yellow', 'orange']);  // ['red', 'yellow', 'orange']
     ```
   itemtype: method
   name: pushObjects
@@ -22966,15 +23072,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 195
+  line: 197
   description: |-
     Pop object from array or nil if none are left. Works just like `pop()` but
     it is KVO-compliant.
 
     ```javascript
-    var colors = ["red", "green", "blue"];
-    colors.popObject();   // "blue"
-    console.log(colors);  // ["red", "green"]
+    var colors = ['red', 'green', 'blue'];
+
+    colors.popObject();   // 'blue'
+    console.log(colors);  // ['red', 'green']
     ```
   itemtype: method
   name: popObject
@@ -22985,15 +23092,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 219
+  line: 222
   description: |-
     Shift an object from start of array or nil if none are left. Works just
     like `shift()` but it is KVO-compliant.
 
     ```javascript
-    var colors = ["red", "green", "blue"];
-    colors.shiftObject();  // "red"
-    console.log(colors);   // ["green", "blue"]
+    var colors = ['red', 'green', 'blue'];
+
+    colors.shiftObject();  // 'red'
+    console.log(colors);   // ['green', 'blue']
     ```
   itemtype: method
   name: shiftObject
@@ -23004,15 +23112,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 242
+  line: 246
   description: |-
     Unshift an object to start of array. Works just like `unshift()` but it is
     KVO-compliant.
 
     ```javascript
-    var colors = ["red"];
-    colors.unshiftObject("yellow");    // ["yellow", "red"]
-    colors.unshiftObject(["black"]);   // [["black"], "yellow", "red"]
+    var colors = ['red'];
+
+    colors.unshiftObject('yellow');    // ['yellow', 'red']
+    colors.unshiftObject(['black']);   // [['black'], 'yellow', 'red']
     ```
   itemtype: method
   name: unshiftObject
@@ -23027,15 +23136,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 261
+  line: 266
   description: |-
     Adds the named objects to the beginning of the array. Defers notifying
     observers until all objects have been added.
 
     ```javascript
-    var colors = ["red"];
-    colors.unshiftObjects(["black", "white"]);   // ["black", "white", "red"]
-    colors.unshiftObjects("yellow"); // Type Error: 'undefined' is not a function
+    var colors = ['red'];
+
+    colors.unshiftObjects(['black', 'white']);   // ['black', 'white', 'red']
+    colors.unshiftObjects('yellow'); // Type Error: 'undefined' is not a function
     ```
   itemtype: method
   name: unshiftObjects
@@ -23051,7 +23161,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 280
+  line: 286
   description: |-
     Reverse objects in the array. Works just like `reverse()` but it is
     KVO-compliant.
@@ -23065,14 +23175,15 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 298
+  line: 304
   description: |-
     Replace all the receiver's content with content of the argument.
     If argument is an empty array receiver will be cleared.
 
     ```javascript
-    var colors = ["red", "green", "blue"];
-    colors.setObjects(["black", "white"]);  // ["black", "white"]
+    var colors = ['red', 'green', 'blue'];
+
+    colors.setObjects(['black', 'white']);  // ['black', 'white']
     colors.setObjects([]);                  // []
     ```
   itemtype: method
@@ -23091,15 +23202,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 327
+  line: 334
   description: |-
     Remove all occurrences of an object in the array.
 
     ```javascript
-    var cities = ["Chicago", "Berlin", "Lima", "Chicago"];
-    cities.removeObject("Chicago");  // ["Berlin", "Lima"]
-    cities.removeObject("Lima");     // ["Berlin"]
-    cities.removeObject("Tokyo")     // ["Berlin"]
+    var cities = ['Chicago', 'Berlin', 'Lima', 'Chicago'];
+
+    cities.removeObject('Chicago');  // ['Berlin', 'Lima']
+    cities.removeObject('Lima');     // ['Berlin']
+    cities.removeObject('Tokyo')     // ['Berlin']
     ```
   itemtype: method
   name: removeObject
@@ -23115,15 +23227,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/mutable_array.js
-  line: 353
+  line: 361
   description: |-
     Push the object onto the end of the array if it is not already
     present in the array.
 
     ```javascript
-    var cities = ["Chicago", "Berlin"];
-    cities.addObject("Lima");    // ["Chicago", "Berlin", "Lima"]
-    cities.addObject("Berlin");  // ["Chicago", "Berlin", "Lima"]
+    var cities = ['Chicago', 'Berlin'];
+
+    cities.addObject('Lima');    // ['Chicago', 'Berlin', 'Lima']
+    cities.addObject('Berlin');  // ['Chicago', 'Berlin', 'Lima']
     ```
   itemtype: method
   name: addObject
@@ -23219,7 +23332,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 101
+  line: 98
   description: |-
     Retrieves the value of a property from the object.
 
@@ -23267,7 +23380,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 143
+  line: 140
   description: |-
     To get the values of multiple properties at once, call `getProperties`
     with a list of strings or an array:
@@ -23297,7 +23410,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 167
+  line: 164
   description: |-
     Sets the provided key or path to the value.
 
@@ -23357,7 +23470,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 221
+  line: 218
   description: |-
     Sets a list of properties at once. These properties are set inside
     a single `beginPropertyChanges` and `endPropertyChanges` batch, so
@@ -23380,7 +23493,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 238
+  line: 235
   description: |-
     Begins a grouping of property changes.
 
@@ -23401,7 +23514,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 257
+  line: 254
   description: |-
     Ends a grouping of property changes.
 
@@ -23421,7 +23534,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 275
+  line: 272
   description: |-
     Notify the observer system that a property is about to change.
 
@@ -23449,7 +23562,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 298
+  line: 295
   description: |-
     Notify the observer system that a property has just changed.
 
@@ -23477,7 +23590,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 321
+  line: 318
   description: |-
     Convenience method to call `propertyWillChange` and `propertyDidChange` in
     succession.
@@ -23495,7 +23608,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 344
+  line: 337
   description: |-
     Adds an observer on a property.
 
@@ -23554,7 +23667,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 395
+  line: 388
   description: |-
     Remove an observer you have previously registered on this object. Pass
     the same key, target, and method you passed to `addObserver()` and your
@@ -23576,7 +23689,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 409
+  line: 402
   description: |-
     Returns `true` if the object currently has observers registered for a
     particular key. You can use this method to potentially defer performing
@@ -23596,7 +23709,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 423
+  line: 416
   description: |-
     Retrieves the value of a property, or a default value in the case that the
     property returns `undefined`.
@@ -23621,7 +23734,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 440
+  line: 433
   description: |-
     Set the value of a property to the current value plus some amount.
 
@@ -23646,7 +23759,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 460
+  line: 453
   description: |-
     Set the value of a property to the current value minus some amount.
 
@@ -23671,7 +23784,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 480
+  line: 473
   description: |-
     Set the value of a boolean property to the opposite of its
     current value.
@@ -23693,7 +23806,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/observable.js
-  line: 497
+  line: 490
   description: |-
     Returns the cached value of a computed property, if it exists.
     This allows you to inspect the value of a computed property
@@ -23780,7 +23893,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/mixins/promise_proxy.js
-  line: 167
+  line: 168
   description: |-
     An alias to the proxied promise's `then`.
 
@@ -23798,7 +23911,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/mixins/promise_proxy.js
-  line: 178
+  line: 179
   description: |-
     An alias to the proxied promise's `catch`.
 
@@ -23817,7 +23930,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/mixins/promise_proxy.js
-  line: 190
+  line: 191
   description: |-
     An alias to the proxied promise's `finally`.
 
@@ -23963,7 +24076,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 73
+  line: 72
   description: |-
     The content array. Must be an object that implements `Ember.Array` and/or
     `Ember.MutableArray.`
@@ -23975,7 +24088,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 82
+  line: 81
   description: |-
     The array that the proxy pretends to be. In the default `ArrayProxy`
     implementation, this and `content` are the same. Subclasses of `ArrayProxy`
@@ -23987,7 +24100,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 91
+  line: 90
   description: |-
     Should actually retrieve the object at the specified index from the
     content. You can override this method in subclasses to transform the
@@ -24008,7 +24121,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 106
+  line: 105
   description: |-
     Should actually replace the specified objects on the content array.
     You can override this method in subclasses to transform the content item
@@ -24037,7 +24150,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 124
+  line: 123
   description: |-
     Invoked when the content property is about to change. Notifies observers that the
     entire array content will change.
@@ -24050,7 +24163,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 146
+  line: 145
   description: Override to implement content array `willChange` observer.
   itemtype: method
   name: contentArrayWillChange
@@ -24072,7 +24185,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 158
+  line: 157
   description: Override to implement content array `didChange` observer.
   itemtype: method
   name: contentArrayDidChange
@@ -24094,7 +24207,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/array_proxy.js
-  line: 170
+  line: 169
   description: |-
     Invoked when the content property changes. Notifies observers that the
     entire array content has changed.
@@ -24107,7 +24220,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 242
+  line: 237
   description: |-
     An overridable method called when objects are instantiated. By default,
     does nothing unless it is overridden during class definition.
@@ -24140,7 +24253,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 276
+  line: 271
   description: |-
     Defines the properties that will be concatenated from the superclass
     (instead of overridden).
@@ -24211,7 +24324,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 344
+  line: 339
   description: |-
     Destroyed object property flag.
 
@@ -24225,7 +24338,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 355
+  line: 350
   description: |-
     Destruction scheduled flag. The `destroy()` method has been called.
 
@@ -24239,7 +24352,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 366
+  line: 361
   description: |-
     Destroys an object by setting the `isDestroyed` flag and removing its
     metadata, which effectively destroys observers and bindings.
@@ -24259,7 +24372,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 388
+  line: 383
   description: Override to implement teardown.
   itemtype: method
   name: willDestroy
@@ -24268,7 +24381,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 395
+  line: 390
   description: |-
     Invoked by the run loop to actually destroy the object. This is
     scheduled for execution by the `destroy` method.
@@ -24281,7 +24394,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 414
+  line: 409
   description: |-
     Returns a string representation which attempts to provide more information
     than Javascript's `toString` typically does, in a generic way for all Ember
@@ -24324,7 +24437,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 478
+  line: 473
   description: |-
     Creates a new subclass.
 
@@ -24417,7 +24530,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 581
+  line: 576
   description: |-
     Equivalent to doing `extend(arguments).create()`.
     If possible use the normal `create` method instead.
@@ -24434,7 +24547,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 602
+  line: 592
   description: |-
     Creates an instance of a class. Accepts either no arguments, or an object
     containing values to initialize the newly instantiated object with.
@@ -24480,7 +24593,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 652
+  line: 637
   description: |-
     Augments a constructor's prototype with additional
     properties and functions:
@@ -24514,7 +24627,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 696
+  line: 672
   description: |-
     Augments a constructor's own properties and functions:
 
@@ -24574,7 +24687,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 778
+  line: 746
   description: |-
     In some cases, you may want to annotate computed properties with additional
     metadata about how they function or what values they operate on. For
@@ -24610,7 +24723,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 834
+  line: 802
   description: |-
     Iterate over each computed property for the class, passing its name
     and any associated metadata (see `metaForProperty`) to the callback.
@@ -24629,7 +24742,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 862
+  line: 830
   description: Provides lookup-time type validation for injected properties.
   access: private
   tagname: ''
@@ -24640,7 +24753,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/core_object.js
-  line: 871
+  line: 839
   description: |-
     Returns a hash of property names and container names that injected
     properties will lookup on the container lazily.
@@ -24654,7 +24767,16 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/each_proxy.js
-  line: 128
+  line: 104
+  description: |-
+    This is the object instance returned when you get the `@each` property on an
+    array. It uses the unknownProperty handler to automatically create
+    EachArray instances for property names.
+  class: Ember
+  module: ember
+  submodule: ember-runtime
+- file: packages/ember-runtime/lib/system/each_proxy.js
+  line: 123
   description: |-
     You can directly access mapped properties by simply requesting them.
     The `unknownProperty` handler will generate an EachArray of each item.
@@ -24667,10 +24789,9 @@ classitems:
   - name: value
     description: ''
     type: "*"
-  class: Ember.EachProxy
+  class: Ember
   module: ember
   submodule: ember-runtime
-  namespace: Ember
 - file: packages/ember-runtime/lib/system/lazy_load.js
   line: 15
   description: |-
@@ -26046,7 +26167,7 @@ classitems:
   module: ember
   submodule: ember-testing
 - file: packages/ember-testing/lib/test.js
-  line: 28
+  line: 27
   description: Hash containing all known test helpers.
   itemtype: property
   name: _helpers
@@ -26058,7 +26179,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 37
+  line: 36
   description: |-
     `registerHelper` is used to register a test helper that will be injected
     when `App.injectTestHelpers` is called.
@@ -26101,7 +26222,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 74
+  line: 73
   description: |-
     `registerAsyncHelper` is used to register an async test helper that will be injected
     when `App.injectTestHelpers` is called.
@@ -26152,7 +26273,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 121
+  line: 120
   description: |-
     Remove a previously added helper method.
 
@@ -26174,7 +26295,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 139
+  line: 138
   description: |-
     Used to register callbacks to be fired whenever `App.injectTestHelpers`
     is called.
@@ -26207,7 +26328,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 167
+  line: 166
   description: |-
     This returns a thenable tailored for testing.  It catches failed
     `onSuccess` callbacks and invokes the `Ember.Test.adapter.exception`
@@ -26227,7 +26348,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 182
+  line: 181
   description: |-
     Used to allow ember-testing to communicate with a specific testing
     framework.
@@ -26252,7 +26373,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 203
+  line: 202
   description: |-
     Replacement for `Ember.RSVP.resolve`
     The only difference is this uses
@@ -26271,7 +26392,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 219
+  line: 218
   description: |-
     This allows ember-testing to play nicely with other asynchronous
     events, such as an application that is waiting for a CSS3
@@ -26309,7 +26430,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 256
+  line: 255
   description: |-
     `unregisterWaiter` is used to unregister a callback that was
     registered with `registerWaiter`.
@@ -26330,7 +26451,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 321
+  line: 319
   description: |-
     This property contains the testing helpers for the current application. These
     are created once you call `injectTestHelpers` on your `Ember.Application`
@@ -26345,7 +26466,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 333
+  line: 331
   description: |-
     This property will contain the original methods that were registered
     on the `helperContainer` before `injectTestHelpers` is called.
@@ -26364,7 +26485,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 349
+  line: 347
   description: |-
     This property indicates whether or not this application is currently in
     testing mode. This is set when `setupForTesting` is called on the current
@@ -26379,7 +26500,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 361
+  line: 359
   description: |-
     This hook defers the readiness of the application, so that you can start
     the app when your tests are ready to run. It also sets the router's
@@ -26399,7 +26520,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 386
+  line: 384
   description: |-
     This will be used as the container to inject the test helpers into. By
     default the helpers are injected into `window`.
@@ -26413,7 +26534,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 397
+  line: 395
   description: |-
     This injects the test helpers into the `helperContainer` object. If an object is provided
     it will be used as the helperContainer. If `helperContainer` is not set it will default
@@ -26435,7 +26556,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 433
+  line: 431
   description: |-
     This removes all helpers that have been registered, and resets and functions
     that were overridden by the helpers.
@@ -26454,7 +26575,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-views/lib/mixins/attribute_bindings_support.js
-  line: 13
+  line: 21
   description: |-
     A list of properties of the view to apply as attributes. If the property is
     a string value, the value of that string will be applied as the attribute.
@@ -26480,10 +26601,12 @@ classitems:
     ```
   itemtype: property
   name: attributeBindings
-  class: Ember.TextSupport
+  class: Ember.AttributeBindingsSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/attribute_bindings_support.js
-  line: 45
+  line: 53
   description: |-
     Iterates through the view's attribute bindings, sets up observers for each,
     then applies the current value of the attributes to the passed render buffer.
@@ -26498,10 +26621,12 @@ classitems:
     type: Array
   access: private
   tagname: ''
-  class: Ember.TextSupport
+  class: Ember.AttributeBindingsSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/attribute_bindings_support.js
-  line: 92
+  line: 100
   description: |-
     We're using setUnknownProperty as a hook to setup attributeBinding observers for
     properties that aren't defined on a view at initialization time.
@@ -26516,10 +26641,12 @@ classitems:
     description: ''
   access: private
   tagname: ''
-  class: Ember.TextSupport
+  class: Ember.AttributeBindingsSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/class_names_support.js
-  line: 33
+  line: 41
   description: |-
     Standard CSS class names to apply to the view's outer element. This
     property automatically inherits any class names defined by the view's
@@ -26528,10 +26655,12 @@ classitems:
   name: classNames
   type: Array
   default: "['ember-view']"
-  class: Ember.TextSupport
+  class: Ember.ClassNamesSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/class_names_support.js
-  line: 44
+  line: 52
   description: |-
     A list of properties of the view to apply as class names. If the property
     is a string value, the value of that string will be applied as a class
@@ -26572,10 +26701,12 @@ classitems:
   name: classNameBindings
   type: Array
   default: "[]"
-  class: Ember.TextSupport
+  class: Ember.ClassNamesSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/class_names_support.js
-  line: 87
+  line: 95
   description: |-
     Iterates over the view's `classNameBindings` array, inserts the value
     of the specified property into the `classNames` array, then creates an
@@ -26585,8 +26716,10 @@ classitems:
   name: _applyClassNameBindings
   access: private
   tagname: ''
-  class: Ember.TextSupport
+  class: Ember.ClassNamesSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/component_template_deprecation.js
   line: 14
   access: private
@@ -26600,28 +26733,33 @@ classitems:
   itemtype: method
   name: willMergeMixin
   since: 1.4.0
-  class: Ember.TextSupport
+  class: Ember.InstrumentationSupport
   module: ember
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/instrumentation_support.js
-  line: 6
+  line: 14
   description: Used to identify this view during debugging
   itemtype: property
   name: instrumentDisplay
   type: String
-  class: Ember.TextSupport
+  class: Ember.InstrumentationSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/legacy_view_support.js
-  line: 23
+  line: 31
   description: Removes all children from the `parentView`.
   itemtype: method
   name: removeAllChildren
   return:
     description: receiver
     type: Ember.View
-  class: Ember.TextSupport
+  class: Ember.LegacyViewSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/legacy_view_support.js
-  line: 41
+  line: 49
   description: |-
     Return the nearest ancestor whose parent is an instance of
     `klass`.
@@ -26634,10 +26772,12 @@ classitems:
   return:
     description: Ember.View
   deprecated: true
-  class: Ember.TextSupport
+  class: Ember.LegacyViewSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/legacy_view_support.js
-  line: 61
+  line: 69
   description: |-
     Return the nearest ancestor that is an instance of the provided
     class.
@@ -26650,10 +26790,12 @@ classitems:
   return:
     description: Ember.View
   deprecated: true
-  class: Ember.TextSupport
+  class: Ember.LegacyViewSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/template_rendering_support.js
-  line: 14
+  line: 22
   description: |-
     Called on your view when it should push strings of HTML into a
     `Ember.RenderBuffer`. Most users will want to override the `template`
@@ -26668,10 +26810,12 @@ classitems:
   - name: buffer
     description: The render buffer
     type: Ember.RenderBuffer
-  class: Ember.TextSupport
+  class: Ember.TemplateRenderingSupport
   module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 134
+  line: 138
   description: |-
     The action to be sent when the user presses the return key.
 
@@ -26687,7 +26831,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 147
+  line: 151
   description: |-
     The event that should send the action.
 
@@ -26704,7 +26848,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 161
+  line: 165
   description: |-
     Whether the `keyUp` event that triggers an `action` to be sent continues
     propagating to other views.
@@ -26724,7 +26868,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 194
+  line: 198
   description: |-
     Allows you to specify a controller action to invoke when either the `enter`
     key is pressed or, in the case of the field being a textarea, when a newline
@@ -26745,7 +26889,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 212
+  line: 216
   description: |-
     Allows you to specify a controller action to invoke when the escape button
     is pressed. To use this method, give your field an `escape-press`
@@ -26765,7 +26909,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 228
+  line: 232
   description: |-
     Allows you to specify a controller action to invoke when a field receives
     focus. To use this method, give your field a `focus-in` attribute. The value
@@ -26785,7 +26929,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 244
+  line: 248
   description: |-
     Allows you to specify a controller action to invoke when a field loses
     focus. To use this method, give your field a `focus-out` attribute. The value
@@ -26805,7 +26949,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 261
+  line: 265
   description: |-
     Allows you to specify a controller action to invoke when a key is pressed.
     To use this method, give your field a `key-press` attribute. The value of
@@ -26825,7 +26969,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 277
+  line: 281
   description: |-
     Allows you to specify a controller action to invoke when a key-up event is
     fired. To use this method, give your field a `key-up` attribute. The value
@@ -26845,7 +26989,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/text_support.js
-  line: 295
+  line: 299
   description: |-
     Allows you to specify a controller action to invoke when a key-down event is
     fired. To use this method, give your field a `key-down` attribute. The value
@@ -26865,7 +27009,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_child_views_support.js
-  line: 36
+  line: 44
   description: |-
     Array of child views. You should never edit this array directly.
     Instead, use `appendChild` and `removeFromParent`.
@@ -26875,11 +27019,12 @@ classitems:
   default: "[]"
   access: private
   tagname: ''
-  class: Ember.ViewTargetActionSupport
+  class: Ember.ViewChildViewsSupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_child_views_support.js
-  line: 60
+  line: 68
   description: Removes the child view from the parent view.
   itemtype: method
   name: removeChild
@@ -26890,11 +27035,12 @@ classitems:
   return:
     description: receiver
     type: Ember.View
-  class: Ember.ViewTargetActionSupport
+  class: Ember.ViewChildViewsSupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_child_views_support.js
-  line: 86
+  line: 94
   description: |-
     Instantiates a view to be added to the childViews array during view
     initialization. You generally will not call this method directly unless
@@ -26914,11 +27060,12 @@ classitems:
   return:
     description: new instance
     type: Ember.View
-  class: Ember.ViewTargetActionSupport
+  class: Ember.ViewChildViewsSupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_context_support.js
-  line: 7
+  line: 15
   description: |-
     The object from which templates should access properties.
 
@@ -26930,11 +27077,12 @@ classitems:
   itemtype: property
   name: context
   type: Object
-  class: Ember.ViewTargetActionSupport
+  class: Ember.ViewsContextSupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_context_support.js
-  line: 28
+  line: 37
   description: |-
     Private copy of the view's template context. This can be set directly
     by Handlebars without triggering the observer that causes the view
@@ -26953,19 +27101,21 @@ classitems:
   name: _context
   access: private
   tagname: ''
-  class: Ember.ViewTargetActionSupport
+  class: Ember.ViewsContextSupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_context_support.js
-  line: 67
+  line: 76
   description: |-
     The controller managing this view. If this property is set, it will be
     made available for use by the template.
   itemtype: property
   name: controller
   type: Object
-  class: Ember.ViewTargetActionSupport
+  class: Ember.ViewsContextSupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/view_target_action_support.js
   line: 47
@@ -26982,17 +27132,18 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-views/lib/mixins/visibility_support.js
-  line: 11
+  line: 19
   description: If `false`, the view will appear hidden in DOM.
   itemtype: property
   name: isVisible
   type: Boolean
   default: 'null'
-  class: Ember.EventDispatcher
+  class: Ember.VisibilitySupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/mixins/visibility_support.js
-  line: 23
+  line: 31
   description: |-
     When the view's `isVisible` property changes, toggle the visibility
     element of the actual DOM element.
@@ -27000,8 +27151,9 @@ classitems:
   name: _isVisibleDidChange
   access: private
   tagname: ''
-  class: Ember.EventDispatcher
+  class: Ember.VisibilitySupport
   module: ember
+  submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/streams/class_name_binding.js
   line: 11
@@ -27328,7 +27480,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 292
+  line: 290
   description: Adds a string of HTML to the `RenderBuffer`.
   itemtype: method
   name: push
@@ -27342,7 +27494,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 313
+  line: 311
   description: Adds a class to the buffer, which will be rendered to the class attribute.
   itemtype: method
   name: addClass
@@ -27356,7 +27508,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 338
+  line: 336
   description: Sets the elementID to be used for the element.
   itemtype: method
   name: id
@@ -27370,7 +27522,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 353
+  line: 351
   description: Adds an attribute which will be rendered to the element.
   itemtype: method
   name: attr
@@ -27390,7 +27542,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 374
+  line: 372
   description: Remove an attribute from the list of attributes to render.
   itemtype: method
   name: removeAttr
@@ -27404,7 +27556,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 388
+  line: 386
   description: Adds a property which will be rendered to the element.
   itemtype: method
   name: prop
@@ -27424,7 +27576,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 409
+  line: 407
   description: Remove an property from the list of properties to render.
   itemtype: method
   name: removeProp
@@ -27438,7 +27590,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 423
+  line: 421
   description: Adds a style to the style attribute which will be rendered to the element.
   itemtype: method
   name: style
@@ -27455,7 +27607,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 498
+  line: 496
   itemtype: method
   name: element
   return:
@@ -27468,7 +27620,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/system/render_buffer.js
-  line: 543
+  line: 541
   description: Generates the HTML content for this buffer.
   itemtype: method
   name: string
@@ -27687,7 +27839,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/collection_view.js
-  line: 412
+  line: 405
   description: |-
     Instantiates a view to be added to the childViews array during view
     initialization. You generally will not call this method directly unless
@@ -27715,7 +27867,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/collection_view.js
-  line: 441
+  line: 434
   description: |-
     A map of parent tags to their default child tags. You can add
     additional parent tags if you want collection views that use
@@ -27730,7 +27882,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/component.js
-  line: 130
+  line: 129
   description: |-
     A components template property is set by passing a block
     during its invocation. It is executed within the parent context.
@@ -27754,7 +27906,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/component.js
-  line: 160
+  line: 161
   description: |-
     Specifying a components `templateName` is deprecated without also
     providing the `layout` or `layoutName` properties.
@@ -27766,7 +27918,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/component.js
-  line: 192
+  line: 193
   description: |-
     If the component is currently inserted into the DOM of a parent view, this
     property will point to the controller of the parent view.
@@ -27779,7 +27931,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/component.js
-  line: 205
+  line: 206
   description: |-
     Triggers a named action on the controller context where the component is used if
     this controller has registered for notifications of the action.
@@ -27870,6 +28022,96 @@ classitems:
   module: ember
   submodule: ember-views
   namespace: Ember
+- file: packages/ember-views/lib/views/component.js
+  line: 335
+  description: |-
+    Returns true when the component was invoked with a block template.
+
+         Example (`hasBlock` will be `false`):
+
+    ```hbs
+    {{! templates/application.hbs }}
+
+    {{foo-bar}}
+
+    {{! templates/components/foo-bar.js }}
+    {{#if hasBlock}}
+      This will not be printed, because no block was provided
+    {{/if}}
+    ```
+
+         Example (`hasBlock` will be `true`):
+
+    ```hbs
+    {{! templates/application.hbs }}
+
+    {{#foo-bar}}
+      Hi!
+    {{/foo-bar}}
+
+    {{! templates/components/foo-bar.js }}
+    {{#if hasBlock}}
+      This will be printed because a block was provided
+      {{yield}}
+    {{/if}}
+    ```
+  access: public
+  tagname: ''
+  itemtype: property
+  name: hasBlock
+  return:
+    description: Boolean
+  class: Ember.Component
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: packages/ember-views/lib/views/component.js
+  line: 372
+  description: |-
+    Returns true when the component was invoked with a block parameter
+    supplied.
+
+    Example (`hasBlockParams` will be `false`):
+
+    ```hbs
+    {{! templates/application.hbs }}
+
+    {{#foo-bar}}
+      No block parameter.
+    {{/foo-bar}}
+
+    {{! templates/components/foo-bar.js }}
+    {{#if hasBlockParams}}
+      This will not be printed, because no block was provided
+      {{yield this}}
+    {{/if}}
+    ```
+
+    Example (`hasBlockParams` will be `true`):
+
+    ```hbs
+    {{! templates/application.hbs }}
+
+    {{#foo-bar as |foo|}}
+      Hi!
+    {{/foo-bar}}
+
+    {{! templates/components/foo-bar.js }}
+    {{#if hasBlockParams}}
+      This will be printed because a block was provided
+      {{yield this}}
+    {{/if}}
+    ```
+  access: public
+  tagname: ''
+  itemtype: property
+  name: hasBlockParams
+  return:
+    description: Boolean
+  class: Ember.Component
+  module: ember
+  submodule: ember-views
+  namespace: Ember
 - file: packages/ember-views/lib/views/container_view.js
   line: 259
   description: Instructs each child view to render to the passed render buffer.
@@ -27943,7 +28185,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/core_view.js
-  line: 60
+  line: 61
   description: |-
     If the view is currently inserted into the DOM of a parent view, this
     property will point to the parent of the view.
@@ -27955,7 +28197,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-views/lib/views/core_view.js
-  line: 99
+  line: 100
   description: |-
     Override the default event firing from `Ember.Evented` to
     also call methods with the given name.
@@ -27971,7 +28213,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 345
+  line: 340
   description: |-
     The `multiple` attribute of the select element. Indicates whether multiple
     options can be selected.
@@ -27984,7 +28226,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 355
+  line: 350
   description: |-
     The `disabled` attribute of the select element. Indicates whether
     the element is disabled from interactions.
@@ -27997,7 +28239,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 365
+  line: 360
   description: |-
     The `required` attribute of the select element. Indicates whether
     a selected option is required for form validation.
@@ -28011,7 +28253,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 376
+  line: 371
   description: |-
     The list of options.
 
@@ -28040,7 +28282,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 402
+  line: 397
   description: |-
     When `multiple` is `false`, the element of `content` that is currently
     selected, if any.
@@ -28055,7 +28297,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 414
+  line: 409
   description: |-
     In single selection mode (when `multiple` is `false`), value can be used to
     get the current selection's value or set the selection by its value.
@@ -28070,7 +28312,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 430
+  line: 429
   description: |-
     If given, a top-most dummy option will be rendered to serve as a user
     prompt.
@@ -28083,7 +28325,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 440
+  line: 439
   description: The path of the option labels. See [content](/api/classes/Ember.Select.html#property_content).
   itemtype: property
   name: optionLabelPath
@@ -28094,7 +28336,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 449
+  line: 448
   description: The path of the option values. See [content](/api/classes/Ember.Select.html#property_content).
   itemtype: property
   name: optionValuePath
@@ -28105,7 +28347,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 458
+  line: 457
   description: |-
     The path of the option group.
     When this property is used, `content` should be sorted by `optionGroupPath`.
@@ -28118,7 +28360,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 468
+  line: 467
   description: The view class for optgroup.
   itemtype: property
   name: groupView
@@ -28129,7 +28371,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/select.js
-  line: 498
+  line: 497
   description: The view class for option.
   itemtype: property
   name: optionView
@@ -28140,31 +28382,31 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/text_field.js
-  line: 59
+  line: 119
   description: |-
     The `value` attribute of the input element. As the user inputs text, this
     property is updated live.
   itemtype: property
   name: value
   type: String
-  default: "\"\""
+  default: '""'
   class: Ember.TextField
   module: ember
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/text_field.js
-  line: 69
+  line: 129
   description: The `type` attribute of the input element.
   itemtype: property
   name: type
   type: String
-  default: "\"text\""
+  default: '"text"'
   class: Ember.TextField
   module: ember
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/text_field.js
-  line: 78
+  line: 138
   description: The `size` of the text field in characters.
   itemtype: property
   name: size
@@ -28175,7 +28417,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/text_field.js
-  line: 87
+  line: 147
   description: The `pattern` attribute of input element.
   itemtype: property
   name: pattern
@@ -28186,7 +28428,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/text_field.js
-  line: 96
+  line: 156
   description: The `min` attribute of input element used with `type="number"` or `type="range"`.
   itemtype: property
   name: min
@@ -28198,7 +28440,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/text_field.js
-  line: 106
+  line: 166
   description: The `max` attribute of input element used with `type="number"` or `type="range"`.
   itemtype: property
   name: max
@@ -28210,7 +28452,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 51
+  line: 54
   description: |-
     Global hash of shared templates. This will automatically be populated
     by the build tools so that you can store your Handlebars templates in
@@ -28222,7 +28464,7 @@ classitems:
   module: ember
   submodule: ember-views
 - file: packages/ember-views/lib/views/view.js
-  line: 681
+  line: 692
   itemtype: property
   name: isView
   type: Boolean
@@ -28233,7 +28475,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 693
+  line: 704
   description: |-
     The name of the template to lookup if no template is provided.
 
@@ -28248,7 +28490,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 705
+  line: 716
   description: |-
     The name of the layout to lookup if no layout is provided.
 
@@ -28263,7 +28505,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 717
+  line: 728
   description: |-
     The template used to render the view. This should be a function that
     accepts an optional context parameter and returns a string of HTML that
@@ -28279,7 +28521,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 739
+  line: 753
   description: |-
     A view may contain a layout. A layout is a regular template but
     supersedes the `template` property during rendering. It is the
@@ -28298,7 +28540,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 789
+  line: 809
   description: |-
     If a value that affects template rendering changes, the view should be
     re-rendered to reflect the new value.
@@ -28311,7 +28553,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 818
+  line: 838
   description: |-
     Return the nearest ancestor that is an instance of the provided
     class or mixin.
@@ -28330,7 +28572,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 839
+  line: 859
   description: Return the nearest ancestor that has a given property.
   itemtype: method
   name: nearestWithProperty
@@ -28345,7 +28587,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 855
+  line: 875
   description: When the parent view changes, recursively invalidate `controller`
   itemtype: method
   name: _parentViewDidChange
@@ -28356,7 +28598,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 882
+  line: 902
   description: |-
     Renders the view again. This will work regardless of whether the
     view is already in the DOM or not. If the view is in the DOM, the
@@ -28377,7 +28619,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 902
+  line: 935
   description: |-
     Given a property name, returns a dasherized version of that
     property name if the property evaluates to a non-falsy value.
@@ -28396,7 +28638,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 921
+  line: 954
   description: Returns the current DOM element for the view.
   itemtype: property
   name: element
@@ -28406,7 +28648,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 929
+  line: 962
   description: |-
     Returns a jQuery object for this view's element. If you pass in a selector
     string, this method will return a jQuery object, using the current element
@@ -28429,7 +28671,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 962
+  line: 995
   description: |-
     Appends the view's element to the specified parent element.
 
@@ -28459,7 +28701,59 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 993
+  line: 1026
+  access: private
+  tagname: |-
+    Creates a new DOM element, renders the view into it, then returns the
+    element.
+
+    By default, the element created and rendered into will be a `BODY` element,
+    since this is the default context that views are rendered into when being
+    inserted directly into the DOM.
+
+    ```js
+    var element = view.renderToElement();
+    element.tagName; // => "BODY"
+    ```
+
+    You can override the kind of element rendered into and returned by
+    specifying an optional tag name as the first argument.
+
+    ```js
+    var element = view.renderToElement('table');
+    element.tagName; // => "TABLE"
+    ```
+
+    This method is useful if you want to render the view into an element that
+    is not in the document's body. Instead, a new `body` element, detached from
+    the DOM is returned. FastBoot uses this to serialize the rendered view into
+    a string for transmission over the network.
+
+    ```js
+    app.visit('/').then(function(instance) {
+      var element;
+      Ember.run(function() {
+        element = renderToElement(instance);
+      });
+
+      res.send(serialize(element));
+    });
+    ```
+  itemtype: method
+  name: renderToElement
+  params:
+  - name: tagName
+    description: The tag of the element to create and render into. Defaults to "body".
+    type: String
+  return:
+    description: element
+    type: HTMLBodyElement
+  class: Ember.View
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: packages/ember-views/lib/views/view.js
+  line: 1078
   description: |-
     Replaces the content of the specified parent element with this view's
     element. If the view does not have an HTML representation yet,
@@ -28482,7 +28776,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1017
+  line: 1102
   description: |-
     Appends the view's element to the document body. If the view does
     not have an HTML representation yet
@@ -28505,7 +28799,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1037
+  line: 1122
   description: Removes the view's element from the element to which it is attached.
   itemtype: method
   name: remove
@@ -28517,7 +28811,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1052
+  line: 1137
   description: |-
     The HTML `id` of the view's element in the DOM. You can provide this
     value yourself but it must be unique (just as in HTML):
@@ -28529,7 +28823,18 @@ classitems:
     If not manually set a default value will be provided by the framework.
 
     Once rendered an element's `elementId` is considered immutable and you
-    should never change it.
+    should never change it. If you need to compute a dynamic value for the
+    `elementId`, you should do this when the component or element is being
+    instantiated:
+
+    ```javascript
+      export default Ember.Component.extend({
+        setElementId: function() {
+          var index = this.get('index');
+          this.set('elementId', 'component-id' + index);
+        }.on('init')
+      });
+    ```
   itemtype: property
   name: elementId
   type: String
@@ -28538,7 +28843,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1070
+  line: 1166
   description: |-
     Attempts to discover the element in the parent element. The default
     implementation looks for an element with an ID of `elementId` (or the
@@ -28559,10 +28864,11 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1086
+  line: 1182
   description: |-
     Creates a DOM representation of the view and all of its child views by
-    recursively calling the `render()` method.
+    recursively calling the `render()` method. Once the element is created,
+    it sets the `element` property of the view to the rendered element.
 
     After the element has been inserted into the DOM, `didInsertElement` will
     be called on this view and all of its child views.
@@ -28576,7 +28882,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1105
+  line: 1202
   description: Called when a view is going to insert an element into the DOM.
   itemtype: event
   name: willInsertElement
@@ -28585,7 +28891,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1112
+  line: 1209
   description: |-
     Called when the element of the view has been inserted into the DOM
     or after the view was re-rendered. Override this function to do any
@@ -28600,7 +28906,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1124
+  line: 1221
   description: |-
     Called when the view is about to rerender, but before anything has
     been torn down. This is a good opportunity to tear down any manual
@@ -28612,7 +28918,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1133
+  line: 1230
   description: |-
     Destroys any existing element along with the element for any child views
     as well. If the view does not currently have a element, then this method
@@ -28637,7 +28943,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1155
+  line: 1252
   description: |-
     Called when the element of the view is going to be destroyed. Override
     this function to do any teardown that requires an element, like removing
@@ -28652,7 +28958,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1167
+  line: 1264
   description: Called when the parentView property has changed.
   itemtype: event
   name: parentViewDidChange
@@ -28661,7 +28967,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1202
+  line: 1299
   description: |-
     Tag name for the view's outer element. The tag name is only used when an
     element is first created. If you change the `tagName` for an element, you
@@ -28677,7 +28983,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1218
+  line: 1315
   description: |-
     The WAI-ARIA role of the control represented by this view. For example, a
     button may have a role of type 'button', or a pane may have a role of
@@ -28695,7 +29001,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1237
+  line: 1334
   description: |-
     Setup a view, but do not finish waking it up.
 
@@ -28711,7 +29017,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1263
+  line: 1364
   description: |-
     Removes the view from its `parentView`, if one is found. Otherwise
     does nothing.
@@ -28725,7 +29031,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1280
+  line: 1381
   description: |-
     You must call `destroy` on a view to destroy the view (and all of its
     child views). This will remove the view from any parent node, then make
@@ -28738,7 +29044,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1307
+  line: 1408
   description: Handle events from `Ember.EventDispatcher`
   itemtype: method
   name: handleEvent
@@ -28756,7 +29062,37 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1395
+  line: 1420
+  description: |-
+    Registers the view in the view registry, keyed on the view's `elementId`.
+    This is used by the EventDispatcher to locate the view in response to
+    events.
+
+    This method should only be called once the view has been inserted into the
+    DOM.
+  itemtype: method
+  name: _register
+  access: private
+  tagname: ''
+  class: Ember.View
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: packages/ember-views/lib/views/view.js
+  line: 1436
+  description: |-
+    Removes the view from the view registry. This should be called when the
+    view is removed from DOM.
+  itemtype: method
+  name: _unregister
+  access: private
+  tagname: ''
+  class: Ember.View
+  module: ember
+  submodule: ember-views
+  namespace: Ember
+- file: packages/ember-views/lib/views/view.js
+  line: 1523
   description: Global views hash
   itemtype: property
   name: views
@@ -28777,6 +29113,10 @@ classitems:
 warnings:
 - message: 'unknown tag: version'
   line: " packages/ember-metal/lib/core.js:8"
+- message: 'replacing incorrect tag: returns with return'
+  line: " packages/ember-views/lib/views/component.js:335"
+- message: 'replacing incorrect tag: returns with return'
+  line: " packages/ember-views/lib/views/component.js:372"
 - message: |-
     Missing item type
     The `ApplicationInstance` encapsulates all of the stateful aspects of a
@@ -28797,14 +29137,14 @@ warnings:
     That state is what the `ApplicationInstance` manages: it is responsible for
     creating the container that contains all application state, and disposing of
     it once the particular test run or FastBoot request has finished.
-  line: " packages/ember-application/lib/system/application-instance.js:12"
+  line: " packages/ember-application/lib/system/application-instance.js:14"
 - message: |-
     Missing item type
-    Instantiates and sets up the router, optionally overriding the default
+    Instantiates and sets up the router, specifically overriding the default
     location. This is useful for manually starting the app in FastBoot or
     testing environments, where trying to modify the URL would be
     inappropriate.
-  line: " packages/ember-application/lib/system/application-instance.js:106"
+  line: " packages/ember-application/lib/system/application-instance.js:112"
 - message: |-
     Missing item type
     This hook is called by the root-most Route (a.k.a. the ApplicationRoute)
@@ -28814,26 +29154,36 @@ warnings:
     In cases like FastBoot and testing, we can override this hook and implement
     custom behavior, such as serializing to a string and sending over an HTTP
     socket rather than appending to DOM.
-  line: " packages/ember-application/lib/system/application-instance.js:125"
+  line: " packages/ember-application/lib/system/application-instance.js:128"
 - message: |-
     Missing item type
     Tells the router to start routing. The router will ask the location for the
     current URL of the page to determine the initial URL to start routing to.
     To start the app at a specific URL, call `handleURL` instead.
+  line: " packages/ember-application/lib/system/application-instance.js:144"
+- message: |-
+    Missing item type
+    Sets up the router, initializing the child router and configuring the
+    location before routing begins.
 
-    Ensure that you have called `setupRouter()` on the instance before using
-    this method.
-  line: " packages/ember-application/lib/system/application-instance.js:141"
+    Because setup should only occur once, multiple calls to `setupRouter`
+    beyond the first call have no effect.
+  line: " packages/ember-application/lib/system/application-instance.js:159"
 - message: |-
     Missing item type
     Directs the router to route to a particular URL. This is useful in tests,
     for example, to tell the app to start at a particular URL. Ensure that you
     have called `setupRouter()` before calling this method.
-  line: " packages/ember-application/lib/system/application-instance.js:159"
+  line: " packages/ember-application/lib/system/application-instance.js:175"
 - message: Missing item type
-  line: " packages/ember-application/lib/system/application-instance.js:173"
+  line: " packages/ember-application/lib/system/application-instance.js:190"
 - message: Missing item type
-  line: " packages/ember-application/lib/system/application-instance.js:184"
+  line: " packages/ember-application/lib/system/application-instance.js:200"
+- message: |-
+    Missing item type
+    Objects of this type can implement an interface to respond to requests to
+    get and set. The default implementation handles simple properties.
+  line: " packages/ember-metal/lib/properties.js:16"
 - message: |-
     Missing item type
     Previously we used `Ember.$.uuid`, however `$.uuid` has been removed from
@@ -28884,9 +29234,41 @@ warnings:
     Known Trick™
   line: " packages/ember-metal/lib/utils.js:58"
 - message: Missing item type
-  line: " packages/ember-metal/lib/utils.js:932"
+  line: " packages/ember-metal/lib/utils.js:944"
 - message: Missing item type
-  line: " packages/ember-metal/lib/utils.js:950"
+  line: " packages/ember-metal/lib/utils.js:962"
+- message: |-
+    Missing item type
+    Called by the router to instruct the location to do any feature detection
+    necessary. In the case of AutoLocation, we detect whether to use history
+    or hash concrete implementations.
+  line: " packages/ember-routing/lib/location/auto_location.js:108"
+- message: |-
+    Missing item type
+    Given the browser's `location`, `history` and `userAgent`, and a configured
+    root URL, this function detects whether the browser supports the [History
+    API](https://developer.mozilla.org/en-US/docs/Web/API/History) and returns a
+    string representing the Location object to use based on its determination.
+
+    For example, if the page loads in an evergreen browser, this function would
+    return the string "history", meaning the history API and thus HistoryLocation
+    should be used. If the page is loaded in IE8, it will return the string
+    "hash," indicating that the History API should be simulated by manipulating the
+    hash portion of the location.
+  line: " packages/ember-routing/lib/location/auto_location.js:163"
+- message: Missing item type
+  line: " packages/ember-routing/lib/location/auto_location.js:228"
+- message: Missing item type
+  line: " packages/ember-routing/lib/location/util.js:1"
+- message: Missing item type
+  line: " packages/ember-routing/lib/location/util.js:16"
+- message: Missing item type
+  line: " packages/ember-routing/lib/location/util.js:25"
+- message: |-
+    Missing item type
+    Replaces the current location, making sure we explicitly include the origin
+    to prevent redirecting to a different origin.
+  line: " packages/ember-routing/lib/location/util.js:104"
 - message: |-
     Missing item type
     Returns a merged query params meta object for a given route.
@@ -28894,3 +29276,9 @@ warnings:
   line: " packages/ember-routing/lib/system/router.js:554"
 - message: Missing item type
   line: " packages/ember-runtime/lib/mixins/controller.js:54"
+- message: |-
+    Missing item type
+    This is the object instance returned when you get the `@each` property on an
+    array. It uses the unknownProperty handler to automatically create
+    EachArray instances for property names.
+  line: " packages/ember-runtime/lib/system/each_proxy.js:104"
