@@ -70,7 +70,7 @@ functions.
 ```javascript
 export default Ember.Object.extend({
 
-  width: 100,
+  height: 100,
   goldenRatioWidth: Ember.computed('height', {
     get(key) {
       return this.get('height') * 1.618;
@@ -100,7 +100,7 @@ the near future:
 ```javascript
 export default Ember.Object.extend({
 
-  width: 100,
+  height: 100,
 
   @computed('height')
   get goldenRatioWidth(key) {
