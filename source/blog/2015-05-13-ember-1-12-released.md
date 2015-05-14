@@ -158,7 +158,7 @@ Ember-CLI 0.2.3 supports instance initializers. For example:
 ```javascript
 // app/instance-initializers/sleep.js
 
-export default function initialize(application) {
+export function initialize(application) {
   application.deferReadiness();
   // Wait 3s before continuing to boot the app
   Ember.run.later(application, 'advanceReadiness', 3000);
