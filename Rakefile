@@ -50,7 +50,7 @@ def generate_ember_docs
       sha = describe =~ /-g(.+)/ ? $1 : describe
     end
 
-    sh('npm run docs')
+    sh('npm install && npm run docs')
   end
 
   # JSON is valid YAML
