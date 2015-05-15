@@ -72,10 +72,10 @@ export default Ember.Object.extend({
 
   height: 100,
   goldenRatioWidth: Ember.computed('height', {
-    get(key) {
+    get: function(key) {
       return this.get('height') * 1.618;
     },
-    set(key, value) {
+    set: function(key, value) {
       this.set('height', value / 1.618);
     }
   });
