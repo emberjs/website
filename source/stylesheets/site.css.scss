@@ -1559,7 +1559,7 @@ body.security #content {
 }
 
 .tomster.section.list {
-  margin: 1em auto 0;
+  margin: 0 auto;
 
   #tomster-list td {
     padding: 20px;
@@ -1609,6 +1609,46 @@ body.security #content {
       margin-top: 0;
       margin-bottom: 0;
     }
+  }
+}
+
+/**
+  Tomster FAQ Page
+**/
+
+body.tomster_faq #content {
+  margin: 3em auto 0 auto;
+  width: 54em;
+
+  h1, h1:first-child {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .section {
+    width: auto;
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    margin: 2em 0;
+    background-color: #dfd7d4;
+  }
+}
+
+.tomster-faq {
+  @include clearfix;
+  .left-col {
+    float: left;
+    width: 491px;
+    margin-top: 1em;
+  }
+  .right-col {
+    float: left;
+    width: 225px;
+    margin-left: 40px;
+    text-align: center;
   }
 }
 
