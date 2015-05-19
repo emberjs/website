@@ -1629,11 +1629,33 @@ body.tomster_faq #content {
     width: auto;
   }
 
+  li {
+    margin-bottom: 4px;
+  }
+
   hr {
     height: 1px;
     border: none;
     margin: 2em 0;
     background-color: #dfd7d4;
+  }
+  
+  #back-to-top {
+    padding-left: 13px;
+    text-align: center;
+    display: none;
+    @include transition(opacity 0.05s linear);
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 0px;
+      height: 20px;
+      width: 30px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 1020px) {
+      display: none !important;
+    }
   }
 }
 
@@ -1642,7 +1664,6 @@ body.tomster_faq #content {
   .left-col {
     float: left;
     width: 491px;
-    margin-top: 1em;
   }
   .right-col {
     float: left;
