@@ -450,9 +450,8 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/1/f/6/thumb_38040502.jpeg
   - location: Manchester, UK
     url: http://embermanchester.uk
-    image: 11london.png
-    lat: 53.4667
-    lng: 2.2333
+    lat: 53.4842
+    lng: -2.2363
     organizers:
     - organizer: Ian Dunlop
   - location: Dublin, Ireland
