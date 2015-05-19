@@ -448,6 +448,13 @@ locations:
       profileImage: http://photos1.meetupstatic.com/photos/member/9/9/4/a/thumb_240099242.jpeg
     - organizer: Ken Snyder
       profileImage: http://photos2.meetupstatic.com/photos/member/1/f/6/thumb_38040502.jpeg
+  - location: Manchester, UK
+    url: http://embermanchester.uk
+    image: 11london.png
+    lat: 53.4667
+    lng: 2.2333
+    organizers:
+    - organizer: Ian Dunlop
   - location: Dublin, Ireland
     url: http://www.meetup.com/emberjsdublin/
     image: 10dublin.png
