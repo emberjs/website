@@ -2,7 +2,10 @@
 <html lang="en">
   <%
     @path = current_page.url.gsub(/^\/guides/, '')
-    @new_url = "http://guides.emberjs.com/v1.10.0#{@path}"
+    @new_url = "http://guides.emberjs.com/"
+    unless @path == '/'
+      @new_url.concat("v1.10.0#{@path}")
+    end
   %>
 
   <head>
