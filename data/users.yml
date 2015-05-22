@@ -400,6 +400,8 @@
   image: locusenergy.png
 - url: http://whatsdueapp.com
   image: whatsdue.png
+- url: https://www.apprentus.com
+  image: apprentus.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
