@@ -402,6 +402,8 @@
   image: whatsdue.png
 - url: https://www.apprentus.com
   image: apprentus.png
+- url: https://www.libroreserve.com
+  image: libro.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
