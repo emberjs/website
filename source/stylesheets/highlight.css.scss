@@ -4,12 +4,19 @@
 $border-radius: 5px;
 
 $blue:   #1f58ce;
-$gray:   #777777;
-$green:  #007700;
+$gray:   #545454;
+$textColor: #222;
+$green:  #005f00;
+$orange: #8f4a2c;
+
+$highlight-yellow: #f8eec7;
+$highlight-green: #E8F4E5;
+$highlight-red: #ffecec;
 
 body.guides .highlight {
   @include border-radius($border-radius);
   border: 1px solid #d1d1d1;
+  color: $textColor;
 }
 
 #content .highlight {
@@ -46,6 +53,45 @@ body.guides .highlight {
   &.handlebars .ribbon {
     @include hidpi('handlebars-ribbon', png);
   }
+
+  .highlight-line {
+    display: inline-block;
+    margin: 0 -10px;
+    background-color: $highlight-yellow;
+    border-right: $highlight-yellow solid 5px;
+    border-left: $highlight-yellow solid 5px;
+    box-sizing: content-box;
+
+    &.added {
+      border-color: $highlight-green;
+      background-color: $highlight-green;
+    }
+
+    &.removed {
+      border-color: $highlight-red;
+      background-color: $highlight-red;
+    }
+  }
+
+  .code .highlight-line {
+    width: 613px;
+    margin: 0 -13px;
+    border-left-width: 13px;
+    border-right-width: 13px;
+  }
+
+  .line-numbers .highlight-line {
+    width: 28px;
+    border-right-color: darken($highlight-yellow, 20%);
+
+    &.added {
+      border-right-color: darken($highlight-green, 20%);
+    }
+
+    &.removed {
+      border-right-color: darken($highlight-red, 20%);
+    }
+  }
 }
 
 .CodeRay {
@@ -55,7 +101,7 @@ body.guides .highlight {
     text-align: center;
     border-right: 1px solid #d1d1d1;
     background-color: #f6f6f6;
-    color: #b4b4b4;
+    color: $gray;
     @include border-top-left-radius($border-radius);
     @include border-bottom-left-radius($border-radius);
   }
@@ -71,7 +117,7 @@ body.guides .highlight {
   }
 
   .comment {
-    color: $gray;
+    color: $green;
   }
 
   .attribute-name {
@@ -87,7 +133,7 @@ body.guides .highlight {
   }
 
   .keyword {
-    color: #ce791f;
+    color: $orange;
   }
 
   .key, .function {

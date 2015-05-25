@@ -37,7 +37,7 @@ change does not affect the template syntax or public API of Ember applications.
 Projects using an Ember-CLI version less than 0.1.5 will require a bump
 of the Handlebars dependency version:
 
-```
+```text
 bower install --save handlebars#2.0.0
 ```
 
