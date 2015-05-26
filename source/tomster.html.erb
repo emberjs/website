@@ -1,0 +1,43 @@
+---
+title: "Tomster"
+---
+
+<div class="tomster section intro">
+  <h1>The Tomster</h1>
+  <p>
+    Tomster is one of the friendly faces of the Ember project and community. Over the years we've dressed and redressed him for all sorts of fun projects and reasons.
+  <p>
+  <p>
+    The Tomster is a registered and protected trademark. These images may not be used without specific and explicit consent (which we aim never to hold back unreasonably). If you have questions about using or commissioning a Tomster, <a href="/tomster/faq">check out the FAQ</a>.
+  </p>
+</div>
+
+<div class="tomster section list">
+  <table id="tomster-list">
+    <% data.tomsters.sort_by {|t| Date.parse(t.date) }.reverse.each_slice(2) do |slice| %>
+      <tr>
+        <% slice.each do |tomster| %>
+          <td>
+            <div class="tomster-container">
+              <div class="tomster-image">
+                <img src="<%= tomster.image %>">
+              </div>
+              <div class="tomster-info">
+                <% if tomster.url %>
+                <a href="<%= tomster.url %>" class="title">
+                  <%= tomster.title %>
+                </a>
+                <% else %>
+                  <p class="not-yet-url title"><%= tomster.title %></p>
+                <% end %>
+                <div class="date">
+                  <%= tomster.date %>
+                </div>
+              </div>
+            </div>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>
