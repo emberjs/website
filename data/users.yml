@@ -404,6 +404,8 @@
   image: apprentus.png
 - url: https://www.libroreserve.com
   image: libro.png
+- url: http://www.molecule.io/
+  image: molecule.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
