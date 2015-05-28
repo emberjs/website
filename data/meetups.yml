@@ -545,6 +545,13 @@ locations:
     organizers:
     - organizer: Artem Sushchev
       profileImage: http://gravatar.com/avatar/fcda4a04ab815c1ab9e5b2327a4350f6
+  - location: Treviso, Italy
+    url: http://www.meetup.com/The-Ember-js-Treviso-Meetup/
+    lat: 45.564845
+    lng: 12.427597
+    organizers:
+    - organizer: Filippo Zanella
+      profileImage: http://photos1.meetupstatic.com/photos/member/b/c/5/7/highres_246288215.jpegla     
 - area: Asia
   groups:
   - location: Tel Aviv, Israel
