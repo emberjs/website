@@ -10,16 +10,36 @@
 
 - url: http://tilde.io/
   image: tilde.png
-- url: http://livingsocial.com/
-  image: livingsocial.png
-- url: http://www.mhelabs.com/
-  image: mhelabs.png
-- url: http://www.bustle.com/
-  image: bustle.png
+  term: "2011-present"
+  type: "Tom Dale, Yehuda Katz, Leah Silber"
 - url: https://www.yapp.us/
   image: yapp.png
+  term: "2013-present"
+  type: "Kris Selden"
+- url: http://www.yahoo.com
+  image: yahoo.png
+  term: "2015-present"
+  type: "Stefan Penner"
+- url: http://www.bustle.com/
+  image: bustle.png
+  term: "2014-2015"
+  type: "FastBoot, Glimmer"
+- url: http://dockyard.com
+  image: dockyard.png
+  term: "2014-2015"
+  type: "Ember Data, Robert Jackson"
+- url: http://www.mhelabs.com/
+  image: mhelabs.png
+  term: "2013"
+  type: "Ember Data, Router"
 - url: https://addepar.com/
   image: addepar.png
+  term: "2012-2013"
+  type: "Ember Data"
+- url: http://livingsocial.com/
+  image: livingsocial.png
+  term: "2011"
+  type: "Ember 1.0, Ember Data"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
