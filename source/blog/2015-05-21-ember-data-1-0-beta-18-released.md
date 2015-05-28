@@ -57,8 +57,7 @@ We changed `typeKey` to `modelName` to allow us to align to dasherized strings
 as Ember and Ember CLI also align with dasherized strings. Changing the name
 allows us to make this change with a deprecation phase.
 
-## DS.RESTSerializer.typeForRoot is now
-DS.RESTSerializer.modelNameFromPayloadKey
+## DS.RESTSerializer.typeForRoot is now DS.RESTSerializer.modelNameFromPayloadKey
 
 To gain more consistency in the naming change of  `typeKey` to `modelName`,
 `typeForRoot` has been renamed to `modelNameFromPayloadKey`. The function
