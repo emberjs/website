@@ -406,6 +406,8 @@
   image: libro.png
 - url: http://www.molecule.io/
   image: molecule.png
+- url: http://www.linkedin.com
+  image: linkedin.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com

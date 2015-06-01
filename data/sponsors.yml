@@ -20,6 +20,10 @@
   image: yahoo.png
   term: "2015-present"
   type: "Stefan Penner"
+- url: http://www.linkedin.com
+  image: linkedin.png
+  term: "2015—present"
+  type: "Glimmer, Ember 2.0"
 - url: http://www.bustle.com/
   image: bustle.png
   term: "2014-2015"
