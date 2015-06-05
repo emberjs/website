@@ -7,6 +7,15 @@ tags: Recent Posts, Releases
 Ember Data 1.0.0-beta.19 contains a lot of bugfixes from the comunity!
 Thank you for helping us push toward a stable release of Ember Data!
 
+## New Features
+
+### Snapshots have changedAttributes
+
+`changedAttributes`, which represents the changes that have happened
+since the model was last synced with the server, are now available on
+the snapshot in your adapters and serializers, instead of just on
+`DS.Model` instances.
+
 ## Breaking Changes
 
 ### Passing Classes to Store Methods
