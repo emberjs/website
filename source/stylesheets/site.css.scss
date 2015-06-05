@@ -2168,6 +2168,16 @@ a.edit-page {
   #sidebar ol#toc-list li > ol {
     display: block;
   }
+
+  table {
+    thead {
+      background-color: #f9e7e4;
+    }
+
+    th, td {
+      padding: 5px 10px;
+    }
+  }
 }
 
 /**
