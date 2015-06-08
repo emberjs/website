@@ -43,6 +43,13 @@ Watson command](https://github.com/abuiles/ember-watson#ember-watsonconvert-embe
 You can use this command-line tool in both Ember-CLI projects and
 "globals mode" style projects.
 
+### Services depending on the store
+
+In order to fix deprecations warning induced by Ember 1.12, the store service is now injected as an
+[instanceInitializer](http://emberjs.com/blog/2015/05/13/ember-1-12-released.html#toc_instance-initializers).
+As a consequence, if you had initializers depending on the store, you should move  
+them to an instance initializer as well, and mark it as `after: 'ember-data'`.
+
 ## Important Deprecations
 
 ### Fixture Adapter Removed
@@ -62,4 +69,3 @@ The Fixture Adapter now lives as an [addon](https://github.com/emberjs/ember-dat
 
 This will be the last release to support Internet Explorer 8. Future
 versions of Ember Data will not support Internet Explorer 8.
-
