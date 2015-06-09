@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v1.0.0-beta.19
+  sha: v1.0.0-beta.19.1
 files:
   packages/activemodel-adapter/lib/system/active-model-adapter.js:
     name: packages/activemodel-adapter/lib/system/active-model-adapter.js
@@ -6465,7 +6465,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 36
+  line: 37
   description: |-
     If this property is `true` the record is in the `empty`
     state. Empty is the first state all records enter after they have
@@ -6482,7 +6482,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 50
+  line: 51
   description: |-
     If this property is `true` the record is in the `loading` state. A
     record enters this state when the store asks the adapter for its
@@ -6496,7 +6496,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 61
+  line: 62
   description: |-
     If this property is `true` the record is in the `loaded` state. A
     record enters this state when its data is populated. Most of a
@@ -6521,7 +6521,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 83
+  line: 84
   description: |-
     If this property is `true` the record is in the `dirty` state. The
     record has local changes that have not yet been saved by the
@@ -6548,7 +6548,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 107
+  line: 108
   description: |-
     If this property is `true` the record is in the `saving` state. A
     record enters the saving state when `save` is called, but the
@@ -6574,7 +6574,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 130
+  line: 131
   description: |-
     If this property is `true` the record is in the `deleted` state
     and has been marked for deletion. When `isDeleted` is true and
@@ -6615,7 +6615,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 168
+  line: 169
   description: |-
     If this property is `true` the record is in the `new` state. A
     record will be in the `new` state when it has been created on the
@@ -6640,7 +6640,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 190
+  line: 191
   description: |-
     If this property is `true` the record is in the `valid` state.
 
@@ -6654,7 +6654,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 201
+  line: 202
   description: |-
     If the record is in the dirty state this property will report what
     kind of change has caused it to move into the dirty
@@ -6678,7 +6678,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 223
+  line: 224
   description: |-
     If `true` the adapter reported that it was unable to save local
     changes to the backend for any reason other than a server-side
@@ -6701,7 +6701,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 244
+  line: 245
   description: |-
     If `true` the store is attempting to reload the record form the adapter.
 
@@ -6720,7 +6720,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 261
+  line: 262
   description: |-
     All ember models have an id property. This is an identifier
     managed by an external source. These are always coerced to be
@@ -6743,7 +6743,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 282
+  line: 283
   itemtype: property
   name: currentState
   access: private
@@ -6753,7 +6753,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 288
+  line: 289
   description: |-
     When the record is in the `invalid` state this object will contain
     any errors returned by the adapter. When present the errors hash
@@ -6808,7 +6808,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 343
+  line: 344
   description: |-
     Create a JSON representation of the record, using the serialization
     strategy of the store's adapter.
@@ -6831,7 +6831,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 361
+  line: 362
   description: |-
     Use [DS.JSONSerializer](DS.JSONSerializer.html) to
     get the JSON representation of a record.
@@ -6854,7 +6854,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 383
+  line: 384
   description: |-
     Fired when the record is ready to be interacted with,
     that is either loaded from the server or created locally.
@@ -6864,7 +6864,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 391
+  line: 392
   description: Fired when the record is loaded from the server.
   itemtype: event
   name: didLoad
@@ -6872,7 +6872,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 398
+  line: 399
   description: Fired when the record is updated.
   itemtype: event
   name: didUpdate
@@ -6880,7 +6880,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 405
+  line: 406
   description: Fired when a new record is commited to the server.
   itemtype: event
   name: didCreate
@@ -6888,7 +6888,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 412
+  line: 413
   description: Fired when the record is deleted.
   itemtype: event
   name: didDelete
@@ -6896,7 +6896,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 419
+  line: 420
   description: Fired when the record becomes invalid.
   itemtype: event
   name: becameInvalid
@@ -6904,7 +6904,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 426
+  line: 427
   description: Fired when the record enters the error state.
   itemtype: event
   name: becameError
@@ -6912,7 +6912,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 433
+  line: 434
   description: Fired when the record is rolled back.
   itemtype: event
   name: rolledBack
@@ -6920,7 +6920,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 440
+  line: 441
   itemtype: property
   name: data
   access: private
@@ -6930,7 +6930,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 448
+  line: 449
   itemtype: method
   name: send
   access: private
@@ -6946,7 +6946,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 458
+  line: 459
   itemtype: method
   name: transitionTo
   access: private
@@ -6959,7 +6959,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 468
+  line: 469
   description: |-
     Marks the record as deleted but does not save it. You must call
     `save` afterwards if you want to persist it. You might use this
@@ -6991,7 +6991,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 500
+  line: 501
   description: |-
     Same as `deleteRecord`, but saves the record immediately.
 
@@ -7022,7 +7022,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 529
+  line: 530
   itemtype: method
   name: unloadRecord
   access: private
@@ -7031,7 +7031,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 538
+  line: 539
   itemtype: method
   name: _notifyProperties
   access: private
@@ -7040,7 +7040,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 552
+  line: 553
   description: |-
     Returns an object, whose keys are changed properties, and value is
     an [oldProp, newProp] array.
@@ -7072,7 +7072,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 592
+  line: 593
   itemtype: method
   name: adapterDidDirty
   access: private
@@ -7085,7 +7085,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 608
+  line: 609
   description: |-
     If the model `isDirty` this function will discard any unsaved
     changes. If the model `isNew` it will be removed from the store.
@@ -7105,7 +7105,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 640
+  line: 641
   description: |-
     Save the record and persist any changes to the record to an
     external source via the adapter.
@@ -7131,7 +7131,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 667
+  line: 668
   description: |-
     Reload the record from the adapter.
 
@@ -7166,7 +7166,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 705
+  line: 706
   description: |-
     Override the default event firing from Ember.Evented to
     also call methods with the given name.
@@ -7182,7 +7182,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 754
+  line: 755
   description: |-
     Alias DS.Model's `create` method to `_create`. This allows us to create DS.Model
     instances from within the store, but if end users accidentally call `create()`
@@ -7196,7 +7196,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 765
+  line: 766
   description: |-
     Override the class' `create()` method to raise an error. This
     prevents end users from inadvertently calling `create()` instead
@@ -7212,7 +7212,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/model.js
-  line: 780
+  line: 781
   description: |-
     Represents the model's class name as a string. This can be used to look up the model through
     DS.Store's modelFor method.
