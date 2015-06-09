@@ -408,6 +408,8 @@
   image: molecule.png
 - url: http://www.linkedin.com
   image: linkedin.png
+- url: https://www.gozooga.com
+  image: gozooga.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
