@@ -511,7 +511,7 @@ This becomes more powerful when the second argument is a bound path:
 {{get items somePathWithAKey}}
 ```
 
-Thanks to [@mmun](https://twitter.com/_mmun) for implementing this feature.
+Thanks to [@jmurphyau](https://twitter.com/jmurphyau) for implementing this feature.
 
 #### Notable Breaking Changes in Ember 2.0
 
