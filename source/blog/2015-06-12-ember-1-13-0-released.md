@@ -13,7 +13,7 @@ across over 680 commits.
 
 ## New Features in Ember.js 1.13
 
-The Glimmer rendering engine, [announced at EmberConf](LINK VIDEO) and introduced to Ember.js
+The Glimmer rendering engine, [announced at EmberConf](https://www.youtube.com/watch?v=o12-90Dm-Qs&feature=youtu.be&t=47m21s) and introduced to Ember.js
 Canary on [May 5th](/blog/2015/05/05/glimmer-merging.html), is released today
 in Ember.js 1.13. Glimmer is the third overhaul of Ember's 1.x rendering
 layer (wow, right?), and dramatically improves rerender performance in many
@@ -47,18 +47,11 @@ render state. Upon rerender, this tree of values is walked. Clean nodes are
 presumed to already be correctly rendered, dirtied nodes have their value
 recomputed and children values (which may or may not have dirtied) walked.
 
-The result is a stunning improvement in many rerender cases.
+The result is a stunning improvement in many rerender cases. This animated
+gif shows rerender performance of Ember 1.12 on the left, and Ember 1.13
+on the right:
 
-A port of the "dbmonster" demo to Ember.js performs XX% better with 1.13 than
-with Ember 1.12.
-
-DBMONSTER VIDEO
-
-Ember's performance in real world apps is similarly impacted. For example,
-an application managed by Ray Tiley of XX COMPANY has seen a SOMEX improvement
-in the speed of page transitions:
-
-RAYTILEYVIDEO
+![](ANIMATED GIF)
 
 Thanks to [@wycats](https://twitter.com/wycats) and [@tomdale](https://twitter.com/tomdale)
 for their continued focus on improving
