@@ -90,8 +90,23 @@ export default Ember.Component.extend({
 ```
 
 The Glimmer rendering engine uses one-way binding at its core. In order to
-implement the current two-way binding behavior of components, Glimmer uses
-"auto-mut" to propagate values upstream. For example:
+implement the current two-way binding behavior of components, Glimmer requires
+the addition of mutable values. We call these `mut` objects, since the `mut`
+helper will be used to create them once angle components land.
+
+`mut` objects represent a mutable value. They have a current value, and a
+function that can update that value.
+
+* `someMut.value` is the current value of the mutable value
+* `someMut.update(newValue)` updates the value of the mutable value
+
+Conceptually, a `mut` simply sets the new value to whatever it is wrapping
+then triggers a rerender at whatever template
+created the `mut`.
+
+Curly components use "auto-mut" to emulate two-way binding. Any bound attribute
+is wrapped as a `mut` object before being set on `attrs`. For example, making
+the `name` attribute bound results in a `mut` object being set to `attrs.name`:
 
 ```hbs
 {{my-component name=model.name}}
@@ -103,7 +118,7 @@ import Ember from "ember";
 
 export default Ember.Component.extend({
   click() {
-    // getAttr always returns a value, regardless of mut
+    // getAttr always returns a value, regardless of if an attr is a mut
     console.log(this.getAttr('name')); // -> logs model.name's value
     // Note that `name` is a mut object:
     console.log(this.attrs.name.value); // -> logs model.name's value
@@ -131,7 +146,7 @@ to use this API for any app on Ember 1.x.
 ##### mut and setAttr
 
 To set a two-way bound value passed to a component, the `setAttr` API has been
-introduced. This API wraps directly setting the `mut`, and again will be
+introduced. This API wraps calling `.update(newValue)` on the `mut` object, and again will be
 available in an addon for backwards compatibility. For example:
 
 ```hbs
@@ -144,9 +159,9 @@ import Ember from "ember";
 
 export default Ember.Component.extend({
   click() {
+    this.setAttr('name', 'Cindy');
     // The old behavior still works:
     this.set('name', 'Cindy');
-    this.setAttr('name', 'Cindy');
     // Note that `name` is a mut object:
     this.attrs.name.update('Cindy');
   }
@@ -154,18 +169,6 @@ export default Ember.Component.extend({
 ```
 
 In general, it is suggested you use `setAttr` for mutating a two-way binding.
-
-In this and the prior example, `this.attrs.name` is a `mut` object. `mut`
-objects have a simple API:
-
-* `someMut.value` is the current value of the mutable value
-* `someMut.update(newValue)` updates the value of the mutable value
-
-Conceptually, a `mut` simply sets the new value to whatever it is wrapping
-(in our examples, `model.name`) then triggers a rerender at whatever template
-created the `mut`. Curly components auto-mut to emulate two-way binding,
-but angle components will use the `mut` helper to opt values into
-two way binding explicitly.
 
 #### Component lifecycle hooks
 
