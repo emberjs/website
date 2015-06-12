@@ -62,7 +62,8 @@ RAYTILEYVIDEO
 
 Thanks to [@wycats](https://twitter.com/wycats) and [@tomdale](https://twitter.com/tomdale)
 for their continued focus on improving
-Glimmer's performance, and to [LinkedIn](http://www.linkedin.com) for their
+Glimmer's performance, and to [LinkedIn](http://www.linkedin.com) and
+[Bustle](http://www.bustle.com/) for their
 generous sponsorship of this work.
 
 #### attrs, mut and auto-mut
