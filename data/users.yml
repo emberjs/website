@@ -412,6 +412,8 @@
   image: gozooga.png
 - url: http://secondstreet.com/
   image: secondstreet.png
+- url: http://dollarshaveclub.com/
+  image: dollarshaveclub.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
