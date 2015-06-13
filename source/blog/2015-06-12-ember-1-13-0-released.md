@@ -1,6 +1,6 @@
 ---
 title: Ember.js 1.13.0 and 2.0 Beta Released
-author: Matthew Beale
+author: Matthew Beale and Yehuda Katz
 tags: Releases
 ---
 
@@ -64,11 +64,7 @@ Notably, the Ember strategy continues to support efficient updates via value obs
 
 Glimmer's hybrid model can opportunistically take advantage of explicit mutation (via `set`) when it is used, while also supporting efficient re-renders of entire data structures, updating only the DOM  nodes that need to be changed.
 
-The result is a stunning improvement in many rerender cases. This animated
-gif shows rerender performance of Ember 1.12 on the left, and Ember 1.13
-on the right:
-
-![](ANIMATED GIF)
+The result is a stunning improvement in many rerender cases.
 
 We would like to thank React for showing that full re-renders can be made efficient. While we did not use their precise Virtual DOM approach, their work with Virtual DOM was extremely influential to our approach in Glimmer.
 
