@@ -428,9 +428,9 @@ All Handlebars APIs are removed in Ember 2.0. This includes:
 Several template helpers are removed in Ember 2.0. These include:
 
 * `{{bindAttr}}`
-* `{{bind-attr}}`
+* `{{bind-attr}}` (use HTMLBars-style attribute bindings instead)
 * `{{bind}}`
-* `{{template}}`
+* `{{template}}` (use `{{partial}}` instead)
 * `{{linkTo}}` (use `{{link-to}}` instead)
 * `{{collection items}}`
 * Non-block params versions of `{{#each}}` and `{{#with}}`
@@ -449,7 +449,8 @@ Other APIs:
 * `Ember.Set`
 * `Ember.computed.defaultTo`
 * `Ember.DeferredMixin`
-* `Ember.Deferred`
+* `Ember.Deferred` (use `Ember.RSVP.Promise` instead)
+* `Ember.reduceComputed` and `Ember.arrayComputed` (use plain array manipulation)
 
 Additionally, IE8 is no longer supported in Ember 2.x. IE9+ is supported.
 
