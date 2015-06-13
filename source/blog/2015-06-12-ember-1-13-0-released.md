@@ -37,7 +37,7 @@ deprecations in application code aligns that application with Ember's public
 API in 2.0. In general, Ember apps running 1.13 without causing any deprecation notices
 to fire should upgrade to 2.0 without changes.
 
-The easiest way to work through deprecations is the **Ember Inspector**. Thanks to the work of Teddy Zeenny, deprecations will be routed to the "Deprecations" inspector pane, where you can get a grouped list of them as well as the line of code in **your app** that triggered the deprecation. You can also ask for a full stack trace of any deprecation.
+The easiest way to work through deprecations is the **Ember Inspector**. Thanks to the work of Teddy Zeenny, deprecations will be routed to the "Deprecations" inspector pane, where you can get a grouped list of them as well as the line of code in your app that triggered the deprecation. You can also ask for a full stack trace of any deprecation.
 
 #### Improved Rerender Performance
 
@@ -70,7 +70,7 @@ on the right:
 
 ![](ANIMATED GIF)
 
-We would like to thank React for showing that full re-renders can be made efficient. While we did not their precise Virtual DOM approach, their work with Virtual DOM was extremely influential to our approach in Glimmer.
+We would like to thank React for showing that full re-renders can be made efficient. While we did not use their precise Virtual DOM approach, their work with Virtual DOM was extremely influential to our approach in Glimmer.
 
 Thanks to [@wycats](https://twitter.com/wycats) and [@tomdale](https://twitter.com/tomdale)
 for their continued focus on improving
@@ -433,7 +433,7 @@ Several template helpers are removed in Ember 2.0. These include:
 * `{{bind-attr}}`
 * `{{bind}}`
 * `{{template}}`
-* `{{linkTo}}`
+* `{{linkTo}}` (use `{{link-to}}` instead)
 * `{{collection items}}`
 * Non-block params versions of `{{#each}}` and `{{#with}}`
 * Legacy arguments to `{{#each}}`, `{{outlet}}`
