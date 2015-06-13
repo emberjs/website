@@ -11,12 +11,18 @@ release process that began just after 1.0 was released.
 The 1.13 release represents the effort of at least 43 contributors
 across over 680 commits.
 
+**Ember 1.13 is the last release in the 1.x series and the first release that includes the Glimmer rendering engine.** It includes a number of deprecations that will ease the upgrade to Ember 2.0, which is due to land in six weeks.
+
+**Ember 2.0 beta is the first release in the 2.x series.** This means that many features deprecated during the 1.x series will be removed in Ember 2.0. If you encounter any unexpected changes in features not marked as deprecated in 1.13 while testing Ember 2.0 beta, please report them immediately. We would like to fix these unintentional regressions before the final release of 2.0 in six weeks.
+
+The release of Ember 2.0 beta also means that the first features in Ember 2.1 (most notably angle bracket components), are in their final canary stretch. Now is a good time to comment on RFCs and pull requests related to those features.
+
 ## New Features in Ember.js 1.13
 
 The Glimmer rendering engine, [announced at EmberConf](https://www.youtube.com/watch?v=o12-90Dm-Qs&feature=youtu.be&t=47m21s) and introduced to Ember.js
 Canary on [May 5th](/blog/2015/05/05/glimmer-merging.html), is released today
 in Ember.js 1.13. Glimmer is the third overhaul of Ember's 1.x rendering
-layer (wow, right?), and dramatically improves rerender performance in many
+layer (wow, right?), and dramatically improves re-render performance in many
 common scenarios. Additionally it lays important groundwork for the Ember 2.x
 development model.
 
@@ -28,24 +34,35 @@ Thank you! You are too many to possibly name.
 **1.13 also marks the final minor release of the Ember 1.x cycle.** As such,
 it contains a number of deprecations ahead of Ember 2.0. Resolving these
 deprecations in application code aligns that application with Ember's public
-API in 2.0. Any Ember app running 1.13 without causing a deprecation notice
-to fire should upgrade to 2.0 without any changes.
+API in 2.0. In general, Ember apps running 1.13 without causing any deprecation notices
+to fire should upgrade to 2.0 without changes.
+
+The easiest way to work through deprecations is the **Ember Inspector**. Thanks to the work of Teddy Zeenny, deprecations will be routed to the "Deprecations" inspector pane, where you can get a grouped list of them as well as the line of code in **your app** that triggered the deprecation. You can also ask for a full stack trace of any deprecation.
 
 #### Improved Rerender Performance
 
-Previous iterations of Ember's rendering layer were based on granular
-observation. Where a piece of dynamic content was rendered (such as a
-new array, or new component) the old DOM and possibly-invalid child views
-were discarded and new DOM and views created from scratch. Additionally,
-granular observation was computationally expensive to initialize and maintain
-for a large set of values.
+Previous iterations of Ember's rendering engine **relied** on granular observation for efficiency. When a piece of dynamic content was rendered, Ember registered observers, updating the content when the value changed.
 
-Glimmer replaces this approach with a value-diffing strategy.
-During render, each occurrence of dynamic content (for example a component,
-and each helper, or a data binding) generates a value representing its
-render state. Upon rerender, this tree of values is walked. Clean nodes are
-presumed to already be correctly rendered, dirtied nodes have their value
-recomputed and children values (which may or may not have dirtied) walked.
+While this was reasonably efficient in cases where the developer could easily use `set` (and the array equivalents) to mutate values, it had two related issues:
+
+* This forced developers to represent all changes in terms of granular
+  observers. In many cases this could be extremely awkward. This was
+  especially problematic when working with Arrays, since (for example)
+  representing a sort as a series of mutations is conceptually complex
+  and can be cost-prohibitive.
+* Ember itself was extremely inefficient when an entire object or
+  array was replaced, despite the fact that this was often the most
+  natural way to represent the change. This meant that while it was
+  usually possible in theory to "just re-render" a component, it was,
+  in practice, cost prohibitive (to say the least).
+
+To address these issues, Glimmer adopts a value-diffing strategy, using a virtual tree of the dynamic areas of the DOM. This means that even if the original data structure (for example, an array) is completely replaced, the DOM is not updated unless the resulting rendered content has changed.
+
+When updating an array with a new array (because you got a new array from the server, or because you produced a new array through `.sort()`), you will see a large improvement in performance, **making this kind of replacement plausible in Ember.**
+
+Notably, the Ember strategy continues to support efficient updates via value observation, which we expect to be useful when communicating with services and models.
+
+Glimmer's hybrid model can opportunistically take advantage of explicit mutation (via `set`) when it is used, while also supporting efficient re-renders of entire data structures, updating only the DOM  nodes that need to be changed.
 
 The result is a stunning improvement in many rerender cases. This animated
 gif shows rerender performance of Ember 1.12 on the left, and Ember 1.13
@@ -53,117 +70,15 @@ on the right:
 
 ![](ANIMATED GIF)
 
+We would like to thank React for showing that full re-renders can be made efficient. While we did not their precise Virtual DOM approach, their work with Virtual DOM was extremely influential to our approach in Glimmer.
+
 Thanks to [@wycats](https://twitter.com/wycats) and [@tomdale](https://twitter.com/tomdale)
 for their continued focus on improving
 Glimmer's performance, and to [LinkedIn](http://www.linkedin.com) and
 [Bustle](http://www.bustle.com/) for their
 generous sponsorship of this work.
 
-#### attrs, mut and auto-mut
-
-In Ember 1.13, components will now have an `attrs` property set with the
-passed values. For example:
-
-```hbs
-{{my-component name="Susan"}}
-```
-
-```js
-// app/components/my-component.js
-import Ember from "ember";
-
-export default Ember.Component.extend({
-  click() {
-    console.log(this.getAttr('name')); // -> logs "Susan"
-    console.log(this.attrs.name); // -> logs "Susan"
-    // The old behavior still works:
-    console.log(this.get('name')); // -> logs "Susan"
-  }
-});
-```
-
-The Glimmer rendering engine uses one-way binding at its core. In order to
-implement the current two-way binding behavior of components, Glimmer requires
-the addition of mutable values. We call these `mut` objects, since the `mut`
-helper will be used to create them once angle components land.
-
-`mut` objects represent a mutable value. They have a current value, and a
-function that can update that value.
-
-* `someMut.value` is the current value of the mutable value
-* `someMut.update(newValue)` updates the value of the mutable value
-
-Conceptually, a `mut` simply sets the new value to whatever it is wrapping
-then triggers a rerender at whatever template
-created the `mut`.
-
-Curly components use "auto-mut" to emulate two-way binding. Any bound attribute
-is wrapped as a `mut` object before being set on `attrs`. For example, making
-the `name` attribute bound results in a `mut` object being set to `attrs.name`:
-
-```hbs
-{{my-component name=model.name}}
-```
-
-```js
-// app/components/my-component.js
-import Ember from "ember";
-
-export default Ember.Component.extend({
-  click() {
-    // getAttr always returns a value, regardless of if an attr is a mut
-    console.log(this.getAttr('name')); // -> logs model.name's value
-    // Note that `name` is a mut object:
-    console.log(this.attrs.name.value); // -> logs model.name's value
-    // The old behavior still works:
-    console.log(this.get('name')); // -> logs model.name's value
-  }
-});
-```
-
-We do not suggest you use the `attrs` API directly in 1.13. Please consider
-the following suggestions:
-
-* Using `get` to access passed values is required for
-  backwards compatibility with Ember 1.x curly components.
-* `getAttr` is ideal for components you
-  plan to port to angle components. This API will be present on angle
-  components.
-* `this.attrs`, because of the auto-mut behavior, is cumbersome for curly
-  components. We encourage you to not use this API with curly components.
-
-An addon will be released that allows use of the `getAttr`
-APIs with versions of Ember before 1.13. This should allow addon authors
-to use this API for any app on Ember 1.x.
-
-##### mut and setAttr
-
-To set a two-way bound value passed to a component, the `setAttr` API has been
-introduced. This API wraps calling `.update(newValue)` on the `mut` object, and again will be
-available in an addon for backwards compatibility. For example:
-
-```hbs
-{{my-component name=model.name}}
-```
-
-```js
-// app/components/my-component.js
-import Ember from "ember";
-
-export default Ember.Component.extend({
-  click() {
-    this.setAttr('name', 'Cindy');
-    // The old behavior still works:
-    this.set('name', 'Cindy');
-    // Note that `name` is a mut object:
-    this.attrs.name.update('Cindy');
-  }
-});
-```
-
-In general, it is suggested you use `setAttr` for mutating a two-way binding.
-
-#### Component lifecycle hooks
+#### Component Lifecycle Hooks
 
 A number of new component lifecycle hooks have been introduced to Ember 1.13.
 Using these hooks allows you to write data down, action up (DDAU) style
@@ -171,13 +86,10 @@ components today, despite the two-way data binding of curly components.
 
 On first render (in order):
 
-* `didInitAttrs` runs after passed attrs are guaranteed to be up to date. This
-  is more reliable than trying to ensure that attrs are always available
-  on `init`. By passed attrs, we mean both the propagation of passed values
-  onto the component instance, ala `component.get('name')`, and `component.attrs`.
-* `didReceiveAttrs` runs after `didInitAttrs` (it also runs on
+* `didInitAttrs` runs after a component was created and passed attrs are guaranteed to be present. In Ember 1.13, the attributes will be available as `this.get('attrName')`.
+* `didReceiveAttrs` runs after `didInitAttrs`, and it also runs on
   subsequent re-renders, which is useful for logic that is the same
-  on all renders).
+  on all renders. It does not run when the component has been re-rendered from the inside.
 * `willRender` runs before the template is rendered. It runs when the
   template is updated for any reason (both initial and re-render, and
   regardless of whether the change was caused by an attrs change or
@@ -275,40 +187,9 @@ Additionally the `action` helper has two options:
   off whatever the first argument to the called action is. This is handy for
   destructuring objects passed as the first argument (like DOM events).
 
-##### Interaction with mut
+#### Note: Angle Bracket Components
 
-Actions can of course be used to express any user interaction: saving a model,
-toggling UI state, etc. One use-case we have found common in Ember 1.x is
-updating a property, for example updating the `name` on a model.
-
-For this reason, we've make `mut` objects "actionable". When passed to the
-action helper, they know how to curry themselves into a function where the
-first argument is set as their value. For example, this code sets the
-model's name to "Gretchen" upon click:
-
-```hbs
-{{! app/templates/index.hbs }}
-{{my-component submit=(action (mut model.name))}}
-```
-
-```js
-// app/components/my-component.js
-import Ember from "ember";
-
-export default Ember.Component.extend({
-  click() {
-    this.attrs.submit('Gretchen');
-  }
-});
-```
-
-This nicely isolates the component from knowing whether a mutable value is
-set or some other action is being performed.
-
-Thanks to [@mixonic](https://twitter.com/mixonic) and [@rwjblue](https://twitter.com/rwjblue)
-for their implementation of this feature, as well as to [@wycats](https://twitter.com/wycats)
-and [@KingstonTime](https://twitter.com/KingstonTime) for their thoughtful
-feedback.
+Ember 2.1 will (likely) ship with angle-bracket components, which will introduce one-way data flow **by default**, and provide an opt-in for two-way data flow. Existing components maintain the existing behavior (for compatibility). While the internals of Ember 2.0 support a distinction between one-way and two-way bindings, that distinction will remain largely internal until Ember 2.1.
 
 #### New Ember.js Helper API
 
@@ -350,9 +231,10 @@ This helper can be used in a variety of contexts:
 Helpers receive two arguments: `params` are the ordered params passed to a
 helper, and `hash` contains the key-value options, for example `title="Mr."`.
 
-Some helpers may require access to other parts of Ember (services), and
-some control over their own invalidation and recomputation. In these cases,
-a full class-based helper can be used.
+This function version satisfies a wide array of use-cases and is quite powerful. In general, you should use this helper form unless you have a strong reason to do otherwise.
+
+Some helpers, especially in addons, may require access to other parts of Ember (services), and
+some control over their own invalidation and recomputation. In these cases, a helper class can be used.
 
 For example, this helper computes a name based on a `name-builder` service. It
 also recomputes whenever the `isAnonymized` state on that service changes:
@@ -475,7 +357,7 @@ The following template will iterate the keys:
 ```
 
 Note that this helper is unbound. Adding a new property to `items` will not
-cause a rerender.
+cause a rerender, but `.set('items', val)` will.
 
 Thanks to [@tomdale](http://twitter.com/tomdale) and implementing this
 feature, and to several others for helping push it to completion.
@@ -513,12 +395,12 @@ deprecated in the 1.13 release and have a viable migration path. The Ember
 [Deprecation Guide](http://emberjs.com/deprecations/v1.x/) should provide a
 clear migration path for commonly used APIs.
 
-During the 2.0 beta cycle we will be removing and disabling  already
+During the 2.0 beta cycle we will be removing and disabling already
 deprecated APIs. Much of this work has not yet started, but the following
 represents what we believe the breaking changes will be.
 
-Many controller APIs are removed in Ember 2.0. Routeable controller still
-exist, but all other uses should have been deprecated. This includes:
+Many controller APIs are removed in Ember 2.0. Routeable controllers still
+exist, but all other uses have been deprecated. This includes:
 
 * `{{render "some-controller"}}`
 * `{{each item itemController="some-controller"}}` - This usage can be replaced
@@ -537,6 +419,8 @@ All view APIs are removed in Ember 2.0. This includes:
 * `{{each itemView=`, `{{each itemViewClass=`, `{{each tagName=`, `{{each emptyView=`, `{{each emptyViewClass`
 * `Ember.Select` and `{{view "select"}}`
 * `Ember.Checkbox` is not removed, but will become a component instead of a view
+
+The most commonly used parts of the `view` API will be supported into the forseeable future via a core-supported addon.
 
 All Handlebars APIs are removed in Ember 2.0. This includes:
 
@@ -570,6 +454,8 @@ Other APIs:
 * `Ember.Deferred`
 
 Additionally, IE8 is no longer supported in Ember 2.x. IE9+ is supported.
+
+Many of these deprecated APIs will be moved into core-supported addons, or have already been moved.
 
 ## Changelogs
 
