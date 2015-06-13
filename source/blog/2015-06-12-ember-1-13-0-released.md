@@ -267,7 +267,7 @@ given this component:
 
 ```hbs
 {{! app/components/show-full-name.hbs }}
-{{if hasBlock}}
+{{#if hasBlock}}
   {{yield fullName}}
 {{else}}
   {{fullName}}
