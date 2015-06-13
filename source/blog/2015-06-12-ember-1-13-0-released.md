@@ -266,7 +266,7 @@ how a component is called.
 given this component:
 
 ```hbs
-{{! app/components/show-full-name }}
+{{! app/components/show-full-name.hbs }}
 {{if hasBlock}}
   {{yield fullName}}
 {{else}}
