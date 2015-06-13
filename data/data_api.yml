@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v1.0.0-beta.19.1
+  sha: v1.0.0-beta.19.2
 files:
   packages/activemodel-adapter/lib/system/active-model-adapter.js:
     name: packages/activemodel-adapter/lib/system/active-model-adapter.js
@@ -3515,7 +3515,7 @@ classitems:
   module: ember-data
   namespace: Ember
 - file: packages/ember-data/lib/initializers/store.js
-  line: 6
+  line: 5
   description: |-
     Configures a registry for use with an Ember-Data
     store. Accepts an optional namespace argument.
@@ -3547,7 +3547,7 @@ classitems:
   module: ember-data
   namespace: Ember
 - file: packages/ember-data/lib/instance-initializers/initialize-store-service.js
-  line: 1
+  line: 2
   description: |-
     Configures a registry for use with an Ember-Data
     store.
@@ -6290,7 +6290,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 218
+  line: 219
   itemtype: method
   name: createSnapshot
   access: private
@@ -6299,7 +6299,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 226
+  line: 227
   itemtype: method
   name: loadingData
   access: private
@@ -6312,7 +6312,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 235
+  line: 236
   itemtype: method
   name: loadedData
   access: private
@@ -6321,7 +6321,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 244
+  line: 245
   itemtype: method
   name: notFound
   access: private
@@ -6330,7 +6330,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 252
+  line: 253
   itemtype: method
   name: pushedData
   access: private
@@ -6339,7 +6339,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 265
+  line: 266
   itemtype: method
   name: adapterWillCommit
   access: private
@@ -6348,7 +6348,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 273
+  line: 274
   itemtype: method
   name: adapterDidDirty
   access: private
@@ -6357,7 +6357,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 282
+  line: 283
   itemtype: method
   name: send
   access: private
@@ -6373,7 +6373,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 354
+  line: 355
   itemtype: method
   name: transitionTo
   access: private
@@ -6386,7 +6386,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 440
+  line: 441
   itemtype: method
   name: clearRelationships
   access: private
@@ -6395,7 +6395,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 481
+  line: 482
   description: |-
     When a find request is triggered on the store, the user can optionally pass in
     attributes and relationships to be preloaded. These are meant to behave as if they
@@ -6418,7 +6418,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 551
+  line: 552
   itemtype: method
   name: updateRecordArrays
   access: private
@@ -6427,7 +6427,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 579
+  line: 580
   description: |-
     If the adapter did not return a hash in response to a commit,
     merge the changed attributes and relationships into the existing
@@ -6438,7 +6438,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 606
+  line: 607
   itemtype: method
   name: updateRecordArraysLater
   access: private
@@ -6447,7 +6447,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 634
+  line: 635
   itemtype: method
   name: adapterDidInvalidate
   access: private
@@ -6456,7 +6456,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/model/internal-model.js
-  line: 646
+  line: 647
   itemtype: method
   name: adapterDidError
   access: private
