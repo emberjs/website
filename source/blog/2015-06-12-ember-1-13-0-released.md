@@ -312,7 +312,7 @@ In preparation for Ember 2.0, 1.13 introduces many deprecations. These include:
 * Non-block param `{{with`
 * The `view` and `viewClass` params for `{{outlet}}`
 * `Ember.reduceComputed` and `Ember.arrayComputed` in favor of plain normal
-  array manipulations. [See deprecatoin guide](http://emberjs.com/deprecations/v1.x/#toc_ember-reducecomputed-ember-arraycomputed)
+  array manipulations. [See deprecation guide](http://emberjs.com/deprecations/v1.x/#toc_ember-reducecomputed-ember-arraycomputed)
 
 ## Ember 2.0 beta
 
