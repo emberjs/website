@@ -451,6 +451,7 @@ Other APIs:
 * `Ember.DeferredMixin`
 * `Ember.Deferred` (use `Ember.RSVP.Promise` instead)
 * `Ember.reduceComputed` and `Ember.arrayComputed` (use plain array manipulation)
+* `Ember.Freezable` (use Object.freeze instead)
 
 Additionally, IE8 is no longer supported in Ember 2.x. IE9+ is supported.
 
