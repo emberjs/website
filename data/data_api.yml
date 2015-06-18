@@ -1,6 +1,6 @@
 ---
 project:
-  sha: 1.13.0
+  sha: v1.13.1
 files:
   packages/activemodel-adapter/lib/system/active-model-adapter.js:
     name: packages/activemodel-adapter/lib/system/active-model-adapter.js
@@ -3817,7 +3817,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/adapters/rest-adapter.js
-  line: 924
+  line: 920
   itemtype: method
   name: ajaxOptions
   access: private
@@ -3839,7 +3839,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/adapters/rest-adapter.js
-  line: 956
+  line: 952
   itemtype: method
   name: parseErrorResponse
   access: private
@@ -3855,7 +3855,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/adapters/rest-adapter.js
-  line: 972
+  line: 968
   itemtype: method
   name: normalizeErrorResponse
   access: private
