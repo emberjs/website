@@ -144,11 +144,13 @@ In Ember.js 1.12 application boot is separated into two phases:
 * Application initializers run. At this phase of boot, the goal of initializers
   should be to register dependencies and injections. These initializers are doing
   work that is shared across all FastBoot requests, and therefore should not
-  create instances. This phase runs *once*.
+  create instances. This phase runs *once*. Because these initializers may
+  load code, they are allowed to defer application readiness and advance it.
 * Instance initializers run next. This is the right time to do work that is
   specific to each FastBoot request. You can create instances and modify their
   state here. This phase runs when the browser application runs, for each
-  integration test, and for each FastBoot request.
+  integration test, and for each FastBoot request. These initializers run
+  after code has loaded and are not allowed to defer readiness.
 
 The two-phase initialization process is safer when multiple addons may be
 registering factories and injections.
@@ -159,9 +161,7 @@ Ember-CLI 0.2.3 supports instance initializers. For example:
 // app/instance-initializers/sleep.js
 
 export function initialize(application) {
-  application.deferReadiness();
-  // Wait 3s before continuing to boot the app
-  Ember.run.later(application, 'advanceReadiness', 3000);
+  application.container.lookup('service:websocket').connect();
 }
 
 export default {
