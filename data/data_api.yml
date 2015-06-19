@@ -1,6 +1,6 @@
 ---
 project:
-  sha: 64550b4
+  sha: v1.13.3
 files:
   packages/activemodel-adapter/lib/system/active-model-adapter.js:
     name: packages/activemodel-adapter/lib/system/active-model-adapter.js
@@ -1189,7 +1189,7 @@ classes:
     module: ember-data
     namespace: DS
     file: packages/ember-data/lib/serializers/rest-serializer.js
-    line: 15
+    line: 16
     description: |-
       Normally, applications will use the `RESTSerializer` by implementing
       the `normalize` method and individual normalizations under
@@ -4247,7 +4247,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 45
+  line: 55
   itemtype: method
   name: _normalizeResponse
   params:
@@ -4278,7 +4278,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 145
+  line: 155
   itemtype: method
   name: modelNameFromPayloadKey
   params:
@@ -4292,7 +4292,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 154
+  line: 164
   itemtype: method
   name: payloadKeyFromModelName
   params:
@@ -4306,7 +4306,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 184
+  line: 194
   itemtype: method
   name: keyForAttribute
   params:
@@ -4323,7 +4323,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 194
+  line: 204
   itemtype: method
   name: keyForRelationship
   params:
@@ -4343,7 +4343,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 205
+  line: 215
   itemtype: method
   name: serialize
   params:
@@ -4360,7 +4360,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 217
+  line: 227
   itemtype: method
   name: serializeAttribute
   params:
@@ -4380,7 +4380,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 245
+  line: 255
   itemtype: method
   name: serializeBelongsTo
   params:
@@ -4397,7 +4397,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 278
+  line: 288
   itemtype: method
   name: serializeHasMany
   params:
@@ -5764,7 +5764,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 60
+  line: 61
   description: |-
     If you want to do normalizations specific to some part of the payload, you
     can specify those under `normalizeHash`.
@@ -5818,7 +5818,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 111
+  line: 112
   description: |-
     Normalizes a part of the JSON payload returned by
     the server. You should override this method, munge the hash
@@ -5897,7 +5897,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 359
+  line: 362
   description: |-
     Called when the server has returned a payload representing
     a single record, such as in response to a `find` or `save`.
@@ -5990,7 +5990,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 489
+  line: 492
   description: |-
     Called when the server has returned a payload representing
     multiple records, such as in response to a `findAll` or `findQuery`.
@@ -6106,7 +6106,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 633
+  line: 636
   description: |-
     This method allows you to push a payload containing top-level
     collections of records organized per type.
@@ -6146,7 +6146,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 690
+  line: 693
   description: |-
     This method is used to convert each JSON root key in the payload
     into a modelName that it can use to look up the appropriate model for
@@ -6213,7 +6213,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 754
+  line: 757
   description: |-
     Called when a record is saved in order to convert the
     record into JSON.
@@ -6375,7 +6375,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 909
+  line: 912
   description: |-
     You can use this method to customize the root keys serialized into the JSON.
     By default the REST Serializer sends the modelName of a model, which is a camelized
@@ -6412,7 +6412,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 938
+  line: 941
   description: |-
     You can use `payloadKeyFromModelName` to override the root key for an outgoing
     request. By default, the RESTSerializer returns a camelized version of the
@@ -6466,7 +6466,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 987
+  line: 990
   description: Deprecated. Use modelNameFromPayloadKey instead
   itemtype: method
   name: typeForRoot
@@ -6482,7 +6482,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/rest-serializer.js
-  line: 1000
+  line: 1003
   description: |-
     You can use this method to customize how polymorphic objects are serialized.
     By default the JSON Serializer creates the key by appending `Type` to
@@ -11776,7 +11776,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1852
+  line: 1860
   description: |-
     Push some raw data into the store.
 
@@ -11844,7 +11844,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1928
+  line: 1936
   description: |-
     `normalize` converts a json payload into the normalized form that
     [push](#method_push) expects.
@@ -11874,7 +11874,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1954
+  line: 1962
   itemtype: method
   name: update
   params:
@@ -11893,7 +11893,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1967
+  line: 1975
   description: |-
     If you have an Array of normalized data to push,
     you can call `pushMany` with the Array, and it will
@@ -11914,7 +11914,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1990
+  line: 1998
   itemtype: method
   name: metaForType
   params:
@@ -11930,7 +11930,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2002
+  line: 2010
   description: |-
     Build a brand new record for a given type, ID, and
     initial data.
@@ -11955,7 +11955,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2044
+  line: 2052
   itemtype: method
   name: dematerializeRecord
   access: private
@@ -11970,7 +11970,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2055
+  line: 2063
   description: |-
     When a record is destroyed, this un-indexes it and
     removes it from any record arrays so it can be GCed.
@@ -11986,7 +11986,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2082
+  line: 2090
   description: |-
     Returns an instance of the adapter for a given type. For
     example, `adapterFor('person')` will return an instance of
@@ -12012,7 +12012,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2121
+  line: 2129
   description: |-
     Returns an instance of the serializer for a given type. For
     example, `serializerFor('person')` will return an instance of
@@ -12043,7 +12043,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2162
+  line: 2170
   description: |-
     Retrieve a particular instance from the
     container cache. If not found, creates it and
