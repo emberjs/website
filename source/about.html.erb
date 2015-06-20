@@ -75,13 +75,16 @@ ember new my-app
 <div class="getting-started section">
   <script type="text/x-handlebars" id="application">
       <div class="example-tabs">
-        {{#each item in model itemController="tabItem"}}
-          <a {{action "selectTab" item}} {{bind-attr class="item.isSelected:active"}} href="#">{{unbound item.name}}</a>
+        {{#each model as |item|}}
+          {{tab-item item=item selectedTab=selectedTab selectTab='selectTab'}}
         {{/each}}
         <span class="tabs-footer"></span>
       </div>
       {{syntax-highlight selectedTab.contents}}
       <div class="example-arrow"></div>
+  </script>
+  <script type="text/x-handlebars" data-template-name="components/tab-item">
+    <a class="{{if isSelected 'active'}}" href="#">{{unbound item.name}}</a>
   </script>
 
   <div class="example-app" data-name="binding" data-files="templates/application.hbs">
