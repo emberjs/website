@@ -55,12 +55,18 @@ function generateViewerApp($elem, files) {
     }
   });
 
-  App.TabItemController = Ember.Controller.extend({
-    needs: 'application',
+  App.TabItemComponent = Ember.Component.extend({
+    tagName: 'span',
 
-    isSelected: function() {
-      return this.get('model') === this.get('controllers.application.selectedTab');
-    }.property('controllers.application.selectedTab')
+    click: function(e){
+      e.preventDefault();
+      this.sendAction('selectTab', this.get('item'));
+    },
+
+    isSelected: Ember.computed('selectedTab', 'item', function() {
+      return this.get('item') === this.get('selectedTab');
+    })
+
   });
 }
 
