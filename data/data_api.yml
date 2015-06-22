@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v1.13.3
+  sha: v1.13.4
 files:
   packages/activemodel-adapter/lib/system/active-model-adapter.js:
     name: packages/activemodel-adapter/lib/system/active-model-adapter.js
@@ -4247,7 +4247,21 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 55
+  line: 76
+  itemtype: method
+  name: pushPayload
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: payload
+    description: ''
+    type: Object
+  class: DS.JSONAPISerializer
+  module: ember-data
+  namespace: DS
+- file: packages/ember-data/lib/serializers/json-api-serializer.js
+  line: 86
   itemtype: method
   name: _normalizeResponse
   params:
@@ -4278,7 +4292,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 155
+  line: 177
   itemtype: method
   name: modelNameFromPayloadKey
   params:
@@ -4292,7 +4306,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 164
+  line: 186
   itemtype: method
   name: payloadKeyFromModelName
   params:
@@ -4306,7 +4320,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 194
+  line: 216
   itemtype: method
   name: keyForAttribute
   params:
@@ -4323,7 +4337,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 204
+  line: 226
   itemtype: method
   name: keyForRelationship
   params:
@@ -4343,7 +4357,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 215
+  line: 237
   itemtype: method
   name: serialize
   params:
@@ -4360,7 +4374,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 227
+  line: 249
   itemtype: method
   name: serializeAttribute
   params:
@@ -4380,7 +4394,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 255
+  line: 277
   itemtype: method
   name: serializeBelongsTo
   params:
@@ -4397,7 +4411,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/serializers/json-api-serializer.js
-  line: 288
+  line: 310
   itemtype: method
   name: serializeHasMany
   params:
@@ -8960,7 +8974,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 35
+  line: 40
   description: Convert the payload from `serializer.extract` to a JSON-API Document.
   itemtype: method
   name: _normalizeSerializerPayload
@@ -8979,7 +8993,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 60
+  line: 65
   description: |-
     Convert the payload representing a single record from `serializer.extract` to
     a JSON-API Resource Object.
@@ -9000,7 +9014,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 145
+  line: 150
   description: |-
     Push a JSON-API Document to the store.
 
@@ -9021,7 +9035,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 162
+  line: 167
   description: |-
     Push the primary data of a JSON-API Document to the store.
 
@@ -9041,7 +9055,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 186
+  line: 191
   description: |-
     Push the secondary data of a JSON-API Document to the store.
 
@@ -9061,7 +9075,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 206
+  line: 211
   description: Push a single JSON-API Resource Object to the store.
   itemtype: method
   name: _pushResourceObject
@@ -9077,7 +9091,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
 - file: packages/ember-data/lib/system/store/serializer-response.js
-  line: 218
+  line: 223
   description: |-
     This method converts a JSON-API Resource Object to a format that DS.Store
     understands.
@@ -9394,7 +9408,7 @@ classitems:
     Implement this method in a subclass to handle the creation of
     new records.
 
-    Serializes the record and send it to the server.
+    Serializes the record and sends it to the server.
 
     Example
 
@@ -9446,7 +9460,7 @@ classitems:
     Implement this method in a subclass to handle the updating of
     a record.
 
-    Serializes the record update and send it to the server.
+    Serializes the record update and sends it to the server.
 
     Example
 
@@ -9552,7 +9566,7 @@ classitems:
     By default the store will try to coalesce all `fetchRecord` calls within the same runloop
     into as few requests as possible by calling groupRecordsForFindMany and passing it into a findMany call.
     You can opt out of this behaviour by either not implementing the findMany hook or by setting
-    coalesceFindRequests to false
+    coalesceFindRequests to false.
   itemtype: property
   name: coalesceFindRequests
   type: "{boolean}"
@@ -9561,7 +9575,7 @@ classitems:
   namespace: DS
 - file: packages/ember-data/lib/system/adapter.js
   line: 421
-  description: Find multiple records at once if coalesceFindRequests is true
+  description: Find multiple records at once if coalesceFindRequests is true.
   itemtype: method
   name: findMany
   params:
@@ -9617,7 +9631,7 @@ classitems:
     reload a record from the adapter when a record is requested by
     `store.findRecord`.
 
-    If this method returns true the store will re fetch a record form
+    If this method returns true the store will re fetch a record from
     the adapter. If is method returns false the store will resolve
     immediately using the cached record.
   itemtype: method
@@ -9642,7 +9656,7 @@ classitems:
     reload all records from the adapter when records are requested by
     `store.findAll`.
 
-    If this method returns true the store will re fetch all records form
+    If this method returns true the store will re fetch all records from
     the adapter. If is method returns false the store will resolve
     immediately using the cached record.
   itemtype: method
@@ -9665,12 +9679,12 @@ classitems:
   description: |-
     This method is used by the store to determine if the store should
     reload a record after the `store.findRecord` method resolves a
-    chached record.
+    cached record.
 
     This method is *only* checked by the store when the store is
     returning a cached record.
 
-    If this method returns true the store will re-fetch a record form
+    If this method returns true the store will re-fetch a record from
     the adapter.
   itemtype: method
   name: shouldBackgroundReloadRecord
@@ -9692,13 +9706,13 @@ classitems:
   description: |-
     This method is used by the store to determine if the store should
     reload a record array after the `store.findAll` method resolves
-    with a chached record array.
+    with a cached record array.
 
     This method is *only* checked by the store when the store is
     returning a cached record array.
 
     If this method returns true the store will re-fetch all records
-    form the adapter.
+    from the adapter.
   itemtype: method
   name: shouldBackgroundReloadAll
   params:
@@ -11481,11 +11495,28 @@ classitems:
   return:
     description: ''
     type: Object
+  deprecated: true
   class: DS.Store
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
   line: 1407
+  itemtype: method
+  name: _metadataFor
+  params:
+  - name: modelName
+    description: ''
+    type: String
+  return:
+    description: ''
+    type: Object
+  access: private
+  tagname: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: packages/ember-data/lib/system/store.js
+  line: 1419
   description: This method sets the metadata for a specific type.
   itemtype: method
   name: setMetadataFor
@@ -11499,11 +11530,28 @@ classitems:
   return:
     description: ''
     type: Object
+  deprecated: true
   class: DS.Store
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1425
+  line: 1433
+  itemtype: method
+  name: _setMetadataFor
+  params:
+  - name: modelName
+    description: ''
+    type: String
+  - name: metadata
+    description: metadata to set
+    type: Object
+  access: private
+  tagname: ''
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: packages/ember-data/lib/system/store.js
+  line: 1449
   description: |-
     If the adapter updates attributes the record will notify
     the store to update its  membership in any filters.
@@ -11524,7 +11572,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1444
+  line: 1468
   description: |-
     This method is called by `record.save`, and gets passed a
     resolver for the promise that `record.save` returns.
@@ -11548,7 +11596,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1467
+  line: 1491
   description: |-
     This method is called at the end of the run loop, and
     flushes any records passed into `scheduleSave`
@@ -11560,7 +11608,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1499
+  line: 1523
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -11583,7 +11631,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1528
+  line: 1552
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -11603,7 +11651,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1542
+  line: 1566
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -11623,7 +11671,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1556
+  line: 1580
   description: |-
     When an adapter's `createRecord`, `updateRecord` or `deleteRecord`
     resolves with data, this method extracts the ID from the supplied
@@ -11643,7 +11691,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1577
+  line: 1601
   description: Returns a map of IDs to client IDs for a given type.
   itemtype: method
   name: typeMapFor
@@ -11660,7 +11708,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1608
+  line: 1632
   description: This internal method is used by `push`.
   itemtype: method
   name: _load
@@ -11677,7 +11725,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1660
+  line: 1684
   description: |-
     Returns a model class for a particular key. Used by
     methods that take a type key (like `find`, `createRecord`,
@@ -11695,7 +11743,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1710
+  line: 1734
   description: |-
     Push some data for a given type into the store.
 
@@ -11776,7 +11824,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1860
+  line: 1884
   description: |-
     Push some raw data into the store.
 
@@ -11844,7 +11892,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1936
+  line: 1960
   description: |-
     `normalize` converts a json payload into the normalized form that
     [push](#method_push) expects.
@@ -11874,7 +11922,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1962
+  line: 1986
   itemtype: method
   name: update
   params:
@@ -11893,7 +11941,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1975
+  line: 1999
   description: |-
     If you have an Array of normalized data to push,
     you can call `pushMany` with the Array, and it will
@@ -11914,7 +11962,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1998
+  line: 2022
   itemtype: method
   name: metaForType
   params:
@@ -11930,7 +11978,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2010
+  line: 2034
   description: |-
     Build a brand new record for a given type, ID, and
     initial data.
@@ -11955,7 +12003,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2052
+  line: 2076
   itemtype: method
   name: dematerializeRecord
   access: private
@@ -11970,7 +12018,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2063
+  line: 2087
   description: |-
     When a record is destroyed, this un-indexes it and
     removes it from any record arrays so it can be GCed.
@@ -11986,7 +12034,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2090
+  line: 2114
   description: |-
     Returns an instance of the adapter for a given type. For
     example, `adapterFor('person')` will return an instance of
@@ -12012,7 +12060,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2129
+  line: 2153
   description: |-
     Returns an instance of the serializer for a given type. For
     example, `serializerFor('person')` will return an instance of
@@ -12043,7 +12091,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 2170
+  line: 2194
   description: |-
     Retrieve a particular instance from the
     container cache. If not found, creates it and
