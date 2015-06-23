@@ -1,6 +1,8 @@
 {{#if model.filesPresent }}
   {{#each projects as |project|}}
-    {{partial 'filesTable'}}
+    <div class="files-table">
+      {{partial 'filesTable'}}
+    </div>
   {{/each}}
 {{ else }}
   <br/>
