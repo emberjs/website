@@ -1080,6 +1080,10 @@ body.community #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
+  > h1 {
+    text-align: center;
+  }
+
   .section {
     width: auto;
     .image {
@@ -1547,6 +1551,16 @@ body.security #content {
 }
 
 /**
+  Deprecations Page
+**/
+
+body.deprecations {
+  #content {
+    margin-top: 38px;
+  }
+}
+
+/**
   Tomster Page
 **/
 
@@ -1639,7 +1653,7 @@ body.tomster_faq #content {
     margin: 2em 0;
     background-color: #dfd7d4;
   }
-  
+
   #back-to-top {
     padding-left: 13px;
     text-align: center;
