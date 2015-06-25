@@ -21,13 +21,13 @@ The highlight of the Ember Data 1.13 release is a total overhaul of Ember Data's
 
 Two years ago Tom Dale and Yehuda Katz [published](http://emberjs.com/blog/2013/05/03/ember-data-progress-update.html) a vision for how Ember Data should look in the future and articulated the need for a single, ubuqituous JSON API standard.
 
-
 We are very happy to see the vision for a single, ubuqituous JSON API standard come to life in the form of the [JSON API 1.0 release](jsonapi.org).
+
 JSON API and Ember Data have been interwined since JSON API's inception
 @DanGebhart gives the origins of JSON API in his 1.0 announcment:
 > Yehuda Katz wrote the first draft of the JSON API specification in May 2013 after hammering out the details in a long discussion with Steve Klabnik at RailsConf. JSON API began as a codification of the shared expectations of a single server library for Rails, ActiveModel::Serializers, and a single JavaScript client library, Ember Data
 
-While Ember Data has supported JSON API since one of early version of JSON API through a community [adapter](https://github.com/kurko/ember-json-api) started by 
+While Ember Data has supported JSON API since one of early versions of JSON API through a community [adapter](https://github.com/kurko/ember-json-api) started by 
 @daliwali and maintained by @kurko, now that JSON API has reached 1.0 it is time for Ember Data to uphold it's part of the bargain and make using JSON API a first class experience in Ember Data. 
 
 We have done exactly that, and Ember Data 1.13 adds support throughout the ED stack for JSON Api:
@@ -36,7 +36,7 @@ We have done exactly that, and Ember Data 1.13 adds support throughout the ED st
 - **`JSONSerializer` and `RestSerializer` have been refactored and streamlined to return JSON API payloads**
 - **`store.push` now accepts JSON API compliant payload**
 
-Switching to JSON API formats unlocks many new features which will be added in the 2.0 cycle, including better native pagination, filtering and metadata support.
+Switching to the JSON API format unlocks many new features which will be added in the 2.0 cycle, including better first class pagination, filtering and metadata support.
 
 While **using JSONSerializer, RESTSerializer and ActiveModelSerializer is not deprecated**, we consider JSON API to be the happiest of the happy paths for using Ember Data, and if you are creating a new app today and have control over the API you should be using JSON API, because it is a well designed and comprehensive solution for JSON serialization.
 
@@ -721,6 +721,13 @@ JSON API document.
 
 
 ### rollback renamed to rollbackAttributes
+
+`record.rollback()` has been deprecated to
+`record.rollbackAttributes()`. This new name more closely matches its
+behavior and will allow for a new `record.rollback()` to be introduced
+in the future that rolls back relationships in addition to attributes.
+
+### isDirty renamed to hasDirtyAttributes
 
 `record.rollback()` has been deprecated to
 `record.rollbackAttributes()`. This new name more closely matches its
