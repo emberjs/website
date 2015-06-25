@@ -1,6 +1,6 @@
 ---
 title: Ember Data v1.13 Released
-author: Ember Data Team
+author: Igor Terzic and the Ember Data Team
 tags: Recent Posts, Releases
 ---
 
@@ -12,12 +12,11 @@ As we explained in the [THE EMBER 2.X PROJECT](http://emberjs.com/blog/2015/06/1
 blog post, going forward Ember Data will be syncing up it's releases and version numbers with Ember.js releases. 
 
 **Ember Data 1.13 is the first release of Ember Data that syncs its
-  version with a version of Ember.js.** Ember Data 1.13 will be followed by Ember Data 2.0, which will be released alongside Ember.js 2.0
+  version with a version of Ember.js.** It will be followed by Ember Data 2.0, which will be released alongside Ember.js 2.0 **Ember Data 1.13 is fully backwards compatible with Ember Data beta.19, allowing for a smooth upgrade path**
 
-###New Features
+###Ember Data 1.13 overview
 
-
-Ember Data 1.13 is a massive release we are very proud of. 
+Ember Data 1.13 is a massive release we are very proud of.
 The highlight of the Ember Data 1.13 release is a total overhaul of Ember Data's internal data format and Serializer to follow JSON API. 
 
 Two years ago Tom Dale and Yehuda Katz [published](http://emberjs.com/blog/2013/05/03/ember-data-progress-update.html) a vision for how Ember Data should look in the future and articulated the need for a single, ubuqituous JSON API standard.
@@ -28,7 +27,7 @@ Two years later, thanks to the enourmous effort of the JSON API team, JSON API h
 > Yehuda Katz wrote the first draft of the JSON API specification in May 2013 after hammering out the details in a long discussion with Steve Klabnik at RailsConf. JSON API began as a codification of the shared expectations of a single server library for Rails, ActiveModel::Serializers, and a single JavaScript client library, Ember Data
 
 While Ember Data has supported JSON API since one of early version of JSON API through a community [adapter](	https://github.com/kurko/ember-json-api) started by 
-@daliwali and maintained by @kurko, now that JSON API has reached 1.0 it is time for Ember Data to uphold it's part of the bargain and make JSON API a seamless experience. While we are keeping support for existing Serializers and Adapters, we consider JSON API *happiest of the happy paths* for using Ember Data, as is it a well designed and comprehensive solution to JSON serialization. 
+@daliwali and maintained by @kurko, now that JSON API has reached 1.0 it is time for Ember Data to uphold it's part of the bargain and make JSON API a seamless experience. While **using JSONSerializer, RESTSerializer and ActiveModelSerializer is not deprecated**, we consider JSON API for using Ember Data, as is it a well designed and comprehensive solution to JSON serialization. 
 
 Ember Data 1.13 adds support throughout the stack for JSON Api:
 
@@ -40,13 +39,12 @@ Switching to JSON API formats unlocks many new features which will be added in t
 
 Other major changes in Ember Data 1.13 include:
 
-- Refactored and simplified Find methods
-- Adapter level control for identity map caching
-- Refactored and simplified Serializer APIs
-- Switch to using JSONAPI as the internal data storage format.
-- Native JSONAPI Serializer
-- Better Errors handling
-
+- [Refactored and simplified Find methods](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_simplified-find-methods)
+- [Adapter level control for identity map caching](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-adapter-hooks-for-better-caching)
+- [Refactored and simplified Serializer APIs]()
+- [Switch to using JSONAPI as the internal data storage format](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-serializer-api)
+- [Native JSONAPI Serializer](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_json-api-support)
+- [Better Errors handling](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-errors-api)
 
 
 
@@ -79,7 +77,8 @@ of the deprecations for you.
 We would like to extend a special thanks to the many contributors who
 have helped out with this release. We would also like to recognize the
 following contributors who helped with multiple issues leading up to
-this release.
+this release. If you would like to help, please joing #dev-ember-data room in the 
+Ember.js community Slack room
 
 - [@turbo87](https://github.com/turbo87)
 - [@erickelly](https://github.com/erickelly)
@@ -97,9 +96,9 @@ use with ember-cli), rubygems, or bower. The builds are also available
 as static files at [http://emberjs.com/builds]().
 
 
-## New Features
+## New Features:
 
-### Simplified Find Methods
+## Simplified Find Methods
 
 Ember Data methods on the store have grown organically over the life
 of the project. Originally, Ember Data started with `store.find(type)`
@@ -141,65 +140,13 @@ If they return a single record they end in `Record` and if they return all the r
       <td><b>All Records</b></td>
       <td><code>findAll(type)</code></td>
       <td><code>peekAll(type)</code></td>
-      <td><code>query(type, )*</code></td>
+      <td><code>query(type, {)*</code></td>
     </tr>
  
   </tbody>
 </table>
 
 \* A query usually does not return all the records of a type, so doesn't end in `All` 
-
-
-###### FindRecord
-
-Thus:
-
-```js
-store.find(type, id)
-```
-
-is being replaced with:
-
-```js
-store.findRecord(type, id, [options]);
-```
-
-If you previously used the preload argument to `store.find` it has
-been moved into the preload key on `findRecord`'s options argument
-
-```js
-// Deprecated
-store.find('comment', 1, { post: 1 });
-
-// Ember Data 1.13 style
-store.findRecord('comment', 1, { preload: { post: 1 }});
-```
-
-###### FindAll
-
-```js
-store.find(type)
-```
-
-is being replaced with:
-
-```js
-store.findAll(type, [options]);
-```
-
-###### PeekRecord
-
-```js
-store.getById(type, id)
-```
-
-is being replaced with:
-
-```js
-store.peek(type, [options]);
-```
-
-
 
 #### query and queryRecord
 
@@ -263,13 +210,14 @@ listing all the new store apis and the methods they repalce.
 </table>
 
 
-### Better caching defaults for `findAll` and `findRecord`
+
+## Better caching defaults for `findAll` and `findRecord`
 
 In Ember Data beta.19 calling `store.find(type, id)` would fetch the
-fresh data the first time find was called, and then every next time
+fresh data from the server the first time find was called, and then every next time
 return cached data. If the user always needed fresh data, they had to
 know to call `store.fetchRecord`, and if they needed to background update
-they would have to make multiple calls and be careful what they return from
+they would have to make multiple calls and be careful about what they return from
 a route's `model:` hook.
 
 Calling `store.find(type)` had the exact opposite behavior, where it would
@@ -278,63 +226,103 @@ to only use local data. Mimicking the identity map behavior of `find` for a
 single record was not straightforward for new developers to write.
 
 Having observed many Ember apps in the wild, we have realized that neither
-of these two defaults are correct. The most common use case we have seen in
-Ember apps is:
+of these two behaviors are the most common use case and deserving of being the default. The most commonly desired behavior we have seen in Ember apps is:
 
-- First time, fetch new data
+- First time `store.find` is called, fetch new data
 - Next time return cached data
 - Fetch new data in the background and update
 
-This is the behavior of the new `findRecord` and `findAll` methods. We do realize
-that there are some app specific cases where you want to make sure you always have
-the freshest data (the old `store.fetch` behavior) or you do not want a background
-update to happen (the old `store.find(type, id)` behavior). 
+This is the behavior of the new `findRecord` and `findAll` methods. 
 
-Thus `findRecord` and `findAll` can be made to wait for fresh data by passing a flag
+The first time you call `findRecord` and `findAll` they behave the same as
+the old `find` method:
 
 ```js
-store.findRecord(type, id, { reload: true });
-store.findAll(type, { reload: true });
-```			
+//visiting /users/1 for the first time
+model: function() {
+  //We do not already have the user, so
+  //store.findRecord returns a promise that resolves
+  //after it has fetched the user from the server
+  return this.store.findRecord('user', 1);
+}
+```
 
-`findRecord` and `findAll` can be also opt out of fetching data in the background
+However if you already have the data cached locally, they resolve immediately
+while fetching new data in the background:
 
 ```js
-store.findRecord(type, id, { backgroundReload: false });
-store.findAll(type, { backgroundReload: false });
+//visiting /users/1 for the second time
+model: function() {
+  //We already have the user, so store.findRecord
+  //will resolve immediately with cached data, but will
+  //send off a request in the background to update the user record
+  //and once the user is updated your template will show the new changes
+  return this.store.findRecord('user', 1);
+}
+```
+
+
+While this is a great default data retrieval strategy, there are certain cases
+where you want to ensure you have  the freshest data (the old `store.fetch` behavior) or you do not want a background update to happen (the old `store.find(type, id)` behavior). 
+
+Because of that, `findRecord` and `findAll` accept `reload: true` and `backgroundReload: false` as options in order to modify their default behavior.
+
+If, for example you want to charge user for a purchase, and want to make sure you
+get their latest account balance, you can pass a `reload: true` option that will
+ensure we get the freshest data before continuing:
+
+```js
+//visiting /users/1/confirm-payment
+model: function() {
+  store.findRecord('user', 1, { reload: true });
+}
+```			
+For example if you are showing the user a settings modal and want to opt out from
+background updates in order to keep the UI stable you can pass `backgroundReload: false` as a flag:
+
+```js
+//visiting /users/1/open-modal
+model: function() {
+  store.findRecord('user', 1, { backgroundReload: false });
+}
 ```			
 
-#### fetchById and fetchAll replaced by findRecord and findAll
+
+All of these behaviors are also shared by `findAll` ->
+```js
+store.findAll('user');  //goes to the server the first time
+store.findAll('user');  //after that returns from cache, but updates in background
+store.findAll('user', { relaod: true });  //enforces getting fresh data
+store.findAll('user', { backgroundReload: false });  //opts out of background updating
+```
+
+#### `fetchById` and `fetchAll` replaced by `findRecord` and `findAll`
 
 Having these two methods, with customizable flags allows us to get rid of:
 `store.fetchById` and `store.fetchAll`.
 
-As part of the simplification of the store API we have decided to
-deprecate the existing `store.fetchById` and `store.fetchAll`
-methods. Their functionality will be supported by passing `{reload:true}`
- to the new `findRecord` and `findAll` methods in the options
-parameter.
-
-- `store.fetchById(type, id)` has been deprecated and replaced by:
-
 ```js
-store.findRecord(type, id, { reload: true });
-```
-
-- `store.fetchAll(type)` has been deprecated and replaced by:
-
-```js
-store.findAll(type, { reload: true });
+store.fetchById(type, id) -> store.findRecord(type, id, { reload: true });
+store.fetchAll(type, id) -> store.findAll(type, { reload: true });
 ```
 
 
 ### New adapter hooks for better caching
 
-While `store.findRecord` and `store.findAll` now have sensible caching defaults,
-and are easy to override in specific place in the app, often times your app and
+While `store.findRecord` and `store.findAll` now have sensible caching defaults
+and are easy to override in specific place in the app, oftentimes your app and
 adapter layer have specific knowledge related to caching. For example, your backend
 might have given you an `expires` header, or you do not want to try fetching background updates if the network is down. To support these use cases, we have added new adapter
-hooks to customize caching beyond just passing options to `findRecord` and `findAll`
+hooks to customize caching app wide beyond just passing options to `findRecord` and `findAll`.
+
+Now, whenever you call `findRecord` or `findAll`, and the record is already cached in the store, the store will ask the adapter whether it needs to immediately reload it, or if it needs to update it in the background.
+
+For example, if you are building an events ticketing system, in which users can only reserve tickets for 20 minutes at a time, and want to ensure that in each route you have data that is no more than 20 minutes old you could write:
+
+```js
+  shouldReloadRecord: function(store, snapshot) 
+```
+
 
 The first 2 adapter methods are `shouldReloadRecord` and
 `shouldBackgroundReloadRecord`. These methods may be called by the
@@ -683,6 +671,19 @@ JSON API document.
 behavior and will allow for a new `record.rollback()` to be introduced
 in the future that rolls back relationships in addition to attributes.
 
+### Preloading record data on find
+
+
+If you previously used the preload argument to `store.find` it has
+been moved into the preload key on `findRecord`'s options argument
+
+```js
+// Deprecated
+store.find('comment', 1, { post: 1 });
+
+// Ember Data 1.13 style
+store.findRecord('comment', 1, { preload: { post: 1 }});
+```
 
 ## Changelog
 
