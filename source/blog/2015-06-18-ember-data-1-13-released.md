@@ -256,7 +256,7 @@ All of these behaviors are also shared by `findAll` ->
 ```js
 store.findAll('user');  //goes to the server the first time
 store.findAll('user');  //after that returns from cache, but updates in background
-store.findAll('user', { relaod: true });  //enforces getting fresh data
+store.findAll('user', { reload: true });  //enforces getting fresh data
 store.findAll('user', { backgroundReload: false });  //opts out of background updating
 ```
 
