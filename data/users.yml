@@ -415,7 +415,7 @@
 - url: http://dollarshaveclub.com/
   image: dollarshaveclub.png
 - url: http://www.esri.com/
-image: esri-logo.png
+  image: esri-logo.png
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
