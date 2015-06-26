@@ -10,14 +10,6 @@
   </li>
   <% end %>
   <li class='level-1'>
-    <a href="<%= tag_path 'Core Team Meeting Minutes'%>">Core Team Meeting Minutes</a>
-    <ol style="display:block">
-      <% blog.tags['Core Team Meeting Minutes'].sort_by(&:date).reverse.take(5).each_with_index do |article, i| %>
-      <li class='level-3'><%= link_to article.title.gsub(/Core Team Meeting Minutes -/, ''), article %></li>
-    <% end %>
-    </ol>
-  </li>
-  <li class='level-1'>
     <a href="<%= tag_path 'Releases'%>">Releases</a>
     <ol style="display:block">
       <% blog.tags['Releases'].sort_by(&:date).reverse.take(10).each_with_index do |article, i| %>
