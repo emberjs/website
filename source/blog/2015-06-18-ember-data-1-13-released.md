@@ -363,7 +363,6 @@ listing all the new store apis and the methods they replace.
       <td><code>store.fetch(type, id)</code></td>
       <td><code>store.findRecord(type, id, {reload: true})</code></td>
     </tr>
-
   </tbody>
 </table>
 
@@ -404,9 +403,9 @@ store.push({
 
 This allows for much better and fine grained meta handling, and ensures we do
 not have to support, maintain and document a completely custom JSON format
-as we had to until now, but can just reference the [JSON API spec](http://jsonapi.org/)
+as we had to until now, but can just reference the [JSON API specification](http://jsonapi.org/).
 
-We will be publishing an Ember Watson helper that will be rewriting all the uses
+We will be publishing an [ember-watson](https://github.com/abuiles/ember-watson) helper that will be rewriting all the uses
 of `store.push` inside your tests to the new format, as well as addon with helpers
 that convert the old `store.push` format into the new format.
 
@@ -509,7 +508,7 @@ in
 If you have a custom serializer you will need to make some new changes
 to your serializer to get it ready for Ember Data 2.0.
 
-#### Custom `extract` Methods
+##### Custom `extract` Methods
 
 If you have custom `extract` hooks you need to do two things:
 
@@ -671,7 +670,7 @@ opt into them by setting `{ async: false }` on your
 relationships. Ember Data 1.13 will log a deprecation warning you if
 you have any relationships where the `async` property is not
 explicitly set. Additionally you can use
-[ember watson](https://github.com/abuiles/ember-watson) to help
+[ember-watson](https://github.com/abuiles/ember-watson) to help
 identify cases in your codebase where you have relationships without
 an explicit `async` property.
 
@@ -744,10 +743,10 @@ in the future that rolls back relationships in addition to attributes.
 
 ### `isDirty` Renamed to `hasDirtyAttributes`
 
-`record.rollback()` has been deprecated to
-`record.rollbackAttributes()`. This new name more closely matches its
-behavior and will allow for a new `record.rollback()` to be introduced
-in the future that rolls back relationships in addition to attributes.
+`record.isDirty()` has been deprecated to
+`record.hasDirtyAttributes()`. This new name more closely matches its
+behavior and will allow for a new `record.hasDirtyRelationships()` to be introduced
+in the future that allows you to check dirtiness of relationships.
 
 ### Preloading Record Data on Find
 
@@ -765,4 +764,3 @@ store.findRecord('comment', 1, { preload: { post: 1 }});
 ## Changelog
 
 [Ember Data 1.13](https://github.com/emberjs/data/blob/3bce36295a6e9f1bbe4824505046d22dc04d056d/CHANGELOG.md#release-113-june-16-2015)
-
