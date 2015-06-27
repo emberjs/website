@@ -80,7 +80,7 @@ this release. If you would like to help, please join #dev-ember-data in the
 [Ember Community](https://ember-community-slackin.herokuapp.com/) on Slack.
 
 - [@turbo87](https://github.com/turbo87)
-- [@erickelly](https://github.com/erickelly)
+- [@HeroicEric](https://github.com/HeroicEric)
 - [@pangratz](https://github.com/pangratz)
 - [@sly7-7](https://github.com/sly7-7)
 - [@yratanov](https://github.com/yratanov)
