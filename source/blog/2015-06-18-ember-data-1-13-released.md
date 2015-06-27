@@ -21,10 +21,10 @@ The highlight of the Ember Data 1.13 release is a total overhaul of Ember Data's
 
 Two years ago Tom Dale and Yehuda Katz [published](http://emberjs.com/blog/2013/05/03/ember-data-progress-update.html) a vision for how Ember Data should look in the future and articulated the need for a single, ubiquitous JSON API standard.
 
-We are very happy to see the vision for that JSON API standard come to life in the form of the [JSON API 1.0 release](jsonapi.org).
+We are very happy to see the vision for that JSON API standard come to life in the form of the [JSON API 1.0 release](http://jsonapi.org).
 
 JSON API and Ember Data have been intertwined since JSON API's inception.
-[@dgeb](https://github.com/dgeb) gives the origins of JSON API in his 1.0 announcement:
+[@dgeb](https://github.com/dgeb) gives the origins of JSON API in his [1.0 announcement](http://www.cerebris.com/blog/2015/06/04/jsonapi-1-0/):
 > Yehuda Katz wrote the first draft of the JSON API specification in May 2013 after hammering out the details in a long discussion with Steve Klabnik at RailsConf. JSON API began as a codification of the shared expectations of a single server library for Rails, ActiveModel::Serializers, and a single JavaScript client library, Ember Data.
 
 Ember Data has long supported JSON API through a community [adapter](https://github.com/kurko/ember-json-api) started by [@0x8890](https://twitter.com/0x8890) and maintained by [@kurko](https://github.com/kurko). However, now that JSON API has reached 1.0, it's time for Ember Data to uphold its part of the bargain and make using JSON API a first-class experience.
