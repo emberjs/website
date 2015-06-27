@@ -44,8 +44,8 @@ Other major changes in Ember Data 1.13 include:
 
 - [Refactored and simplified find methods](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_simplified-find-methods)
 - [Adapter level control for identity map caching](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-adapter-hooks-for-better-caching)
-- [Refactored and simplified Serializer APIs]()
-- [Switch to using JSON API as the internal data storage format](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-serializer-api)
+- [Refactored and simplified Serializer APIs](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-serializer-api-for-custom-serializer-authors)
+- [Switch to using JSON API as the internal data storage format](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_internal-format-change-to-json-api)
 - [Native JSON API Serializer](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_json-api-support)
 - [Better error handling](http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html#toc_new-errors-api)
 
