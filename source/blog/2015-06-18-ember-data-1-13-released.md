@@ -38,7 +38,7 @@ We have done exactly that, and Ember Data 1.13 adds support throughout the Ember
 
 Switching to the JSON API format unlocks many new features which will be added in the 2.0 cycle, including first-class pagination, filtering and metadata support.
 
-While **using JSONSerializer, RESTSerializer and ActiveModelSerializer is not deprecated**, we consider JSON API to be the happiest of the happy paths for using Ember Data, and if you are creating a new app today and have control over the API you should be using JSON API, because it is a well designed and comprehensive solution for JSON serialization. **If your app is using the vanilla JSONSerializer or RESTSerializer, you will not have to make any changes, and you app will continue to work.** The existing serializers have been updated in a backwards compatible way to return JSON API data to the store.
+While **using JSONSerializer, RESTSerializer and ActiveModelSerializer is not deprecated**, we consider JSON API to be the happiest of the happy paths for using Ember Data, and if you are creating a new app today and have control over the API you should be using JSON API, because it is a well designed and comprehensive solution for JSON serialization. **If your app is using the vanilla JSONSerializer or RESTSerializer, you will not have to make any changes, and your app will continue to work.** The existing serializers have been updated in a backwards compatible way to return JSON API data to the store.
 
 Other major changes in Ember Data 1.13 include:
 
