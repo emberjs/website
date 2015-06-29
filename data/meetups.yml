@@ -587,6 +587,10 @@ locations:
     organizers:
     - organizer: Simon Ihmig
       profileImage: http://photos1.meetupstatic.com/photos/member/c/2/e/4/thumb_215389892.jpeg
+  - location: Stockholm, Sweden
+    url: http://www.meetup.com/Stockholm-Ember-js-Meetup/
+    lat: 59.329323
+    lng: 18.068581
 - area: Asia
   groups:
   - location: Tel Aviv, Israel
