@@ -31,29 +31,30 @@ The force=true flag will overwrite all existing organizer data
 
 #### API Documentation
 
-You can preview api documentation, by generating docs from the source code.
-Clone the three repositories, then from project executing the specific
-tasks to build the docs locally.
+You can preview the API documentation by generating the docs from the source code. To begin, ensure
+that you have the necessary dependencies:
 
-* For the ember.js and website projects a rake task will build the docs
-* For the data project the yuidocjs npm library is required to build docs
+- Node
+- npm
+- Ruby
+- bundler
 
-Node, npm, Ruby, bundler are required to preview documentation locally
-
-The repositories for ember.js, data and the website need to be located in
-the same directory:
+Next, clone the three repositories: [`ember.js`](https://github.com/emberjs/ember.js),
+[`data`](https://github.com/emberjs/data), and this repository, `website`. The repositories need
+to be placed in the same directory:
 
     emberjs/
         website/
         ember.js/
         ember-data/
+        
 
-Notice that the name of the data project needs to use `ember-data` not `data`
+Note that the name of the data project needs to be `ember-data`, not `data`.
 
-In the website directory execute `bundle exec rake generate_docs`
+Next, navigate into the root directory of this repository and execute `bundle exec rake generate_docs`. This
+will build the documentation for the `ember.js` and `data` repositories.
 
 You can launch the website via `bundle exec middleman` to preview the generated docs.
-
 
 ### Requirements
 
