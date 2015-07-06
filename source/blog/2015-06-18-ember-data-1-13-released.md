@@ -602,7 +602,7 @@ For example, if your API engineers for some unknown reason decided to return
 
 ```js
 handleResponse: function(status, headers, payload) {
-  if (status === '200' && payload.errors) {
+  if (status === 200 && payload.errors) {
     return new InvalidError(payload.errors);
   }
   return this._super(...arguments);
