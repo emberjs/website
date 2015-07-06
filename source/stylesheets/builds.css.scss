@@ -2,7 +2,7 @@
 @import "mixins/hidpi";
 
 // the builds page is an ember app inserted into the master layout, replicate styling
-// content -> builds page ( sidebar / subcontent ) 
+// content -> builds page ( sidebar / subcontent )
 #subcontent {
   @extend #content;
 }
@@ -24,6 +24,11 @@
     &:after {
       width: $sidebar-width;
     }
+  }
+
+  #subcontent {
+    margin-left: 30px;
+    width: 770px;
   }
 
   .float-left-container {
@@ -68,8 +73,9 @@
   }
 
   .release-progress {
-    padding-top: 40px;
     display: table;
+    margin: 0 auto;
+    padding-top: 40px;
   }
 
   .beta-version {
@@ -133,7 +139,7 @@
   }
 
   .features {
-    margin-top: 15%;
+    margin-top: 5%;
   }
 
   .feature {
@@ -176,14 +182,12 @@
   }
 
   .project-name {
-    margin-top: 0.5em;
-    float: left;
+    margin-top: 0;
   }
 
   .description {
     border-top: 1px dotted #E5DBD6;
     padding-top: 10px;
-    clear: both;
   }
 
   .table {
@@ -212,6 +216,12 @@
     td {
       vertical-align: middle;
       border-top: 1px solid #dddddd;
+    }
+
+    td, th {
+      &:last-child {
+        text-align: right;
+      }
     }
   }
 
@@ -289,5 +299,31 @@
 
   .loading-spinner {
     text-align: center;
+  }
+
+  hr {
+    height: 1px;
+    border: none;
+    margin: 40px 0;
+    background-color: #dfd7d4;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .files-table {
+    margin-bottom: 4em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  #download {
+    width: 100%;
+    #download-ember {
+      left: auto;
+      margin: 2.5em 0;
+    }
   }
 }
