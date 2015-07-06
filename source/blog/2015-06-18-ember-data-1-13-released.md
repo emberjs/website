@@ -648,7 +648,7 @@ New format:
 new DS.InvalidError([
   {
     source: { pointer: 'data/attributes/first_name' },
-    details: 'is invalid'
+    detail: 'is invalid'
   }
 ]);
 ```
