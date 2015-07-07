@@ -78,7 +78,7 @@ export default Ember.Object.extend({
     set(key, value) {
       this.set('height', value / 1.618);
     }
-  });
+  })
 
 });
 ```
