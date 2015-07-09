@@ -67,5 +67,11 @@ The Fixture Adapter now lives as an [addon](https://github.com/emberjs/ember-dat
 
 ## Internet Explorer 8
 
-This will be the last release to support Internet Explorer 8. Future
-versions of Ember Data will not support Internet Explorer 8.
+<s>This will be the last release to support Internet
+Explorer 8. Future versions of Ember Data will not support Internet
+Explorer 8</s>
+
+Update:
+[Ember Data 1.13](/blog/2015/06/18/ember-data-1-13-released.html) has
+been released with support for IE8. Ember Data 1.13 is the last
+version of Ember Data that supports IE8. Ember Data 2.0 supports IE9+.
