@@ -393,7 +393,7 @@ becomes
 store.push({
   data: {
     id: '1', 
-    type: 'user', 
+    type: 'users', 
     attributes: { 
       name: 'Pangratz' 
     }
@@ -446,28 +446,28 @@ For example a Serializer responsible for normalizing the above sample payload wo
 {
   data: { 
     id: '1', 
-    type: 'user', 
+    type: 'users', 
     attributes: {
       name: 'wecc'
     }, 
     relationships: {
       accounts: {
         data: [
-          { id: '1', type: 'account' },
-          { id: '2', type: 'account' }
+          { id: '1', type: 'accounts' },
+          { id: '2', type: 'accounts' }
         ]
       }
     }
   },
   included: [{ 
     id: '1',
-    type: 'account',
+    type: 'accounts',
     attributes: {
       email: 'wecc@sweden.se'
     }
   }, {
     id: '2',
-    type: 'account',
+    type: 'accounts',
     attributes: {
       email: 'wecc@greece.gr'
     }
