@@ -69,10 +69,6 @@ App.S3Bucket = Ember.Object.extend({
     return (delimiter) ? 'delimiter=' + delimiter : '';
   }.property('delimiter'),
 
-  markerParameter: function(){
-    return 'marker=' + this.getWithDefault('marker','').toString();
-  }.property('marker'),
-
   maxKeysParameter: function(){
     return 'max-keys=' + this.getWithDefault('maxKeys','').toString();
   }.property('maxKeys'),
@@ -99,10 +95,9 @@ App.S3Bucket = Ember.Object.extend({
 
   queryParams: function(){
     return this.get('delimiterParameter')  + '&' +
-      this.get('markerParameter')     + '&' +
       this.get('maxKeysParameter')    + '&' +
       this.get('prefixParameter');
-  }.property('delimiterParameter','markerParameter','maxKeysParameter','prefixParameter'),
+  }.property('delimiterParameter','maxKeysParameter','prefixParameter'),
 
   queryUrl: function(){
     return this.get('queryBaseUrl') + '?' + this.get('queryParams');
@@ -125,40 +120,53 @@ App.S3Bucket = Ember.Object.extend({
     });
   },
 
-  load: function(){
-    var self = this,
-    baseUrl = this.get('objectBaseUrl');
-
+  load: function() {
+    var self = this;
     this.set('isLoading', true);
-    Ember.$.get(this.get('queryUrl'), function(data){
+
+    this.loadAllPages('', []).then(function(files) {
       self.set('isLoading', false);
-      self.set('response', data);
-
-      var contents = data.getElementsByTagName('Contents'),
-      length   = contents.length,
-      files    = [];
-
-      for(var i = 0; i < length; i++) {
-        var size = contents[i].getElementsByTagName('Size')[0].firstChild.data,
-        name = contents[i].getElementsByTagName('Key')[0].firstChild.data,
-        lastModified = new Date(contents[i].getElementsByTagName('LastModified')[0].firstChild.data);
-
-        files.push(
-          App.S3File.create({
-          name: name,
-          size: size,
-          lastModified: lastModified,
-          relativePath: name,
-          baseUrl: baseUrl
-        })
-        );
-      }
-
-      self.set('files', files.sort(function(a,b){
+      self.set('files', files.sort(function(a, b) {
         return b.lastModified - a.lastModified;
       }));
     });
-  }.observes('queryUrl').on('init')
+  }.observes('queryUrl').on('init'),
+
+  loadAllPages: function(marker, files) {
+    var self = this;
+    var baseUrl = this.get('objectBaseUrl');
+
+    return Ember.$.get(this.get('queryUrl') + '&marker=' + marker).then(function(data) {
+      var contents = data.getElementsByTagName('Contents');
+      var isTruncated = data.getElementsByTagName('IsTruncated')[0].firstChild.data === "true";
+      var length = contents.length;
+
+      self.set('response', data);
+
+      for(var i = 0; i < length; i++) {
+        var size = contents[i].getElementsByTagName('Size')[0].firstChild.data;
+        var name = contents[i].getElementsByTagName('Key')[0].firstChild.data;
+        var lastModified = new Date(contents[i].getElementsByTagName('LastModified')[0].firstChild.data);
+
+        files.push(
+          App.S3File.create({
+            name: name,
+            size: size,
+            lastModified: lastModified,
+            relativePath: name,
+            baseUrl: baseUrl
+          })
+        );
+      }
+
+      if (isTruncated) {
+        var lastFile = files[files.length - 1];
+        return self.loadAllPages(lastFile.get('name'), files);
+      } else {
+        return files;
+      }
+    });
+  }
 });
 
 App.S3File = Ember.Object.extend({
