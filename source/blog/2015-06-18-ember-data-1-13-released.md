@@ -451,7 +451,7 @@ For example a Serializer responsible for normalizing the above sample payload wo
       name: 'wecc'
     }, 
     relationships: {
-      accounts: {
+      account: {
         data: [
           { id: '1', type: 'account' },
           { id: '2', type: 'account' }
