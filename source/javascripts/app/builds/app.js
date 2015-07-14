@@ -204,10 +204,10 @@ App.Project.reopenClass({
       projectRepo: 'emberjs/ember.js',
       initialVersion: "1.13.0",
       initialReleaseDate: "2015-06-12",
-      lastRelease: "1.13.3",
-      futureVersion: "1.13.4",
+      lastRelease: "1.13.4",
+      futureVersion: "1.13.5",
       channel: "release",
-      date: "2015-07-06",
+      date: "2015-07-13",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
       debugFileName: ".debug.js"
