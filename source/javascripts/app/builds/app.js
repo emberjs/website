@@ -427,7 +427,7 @@ App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
-      prefix: 'tags/',
+      prefix: 'tags/v',
       delimiter: '',
     });
     return bucket;
