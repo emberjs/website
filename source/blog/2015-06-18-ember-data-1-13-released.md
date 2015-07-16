@@ -683,7 +683,7 @@ source of memory leaks in long running applications. In order to give
 Ember Data time to iterate on a better filter API the current
 `store.filter` method has been deprecated and its functionality is
 being moved into an addon
-[https://github.com/ember-data/ember-data-filter/]().
+[https://github.com/ember-data/ember-data-filter/](https://github.com/ember-data/ember-data-filter).
 
 In Ember 2.0, if you would like to use the current `store.filter`
 method you will need to include the ember-data-filter addon with your
