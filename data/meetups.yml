@@ -102,6 +102,13 @@ locations:
       profileImage: http://photos1.meetupstatic.com/photos/member/b/1/9/6/thumb_131385462.jpeg
     - organizer: Drew Purdy
       profileImage: http://photos2.meetupstatic.com/photos/member/2/0/8/2/thumb_42788322.jpeg
+  - location: Louisville, KY
+    url: http://www.meetup.com/Ember-js-Louisville/
+    lat: 38.252665
+    lng: -85.758456
+    organizers:
+    - organizer: Michael Yared
+      profileImage: http://photos2.meetupstatic.com/photos/member/d/5/d/6/thumb_240114742.jpeg
   - location: Orange County, CA
     url: http://www.meetup.com/Ember-SC/
     image: 05socal.png
