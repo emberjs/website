@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: 1.13.4
-  sha: v1.13.4
+  version: 1.13.5
+  sha: v1.13.5
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
@@ -2968,7 +2968,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/binding.js
-    line: 342
+    line: 343
     access: public
     tagname: ''
     description: |-
@@ -3447,7 +3447,7 @@ classes:
     submodule: ember-metal
     namespace: ''
     file: packages/ember-metal/lib/main.js
-    line: 359
+    line: 355
     access: private
     tagname: ''
   Ember.OrderedSet:
@@ -4291,7 +4291,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/copyable.js
-    line: 12
+    line: 13
     description: |-
       Implements some standard methods for copying an object. Add this mixin to
       any object you create that can create a copy of itself. This mixin is
@@ -4334,7 +4334,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/enumerable.js
-    line: 53
+    line: 60
     description: |-
       This mixin defines the common interface implemented by enumerable objects
       in Ember. Most of these methods follow the standard Array iteration
@@ -4432,7 +4432,7 @@ classes:
     submodule: ember-runtime
     namespace: Ember
     file: packages/ember-runtime/lib/mixins/freezable.js
-    line: 10
+    line: 11
     description: |-
       The `Ember.Freezable` mixin implements some basic methods for marking an
       object as frozen. Once an object is frozen it should be read only. No changes
@@ -4485,6 +4485,8 @@ classes:
       `Ember.Copyable` protocol, which defines a `frozenCopy()` method that will
       return a frozen object, if the object implements this method as well.
     since: Ember 0.9
+    deprecated: true
+    deprecationMessage: Use `Object.freeze` instead.
     access: private
     tagname: ''
   Ember.MutableArray:
@@ -8489,7 +8491,7 @@ classitems:
     description: Error
   class: RSVP
 - file: packages/ember-application/lib/ext/controller.js
-  line: 79
+  line: 81
   description: |-
     An array of other controller objects available inside
     instances of this controller via the `controllers`
@@ -8546,13 +8548,13 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/ext/controller.js
-  line: 151
+  line: 153
   itemtype: method
   name: controllerFor
   see:
   - "{Ember.Route#controllerFor}"
   deprecated: true
-  deprecationMessage: Use `needs` instead
+  deprecationMessage: Use `Ember.inject.controller()` instead.
   access: public
   tagname: ''
   class: Ember.ControllerMixin
@@ -8560,7 +8562,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/ext/controller.js
-  line: 162
+  line: 164
   description: |-
     Stores the instances of other controllers available from within
     this controller. Any controller listed by name in the `needs`
@@ -8577,6 +8579,8 @@ classitems:
     ```
   see:
   - "{Ember.ControllerMixin#needs}"
+  deprecated: true
+  deprecationMessage: Use `Ember.inject.controller()` instead.
   itemtype: property
   name: controllers
   type: Object
@@ -11717,6 +11721,7 @@ classitems:
   return:
     description: "`this`"
     type: Ember.Binding
+  deprecated: true
   access: public
   tagname: ''
   class: Ember.Binding
@@ -11724,7 +11729,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/binding.js
-  line: 475
+  line: 476
   description: |-
     Global helper method to create a new binding. Just pass the root object
     along with a `to` and `from` path to create and connect the binding.
@@ -11753,7 +11758,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/binding.js
-  line: 493
+  line: 494
   itemtype: method
   name: oneWay
   params:
@@ -13562,7 +13567,7 @@ classitems:
   return:
     description: ''
     type: Object
-  access: private
+  access: public
   tagname: ''
   class: Ember
   module: ember
@@ -13910,7 +13915,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-metal/lib/main.js
-  line: 396
+  line: 392
   description: |-
     A function may be assigned to `Ember.onerror` to be called when Ember
     internals encounter an error. This is useful for specialized error handling
@@ -14492,7 +14497,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 840
+  line: 841
   description: |-
     Specify a method that observes property changes.
 
@@ -14529,7 +14534,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 877
+  line: 878
   description: |-
     When observers fire, they are called with the arguments `obj`, `keyName`.
 
@@ -14860,7 +14865,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_get.js
-  line: 107
+  line: 111
   description: |-
     Normalizes a target/path pair to reflect that actual target/path that should
     be observed, etc. This takes into account passing in global property
@@ -14909,7 +14914,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_set.js
-  line: 159
+  line: 166
   description: |-
     Error-tolerant form of `Ember.set`. Will not blow up if any part of the
     chain is `undefined`, `null`, or destroyed.
@@ -21113,7 +21118,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/ext/function.js
-  line: 156
+  line: 171
   description: |-
     The `observesBefore` extension of Javascript's Function prototype is
     available when `Ember.EXTEND_PROTOTYPES` or
@@ -21140,7 +21145,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/ext/function.js
-  line: 194
+  line: 196
   description: |-
     The `on` extension of Javascript's Function prototype is available
     when `Ember.EXTEND_PROTOTYPES` or `Ember.EXTEND_PROTOTYPES.Function` is
@@ -21899,7 +21904,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/copyable.js
-  line: 29
+  line: 30
   description: |-
     __Required.__ You must implement this method to apply this mixin.
 
@@ -21921,7 +21926,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/copyable.js
-  line: 42
+  line: 43
   description: |-
     If the object implements `Ember.Freezable`, then this will return a new
     copy if the object is not frozen and the receiver if the object is frozen.
@@ -21937,6 +21942,8 @@ classitems:
   return:
     description: copy of receiver or receiver
     type: Object
+  deprecated: true
+  deprecationMessage: Use `Object.freeze` instead.
   access: private
   tagname: ''
   class: Ember.Copyable
@@ -21986,7 +21993,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 93
+  line: 100
   description: |-
     __Required.__ You must implement this method to apply this mixin.
 
@@ -22038,7 +22045,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 131
+  line: 138
   description: |-
     Helper method returns the first object from a collection. This is usually
     used by bindings and other parts of the framework to extract a single
@@ -22068,7 +22075,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 167
+  line: 174
   description: |-
     Helper method returns the last object from a collection. If your enumerable
     contains only one object, this method should always return that object.
@@ -22093,7 +22100,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 206
+  line: 213
   description: |-
     Returns `true` if the passed object can be found in the receiver. The
     default version will iterate through the enumerable until the object
@@ -22121,7 +22128,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 231
+  line: 238
   description: |-
     Iterates through the enumerable, calling the passed function on each
     item. This method corresponds to the `forEach()` method defined in
@@ -22161,7 +22168,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 282
+  line: 289
   description: Alias for `mapBy`
   itemtype: method
   name: getEach
@@ -22179,7 +22186,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 292
+  line: 299
   description: |-
     Sets the value on the named property for each member. This is more
     efficient than using other methods defined on this helper. If the object
@@ -22204,7 +22211,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 310
+  line: 317
   description: |-
     Maps all of the items in the enumeration to another value, returning
     a new array. This method corresponds to `map()` defined in JavaScript 1.6.
@@ -22245,7 +22252,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 347
+  line: 354
   description: |-
     Similar to map, this specialized function returns the value of the named
     property on all items in the enumeration.
@@ -22265,7 +22272,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 362
+  line: 369
   description: |-
     Similar to map, this specialized function returns the value of the named
     property on all items in the enumeration.
@@ -22287,7 +22294,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 375
+  line: 381
   description: |-
     Returns an array with all of the items in the enumeration that the passed
     function returns true for. This method corresponds to `filter()` defined in
@@ -22330,7 +22337,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 416
+  line: 422
   description: |-
     Returns an array with all of the items in the enumeration where the passed
     function returns false. This method is the inverse of filter().
@@ -22371,7 +22378,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 449
+  line: 455
   description: |-
     Returns an array with just the items with the matched property. You
     can pass an optional second argument with the target value. Otherwise
@@ -22396,7 +22403,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 464
+  line: 470
   description: |-
     Returns an array with just the items with the matched property. You
     can pass an optional second argument with the target value. Otherwise
@@ -22423,7 +22430,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 478
+  line: 484
   description: |-
     Returns an array with the items that do not have truthy values for
     key.  You can pass an optional second argument with the target value.  Otherwise
@@ -22448,7 +22455,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 503
+  line: 509
   description: |-
     Returns an array with the items that do not have truthy values for
     key.  You can pass an optional second argument with the target value.  Otherwise
@@ -22475,7 +22482,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 517
+  line: 523
   description: |-
     Returns the first item in the array for which the callback returns true.
     This method works similar to the `filter()` method defined in JavaScript 1.6
@@ -22518,7 +22525,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 574
+  line: 580
   description: |-
     Returns the first item with a property matching the passed value. You
     can pass an optional second argument with the target value. Otherwise
@@ -22545,7 +22552,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 591
+  line: 597
   description: |-
     Returns the first item with a property matching the passed value. You
     can pass an optional second argument with the target value. Otherwise
@@ -22574,7 +22581,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 607
+  line: 613
   description: |-
     Returns `true` if the passed function returns true for every item in the
     enumeration. This corresponds with the `every()` method in JavaScript 1.6.
@@ -22623,7 +22630,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 648
+  line: 654
   itemtype: method
   name: everyBy
   params:
@@ -22646,7 +22653,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 658
+  line: 664
   itemtype: method
   name: everyProperty
   params:
@@ -22669,7 +22676,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 668
+  line: 674
   description: |-
     Returns `true` if the passed property resolves to the value of the second
     argument for all items in the enumerable. This method is often simpler/faster
@@ -22695,7 +22702,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 684
+  line: 690
   description: |-
     Returns `true` if the passed function returns true for any item in the
     enumeration. This corresponds with the `some()` method in JavaScript 1.6.
@@ -22745,7 +22752,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 742
+  line: 748
   description: |-
     Returns `true` if the passed function returns true for any item in the
     enumeration. This corresponds with the `some()` method in JavaScript 1.6.
@@ -22797,7 +22804,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 781
+  line: 787
   description: |-
     Returns `true` if the passed property resolves to the value of the second
     argument for any item in the enumerable. This method is often simpler/faster
@@ -22823,7 +22830,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 797
+  line: 803
   itemtype: method
   name: anyBy
   params:
@@ -22846,7 +22853,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 807
+  line: 813
   itemtype: method
   name: someProperty
   params:
@@ -22869,7 +22876,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 817
+  line: 823
   description: |-
     This will combine the values of the enumerator into a single value. It
     is a useful way to collect a summary value from an enumeration. This
@@ -22918,7 +22925,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 865
+  line: 871
   description: |-
     Invokes the named method on every object in the receiver that
     implements it. This method corresponds to the implementation in
@@ -22942,7 +22949,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 890
+  line: 896
   description: |-
     Simply converts the enumerable into a genuine array. The order is not
     guaranteed. Corresponds to the method implemented by Prototype.
@@ -22958,7 +22965,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 908
+  line: 914
   description: |-
     Returns a copy of the array with all `null` and `undefined` elements removed.
 
@@ -22978,7 +22985,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 926
+  line: 932
   description: |-
     Returns a new enumerable that excludes the passed value. The default
     implementation returns an array regardless of the receiver type unless
@@ -23004,7 +23011,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 957
+  line: 963
   description: |-
     Returns a new enumerable that contains only unique values. The default
     implementation returns an array regardless of the receiver type.
@@ -23027,7 +23034,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 984
+  line: 990
   description: |-
     This property will trigger anytime the enumerable's content changes.
     You can observe this property to be notified of changes to the enumerable's
@@ -23047,7 +23054,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1005
+  line: 1011
   description: |-
     Registers an enumerable observer. Must implement `Ember.EnumerableObserver`
     mixin.
@@ -23070,7 +23077,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1034
+  line: 1040
   description: Removes a registered enumerable observer.
   itemtype: method
   name: removeEnumerableObserver
@@ -23091,7 +23098,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1062
+  line: 1068
   description: |-
     Becomes true whenever the array currently has observers watching changes
     on the array.
@@ -23105,7 +23112,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1075
+  line: 1081
   description: |-
     Invoke this method just before the contents of your enumerable will
     change. You can either omit the parameters completely or pass the objects
@@ -23131,7 +23138,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1128
+  line: 1134
   description: |-
     Invoke this method when the contents of your enumerable has changed.
     This will notify any observers watching for content changes. If you are
@@ -23159,7 +23166,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/enumerable.js
-  line: 1183
+  line: 1189
   description: |-
     Converts the enumerable into an array and sorts by the keys
     specified in the argument.
@@ -23321,7 +23328,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/freezable.js
-  line: 69
+  line: 76
   description: |-
     Set to `true` when the object is frozen. Use this property to detect
     whether your object is frozen or not.
@@ -23335,7 +23342,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/mixins/freezable.js
-  line: 79
+  line: 86
   description: |-
     Freezes the object. Once this method has been called the object should
     no longer allow any properties to be edited.
@@ -26723,7 +26730,7 @@ classitems:
   throws:
     description: throws error if jQuery object returned has a length of 0
     type: Error
-  access: private
+  access: public
   tagname: ''
   class: Ember.Test
   module: ember
@@ -27705,7 +27712,7 @@ classitems:
     ```javascript
     // Applies the 'high' class to the view element
     Ember.View.extend({
-      classNameBindings: ['priority']
+      classNameBindings: ['priority'],
       priority: 'high'
     });
     ```
@@ -27716,7 +27723,7 @@ classitems:
     ```javascript
     // Applies the 'is-urgent' class to the view element
     Ember.View.extend({
-      classNameBindings: ['isUrgent']
+      classNameBindings: ['isUrgent'],
       isUrgent: true
     });
     ```
@@ -27727,7 +27734,7 @@ classitems:
     ```javascript
     // Applies the 'urgent' class to the view element
     Ember.View.extend({
-      classNameBindings: ['isUrgent:urgent']
+      classNameBindings: ['isUrgent:urgent'],
       isUrgent: true
     });
     ```
