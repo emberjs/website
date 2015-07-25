@@ -18,6 +18,7 @@ $(function() {
     var type = this.getAttribute('data-type');
 
     $('.'+type).toggle(this.checked);
+    $('#api-options input[data-type='+type+']').prop('checked', this.checked);
 
     if(ls)
       ls.setItem('api-options-' + type, this.checked);
