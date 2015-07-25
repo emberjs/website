@@ -23,9 +23,13 @@ $(function() {
       ls.setItem('api-options-' + type, this.checked);
   }
 
+  function confirmPaneInputs() {
+    $(this).closest('#api-options').find('input').each(toggleType);
+  }
+
   $('#api-options input').each(initApiOptions);
   $('#api-options input').each(toggleType);
-  $('#api-options input').on('change', toggleType);
+  $('#api-options input').on('change', confirmPaneInputs);
 
   // Tabs
   $('.tabs .pane').hide();
