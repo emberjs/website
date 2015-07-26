@@ -2137,11 +2137,14 @@ a.edit-page {
   ul.index-list {
     margin-left: 1.5em;
     overflow: hidden; /* Clearfix */
+    -moz-column-count: 2;
+    -moz-column-gap: 1em;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 1em;
+    column-count: 2;
+    column-gap: 1em;
 
     li {
-      float: left;
-      width: 300px;
-      padding-right: 1em;
       display: block;
       overflow: hidden;
       @include ellipsis;
