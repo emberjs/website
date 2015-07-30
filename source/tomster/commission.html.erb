@@ -1,0 +1,115 @@
+---
+title: "Tomster Commission Request"
+---
+
+<h1>Tomster Commission Request</h1>
+
+<div class="tomster-commission section">
+  <div class="left-col">
+    <p>Thanks so much for your interest in commissioning a Tomster! As per our <a href="/tomster/faq">FAQ</a>, assuming an approved use case, we'd love to work with you!</p>
+     <form id="tomster-commission-form" name="tomster-commission-form" class="tomster-commission-form wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://tilde.wufoo.com/forms/q14mw9qi196f6oy/#public">
+      <ul>
+        <li id="foli3">
+          <label class="desc" id="title3" for="Field3">
+            Name
+            <span id="req_3" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field3" name="Field3" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required>
+          </div>
+        </li>
+        <li id="foli4">
+          <label class="desc" id="title4" for="Field4">
+            Email
+            <span id="req_4" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field4" name="Field4" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" required>
+          </div>
+        </li>
+        <li id="foli6">
+          <label class="desc" id="title6" for="Field6">
+            Please tell us what you'd like to commission a Tomster for.
+            <span id="req_6" class="req">*</span>
+          </label>
+          <div>
+            <textarea id="Field6" name="Field6" spellcheck="true" tabindex="3" onkeyup="" required></textarea>
+          </div>
+        </li>
+        <li id="foli7">
+          <label class="desc" id="title7" for="Field7">
+            Do you already have ideas for the Tomster? If so, please do share here.
+          </label>
+          <div>
+            <textarea id="Field7" name="Field7" spellcheck="true" tabindex="4" onkeyup=""></textarea>
+          </div>
+        </li>
+        <li id="foli8">
+          <fieldset>
+            <![if !IE | (gte IE 8)]>
+              <legend id="title8" class="desc">
+                I believe what I need fits into the following pricing category:
+                <span id="req_8" class="req">*</span>
+              </legend>
+            <![endif]>
+            <!--[if lt IE 8]>
+              <label id="title8" class="desc">
+                I believe what I need fits into the following pricing category:
+                <span id="req_8" class="req">*</span>
+              </label>
+            <![endif] -->
+            <div>
+              <input id="radioDefault_8" name="Field8" type="hidden" value="">
+              <span class="choice">
+                <input id="Field8_0" name="Field8" type="radio" class="field radio" value="Classic Tomster with Simple Shirt Change, $80" tabindex="5" checked="checked" required>
+                <label for="Field8_0">
+                  Classic Tomster with Simple Shirt Change, $80
+                </label>
+              </span>
+              <span class="choice">
+                <input id="Field8_1" name="Field8" type="radio" class="field radio" value="Classic Tomster with 1 Prop and Full Costume, $200" tabindex="6"     required>
+                <label for="Field8_1">
+                  Classic Tomster with 1 Prop and Full Costume, $200</label>
+              </span>
+              <span class="choice">
+                <input id="Field8_2" name="Field8" type="radio" class="field radio" value="Tomster with Full Background, $300" tabindex="7" required>
+                <label for="Field8_2">
+                  Tomster with Full Background, $300
+                </label>
+              </span>
+              <span class="choice">
+                <input id="Field8_3" name="Field8" type="radio" class="field radio" value="Other" tabindex="8" onmouseup="document.getElementById('Field8_other').focus();" required>
+                <label for="Field8_3"  onmouseup="document.getElementById('Field8_other').focus();">
+                  Other
+                </label>
+                <input id="Field8_other" name="Field8_other_Other" type="text" class="field text other" value="" onclick="document.getElementById('Field8_3').checked = 'checked';" tabindex="9">
+              </span>
+            </div>
+          </fieldset>
+        </li>
+        <li class="buttons">
+          <div>
+            <input id="saveForm" name="saveForm" class="orange button" type="submit" value="Submit">
+          </div>
+        </li>
+        <li style="display: none;">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input type="hidden" id="idstamp" name="idstamp" value="HzIvtB3mbwMUBgagcaKaxnTASiJAOpXIR2gxYqSusY0=">
+        </li>
+      </ul>
+    </form>
+
+  </div>
+  <div class="right-col">
+    <img src="/images/tomster-faq.png" width="95%">
+  </div>
+</div>
+
+<script src="/javascripts/app/tomster/jquery.validate.js"></script>
+<script src="/javascripts/app/tomster/wufoo-q14mw9qi196f6oy.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    $("#tomster-commission-form").validate();
+  });
+</script>
