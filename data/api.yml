@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: 1.13.5
-  sha: v1.13.5
+  version: 1.13.6
+  sha: v1.13.6
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
@@ -3433,7 +3433,7 @@ classes:
     description: |-
       Inside Ember-Metal, simply uses the methods from `imports.console`.
       Override this to provide more robust logging functionality.
-    access: private
+    access: public
     tagname: ''
   Backburner:
     name: Backburner
@@ -6106,6 +6106,8 @@ classes:
       or layout being rendered. The HTML contents of a `Ember.ContainerView`'s DOM
       representation will only be the rendered HTML of its child views.
     extends: Ember.View
+    deprecated: true
+    deprecationMessage: See http://emberjs.com/deprecations/v1.x/#toc_ember-containerview
     access: private
     tagname: ''
   Ember.CoreView:
@@ -9263,7 +9265,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 787
+  line: 794
   itemtype: method
   name: then
   access: private
@@ -9274,7 +9276,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 813
+  line: 820
   description: |-
     Creates a new instance of the application and instructs it to route to the
     specified initial URL. This method returns a promise that will be resolved
@@ -9295,7 +9297,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 852
+  line: 859
   description: |-
     Initializer receives an object which has the following attributes:
     `name`, `before`, `after`, `initialize`. The only required attribute is
@@ -9428,7 +9430,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 978
+  line: 985
   description: |-
     This creates a registry with the default Ember naming conventions.
 
@@ -9465,7 +9467,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 1079
+  line: 1086
   description: |-
     This function defines the default lookup rules for container lookups:
 
@@ -10499,7 +10501,7 @@ classitems:
   module: ember
   submodule: ember-htmlbars
 - file: packages/ember-htmlbars/lib/compat/register-bound-helper.js
-  line: 11
+  line: 12
   description: |-
     Register a bound handlebars helper. Bound helpers behave similarly to regular
     handlebars helpers, with the added ability to re-render when the underlying data
@@ -10803,7 +10805,7 @@ classitems:
   module: ember
   submodule: ember-htmlbars
 - file: packages/ember-htmlbars/lib/helpers/each.js
-  line: 8
+  line: 6
   description: |-
     The `{{#each}}` helper loops over elements in a collection. It is an extension
     of the base Handlebars `{{#each}}` helper.
@@ -11214,7 +11216,7 @@ classitems:
   module: ember
   submodule: ember-htmlbars
 - file: packages/ember-htmlbars/lib/system/make-view-helper.js
-  line: 6
+  line: 8
   description: |-
     Returns a helper function that renders the provided ViewClass.
 
@@ -11376,7 +11378,7 @@ classitems:
   module: ember
   submodule: ember-templates
 - file: packages/ember-htmlbars/lib/helpers.js
-  line: 8
+  line: 9
   access: private
   tagname: ''
   itemtype: property
@@ -11385,7 +11387,7 @@ classitems:
   module: ember
   submodule: ember-htmlbars
 - file: packages/ember-htmlbars/lib/helpers.js
-  line: 19
+  line: 20
   access: private
   tagname: ''
   itemtype: method
@@ -13803,7 +13805,7 @@ classitems:
   - name: arguments
     description: ''
     type: "*"
-  access: private
+  access: public
   tagname: ''
   class: Ember.Logger
   module: ember
@@ -13824,7 +13826,7 @@ classitems:
   - name: arguments
     description: ''
     type: "*"
-  access: private
+  access: public
   tagname: ''
   class: Ember.Logger
   module: ember
@@ -13845,7 +13847,7 @@ classitems:
   - name: arguments
     description: ''
     type: "*"
-  access: private
+  access: public
   tagname: ''
   class: Ember.Logger
   module: ember
@@ -13867,7 +13869,7 @@ classitems:
   - name: arguments
     description: ''
     type: "*"
-  access: private
+  access: public
   tagname: ''
   class: Ember.Logger
   module: ember
@@ -13889,7 +13891,7 @@ classitems:
   - name: arguments
     description: ''
     type: "*"
-  access: private
+  access: public
   tagname: ''
   class: Ember.Logger
   module: ember
@@ -13909,7 +13911,7 @@ classitems:
   - name: bool
     description: Value to test
     type: Boolean
-  access: private
+  access: public
   tagname: ''
   class: Ember.Logger
   module: ember
@@ -19586,7 +19588,7 @@ classitems:
   - name: model
     description: the route's model
     type: Object
-  access: private
+  access: public
   tagname: ''
   class: Ember.Route
   module: ember
@@ -20988,7 +20990,7 @@ classitems:
   return:
     description: injection descriptor instance
     type: Ember.InjectedProperty
-  access: private
+  access: public
   tagname: ''
   class: Ember.inject
   module: ember
@@ -24101,7 +24103,7 @@ classitems:
   return:
     description: ''
     type: Ember.Observable
-  access: private
+  access: public
   tagname: ''
   class: Ember.Observable
   module: ember
@@ -25373,7 +25375,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/system/lazy_load.js
-  line: 15
+  line: 16
   description: |-
     Detects when a specific package of Ember (e.g. 'Ember.Application')
     has fully loaded and is available for extension.
@@ -25401,7 +25403,7 @@ classitems:
   module: ember
   submodule: ember-runtime
 - file: packages/ember-runtime/lib/system/lazy_load.js
-  line: 45
+  line: 46
   description: |-
     Called when an Ember.js package (e.g Ember.Application) has finished
     loading. Triggers any callbacks registered for this event.
@@ -27345,7 +27347,7 @@ classitems:
   submodule: ember-testing
   namespace: Ember
 - file: packages/ember-testing/lib/test.js
-  line: 439
+  line: 446
   description: |-
     This removes all helpers that have been registered, and resets and functions
     that were overridden by the helpers.
@@ -29278,7 +29280,7 @@ classitems:
   name: layoutName
   type: String
   default: 'null'
-  access: private
+  access: public
   tagname: ''
   class: Ember.View
   module: ember
@@ -29317,7 +29319,7 @@ classitems:
   itemtype: property
   name: layout
   type: Function
-  access: private
+  access: public
   tagname: ''
   class: Ember.View
   module: ember
