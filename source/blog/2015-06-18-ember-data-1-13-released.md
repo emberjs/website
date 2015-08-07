@@ -530,14 +530,14 @@ First, rename:
 - `extractArray()         => normalizeArrayResponse()`
 
 Second, make sure that your `extract` hooks return a full JSON API compound document
-([http://jsonapi.org/format/#document-top-level]()) with the primary
+([http://jsonapi.org/format/#document-top-level](http://jsonapi.org/format/#document-top-level)) with the primary
 resource(s) in a `data` array or object and eventual sideloaded
 resources in a `included` array. Every resource object
-([http://jsonapi.org/format/#document-resource-objects]()) has to
+([http://jsonapi.org/format/#document-resource-objects](http://jsonapi.org/format/#document-resource-objects)) has to
 follow the JSON API format with `id`, `type`, attributes in
 `attributes` and relationships in `relationships`. For the full
 specification of the JSON API format see
-[http://jsonapi.org/format/]().
+[http://jsonapi.org/format/](http://jsonapi.org/format/).
 
 ##### Custom `extractMeta` Method
 
@@ -549,9 +549,9 @@ relying on `_super` to do so).
 
 If you have a custom `normalize()` method you need to update this to
 return a full JSON API Document
-([http://jsonapi.org/format/#document-top-level]()) with the primary
+([http://jsonapi.org/format/#document-top-level](http://jsonapi.org/format/#document-top-level)) with the primary
 resource object
-([http://jsonapi.org/format/#document-resource-objects]()) located in
+([http://jsonapi.org/format/#document-resource-objects](http://jsonapi.org/format/#document-resource-objects)) located in
 `data`.
 
 ##### Opt Into the New Serializer API
