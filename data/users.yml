@@ -640,6 +640,10 @@
   image: movable_ink.png
   alt: Movable Ink
   use: "The front-end for the e-mail building editor and the company dashboard"
+- url: http://velocitylabs.io
+  image: velocitylabs.png
+  alt: "Velocity Labs"
+  use: "Consultancy who uses Ember to built our clients awesome client-side apps"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
