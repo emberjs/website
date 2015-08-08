@@ -634,6 +634,8 @@
   use: "The entire Skylight front-end is built using Ember"
 - url: http://velocitylabs.io
   image: velocitylabs.png
+  alt: "Velocity Labs"
+  use: "Consultancy who uses Ember to built our clients awesome client-side apps"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
