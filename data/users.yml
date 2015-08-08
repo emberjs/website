@@ -18,7 +18,7 @@
 # order in which people made their requests. Be respectful to those who
 # came before you and add your name to the *bottom*.
 
-# As of August 20115, new entries are required to also fill in the "use" field;
+# As of August 2015, new entries are required to also fill in the "use" field;
 # specifically, tell us in a couple words what you use Ember for. This info will
 # not be published on the site, but will help us verify that new entrants belong
 # on this list. This will also help keep the list current in the future, since it
@@ -636,6 +636,10 @@
   image: monegraph.png
   alt: Monegraph
   use: "Our mobile app, TV app, and desktop apps are built using Ember"
+- url: https://movableink.com/
+  image: movable_ink.png
+  alt: Movable Ink
+  use: "The front-end for the e-mail building editor and the company dashboard"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
@@ -645,7 +649,7 @@
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace. See further comments atop this file.
 
-# As of August 20115, new entries are required to also fill in the "use" field;
+# As of August 2015, new entries are required to also fill in the "use" field;
 # specifically, tell us in a couple words what you use Ember for. This info will
 # not be published on the site, but will help us verify that new entrants belong
 # on this list. This will also help keep the list current in the future, since it
