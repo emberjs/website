@@ -18,6 +18,12 @@
 # order in which people made their requests. Be respectful to those who
 # came before you and add your name to the *bottom*.
 
+# As of August 20115, new entries are required to also fill in the "use" field;
+# specifically, tell us in a couple words what you use Ember for. This info will
+# not be published on the site, but will help us verify that new entrants belong
+# on this list. This will also help keep the list current in the future, since it
+# will become easier to verify if the specific use is still current.
+
 - url: http://www.mheducation.com/
   image: mhelabs.png
   alt: McGraw-Hill
@@ -27,6 +33,7 @@
 - url: http://tilde.io/
   image: tilde.png
   alt: Tilde
+  use: "We build online Ember trainings"
 - url: http://www.bustle.com
   image: bustle.png
   alt: Bustle
@@ -121,7 +128,7 @@
   image: toushay.png
   alt: Toushay
 - url:  http://shopittome.com/
-  image: shopittome_threads_logo_emberjs.png
+  image: shopittome.png
   alt: Shop It To Me
 - url:  http://www.crowdstrike.com
   image: crowdstrike.png
@@ -621,6 +628,10 @@
 - url: http://www.trampos.co/
   image: trampos-co.png
   alt: trampos
+- url: http://www.skylight.io
+  image: skylight.png
+  alt: skylight
+  use: "The entire Skylight front-end is built using Ember"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
@@ -629,3 +640,9 @@
 
 # Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace. See further comments atop this file.
+
+# As of August 20115, new entries are required to also fill in the "use" field;
+# specifically, tell us in a couple words what you use Ember for. This info will
+# not be published on the site, but will help us verify that new entrants belong
+# on this list. This will also help keep the list current in the future, since it
+# will become easier to verify if the specific use is still current.
