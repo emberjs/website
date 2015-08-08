@@ -632,6 +632,10 @@
   image: skylight.png
   alt: skylight
   use: "The entire Skylight front-end is built using Ember"
+- url: http://monegraph.com
+  image: monegraph.png
+  alt: Monegraph
+  use: "Our mobile app, TV app, and desktop apps are built using Ember"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
