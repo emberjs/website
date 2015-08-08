@@ -1,0 +1,98 @@
+---
+title: "Tomster Commission Payment"
+---
+
+<h1>Tomster Commission Payment</h1>
+
+<div class="tomster-payment section">
+  <div class="left-col">
+    <p>This form is processed using <a href="https://stripe.com" target="_blank">Stripe</a>.</p>
+    <p>This form is only for Tomsters that we've already discussed payment and details on. If you have a new idea, <a href="/tomster/commission">reach out to discuss</a> first :)</p>
+     <form id="tomster-payment-form" name="tomster-payment-form" class="tomster-form wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://tilde.wufoo.com/forms/q3qhbsp095gijb/#public">
+      <ul>
+        <li id="foli1">
+          <label class="desc" id="title1" for="Field1">
+            Name
+            <span id="req_1" class="req">*</span>
+          </label>
+          <span class="inline-field">
+            <input id="Field1" name="Field1" type="text" class="field text fn" value="" size="22" tabindex="1" placeholder="First" required>
+          </span>
+          <span class="inline-field">
+            <input id="Field2" name="Field2" type="text" class="field text ln" value="" size="22" tabindex="2" placeholder="Last" required>
+          </span>
+        </li>
+        <li id="foli9">
+          <label class="desc" id="title9" for="Field9">
+            Company
+          </label>
+          <div>
+            <input id="Field9" name="Field9" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup="">
+          </div>
+        </li>
+        <li id="foli3">
+          <label class="desc" id="title3" for="Field3">
+            Email
+            <span id="req_3" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="4" required>
+          </div>
+        </li>
+        <li id="foli11">
+          <label class="desc" id="title11" for="Field11">
+            Which Tomster is this payment for?
+            <span id="req_11" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field11" name="Field11" type="text" class="field text medium" value="" maxlength="255" tabindex="5" onkeyup="" required>
+          </div>
+        </li>
+        <li id="foli4">
+          <label class="desc" id="title4" for="Field4">
+            Commission Amount
+            <span id="req_4" class="req">*</span>
+          </label>
+          <span class="symbol inline-field">$</span>
+          <span class="inline-field">
+            <input id="Field4" name="Field4" type="text" class="field text currency nospin" value="" size="10" tabindex="6" required>
+          </span>
+          <span class="symbol radix inline-field">.</span>
+          <span class="cents inline-field">
+            <input id="Field4-1" name="Field4-1" type="text" class="field text nospin" value="" size="2" maxlength="2" tabindex="7">
+          </span>
+        </li>
+        <li id="foli13">
+          <label class="desc" id="title13" for="Field13">
+            Signed License Agreement
+            <span id="req_13" class="req">*</span>
+          </label>
+          <div>
+            <input id="Field13" name="Field13" type="file" class="field file" size="12" tabindex="8" required>
+          </div>
+        </li>
+        <li class="buttons">
+          <div>
+            <input id="saveForm" name="saveForm" class="orange button" type="submit" value="Let's Do This!">
+          </div>
+        </li>
+        <li style="display: none;">
+          <label for="comment">Do Not Fill This Out</label>
+          <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+          <input type="hidden" id="idstamp" name="idstamp" value="h9Ab53gqbgg7YKEj5J7p/Kxokx5OlhEX0RtkdPdY2mo=">
+        </li>
+      </ul>
+    </form>
+  </div>
+  <div class="right-col">
+    <img src="/images/tomster-faq.png" width="95%">
+  </div>
+</div>
+
+<script src="/javascripts/app/tomster/jquery.validate.min.js"></script>
+<script src="/javascripts/app/tomster/wufoo.js"></script>
+<script type="text/javascript" charset="utf-8">
+  $(function(){
+    $("#tomster-payment-form").validate();
+  });
+</script>
