@@ -20,406 +20,607 @@
 
 - url: http://www.mheducation.com/
   image: mhelabs.png
+  alt: McGraw-Hill
 - url: https://www.yapp.us/
   image: yapp.png
+  alt: Yapp
 - url: http://tilde.io/
   image: tilde.png
+  alt: Tilde
 - url: http://www.bustle.com
   image: bustle.png
+  alt: Bustle
 - url: http://yahoo.com
   image: yahoo.png
+  alt: Yahoo!
 - url: http://www.zendesk.com/
   image: zendesk.png
+  alt: Zendesk
 - url: http://squareup.com/
   image: square.png
+  alt: Square
 - url: http://www.discourse.org
   image: discourse.png
+  alt: Discourse
 - url: https://addepar.com/
   image: addepar.png
+  alt: Addepar
 - url: http://livingsocial.com/
   image: livingsocial.png
+  alt: Living Social
 - url: http://www.groupon.com
   image: groupon.png
+  alt: Groupon
 - url: http://www.timbuk2.com/
   image: timbuk2.png
+  alt: Timbuk2
 - url: http://www.benefitcloud.com/
   image: benefitcloud.png
+  alt: Benefitcloud
 - url: http://www.topicus.nl/
   image: topicus.png
+  alt: Topicus
 - url: http://www.gemfury.com/
   image: gemfury.png
+  alt: Gemfury
 - url: http://www.batterii.com/
   image: batterii.png
+  alt: Batterii
 - url: http://inst.ag/
   image: instagrille.png
+  alt: Pixsta
 - url: http://www.bluetubeinteractive.com
   image: bluetube.png
+  alt: Bluetube
 - url: http://www.mashape.com
   image: mashape.png
+  alt: Mashape
 - url: http://www.skovik.com
   image: skovik.png
+  alt: Skovik
 - url: http://entwine.me/
   image: twine.png
+  alt: Twine
 - url: https://www.tradegecko.com
   image: tradegecko.png
+  alt: TradeGecko
 - url: http://grouptalent.com
   image: grouptalent.png
+  alt: GroupTalent
 - url: http://www.kohactive.com
   image: kohactive.png
+  alt: kohactive
 - url: http://www.capitainetrain.com
   image: capitainetrain.png
+  alt: Capitaine Train
 - url: http://withassociates.com
   image: withassociates.png
+  alt: With Associates
 - url: http://www.nedap.com/
   image: nedap.png
+  alt: Nedap
 - url: http://www.brainistic.com
   image: brainistic.png
+  alt: Brainistic
 - url: http://kabisa.nl/
   image: kabisa.png
+  alt: Kabisa
 - url: http://fundinggates.com
   image: fundinggates.png
+  alt: Funding Gates
 - url: http://witsbits.com
   image: witsbits.png
+  alt: Witsbits Virtualization
 - url: http://www.yesmail.com/services/market-intelligence-measurement/yesmail-market-intelligence
   image: yesmail.png
+  alt: Yesmail
 - url: http://crashlog.io
   image: crashlog.png
+  alt: CrashLog
 - url: http://www.toushay.com
   image: toushay.png
+  alt: Toushay
 - url:  http://shopittome.com/
   image: shopittome_threads_logo_emberjs.png
+  alt: Shop It To Me
 - url:  http://www.crowdstrike.com
   image: crowdstrike.png
+  alt: CrowdStrike
 - url: http://www.playtin.com
   image: playtin.png
+  alt: PLAYTIN
 - url:  http://vsco.co
   image: visualsupplyco.png
+  alt: Visual Supply Co
 - url:  http://www.crowdcompass.com
   image: crowdcompass.png
+  alt: CrowdCompass
 - url:  http://www.totango.com
   image: totango.png
+  alt: Totango
 - url: http://www.nearzero.org
   image: nearzero.png
+  alt: Near Zero
 - url: http://porkepic.com/
   image: porkepic.png
+  alt: Porkepic Solutions
 - url: http://www.appdrones.com/
   image: appdrones.png
+  alt: App drones
 - url: http://dockyard.com
   image: dockyard.png
+  alt: DockYard
 - url: http://www.montania.se/
   image: montania.png
+  alt: Montania System AB
 - url: http://yourkarma.com
   image: karma.png
+  alt: Karma
 - url: http://nosolosoftware.biz
   image: nosolosoftware.png
+  alt: NoSoloSoftware
 - url: http://unspace.ca
   image: unspace.png
+  alt: Unspace
 - url: https://mist.io
   image: mistio.png
+  alt: Mist
 - url: http://billysbilling.com/
   image: billysbilling.png
+  alt: "Billy's Billing Accounting Software"
 - url: http://llanoseco.com/
   image: llanoseco.png
+  alt: LLANO SECO RANCHO
 - url: https://www.data-field.com/
   image: datafield.png
+  alt: Datafield
 - url: http://www.wagaroo.com/
   image: wagaroo.png
+  alt: Wagaroo
 - url: http://www.pertino.com
   image: pertino.png
+  alt: Pertino
 - url: http://www.summit.com/mobile
   image: summit_electric_supply.png
+  alt:
 - url: https://spoton.it
   image: spoton.png
+  alt:
 - url: http://simplereach.com
   image: simplereach.png
+  alt: SimpleReach
 - url: http://crowdhall.com
   image: crowdhall.png
+  alt: CrowdHall
 - url: http://travis-ci.org
   image: travisci.png
+  alt: Travis CI
 - url: http://boxee.tv
   image: boxee.png
+  alt: Boxee
 - url: http://www.crowdflower.com
   image: crowdflower.png
+  alt: CrowdFlower
 - url: http://www.avalara.com
   image: avalara.png
+  alt: Avalara
 - url: http://www.twitch.tv
   image: twitch.png
+  alt: Twitch
 - url: http://www.eatwith.com
   image: eatwith.png
+  alt: Eatwith
 - url: https://pivotshare.com/
   image: pivotshare.png
+  alt: Pivotshare
 - url: http://www.nezasa.com
   image: nezasa.png
+  alt: Nezasa
 - url: http://inthepocket.mobi/
   image: inthepocket.png
+  alt: In The Pocket
 - url: http://www.veriskhealth.com
   image: verisk_health.png
+  alt: Verisk Health
 - url: https://universe.com
   image: universe.png
+  alt: Universe
 - url: http://www.silveregg.com/
   image: silveregg.png
+  alt: Silver Egg Technology
 - url: https://owner.urbanspoon.com
   image: urbanspoon.png
+  alt: Urbanspoon
 - url: http://caliper.io
   image: caliper.png
+  alt: Caliper
 - url: http://basho.com
   image: basho.png
+  alt: Basho
 - url: http://maginatics.com
   image: maginatics.png
+  alt: Maginatics
 - url: http://www.homeandstone.com
   image: homeandstone.png
+  alt: Home & Stone
 - url: http://gaslight.co
   image: gaslight.png
+  alt: Gaslight
 - url: http://www.tictail.com
   image: tictail.png
+  alt: Tictail
 - url: http://caxanuma.com
   image: caxanuma.png
+  alt: Caxanuma
 - url: http://neo.com
   image: neo.png
+  alt: Neo Innovation
 - url: http://www.wanapi.com
   image: wanapi.png
+  alt: Leadfeeder
 - url: http://edgycircle.com/
   image: edgycircle.png
+  alt: edgy circle
 - url: http://www.thoughtbot.com
   image: thoughtbot.png
+  alt: thoughtbot
 - url: http://www.elastic.io
   image: elasticio.png
+  alt: Elastic
 - url: http://www.onepercentclub.com
   image: onepercentclub.png
+  alt: One Percent Club
 - url: http://www.terracycle.com
   image: terracycle.png
+  alt: TerraCycle
 - url: http://scan.me
   image: scan.png
+  alt: Scan
 - url: http://www.brandingbrand.com/
   image: brandingbrand.png
+  alt: Branding Brand
 - url: http://noesissoftware.com
   image: noesissoftware.png
+  alt: Noesis Solutions
 - url: https://5apps.com
   image: 5apps.png
+  alt: 5apps Deploy
 - url: http://www.getfeedback.com
   image: getfeedback.png
+  alt: GetFeedback
 - url: http://instructure.com
   image: instructure.png
+  alt: Instructure
 - url: http://radflex.pt
   image: radflex.png
+  alt: Light Speck
 - url: http://meetmantra.com
   image: mantra.png
+  alt: Mantra, Inc
 - url: http://www.runtastic.com
   image: runtastic.png
+  alt: Runtastic
 - url: http://www.enthuse.me
   image: enthuseme.png
+  alt: Enthuse
 - url: https://www.chronosave.com
   image: chronosave.png
+  alt: ChronoSave
 - url: http://coschedule.com
   image: coschedule.png
+  alt: CoSchedule
 - url: http://www.iorahealth.com/
   image: iorahealth.png
+  alt: Iora Health
 - url: http://www.locbox.com
   image: locbox.png
+  alt: LocBox
 - url: http://www.khelkund.com/football
   image: khelkund.png
+  alt: khelkund
 - url: https://centroy.com
   image: centroy.png
+  alt: Centroy
 - url: http://pluckit.io
   image: pluck.png
+  alt: Pluck
 - url: http://flockler.com
   image: flockler_x2.png
+  alt: Flockler
 - url: http://www.astonishdesign.com
   image: astonishdesign.png
+  alt: Praxent
 - url: http://rankinity.com
   image: rankinity.png
+  alt: Rankinity
 - url: http://swink.tv
   image: swinktv.png
+  alt: SwinkTV
 - url: https://beta.bondable.com
   image: bondable.png
+  alt: Bondable
 - url: https://asknative.com
   image: asknative.png
+  alt: Asknative
 - url: http://vijo.inn.ac
   image: vijo.png
+  alt: Innovation Accelerator
 - url: http://www.brightin.nl
   image: brightin.png
+  alt: Brightin
 - url: http://www.codeschool.com
   image: codeschool.png
+  alt: Code School
 - url: http://www.gooddata.com/
   image: gooddata.png
+  alt: GoodData
 - url: http://www.cruxandco.com/
   image: crux.png
+  alt: Crux Consulting
 - url: https://huboard.com
   image: huboard.png
+  alt: HuBoard
 - url: http://www.fasteragile.com
   image: fasteragile.png
+  alt: Faster Agile
 - url: http://www.theworkinggroup.ca/
   image: theworkinggroup.png
+  alt: The Working Group
 - url: https://www.balancedpayments.com/
   image: balanced.png
+  alt: Balanced
 - url: https://www.livenation.com/
   image: livenationlabs.png
+  alt: Live Nation
 - url: http://www.midokura.com/
   image: midokura.png
+  alt: Midokura
 - url: http://www.unlockable.com/
   image: unlockable.png
+  alt: Unlockable
 - url: http://orchestrate.io
   image: orchestrate.png
+  alt: Orchestrate
 - url: http://www.aspireauctions.com
   image: aspireauctions.png
+  alt: Aspire Auctions
 - url: http://planetargon.com/
   image: planetargon.png
+  alt: Planet Argon
 - url: http://speedpos.com/
   image: speedpos.png
+  alt: Speed POS
 - url: http://selleo.com/
   image: selleo.png
+  alt: Selleo
 - url: http://devmynd.com
   image: devmynd.png
+  alt: DevMynd
 - url: http://www.radiumcrm.com
   image: radiumcrm.png
+  alt: Radium CRM
 - url: http://www.acentera.com
   image: acentera.png
+  alt: ACenterA Cloud Services
 - url: http://greenfieldhq.com
   image: greenfield.png
+  alt: Greenfield
 - url: http://typework.com
   image: typework.png
+  alt: Typework
 - url: https://garagesocial.com/ember-js
   image: garagesocial.png
+  alt: Garagesocial
 - url: http://sush.io
   image: sushio.png
+  alt: Sush
 - url: http://www.hstry.co
   image: hstry.png
+  alt: HSTRY
 - url: http://www.netuitive.com
   image: netuitive_ember_logo.png
+  alt: Netuitive
 - url: http://www.thinkific.com
   image: thinkific.png
+  alt: Thinkific
 - url: http://app.getwashio.com/
   image: washio.png
+  alt: Washio
 - url: http://www.jebbit.com
   image: jebbit.png
+  alt: Jebbit
 - url: http://zing.co
   image: zing.png
+  alt: Zing
 - url: http://screenlight.tv
   image: screenlight.png
+  alt: ScreenLight
 - url: http://www.navigator.ba
   image: navigator.png
+  alt: Navigator
 - url: http://expresscheckoutapp.com
   image: expresscheckout.png
+  alt: Express Checkout
 - url: https://www.pushmote.com
   image: pushmote.png
+  alt: Pushmote
 - url: http://echobind.com
   image: echobind.png
+  alt: echobind
 - url: https://idobata.io
   image: idobata.png
+  alt: Idobata
 - url: http://closealert.com
   image: closealert.png
+  alt: CloseAlert
 - url: https://www.export-to-china.com
   image: exportToChina.png
+  alt: Export to China
 - url: https://www.tailorbrands.com
   image: tailorBrands.png
+  alt: Tailor Brands
 - url: https://www.skedda.com
   image: skedda.png
+  alt: Skedda
 - url: http://poeticsystems.com
   image: poetic.png
+  alt: Poetic Systems
 - url: http://redowlanalytics.com
   image: redowlanalytics.png
+  alt: RedOwl
 - url: https://www.solvace.com
   image: solvace.png
+  alt: Solvace
 - url: http://dlabs.si
   image: dlabs.png
+  alt: D-labs
 - url: http://www.zenefits.com
   image: zenefits.png
+  alt: Zenefits
 - url: https://getpoynt.com
   image: poynt.png
+  alt: Poynt
 - url: https://www.ted.com
   image: ted.png
+  alt: TED
 - url: http://www.zybooks.com
   image: zybooks.png
+  alt: zyBooks
 - url: http://ghost.org
   image: ghost.png
+  alt: Ghost
 - url: http://www.softlayer.com
   image: softlayer.png
+  alt: SoftLayer
 - url: http://www.netural.com
   image: netural.png
+  alt: Netural GmbH
 - url: http://www.ticketfly.com/
   image: ticketfly.png
+  alt: Ticketfly
 - url: http://www.dudamobile.com/
   image: duda.png
+  alt: DudaMobile
 - url: https://www.bookingsync.com
   image: bookingsync.png
+  alt: BookingSync
 - url: https://www.hotdoc.com.au
   image: hotdoc.png
+  alt: HOTDOCS
 - url: http://www.xlab.si
   image: xlab.png
+  alt: XLAB
 - url: https://www.netflix.com/
   image: netflix.png
+  alt: Netflix
 - url: http://roomle.com
   image: roomle.png
+  alt: ROOMLE
 - url: http://www.claroapps.com
   image: claroapps.png
+  alt: Claro Apps
 - url: http://blimp.io
   image: blimp.png
+  alt: Blimp
 - url: http://heroku.com/
   image: heroku.png
+  alt: heroku
 - url: http://www.kotive.com
   image: kotive.png
+  alt: Kotive
 - url: http://gettinderbox.com/
   image: tinderbox.png
+  alt: TinderBox
 - url: http://www.checkmate.io
   image: checkmate.png
+  alt: Instant Checkmate
 - url: http://www.microsoft.com
   image: microsoft.png
+  alt: Microsoft
 - url: https://www.intercom.io
   image: intercom.png
+  alt: Intercom
 - url: http://verdigris.co
   image: verdigris.png
+  alt: Verdigris Technologies
 - url: http://www.bittitan.com
   image: bittitan.png
+  alt: BitTitan
 - url: http://www.sellfapp.com
   image: sellf.png
+  alt: Sellf
 - url: http://healthsparq.com
   image: healthsparq.png
+  alt: HealthSparq
 - url: https://sparehanger.com
   image: sparehanger.png
+  alt: Sparehanger
 - url: https://mingleville.com
   image: mingleville.png
+  alt: MingleVille
 - url: http://www.sakura.ad.jp
   image: sakura.png
+  alt: Sakura Japanese Steak
 - url: https://www.ludu.co
   image: ludu.png
+  alt: Ludu
 - url: https://www.whichledlight.com
   image: whichledlight.png
+  alt: Which LED Light
 - url: http://www.foogi.me
   image: foogi.png
+  alt: Foogi
 - url: https://www.zesty.com
   image: zesty.png
+  alt: Zesty
 - url: http://www.eflexsystems.com
   image: eflexsystems.png
+  alt: eFlex Systems
 - url: http://www.vestorly.com
   image: vestorly.png
+  alt: Vestorly
 - url: https://isleofcode.com
   image: isleofcode.png
+  alt: Isle of Code
 - url: https://aisler.net
   image: aisler.png
+  alt: AISLER
 - url: http://locusenergy.com
   image: locusenergy.png
+  alt: Locus Energy
 - url: http://whatsdueapp.com
   image: whatsdue.png
+  alt: WhatsDue
 - url: https://www.apprentus.com
   image: apprentus.png
+  alt: Apprentus
 - url: https://www.libroreserve.com
   image: libro.png
+  alt: Libro
 - url: http://www.molecule.io/
   image: molecule.png
+  alt: Molecule
 - url: http://www.linkedin.com
   image: linkedin.png
+  alt: LinkedIn
 - url: https://www.gozooga.com
   image: gozooga.png
+  alt: Gozooga
 - url: http://secondstreet.com/
   image: secondstreet.png
+  alt: Second Street
 - url: http://dollarshaveclub.com/
   image: dollarshaveclub.png
+  alt: Dollar Shave Club
 - url: http://www.esri.com/
   image: esri-logo.png
+  alt: Esri
 - url: http://www.codechef.com/
   image: codechef.png
+  alt: CodeChef
 - url: http://www.trampos.co/
   image: trampos-co.png
+  alt: trampos
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
