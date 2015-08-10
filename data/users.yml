@@ -652,6 +652,10 @@
   image: news-ninja-emberjs.png
   alt: NewsNinja.com
   use: "Timely, automated news generator built with Ember-cli"
+- url: http://www.netscout.com/
+  image: netscout-logo.png
+  alt: NetScout
+  use: "Chart-based dashboard for network performance analysis and monitoring"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
