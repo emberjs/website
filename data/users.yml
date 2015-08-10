@@ -644,6 +644,14 @@
   image: velocitylabs.png
   alt: "Velocity Labs"
   use: "Consultancy who uses Ember to built our clients awesome client-side apps"
+- url: http://www.infegy.com
+  image: infegy-atlas-emberjs-logo.png
+  alt: Infegy Inc.
+  use: "Interactive Social Media Analytics Dashboards built with Ember"
+- url: http://www.newsninja.com
+  image: news-ninja-emberjs.png
+  alt: NewsNinja.com
+  use: "Timely, automated news generator built with Ember-cli"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
