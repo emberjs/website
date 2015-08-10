@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: 1.13.6
-  sha: v1.13.6
+  version: 1.13.7
+  sha: v1.13.7
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
@@ -238,10 +238,11 @@ files:
     namespaces: {}
   packages/ember-htmlbars/lib/helpers/-concat.js:
     name: packages/ember-htmlbars/lib/helpers/-concat.js
-    modules: {}
+    modules:
+      ember-templates: 1
     classes: {}
     fors:
-      Ember.HTMLBars: 1
+      Ember.Templates.helpers: 1
     namespaces: {}
   packages/ember-htmlbars/lib/helpers/-html-safe.js:
     name: packages/ember-htmlbars/lib/helpers/-html-safe.js
@@ -265,8 +266,7 @@ files:
     namespaces: {}
   packages/ember-htmlbars/lib/helpers/if_unless.js:
     name: packages/ember-htmlbars/lib/helpers/if_unless.js
-    modules:
-      ember-templates: 1
+    modules: {}
     classes: {}
     fors:
       Ember.Templates.helpers: 1
@@ -408,11 +408,19 @@ files:
     classes: {}
     fors: {}
     namespaces: {}
+  packages/ember-htmlbars/lib/keywords/mut.js:
+    name: packages/ember-htmlbars/lib/keywords/mut.js
+    modules: {}
+    classes: {}
+    fors:
+      Ember.Templates.helpers: 1
+    namespaces: {}
   packages/ember-htmlbars/lib/keywords/outlet.js:
     name: packages/ember-htmlbars/lib/keywords/outlet.js
     modules: {}
     classes: {}
-    fors: {}
+    fors:
+      Ember.Templates.helpers: 1
     namespaces: {}
   packages/ember-htmlbars/lib/keywords/partial.js:
     name: packages/ember-htmlbars/lib/keywords/partial.js
@@ -436,7 +444,8 @@ files:
     name: packages/ember-htmlbars/lib/keywords/unbound.js
     modules: {}
     classes: {}
-    fors: {}
+    fors:
+      Ember.Templates.helpers: 1
     namespaces: {}
   packages/ember-htmlbars/lib/keywords/view.js:
     name: packages/ember-htmlbars/lib/keywords/view.js
@@ -658,7 +667,8 @@ files:
     name: packages/ember-metal/lib/expand_properties.js
     modules: {}
     classes: {}
-    fors: {}
+    fors:
+      Ember: 1
     namespaces: {}
   packages/ember-metal/lib/get_properties.js:
     name: packages/ember-metal/lib/get_properties.js
@@ -1679,9 +1689,9 @@ modules:
       Ember.DataAdapter: 1
       Ember.Handlebars: 1
       HandlebarsCompatibleHelper: 1
-      Ember.HTMLBars: 1
-      Ember.Handlebars.helpers: 1
       Ember.Templates.helpers: 1
+      Ember.Handlebars.helpers: 1
+      Ember.HTMLBars: 1
       Ember.String: 1
       Ember.Helper: 1
       Ember.platform: 1
@@ -1769,9 +1779,9 @@ modules:
       Ember.View: 1
     fors:
       Ember.Handlebars: 1
-      Ember.HTMLBars: 1
-      Ember.Handlebars.helpers: 1
       Ember.Templates.helpers: 1
+      Ember.Handlebars.helpers: 1
+      Ember.HTMLBars: 1
       Ember.String: 1
       Ember: 1
       Ember.computed: 1
@@ -1871,6 +1881,7 @@ modules:
       Ember.Handlebars: 1
       HandlebarsCompatibleHelper: 1
       Ember.Handlebars.helpers: 1
+      Ember.HTMLBars: 1
     fors:
       Ember.Handlebars: 1
       Ember.Handlebars.helpers: 1
@@ -1898,6 +1909,7 @@ modules:
     name: ember-templates
     submodules: {}
     classes:
+      Ember.Templates.helpers: 1
       Ember.Helper: 1
     fors:
       Ember.Templates.helpers: 1
@@ -1909,7 +1921,81 @@ modules:
     line: 8
     access: public
     tagname: ''
-    description: "&nbsp;"
+    description: |-
+      Ember templates are executed by [HTMLBars](https://github.com/tildeio/htmlbars),
+      an HTML-friendly version of [Handlebars](http://handlebarsjs.com/). Any valid Handlebars syntax is valid in an Ember template.
+
+      ### Showing a property
+
+      Templates manage the flow of an application's UI, and display state (through
+      the DOM) to a user. For example, given a component with the property "name",
+      that component's template can use the name in several ways:
+
+      ```javascript
+      // app/components/person.js
+      export default Ember.Component.extend({
+        name: 'Jill'
+      });
+      ```
+
+      ```handlebars
+      {{! app/components/person.hbs }}
+      {{name}}
+      <div>{{name}}</div>
+      <span data-name={{name}}></span>
+      ```
+
+      Any time the "name" property on the component changes, the DOM will be
+      updated.
+
+      Properties can be chained as well:
+
+      ```handlebars
+      {{aUserModel.name}}
+      <div>{{listOfUsers.firstObject.name}}</div>
+      ```
+
+      ### Using Ember helpers
+
+      When content is passed in mustaches `{{}}`, Ember will first try to find a helper
+      or component with that name. For example, the `if` helper:
+
+      ```handlebars
+      {{if name "I have a name" "I have no name"}}
+      <span data-has-name={{if name true}}></span>
+      ```
+
+      The returned value is placed where the `{{}}` is called. The above style is
+      called "inline". A second style of helper usage is called "block". For example:
+
+      ```handlebars
+      {{#if name}}
+        I have a name
+      {{else}}
+        I have no name
+      {{/if}}
+      ```
+
+      The block form of helpers allows you to control how the UI is created based
+      on the values of properties.
+
+      A third form of helper is called "nested". For example here the concat
+      helper will add " Doe" to a displayed name if the person has no last name:
+
+      ```handlebars
+      <span data-name={{concat firstName (
+       if lastName (concat " " lastName) "Doe"
+      )}}></span>
+      ```
+
+      Ember's built-in helpers are described under the [Ember.Templates.helpers](/api/classes/Ember.Templates.helpers.html)
+      namespace. Documentation on creating custom helpers can be found under
+      [Ember.Helper](/api/classes/Ember.Helper.html).
+
+      ### Invoking a Component
+
+      Ember components represent state to the UI of an application. Further
+      reading on components can be found under [Ember.Component](/api/classes/Ember.Component.html).
     tag: main
     itemtype: main
   ember-metal:
@@ -2785,15 +2871,16 @@ classes:
     is_constructor: 1
     access: private
     tagname: ''
-  Ember.HTMLBars:
-    name: Ember.HTMLBars
-    shortname: Ember.HTMLBars
+  Ember.Templates.helpers:
+    name: Ember.Templates.helpers
+    shortname: Ember.Templates.helpers
     classitems: []
     plugins: []
     extensions: []
     plugin_for: []
     extension_for: []
     module: ember
+    submodule: ember-templates
     namespace: ''
   Ember.Handlebars.helpers:
     name: Ember.Handlebars.helpers
@@ -2806,15 +2893,16 @@ classes:
     module: ember
     submodule: ember-htmlbars
     namespace: ''
-  Ember.Templates.helpers:
-    name: Ember.Templates.helpers
-    shortname: Ember.Templates.helpers
+  Ember.HTMLBars:
+    name: Ember.HTMLBars
+    shortname: Ember.HTMLBars
     classitems: []
     plugins: []
     extensions: []
     plugin_for: []
     extension_for: []
     module: ember
+    submodule: ember-htmlbars
     namespace: ''
   Ember.String:
     name: Ember.String
@@ -3108,7 +3196,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/computed.js
-    line: 34
+    line: 35
     description: |-
       A computed property transforms an object's function into a property.
 
@@ -3199,7 +3287,7 @@ classes:
     submodule: ember-metal
     namespace: Ember
     file: packages/ember-metal/lib/computed.js
-    line: 525
+    line: 533
     description: |-
       This helper returns a new property descriptor that wraps the passed
       computed property function. You can use this helper to define properties
@@ -4872,7 +4960,7 @@ classes:
     extends: Ember.Object
     uses:
     - Ember.MutableArray
-    access: private
+    access: public
     tagname: ''
   Ember.CoreObject:
     name: Ember.CoreObject
@@ -5197,7 +5285,7 @@ classes:
     module: ember
     namespace: Ember
     file: packages/ember-runtime/lib/system/subarray.js
-    line: 14
+    line: 15
     description: |-
       An `Ember.SubArray` tracks an array in a way similar to, but more specialized
       than, `Ember.TrackedArray`.  It is useful for keeping track of the indexes of
@@ -5215,7 +5303,7 @@ classes:
     module: ember
     namespace: Ember
     file: packages/ember-runtime/lib/system/tracked_array.js
-    line: 10
+    line: 11
     description: |-
       An `Ember.TrackedArray` tracks array operations.  It's useful when you want to
       lazily compute the indexes of items in an array after they've been shifted by
@@ -10623,7 +10711,7 @@ classitems:
   module: ember
   submodule: ember-htmlbars
 - file: packages/ember-htmlbars/lib/helpers/-concat.js
-  line: 1
+  line: 6
   description: |-
     Concatenates input params together.
 
@@ -10638,8 +10726,9 @@ classitems:
   tagname: ''
   itemtype: method
   name: concat
-  class: Ember.HTMLBars
+  class: Ember.Templates.helpers
   module: ember
+  submodule: ember-templates
 - file: packages/ember-htmlbars/lib/helpers/-html-safe.js
   line: 3
   description: |-
@@ -11145,6 +11234,128 @@ classitems:
   class: Ember.Templates.helpers
   module: ember
   submodule: ember-htmlbars
+- file: packages/ember-htmlbars/lib/keywords/mut.js
+  line: 18
+  description: |-
+    The `mut` helper lets you __clearly specify__ that a child `Component` can update the
+    (mutable) value passed to it, which will __change the value of the parent compnent__.
+
+    This is very helpful for passing mutable values to a `Component` of any size, but
+    critical to understanding the logic of a large/complex `Component`.
+
+    To specify that a parameter is mutable, when invoking the child `Component`:
+
+    ```handlebars
+    <my-child child-click-count={{mut totalClicks}} />
+    ```
+
+    The child `Component` can then modify the parent's value as needed:
+
+    ```javascript
+    // my-child.js
+    export default Component.extend({
+      click: function() {
+        this.attrs.childClickCount.update(this.attrs.childClickCount.value + 1);
+      }
+    });
+    ```
+
+    See a [2.0 blog post](http://emberjs.com/blog/2015/05/10/run-up-to-two-oh.html#toc_the-code-mut-code-helper) for
+    additional information on using `{{mut}}`.
+  access: public
+  tagname: ''
+  itemtype: method
+  name: mut
+  params:
+  - name: attr
+    description: the "two-way" attribute that can be modified.
+    type: Object
+    optional: true
+  class: Ember.Templates.helpers
+  module: ember
+  submodule: ember-templates
+- file: packages/ember-htmlbars/lib/keywords/outlet.js
+  line: 8
+  description: |-
+    The `{{outlet}}` helper lets you specify where a child routes will render in
+    your template. An important use of the `{{outlet}}` helper is in your
+    application's `application.hbs` file:
+    ```handlebars
+    {{! app/templates/application.hbs }}
+    <!-- header content goes here, and will always display -->
+    {{my-header}}
+    <div class="my-dynamic-content">
+      <!-- this content will change based on the current route, which depends on the current URL -->
+      {{outlet}}
+    </div>
+    <!-- footer content goes here, and will always display -->
+    {{my-footer}}
+    ```
+    See [templates guide](http://emberjs.com/guides/templates/the-application-template/) for
+    additional information on using `{{outlet}}` in `application.hbs`.
+    You may also specify a name for the `{{outlet}}`, which is useful when using more than one
+    `{{outlet}}` in a template:
+    ```handlebars
+    {{outlet "menu"}}
+    {{outlet "sidebar"}}
+    {{outlet "main"}}
+    ```
+    Your routes can then render into a specific one of these `outlet`s by specifying the `outlet`
+    attribute in your `renderTemplate` function:
+    ```javascript
+    // app/routes/menu.js
+    export default Ember.Route.extend({
+      renderTemplate() {
+        this.render({ outlet: 'menu' });
+      }
+    });
+    ```
+    See the [routing guide](http://emberjs.com/guides/routing/rendering-a-template/) for more
+    information on how your `route` interacts with the `{{outlet}}` helper.
+    Note: Your content __will not render__ if there isn't an `{{outlet}}` for it.
+  access: public
+  tagname: ''
+  itemtype: method
+  name: outlet
+  params:
+  - name: name
+    description: ''
+    type: String
+    optional: true
+  class: Ember.Templates.helpers
+  module: ember
+  submodule: ember-templates
+- file: packages/ember-htmlbars/lib/keywords/unbound.js
+  line: 6
+  description: |-
+    The `{{unbound}}` helper disconnects the one-way binding of a property,
+    essentially freezing its value at the moment of rendering. For example,
+    in this example the display of the variable `name` will not change even
+    if it is set with a new value:
+
+    ```handlebars
+    {{unbound name}}
+    ```
+
+    Like any helper, the `unbound` helper can accept a nested helper expression.
+    This allows for custom helpers to be rendered unbound:
+
+    ```handlebars
+    {{unbound (some-custom-helper)}}
+    {{unbound (capitalize name)}}
+    {{! You can use any helper, including unbound, in a nested expression }}
+    {{capitalize (unbound name)}}
+    ```
+
+    The `unbound` helper only accepts a single argument, and it return an
+    unbound value.
+  itemtype: method
+  name: unbound
+  access: public
+  tagname: ''
+  class: Ember.Templates.helpers
+  module: ember
+  submodule: ember-templates
 - file: packages/ember-htmlbars/lib/system/bootstrap.js
   line: 21
   description: |-
@@ -11786,7 +11997,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/computed.js
-  line: 149
+  line: 150
   description: |-
     Properties are cacheable by default. Computed property will automatically
     cache the return value of your function until one of the dependent keys changes.
@@ -11816,7 +12027,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 172
+  line: 173
   description: |-
     Call on a computed property to set it into non-cached mode. When in this
     mode the computed property will not automatically cache the return value.
@@ -11841,7 +12052,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 194
+  line: 195
   description: |-
     Call on a computed property to set it into read-only mode. When in this
     mode the computed property will throw an error when set.
@@ -11870,7 +12081,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 222
+  line: 223
   description: |-
     Sets the dependent keys on this computed property. Pass any number of
     arguments containing key paths that this computed property depends on.
@@ -11910,7 +12121,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 266
+  line: 274
   description: |-
     In some cases, you may want to annotate computed properties with additional
     metadata about how they function or what values they operate on. For example,
@@ -11944,7 +12155,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 320
+  line: 328
   description: |-
     Access the value of the function backing the computed property.
     If this property has already been cached, return the cached result.
@@ -11982,7 +12193,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 383
+  line: 391
   description: |-
     Set the value of a computed property. If the function that backs your
     computed property does not accept arguments then the default action for
@@ -12046,7 +12257,7 @@ classitems:
   submodule: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/computed.js
-  line: 596
+  line: 604
   description: |-
     Returns the cached value for a property, if one exists.
     This can be useful for peeking at the value of a computed
@@ -13004,11 +13215,11 @@ classitems:
   description: An empty function useful for some operations. Always returns `this`.
   itemtype: method
   name: K
-  access: public
-  tagname: ''
   return:
     description: ''
     type: Object
+  access: public
+  tagname: ''
   class: Ember
   module: ember
   submodule: ember-metal
@@ -13525,7 +13736,7 @@ classitems:
     Ember.expandProperties('{foo}.bar.{baz}')             //=> 'foo.bar.baz'
     ```
   itemtype: method
-  name: ''
+  name: expandProperties
   access: private
   tagname: ''
   params:
@@ -14346,7 +14557,7 @@ classitems:
   return:
     description: ''
     type: Object
-  access: private
+  access: public
   tagname: ''
   class: Ember
   module: ember
@@ -14499,7 +14710,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 841
+  line: 850
   description: |-
     Specify a method that observes property changes.
 
@@ -14536,7 +14747,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/mixin.js
-  line: 878
+  line: 887
   description: |-
     When observers fire, they are called with the arguments `obj`, `keyName`.
 
@@ -14832,7 +15043,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_get.js
-  line: 28
+  line: 24
   description: |-
     Gets the value of a property on an object. If the property is computed,
     the function will be invoked. If the property is not defined but the
@@ -14867,7 +15078,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_get.js
-  line: 111
+  line: 102
   description: |-
     Normalizes a target/path pair to reflect that actual target/path that should
     be observed, etc. This takes into account passing in global property
@@ -14890,7 +15101,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_set.js
-  line: 20
+  line: 16
   description: |-
     Sets the value of a property on an object, respecting computed properties
     and notifying observers and other listeners of the change. If the
@@ -14916,7 +15127,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/property_set.js
-  line: 166
+  line: 154
   description: |-
     Error-tolerant form of `Ember.set`. Will not blow up if any part of the
     chain is `undefined`, `null`, or destroyed.
@@ -16771,7 +16982,7 @@ classitems:
   module: ember
   submodule: ember-routing-htmlbars
 - file: packages/ember-routing-htmlbars/lib/keywords/link-to.js
-  line: 309
+  line: 311
   description: See [link-to](/api/classes/Ember.Handlebars.helpers.html#method_link-to)
   itemtype: method
   name: linkTo
@@ -16810,7 +17021,7 @@ classitems:
   description: Used to determine when this LinkComponent is active.
   itemtype: property
   name: currentWhen
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16822,7 +17033,7 @@ classitems:
   itemtype: property
   name: title
   default: 'null'
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16834,7 +17045,7 @@ classitems:
   itemtype: property
   name: rel
   default: 'null'
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16846,7 +17057,7 @@ classitems:
   itemtype: property
   name: tabindex
   default: 'null'
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16859,7 +17070,7 @@ classitems:
   itemtype: property
   name: target
   default: 'null'
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16919,7 +17130,7 @@ classitems:
   name: replace
   type: Boolean
   default: 'false'
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16935,7 +17146,7 @@ classitems:
   name: attributeBindings
   type: Array | String
   default: "['title', 'rel', 'tabindex', 'target']"
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -16950,7 +17161,7 @@ classitems:
   name: classNameBindings
   type: Array
   default: "['active', 'loading', 'disabled']"
-  access: private
+  access: public
   tagname: ''
   class: Ember.LinkComponent
   module: ember
@@ -19881,7 +20092,7 @@ classitems:
     Triggers the router level `didTransition` hook.
   itemtype: method
   name: didTransition
-  access: private
+  access: public
   tagname: ''
   since: 1.2.0
   class: Ember.Router
@@ -19897,7 +20108,7 @@ classitems:
     Triggers the router level `willTransition` hook.
   itemtype: method
   name: willTransition
-  access: private
+  access: public
   tagname: ''
   since: 1.11.0
   class: Ember.Router
@@ -22163,7 +22374,7 @@ classitems:
   return:
     description: receiver
     type: Object
-  access: private
+  access: public
   tagname: ''
   class: Ember.Enumerable
   module: ember
@@ -22625,7 +22836,7 @@ classitems:
   return:
     description: ''
     type: Boolean
-  access: private
+  access: public
   tagname: ''
   class: Ember.Enumerable
   module: ember
@@ -22980,7 +23191,7 @@ classitems:
   return:
     description: the array without null and undefined elements.
     type: Array
-  access: private
+  access: public
   tagname: ''
   class: Ember.Enumerable
   module: ember
@@ -23006,7 +23217,7 @@ classitems:
   return:
     description: ''
     type: Ember.Enumerable
-  access: private
+  access: public
   tagname: ''
   class: Ember.Enumerable
   module: ember
@@ -23184,7 +23395,7 @@ classitems:
     description: The sorted array.
     type: Array
   since: 1.2.0
-  access: private
+  access: public
   tagname: ''
   class: Ember.Enumerable
   module: ember
@@ -26074,7 +26285,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/system/subarray.js
-  line: 35
+  line: 42
   description: Track that an item was added to the tracked array.
   itemtype: method
   name: addItem
@@ -26094,7 +26305,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/subarray.js
-  line: 89
+  line: 96
   description: Track that an item was removed from the tracked array.
   itemtype: method
   name: removeItem
@@ -26113,7 +26324,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/tracked_array.js
-  line: 39
+  line: 46
   description: Track that `newItems` were added to the tracked array at `index`.
   itemtype: method
   name: addItems
@@ -26128,7 +26339,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/tracked_array.js
-  line: 77
+  line: 84
   description: Track that `count` items were removed at `index`.
   itemtype: method
   name: removeItems
@@ -26143,7 +26354,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/tracked_array.js
-  line: 106
+  line: 113
   description: |-
     Apply all operations, reducing them to retain:n, for `n`, the number of
     items in the array.
@@ -26167,7 +26378,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/tracked_array.js
-  line: 138
+  line: 145
   description: Return an `ArrayOperationMatch` for the operation that contains the
     item at `index`.
   itemtype: method
@@ -26184,7 +26395,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/tracked_array.js
-  line: 294
+  line: 301
   description: Internal data structure to represent an array operation.
   itemtype: method
   name: ArrayOperation
@@ -26208,7 +26419,7 @@ classitems:
   module: ember
   namespace: Ember
 - file: packages/ember-runtime/lib/system/tracked_array.js
-  line: 312
+  line: 319
   description: |-
     Internal data structure used to include information when looking up operations
     by item index.
@@ -29305,7 +29516,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 752
+  line: 751
   description: |-
     A view may contain a layout. A layout is a regular template but
     supersedes the `template` property during rendering. It is the
@@ -29326,7 +29537,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 795
+  line: 794
   description: |-
     If a value that affects template rendering changes, the view should be
     re-rendered to reflect the new value.
@@ -29339,7 +29550,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 807
+  line: 806
   description: |-
     Return the nearest ancestor that is an instance of the provided
     class or mixin.
@@ -29360,7 +29571,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 829
+  line: 828
   description: Return the nearest ancestor that has a given property.
   itemtype: method
   name: nearestWithProperty
@@ -29377,7 +29588,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 846
+  line: 845
   description: |-
     Renders the view again. This will work regardless of whether the
     view is already in the DOM or not. If the view is in the DOM, the
@@ -29400,7 +29611,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 880
+  line: 879
   description: |-
     Given a property name, returns a dasherized version of that
     property name if the property evaluates to a non-falsy value.
@@ -29419,7 +29630,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 899
+  line: 898
   description: Returns the current DOM element for the view.
   itemtype: property
   name: element
@@ -29431,7 +29642,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 908
+  line: 907
   description: |-
     Returns a jQuery object for this view's element. If you pass in a selector
     string, this method will return a jQuery object, using the current element
@@ -29456,7 +29667,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 942
+  line: 941
   description: |-
     Appends the view's element to the specified parent element.
 
@@ -29488,7 +29699,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 974
+  line: 973
   access: private
   tagname: ''
   itemtype: method
@@ -29505,7 +29716,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1027
+  line: 1026
   description: |-
     Replaces the content of the specified parent element with this view's
     element. If the view does not have an HTML representation yet,
@@ -29530,7 +29741,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1052
+  line: 1051
   description: |-
     Appends the view's element to the document body. If the view does
     not have an HTML representation yet
@@ -29555,7 +29766,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1073
+  line: 1072
   description: Removes the view's element from the element to which it is attached.
   itemtype: method
   name: remove
@@ -29569,7 +29780,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1092
+  line: 1091
   description: |-
     The HTML `id` of the view's element in the DOM. You can provide this
     value yourself but it must be unique (just as in HTML):
@@ -29603,7 +29814,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1122
+  line: 1121
   description: |-
     Attempts to discover the element in the parent element. The default
     implementation looks for an element with an ID of `elementId` (or the
@@ -29626,7 +29837,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1139
+  line: 1138
   description: |-
     Creates a DOM representation of the view and all of its child views by
     recursively calling the `render()` method. Once the element is created,
@@ -29646,7 +29857,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1159
+  line: 1158
   description: Called when a view is going to insert an element into the DOM.
   itemtype: event
   name: willInsertElement
@@ -29657,7 +29868,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1167
+  line: 1166
   description: |-
     Called when the element of the view has been inserted into the DOM
     or after the view was re-rendered. Override this function to do any
@@ -29674,7 +29885,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1180
+  line: 1179
   description: |-
     Called when the view is about to rerender, but before anything has
     been torn down. This is a good opportunity to tear down any manual
@@ -29688,7 +29899,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1190
+  line: 1189
   description: |-
     Destroys any existing element along with the element for any child views
     as well. If the view does not currently have a element, then this method
@@ -29715,7 +29926,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1213
+  line: 1212
   description: |-
     Called when the element of the view is going to be destroyed. Override
     this function to do any teardown that requires an element, like removing
@@ -29732,7 +29943,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1226
+  line: 1225
   description: Called when the parentView property has changed.
   itemtype: event
   name: parentViewDidChange
@@ -29743,7 +29954,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1238
+  line: 1237
   description: |-
     Tag name for the view's outer element. The tag name is only used when an
     element is first created. If you change the `tagName` for an element, you
@@ -29761,7 +29972,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1263
+  line: 1262
   description: |-
     Normally, Ember's component model is "write-only". The component takes a
     bunch of attributes that it got passed in, and uses them to render its
@@ -29803,7 +30014,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1305
+  line: 1304
   description: |-
     Setup a view, but do not finish waking it up.
 
@@ -29819,7 +30030,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1363
+  line: 1370
   description: |-
     Removes the view from its `parentView`, if one is found. Otherwise
     does nothing.
@@ -29835,7 +30046,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1381
+  line: 1388
   description: |-
     You must call `destroy` on a view to destroy the view (and all of its
     child views). This will remove the view from any parent node, then make
@@ -29850,7 +30061,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1414
+  line: 1421
   description: Handle events from `Ember.EventDispatcher`
   itemtype: method
   name: handleEvent
@@ -29868,7 +30079,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1426
+  line: 1433
   description: |-
     Registers the view in the view registry, keyed on the view's `elementId`.
     This is used by the EventDispatcher to locate the view in response to
@@ -29885,7 +30096,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1442
+  line: 1449
   description: |-
     Removes the view from the view registry. This should be called when the
     view is removed from DOM.
@@ -29898,7 +30109,7 @@ classitems:
   submodule: ember-views
   namespace: Ember
 - file: packages/ember-views/lib/views/view.js
-  line: 1529
+  line: 1537
   description: Global views hash
   itemtype: property
   name: views

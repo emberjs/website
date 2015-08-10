@@ -1692,7 +1692,9 @@ body.tomster_faq #content {
 **/
 
 body.tomster_commission #content,
-body.tomster_commission-sent #content {
+body.tomster_commission-sent #content,
+body.tomster_payment #content,
+body.tomster_payment-sent #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
@@ -1706,7 +1708,8 @@ body.tomster_commission-sent #content {
   }
 }
 
-.tomster-commission {
+.tomster-commission,
+.tomster-payment {
   @include clearfix;
   .left-col {
     float: left;
@@ -1720,11 +1723,14 @@ body.tomster_commission-sent #content {
   }
 }
 
-.tomster-commission-form {
+.tomster-form {
   margin-top: 1.5em;
   ul {
     padding: 0;
     margin: 0 !important;
+  }
+  li {
+    @include clearfix;
   }
   label,
   legend {
@@ -1743,6 +1749,7 @@ body.tomster_commission-sent #content {
   }
   input[type="text"],
   input[type="email"],
+  input[type="file"],
   textarea {
     border: none;
     margin: 0 0 1em;
@@ -1760,6 +1767,14 @@ body.tomster_commission-sent #content {
     }
     &.error {
       border-color: $orange-color;
+    }
+  }
+  input[type="file"] {
+    padding: 15px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+      border-color: #ddd;
     }
   }
   textarea {
@@ -1783,11 +1798,22 @@ body.tomster_commission-sent #content {
     }
   }
   input[type="submit"] {
-    margin-top: 0.5em;
+    margin-top: 1em;
     width: 125px;
     line-height: 35px;
     &:hover {
       cursor: pointer;
+    }
+  }
+  .inline-field {
+    margin-right: 5px;
+    float: left;
+    line-height: 40px;
+    input[type="text"] {
+      width: auto;
+    }
+    label {
+      line-height: 1.6em;
     }
   }
 }

@@ -8,7 +8,7 @@ title: "Users"
 
 <p>
   Logos are added by company representatives. These companies may or may not be using Ember on their main web properties, but they're definitely using it somewhere in their organizations :)
-</p> 
+</p>
 <p>
   Feel free to track down folks who work at a specific company if you're looking for more detail on their specific usage.
 </p>
@@ -21,7 +21,7 @@ title: "Users"
       <% slice.each do |user| %>
         <td>
           <a href="<%= user.url %>" rel="nofollow">
-            <img src="/images/about/<%= user.image %>" width="210" height="103" alt="">
+            <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>">
           </a>
         </td>
       <% end %>
