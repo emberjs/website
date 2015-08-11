@@ -660,6 +660,10 @@
   image: coders51.png
   alt: "coders51"
   use: "we develop web and mobile apps"
+- url: https://privatt.io
+  image: privatt.png
+  alt: Privatt
+  use: "Our front-end for Privatt Data Enterprise is built using Ember"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
