@@ -129,7 +129,7 @@ This API does not provide a mechanism for helpers to take a block, but does
 introduce support for nested helpers which can be used in concert with built-in
 helpers (like `{{#if}}` and `{{#each}}`) to achieve the same ends.
 
-Please see the [CHANGELOG.md](https://github.com/emberjs/ember.js/blob/stable/CHANGELOG.md)
+Please see the [CHANGELOG.md](https://github.com/emberjs/ember.js/releases/tag/v2.0.0)
 for an authoritative list of cleanups.
 
 #### The Road Ahead
