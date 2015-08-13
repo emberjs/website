@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Ember.js - <%= current_page.data.title || @title %></title>
-    <meta property="st:title" content="<%= current_page.data.title || @title %>" />
+		<meta property="st:title" content="Ember.js: <%= current_page.data.title || @title %>" />
+		<meta property="og:title" content="Ember.js: <%= current_page.data.title || @title %>" />
+		<meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+		<meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:site" content="@emberjs" />
+		<meta name="twitter:title" content="<%= current_page.data.title || @title %>"/>
+		<meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
     <link rel="shortcut icon" href="/images/favicon.png" />
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
