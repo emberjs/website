@@ -8,7 +8,10 @@ App.Router.map(function() {
   this.route('release');
   this.route('beta');
   this.route('canary');
-  this.route('tagged');
+  this.route('tagged', function() {
+    this.route('ember');
+    this.route('ember-data');
+  });
 });
 
 App.Router.reopen({
@@ -187,18 +190,21 @@ App.Project.reopenClass({
   FIXTURES:
     [ {
       projectName: 'Ember',
+      projectTitle: 'Ember Tagged',
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
-      channel: "tagged"
+      channel: "tagged-ember"
     }, {
       projectName: 'Ember Data',
+      projectTitle: 'Ember Data Tagged',
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
-      channel: "tagged"
+      channel: "tagged-ember-data"
     }, {
       projectName: "Ember",
+      projectTitle: "Ember Release",
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
@@ -213,6 +219,7 @@ App.Project.reopenClass({
       debugFileName: ".debug.js"
     }, {
       projectName: "Ember",
+      projectTitle: "Ember Beta",
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
@@ -229,6 +236,7 @@ App.Project.reopenClass({
       ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
+      projectTitle: 'Ember Data Release',
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
@@ -240,6 +248,7 @@ App.Project.reopenClass({
       debugFileName: ".js"
     }, {
       projectName: "Ember",
+      projectTitle: 'Ember Canary',
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
@@ -249,6 +258,7 @@ App.Project.reopenClass({
       ignoreFiles: ['ember.js']
     }, {
       projectName: "Ember Data",
+      projectTitle: 'Ember Data Canary',
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
@@ -291,12 +301,21 @@ App.ApplicationController = Ember.Controller.extend({
   }.property('currentRouteName'),
 
   isTaggedActive: function(){
-    return this.isActiveChannel('tagged');
+    var self = this;
+    return ['tagged.ember', 'tagged.ember-data'].some(function(name){ return name === self.get('currentRouteName'); })
+  }.property('currentRouteName'),
+
+  isTaggedEmberActive: function() {
+    return this.get('currentRouteName') == 'tagged.ember';
+  }.property('currentRouteName'),
+
+  isTaggedEmberDataActive: function() {
+    return this.get('currentRouteName') == 'tagged.ember-data';
   }.property('currentRouteName'),
 
   isChannelsActive: function(){
     var self = this;
-    return !['index','tagged'].some(function(name){ return name === self.get('currentRouteName'); })
+    return ['release', 'beta', 'canary'].some(function(name){ return name === self.get('currentRouteName'); })
   }.property('currentRouteName'),
 
   isReleaseActive: function(){
@@ -423,7 +442,7 @@ App.ReleaseController = Ember.Controller.extend(App.ProjectsMixin, {
   channel: 'release'
 });
 
-App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.TaggedEmberRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
@@ -434,8 +453,23 @@ App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   }
 });
 
-App.TaggedController = Ember.Controller.extend(App.ProjectsMixin, {
-  channel: 'tagged'
+App.TaggedEmberDataRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+  model: function() {
+    var bucket = App.S3Bucket.create({
+      title: 'Tagged Release Builds',
+      prefix: 'tags/v',
+      delimiter: '',
+    });
+    return bucket;
+  }
+});
+
+App.TaggedEmberController = Ember.Controller.extend(App.ProjectsMixin, {
+  channel: 'tagged-ember'
+});
+
+App.TaggedEmberDataController = Ember.Controller.extend(App.ProjectsMixin, {
+  channel: 'tagged-ember-data'
 });
 /*
  * Handlebars Helpers
