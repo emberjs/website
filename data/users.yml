@@ -664,6 +664,10 @@
   image: privatt.png
   alt: Privatt
   use: "Our front-end for Privatt Data Enterprise is built using Ember"
+- url: https://www.blueapron.com
+  image: blue-apron.png
+  alt: Blue Apron
+  use: "Powering our internal desktop and mobile warehouse management system"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
