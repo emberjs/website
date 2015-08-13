@@ -12,7 +12,8 @@ built-up cruft as a foundation for continued progress.
 apps that run on Ember 1.13 without any deprecation warnings should run
 without issues on Ember 2.0.**
 
-New applications should begin using Ember 2.0 today.
+New applications should begin using Ember 2.0 today. Apps requiring Ember-Data
+should use Ember-Data 2.0.0-beta.1 (2.0 release coming shortly!).
 
 #### New Features in Ember.js 2.0
 
