@@ -232,10 +232,22 @@ App.Project.reopenClass({
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
-      lastRelease: "1.13.7",
-      futureVersion: "1.13.8",
+      lastRelease: "1.13.9",
+      futureVersion: "1.13.10",
       channel: "release",
-      date: "2015-07-27",
+      date: "2015-08-13",
+      changelogPath: "CHANGELOG.md",
+      debugFileName: ".js"
+    }, {
+      projectName: "Ember Data",
+      baseFileName: 'ember-data',
+      projectFilter: [ /ember-data\./ ],
+      projectRepo: 'emberjs/data',
+      lastRelease: "2.0.0-beta.2",
+      futureVersion: "2.0.0-beta.3",
+      finalVersion: '2.0.0',
+      channel: "beta",
+      date: "2015-08-14",
       changelogPath: "CHANGELOG.md",
       debugFileName: ".js"
     }, {
