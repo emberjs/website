@@ -442,6 +442,12 @@ App.ReleaseController = Ember.Controller.extend(App.ProjectsMixin, {
   channel: 'release'
 });
 
+App.TaggedRoute = Ember.Route.extend({
+  redirect: function() {
+    return this.transitionTo('tagged.ember');
+  }
+});
+
 App.TaggedEmberRoute = Ember.Route.extend(App.BuildCategoryMixin, {
   model: function() {
     var bucket = App.S3Bucket.create({
