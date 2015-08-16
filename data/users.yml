@@ -668,6 +668,10 @@
   image: blue-apron.png
   alt: Blue Apron
   use: "Powering our internal desktop and mobile warehouse management system"
+- url: http://www.totalpartyplanner.com/
+  image: tpp.png
+  alt: Total Party Planner
+  use: "Modernizing and porting the existing catering app"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
