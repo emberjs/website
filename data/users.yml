@@ -671,14 +671,14 @@
 - url: http://www.totalpartyplanner.com/
   image: tpp.png
   alt: Total Party Planner
-  use: "Modernizing and porting the existing catering app"
+  use: "Ember is enabling the modernization of our food catering system"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
 # name and email of a contact we can reach out to should we ever need
 # to make changes to this page or get logo variants.
 
-# Please also be sure the logo you upload has a transparent background,
+# Please also be sure the logo you  upload has a transparent background,
 # and adequate whitespace. See further comments atop this file.
 
 # As of August 2015, new entries are required to also fill in the "use" field;
