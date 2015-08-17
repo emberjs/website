@@ -221,7 +221,7 @@ App.Project.reopenClass({
       finalVersion: '2.1.0',
       channel: "beta",
       cycleEstimatedFinishDate: '2015-10-01',
-      date: "2015-08-13",
+      date: "2015-08-16",
       nextDate: "2015-08-20",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
