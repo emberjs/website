@@ -672,6 +672,10 @@
   image: tpp.png
   alt: Total Party Planner
   use: "Ember is enabling the modernization of our food catering system"
+- url: http://www.shearwaterintl.com/
+  image: shearwater.png
+  alt: Shearwater
+  use: "Ember powers our scalable mentorship and reporting platform"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
