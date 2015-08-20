@@ -676,6 +676,10 @@
   image: shearwater.png
   alt: Shearwater
   use: "Ember powers our scalable mentorship and reporting platform"
+- url: https://www.kickstarter.com/
+  image: kickstarter.png
+  alt: Kickstarter
+  use: "Powering our creator dashboard and other tools"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
