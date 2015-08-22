@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: v2.0.0
-  sha: v2.0.0
+  version: v2.0.1
+  sha: v2.0.1
 files:
   bower_components/rsvp/lib/rsvp/promise/all.js:
     name: bower_components/rsvp/lib/rsvp/promise/all.js
@@ -807,6 +807,13 @@ files:
     namespaces: {}
   packages/ember-routing-htmlbars/lib/keywords/link-to.js:
     name: packages/ember-routing-htmlbars/lib/keywords/link-to.js
+    modules: {}
+    classes: {}
+    fors:
+      Ember.Templates.helpers: 1
+    namespaces: {}
+  packages/ember-routing-htmlbars/lib/keywords/render.js:
+    name: packages/ember-routing-htmlbars/lib/keywords/render.js
     modules: {}
     classes: {}
     fors:
@@ -4510,9 +4517,9 @@ classes:
 
       ```javascript
       Ember.Object.extend({
-        valueObserver: function() {
+        valueObserver: Ember.observer('value', function() {
           // Executes whenever the "value" property changes
-        }.observes('value')
+        })
       });
       ```
 
@@ -8808,6 +8815,13 @@ classitems:
 - file: packages/ember-application/lib/system/application.js
   line: 823
   description: |-
+    The goal of initializers should be to register dependencies and injections.
+    This phase runs once. Because these initializers may load code, they are
+    allowed to defer application readiness and advance it. If you need to access
+    the container or store you should use an InstanceInitializer that will be run
+    after all initializers and therefore after all code is loaded and the app is
+    ready.
+
     Initializer receives an object which has the following attributes:
     `name`, `before`, `after`, `initialize`. The only required attribute is
     `initialize`, all others are optional.
@@ -8906,6 +8920,7 @@ classitems:
     ```javascript
     Ember.Application.initializer({
       name: 'preload-data',
+      after: 'ember-data',   // ember-data must be loaded before we can access store
 
       initialize: function(container, application) {
         var store = container.lookup('store:main');
@@ -8939,7 +8954,78 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 949
+  line: 956
+  description: |-
+    InstanceInitializers run after all initializers have run. Because
+    instanceInitializers run after the app is fully set up. We have access
+    to the store, container, and other items. However, these initializers run
+    after code has loaded and are not allowed to defer readiness.
+
+    InstanceInitializer receives an object which has the following attributes:
+    `name`, `before`, `after`, `initialize`. The only required attribute is
+    `initialize`, all others are optional.
+
+    * `name` allows you to specify under which name the instanceInitializer is
+    registered. This must be a unique name, as trying to register two
+    instanceInitializer with the same name will result in an error.
+
+    ```javascript
+    Ember.Application.instanceInitializer({
+      name: 'namedinstanceInitializer',
+
+      initialize: function(application) {
+        Ember.debug('Running namedInitializer!');
+      }
+    });
+    ```
+
+    * `before` and `after` are used to ensure that this initializer is ran prior
+    or after the one identified by the value. This value can be a single string
+    or an array of strings, referencing the `name` of other initializers.
+
+    * See Ember.Application.initializer for discussion on the usage of before
+    and after.
+
+    Example instanceInitializer to preload data into the store.
+
+    ```javascript
+    Ember.Application.initializer({
+      name: 'preload-data',
+
+      initialize: function(application) {
+        var userConfig, userConfigEncoded, store;
+        // We have a HTML escaped JSON representation of the user's basic
+        // configuration generated server side and stored in the DOM of the main
+        // index.html file. This allows the app to have access to a set of data
+        // without making any additional remote calls. Good for basic data that is
+        // needed for immediate rendering of the page. Keep in mind, this data,
+        // like all local models and data can be manipulated by the user, so it
+        // should not be relied upon for security or authorization.
+        //
+        // Grab the encoded data from the meta tag
+        userConfigEncoded = Ember.$('head meta[name=app-user-config]').attr('content');
+        // Unescape the text, then parse the resulting JSON into a real object
+        userConfig = JSON.parse(unescape(userConfigEncoded));
+        // Lookup the store
+        store = application.container.lookup('service:store');
+        // Push the encoded JSON into the store
+        store.pushPayload(userConfig);
+      }
+    });
+    ```
+  itemtype: method
+  name: instanceInitializer
+  params:
+  - name: instanceInitializer
+    description: ''
+  access: public
+  tagname: ''
+  class: Ember.Application
+  module: ember
+  submodule: ember-application
+  namespace: Ember
+- file: packages/ember-application/lib/system/application.js
+  line: 1022
   description: |-
     This creates a registry with the default Ember naming conventions.
 
@@ -8976,7 +9062,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 1048
+  line: 1121
   description: |-
     This function defines the default lookup rules for container lookups:
 
@@ -16249,6 +16335,86 @@ classitems:
   class: Ember.Templates.helpers
   module: ember
   submodule: ember-routing-htmlbars
+- file: packages/ember-routing-htmlbars/lib/keywords/render.js
+  line: 15
+  description: |-
+    Calling ``{{render}}`` from within a template will insert another
+    template that matches the provided name. The inserted template will
+    access its properties on its own controller (rather than the controller
+    of the parent template).
+    If a view class with the same name exists, the view class also will be used.
+    Note: A given controller may only be used *once* in your app in this manner.
+    A singleton instance of the controller will be created for you.
+    Example:
+
+    ```javascript
+    App.NavigationController = Ember.Controller.extend({
+      who: "world"
+    });
+    ```
+
+    ```handlebars
+    <!-- navigation.hbs -->
+    Hello, {{who}}.
+    ```
+
+    ```handlebars
+    <!-- application.hbs -->
+    <h1>My great app</h1>
+    {{render "navigation"}}
+    ```
+
+    ```html
+    <h1>My great app</h1>
+    <div class='ember-view'>
+      Hello, world.
+    </div>
+    ```
+
+    Optionally you may provide a second argument: a property path
+    that will be bound to the `model` property of the controller.
+    If a `model` property path is specified, then a new instance of the
+    controller will be created and `{{render}}` can be used multiple times
+    with the same name.
+
+    For example if you had this `author` template.
+
+    ```handlebars
+    <div class="author">
+      Written by {{firstName}} {{lastName}}.
+      Total Posts: {{postCount}}
+    </div>
+    ```
+
+    You could render it inside the `post` template using the `render` helper.
+
+    ```handlebars
+    <div class="post">
+      <h1>{{title}}</h1>
+      <div>{{body}}</div>
+      {{render "author" author}}
+    </div>
+    ```
+  itemtype: method
+  name: render
+  params:
+  - name: name
+    description: ''
+    type: String
+  - name: context
+    description: ''
+    type: Object?
+  - name: options
+    description: ''
+    type: Hash
+  return:
+    description: HTML string
+    type: String
+  access: public
+  tagname: ''
+  class: Ember.Templates.helpers
+  module: ember
+  submodule: ember-templates
 - file: packages/ember-routing-views/lib/views/link.js
   line: 47
   deprecated: true
@@ -18049,7 +18215,7 @@ classitems:
     this.transitionTo({queryParams: {sort: 'date'}});
     ```
 
-    See also 'replaceWith'.
+    See also [replaceWith](#method_replaceWith).
 
     Simple Transition Example
 
@@ -18182,7 +18348,7 @@ classitems:
       to the route.
     type: "...Object"
   since: 1.2.0
-  access: private
+  access: public
   tagname: ''
   class: Ember.Route
   module: ember
@@ -19204,6 +19370,24 @@ classitems:
     change.
 
     Triggers the router level `didTransition` hook.
+
+    For example, to notify google analytics when the route changes,
+    you could use this hook.  (Note: requires also including GA scripts, etc.)
+
+    ```javascript
+    var Router = Ember.Router.extend({
+      location: config.locationType,
+
+      didTransition: function() {
+        this._super(...arguments);
+
+        return ga('send', 'pageview', {
+            'page': this.get('url'),
+            'title': this.get('url')
+          });
+      }
+    });
+    ```
   itemtype: method
   name: didTransition
   access: public
@@ -19214,7 +19398,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 236
+  line: 254
   description: |-
     Handles notifying any listeners of an impending URL
     change.
@@ -19230,7 +19414,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 304
+  line: 322
   description: Determines if the supplied route is currently active.
   itemtype: method
   name: isActive
@@ -19247,7 +19431,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 317
+  line: 335
   description: |-
     An alternative form of `isActive` that doesn't require
     manual concatenation of the arguments into a single
@@ -19272,7 +19456,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 338
+  line: 356
   description: Does this router instance have the given route.
   itemtype: method
   name: hasRoute
@@ -19286,7 +19470,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 349
+  line: 367
   description: |-
     Resets the state of the router by clearing the current route
     handlers and deactivating them.
@@ -19299,7 +19483,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 593
+  line: 611
   description: |-
     Returns a merged query params meta object for a given route.
     Useful for asking a route what its known query params are.
@@ -19310,7 +19494,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/router.js
-  line: 913
+  line: 931
   description: |-
     The `Router.map` function allows you to define mappings from URLs to routes
     in your application. These mappings are defined within the
@@ -19359,7 +19543,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 52
+  line: 56
   description: |-
     A computed property that returns the sum of the value
     in the dependent array.
@@ -19380,7 +19564,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 67
+  line: 71
   description: |-
     A computed property that calculates the maximum value in the
     dependent array. This will return `-Infinity` when the dependent
@@ -19424,7 +19608,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 105
+  line: 109
   description: |-
     A computed property that calculates the minimum value in the
     dependent array. This will return `Infinity` when the dependent
@@ -19468,7 +19652,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 143
+  line: 147
   description: |-
     Returns an array mapped via the callback
 
@@ -19514,7 +19698,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 183
+  line: 187
   description: |-
     Returns an array mapped to the specified key.
 
@@ -19556,7 +19740,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 220
+  line: 224
   description: |-
     Filters the array by the callback.
 
@@ -19605,7 +19789,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 263
+  line: 267
   description: |-
     Filters the array by the property and value
 
@@ -19646,7 +19830,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 306
+  line: 310
   description: |-
     A computed property which returns a new array with all the unique
     elements from one or more dependent arrays.
@@ -19688,7 +19872,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 355
+  line: 359
   description: Alias for [Ember.computed.uniq](/api/#method_computed_uniq).
   itemtype: method
   name: union
@@ -19709,7 +19893,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 367
+  line: 371
   description: |-
     A computed property which returns a new array with all the duplicated
     elements from two or more dependent arrays.
@@ -19745,7 +19929,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 422
+  line: 426
   description: |-
     A computed property which returns a new array with all the
     properties from the first dependent array that are not in the second
@@ -19790,7 +19974,7 @@ classitems:
   submodule: ember-runtime
   namespace: Ember
 - file: packages/ember-runtime/lib/computed/reduce_computed_macros.js
-  line: 470
+  line: 474
   description: |-
     A computed property which returns a new array with all the
     properties from the first dependent array sorted based on a property
@@ -27741,6 +27925,6 @@ warnings:
     Missing item type
     Returns a merged query params meta object for a given route.
     Useful for asking a route what its known query params are.
-  line: " packages/ember-routing/lib/system/router.js:593"
+  line: " packages/ember-routing/lib/system/router.js:611"
 - message: Missing item type
   line: " packages/ember-runtime/lib/mixins/controller.js:52"
