@@ -681,6 +681,10 @@
   image: flood.png
   alt: Flood IO
   use: "Ember powers our visual load test builder and data exploration dashboard"
+- url: http://www.youneedabudget.com/
+  image: ynab.png
+  alt: YNAB
+  use: "The YNAB web and desktop app is built with Ember"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
