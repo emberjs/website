@@ -241,7 +241,7 @@ import Ember from "ember";
 
 export default Ember.Helper.extend({
   // This service name is only an example
-  nameBuilder: Ember.service.inject(),
+  nameBuilder: Ember.inject.service(),
   compute(params, hash) {
     return this.get('nameBuilder').build(params, hash.title);
   },
@@ -461,4 +461,3 @@ Many of these deprecated APIs will be moved into core-supported addons, or have 
 
 + [Ember.js 1.13.0 CHANGELOG](https://github.com/emberjs/ember.js/blob/v1.13.0/CHANGELOG.md)
 + [Ember.js 2.0.0-beta.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.0.0-beta.1/CHANGELOG.md)
-
