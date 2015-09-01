@@ -693,17 +693,14 @@
   image: spiceworks.png
   alt: Spiceworks
   use: "We use Ember for our App Center and HelpDesk products, and also internal projects"
-<<<<<<< HEAD
 - url: http://ainq.com/
   image: ainq.png
   alt: AudaciousInquiry
-  use: "Our developers love using Ember.Js on their web applications."
-=======
+  use: "Using Ember in the dashboards of our health care software"
 - url: https://neighborly.com
   image: neighborly.png
   alt: Neighborly
   use: "We use Ember for some of our internal apps and some parts of the public facing app"
->>>>>>> emberjs/master
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
