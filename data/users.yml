@@ -693,6 +693,10 @@
   image: spiceworks.png
   alt: Spiceworks
   use: "We use Ember for our App Center and HelpDesk products, and also internal projects"
+- url: http://ainq.com/
+  image: ainq.png
+  alt: AudaciousInquiry
+  use: "Using Ember in the dashboards of our health care software"
 - url: https://neighborly.com
   image: neighborly.png
   alt: Neighborly
