@@ -693,6 +693,10 @@
   image: spiceworks.png
   alt: Spiceworks
   use: "We use Ember for our App Center and HelpDesk products, and also internal projects"
+- url: https://neighborly.com
+  image: neighborly.png
+  alt: Neighborly
+  use: "We use Ember for some of our internal apps and some parts of the public facing app"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
