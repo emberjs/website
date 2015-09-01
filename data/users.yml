@@ -693,6 +693,10 @@
   image: spiceworks.png
   alt: Spiceworks
   use: "We use Ember for our App Center and HelpDesk products, and also internal projects"
+- url: http://ainq.com/
+  image: ainq.png
+  alt: AudaciousInquiry
+  use: "Our developers love using Ember.Js on their web applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
