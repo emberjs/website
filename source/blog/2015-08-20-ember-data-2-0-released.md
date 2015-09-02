@@ -1,5 +1,5 @@
 ---
-title: Ember Data v2.0 Released
+title: Ember Data v2.0 Released and v2.1 Beta Released
 author: Tom Dale and the Ember Data Team
 tags: Recent Posts, Releases
 ---
@@ -63,11 +63,14 @@ acknowledged by the adapter. Note that Although deleted records will be visible
 in hasMany relationships, they will not be serialized when saving these
 relationships back to the server.
 
-If you want to preserve the old behavior, where records are removed from
-collections as soon as they are deleted, `RecordArray`s and `hasMany`
-relationships implement (since Ember Data 1.13.8) a `filterBy` method that
-returns a live filtered subset of the original array.  This can be used to
-filter out deleted but unsaved records.
+To make the transition easier, the Ember Data team (with help from
+[Clemens Müller](https://github.com/pangratz)) has released an addon called
+[Ember Data Live filterBy](https://github.com/ember-data/ember-data-live-filter-by). This
+allows the `filterBy` method on `RecordArray`s and `hasMany`
+relationships to return a live filtered subset of the original
+array. This can be used to filter out deleted but unsaved records to
+preserve the old behavior, where records are removed from collections
+as soon as they are deleted. This addon work with Ember Data 1.13 and Ember Data 2.0.
 
 ```js
 App.PostController = Ember.Controller.extend({
@@ -75,7 +78,24 @@ App.PostController = Ember.Controller.extend({
     return this.store.peekAll('post');
   }.property()
   allUndeletedPosts: function() {
-    return this.store.peekAll('post').filterBy('isDeleted', false);
+    return this.store.peekAll('post').filterBy('isDeleted', false, { live: true });
   }.property()
 });
 ```
+
+# Ember Data 2.1 Beta
+
+Ember Data data 2.1 will be the first release following Ember's 6 week
+release cycle. Rather then rush new features into the beta before they
+are ready, Ember Data 2.1 will not contain any new features or
+deprecations. Instead the Ember Data team is going to spend this cycle
+fixing issues, updating documentation and planning features for future
+2.x releases.
+
+## CHANGELOGS
+
+* [Ember Data 2.0.0 CHANGELOG][2.0-changelog]
+* [Ember Data 2.1.0-beta.1 CHANGELOG][2.1-changelog]
+
+[2.0-changelog]: https://github.com/emberjs/data/blob/v2.0.0/CHANGELOG.md
+[2.1-changelog]: https://github.com/emberjs/data/blob/v2.1.0-beta.1/CHANGELOG.md
