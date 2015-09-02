@@ -4,7 +4,7 @@ author: Tom Dale and the Ember Data Team
 tags: Recent Posts, Releases
 ---
 
-Today we are excited to announce the release of Ember Data 2.0, the
+We are excited to announce the release of Ember Data 2.0, the
 second stable release since 1.13 that includes significant improvements,
 cleanup, and cruft removal.
 
@@ -41,7 +41,13 @@ adapter authors much simpler going forward.
 
 ### Unsaved Deleted Records
 
-There is one significant change being made in the move from 1.13 to 2.0.
+There is one significant breaking change in the move from 1.13 to
+2.0. The short version of this change is **locally deleted (unsaved)
+records are no longer removed from RecordArrays and hasMany
+arrays. Ember Data now removes the deleted record only after the
+delete has been confirmed by the backend. There is also a
+[new addon](https://github.com/ember-data/ember-data-live-filter-by)
+to make it easier to implement the old behavior.**
 
 In Ember Data 1.13, once a record was marked as deleted, it was removed from
 all of the `RecordArrays` and `hasMany` arrays it belonged to. This made it
