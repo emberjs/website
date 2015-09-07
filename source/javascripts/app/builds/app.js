@@ -105,7 +105,7 @@ App.S3Bucket = Ember.Object.extend({
 
   filesPresent: function(){
     return this.get('files').length;
-  }.property('files.@each'),
+  }.property('files.[]'),
 
   filterFiles: function(filter, ignoreFiles){
     var files = this.get('files');
@@ -452,15 +452,15 @@ App.TaggedController = Ember.Controller.extend(App.ProjectsMixin, {
 /*
  * Handlebars Helpers
  */
-Ember.Handlebars.helper('format-date-time', function(date, format, options) {
+App.FormatDateTimeHelper = Ember.Helper.helper(function(date, format, options) {
   if (!options) {
     options = format;
     format = null;
   }
 
   if (format){
-    return moment(date).format(format);
+    return moment(date[0]).format(format);
   } else {
-    return moment(date).fromNow();
+    return moment(date[0]).fromNow();
   }
 });
