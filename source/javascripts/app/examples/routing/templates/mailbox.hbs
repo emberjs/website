@@ -6,7 +6,7 @@
     <th>To</th>
   </tr>
 
-  {{#each messages as |message|}}
+  {{#each model.messages as |message|}}
     {{#link-to "mail" message tagName="tr"}}
       <td>{{date message.date}}</td>
       <td>{{message.subject}}</td>

@@ -34,6 +34,6 @@ App.MailRoute = Em.Route.extend({
 
 // Handlebars helper
 
-Ember.Handlebars.registerBoundHelper('date', function(date) {
-  return moment(date).format('MMM Do');
+App.DateHelper = Ember.Helper.helper(function(date) {
+  return moment(date[0]).format('MMM Do');
 });
