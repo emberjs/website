@@ -15,8 +15,8 @@ App.Mailbox.reopenClass({
 // Routes
 
 App.Router.map(function() {
-  this.resource('mailbox', { path: '/:mailbox_id' }, function() {
-    this.resource('mail', { path: '/:message_id' });
+  this.route('mailbox', { path: '/:mailbox_id' }, function() {
+    this.route('mail', { path: '/:message_id', resetNamespace: true });
   });
 });
 
