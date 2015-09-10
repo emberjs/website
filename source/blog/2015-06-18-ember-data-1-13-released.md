@@ -233,7 +233,7 @@ ensure we get the freshest data before continuing:
 ```js
 //visiting /users/1/confirm-payment
 model: function() {
-  store.findRecord('user', 1, { reload: true });
+  return this.store.findRecord('user', 1, { reload: true });
 }
 ```			
 
@@ -243,7 +243,7 @@ background updates in order to keep the UI stable you can pass `backgroundReload
 ```js
 //visiting /users/1/open-modal
 model: function() {
-  store.findRecord('user', 1, { backgroundReload: false });
+  return this.store.findRecord('user', 1, { backgroundReload: false });
 }
 ```			
 
@@ -320,8 +320,8 @@ Ember Data 2.0 this will be changed to always return `true`.
 Symmetric methods have also been added for `store.findAll`.
 
 ```js
-  shouldReloadAll: function(store, snapshotRecordArray)
-  shouldBackgroundReloadAll: function(store, snapshotRecordArray)
+shouldReloadAll: function(store, snapshotRecordArray)
+shouldBackgroundReloadAll: function(store, snapshotRecordArray)
 ```
 
 [@eccegordo](https://github.com/eccegordo) put together this table
