@@ -701,6 +701,10 @@
   image: neighborly.png
   alt: Neighborly
   use: "We use Ember for some of our internal apps and some parts of the public facing app"
+- url: https://www.viasto.com/en/
+  image: viasto.png
+  alt: Viasto
+  use: "We use Ember to build our customer and user facing frontends."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
