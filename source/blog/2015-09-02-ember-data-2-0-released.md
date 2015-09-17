@@ -28,7 +28,7 @@ In the [Ember Data 1.13 blog post][ember-data-1-13], we described how we
 had overhauled Ember Data's internals to use JSON API from top to
 bottom.
 
-[ember-data-1-13]: http://emberjs.com/blog/2013/05/03/ember-data-progress-update.html
+[ember-data-1-13]: http://emberjs.com/blog/2015/06/18/ember-data-1-13-released.html
 
 Using JSON API dramatically simplified internal code and APIs, but I
 want to emphasize that **moving to JSON API internally does not affect
