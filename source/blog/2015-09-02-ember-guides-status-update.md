@@ -14,7 +14,7 @@ Unfortunately, our docs efforts haven’t kept up with all of those improvements
 
 Here's what you can expect in the coming weeks and months:
 
-**_Ember Data_**: Several of us are working hard to update the Models section of the Guides to properly document Ember Data in its stable form. This should be finished in about a month and released to the 2.0 and 1.13 Guides.
+**_Ember Data_**: Several of us are working hard to update the Models section of the Guides to properly document Ember Data in its stable form. This should be released imminently.
 
 **_Ember 2.1_**: Several people are working on reviewing the Guides from beginning to end to improve the quality of the writing and make sure that all of the information is up to date. We aim to have this completed for the 2.1 release of the Guides.
 
