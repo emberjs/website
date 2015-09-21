@@ -222,9 +222,9 @@ model: function() {
 ```
 
 While this is a great default data retrieval strategy, there are certain cases
-where you want to ensure you have  the freshest data (the old `store.fetch` behavior) or you do not want a background update to happen (the old `store.find(type, id)` behavior). 
+where you want to ensure you have the freshest data (the old `store.fetch` behavior).
 
-Because of that, `findRecord` and `findAll` accept `reload: true` and `backgroundReload: false` as options in order to modify their default behavior.
+Because of that, `findRecord` and `findAll` accept `reload: true` an option in order to modify their default behavior.
 
 If, for example you want to charge user for a purchase, and want to make sure you
 get their latest account balance, you can pass a `reload: true` option that will
@@ -235,17 +235,7 @@ ensure we get the freshest data before continuing:
 model: function() {
   return this.store.findRecord('user', 1, { reload: true });
 }
-```			
-
-For example if you are showing the user a settings modal and want to opt out from
-background updates in order to keep the UI stable you can pass `backgroundReload: false` as a flag:
-
-```js
-//visiting /users/1/open-modal
-model: function() {
-  return this.store.findRecord('user', 1, { backgroundReload: false });
-}
-```			
+```
 
 All of these behaviors are also shared by `findAll`:
 
@@ -253,7 +243,6 @@ All of these behaviors are also shared by `findAll`:
 store.findAll('user');  //goes to the server the first time
 store.findAll('user');  //after that returns from cache, but updates in background
 store.findAll('user', { reload: true });  //enforces getting fresh data
-store.findAll('user', { backgroundReload: false });  //opts out of background updating
 ```
 
 #### `fetchById` and `fetchAll` Replaced by `findRecord` and `findAll`
