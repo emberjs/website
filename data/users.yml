@@ -705,6 +705,10 @@
   image: viasto.png
   alt: Viasto
   use: "We use Ember to build our customer and user facing frontends."
+- url: http://www.atlantbh.com/
+  image: atlantbh.png
+  alt: Atlantbh
+  use: "We use Ember for some of our internal projects"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
