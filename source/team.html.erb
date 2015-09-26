@@ -12,8 +12,36 @@ title: "Team"
 
 <div class="team section">
 
+<% active_team = data.team.reject { |m| m.alumni } %>
+<% alumni = data.team.select { |m| m.alumni } %>
+
 <table class="headshots">
-  <% data.team.each_slice(4) do |slice| %>
+  <% active_team.each_slice(4) do |slice| %>
+    <tr>
+      <% slice.each do |user| %>
+        <td>
+          <p>
+            <%= user.name %>
+          </p>
+          <a href="<%= user.github %>" rel="nofollow">
+            <img src="/images/team/<%= user.image %>" width="150" height="150">
+          </a>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<h1>
+  Ember Core Alumni
+</h1>
+
+<p>
+  Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are retired members of the Ember Core Team, to whom we will always be grateful:
+</p>
+
+<table class="headshots">
+  <% alumni.each_slice(4) do |slice| %>
     <tr>
       <% slice.each do |user| %>
         <td>
