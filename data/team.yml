@@ -7,6 +7,7 @@
 - name: Peter Wagenet
   github: https://github.com/wagenet
   image: pwagenet.jpg
+  alumni: true
 - name: Trek Glowacki
   github: https://github.com/trek
   image: tglowaki.jpg
