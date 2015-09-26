@@ -1876,7 +1876,7 @@ body.tomster_payment-sent #content {
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
 
-.team, .meetup-assets, .guidelines, .legal {
+.team, .meetup-assets, .guidelines, .legal, .brand {
 
   .section {
     width: 100%;
@@ -2136,6 +2136,10 @@ body.tomster_payment-sent #content {
   }
 }
 
+.button-hero {
+  margin: 30px auto;  
+}
+
 a.edit-page {
   font-size: 18px;
   color: #444;
@@ -2333,11 +2337,6 @@ a.edit-page {
   404 Page
 **/
 
-// body.not-found #content {
-//   margin: 3em auto 0 auto;
-//   width: 54em;
-// }
-
 .whoops {
   margin: 3em auto 0 auto;
   width: 54em;
@@ -2367,6 +2366,30 @@ a.edit-page {
 
 .more_caution {
   color: black;
+}
+
+/* Brand Page */
+
+.brand-logo, .brand-small {
+  text-align: center;
+}
+
+.brand-logo > img {
+  width: 300px;
+  background-image: url('/images/brand/brand-bg.png');
+  border: 1px solid #cccccc;
+  margin-top: 10px;
+}
+
+.brand-logo ~ a {
+  text-align: center;
+}
+
+.brand-small > img {
+  width: 150px;
+  background-image: url('/images/brand/brand-bg.png');
+  border: 1px solid #cccccc;
+  margin-top: 10px;
 }
 
 
