@@ -2332,7 +2332,12 @@ a.edit-page {
   404 Page
 **/
 
-body.not-found #content {
+// body.not-found #content {
+//   margin: 3em auto 0 auto;
+//   width: 54em;
+// }
+
+.whoops {
   margin: 3em auto 0 auto;
   width: 54em;
 }
