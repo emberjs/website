@@ -647,3 +647,12 @@ locations:
     organizers:
     - organizer: Eoin Kelly
       profileImage: http://photos4.meetupstatic.com/photos/member/1/d/6/c/thumb_196567532.jpeg
+- area: Global
+  groups:
+  - location: Internet
+    url: http://global-ember-meetup.com
+    lat: 35.746512
+    lng: -39.46289100000001
+    organizers:
+    - organizer: EmberSherpa
+      profileImage: https://pbs.twimg.com/profile_images/538359624593055744/2jlMAv3_.jpeg
