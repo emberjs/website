@@ -14,3 +14,4 @@ of change management is commonly referred to as [Semantic Versioning](http://sem
 ### By Version
 
 * [Version 1.x](/deprecations/v1.x)
+* [Version 2.x](/deprecations/v2.x)
