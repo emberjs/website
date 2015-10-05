@@ -170,8 +170,8 @@ Thanks to [@rwjblue](https://twitter.com/rwjblue) for
 shipping this API and the polyfill addon, and to [@mixonic](https://twitter.com/mixonic)
 for the RFC.
 
-For more details on changes landing in 2.0, review the
-[Ember.js 2.0.0 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.0.0/CHANGELOG.md).
+For more details on changes landing in 2.1, review the
+[Ember.js 2.1.0 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.1.0/CHANGELOG.md).
 
 ## Ember.js 2.2 beta
 
