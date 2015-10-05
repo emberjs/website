@@ -96,7 +96,7 @@ One relevant public APIs exists on `Ember.ApplicationInstance`s:
 
 * `lookup` - fetch an instance of a factory (with dependencies)
 
-You can find updates to the guides regarding initializers in the revamped [Application Concerns](http://guides.emberjs.com/v2.1.0/application-concerns) section. The
+You can find updates to the guides regarding initializers in the revamped [Application Concerns](http://guides.emberjs.com/v2.1.0/applications/applications-and-instances/) section. The
 API documentation is similarly updated at the [ember-application namespace](http://emberjs.com/api/modules/ember-application.html), [Ember.Application](http://emberjs.com/api/classes/Ember.Application.html) class, and [Ember.ApplicationInstance](http://emberjs.com/api/classes/Ember.ApplicationInstance.html) class.
 
 This feature also introduces two minor deprecations:
