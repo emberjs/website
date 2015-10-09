@@ -709,6 +709,10 @@
   image: atlantbh.png
   alt: Atlantbh
   use: "We use Ember for some of our internal projects"
+- url: http://hashrocket.com/
+  image: hashrocket.png
+  alt: Hashrocket
+  use: "Hashrocket utilizes Ember to deliver world class client side applications"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
