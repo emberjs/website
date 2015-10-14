@@ -3,11 +3,12 @@ title: "Team"
 ---
 
 <h1>
-  Ember Core Team
+  The Team Behind Ember
 </h1>
 
-<p>
-  Ember is an Open Source project that relies on the tireless support of individual contributors. These are the members of our Core Team:
+<p class="lead">
+  Ember is an Open Source project that relies on the tireless support of individual contributors.<br>
+  These are the members of our Core Team:
 </p>
 
 <div class="team section">
@@ -16,28 +17,77 @@ title: "Team"
 <% alumni = data.team.select { |m| m.alumni } %>
 
 <table class="headshots">
-  <% active_team.each_slice(4) do |slice| %>
+  <% active_team.select {|user| user['type'] == 'core' }.each_slice(4) do |slice| %>
     <tr>
       <% slice.each do |user| %>
         <td>
-          <p>
+          <a href="<%= user.github %>" rel="nofollow" class="avatar">
+            <img src="/images/team/<%= user.image %>">
+          </a>
+
+          <p class="name">
             <%= user.name %>
           </p>
-          <a href="<%= user.github %>" rel="nofollow">
-            <img src="/images/team/<%= user.image %>" width="150" height="150">
-          </a>
+
+          <ul class="social">
+            <li>
+              <a class="twitter" href="<%= user.twitter %>">
+                <i class="icon-twitter"></i>
+              </a>
+            </li>
+
+            <li>
+              <a class="github" href="<%= user.github %>">
+                <i class="icon-github"></i>
+              </a>
+            </li>
+          </ul>
+
+          <p class="bio">
+            <%= user.bio %>
+          </p>
         </td>
       <% end %>
     </tr>
   <% end %>
 </table>
 
+<hr>
+
+<!-- <p class="lead">
+  In addition to the Core Team, the following people contribute significantly to the Ember project.<br>
+  We're grateful for their assistance.
+</p>
+
+<table class="contributors headshots">
+  <% active_team.select {|user| user['type'] != 'core' }.each_slice(4) do |slice| %>
+    <tr>
+      <% slice.each do |user| %>
+        <td>
+          <a href="<%= user.github %>" rel="nofollow" class="avatar">
+            <img src="/images/team/<%= user.image %>">
+
+            <span class="type"><%= user.type %></span>
+          </a>
+
+          <p class="name">
+            <%= user.name %>
+          </p>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<hr> -->
+
 <h1>
   Ember Core Alumni
 </h1>
 
-<p>
-  Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are retired members of the Ember Core Team, to whom we will always be grateful:
+<p class="lead">
+  Serving as a member of the Core Team of an open source project like Ember is a huge amount of work.<br>
+  These are retired members of the Ember Core Team, to whom we will always be grateful:
 </p>
 
 <table class="headshots">
@@ -45,12 +95,12 @@ title: "Team"
     <tr>
       <% slice.each do |user| %>
         <td>
-          <p>
-            <%= user.name %>
-          </p>
           <a href="<%= user.github %>" rel="nofollow">
             <img src="/images/team/<%= user.image %>" width="150" height="150">
           </a>
+          <p>
+            <%= user.name %>
+          </p>
         </td>
       <% end %>
     </tr>
