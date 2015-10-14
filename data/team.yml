@@ -1,43 +1,92 @@
 - name: Yehuda Katz
   github: https://github.com/wycats
+  twitter: https://twitter.com/wycats
   image: ykatz.jpg
+  type: core
 - name: Tom Dale
   github: https://github.com/tomdale
+  twitter: https://twitter.com/tomdale
   image: tdale.jpg
+  type: core
 - name: Peter Wagenet
   github: https://github.com/wagenet
+  twitter: https://twitter.com/wagenet
   image: pwagenet.jpg
+  type: core
   alumni: true
 - name: Trek Glowacki
   github: https://github.com/trek
+  twitter: https://twitter.com/trek
   image: tglowaki.jpg
+  type: core
 - name: Erik Bryn
   github: https://github.com/ebryn
+  twitter: https://twitter.com/ebryn
   image: ebryn.jpg
+  type: core
 - name: Kris Selden
   github: https://github.com/krisselden
+  twitter: https://twitter.com/krisselden
   image: kselden.jpg
+  type: core
 - name: Stefan Penner
   github: https://github.com/stefanpenner
+  twitter: https://twitter.com/stefanpenner
   image: spenner.jpg
+  type: core
 - name: Leah Silber
   github: https://github.com/wifelette
+  twitter: https://twitter.com/wifelette
   image: lsilber.jpg
+  type: core
 - name: Alex Matchneer
   github: https://github.com/machty
+  twitter: https://twitter.com/machty
   image: amatchneer.jpg
+  type: core
 - name: Robert Jackson
   github: https://github.com/rwjblue
+  twitter: https://twitter.com/rjackson
   image: rjackson.jpg
+  type: core
 - name: Igor Terzic
   github: https://github.com/igorT
+  twitter: https://twitter.com/terzicigor
   image: iterzic.jpeg
+  type: core
 - name: Matthew Beale
   github: https://github.com/mixonic
+  twitter: https://twitter.com/mixonic
   image: mbeale.jpg
+  type: core
 - name: Edward Faulkner
   github: https://github.com/ef4
+  twitter: https://twitter.com/eaf4
   image: efaulkner.jpg
+  type: core
 - name: Martin Muñoz
   github: https://github.com/mmun
+  twitter: https://twitter.com/_mmun
   image: mmunoz.jpg
+  type: core
+
+- name: Tomster
+  github: https://github.com/emberjs
+  image: ../tomsters/original.png
+  type: data
+- name: Tomster
+  github: https://github.com/emberjs
+  image: ../tomsters/original.png
+  type: dev
+- name: Tomster
+  github: https://github.com/emberjs
+  image: ../tomsters/original.png
+  type: docs
+- name: Tomster
+  github: https://github.com/emberjs
+  image: ../tomsters/original.png
+  type: comm
+- name: Tomster
+  github: https://github.com/emberjs
+  image: ../tomsters/original.png
+  type: infra

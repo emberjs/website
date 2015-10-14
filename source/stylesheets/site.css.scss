@@ -1881,39 +1881,99 @@ body.tomster_payment-sent #content {
   .section {
     width: 100%;
     margin-top: 0px;
-
-    .headshots {
-      width: 760px;
-      margin: 0 auto;
-
-      a:hover {
-        border-bottom: none;
-      }
-
-      td {
-        text-align: center;
-
-        p {
-          margin: 0px 0px 10px 0px;
-          font-weight: bold;
-        }
-
-        img {
-          border: 1px solid #888888;
-          margin-bottom: 10px
-        }
-      }
-    }
   }
 
-.rightFloat {
-  float: right;
-  padding: 2px;
-}
+  .rightFloat {
+    float: right;
+    padding: 2px;
+  }
 
   #content {
     margin: 3em auto 0 auto;
     width: 54em;
+  }
+}
+
+/**
+  Core Team Page
+**/
+
+body.team {
+  h1, .lead {
+    text-align: center;
+  }
+  hr {
+    height: 1px;
+    border: none;
+    margin: 4em 0;
+    background-color: #dfd7d4;
+  }
+  .headshots {
+    width: 760px;
+    margin: 0 auto;
+
+    a:hover {
+      border-bottom: none;
+    }
+
+    td {
+      text-align: center;
+      padding: 40px 0 0;
+
+      p {
+        margin: 0px 0px 10px 0px;
+        font-weight: bold;
+      }
+
+      img {
+        margin-bottom: 10px;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        border: 2px solid #faf4f1;
+        &:hover,
+        &:active,
+        &:focus {
+          border: 0;
+        }
+      }
+      .social {
+        margin-bottom: 0;
+        li {
+          display: inline-block;
+          padding: 0;
+        }
+        a {
+          color: #7c7a79;
+          font-size: 24px;
+          &:hover {
+            color: #444;
+          }
+        }
+      }
+    }
+    &.contributors {
+      .avatar {
+        position: relative;
+      }
+      img {
+        width: 66px;
+        height: 66px;
+      }
+      .type {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: -9px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        line-height: 1.5em;
+        border-radius: 4px;
+        background-color: #f23818;
+      }
+    }
   }
 }
 
@@ -2137,7 +2197,7 @@ body.tomster_payment-sent #content {
 }
 
 .button-hero {
-  margin: 30px auto;  
+  margin: 30px auto;
 }
 
 a.edit-page {
