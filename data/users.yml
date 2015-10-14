@@ -713,7 +713,10 @@
   image: hashrocket.png
   alt: Hashrocket
   use: "Hashrocket utilizes Ember to deliver world class client side applications"
-
+- url: https://www.streamrail.com/
+  image: streamrail.png
+  alt: Streamrail
+  use: "In StreamRail we use Ember in our dashboard"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
