@@ -717,6 +717,10 @@
   image: streamrail.png
   alt: Streamrail
   use: "In StreamRail we use Ember in our dashboard"
+- url: https://acorns.com/
+  image: acorns.png
+  alt: Acorns
+  use: "Acorns uses Ember to build it's web application"
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
