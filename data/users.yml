@@ -685,7 +685,7 @@
   image: ynab.png
   alt: YNAB
   use: "The YNAB web and desktop app is built with Ember"
-- url: http://engineering.alphasights.com/ 
+- url: http://engineering.alphasights.com/
   image: alphasights.png
   alt: AlphaSights
   use: "Ember gives us a best-in-class user interface for our ambitious web applications"
@@ -721,6 +721,11 @@
   image: acorns.png
   alt: Acorns
   use: "Acorns uses Ember to build it's web application"
+- url: http://www.practicefusion.com/
+  image: pf.png
+  alt: "The #1 cloud-based electronic health record platform for doctors and patients"
+  use: "The front-end for our main product is all done in Ember"
+
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember User Logo Contact". Please include the
