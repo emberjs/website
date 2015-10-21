@@ -9,6 +9,7 @@ App.Router.map(function() {
   this.route('beta');
   this.route('canary');
   this.route('tagged');
+  this.route('features');
 });
 
 App.Router.reopen({
@@ -308,7 +309,7 @@ App.ApplicationController = Ember.Controller.extend({
 
   isChannelsActive: Ember.computed('currentRouteName', function(){
     var self = this;
-    return !['index','tagged'].some(function(name){ return name === self.get('currentRouteName'); })
+    return !['index','tagged','features'].some(function(name){ return name === self.get('currentRouteName'); })
   }),
 
   isReleaseActive: Ember.computed('currentRouteName', function(){
@@ -321,6 +322,9 @@ App.ApplicationController = Ember.Controller.extend({
 
   isCanaryActive: Ember.computed('currentRouteName', function(){
     return this.isActiveChannel('canary');
+  }),
+  isFeaturesActive: Ember.computed('currentRouteName', function(){
+    return this.isActiveChannel('features');
   }),
 
   isActiveChannel: function(channel){
@@ -422,6 +426,8 @@ App.BetaRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 App.BetaController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
   channel: 'beta'
+});
+App.FeaturesController = Ember.Controller.extend({
 });
 
 App.ReleaseRoute = Ember.Route.extend(App.BuildCategoryMixin, {
