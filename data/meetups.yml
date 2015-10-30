@@ -427,6 +427,13 @@ locations:
       profileImage: http://photos1.meetupstatic.com/photos/member/9/6/a/c/thumb_131018572.jpeg
     - organizer: Santiago Ferreira
       profileImage: http://photos4.meetupstatic.com/photos/member/2/6/3/6/thumb_156729782.jpeg
+  - location: Santiago, Chile
+    url: http://www.meetup.com/Santiago-Ember-js-Group/
+    lat: -33.4533661
+    lng: -70.6967031
+    organizers:
+    - organizer: Yoran Brondsema
+      profileImage: http://photos2.meetupstatic.com/photos/member/6/b/a/0/thumb_142947552.jpeg
 - area: Europe
   groups:
   - location: Paris, France
