@@ -11,8 +11,10 @@ title: "Sponsors"
 </p>
 
 <div class="sponsors section">
-  <table id="showcase">
-    <% data.sponsors.each_slice(3) do |slice| %>
+  <h2>Current Sponsors</h2>
+
+  <table class="showcase">
+    <% current_sponsors.each_slice(3) do |slice| %>
       <tr>
         <% slice.each do |user| %>
           <td>
@@ -27,18 +29,24 @@ title: "Sponsors"
     <% end %>
   </table>
 
-  <p>A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original (this) Ember website.</p>
+<h2>Past Sponsors</h2>
 
-<!-- This next section is here for smaller sponsors; all those listed above have contributed tens-to-hundreds of thousands of dollars in time/cash.
- -->
-<!-- <p>
-  We'd also like the thank the following folks for their generous support:
-</p>
+  <table class="showcase">
+    <% past_sponsors.each_slice(3) do |slice| %>
+      <tr>
+        <% slice.each do |user| %>
+          <td>
+            <a href="<%= user.url %>" rel="nofollow">
+              <img src="/images/about/<%= user.image %>">
+            </a>
+            <h5><%=user.term %></h5>
+            <p id="sponsorType"><%=user.type %></p>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
 
-<ul>
-  <li>Test small supporter 1</li>
-  <li>Test small supporter 2</li>
-  <li>Test small supporter 3</li>
-</ul> -->
+  <p class="thanks">A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original (this) Ember website.</p>
 
 </div>
