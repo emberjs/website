@@ -10,10 +10,10 @@ title: "Sponsors"
   It's still early in the life of the project, but we couldn't have gotten as far as we have without the support&mdash;both financial and technical&mdash;of the following companies:
 </p>
 
-<h2>Current Sponsors</h2>
-
 <div class="sponsors section">
-  <table id="showcase">
+  <h2>Current Sponsors</h2>
+
+  <table class="showcase">
     <% current_sponsors.each_slice(3) do |slice| %>
       <tr>
         <% slice.each do |user| %>
@@ -29,10 +29,9 @@ title: "Sponsors"
     <% end %>
   </table>
 
-  <h2>Past Sponsors</h2>
+<h2>Past Sponsors</h2>
 
-  <%# FIXME: Don't re-use same id %>
-  <table id="showcase">
+  <table class="showcase">
     <% past_sponsors.each_slice(3) do |slice| %>
       <tr>
         <% slice.each do |user| %>
@@ -48,18 +47,6 @@ title: "Sponsors"
     <% end %>
   </table>
 
-  <p>A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original (this) Ember website.</p>
-
-<!-- This next section is here for smaller sponsors; all those listed above have contributed tens-to-hundreds of thousands of dollars in time/cash.
- -->
-<!-- <p>
-  We'd also like the thank the following folks for their generous support:
-</p>
-
-<ul>
-  <li>Test small supporter 1</li>
-  <li>Test small supporter 2</li>
-  <li>Test small supporter 3</li>
-</ul> -->
+  <p class="thanks">A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original (this) Ember website.</p>
 
 </div>

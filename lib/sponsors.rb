@@ -20,7 +20,7 @@ module Sponsors
     end
 
     def past_sponsors
-      @past_sponsors ||= sponsors.reject(&:current?).sort_by(&:term_length).reverse
+      @past_sponsors ||= sponsors.reject(&:current?).sort_by(&:term_end).reverse
     end
   end
 

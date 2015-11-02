@@ -1518,17 +1518,17 @@ body.security #content {
   margin-top: 0px;
 }
 
-#showcase {
+.showcase {
   margin: 0 auto;
   width: 100%;
 }
 
-#content #showcase tr {
+#content .showcase tr {
   background: transparent;
   border-bottom: none;
 }
 
-#showcase td {
+.showcase td {
 
   &:nth-child(2) a {
     margin: 0 auto;
@@ -1547,7 +1547,7 @@ body.security #content {
   }
 }
 
-#showcase a:hover {
+.showcase a:hover {
   border-bottom: none;
 }
 
@@ -1827,7 +1827,15 @@ body.tomster_payment-sent #content {
   .section {
     width: 100%;
     margin-top: 0px;
-    padding: 2em;
+    padding: 0 2em 2em 2em;
+
+    h2 {
+      margin: 30px 0;
+    }
+
+    h2:nth-of-type(2) {
+      margin-top: 50px;
+    }
   }
 
   p {
@@ -1855,6 +1863,10 @@ body.tomster_payment-sent #content {
     font-style: italic;
     font-size: 12px;
     margin-top: 0px;
+  }
+
+  .thanks {
+    margin-top: 50px;
   }
 
   ul, ol {

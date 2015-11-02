@@ -18,32 +18,32 @@
   term_start: 2015-01-01
 - url: http://www.linkedin.com
   image: linkedin.png
-  type: "Glimmer, Ember 2.0"
+  type: "Kris Selden, Glimmer, Ember 2.0"
   term_start: 2015-01-01
 - url: https://www.yapp.us/
   image: yapp.png
   type: "Kris Selden"
   term_start: 2013-01-01
   term_end: 2015-10-31
-- url: http://www.bustle.com/
-  image: bustle.png
-  type: "FastBoot, Glimmer"
-  term_start: 2014-01-01
-  term_end: 2015-10-31
 - url: http://dockyard.com
   image: dockyard.png
   type: "Ember Data, Robert Jackson"
   term_start: 2014-01-01
   term_end: 2015-10-31
-- url: http://www.mhelabs.com/
-  image: mhelabs.png
-  type: "Ember Data, Router"
-  term_start: 2013-01-01
-  term_end: 2013-12-31
+- url: http://www.bustle.com/
+  image: bustle.png
+  type: "FastBoot, Glimmer"
+  term_start: 2014-01-01
+  term_end: 2015-10-31
 - url: https://addepar.com/
   image: addepar.png
   type: "Ember Data"
   term_start: 2012-01-01
+  term_end: 2013-12-31
+- url: http://www.mhelabs.com/
+  image: mhelabs.png
+  type: "Ember Data, Router"
+  term_start: 2013-01-01
   term_end: 2013-12-31
 - url: http://livingsocial.com/
   image: livingsocial.png
