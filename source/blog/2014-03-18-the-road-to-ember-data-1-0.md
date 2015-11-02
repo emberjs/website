@@ -185,7 +185,7 @@ article.get('title'); //=> "Ember Data Roadmap"
 
 The basic idea is that when you're working within the context of Ember data bindings (templates, computed properties, observers), you can use a relationship as if it were a synchronous value, and let the data binding system handle the promise. This means that in many cases, this change won't affect your existing code, and will indeed improve your ability to work with asynchronous relationships in templates and computed properties (a major pain point today).
 
-You should **not** rely on this behavior when you want to use the value in imperative JavaScript (outside of computed properties); in that case, always use the promise's `then()` method to ensure the the value is available, lest you unleash Zalgo into your own apps. Only `.get` properties from a `DataBoundPromise` if you're relying on Ember's data binding functionality to update the template or computed property when the promise finally does resolve.
+You should **not** rely on this behavior when you want to use the value in imperative JavaScript (outside of computed properties); in that case, always use the promise's `then()` method to ensure the value is available, lest you unleash Zalgo into your own apps. Only `.get` properties from a `DataBoundPromise` if you're relying on Ember's data binding functionality to update the template or computed property when the promise finally does resolve.
 
 **TL;DR** Only use `get` on `DataBoundPromises` inside of observers or computed properties. Otherwise, always treat them as regular promises and use `.then`.
 
