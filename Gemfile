@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-source 'https://rails-assets.org'
 
 gem "redcarpet"
 gem "activesupport"
@@ -14,12 +13,15 @@ gem "listen"
 gem "builder"
 gem "middleman-alias", github: "wagenet/middleman-alias", branch: "keep-search-and-hash"
 gem "ember-middleman"
-gem "rails-assets-js-md5"
-gem "rails-assets-moment"
 gem "underscore-rails"
 gem "gmaps4rails"
 gem "geocoder"
 gem "faraday"
+
+source 'https://rails-assets.org' do
+  gem "rails-assets-js-md5"
+  gem "rails-assets-moment"
+end
 
 group :development, :test do
   gem 'pry'
