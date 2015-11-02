@@ -15,6 +15,7 @@ set :markdown, :layout_engine => :erb,
 
 activate :directory_indexes
 activate :toc
+activate :sponsors
 activate :highlighter
 activate :column_balancer
 activate :ember do |config|

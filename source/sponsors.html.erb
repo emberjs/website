@@ -10,9 +10,30 @@ title: "Sponsors"
   It's still early in the life of the project, but we couldn't have gotten as far as we have without the support&mdash;both financial and technical&mdash;of the following companies:
 </p>
 
+<h2>Current Sponsors</h2>
+
 <div class="sponsors section">
   <table id="showcase">
-    <% data.sponsors.each_slice(3) do |slice| %>
+    <% current_sponsors.each_slice(3) do |slice| %>
+      <tr>
+        <% slice.each do |user| %>
+          <td>
+            <a href="<%= user.url %>" rel="nofollow">
+              <img src="/images/about/<%= user.image %>">
+            </a>
+            <h5><%=user.term %></h5>
+            <p id="sponsorType"><%=user.type %></p>
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+  <h2>Past Sponsors</h2>
+
+  <%# FIXME: Don't re-use same id %>
+  <table id="showcase">
+    <% past_sponsors.each_slice(3) do |slice| %>
       <tr>
         <% slice.each do |user| %>
           <td>
