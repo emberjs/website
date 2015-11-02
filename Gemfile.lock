@@ -237,8 +237,8 @@ DEPENDENCIES
   poltergeist
   pry
   rack
-  rails-assets-js-md5
-  rails-assets-moment
+  rails-assets-js-md5!
+  rails-assets-moment!
   rake
   redcarpet
   rspec
