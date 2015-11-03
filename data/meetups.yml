@@ -647,6 +647,13 @@ locations:
     organizers:
     - organizer: Tomas Spacek
       profileImage: http://photos3.meetupstatic.com/photos/member/8/1/1/2/thumb_115833042.jpeg
+  - location: Sydney, Australia
+    url: http://www.meetup.com/EmberJS-SYD/
+    lat: -33.8650
+    lng: 151.2094
+    organizers:
+    - organizer: Boris Gordon
+      profileImage: http://photos1.meetupstatic.com/photos/member/e/0/d/d/thumb_244677565.jpeg
   - location: Wellington, New Zealand
     url: http://www.meetup.com/ember-js-wellington/
     lat: -41.298089
