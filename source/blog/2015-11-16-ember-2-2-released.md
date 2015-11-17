@@ -131,7 +131,7 @@ of the `alert-box-button` component and the attribute `onclick`:
 
 ```handlebars
 {{! app/templates/index.hbs }}
-{{alert-box as |box|}}
+{{#alert-box as |box|}}
   Danger, Will Robinson!
   <div style="float:right">
     {{#box.close-button}}
