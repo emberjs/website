@@ -725,6 +725,11 @@
   image: pf.png
   alt: "The #1 cloud-based electronic health record platform for doctors and patients"
   use: "The front-end for our main product is all done in Ember"
+- url: https://mypurecloud.com
+  image: inin.png
+  alt: "Interactive Intelligence"
+  use: "Interactive Intelligence uses Ember to develop its realtime collaboration products"
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
