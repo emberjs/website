@@ -4,8 +4,9 @@ author: Matthew Beale
 tags: Releases
 ---
 
-Ember.js 2.2, a minor version release of Ember with additive features only, is
-released today. This release represents the work of over 60 contributors.
+Ember.js 2.2, a minor version release of Ember with backwards compatible
+changes, is released today. This release represents the work of over 60
+contributors.
 
 Ember.js 2.3 beta, the branch of Ember that will be released as stable in
 roughly six weeks, is also being released today.
