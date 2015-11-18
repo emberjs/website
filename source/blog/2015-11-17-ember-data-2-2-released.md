@@ -8,7 +8,7 @@ Ember Data 2.2, a minor version release of Ember Data with bug fixes
 only, is released today. This release represents the work of over 21
 direct contributors, and over 140 commits.
 
-Ember Data 2.2 beta.1, the branch of Ember Data that will be released
+Ember Data 2.3 beta.1, the branch of Ember Data that will be released
 as stable in roughly six weeks, is also being released today.
 
 ### Changes in Ember Data 2.2
