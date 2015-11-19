@@ -259,9 +259,10 @@
 - url: http://neo.com
   image: neo.png
   alt: Neo Innovation
-- url: http://www.wanapi.com
-  image: wanapi.png
+- url: http://www.leadfeeder.com
+  image: leadfeeder.png
   alt: Leadfeeder
+  use: "Leadfeeder web app is built with Ember"
 - url: http://edgycircle.com/
   image: edgycircle.png
   alt: edgy circle
