@@ -45,4 +45,4 @@ Thanks to [fivetanley](https://github.com/fivetanley) for his hard
 work in porting Ember Data to the addon infrastructure.
 
 For more details on changes landing in 2.3, review the
-[Ember.js 2.3.0-beta.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.3.0-beta.1/CHANGELOG.md).
+[Ember Data 2.3.0-beta.1 CHANGELOG](https://github.com/emberjs/data/blob/v2.3.0-beta.1/CHANGELOG.md).
