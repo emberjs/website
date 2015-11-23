@@ -51,7 +51,7 @@
   date: December 3, 2014
   image: /images/tomsters/builtwith.png
 - title: Ember Sherpa
-  url: 
+  url:
   date: November 25, 2014
   image: /images/tomsters/sherpa.png
 - title: Stable Release Bust
@@ -67,15 +67,15 @@
   date: December 2, 2013
   image: /images/tomsters/2-beta.png
 - title: RFC Bust
-  url: 
+  url:
   date: February 26, 2015
   image: /images/tomsters/0-rfc.png
 - title: Construction Tomster
-  url: 
+  url:
   date: March 24, 2013
   image: /images/tomsters/construction.png
 - title: EmberCamp Tomster
-  url: 
+  url:
   date: December 21, 2012
   image: /images/tomsters/embercamp.png
 - title: Fishy Tomster
@@ -83,11 +83,11 @@
   date: November 17, 2012
   image: /images/tomsters/fishy.png
 - title: Deprecated Tomster
-  url: 
+  url:
   date: March 24, 2013
   image: /images/tomsters/deprecated.png
 - title: 5K Tomster
-  url: 
+  url:
   date: March 12, 2014
   image: /images/tomsters/5k.png
 - title: EmberConf 2015
@@ -99,15 +99,15 @@
   date: November 1, 2013
   image: /images/tomsters/hanggliding.png
 - title: Teaching Tomster
-  url: 
+  url:
   date: January 14, 2013
   image: /images/tomsters/teaching.png
 - title: Office Hours Tomster
-  url: 
+  url:
   date: March 25, 2013
   image: /images/tomsters/officehours.png
 - title: Pirate Tomster
-  url: 
+  url:
   date: May 26, 2015
   image: /images/tomsters/pirate.png
 - title: Atlanta Tomster
@@ -122,3 +122,11 @@
   url: http://www.meetup.com/Ember-js-Denver/
   date: July 24, 2015
   image: /images/tomsters/denver.png
+- title: Vancouver Tomster
+  url: http://www.meetup.com/Vancouver-Ember-js/
+  date: October 15, 2015
+  image: /images/tomsters/vancouver.png
+# - title: Portland Tomster
+#   url: www.meetup.com/Ember-PDX
+#   date: October 23, 2015
+#   image: /images/tomsters/portland.png
