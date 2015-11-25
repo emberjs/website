@@ -730,6 +730,10 @@
   image: inin.png
   alt: "Interactive Intelligence"
   use: "Interactive Intelligence uses Ember to develop its realtime collaboration products"
+- url: http://simplabs.com
+  image: simplabs.png
+  alt: "simplabs"
+  use: "Consultancy that uses Ember to built our clients' projects as well as some projects of our own"
 
 
 # ---- PLEASE READ ----
