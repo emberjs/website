@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v2.2.0
+  sha: v2.2.1
 files:
   packages/ember-data/lib/adapters/build-url-mixin.js:
     name: packages/ember-data/lib/adapters/build-url-mixin.js
@@ -10839,7 +10839,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1749
+  line: 1754
   description: |-
     Push some raw data into the store.
 
@@ -10904,7 +10904,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1819
+  line: 1824
   description: |-
     `normalize` converts a json payload into the normalized form that
     [push](#method_push) expects.
@@ -10934,7 +10934,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1845
+  line: 1850
   description: |-
     Build a brand new record for a given type, ID, and
     initial data.
@@ -10959,7 +10959,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1887
+  line: 1892
   description: |-
     When a record is destroyed, this un-indexes it and
     removes it from any record arrays so it can be GCed.
@@ -10975,7 +10975,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1914
+  line: 1919
   description: |-
     Returns an instance of the adapter for a given type. For
     example, `adapterFor('person')` will return an instance of
@@ -11001,7 +11001,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1946
+  line: 1951
   description: |-
     Returns an instance of the serializer for a given type. For
     example, `serializerFor('person')` will return an instance of
@@ -11032,7 +11032,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: packages/ember-data/lib/system/store.js
-  line: 1981
+  line: 1986
   description: |-
     Retrieve a particular instance from the
     container cache. If not found, creates it and
