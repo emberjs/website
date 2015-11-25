@@ -126,7 +126,7 @@
   url: http://www.meetup.com/Vancouver-Ember-js/
   date: October 15, 2015
   image: /images/tomsters/vancouver.png
-# - title: Portland Tomster
-#   url: www.meetup.com/Ember-PDX
-#   date: October 23, 2015
-#   image: /images/tomsters/portland.png
+- title: Portland Tomster
+  url: http://www.meetup.com/Ember-PDX
+  date: October 23, 2015
+  image: /images/tomsters/portland.png
