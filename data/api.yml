@@ -4668,7 +4668,7 @@ classes:
       proxy.get('isFulfilled') //=> false
       ```
 
-      When the the $.getJSON completes, and the promise is fulfilled
+      When the $.getJSON completes, and the promise is fulfilled
       with json, the life cycle attributes will update accordingly.
 
       ```javascript
@@ -6372,7 +6372,7 @@ classes:
       <div id="ember1" class="ember-view disabled"></div>
       ```
 
-      Updates to the the value of a class name binding will result in automatic
+      Updates to the value of a class name binding will result in automatic
       update of the  HTML `class` attribute in the view's rendered HTML
       representation. If the value becomes `false` or `undefined` the class name
       will be removed.
@@ -6469,7 +6469,7 @@ classes:
       });
       ```
 
-      Updates to the the property of an attribute binding will result in automatic
+      Updates to the property of an attribute binding will result in automatic
       update of the  HTML attribute in the view's rendered HTML representation.
 
       `attributeBindings` is a concatenated property. See [Ember.Object](/api/classes/Ember.Object.html)
@@ -6653,7 +6653,7 @@ classes:
       ```javascript
       AView = Ember.View.extend({
         click: function(event) {
-          // will be called when when an instance's
+          // will be called when an instance's
           // rendered element is clicked
         }
       });
@@ -6674,7 +6674,7 @@ classes:
       AView = Ember.View.extend({
         eventManager: Ember.Object.create({
           doubleClick: function(event, view) {
-            // will be called when when an instance's
+            // will be called when an instance's
             // rendered element or any rendering
             // of this view's descendant
             // elements is clicked
@@ -7505,7 +7505,7 @@ classitems:
     type: String
   return:
     description: |-
-      promise that is fulfilled when when all properties of `promises`
+      promise that is fulfilled when all properties of `promises`
       have been settled.
     type: Promise
   static: 1
@@ -11908,7 +11908,7 @@ classitems:
   description: |-
     Find templates stored in the head tag as script tags and make them available
     to `Ember.CoreView` in the global `Ember.TEMPLATES` object. This will be run
-    as as jQuery DOM-ready callback.
+    as a jQuery DOM-ready callback.
 
     Script tags with `text/x-handlebars` will be compiled
     with Ember's template compiler and are suitable for use as a view's template.
@@ -16775,8 +16775,7 @@ classitems:
     ### Keeping a link active for other routes
 
     If you need a link to be 'active' even when it doesn't match
-    the current route, you can use the the `current-when`
-    argument.
+    the current route, you can use the `current-when` argument.
 
     ```handlebars
     {{#link-to 'photoGallery' current-when='photos'}}
@@ -21270,7 +21269,7 @@ classitems:
       called just after the array is modified.
 
     Both callbacks will be passed the observed object, starting index of the
-    change as well a a count of the items to be removed and added. You can use
+    change as well as a count of the items to be removed and added. You can use
     these callbacks to optionally inspect the array during the change, clear
     caches, or do any other bookkeeping necessary.
 
