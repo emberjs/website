@@ -734,6 +734,10 @@
   image: simplabs.png
   alt: "simplabs"
   use: "Consultancy that uses Ember to built our clients' projects as well as some projects of our own"
+- url: https://bankfacil.com.br/dev
+  image: bankfacil.png
+  alt: "bankfacil"
+  use: "Ember is powering the new Bankfacil customer frontend"
 
 
 # ---- PLEASE READ ----
