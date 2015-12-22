@@ -20,10 +20,10 @@ Ember Data.
 See the [Ember Data 2.2.0 CHANGELOG](https://github.com/emberjs/data/blob/v2.2.0/CHANGELOG.md) for a full list of all changes.
 
 
-### Ember.js 2.3 beta
+### Ember Data 2.3 beta
 
-Ember.js 2.3 beta is released today, and in six weeks it will become the
-new stable version of Ember.
+Ember Data 2.3 beta is released today, and in six weeks it will become the
+new stable version of Ember Data.
 
 #### Ember CLI Addon
 
