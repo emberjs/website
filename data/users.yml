@@ -738,6 +738,10 @@
   image: bankfacil.png
   alt: "bankfacil"
   use: "Ember is powering the new Bankfacil customer frontend"
+- url: http://testdouble.com/
+  image: testdouble.png
+  alt: "Test Double"
+  use: "Test Double uses Ember to develop rich web applications for our clients"
 
 
 # ---- PLEASE READ ----
