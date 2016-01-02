@@ -9,7 +9,8 @@
 # and adequate whitespace so it's not crammed against the edges. The size
 # of the space you're filling is max 210 x 103. To best control
 # appearance, submit an image this exact size that already includes
-# the whitespace you want.
+# the whitespace you want. To support high-resolution displays, consider
+# submitting your image at twice this resolution with dimensions of 420 x 206.
 
 # Please do not post links to pages selling Ember consulting
 # services. They will be removed.
