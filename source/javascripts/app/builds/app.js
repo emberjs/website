@@ -15,14 +15,14 @@ App.Router.map(function() {
 });
 
 App.Router.reopen({
-  notifyGoogleAnalytics: function() {
+  notifyGoogleAnalytics: Ember.on('didTransition', function() {
     var url = this.get('url');
 
     // Add a slash if neccesary
     if (!/^\//.test(url)){ url = '/' + url; }
 
     _gaq.push(['_trackPageview', '/builds' + url]);
-  }.on('didTransition')
+  })
 });
 
 App.CopyClipboardComponent = Ember.Component.extend({
@@ -67,48 +67,48 @@ App.S3Bucket = Ember.Object.extend({
   bucket: 'builds.emberjs.com',
   endpoint: 's3.amazonaws.com',
 
-  delimiterParameter: function(){
+  delimiterParameter: Ember.computed('delimiter', function(){
     var delimiter = this.getWithDefault('delimiter','').toString();
     return (delimiter) ? 'delimiter=' + delimiter : '';
-  }.property('delimiter'),
+  }),
 
-  maxKeysParameter: function(){
+  maxKeysParameter: Ember.computed('maxKeys', function(){
     return 'max-keys=' + this.getWithDefault('maxKeys','').toString();
-  }.property('maxKeys'),
+  }),
 
-  prefixParameter: function(){
+  prefixParameter: Ember.computed('prefix', function(){
     return 'prefix=' + this.getWithDefault('prefix','').toString();
-  }.property('prefix'),
+  }),
 
-  queryProtocol: function() {
+  queryProtocol: Ember.computed('queryUseSSL', function() {
     return this.get('queryUseSSL') ? 'https://' : 'http://';
-  }.property('queryUseSSL'),
+  }),
 
-  queryBaseUrl: function(){
+  queryBaseUrl: Ember.computed('queryProtocol', 'endpoint', 'bucket', function(){
     return this.get('queryProtocol') + this.get('endpoint') + '/' + this.get('bucket')
-  }.property('queryProtocol', 'endpoint', 'bucket'),
+  }),
 
-  objectProtocol: function() {
+  objectProtocol: Ember.computed('objectUseSSL', function() {
     return this.get('objectUseSSL') ? 'https://' : 'http://';
-  }.property('objectUseSSL'),
+  }),
 
-  objectBaseUrl: function(){
+  objectBaseUrl: Ember.computed('objectProtocol', 'bucket', function(){
     return this.get('objectProtocol') + this.get('bucket');
-  }.property('objectProtocol', 'bucket'),
+  }),
 
-  queryParams: function(){
+  queryParams: Ember.computed('delimiterParameter', 'maxKeysParameter', 'prefixParameter', function(){
     return this.get('delimiterParameter')  + '&' +
       this.get('maxKeysParameter')    + '&' +
       this.get('prefixParameter');
-  }.property('delimiterParameter','maxKeysParameter','prefixParameter'),
+  }),
 
-  queryUrl: function(){
+  queryUrl: Ember.computed('queryBaseUrl', 'queryParams', function(){
     return this.get('queryBaseUrl') + '?' + this.get('queryParams');
-  }.property('queryBaseUrl','queryParams'),
+  }),
 
-  filesPresent: function(){
+  filesPresent: Ember.computed('files.[]', function(){
     return this.get('files').length;
-  }.property('files.@each'),
+  }),
 
   filterFiles: function(filter, ignoreFiles){
     var files = this.get('files');
@@ -123,7 +123,7 @@ App.S3Bucket = Ember.Object.extend({
     });
   },
 
-  load: function() {
+  load: Ember.on('init', Ember.observer('queryUrl', function() {
     var self = this;
     this.set('isLoading', true);
 
@@ -133,7 +133,7 @@ App.S3Bucket = Ember.Object.extend({
         return b.lastModified - a.lastModified;
       }));
     });
-  }.observes('queryUrl').on('init'),
+  })),
 
   loadAllPages: function(marker, files) {
     var self = this;
@@ -173,15 +173,15 @@ App.S3Bucket = Ember.Object.extend({
 });
 
 App.S3File = Ember.Object.extend({
-  scriptTag: function(){
+  scriptTag: Ember.computed('url', function(){
     var escapedURL = Ember.Handlebars.Utils.escapeExpression(this.get('url'));
 
     return new Ember.Handlebars.SafeString('<script src="' + escapedURL + '"></script>').toString();
-  }.property('url'),
+  }),
 
-  url: function(){
+  url: Ember.computed('baseUrl', 'relativePath', function(){
     return this.get('baseUrl') + '/' + this.get('relativePath');
-  }.property('baseUrl', 'relativePath')
+  })
 });
 
 App.Project = Ember.Object.extend();
@@ -208,12 +208,12 @@ App.Project.reopenClass({
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
-      initialVersion: "2.0.0",
-      initialReleaseDate: "2015-08-13",
-      lastRelease: "2.0.0",
-      futureVersion: "2.0.1",
+      initialVersion: "2.2.0",
+      initialReleaseDate: "2015-11-16",
+      lastRelease: "2.2.0",
+      futureVersion: "2.2.1",
       channel: "release",
-      date: "2015-08-13",
+      date: "2015-11-16",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
       debugFileName: ".debug.js"
@@ -223,13 +223,13 @@ App.Project.reopenClass({
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
-      lastRelease: "2.1.0-beta.1",
-      futureVersion: "2.1.0-beta.2",
-      finalVersion: '2.1.0',
+      lastRelease: "2.3.0-beta.1",
+      futureVersion: "2.3.0-beta.2",
+      finalVersion: '2.3.0',
       channel: "beta",
-      cycleEstimatedFinishDate: '2015-10-01',
-      date: "2015-08-13",
-      nextDate: "2015-08-20",
+      cycleEstimatedFinishDate: '2016-01-01',
+      date: "2015-11-16",
+      nextDate: "2015-11-23",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
       debugFileName: ".debug.js",
@@ -240,10 +240,22 @@ App.Project.reopenClass({
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
-      lastRelease: "1.13.7",
-      futureVersion: "1.13.8",
+      lastRelease: "2.2.1",
+      futureVersion: "2.2.2",
       channel: "release",
-      date: "2015-07-27",
+      date: "2015-11-17",
+      changelogPath: "CHANGELOG.md",
+      debugFileName: ".js"
+    }, {
+      projectName: "Ember Data",
+      baseFileName: 'ember-data',
+      projectFilter: [ /ember-data\./ ],
+      projectRepo: 'emberjs/data',
+      lastRelease: "2.3.0-beta.1",
+      futureVersion: "2.3.0-beta.2",
+      finalVersion: '2.3.0',
+      channel: "beta",
+      date: "2015-11-17",
       changelogPath: "CHANGELOG.md",
       debugFileName: ".js"
     }, {
@@ -296,39 +308,39 @@ App.BuildCategoryMixin = Ember.Mixin.create({
 });
 
 App.ApplicationController = Ember.Controller.extend({
-  isIndexActive: function(){
+  isIndexActive: Ember.computed('currentRouteName', function(){
     return this.isActiveChannel('index');
-  }.property('currentRouteName'),
+  }),
 
-  isTaggedActive: function(){
+  isTaggedActive: Ember.computed('currentRouteName', function(){
     var self = this;
     return ['tagged.ember', 'tagged.ember-data'].some(function(name){ return name === self.get('currentRouteName'); })
-  }.property('currentRouteName'),
+  }),
 
-  isTaggedEmberActive: function() {
+  isTaggedEmberActive: Ember.computed('currentRouteName', function() {
     return this.get('currentRouteName') == 'tagged.ember';
-  }.property('currentRouteName'),
+  }),
 
-  isTaggedEmberDataActive: function() {
+  isTaggedEmberDataActive: Ember.computed('currentRouteName', function() {
     return this.get('currentRouteName') == 'tagged.ember-data';
-  }.property('currentRouteName'),
+  }),
 
-  isChannelsActive: function(){
+  isChannelsActive: Ember.computed('currentRouteName', function(){
     var self = this;
     return ['release', 'beta', 'canary'].some(function(name){ return name === self.get('currentRouteName'); })
-  }.property('currentRouteName'),
+  }),
 
-  isReleaseActive: function(){
+  isReleaseActive: Ember.computed('currentRouteName', function(){
     return this.isActiveChannel('release');
-  }.property('currentRouteName'),
+  }),
 
-  isBetaActive: function(){
+  isBetaActive: Ember.computed('currentRouteName', function(){
     return this.isActiveChannel('beta');
-  }.property('currentRouteName'),
+  }),
 
-  isCanaryActive: function(){
+  isCanaryActive: Ember.computed('currentRouteName', function(){
     return this.isActiveChannel('canary');
-  }.property('currentRouteName'),
+  }),
 
   isActiveChannel: function(channel){
     return this.get('currentRouteName').indexOf(channel) !== -1;
@@ -336,7 +348,7 @@ App.ApplicationController = Ember.Controller.extend({
 });
 
 App.ProjectsMixin = Ember.Mixin.create({
-  projects: function(){
+  projects: Ember.computed('channel', 'model', function(){
     var projects = App.Project.find(this.get('channel')),
         bucket   = this.get('model'),
         self = this;
@@ -379,7 +391,7 @@ App.ProjectsMixin = Ember.Mixin.create({
     });
 
     return projects;
-  }.property('channel', 'model'),
+  }),
 
   description: function(project){
     var lastRelease = project.lastRelease,
@@ -480,15 +492,15 @@ App.TaggedEmberDataController = Ember.Controller.extend(App.ProjectsMixin, {
 /*
  * Handlebars Helpers
  */
-Ember.Handlebars.helper('format-date-time', function(date, format, options) {
+App.FormatDateTimeHelper = Ember.Helper.helper(function(date, format, options) {
   if (!options) {
     options = format;
     format = null;
   }
 
   if (format){
-    return moment(date).format(format);
+    return moment(date[0]).format(format);
   } else {
-    return moment(date).fromNow();
+    return moment(date[0]).fromNow();
   }
 });

@@ -2,7 +2,7 @@
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember Sponsor Logo Contact". Please include the
 # name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants, as well as an 
+# to make changes to this page or get logo variants, as well as an
 # explanation of why you should be listed here.
 
 # Please also be sure the logo you upload has a transparent background,
@@ -10,44 +10,50 @@
 
 - url: http://tilde.io/
   image: tilde.png
-  term: "2011-present"
-  type: "Tom Dale, Yehuda Katz, Leah Silber"
-- url: https://www.yapp.us/
-  image: yapp.png
-  term: "2013-present"
-  type: "Kris Selden"
+  type: "Yehuda Katz, Leah Silber"
+  term_start: 2011-01-01
 - url: http://www.yahoo.com
   image: yahoo.png
-  term: "2015-present"
   type: "Stefan Penner"
+  term_start: 2015-01-01
 - url: http://www.linkedin.com
   image: linkedin.png
-  term: "2015—present"
-  type: "Glimmer, Ember 2.0"
-- url: http://www.bustle.com/
-  image: bustle.png
-  term: "2014-2015"
-  type: "FastBoot, Glimmer"
+  type: "Kris Selden, Glimmer, Ember 2.0"
+  term_start: 2015-01-01
+- url: https://www.yapp.us/
+  image: yapp.png
+  type: "Kris Selden"
+  term_start: 2013-01-01
+  term_end: 2015-10-31
 - url: http://dockyard.com
   image: dockyard.png
-  term: "2014-2015"
   type: "Ember Data, Robert Jackson"
-- url: http://www.mhelabs.com/
-  image: mhelabs.png
-  term: "2013"
-  type: "Ember Data, Router"
+  term_start: 2014-01-01
+  term_end: 2015-10-31
+- url: http://www.bustle.com/
+  image: bustle.png
+  type: "FastBoot, Glimmer"
+  term_start: 2014-01-01
+  term_end: 2015-10-31
 - url: https://addepar.com/
   image: addepar.png
-  term: "2012-2013"
   type: "Ember Data"
+  term_start: 2012-01-01
+  term_end: 2013-12-31
+- url: http://www.mhelabs.com/
+  image: mhelabs.png
+  type: "Ember Data, Router"
+  term_start: 2013-01-01
+  term_end: 2013-12-31
 - url: http://livingsocial.com/
   image: livingsocial.png
-  term: "2011"
   type: "Ember 1.0, Ember Data"
+  term_start: 2011-01-01
+  term_end: 2011-12-31
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
 # with the subject line "Ember Sponsor Logo Contact". Please include the
 # name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants, as well as an 
+# to make changes to this page or get logo variants, as well as an
 # explanation of why you should be listed here.

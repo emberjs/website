@@ -16,18 +16,6 @@ function buildLineNumbers(source) {
   return "<pre>"+output.join('')+"</pre>";
 }
 
-Ember.Handlebars.helper('syntax-highlight', function(value, options) {
-  var highlighted = hljs.highlightAuto(value).value;
-  var lineNumbers = buildLineNumbers(highlighted);
-
-  var output = '<table class="CodeRay"><tr><td class="line-numbers">';
-  output += lineNumbers;
-  output += '</td><td class="code"><pre>' + highlighted + '</pre></td></tr></table>';
-
-  output = "<div class='example-highlight'>" + output + "</div>";
-  return new Ember.Handlebars.SafeString(output);
-});
-
 function generateViewerApp($elem, files) {
   // Scope the application to the example's
   // DOM element by setting rootElement.
@@ -47,7 +35,7 @@ function generateViewerApp($elem, files) {
     }
   });
 
-  App.ApplicationController = Ember.ArrayController.extend({
+  App.ApplicationController = Ember.Controller.extend({
     actions: {
       selectTab: function(tab) {
         this.set('selectedTab', tab);
@@ -68,12 +56,24 @@ function generateViewerApp($elem, files) {
     })
 
   });
+
+  App.SyntaxHighlightHelper = Ember.Helper.helper(function(value, options) {
+    var highlighted = hljs.highlightAuto(value[0]).value;
+    var lineNumbers = buildLineNumbers(highlighted);
+
+    var output = '<table class="CodeRay"><tr><td class="line-numbers">';
+    output += lineNumbers;
+    output += '</td><td class="code"><pre>' + highlighted + '</pre></td></tr></table>';
+
+    output = "<div class='example-highlight'>" + output + "</div>";
+    return new Ember.Handlebars.SafeString(output);
+  });
 }
 
-function registerComponent(container, name) {
+function registerComponent(container, name, application) {
   Ember.assert("You provided a template named 'components/" + name + "', but custom components must include a '-'", name.match(/-/));
 
-  container.injection('component:' + name, 'layout', 'template:components/' + name);
+  application.register('component:' + name, 'layout', 'template:components/' + name);
 
   var fullName = 'component:' + name;
   var Component = container.lookupFactory(fullName);
@@ -83,7 +83,7 @@ function registerComponent(container, name) {
     Component = container.lookupFactory(fullName);
   }
 
-  Ember.Handlebars.helper(name, Component);
+  Ember.Helper.helper(name, Component);
 }
 
 function generateOutputApp($elem, files) {
@@ -111,7 +111,7 @@ function generateOutputApp($elem, files) {
     ready: function() {
       for (var name in templates) {
         if (name.substr(0, 11) === "components/") {
-          registerComponent(this.__container__, name.substr(11, name.length));
+          registerComponent(this.__container__, name.substr(11, name.length), App);
         }
       }
     },

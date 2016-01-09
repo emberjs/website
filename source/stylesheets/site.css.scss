@@ -1082,6 +1082,7 @@ body.community #content {
 
   > h1 {
     text-align: center;
+    margin: 3em auto 1em auto;
   }
 
   .section {
@@ -1517,17 +1518,17 @@ body.security #content {
   margin-top: 0px;
 }
 
-#showcase {
+.showcase {
   margin: 0 auto;
   width: 100%;
 }
 
-#content #showcase tr {
+#content .showcase tr {
   background: transparent;
   border-bottom: none;
 }
 
-#showcase td {
+.showcase td {
 
   &:nth-child(2) a {
     margin: 0 auto;
@@ -1546,7 +1547,7 @@ body.security #content {
   }
 }
 
-#showcase a:hover {
+.showcase a:hover {
   border-bottom: none;
 }
 
@@ -1826,7 +1827,15 @@ body.tomster_payment-sent #content {
   .section {
     width: 100%;
     margin-top: 0px;
-    padding: 2em;
+    padding: 0 2em 2em 2em;
+
+    h2 {
+      margin: 30px 0;
+    }
+
+    h2:nth-of-type(2) {
+      margin-top: 50px;
+    }
   }
 
   p {
@@ -1856,6 +1865,10 @@ body.tomster_payment-sent #content {
     margin-top: 0px;
   }
 
+  .thanks {
+    margin-top: 50px;
+  }
+
   ul, ol {
     margin-bottom: 28px;
 
@@ -1875,44 +1888,104 @@ body.tomster_payment-sent #content {
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
 
-.team, .meetup-assets, .guidelines, .legal {
+.team, .meetup-assets, .guidelines, .legal, .logos {
 
   .section {
     width: 100%;
     margin-top: 0px;
-
-    .headshots {
-      width: 760px;
-      margin: 0 auto;
-
-      a:hover {
-        border-bottom: none;
-      }
-
-      td {
-        text-align: center;
-
-        p {
-          margin: 0px 0px 10px 0px;
-          font-weight: bold;
-        }
-
-        img {
-          border: 1px solid #888888;
-          margin-bottom: 10px
-        }
-      }
-    }
   }
 
-.rightFloat {
-  float: right;
-  padding: 2px;
-}
+  .rightFloat {
+    float: right;
+    padding: 2px;
+  }
 
   #content {
     margin: 3em auto 0 auto;
     width: 54em;
+  }
+}
+
+/**
+  Core Team Page
+**/
+
+body.team {
+  h1, .lead {
+    text-align: center;
+  }
+  hr {
+    height: 1px;
+    border: none;
+    margin: 4em 0;
+    background-color: #dfd7d4;
+  }
+  .headshots {
+    width: 760px;
+    margin: 0 auto;
+
+    a:hover {
+      border-bottom: none;
+    }
+
+    td {
+      text-align: center;
+      padding: 40px 0 0;
+
+      p {
+        margin: 0px 0px 10px 0px;
+        font-weight: bold;
+      }
+
+      img {
+        margin-bottom: 10px;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        border: 2px solid #faf4f1;
+        &:hover,
+        &:active,
+        &:focus {
+          border: 0;
+        }
+      }
+      .social {
+        margin-bottom: 0;
+        li {
+          display: inline-block;
+          padding: 0;
+        }
+        a {
+          color: #7c7a79;
+          font-size: 24px;
+          &:hover {
+            color: #444;
+          }
+        }
+      }
+    }
+    &.contributors {
+      .avatar {
+        position: relative;
+      }
+      img {
+        width: 66px;
+        height: 66px;
+      }
+      .type {
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        top: -9px;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        display: block;
+        line-height: 1.5em;
+        border-radius: 4px;
+        background-color: #f23818;
+      }
+    }
   }
 }
 
@@ -2135,6 +2208,10 @@ body.tomster_payment-sent #content {
   }
 }
 
+.button-hero {
+  margin: 30px auto;
+}
+
 a.edit-page {
   font-size: 18px;
   color: #444;
@@ -2332,7 +2409,7 @@ a.edit-page {
   404 Page
 **/
 
-body.not-found #content {
+.whoops {
   margin: 3em auto 0 auto;
   width: 54em;
 }
@@ -2361,6 +2438,30 @@ body.not-found #content {
 
 .more_caution {
   color: black;
+}
+
+/* Brand Page */
+
+.brand-logo, .brand-small {
+  text-align: center;
+}
+
+.brand-logo > img {
+  width: 300px;
+  background-image: url('/images/brand/brand-bg.png');
+  border: 1px solid #cccccc;
+  margin-top: 10px;
+}
+
+.brand-logo ~ a {
+  text-align: center;
+}
+
+.brand-small > img {
+  width: 150px;
+  background-image: url('/images/brand/brand-bg.png');
+  border: 1px solid #cccccc;
+  margin-top: 10px;
 }
 
 

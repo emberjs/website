@@ -31,7 +31,7 @@ If you have not received a reply to your email within 48 hours, or have
 not heard from the security team for the past five days, there are a few
 steps you can take:
 
-1. Contact the current security coordinator ([Peter Wagenet](mailto:peter.wagenet@gmail.com))
+1. Contact the current security coordinator ([Robert Jackson](mailto:ember-security@rwjblue.com))
    directly.
 2. Contact the back-up contact ([Tom Dale](mailto:tom@tomdale.net)) directly.
 3. Post on the [Ember.js discussion forums](http://discuss.emberjs.com/)
