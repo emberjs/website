@@ -148,7 +148,7 @@ to `emberjs/data#master` and add the feature to the `EmberENV`'s
 var ENV = {
   EmberENV: {
     FEATURES: {
-      'ds-find-include': true,
+      'ds-finder-include': true,
       'ds-references': true
     }
   }
