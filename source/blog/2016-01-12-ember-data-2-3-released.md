@@ -215,7 +215,7 @@ if (post.belongsTo('author').value() !== null) {
   console.log(post.get("author.name"));
 } else {
   // load the author
-  post.belongtTo('author').load();
+  post.belongsTo('author').load();
 }
 
 // reload the author
