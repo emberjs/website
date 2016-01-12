@@ -21,7 +21,7 @@ To upgrade Ember Data to version 2.3 in your Ember CLI projects please
 do the following:
 
   1. remove the `ember-data` package from your `bower.json`
-  2. update `ember-cli-shims` package to version `ember-cli/ember-cli-shims#0.1.0`
+  2. update `ember-cli-shims` package to version `0.1.0`
 
 ```diff
    ...
