@@ -143,6 +143,15 @@ body.guides .highlight {
   .local-variable {
     color: #1f58ce;
   }
+
+  .delete {
+    background-color: #ffecec;
+    color: #bd2c00;
+  }
+  .insert {
+    background-color: #eaffea;
+    color: #55a532;
+  }
 }
 
 .handlebars {
