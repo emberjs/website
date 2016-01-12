@@ -158,9 +158,9 @@ var ENV = {
 For more information you can check out Ember's
 [feature flags guide](https://guides.emberjs.com/v2.2.0/configuring-ember/feature-flags/).
 
-#### `ds-find-include`
+#### `ds-finder-include`
 
-The `ds-find-include` feature allows an `include` query parameter to
+The `ds-finder-include` feature allows an `include` query parameter to
 be specified with using `store.findRecord()` and `store.findAll()` as
 described in [RFC 99](https://github.com/emberjs/rfcs/pull/99). This
 should make it easier to specify when backends should return
