@@ -28,8 +28,8 @@ do the following:
    "dependencies": {
      "handlebars": "2.0.0",
      "ember": "~2.2.0",
--    "ember-cli-shims": "ember-cli/ember-cli-shims#0.0.6",
-+    "ember-cli-shims": "ember-cli/ember-cli-shims#0.1.0",
+-    "ember-cli-shims": "0.0.6",
++    "ember-cli-shims": "0.1.0",
      "ember-cli-test-loader": "ember-cli-test-loader#0.1.3",
 -    "ember-data": "~1.13.12",
      "ember-load-initializers": "ember-cli/ember-load-initializers#0.1.5",
