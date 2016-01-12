@@ -4,7 +4,7 @@ author: Brendan McLoughlin
 tags: Releases
 ---
 
-Ember Data 2.3, a minor version release of Ember Data, is released today. This release represents the work of over 32 direct contributors, and over 191 commits.
+Ember Data 2.3, a minor version release of Ember Data, is released today. This release represents the work of over 32 direct contributors, and over 196 commits.
 
 Ember Data 2.4 beta.1, the branch of Ember Data that will be released as stable in roughly six weeks, is also being released today.
 
