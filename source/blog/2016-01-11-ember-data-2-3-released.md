@@ -132,13 +132,13 @@ For more details on changes in 2.4, review the
 [Ember Data 2.4.0-beta.1 CHANGELOG](https://github.com/emberjs/data/blob/v2.4.0-beta.1/CHANGELOG.md).
 
 
-### Upcomming Features
+### Upcoming Features
 
 Two new features recently landed on the Ember Data canary branch. They
 each address add some long requested features to Ember Data. However,
 before they can be enabled in a beta branch the Ember Data team would
 like the community to try them out and provide feedback on their
-implementations. These two feature flaged features are only available
+implementations. These two feature flagged features are only available
 on the master branch (sometimes called "canary") of Ember Data. To
 test them out please update the version of Ember Data in package.json
 to `emberjs/data#master` and add the feature to the `EmberENV`'s
@@ -182,7 +182,7 @@ var article = this.store.findAll('article', { include: 'comments' });
 
 #### `ds-references`
 
-The `ds-references` feature implementes the refernces api as described
+The `ds-references` feature implements the references API as described
 in [RFC 57](https://github.com/emberjs/rfcs/pull/57). References is a
 low level API to perform meta-operations on records, has-many
 relationships and belongs-to relationships:
