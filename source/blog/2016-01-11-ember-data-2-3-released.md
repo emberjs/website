@@ -192,5 +192,48 @@ relationships and belongs-to relationships:
   * similarly, notify a record that a fetch for a given relationship has begun, and provide a promise for its result
   * retrieve server-provided metadata about a record or relationship
 
+Consider the following `post` model:
+
+```js
+// app/models/post.js
+import Model from 'ember-data/model';
+import { belongsTo, hasMany } from 'ember-data/relationships';
+
+export default Model.extend({
+  comments: hasMany(),
+  author: belongsTo()
+});
+```
+
+The references API now allows the possibility to interact with the relationships:
+
+```js
+var post = store.peekRecord('post', 1);
+
+// check if the author is already loaded, without triggering a request
+if (post.belongsTo('author').value() !== null) {
+  console.log(post.get("author.name"));
+} else {
+  // load the author
+  post.belongtTo('author').load();
+}
+
+// reload the author
+post.belongsTo('author').reload();
+
+// check if there are comments, without triggering a request
+if (post.hasMany('comments').value() !== null) {
+  var ids = post.hasMany('comments').ids();
+
+  var meta = post.hasMany('comments').meta();
+  console.log(`${ids.length} comments out of ${meta.total}`);
+} else {
+  post.hasMany('comments').load();
+}
+
+// reload comments
+post.hasMany('comments').reload();
+```
+
 Thanks to [ @pangratz](https://github.com/pangratz) for implementing
 this feature.
