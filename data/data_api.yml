@@ -2,16 +2,16 @@
 project:
   sha: v2.3.0
 files:
-  "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+  "addon/-private/adapters/build-url-mixin.js":
+    name: "addon/-private/adapters/build-url-mixin.js"
     modules: {}
     classes:
       DS.BuildURLMixin: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js"
+  "addon/-private/adapters/errors.js":
+    name: "addon/-private/adapters/errors.js"
     modules: {}
     classes:
       DS.AdapterError: 1
@@ -20,184 +20,184 @@ files:
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/ext/date.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/ext/date.js"
+  "addon/-private/ext/date.js":
+    name: "addon/-private/ext/date.js"
     modules: {}
     classes:
       Ember.Date: 1
     fors: {}
     namespaces:
       Ember: 1
-  "/Users/bmac/code/ember-data/addon/-private/initializers/data-adapter.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/initializers/data-adapter.js"
+  "addon/-private/initializers/data-adapter.js":
+    name: "addon/-private/initializers/data-adapter.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/initializers/store-injections.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/initializers/store-injections.js"
+  "addon/-private/initializers/store-injections.js":
+    name: "addon/-private/initializers/store-injections.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/initializers/store.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/initializers/store.js"
+  "addon/-private/initializers/store.js":
+    name: "addon/-private/initializers/store.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/initializers/transforms.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/initializers/transforms.js"
+  "addon/-private/initializers/transforms.js":
+    name: "addon/-private/initializers/transforms.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/instance-initializers/initialize-store-service.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/instance-initializers/initialize-store-service.js"
+  "addon/-private/instance-initializers/initialize-store-service.js":
+    name: "addon/-private/instance-initializers/initialize-store-service.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+  "addon/-private/serializers/embedded-records-mixin.js":
+    name: "addon/-private/serializers/embedded-records-mixin.js"
     modules: {}
     classes:
       DS.EmbeddedRecordsMixin: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/debug/debug-adapter.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/debug/debug-adapter.js"
+  "addon/-private/system/debug/debug-adapter.js":
+    name: "addon/-private/system/debug/debug-adapter.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/debug/debug-info.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/debug/debug-info.js"
+  "addon/-private/system/debug/debug-info.js":
+    name: "addon/-private/system/debug/debug-info.js"
     modules: {}
     classes: {}
     fors:
       DS.Model: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/model/errors/invalid.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/model/errors/invalid.js"
+  "addon/-private/system/model/errors/invalid.js":
+    name: "addon/-private/system/model/errors/invalid.js"
     modules: {}
     classes:
       DS.InvalidError: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+  "addon/-private/system/model/errors.js":
+    name: "addon/-private/system/model/errors.js"
     modules: {}
     classes:
       DS.Errors: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/model/model.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+  "addon/-private/system/model/model.js":
+    name: "addon/-private/system/model/model.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/model/states.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/model/states.js"
+  "addon/-private/system/model/states.js":
+    name: "addon/-private/system/model/states.js"
     modules: {}
     classes:
       DS.RootState: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/adapter-populated-record-array.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/adapter-populated-record-array.js"
+  "addon/-private/system/record-arrays/adapter-populated-record-array.js":
+    name: "addon/-private/system/record-arrays/adapter-populated-record-array.js"
     modules: {}
     classes:
       DS.AdapterPopulatedRecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/filtered-record-array.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/filtered-record-array.js"
+  "addon/-private/system/record-arrays/filtered-record-array.js":
+    name: "addon/-private/system/record-arrays/filtered-record-array.js"
     modules: {}
     classes:
       DS.FilteredRecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+  "addon/-private/system/record-arrays/record-array.js":
+    name: "addon/-private/system/record-arrays/record-array.js"
     modules: {}
     classes:
       DS.RecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/relationships/belongs-to.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/relationships/belongs-to.js"
+  "addon/-private/system/relationships/belongs-to.js":
+    name: "addon/-private/system/relationships/belongs-to.js"
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+  "addon/-private/system/relationships/ext.js":
+    name: "addon/-private/system/relationships/ext.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/relationships/has-many.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/relationships/has-many.js"
+  "addon/-private/system/relationships/has-many.js":
+    name: "addon/-private/system/relationships/has-many.js"
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/store/container-instance-cache.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/store/container-instance-cache.js"
+  "addon/-private/system/store/container-instance-cache.js":
+    name: "addon/-private/system/store/container-instance-cache.js"
     modules: {}
     classes:
       ContainerInstanceCache: 1
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/debug.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/debug.js"
+  "addon/-private/system/debug.js":
+    name: "addon/-private/system/debug.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/many-array.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+  "addon/-private/system/many-array.js":
+    name: "addon/-private/system/many-array.js"
     modules: {}
     classes:
       DS.ManyArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/model.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/model.js"
+  "addon/-private/system/model.js":
+    name: "addon/-private/system/model.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/normalize-link.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/normalize-link.js"
+  "addon/-private/system/normalize-link.js":
+    name: "addon/-private/system/normalize-link.js"
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/normalize-model-name.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/normalize-model-name.js"
+  "addon/-private/system/normalize-model-name.js":
+    name: "addon/-private/system/normalize-model-name.js"
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/promise-proxies.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/promise-proxies.js"
+  "addon/-private/system/promise-proxies.js":
+    name: "addon/-private/system/promise-proxies.js"
     modules: {}
     classes:
       DS.PromiseArray: 1
@@ -206,159 +206,159 @@ files:
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+  "addon/-private/system/record-array-manager.js":
+    name: "addon/-private/system/record-array-manager.js"
     modules: {}
     classes:
       DS.RecordArrayManager: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/record-arrays.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays.js"
+  "addon/-private/system/record-arrays.js":
+    name: "addon/-private/system/record-arrays.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/system/serializer.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/serializer.js"
+  "addon/-private/system/serializer.js":
+    name: "addon/-private/system/serializer.js"
     modules: {}
     classes:
       DS.Serializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+  "addon/-private/system/snapshot-record-array.js":
+    name: "addon/-private/system/snapshot-record-array.js"
     modules: {}
     classes:
       DS.SnapshotRecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+  "addon/-private/system/snapshot.js":
+    name: "addon/-private/system/snapshot.js"
     modules: {}
     classes:
       DS.Snapshot: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/system/store.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+  "addon/-private/system/store.js":
+    name: "addon/-private/system/store.js"
     modules: {}
     classes:
       DS.Store: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/transforms/boolean.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/transforms/boolean.js"
+  "addon/-private/transforms/boolean.js":
+    name: "addon/-private/transforms/boolean.js"
     modules: {}
     classes:
       DS.BooleanTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/transforms/date.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/transforms/date.js"
+  "addon/-private/transforms/date.js":
+    name: "addon/-private/transforms/date.js"
     modules: {}
     classes:
       DS.DateTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/transforms/number.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/transforms/number.js"
+  "addon/-private/transforms/number.js":
+    name: "addon/-private/transforms/number.js"
     modules: {}
     classes:
       DS.NumberTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/transforms/string.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/transforms/string.js"
+  "addon/-private/transforms/string.js":
+    name: "addon/-private/transforms/string.js"
     modules: {}
     classes:
       DS.StringTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/-private/adapters.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/adapters.js"
+  "addon/-private/adapters.js":
+    name: "addon/-private/adapters.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/core.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/core.js"
+  "addon/-private/core.js":
+    name: "addon/-private/core.js"
     modules: {}
     classes:
       DS: 1
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/serializers.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/serializers.js"
+  "addon/-private/serializers.js":
+    name: "addon/-private/serializers.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/-private/utils.js":
-    name: "/Users/bmac/code/ember-data/addon/-private/utils.js"
+  "addon/-private/utils.js":
+    name: "addon/-private/utils.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/adapters/json-api.js":
-    name: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+  "addon/adapters/json-api.js":
+    name: "addon/adapters/json-api.js"
     modules: {}
     classes:
       DS.JSONAPIAdapter: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/adapters/rest.js":
-    name: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+  "addon/adapters/rest.js":
+    name: "addon/adapters/rest.js"
     modules: {}
     classes:
       DS.RESTAdapter: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/serializers/json-api.js":
-    name: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+  "addon/serializers/json-api.js":
+    name: "addon/serializers/json-api.js"
     modules: {}
     classes:
       DS.JSONAPISerializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/serializers/json.js":
-    name: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+  "addon/serializers/json.js":
+    name: "addon/serializers/json.js"
     modules: {}
     classes:
       DS.JSONSerializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/serializers/rest.js":
-    name: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+  "addon/serializers/rest.js":
+    name: "addon/serializers/rest.js"
     modules: {}
     classes:
       DS.RESTSerializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/adapter.js":
-    name: "/Users/bmac/code/ember-data/addon/adapter.js"
+  "addon/adapter.js":
+    name: "addon/adapter.js"
     modules: {}
     classes:
       DS.Adapter: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/attr.js":
-    name: "/Users/bmac/code/ember-data/addon/attr.js"
+  "addon/attr.js":
+    name: "addon/attr.js"
     modules: {}
     classes:
       DS.Model: 1
@@ -366,51 +366,51 @@ files:
       DS: 1
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/addon/index.js":
-    name: "/Users/bmac/code/ember-data/addon/index.js"
+  "addon/index.js":
+    name: "addon/index.js"
     modules:
       ember-data: 1
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/relationships.js":
-    name: "/Users/bmac/code/ember-data/addon/relationships.js"
+  "addon/relationships.js":
+    name: "addon/relationships.js"
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "/Users/bmac/code/ember-data/addon/transform.js":
-    name: "/Users/bmac/code/ember-data/addon/transform.js"
+  "addon/transform.js":
+    name: "addon/transform.js"
     modules: {}
     classes:
       DS.Transform: 1
     fors: {}
     namespaces:
       DS: 1
-  "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/ext/string.js":
-    name: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/ext/string.js"
+  "node_modules/ember-inflector/addon/lib/ext/string.js":
+    name: "node_modules/ember-inflector/addon/lib/ext/string.js"
     modules: {}
     classes: {}
     fors:
       String: 1
       DS.String: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/helpers/pluralize.js":
-    name: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/helpers/pluralize.js"
+  "node_modules/ember-inflector/addon/lib/helpers/pluralize.js":
+    name: "node_modules/ember-inflector/addon/lib/helpers/pluralize.js"
     modules: {}
     classes: {}
     fors:
       Ember.HTMLBars.helpers: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/helpers/singularize.js":
-    name: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/helpers/singularize.js"
+  "node_modules/ember-inflector/addon/lib/helpers/singularize.js":
+    name: "node_modules/ember-inflector/addon/lib/helpers/singularize.js"
     modules: {}
     classes: {}
     fors:
       Ember.HTMLBars.helpers: 1
     namespaces: {}
-  "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js":
-    name: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+  "node_modules/ember-inflector/addon/lib/system/inflector.js":
+    name: "node_modules/ember-inflector/addon/lib/system/inflector.js"
     modules: {}
     classes:
       Ember.Inflector: 1
@@ -472,7 +472,7 @@ modules:
       Ember: 1
       DS: 1
     tag: main
-    file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+    file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
     line: 32
     description: Ember Data
     itemtype: main
@@ -488,7 +488,7 @@ classes:
     - DS.RESTAdapter
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+    file: "addon/-private/adapters/build-url-mixin.js"
     line: 3
     description: |-
       WARNING: This interface is likely to change in order to accomodate https://github.com/emberjs/rfcs/pull/4
@@ -516,7 +516,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js"
+    file: "addon/-private/adapters/errors.js"
     line: 10
   DS.InvalidError:
     name: DS.InvalidError
@@ -528,7 +528,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors/invalid.js"
+    file: "addon/-private/system/model/errors/invalid.js"
     line: 3
     description: |-
       A `DS.InvalidError` is used by an adapter to signal the external API
@@ -611,7 +611,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js"
+    file: "addon/-private/adapters/errors.js"
     line: 92
   DS.AbortError:
     name: DS.AbortError
@@ -623,7 +623,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js"
+    file: "addon/-private/adapters/errors.js"
     line: 102
   Ember.Date:
     name: Ember.Date
@@ -635,7 +635,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: Ember
-    file: "/Users/bmac/code/ember-data/addon/-private/ext/date.js"
+    file: "addon/-private/ext/date.js"
     line: 5
     description: |-
       Date.parse with progressive enhancement for ISO 8601 <https://github.com/csnover/js-iso8601>
@@ -654,7 +654,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+    file: "addon/-private/serializers/embedded-records-mixin.js"
     line: 8
     description: |-
       ## Using Embedded Records
@@ -752,7 +752,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/attr.js"
+    file: "addon/attr.js"
     line: 12
     description: |-
       The model class that all Ember Data records descend from.
@@ -773,7 +773,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+    file: "addon/-private/system/model/errors.js"
     line: 14
     description: |-
       Holds validation errors for a given record organized by attribute names.
@@ -872,7 +872,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/model/states.js"
+    file: "addon/-private/system/model/states.js"
     line: 12
     description: |-
       ### State
@@ -1044,7 +1044,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/adapter-populated-record-array.js"
+    file: "addon/-private/system/record-arrays/adapter-populated-record-array.js"
     line: 11
     description: |-
       Represents an ordered list of records whose order and membership is
@@ -1062,7 +1062,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/filtered-record-array.js"
+    file: "addon/-private/system/record-arrays/filtered-record-array.js"
     line: 10
     description: |-
       Represents a list of records whose membership is determined by the
@@ -1080,7 +1080,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+    file: "addon/-private/system/record-arrays/record-array.js"
     line: 12
     description: |-
       A record array is an array that contains records of a certain type. The record
@@ -1101,7 +1101,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: ''
-    file: "/Users/bmac/code/ember-data/addon/-private/core.js"
+    file: "addon/-private/core.js"
     line: 8
     description: All Ember Data methods and functions are defined inside of this namespace.
     static: 1
@@ -1115,7 +1115,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: ''
-    file: "/Users/bmac/code/ember-data/addon/-private/system/store/container-instance-cache.js"
+    file: "addon/-private/system/store/container-instance-cache.js"
     line: 4
     description: |-
       The `ContainerInstanceCache` serves as a lazy cache for looking up
@@ -1142,7 +1142,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+    file: "addon/-private/system/many-array.js"
     line: 11
     description: |-
       A `ManyArray` is a `MutableArray` that represents the contents of a has-many
@@ -1195,7 +1195,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/promise-proxies.js"
+    file: "addon/-private/system/promise-proxies.js"
     line: 7
     description: |-
       A `PromiseArray` is an object that acts like both an `Ember.Array`
@@ -1233,7 +1233,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/promise-proxies.js"
+    file: "addon/-private/system/promise-proxies.js"
     line: 38
     description: |-
       A `PromiseObject` is an object that acts like both an `Ember.Object`
@@ -1271,7 +1271,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/promise-proxies.js"
+    file: "addon/-private/system/promise-proxies.js"
     line: 81
     description: |-
       A PromiseManyArray is a PromiseArray that also proxies certain method calls
@@ -1296,7 +1296,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+    file: "addon/-private/system/record-array-manager.js"
     line: 14
     access: private
     tagname: ''
@@ -1311,7 +1311,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/serializer.js"
+    file: "addon/-private/system/serializer.js"
     line: 5
     description: |-
       `DS.Serializer` is an abstract base class that you should override in your
@@ -1338,7 +1338,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+    file: "addon/-private/system/snapshot-record-array.js"
     line: 5
     access: private
     tagname: ''
@@ -1360,7 +1360,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+    file: "addon/-private/system/snapshot.js"
     line: 9
     access: private
     tagname: ''
@@ -1379,7 +1379,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+    file: "addon/-private/system/store.js"
     line: 141
     description: |-
       The store contains all of the data for records loaded from the server.
@@ -1460,7 +1460,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/transforms/boolean.js"
+    file: "addon/-private/transforms/boolean.js"
     line: 3
     description: |-
       The `DS.BooleanTransform` class is used to serialize and deserialize
@@ -1490,7 +1490,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/transforms/date.js"
+    file: "addon/-private/transforms/date.js"
     line: 1
     description: |-
       The `DS.DateTransform` class is used to serialize and deserialize
@@ -1518,7 +1518,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/transforms/number.js"
+    file: "addon/-private/transforms/number.js"
     line: 10
     description: |-
       The `DS.NumberTransform` class is used to serialize and deserialize
@@ -1548,7 +1548,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/-private/transforms/string.js"
+    file: "addon/-private/transforms/string.js"
     line: 6
     description: |-
       The `DS.StringTransform` class is used to serialize and deserialize
@@ -1578,7 +1578,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+    file: "addon/adapters/json-api.js"
     line: 8
     is_constructor: 1
     extends: DS.RESTAdapter
@@ -1592,7 +1592,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+    file: "addon/adapters/rest.js"
     line: 20
     description: |-
       The REST adapter allows your store to communicate with an HTTP server by
@@ -1775,7 +1775,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+    file: "addon/serializers/json-api.js"
     line: 13
     description: |-
       Ember Data 2.0 Serializer:
@@ -1869,7 +1869,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+    file: "addon/serializers/json.js"
     line: 18
     description: |-
       Ember Data 2.0 Serializer:
@@ -1943,7 +1943,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+    file: "addon/serializers/rest.js"
     line: 15
     description: |-
       Normally, applications will use the `RESTSerializer` by implementing
@@ -1994,7 +1994,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/adapter.js"
+    file: "addon/adapter.js"
     line: 8
     description: |-
       An adapter is an object that receives requests from a store and
@@ -2057,7 +2057,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "/Users/bmac/code/ember-data/addon/transform.js"
+    file: "addon/transform.js"
     line: 3
     description: |-
       The `DS.Transform` class is used to serialize and deserialize model
@@ -2132,7 +2132,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: Ember
-    file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+    file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
     line: 32
     description: |-
       Inflector.Ember provides a mechanism for supplying inflection rules for your
@@ -2190,7 +2190,7 @@ classes:
       ```
 elements: {}
 classitems:
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 31
   description: |-
     Builds a URL for a given type and optional ID.
@@ -2227,7 +2227,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 79
   itemtype: method
   name: _buildURL
@@ -2245,7 +2245,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 108
   itemtype: method
   name: urlForFindRecord
@@ -2264,7 +2264,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 119
   itemtype: method
   name: urlForFindAll
@@ -2277,7 +2277,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 128
   itemtype: method
   name: urlForQuery
@@ -2293,7 +2293,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 138
   itemtype: method
   name: urlForQueryRecord
@@ -2309,7 +2309,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 148
   itemtype: method
   name: urlForFindMany
@@ -2328,7 +2328,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 159
   itemtype: method
   name: urlForFindHasMany
@@ -2344,7 +2344,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 169
   itemtype: method
   name: urlForFindBelongTo
@@ -2360,7 +2360,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 179
   itemtype: method
   name: urlForCreateRecord
@@ -2376,7 +2376,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 189
   itemtype: method
   name: urlForUpdateRecord
@@ -2395,7 +2395,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 200
   itemtype: method
   name: urlForDeleteRecord
@@ -2414,7 +2414,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 211
   itemtype: method
   name: urlPrefix
@@ -2432,7 +2432,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/build-url-mixin.js"
+- file: "addon/-private/adapters/build-url-mixin.js"
   line: 254
   description: |-
     Determines the pathname for a given type.
@@ -2466,7 +2466,7 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js"
+- file: "addon/-private/adapters/errors.js"
   line: 112
   itemtype: method
   name: errorsHashToArray
@@ -2474,7 +2474,7 @@ classitems:
   tagname: ''
   class: DS.AbortError
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/adapters/errors.js"
+- file: "addon/-private/adapters/errors.js"
   line: 143
   itemtype: method
   name: errorsArrayToHash
@@ -2482,7 +2482,7 @@ classitems:
   tagname: ''
   class: DS.AbortError
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/ext/date.js"
+- file: "addon/-private/ext/date.js"
   line: 21
   itemtype: method
   name: parse
@@ -2496,7 +2496,7 @@ classitems:
   class: Ember.Date
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/addon/-private/initializers/data-adapter.js"
+- file: "addon/-private/initializers/data-adapter.js"
   line: 3
   description: |-
     Configures a registry with injections on Ember applications
@@ -2510,7 +2510,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/addon/-private/initializers/store-injections.js"
+- file: "addon/-private/initializers/store-injections.js"
   line: 1
   description: |-
     Configures a registry with injections on Ember applications
@@ -2524,7 +2524,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/addon/-private/initializers/store.js"
+- file: "addon/-private/initializers/store.js"
   line: 15
   description: |-
     Configures a registry for use with an Ember-Data
@@ -2538,7 +2538,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/addon/-private/initializers/transforms.js"
+- file: "addon/-private/initializers/transforms.js"
   line: 8
   description: |-
     Configures a registry for use with Ember-Data
@@ -2552,7 +2552,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/addon/-private/instance-initializers/initialize-store-service.js"
+- file: "addon/-private/instance-initializers/initialize-store-service.js"
   line: 1
   description: |-
     Configures a registry for use with an Ember-Data
@@ -2566,7 +2566,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 100
   description: |-
     Normalize the record and recursively normalize/extract all the embedded records
@@ -2607,7 +2607,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 141
   description: |-
     Serialize `belongsTo` relationship when it is configured as an embedded object.
@@ -2669,7 +2669,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 233
   description: |-
     Serialize `hasMany` relationship when it is configured as embedded objects.
@@ -2765,7 +2765,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 358
   description: |-
     When serializing an embedded record, modify the property (in the json payload)
@@ -2794,7 +2794,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 429
   itemtype: method
   name: _extractEmbeddedRecords
@@ -2803,7 +2803,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 447
   itemtype: method
   name: _extractEmbeddedHasMany
@@ -2812,7 +2812,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 472
   itemtype: method
   name: _extractEmbeddedBelongsTo
@@ -2821,7 +2821,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/serializers/embedded-records-mixin.js"
+- file: "addon/-private/serializers/embedded-records-mixin.js"
   line: 495
   itemtype: method
   name: _normalizeEmbeddedRelationship
@@ -2830,7 +2830,7 @@ classitems:
   class: DS.EmbeddedRecordsMixin
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/debug/debug-info.js"
+- file: "addon/-private/system/debug/debug-info.js"
   line: 5
   description: |-
     Provides info about the model for debugging purposes
@@ -2849,7 +2849,7 @@ classitems:
   tagname: ''
   class: DS.Model
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 105
   description: Register with target handler
   itemtype: method
@@ -2867,7 +2867,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 118
   itemtype: property
   name: errorsByAttributeName
@@ -2877,7 +2877,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 131
   description: |-
     Returns errors for a given attribute
@@ -2904,7 +2904,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 153
   description: |-
     An array containing all of the error messages for this
@@ -2923,7 +2923,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 170
   itemtype: property
   name: content
@@ -2933,7 +2933,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 179
   itemtype: method
   name: unknownProperty
@@ -2942,7 +2942,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 189
   description: Total number of errors.
   itemtype: property
@@ -2952,7 +2952,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 197
   itemtype: property
   name: isEmpty
@@ -2961,7 +2961,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 204
   description: |-
     Adds error messages to a given attribute and sends
@@ -2986,7 +2986,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 234
   itemtype: method
   name: _findOrCreateMessages
@@ -2995,7 +2995,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 249
   description: |-
     Removes all error messages from the given attribute and sends
@@ -3036,7 +3036,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 297
   description: |-
     Removes all error messages and sends `becameValid` event
@@ -3061,7 +3061,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/errors.js"
+- file: "addon/-private/system/model/errors.js"
   line: 338
   description: |-
     Checks if there is error messages for the given attribute.
@@ -3092,7 +3092,7 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 48
   description: |-
     If this property is `true` the record is in the `empty`
@@ -3109,7 +3109,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 62
   description: |-
     If this property is `true` the record is in the `loading` state. A
@@ -3123,7 +3123,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 73
   description: |-
     If this property is `true` the record is in the `loaded` state. A
@@ -3148,7 +3148,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 95
   description: |-
     If this property is `true` the record is in the `dirty` state. The
@@ -3175,7 +3175,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 121
   description: |-
     If this property is `true` the record is in the `saving` state. A
@@ -3201,7 +3201,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 144
   description: |-
     If this property is `true` the record is in the `deleted` state
@@ -3242,7 +3242,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 182
   description: |-
     If this property is `true` the record is in the `new` state. A
@@ -3267,7 +3267,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 204
   description: |-
     If this property is `true` the record is in the `valid` state.
@@ -3281,7 +3281,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 215
   description: |-
     If the record is in the dirty state this property will report what
@@ -3305,7 +3305,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 237
   description: |-
     If `true` the adapter reported that it was unable to save local
@@ -3328,7 +3328,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 258
   description: |-
     If `true` the store is attempting to reload the record form the adapter.
@@ -3347,7 +3347,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 275
   description: |-
     All ember models have an id property. This is an identifier
@@ -3370,7 +3370,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 296
   itemtype: property
   name: currentState
@@ -3380,7 +3380,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 302
   description: |-
     When the record is in the `invalid` state this object will contain
@@ -3435,7 +3435,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 367
   description: |-
     This property holds the `DS.AdapterError` object with which
@@ -3446,7 +3446,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 376
   description: |-
     Create a JSON representation of the record, using the serialization
@@ -3469,7 +3469,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 394
   description: |-
     Use [DS.JSONSerializer](DS.JSONSerializer.html) to
@@ -3492,7 +3492,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 416
   description: |-
     Fired when the record is ready to be interacted with,
@@ -3502,7 +3502,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 424
   description: Fired when the record is loaded from the server.
   itemtype: event
@@ -3510,7 +3510,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 431
   description: Fired when the record is updated.
   itemtype: event
@@ -3518,7 +3518,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 438
   description: Fired when a new record is commited to the server.
   itemtype: event
@@ -3526,7 +3526,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 445
   description: Fired when the record is deleted.
   itemtype: event
@@ -3534,7 +3534,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 452
   description: Fired when the record becomes invalid.
   itemtype: event
@@ -3542,7 +3542,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 459
   description: Fired when the record enters the error state.
   itemtype: event
@@ -3550,7 +3550,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 466
   description: Fired when the record is rolled back.
   itemtype: event
@@ -3558,7 +3558,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 473
   itemtype: property
   name: data
@@ -3568,7 +3568,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 481
   itemtype: method
   name: send
@@ -3584,7 +3584,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 491
   itemtype: method
   name: transitionTo
@@ -3597,7 +3597,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 501
   description: |-
     Marks the record as deleted but does not save it. You must call
@@ -3629,7 +3629,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 533
   description: |-
     Same as `deleteRecord`, but saves the record immediately.
@@ -3664,7 +3664,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 563
   itemtype: method
   name: unloadRecord
@@ -3673,7 +3673,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 572
   itemtype: method
   name: _notifyProperties
@@ -3682,7 +3682,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 586
   description: |-
     Returns an object, whose keys are changed properties, and value is
@@ -3714,7 +3714,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 617
   itemtype: method
   name: adapterDidDirty
@@ -3727,7 +3727,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 633
   description: |-
     If the model `hasDirtyAttributes` this function will discard any unsaved
@@ -3747,7 +3747,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 665
   description: |-
     Save the record and persist any changes to the record to an
@@ -3777,7 +3777,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 690
   description: |-
     Reload the record from the adapter.
@@ -3810,7 +3810,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 723
   description: |-
     Override the default event firing from Ember.Evented to
@@ -3826,7 +3826,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 777
   description: |-
     Alias DS.Model's `create` method to `_create`. This allows us to create DS.Model
@@ -3840,7 +3840,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 788
   description: |-
     Override the class' `create()` method to raise an error. This
@@ -3856,7 +3856,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/model/model.js"
+- file: "addon/-private/system/model/model.js"
   line: 803
   description: |-
     Represents the model's class name as a string. This can be used to look up the model through
@@ -3887,7 +3887,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/adapter-populated-record-array.js"
+- file: "addon/-private/system/record-arrays/adapter-populated-record-array.js"
   line: 29
   itemtype: method
   name: loadRecords
@@ -3900,7 +3900,7 @@ classitems:
   class: DS.AdapterPopulatedRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/filtered-record-array.js"
+- file: "addon/-private/system/record-arrays/filtered-record-array.js"
   line: 21
   description: |-
     The filterFunction is a function used to test records from the store to
@@ -3935,7 +3935,7 @@ classitems:
   class: DS.FilteredRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/filtered-record-array.js"
+- file: "addon/-private/system/record-arrays/filtered-record-array.js"
   line: 55
   itemtype: method
   name: updateFilter
@@ -3944,7 +3944,7 @@ classitems:
   class: DS.FilteredRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 26
   description: The model type contained by this record array.
   itemtype: property
@@ -3953,7 +3953,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 34
   description: |-
     The array of client ids backing the record array. When a
@@ -3968,7 +3968,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 46
   description: |-
     The flag to signal a `RecordArray` is finished loading data.
@@ -3985,7 +3985,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 60
   description: |-
     The flag to signal a `RecordArray` is currently loading data.
@@ -4004,7 +4004,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 77
   description: The store that created this record array.
   itemtype: property
@@ -4015,7 +4015,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 86
   description: Retrieves an object from the content by index.
   itemtype: method
@@ -4032,7 +4032,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 100
   description: |-
     Used to get the latest version of all of the records in this array
@@ -4051,7 +4051,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 129
   description: Adds an internal model to the `RecordArray` without duplicates
   itemtype: method
@@ -4068,7 +4068,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 146
   description: Removes an internalModel to the `RecordArray`.
   itemtype: method
@@ -4082,7 +4082,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 157
   description: |-
     Saves all of the records in the `RecordArray`.
@@ -4104,7 +4104,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-arrays/record-array.js"
+- file: "addon/-private/system/record-arrays/record-array.js"
   line: 193
   itemtype: method
   name: _unregisterFromManager
@@ -4113,7 +4113,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/belongs-to.js"
+- file: "addon/-private/system/relationships/belongs-to.js"
   line: 6
   description: |-
     `DS.belongsTo` is used to define One-To-One and One-To-Many
@@ -4193,7 +4193,7 @@ classitems:
     type: Ember.computed
   class: DS
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 103
   description: |-
     This Ember.js hook allows an object to be notified when a property
@@ -4230,7 +4230,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 162
   description: |-
     For a given relationship name, returns the model type of the relationship.
@@ -4262,7 +4262,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 192
   description: |-
     Find the relationship which is the inverse of the one asked for.
@@ -4300,7 +4300,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 326
   description: |-
     The model's relationships as a map, keyed on the type of the
@@ -4342,7 +4342,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 367
   description: |-
     A hash containing lists of the model's relationships, grouped
@@ -4380,7 +4380,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 416
   description: |-
     An array of types directly related to a model. Each type will be
@@ -4417,7 +4417,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 451
   description: |-
     A map whose keys are the relationships of a model and whose values are
@@ -4457,7 +4457,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 489
   description: |-
     A map whose keys are the fields of the model and whose values are strings
@@ -4502,7 +4502,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 544
   description: |-
     Given a callback, iterates over each of the relationships in the model,
@@ -4521,7 +4521,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 560
   description: |-
     Given a callback, iterates over each of the types related to a model,
@@ -4541,7 +4541,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/ext.js"
+- file: "addon/-private/system/relationships/ext.js"
   line: 600
   description: |-
     Given a callback, iterates over each of the relationships in the model,
@@ -4602,7 +4602,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/relationships/has-many.js"
+- file: "addon/-private/system/relationships/has-many.js"
   line: 11
   description: |-
     `DS.hasMany` is used to define One-To-Many and Many-To-Many
@@ -4716,7 +4716,7 @@ classitems:
     type: Ember.computed
   class: DS
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 92
   description: "`true` if the relationship is polymorphic, `false` otherwise."
   itemtype: property
@@ -4727,7 +4727,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 100
   description: The loading state of this array
   itemtype: property
@@ -4736,7 +4736,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 107
   description: The relationship which manages this array.
   itemtype: property
@@ -4747,7 +4747,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 115
   description: |-
     Metadata associated with the request for async hasMany relationships.
@@ -4791,7 +4791,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 197
   description: |-
     Used for async `hasMany` arrays
@@ -4804,7 +4804,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 206
   itemtype: method
   name: loadingRecordsCount
@@ -4817,7 +4817,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 215
   itemtype: method
   name: loadedRecord
@@ -4826,7 +4826,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 227
   itemtype: method
   name: reload
@@ -4835,7 +4835,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 235
   description: |-
     Saves all of the records in the `ManyArray`.
@@ -4860,7 +4860,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/many-array.js"
+- file: "addon/-private/system/many-array.js"
   line: 264
   description: Create a child record within the owner
   itemtype: method
@@ -4877,7 +4877,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/normalize-link.js"
+- file: "addon/-private/system/normalize-link.js"
   line: 1
   description: |-
     This method normalizes a link to an "links object". If the passed link is
@@ -4897,7 +4897,7 @@ classitems:
     type: Object|null
   class: DS
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/system/normalize-model-name.js"
+- file: "addon/-private/system/normalize-model-name.js"
   line: 1
   description: |-
     All modelNames are dasherized internally. Changing this function may
@@ -4915,7 +4915,7 @@ classitems:
     type: String
   class: DS
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 47
   description: |-
     This method is invoked whenever data is loaded into the store by the
@@ -4929,7 +4929,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 107
   description: Update an individual filter.
   itemtype: method
@@ -4950,7 +4950,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 149
   description: |-
     This method is invoked if the `filterFunction` property is
@@ -4973,7 +4973,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 175
   description: |-
     Get the `DS.RecordArray` for a type, which contains all loaded records of
@@ -4990,7 +4990,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 187
   description: Create a `DS.RecordArray` for a type.
   itemtype: method
@@ -5005,7 +5005,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 206
   description: Create a `DS.FilteredRecordArray` for a type and register it for updates.
   itemtype: method
@@ -5026,7 +5026,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 230
   description: Create a `DS.AdapterPopulatedRecordArray` for a type with given query.
   itemtype: method
@@ -5044,7 +5044,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 252
   description: |-
     Register a RecordArray for a given type to be backed by
@@ -5066,7 +5066,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/record-array-manager.js"
+- file: "addon/-private/system/record-array-manager.js"
   line: 270
   description: |-
     Unregister a RecordArray.
@@ -5080,7 +5080,7 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/serializer.js"
+- file: "addon/-private/system/serializer.js"
   line: 27
   description: |-
     The `store` property is the application's `store` that contains all records.
@@ -5095,7 +5095,7 @@ classitems:
   class: DS.Serializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/serializer.js"
+- file: "addon/-private/system/serializer.js"
   line: 38
   description: |-
     The `normalizeResponse` method is used to normalize a payload from the
@@ -5126,7 +5126,7 @@ classitems:
   class: DS.Serializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/serializer.js"
+- file: "addon/-private/system/serializer.js"
   line: 54
   description: |-
     The `serialize` method is used when a record is saved in order to convert
@@ -5152,7 +5152,7 @@ classitems:
   class: DS.Serializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/serializer.js"
+- file: "addon/-private/system/serializer.js"
   line: 70
   description: |-
     The `normalize` method is used to convert a payload received from your
@@ -5174,7 +5174,7 @@ classitems:
   class: DS.Serializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 14
   description: An array of snapshots
   access: private
@@ -5185,7 +5185,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 21
   description: An array of records
   access: private
@@ -5196,7 +5196,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 28
   description: Number of records in the array
   itemtype: property
@@ -5205,7 +5205,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 34
   description: The type of the underlying records for the snapshots in the array,
     as a DS.Model
@@ -5215,7 +5215,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 40
   description: Meta object
   itemtype: property
@@ -5224,7 +5224,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 46
   description: A hash of adapter options
   itemtype: property
@@ -5233,7 +5233,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot-record-array.js"
+- file: "addon/-private/system/snapshot-record-array.js"
   line: 54
   description: Get snapshots of the underlying record array
   itemtype: method
@@ -5244,7 +5244,7 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 38
   description: |-
     The id of the snapshot's underlying record
@@ -5261,7 +5261,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 53
   description: |-
     The underlying record for this snapshot. Can be used to access methods and
@@ -5278,7 +5278,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 68
   description: The type of the underlying record for this snapshot, as a DS.Model.
   itemtype: property
@@ -5287,7 +5287,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 76
   description: The name of the type of the underlying record for this snapshot, as
     a string.
@@ -5297,7 +5297,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 84
   description: |-
     Returns the value of an attribute.
@@ -5323,7 +5323,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 108
   description: |-
     Returns all attributes and their corresponding values.
@@ -5342,7 +5342,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 125
   description: |-
     Returns all changed attributes and their old and new values.
@@ -5362,7 +5362,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 151
   description: |-
     Returns the current value of a belongsTo relationship.
@@ -5410,7 +5410,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 228
   description: |-
     Returns the current value of a hasMany relationship.
@@ -5452,7 +5452,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 300
   description: |-
     Iterates through all the attributes of the model, calling the passed
@@ -5478,7 +5478,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 320
   description: |-
     Iterates through all the relationships of the model, calling the passed
@@ -5504,7 +5504,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/snapshot.js"
+- file: "addon/-private/system/snapshot.js"
   line: 340
   itemtype: method
   name: serialize
@@ -5518,7 +5518,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 216
   itemtype: method
   name: init
@@ -5527,7 +5527,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 234
   description: |-
     The adapter to use to communicate to a backend server or other persistence layer.
@@ -5546,7 +5546,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 251
   description: |-
     Returns a JSON representation of the record using a custom
@@ -5570,7 +5570,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 270
   description: |-
     This property returns the adapter, after resolving a possible
@@ -5591,7 +5591,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 299
   description: |-
     Create a new record in the current store. The properties passed
@@ -5631,7 +5631,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 361
   description: |-
     If possible, this method asks the adapter to generate an ID for
@@ -5653,7 +5653,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 385
   description: |-
     For symmetry, a record can be deleted via the store.
@@ -5676,7 +5676,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 405
   description: |-
     For symmetry, a record can be unloaded via the store. Only
@@ -5698,7 +5698,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 428
   itemtype: method
   name: find
@@ -5720,7 +5720,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 460
   description: |-
     This method returns a record for a given type and id combination.
@@ -5776,7 +5776,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 568
   description: |-
     This method makes a series of requests to the adapter's `find` method
@@ -5798,7 +5798,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 587
   description: |-
     This method is called by `findRecord` if it discovers that a particular
@@ -5818,7 +5818,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 737
   description: |-
     Get a record by a given type and ID without triggering a fetch.
@@ -5849,7 +5849,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 766
   description: |-
     This method is called by the record's `reload` method.
@@ -5871,7 +5871,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 790
   description: Returns true if a record for a given type and ID is already loaded.
   itemtype: method
@@ -5889,7 +5889,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 806
   description: |-
     Returns id record for a given type and ID. If one isn't already loaded,
@@ -5911,7 +5911,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 836
   itemtype: method
   name: findMany
@@ -5927,7 +5927,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 847
   description: |-
     If a relationship was originally populated by the adapter as a link
@@ -5959,7 +5959,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 874
   itemtype: method
   name: findBelongsTo
@@ -5981,7 +5981,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 891
   description: |-
     This method delegates a query to the adapter. This is the one place where
@@ -6040,7 +6040,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 957
   description: |-
     This method delegates a query to the adapter. This is the one place where
@@ -6067,7 +6067,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 987
   description: |-
     `findAll` ask the adapter's `findAll` method to find the records
@@ -6100,7 +6100,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1016
   itemtype: method
   name: _fetchAll
@@ -6119,7 +6119,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1045
   itemtype: method
   name: didUpdateAll
@@ -6132,7 +6132,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1055
   description: |-
     This method returns a filtered array that contains all of the
@@ -6164,7 +6164,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1088
   description: |-
     This method unloads all records in the store.
@@ -6184,7 +6184,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1130
   description: |-
     Takes a type and filter function, and returns a live RecordArray that
@@ -6249,7 +6249,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1214
   description: |-
     This method returns if a certain record is already loaded
@@ -6279,7 +6279,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1238
   itemtype: method
   name: _metadataFor
@@ -6295,7 +6295,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1250
   itemtype: method
   name: _setMetadataFor
@@ -6311,7 +6311,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1266
   description: |-
     If the adapter updates attributes the record will notify
@@ -6332,7 +6332,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1285
   description: |-
     This method is called by `record.save`, and gets passed a
@@ -6356,7 +6356,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1308
   description: |-
     This method is called at the end of the run loop, and
@@ -6368,7 +6368,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1340
   description: |-
     This method is called once the promise returned by an
@@ -6391,7 +6391,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1369
   description: |-
     This method is called once the promise returned by an
@@ -6411,7 +6411,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1383
   description: |-
     This method is called once the promise returned by an
@@ -6431,7 +6431,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1397
   description: |-
     When an adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6451,7 +6451,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1418
   description: Returns a map of IDs to client IDs for a given type.
   itemtype: method
@@ -6468,7 +6468,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1449
   description: This internal method is used by `push`.
   itemtype: method
@@ -6485,7 +6485,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1504
   description: |-
     Returns a model class for a particular key. Used by
@@ -6503,7 +6503,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1538
   description: |-
     Push some data for a given type into the store.
@@ -6663,7 +6663,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1768
   description: |-
     Push some raw data into the store.
@@ -6728,7 +6728,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1838
   description: |-
     `normalize` converts a json payload into the normalized form that
@@ -6758,7 +6758,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1864
   description: |-
     Build a brand new record for a given type, ID, and
@@ -6783,7 +6783,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1906
   description: |-
     When a record is destroyed, this un-indexes it and
@@ -6799,7 +6799,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1933
   description: |-
     Returns an instance of the adapter for a given type. For
@@ -6825,7 +6825,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 1965
   description: |-
     Returns an instance of the serializer for a given type. For
@@ -6856,7 +6856,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/system/store.js"
+- file: "addon/-private/system/store.js"
   line: 2000
   description: |-
     Retrieve a particular instance from the
@@ -6886,7 +6886,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/-private/core.js"
+- file: "addon/-private/core.js"
   line: 15
   itemtype: property
   name: VERSION
@@ -6894,7 +6894,7 @@ classitems:
   static: 1
   class: DS
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/utils.js"
+- file: "addon/-private/utils.js"
   line: 6
   description: |-
     Assert that `addedRecord` has a valid type so it can be added to the
@@ -6925,7 +6925,7 @@ classitems:
     type: InternalModel
   class: DS.JSONAPIAdapter
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/-private/utils.js"
+- file: "addon/-private/utils.js"
   line: 48
   description: Check if the passed model has a `type` attribute or a relationship
     named `type`.
@@ -6936,7 +6936,7 @@ classitems:
     description: ''
   class: DS.JSONAPIAdapter
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+- file: "addon/adapters/json-api.js"
   line: 17
   itemtype: method
   name: ajaxOptions
@@ -6958,7 +6958,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+- file: "addon/adapters/json-api.js"
   line: 43
   description: |-
     By default the JSONAPIAdapter will send each find request coming from a `store.find`
@@ -7009,7 +7009,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+- file: "addon/adapters/json-api.js"
   line: 92
   itemtype: method
   name: findMany
@@ -7032,7 +7032,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+- file: "addon/adapters/json-api.js"
   line: 105
   itemtype: method
   name: pathForType
@@ -7046,7 +7046,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/json-api.js"
+- file: "addon/adapters/json-api.js"
   line: 116
   itemtype: method
   name: updateRecord
@@ -7066,7 +7066,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 197
   description: |-
     By default, the RESTAdapter will send the query params sorted alphabetically to the
@@ -7116,7 +7116,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 253
   description: |-
     By default the RESTAdapter will send each find request coming from a `store.find`
@@ -7167,7 +7167,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 302
   description: |-
     Endpoint paths can be prefixed with a `namespace` by setting the namespace
@@ -7188,7 +7188,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 320
   description: |-
     An adapter can target other hosts by setting the `host` property.
@@ -7208,7 +7208,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 337
   description: |-
     Some APIs require HTTP headers, e.g. to provide an API
@@ -7233,7 +7233,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 359
   description: |-
     Called by the store in order to fetch the JSON for a given
@@ -7264,7 +7264,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 379
   description: |-
     Called by the store in order to fetch a JSON array for all
@@ -7293,7 +7293,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 405
   description: |-
     Called by the store in order to fetch a JSON array for
@@ -7323,7 +7323,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 432
   description: |-
     Called by the store in order to fetch a JSON object for
@@ -7353,7 +7353,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 459
   description: |-
     Called by the store in order to fetch several records together if `coalesceFindRequests` is true
@@ -7401,7 +7401,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 497
   description: |-
     Called by the store in order to fetch a JSON array for
@@ -7449,7 +7449,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 541
   description: |-
     Called by the store in order to fetch a JSON array for
@@ -7497,7 +7497,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 584
   description: |-
     Called by the store when a newly created record is
@@ -7526,7 +7526,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 610
   description: |-
     Called by the store when an existing record is saved
@@ -7555,7 +7555,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 638
   description: |-
     Called by the store when a record is deleted.
@@ -7579,7 +7579,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 675
   description: |-
     Organize records into groups, each of which is to be passed to separate
@@ -7613,7 +7613,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 739
   description: |-
     Takes an ajax response, and returns the json payload or an error.
@@ -7653,7 +7653,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 778
   description: |-
     Default `handleResponse` implementation uses this hook to decide if the
@@ -7676,7 +7676,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 792
   description: |-
     Default `handleResponse` implementation uses this hook to decide if the
@@ -7699,7 +7699,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 806
   description: |-
     Takes a URL, an HTTP method and a hash of data, and makes an
@@ -7737,7 +7737,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 877
   itemtype: method
   name: ajaxOptions
@@ -7759,7 +7759,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 907
   itemtype: method
   name: parseErrorResponse
@@ -7775,7 +7775,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapters/rest.js"
+- file: "addon/adapters/rest.js"
   line: 923
   itemtype: method
   name: normalizeErrorResponse
@@ -7797,7 +7797,7 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 101
   itemtype: method
   name: _normalizeDocumentHelper
@@ -7813,7 +7813,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 136
   itemtype: method
   name: _normalizeRelationshipDataHelper
@@ -7829,7 +7829,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 148
   itemtype: method
   name: _normalizeResourceHelper
@@ -7845,7 +7845,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 174
   itemtype: method
   name: pushPayload
@@ -7859,7 +7859,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 184
   itemtype: method
   name: _normalizeResponse
@@ -7890,7 +7890,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 200
   itemtype: method
   name: extractAttributes
@@ -7907,7 +7907,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 221
   itemtype: method
   name: extractRelationship
@@ -7921,7 +7921,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 246
   itemtype: method
   name: extractRelationships
@@ -7938,7 +7938,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 270
   itemtype: method
   name: _extractType
@@ -7957,7 +7957,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 281
   itemtype: method
   name: modelNameFromPayloadKey
@@ -7971,7 +7971,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 290
   itemtype: method
   name: payloadKeyFromModelName
@@ -7985,7 +7985,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 299
   itemtype: method
   name: normalize
@@ -8002,7 +8002,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 326
   description: |-
     `keyForAttribute` can be used to define rules for how to convert an
@@ -8039,7 +8039,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 356
   description: |-
     `keyForRelationship` can be used to define a custom key when
@@ -8079,7 +8079,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 386
   itemtype: method
   name: serialize
@@ -8096,7 +8096,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 398
   itemtype: method
   name: serializeAttribute
@@ -8116,7 +8116,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 427
   itemtype: method
   name: serializeBelongsTo
@@ -8133,7 +8133,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json-api.js"
+- file: "addon/serializers/json-api.js"
   line: 460
   itemtype: method
   name: serializeHasMany
@@ -8150,7 +8150,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 86
   description: |-
     The `primaryKey` is used when serializing and deserializing
@@ -8176,7 +8176,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 110
   description: |-
     The `attrs` object can be used to declare a simple mapping between
@@ -8242,7 +8242,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 174
   description: |-
     Given a subclass of `DS.Model` and a JSON object this method will
@@ -8267,7 +8267,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 198
   description: |-
     The `normalizeResponse` method is used to normalize a payload from the
@@ -8318,7 +8318,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 257
   itemtype: method
   name: normalizeFindRecordResponse
@@ -8344,7 +8344,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 270
   itemtype: method
   name: normalizeQueryRecordResponse
@@ -8370,7 +8370,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 283
   itemtype: method
   name: normalizeFindAllResponse
@@ -8396,7 +8396,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 296
   itemtype: method
   name: normalizeFindBelongsToResponse
@@ -8422,7 +8422,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 309
   itemtype: method
   name: normalizeFindHasManyResponse
@@ -8448,7 +8448,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 322
   itemtype: method
   name: normalizeFindManyResponse
@@ -8474,7 +8474,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 335
   itemtype: method
   name: normalizeQueryResponse
@@ -8500,7 +8500,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 348
   itemtype: method
   name: normalizeCreateRecordResponse
@@ -8526,7 +8526,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 361
   itemtype: method
   name: normalizeDeleteRecordResponse
@@ -8552,7 +8552,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 374
   itemtype: method
   name: normalizeUpdateRecordResponse
@@ -8578,7 +8578,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 387
   itemtype: method
   name: normalizeSaveResponse
@@ -8604,7 +8604,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 400
   itemtype: method
   name: normalizeSingleResponse
@@ -8630,7 +8630,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 413
   itemtype: method
   name: normalizeArrayResponse
@@ -8656,7 +8656,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 426
   itemtype: method
   name: _normalizeResponse
@@ -8687,7 +8687,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 473
   description: |-
     Normalizes a part of the JSON payload returned by
@@ -8735,7 +8735,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 529
   description: Returns the resource's ID.
   itemtype: method
@@ -8753,7 +8753,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 543
   description: |-
     Returns the resource's attributes formatted as a JSON-API "attributes object".
@@ -8774,7 +8774,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 567
   description: |-
     Returns a relationship formatted as a JSON-API "relationship object".
@@ -8795,7 +8795,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 598
   description: |-
     Returns a polymorphic relationship formatted as a JSON-API "relationship object".
@@ -8827,7 +8827,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 621
   description: |-
     Returns the resource's relationships formatted as a JSON-API "relationships object".
@@ -8848,7 +8848,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 677
   itemtype: method
   name: modelNameFromPayloadKey
@@ -8862,7 +8862,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 687
   itemtype: method
   name: normalizeAttributes
@@ -8871,7 +8871,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 706
   itemtype: method
   name: normalizeRelationships
@@ -8880,7 +8880,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 725
   itemtype: method
   name: normalizeUsingDeclaredMapping
@@ -8889,7 +8889,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 755
   description: |-
     Looks up the property key that was set by the custom `attr` mapping
@@ -8908,7 +8908,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 786
   description: |-
     Check attrs.key.serialize property to inform if the `key`
@@ -8927,7 +8927,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 801
   description: |-
     When attrs.key.serialize is set to true then
@@ -8947,7 +8947,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 817
   description: Check if the given hasMany relationship should be serialized
   itemtype: method
@@ -8970,7 +8970,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 837
   description: |-
     Called when a record is saved in order to convert the
@@ -9132,7 +9132,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1014
   description: |-
     You can use this method to customize how a serialized record is added to the complete
@@ -9172,7 +9172,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1045
   description: |-
     `serializeAttribute` can be used to customize how `DS.attr`
@@ -9210,7 +9210,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1092
   description: |-
     `serializeBelongsTo` can be used to customize how `DS.belongsTo`
@@ -9248,7 +9248,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1145
   description: |-
     `serializeHasMany` can be used to customize how `DS.hasMany`
@@ -9285,7 +9285,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1190
   description: |-
     You can use this method to customize how polymorphic objects are
@@ -9327,7 +9327,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1223
   description: |-
     `extractMeta` is used to deserialize any meta information in the
@@ -9363,7 +9363,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1256
   description: |-
     `extractErrors` is used to extract model errors when a call is made
@@ -9407,7 +9407,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1311
   description: |-
     `keyForAttribute` can be used to define rules for how to convert an
@@ -9439,7 +9439,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1336
   description: |-
     `keyForRelationship` can be used to define a custom key when
@@ -9475,7 +9475,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1363
   description: |-
     `keyForLink` can be used to define a custom key when deserializing link
@@ -9495,7 +9495,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/json.js"
+- file: "addon/serializers/json.js"
   line: 1378
   itemtype: method
   name: transformFor
@@ -9514,7 +9514,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 60
   description: |-
     `keyForPolymorphicType` can be used to define a custom key when
@@ -9552,7 +9552,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 91
   description: |-
     Normalizes a part of the JSON payload returned by
@@ -9631,7 +9631,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 164
   description: |-
     Normalizes an array of resource payloads and returns a JSON-API Document
@@ -9659,7 +9659,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 348
   description: |-
     This method allows you to push a payload containing top-level
@@ -9699,7 +9699,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 409
   description: |-
     This method is used to convert each JSON root key in the payload
@@ -9766,7 +9766,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 473
   description: |-
     Called when a record is saved in order to convert the
@@ -9928,7 +9928,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 628
   description: |-
     You can use this method to customize the root keys serialized into the JSON.
@@ -9966,7 +9966,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 658
   description: |-
     You can use `payloadKeyFromModelName` to override the root key for an outgoing
@@ -10020,7 +10020,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 707
   description: |-
     You can use this method to customize how polymorphic objects are serialized.
@@ -10041,7 +10041,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/serializers/rest.js"
+- file: "addon/serializers/rest.js"
   line: 747
   description: |-
     You can use this method to customize how a polymorphic relationship should
@@ -10064,7 +10064,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 66
   description: |-
     If you would like your adapter to use a custom serializer you can
@@ -10088,7 +10088,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 88
   description: |-
     The `findRecord()` method is invoked when the store is asked for a record that
@@ -10138,7 +10138,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 125
   description: |-
     The `findAll()` method is used to retrieve all records for a given type.
@@ -10184,7 +10184,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 158
   description: |-
     This method is called when you call `query` on the store.
@@ -10229,7 +10229,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 190
   description: |-
     The `queryRecord()` method is invoked when the store is asked for a single
@@ -10280,7 +10280,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 230
   description: |-
     If the globally unique IDs for your records should be generated on the client,
@@ -10322,7 +10322,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 260
   description: |-
     Proxies to the serializer's `serialize` method.
@@ -10356,7 +10356,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 287
   description: |-
     Implement this method in a subclass to handle the creation of
@@ -10408,7 +10408,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 328
   description: |-
     Implement this method in a subclass to handle the updating of
@@ -10469,7 +10469,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 378
   description: |-
     Implement this method in a subclass to handle the deletion of
@@ -10522,7 +10522,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 420
   description: |-
     By default the store will try to coalesce all `fetchRecord` calls within the same runloop
@@ -10535,7 +10535,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 431
   description: Find multiple records at once if coalesceFindRequests is true.
   itemtype: method
@@ -10559,7 +10559,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 443
   description: |-
     Organize records into groups, each of which is to be passed to separate
@@ -10586,7 +10586,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 463
   description: |-
     This method is used by the store to determine if the store should
@@ -10611,7 +10611,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 481
   description: |-
     This method is used by the store to determine if the store should
@@ -10636,7 +10636,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 499
   description: |-
     This method is used by the store to determine if the store should
@@ -10663,7 +10663,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/adapter.js"
+- file: "addon/adapter.js"
   line: 519
   description: |-
     This method is used by the store to determine if the store should
@@ -10690,7 +10690,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/attr.js"
+- file: "addon/attr.js"
   line: 17
   description: |-
     A map whose keys are the attributes of the model (properties
@@ -10732,7 +10732,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/attr.js"
+- file: "addon/attr.js"
   line: 70
   description: |-
     A map whose keys are the attributes of the model (properties
@@ -10774,7 +10774,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/attr.js"
+- file: "addon/attr.js"
   line: 120
   description: |-
     Iterates through the attributes of the model, calling the passed function on each
@@ -10827,7 +10827,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/attr.js"
+- file: "addon/attr.js"
   line: 169
   description: |-
     Iterates through the transformedAttributes of the model, calling
@@ -10881,7 +10881,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/attr.js"
+- file: "addon/attr.js"
   line: 257
   description: |-
     `DS.attr` defines an attribute on a [DS.Model](/api/data/classes/DS.Model.html).
@@ -10939,7 +10939,7 @@ classitems:
     type: Attribute
   class: DS
   module: ember-data
-- file: "/Users/bmac/code/ember-data/addon/transform.js"
+- file: "addon/transform.js"
   line: 41
   description: |-
     When given a deserialized value from a record attribute this
@@ -10962,7 +10962,7 @@ classitems:
   class: DS.Transform
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/addon/transform.js"
+- file: "addon/transform.js"
   line: 59
   description: |-
     When given a serialize value from a JSON object this method must
@@ -10985,14 +10985,14 @@ classitems:
   class: DS.Transform
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/ext/string.js"
+- file: "node_modules/ember-inflector/addon/lib/ext/string.js"
   line: 8
   description: See {{#crossLink "Ember.String/pluralize"}}{{/crossLink}}
   itemtype: method
   name: pluralize
   class: DS.String
   module: ember-data
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/ext/string.js"
+- file: "node_modules/ember-inflector/addon/lib/ext/string.js"
   line: 18
   description: See {{#crossLink "Ember.String/singularize"}}{{/crossLink}}
   itemtype: method
@@ -11000,7 +11000,7 @@ classitems:
   class: DS.String
   module: ember-data
   namespace: DS
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/helpers/pluralize.js"
+- file: "node_modules/ember-inflector/addon/lib/helpers/pluralize.js"
   line: 4
   description: |-
     If you have Ember Inflector (such as if Ember Data is present),
@@ -11022,7 +11022,7 @@ classitems:
     type: String|Property
   class: DS.Ember.HTMLBars.helpers
   module: ember-data
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/helpers/singularize.js"
+- file: "node_modules/ember-inflector/addon/lib/helpers/singularize.js"
   line: 4
   description: |-
     If you have Ember Inflector (such as if Ember Data is present),
@@ -11038,7 +11038,7 @@ classitems:
     type: String|Property
   class: Ember.HTMLBars.helpers
   module: ember-data
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 121
   access: public
   tagname: |-
@@ -11049,7 +11049,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 143
   access: public
   tagname: ''
@@ -11058,7 +11058,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 154
   access: public
   tagname: disable caching
@@ -11067,7 +11067,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 172
   itemtype: method
   name: plural
@@ -11081,7 +11081,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 182
   itemtype: method
   name: singular
@@ -11095,7 +11095,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 192
   itemtype: method
   name: uncountable
@@ -11106,7 +11106,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 201
   itemtype: method
   name: irregular
@@ -11120,7 +11120,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 211
   itemtype: method
   name: pluralize
@@ -11131,7 +11131,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 222
   itemtype: method
   name: singularize
@@ -11142,7 +11142,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "/Users/bmac/code/ember-data/node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
   line: 234
   access: protected
   tagname: ''
