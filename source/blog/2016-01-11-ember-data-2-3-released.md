@@ -132,13 +132,13 @@ For more details on changes in 2.4, review the
 [Ember Data 2.4.0-beta.1 CHANGELOG](https://github.com/emberjs/data/blob/v2.4.0-beta.1/CHANGELOG.md).
 
 
-### Upcomming Features
+### Upcoming Features
 
 Two new features recently landed on the Ember Data canary branch. They
 each address add some long requested features to Ember Data. However,
 before they can be enabled in a beta branch the Ember Data team would
 like the community to try them out and provide feedback on their
-implementations. These two feature flaged features are only available
+implementations. These two feature flagged features are only available
 on the master branch (sometimes called "canary") of Ember Data. To
 test them out please update the version of Ember Data in package.json
 to `emberjs/data#master` and add the feature to the `EmberENV`'s
@@ -158,9 +158,9 @@ var ENV = {
 For more information you can check out Ember's
 [feature flags guide](https://guides.emberjs.com/v2.2.0/configuring-ember/feature-flags/).
 
-#### `ds-find-include`
+#### `ds-finder-include`
 
-The `ds-find-include` feature allows an `include` query parameter to
+The `ds-finder-include` feature allows an `include` query parameter to
 be specified with using `store.findRecord()` and `store.findAll()` as
 described in [RFC 99](https://github.com/emberjs/rfcs/pull/99). This
 should make it easier to specify when backends should return
@@ -182,7 +182,7 @@ var article = this.store.findAll('article', { include: 'comments' });
 
 #### `ds-references`
 
-The `ds-references` feature implementes the refernces api as described
+The `ds-references` feature implements the references API as described
 in [RFC 57](https://github.com/emberjs/rfcs/pull/57). References is a
 low level API to perform meta-operations on records, has-many
 relationships and belongs-to relationships:
@@ -191,6 +191,49 @@ relationships and belongs-to relationships:
   * notify the store that a fetch for a given record has begun, and provide a promise for its result
   * similarly, notify a record that a fetch for a given relationship has begun, and provide a promise for its result
   * retrieve server-provided metadata about a record or relationship
+
+Consider the following `post` model:
+
+```js
+// app/models/post.js
+import Model from 'ember-data/model';
+import { belongsTo, hasMany } from 'ember-data/relationships';
+
+export default Model.extend({
+  comments: hasMany(),
+  author: belongsTo()
+});
+```
+
+The references API now allows the possibility to interact with the relationships:
+
+```js
+var post = store.peekRecord('post', 1);
+
+// check if the author is already loaded, without triggering a request
+if (post.belongsTo('author').value() !== null) {
+  console.log(post.get("author.name"));
+} else {
+  // load the author
+  post.belongtTo('author').load();
+}
+
+// reload the author
+post.belongsTo('author').reload();
+
+// check if there are comments, without triggering a request
+if (post.hasMany('comments').value() !== null) {
+  var ids = post.hasMany('comments').ids();
+
+  var meta = post.hasMany('comments').meta();
+  console.log(`${ids.length} comments out of ${meta.total}`);
+} else {
+  post.hasMany('comments').load();
+}
+
+// reload comments
+post.hasMany('comments').reload();
+```
 
 Thanks to [ @pangratz](https://github.com/pangratz) for implementing
 this feature.
