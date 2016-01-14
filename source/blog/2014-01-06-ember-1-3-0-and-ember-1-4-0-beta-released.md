@@ -132,7 +132,7 @@ Which will allow you to see a tree of promises and inspect their names, state, a
   the first promise that settles. In other words: given an array of promises `Promise.race`
   will return the value from the first argument that settles (like the winner in a "race").
 
-Please review [the documentation](/api/modules/RSVP.html) for more information.
+Please review [the documentation](/api/classes/RSVP.html) for more information.
 
 #### Other Improvements
 
