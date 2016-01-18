@@ -77,7 +77,7 @@ def generate_ember_data_docs
       sha = describe =~ /-g(.+)/ ? $1 : describe
     end
 
-    sh("npm install && npm run build:production")
+    sh("npm install && npm run production")
   end
 
   # JSON is valid YAML
