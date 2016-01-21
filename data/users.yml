@@ -743,7 +743,10 @@
   image: testdouble.png
   alt: "Test Double"
   use: "Test Double uses Ember to develop rich web applications for our clients"
-
+- url: https://www.scienceexchange.com
+  image: scienceexchange.png
+  alt: "Science Exchange"
+  use: "An online marketplace for scientific research built with EmberJS and Rails"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
