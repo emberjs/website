@@ -378,9 +378,9 @@ blocks have unlocked frameworks and libraries like jQuery, Ember,
 Angular and React.
 
 By focusing first on raw capabilities before ease-of-use, you keep the
-scope constrained. You can ship features faster, and by exposing the
-just the building blocks, you can let experimentation and competition in
-the ecosystem find an API that developers love&mdash;without breaking
+scope constrained. You can ship features faster, and by exposing just
+the building blocks, you can let experimentation and competition in the
+ecosystem find an API that developers love&mdash;without breaking
 backwards compatibility.
 
 The same thing is starting to happen in Ember. Two illustrative examples
