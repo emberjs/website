@@ -317,14 +317,6 @@ locations:
       profileImage: http://photos1.meetupstatic.com/photos/member/7/7/f/8/thumb_96750712.jpeg
     - organizer: Paul Ruescher
       profileImage: http://photos3.meetupstatic.com/photos/member/6/a/d/thumb_10561709.jpeg
-  - location: San Juan, Puerto Rico
-    url: http://www.meetup.com/Ember-PR/
-    image: 21puertorico.png
-    lat: 18.4663338
-    lng: -66.1057217
-    organizers:
-    - organizer: Giovanni Collazo
-      profileImage: http://photos4.meetupstatic.com/photos/member/a/d/9/9/thumb_241964441.jpeg
   - location: Calgary, Canada
     url: http://www.meetup.com/EmberJS-YYC/
     image: 23calgary.png
