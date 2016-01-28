@@ -747,6 +747,10 @@
   image: scienceexchange.png
   alt: "Science Exchange"
   use: "An online marketplace for scientific research built with EmberJS and Rails"
+- url: http://kiosked.com
+  image: kiosked.png
+  alt: "Kiosked"
+  use: "We use Ember to power our analytics and inventory dashboards"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
