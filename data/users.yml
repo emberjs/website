@@ -754,7 +754,7 @@
 - url: http://www.startae.com
   image: startae.png
   alt: "Startaê"
-  use: "We use Ember for some of our internal and client projects."
+  use: "Consulting firm using Ember for internal and client projects."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
