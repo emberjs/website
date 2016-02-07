@@ -379,6 +379,12 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/d/1/0/8/member_139613512.jpeg
     - organizer: James Martinez
       profileImage: http://photos2.meetupstatic.com/photos/member/6/d/7/2/highres_244288018.jpeg
+  - location: Phoenix, AZ
+    url: http://www.meetup.com/EmberJS-Phoenix
+    lat: 33.377826
+    lng: -111.975909
+    - organizer: Sid Tantia
+      profileImage: http://photos4.meetupstatic.com/photos/member/4/6/a/2/highres_212178082.jpeg
 - area: South America
   groups:
   - location: São Paulo, Brazil
