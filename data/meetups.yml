@@ -384,7 +384,7 @@ locations:
     lat: 33.377826
     lng: -111.975909
     - organizer: Sid Tantia
-      profileImage: http://photos4.meetupstatic.com/photos/member/4/6/a/2/highres_212178082.jpeg
+      profileImage: https://avatars1.githubusercontent.com/u/7014435?v=2&s=150
 - area: South America
   groups:
   - location: São Paulo, Brazil
