@@ -75,7 +75,7 @@
   .release-progress {
     display: table;
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 0.8em 0;
   }
 
   .beta-version {
@@ -191,7 +191,6 @@
   }
 
   .table {
-    margin-top: 2em;
     width: 100%;
     background-color: transparent;
     border-collapse: collapse;
@@ -326,4 +325,108 @@
       margin: 2.5em 0;
     }
   }
+
+  /*
+   * Warning at the top of the build page
+   */
+
+  .old-version-warning {
+    background-color: #dd6a58;
+    color: #FFFBF5;
+    padding: .5em;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .old-version-warning .btn {
+    float: right;
+    font-weight: bold;
+    font-size: 12px;
+    color: #FFFBF5;
+    padding: 0.3em 0.8em;
+    background-color: #e69082;
+    border-radius: 3px;
+    line-height: 1.4;
+  }
+
+  .icon-attention-circled:before {
+    content: '!';
+    font-family: "Arial Black";
+    font-style: normal;
+    background-color: #FFFBF5;
+    color: #dd6a58;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    border-radius: 0.5em;
+  }
+
+  /*
+   * Channels list on the index page
+   */
+
+  .channels {
+    margin-top: 5%;
+  }
+
+  .channel {
+    text-align: left;
+    @include clearfix();
+  }
+
+  .channel .tomster {
+    float: left;
+    margin: 0 20px;
+    width: 10%;
+    padding: 10px 0;
+    &:hover {
+      border: 0;
+    }
+  }
+
+  .channel .description {
+    width: 80%;
+    padding: 20px 0;
+    &.last {
+      border-bottom: 1px dotted #E5DBD6;
+    }
+  }
+
+  .channel .release {
+    background-image: url('/images/builds/release.png');
+    background-size: cover;
+    width: 99px;
+    height: 131.5px;
+    margin: 0 auto;
+  }
+
+  .channel .beta {
+    background-image: url('/images/builds/beta.png');
+    background-size: cover;
+    width: 99px;
+    height: 131.5px;
+    margin: 0 auto;
+  }
+
+  .channel .canary {
+    background-image: url('/images/builds/canary.png');
+    background-size: cover;
+    width: 99px;
+    height: 131.5px;
+    margin: 0 auto;
+  }
+
+  .channel .lts {
+    width: 99px;
+    height: 131.5px;
+    margin: 0 auto;
+  }
+
 }

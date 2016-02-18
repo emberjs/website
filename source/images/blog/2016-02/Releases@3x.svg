@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="700px" height="154px" viewBox="0 0 700 154" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.5.2 (25235) - http://www.bohemiancoding.com/sketch -->
+    <title>Releases@3x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="52.7045705%" x2="100%" y2="52.7045727%" id="linearGradient-1">
+            <stop stop-color="#E16363" offset="0%"></stop>
+            <stop stop-color="#E1B763" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="52.7045705%" x2="100%" y2="52.7045727%" id="linearGradient-2">
+            <stop stop-color="#63E17B" offset="0%"></stop>
+            <stop stop-color="#E16363" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="52.7045705%" x2="100%" y2="52.7045727%" id="linearGradient-3">
+            <stop stop-color="#E1B763" offset="0%"></stop>
+            <stop stop-color="#7863E1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <rect id="Rectangle-25" fill="#000000" sketch:type="MSShapeGroup" x="0" y="0" width="700" height="154"></rect>
+        <path d="M64,97 L689.008057,97 C689.008057,97 693,104.215658 693,107.823486 C693,111.548991 689.008057,119 689.008057,119 L64,119 L64,97 Z" id="Rectangle-1" fill="#63E27B" sketch:type="MSShapeGroup"></path>
+        <rect id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup" x="155" y="69" width="83" height="22"></rect>
+        <rect id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup" x="246" y="69" width="83" height="22"></rect>
+        <rect id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup" x="337" y="69" width="83" height="22"></rect>
+        <rect id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup" x="428" y="69" width="83" height="22"></rect>
+        <rect id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup" x="519" y="69" width="83" height="22"></rect>
+        <path d="M610,69 L688.959961,69 C688.959961,69 693,76.3333333 693,80 C693,83.6666667 688.959961,91 688.959961,91 L610,91 L610,69 Z" id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup"></path>
+        <path d="M610,41 L689.065674,41 C689.065674,41 693,48.3333333 693,52 C693,55.6666667 689.065674,63 689.065674,63 L610,63 L610,41 Z" id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup"></path>
+        <path d="M602,69.0213623 L610.000488,40.9477539 L610.000488,63.0361328 L602,91.0126953 L602,69.0213623 Z" id="Path-21" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M602,97.0340576 L610.012329,68.9787598 L610.012329,90.9658203 L602,118.972656 L602,97.0340576 Z" id="Path-21" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+        <text id="2.9.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="616" y="56">2.9.0</tspan>
+        </text>
+        <text id="2.10-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="616" y="84">2.10-beta</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup" x="519" y="41" width="83" height="22"></rect>
+        <path d="M511,69.0213623 L519.000488,40.9477539 L519.000488,63.0361328 L511,91.0126953 L511,69.0213623 Z" id="Path-21" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M511,97.0340576 L519.012329,68.9787598 L519.012329,90.9658203 L511,118.972656 L511,97.0340576 Z" id="Path-21" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+        <text id="2.8.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="525" y="56">2.8.0</tspan>
+        </text>
+        <text id="2.9-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="525" y="84">2.9-beta</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup" x="428" y="41" width="83" height="22"></rect>
+        <path d="M420,69.0213623 L428.000488,40.9477539 L428.000488,63.0361328 L420,91.0126953 L420,69.0213623 Z" id="Path-21" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M420,97.0340576 L428.012329,68.9787598 L428.012329,90.9658203 L420,118.972656 L420,97.0340576 Z" id="Path-21" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+        <text id="2.7.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="434" y="56">2.7.0</tspan>
+        </text>
+        <text id="2.8-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="434" y="84">2.8-beta</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup" x="337" y="41" width="83" height="22"></rect>
+        <path d="M329,69.0213623 L337.000488,40.9477539 L337.000488,63.0361328 L329,91.0126953 L329,69.0213623 Z" id="Path-21" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M329,97.0340576 L337.012329,68.9787598 L337.012329,90.9658203 L329,118.972656 L329,97.0340576 Z" id="Path-21" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+        <text id="2.6.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="343" y="56">2.6.0</tspan>
+        </text>
+        <text id="2.7-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="343" y="84">2.7-beta</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup" x="246" y="41" width="83" height="22"></rect>
+        <rect id="Rectangle-1" fill="#7863E2" sketch:type="MSShapeGroup" x="246" y="13" width="356" height="22"></rect>
+        <path d="M610,13 L688.997559,13 C688.997559,13 693,20.3333333 693,24 C693,27.6666667 688.997559,35 688.997559,35 L610,35 L610,13 Z" id="Rectangle-1" fill="#7863E2" sketch:type="MSShapeGroup"></path>
+        <path d="M602,41.0213623 L610.000488,12.9477539 L610.000488,35.0361328 L602,63.0126953 L602,41.0213623 Z" id="Path-21" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup"></path>
+        <text id="2.8-LTS" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="616" y="28">2.8-LTS</tspan>
+        </text>
+        <path d="M238,41.0213623 L246.000488,12.9477539 L246.000488,35.0361328 L238,63.0126953 L238,41.0213623 Z" id="Path-21" fill="url(#linearGradient-3)" sketch:type="MSShapeGroup"></path>
+        <path d="M238,69.0213623 L246.000488,40.9477539 L246.000488,63.0361328 L238,91.0126953 L238,69.0213623 Z" id="Path-21" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M238,97.0340576 L246.012329,68.9787598 L246.012329,90.9658203 L238,118.972656 L238,97.0340576 Z" id="Path-21" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+        <rect id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup" x="155" y="41" width="83" height="22"></rect>
+        <rect id="Rectangle-1" fill="#E2B863" sketch:type="MSShapeGroup" x="64" y="41" width="83" height="22"></rect>
+        <text id="2.4-LTS" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="252" y="28">2.4-LTS</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="246" y="124" width="83" height="3"></rect>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="337" y="124" width="83" height="3"></rect>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="428" y="124" width="83" height="3"></rect>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="519" y="124" width="83" height="3"></rect>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="610" y="124" width="83" height="3"></rect>
+        <text id="Sep-23" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="611" y="140">Sep 23</tspan>
+        </text>
+        <text id="Aug-12" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="520" y="140">Aug 12</tspan>
+        </text>
+        <text id="Jul-1" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="429" y="140">Jul 1</tspan>
+        </text>
+        <text id="May-20" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="338" y="140">May 20</tspan>
+        </text>
+        <text id="2.5.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="252" y="56">2.5.0</tspan>
+        </text>
+        <text id="2.6-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="252" y="84">2.6-beta</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="155" y="124" width="83" height="3"></rect>
+        <text id="2.4.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="161" y="56">2.4.0</tspan>
+        </text>
+        <text id="2.5-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="161" y="84">2.5-beta</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#E26363" sketch:type="MSShapeGroup" x="64" y="69" width="83" height="22"></rect>
+        <text id="master" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="70" y="112">master</tspan>
+        </text>
+        <rect id="Rectangle-1" fill="#9B9B9B" sketch:type="MSShapeGroup" x="64" y="124" width="83" height="3"></rect>
+        <text id="2.3.0" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="70" y="56">2.3.0</tspan>
+        </text>
+        <text id="Jan-15" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="66" y="140">Jan 15</tspan>
+        </text>
+        <text id="Canary" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="bold" sketch:alignment="right" fill="#63E27B">
+            <tspan x="15.3125" y="112">Canary</tspan>
+        </text>
+        <text id="Beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="bold" sketch:alignment="right" fill="#E26363">
+            <tspan x="29.9902344" y="84">Beta</tspan>
+        </text>
+        <text id="Release" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="bold" sketch:alignment="right" fill="#E2B863">
+            <tspan x="10.6308594" y="56">Release</tspan>
+        </text>
+        <text id="LTS" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="bold" sketch:alignment="right" fill="#7863E2">
+            <tspan x="34.2207031" y="28">LTS</tspan>
+        </text>
+        <text id="2.4-beta" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#FFFFFF">
+            <tspan x="70" y="84">2.4-beta</tspan>
+        </text>
+        <text id="Feb-26" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="156" y="140">Feb 26</tspan>
+        </text>
+        <text id="Apr-8" sketch:type="MSTextLayer" font-family="Helvetica" font-size="12" font-weight="normal" fill="#9B9B9B">
+            <tspan x="247" y="140">Apr 8</tspan>
+        </text>
+        <path d="M147,69.0213623 L155.000488,40.9477539 L155.000488,63.0361328 L147,91.0126953 L147,69.0213623 Z" id="Path-21" fill="url(#linearGradient-1)" sketch:type="MSShapeGroup"></path>
+        <path d="M147,97.0340576 L155.012329,68.9787598 L155.012329,90.9658203 L147,118.972656 L147,97.0340576 Z" id="Path-21" fill="url(#linearGradient-2)" sketch:type="MSShapeGroup"></path>
+    </g>
+</svg>

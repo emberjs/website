@@ -1,7 +1,6 @@
 <div id="sidebar">
   <ol id="toc-list">
     <li class="level-1 {{if isIndexActive 'selected'}}">{{#link-to 'index'}}Home{{/link-to}}</li>
-    <li class="level-1 {{if isTaggedActive 'selected'}}">{{#link-to 'tagged'}}Tagged Releases{{/link-to}}</li>
     <li class="level-1 {{if isChannelsActive 'selected'}}">
       <a>Channels</a>
       <ol style="display:block">
@@ -10,6 +9,7 @@
         <li class="level-3 {{if isCanaryActive 'sub-selected'}}">{{#link-to 'canary'}}Canary{{/link-to}}</li>
       </ol>
     </li>
+    <li class="level-1 {{if isTaggedActive 'selected'}}">{{#link-to 'tagged'}}Prev. Releases{{/link-to}}</li>
   </ol>
 </div>
 

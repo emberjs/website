@@ -1,104 +1,16 @@
-<h2 class="project-name">{{project.projectName}} {{project.channel}} Builds</h2>
-{{#if project.isEmberBeta}}
-  <div class="release-progress clear">
-    <div class="left">
-      <div class="small-release-image" title={{project.lastStableVersion}}></div>
-      <div class="release-version">{{project.lastStableVersion}}</div>
-      <div class="release-date">Released {{format-date-time project.lastStableDate "MMM Do"}}</div>
-    </div>
-    <div class="float-left-container">
-      <div class="release-cycle-title">The path to {{project.finalVersion}}...</div>
-      <div class="left {{if project.beta1Completed '' 'future-image'}}">
-        <div class="tiny-beta-image"></div>
-        <div class="beta-version">beta 1</div>
-        {{#if project.isBeta1}}
-          <div class="beta-current-version">(current beta)</div>
-        {{/if}}
-      </div>
-      <div class="left {{if project.beta2Completed '' 'future-image'}}">
-        <div class="tiny-beta-image"></div>
-        <div class="beta-version">beta 2</div>
-        {{#if project.isBeta2}}
-          <div class="beta-current-version">(current beta)</div>
-        {{/if}}
-        {{#if project.isBeta1}}
-          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
-        {{/if}}
-      </div>
-      <div class="left {{if project.beta3Completed '' 'future-image'}}">
-        <div class="tiny-beta-image"></div>
-        <div class="beta-version">beta 3</div>
-        {{#if project.isBeta3}}
-          <div class="beta-current-version">(current beta)</div>
-        {{/if}}
-        {{#if project.isBeta2}}
-          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
-        {{/if}}
-      </div>
-      <div class="left {{if project.beta4Completed '' 'future-image'}}">
-        <div class="tiny-beta-image"></div>
-        <div class="beta-version">beta 4</div>
-        {{#if project.isBeta4}}
-          <div class="beta-current-version">(current beta)</div>
-        {{/if}}
-        {{#if project.isBeta3}}
-          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
-        {{/if}}
-      </div>
-      <div class="left {{if project.beta5Completed '' 'future-image'}}">
-        <div class="tiny-beta-image"></div>
-        <div class="beta-version">beta 5</div>
-        {{#if project.isBeta5}}
-          <div class="beta-current-version">(current beta)</div>
-        {{/if}}
-        {{#if project.isBeta4}}
-          <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
-        {{/if}}
-      </div>
-    </div>
-    <div class="right future-image">
-      <div class="small-release-image" title={{project.finalVersion}}></div>
-      <div class="release-version">{{project.finalVersion}}</div>
-      <div class="release-date">Coming {{format-date-time project.cycleEstimatedFinishDate "MMM Do"}}</div>
-    </div>
-    <div class="clear"></div>
-  </div>
-{{/if}}
-{{#if project.lastRelease}}
-<div id="download">
-  <div id="download-ember">
-    <a class="orange button" href={{project.lastReleaseDebugUrl}} download>Download {{project.lastRelease}}</a>
-    <div class="info">
-      {{project.lastRelease}}:
-      <a class="debug" href={{project.lastReleaseProdUrl}} download>production</a>
-      <a class="debug" href={{project.lastReleaseMinUrl}} download>(min)</a> |
-      <a class="debug" href={{project.lastReleaseDebugUrl}} download>debug</a>
-      {{#if project.lastReleaseTestUrl}} |
-        <a class="debug" href={{project.lastReleaseTestUrl}} target="_blank" >live tests</a>
-      {{/if}}
-      {{#if project.lastReleaseChangelogUrl }} |
-        <a class="debug" href={{project.lastReleaseChangelogUrl}}>changelog</a>
-      {{/if}}
-    </div>
-  </div>
-</div>
-{{/if}}
-<p class="description">{{project.description}}</p>
-<table class="table">
-  <thead>
+{{#if includeReleasesInFileList}}
+  {{#each (params project.lastReleaseProdUrl project.lastReleaseMinUrl project.lastReleaseDebugUrl) as |url|}}
     <tr>
-      <th>File</th>
-      <th>Modified</th>
-      <th>Quick Copy</th>
+      <td><a href={{url}}>{{tag-url-path url}}</a></td>
+      <td>{{format-date-time project.date}}</td>
+      <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=(script-tag url)}}</td>
     </tr>
-  </thead>
-  <tbody>
-    {{#each project.files as |file|}}
-      <tr>
-        <td><a href={{file.url}}>{{file.name}}</a></td>
-        <td>{{format-date-time file.lastModified}}</td>
-        <td>{{copy-clipboard label="Link" text=file.url}} {{copy-clipboard label="Script Tag" text=file.scriptTag}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
-</table>
+  {{/each}}
+{{/if}}
+{{#each project.files as |file|}}
+  <tr>
+    <td><a href={{file.url}}>{{file.name}}</a></td>
+    <td>{{format-date-time file.lastModified}}</td>
+    <td>{{copy-clipboard label="Link" text=file.url}} {{copy-clipboard label="Script Tag" text=file.scriptTag}}</td>
+  </tr>
+{{/each}}

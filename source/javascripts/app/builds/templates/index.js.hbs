@@ -1,29 +1,98 @@
-<div class="features section">
-  <div class="feature">
-    {{#link-to 'release'}}
+<div class="old-version-warning">
+  <i class="icon-attention-circled"></i>
+  <strong>Getting Started?</strong> Ember-CLI is the
+  modern, supported way to run an Ember application.
+  <a class="btn" href="https://guides.emberjs.com/v2.3.0/getting-started/quick-start/">Getting Started Guide</a>
+</div>
+
+<p>
+Ember releases follow a "train" release model. Every
+six weeks, the <code>master</code> branch of Ember (sometimes referred to as
+"canary") branches to become the new beta. After six weeks as a beta, this
+version becomes the new stable release of Ember.
+</p>
+
+<p>
+The Ember project adheres to
+<a href="http://semver.org/">semantic versioning</a>. Releases are named
+according to a <code>MAJOR.MINOR.PATCH</code> scheme, and only
+<code>MAJOR</code> versions releases may change or remove public APIs after
+deprecation. <code>MINOR</code> versions may introduce new features so long
+as they are backwards compatible, and <code>PATCH</code> releases may include
+bug or security fixes.
+</p>
+
+<div class="channels section">
+  <div class="channel">
+    {{#link-to 'release' class='tomster'}}
       <div class="release" title="Release Builds"></div>
     {{/link-to}}
-    <h2>Release</h2>
-    <p>Release builds have been hardened through our multi-tiered release process. These builds are perfect for use in production environments.</p>
+    <div class="description">
+      <h3>
+        {{#link-to 'release'}}Release{{/link-to}}
+      </h3>
+      <p>
+      <em>The latest stable release is {{model.release.lastRelease}}, made
+        on {{format-date-time model.release.date 'MMMM Do, YYYY'}}</em>
+      </p>
+      <p>
+      Release builds have been hardened through our multi-tiered release
+      process. These builds are perfect for use in production environments.
+      </p>
+    </div>
   </div>
-  <div class="feature">
-    {{#link-to 'beta'}}
+  <div class="channel">
+    {{#link-to 'beta' class='tomster'}}
       <div class="beta" title="Beta Builds"></div>
     {{/link-to}}
-    <h2>Beta</h2>
-    <p>Beta builds will incorporate new features that are ready for more review. They will include new features that have been more thoroughly tested. We do not recommend using Beta builds in production.</p>
+    <div class="description">
+      <h3>
+        {{#link-to 'beta'}}Beta{{/link-to}}
+      </h3>
+      <p>
+      <em>The latest beta release is {{model.beta.lastRelease}}, made
+        {{format-date-time model.beta.date}}</em>
+      </p>
+      <p>Beta builds incorporate new features that are ready for evaluation in
+      application code. We do not recommend using Beta builds in production.
+      </p>
+    </div>
   </div>
-  <div class="feature">
-    {{#link-to 'canary'}}
+  <div class="channel">
+    {{#link-to 'canary' class='tomster'}}
       <div class="canary" title="Canary Builds"></div>
     {{/link-to}}
-    <h2>Canary</h2>
-    <p>Canary builds are the bleeding edge of Ember development. Please do not use these builds unless you are absolutely certain that you need fixes and/or features not available in the Release or Beta builds.</p>
+    <div class="description">
+      <h3>
+        {{#link-to 'canary'}}Canary{{/link-to}}
+      </h3>
+      <p>Canary builds are the bleeding edge of Ember development. Please do
+      not use these builds unless you want to try out and offer
+      feedback on new features and fixes not available in the Release or
+      Beta builds.</p>
+    </div>
+  </div>
+  <div class="channel">
+    <a class="tomster">
+      <div class="lts" title="LTS Builds"></div>
+    </a>
+    <div class="description last">
+      <h3>Long-Term Support (LTS)</h3>
+      <p>
+      <em>Ember 2.4 will become the first LTS release six weeks after 2.4
+        stable is released</em>
+      </p>
+      <p>For some users, the six-week release cycle of Ember can be too
+      quick. LTS releases occur every four stable releases (roughly twice
+      a year), and include backported bug and security fixes.</p>
+    </div>
   </div>
 </div>
 
-<hr>
-
-<h3>Versioning and Deprecations</h3>
-
-<p>Periodically, various APIs in Ember.js may be deprecated. Ember.js uses <a href="http://semver.org" title="Semantic Versioning">Semantic Versioning</a> to indicate these changes. As new releases of Ember and Ember Data are released, be sure to review the <a href="/deprecations">deprecation guides</a> alongside the current version of the <a href="http://guides.emberjs.com">documentation guides</a> as they may often be more in line with the channel you are using.</p>
+<p>
+Periodically, various APIs in Ember may be deprecated. As new releases
+of Ember and Ember Data land, be sure to review the
+<a href="/deprecations">deprecation guides</a> and
+<a href="http://guides.emberjs.com">documentation guides</a>. These are updated
+regularly.
+</p>

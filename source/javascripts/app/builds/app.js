@@ -210,7 +210,9 @@ App.Project.reopenClass({
       date: "2016-01-17",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
-      debugFileName: ".debug.js"
+      debugFileName: ".debug.js",
+      ignoreFiles: ['ember.js'],
+      installWithEmberCLI: '# Install Ember %s:\nbower install --dev ember#v%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nbower install --dev ember#release'
     }, {
       projectName: "Ember",
       baseFileName: 'ember',
@@ -226,7 +228,8 @@ App.Project.reopenClass({
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
       debugFileName: ".debug.js",
-      ignoreFiles: ['ember.js']
+      ignoreFiles: ['ember.js'],
+      installWithEmberCLI: '# Install Ember %s:\nbower install --dev ember#v%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nbower install --dev ember#beta'
     }, {
       projectName: "Ember Data",
       baseFileName: 'ember-data',
@@ -237,7 +240,8 @@ App.Project.reopenClass({
       channel: "release",
       date: "2016-01-12",
       changelogPath: "CHANGELOG.md",
-      debugFileName: ".js"
+      debugFileName: ".js",
+      installWithEmberCLI: '# Install Ember-Data %s:\nnpm install --save-dev ember-data@%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nnpm install --save-dev emberjs/data#release'
     }, {
       projectName: "Ember Data",
       baseFileName: 'ember-data',
@@ -249,7 +253,8 @@ App.Project.reopenClass({
       channel: "beta",
       date: "2016-02-12",
       changelogPath: "CHANGELOG.md",
-      debugFileName: ".js"
+      debugFileName: ".js",
+      installWithEmberCLI: '# Install Ember-Data %s:\nnpm install --save-dev ember-data@%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nnpm install --save-dev emberjs/data#beta'
     }, {
       projectName: "Ember",
       baseFileName: 'ember',
@@ -258,14 +263,16 @@ App.Project.reopenClass({
       channel: "canary",
       enableTestURL: true,
       debugFileName: ".debug.js",
-      ignoreFiles: ['ember.js']
+      ignoreFiles: ['ember.js'],
+      installWithEmberCLI: '# Install the latest Ember canary:\nbower install --dev ember#canary'
     }, {
       projectName: "Ember Data",
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
       channel: "canary",
-      debugFileName: ".js"
+      debugFileName: ".js",
+      installWithEmberCLI: '# Install the latest Ember-Data canary:\nnpm install --save-dev emberjs/data#master'
     }],
 
   all: function(channel){
@@ -288,6 +295,14 @@ App.Project.reopenClass({
       return allProjects;
     else
       return allProjects.filterBy('projectName', name);
+  },
+
+  findOne: function(channel, name) {
+    var results = this.find(channel, name);
+    if (results.length > 1) {
+      throw new Error('Expected one result from `find`, got '+results.length);
+    }
+    return results[0];
   }
 });
 
@@ -308,7 +323,9 @@ App.ApplicationController = Ember.Controller.extend({
 
   isChannelsActive: Ember.computed('currentRouteName', function(){
     var self = this;
-    return !['index','tagged'].some(function(name){ return name === self.get('currentRouteName'); })
+    return !['index','tagged'].some(function(name){
+      return name === self.get('currentRouteName');
+    });
   }),
 
   isReleaseActive: Ember.computed('currentRouteName', function(){
@@ -325,6 +342,16 @@ App.ApplicationController = Ember.Controller.extend({
 
   isActiveChannel: function(channel){
     return this.get('currentRouteName').indexOf(channel) !== -1;
+  }
+});
+
+App.IndexRoute = Ember.Route.extend({
+  model: function() {
+    return Ember.RSVP.hash({
+      release: App.Project.findOne('release', 'Ember'),
+      beta: App.Project.findOne('beta', 'Ember'),
+      canary: App.Project.findOne('canary', 'Ember')
+    });
   }
 });
 
@@ -410,7 +437,8 @@ App.CanaryRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 
 App.CanaryController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
-  channel: 'canary'
+  channel: 'canary',
+  channelDescription: 'Canary builds are generated from each commit to the master branch of Ember and Ember-Data. These builds are not suitable for use in production, and may contain unstable features disabled behind a flag.'
 });
 
 App.BetaRoute = Ember.Route.extend(App.BuildCategoryMixin, {
@@ -421,7 +449,9 @@ App.BetaRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 
 App.BetaController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
-  channel: 'beta'
+  channel: 'beta',
+  includeReleasesInFileList: true,
+  channelDescription: 'The master branch of Ember and Ember-Data is promoted to beta every six weeks. Roughly each week, a new beta release is provided for evaluation. After six of these beta releases, a stable release is declared.'
 });
 
 App.ReleaseRoute = Ember.Route.extend(App.BuildCategoryMixin, {
@@ -432,10 +462,12 @@ App.ReleaseRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 
 App.ReleaseController = Ember.Controller.extend(App.ProjectsMixin, {
   templateName: 'buildList',
-  channel: 'release'
+  channel: 'release',
+  includeReleasesInFileList: true,
+  channelDescription: 'Release builds are production-ready versions of Ember and Ember-Data that have been through a six-week beta cycle.'
 });
 
-App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
+App.TaggedRoute = Ember.Route.extend({
   model: function() {
     var bucket = App.S3Bucket.create({
       title: 'Tagged Release Builds',
@@ -449,18 +481,39 @@ App.TaggedRoute = Ember.Route.extend(App.BuildCategoryMixin, {
 App.TaggedController = Ember.Controller.extend(App.ProjectsMixin, {
   channel: 'tagged'
 });
-/*
- * Handlebars Helpers
- */
-App.FormatDateTimeHelper = Ember.Helper.helper(function(date, format, options) {
-  if (!options) {
-    options = format;
-    format = null;
-  }
 
-  if (format){
-    return moment(date[0]).format(format);
+/*
+ * Helpers
+ */
+
+App.FormatDateTimeHelper = Ember.Helper.helper(function(params) {
+  var date = params[0];
+  var format = params[1];
+  if (format) {
+    return moment(date).format(format);
   } else {
-    return moment(date[0]).fromNow();
+    return moment(date).fromNow();
   }
+});
+
+App.PrintfHelper = Ember.Helper.helper(function(params) {
+  var template = params[0];
+  var value = params[1];
+  return template.replace(/%s/g, value);
+});
+
+App.ScriptTagHelper = Ember.Helper.helper(function(params) {
+  var url = params[0];
+  var escapedURL = Ember.Handlebars.Utils.escapeExpression(url);
+  return Ember.String.htmlSafe('<script src="' + escapedURL + '"></script>');
+});
+
+App.TagUrlPathHelper = Ember.Helper.helper(function(params) {
+  var url = params[0];
+  var pathIndex = url.indexOf('tags');
+  return url.slice(pathIndex);
+});
+
+App.ParamsHelper = Ember.Helper.helper(function(params) {
+  return params;
 });

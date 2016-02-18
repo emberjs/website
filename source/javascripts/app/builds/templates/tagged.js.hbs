@@ -1,0 +1,33 @@
+<h2 class="project-name">Previous Releases</h2>
+
+<p>This list contains downloadable assets for all tagged versions of Ember and
+Ember-Data.</p>
+
+{{#if model.filesPresent}}
+  <div class="files-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Modified</th>
+          <th>Quick Copy</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each projects as |project|}}
+          {{partial 'filesTable'}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <br/>
+  {{#if model.isLoading}}
+    <p class="loading-spinner">
+      Loading...<br/><br/>
+      <img src="/images/ajax-loader.gif" width="31" height="31" />
+    </p>
+  {{else}}
+    <p>There are currently no builds for {{model.title}}. Please check back soon.</p>
+  {{/if}}
+{{/if}}
