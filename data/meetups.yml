@@ -342,7 +342,7 @@ locations:
       - organizer: Christian Reuter
         profileImage: http://photos2.meetupstatic.com/photos/member/a/b/8/8/highres_239803912.jpeg
   - location: Silicon Valley, CA
-    url: http://www.svemberjs.com
+    url: http://www.meetup.com/Silicon-Valley-EmberJS-Meetup/
     lat: 37.389400
     lng: -122.081900
     organizers:
