@@ -282,7 +282,7 @@ locations:
     organizers:
     - organizer: Joe Heth
       profileImage: http://photos4.meetupstatic.com/photos/member/3/c/e/5/thumb_242415589.jpeg
-  - location: Toronto, Canada
+  - location: Toronto, ON
     url: http://www.meetup.com/Toronto-Ember-JS-Meetup/
     image: 15toronto.png
     lat: 43.653226
@@ -298,7 +298,7 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/4/c/e/c/thumb_77659692.jpeg
     - organizer: Justin G.
       profileImage: http://photos2.meetupstatic.com/photos/member/8/c/d/c/thumb_12036060.jpeg
-  - location: Ottawa, Canada
+  - location: Ottawa, ON
     url: http://www.meetup.com/Ember-js-Ottawa/
     image: 13ottawa.png
     lat: 45.4215296
@@ -308,7 +308,7 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/7/9/d/c/thumb_11191196.jpeg
     - organizer: Thomas Martineau
       profileImage: http://photos1.meetupstatic.com/photos/member/a/1/2/e/thumb_99701262.jpeg
-  - location: Vancouver, Canada
+  - location: Vancouver, BC
     url: http://www.meetup.com/Vancouver-Ember-js/
     lat: 49.280425
     lng: -123.106967
@@ -317,7 +317,7 @@ locations:
       profileImage: http://photos1.meetupstatic.com/photos/member/7/7/f/8/thumb_96750712.jpeg
     - organizer: Paul Ruescher
       profileImage: http://photos3.meetupstatic.com/photos/member/6/a/d/thumb_10561709.jpeg
-  - location: Calgary, Canada
+  - location: Calgary, AB
     url: http://www.meetup.com/EmberJS-YYC/
     image: 23calgary.png
     lat: 51.03168
@@ -342,7 +342,7 @@ locations:
       - organizer: Christian Reuter
         profileImage: http://photos2.meetupstatic.com/photos/member/a/b/8/8/highres_239803912.jpeg
   - location: Silicon Valley, CA
-    url: http://www.svemberjs.com
+    url: http://www.meetup.com/Silicon-Valley-EmberJS-Meetup/
     lat: 37.389400
     lng: -122.081900
     organizers:
