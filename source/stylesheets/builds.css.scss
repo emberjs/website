@@ -36,13 +36,16 @@
   }
 
   @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
-    .feature .release {
+    .feature .canary {
       background-size: 198px 263px !important;
     }
     .feature .beta {
       background-size: 198px 263px !important;
     }
-    .feature .canary {
+    .feature .release {
+      background-size: 198px 263px !important;
+    }
+    .feature .lts {
       background-size: 198px 263px !important;
     }
   }
@@ -117,8 +120,8 @@
     font-weight: bolder;
   }
 
-  .feature .release {
-    @include hidpi('builds/release', 'png');
+  .feature .canary {
+    @include hidpi('builds/canary', 'png');
     width: 198px;
     height: 263px;
     margin: 0 auto;
@@ -131,8 +134,15 @@
     margin: 0 auto;
   }
 
-  .feature .canary {
-    @include hidpi('builds/canary', 'png');
+  .feature .release {
+    @include hidpi('builds/release', 'png');
+    width: 198px;
+    height: 263px;
+    margin: 0 auto;
+  }
+
+  .feature .lts {
+    @include hidpi('builds/lts', 'png');
     width: 198px;
     height: 263px;
     margin: 0 auto;
@@ -391,6 +401,10 @@
     }
   }
 
+  .channel.lts {
+    opacity: 0.5; // Grey it out for now, since we haven't released one yet
+  }
+
   .channel .description {
     width: 80%;
     padding: 20px 0;
@@ -399,8 +413,8 @@
     }
   }
 
-  .channel .release {
-    background-image: url('/images/builds/release.png');
+  .channel .canary {
+    background-image: url('/images/builds/canary.png');
     background-size: cover;
     width: 99px;
     height: 131.5px;
@@ -415,8 +429,8 @@
     margin: 0 auto;
   }
 
-  .channel .canary {
-    background-image: url('/images/builds/canary.png');
+  .channel .release {
+    background-image: url('/images/builds/release.png');
     background-size: cover;
     width: 99px;
     height: 131.5px;
@@ -424,6 +438,8 @@
   }
 
   .channel .lts {
+    background-image: url('/images/builds/lts.png');
+    background-size: cover;
     width: 99px;
     height: 131.5px;
     margin: 0 auto;

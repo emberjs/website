@@ -23,25 +23,21 @@ bug or security fixes.
 </p>
 
 <div class="channels section">
-  <div class="channel">
-    {{#link-to 'release' class='tomster'}}
-      <div class="release" title="Release Builds"></div>
+  <div class="channel canary">
+    {{#link-to 'canary' class='tomster'}}
+      <div class="canary" title="Canary Builds"></div>
     {{/link-to}}
     <div class="description">
       <h3>
-        {{#link-to 'release'}}Release{{/link-to}}
+        {{#link-to 'canary'}}Canary{{/link-to}}
       </h3>
-      <p>
-      <em>The latest stable release is {{model.release.lastRelease}}, made
-        on {{format-date-time model.release.date 'MMMM Do, YYYY'}}</em>
-      </p>
-      <p>
-      Release builds have been hardened through our multi-tiered release
-      process. These builds are perfect for use in production environments.
-      </p>
+      <p>Canary builds are the bleeding edge of Ember development. Please do
+      not use these builds unless you want to try out and offer
+      feedback on new features and fixes not available in the Release or
+      Beta builds.</p>
     </div>
   </div>
-  <div class="channel">
+  <div class="channel beta">
     {{#link-to 'beta' class='tomster'}}
       <div class="beta" title="Beta Builds"></div>
     {{/link-to}}
@@ -58,33 +54,36 @@ bug or security fixes.
       </p>
     </div>
   </div>
-  <div class="channel">
-    {{#link-to 'canary' class='tomster'}}
-      <div class="canary" title="Canary Builds"></div>
+  <div class="channel release">
+    {{#link-to 'release' class='tomster'}}
+      <div class="release" title="Release Builds"></div>
     {{/link-to}}
     <div class="description">
       <h3>
-        {{#link-to 'canary'}}Canary{{/link-to}}
+        {{#link-to 'release'}}Release{{/link-to}}
       </h3>
-      <p>Canary builds are the bleeding edge of Ember development. Please do
-      not use these builds unless you want to try out and offer
-      feedback on new features and fixes not available in the Release or
-      Beta builds.</p>
+      <p>
+      <em>The latest stable release is {{model.release.lastRelease}}, made
+        on {{format-date-time model.release.date 'MMMM Do, YYYY'}}</em>
+      </p>
+      <p>Release builds have been hardened through our multi-tiered release
+      process. These builds are perfect for use in production environments.
+      </p>
     </div>
   </div>
-  <div class="channel">
+  <div class="channel lts">
     <a class="tomster">
       <div class="lts" title="LTS Builds"></div>
     </a>
     <div class="description last">
       <h3>Long-Term Support (LTS)</h3>
       <p>
-      <em>Ember 2.4 will become the first LTS release six weeks after 2.4
-        stable is released</em>
+      <em>The first LTS release will be made around Feburary 26th, 2016</em>
       </p>
-      <p>For some users, the six-week release cycle of Ember can be too
-      quick. LTS releases occur every four stable releases (roughly twice
-      a year), and include backported bug and security fixes.</p>
+      <p>The LTS channel provides a longer support timeframe but receives
+      new features less frequently. These builds are right for users who
+      prefer to upgrade roughly twice a year.
+      </p>
     </div>
   </div>
 </div>
