@@ -1,0 +1,21 @@
+{{#if project.installWithEmberCLI}}
+  <h4 class="project-name">Using {{project.projectName}} {{channel}} builds with Ember-CLI</h4>
+  <div>
+    <pre><code>{{{printf project.installWithEmberCLI project.lastRelease}}}</code></pre>
+    {{#if project.lastReleaseChangelogUrl}}
+      <p>
+        Read the <a class="debug" href={{project.lastReleaseChangelogUrl}}>changelog</a>
+        {{~#if project.lastReleaseTestUrl}}
+          or <a class="debug" href={{project.lastReleaseTestUrl}} target="_blank">run the tests</a>
+        {{~/if}}
+        for {{project.projectName}} {{project.lastRelease}}.
+      </p>
+    {{else if project.lastReleaseTestUrl}}
+        <p>
+        <a class="debug" href={{project.lastReleaseTestUrl}} target="_blank">Run the tests</a> for {{project.projectName}} {{product.lastRelease}} in your browser.
+        </p>
+    {{else}}
+      <p></p>
+    {{/if}}
+  </div>
+{{/if}}

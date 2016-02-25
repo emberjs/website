@@ -1,10 +1,96 @@
-{{#if model.filesPresent }}
+<h2 class="project-name">{{channel}} Channel</h2>
+
+<p>{{channelDescription}}</p>
+
+{{#if model.filesPresent}}
   {{#each projects as |project|}}
-    <div class="files-table">
-      {{partial 'filesTable'}}
+    {{#if project.isEmberBeta}}
+      <div class="release-progress clear">
+        <div class="left">
+          <div class="small-release-image" title={{project.lastStableVersion}}></div>
+          <div class="release-version">{{project.lastStableVersion}}</div>
+          <div class="release-date">Released {{format-date-time project.lastStableDate "MMM Do"}}</div>
+        </div>
+        <div class="float-left-container">
+          <div class="release-cycle-title">The path to {{project.finalVersion}}...</div>
+          <div class="left {{if project.beta1Completed '' 'future-image'}}">
+            <div class="tiny-beta-image"></div>
+            <div class="beta-version">beta 1</div>
+            {{#if project.isBeta1}}
+              <div class="beta-current-version">(current beta)</div>
+            {{/if}}
+          </div>
+          <div class="left {{if project.beta2Completed '' 'future-image'}}">
+            <div class="tiny-beta-image"></div>
+            <div class="beta-version">beta 2</div>
+            {{#if project.isBeta2}}
+              <div class="beta-current-version">(current beta)</div>
+            {{/if}}
+            {{#if project.isBeta1}}
+              <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
+            {{/if}}
+          </div>
+          <div class="left {{if project.beta3Completed '' 'future-image'}}">
+            <div class="tiny-beta-image"></div>
+            <div class="beta-version">beta 3</div>
+            {{#if project.isBeta3}}
+              <div class="beta-current-version">(current beta)</div>
+            {{/if}}
+            {{#if project.isBeta2}}
+              <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
+            {{/if}}
+          </div>
+          <div class="left {{if project.beta4Completed '' 'future-image'}}">
+            <div class="tiny-beta-image"></div>
+            <div class="beta-version">beta 4</div>
+            {{#if project.isBeta4}}
+              <div class="beta-current-version">(current beta)</div>
+            {{/if}}
+            {{#if project.isBeta3}}
+              <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
+            {{/if}}
+          </div>
+          <div class="left {{if project.beta5Completed '' 'future-image'}}">
+            <div class="tiny-beta-image"></div>
+            <div class="beta-version">beta 5</div>
+            {{#if project.isBeta5}}
+              <div class="beta-current-version">(current beta)</div>
+            {{/if}}
+            {{#if project.isBeta4}}
+              <div class="beta-current-version">(coming {{format-date-time project.nextDate "MMM Do"}})</div>
+            {{/if}}
+          </div>
+        </div>
+        <div class="right future-image">
+          <div class="small-release-image" title={{project.finalVersion}}></div>
+          <div class="release-version">{{project.finalVersion}}</div>
+          <div class="release-date">Coming {{format-date-time project.cycleEstimatedFinishDate "MMM Do"}}</div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    {{/if}}
+    <div class="ember-cli-usage">
+      {{partial 'emberCliUsage'}}
     </div>
   {{/each}}
-{{ else }}
+  <div class="files-table">
+    <h4 class="project-name">{{channel}} Channel Downloads</h4>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>File</th>
+          <th>Modified</th>
+          <th>Quick Copy</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each projects as |project|}}
+          {{partial 'filesTable'}}
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
   <br/>
   {{#if model.isLoading}}
     <p class="loading-spinner">
