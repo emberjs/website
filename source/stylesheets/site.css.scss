@@ -1031,6 +1031,14 @@ a.toc-anchor {
       max-width: 100%;
     }
 
+    img.no-background {
+      background-color: transparent;
+    }
+
+    img.float-right {
+      float: right;
+    }
+
     ul, ol {
       margin-left: 1.5em;
     }
