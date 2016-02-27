@@ -548,19 +548,6 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/1/a/9/2/thumb_166206802.jpeg
     - organizer: Miguel Camba
       profileImage: http://photos4.meetupstatic.com/photos/member/5/2/1/f/thumb_12381023.jpeg
-  - location: Kyiv, Ukraine
-    url: http://ember-club.kiev.ua
-    lat: 50.4501
-    lng: 30.5234
-    organizers:
-    - organizer: Alex Opak
-      profileImage: http://www.gravatar.com/avatar/0176cdda497ae370046f1408f83e71bc
-    - organizer: Oleksandr Lapshyn
-      profileImage: http://www.gravatar.com/avatar/f21e9fc4411f39d96e21efb64790b130
-    - organizer: Evgeniy Kurtov
-      profileImage: http://www.gravatar.com/avatar/9aedca736ea2277b591ee4962658caea
-    - organizer: Aminov Vali
-      profileImage: http://www.gravatar.com/avatar/d86bc01af68feecdab84cbf801a52a38
   - location: Zürich, Switzerland
     url: http://www.meetup.com/Ember-js-Zurich/
     lat: 47.3686498
