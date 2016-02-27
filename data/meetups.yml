@@ -298,16 +298,6 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/4/c/e/c/thumb_77659692.jpeg
     - organizer: Justin G.
       profileImage: http://photos2.meetupstatic.com/photos/member/8/c/d/c/thumb_12036060.jpeg
-  - location: Ottawa, ON
-    url: http://www.meetup.com/Ember-js-Ottawa/
-    image: 13ottawa.png
-    lat: 45.4215296
-    lng: -75.69719309999999
-    organizers:
-    - organizer: Owain
-      profileImage: http://photos2.meetupstatic.com/photos/member/7/9/d/c/thumb_11191196.jpeg
-    - organizer: Thomas Martineau
-      profileImage: http://photos1.meetupstatic.com/photos/member/a/1/2/e/thumb_99701262.jpeg
   - location: Vancouver, BC
     url: http://www.meetup.com/Vancouver-Ember-js/
     lat: 49.280425
