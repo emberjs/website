@@ -329,9 +329,11 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/6/a/2/4/thumb_241647172.jpeg
   - location: Riverside, CA
     url: http://www.meetup.com/Ember-Riverside-Meetup/
+    lat: 33.981040
+    lng: -117.376674
     organizers:
-      organizer: Judd Lillestrand
-      profileImage: http://photos2.meetupstatic.com/photos/member/2/1/d/6/thumb_59348662.jpeg
+      - organizer: Judd Lillestrand
+        profileImage: http://photos2.meetupstatic.com/photos/member/6/b/8/9/thumb_248067529.jpeg
   - location: Raleigh, NC
     url: http://triangleember.com/
     lat: 35.77791
