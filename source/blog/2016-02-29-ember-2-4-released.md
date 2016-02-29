@@ -45,11 +45,11 @@ objects to a target object. For example:
 ```javascript
 let a = {first: 'John'};
 let b = {last: 'Lennon'};
-let c = {band: 'The Bealtes'};
+let c = {band: 'The Beatles'};
 
 Ember.assign(a, b, c);
 
-// a === {first: 'John', last: 'Lennon', band: 'The Bealtes'}
+// a === {first: 'John', last: 'Lennon', band: 'The Beatles'}
 // b === {last: 'Lennon'}
 // c === {band: 'The Beatles'}
 ```
