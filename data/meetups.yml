@@ -298,16 +298,6 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/4/c/e/c/thumb_77659692.jpeg
     - organizer: Justin G.
       profileImage: http://photos2.meetupstatic.com/photos/member/8/c/d/c/thumb_12036060.jpeg
-  - location: Ottawa, ON
-    url: http://www.meetup.com/Ember-js-Ottawa/
-    image: 13ottawa.png
-    lat: 45.4215296
-    lng: -75.69719309999999
-    organizers:
-    - organizer: Owain
-      profileImage: http://photos2.meetupstatic.com/photos/member/7/9/d/c/thumb_11191196.jpeg
-    - organizer: Thomas Martineau
-      profileImage: http://photos1.meetupstatic.com/photos/member/a/1/2/e/thumb_99701262.jpeg
   - location: Vancouver, BC
     url: http://www.meetup.com/Vancouver-Ember-js/
     lat: 49.280425
@@ -550,19 +540,6 @@ locations:
       profileImage: http://photos4.meetupstatic.com/photos/member/1/a/9/2/thumb_166206802.jpeg
     - organizer: Miguel Camba
       profileImage: http://photos4.meetupstatic.com/photos/member/5/2/1/f/thumb_12381023.jpeg
-  - location: Kyiv, Ukraine
-    url: http://ember-club.kiev.ua
-    lat: 50.4501
-    lng: 30.5234
-    organizers:
-    - organizer: Alex Opak
-      profileImage: http://www.gravatar.com/avatar/0176cdda497ae370046f1408f83e71bc
-    - organizer: Oleksandr Lapshyn
-      profileImage: http://www.gravatar.com/avatar/f21e9fc4411f39d96e21efb64790b130
-    - organizer: Evgeniy Kurtov
-      profileImage: http://www.gravatar.com/avatar/9aedca736ea2277b591ee4962658caea
-    - organizer: Aminov Vali
-      profileImage: http://www.gravatar.com/avatar/d86bc01af68feecdab84cbf801a52a38
   - location: Zürich, Switzerland
     url: http://www.meetup.com/Ember-js-Zurich/
     lat: 47.3686498
