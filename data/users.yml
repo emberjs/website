@@ -755,6 +755,10 @@
   image: startae.png
   alt: "Startaê"
   use: "Consulting firm using Ember for internal and client projects."
+- url: http://www.bidvine.com
+  image: bidvine.png
+  alt: "Bidvine"
+  use: "Service matching site using Ember to build our web application"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
