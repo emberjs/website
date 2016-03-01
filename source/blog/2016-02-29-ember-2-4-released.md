@@ -30,7 +30,7 @@ LTS channel, we strongly suggest you attempt updating your application to
 2.4 and open any issues in the next six weeks.
 
 For more details on changes landing in 2.4, review the
-[Ember.js 2.4.0 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.4.0/CHANGELOG.md).
+[Ember.js 2.4.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.4.1/CHANGELOG.md).
 
 ### Ember.js 2.5 beta
 
@@ -76,3 +76,17 @@ the triggering of non-jQuery event listeners in acceptance tests.
 
 For more details on changes landing in 2.5, review the
 [Ember.js 2.5.0-beta.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.5.0-beta.1/CHANGELOG.md).
+
+### Update: Ember 2.4.1 Released
+
+Shortly after Ember 2.4.0 was released, we have identified a regression that
+caused incorrect deprecation warnings to be emitted. Specifically, we intended
+to emit deprecation warnings when either (or both) of the legacy addons are
+installed. Instead, the check was inverted, causing the deprecation warnings to
+be emitted only if the addons are _not_ installed.
+
+Ember 2.4.1 has been released to address this error.
+
+It should be noted that the production builds for 2.4.0 are _not_ affected by
+this regression, since deprecation warnings are only present in development
+builds.
