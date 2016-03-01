@@ -214,14 +214,18 @@ locations:
     - organizer: Merrilee Luke-Ebbeler
       profileImage: http://photos4.meetupstatic.com/photos/member/5/a/0/c/thumb_157403052.jpeg
   - location: Minneapolis / St. Paul, MN
-    url: http://www.meetup.com/Ember-Twin-Cities
-    lat: 44.9716692
-    lng: -93.2806134
+    url: http://www.meetup.com/EmberMN/
+    lat: 44.965775
+    lng: -93.185274
     organizers:
     - organizer: Jacob Quant
       profileImage: http://photos4.meetupstatic.com/photos/member/d/9/5/a/thumb_168415642.jpeg
     - organizer: Seth Phillips
-      profileImage: http://photos4.meetupstatic.com/photos/member/6/4/3/e/thumb_218605662.jpeg
+      profileImage: http://photos1.meetupstatic.com/photos/member/9/b/8/f/thumb_251319823.jpeg
+    - organizer: Ben Rosas
+      profileImage: http://photos4.meetupstatic.com/photos/member/d/c/2/0/thumb_164336352.jpeg
+    - organizer: Doug DeBold
+      profileImage: http://photos2.meetupstatic.com/photos/member/6/8/6/2/thumb_218846722.jpeg
   - location: Portland, OR
     url: http://www.meetup.com/Ember-PDX/
     lat: 45.5230622
