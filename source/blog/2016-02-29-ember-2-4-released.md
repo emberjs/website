@@ -23,7 +23,7 @@ community have remained active around other highly visible parts of
 the Ember stack (Ember-CLI, Ember-Data, FastBoot, Glimmer, etc).
 
 In six weeks, the current release build of 2.4 will become Ember's first
-LTS release. Builds on the LTS channel will recieve critical bugfixes covering the
+LTS release. Builds on the LTS channel will receive critical bugfixes covering the
 subsequent six release cycles (~36 weeks), and security patches for the subsequent
 ten release cycles (~60 weeks). If your organization intends to remain on the
 LTS channel, we strongly suggest you attempt updating your application to
