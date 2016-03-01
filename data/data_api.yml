@@ -1,17 +1,17 @@
 ---
 project:
-  sha: v2.3.0
+  sha: v2.4.0
 files:
-  "addon/-private/adapters/build-url-mixin.js":
-    name: "addon/-private/adapters/build-url-mixin.js"
+  addon/-private/adapters/build-url-mixin.js:
+    name: addon/-private/adapters/build-url-mixin.js
     modules: {}
     classes:
       DS.BuildURLMixin: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/adapters/errors.js":
-    name: "addon/-private/adapters/errors.js"
+  addon/-private/adapters/errors.js:
+    name: addon/-private/adapters/errors.js
     modules: {}
     classes:
       DS.AdapterError: 1
@@ -20,184 +20,184 @@ files:
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/ext/date.js":
-    name: "addon/-private/ext/date.js"
+  addon/-private/ext/date.js:
+    name: addon/-private/ext/date.js
     modules: {}
     classes:
       Ember.Date: 1
     fors: {}
     namespaces:
       Ember: 1
-  "addon/-private/initializers/data-adapter.js":
-    name: "addon/-private/initializers/data-adapter.js"
+  addon/-private/initializers/data-adapter.js:
+    name: addon/-private/initializers/data-adapter.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/initializers/store-injections.js":
-    name: "addon/-private/initializers/store-injections.js"
+  addon/-private/initializers/store-injections.js:
+    name: addon/-private/initializers/store-injections.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/initializers/store.js":
-    name: "addon/-private/initializers/store.js"
+  addon/-private/initializers/store.js:
+    name: addon/-private/initializers/store.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/initializers/transforms.js":
-    name: "addon/-private/initializers/transforms.js"
+  addon/-private/initializers/transforms.js:
+    name: addon/-private/initializers/transforms.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/instance-initializers/initialize-store-service.js":
-    name: "addon/-private/instance-initializers/initialize-store-service.js"
+  addon/-private/instance-initializers/initialize-store-service.js:
+    name: addon/-private/instance-initializers/initialize-store-service.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/serializers/embedded-records-mixin.js":
-    name: "addon/-private/serializers/embedded-records-mixin.js"
-    modules: {}
-    classes:
-      DS.EmbeddedRecordsMixin: 1
-    fors: {}
-    namespaces:
-      DS: 1
-  "addon/-private/system/debug/debug-adapter.js":
-    name: "addon/-private/system/debug/debug-adapter.js"
+  addon/-private/system/debug/debug-adapter.js:
+    name: addon/-private/system/debug/debug-adapter.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/system/debug/debug-info.js":
-    name: "addon/-private/system/debug/debug-info.js"
+  addon/-private/system/debug/debug-info.js:
+    name: addon/-private/system/debug/debug-info.js
     modules: {}
     classes: {}
     fors:
       DS.Model: 1
     namespaces: {}
-  "addon/-private/system/model/errors/invalid.js":
-    name: "addon/-private/system/model/errors/invalid.js"
+  addon/-private/system/model/errors/invalid.js:
+    name: addon/-private/system/model/errors/invalid.js
     modules: {}
     classes:
       DS.InvalidError: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/model/errors.js":
-    name: "addon/-private/system/model/errors.js"
+  addon/-private/system/model/attr.js:
+    name: addon/-private/system/model/attr.js
+    modules: {}
+    classes: {}
+    fors: {}
+    namespaces:
+      DS: 1
+  addon/-private/system/model/errors.js:
+    name: addon/-private/system/model/errors.js
     modules: {}
     classes:
       DS.Errors: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/model/model.js":
-    name: "addon/-private/system/model/model.js"
+  addon/-private/system/model/model.js:
+    name: addon/-private/system/model/model.js
     modules: {}
     classes: {}
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/model/states.js":
-    name: "addon/-private/system/model/states.js"
+  addon/-private/system/model/states.js:
+    name: addon/-private/system/model/states.js
     modules: {}
     classes:
       DS.RootState: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/record-arrays/adapter-populated-record-array.js":
-    name: "addon/-private/system/record-arrays/adapter-populated-record-array.js"
+  addon/-private/system/record-arrays/adapter-populated-record-array.js:
+    name: addon/-private/system/record-arrays/adapter-populated-record-array.js
     modules: {}
     classes:
       DS.AdapterPopulatedRecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/record-arrays/filtered-record-array.js":
-    name: "addon/-private/system/record-arrays/filtered-record-array.js"
+  addon/-private/system/record-arrays/filtered-record-array.js:
+    name: addon/-private/system/record-arrays/filtered-record-array.js
     modules: {}
     classes:
       DS.FilteredRecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/record-arrays/record-array.js":
-    name: "addon/-private/system/record-arrays/record-array.js"
+  addon/-private/system/record-arrays/record-array.js:
+    name: addon/-private/system/record-arrays/record-array.js
     modules: {}
     classes:
       DS.RecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/relationships/belongs-to.js":
-    name: "addon/-private/system/relationships/belongs-to.js"
+  addon/-private/system/relationships/belongs-to.js:
+    name: addon/-private/system/relationships/belongs-to.js
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "addon/-private/system/relationships/ext.js":
-    name: "addon/-private/system/relationships/ext.js"
+  addon/-private/system/relationships/ext.js:
+    name: addon/-private/system/relationships/ext.js
     modules: {}
-    classes: {}
+    classes:
+      DS.Model: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/relationships/has-many.js":
-    name: "addon/-private/system/relationships/has-many.js"
+  addon/-private/system/relationships/has-many.js:
+    name: addon/-private/system/relationships/has-many.js
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "addon/-private/system/store/container-instance-cache.js":
-    name: "addon/-private/system/store/container-instance-cache.js"
+  addon/-private/system/store/container-instance-cache.js:
+    name: addon/-private/system/store/container-instance-cache.js
     modules: {}
     classes:
       ContainerInstanceCache: 1
     fors: {}
     namespaces: {}
-  "addon/-private/system/debug.js":
-    name: "addon/-private/system/debug.js"
+  addon/-private/system/debug.js:
+    name: addon/-private/system/debug.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/system/many-array.js":
-    name: "addon/-private/system/many-array.js"
+  addon/-private/system/many-array.js:
+    name: addon/-private/system/many-array.js
     modules: {}
     classes:
       DS.ManyArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/model.js":
-    name: "addon/-private/system/model.js"
+  addon/-private/system/model.js:
+    name: addon/-private/system/model.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/system/normalize-link.js":
-    name: "addon/-private/system/normalize-link.js"
+  addon/-private/system/normalize-link.js:
+    name: addon/-private/system/normalize-link.js
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "addon/-private/system/normalize-model-name.js":
-    name: "addon/-private/system/normalize-model-name.js"
+  addon/-private/system/normalize-model-name.js:
+    name: addon/-private/system/normalize-model-name.js
     modules: {}
     classes: {}
     fors:
       DS: 1
     namespaces: {}
-  "addon/-private/system/promise-proxies.js":
-    name: "addon/-private/system/promise-proxies.js"
+  addon/-private/system/promise-proxies.js:
+    name: addon/-private/system/promise-proxies.js
     modules: {}
     classes:
       DS.PromiseArray: 1
@@ -206,211 +206,217 @@ files:
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/record-array-manager.js":
-    name: "addon/-private/system/record-array-manager.js"
+  addon/-private/system/record-array-manager.js:
+    name: addon/-private/system/record-array-manager.js
     modules: {}
     classes:
       DS.RecordArrayManager: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/record-arrays.js":
-    name: "addon/-private/system/record-arrays.js"
+  addon/-private/system/record-arrays.js:
+    name: addon/-private/system/record-arrays.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/system/serializer.js":
-    name: "addon/-private/system/serializer.js"
-    modules: {}
-    classes:
-      DS.Serializer: 1
-    fors: {}
-    namespaces:
-      DS: 1
-  "addon/-private/system/snapshot-record-array.js":
-    name: "addon/-private/system/snapshot-record-array.js"
+  addon/-private/system/snapshot-record-array.js:
+    name: addon/-private/system/snapshot-record-array.js
     modules: {}
     classes:
       DS.SnapshotRecordArray: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/snapshot.js":
-    name: "addon/-private/system/snapshot.js"
+  addon/-private/system/snapshot.js:
+    name: addon/-private/system/snapshot.js
     modules: {}
     classes:
       DS.Snapshot: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/system/store.js":
-    name: "addon/-private/system/store.js"
+  addon/-private/system/store.js:
+    name: addon/-private/system/store.js
     modules: {}
     classes:
       DS.Store: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/transforms/boolean.js":
-    name: "addon/-private/transforms/boolean.js"
+  addon/-private/transforms/boolean.js:
+    name: addon/-private/transforms/boolean.js
     modules: {}
     classes:
       DS.BooleanTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/transforms/date.js":
-    name: "addon/-private/transforms/date.js"
+  addon/-private/transforms/date.js:
+    name: addon/-private/transforms/date.js
     modules: {}
     classes:
       DS.DateTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/transforms/number.js":
-    name: "addon/-private/transforms/number.js"
+  addon/-private/transforms/number.js:
+    name: addon/-private/transforms/number.js
     modules: {}
     classes:
       DS.NumberTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/transforms/string.js":
-    name: "addon/-private/transforms/string.js"
+  addon/-private/transforms/string.js:
+    name: addon/-private/transforms/string.js
     modules: {}
     classes:
       DS.StringTransform: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/-private/adapters.js":
-    name: "addon/-private/adapters.js"
+  addon/-private/adapters.js:
+    name: addon/-private/adapters.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/core.js":
-    name: "addon/-private/core.js"
+  addon/-private/core.js:
+    name: addon/-private/core.js
     modules: {}
     classes:
       DS: 1
     fors: {}
     namespaces: {}
-  "addon/-private/serializers.js":
-    name: "addon/-private/serializers.js"
+  addon/-private/serializers.js:
+    name: addon/-private/serializers.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/-private/utils.js":
-    name: "addon/-private/utils.js"
+  addon/-private/utils.js:
+    name: addon/-private/utils.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/adapters/json-api.js":
-    name: "addon/adapters/json-api.js"
+  addon/adapters/json-api.js:
+    name: addon/adapters/json-api.js
     modules: {}
     classes:
       DS.JSONAPIAdapter: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/adapters/rest.js":
-    name: "addon/adapters/rest.js"
+  addon/adapters/rest.js:
+    name: addon/adapters/rest.js
     modules: {}
     classes:
       DS.RESTAdapter: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/serializers/json-api.js":
-    name: "addon/serializers/json-api.js"
+  addon/serializers/embedded-records-mixin.js:
+    name: addon/serializers/embedded-records-mixin.js
+    modules: {}
+    classes:
+      DS.EmbeddedRecordsMixin: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  addon/serializers/json-api.js:
+    name: addon/serializers/json-api.js
     modules: {}
     classes:
       DS.JSONAPISerializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/serializers/json.js":
-    name: "addon/serializers/json.js"
+  addon/serializers/json.js:
+    name: addon/serializers/json.js
     modules: {}
     classes:
       DS.JSONSerializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/serializers/rest.js":
-    name: "addon/serializers/rest.js"
+  addon/serializers/rest.js:
+    name: addon/serializers/rest.js
     modules: {}
     classes:
       DS.RESTSerializer: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/adapter.js":
-    name: "addon/adapter.js"
+  addon/adapter.js:
+    name: addon/adapter.js
     modules: {}
     classes:
       DS.Adapter: 1
     fors: {}
     namespaces:
       DS: 1
-  "addon/attr.js":
-    name: "addon/attr.js"
+  addon/attr.js:
+    name: addon/attr.js
     modules: {}
-    classes:
-      DS.Model: 1
+    classes: {}
     fors:
       DS: 1
-    namespaces:
-      DS: 1
-  "addon/index.js":
-    name: "addon/index.js"
+    namespaces: {}
+  addon/index.js:
+    name: addon/index.js
     modules:
       ember-data: 1
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/relationships.js":
-    name: "addon/relationships.js"
+  addon/relationships.js:
+    name: addon/relationships.js
     modules: {}
     classes: {}
     fors: {}
     namespaces: {}
-  "addon/transform.js":
-    name: "addon/transform.js"
+  addon/serializer.js:
+    name: addon/serializer.js
+    modules: {}
+    classes:
+      DS.Serializer: 1
+    fors: {}
+    namespaces:
+      DS: 1
+  addon/transform.js:
+    name: addon/transform.js
     modules: {}
     classes:
       DS.Transform: 1
     fors: {}
     namespaces:
       DS: 1
-  "node_modules/ember-inflector/addon/lib/ext/string.js":
-    name: "node_modules/ember-inflector/addon/lib/ext/string.js"
+  node_modules/ember-inflector/addon/lib/ext/string.js:
+    name: node_modules/ember-inflector/addon/lib/ext/string.js
     modules: {}
     classes: {}
     fors:
       String: 1
       DS.String: 1
     namespaces: {}
-  "node_modules/ember-inflector/addon/lib/helpers/pluralize.js":
-    name: "node_modules/ember-inflector/addon/lib/helpers/pluralize.js"
+  node_modules/ember-inflector/addon/lib/helpers/pluralize.js:
+    name: node_modules/ember-inflector/addon/lib/helpers/pluralize.js
     modules: {}
     classes: {}
     fors:
       Ember.HTMLBars.helpers: 1
     namespaces: {}
-  "node_modules/ember-inflector/addon/lib/helpers/singularize.js":
-    name: "node_modules/ember-inflector/addon/lib/helpers/singularize.js"
+  node_modules/ember-inflector/addon/lib/helpers/singularize.js:
+    name: node_modules/ember-inflector/addon/lib/helpers/singularize.js
     modules: {}
     classes: {}
     fors:
       Ember.HTMLBars.helpers: 1
     namespaces: {}
-  "node_modules/ember-inflector/addon/lib/system/inflector.js":
-    name: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+  node_modules/ember-inflector/addon/lib/system/inflector.js:
+    name: node_modules/ember-inflector/addon/lib/system/inflector.js
     modules: {}
     classes:
       Ember.Inflector: 1
@@ -429,7 +435,6 @@ modules:
       DS.TimeoutError: 1
       DS.AbortError: 1
       Ember.Date: 1
-      DS.EmbeddedRecordsMixin: 1
       DS.Model: 1
       DS.Errors: 1
       DS.RootState: 1
@@ -443,7 +448,6 @@ modules:
       DS.PromiseObject: 1
       DS.PromiseManyArray: 1
       DS.RecordArrayManager: 1
-      DS.Serializer: 1
       DS.SnapshotRecordArray: 1
       DS.Snapshot: 1
       DS.Store: 1
@@ -453,10 +457,12 @@ modules:
       DS.StringTransform: 1
       DS.JSONAPIAdapter: 1
       DS.RESTAdapter: 1
+      DS.EmbeddedRecordsMixin: 1
       DS.JSONAPISerializer: 1
       DS.JSONSerializer: 1
       DS.RESTSerializer: 1
       DS.Adapter: 1
+      DS.Serializer: 1
       DS.Transform: 1
       DS.String: 1
       DS.Ember.HTMLBars.helpers: 1
@@ -472,7 +478,7 @@ modules:
       Ember: 1
       DS: 1
     tag: main
-    file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+    file: node_modules/ember-inflector/addon/lib/system/inflector.js
     line: 32
     description: Ember Data
     itemtype: main
@@ -488,8 +494,8 @@ classes:
     - DS.RESTAdapter
     module: ember-data
     namespace: DS
-    file: "addon/-private/adapters/build-url-mixin.js"
-    line: 3
+    file: addon/-private/adapters/build-url-mixin.js
+    line: 5
     description: |-
       WARNING: This interface is likely to change in order to accomodate https://github.com/emberjs/rfcs/pull/4
       ## Using BuildURLMixin
@@ -516,7 +522,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/adapters/errors.js"
+    file: addon/-private/adapters/errors.js
     line: 10
   DS.InvalidError:
     name: DS.InvalidError
@@ -528,8 +534,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/model/errors/invalid.js"
-    line: 3
+    file: addon/-private/system/model/errors/invalid.js
+    line: 4
     description: |-
       A `DS.InvalidError` is used by an adapter to signal the external API
       was unable to process a request because the content was not
@@ -611,8 +617,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/adapters/errors.js"
-    line: 92
+    file: addon/-private/adapters/errors.js
+    line: 93
   DS.AbortError:
     name: DS.AbortError
     shortname: DS.AbortError
@@ -623,8 +629,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/adapters/errors.js"
-    line: 102
+    file: addon/-private/adapters/errors.js
+    line: 103
   Ember.Date:
     name: Ember.Date
     shortname: Ember.Date
@@ -635,8 +641,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: Ember
-    file: "addon/-private/ext/date.js"
-    line: 5
+    file: addon/-private/ext/date.js
+    line: 7
     description: |-
       Date.parse with progressive enhancement for ISO 8601 <https://github.com/csnover/js-iso8601>
 
@@ -644,104 +650,6 @@ classes:
 
       Released under MIT license.
     static: 1
-  DS.EmbeddedRecordsMixin:
-    name: DS.EmbeddedRecordsMixin
-    shortname: DS.EmbeddedRecordsMixin
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-data
-    namespace: DS
-    file: "addon/-private/serializers/embedded-records-mixin.js"
-    line: 8
-    description: |-
-      ## Using Embedded Records
-
-      `DS.EmbeddedRecordsMixin` supports serializing embedded records.
-
-      To set up embedded records, include the mixin when extending a serializer,
-      then define and configure embedded (model) relationships.
-
-      Below is an example of a per-type serializer (`post` type).
-
-      ```app/serializers/post.js
-      import DS from 'ember-data';
-
-      export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
-        attrs: {
-          author: { embedded: 'always' },
-          comments: { serialize: 'ids' }
-        }
-      });
-      ```
-      Note that this use of `{ embedded: 'always' }` is unrelated to
-      the `{ embedded: 'always' }` that is defined as an option on `DS.attr` as part of
-      defining a model while working with the `ActiveModelSerializer`.  Nevertheless,
-      using `{ embedded: 'always' }` as an option to `DS.attr` is not a valid way to setup
-      embedded records.
-
-      The `attrs` option for a resource `{ embedded: 'always' }` is shorthand for:
-
-      ```js
-      {
-        serialize: 'records',
-        deserialize: 'records'
-      }
-      ```
-
-      ### Configuring Attrs
-
-      A resource's `attrs` option may be set to use `ids`, `records` or false for the
-      `serialize`  and `deserialize` settings.
-
-      The `attrs` property can be set on the `ApplicationSerializer` or a per-type
-      serializer.
-
-      In the case where embedded JSON is expected while extracting a payload (reading)
-      the setting is `deserialize: 'records'`, there is no need to use `ids` when
-      extracting as that is the default behavior without this mixin if you are using
-      the vanilla `EmbeddedRecordsMixin`. Likewise, to embed JSON in the payload while
-      serializing `serialize: 'records'` is the setting to use. There is an option of
-      not embedding JSON in the serialized payload by using `serialize: 'ids'`. If you
-      do not want the relationship sent at all, you can use `serialize: false`.
-
-
-      ### EmbeddedRecordsMixin defaults
-      If you do not overwrite `attrs` for a specific relationship, the `EmbeddedRecordsMixin`
-      will behave in the following way:
-
-      BelongsTo: `{ serialize: 'id', deserialize: 'id' }`
-      HasMany:   `{ serialize: false, deserialize: 'ids' }`
-
-      ### Model Relationships
-
-      Embedded records must have a model defined to be extracted and serialized. Note that
-      when defining any relationships on your model such as `belongsTo` and `hasMany`, you
-      should not both specify `async: true` and also indicate through the serializer's
-      `attrs` attribute that the related model should be embedded for deserialization.
-      If a model is declared embedded for deserialization (`embedded: 'always'` or `deserialize: 'records'`),
-      then do not use `async: true`.
-
-      To successfully extract and serialize embedded records the model relationships
-      must be setup correcty. See the
-      [defining relationships](/guides/models/defining-models/#toc_defining-relationships)
-      section of the **Defining Models** guide page.
-
-      Records without an `id` property are not considered embedded records, model
-      instances must have an `id` property to be used with Ember Data.
-
-      ### Example JSON payloads, Models and Serializers
-
-      **When customizing a serializer it is important to grok what the customizations
-      are. Please read the docs for the methods this mixin provides, in case you need
-      to modify it to fit your specific needs.**
-
-      For example review the docs for each method of this mixin:
-      * [normalize](/api/data/classes/DS.EmbeddedRecordsMixin.html#method_normalize)
-      * [serializeBelongsTo](/api/data/classes/DS.EmbeddedRecordsMixin.html#method_serializeBelongsTo)
-      * [serializeHasMany](/api/data/classes/DS.EmbeddedRecordsMixin.html#method_serializeHasMany)
   DS.Model:
     name: DS.Model
     shortname: DS.Model
@@ -752,8 +660,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/attr.js"
-    line: 12
+    file: addon/-private/system/relationships/ext.js
+    line: 96
     description: |-
       The model class that all Ember Data records descend from.
         This is the public API of Ember Data models. If you are using Ember Data
@@ -773,8 +681,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/model/errors.js"
-    line: 14
+    file: addon/-private/system/model/errors.js
+    line: 15
     description: |-
       Holds validation errors for a given record organized by attribute names.
 
@@ -802,8 +710,8 @@ classes:
       user.save();
       ```
 
-      Your backend data store might return a response that looks like
-      this. This response will be used to populate the error object.
+      Your backend data store might return a response with status code 422 (Unprocessable Entity)
+      and that looks like this. This response will be used to populate the error object.
 
       ```javascript
       {
@@ -858,6 +766,33 @@ classes:
         </div>
       {{/each}}
       ```
+
+      The JSON API spec also allows for object level errors to be placed
+      in an object with pointer `data`.
+
+      ```javascript
+      {
+        "errors": [
+          {
+            "detail": "Some generic non property error message",
+            "source": {
+              "pointer": "data"
+            }
+          }
+        ]
+      }
+      ```
+
+      You can access these errors by using the `base` property on the errors
+      object.
+
+      ```handlebars
+      {{#each model.errors.base as |error|}}
+        <div class="error">
+          {{error.message}}
+        </div>
+      {{/each}}
+      ```
     extends: Ember.Object
     uses:
     - Ember.Enumerable
@@ -872,7 +807,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/model/states.js"
+    file: addon/-private/system/model/states.js
     line: 12
     description: |-
       ### State
@@ -1044,7 +979,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/record-arrays/adapter-populated-record-array.js"
+    file: addon/-private/system/record-arrays/adapter-populated-record-array.js
     line: 11
     description: |-
       Represents an ordered list of records whose order and membership is
@@ -1062,7 +997,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/record-arrays/filtered-record-array.js"
+    file: addon/-private/system/record-arrays/filtered-record-array.js
     line: 10
     description: |-
       Represents a list of records whose membership is determined by the
@@ -1080,7 +1015,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/record-arrays/record-array.js"
+    file: addon/-private/system/record-arrays/record-array.js
     line: 12
     description: |-
       A record array is an array that contains records of a certain type. The record
@@ -1101,7 +1036,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: ''
-    file: "addon/-private/core.js"
+    file: addon/-private/core.js
     line: 8
     description: All Ember Data methods and functions are defined inside of this namespace.
     static: 1
@@ -1115,7 +1050,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: ''
-    file: "addon/-private/system/store/container-instance-cache.js"
+    file: addon/-private/system/store/container-instance-cache.js
     line: 4
     description: |-
       The `ContainerInstanceCache` serves as a lazy cache for looking up
@@ -1142,7 +1077,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/many-array.js"
+    file: addon/-private/system/many-array.js
     line: 11
     description: |-
       A `ManyArray` is a `MutableArray` that represents the contents of a has-many
@@ -1195,7 +1130,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/promise-proxies.js"
+    file: addon/-private/system/promise-proxies.js
     line: 7
     description: |-
       A `PromiseArray` is an object that acts like both an `Ember.Array`
@@ -1233,7 +1168,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/promise-proxies.js"
+    file: addon/-private/system/promise-proxies.js
     line: 38
     description: |-
       A `PromiseObject` is an object that acts like both an `Ember.Object`
@@ -1271,7 +1206,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/promise-proxies.js"
+    file: addon/-private/system/promise-proxies.js
     line: 81
     description: |-
       A PromiseManyArray is a PromiseArray that also proxies certain method calls
@@ -1296,37 +1231,10 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/record-array-manager.js"
-    line: 14
+    file: addon/-private/system/record-array-manager.js
+    line: 15
     access: private
     tagname: ''
-    extends: Ember.Object
-  DS.Serializer:
-    name: DS.Serializer
-    shortname: DS.Serializer
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-data
-    namespace: DS
-    file: "addon/-private/system/serializer.js"
-    line: 5
-    description: |-
-      `DS.Serializer` is an abstract base class that you should override in your
-      application to customize it for your backend. The minimum set of methods
-      that you should implement is:
-
-        * `normalizeResponse()`
-        * `serialize()`
-
-      And you can optionally override the following methods:
-
-        * `normalize()`
-
-      For an example implementation, see
-      [DS.JSONSerializer](DS.JSONSerializer.html), the included JSON serializer.
     extends: Ember.Object
   DS.SnapshotRecordArray:
     name: DS.SnapshotRecordArray
@@ -1338,8 +1246,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/snapshot-record-array.js"
-    line: 5
+    file: addon/-private/system/snapshot-record-array.js
+    line: 7
     access: private
     tagname: ''
     is_constructor: 1
@@ -1360,8 +1268,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/snapshot.js"
-    line: 9
+    file: addon/-private/system/snapshot.js
+    line: 11
     access: private
     tagname: ''
     is_constructor: 1
@@ -1379,7 +1287,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/system/store.js"
+    file: addon/-private/system/store.js
     line: 141
     description: |-
       The store contains all of the data for records loaded from the server.
@@ -1460,7 +1368,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/transforms/boolean.js"
+    file: addon/-private/transforms/boolean.js
     line: 3
     description: |-
       The `DS.BooleanTransform` class is used to serialize and deserialize
@@ -1490,8 +1398,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/transforms/date.js"
-    line: 1
+    file: addon/-private/transforms/date.js
+    line: 4
     description: |-
       The `DS.DateTransform` class is used to serialize and deserialize
       date attributes on Ember Data record objects. This transform is used
@@ -1518,7 +1426,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/transforms/number.js"
+    file: addon/-private/transforms/number.js
     line: 10
     description: |-
       The `DS.NumberTransform` class is used to serialize and deserialize
@@ -1548,7 +1456,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/-private/transforms/string.js"
+    file: addon/-private/transforms/string.js
     line: 6
     description: |-
       The `DS.StringTransform` class is used to serialize and deserialize
@@ -1578,7 +1486,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/adapters/json-api.js"
+    file: addon/adapters/json-api.js
     line: 8
     is_constructor: 1
     extends: DS.RESTAdapter
@@ -1592,8 +1500,8 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/adapters/rest.js"
-    line: 20
+    file: addon/adapters/rest.js
+    line: 22
     description: |-
       The REST adapter allows your store to communicate with an HTTP server by
       transmitting JSON via XHR. Most Ember.js apps that consume a JSON API
@@ -1765,6 +1673,104 @@ classes:
     extends: DS.Adapter
     uses:
     - DS.BuildURLMixin
+  DS.EmbeddedRecordsMixin:
+    name: DS.EmbeddedRecordsMixin
+    shortname: DS.EmbeddedRecordsMixin
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: addon/serializers/embedded-records-mixin.js
+    line: 8
+    description: |-
+      ## Using Embedded Records
+
+      `DS.EmbeddedRecordsMixin` supports serializing embedded records.
+
+      To set up embedded records, include the mixin when extending a serializer,
+      then define and configure embedded (model) relationships.
+
+      Below is an example of a per-type serializer (`post` type).
+
+      ```app/serializers/post.js
+      import DS from 'ember-data';
+
+      export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+        attrs: {
+          author: { embedded: 'always' },
+          comments: { serialize: 'ids' }
+        }
+      });
+      ```
+      Note that this use of `{ embedded: 'always' }` is unrelated to
+      the `{ embedded: 'always' }` that is defined as an option on `DS.attr` as part of
+      defining a model while working with the `ActiveModelSerializer`.  Nevertheless,
+      using `{ embedded: 'always' }` as an option to `DS.attr` is not a valid way to setup
+      embedded records.
+
+      The `attrs` option for a resource `{ embedded: 'always' }` is shorthand for:
+
+      ```js
+      {
+        serialize: 'records',
+        deserialize: 'records'
+      }
+      ```
+
+      ### Configuring Attrs
+
+      A resource's `attrs` option may be set to use `ids`, `records` or false for the
+      `serialize`  and `deserialize` settings.
+
+      The `attrs` property can be set on the `ApplicationSerializer` or a per-type
+      serializer.
+
+      In the case where embedded JSON is expected while extracting a payload (reading)
+      the setting is `deserialize: 'records'`, there is no need to use `ids` when
+      extracting as that is the default behavior without this mixin if you are using
+      the vanilla `EmbeddedRecordsMixin`. Likewise, to embed JSON in the payload while
+      serializing `serialize: 'records'` is the setting to use. There is an option of
+      not embedding JSON in the serialized payload by using `serialize: 'ids'`. If you
+      do not want the relationship sent at all, you can use `serialize: false`.
+
+
+      ### EmbeddedRecordsMixin defaults
+      If you do not overwrite `attrs` for a specific relationship, the `EmbeddedRecordsMixin`
+      will behave in the following way:
+
+      BelongsTo: `{ serialize: 'id', deserialize: 'id' }`
+      HasMany:   `{ serialize: false, deserialize: 'ids' }`
+
+      ### Model Relationships
+
+      Embedded records must have a model defined to be extracted and serialized. Note that
+      when defining any relationships on your model such as `belongsTo` and `hasMany`, you
+      should not both specify `async: true` and also indicate through the serializer's
+      `attrs` attribute that the related model should be embedded for deserialization.
+      If a model is declared embedded for deserialization (`embedded: 'always'` or `deserialize: 'records'`),
+      then do not use `async: true`.
+
+      To successfully extract and serialize embedded records the model relationships
+      must be setup correcty. See the
+      [defining relationships](/guides/models/defining-models/#toc_defining-relationships)
+      section of the **Defining Models** guide page.
+
+      Records without an `id` property are not considered embedded records, model
+      instances must have an `id` property to be used with Ember Data.
+
+      ### Example JSON payloads, Models and Serializers
+
+      **When customizing a serializer it is important to grok what the customizations
+      are. Please read the docs for the methods this mixin provides, in case you need
+      to modify it to fit your specific needs.**
+
+      For example review the docs for each method of this mixin:
+      * [normalize](/api/data/classes/DS.EmbeddedRecordsMixin.html#method_normalize)
+      * [serializeBelongsTo](/api/data/classes/DS.EmbeddedRecordsMixin.html#method_serializeBelongsTo)
+      * [serializeHasMany](/api/data/classes/DS.EmbeddedRecordsMixin.html#method_serializeHasMany)
   DS.JSONAPISerializer:
     name: DS.JSONAPISerializer
     shortname: DS.JSONAPISerializer
@@ -1775,7 +1781,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/serializers/json-api.js"
+    file: addon/serializers/json-api.js
     line: 13
     description: |-
       Ember Data 2.0 Serializer:
@@ -1869,7 +1875,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/serializers/json.js"
+    file: addon/serializers/json.js
     line: 18
     description: |-
       Ember Data 2.0 Serializer:
@@ -1943,7 +1949,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/serializers/rest.js"
+    file: addon/serializers/rest.js
     line: 15
     description: |-
       Normally, applications will use the `RESTSerializer` by implementing
@@ -1994,7 +2000,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/adapter.js"
+    file: addon/adapter.js
     line: 8
     description: |-
       An adapter is an object that receives requests from a store and
@@ -2047,6 +2053,33 @@ classes:
       For an example implementation, see `DS.RESTAdapter`, the
       included REST adapter.
     extends: Ember.Object
+  DS.Serializer:
+    name: DS.Serializer
+    shortname: DS.Serializer
+    classitems: []
+    plugins: []
+    extensions: []
+    plugin_for: []
+    extension_for: []
+    module: ember-data
+    namespace: DS
+    file: addon/serializer.js
+    line: 7
+    description: |-
+      `DS.Serializer` is an abstract base class that you should override in your
+      application to customize it for your backend. The minimum set of methods
+      that you should implement is:
+
+        * `normalizeResponse()`
+        * `serialize()`
+
+      And you can optionally override the following methods:
+
+        * `normalize()`
+
+      For an example implementation, see
+      [DS.JSONSerializer](DS.JSONSerializer.html), the included JSON serializer.
+    extends: Ember.Object
   DS.Transform:
     name: DS.Transform
     shortname: DS.Transform
@@ -2057,7 +2090,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: DS
-    file: "addon/transform.js"
+    file: addon/transform.js
     line: 3
     description: |-
       The `DS.Transform` class is used to serialize and deserialize model
@@ -2132,7 +2165,7 @@ classes:
     extension_for: []
     module: ember-data
     namespace: Ember
-    file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+    file: node_modules/ember-inflector/addon/lib/system/inflector.js
     line: 32
     description: |-
       Inflector.Ember provides a mechanism for supplying inflection rules for your
@@ -2190,8 +2223,8 @@ classes:
       ```
 elements: {}
 classitems:
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 31
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 33
   description: |-
     Builds a URL for a given type and optional ID.
 
@@ -2227,8 +2260,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 79
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 81
   itemtype: method
   name: _buildURL
   access: private
@@ -2245,8 +2278,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 108
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 110
   itemtype: method
   name: urlForFindRecord
   params:
@@ -2264,8 +2297,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 119
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 121
   itemtype: method
   name: urlForFindAll
   params:
@@ -2277,8 +2310,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 128
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 130
   itemtype: method
   name: urlForQuery
   params:
@@ -2293,8 +2326,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 138
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 140
   itemtype: method
   name: urlForQueryRecord
   params:
@@ -2309,8 +2342,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 148
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 150
   itemtype: method
   name: urlForFindMany
   params:
@@ -2328,8 +2361,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 159
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 161
   itemtype: method
   name: urlForFindHasMany
   params:
@@ -2344,8 +2377,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 169
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 171
   itemtype: method
   name: urlForFindBelongTo
   params:
@@ -2360,8 +2393,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 179
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 181
   itemtype: method
   name: urlForCreateRecord
   params:
@@ -2376,8 +2409,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 189
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 191
   itemtype: method
   name: urlForUpdateRecord
   params:
@@ -2395,8 +2428,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 200
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 202
   itemtype: method
   name: urlForDeleteRecord
   params:
@@ -2414,8 +2447,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 211
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 213
   itemtype: method
   name: urlPrefix
   access: private
@@ -2432,8 +2465,8 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/build-url-mixin.js"
-  line: 254
+- file: addon/-private/adapters/build-url-mixin.js
+  line: 250
   description: |-
     Determines the pathname for a given type.
 
@@ -2466,24 +2499,24 @@ classitems:
     type: String
   class: DS.BuildURLMixin
   namespace: DS
-- file: "addon/-private/adapters/errors.js"
-  line: 112
+- file: addon/-private/adapters/errors.js
+  line: 113
   itemtype: method
   name: errorsHashToArray
   access: private
   tagname: ''
   class: DS.AbortError
   namespace: DS
-- file: "addon/-private/adapters/errors.js"
-  line: 143
+- file: addon/-private/adapters/errors.js
+  line: 144
   itemtype: method
   name: errorsArrayToHash
   access: private
   tagname: ''
   class: DS.AbortError
   namespace: DS
-- file: "addon/-private/ext/date.js"
-  line: 21
+- file: addon/-private/ext/date.js
+  line: 23
   itemtype: method
   name: parse
   params:
@@ -2496,7 +2529,7 @@ classitems:
   class: Ember.Date
   module: ember-data
   namespace: Ember
-- file: "addon/-private/initializers/data-adapter.js"
+- file: addon/-private/initializers/data-adapter.js
   line: 3
   description: |-
     Configures a registry with injections on Ember applications
@@ -2507,10 +2540,10 @@ classitems:
   - name: registry
     description: ''
     type: Ember.Registry
-  class: DS.EmbeddedRecordsMixin
+  class: DS.Model
   module: ember-data
   namespace: Ember
-- file: "addon/-private/initializers/store-injections.js"
+- file: addon/-private/initializers/store-injections.js
   line: 1
   description: |-
     Configures a registry with injections on Ember applications
@@ -2521,10 +2554,10 @@ classitems:
   - name: registry
     description: ''
     type: Ember.Registry
-  class: DS.EmbeddedRecordsMixin
+  class: DS.Model
   module: ember-data
   namespace: Ember
-- file: "addon/-private/initializers/store.js"
+- file: addon/-private/initializers/store.js
   line: 15
   description: |-
     Configures a registry for use with an Ember-Data
@@ -2535,10 +2568,10 @@ classitems:
   - name: registry
     description: ''
     type: Ember.Registry
-  class: DS.EmbeddedRecordsMixin
+  class: DS.Model
   module: ember-data
   namespace: Ember
-- file: "addon/-private/initializers/transforms.js"
+- file: addon/-private/initializers/transforms.js
   line: 8
   description: |-
     Configures a registry for use with Ember-Data
@@ -2549,10 +2582,10 @@ classitems:
   - name: registry
     description: ''
     type: Ember.Registry
-  class: DS.EmbeddedRecordsMixin
+  class: DS.Model
   module: ember-data
   namespace: Ember
-- file: "addon/-private/instance-initializers/initialize-store-service.js"
+- file: addon/-private/instance-initializers/initialize-store-service.js
   line: 1
   description: |-
     Configures a registry for use with an Ember-Data
@@ -2563,274 +2596,10 @@ classitems:
   - name: applicationOrRegistry
     description: ''
     type: Ember.ApplicationInstance
-  class: DS.EmbeddedRecordsMixin
+  class: DS.Model
   module: ember-data
   namespace: Ember
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 100
-  description: |-
-    Normalize the record and recursively normalize/extract all the embedded records
-    while pushing them into the store as they are encountered
-
-    A payload with an attr configured for embedded records needs to be extracted:
-
-    ```js
-    {
-      "post": {
-        "id": "1"
-        "title": "Rails is omakase",
-        "comments": [{
-          "id": "1",
-          "body": "Rails is unagi"
-        }, {
-          "id": "2",
-          "body": "Omakase O_o"
-        }]
-      }
-    }
-    ```
-  itemtype: method
-  name: normalize
-  params:
-  - name: typeClass
-    description: ''
-    type: DS.Model
-  - name: hash
-    description: to be normalized
-    type: Object
-  - name: prop
-    description: the hash has been referenced by
-    type: String
-  return:
-    description: the normalized hash
-    type: Object
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 141
-  description: |-
-    Serialize `belongsTo` relationship when it is configured as an embedded object.
-
-    This example of an author model belongs to a post model:
-
-    ```js
-    Post = DS.Model.extend({
-      title:    DS.attr('string'),
-      body:     DS.attr('string'),
-      author:   DS.belongsTo('author')
-    });
-
-    Author = DS.Model.extend({
-      name:     DS.attr('string'),
-      post:     DS.belongsTo('post')
-    });
-    ```
-
-    Use a custom (type) serializer for the post model to configure embedded author
-
-    ```app/serializers/post.js
-    import DS from 'ember-data;
-
-    export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
-      attrs: {
-        author: { embedded: 'always' }
-      }
-    })
-    ```
-
-    A payload with an attribute configured for embedded records can serialize
-    the records together under the root attribute's payload:
-
-    ```js
-    {
-      "post": {
-        "id": "1"
-        "title": "Rails is omakase",
-        "author": {
-          "id": "2"
-          "name": "dhh"
-        }
-      }
-    }
-    ```
-  itemtype: method
-  name: serializeBelongsTo
-  params:
-  - name: snapshot
-    description: ''
-    type: DS.Snapshot
-  - name: json
-    description: ''
-    type: Object
-  - name: relationship
-    description: ''
-    type: Object
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 233
-  description: |-
-    Serialize `hasMany` relationship when it is configured as embedded objects.
-
-    This example of a post model has many comments:
-
-    ```js
-    Post = DS.Model.extend({
-      title:    DS.attr('string'),
-      body:     DS.attr('string'),
-      comments: DS.hasMany('comment')
-    });
-
-    Comment = DS.Model.extend({
-      body:     DS.attr('string'),
-      post:     DS.belongsTo('post')
-    });
-    ```
-
-    Use a custom (type) serializer for the post model to configure embedded comments
-
-    ```app/serializers/post.js
-    import DS from 'ember-data;
-
-    export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
-      attrs: {
-        comments: { embedded: 'always' }
-      }
-    })
-    ```
-
-    A payload with an attribute configured for embedded records can serialize
-    the records together under the root attribute's payload:
-
-    ```js
-    {
-      "post": {
-        "id": "1"
-        "title": "Rails is omakase",
-        "body": "I want this for my ORM, I want that for my template language..."
-        "comments": [{
-          "id": "1",
-          "body": "Rails is unagi"
-        }, {
-          "id": "2",
-          "body": "Omakase O_o"
-        }]
-      }
-    }
-    ```
-
-    The attrs options object can use more specific instruction for extracting and
-    serializing. When serializing, an option to embed `ids` or `records` can be set.
-    When extracting the only option is `records`.
-
-    So `{ embedded: 'always' }` is shorthand for:
-    `{ serialize: 'records', deserialize: 'records' }`
-
-    To embed the `ids` for a related object (using a hasMany relationship):
-
-    ```app/serializers/post.js
-    import DS from 'ember-data;
-
-    export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
-      attrs: {
-        comments: { serialize: 'ids', deserialize: 'records' }
-      }
-    })
-    ```
-
-    ```js
-    {
-      "post": {
-        "id": "1"
-        "title": "Rails is omakase",
-        "body": "I want this for my ORM, I want that for my template language..."
-        "comments": ["1", "2"]
-      }
-    }
-    ```
-  itemtype: method
-  name: serializeHasMany
-  params:
-  - name: snapshot
-    description: ''
-    type: DS.Snapshot
-  - name: json
-    description: ''
-    type: Object
-  - name: relationship
-    description: ''
-    type: Object
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 358
-  description: |-
-    When serializing an embedded record, modify the property (in the json payload)
-    that refers to the parent record (foreign key for relationship).
-
-    Serializing a `belongsTo` relationship removes the property that refers to the
-    parent record
-
-    Serializing a `hasMany` relationship does not remove the property that refers to
-    the parent record.
-  itemtype: method
-  name: removeEmbeddedForeignKey
-  params:
-  - name: snapshot
-    description: ''
-    type: DS.Snapshot
-  - name: embeddedSnapshot
-    description: ''
-    type: DS.Snapshot
-  - name: relationship
-    description: ''
-    type: Object
-  - name: json
-    description: ''
-    type: Object
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 429
-  itemtype: method
-  name: _extractEmbeddedRecords
-  access: private
-  tagname: ''
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 447
-  itemtype: method
-  name: _extractEmbeddedHasMany
-  access: private
-  tagname: ''
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 472
-  itemtype: method
-  name: _extractEmbeddedBelongsTo
-  access: private
-  tagname: ''
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/serializers/embedded-records-mixin.js"
-  line: 495
-  itemtype: method
-  name: _normalizeEmbeddedRelationship
-  access: private
-  tagname: ''
-  class: DS.EmbeddedRecordsMixin
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/debug/debug-info.js"
+- file: addon/-private/system/debug/debug-info.js
   line: 5
   description: |-
     Provides info about the model for debugging purposes
@@ -2849,8 +2618,199 @@ classitems:
   tagname: ''
   class: DS.Model
   module: ember-data
-- file: "addon/-private/system/model/errors.js"
-  line: 105
+- file: addon/-private/system/model/attr.js
+  line: 18
+  description: |-
+    A map whose keys are the attributes of the model (properties
+    described by DS.attr) and whose values are the meta object for the
+    property.
+
+    Example
+
+    ```app/models/person.js
+    import DS from 'ember-data';
+
+    export default DS.Model.extend({
+      firstName: attr('string'),
+      lastName: attr('string'),
+      birthday: attr('date')
+    });
+    ```
+
+    ```javascript
+    import Ember from 'ember';
+    import Person from 'app/models/person';
+
+    var attributes = Ember.get(Person, 'attributes')
+
+    attributes.forEach(function(meta, name) {
+      console.log(name, meta);
+    });
+
+    // prints:
+    // firstName {type: "string", isAttribute: true, options: Object, parentType: function, name: "firstName"}
+    // lastName {type: "string", isAttribute: true, options: Object, parentType: function, name: "lastName"}
+    // birthday {type: "date", isAttribute: true, options: Object, parentType: function, name: "birthday"}
+    ```
+  itemtype: property
+  name: attributes
+  static: 1
+  type: "{Ember.Map}"
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/attr.js
+  line: 71
+  description: |-
+    A map whose keys are the attributes of the model (properties
+    described by DS.attr) and whose values are type of transformation
+    applied to each attribute. This map does not include any
+    attributes that do not have an transformation type.
+
+    Example
+
+    ```app/models/person.js
+    import DS from 'ember-data';
+
+    export default DS.Model.extend({
+      firstName: attr(),
+      lastName: attr('string'),
+      birthday: attr('date')
+    });
+    ```
+
+    ```javascript
+    import Ember from 'ember';
+    import Person from 'app/models/person';
+
+    var transformedAttributes = Ember.get(Person, 'transformedAttributes')
+
+    transformedAttributes.forEach(function(field, type) {
+      console.log(field, type);
+    });
+
+    // prints:
+    // lastName string
+    // birthday date
+    ```
+  itemtype: property
+  name: transformedAttributes
+  static: 1
+  type: "{Ember.Map}"
+  readonly: ''
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/attr.js
+  line: 121
+  description: |-
+    Iterates through the attributes of the model, calling the passed function on each
+    attribute.
+
+    The callback method you provide should have the following signature (all
+    parameters are optional):
+
+    ```javascript
+    function(name, meta);
+    ```
+
+    - `name` the name of the current property in the iteration
+    - `meta` the meta object for the attribute property in the iteration
+
+    Note that in addition to a callback, you can also pass an optional target
+    object that will be set as `this` on the context.
+
+    Example
+
+    ```javascript
+    import DS from 'ember-data';
+
+    var Person = DS.Model.extend({
+      firstName: attr('string'),
+      lastName: attr('string'),
+      birthday: attr('date')
+    });
+
+    Person.eachAttribute(function(name, meta) {
+      console.log(name, meta);
+    });
+
+    // prints:
+    // firstName {type: "string", isAttribute: true, options: Object, parentType: function, name: "firstName"}
+    // lastName {type: "string", isAttribute: true, options: Object, parentType: function, name: "lastName"}
+    // birthday {type: "date", isAttribute: true, options: Object, parentType: function, name: "birthday"}
+       ```
+  itemtype: method
+  name: eachAttribute
+  params:
+  - name: callback
+    description: The callback to execute
+    type: Function
+  - name: binding
+    description: the value to which the callback's `this` should be bound
+    type: Object
+    optional: true
+  static: 1
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/attr.js
+  line: 170
+  description: |-
+    Iterates through the transformedAttributes of the model, calling
+    the passed function on each attribute. Note the callback will not be
+    called for any attributes that do not have an transformation type.
+
+    The callback method you provide should have the following signature (all
+    parameters are optional):
+
+    ```javascript
+    function(name, type);
+    ```
+
+    - `name` the name of the current property in the iteration
+    - `type` a string containing the name of the type of transformed
+      applied to the attribute
+
+    Note that in addition to a callback, you can also pass an optional target
+    object that will be set as `this` on the context.
+
+    Example
+
+    ```javascript
+    import DS from 'ember-data';
+
+    var Person = DS.Model.extend({
+      firstName: attr(),
+      lastName: attr('string'),
+      birthday: attr('date')
+    });
+
+    Person.eachTransformedAttribute(function(name, type) {
+      console.log(name, type);
+    });
+
+    // prints:
+    // lastName string
+    // birthday date
+       ```
+  itemtype: method
+  name: eachTransformedAttribute
+  params:
+  - name: callback
+    description: The callback to execute
+    type: Function
+  - name: binding
+    description: the value to which the callback's `this` should be bound
+    type: Object
+    optional: true
+  static: 1
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/errors.js
+  line: 133
   description: Register with target handler
   itemtype: method
   name: registerHandlers
@@ -2864,11 +2824,22 @@ classitems:
   - name: becameValid
     description: ''
     type: Function
+  deprecated: true
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 118
+- file: addon/-private/system/model/errors.js
+  line: 153
+  description: Register with target handler
+  itemtype: method
+  name: _registerHandlers
+  access: private
+  tagname: ''
+  class: DS.Errors
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/errors.js
+  line: 165
   itemtype: property
   name: errorsByAttributeName
   type: "{Ember.MapWithDefault}"
@@ -2877,8 +2848,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 131
+- file: addon/-private/system/model/errors.js
+  line: 178
   description: |-
     Returns errors for a given attribute
 
@@ -2904,8 +2875,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 153
+- file: addon/-private/system/model/errors.js
+  line: 200
   description: |-
     An array containing all of the error messages for this
     record. This is useful for displaying all errors to the user.
@@ -2923,8 +2894,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 170
+- file: addon/-private/system/model/errors.js
+  line: 217
   itemtype: property
   name: content
   type: "{Array}"
@@ -2933,8 +2904,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 179
+- file: addon/-private/system/model/errors.js
+  line: 226
   itemtype: method
   name: unknownProperty
   access: private
@@ -2942,8 +2913,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 189
+- file: addon/-private/system/model/errors.js
+  line: 236
   description: Total number of errors.
   itemtype: property
   name: length
@@ -2952,8 +2923,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 197
+- file: addon/-private/system/model/errors.js
+  line: 244
   itemtype: property
   name: isEmpty
   type: "{Boolean}"
@@ -2961,8 +2932,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 204
+- file: addon/-private/system/model/errors.js
+  line: 251
   description: |-
     Adds error messages to a given attribute and sends
     `becameInvalid` event to the record.
@@ -2983,11 +2954,22 @@ classitems:
   - name: messages
     description: ''
     type: "(Array|String)"
+  deprecated: true
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 234
+- file: addon/-private/system/model/errors.js
+  line: 283
+  description: Adds error messages to a given attribute without sending event.
+  itemtype: method
+  name: _add
+  access: private
+  tagname: ''
+  class: DS.Errors
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/errors.js
+  line: 297
   itemtype: method
   name: _findOrCreateMessages
   access: private
@@ -2995,8 +2977,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 249
+- file: addon/-private/system/model/errors.js
+  line: 322
   description: |-
     Removes all error messages from the given attribute and sends
     `becameValid` event to the record if there no more errors left.
@@ -3033,11 +3015,23 @@ classitems:
   - name: attribute
     description: ''
     type: String
+  deprecated: true
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 297
+- file: addon/-private/system/model/errors.js
+  line: 371
+  description: Removes all error messages from the given attribute without sending
+    event.
+  itemtype: method
+  name: _remove
+  access: private
+  tagname: ''
+  class: DS.Errors
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/errors.js
+  line: 387
   description: |-
     Removes all error messages and sends `becameValid` event
     to the record.
@@ -3058,11 +3052,24 @@ classitems:
     ```
   itemtype: method
   name: clear
+  deprecated: true
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/errors.js"
-  line: 338
+- file: addon/-private/system/model/errors.js
+  line: 421
+  description: |-
+    Removes all error messages.
+    to the record.
+  itemtype: method
+  name: _clear
+  access: private
+  tagname: ''
+  class: DS.Errors
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/errors.js
+  line: 447
   description: |-
     Checks if there is error messages for the given attribute.
 
@@ -3092,8 +3099,8 @@ classitems:
   class: DS.Errors
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 48
+- file: addon/-private/system/model/model.js
+  line: 54
   description: |-
     If this property is `true` the record is in the `empty`
     state. Empty is the first state all records enter after they have
@@ -3109,8 +3116,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 62
+- file: addon/-private/system/model/model.js
+  line: 68
   description: |-
     If this property is `true` the record is in the `loading` state. A
     record enters this state when the store asks the adapter for its
@@ -3123,8 +3130,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 73
+- file: addon/-private/system/model/model.js
+  line: 79
   description: |-
     If this property is `true` the record is in the `loaded` state. A
     record enters this state when its data is populated. Most of a
@@ -3148,8 +3155,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 95
+- file: addon/-private/system/model/model.js
+  line: 101
   description: |-
     If this property is `true` the record is in the `dirty` state. The
     record has local changes that have not yet been saved by the
@@ -3175,8 +3182,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 121
+- file: addon/-private/system/model/model.js
+  line: 127
   description: |-
     If this property is `true` the record is in the `saving` state. A
     record enters the saving state when `save` is called, but the
@@ -3201,8 +3208,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 144
+- file: addon/-private/system/model/model.js
+  line: 150
   description: |-
     If this property is `true` the record is in the `deleted` state
     and has been marked for deletion. When `isDeleted` is true and
@@ -3242,8 +3249,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 182
+- file: addon/-private/system/model/model.js
+  line: 188
   description: |-
     If this property is `true` the record is in the `new` state. A
     record will be in the `new` state when it has been created on the
@@ -3267,8 +3274,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 204
+- file: addon/-private/system/model/model.js
+  line: 210
   description: |-
     If this property is `true` the record is in the `valid` state.
 
@@ -3281,8 +3288,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 215
+- file: addon/-private/system/model/model.js
+  line: 221
   description: |-
     If the record is in the dirty state this property will report what
     kind of change has caused it to move into the dirty
@@ -3305,8 +3312,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 237
+- file: addon/-private/system/model/model.js
+  line: 243
   description: |-
     If `true` the adapter reported that it was unable to save local
     changes to the backend for any reason other than a server-side
@@ -3328,8 +3335,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 258
+- file: addon/-private/system/model/model.js
+  line: 264
   description: |-
     If `true` the store is attempting to reload the record form the adapter.
 
@@ -3347,8 +3354,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 275
+- file: addon/-private/system/model/model.js
+  line: 281
   description: |-
     All ember models have an id property. This is an identifier
     managed by an external source. These are always coerced to be
@@ -3370,8 +3377,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 296
+- file: addon/-private/system/model/model.js
+  line: 302
   itemtype: property
   name: currentState
   access: private
@@ -3380,8 +3387,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 302
+- file: addon/-private/system/model/model.js
+  line: 308
   description: |-
     When the record is in the `invalid` state this object will contain
     any errors returned by the adapter. When present the errors hash
@@ -3435,8 +3442,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 367
+- file: addon/-private/system/model/model.js
+  line: 372
   description: |-
     This property holds the `DS.AdapterError` object with which
     last adapter operation was rejected.
@@ -3446,8 +3453,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 376
+- file: addon/-private/system/model/model.js
+  line: 381
   description: |-
     Create a JSON representation of the record, using the serialization
     strategy of the store's adapter.
@@ -3469,8 +3476,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 394
+- file: addon/-private/system/model/model.js
+  line: 399
   description: |-
     Use [DS.JSONSerializer](DS.JSONSerializer.html) to
     get the JSON representation of a record.
@@ -3492,8 +3499,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 416
+- file: addon/-private/system/model/model.js
+  line: 421
   description: |-
     Fired when the record is ready to be interacted with,
     that is either loaded from the server or created locally.
@@ -3502,64 +3509,64 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 424
+- file: addon/-private/system/model/model.js
+  line: 429
   description: Fired when the record is loaded from the server.
   itemtype: event
   name: didLoad
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 431
+- file: addon/-private/system/model/model.js
+  line: 436
   description: Fired when the record is updated.
   itemtype: event
   name: didUpdate
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 438
+- file: addon/-private/system/model/model.js
+  line: 443
   description: Fired when a new record is commited to the server.
   itemtype: event
   name: didCreate
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 445
+- file: addon/-private/system/model/model.js
+  line: 450
   description: Fired when the record is deleted.
   itemtype: event
   name: didDelete
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 452
+- file: addon/-private/system/model/model.js
+  line: 457
   description: Fired when the record becomes invalid.
   itemtype: event
   name: becameInvalid
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 459
+- file: addon/-private/system/model/model.js
+  line: 464
   description: Fired when the record enters the error state.
   itemtype: event
   name: becameError
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 466
+- file: addon/-private/system/model/model.js
+  line: 471
   description: Fired when the record is rolled back.
   itemtype: event
   name: rolledBack
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 473
+- file: addon/-private/system/model/model.js
+  line: 478
   itemtype: property
   name: data
   access: private
@@ -3568,8 +3575,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 481
+- file: addon/-private/system/model/model.js
+  line: 486
   itemtype: method
   name: send
   access: private
@@ -3584,8 +3591,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 491
+- file: addon/-private/system/model/model.js
+  line: 496
   itemtype: method
   name: transitionTo
   access: private
@@ -3597,8 +3604,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 501
+- file: addon/-private/system/model/model.js
+  line: 506
   description: |-
     Marks the record as deleted but does not save it. You must call
     `save` afterwards if you want to persist it. You might use this
@@ -3629,8 +3636,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 533
+- file: addon/-private/system/model/model.js
+  line: 538
   description: |-
     Same as `deleteRecord`, but saves the record immediately.
 
@@ -3664,8 +3671,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 563
+- file: addon/-private/system/model/model.js
+  line: 568
   itemtype: method
   name: unloadRecord
   access: private
@@ -3673,8 +3680,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 572
+- file: addon/-private/system/model/model.js
+  line: 577
   itemtype: method
   name: _notifyProperties
   access: private
@@ -3682,8 +3689,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 586
+- file: addon/-private/system/model/model.js
+  line: 591
   description: |-
     Returns an object, whose keys are changed properties, and value is
     an [oldProp, newProp] array.
@@ -3714,8 +3721,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 617
+- file: addon/-private/system/model/model.js
+  line: 622
   itemtype: method
   name: adapterDidDirty
   access: private
@@ -3727,8 +3734,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 633
+- file: addon/-private/system/model/model.js
+  line: 638
   description: |-
     If the model `hasDirtyAttributes` this function will discard any unsaved
     changes. If the model `isNew` it will be removed from the store.
@@ -3747,8 +3754,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 665
+- file: addon/-private/system/model/model.js
+  line: 670
   description: |-
     Save the record and persist any changes to the record to an
     external source via the adapter.
@@ -3777,8 +3784,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 690
+- file: addon/-private/system/model/model.js
+  line: 695
   description: |-
     Reload the record from the adapter.
 
@@ -3810,8 +3817,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 723
+- file: addon/-private/system/model/model.js
+  line: 728
   description: |-
     Override the default event firing from Ember.Evented to
     also call methods with the given name.
@@ -3826,8 +3833,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 777
+- file: addon/-private/system/model/model.js
+  line: 782
   description: |-
     Alias DS.Model's `create` method to `_create`. This allows us to create DS.Model
     instances from within the store, but if end users accidentally call `create()`
@@ -3840,8 +3847,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 788
+- file: addon/-private/system/model/model.js
+  line: 793
   description: |-
     Override the class' `create()` method to raise an error. This
     prevents end users from inadvertently calling `create()` instead
@@ -3856,8 +3863,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/model/model.js"
-  line: 803
+- file: addon/-private/system/model/model.js
+  line: 808
   description: |-
     Represents the model's class name as a string. This can be used to look up the model through
     DS.Store's modelFor method.
@@ -3887,7 +3894,134 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/adapter-populated-record-array.js"
+- file: addon/-private/system/model/model.js
+  line: 860
+  description: |-
+    Get the reference for the specified belongsTo relationship.
+
+    Example
+
+    ```javascript
+    // models/blog.js
+    export default DS.Model.extend({
+      user: DS.belongsTo({ async: true })
+    });
+
+    store.push({
+      type: 'blog',
+      id: 1,
+      relationships: {
+        user: { type: 'user', id: 1 }
+      }
+    });
+    var userRef = blog.belongsTo('user');
+
+    // check if the user relationship is loaded
+    var isLoaded = userRef.value() !== null;
+
+    // get the record of the reference (null if not yet available)
+    var user = userRef.value();
+
+    // get the identifier of the reference
+    if (userRef.remoteType() === "id") {
+      var id = userRef.id();
+    } else if (userRef.remoteType() === "link") {
+      var link = userRef.link();
+    }
+
+    // load user (via store.findRecord or store.findBelongsTo)
+    userRef.load().then(...)
+
+    // or trigger a reload
+    userRef.reload().then(...)
+
+    // provide data for reference
+    userRef.push({
+      type: 'user',
+      id: 1,
+      attributes: {
+        username: "@user"
+      }
+    }).then(function(user) {
+      userRef.value() === user;
+    });
+    ```
+  itemtype: method
+  name: belongsTo
+  params:
+  - name: name
+    description: of the relationship
+    type: String
+  return:
+    description: reference for this relationship
+    type: BelongsToReference
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/model/model.js
+  line: 919
+  description: |-
+    Get the reference for the specified hasMany relationship.
+
+    Example
+
+    ```javascript
+    // models/blog.js
+    export default DS.Model.extend({
+      comments: DS.hasMany({ async: true })
+    });
+
+    store.push({
+      type: 'blog',
+      id: 1,
+      relationships: {
+        comments: {
+          data: [
+            { type: 'comment', id: 1 },
+            { type: 'comment', id: 2 }
+          ]
+        }
+      }
+    });
+    var commentsRef = blog.hasMany('comments');
+
+    // check if the comments are loaded already
+    var isLoaded = commentsRef.value() !== null;
+
+    // get the records of the reference (null if not yet available)
+    var comments = commentsRef.value();
+
+    // get the identifier of the reference
+    if (commentsRef.remoteType() === "ids") {
+      var ids = commentsRef.ids();
+    } else if (commentsRef.remoteType() === "link") {
+      var link = commentsRef.link();
+    }
+
+    // load comments (via store.findMany or store.findHasMany)
+    commentsRef.load().then(...)
+
+    // or trigger a reload
+    commentsRef.reload().then(...)
+
+    // provide data for reference
+    commentsRef.push([{ type: 'comment', id: 1 }, { type: 'comment', id: 2 }]).then(function(comments) {
+      commentsRef.value() === comments;
+    });
+    ```
+  itemtype: method
+  name: hasMany
+  params:
+  - name: name
+    description: of the relationship
+    type: String
+  return:
+    description: reference for this relationship
+    type: HasManyReference
+  class: DS.Model
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/record-arrays/adapter-populated-record-array.js
   line: 29
   itemtype: method
   name: loadRecords
@@ -3895,12 +4029,15 @@ classitems:
   - name: records
     description: ''
     type: Array
+  - name: payload
+    description: normalized payload
+    type: Object
   access: private
   tagname: ''
   class: DS.AdapterPopulatedRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/filtered-record-array.js"
+- file: addon/-private/system/record-arrays/filtered-record-array.js
   line: 21
   description: |-
     The filterFunction is a function used to test records from the store to
@@ -3935,7 +4072,7 @@ classitems:
   class: DS.FilteredRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/filtered-record-array.js"
+- file: addon/-private/system/record-arrays/filtered-record-array.js
   line: 55
   itemtype: method
   name: updateFilter
@@ -3944,7 +4081,7 @@ classitems:
   class: DS.FilteredRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 26
   description: The model type contained by this record array.
   itemtype: property
@@ -3953,7 +4090,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 34
   description: |-
     The array of client ids backing the record array. When a
@@ -3968,7 +4105,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 46
   description: |-
     The flag to signal a `RecordArray` is finished loading data.
@@ -3985,7 +4122,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 60
   description: |-
     The flag to signal a `RecordArray` is currently loading data.
@@ -4004,7 +4141,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 77
   description: The store that created this record array.
   itemtype: property
@@ -4015,7 +4152,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 86
   description: Retrieves an object from the content by index.
   itemtype: method
@@ -4032,7 +4169,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 100
   description: |-
     Used to get the latest version of all of the records in this array
@@ -4051,7 +4188,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 129
   description: Adds an internal model to the `RecordArray` without duplicates
   itemtype: method
@@ -4068,7 +4205,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 146
   description: Removes an internalModel to the `RecordArray`.
   itemtype: method
@@ -4082,7 +4219,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 157
   description: |-
     Saves all of the records in the `RecordArray`.
@@ -4104,7 +4241,7 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-arrays/record-array.js"
+- file: addon/-private/system/record-arrays/record-array.js
   line: 193
   itemtype: method
   name: _unregisterFromManager
@@ -4113,8 +4250,8 @@ classitems:
   class: DS.RecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/belongs-to.js"
-  line: 6
+- file: addon/-private/system/relationships/belongs-to.js
+  line: 5
   description: |-
     `DS.belongsTo` is used to define One-To-One and One-To-Many
     relationships on a [DS.Model](/api/data/classes/DS.Model.html).
@@ -4193,8 +4330,8 @@ classitems:
     type: Ember.computed
   class: DS
   module: ember-data
-- file: "addon/-private/system/relationships/ext.js"
-  line: 103
+- file: addon/-private/system/relationships/ext.js
+  line: 102
   description: |-
     This Ember.js hook allows an object to be notified when a property
     is defined.
@@ -4230,8 +4367,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 162
+- file: addon/-private/system/relationships/ext.js
+  line: 161
   description: |-
     For a given relationship name, returns the model type of the relationship.
 
@@ -4262,8 +4399,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 192
+- file: addon/-private/system/relationships/ext.js
+  line: 191
   description: |-
     Find the relationship which is the inverse of the one asked for.
 
@@ -4300,8 +4437,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 326
+- file: addon/-private/system/relationships/ext.js
+  line: 325
   description: |-
     The model's relationships as a map, keyed on the type of the
     relationship. The value of each entry is an array containing a descriptor
@@ -4342,8 +4479,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 367
+- file: addon/-private/system/relationships/ext.js
+  line: 366
   description: |-
     A hash containing lists of the model's relationships, grouped
     by the relationship kind. For example, given a model with this
@@ -4380,8 +4517,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 416
+- file: addon/-private/system/relationships/ext.js
+  line: 415
   description: |-
     An array of types directly related to a model. Each type will be
     included once, regardless of the number of relationships it has with
@@ -4417,8 +4554,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 451
+- file: addon/-private/system/relationships/ext.js
+  line: 450
   description: |-
     A map whose keys are the relationships of a model and whose values are
     relationship descriptors.
@@ -4457,8 +4594,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 489
+- file: addon/-private/system/relationships/ext.js
+  line: 488
   description: |-
     A map whose keys are the fields of the model and whose values are strings
     describing the kind of the field. A model's fields are the union of all of its
@@ -4502,8 +4639,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 544
+- file: addon/-private/system/relationships/ext.js
+  line: 543
   description: |-
     Given a callback, iterates over each of the relationships in the model,
     invoking the callback with the name of each relationship and its relationship
@@ -4521,8 +4658,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 560
+- file: addon/-private/system/relationships/ext.js
+  line: 559
   description: |-
     Given a callback, iterates over each of the types related to a model,
     invoking the callback with the related type's class. Each type will be
@@ -4541,8 +4678,8 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/ext.js"
-  line: 600
+- file: addon/-private/system/relationships/ext.js
+  line: 602
   description: |-
     Given a callback, iterates over each of the relationships in the model,
     invoking the callback with the name of each relationship and its relationship
@@ -4602,7 +4739,7 @@ classitems:
   class: DS.Model
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/relationships/has-many.js"
+- file: addon/-private/system/relationships/has-many.js
   line: 11
   description: |-
     `DS.hasMany` is used to define One-To-Many and Many-To-Many
@@ -4716,7 +4853,7 @@ classitems:
     type: Ember.computed
   class: DS
   module: ember-data
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 92
   description: "`true` if the relationship is polymorphic, `false` otherwise."
   itemtype: property
@@ -4727,7 +4864,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 100
   description: The loading state of this array
   itemtype: property
@@ -4736,7 +4873,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 107
   description: The relationship which manages this array.
   itemtype: property
@@ -4747,7 +4884,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 115
   description: |-
     Metadata associated with the request for async hasMany relationships.
@@ -4791,7 +4928,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 197
   description: |-
     Used for async `hasMany` arrays
@@ -4804,7 +4941,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 206
   itemtype: method
   name: loadingRecordsCount
@@ -4817,7 +4954,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 215
   itemtype: method
   name: loadedRecord
@@ -4826,7 +4963,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 227
   itemtype: method
   name: reload
@@ -4835,7 +4972,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 235
   description: |-
     Saves all of the records in the `ManyArray`.
@@ -4860,7 +4997,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/many-array.js"
+- file: addon/-private/system/many-array.js
   line: 264
   description: Create a child record within the owner
   itemtype: method
@@ -4877,7 +5014,7 @@ classitems:
   class: DS.ManyArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/normalize-link.js"
+- file: addon/-private/system/normalize-link.js
   line: 1
   description: |-
     This method normalizes a link to an "links object". If the passed link is
@@ -4897,8 +5034,8 @@ classitems:
     type: Object|null
   class: DS
   module: ember-data
-- file: "addon/-private/system/normalize-model-name.js"
-  line: 1
+- file: addon/-private/system/normalize-model-name.js
+  line: 3
   description: |-
     All modelNames are dasherized internally. Changing this function may
     require changes to other normalization hooks (such as typeForRoot).
@@ -4915,8 +5052,8 @@ classitems:
     type: String
   class: DS
   module: ember-data
-- file: "addon/-private/system/record-array-manager.js"
-  line: 47
+- file: addon/-private/system/record-array-manager.js
+  line: 48
   description: |-
     This method is invoked whenever data is loaded into the store by the
     adapter or updated by the adapter, or when a record has changed.
@@ -4929,8 +5066,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 107
+- file: addon/-private/system/record-array-manager.js
+  line: 108
   description: Update an individual filter.
   itemtype: method
   name: updateFilterRecordArray
@@ -4950,8 +5087,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 149
+- file: addon/-private/system/record-array-manager.js
+  line: 150
   description: |-
     This method is invoked if the `filterFunction` property is
     changed on a `DS.FilteredRecordArray`.
@@ -4973,8 +5110,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 175
+- file: addon/-private/system/record-array-manager.js
+  line: 176
   description: |-
     Get the `DS.RecordArray` for a type, which contains all loaded records of
     given type.
@@ -4990,8 +5127,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 187
+- file: addon/-private/system/record-array-manager.js
+  line: 188
   description: Create a `DS.RecordArray` for a type.
   itemtype: method
   name: createRecordArray
@@ -5005,8 +5142,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 206
+- file: addon/-private/system/record-array-manager.js
+  line: 207
   description: Create a `DS.FilteredRecordArray` for a type and register it for updates.
   itemtype: method
   name: createFilteredRecordArray
@@ -5026,8 +5163,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 230
+- file: addon/-private/system/record-array-manager.js
+  line: 231
   description: Create a `DS.AdapterPopulatedRecordArray` for a type with given query.
   itemtype: method
   name: createAdapterPopulatedRecordArray
@@ -5044,8 +5181,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 252
+- file: addon/-private/system/record-array-manager.js
+  line: 253
   description: |-
     Register a RecordArray for a given type to be backed by
     a filter function. This will cause the array to update
@@ -5066,8 +5203,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/record-array-manager.js"
-  line: 270
+- file: addon/-private/system/record-array-manager.js
+  line: 271
   description: |-
     Unregister a RecordArray.
     So manager will not update this array.
@@ -5080,102 +5217,8 @@ classitems:
   class: DS.RecordArrayManager
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/serializer.js"
-  line: 27
-  description: |-
-    The `store` property is the application's `store` that contains all records.
-    It's injected as a service.
-    It can be used to push records from a non flat data structure server
-    response.
-  itemtype: property
-  name: store
-  type: "{DS.Store}"
-  access: public
-  tagname: ''
-  class: DS.Serializer
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/serializer.js"
-  line: 38
-  description: |-
-    The `normalizeResponse` method is used to normalize a payload from the
-    server to a JSON-API Document.
-
-    http://jsonapi.org/format/#document-structure
-  itemtype: method
-  name: normalizeResponse
-  params:
-  - name: store
-    description: ''
-    type: DS.Store
-  - name: primaryModelClass
-    description: ''
-    type: DS.Model
-  - name: payload
-    description: ''
-    type: Object
-  - name: id
-    description: ''
-    type: String|Number
-  - name: requestType
-    description: ''
-    type: String
-  return:
-    description: JSON-API Document
-    type: Object
-  class: DS.Serializer
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/serializer.js"
-  line: 54
-  description: |-
-    The `serialize` method is used when a record is saved in order to convert
-    the record into the form that your external data source expects.
-
-    `serialize` takes an optional `options` hash with a single option:
-
-    - `includeId`: If this is `true`, `serialize` should include the ID
-      in the serialized object it builds.
-  itemtype: method
-  name: serialize
-  params:
-  - name: record
-    description: ''
-    type: DS.Model
-  - name: options
-    description: ''
-    type: Object
-    optional: true
-  return:
-    description: ''
-    type: Object
-  class: DS.Serializer
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/serializer.js"
-  line: 70
-  description: |-
-    The `normalize` method is used to convert a payload received from your
-    external data source into the normalized form `store.push()` expects. You
-    should override this method, munge the hash and return the normalized
-    payload.
-  itemtype: method
-  name: normalize
-  params:
-  - name: typeClass
-    description: ''
-    type: DS.Model
-  - name: hash
-    description: ''
-    type: Object
-  return:
-    description: ''
-    type: Object
-  class: DS.Serializer
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 14
+- file: addon/-private/system/snapshot-record-array.js
+  line: 16
   description: An array of snapshots
   access: private
   tagname: ''
@@ -5185,8 +5228,8 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 21
+- file: addon/-private/system/snapshot-record-array.js
+  line: 23
   description: An array of records
   access: private
   tagname: ''
@@ -5196,8 +5239,8 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 28
+- file: addon/-private/system/snapshot-record-array.js
+  line: 30
   description: Number of records in the array
   itemtype: property
   name: length
@@ -5205,8 +5248,8 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 34
+- file: addon/-private/system/snapshot-record-array.js
+  line: 36
   description: The type of the underlying records for the snapshots in the array,
     as a DS.Model
   itemtype: property
@@ -5215,8 +5258,8 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 40
+- file: addon/-private/system/snapshot-record-array.js
+  line: 42
   description: Meta object
   itemtype: property
   name: meta
@@ -5224,8 +5267,8 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 46
+- file: addon/-private/system/snapshot-record-array.js
+  line: 48
   description: A hash of adapter options
   itemtype: property
   name: adapterOptions
@@ -5233,8 +5276,8 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot-record-array.js"
-  line: 54
+- file: addon/-private/system/snapshot-record-array.js
+  line: 60
   description: Get snapshots of the underlying record array
   itemtype: method
   name: snapshots
@@ -5244,8 +5287,17 @@ classitems:
   class: DS.SnapshotRecordArray
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 38
+- file: addon/-private/system/snapshot.js
+  line: 34
+  description: A hash of adapter options
+  itemtype: property
+  name: adapterOptions
+  type: "{Object}"
+  class: DS.Snapshot
+  module: ember-data
+  namespace: DS
+- file: addon/-private/system/snapshot.js
+  line: 51
   description: |-
     The id of the snapshot's underlying record
 
@@ -5261,8 +5313,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 53
+- file: addon/-private/system/snapshot.js
+  line: 66
   description: |-
     The underlying record for this snapshot. Can be used to access methods and
     properties defined on the record.
@@ -5278,8 +5330,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 68
+- file: addon/-private/system/snapshot.js
+  line: 81
   description: The type of the underlying record for this snapshot, as a DS.Model.
   itemtype: property
   name: type
@@ -5287,8 +5339,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 76
+- file: addon/-private/system/snapshot.js
+  line: 89
   description: The name of the type of the underlying record for this snapshot, as
     a string.
   itemtype: property
@@ -5297,8 +5349,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 84
+- file: addon/-private/system/snapshot.js
+  line: 97
   description: |-
     Returns the value of an attribute.
 
@@ -5323,8 +5375,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 108
+- file: addon/-private/system/snapshot.js
+  line: 121
   description: |-
     Returns all attributes and their corresponding values.
 
@@ -5342,8 +5394,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 125
+- file: addon/-private/system/snapshot.js
+  line: 138
   description: |-
     Returns all changed attributes and their old and new values.
 
@@ -5362,8 +5414,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 151
+- file: addon/-private/system/snapshot.js
+  line: 164
   description: |-
     Returns the current value of a belongsTo relationship.
 
@@ -5410,8 +5462,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 228
+- file: addon/-private/system/snapshot.js
+  line: 241
   description: |-
     Returns the current value of a hasMany relationship.
 
@@ -5452,8 +5504,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 300
+- file: addon/-private/system/snapshot.js
+  line: 313
   description: |-
     Iterates through all the attributes of the model, calling the passed
     function on each attribute.
@@ -5478,8 +5530,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 320
+- file: addon/-private/system/snapshot.js
+  line: 333
   description: |-
     Iterates through all the relationships of the model, calling the passed
     function on each relationship.
@@ -5504,8 +5556,8 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/snapshot.js"
-  line: 340
+- file: addon/-private/system/snapshot.js
+  line: 353
   itemtype: method
   name: serialize
   params:
@@ -5518,7 +5570,7 @@ classitems:
   class: DS.Snapshot
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 216
   itemtype: method
   name: init
@@ -5527,7 +5579,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 234
   description: |-
     The adapter to use to communicate to a backend server or other persistence layer.
@@ -5546,7 +5598,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 251
   description: |-
     Returns a JSON representation of the record using a custom
@@ -5570,7 +5622,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 270
   description: |-
     This property returns the adapter, after resolving a possible
@@ -5591,7 +5643,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 299
   description: |-
     Create a new record in the current store. The properties passed
@@ -5631,7 +5683,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 361
   description: |-
     If possible, this method asks the adapter to generate an ID for
@@ -5653,7 +5705,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 385
   description: |-
     For symmetry, a record can be deleted via the store.
@@ -5676,7 +5728,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 405
   description: |-
     For symmetry, a record can be unloaded via the store. Only
@@ -5685,7 +5737,7 @@ classitems:
     Example
 
     ```javascript
-    store.find('post', 1).then(function(post) {
+    store.findRecord('post', 1).then(function(post) {
       store.unloadRecord(post);
     });
     ```
@@ -5698,7 +5750,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 428
   itemtype: method
   name: find
@@ -5720,7 +5772,7 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
+- file: addon/-private/system/store.js
   line: 460
   description: |-
     This method returns a record for a given type and id combination.
@@ -5776,8 +5828,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 568
+- file: addon/-private/system/store.js
+  line: 567
   description: |-
     This method makes a series of requests to the adapter's `find` method
     and returns a promise that resolves once they are all loaded.
@@ -5798,8 +5850,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 587
+- file: addon/-private/system/store.js
+  line: 588
   description: |-
     This method is called by `findRecord` if it discovers that a particular
     type/id pair hasn't been loaded yet to kick off a request to the
@@ -5818,8 +5870,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 737
+- file: addon/-private/system/store.js
+  line: 747
   description: |-
     Get a record by a given type and ID without triggering a fetch.
 
@@ -5849,8 +5901,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 766
+- file: addon/-private/system/store.js
+  line: 776
   description: |-
     This method is called by the record's `reload` method.
 
@@ -5871,8 +5923,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 790
+- file: addon/-private/system/store.js
+  line: 800
   description: Returns true if a record for a given type and ID is already loaded.
   itemtype: method
   name: hasRecordForId
@@ -5889,8 +5941,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 806
+- file: addon/-private/system/store.js
+  line: 816
   description: |-
     Returns id record for a given type and ID. If one isn't already loaded,
     it builds a new record and leaves it in the `empty` state.
@@ -5911,8 +5963,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 836
+- file: addon/-private/system/store.js
+  line: 846
   itemtype: method
   name: findMany
   access: private
@@ -5927,8 +5979,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 847
+- file: addon/-private/system/store.js
+  line: 863
   description: |-
     If a relationship was originally populated by the adapter as a link
     (as opposed to a list of IDs), this method is called when the
@@ -5959,8 +6011,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 874
+- file: addon/-private/system/store.js
+  line: 890
   itemtype: method
   name: findBelongsTo
   access: private
@@ -5981,8 +6033,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 891
+- file: addon/-private/system/store.js
+  line: 907
   description: |-
     This method delegates a query to the adapter. This is the one place where
     adapter-level semantics are exposed to the application.
@@ -6040,8 +6092,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 957
+- file: addon/-private/system/store.js
+  line: 975
   description: |-
     This method delegates a query to the adapter. This is the one place where
     adapter-level semantics are exposed to the application.
@@ -6055,9 +6107,9 @@ classitems:
   itemtype: method
   name: queryRecord
   params:
-  - name: type
+  - name: modelName
     description: ''
-    type: String or subclass of DS.Model
+    type: String
   - name: query
     description: an opaque query to be used by the adapter
     type: Any
@@ -6067,8 +6119,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 987
+- file: addon/-private/system/store.js
+  line: 1005
   description: |-
     `findAll` ask the adapter's `findAll` method to find the records
     for the given type, and return a promise that will be resolved
@@ -6100,8 +6152,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1016
+- file: addon/-private/system/store.js
+  line: 1034
   itemtype: method
   name: _fetchAll
   access: private
@@ -6119,8 +6171,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1045
+- file: addon/-private/system/store.js
+  line: 1063
   itemtype: method
   name: didUpdateAll
   params:
@@ -6132,8 +6184,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1055
+- file: addon/-private/system/store.js
+  line: 1073
   description: |-
     This method returns a filtered array that contains all of the
     known records for a given type in the store.
@@ -6164,8 +6216,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1088
+- file: addon/-private/system/store.js
+  line: 1106
   description: |-
     This method unloads all records in the store.
 
@@ -6184,8 +6236,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1130
+- file: addon/-private/system/store.js
+  line: 1147
   description: |-
     Takes a type and filter function, and returns a live RecordArray that
     remains up to date as new records are loaded into the store or created
@@ -6249,8 +6301,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1214
+- file: addon/-private/system/store.js
+  line: 1231
   description: |-
     This method returns if a certain record is already loaded
     in the store. Use this function to know beforehand if a findRecord()
@@ -6279,40 +6331,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1238
-  itemtype: method
-  name: _metadataFor
-  params:
-  - name: modelName
-    description: ''
-    type: String
-  return:
-    description: ''
-    type: Object
-  access: private
-  tagname: ''
-  class: DS.Store
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1250
-  itemtype: method
-  name: _setMetadataFor
-  params:
-  - name: modelName
-    description: ''
-    type: String
-  - name: metadata
-    description: metadata to set
-    type: Object
-  access: private
-  tagname: ''
-  class: DS.Store
-  module: ember-data
-  namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1266
+- file: addon/-private/system/store.js
+  line: 1259
   description: |-
     If the adapter updates attributes the record will notify
     the store to update its  membership in any filters.
@@ -6332,8 +6352,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1285
+- file: addon/-private/system/store.js
+  line: 1278
   description: |-
     This method is called by `record.save`, and gets passed a
     resolver for the promise that `record.save` returns.
@@ -6356,8 +6376,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1308
+- file: addon/-private/system/store.js
+  line: 1301
   description: |-
     This method is called at the end of the run loop, and
     flushes any records passed into `scheduleSave`
@@ -6368,8 +6388,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1340
+- file: addon/-private/system/store.js
+  line: 1333
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6391,8 +6411,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1369
+- file: addon/-private/system/store.js
+  line: 1362
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6411,8 +6431,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1383
+- file: addon/-private/system/store.js
+  line: 1376
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6431,8 +6451,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1397
+- file: addon/-private/system/store.js
+  line: 1390
   description: |-
     When an adapter's `createRecord`, `updateRecord` or `deleteRecord`
     resolves with data, this method extracts the ID from the supplied
@@ -6451,8 +6471,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1418
+- file: addon/-private/system/store.js
+  line: 1411
   description: Returns a map of IDs to client IDs for a given type.
   itemtype: method
   name: typeMapFor
@@ -6468,8 +6488,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1449
+- file: addon/-private/system/store.js
+  line: 1442
   description: This internal method is used by `push`.
   itemtype: method
   name: _load
@@ -6485,8 +6505,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1504
+- file: addon/-private/system/store.js
+  line: 1497
   description: |-
     Returns a model class for a particular key. Used by
     methods that take a type key (like `find`, `createRecord`,
@@ -6503,8 +6523,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1538
+- file: addon/-private/system/store.js
+  line: 1531
   description: |-
     Push some data for a given type into the store.
 
@@ -6663,8 +6683,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1768
+- file: addon/-private/system/store.js
+  line: 1753
   description: |-
     Push some raw data into the store.
 
@@ -6728,8 +6748,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1838
+- file: addon/-private/system/store.js
+  line: 1823
   description: |-
     `normalize` converts a json payload into the normalized form that
     [push](#method_push) expects.
@@ -6758,8 +6778,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1864
+- file: addon/-private/system/store.js
+  line: 1849
   description: |-
     Build a brand new record for a given type, ID, and
     initial data.
@@ -6783,8 +6803,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1906
+- file: addon/-private/system/store.js
+  line: 1891
   description: |-
     When a record is destroyed, this un-indexes it and
     removes it from any record arrays so it can be GCed.
@@ -6799,8 +6819,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1933
+- file: addon/-private/system/store.js
+  line: 1918
   description: |-
     Returns an instance of the adapter for a given type. For
     example, `adapterFor('person')` will return an instance of
@@ -6814,7 +6834,7 @@ classitems:
     the value of the `defaultAdapter`.
   itemtype: method
   name: adapterFor
-  access: private
+  access: public
   tagname: ''
   params:
   - name: modelName
@@ -6825,8 +6845,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 1965
+- file: addon/-private/system/store.js
+  line: 1950
   description: |-
     Returns an instance of the serializer for a given type. For
     example, `serializerFor('person')` will return an instance of
@@ -6844,7 +6864,7 @@ classitems:
     to an instance of `DS.JSONSerializer`.
   itemtype: method
   name: serializerFor
-  access: private
+  access: public
   tagname: ''
   params:
   - name: modelName
@@ -6856,8 +6876,8 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/system/store.js"
-  line: 2000
+- file: addon/-private/system/store.js
+  line: 1985
   description: |-
     Retrieve a particular instance from the
     container cache. If not found, creates it and
@@ -6886,7 +6906,54 @@ classitems:
   class: DS.Store
   module: ember-data
   namespace: DS
-- file: "addon/-private/core.js"
+- file: addon/-private/system/store.js
+  line: 2033
+  description: |-
+    Get the reference for the specified record.
+
+    Example
+
+    ```javascript
+    var userRef = store.getReference('user', 1);
+
+    // check if the user is loaded
+    var isLoaded = userRef.value() !== null;
+
+    // get the record of the reference (null if not yet available)
+    var user = userRef.value();
+
+    // get the identifier of the reference
+    if (userRef.remoteType() === "id") {
+    var id = userRef.id();
+    }
+
+    // load user (via store.find)
+    userRef.load().then(...)
+
+    // or trigger a reload
+    userRef.reload().then(...)
+
+    // provide data for reference
+    userRef.push({ id: 1, username: "@user" }).then(function(user) {
+      userRef.value() === user;
+    });
+        ```
+  itemtype: method
+  name: getReference
+  params:
+  - name: type
+    description: ''
+    type: String
+  - name: id
+    description: ''
+    type: String|Integer
+  return:
+    description: ''
+    type: RecordReference
+  class: DS.Store
+  module: ember-data
+  namespace: DS
+- file: addon/-private/core.js
   line: 15
   itemtype: property
   name: VERSION
@@ -6894,7 +6961,7 @@ classitems:
   static: 1
   class: DS
   module: ember-data
-- file: "addon/-private/utils.js"
+- file: addon/-private/utils.js
   line: 6
   description: |-
     Assert that `addedRecord` has a valid type so it can be added to the
@@ -6925,7 +6992,7 @@ classitems:
     type: InternalModel
   class: DS.JSONAPIAdapter
   module: ember-data
-- file: "addon/-private/utils.js"
+- file: addon/-private/utils.js
   line: 48
   description: Check if the passed model has a `type` attribute or a relationship
     named `type`.
@@ -6936,7 +7003,7 @@ classitems:
     description: ''
   class: DS.JSONAPIAdapter
   module: ember-data
-- file: "addon/adapters/json-api.js"
+- file: addon/adapters/json-api.js
   line: 17
   itemtype: method
   name: ajaxOptions
@@ -6958,7 +7025,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/json-api.js"
+- file: addon/adapters/json-api.js
   line: 43
   description: |-
     By default the JSONAPIAdapter will send each find request coming from a `store.find`
@@ -7009,7 +7076,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/json-api.js"
+- file: addon/adapters/json-api.js
   line: 92
   itemtype: method
   name: findMany
@@ -7032,7 +7099,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/json-api.js"
+- file: addon/adapters/json-api.js
   line: 105
   itemtype: method
   name: pathForType
@@ -7046,7 +7113,7 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/json-api.js"
+- file: addon/adapters/json-api.js
   line: 116
   itemtype: method
   name: updateRecord
@@ -7066,8 +7133,8 @@ classitems:
   class: DS.JSONAPIAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 197
+- file: addon/adapters/rest.js
+  line: 199
   description: |-
     By default, the RESTAdapter will send the query params sorted alphabetically to the
     server.
@@ -7116,8 +7183,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 253
+- file: addon/adapters/rest.js
+  line: 255
   description: |-
     By default the RESTAdapter will send each find request coming from a `store.find`
     or from accessing a relationship separately to the server. If your server supports passing
@@ -7167,8 +7234,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 302
+- file: addon/adapters/rest.js
+  line: 304
   description: |-
     Endpoint paths can be prefixed with a `namespace` by setting the namespace
     property on the adapter:
@@ -7188,8 +7255,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 320
+- file: addon/adapters/rest.js
+  line: 322
   description: |-
     An adapter can target other hosts by setting the `host` property.
 
@@ -7208,8 +7275,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 337
+- file: addon/adapters/rest.js
+  line: 339
   description: |-
     Some APIs require HTTP headers, e.g. to provide an API
     key. Arbitrary headers can be set as key/value pairs on the
@@ -7233,8 +7300,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 359
+- file: addon/adapters/rest.js
+  line: 361
   description: |-
     Called by the store in order to fetch the JSON for a given
     type and ID.
@@ -7264,8 +7331,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 379
+- file: addon/adapters/rest.js
+  line: 384
   description: |-
     Called by the store in order to fetch a JSON array for all
     of the records for a given type.
@@ -7293,8 +7360,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 405
+- file: addon/adapters/rest.js
+  line: 409
   description: |-
     Called by the store in order to fetch a JSON array for
     the records that match a particular query.
@@ -7323,8 +7390,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 432
+- file: addon/adapters/rest.js
+  line: 436
   description: |-
     Called by the store in order to fetch a JSON object for
     the record that matches a particular query.
@@ -7353,8 +7420,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 459
+- file: addon/adapters/rest.js
+  line: 463
   description: |-
     Called by the store in order to fetch several records together if `coalesceFindRequests` is true
 
@@ -7401,8 +7468,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 497
+- file: addon/adapters/rest.js
+  line: 501
   description: |-
     Called by the store in order to fetch a JSON array for
     the unloaded records in a has-many relationship that were originally
@@ -7449,8 +7516,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 541
+- file: addon/adapters/rest.js
+  line: 545
   description: |-
     Called by the store in order to fetch a JSON array for
     the unloaded records in a belongs-to relationship that were originally
@@ -7497,8 +7564,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 584
+- file: addon/adapters/rest.js
+  line: 588
   description: |-
     Called by the store when a newly created record is
     saved via the `save` method on a model record instance.
@@ -7526,8 +7593,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 610
+- file: addon/adapters/rest.js
+  line: 614
   description: |-
     Called by the store when an existing record is saved
     via the `save` method on a model record instance.
@@ -7555,8 +7622,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 638
+- file: addon/adapters/rest.js
+  line: 642
   description: |-
     Called by the store when a record is deleted.
 
@@ -7579,8 +7646,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 675
+- file: addon/adapters/rest.js
+  line: 679
   description: |-
     Organize records into groups, each of which is to be passed to separate
     calls to `findMany`.
@@ -7613,8 +7680,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 739
+- file: addon/adapters/rest.js
+  line: 743
   description: |-
     Takes an ajax response, and returns the json payload or an error.
 
@@ -7647,14 +7714,17 @@ classitems:
   - name: payload
     description: ''
     type: Object
+  - name: requestData
+    description: "- the original request information"
+    type: Object
   return:
     description: response
     type: Object | DS.AdapterError
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 778
+- file: addon/adapters/rest.js
+  line: 784
   description: |-
     Default `handleResponse` implementation uses this hook to decide if the
     response is a success.
@@ -7676,8 +7746,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 792
+- file: addon/adapters/rest.js
+  line: 798
   description: |-
     Default `handleResponse` implementation uses this hook to decide if the
     response is a an invalid error.
@@ -7699,8 +7769,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 806
+- file: addon/adapters/rest.js
+  line: 812
   description: |-
     Takes a URL, an HTTP method and a hash of data, and makes an
     HTTP request.
@@ -7737,8 +7807,21 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 877
+- file: addon/adapters/rest.js
+  line: 888
+  itemtype: method
+  name: _ajaxRequest
+  access: private
+  tagname: ''
+  params:
+  - name: options
+    description: jQuery ajax options to be used for the ajax request
+    type: Object
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: addon/adapters/rest.js
+  line: 897
   itemtype: method
   name: ajaxOptions
   access: private
@@ -7759,8 +7842,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 907
+- file: addon/adapters/rest.js
+  line: 927
   itemtype: method
   name: parseErrorResponse
   access: private
@@ -7775,8 +7858,8 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/adapters/rest.js"
-  line: 923
+- file: addon/adapters/rest.js
+  line: 943
   itemtype: method
   name: normalizeErrorResponse
   access: private
@@ -7797,7 +7880,296 @@ classitems:
   class: DS.RESTAdapter
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/adapters/rest.js
+  line: 965
+  description: |-
+    Generates a detailed ("friendly") error message, with plenty
+    of information for debugging (good luck!)
+  itemtype: method
+  name: generatedDetailedMessage
+  access: private
+  tagname: ''
+  params:
+  - name: status
+    description: ''
+    type: Number
+  - name: headers
+    description: ''
+    type: Object
+  - name: payload
+    description: ''
+    type: Object
+  return:
+    description: request information
+    type: Object
+  class: DS.RESTAdapter
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 100
+  description: |-
+    Normalize the record and recursively normalize/extract all the embedded records
+    while pushing them into the store as they are encountered
+
+    A payload with an attr configured for embedded records needs to be extracted:
+
+    ```js
+    {
+      "post": {
+        "id": "1"
+        "title": "Rails is omakase",
+        "comments": [{
+          "id": "1",
+          "body": "Rails is unagi"
+        }, {
+          "id": "2",
+          "body": "Omakase O_o"
+        }]
+      }
+    }
+    ```
+  itemtype: method
+  name: normalize
+  params:
+  - name: typeClass
+    description: ''
+    type: DS.Model
+  - name: hash
+    description: to be normalized
+    type: Object
+  - name: prop
+    description: the hash has been referenced by
+    type: String
+  return:
+    description: the normalized hash
+    type: Object
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 141
+  description: |-
+    Serialize `belongsTo` relationship when it is configured as an embedded object.
+
+    This example of an author model belongs to a post model:
+
+    ```js
+    Post = DS.Model.extend({
+      title:    DS.attr('string'),
+      body:     DS.attr('string'),
+      author:   DS.belongsTo('author')
+    });
+
+    Author = DS.Model.extend({
+      name:     DS.attr('string'),
+      post:     DS.belongsTo('post')
+    });
+    ```
+
+    Use a custom (type) serializer for the post model to configure embedded author
+
+    ```app/serializers/post.js
+    import DS from 'ember-data;
+
+    export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+      attrs: {
+        author: { embedded: 'always' }
+      }
+    })
+    ```
+
+    A payload with an attribute configured for embedded records can serialize
+    the records together under the root attribute's payload:
+
+    ```js
+    {
+      "post": {
+        "id": "1"
+        "title": "Rails is omakase",
+        "author": {
+          "id": "2"
+          "name": "dhh"
+        }
+      }
+    }
+    ```
+  itemtype: method
+  name: serializeBelongsTo
+  params:
+  - name: snapshot
+    description: ''
+    type: DS.Snapshot
+  - name: json
+    description: ''
+    type: Object
+  - name: relationship
+    description: ''
+    type: Object
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 237
+  description: |-
+    Serialize `hasMany` relationship when it is configured as embedded objects.
+
+    This example of a post model has many comments:
+
+    ```js
+    Post = DS.Model.extend({
+      title:    DS.attr('string'),
+      body:     DS.attr('string'),
+      comments: DS.hasMany('comment')
+    });
+
+    Comment = DS.Model.extend({
+      body:     DS.attr('string'),
+      post:     DS.belongsTo('post')
+    });
+    ```
+
+    Use a custom (type) serializer for the post model to configure embedded comments
+
+    ```app/serializers/post.js
+    import DS from 'ember-data;
+
+    export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+      attrs: {
+        comments: { embedded: 'always' }
+      }
+    })
+    ```
+
+    A payload with an attribute configured for embedded records can serialize
+    the records together under the root attribute's payload:
+
+    ```js
+    {
+      "post": {
+        "id": "1"
+        "title": "Rails is omakase",
+        "body": "I want this for my ORM, I want that for my template language..."
+        "comments": [{
+          "id": "1",
+          "body": "Rails is unagi"
+        }, {
+          "id": "2",
+          "body": "Omakase O_o"
+        }]
+      }
+    }
+    ```
+
+    The attrs options object can use more specific instruction for extracting and
+    serializing. When serializing, an option to embed `ids` or `records` can be set.
+    When extracting the only option is `records`.
+
+    So `{ embedded: 'always' }` is shorthand for:
+    `{ serialize: 'records', deserialize: 'records' }`
+
+    To embed the `ids` for a related object (using a hasMany relationship):
+
+    ```app/serializers/post.js
+    import DS from 'ember-data;
+
+    export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
+      attrs: {
+        comments: { serialize: 'ids', deserialize: 'records' }
+      }
+    })
+    ```
+
+    ```js
+    {
+      "post": {
+        "id": "1"
+        "title": "Rails is omakase",
+        "body": "I want this for my ORM, I want that for my template language..."
+        "comments": ["1", "2"]
+      }
+    }
+    ```
+  itemtype: method
+  name: serializeHasMany
+  params:
+  - name: snapshot
+    description: ''
+    type: DS.Snapshot
+  - name: json
+    description: ''
+    type: Object
+  - name: relationship
+    description: ''
+    type: Object
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 372
+  description: |-
+    When serializing an embedded record, modify the property (in the json payload)
+    that refers to the parent record (foreign key for relationship).
+
+    Serializing a `belongsTo` relationship removes the property that refers to the
+    parent record
+
+    Serializing a `hasMany` relationship does not remove the property that refers to
+    the parent record.
+  itemtype: method
+  name: removeEmbeddedForeignKey
+  params:
+  - name: snapshot
+    description: ''
+    type: DS.Snapshot
+  - name: embeddedSnapshot
+    description: ''
+    type: DS.Snapshot
+  - name: relationship
+    description: ''
+    type: Object
+  - name: json
+    description: ''
+    type: Object
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 443
+  itemtype: method
+  name: _extractEmbeddedRecords
+  access: private
+  tagname: ''
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 461
+  itemtype: method
+  name: _extractEmbeddedHasMany
+  access: private
+  tagname: ''
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 490
+  itemtype: method
+  name: _extractEmbeddedBelongsTo
+  access: private
+  tagname: ''
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/embedded-records-mixin.js
+  line: 513
+  itemtype: method
+  name: _normalizeEmbeddedRelationship
+  access: private
+  tagname: ''
+  class: DS.EmbeddedRecordsMixin
+  module: ember-data
+  namespace: DS
+- file: addon/serializers/json-api.js
   line: 101
   itemtype: method
   name: _normalizeDocumentHelper
@@ -7813,7 +8185,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 136
   itemtype: method
   name: _normalizeRelationshipDataHelper
@@ -7829,7 +8201,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 148
   itemtype: method
   name: _normalizeResourceHelper
@@ -7845,7 +8217,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 174
   itemtype: method
   name: pushPayload
@@ -7859,7 +8231,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 184
   itemtype: method
   name: _normalizeResponse
@@ -7890,7 +8262,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 200
   itemtype: method
   name: extractAttributes
@@ -7907,7 +8279,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 221
   itemtype: method
   name: extractRelationship
@@ -7921,7 +8293,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 246
   itemtype: method
   name: extractRelationships
@@ -7938,7 +8310,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 270
   itemtype: method
   name: _extractType
@@ -7957,7 +8329,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 281
   itemtype: method
   name: modelNameFromPayloadKey
@@ -7971,7 +8343,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 290
   itemtype: method
   name: payloadKeyFromModelName
@@ -7985,7 +8357,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 299
   itemtype: method
   name: normalize
@@ -8002,7 +8374,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 326
   description: |-
     `keyForAttribute` can be used to define rules for how to convert an
@@ -8039,7 +8411,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 356
   description: |-
     `keyForRelationship` can be used to define a custom key when
@@ -8079,7 +8451,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 386
   itemtype: method
   name: serialize
@@ -8096,7 +8468,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 398
   itemtype: method
   name: serializeAttribute
@@ -8116,7 +8488,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 427
   itemtype: method
   name: serializeBelongsTo
@@ -8133,7 +8505,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json-api.js"
+- file: addon/serializers/json-api.js
   line: 460
   itemtype: method
   name: serializeHasMany
@@ -8150,7 +8522,7 @@ classitems:
   class: DS.JSONAPISerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 86
   description: |-
     The `primaryKey` is used when serializing and deserializing
@@ -8176,7 +8548,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 110
   description: |-
     The `attrs` object can be used to declare a simple mapping between
@@ -8242,7 +8614,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 174
   description: |-
     Given a subclass of `DS.Model` and a JSON object this method will
@@ -8267,7 +8639,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 198
   description: |-
     The `normalizeResponse` method is used to normalize a payload from the
@@ -8318,7 +8690,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 257
   itemtype: method
   name: normalizeFindRecordResponse
@@ -8344,7 +8716,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 270
   itemtype: method
   name: normalizeQueryRecordResponse
@@ -8370,7 +8742,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 283
   itemtype: method
   name: normalizeFindAllResponse
@@ -8396,7 +8768,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 296
   itemtype: method
   name: normalizeFindBelongsToResponse
@@ -8422,7 +8794,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 309
   itemtype: method
   name: normalizeFindHasManyResponse
@@ -8448,7 +8820,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 322
   itemtype: method
   name: normalizeFindManyResponse
@@ -8474,7 +8846,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 335
   itemtype: method
   name: normalizeQueryResponse
@@ -8500,7 +8872,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 348
   itemtype: method
   name: normalizeCreateRecordResponse
@@ -8526,7 +8898,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 361
   itemtype: method
   name: normalizeDeleteRecordResponse
@@ -8552,7 +8924,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 374
   itemtype: method
   name: normalizeUpdateRecordResponse
@@ -8578,7 +8950,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 387
   itemtype: method
   name: normalizeSaveResponse
@@ -8604,7 +8976,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 400
   itemtype: method
   name: normalizeSingleResponse
@@ -8630,7 +9002,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 413
   itemtype: method
   name: normalizeArrayResponse
@@ -8656,7 +9028,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 426
   itemtype: method
   name: _normalizeResponse
@@ -8687,7 +9059,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 473
   description: |-
     Normalizes a part of the JSON payload returned by
@@ -8735,7 +9107,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 529
   description: Returns the resource's ID.
   itemtype: method
@@ -8753,7 +9125,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 543
   description: |-
     Returns the resource's attributes formatted as a JSON-API "attributes object".
@@ -8774,7 +9146,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 567
   description: |-
     Returns a relationship formatted as a JSON-API "relationship object".
@@ -8795,7 +9167,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 598
   description: |-
     Returns a polymorphic relationship formatted as a JSON-API "relationship object".
@@ -8827,7 +9199,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 621
   description: |-
     Returns the resource's relationships formatted as a JSON-API "relationships object".
@@ -8848,7 +9220,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 677
   itemtype: method
   name: modelNameFromPayloadKey
@@ -8862,7 +9234,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 687
   itemtype: method
   name: normalizeAttributes
@@ -8871,7 +9243,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 706
   itemtype: method
   name: normalizeRelationships
@@ -8880,7 +9252,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 725
   itemtype: method
   name: normalizeUsingDeclaredMapping
@@ -8889,7 +9261,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 755
   description: |-
     Looks up the property key that was set by the custom `attr` mapping
@@ -8908,7 +9280,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 786
   description: |-
     Check attrs.key.serialize property to inform if the `key`
@@ -8927,7 +9299,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 801
   description: |-
     When attrs.key.serialize is set to true then
@@ -8947,7 +9319,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 817
   description: Check if the given hasMany relationship should be serialized
   itemtype: method
@@ -8970,7 +9342,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 837
   description: |-
     Called when a record is saved in order to convert the
@@ -9132,7 +9504,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1014
   description: |-
     You can use this method to customize how a serialized record is added to the complete
@@ -9172,7 +9544,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1045
   description: |-
     `serializeAttribute` can be used to customize how `DS.attr`
@@ -9210,7 +9582,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1092
   description: |-
     `serializeBelongsTo` can be used to customize how `DS.belongsTo`
@@ -9248,7 +9620,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1145
   description: |-
     `serializeHasMany` can be used to customize how `DS.hasMany`
@@ -9285,7 +9657,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1190
   description: |-
     You can use this method to customize how polymorphic objects are
@@ -9327,7 +9699,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1223
   description: |-
     `extractMeta` is used to deserialize any meta information in the
@@ -9363,7 +9735,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1256
   description: |-
     `extractErrors` is used to extract model errors when a call is made
@@ -9407,7 +9779,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1311
   description: |-
     `keyForAttribute` can be used to define rules for how to convert an
@@ -9439,7 +9811,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1336
   description: |-
     `keyForRelationship` can be used to define a custom key when
@@ -9475,7 +9847,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1363
   description: |-
     `keyForLink` can be used to define a custom key when deserializing link
@@ -9495,7 +9867,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/json.js"
+- file: addon/serializers/json.js
   line: 1378
   itemtype: method
   name: transformFor
@@ -9514,7 +9886,7 @@ classitems:
   class: DS.JSONSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 60
   description: |-
     `keyForPolymorphicType` can be used to define a custom key when
@@ -9552,7 +9924,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 91
   description: |-
     Normalizes a part of the JSON payload returned by
@@ -9631,7 +10003,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 164
   description: |-
     Normalizes an array of resource payloads and returns a JSON-API Document
@@ -9659,7 +10031,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 348
   description: |-
     This method allows you to push a payload containing top-level
@@ -9699,7 +10071,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 409
   description: |-
     This method is used to convert each JSON root key in the payload
@@ -9766,7 +10138,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 473
   description: |-
     Called when a record is saved in order to convert the
@@ -9928,7 +10300,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 628
   description: |-
     You can use this method to customize the root keys serialized into the JSON.
@@ -9966,7 +10338,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 658
   description: |-
     You can use `payloadKeyFromModelName` to override the root key for an outgoing
@@ -10020,7 +10392,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 707
   description: |-
     You can use this method to customize how polymorphic objects are serialized.
@@ -10041,7 +10413,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/serializers/rest.js"
+- file: addon/serializers/rest.js
   line: 747
   description: |-
     You can use this method to customize how a polymorphic relationship should
@@ -10064,7 +10436,7 @@ classitems:
   class: DS.RESTSerializer
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 66
   description: |-
     If you would like your adapter to use a custom serializer you can
@@ -10088,7 +10460,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 88
   description: |-
     The `findRecord()` method is invoked when the store is asked for a record that
@@ -10138,7 +10510,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 125
   description: |-
     The `findAll()` method is used to retrieve all records for a given type.
@@ -10184,7 +10556,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 158
   description: |-
     This method is called when you call `query` on the store.
@@ -10229,7 +10601,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 190
   description: |-
     The `queryRecord()` method is invoked when the store is asked for a single
@@ -10280,7 +10652,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 230
   description: |-
     If the globally unique IDs for your records should be generated on the client,
@@ -10322,7 +10694,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 260
   description: |-
     Proxies to the serializer's `serialize` method.
@@ -10356,7 +10728,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 287
   description: |-
     Implement this method in a subclass to handle the creation of
@@ -10408,7 +10780,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 328
   description: |-
     Implement this method in a subclass to handle the updating of
@@ -10469,7 +10841,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 378
   description: |-
     Implement this method in a subclass to handle the deletion of
@@ -10522,7 +10894,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 420
   description: |-
     By default the store will try to coalesce all `fetchRecord` calls within the same runloop
@@ -10535,7 +10907,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 431
   description: Find multiple records at once if coalesceFindRequests is true.
   itemtype: method
@@ -10559,7 +10931,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 443
   description: |-
     Organize records into groups, each of which is to be passed to separate
@@ -10586,7 +10958,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 463
   description: |-
     This method is used by the store to determine if the store should
@@ -10611,7 +10983,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 481
   description: |-
     This method is used by the store to determine if the store should
@@ -10636,7 +11008,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 499
   description: |-
     This method is used by the store to determine if the store should
@@ -10663,7 +11035,7 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/adapter.js"
+- file: addon/adapter.js
   line: 519
   description: |-
     This method is used by the store to determine if the store should
@@ -10690,199 +11062,8 @@ classitems:
   class: DS.Adapter
   module: ember-data
   namespace: DS
-- file: "addon/attr.js"
-  line: 17
-  description: |-
-    A map whose keys are the attributes of the model (properties
-    described by DS.attr) and whose values are the meta object for the
-    property.
-
-    Example
-
-    ```app/models/person.js
-    import DS from 'ember-data';
-
-    export default DS.Model.extend({
-      firstName: attr('string'),
-      lastName: attr('string'),
-      birthday: attr('date')
-    });
-    ```
-
-    ```javascript
-    import Ember from 'ember';
-    import Person from 'app/models/person';
-
-    var attributes = Ember.get(Person, 'attributes')
-
-    attributes.forEach(function(meta, name) {
-      console.log(name, meta);
-    });
-
-    // prints:
-    // firstName {type: "string", isAttribute: true, options: Object, parentType: function, name: "firstName"}
-    // lastName {type: "string", isAttribute: true, options: Object, parentType: function, name: "lastName"}
-    // birthday {type: "date", isAttribute: true, options: Object, parentType: function, name: "birthday"}
-    ```
-  itemtype: property
-  name: attributes
-  static: 1
-  type: "{Ember.Map}"
-  readonly: ''
-  class: DS.Model
-  module: ember-data
-  namespace: DS
-- file: "addon/attr.js"
-  line: 70
-  description: |-
-    A map whose keys are the attributes of the model (properties
-    described by DS.attr) and whose values are type of transformation
-    applied to each attribute. This map does not include any
-    attributes that do not have an transformation type.
-
-    Example
-
-    ```app/models/person.js
-    import DS from 'ember-data';
-
-    export default DS.Model.extend({
-      firstName: attr(),
-      lastName: attr('string'),
-      birthday: attr('date')
-    });
-    ```
-
-    ```javascript
-    import Ember from 'ember';
-    import Person from 'app/models/person';
-
-    var transformedAttributes = Ember.get(Person, 'transformedAttributes')
-
-    transformedAttributes.forEach(function(field, type) {
-      console.log(field, type);
-    });
-
-    // prints:
-    // lastName string
-    // birthday date
-    ```
-  itemtype: property
-  name: transformedAttributes
-  static: 1
-  type: "{Ember.Map}"
-  readonly: ''
-  class: DS.Model
-  module: ember-data
-  namespace: DS
-- file: "addon/attr.js"
-  line: 120
-  description: |-
-    Iterates through the attributes of the model, calling the passed function on each
-    attribute.
-
-    The callback method you provide should have the following signature (all
-    parameters are optional):
-
-    ```javascript
-    function(name, meta);
-    ```
-
-    - `name` the name of the current property in the iteration
-    - `meta` the meta object for the attribute property in the iteration
-
-    Note that in addition to a callback, you can also pass an optional target
-    object that will be set as `this` on the context.
-
-    Example
-
-    ```javascript
-    import DS from 'ember-data';
-
-    var Person = DS.Model.extend({
-      firstName: attr('string'),
-      lastName: attr('string'),
-      birthday: attr('date')
-    });
-
-    Person.eachAttribute(function(name, meta) {
-      console.log(name, meta);
-    });
-
-    // prints:
-    // firstName {type: "string", isAttribute: true, options: Object, parentType: function, name: "firstName"}
-    // lastName {type: "string", isAttribute: true, options: Object, parentType: function, name: "lastName"}
-    // birthday {type: "date", isAttribute: true, options: Object, parentType: function, name: "birthday"}
-       ```
-  itemtype: method
-  name: eachAttribute
-  params:
-  - name: callback
-    description: The callback to execute
-    type: Function
-  - name: binding
-    description: the value to which the callback's `this` should be bound
-    type: Object
-    optional: true
-  static: 1
-  class: DS.Model
-  module: ember-data
-  namespace: DS
-- file: "addon/attr.js"
-  line: 169
-  description: |-
-    Iterates through the transformedAttributes of the model, calling
-    the passed function on each attribute. Note the callback will not be
-    called for any attributes that do not have an transformation type.
-
-    The callback method you provide should have the following signature (all
-    parameters are optional):
-
-    ```javascript
-    function(name, type);
-    ```
-
-    - `name` the name of the current property in the iteration
-    - `type` a string containing the name of the type of transformed
-      applied to the attribute
-
-    Note that in addition to a callback, you can also pass an optional target
-    object that will be set as `this` on the context.
-
-    Example
-
-    ```javascript
-    import DS from 'ember-data';
-
-    var Person = DS.Model.extend({
-      firstName: attr(),
-      lastName: attr('string'),
-      birthday: attr('date')
-    });
-
-    Person.eachTransformedAttribute(function(name, type) {
-      console.log(name, type);
-    });
-
-    // prints:
-    // lastName string
-    // birthday date
-       ```
-  itemtype: method
-  name: eachTransformedAttribute
-  params:
-  - name: callback
-    description: The callback to execute
-    type: Function
-  - name: binding
-    description: the value to which the callback's `this` should be bound
-    type: Object
-    optional: true
-  static: 1
-  class: DS.Model
-  module: ember-data
-  namespace: DS
-- file: "addon/attr.js"
-  line: 257
+- file: addon/attr.js
+  line: 38
   description: |-
     `DS.attr` defines an attribute on a [DS.Model](/api/data/classes/DS.Model.html).
     By default, attributes are passed through as-is, however you can specify an
@@ -10939,7 +11120,101 @@ classitems:
     type: Attribute
   class: DS
   module: ember-data
-- file: "addon/transform.js"
+- file: addon/serializer.js
+  line: 29
+  description: |-
+    The `store` property is the application's `store` that contains all records.
+    It's injected as a service.
+    It can be used to push records from a non flat data structure server
+    response.
+  itemtype: property
+  name: store
+  type: "{DS.Store}"
+  access: public
+  tagname: ''
+  class: DS.Serializer
+  module: ember-data
+  namespace: DS
+- file: addon/serializer.js
+  line: 40
+  description: |-
+    The `normalizeResponse` method is used to normalize a payload from the
+    server to a JSON-API Document.
+
+    http://jsonapi.org/format/#document-structure
+  itemtype: method
+  name: normalizeResponse
+  params:
+  - name: store
+    description: ''
+    type: DS.Store
+  - name: primaryModelClass
+    description: ''
+    type: DS.Model
+  - name: payload
+    description: ''
+    type: Object
+  - name: id
+    description: ''
+    type: String|Number
+  - name: requestType
+    description: ''
+    type: String
+  return:
+    description: JSON-API Document
+    type: Object
+  class: DS.Serializer
+  module: ember-data
+  namespace: DS
+- file: addon/serializer.js
+  line: 56
+  description: |-
+    The `serialize` method is used when a record is saved in order to convert
+    the record into the form that your external data source expects.
+
+    `serialize` takes an optional `options` hash with a single option:
+
+    - `includeId`: If this is `true`, `serialize` should include the ID
+      in the serialized object it builds.
+  itemtype: method
+  name: serialize
+  params:
+  - name: record
+    description: ''
+    type: DS.Model
+  - name: options
+    description: ''
+    type: Object
+    optional: true
+  return:
+    description: ''
+    type: Object
+  class: DS.Serializer
+  module: ember-data
+  namespace: DS
+- file: addon/serializer.js
+  line: 72
+  description: |-
+    The `normalize` method is used to convert a payload received from your
+    external data source into the normalized form `store.push()` expects. You
+    should override this method, munge the hash and return the normalized
+    payload.
+  itemtype: method
+  name: normalize
+  params:
+  - name: typeClass
+    description: ''
+    type: DS.Model
+  - name: hash
+    description: ''
+    type: Object
+  return:
+    description: ''
+    type: Object
+  class: DS.Serializer
+  module: ember-data
+  namespace: DS
+- file: addon/transform.js
   line: 41
   description: |-
     When given a deserialized value from a record attribute this
@@ -10962,7 +11237,7 @@ classitems:
   class: DS.Transform
   module: ember-data
   namespace: DS
-- file: "addon/transform.js"
+- file: addon/transform.js
   line: 59
   description: |-
     When given a serialize value from a JSON object this method must
@@ -10985,14 +11260,14 @@ classitems:
   class: DS.Transform
   module: ember-data
   namespace: DS
-- file: "node_modules/ember-inflector/addon/lib/ext/string.js"
+- file: node_modules/ember-inflector/addon/lib/ext/string.js
   line: 8
   description: See {{#crossLink "Ember.String/pluralize"}}{{/crossLink}}
   itemtype: method
   name: pluralize
   class: DS.String
   module: ember-data
-- file: "node_modules/ember-inflector/addon/lib/ext/string.js"
+- file: node_modules/ember-inflector/addon/lib/ext/string.js
   line: 18
   description: See {{#crossLink "Ember.String/singularize"}}{{/crossLink}}
   itemtype: method
@@ -11000,7 +11275,7 @@ classitems:
   class: DS.String
   module: ember-data
   namespace: DS
-- file: "node_modules/ember-inflector/addon/lib/helpers/pluralize.js"
+- file: node_modules/ember-inflector/addon/lib/helpers/pluralize.js
   line: 4
   description: |-
     If you have Ember Inflector (such as if Ember Data is present),
@@ -11022,7 +11297,7 @@ classitems:
     type: String|Property
   class: DS.Ember.HTMLBars.helpers
   module: ember-data
-- file: "node_modules/ember-inflector/addon/lib/helpers/singularize.js"
+- file: node_modules/ember-inflector/addon/lib/helpers/singularize.js
   line: 4
   description: |-
     If you have Ember Inflector (such as if Ember Data is present),
@@ -11038,7 +11313,7 @@ classitems:
     type: String|Property
   class: Ember.HTMLBars.helpers
   module: ember-data
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 121
   access: public
   tagname: |-
@@ -11049,7 +11324,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 143
   access: public
   tagname: ''
@@ -11058,7 +11333,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 154
   access: public
   tagname: disable caching
@@ -11067,7 +11342,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 172
   itemtype: method
   name: plural
@@ -11081,7 +11356,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 182
   itemtype: method
   name: singular
@@ -11095,7 +11370,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 192
   itemtype: method
   name: uncountable
@@ -11106,7 +11381,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 201
   itemtype: method
   name: irregular
@@ -11120,7 +11395,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 211
   itemtype: method
   name: pluralize
@@ -11131,7 +11406,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 222
   itemtype: method
   name: singularize
@@ -11142,7 +11417,7 @@ classitems:
   class: Ember.Inflector
   module: ember-data
   namespace: Ember
-- file: "node_modules/ember-inflector/addon/lib/system/inflector.js"
+- file: node_modules/ember-inflector/addon/lib/system/inflector.js
   line: 234
   access: protected
   tagname: ''
