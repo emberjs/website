@@ -17,10 +17,10 @@ roughly six weeks, is also being released today.
 ### Changes in Ember.js 2.4
 
 No new features are added in Ember core in 2.4. Instead this release
-is primarially comprised of bugfixes making it an excellent LTS candidate. In
+is primarily comprised of bugfixes making it an excellent LTS candidate. In
 general the core team and
 community have remained active around other highly visible parts of
-the Ember stack (Ember-CLI, Ember-Data, FastBoot, Glimmer, etc).
+the Ember stack (Ember CLI, Ember Data, FastBoot, Glimmer, etc).
 
 In six weeks, the current release build of 2.4 will become Ember's first
 LTS release. Builds on the LTS channel will receive critical bugfixes covering the
