@@ -134,7 +134,15 @@
   url: http://www.meetup.com/Ember-SC
   date: January 20, 2016
   image: /images/tomsters/socal.png
-# - title: NYC Tomster
-#   url: http://www.meetup.com/EmberJS-NYC/
-#   date: February 2, 2016
-#   image: /images/tomsters/nyc.png
+- title: NYC Tomster
+  url: http://www.meetup.com/EmberJS-NYC/
+  date: February 2, 2016
+  image: /images/tomsters/nyc.png
+- title: LTS Tomster
+  url: http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html
+  date: February 25, 2016
+  image: /images/tomsters/lts.png
+- title: LTS Release Bust
+  url: http://www.emberjs.com/builds
+  date: February 25, 2016
+  image: /images/tomsters/4-lts.png
