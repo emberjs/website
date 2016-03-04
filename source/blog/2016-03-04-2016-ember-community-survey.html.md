@@ -3,7 +3,7 @@ title: "2016 Ember Community Survey"
 author: Matthew Beale, Ryan LaBouve
 ---
 
-2015 was an increadible year to be a web developer, and great year to be
+2015 was an incredible year to be a web developer, and great year to be
 building an Ember app.
 
 Ember 2.0 landed in August, and with it came the first major shift in
