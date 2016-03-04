@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <%
+    require 'json'
+    require 'open-uri'
+
+    @version = JSON.parse(open('https://guides.emberjs.com/versions.json').read).last
     @path = current_page.url.gsub(/^\/guides/, '')
-    @new_url = "http://guides.emberjs.com/"
+    @new_url = "https://guides.emberjs.com/"
     unless @path == '/'
-      @new_url.concat("v2.0.0#{@path}")
+      @new_url.concat("#{@version}#{@path}")
     end
   %>
 
