@@ -1,8 +1,12 @@
 
-.survey-wrapper{
+.survey-wrapper {
   padding: 80px 0;
   text-align: center;
   background: white;
+}
+
+.survey-wrapper a:hover {
+  border: 0;
 }
 
 @media screen and (max-width: 360px) {
@@ -53,6 +57,8 @@
   margin-top: 20px;
   margin: auto;
   img {
+    display: inline;
+    background-color: transparent;
     width: 7px;
     transition: 0.2s margin-left ease-in-out;
     margin-left: 5px;
@@ -98,6 +104,7 @@
   font-size: 11px;
   img {
     max-width: 100%;
+    border: solid 1px #8E897B;
   }
 }
 
@@ -119,7 +126,7 @@
 
 .survey-footer {
   margin: auto;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 // Force layout.erb to play nice
