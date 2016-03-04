@@ -1,0 +1,141 @@
+
+.survey-wrapper {
+  padding: 80px 0;
+  text-align: center;
+  background: white;
+}
+
+.survey-wrapper a:hover {
+  border: 0;
+}
+
+@media screen and (max-width: 360px) {
+  .survey-wrapper {
+    padding: 50px 0;
+  }
+}
+
+.survey-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.survey-wrapper {
+  color: #747474;
+  padding-left: 10px;
+  padding-right: 10px;
+  p {
+    line-height: 1.8;
+  }
+}
+
+.survey-wrapper-header {
+  background: #fff;
+  background: url('/images/survey/bg.jpg') repeat;
+  background-size: cover;
+}
+
+.survey-wrapper.survey-wrapper-center {
+  text-align: center;
+}
+
+.survey-h1 {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 70px;
+  img {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 360px) {
+  .survey-h1 {
+    margin-top: 0px;
+  }
+}
+
+.survey-button:link, .survey-button:visited {
+  margin-top: 20px;
+  margin: auto;
+  img {
+    display: inline;
+    background-color: transparent;
+    width: 7px;
+    transition: 0.2s margin-left ease-in-out;
+    margin-left: 5px;
+    vertical-align: text-top;
+  }
+}
+
+.survey-border-top {
+  border-top: 1px solid #e5dbd6;
+}
+.survey-button:hover, .survey-button:active {
+  background: #2C92AD;
+  border-bottom: 0;
+  img {
+    margin-left: 10px;
+  }
+}
+
+.survey-image {
+  max-width: 100%;
+}
+
+.survey-row {
+  @include clearfix;
+}
+
+.survey-column {
+  width: 33%;
+  padding: 10px;
+  float: left;
+  margin-top: 18px;
+}
+
+@media screen and (max-width: 760px) {
+  .survey-column {
+    width: 100%;
+    float: none;
+  }
+}
+.survey-credits {
+  width: 135px;
+  margin: auto;
+  font-size: 11px;
+  img {
+    max-width: 100%;
+    border: solid 1px #8E897B;
+  }
+}
+
+.survey-tagline {
+  font-size: 14px;
+  color: #A4A4A4;
+  margin-bottom: 20px;
+}
+
+.survey-h2 {
+  line-height: 1.2;
+  font-size: 28px;
+}
+@media screen and (max-width: 460px) {
+  .survey-h2 {
+    font-size: 22px;
+  }
+}
+
+.survey-footer {
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+// Force layout.erb to play nice
+// with survey design
+.survey-wrapper ~ #content-wrapper {
+  display: none;
+}
+
+.survey-wrapper ~ #footer {
+  margin-top: 0;
+}
+
