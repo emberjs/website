@@ -15,6 +15,9 @@
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
     <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <% if current_page.data.responsive.eql? true %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% end %>
     <%= yield_content :head %>
   </head>
 

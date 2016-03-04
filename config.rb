@@ -120,6 +120,8 @@ helpers do
 
     if page.responsive
       classes += ' responsive'
+    else
+      classes += ' not-responsive'
     end
 
     classes

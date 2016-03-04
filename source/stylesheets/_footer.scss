@@ -3,6 +3,13 @@
   margin: auto;
 }
 
+.not-responsive .footer > .container {
+  width: 960px;
+}
+.not-responsive .footer {
+  min-width: 992px;
+}
+
 .footer a:link {
   font-family: 'Maven Pro';
 }
@@ -24,7 +31,7 @@
   background-color: #f2ece9;
   border-top: 1px solid #f9e7e4;
   border-top: 1px solid #e5dbd6;
-  text-align: center;
+  text-align: left;
   margin-top: 60px;
 }
 
@@ -32,10 +39,15 @@
   padding: 2rem 1rem
 }
 
-@media screen and (min-width: 53.75rem) {
-  .footer .container {
-    align-items:center;
-    display: flex
+.footer .container {
+  align-items:center;
+  display: flex
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .footer .container {
+    text-align: center;
+    display: block;
   }
 }
 
@@ -48,10 +60,14 @@
   text-transform: uppercase
 }
 
-@media screen and (min-width: 53.75rem) {
-  .footer .footer-info {
-    flex:0 0 18em;
-    text-align: left
+.footer .footer-info {
+  flex:0 0 18em;
+  text-align: left
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .footer .footer-info {
+    text-align: center;
   }
 }
 
