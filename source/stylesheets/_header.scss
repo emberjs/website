@@ -1,0 +1,181 @@
+.header-nav.container {
+  width: 992px; /* 960 + 16x2 padding */
+  list-style-type: none;
+}
+.responsive .header-nav.container {
+  max-width: 992px;
+  width: auto;
+}
+@media screen and (max-width: 992px) {
+  .header-nav.container {
+    padding: 0 1rem;
+  }
+
+}
+
+#st-search-input:focus {
+  border-color: #dd6a58;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.06),0 0 5px rgba(217,87,67,0.7);
+  outline: none;
+}
+
+.header a:hover {
+  border-bottom: none;
+}
+
+// The styles bellow were ported from the compiled sass from
+// https://guides.emberjs.com/v2.3.0/
+
+// Ideally we will install bourbon / bittters / neat
+// and reuse the same _base_ stylesheets as the guides.
+// Since that will affect many default styles hence
+// the overall visual aesthetics of the site, this is an intentional
+// intermediate step to quickly port the responsive header.
+
+.header {
+  background: #dd6a58 url("../images/header.svg") top center no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+@media screen and (min-width: 53.75rem) {
+  .header .container {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 53.75rem) {
+  .header .header-nav {
+    align-items: center;
+    display: flex;
+    height: 2.8rem;
+    justify-content: space-between;
+  }
+}
+
+.header a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.header-nav li {
+  margin-top: 11px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (min-width: 53.75em) {
+  .header-nav li {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 0 0;
+    -moz-flex: 1 0 0;
+    -ms-flex: 1 0 0;
+    flex: 1 0 0;
+    display: inline-block;
+  }
+}
+
+.header-nav li:not(.header-logo):not(.header-search) {
+  width: 32%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 53.75rem) {
+  .header-nav li:not(.header-logo):not(.header-search) {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 53.75rem) {
+  .header-nav .header-logo {
+    -webkit-box-flex: 1.5;
+    -moz-box-flex: 1.5;
+    box-flex: 1.5;
+    -webkit-flex: 1.5 0 0;
+    -moz-flex: 1.5 0 0;
+    -ms-flex: 1.5 0 0;
+    flex: 1.5 0 0;
+  }
+}
+
+@media screen and (min-width: 53.75rem) {
+  .header-nav .header-search {
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    box-flex: 2;
+    -webkit-flex: 2 0 0;
+    -moz-flex: 2 0 0;
+    -ms-flex: 2 0 0;
+    flex: 2 0 0;
+  }
+}
+
+.header-logo a {
+  height: 40px;
+  width: 100px;
+  background: url("../images/ember-logo.svg") no-repeat;
+  display: block;
+  margin: -15px auto 0 auto;
+}
+
+@media screen and (min-width: 53.75rem) {
+  .header-logo a {
+    margin-left: 0;
+  }
+}
+
+.header-search {
+  margin-left: 4%;
+  list-style-type: none;
+}
+@media screen and (max-width: 53.75rem) {
+  .header-search {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+.header-search .st-search-input {
+  appearance: none;
+  background: url("../images/search-icon.svg") rgba(255, 255, 255, 0.1) 10px 10px no-repeat;
+  border: none;
+  border-radius: 35px;
+  box-shadow: none;
+  color: #fff;
+  font-size: 0.9rem;
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 0;
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+.header-search .st-search-input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.header-search .st-search-input::-moz-placeholder {
+  color: #fff;
+}
+
+.header-search .st-search-input:-moz-placeholder {
+  color: #fff;
+}
+
+.header-search .st-search-input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.visually-hidden {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}

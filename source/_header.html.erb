@@ -1,0 +1,20 @@
+<header class="header">
+  <nav role="navigation" aria-label="main">
+    <ul class="header-nav container">
+      <li class="header-logo">
+        <a href="http://emberjs.com/"><span class="visually-hidden">Ember homepage</span></a>
+      <%= link_to_page "About", "/about" %>
+      <%= link_to_page "Guides", "http://guides.emberjs.com" %>
+      <%= link_to_page "API", "/api" %>
+      <%= link_to_page "Community", "/community" %>
+      <%= link_to_page "Blog", "/blog" %>
+      <%= link_to_page "Builds", "/builds" %>
+      <li class="header-search">
+        <form>
+          <input type="text" id="st-search-input" placeholder="" class="st-search-input" />
+        </form>
+        <div id="st-results-container"></div>
+      </li>
+    </ul>
+  </nav>
+</header>

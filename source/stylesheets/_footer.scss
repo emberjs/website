@@ -1,0 +1,93 @@
+.footer > .container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.footer a:link {
+  font-family: 'Maven Pro';
+}
+
+.footer a:hover {
+  border-bottom: none;
+}
+
+// The styles bellow were ported from the compiled sass from
+// https://guides.emberjs.com/v2.3.0/
+
+// Ideally we will install bourbon / bittters / neat
+// and reuse the same _base_ stylesheets as the guides.
+// Since that will affect many default styles hence
+// the overall visual aesthetics of the site, this is an intentional
+// intermediate step to quickly port the responsive footer.
+
+.footer {
+  background-color: #f2ece9;
+  border-top: 1px solid #f9e7e4;
+  border-top: 1px solid #e5dbd6;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer .container {
+  padding: 2rem 1rem
+}
+
+@media screen and (min-width: 53.75rem) {
+  .footer .container {
+    align-items:center;
+    display: flex
+  }
+}
+
+.footer .footer-info {
+  color: #999;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2;
+  margin: 0.625rem 0;
+  text-transform: uppercase
+}
+
+@media screen and (min-width: 53.75rem) {
+  .footer .footer-info {
+    flex:0 0 18em;
+    text-align: left
+  }
+}
+
+.footer .footer-info a {
+  color: #dd6a58
+}
+
+.footer .footer-statement {
+  color: #999;
+  flex: 1;
+  font-size: 1.1rem;
+  margin: 1rem 0
+}
+
+.footer .footer-social {
+  margin: 1rem 0
+}
+
+@media screen and (min-width: 53.75rem) {
+  .footer .footer-social {
+    flex:0 0 11em;
+    text-align: right
+  }
+}
+
+.footer .footer-social a {
+  -webkit-transition: opacity 200ms, color 200ms;
+  -moz-transition: opacity 200ms, color 200ms;
+  transition: opacity 200ms, color 200ms;
+  color: #999;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  opacity: 0.7
+}
+
+.footer .footer-social a:hover {
+  color: #dd6a58;
+  opacity: 1
+}
