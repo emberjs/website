@@ -1,22 +1,17 @@
 .header-nav.container {
-  width: 992px; /* 960 + 16x2 padding */
+  width: 960px;
+  padding: 0 1rem;
   list-style-type: none;
   margin: auto;
 }
 
 .responsive .header-nav.container {
-  max-width: 992px;
+  max-width: 960px;
   width: auto;
 }
 
-@media screen and (max-width: 992px) {
-  .responsive .header-nav.container {
-    padding: 0 1rem;
-  }
-}
-
 .not-responsive .header {
-  min-width: 992px;
+  min-width: 960px;
 }
 
 #st-search-input:focus {
@@ -72,10 +67,22 @@
   font-size: 1rem;
 }
 
+@media screen and (max-width: 53.75rem) {
+  .responsive .header a {
+    line-height: 24px;
+  }
+}
+
 .header-nav li {
   margin-top: 11px;
   margin-bottom: 10px;
   text-align: center;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .header-nav li {
+    margin-top: 10px;
+  }
 }
 
 // Desktop
@@ -142,12 +149,12 @@
   width: 100px;
   background: url("../images/ember-logo.svg") no-repeat;
   display: block;
-  margin: -15px auto 0 auto;
+  margin: -15px auto 0 0;
 }
 
-@media screen and (min-width: 53.75rem) {
+@media screen and (max-width: 53.75rem) {
   .responsive .header-logo a {
-    margin-left: 0;
+    margin-left: auto;
   }
 }
 
@@ -158,8 +165,7 @@
 }
 @media screen and (max-width: 53.75rem) {
   .responsive .header-search {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 0;
   }
 }
 
