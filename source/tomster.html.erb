@@ -14,7 +14,7 @@ title: "Tomster"
 
 <div class="tomster section list">
   <table id="tomster-list">
-    <% data.tomsters.sort_by {|t| Date.parse(t.date, t.title) }.reverse.each_slice(2) do |slice| %>
+    <% data.tomsters.sort_by {|t| [Date.parse(t.date), t.title] }.reverse.each_slice(2) do |slice| %>
       <tr>
         <% slice.each do |tomster| %>
           <td>

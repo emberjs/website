@@ -16,11 +16,11 @@ module Sponsors
     end
 
     def current_sponsors
-      @current_sponsors ||= sponsors.select(&:current?).sort_by(&:term_start)
+      @current_sponsors ||= sponsors.select(&:current?).sort_by { |s| [s.term_start, s.url] }
     end
 
     def past_sponsors
-      @past_sponsors ||= sponsors.reject(&:current?).sort_by(&:term_end).reverse
+      @past_sponsors ||= sponsors.reject(&:current?).sort_by { |s| [s.term_end, s.url] }.reverse
     end
   end
 
