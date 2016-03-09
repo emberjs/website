@@ -15,11 +15,13 @@
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
     <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
+    <% if current_page.data.responsive.eql? true %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% end %>
     <%= yield_content :head %>
   </head>
 
-  <body class="<%= page_classes %>">
-
+  <body class="<%= page_classes current_page.data %>">
 
     <!--[if lt IE 9]>
       <script type="text/javascript" src="/javascripts/common-old-ie.js"></script>
@@ -28,29 +30,7 @@
       <script type="text/javascript" src="/javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <div id="header">
-      <div id="wrapper">
-        <a id="logo" href="/">&nbsp;</a>
-        <ul id="nav">
-          <%= link_to_page "about", "/about" %>
-          <%= link_to_page "guides", "http://guides.emberjs.com" %>
-          <%= link_to_page "api", "/api" %>
-          <%= link_to_page "community", "/community" %>
-          <%= link_to_page "blog", "/blog" %>
-          <%= link_to_page "builds", "/builds" %>
-          <li id="search">
-            <form>
-              <input type="text" id="st-search-input" class="st-search-input" />
-            </form>
-            <div id="st-results-container"></div>
-          </li>
-        </ul>
-
-        <div id="github">
-          <a href="https://github.com/emberjs/ember.js"><i class="icon-fork"></i>Fork Us!</a>
-        </div>
-      </div>
-    </div>
+    <%= partial "header" %>
 
     <%= yield_content :outside_wrapper %>
 
@@ -67,28 +47,7 @@
       </div>
     </div>
 
-    <div id="footer">
-      <div id="footer-wrapper">
-        <div class="info">
-          Copyright <%= Time.now.strftime('%Y') %> <a href="http://tilde.io">Tilde Inc.</a><br>
-          <a href="/team">Core Team</a> | <a href="/sponsors">Sponsors</a><br>
-            <a href="/security">Security</a> | <a href="/legal">Legal</a> | <a href="/logos">Logos</a><br>
-            <a href="/guidelines">Community Guidelines</a>
-        </div>
-        <div class="statement">Ember.js is free, open source and always will be.</div>
-        <div class="links">
-          <a class="twitter" href="http://twitter.com/emberjs">
-            <i class="icon-twitter"></i><span>Twitter</span>
-          </a>
-          <a class="github" href="https://github.com/emberjs/ember.js">
-            <i class="icon-github"></i><span>GitHub</span>
-          </a>
-          <a class="googleplus" href="https://plus.google.com/communities/106387049790387471205">
-            <i class="icon-gplus"></i><span>Google+</span>
-          </a>
-        </div>
-      </div>
-    </div>
+    <%= partial "footer" %>
 
     <%= yield_content :foot %>
     <script type="text/javascript">
