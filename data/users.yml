@@ -759,6 +759,10 @@
   image: bidvine.png
   alt: "Bidvine"
   use: "Service matching site using Ember to build our web application"
+- url: http://societyofgrownups.com
+  image: societyofgrownups.png
+  alt: "Society of Grownups"
+  use: "One-stop shop for financial literacy and all things adulthood, built with Ember."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
