@@ -10,12 +10,13 @@ label,
 select {
   display: block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: .875em;
 }
 
 label {
   font-weight: 600;
   margin-bottom: $small-spacing / 2;
+  display: inline;
 
   &.required::after {
     content: "*";
