@@ -1,0 +1,15 @@
+body {
+  background-color: $base-background-color;
+  margin: 0;
+}
+
+main {
+  @include media($large-screen) {
+    display: flex;
+  }
+}
+
+.container {
+  @include outer-container;
+  padding: 0 1em;
+}

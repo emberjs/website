@@ -1,0 +1,21 @@
+.old-version-warning {
+  background-color: $ember-orange;
+  color: $creme;
+  padding: .5em;
+  border-radius: $base-border-radius;
+  margin-bottom: 40px;
+}
+
+.old-version-warning .btn {
+  float: right;
+  font-weight: bold;
+  font-size: 12px;
+  color: $creme;
+  padding: 0.3em 0.8em;
+  background-color: lighten($ember-orange, 10);
+  border-radius: $base-border-radius;
+
+  &:hover {
+    background: darken($ember-orange, 10);
+  }
+}
