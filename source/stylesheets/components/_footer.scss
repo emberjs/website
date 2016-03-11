@@ -1,0 +1,62 @@
+.footer {
+  background-color: shade($creme, 3%);
+  border-top: 1px solid $linen;
+  text-align: center;
+  font-family: $footer-font-family;
+
+  .container {
+    @include padding(2em 1em);
+
+    @include media($large-screen) {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .footer-info {
+    color: $medium-gray;
+    font-size: $small-font-size;
+    font-weight: 600;
+    line-height: 2;
+    margin: 1em 0;
+    text-transform: uppercase;
+
+    @include media($large-screen) {
+      flex: 0 0 18em;
+      text-align: left;
+    }
+
+    a {
+      color: $ember-orange;
+    }
+  }
+
+  .footer-statement {
+    color: $medium-gray;
+    flex: 1;
+    font-size: 1.1rem;
+    margin: 1em 0;
+  }
+
+  .footer-social {
+    margin: 1em 0;
+
+    @include media($large-screen) {
+      flex: 0 0 10em;
+      text-align: right;
+    }
+
+    a {
+      @include transition(opacity $duration, color $duration);
+      color: $medium-gray;
+      font-size: $large-font-size;
+      margin-left: 0.5em;
+      opacity: 0.7;
+
+      &:hover {
+        color: $ember-orange;
+        opacity: 1;
+      }
+    }
+  }
+}

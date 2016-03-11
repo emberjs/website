@@ -1,0 +1,166 @@
+.highlight {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  border-radius: $base-border-radius;
+  font-family: $monospace-font-family;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: $small-spacing 0 $large-spacing;
+  overflow: hidden;
+  position: relative;
+
+  &.handlebars {
+    .inline,
+    .inline-delimiter,
+    .delimiter {
+      color: $highlight-green;
+    }
+
+    .inline {
+      .attribute-name {
+        color: $highlight-green;
+      }
+
+      .attribute-value,
+      .content {
+        color: $highlight-green;
+      }
+    }
+  }
+
+  .scroller {
+    overflow: auto;
+  }
+
+  pre {
+    margin: 0;
+    font-size: 1.2em;
+  }
+
+  table {
+    border: none;
+    margin: 0;
+    table-layout: auto;
+    width: 100%;
+
+    tr,
+    th,
+    td {
+      border: none;
+    }
+
+    th,
+    td {
+      padding: 5px 10px;
+    }
+
+    td {
+      color: $white;
+
+      &.line-numbers {
+        color: $medium-gray;
+        text-align: center;
+        width: 2em;
+        background-color: $code-background;
+      }
+
+      &.code {
+        background-color: $code-background;
+        padding: 0.5em 0 0.5em 0.5em;
+      }
+    }
+
+    thead {
+      td {
+        color: lightgrey;
+      }
+    }
+
+    &.specific {
+      th, td {
+        padding: 5px 6px;
+      }
+    }
+
+    &.extensive {
+      font-size: 9px;
+    }
+
+    @each $tag, $color in $highlight-colors {
+      .#{$tag} {
+        color: $color;
+      }
+    }
+  }
+
+  .ribbon {
+    @include position(absolute, 0.33em -1px null null);
+    @include size(52px 20px);
+    background: 0 0 no-repeat;
+    background-size: 52px 20px;
+  }
+
+  &.javascript .ribbon,
+  &.js .ribbon {
+    background-image: image-url('ribbon-js.svg');
+  }
+  &.html .ribbon {
+    background-image: image-url('ribbon-html.svg');
+  }
+  &.handlebars .ribbon {
+    background-image: image-url('ribbon-hbs.svg');
+  }
+
+  .highlight-line {
+    border-left: transparent solid 5px;
+    border-right: transparent solid 5px;
+    box-sizing: content-box;
+    display: inline-block;
+    margin: 0 -10px;
+
+    &.added {
+      background-color: $highlight-added;
+    }
+
+    &.removed {
+      background-color: $highlight-removed;
+    }
+  }
+
+  .code .highlight-line {
+    border-left-width: 13px;
+    border-right-width: 13px;
+    margin: 0 -13px;
+    width: 613px;
+  }
+
+  .line-numbers .highlight-line {
+    width: 28px;
+    border-right-color: darken($highlight-yellow, 20%);
+
+    &.added {
+      border-right-color: darken($highlight-green, 20%);
+    }
+
+    &.removed {
+     border-right-color: darken($highlight-red, 20%);
+    }
+  }
+}
+
+code {
+  background-color: $base-border-color;
+  border-radius: $base-border-radius;
+  font-family: $monospace-font-family;
+  font-size: 0.9em;
+  padding: 0.2em 0.5em;
+  margin: 0 0.1em;
+}
+
+a code {
+  color: $ember-orange;
+}
+
+.CodeRay thead {
+  background-color: #292929;
+}

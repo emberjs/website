@@ -1,0 +1,16 @@
+.back-to-top {
+  @include transition(opacity $duration);
+  color: $action-color;
+  display: none;
+  margin-left: 1em;
+  text-align: center;
+
+  @include media(max-width ($max-width + 14em)) {
+    @include size(1.5em);
+    overflow: hidden;
+  }
+
+  @include media(max-width $max-width + 3em) {
+    height: 0;
+  }
+}
