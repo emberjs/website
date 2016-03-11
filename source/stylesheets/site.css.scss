@@ -20,17 +20,6 @@
 @import 'shared';
 @import 'survey';
 
-.visually-hidden {
-  border: 0 !important;
-  clip: rect(0 0 0 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-}
-
 /* Calculated page dimensions. */
 $page-width: 960px;
 $col-width: 40px;
@@ -52,7 +41,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4em;
   color: #444444;
   font-weight: normal;
