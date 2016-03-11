@@ -21,6 +21,7 @@
 
   a {
     color: $white;
+    line-height: 1.5rem;
   }
 }
 
@@ -28,6 +29,7 @@
   li {
     @include margin(10px null);
     text-align: center;
+    display: inherit;
 
     @include media($large-screen) {
       @include flex(1 0 0);
