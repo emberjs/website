@@ -12,6 +12,29 @@ require "bundler/setup"
 require 'yaml'
 require './lib/meetups_data'
 
+begin
+  require 'openssl'
+  require 'open-uri'
+  open('https://guides.emberjs.com/versions.json')
+rescue OpenSSL::SSL::SSLError
+  puts <<-NOTICE.gsub(/^    /, '')
+    IMPORTANT NOTICE
+    ================
+
+    It looks like you haven't set up your certs correctly.
+    You probably want to run \033[1;33mrvm osx-ssl-certs update all\033[0m
+    If you're not on OSX, or want more information, please check out
+    \033[1;34mhttps://rvm.io/support/fixing-broken-ssl-certificates\033[0m
+
+  NOTICE
+  exit!
+rescue Exception
+  puts "Attempting to download guides.emberjs.com/version.json failed."
+  puts "This will prevent the build from working correctly."
+  puts
+  raise
+end
+
 def git_initialize(repository)
   unless File.exist?(".git")
     system "git init"
