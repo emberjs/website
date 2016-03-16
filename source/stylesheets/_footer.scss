@@ -10,14 +10,27 @@
   min-width: 960px;
 }
 
-.footer a:link {
-  font-family: 'Maven Pro';
-}
-
 .footer a:hover {
   border-bottom: none;
 }
 
+@media screen and (max-width: 53.75rem) {
+  .responsive .footer .container {
+    padding: 2rem 1rem;
+
+    .footer-info {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    .footer-statement {
+      margin: 1.1rem 0;
+    }
+    .footer-social {
+      line-height: 32px;
+      margin-bottom: 18px;
+    }
+  }
+}
 // The styles bellow were ported from the compiled sass from
 // https://guides.emberjs.com/v2.3.0/
 
@@ -39,7 +52,7 @@
 }
 
 .footer .container {
-  padding: 2rem 1rem
+  padding: 1.875rem 1rem
 }
 
 .footer .container {
@@ -56,10 +69,11 @@
 
 .footer .footer-info {
   color: #999;
-  font-size: 0.75rem;
+  // font-size: 0.75rem;
+  font-size: 11px;
+  line-height: 24px;
   font-weight: 600;
-  line-height: 2;
-  margin: 0.625rem 0;
+  margin: 0.875rem 0;
   text-transform: uppercase
 }
 
@@ -82,7 +96,8 @@
   color: #999;
   flex: 1;
   font-size: 1.1rem;
-  margin: 1rem 0
+  margin: 1rem 0;
+  line-height: 26.4px;
 }
 
 .footer .footer-social {
@@ -102,7 +117,7 @@
   transition: opacity 200ms, color 200ms;
   color: #999;
   font-size: 1.5rem;
-  margin-left: 0.5rem;
+  margin-left: 0.75rem;
   opacity: 0.7
 }
 

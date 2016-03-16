@@ -9,50 +9,58 @@
     {
       "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
       "css": "search",
-      "code": 59396,
+      "code": 59392,
       "src": "fontawesome"
     },
     {
       "uid": "5211af474d3a9848f67f945e2ccaf143",
       "css": "cancel",
-      "code": 59394,
+      "code": 59393,
       "src": "fontawesome"
     },
     {
       "uid": "0ddd3e8201ccc7d41f7b7c9d27eca6c1",
       "css": "link",
-      "code": 59395,
+      "code": 59394,
       "src": "fontawesome"
     },
     {
       "uid": "d35a1d35efeb784d1dc9ac18b9b6c2b6",
       "css": "pencil",
-      "code": 59393,
+      "code": 59395,
       "src": "fontawesome"
     },
     {
       "uid": "bc4b94dd7a9a1dd2e02f9e4648062596",
       "css": "fork",
-      "code": 59392,
+      "code": 59396,
       "src": "fontawesome"
     },
     {
       "uid": "5e0a374728ffa8d0ae1f331a8f648231",
       "css": "github",
-      "code": 59398,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "b8d0c7d76e87b94882329a88e8e43d3d",
-      "css": "gplus",
-      "code": 59399,
+      "code": 59397,
       "src": "fontawesome"
     },
     {
       "uid": "627abcdb627cb1789e009c08e2678ef9",
       "css": "twitter",
-      "code": 59397,
+      "code": 59398,
       "src": "fontawesome"
+    },
+    {
+      "uid": "0350d80455823796cce38d84b2b91ba6",
+      "css": "gplus",
+      "code": 59399,
+      "src": "custom_icons",
+      "selected": true,
+      "svg": {
+        "path": "M801.9 509.5Q801.9 625.6 753.3 716.2T615 858 409 909Q325.9 909 250 876.7T119.4 789.6 32.4 659 0 500 32.4 341 119.4 210.4 250 123.3 409 91Q568.6 91 683 198.1L572 304.7Q506.7 241.6 409 241.6 340.4 241.6 282.1 276.2T189.7 370.3 155.7 500 189.7 629.7 282.1 723.8 409 758.4Q455.4 758.4 494.1 745.5T558 713.4 601.8 669.6 629.2 623.3 641.2 582H409V441.4H795.2Q801.9 476.6 801.9 509.5ZM1285.7 441.4V558.6H1169.1V675.2H1051.9V558.6H935.3V441.4H1051.9V324.8H1169.1V441.4H1285.7Z",
+        "width": 1285.7142857142858
+      },
+      "search": [
+        "glyph"
+      ]
     }
   ]
 }
