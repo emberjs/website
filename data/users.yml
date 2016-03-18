@@ -767,6 +767,10 @@
   image: b-lab.png
   alt: "B Lab"
   use: "We use Ember to build our products that help people use business as a force for good."
+- url: http://condenast.com
+  image: condenast.png
+  alt: "Condé Nast"
+  use: "Developing a cutting edge content management system with Ember."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
