@@ -766,7 +766,7 @@
 - url: http://bimpactassessment.net
   image: b-lab.png
   alt: "B Lab"
-  use: "We use Ember to help people use business as a force for good."
+  use: "We use Ember to build our products that help people use business as a force for good."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
