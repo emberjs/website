@@ -229,7 +229,7 @@ App.Project.reopenClass({
       enableTestURL: true,
       debugFileName: ".debug.js",
       ignoreFiles: ['ember.js'],
-      installWithEmberCLI: '# Install Ember %s:\nbower install --dev ember#v%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nbower install --dev ember#beta'
+      installWithEmberCLI: '# Install Ember %s:\nbower install --save ember#v%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nbower install --save ember#beta'
     }, {
       projectName: "Ember Data",
       baseFileName: 'ember-data',
@@ -264,7 +264,7 @@ App.Project.reopenClass({
       enableTestURL: true,
       debugFileName: ".debug.js",
       ignoreFiles: ['ember.js'],
-      installWithEmberCLI: '# Install the latest Ember canary:\nbower install --dev ember#canary'
+      installWithEmberCLI: '# Install the latest Ember canary:\nbower install --save ember#canary'
     }, {
       projectName: "Ember Data",
       baseFileName: 'ember-data',
