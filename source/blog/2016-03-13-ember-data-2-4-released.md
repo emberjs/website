@@ -21,11 +21,11 @@ details.
 
 #### Importing Modules
 
-[@pangratz](https://github.com/pangratz) added public paths to make it easy to import the `DS.EmbeddedRecordsMixin` and `DS.Serializer` modules.
+[@pangratz](https://github.com/pangratz) [added public paths](https://github.com/emberjs/data/pull/4125) to make it easy to import the `DS.EmbeddedRecordsMixin` and `DS.Serializer` modules.
 
 ```js
 // DS.EmbeddedRecordsMixin
-import EmbeddedRecordsMixin from 'ember-data/mixins/embedded-records';
+import EmbeddedRecordsMixin from 'ember-data/serializers/embedded-records-mixin';
 
 // DS.Serializer
 import Serializer from 'ember-data/serializer';
