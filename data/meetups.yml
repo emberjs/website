@@ -79,6 +79,13 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/7/3/5/c/thumb_77009532.jpeg
     - organizer: Robert Jackson
       profileImage: http://photos1.meetupstatic.com/photos/member/8/2/a/c/thumb_138033452.jpeg
+  - location: Nashville, TN
+    url: http://www.meetup.com/Nashville-EmberJS
+    lat: 36.152706
+    lng: -86.776111
+    organizers:
+    - organizer: Ryan Tablada
+      profileImage: http://photos3.meetupstatic.com/photos/member/2/7/1/8/thumb_250510008.jpeg
   - location: Atlanta, GA
     url: http://www.meetup.com/Ember-Atlanta-Meetup/
     image: 01atlanta.png
@@ -323,24 +330,24 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/6/a/2/4/thumb_241647172.jpeg
   - location: Riverside, CA
     url: http://www.meetup.com/Ember-Riverside-Meetup/
-    lat: 33.981040
+    lat: 33.98104
     lng: -117.376674
     organizers:
-      - organizer: Judd Lillestrand
-        profileImage: http://photos2.meetupstatic.com/photos/member/6/b/8/9/thumb_248067529.jpeg
+    - organizer: Judd Lillestrand
+      profileImage: http://photos2.meetupstatic.com/photos/member/6/b/8/9/thumb_248067529.jpeg
   - location: Raleigh, NC
     url: http://triangleember.com/
     lat: 35.77791
     lng: -78.63903
     organizers:
-      - organizer: Jason Draper
-        profileImage: http://photos3.meetupstatic.com/photos/member/c/3/1/6/highres_132229942.jpeg
-      - organizer: Christian Reuter
-        profileImage: http://photos2.meetupstatic.com/photos/member/a/b/8/8/highres_239803912.jpeg
+    - organizer: Jason Draper
+      profileImage: http://photos3.meetupstatic.com/photos/member/c/3/1/6/highres_132229942.jpeg
+    - organizer: Christian Reuter
+      profileImage: http://photos2.meetupstatic.com/photos/member/a/b/8/8/highres_239803912.jpeg
   - location: Silicon Valley, CA
     url: http://www.meetup.com/Silicon-Valley-EmberJS-Meetup/
-    lat: 37.389400
-    lng: -122.081900
+    lat: 37.3894
+    lng: -122.0819
     organizers:
     - organizer: Erik Bryn
   - location: Jacksonville Beach, FL
@@ -412,7 +419,7 @@ locations:
   - location: Medellin, Colombia
     url: http://www.meetup.com/Ember-Medellin
     lat: 6.217258
-    lng: -75.570780
+    lng: -75.57078
     organizers:
     - organizer: John Acosta
       profileImage: http://photos2.meetupstatic.com/photos/member/7/9/1/0/highres_145470992.jpeg
@@ -495,8 +502,8 @@ locations:
   - location: Madrid, Spain
     url: http://www.meetup.com/Ember-js-Madrid/
     image: 24madrid.png
-    lat: 40.4165000
-    lng: -3.7025600
+    lat: 40.4165
+    lng: -3.70256
     organizers:
     - organizer: Laura Paredes
       profileImage: http://photos4.meetupstatic.com/photos/member/a/1/d/8/thumb_147281432.jpeg
@@ -569,7 +576,7 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/d/3/2/4/thumb_162114052.jpeg
   - location: Saint Petersburg, Russia
     url: http://plus.google.com/b/102274210168727640530/102274210168727640530
-    lat: 59.934280
+    lat: 59.93428
     lng: 30.335099
     organizers:
     - organizer: Artem Sushchev
@@ -592,6 +599,9 @@ locations:
     url: http://www.meetup.com/Stockholm-Ember-js-Meetup/
     lat: 59.329323
     lng: 18.068581
+    organizers:
+    - organizer: jimmynode
+      profileImage: http://photos4.meetupstatic.com/photos/member/b/e/7/0/thumb_246288752.jpeg
 - area: Asia
   groups:
   - location: Tel Aviv, Israel
@@ -638,7 +648,7 @@ locations:
       profileImage: http://photos3.meetupstatic.com/photos/member/8/1/1/2/thumb_115833042.jpeg
   - location: Sydney, Australia
     url: http://www.meetup.com/EmberJS-SYD/
-    lat: -33.8650
+    lat: -33.865
     lng: 151.2094
     organizers:
     - organizer: Boris Gordon
