@@ -33,10 +33,8 @@
         <a href='#'>Namespaces</a>
         <% ol_for(:namespaces) do %>
           <% api_namespaces.each do |id, data| %>
-            <% unless data['access'] === 'private' or data['deprecated'] %>
-              <% li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
-                <%= api_namespace_link data['name'] %>
-              <% end %>
+            <% li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
+              <%= api_namespace_link data['name'] %>
             <% end %>
           <% end %>
         <% end %>
@@ -46,10 +44,8 @@
         <a href='#'>Classes</a>
         <% ol_for(:classes) do %>
           <% api_classes.each do |id, data| %>
-            <% unless data['access'] === 'private' or data['deprecated'] %>
-              <% li_for(:classes, name:data['name'], class: 'sub-selected') do %>
-                <%= api_class_link data['name'] %>
-              <% end %>
+            <% li_for(:classes, name:data['name'], class: 'sub-selected') do %>
+              <%= api_class_link data['name'] %>
             <% end %>
           <% end %>
         <% end %>

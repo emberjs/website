@@ -11,38 +11,39 @@ module APIDocs
         @apis = {}
 
         options.each do |key, opts|
+          @apis[key] = opts
 
-          api = Api.new(key, opts)
-          api.data = data.send opts[:data]
+          api_data = data.send opts[:data]
 
-          @apis[key] = api
+          @apis[key][:api_class] = Class.new(ApiClass)
+          @apis[key][:api_class].data = api_data
 
           page "/#{opts[:root]}*", directory_index: false, layout: 'layouts/api'
 
-          api.classes.each do |name, api_class|
+          api_data.fetch('classes').each do |name, data|
             page "/#{opts[:root]}/classes/#{name}.html", proxy: 'api/class.html', layout: 'layouts/api' do
               @title = name
-              @class = api_class
+              @class = @apis[key][:api_class].find(name)
             end
 
             if name == opts[:default_class]
               page "/#{opts[:root]}/index.html", proxy: 'api/class.html', layout: 'layouts/api' do
                 @title = name
-                @class = api_class
+                @class = @apis[key][:api_class].find(name)
               end
             end
           end
 
-          api.modules.each do |name, api_module|
+          api_data.fetch('modules').each do |name, data|
             page "/#{opts[:root]}/modules/#{name}.html", proxy: 'api/module.html', layout: 'layouts/api' do
               @title = name
-              @module = api_module
+              @module = data
             end
           end
 
           # Update data caches
           files.changed("data/#{opts[:data]}.yml") do
-            @apis[key].data = data.send opts[:data]
+            @apis[key][:api_class].data = api_data
           end
         end
       end
@@ -50,94 +51,29 @@ module APIDocs
     alias :included :registered
   end
 
-  class Api
-    attr_reader :key
-    attr_reader :opts
-    attr_reader :modules
-    attr_reader :classes
-    attr_reader :data
+  class ApiClass
+    @cache = {}
 
-    def initialize(key, opts)
-      @key = key
-      @opts = opts
-      @modules = {}
-      @classes = {}
+    @data = nil
+    class << self
+      attr_reader :cache
+      attr_reader :data
     end
 
-    def data=(data)
-      @data = data
-      @modules = {}
-      data['modules'].each_pair do |name, data|
-        @modules[name] = ModuleWrapper.new(name, data, self)
-      end
-      @classes = {}
-      data['classes'].each_pair do |name, data|
-        @classes[name] = ClassWrapper.new(name, data, self)
-      end
+    def self.data=(value)
+      @cache = {}
+      @data = value
     end
 
-    def name
-      @opts[:name]
+    def self.find(name)
+      cache[name] ||= new(name)
     end
 
-    def default_class
-      @opts[:default_class]
-    end
-
-    def root
-      @opts[:root]
-    end
-
-    def repo_url
-      @opts[:repo_url]
-    end
-
-    def sha
-      data['project']['sha']
-    end
-
-    def sha_url
-      "#{repo_url}/commits/#{sha}"
-    end
-
-    def tree_url(path)
-      "#{repo_url}/tree/#{sha}/#{path}"
-    end
-
-    def [](attr)
-      @opts[attr]
-    end
-  end
-
-  class ModuleWrapper
-    attr_reader :name
-
-    def initialize(name, data, cache)
-      @name = name
-      @data = data
-      @cache = cache
-    end
-
-    def to_s
-      return self.name
-    end
-
-    def [](attr)
-      @data[attr]
-    end
-
-    def method_missing(method, *args)
-      @data[method]
-    end
-  end
-
-  class ClassWrapper
     attr_reader :native
-    attr_reader :name
 
-    def initialize(name, data, cache)
-      @name = name
-      @cache = cache
+    def initialize(name)
+      data = self.class.data['classes'][name]
+
       if data
         @native = false
         @ldata = data
@@ -147,17 +83,20 @@ module APIDocs
       end
     end
 
+    #def self.inherited(subclass)
+    #  subclass.instance_variable_set(:@cache,
+
     def to_s
       return self.name
     end
 
     def extends
-      @extends ||= @ldata['extends'] && @cache.find_class(@ldata['extends'])
+      @extends ||= @ldata['extends'] && self.class.find(@ldata['extends'])
     end
 
     def uses
       @uses ||= @ldata['uses'] ?
-                  @ldata['uses'].map{|u| @cache.find_class(u) } :
+                  @ldata['uses'].map{|u| self.class.find(u) } :
                   []
     end
 
@@ -184,7 +123,7 @@ module APIDocs
           end
         end
 
-        @cache.data.classitems.each do |item|
+        self.class.data.classitems.each do |item|
           next if item['class'] != self.name
 
           item = item.clone
@@ -262,11 +201,19 @@ module APIDocs
       @level -= 1
     end
 
-    def _apiForResource(resource)
+    def _currentAPI(resource)
       # always pick the closest (longest) match
       # i.e. /api/data should match /api/data and not /api
-      sorted = @apis.values.sort { |x,y| y.root.length <=> x.root.length }
-      api = sorted.find {|api| resource.url.start_with? "/#{api.root}" }
+      matches = @apis.find_all { |name, opts| resource.url.start_with? "/" + opts[:root] }
+      matches.sort_by { |name, opts| opts[:root].length }.last
+    end
+
+    def _metadataForResource(resource)
+      _currentAPI(resource).last
+    end
+
+    def _dataForResource(resource)
+      data.send _metadataForResource(resource)[:data]
     end
 
     def li_for(category, options = {}, &block)
@@ -302,9 +249,9 @@ module APIDocs
       end
     end
 
-    def api_li_class(api_key, class_name = nil)
-      current_api = _apiForResource(current_resource)
-      class_name || 'sub-selected' if current_api.key == api_key
+    def api_li_class(name, class_name = nil)
+      current = _currentAPI(current_resource).first
+      class_name || 'sub-selected' if current == name
     end
 
     def selected_class(key, class_name = nil)
@@ -312,27 +259,31 @@ module APIDocs
     end
 
     def sha
-      _apiForResource(current_resource).sha
+      _dataForResource(current_resource).fetch('project')['sha']
     end
 
     def sha_url
-      _apiForResource(current_resource).sha_url
+      #"#{APIDocs.repo_url}/tree/#{sha}"
+      repo_url = _metadataForResource(current_resource)[:repo_url]
+      "#{repo_url}/commits/#{sha}"
     end
 
     def api_modules
-      _apiForResource(current_resource).modules.sort
+      _dataForResource(current_resource)['modules'].sort
     end
 
     def api_classes
-      _apiForResource(current_resource).classes.select{|_,c| !c['static'] }.sort
+      _dataForResource(current_resource)['classes'].select{|_,c| !c['static'] }.sort
     end
 
     def api_namespaces
-      _apiForResource(current_resource).classes.select{|_,c| c['static'] }.sort
+      _dataForResource(current_resource)['classes'].select{|_,c| c['static'] }.sort
     end
 
     def api_file_link(item, options = {})
-      api = _apiForResource(current_resource)
+      metadata = _metadataForResource(current_resource)
+      api_class = metadata[:api_class]
+      repo_url = metadata[:repo_url]
 
       return unless item['file']
       path = item['file'].sub(/^\.\.\//, '')
@@ -340,7 +291,7 @@ module APIDocs
       options[:class] ||= 'api-file-link'
 
       title = path
-      link  = api.tree_url(path)
+      link  = "#{repo_url}/tree/#{api_class.data['project']['sha']}/#{path}"
 
       if line = item['line']
         title += ":#{line}"
@@ -353,29 +304,30 @@ module APIDocs
     end
 
     def api_module(name)
-      return name if name.is_a?(ModuleWrapper)
-      _apiForResource(current_resource).modules[name]
+      return name if name.is_a?(Hash)
+      _dataForResource(current_resource)['modules'][name]
     end
 
     def api_class(name)
-      return name if name.is_a?(ClassWrapper)
+      api_class = _metadataForResource(current_resource)[:api_class]
+      return name if name.is_a?(ApiClass)
       name = name['name'] if name.is_a?(Hash)
-      _apiForResource(current_resource).classes[name]
+      api_class.find(name)
     end
     alias :api_namespace :api_class
 
     def api_module_link(name, anchor=nil)
-      api = _apiForResource(current_resource)
-      link = "/#{api.root}/modules/#{name}.html"
+      metadata = _metadataForResource(current_resource)
+      link = "/#{metadata[:root]}/modules/#{name}.html"
       link += '#'+anchor if anchor
       link_to name, link
     end
 
     def api_class_link(name, anchor=nil)
-      api = _apiForResource(current_resource)
-      api_class = api.classes[name]
-      if api_class && !api_class.native # do we need this?
-        link = "/#{api.root}/classes/#{name}.html"
+      metadata = _metadataForResource(current_resource)
+      klass = api_class(name)
+      if klass && !klass.native
+        link = "/#{metadata[:root]}/classes/#{name}.html"
         link += '#'+anchor if anchor
         link_to name, link
       else
