@@ -94,8 +94,14 @@
   margin-top: 18px;
 }
 
+.survey-column.half {
+  width: 50%;
+  float: left;
+  margin-top: 18px;
+}
+
 @media screen and (max-width: 760px) {
-  .survey-column {
+  .survey-column.survey-column { /* specificity hack */
     width: 100%;
     float: none;
   }
@@ -116,10 +122,29 @@
   margin-bottom: 20px;
 }
 
-.survey-h2 {
+.survey-h2,
+a.survey-h2:link,
+a.survey-h2:visited {
+  position: relative;
+  color: #252525;
+  font-family: 'Maven Pro';
+  font-weight: bold;
   line-height: 1.2;
   font-size: 28px;
 }
+
+a.survey-h2:hover:after,
+a.survey-h2:active:after {
+  font-family: 'fontello';
+  content: '\e802';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  padding: 0 0.3em;
+  color: #cccccc;
+}
+
+
 @media screen and (max-width: 460px) {
   .survey-h2 {
     font-size: 22px;
@@ -141,3 +166,11 @@
   margin-top: 0;
 }
 
+.survey-wrapper p.large {
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.4em;
+}
