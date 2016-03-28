@@ -37,7 +37,7 @@ code {
   overflow: hidden;
   position: relative;
   margin: 2em 0;
-  @include box-shadow(0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
@@ -140,5 +140,5 @@ code {
 
 @mixin well {
   @include hidpi('code_background', 'gif');
-  @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+  box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }
