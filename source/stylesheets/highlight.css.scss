@@ -2,7 +2,7 @@
 @import "shared";
 
 body.guides .highlight {
-  @include border-radius($highlight-border-radius);
+  border-radius: $highlight-border-radius;
   border: 1px solid #d1d1d1;
   color: $highlight-text-color;
 }
@@ -90,8 +90,8 @@ body.guides .highlight {
     border-right: 1px solid #d1d1d1;
     background-color: #f6f6f6;
     color: $highlight-gray;
-    @include border-top-left-radius($highlight-border-radius);
-    @include border-bottom-left-radius($highlight-border-radius);
+    border-top-left-radius: $highlight-border-radius;
+    border-bottom-left-radius: $highlight-border-radius;
   }
 
   td.code {
