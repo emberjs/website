@@ -17,12 +17,10 @@
 
 #builds-application {
   #sidebar {
-    $sidebar-width: 140px;
-
-    width: $sidebar-width;
+    width: $builds-sidebar-width;
 
     &:after {
-      width: $sidebar-width;
+      width: $builds-sidebar-width;
     }
   }
 

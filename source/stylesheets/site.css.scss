@@ -1,9 +1,9 @@
 @import 'compass';
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
+@import 'variables';
 @import 'mixins/hidpi';
 @import 'fonts';
-@import 'colors';
 @import 'header';
 @import 'footer';
 @import 'examples';
@@ -14,14 +14,6 @@
 @import 'dashboard';
 @import 'shared';
 @import 'survey';
-
-/* Calculated page dimensions. */
-$page-width: 960px;
-$col-width: 40px;
-$col-spacing: 20px;
-$sidebar-width: $col-width * 4 + $col-spacing * 3;
-$content-width: $page-width - $sidebar-width - $col-spacing * 2;
-
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
@@ -900,15 +892,12 @@ a.toc-anchor {
 
 .guides, .dashboard {
   .chapter {
-    $h3-indent: 32px;
-    $body-indent: $h3-indent;
-
     h1 {
       padding-bottom: 0.5em;
     }
 
     ul, ol {
-      margin-left: $body-indent;
+      margin-left: $list-indent;
       margin-bottom: 28px;
 
       li {
@@ -990,8 +979,6 @@ a.toc-anchor {
     margin: 0 0 3em 0;
     padding: 0 0 3em 0;
 
-    $h3-indent: 0;
-    $body-indent: $h3-indent;
     border-bottom: solid 1px #e0e0e0;
 
     &:last-child {
