@@ -15,7 +15,7 @@ require './lib/meetups_data'
 begin
   require 'openssl'
   require 'open-uri'
-  open('https://guides.emberjs.com/versions.json')
+  open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json')
 rescue OpenSSL::SSL::SSLError
   puts <<-NOTICE.gsub(/^    /, '')
     IMPORTANT NOTICE
