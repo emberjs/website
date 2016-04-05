@@ -7,7 +7,7 @@ code {
   color: #666;
   background-color: rgba(0, 0, 0, 0.04);
   padding: 3px;
-  @include border-radius(5px);
+  border-radius: 5px;
 }
 
 #content .tabs > ul {
@@ -30,20 +30,20 @@ code {
 #content .highlight {
   @include hidpi('code_background', 'gif');
   border: 1px solid #d1d1d1;
-  @include border-radius(5px);
+  border-radius: 5px;
   font-size: 12px;
   font-family: Menlo, monospace;
   line-height: 16px;
   overflow: hidden;
   position: relative;
   margin: 2em 0;
-  @include box-shadow(0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
   margin-top: 1em;
   border: 1px solid #e0e0e0;
-  @include border-radius(5px);
+  border-radius: 5px;
 
   overflow: hidden;
 
@@ -140,5 +140,5 @@ code {
 
 @mixin well {
   @include hidpi('code_background', 'gif');
-  @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+  box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }

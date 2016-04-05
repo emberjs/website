@@ -1,0 +1,107 @@
+@import "compass";
+@import "mixins/hidpi";
+
+@mixin community-content($selector) {
+  #{$selector} {
+    margin: 3em auto 0 auto;
+    width: 54em;
+  }
+
+  #{$selector}__heading {
+    text-align: center;
+    margin: 3em auto 1em auto;
+  }
+
+  #{$selector}__video {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  // Sections
+  #{$selector}__section-contribute,
+  #{$selector}__section-help,
+  #{$selector}__section-bugs,
+  #{$selector}__section-meetup,
+  #{$selector}__section-learn {
+    @include clearfix;
+  }
+
+  #{$selector}__section-meetup,
+  #{$selector}__section-learn {
+    width: 47%;
+    text-align: center;
+  }
+
+  #{$selector}__section-meetup {
+    float: left;
+  }
+
+  #{$selector}__section-learn {
+    float: right;
+  }
+
+
+  // Section headings
+
+  #{$selector}__h2 {
+    margin: 40px 0;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  // Section images
+
+  #{$selector}__section-image-contribute,
+  #{$selector}__section-image-help,
+  #{$selector}__section-image-bugs,
+  #{$selector}__section-image-meetup,
+  #{$selector}__section-image-learn {
+    float: left;
+    margin: 0 20px 15px 0;
+    width: 220px;
+    height: 142px;
+  }
+
+  #{$selector}__section-image-contribute {
+    @include hidpi('community/give', 'png');
+  }
+
+  #{$selector}__section-image-help {
+    @include hidpi('community/sos', 'png');
+  }
+
+  #{$selector}__section-image-bugs {
+    @include hidpi('community/bug', 'png');
+    float: right;
+    margin: 0 0 15px 20px;
+  }
+
+  #{$selector}__section-image-meetup {
+    @include hidpi('community/meetup', 'png');
+    background-position: center top;
+    float: none;
+    margin: 0 0 15px 20px;
+    width: 221px;
+    height: 185px;
+    margin: 0 auto;
+  }
+
+  #{$selector}__section-image-learn {
+    @include hidpi('community/campster', 'png');
+    background-position: center top;
+    float: none;
+    width: 201px;
+    height: 179px;
+    margin: 0 auto;
+  }
+
+
+  // Action buttons for the Meetup & Learn sections
+
+  #{$selector}__button-wrapper {
+    display: inline-block;
+  }
+}
+
+@include community-content('.community-content');
