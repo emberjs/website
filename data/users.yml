@@ -771,6 +771,10 @@
   image: condenast.png
   alt: "Condé Nast"
   use: "Developing a cutting edge content management system with Ember."
+- url: https://iloan.com
+  image: iloan.png
+  alt: "iLoan"
+  use: "Our internal customer support application is built using Ember."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
