@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v2.5.0
+  sha: v2.5.1
 files:
   addon/-private/adapters/build-url-mixin.js:
     name: addon/-private/adapters/build-url-mixin.js
