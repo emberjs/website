@@ -775,6 +775,10 @@
   image: iloan.png
   alt: "iLoan"
   use: "Our internal customer support application is built using Ember."
+- url: https://mammothhr.com
+  image: mammothhr.png
+  alt: "MammothHR"
+  use: "We use Ember to power our HR Support Center as well as several internal tools."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
