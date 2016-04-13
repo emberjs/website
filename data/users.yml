@@ -779,6 +779,10 @@
   image: mammothhr.png
   alt: "MammothHR"
   use: "We use Ember to power our HR Support Center as well as several internal tools."
+- url: https://ibotta.com/
+  image: ibotta.png
+  alt: "Ibotta"
+  use: "We use Ember for building our internal and external web applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
