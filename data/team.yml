@@ -72,23 +72,27 @@
   image: mmunoz.jpg
   type: core
 
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
+- name: Brendan McLoughlin
+  github: https://github.com/bmac
+  image: bmcloughlin.png
   type: data
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: dev
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: docs
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: comm
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: infra
+- name: David Baker
+  github: https://github.com/acorncom
+  image: dbaker.jpg
+  type: learning
+- name: Ricardo Mendez
+  github: https://github.com/locks
+  image: rmendez.jpg
+  type: learning
+- name: Katie Gengler
+  github: https://github.com/kategengler
+  image: kgengler.jpg
+  type: cli
+- name: Chad Hietala
+  github: https://github.com/chadhietala
+  image: chietala.jpg
+  type: cli
+- name: Todd Jordan
+  github: https://github.com/toddjordan
+  image: tjordan.jpg
+  type: learning
