@@ -71,6 +71,11 @@
   twitter: https://twitter.com/_mmun
   image: mmunoz.jpg
   type: core
+- name: Dan Gebhardt
+  github: https://github.com/dgeb
+  twitter: https://twitter.com/dgeb
+  image: dgeb.jpg
+  type: core
 
 - name: Brendan McLoughlin
   github: https://github.com/bmac
