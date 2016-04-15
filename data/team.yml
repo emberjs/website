@@ -86,6 +86,10 @@
   twitter: https://twitter.com/ChristofferP
   image: cpersson.jpg
   type: data
+- name: Clemens Müller
+  github: https://github.com/pangratz
+  image: cmueller.png
+  type: data
 - name: David Baker
   github: https://github.com/acorncom
   image: dbaker.jpg
