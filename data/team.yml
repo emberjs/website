@@ -110,3 +110,7 @@
   github: https://github.com/toddjordan
   image: tjordan.jpg
   type: learning
+- name: Nathan Hammond
+  github: https://github.com/nathanhammond
+  image: nhammond.jpg
+  type: cli
