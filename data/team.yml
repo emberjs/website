@@ -90,6 +90,11 @@
   github: https://github.com/pangratz
   image: cmueller.jpg
   type: data
+- name: Stanley Stuart
+  github: https://github.com/fivetanley
+  witter: https://twitter.com/fivetanley
+  image: fivetanley.jpg
+  type: data
 - name: David Baker
   github: https://github.com/acorncom
   image: dbaker.jpg
