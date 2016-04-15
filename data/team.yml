@@ -81,6 +81,11 @@
   github: https://github.com/bmac
   image: bmcloughlin.png
   type: data
+- name: Christoffer Persson
+  github: https://github.com/wecc
+  twitter: https://twitter.com/ChristofferP
+  image: cpersson.jpg
+  type: data
 - name: David Baker
   github: https://github.com/acorncom
   image: dbaker.jpg
