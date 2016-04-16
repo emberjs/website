@@ -71,24 +71,59 @@
   twitter: https://twitter.com/_mmun
   image: mmunoz.jpg
   type: core
+- name: Dan Gebhardt
+  github: https://github.com/dgeb
+  twitter: https://twitter.com/dgeb
+  image: dgeb.jpg
+  type: core
 
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
+- name: Brendan McLoughlin
+  github: https://github.com/bmac
+  image: bmcloughlin.png
   type: data
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: dev
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: docs
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: comm
-- name: Tomster
-  github: https://github.com/emberjs
-  image: ../tomsters/original.png
-  type: infra
+- name: Christoffer Persson
+  github: https://github.com/wecc
+  twitter: https://twitter.com/ChristofferP
+  image: cpersson.jpg
+  type: data
+- name: Clemens Müller
+  github: https://github.com/pangratz
+  image: cmueller.jpg
+  type: data
+- name: Stanley Stuart
+  github: https://github.com/fivetanley
+  witter: https://twitter.com/fivetanley
+  image: fivetanley.jpg
+  type: data
+- name: David Baker
+  github: https://github.com/acorncom
+  image: dbaker.jpg
+  type: learning
+- name: Ricardo Mendes
+  github: https://github.com/locks
+  image: rmendes.jpg
+  type: learning
+- name: Katie Gengler
+  github: https://github.com/kategengler
+  image: kgengler.jpg
+  type: cli
+- name: Chad Hietala
+  github: https://github.com/chadhietala
+  image: chietala.jpg
+  type: cli
+- name: Todd Jordan
+  github: https://github.com/toddjordan
+  image: tjordan.jpg
+  type: learning
+- name: Nathan Hammond
+  github: https://github.com/nathanhammond
+  image: nhammond.jpg
+  type: cli
+- name: Jacob Bixby
+  github: https://github.com/trabus
+  image: jbixby.jpg
+  type: cli
+- name: Kelly Selden
+  github: https://github.com/kellyselden
+  image: kselden.jpg
+  type: cli
