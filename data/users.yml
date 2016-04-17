@@ -786,7 +786,7 @@
 - url: https://feedza.com/
   image: feedza.png
   alt: "Feedza"
-  use: "The feedza web app was build with Ember"
+  use: "The feedza web app was built with Ember"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
