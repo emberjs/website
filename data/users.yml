@@ -783,6 +783,10 @@
   image: ibotta.png
   alt: "Ibotta"
   use: "We use Ember for building our internal and external web applications."
+- url: https://feedza.com/
+  image: feedza.png
+  alt: "Feedza"
+  use: "The feedza web app was build with Ember"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
