@@ -787,6 +787,10 @@
   image: wikia.png
   alt: "Wikia - Home of Fandom"
   use: "We use Ember for building our mobile web application and numerous contribution tools."
+- url: http://www.salsify.com/
+  image: salsify.png
+  alt: "Salsify"
+  use: "We use Ember for our product content management, product catalog, and digital asset management applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
