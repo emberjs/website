@@ -214,19 +214,24 @@ var post = store.peekRecord('post', 1);
 if (post.belongsTo('author').value() !== null) {
   console.log(post.get("author.name"));
 } else {
+  // get the id of the author without triggering a request
+  var authorId = post.belongsTo("author").id();
+
   // load the author
   post.belongsTo('author').load();
+  console.log(`Loading author with id ${authorId}`);
 }
 
 // reload the author
 post.belongsTo('author').reload();
 
+// get all ids without triggering a request
+var commentIds = post.hasMany('comments').ids();
+
 // check if there are comments, without triggering a request
 if (post.hasMany('comments').value() !== null) {
-  var ids = post.hasMany('comments').ids();
-
   var meta = post.hasMany('comments').meta();
-  console.log(`${ids.length} comments out of ${meta.total}`);
+  console.log(`${commentIds.length} comments out of ${meta.total}`);
 } else {
   post.hasMany('comments').load();
 }
@@ -235,5 +240,5 @@ if (post.hasMany('comments').value() !== null) {
 post.hasMany('comments').reload();
 ```
 
-Thanks to [ @pangratz](https://github.com/pangratz) for implementing
+Thanks to [@pangratz](https://github.com/pangratz) for implementing
 this feature.
