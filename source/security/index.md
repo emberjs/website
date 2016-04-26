@@ -1,5 +1,6 @@
 ---
 title: "Security Policy"
+responsive: true
 ---
 
 # Ember.js Security Policy
