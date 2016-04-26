@@ -791,6 +791,10 @@
   image: salsify.png
   alt: "Salsify"
   use: "We use Ember for our product content management, product catalog, and digital asset management applications."
+  - url: http://www.geometric.me/
+  image: geometric.png
+  alt: "Geometric"
+  use: "We are a consultancy that uses Ember for client projects."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
