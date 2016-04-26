@@ -1,0 +1,17 @@
+body.security.responsive > #content-wrapper {
+  padding: 3em;
+  padding-bottom: 1em;
+  width: auto;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+body.security.responsive #content {
+  width: auto;
+}
+
+@media screen and (max-width: 460px) {
+  body.security.responsive > #content-wrapper {
+    padding: 2em 1em 1em 1em;
+  }
+}
