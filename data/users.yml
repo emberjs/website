@@ -795,6 +795,10 @@
   image: feedza.png
   alt: "Feedza"
   use: "The feedza web app was built with Ember"
+- url: https://inquicker.com/
+  image: inquicker.png
+  alt: "InQuicker"
+  use: "We use Ember for our new customer-facing applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
