@@ -791,6 +791,10 @@
   image: salsify.png
   alt: "Salsify"
   use: "We use Ember for our product content management, product catalog, and digital asset management applications."
+- url: https://feedza.com/
+  image: feedza.png
+  alt: "Feedza"
+  use: "The feedza web app was built with Ember"
 - url: https://inquicker.com/
   image: inquicker.png
   alt: "InQuicker"
