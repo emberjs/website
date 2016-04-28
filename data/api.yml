@@ -2382,7 +2382,9 @@ classes:
       ------------
 
       ```js
-      var promise = new Promise(function(resolve, reject) {
+      import RSVP from ‘rsvp’;
+
+      var promise = new RSVP.Promise(function(resolve, reject) {
         // on success
         resolve(value);
 
@@ -2405,7 +2407,7 @@ classes:
 
       ```js
       function getJSON(url) {
-        return new Promise(function(resolve, reject){
+        return new RSVP.Promise(function(resolve, reject){
           var xhr = new XMLHttpRequest();
 
           xhr.open('GET', url);
@@ -2436,7 +2438,7 @@ classes:
       Unlike callbacks, promises are great composable primitives.
 
       ```js
-      Promise.all([
+      RSVP.all([
         getJSON('/posts'),
         getJSON('/comments')
       ]).then(function(values){
