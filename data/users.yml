@@ -807,7 +807,10 @@
   image: britishgas.png
   alt: British Gas
   use: "We use ember to build our customer interacting applications"
-
+- url: http://muffin.cafe
+  image: muffin.png
+  alt: "muffin"
+  use: "We use Ember for the admin area of our application."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
