@@ -26,27 +26,25 @@ title: "A framework for creating ambitious web applications."
   <a href="http://jobs.emberjs.com" class="job-board-banner" >Post and find jobs on the Ember job board</a>
 <% end %>
 
+<% @version = JSON.parse(open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json').read).last %>
+
 <h1 class="about-header-text">
   A framework for creating ambitious web applications.
 </h1>
 
-<div id="download">
-  <div id="download-ember">
-    <% highlight("shell", "install-ember-cli") do %>
-npm install -g ember-cli
-ember new my-app
-    <% end %>
-  </div>
+<div class="call-to-action">
+  <div class="top">
+    <h1>Get Started</h1>
+    <div class="cta-copy">
+      <p>Build your first Ember application with our 5 minute tutorial.</p>
+    </div>
 
-  <div class="info">
-    <a href="/builds">More downloads</a>
+    <a href="https://guides.emberjs.com/<%= @version %>/getting-started/quick-start/">View Quick Start guide</a>
   </div>
-
-  <ul class="social">
-    <li class="twitter">
-      <a href="https://twitter.com/emberjs" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @emberjs</a>
-    </li>
-  </ul>
+  <div class="bottom">
+    <p>$ npm install -g ember-cli</p>
+    <p>$ ember new ember-quickstart</p>
+  </div>
 </div>
 
 <div class="features section">
