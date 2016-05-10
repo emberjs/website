@@ -799,6 +799,10 @@
   image: inquicker.png
   alt: "InQuicker"
   use: "We use Ember for our new customer-facing applications."
+- url: http://number42.de/
+  image: num42.png
+  alt: "number42"
+  use: "Ember powers our digital product catalog solution 42stacks and many more of our clients' and internal products."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
