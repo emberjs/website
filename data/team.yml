@@ -2,128 +2,164 @@
   github: https://github.com/wycats
   twitter: https://twitter.com/wycats
   image: ykatz.jpg
-  type: core
+  teams:
+    - core
 - name: Tom Dale
   github: https://github.com/tomdale
   twitter: https://twitter.com/tomdale
   image: tdale.jpg
-  type: core
+  teams:
+    - core
 - name: Peter Wagenet
   github: https://github.com/wagenet
   twitter: https://twitter.com/wagenet
   image: pwagenet.jpg
-  type: core
-  alumni: true
+  teams:
+    - corealumni
 - name: Trek Glowacki
   github: https://github.com/trek
   twitter: https://twitter.com/trek
   image: tglowaki.jpg
-  type: core
-  alumni: true
+  teams:
+    - corealumni
 - name: Erik Bryn
   github: https://github.com/ebryn
   twitter: https://twitter.com/ebryn
   image: ebryn.jpg
-  type: core
+  teams: 
+    - core
 - name: Kris Selden
   github: https://github.com/krisselden
   twitter: https://twitter.com/krisselden
   image: kselden.jpg
-  type: core
+  teams:
+    - core
 - name: Stefan Penner
   github: https://github.com/stefanpenner
   twitter: https://twitter.com/stefanpenner
   image: spenner.jpg
-  type: core
+  teams:
+    - core
+    - cli
 - name: Leah Silber
   github: https://github.com/wifelette
   twitter: https://twitter.com/wifelette
   image: lsilber.jpg
-  type: core
+  teams:
+    - core
+    - learning
 - name: Alex Matchneer
   github: https://github.com/machty
   twitter: https://twitter.com/machty
   image: amatchneer.jpg
-  type: core
-  alumni: true
+  teams:
+    - corealumni
 - name: Robert Jackson
   github: https://github.com/rwjblue
   twitter: https://twitter.com/rwjblue
   image: rjackson.jpg
-  type: core
+  teams:
+    - core
+    - cli
 - name: Igor Terzic
   github: https://github.com/igorT
   twitter: https://twitter.com/terzicigor
   image: iterzic.jpeg
-  type: core
+  teams:
+    - core
+    - data
 - name: Matthew Beale
   github: https://github.com/mixonic
   twitter: https://twitter.com/mixonic
   image: mbeale.jpg
-  type: core
+  teams:
+    - core
 - name: Edward Faulkner
   github: https://github.com/ef4
   twitter: https://twitter.com/eaf4
   image: efaulkner.jpg
-  type: core
+  teams:
+    - core
 - name: Martin Muñoz
   github: https://github.com/mmun
   twitter: https://twitter.com/_mmun
   image: mmunoz.jpg
-  type: core
+  teams:
+    - core
 - name: Dan Gebhardt
   github: https://github.com/dgeb
   twitter: https://twitter.com/dgeb
   image: dgeb.jpg
-  type: core
+  teams:
+    - core
 
 - name: Brendan McLoughlin
   github: https://github.com/bmac
   image: bmcloughlin.png
-  type: data
+  teams: 
+    - data
 - name: Christoffer Persson
   github: https://github.com/wecc
   twitter: https://twitter.com/ChristofferP
   image: cpersson.jpg
-  type: data
+  teams: 
+    - data
 - name: Clemens Müller
   github: https://github.com/pangratz
   image: cmueller.jpg
-  type: data
+  teams: 
+    - data
 - name: Stanley Stuart
   github: https://github.com/fivetanley
-  witter: https://twitter.com/fivetanley
+  twitter: https://twitter.com/fivetanley
   image: fivetanley.jpg
-  type: data
+  teams: 
+    - data
+
 - name: David Baker
   github: https://github.com/acorncom
   image: dbaker.jpg
-  type: learning
+  teams: 
+    - learning
 - name: Ricardo Mendes
   github: https://github.com/locks
   image: rmendes.jpg
-  type: learning
-- name: Katie Gengler
-  github: https://github.com/kategengler
-  image: kgengler.jpg
-  type: cli
-- name: Chad Hietala
-  github: https://github.com/chadhietala
-  image: chietala.jpg
-  type: cli
+  teams: 
+    - learning
 - name: Todd Jordan
   github: https://github.com/toddjordan
   image: tjordan.jpg
-  type: learning
-- name: Nathan Hammond
-  github: https://github.com/nathanhammond
-  image: nhammond.jpg
-  type: cli
+  teams: 
+    - learning
+
+- name: Chad Hietala
+  github: https://github.com/chadhietala
+  image: chietala.jpg
+  teams: 
+    - cli
 - name: Jacob Bixby
   github: https://github.com/trabus
   image: jbixby.jpg
-  type: cli
+  teams: 
+    - cli
+- name: Katie Gengler
+  github: https://github.com/kategengler
+  image: kgengler.jpg
+  teams: 
+    - cli
 - name: Kelly Selden
   github: https://github.com/kellyselden
-  image: kselden.jpg
-  type: cli
+  image: kellyselden.jpg
+  teams: 
+    - cli
+- name: Nathan Hammond
+  github: https://github.com/nathanhammond
+  twitter: https://twitter.com/nathanhammond
+  image: nhammond.jpg
+  teams: 
+    - cli
+- name: Tobias Bieniek
+  github: https://github.com/Turbo87
+  image: tbieniek.jpg
+  teams: 
+    - cli
