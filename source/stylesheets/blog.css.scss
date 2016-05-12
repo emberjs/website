@@ -1,3 +1,19 @@
+body.blog.responsive 
+#content-wrapper{
+  width: 100%;
+  #sidebar {
+    width: 100%;
+    float: none;
+  }
+  #content.has-sidebar{
+    width: 100%;
+    float: none;
+  }
+}
+
+
+
+
 article.blog-post {
   h1 {
     min-height: 24px;
