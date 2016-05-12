@@ -7,21 +7,11 @@ body.sponsors_index.responsive > #content-wrapper {
 }
 
 body.sponsors_index.responsive #content {
-  width: auto;
+  width: 90%;
 }
 
 @media screen and (max-width: 460px) {
   body.sponsors_index.responsive > #content-wrapper {
-    padding: 2em 1em 1em 1em;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .section table.showcase td {
-    display: block;
-  }
-
-  .showcase td a {
-    margin: 0 auto;
+    padding: 2em 0 1em;
   }
 }

@@ -1,5 +1,6 @@
 ---
 title: "Users"
+responsive: true
 ---
 
 <h1>
@@ -15,19 +16,15 @@ title: "Users"
 
 <div class="users section">
 
-<table class="showcase">
-  <% data.users.each_slice(3) do |slice| %>
-    <tr>
-      <% slice.each do |user| %>
-        <td>
-          <a href="<%= user.url %>" rel="nofollow" target="_blank">
-            <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>">
-          </a>
-        </td>
-      <% end %>
-    </tr>
+<ul class="showcase">
+  <% data.users.each do |user| %>
+    <li>
+      <a href="<%= user.url %>" rel="nofollow" target="_blank">
+        <img src="/images/about/<%= user.image %>" alt="<%= user.alt %>">
+      </a>
+    </li>
   <% end %>
-</table>
+</ul>
 
 <!-- <a class="orange button" href="mailto:hello@emberjs.com">
   GET LISTED
