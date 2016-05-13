@@ -806,6 +806,8 @@
 - url: http://www.britishgas.co.uk/
   image: britishgas.png
   alt: British Gas
+  use: "We user ember to transform  exising other stacks of web BG application in to digital"
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
