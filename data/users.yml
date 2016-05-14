@@ -803,6 +803,11 @@
   image: num42.png
   alt: "number42"
   use: "Ember powers our digital product catalog solution 42stacks and many more of our clients' and internal products."
+- url: http://www.britishgas.co.uk/
+  image: britishgas.png
+  alt: British Gas
+  use: "We use ember to build our customer interacting applications"
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
