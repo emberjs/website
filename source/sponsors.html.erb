@@ -14,39 +14,31 @@ responsive: true
 <div class="sponsors section">
   <h2>Current Sponsors</h2>
 
-  <table class="showcase">
-    <% current_sponsors.each_slice(3) do |slice| %>
-      <tr>
-        <% slice.each do |user| %>
-          <td>
-            <a href="<%= user.url %>" rel="nofollow">
-              <img src="/images/about/<%= user.image %>">
-            </a>
-            <h5><%=user.term %></h5>
-            <p id="sponsorType"><%=user.type %></p>
-          </td>
-        <% end %>
-      </tr>
+  <ul class="showcase">
+    <% current_sponsors.each do |user| %>
+      <li>
+        <a href="<%= user.url %>" rel="nofollow">
+          <img src="/images/about/<%= user.image %>">
+        </a>
+        <h5><%=user.term %></h5>
+        <p id="sponsorType"><%=user.type %></p>
+    </li>
     <% end %>
-  </table>
+  </ul>
 
 <h2>Past Sponsors</h2>
 
-  <table class="showcase">
-    <% past_sponsors.each_slice(3) do |slice| %>
-      <tr>
-        <% slice.each do |user| %>
-          <td>
-            <a href="<%= user.url %>" rel="nofollow">
-              <img src="/images/about/<%= user.image %>">
-            </a>
-            <h5><%=user.term %></h5>
-            <p id="sponsorType"><%=user.type %></p>
-          </td>
-        <% end %>
-      </tr>
+  <ul class="showcase">
+    <% past_sponsors.each do |user| %>
+      <li>
+        <a href="<%= user.url %>" rel="nofollow">
+          <img src="/images/about/<%= user.image %>">
+        </a>
+        <h5><%=user.term %></h5>
+        <p id="sponsorType"><%=user.type %></p>
+    </li>
     <% end %>
-  </table>
+  </ul>
 
   <p class="thanks">A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original (this) Ember website.</p>
 

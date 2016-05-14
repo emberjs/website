@@ -508,6 +508,11 @@ p {
   }
 }
 
+.responsive #content-wrapper {
+    max-width: 960px;
+    width: 100%;
+}
+
 #content {
   &.has-sidebar {
     margin: 38px 0 90px 2.1em;
@@ -1517,7 +1522,8 @@ body.security #content {
 
   #content {
     margin: 3em auto 0 auto;
-    width: 54em;
+    max-width: 54em;
+    width: 90%;
   }
 
   .button {
@@ -1537,27 +1543,81 @@ body.security #content {
   width: 100%;
 }
 
-#content .showcase tr {
+ul.showcase {
+  @include clearfix;
+  list-style-type: none;
+}
+
+#content ul.showcase {
+  margin: 0;
+}
+
+#content .showcase li {
   background: transparent;
   border-bottom: none;
 }
 
-.showcase td {
+@media screen and (max-width: 780px) {
+  #content {
+    .showcase > li {
+      width: 50%;
 
-  &:nth-child(2) a {
-    margin: 0 auto;
+      a {
+        margin: 0 auto;
+      }
+    }
   }
+}
 
-  &:nth-child(3) a {
-    margin-left: auto;
+
+@media screen and (max-width: 560px) {
+  #content {
+    .showcase > li {
+      display: block;
+      float: none;
+      margin: 20px auto;
+      width: 100%;
+
+      a {
+        margin: 0 auto;
+      }
+    }
   }
+}
 
-  padding: 10px;
+.showcase > li {
+
+  float: left;
+
+  width: 33.333%;
+  margin: 10px 0;
+  &:nth-child(3n+1) {
+    a {
+      margin: 0 auto 0 0;
+    }
+  }
+  &:nth-child(3n+2) {
+    a {
+      margin: 0 auto 0 auto;
+    }
+  }
+  &:nth-child(3n+3) {
+    a {
+      margin: 0 0 0 auto;
+    }
+  }
   a {
     background-image: url('/images/about/user_bg.png');
     display: block;
     height: 103px;
     width: 210px;
+
+    img {
+      height: auto;
+      width: auto;
+      max-height: 103px;
+      max-width: 210px;
+    }
   }
 }
 
@@ -1837,18 +1897,22 @@ body.tomster_payment-sent #content {
   Sponsors Page
 **/
 
+#content {
+  .sponsors.section {
+    h2:nth-of-type(2) {
+      margin-top: 50px;
+    }
+  }
+}
+
 .sponsors {
   .section {
     width: 100%;
     margin-top: 0px;
-    padding: 0 2em 2em 2em;
+    padding: 0 0 2em;
 
     h2 {
       margin: 30px 0;
-    }
-
-    h2:nth-of-type(2) {
-      margin-top: 50px;
     }
   }
 
