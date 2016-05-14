@@ -806,7 +806,7 @@
 - url: http://www.britishgas.co.uk/
   image: britishgas.png
   alt: British Gas
-  use: "We user ember to transform  exising other stacks of web BG application in to digital"
+  use: "We use ember to build our customer interacting applications"
 
 
 # ---- PLEASE READ ----
