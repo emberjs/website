@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v2.5.2
+  sha: v2.5.3
 files:
   addon/-private/adapters/build-url-mixin.js:
     name: addon/-private/adapters/build-url-mixin.js
@@ -6161,7 +6161,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1025
+  line: 1028
   itemtype: method
   name: didUpdateAll
   params:
@@ -6174,7 +6174,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1035
+  line: 1038
   description: |-
     This method returns a filtered array that contains all of the
     known records for a given type in the store.
@@ -6206,7 +6206,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1069
+  line: 1072
   description: |-
     This method unloads all records in the store.
 
@@ -6226,7 +6226,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1110
+  line: 1113
   description: |-
     Takes a type and filter function, and returns a live RecordArray that
     remains up to date as new records are loaded into the store or created
@@ -6294,7 +6294,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1197
+  line: 1200
   description: |-
     This method returns if a certain record is already loaded
     in the store. Use this function to know beforehand if a findRecord()
@@ -6324,7 +6324,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1226
+  line: 1229
   description: |-
     If the adapter updates attributes the record will notify
     the store to update its  membership in any filters.
@@ -6345,7 +6345,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1245
+  line: 1248
   description: |-
     This method is called by `record.save`, and gets passed a
     resolver for the promise that `record.save` returns.
@@ -6369,7 +6369,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1268
+  line: 1271
   description: |-
     This method is called at the end of the run loop, and
     flushes any records passed into `scheduleSave`
@@ -6381,7 +6381,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1300
+  line: 1303
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6404,7 +6404,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1329
+  line: 1332
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6424,7 +6424,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1343
+  line: 1346
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6444,7 +6444,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1357
+  line: 1360
   description: |-
     When an adapter's `createRecord`, `updateRecord` or `deleteRecord`
     resolves with data, this method extracts the ID from the supplied
@@ -6464,7 +6464,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1378
+  line: 1381
   description: Returns a map of IDs to client IDs for a given type.
   itemtype: method
   name: typeMapFor
@@ -6481,7 +6481,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1409
+  line: 1412
   description: This internal method is used by `push`.
   itemtype: method
   name: _load
@@ -6498,7 +6498,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1464
+  line: 1467
   description: |-
     Returns a model class for a particular key. Used by
     methods that take a type key (like `find`, `createRecord`,
@@ -6516,7 +6516,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1500
+  line: 1503
   description: |-
     Push some data for a given type into the store.
 
@@ -6676,7 +6676,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1722
+  line: 1725
   description: |-
     Push some raw data into the store.
 
@@ -6741,7 +6741,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1796
+  line: 1799
   description: |-
     `normalize` converts a json payload into the normalized form that
     [push](#method_push) expects.
@@ -6771,7 +6771,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1823
+  line: 1826
   description: |-
     Build a brand new record for a given type, ID, and
     initial data.
@@ -6796,7 +6796,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1865
+  line: 1868
   description: |-
     When a record is destroyed, this un-indexes it and
     removes it from any record arrays so it can be GCed.
@@ -6812,7 +6812,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1892
+  line: 1895
   description: |-
     Returns an instance of the adapter for a given type. For
     example, `adapterFor('person')` will return an instance of
@@ -6838,7 +6838,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1924
+  line: 1927
   description: |-
     Returns an instance of the serializer for a given type. For
     example, `serializerFor('person')` will return an instance of
@@ -6869,7 +6869,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1959
+  line: 1962
   description: |-
     Retrieve a particular instance from the
     container cache. If not found, creates it and
@@ -6899,7 +6899,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2007
+  line: 2010
   description: |-
     Get the reference for the specified record.
 

@@ -251,10 +251,10 @@ App.Project.reopenClass({
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
-      lastRelease: "2.5.2",
-      futureVersion: "2.5.3",
+      lastRelease: "2.5.3",
+      futureVersion: "2.5.4",
       channel: "release",
-      date: "2016-04-14",
+      date: "2016-05-17",
       changelogPath: "CHANGELOG.md",
       debugFileName: ".js",
       installWithEmberCLI: '# Install Ember-Data %s:\nnpm install --save-dev ember-data@%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nnpm install --save-dev emberjs/data#release'
