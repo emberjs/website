@@ -13,7 +13,7 @@ Earlier this year [the Ember A11y project](http://www.ember-a11y.com) was starte
 
 ## How to Participate
 
-On May 19th join the Ember A11y team, addon maintainers, and other participants in [#topic-a11y](https://embercommunity.slack.com/archives/topic-a11y) on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/). Share what you're working on and connect with us for ideas and advice. We have a [curated list of issues in Ember community projects](https://docs.google.com/spreadsheets/d/1q4DkaNwH8mh7xZJa1TmrHNcFuFuWdQ80iG88c7N4QII/edit#gid=808967448) that you can help with, or feel free to bring and share what you're doing in your own app! If you've got something you want help tackling we're offering [pairing sessions with Ember A11y team members](https://pair.ember-a11y.com) throughout the day.
+On May 19th join the Ember A11y team, addon maintainers, and other participants in [#topic-a11y](https://embercommunity.slack.com/archives/topic-a11y) on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/). Share what you're working on and connect with us for ideas and advice. We have a [curated list of issues in Ember community projects](https://docs.google.com/spreadsheets/d/1q4DkaNwH8mh7xZJa1TmrHNcFuFuWdQ80iG88c7N4QII/edit#gid=808967448) that you can help with, or feel free to bring and share what you're doing in your own app! If you've got something you want help tackling we're offering [pairing sessions with Ember A11y team members](http://pair.ember-a11y.com) throughout the day.
 
 You can also [sign up for the Ember A11y mailing list at www.ember-a11y.com](http://www.ember-a11y.com/) to get notifications about Global Accessibility Awareness Day and other accessibility topics in the Ember community.
 
@@ -61,9 +61,7 @@ Lastly we encourage you to join us even if you're working on your own applicatio
 
 ## After GAAD
 
-Accessibility isn't a one-day-a-year project. We would love to have you with us in [#topic-a11y](https://embercommunity.slack.com/archives/topic-a11y) on the Ember Community Slack year-round.
-
-The Ember A11y community group is here to stay, and you can participate! Information about what we're working on shows up in our [fortnightly meeting notes](https://github.com/ember-a11y/core-notes/tree/ember-a11y/ember-a11y) and our nascent website, [ember-a11y.com](http://www.ember-a11y.com). We hang out in the [#topic-a11y channel](https://embercommunity.slack.com/archives/topic-a11y) on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/) and some of us haunt the [Web A11y Slack/Gitter](https://www.paciellogroup.com/blog/2015/07/anybody-can-be-an-a11y-slacker/). Come introduce yourself, we'd love to chat and help in any way we can.
+Accessibility isn't a one-day-a-year project. The Ember A11y community group is here to stay, and you can participate! Information about what we're working on shows up in our [fortnightly meeting notes](https://github.com/ember-a11y/core-notes/tree/ember-a11y/ember-a11y) and our nascent website, [ember-a11y.com](http://www.ember-a11y.com). We hang out in the [#topic-a11y channel](https://embercommunity.slack.com/archives/topic-a11y) on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/) and some of us haunt the [Web A11y Slack/Gitter](https://www.paciellogroup.com/blog/2015/07/anybody-can-be-an-a11y-slacker/). Come introduce yourself, we'd love to chat and help in any way we can.
 
 We've also set up a low-traffic email list for which you can sign up to be notified of accessibility-related news and happenings in the Ember community like Global Accessibility Awareness Day. [Sign up for email updates from the Ember A11y team.](http://www.ember-a11y.com/)
 
