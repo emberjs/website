@@ -7,13 +7,13 @@ tags: Recent Posts, Ember A11y
 
 May 19, 2016 marks the fifth annual **[Global Accessibility Awareness Day (GAAD)](http://www.globalaccessibilityawarenessday.org/)** and this year we're encouraging you, the Ember.js community, to participate. We want to make our framework, addons, and the applications we collectively build and maintain accessible to all users.
 
-Designing and building for accessibility can hugely benefit the Ember project and community. Accessibility helps inform the constraints of building great user interfaces, and making it easier to build better experiences results in greater adoption of Ember as a framework. Joining our efforts on May 19th is an investment in the Ember community and our collective future.
+Designing and building for accessibility can hugely benefit the Ember project and community. Accessibility informs the constraints of building great user interfaces, and better experiences result in greater adoption of Ember as a framework. Joining our efforts on May 19th is an investment in the Ember community and our collective future.
 
 Earlier this year [the Ember A11y project](http://www.ember-a11y.com) was started with the goal of making Ember applications _accessible by default_. We want Ember applications to move "beyond the ramp" of token accessibility and instead provide fantastic experiences for users of assistive technology. On Global Accessibility Awareness Day this year, we want **you** to get involved.
 
 ## How to Participate
 
-On May 19th join the Ember A11y team, addon maintainers, and other participants in [#topic-a11y](https://embercommunity.slack.com/archives/topic-a11y) on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/). Share what you're working on and connect with us for ideas and advice. We have a [curated list of issues in Ember community projects](https://docs.google.com/spreadsheets/d/1q4DkaNwH8mh7xZJa1TmrHNcFuFuWdQ80iG88c7N4QII/edit#gid=808967448) that you can help with or feel free to bring and share what you're doing for your own app as well! If you've got something you want help tackling we're offering [pairing sessions with Ember A11y team members](https://pair.ember-a11y.com) throughout the day.
+On May 19th join the Ember A11y team, addon maintainers, and other participants in [#topic-a11y](https://embercommunity.slack.com/archives/topic-a11y) on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/). Share what you're working on and connect with us for ideas and advice. We have a [curated list of issues in Ember community projects](https://docs.google.com/spreadsheets/d/1q4DkaNwH8mh7xZJa1TmrHNcFuFuWdQ80iG88c7N4QII/edit#gid=808967448) that you can help with, or feel free to bring and share what you're doing in your own app! If you've got something you want help tackling we're offering [pairing sessions with Ember A11y team members](https://pair.ember-a11y.com) throughout the day.
 
 You can also [sign up for the Ember A11y mailing list at www.ember-a11y.com](http://www.ember-a11y.com/) to get notifications about Global Accessibility Awareness Day and other accessibility topics in the Ember community.
 
