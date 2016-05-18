@@ -7,7 +7,7 @@ The website for the Ember.js project.
 To get started:
 
 ``` sh
-git clone git://github.com/emberjs/website.git
+git clone https://github.com/emberjs/website.git
 cd website
 bundle
 bundle exec middleman
