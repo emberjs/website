@@ -5,7 +5,7 @@ tags: Recent Posts
 ---
 
 I'm very happy to share with you our plan to scale Ember's day-to-day
-decision-making and coordination–something we're calling Subteams. We mentioned
+decision-making and coordination—something we're calling Subteams. We mentioned
 some of this in this year's EmberConf keynote, but wanted to expand on the
 specific details.
 
