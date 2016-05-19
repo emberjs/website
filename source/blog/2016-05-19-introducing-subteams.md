@@ -49,14 +49,14 @@ Its responsibilities include:
 * **Focusing on broad, cross-cutting concerns.** The Core Team is specifically
   designed to take a global view of the project, to make sure the pieces
   are fitting together in a coherent way.
-* **Spinning up or shuting down subteams.** Over time, we may want to expand the
+* **Spinning up or shutting down subteams.** Over time, we may want to expand the
   set of subteams, and it may make sense to have temporary "strike
   teams" that focus on a particular, limited task.
 * **Going/no-going features**. While the subteams make decisions on RFCs,
   the Core Team is responsible for pulling the trigger that moves a
   feature from canary to beta. This provides an extra check that
   features have adequately addressed cross-cutting concerns and that the
-  implementation quality is high enough
+  implementation quality is high enough.
 
 Each subteam is led by a Core Team liaison. This member is responsible for
 keeping the Core Team apprised of progress on important initiatives,
@@ -96,7 +96,7 @@ Data](http://discuss.emberjs.com/c/ember-data)
 
 ## Learning
 
-**Slack channel**: #learning  
+**Slack channel**: #-learning  
 **Discourse category**: [Learning](http://discuss.emberjs.com/c/learning)
 
 While the Ember CLI and Ember Data subteams should be self-explanatory,
