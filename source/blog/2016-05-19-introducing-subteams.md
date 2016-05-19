@@ -147,4 +147,8 @@ could not build as ambitiously without the dedication of these people.
 Please join me in welcoming the new subteams, and in thanking for them
 all of their hard work!
 
-
+*Many thanks to the Rust Core Team and particularly Aaron Turon's [Governance
+RFC](https://github.com/aturon/rfcs/blob/rust-governance/text/0000-rust-governance.md),
+and [subteam
+announcement](https://internals.rust-lang.org/t/announcing-the-subteams/2042),
+from which parts of this post are adapted.*
