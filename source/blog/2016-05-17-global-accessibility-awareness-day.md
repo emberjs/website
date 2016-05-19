@@ -19,7 +19,7 @@ You can also [sign up for the Ember A11y mailing list at www.ember-a11y.com](htt
 
 ### Contribute to the Ember A11y Project
 
-The [Ember A11y GitHub organization](https://github.com/ember-a11y/) has a collection of addons that we maintain as part of our commitment to accessibility in the Ember ecosystem. Our primary focus so far has been on functionality for [focus management](https://github.com/ember-a11y/ember-a11y) as well as [testing](https://github.com/trentmwillis/ember-axe). We'd love for you to help [add features](https://github.com/rwjblue/ember-template-lint/issues/41), [research issues](https://github.com/ember-a11y/ember-a11y/issues/3), [address `TODO:`s in the codebase](https://github.com/ember-a11y/ember-a11y/issues/9), and [test in multiple browser/assistive tech permutations](http://ember-a11y.github.io/ember-a11y/).
+The [Ember A11y GitHub organization](https://github.com/ember-a11y/) has a collection of addons that we maintain as part of our commitment to accessibility in the Ember ecosystem. Our primary focus so far has been on functionality for [focus management](https://github.com/ember-a11y/ember-a11y) as well as [testing](https://github.com/ember-a11y/ember-a11y-testing). We'd love for you to help [add features](https://github.com/rwjblue/ember-template-lint/issues/41), [research issues](https://github.com/ember-a11y/ember-a11y/issues/3), [address `TODO:`s in the codebase](https://github.com/ember-a11y/ember-a11y/issues/9), and [test in multiple browser/assistive tech permutations](http://ember-a11y.github.io/ember-a11y/).
 
 A curated list of Ember A11y issues ripe for the picking [will be here](https://docs.google.com/spreadsheets/d/1q4DkaNwH8mh7xZJa1TmrHNcFuFuWdQ80iG88c7N4QII/edit#gid=808967448).
 
@@ -57,7 +57,7 @@ This list of presentations is selected from the Ember community.
 
 ### Work on Your Own Application
 
-Lastly we encourage you to join us even if you're working on your own application behind closed doors. We recommend investigating adoption of [ember-a11y](https://emberobserver.com/addons/ember-a11y) for its focusing mechanics, adding [ember-a11y-testing](https://emberobserver.com/addons/ember-axe) into your CI pipeline to test for accessibility issues, as well as adopting [ember-cli-template-lint](https://emberobserver.com/addons/ember-cli-template-lint) which will hopefully include linting for accessibility issues by the end of the day on May 19th!
+Lastly we encourage you to join us even if you're working on your own application behind closed doors. We recommend investigating adoption of [ember-a11y](https://emberobserver.com/addons/ember-a11y) for its focusing mechanics, adding [ember-a11y-testing](https://emberobserver.com/addons/ember-a11y-testing) into your CI pipeline to test for accessibility issues, as well as adopting [ember-cli-template-lint](https://emberobserver.com/addons/ember-cli-template-lint) which will hopefully include linting for accessibility issues by the end of the day on May 19th!
 
 ## After GAAD
 
