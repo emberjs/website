@@ -18,7 +18,7 @@ Making things simple for developers often means a lot of coordination
 and decision-making behind the scenes. As the number of pieces making up
 Ember has grown—encompassing not only Ember.js but Ember CLI, Ember
 Data, the Ember Inspector, documentation, and more—we want to ensure
-that the core team does not become a bottleneck for progress.
+that the Core Team does not become a bottleneck for progress.
 
 At the same time, we believe that having a strong vision that everyone
 can rally behind is critical to building software that feels cohesive.
@@ -33,7 +33,7 @@ the hard work of these contributors.
 
 ## Core Team
 
-The core team serves as the leadership for the Ember project as a whole.
+The Core Team serves as the leadership for the Ember project as a whole.
 Its responsibilities include:
 
 * **Setting the overall direction and vision for the project.** That means
@@ -46,22 +46,22 @@ Its responsibilities include:
   new design, based on the core values and target use cases.
   The regular release cycle, being one of the project's core values,
   applies to subteams as well.
-* **Focusing on broad, cross-cutting concerns.** The core team is specifically
+* **Focusing on broad, cross-cutting concerns.** The Core Team is specifically
   designed to take a global view of the project, to make sure the pieces
   are fitting together in a coherent way.
 * **Spinning up or shuting down subteams.** Over time, we may want to expand the
   set of subteams, and it may make sense to have temporary "strike
   teams" that focus on a particular, limited task.
 * **Going/no-going features**. While the subteams make decisions on RFCs,
-  the core team is responsible for pulling the trigger that moves a
+  the Core Team is responsible for pulling the trigger that moves a
   feature from canary to beta. This provides an extra check that
   features have adequately addressed cross-cutting concerns and that the
   implementation quality is high enough
 
-Each subteam is lead by a core team liaison. This core team member
-is responsible for keeping the core team apprised of progress on
-important initiatives, identifying potential areas of concern early, and
-escalating cross-cutting issues when needed.
+Each subteam is led by a Core Team liaison. This member is responsible for
+keeping the Core Team apprised of progress on important initiatives,
+identifying potential areas of concern early, and escalating cross-cutting
+issues when needed.
 
 ## Ember CLI
 
@@ -113,7 +113,7 @@ the community interact, how they get help, and how we introduce them to
 new features added via the RFC process.
 
 The Learning Subteam is responsible for the website, the guides, the API
-docs and making sure the core team is aware of common pitfalls people
+docs and making sure the Core Team is aware of common pitfalls people
 hit, like confusing error messages or APIs. We will take this
 information and feed it back into the framework itself.
 
