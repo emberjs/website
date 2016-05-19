@@ -55,6 +55,9 @@ activate :blog do |blog|
   blog.prefix = 'blog'
   blog.layout = 'layouts/blog'
   blog.tag_template = 'blog/tag.html'
+  blog.paginate = true
+  blog.page_link = "page/{num}"
+  blog.per_page = 10
 end
 
 page '/blog/feed.xml', layout: false
