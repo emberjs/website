@@ -5,7 +5,9 @@ tags: Recent Posts
 ---
 
 I'm very happy to share with you our plan to scale Ember's day-to-day
-decision-making and coordination–something we're calling Subteams.
+decision-making and coordination–something we're calling Subteams. We mentioned
+some of this in this year's EmberConf keynote, but wanted to expand on the
+specific details.
 
 Ember.js was once just a view layer for rendering templates in the
 browser, but has grown to become a complete SDK for the web. With one
@@ -23,11 +25,11 @@ can rally behind is critical to building software that feels cohesive.
 So how do we ensure that everyone is pulling their cart in the same
 direction, without losing momentum?
 
-Today, we're taking a page from [Rust's
-playbook](https://internals.rust-lang.org/t/announcing-the-subteams/2042)
-and announcing Subteams. While we've often had informal teams tackle
-specific tasks, this change formalizes that process and officially
-recognizes the hard work of these contributors.
+We're taking a page from [Rust's
+playbook](https://internals.rust-lang.org/t/announcing-the-subteams/2042) and
+and adopting the idea of Subteams. While we've often had informal teams tackle
+specific tasks, this change formalizes that process and officially recognizes
+the hard work of these contributors.
 
 ## Core Team
 
