@@ -12,3 +12,6 @@ build/
 .rvmrc
 .ruby-gemset
 .cache
+
+# Travis CI
+deploy_key
