@@ -1,3 +1,102 @@
+$small-breakpoint: 670px;
+$medium-breakpoint: 1040px;
+
+body.blog.responsive{
+  #content-wrapper{
+    @media screen and (max-width: $medium-breakpoint) {
+      width: 100%;
+      float: none;
+    }
+    @media screen and (max-width: $small-breakpoint) {
+      width: 100%;
+      float: none;
+    }
+
+    #sidebar {
+      @media screen and (max-width: $medium-breakpoint) {
+        width: 30%;
+        float: left;
+        &:after{
+          width: 100%;
+        }
+        .slide-widget-head{
+          font-size: 1.2em;
+        }
+        ol li.level-3{
+          a{
+            font-size: 1.2em;
+          }
+        }
+      }
+      @media screen and (max-width: $small-breakpoint) {
+        width: 100%;
+        float: none;
+        padding-bottom: 0em;
+        min-height: 0;
+
+        &:after{
+          display: none;
+        }
+      }
+      
+    }
+    #content.has-sidebar{
+      margin-bottom: 0;
+      @media screen and (max-width: $medium-breakpoint) {
+        width: 70%;
+        float: left;
+        margin: 0;
+        padding: 2rem;
+        .blog-post-summary{
+          >h2{
+            line-height: 1.5;
+          }
+          >p{
+            font-size: 1.3em;
+            line-height: 1.8em;
+          }
+          >a.read-more{
+            font-size: 1.3em;
+          }
+        }
+      }
+      @media screen and (max-width: $small-breakpoint) {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding: 1rem;
+        
+      }
+    }
+
+    .pagination {
+      position: relative;
+      margin: 40px auto 20px;
+      font-size: 1.1em;
+      color: #9EABB3;
+      text-align: center;
+      a{
+        position: absolute;
+        display: inline-block;
+        &.older-posts{
+          right: 0;
+        }
+        &.newer-posts{
+          left: 0;
+        }
+      }
+      .page-number{
+        display: inline-block;
+        color: #333;
+        margin: 0;
+      }
+    }
+
+
+  }
+
+}
+
 .blog {
   .btn {
     font-weight: bold;
