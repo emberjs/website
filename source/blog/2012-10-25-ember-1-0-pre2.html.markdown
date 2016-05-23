@@ -1,4 +1,4 @@
---- 
+---
 title: Ember 1.0 Prerelease 2
 author: Peter Wagenet
 tags: Releases

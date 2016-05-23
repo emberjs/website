@@ -1,7 +1,7 @@
 ---
 title: Ember Data v1.0.0-beta.15 Released
 author: Brendan McLoughlin
-tags: Releases
+tags: Ember Data
 ---
 
 

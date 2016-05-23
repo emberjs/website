@@ -1,6 +1,7 @@
 ---
 title: Making Ember.js Easier
 author: Tom Dale & Yehuda Katz
+tags: Recent Posts
 ---
 
 We frequently receive feedback from new developers about how frustrating

@@ -1,7 +1,7 @@
 ---
 title: Core Team Face to Face, January 2016
 author: Tom Dale
-tags: Core Team Meeting Minutes
+tags: Core Team Meeting Minutes, Recent Posts
 ---
 
 Ember is a truly community-driven framework, with contributors and core

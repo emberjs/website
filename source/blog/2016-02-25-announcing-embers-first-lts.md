@@ -1,6 +1,7 @@
 ---
 title: Announcing Ember's First LTS Release
 author: Matthew Beale, Yehuda Katz, Godfrey Chan
+tags: Recent Posts
 ---
 
 Currently, Ember uses [release channels](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html)
