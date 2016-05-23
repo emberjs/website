@@ -1,7 +1,7 @@
 ---
 title: This Week in Ember
 date: 2013/01/18
-tags: This Week in Ember
+tags: Recent Posts
 author: Tom Dale & Yehuda Katz
 ---
 

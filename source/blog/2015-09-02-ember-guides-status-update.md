@@ -1,7 +1,7 @@
 ---
 title: Ember Guides Status Update
 author: Michael Kaiser-Nyman and Ricardo Mendes
-tags:
+tags: Recent Posts
 ---
 
 The road to Ember 2.0 has been long and rewarding: the community and team have invested in huge efforts to move Ember to a component-based architecture; we released a stable Ember Data; and we unified our development process with Ember CLI. All in all, we've made huge progress.

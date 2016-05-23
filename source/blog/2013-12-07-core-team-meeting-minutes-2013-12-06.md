@@ -1,4 +1,4 @@
---- 
+---
 title: Core Team Meeting Minutes - 2013/12/06
 author: Trek Glowacki
 tags: Core Team Meeting Minutes

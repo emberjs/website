@@ -1,7 +1,7 @@
 ---
 title: Ember Data v1.13 Released
 author: Igor Terzic and the Ember Data Team
-tags: Recent Posts, Releases
+tags: Ember Data
 ---
 
 We are proud to announce the release of Ember Data 1.13. This

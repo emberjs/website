@@ -1,7 +1,7 @@
 ---
 title: Ember Data 2.3 and 2.4 Beta Released
 author: Brendan McLoughlin
-tags: Releases
+tags: Ember Data
 ---
 
 Ember Data 2.3, a minor version release of Ember Data, is released today. This release represents the work of over 32 direct contributors, and over 196 commits.

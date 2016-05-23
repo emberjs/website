@@ -1,7 +1,7 @@
 ---
 title: This Week in Ember.js
 date:  2012/11/02
-tags: This Week in Ember
+tags: Recent Posts
 author: Tom Dale
 ---
 

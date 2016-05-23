@@ -1,7 +1,7 @@
 ---
 title: Ember Data Meeting Minutes - 2014/07/02
 author: Igor Terzic
-tags: Ember-Data Team Meeting Minutes
+tags: Recent Posts
 ---
 
 Although most of our collaboration takes place on Github, IRC

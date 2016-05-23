@@ -1,7 +1,7 @@
 ---
 title: Ember Data v1.0.0-beta.14.1 Released
 author: Stanley Stuart
-tags: Releases
+tags: Ember Data
 ---
 
 Ember Data v1.0.0-beta.14.1 is a bugfix release that adds sourcemaps

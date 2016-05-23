@@ -1,7 +1,7 @@
 ---
 title: Ember Data v1.0.0-beta.12 Released
 author: Stanley Stuart
-tags: Recent Posts, Releases
+tags: Ember Data
 ---
 
 ## New Core Contributors

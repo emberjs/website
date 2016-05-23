@@ -1,7 +1,7 @@
 ---
 title: Ember Data v1.0.0-beta.17/18 Released
 author: Stanley Stuart
-tags: Recent Posts, Releases
+tags: Ember Data
 ---
 
 Beta.17 and Beta.18 contained many bugfixes from the community! Please check
