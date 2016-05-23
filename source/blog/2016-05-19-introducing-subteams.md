@@ -26,10 +26,10 @@ So how do we ensure that everyone is pulling their cart in the same
 direction, without losing momentum?
 
 We're taking a page from [Rust's
-playbook](https://internals.rust-lang.org/t/announcing-the-subteams/2042) and
-and adopting the idea of Subteams. While we've often had informal teams tackle
-specific tasks, this change formalizes that process and officially recognizes
-the hard work of these contributors.
+playbook](https://internals.rust-lang.org/t/announcing-the-subteams/2042)
+and adopting the idea of Subteams. While we've often had informal teams
+tackle specific tasks, this change formalizes that process and
+officially recognizes the hard work of these contributors.
 
 ## Core Team
 
