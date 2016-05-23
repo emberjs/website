@@ -6,7 +6,7 @@ tags: Recent Posts
 
 I'm very happy to share with you our plan to scale Ember's day-to-day
 decision-making and coordination—something we're calling Subteams. We mentioned
-some of this in this year's EmberConf keynote, but wanted to expand on the
+some of this in this year's EmberConf keynote, and wanted to expand on the
 specific details.
 
 Ember.js was once just a view layer for rendering templates in the
@@ -36,10 +36,10 @@ the hard work of these contributors.
 The Core Team serves as the leadership for the Ember project as a whole.
 Its responsibilities include:
 
-* **Setting the overall direction and vision for the project.** That means
+* **Setting the overall direction and vision for the project.** This means
   setting the core values that are used when making decisions about
-  technical tradeoffs. It also means leading the discussion, and writing RFCs
-  for, major initiatives in the project.
+  technical tradeoffs. The core team also leads the writing of RFCs around new
+  initiatives.
 * **Setting priorities and the release schedule.** Design bandwidth is limited,
   and it's dangerous to try to grow the framework too quickly; the core
   team makes some difficult decisions about which areas to prioritize for
