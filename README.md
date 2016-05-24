@@ -47,7 +47,6 @@ to be placed in the same directory:
         website/
         ember.js/
         ember-data/
-        
 
 Note that the name of the data project needs to be `ember-data`, not `data`.
 
