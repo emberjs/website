@@ -17,10 +17,12 @@
 
 #builds-application {
   #sidebar {
-    width: $builds-sidebar-width;
+    $sidebar-width: 140px;
+
+    width: $sidebar-width;
 
     &:after {
-      width: $builds-sidebar-width;
+      width: $sidebar-width;
     }
   }
 
@@ -165,7 +167,7 @@
     li {
       float: left;
       margin-right: 10px;
-      border-radius: 3px;
+      @include border-radius(3px);
       padding: 5px;
       width: 111px;
       text-align: center;
@@ -261,7 +263,7 @@
     font-weight:normal;
     color:rgba(0,0,0,0);
     background:transparent;
-    border-radius: .25rem;
+    @include border-radius(.25rem);
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
   }
@@ -281,7 +283,7 @@
     bottom:0;
     left:0;
     right:0;
-    border-radius: .25rem;
+    @include border-radius(.25rem);
     @include backface-visibility( hidden);
   }
 

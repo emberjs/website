@@ -1,10 +1,22 @@
 @import "compass";
 @import "shared";
 
+$border-radius: 5px;
+
+$blue:   #1f58ce;
+$gray:   #545454;
+$textColor: #222;
+$green:  #005f00;
+$orange: #8f4a2c;
+
+$highlight-yellow: #f8eec7;
+$highlight-green: #E8F4E5;
+$highlight-red: #ffecec;
+
 body.guides .highlight {
-  border-radius: $highlight-border-radius;
+  @include border-radius($border-radius);
   border: 1px solid #d1d1d1;
-  color: $highlight-text-color;
+  color: $textColor;
 }
 
 #content .highlight {
@@ -51,8 +63,8 @@ body.guides .highlight {
     box-sizing: content-box;
 
     &.added {
-      border-color: $highlight-green-light;
-      background-color: $highlight-green-light;
+      border-color: $highlight-green;
+      background-color: $highlight-green;
     }
 
     &.removed {
@@ -73,7 +85,7 @@ body.guides .highlight {
     border-right-color: darken($highlight-yellow, 20%);
 
     &.added {
-      border-right-color: darken($highlight-green-light, 20%);
+      border-right-color: darken($highlight-green, 20%);
     }
 
     &.removed {
@@ -89,9 +101,9 @@ body.guides .highlight {
     text-align: center;
     border-right: 1px solid #d1d1d1;
     background-color: #f6f6f6;
-    color: $highlight-gray;
-    border-top-left-radius: $highlight-border-radius;
-    border-bottom-left-radius: $highlight-border-radius;
+    color: $gray;
+    @include border-top-left-radius($border-radius);
+    @include border-bottom-left-radius($border-radius);
   }
 
   td.code {
@@ -101,27 +113,27 @@ body.guides .highlight {
   /* HTML */
 
   .tag {
-    color: $highlight-blue;
+    color: $blue;
   }
 
   .comment {
-    color: $highlight-green;
+    color: $green;
   }
 
   .attribute-name {
-    color: $highlight-blue;
+    color: $blue;
   }
 
   .content {
-    color: darken($highlight-blue, 15%);
+    color: darken($blue, 15%);
   }
 
   .string {
-    color: $highlight-blue;
+    color: $blue;
   }
 
   .keyword {
-    color: $highlight-orange;
+    color: $orange;
   }
 
   .key, .function {
@@ -148,15 +160,15 @@ body.guides .highlight {
       &,
       .inline-delimiter,
       .delimiter {
-        color: lighten($highlight-green, 10%);
+        color: lighten($green, 10%);
       }
 
       .attribute-name {
-        color: $highlight-green;
+        color: $green;
       }
       .attribute-value,
       .content {
-        color: darken($highlight-green, 10%);
+        color: darken($green, 10%);
       }
     }
   }
