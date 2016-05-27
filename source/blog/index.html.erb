@@ -1,11 +1,14 @@
 ---
 title: "Blog"
+responsive: true
+pageable: true
+per_page: 10
 ---
 
 <% partial_for :head, 'head' %>
 <% partial_for :sidebar, 'sidebar' %>
 
-<% blog.articles.each_with_index do |article, i| %>
+<% page_articles.each_with_index do |article, i| %>
   <article class="blog-post-summary">
     <h2><%= link_to article.title, article %> &ndash; <time><%= article.date.strftime('%b %d, %Y') %></time></span></h2>
     <% if article.data.author %>
@@ -14,6 +17,16 @@ title: "Blog"
       </h5>
     <% end%>
     <%= article.summary %>
-    <%= link_to "Read more...", article %>
+    <%= link_to "Read more...", article, :class => "read-more" %>
   </article>
 <% end %>
+
+<div class="pagination">
+   <% if prev_page %>
+      <a class="newer-posts" href="<%= prev_page.url %>">Newer articles</a>
+    <% end %>
+   <p class="page-number">Page <%= page_number %> of <%= num_pages %></p>
+    <% if next_page %>
+      <a class="older-posts" href="<%= next_page.url %>">Older articles</a>
+    <% end %>
+</div>
