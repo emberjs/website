@@ -1,0 +1,33 @@
+/* Colors */
+$orange-color: #E1563F;
+$blue-color: #1F58CE;
+$black-color: #252525;
+
+/* Calculated page dimensions. */
+$page-width: 960px;
+$col-width: 40px;
+$col-spacing: 20px;
+$sidebar-width: $col-width * 4 + $col-spacing * 3;
+$content-width: $page-width - $sidebar-width - $col-spacing * 2;
+
+/* Typography */
+$list-indent: 32px;
+
+/* Code highlight */
+$highlight-border-radius: 5px;
+
+$highlight-blue: #1F58CE;
+$highlight-gray: #545454;
+$highlight-text-color: #222;
+$highlight-green: #005F00;
+$highlight-green-light: #E8F4E5;
+$highlight-orange: #8F4A2C;
+$highlight-yellow: #F8EEC7;
+$highlight-red: #FFECEC;
+
+/* Misc */
+$hidpi-min-pixel-ratio: 1.3 !default;
+
+/* Page-specific variables */
+$builds-sidebar-width: 140px;
+
