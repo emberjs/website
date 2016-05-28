@@ -1,4 +1,5 @@
 @import "compass";
+@import "variables";
 @import "mixins/hidpi";
 
 // the builds page is an ember app inserted into the master layout, replicate styling
@@ -17,12 +18,10 @@
 
 #builds-application {
   #sidebar {
-    $sidebar-width: 140px;
-
-    width: $sidebar-width;
+    width: $builds-sidebar-width;
 
     &:after {
-      width: $sidebar-width;
+      width: $builds-sidebar-width;
     }
   }
 
@@ -167,7 +166,7 @@
     li {
       float: left;
       margin-right: 10px;
-      @include border-radius(3px);
+      border-radius: 3px;
       padding: 5px;
       width: 111px;
       text-align: center;
@@ -263,7 +262,7 @@
     font-weight:normal;
     color:rgba(0,0,0,0);
     background:transparent;
-    @include border-radius(.25rem);
+    border-radius: .25rem;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
   }
@@ -283,7 +282,7 @@
     bottom:0;
     left:0;
     right:0;
-    @include border-radius(.25rem);
+    border-radius: .25rem;
     @include backface-visibility( hidden);
   }
 

@@ -1,9 +1,9 @@
 @import 'compass';
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
+@import 'variables';
 @import 'mixins/hidpi';
 @import 'fonts';
-@import 'colors';
 @import 'header';
 @import 'footer';
 @import 'examples';
@@ -19,20 +19,12 @@
 @import 'components/sponsors';
 @import 'components/logos';
 
-/* Calculated page dimensions. */
-$page-width: 960px;
-$col-width: 40px;
-$col-spacing: 20px;
-$sidebar-width: $col-width * 4 + $col-spacing * 3;
-$content-width: $page-width - $sidebar-width - $col-spacing * 2;
-
-
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
 
 * {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
 }
 
 body {
@@ -360,7 +352,7 @@ p {
   @include hidpi('navigation_background', png);
   border-bottom: 1px solid #aa412f;
   z-index: 10; /* The header is on top to have proper drop-shadow. */
-  @include box-shadow(rgba(0, 0, 0, 0.3) 0 0 3px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 
   #wrapper {
     width: $page-width;
@@ -421,12 +413,12 @@ p {
         @include text-shadow(rgba(255, 255, 255, 0.2) 0 1px 0px);
         background-color: #bf4737;
         background-color: rgba(0, 0, 0, 0.2);
-        @include border-radius(3px);
+        border-radius: 3px;
         border: 1px solid #923c2e;
-        @include box-shadow(
+        box-shadow:
           rgba(255, 255, 255, 0.15) 0 1px 0px,
           inset rgba(0, 0, 0, 0.17) 0 1px 1px
-        );
+        ;
 
         &:hover {
           color: black;
@@ -478,10 +470,8 @@ p {
       @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
 
       border: 1px solid #a93926;
-      @include border-radius(4px);
-      @include box-shadow(
-        inset rgba(255, 255, 255, 0.17) 0 1px 1px
-      );
+      border-radius: 4px;
+      box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;
 
       &:hover {
         color: #ffffff;
@@ -668,8 +658,8 @@ p {
     margin: 0 auto;
     padding-top: 19px;
 
-    @include border-radius(3px);
-    @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff;
     @include clearfix;
     background: url('/images/about/carousel_bg.png');
     border: 1px solid #d1d1d1;
@@ -778,8 +768,8 @@ p {
     }
 
     a {
-      @include border-radius(4px);
-      @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       background: url('/images/about/user_bg.png') no-repeat;
       display: block;
       height: 103px;
@@ -824,8 +814,8 @@ p {
     margin-left: $col-spacing;
     border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    @include box-shadow(rgba(0, 0, 0, 0.1) 0 2px 3px);
-    @include border-radius(6px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px;
+    border-radius: 6px;
     @include width-for-columns(4);
 
     &:first-of-type {
@@ -842,7 +832,7 @@ p {
       background-color: rgba(0, 0, 0, 0.85);
       -webkit-font-smoothing: antialiased;
       @include transition(opacity 0.1s linear);
-      @include border-radius(6px);
+      border-radius: 6px;
 
       .name {
         text-align: center;
@@ -866,7 +856,7 @@ p {
     }
 
     img {
-      @include border-radius(6px);
+      border-radius: 6px;
     }
 
     &:hover .info {
@@ -909,15 +899,12 @@ a.toc-anchor {
 
 .guides, .dashboard {
   .chapter {
-    $h3-indent: 32px;
-    $body-indent: $h3-indent;
-
     h1 {
       padding-bottom: 0.5em;
     }
 
     ul, ol {
-      margin-left: $body-indent;
+      margin-left: $list-indent;
       margin-bottom: 28px;
 
       li {
@@ -999,8 +986,6 @@ a.toc-anchor {
     margin: 0 0 3em 0;
     padding: 0 0 3em 0;
 
-    $h3-indent: 0;
-    $body-indent: $h3-indent;
     border-bottom: solid 1px #e0e0e0;
 
     &:last-child {
@@ -1206,8 +1191,8 @@ body.community_meetups #content {
       height: 400px;
       margin-top: 2em;
       border: 1px solid #e0e0e0;
-      @include box-shadow(0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
-      @include border-radius(5px);
+      box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
       #maptype,
       .gm-style-cc {
         display: none;
@@ -1836,8 +1821,8 @@ body.tomster_payment-sent #content {
     border: 1px solid #ddd;
     outline: none;
     width: 70%;
-    @include border-radius(6px);
-    @include box-shadow(0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1));
+    border-radius: 6px;
+    box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
     &:focus {
       border-color: #888;
     }
@@ -2231,8 +2216,8 @@ body.team {
 
     @include filter-gradient(#fe845a, #d14e37, vertical);
     @include background-image( linear-gradient(to bottom, #fe845a, #d14e37) );
-    @include border-radius(5px);
-    @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.35));
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
     &:hover, &:focus {
       border-color: #e27260;
@@ -2248,7 +2233,7 @@ body.team {
       border-bottom-color: #e1583f;
       @include filter-gradient(#b2412e, #ed7249, vertical);
       @include background-image( linear-gradient(to bottom, #b2412e, #ed7249) );
-      @include box-shadow(none);
+      box-shadow: none;
       @include text-shadow(rgba(0, 0, 0, 0.2) 0 -1px 0);
     }
   }
@@ -2467,7 +2452,7 @@ a.edit-page {
     background-color: gray;
     color: white;
     padding: 2px 7px;
-    @include border-radius(3px);
+    border-radius: 3px;
   }
 
   #sidebar ol#toc-list li > ol {
@@ -2497,14 +2482,14 @@ a.edit-page {
 .under_construction_warning {
   background-color: #FFFFCC;
   width: 100%;
-  @include border-radius(8px);
+  border-radius: 8px;
 }
 
 .under_construction_warning h3 {
   min-height: 64px;
   font-size: 14px !important;
   border: 1px solid #dfd7d4;
-  @include border-radius(8px);
+  border-radius: 8px;
   color: #e1563f;
   padding: 0px 0px 1em 2em;
   margin-bottom: 1.5em;
@@ -2559,7 +2544,7 @@ a.edit-page {
     background-color: $orange-color;
     border-top: 1px solid darken($orange-color, 20%);
     border-bottom: 1px solid darken($orange-color, 20%);
-    @include box-shadow(0 1px 0 #C0242D inset);
+    box-shadow: 0 1px 0 #C0242D inset;
 
     .sections {
       color: white;

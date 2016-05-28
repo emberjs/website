@@ -1,6 +1,5 @@
+@import "variables";
 @import "mixins/hidpi";
-
-$hidpi-min-pixel-ratio: 1.3 !default;
 
 .job-board-banner {
   z-index: 99998;
