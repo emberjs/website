@@ -1,4 +1,5 @@
 ## Ember Website
+[![Build Status](https://travis-ci.org/emberjs/website.svg?branch=master)](https://travis-ci.org/emberjs/website)
 
 The website for the Ember.js project.
 
