@@ -602,6 +602,13 @@ locations:
     organizers:
     - organizer: jimmynode
       profileImage: http://photos4.meetupstatic.com/photos/member/b/e/7/0/thumb_246288752.jpeg
+  - location: Helsinki, Finland
+    url: http://www.meetup.com/Ember-js-Helsinki/
+    lat: 60.163930
+    lng: 24.900188
+    organizers:
+    - organizer: Lauri Jutila
+      profileImage: http://photos2.meetupstatic.com/photos/member/8/3/6/0/highres_246093632.jpeg
 - area: Asia
   groups:
   - location: Tel Aviv, Israel
