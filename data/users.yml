@@ -817,7 +817,7 @@
   use: "AirHelp web app is built with Ember"
 - url: http://www.samewave.com/
   image: samewave.png
-  alt: SameWave
+  alt: "SameWave"
   use: "We use ember together with cordova to power our v2 hybrid ios and android app. Our app allows users to easily track and talk about the important stuff with a scoreboard for the whole team."
 
 
