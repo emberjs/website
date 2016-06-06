@@ -807,6 +807,10 @@
   image: britishgas.png
   alt: British Gas
   use: "We use ember to build our customer interacting applications"
+- url: http://www.samewave.com/
+  image: samewave.png
+  alt: SameWave
+  use: "We use ember together with cordova to power our v2 hybrid mobile app and desktop website. Our app allows users to easily track and talk about the important stuff with a scoreboard for the whole team."
 
 
 # ---- PLEASE READ ----
