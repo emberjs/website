@@ -43,7 +43,7 @@ or array prototype extensions to the framework. Instead, we encourage developers
 to adopt an addon such as [ember-cpm](https://github.com/cibernox/ember-cpm)
 if they desire an expanded list of macros.
 
-However contributor @seanjohnson08 correctly pointed out there is a logical
+However contributor [@seanjohnson08](https://github.com/seanjohnson08) correctly pointed out there is a logical
 gap in the APIs Ember provides today. Although each of `find`, `map`, `filter`,
 and `reject` have a comparable `xxxBy` method (for example `findBy`) no
 comparable method exists for `uniq`.
