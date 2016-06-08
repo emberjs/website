@@ -38,76 +38,7 @@ For more details on changes landing in 2.6, review the
 
 ### Ember.js 2.7 Beta
 
-Ember 2.7 beta introduces two new backward compatible APIs.
-
-#### Route serialization via the router map
-
-Route serialization in Ember has historically been specified on a route class.
-For example:
-
-```js
-// app/routes/post.js
-import Ember from 'ember';
-export default Ember.Route.extend({
-  // ...
-  serialize(model) {
-    return { post_id: model.id };
-  }
-});
-```
-
-```js
-// app/router.js
-export default Router.map(function() {
-  this.route('post', {
-    path: '/post/:post_id'
-  });
-});
-```
-
-Additional examples of the current system are found in [the API docs](http://emberjs.com/api/classes/Ember.Route.html#method_serialize).
-
-The serialization of route's model is required to link to that route, for example
-`{{link-to 'post' postModel}}` must know the serialization to create the
-URL `/post/123` for that link's `href`. The rest of the route class logic
-is concerned with entering and exiting a route. By moving serialization to
-the routing map, the logic for building a link and for handling a route
-is split. This in turn permits route classes to be lazy-loaded.
-
-Ember 2.7 will raise a deprecation warning for the old route serialization API,
-and ask applications to refactor to this new style:
-
-```js
-// app/routes/post.js
-import Ember from 'ember';
-export default Ember.Route.extend({
-  // ...
-});
-```
-
-```js
-// app/router.js
-function serializePostRoute(model) {
-  return { post_id: model.id };
-}
-
-export default Router.map(function() {
-  this.route('post', {
-    path: '/post/:post_id',
-    serialize: serializePostRoute
-  });
-});
-```
-
-For more details about this change, see the following resources:
-
-* Learn more about route serialization in the [API](FIXME) and [guides](FIXME).
-* [RFC #120](https://github.com/emberjs/rfcs/blob/master/text/0120-route-serializers.md)
-  proposes this change and documents the motivation.
-* There is a [deprecation guide](http://emberjs.com/deprecations/v2.x/#toc_route-serialize)
-  for this change.
-
-FIXME: add thanks
+Ember 2.7 beta introduces one new backward compatible API:
 
 #### `Ember.computed.uniqBy`
 
