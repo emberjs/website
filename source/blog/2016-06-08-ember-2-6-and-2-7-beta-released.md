@@ -21,10 +21,6 @@ stack (Ember Data, FastBoot, Glimmer, etc).
 The following deprecations are scheduled for release with Ember 2.6 and will be
 removed in Ember 3.0:
 
-* `Ember.String.htmlSafe(aString)` is the preferred API for marking a string
-  XSS safe for the rendering layer. Use of `Ember.Handlebars.SafeString` as
-  a constructor for safe strings is deprecated, and will be removed.
-  See the [deprecation guide](http://emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring) for more details.
 * The `didInitAttrs` hook for component lifecycles is deprecated in favor of
   simply using `init`. `didInitAttrs` had confusing timing
   issues, and `init` fulfills the same role. See the [deprecation guide](http://emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs) for more details.
