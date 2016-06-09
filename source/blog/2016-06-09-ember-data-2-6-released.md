@@ -1,7 +1,7 @@
 ---
 title: Ember Data 2.6 and 2.7 Beta Released
 author: Brendan McLoughlin
-tags: Releases
+tags: Ember Data
 ---
 
 Ember Data 2.6, a minor version release of Ember Data, is
