@@ -1,6 +1,6 @@
-@import 'compass';
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
+@import 'bourbon';
 @import 'variables';
 @import 'mixins/hidpi';
 @import 'fonts';
@@ -397,7 +397,7 @@ p {
         text-transform: uppercase;
         color: #faf2ee;
 
-        @include text-shadow(rgba(0, 0, 0, 0.3) 0px 1px 0px);
+        text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
         display: block;
         padding: 0px 1em;
         height: 26px;
@@ -410,7 +410,7 @@ p {
 
       &.active a {
         color: #331915;
-        @include text-shadow(rgba(255, 255, 255, 0.2) 0 1px 0px);
+        text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0px;
         background-color: #bf4737;
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 3px;
@@ -458,7 +458,7 @@ p {
       font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
-      @include text-shadow(rgba(0, 0, 0, 0.3) 0px 1px 0px);
+      text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
 
       display: block;
       padding: 0px 1em 0 0.5em;
@@ -466,7 +466,6 @@ p {
       line-height: 28px;
 
       background-color: #ff6e56;
-      @include filter-gradient(#ff6e56, #ed4f35, vertical);
       @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
 
       border: 1px solid #a93926;
@@ -2207,14 +2206,13 @@ body.team {
   font-size: 14px;
   color: #f6ece8;
   text-align: center;
-  @include text-shadow(rgba(0, 0, 0, 0.3) 0 1px 0);
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
 
   &.orange {
     border: 1px solid #cb6352;
     border-top-color: #ea7a68;
     border-bottom-color: #a04332;
 
-    @include filter-gradient(#fe845a, #d14e37, vertical);
     @include background-image( linear-gradient(to bottom, #fe845a, #d14e37) );
     border-radius: 5px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
@@ -2223,7 +2221,6 @@ body.team {
       border-color: #e27260;
       border-top-color: #ea7a68;
       border-bottom-color: #c1513d;
-      @include filter-gradient(#fc906b, #e2654e, vertical);
       @include background-image( linear-gradient(to bottom, #fc906b, #e2654e) );
     }
 
@@ -2231,10 +2228,9 @@ body.team {
       border-color: #c9533d;
       border-top-color: #92473a;
       border-bottom-color: #e1583f;
-      @include filter-gradient(#b2412e, #ed7249, vertical);
       @include background-image( linear-gradient(to bottom, #b2412e, #ed7249) );
       box-shadow: none;
-      @include text-shadow(rgba(0, 0, 0, 0.2) 0 -1px 0);
+      text-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0;
     }
   }
 
@@ -2248,7 +2244,7 @@ body.team {
 
     &:active {
       background-position: 0 -92px;
-      @include text-shadow(rgba(0, 0, 0, 0.3) 0 -1px 0);
+      text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
     }
   }
 }
@@ -2262,7 +2258,7 @@ body.team {
   color: #ffffff;
   line-height: 24px;
   text-transform: uppercase;
-  @include text-shadow(rgba(0, 0, 0, 0.3) 0 1px 0);
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
 
   &.orange {
     background-image: url('/images/small-orange-button.png');

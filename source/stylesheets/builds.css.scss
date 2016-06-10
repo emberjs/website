@@ -1,4 +1,5 @@
-@import "compass";
+@import "bourbon";
+@import "compass/css3/transform";
 @import "variables";
 @import "mixins/hidpi";
 
@@ -107,7 +108,7 @@
   }
 
   .future-image {
-    @include opacity(0.35);
+    opacity: 0.35;
   }
 
   .clear {
