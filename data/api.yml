@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: v2.6.0
-  sha: v2.6.0
+  version: v2.6.1
+  sha: v2.6.1
 files:
   bower_components/router.js/lib/router/router.js:
     name: bower_components/router.js/lib/router/router.js
@@ -2663,9 +2663,8 @@ classes:
       not receive events.* If you specify a custom root element, make sure you only
       append views inside it!
 
-      To learn more about the advantages of event delegation and the Ember view
-      layer, and a list of the event listeners that are setup by default, visit the
-      [Ember View Layer guide](http://emberjs.com/guides/understanding-ember/the-view-layer/#toc_event-delegation).
+      To learn more about the events Ember components use, see
+      [components/handling-events](https://guides.emberjs.com/v2.6.0/components/handling-events/#toc_event-names).
 
       ### Initializers
 
@@ -8473,7 +8472,7 @@ classitems:
   submodule: ember-application
   namespace: Ember.ApplicationInstance
 - file: packages/ember-application/lib/system/application.js
-  line: 211
+  line: 210
   description: |-
     The root DOM element of the Application. This can be specified as an
     element or a
@@ -8493,7 +8492,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 227
+  line: 226
   description: |-
     The `Ember.EventDispatcher` responsible for delegating events to this
     application's views.
@@ -8514,7 +8513,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 244
+  line: 243
   description: |-
     The DOM events for which the event dispatcher should listen.
 
@@ -8563,7 +8562,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 288
+  line: 287
   description: |-
     Whether the application should automatically start routing and render
     templates to the `rootElement` on DOM ready. While default by true,
@@ -8581,7 +8580,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 302
+  line: 301
   description: |-
     Whether the application should be configured for the legacy "globals mode".
     Under this mode, the Application object serves as a global namespace for all
@@ -8631,7 +8630,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 374
+  line: 373
   description: Create an ApplicationInstance for this application.
   access: private
   tagname: ''
@@ -8645,7 +8644,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 387
+  line: 386
   description: |-
     Enable the legacy globals mode by allowing this application to act
     as a global namespace. See the docs on the `_globalsMode` property
@@ -8662,7 +8661,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 435
+  line: 434
   description: |-
     Automatically kick-off the boot process for the application once the
     DOM has become ready.
@@ -8682,7 +8681,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 457
+  line: 456
   description: |-
     This is the autoboot flow:
 
@@ -8723,7 +8722,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 502
+  line: 501
   description: |-
     Use this to defer readiness until some condition is true.
 
@@ -8755,7 +8754,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 534
+  line: 533
   description: |-
     Call `advanceReadiness` after any asynchronous setup logic has completed.
     Each call to `deferReadiness` must be matched by a call to `advanceReadiness`
@@ -8771,7 +8770,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 552
+  line: 551
   description: |-
     Initialize the application and return a promise that resolves with the `Ember.Application`
     object when the boot process is complete.
@@ -8795,7 +8794,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 581
+  line: 580
   description: |-
     Unfortunately, a lot of existing code assumes the booting process is
     "synchronous". Specifically, a lot of tests assumes the last call to
@@ -8813,7 +8812,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 638
+  line: 637
   description: |-
     Reset the application. This is typically used only in tests. It cleans up
     the application in the following order:
@@ -8888,7 +8887,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 729
+  line: 728
   access: private
   tagname: ''
   itemtype: method
@@ -8898,7 +8897,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 780
+  line: 779
   description: |-
     Called when the Application has become ready, immediately before routing
     begins. The call will be delayed until the DOM has become ready.
@@ -8911,7 +8910,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 806
+  line: 805
   description: |-
     Boot a new instance of `Ember.ApplicationInstance` for the current
     application and navigate it to the given `url`. Returns a `Promise` that
@@ -9121,7 +9120,7 @@ classitems:
   submodule: ember-application
   namespace: Ember
 - file: packages/ember-application/lib/system/application.js
-  line: 1021
+  line: 1020
   description: |-
     This creates a registry with the default Ember naming conventions.
 
@@ -13320,7 +13319,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 73
+  line: 70
   description: Add an event listener
   itemtype: method
   name: addListener
@@ -13345,7 +13344,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 117
+  line: 114
   description: |-
     Remove an event listener
 
@@ -13370,7 +13369,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 145
+  line: 142
   description: |-
     Suspend listener during callback.
 
@@ -13401,7 +13400,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 167
+  line: 164
   description: Suspends multiple listeners during a callback.
   itemtype: method
   name: suspendListeners
@@ -13426,7 +13425,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 188
+  line: 185
   description: Return a list of currently watched events
   access: private
   tagname: ''
@@ -13439,7 +13438,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 200
+  line: 197
   description: |-
     Send an event. The execution of suspended listeners
     is skipped, and once listeners are removed. A listener without
@@ -13467,7 +13466,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 249
+  line: 246
   access: private
   tagname: ''
   itemtype: method
@@ -13482,7 +13481,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 262
+  line: 259
   access: private
   tagname: ''
   itemtype: method
@@ -13497,7 +13496,7 @@ classitems:
   module: ember
   submodule: ember-metal
 - file: packages/ember-metal/lib/events.js
-  line: 285
+  line: 282
   description: |-
     Define a property as a function that should be executed when
     a specified event or events are triggered.
@@ -13973,6 +13972,7 @@ classitems:
      ```javascript
      Ember.Logger.assert(true); // undefined
      Ember.Logger.assert(true === false); // Throws an Assertion failed error.
+     Ember.Logger.assert(true === false, 'Something invalid'); // Throws an Assertion failed error with message.
      ```
   itemtype: method
   name: assert
@@ -13980,6 +13980,9 @@ classitems:
   - name: bool
     description: Value to test
     type: Boolean
+  - name: message
+    description: Assertion message on failed
+    type: String
   access: public
   tagname: ''
   class: Ember.Logger
@@ -15925,7 +15928,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 275
+  line: 276
   description: |-
     Wraps the passed function so that `this._super` will point to the superFunc
     when the function is invoked. This is the primitive we use to implement
@@ -15947,7 +15950,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 333
+  line: 316
   description: |-
     Checks to see if the `methodName` exists on the `obj`.
 
@@ -15975,7 +15978,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 355
+  line: 338
   description: |-
     Checks to see if the `methodName` exists on the `obj`,
     and if it does, invokes it with the arguments passed.
@@ -16009,7 +16012,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 387
+  line: 370
   description: |-
     Forces the passed object to be part of an array. If the object is already
     an array, it will return the object. Otherwise, it will add the object to
@@ -16040,7 +16043,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 415
+  line: 398
   description: |-
     Convenience method to inspect an object. This method will attempt to
     convert the object into a useful string description.
@@ -16062,23 +16065,7 @@ classitems:
   class: Ember
   module: ember-metal
 - file: packages/ember-metal/lib/utils.js
-  line: 470
-  params:
-  - name: t
-    description: target
-    type: Object
-  - name: m
-    description: method
-    type: Function
-  - name: a
-    description: args
-    type: Array
-  access: private
-  tagname: ''
-  class: Ember
-  module: ember-metal
-- file: packages/ember-metal/lib/utils.js
-  line: 489
+  line: 451
   params:
   - name: t
     description: target
@@ -19701,7 +19688,7 @@ classitems:
   submodule: ember-routing
   namespace: Ember
 - file: packages/ember-routing/lib/system/route.js
-  line: 2057
+  line: 2061
   access: private
   tagname: ''
   itemtype: method
@@ -20678,7 +20665,7 @@ classitems:
     will instead clear the cache so that it is updated when the next `get`
     is called on the property.
 
-    See [Ember.ComputedProperty](/api/classes/Ember.ComputedProperty.html), [Ember.computed](/api/#method_computed).
+    See [Ember.ComputedProperty](/api/classes/Ember.ComputedProperty.html), [Ember.computed](/api/classes/Ember.computed.html).
   itemtype: method
   name: property
   access: public
@@ -26632,7 +26619,7 @@ classitems:
 - file: packages/ember-views/lib/components/component.js
   line: 203
   description: |-
-    Calls a action passed to a component.
+    Calls an action passed to a component.
 
     For example a component for playing or pausing music may translate click events
     into action notifications of "play" or "stop" depending on some internal state
@@ -28751,7 +28738,7 @@ warnings:
     so we created the asynchronous version above that returns a promise. But until
     we have migrated all the code, we would have to expose this method for use
     *internally* in places where we need to boot an app "synchronously".
-  line: " packages/ember-application/lib/system/application.js:581"
+  line: " packages/ember-application/lib/system/application.js:580"
 - message: Missing item type
   line: " packages/ember-application/lib/system/engine-instance.js:68"
 - message: |-
@@ -28815,9 +28802,7 @@ warnings:
     Known Trick™
   line: " packages/ember-metal/lib/utils.js:44"
 - message: Missing item type
-  line: " packages/ember-metal/lib/utils.js:470"
-- message: Missing item type
-  line: " packages/ember-metal/lib/utils.js:489"
+  line: " packages/ember-metal/lib/utils.js:451"
 - message: |-
     Missing item type
     Called by the router to instruct the location to do any feature detection
