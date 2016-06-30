@@ -12940,7 +12940,7 @@ classitems:
     You may pass in more than two properties and even use
     property brace expansion.  The computed property will
     returns the first falsy value or last truthy value
-    just like JavaScript's `||` operator.
+    just like JavaScript's `&&` operator.
 
     Example
 
