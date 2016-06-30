@@ -815,6 +815,11 @@
   image: airhelp.png
   alt: "AirHelp"
   use: "AirHelp web app is built with Ember"
+- url: http://www.samewave.com/
+  image: samewave.png
+  alt: "Samewave"
+  use: "We use Ember together with Cordova to power our v2 hybrid IOS and Android app."
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
