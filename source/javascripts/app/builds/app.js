@@ -372,6 +372,14 @@ App.IndexRoute = Ember.Route.extend({
   }
 });
 
+App.IndexController = Ember.Controller.extend({
+  latestVersionOfDocs: Ember.computed('model.release.lastRelease', function() {
+    const release = this.get('model.release.lastRelease');
+    const versionArray = release.split('.');
+    return `${versionArray[0]}.${versionArray[1]}.0`;
+  })
+});
+
 App.ProjectsMixin = Ember.Mixin.create({
   projects: Ember.computed('channel', 'model', function(){
     var projects = App.Project.find(this.get('channel')),
