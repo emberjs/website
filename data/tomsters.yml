@@ -150,3 +150,19 @@
   url: http://www.meetup.com/ember-columbus/
   date: March 7, 2016
   image: /images/tomsters/columbus.png
+- title: Amsterdam Tomster
+  url: http://www.meetup.com/Ember-js-Amsterdam/
+  date: May 31, 2016
+  image: /images/tomsters/amsterdam.png
+- title: San Diego Zoey
+  url: http://www.meetup.com/sandiego-ember/
+  date: May 31, 2016
+  image: /images/tomsters/sandiego-zoey.png
+- title: Classic Zoey
+  date: March 23, 2016
+  url: http://www.emberjs.com/tomster
+  image: /images/tomsters/zoey.png
+- title: Raleigh Tomster
+  date: March 8, 2016
+  url: http://triangleember.com/
+  image: /images/tomsters/raleigh.png
