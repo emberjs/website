@@ -1,4 +1,4 @@
-@import "compass/css3";
+@import "bourbon";
 @import "solarized_light";
 @import "variables";
 @import "mixins/hidpi";
@@ -82,7 +82,7 @@
   display: inline-block;
   font-size: 14px;
   border-radius: 0;
-  @include background-clip(padding-box);
+  background-clip: padding-box;
   box-shadow: 0 0 0 rgba(0,0,0,0);
   border-top: none;
   border-left: none;

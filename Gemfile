@@ -17,6 +17,7 @@ gem "underscore-rails"
 gem "gmaps4rails"
 gem "geocoder"
 gem "faraday"
+gem "bourbon"
 
 source 'https://rails-assets.org' do
   gem "rails-assets-js-md5"
