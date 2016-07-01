@@ -2414,9 +2414,9 @@ a.edit-page {
     column-gap: 1em;
 
     li {
-      display: block;
       overflow: hidden;
       @include ellipsis;
+      display: block;
     }
   }
 
