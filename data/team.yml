@@ -92,6 +92,12 @@
   image: dgeb.jpg
   teams:
     - core
+- name: Godfrey Chan
+  github: https://github.com/chancancode
+  twitter: https://twitter.com/chancancode
+  image: godfrey.jpg
+  teams:
+    - core
 
 - name: Brendan McLoughlin
   github: https://github.com/bmac
