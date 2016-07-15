@@ -3,6 +3,7 @@
 @import 'bourbon';
 @import 'variables';
 @import 'base/base'; // bitters replacement for our homegrown setup
+@import 'vendor/docsearch';
 @import 'mixins/hidpi';
 @import 'fonts';
 @import 'header';
@@ -2525,47 +2526,6 @@ a.edit-page {
   background-image: url('/images/brand/brand-bg.png');
   border: 1px solid #cccccc;
   margin-top: 10px;
-}
-
-
-/* Swiftype Search CSS overrides - https://swiftype.com/documentation/tutorials/custom_styles
-   =========================================================================================== */
-
-/* Change color of search dropdown text */
-.swiftype-widget .autocomplete ul li {
-  p.title {
-    color: $orange-color;
-  }
-
-  &.active {
-    background: none;
-    background-color: $orange-color;
-    border-top: 1px solid darken($orange-color, 20%);
-    border-bottom: 1px solid darken($orange-color, 20%);
-    box-shadow: 0 1px 0 #C0242D inset;
-
-    .sections {
-      color: white;
-
-      em {
-        color: $black-color;
-        text-shadow: lighten($orange-color, 10%) 0px -1px 0px;
-      }
-    }
-  }
-}
-
-/* Changing the search result link colors */
-.st-result-listing a {
-  color: $orange-color;
-
-  &:visited {
-    color: darken($orange-color, 20%);
-  }
-
-  &:hover {
-    color: lighten($orange-color, 20%);
-  }
 }
 
 @import 'highlight';
