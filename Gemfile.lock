@@ -135,6 +135,9 @@ GEM
     minitest (5.8.2)
     multi_json (1.11.2)
     multipart-post (2.0.0)
+    neat (1.8.0)
+      sass (>= 3.3)
+      thor (~> 0.19)
     nokogiri (1.6.6.3)
       mini_portile (~> 0.6.0)
     nokogiri (1.6.6.3-x86-mingw32)
@@ -240,6 +243,7 @@ DEPENDENCIES
   middleman (~> 3.0)
   middleman-alias!
   middleman-blog (~> 3.0)
+  neat
   poltergeist
   pry
   pry-byebug
@@ -253,6 +257,3 @@ DEPENDENCIES
   tzinfo-data
   underscore-rails
   wdm (>= 0.1.0)
-
-BUNDLED WITH
-   1.11.2
