@@ -26,8 +26,6 @@ title: "A framework for creating ambitious web applications."
   <a href="http://jobs.emberjs.com" class="job-board-banner" >Post and find jobs on the Ember job board</a>
 <% end %>
 
-<% @version = JSON.parse(open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json').read).last %>
-
 <h1 class="about-header-text">
   A framework for creating ambitious web applications.
 </h1>
@@ -39,7 +37,7 @@ title: "A framework for creating ambitious web applications."
       <p>Build your first Ember application with our 5 minute tutorial.</p>
     </div>
 
-    <a href="https://guides.emberjs.com/<%= @version %>/getting-started/quick-start/">View Quick Start guide</a>
+    <a href="https://guides.emberjs.com/<%= current_version %>/getting-started/quick-start/">View Quick Start guide</a>
   </div>
   <div class="bottom">
     <p>$ npm install -g ember-cli</p>
