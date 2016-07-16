@@ -14,12 +14,6 @@
   min-width: 960px;
 }
 
-#st-search-input:focus {
-  border-color: #dd6a58;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.06),0 0 5px rgba(217,87,67,0.7);
-  outline: none;
-}
-
 .header a:hover {
   border-bottom: none;
 }
@@ -161,43 +155,34 @@
 
 .header-search {
   margin-left: 4%;
-  list-style-type: none;
+
+  .algolia-autocomplete {
+    display: block !important; // beats `inline-block` added by DocSearch script
+  }
+  .search-input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 0;
+    padding-left: 2.5em;
+    border: none;
+    border-radius: 35px;
+    outline: none;
+    appearance: none;
+    background: image-url("../images/search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
+    box-shadow: none;
+    font-size: 0.9rem;
+    line-height: 35px;
+    color: $white;
+
+    @include placeholder {
+      color: $white;
+    }
+  }
 }
 @media screen and (max-width: 53.75rem) {
   .responsive .header-search {
     margin-left: 0;
   }
-}
-
-.header-search .st-search-input {
-  appearance: none;
-  background: url("../images/search-icon.svg") rgba(255, 255, 255, 0.1) 10px 10px no-repeat;
-  border: none;
-  border-radius: 35px;
-  box-shadow: none;
-  color: #fff;
-  font-size: 0.9rem;
-  height: 35px;
-  line-height: 35px;
-  margin-bottom: 0;
-  padding-left: 2.5rem;
-  width: 100%;
-}
-
-.header-search .st-search-input::-webkit-input-placeholder {
-  color: #fff;
-}
-
-.header-search .st-search-input::-moz-placeholder {
-  color: #fff;
-}
-
-.header-search .st-search-input:-moz-placeholder {
-  color: #fff;
-}
-
-.header-search .st-search-input:-ms-input-placeholder {
-  color: #fff;
 }
 
 .visually-hidden {

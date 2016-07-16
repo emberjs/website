@@ -18,6 +18,7 @@ gem "gmaps4rails"
 gem "geocoder"
 gem "faraday"
 gem "bourbon"
+gem "neat"
 
 source 'https://rails-assets.org' do
   gem "rails-assets-js-md5"

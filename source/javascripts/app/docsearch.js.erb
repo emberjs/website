@@ -1,0 +1,27 @@
+(function() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = '//cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js';
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+}());
+
+var currentRevision = '<%= current_version %>';
+var apiKey = '<%= data.search.api_key %>';
+var inputSelector = '#search-input';
+var indexName = 'emberjs_versions';
+var hitsPerPage = 10;
+var facetFilters = '[["version:' + currentRevision + '","tags:api"]]';
+
+$(window).load(function () {
+    docsearch({
+        apiKey: apiKey,
+        indexName: indexName,
+        inputSelector: inputSelector,
+        algoliaOptions: {
+            hitsPerPage: hitsPerPage,
+            facetFilters: facetFilters
+        }
+    });
+});

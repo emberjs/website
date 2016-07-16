@@ -1,0 +1,17 @@
+// https://github.com/algolia/docsearch/blob/master/src/styles/_variables.scss
+
+$color-border: darken($base-border-color, 10%);
+$color-border-light: $base-border-color;
+$color-category-header-background: $ember-orange;
+$color-highlight-header-background: lighten($color-category-header-background, 15%);
+$color-highlight-text: $highlight-red;
+$color-selected-background: white;
+$color-selected-text: darken($action-color, 15%);
+$color-left-column-bg: $sidebar-background-color;
+$color-left-column: $base-font-color;
+
+$breakpoint-medium: $medium-screen;
+$breakpoint-large: $large-screen;
+
+$dropdown-min-width-medium: 100%;
+$dropdown-min-width-large: 600px;
