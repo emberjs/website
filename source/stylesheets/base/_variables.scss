@@ -36,7 +36,7 @@ $sidebar-background-color: #FFFDF9;
 // Code Highlighting
 /* $highlight-yellow: #F5E090; */
 /* $highlight-green: #C3F590; */
-/* $highlight-red: #EC605E; */
+$highlight-red: #EC605E;
 /* $highlight-blue: #90D7F5; */
 /* $highlight-cyan: #78CEC8; */
 $highlight-added: #5D7D5D;
@@ -46,15 +46,15 @@ $code-header-background: shade($code-background, 40%);
 $code-line-number-background: mix($code-background, $code-header-background);
 
 /* $highlight-colors: ( */
-/*         attribute-name: $highlight-red, */
-/*         comment: $medium-gray, */
-/*         content: $highlight-cyan, */
-/*         function: $highlight-red, */
-/*         key: $highlight-red, */
-/*         keyword: $highlight-yellow, */
-/*         local-variable: $highlight-red, */
-/*         string: $highlight-cyan, */
-/*         tag: $highlight-red, */
+        /* attribute-name: $highlight-red, */
+        /* comment: $medium-gray, */
+        /* content: $highlight-cyan, */
+        /* function: $highlight-red, */
+        /* key: $highlight-red, */
+        /* keyword: $highlight-yellow, */
+        /* local-variable: $highlight-red, */
+        /* string: $highlight-cyan, */
+        /* tag: $highlight-red, */
 /* ); */
 
 // Font Colors
