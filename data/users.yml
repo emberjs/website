@@ -823,6 +823,10 @@
   image: stealth_worker.png
   alt: "Stealth Worker"
   use: "StealthWorker.com is powered by Ember.js and JSONAPI"
+- url: http://www.acrolinx.com
+  image: acrolinx.png
+  alt: "Acrolinx"
+  use: "Acrolinx is using Ember.js and JSONAPI for several customer-facing web apps."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
