@@ -827,6 +827,10 @@
   image: acrolinx.png
   alt: "Acrolinx"
   use: "Acrolinx is using Ember.js and JSONAPI for several customer-facing web apps."
+- url: https://arukas.io
+  image: arukas.png
+  alt: "Arukas"
+  use: "We use Ember to build our Web UI (Dashboard)"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
