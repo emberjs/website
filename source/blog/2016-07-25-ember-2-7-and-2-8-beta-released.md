@@ -8,7 +8,7 @@ Ember.js 2.7, a minor version release of Ember with backwards compatible
 changes, is released today.
 
 Ember.js 2.8 beta is also being released today. This branch will be released as
-stable in roughly six weeks and will then go on to be the next LTS release
+stable in roughly six weeks and will then go on to be the next [LTS release](/blog/2016/02/25/announcing-embers-first-lts.html)
 roughly six weeks after that.
 
 ### Changes in Ember.js 2.7
@@ -83,8 +83,7 @@ changes.
 
 #### Notable Deprecations
 
-The following deprecations are scheduled for release with Ember 2.7 and will be
-removed soon:
+The following deprecations are scheduled for release with Ember 2.7:
 
 * `Ember.Backburner` was private throughout the Ember 2.x series and will be
   removed after Ember 2.8, as mentioned in the
