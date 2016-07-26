@@ -827,6 +827,9 @@
   image: acrolinx.png
   alt: "Acrolinx"
   use: "Acrolinx is using Ember.js and JSONAPI for several customer-facing web apps."
+- url: http://www.activecampaign.com
+  image: activecampaign.png
+  use: "ActiveCampaign is currently using Ember to power our Forms and CRM products of our platform."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
