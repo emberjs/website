@@ -16,9 +16,10 @@
   image: yahoo.png
   type: "Stefan Penner"
   term_start: 2015-01-01
+  term_end: 2015-06-24
 - url: http://www.linkedin.com
   image: linkedin.png
-  type: "Kris Selden, Glimmer, Ember 2.0"
+  type: "Kris Selden, Stefan Penner, Glimmer, Ember 2.0"
   term_start: 2015-01-01
 - url: https://www.yapp.us/
   image: yapp.png
