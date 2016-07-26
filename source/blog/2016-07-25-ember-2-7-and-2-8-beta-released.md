@@ -108,19 +108,19 @@ As described in the [RFC](https://github.com/emberjs/rfcs/pull/10), "engines
 allow multiple logical applications to be composed together into a single
 application from the user's perspective."
 
-The best way to get started with Engines is through the [ember-engines addon](http://github.com/dgeb/ember-engines).
-
-The addition of this API means **ember-engines is now usable with Ember.js 2.8 beta**.
-ember-engines itself remains experimental, however this is the first time you can use
-it with a beta build of Ember.js. For more information, check out the excellent 
-[guides](https://github.com/dgeb/ember-engines/blob/master/guides/01-introduction.md)
+The best way to use this feature in your apps is through the [ember-engines addon](http://github.com/dgeb/ember-engines).
+To get started, check out the excellent [guides](https://github.com/dgeb/ember-engines/blob/master/guides/01-introduction.md)
 written by [@trentmwillis](https://github.com/trentmwillis).
 
+This release will introduce a set of low-level APIs for the core functionailty
+along with the ususal semver guarentee. While the ember-engines addon itself
+remains expermental, the introduction of these public APIs means that **ember-engines
+is now usable with Ember.js 2.8 beta**.
+
 Work on engines has proceeded over the past year in both Ember core as well as
-the addon. Ember's
-architecture has been enhanced to provide the base classes and hooks needed to
-support engines. The addon then makes use of these interfaces to provide a
-smooth experience building and consuming engines.
+the addon. Ember's architecture has been enhanced to provide the base classes
+and hooks needed to support engines. The addon then makes use of these interfaces
+to provide a smooth experience building and consuming engines.
 
 Until now, none of the engine-related classes and hooks in Ember have been
 exposed publicly. However, starting with Ember 2.8, the following APIs will be
