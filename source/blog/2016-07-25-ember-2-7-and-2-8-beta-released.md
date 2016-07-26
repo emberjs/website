@@ -108,8 +108,16 @@ As described in the [RFC](https://github.com/emberjs/rfcs/pull/10), "engines
 allow multiple logical applications to be composed together into a single
 application from the user's perspective."
 
+The best way to get started with Engines is through the [ember-engines addon](http://github.com/dgeb/ember-engines).
+
+The addition of this API means **ember-engines is now usable with Ember.js 2.8 beta**.
+ember-engines itself remains experimental, however this is the first time you can use
+it with a beta build of Ember.js. For more information, check out the excellent 
+[guides](https://github.com/dgeb/ember-engines/blob/master/guides/01-introduction.md)
+written by [@trentmwillis](https://github.com/trentmwillis).
+
 Work on engines has proceeded over the past year in both Ember core as well as
-the [ember-engines](https://github.com/dgeb/ember-engines) addon. Ember's
+the addon. Ember's
 architecture has been enhanced to provide the base classes and hooks needed to
 support engines. The addon then makes use of these interfaces to provide a
 smooth experience building and consuming engines.
@@ -141,10 +149,6 @@ decrease the initial payload size and startup time for applications. If you're
 interested in helping to implement or test lazy loading of engines, please check
 out the thorough [attack plan](https://github.com/dgeb/ember-engines/issues/154)
 written up by [@nathanhammond](https://github.com/nathanhammond).
-
-If you'd like to get started using engines, check out the excellent
-[guides](https://github.com/dgeb/ember-engines/blob/master/guides/01-introduction.md)
-written by [@trentmwillis](https://github.com/trentmwillis).
 
 #### `Enumerable#includes` and `Array#includes`
 
