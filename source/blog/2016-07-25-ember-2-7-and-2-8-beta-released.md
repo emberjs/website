@@ -77,8 +77,8 @@ export default Ember.Component.extend({
 For more information on these methods, see the [API docs for the computed
 macro](http://emberjs.com/api/classes/Ember.computed.html#method_uniqBy), [API
 docs for the array
-method](http://emberjs.com/api/classes/Ember.Array.html#method_uniqBy), and [PR
-#12875](https://github.com/emberjs/ember.js/pull/12875) introducing these
+method](http://emberjs.com/api/classes/Ember.Array.html#method_uniqBy), and
+[PR #12875](https://github.com/emberjs/ember.js/pull/12875) introducing these
 changes.
 
 #### Notable Deprecations
