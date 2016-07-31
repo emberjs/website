@@ -835,6 +835,10 @@
   image: arukas.png
   alt: "Arukas"
   use: "We use Ember to build our Web UI (Dashboard)"
+- url: https://www.alyne.com
+  image: alyne.png
+  alt: "Alyne"
+  use: "Alyne is using Ember.js to power the frontend for our Cyber Security SaaS"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
