@@ -839,6 +839,11 @@
   image: alyne.png
   alt: "Alyne"
   use: "Alyne is using Ember.js to power the frontend for our Cyber Security SaaS"
+- url: https://www.splittytravel.com/
+  image: splitty.png
+  alt: "Splitty"
+  use: "Splitty is using Ember.js to power its ambitious website"
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
