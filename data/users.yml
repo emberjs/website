@@ -842,7 +842,7 @@
 - url: https://www.splittytravel.com/
   image: splitty.png
   alt: "Splitty"
-  use: "Online hotel booking website which offers cheaper prices and new deals with “Split & Match” hotel reservations"
+  use: "Splitty is using Ember.js to power its ambitious website"
 
 
 # ---- PLEASE READ ----
