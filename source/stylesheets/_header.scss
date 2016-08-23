@@ -36,6 +36,7 @@
 
 .header .container {
   display: flex;
+  display: -webkit-flex;
 }
 
 @media screen and (max-width: 53.75rem) {
