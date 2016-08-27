@@ -3,7 +3,7 @@
     <tr>
       <td><a href={{url}}>{{tag-url-path url}}</a></td>
       <td>{{format-date-time project.date}}</td>
-      <td>{{copy-clipboard label="Link" text=url}} {{copy-clipboard label="Script Tag" text=(script-tag url)}}</td>
+      <td>{{copy-clipboard label="Link" text=url}}</td>
     </tr>
   {{/each}}
 {{/if}}
@@ -11,6 +11,6 @@
   <tr>
     <td><a href={{file.url}}>{{file.name}}</a></td>
     <td>{{format-date-time file.lastModified}}</td>
-    <td>{{copy-clipboard label="Link" text=file.url}} {{copy-clipboard label="Script Tag" text=file.scriptTag}}</td>
+    <td>{{copy-clipboard label="Link" text=file.url}}</td>
   </tr>
 {{/each}}
