@@ -25,7 +25,7 @@ In Ember Data 2.5 and Ember Data 2.6 the following generator command for buildin
 
 `ember generate model post content isDraft:boolean comments:has-many user:belongs-to`
 
-It would generate the following bluerpint:
+It would generate the following blueprint:
 
 ```app/models/post.js
 import Model from 'ember-data/model';
