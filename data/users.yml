@@ -843,6 +843,10 @@
   image: splitty-ember.png
   alt: "Splitty"
   use: "Splitty is using Ember.js to power its ambitious website"
+- url: https://synap.ac
+  image: synap.png
+  alt: "Synap"
+  use: "Synap's front-end is fully powered by Ember"  
 
 
 # ---- PLEASE READ ----
