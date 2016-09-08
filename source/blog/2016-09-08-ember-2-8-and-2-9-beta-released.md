@@ -7,11 +7,11 @@ tags: Releases
 Today, the Ember core team is happy to announce two new Ember.js releases –
 Ember.js 2.8 and Ember.js 2.9 beta.
 
-# Ember.js 2.8
+## Ember.js 2.8
 
 Ember.js 2.8 is a minor release with only backwards compatible changes.
 
-## LTS Candidate
+### LTS Candidate
 
 The Ember.js 2.8 release is considered a release candidate for the LTS
 (long-term support) channel. As described in the [original LTS announcement](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html),
@@ -19,7 +19,7 @@ the 2.8 branch will be moved into the LTS channel six weeks after today's
 release. Although we don't anticipate any issues, this process ensures the LTS
 releases will be rock solid.
 
-## Engines
+### Engines
 
 Ember.js 2.8 introduced a new [Engines](https://github.com/emberjs/rfcs/pull/10)
 API, which allows multiple logical applications to be composed together into a
@@ -68,9 +68,9 @@ interested in helping to implement or test lazy loading of engines, please
 check out the thorough [attack plan](https://github.com/dgeb/ember-engines/issues/154)
 written up by [@nathanhammond](https://github.com/nathanhammond).
 
-## Other Notable Features
+### Other Notable Features
 
-### `Enumerable#includes` and `Array#includes`
+#### `Enumerable#includes` and `Array#includes`
 
 In an effort to remain in line with ES standards, the methods `Enumerable#contains`
 and `Array#contains` have been deprecated in favor of the new methods `Enumerable#includes`
@@ -82,7 +82,7 @@ that proposed this change.
 Thanks as well to [@bmeurant](https://github.com/bmeurant) for the [PR](https://github.com/emberjs/ember.js/pull/13553)
 that implemented the change.
 
-### `Ember.String.isHTMLSafe`
+#### `Ember.String.isHTMLSafe`
 
 The new method `Ember.String.isHTMLSafe` detects if a string was decorated
 using `Ember.String.htmlSafe`.
@@ -106,7 +106,7 @@ instead of the using the deprecated `Ember.Handlebars.SafeString`. See the
 [deprecation guide](http://emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring)
 for details.
 
-### `Ember.Test.checkWaiters`
+#### `Ember.Test.checkWaiters`
 
 The new method `Ember.Test.checkWaiters` provides a simple mechanism for test
 tooling to determine whether all async test waiters have settled. This replaces
@@ -119,7 +119,7 @@ for implementing this method.
 
 For more details on the changes landing in Ember.js 2.8, review the [Ember.js 2.8.0 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.8.0/CHANGELOG.md).
 
-# Ember.js 2.9 beta
+## Ember.js 2.9 beta
 
 Ember.js 2.9 beta is also being released today. Per our usual [release cadence](http://emberjs.com/builds/#/beta),
 it will be released to the stable channel in six weeks.
@@ -128,7 +128,7 @@ This release will not introduce any new features or deprecations. Instead, this
 release will be focused around integrating the Glimmer 2 rendering engine into
 Ember.
 
-## Glimmer 2
+### Glimmer 2
 
 In this year's [EmberConf keynote](https://www.youtube.com/watch?v=OInJBwS8VDQ&list=PL4eq2DPpyBblc8aQAd516-jGMdAhEeUiW),
 Yehuda mentioned that we are working on a highly optimized rendering engine for
@@ -136,12 +136,12 @@ Ember called Glimmer 2. A few weeks ago, we announced the [Glimmer 2 alpha](http
 to invite our community to help test the new engine. Today, we are very excited
 to announce that the Glimmer 2 engine will be included in the 2.9 beta release.
 
-### Compatibility First
+#### Compatibility First
 
-As mentioned in the alpha announcement, our primary goal of the initial
-integration is maximal compatibility – **we expect the final release to be a
-drop-in, completely backwards compatible upgrade for virtually all Ember
-users**.
+As mentioned above, the initial Glimmer 2 integration does not expose any new
+user-facing features. The primary goal of this release is maximal compatibility
+– **we expect the final release to be a drop-in, completely backwards
+compatible upgrade for virtually all Ember users**.
 
 During the alpha testing period, the Ember core team and our community were
 laser-focused and worked really hard to achieve this goal. Thanks to all the
@@ -162,12 +162,6 @@ to include the current-generation rendering engine, which will be supported
 with critical bugfixes until at least May 2017 and security patches until at
 least October 2017.
 
-### The Glimmer 2 Benefits
-
-As mentioned above, the initial Glimmer 2 integration does not expose any new
-user-facing features. However, there are still a few notable benefits enabled
-by this integration.
-
 #### New Template Serialization Format
 
 Glimmer 2 adopted a new serialization format for the precompiled templates. The
@@ -176,7 +170,7 @@ size (hence download time) and parse time.
 
 Take this simple template for example:
 
-```app/templates/application.hbs
+```handlebars
 Hello {{name}}! {{#if isFriday}}Happy Friday!!!{{/if}}
 ```
 
@@ -205,19 +199,19 @@ stable release.
 
 #### Performance
 
-One of the overarching goals of Glimmer 2 is to improve performance in Ember.
+One of the overarching goals of the Glimmer 2 project is to improve performance
+in Ember. While compatibility is the immediate priority for this release,
+performance remains an important secondary consideration.
 
-While the immediate priority for this release is to achieve maximum
-compatibility, performance remains an important secondary consideration. Our
-conservative goal for this first release is to avoid introducing any accidental
-performance regressions.
+Our conservative goal for this first release is to avoid introducing any
+accidental performance regressions. Based on our testing, we have cleared that
+goal with ample headroom.
 
-Based on our testing, we have cleared that goal with ample headroom. As the
-benefits of Glimmer 2 begin to trickle in, we have already seen noticeable
-improvements to rendering performance (both initial render and re-rendering).
-Among other things, the `{{link-to}}` helper and `{{#each}}` loops with big
-lists appear to be significantly faster. Component instantiation has also seen
-some modest improvement.
+As the benefits of Glimmer 2 begin to trickle in, we have already seen
+noticeable improvements to rendering performance (both initial render and
+re-rendering). Among other things, the `{{link-to}}` helper and `{{#each}}`
+loops with big lists appear to be significantly faster. Component instantiation
+has also seen some modest improvement.
 
 However, we have also noticed a performance regression in the pre-render phase.
 Specifically, we have seen a small increase in the `vendor.js` byte size and an
@@ -243,7 +237,7 @@ please report them as bugs. As always – when running performance benchmarks,
 (`ember.min.js`). The debug builds contain a lot of helpful development aids
 that impact performance negatively.
 
-### Future Work
+#### Future Work
 
 While this release serves as an important milestone and proving ground for the
 Glimmer 2 project, we are barely scratching the surface here. One of the
@@ -279,7 +273,7 @@ time.
 features**, such as FastBoot rehydration, incremental rendering and a refreshed
 approach to components once the initial integration is complete.
 
-### Thank You!
+#### Thank You!
 
 Since [forking HTMLBars](https://github.com/tildeio/glimmer/compare/rip-htmlbars...master),
 the Glimmer repo has clocked over 850 commits, not to mention the [integration effort](https://github.com/emberjs/ember.js/issues?q=label:Glimmer2+is:closed)
