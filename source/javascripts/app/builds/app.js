@@ -374,9 +374,9 @@ App.IndexRoute = Ember.Route.extend({
 
 App.IndexController = Ember.Controller.extend({
   latestVersionOfDocs: Ember.computed('model.release.lastRelease', function() {
-    const release = this.get('model.release.lastRelease');
-    const versionArray = release.split('.');
-    return `${versionArray[0]}.${versionArray[1]}.0`;
+    var release = this.get('model.release.lastRelease');
+    var versionArray = release.split('.');
+    return versionArray[0] + '.' + versionArray[1] + '.0';
   })
 });
 
