@@ -1550,7 +1550,7 @@ ul.showcase {
     .showcase > li {
       width: 50%;
 
-      a {
+      > * {
         margin: 0 auto;
       }
     }
@@ -1566,7 +1566,7 @@ ul.showcase {
       margin: 20px auto;
       width: 100%;
 
-      a {
+      > * {
         margin: 0 auto;
       }
     }
@@ -1579,24 +1579,32 @@ ul.showcase {
 
   width: 33.333%;
   margin: 10px 0;
+
+  > * {
+    display: block;
+    width: 210px;
+  }
+
   &:nth-child(3n+1) {
-    a {
+    > * {
       margin: 0 auto 0 0;
     }
   }
+
   &:nth-child(3n+2) {
-    a {
+    > * {
       margin: 0 auto 0 auto;
     }
   }
+
   &:nth-child(3n+3) {
-    a {
+    > * {
       margin: 0 0 0 auto;
     }
   }
-  a {
+
+  > a {
     background-image: url('/images/about/user_bg.png');
-    display: block;
     height: 103px;
     width: 210px;
     text-align: center;
@@ -1943,10 +1951,6 @@ body.tomster_payment-sent #content {
     li {
       font-size: 15px;
       margin: 10px 0 10px 0;
-
-      p {
-        padding-left: 7px;
-      }
     }
   }
 }
