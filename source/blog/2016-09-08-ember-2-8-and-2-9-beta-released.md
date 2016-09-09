@@ -76,6 +76,9 @@ In an effort to remain in line with ES standards, the methods `Enumerable#contai
 and `Array#contains` have been deprecated in favor of the new methods `Enumerable#includes`
 and `Array#includes`.
 
+Addon authors should use [ember-runtime-enumerable-includes-polyfill](https://github.com/rwjblue/ember-runtime-enumerable-includes-polyfill)
+to fix the deprecation in a backwards-compatible way.
+
 Thanks to [@alexspeller](https://github.com/alexspeller) for the [RFC](https://github.com/emberjs/rfcs/blob/master/text/0136-contains-to-includes.md)
 that proposed this change.
 
@@ -287,4 +290,3 @@ sacrifices to make this happen.
 ---
 
 For more details on the changes landing in Ember.js 2.9 beta, review the [Ember.js 2.9.0-beta.1 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.9.0-beta.1/CHANGELOG.md).
-
