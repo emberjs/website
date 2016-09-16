@@ -846,7 +846,11 @@
 - url: https://synap.ac
   image: synap.png
   alt: "Synap"
-  use: "Synap's front-end is fully powered by Ember"  
+  use: "Synap's front-end is fully powered by Ember" 
+- url: http://www.wnyc.org/
+  image: wnyc.png
+  alt: WNYC
+  use: "WNYC's front-end is fully powered by Ember" 
 
 
 # ---- PLEASE READ ----
