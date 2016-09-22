@@ -851,6 +851,10 @@
   image: wnyc.png
   alt: WNYC
   use: "WNYC's front-end is fully powered by Ember" 
+- url: https://freshbooks.com
+  image: freshbooks.png
+  alt: FreshBooks
+  use: "FreshBooks front-end application is powered by Ember"
 
 
 # ---- PLEASE READ ----
