@@ -1982,6 +1982,11 @@ body.tomster_payment-sent #content {
 **/
 
 body.team {
+  #content {
+      margin: 3em auto 0 auto;
+      max-width: 54em;
+      width: 90%;
+  }
   h1, .lead {
     text-align: center;
   }
@@ -1991,18 +1996,27 @@ body.team {
     margin: 4em 0;
     background-color: #dfd7d4;
   }
-  .headshots {
-    width: 760px;
+  #content .headshots { /* #content is needed for specifity override */
+    max-width: 760px;
+    width: 100%;
     margin: 0 auto;
 
     a:hover {
       border-bottom: none;
     }
 
-    td {
-      width: 190px;
+    > li {
+      display: inline-block;
+      width: 24%;
       text-align: center;
       padding: 40px 0 0;
+
+      @media screen and (max-width: 860px) {
+        width: 32%;
+      }
+      @media screen and (max-width: 560px) {
+        width: 49%;
+      }
 
       p {
         margin: 0px 0px 10px 0px;
@@ -2023,7 +2037,7 @@ body.team {
       }
       .social {
         margin-bottom: 0;
-        li {
+        > li {
           display: inline-block;
           padding: 0;
         }
