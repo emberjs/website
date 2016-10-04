@@ -218,12 +218,12 @@ App.Project.reopenClass({
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
-      initialVersion: "2.7.0",
-      initialReleaseDate: "2016-07-25",
-      lastRelease: "2.7.2",
-      futureVersion: "2.7.3",
+      initialVersion: "2.8.0",
+      initialReleaseDate: "2016-09-08",
+      lastRelease: "2.8.1",
+      futureVersion: "2.8.2",
       channel: "release",
-      date: "2016-08-30",
+      date: "2016-09-15",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
       debugFileName: ".debug.js",
@@ -234,13 +234,13 @@ App.Project.reopenClass({
       baseFileName: 'ember',
       projectFilter: [ /ember\./, /ember-template-compiler/ ],
       projectRepo: 'emberjs/ember.js',
-      lastRelease: "2.8.0-beta.5",
-      futureVersion: "2.8.0",
-      finalVersion: '2.8.0',
+      lastRelease: "2.9.0-beta.4",
+      futureVersion: "2.9.0-beta.5",
+      finalVersion: '2.9.0',
       channel: "beta",
-      cycleEstimatedFinishDate: '2016-09-05',
-      date: "2016-08-30",
-      nextDate: "2016-09-05",
+      cycleEstimatedFinishDate: '2016-10-17',
+      date: "2016-09-28",
+      nextDate: "2016-09-19",
       changelogPath: "CHANGELOG.md",
       enableTestURL: true,
       debugFileName: ".debug.js",
@@ -251,10 +251,10 @@ App.Project.reopenClass({
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
-      lastRelease: "2.7.0",
-      futureVersion: "2.7.1",
+      lastRelease: "2.8.0",
+      futureVersion: "2.8.1",
       channel: "release",
-      date: "2016-07-25",
+      date: "2016-09-10",
       changelogPath: "CHANGELOG.md",
       debugFileName: ".js",
       installWithEmberCLI: '# Install Ember-Data %s:\nnpm install --save-dev ember-data@%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nnpm install --save-dev emberjs/data#release'
@@ -263,11 +263,11 @@ App.Project.reopenClass({
       baseFileName: 'ember-data',
       projectFilter: [ /ember-data\./ ],
       projectRepo: 'emberjs/data',
-      lastRelease: "2.8.0-beta.1",
-      futureVersion: "2.8.0-beta.2",
-      finalVersion: '2.7.0',
+      lastRelease: "2.9.0-beta.1",
+      futureVersion: "2.9.0-beta.2",
+      finalVersion: '2.9.0',
       channel: "beta",
-      date: "2016-07-25",
+      date: "2016-09-11",
       changelogPath: "CHANGELOG.md",
       debugFileName: ".js",
       installWithEmberCLI: '# Install Ember-Data %s:\nnpm install --save-dev ember-data@%s\n# Or, install the latest build of this channel which may include unreleased incremental changes:\nnpm install --save-dev emberjs/data#beta'
@@ -374,9 +374,9 @@ App.IndexRoute = Ember.Route.extend({
 
 App.IndexController = Ember.Controller.extend({
   latestVersionOfDocs: Ember.computed('model.release.lastRelease', function() {
-    const release = this.get('model.release.lastRelease');
-    const versionArray = release.split('.');
-    return `${versionArray[0]}.${versionArray[1]}.0`;
+    var release = this.get('model.release.lastRelease');
+    var versionArray = release.split('.');
+    return versionArray[0] + '.' + versionArray[1] + '.0';
   })
 });
 

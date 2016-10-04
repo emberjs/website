@@ -79,6 +79,7 @@ h1 {
   // This styling has been removed from everywhere other than
   // the API and Guides, like at line 1167.
   padding-bottom: 20px;
+  line-height: 1.125;
 }
 
 /* This next h1 is so h1s in the middle of the page (ie not the first time)
@@ -1085,11 +1086,32 @@ a.toc-anchor {
 
 body.community #content {
   margin: 3em auto 0 auto;
-  width: 54em;
+  max-width: 54em;
+  width: 90%;
 
   > h1 {
     text-align: center;
     margin: 3em auto 1em auto;
+  }
+
+  .video {
+      max-width: 640px;
+      margin: 0 auto;
+
+      .embedded-video {
+        position: relative;
+        padding-bottom: 52.25%; /* not quite 16:9 */
+        padding-top: 25px;
+        height: 0;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
   }
 
   .section {
@@ -1099,6 +1121,11 @@ body.community #content {
       margin: 0 20px 15px 0;
       width: 220px;
       height: 142px;
+
+      @media screen and (max-width: 560px) {
+        float: none;
+        margin: 0 auto 15px;
+      }
     }
     &.contribute .image {
       @include hidpi('community/give', 'png');
@@ -1112,11 +1139,23 @@ body.community #content {
       @include hidpi('community/bug', 'png');
       float: right;
       margin: 0 0 15px 20px;
+
+      @media screen and (max-width: 560px) {
+        float: none;
+        margin: 0 auto 15px;
+      }
     }
     &.meetup {
       width: 47%;
       float: left;
       text-align: center;
+
+      @media screen and (max-width: 560px) {
+        width: 100%;
+        float: none;
+        margin: 0 auto 15px;
+      }
+
       h2 {
         margin-bottom: 10px;
         line-height: 1.2;
@@ -1138,6 +1177,13 @@ body.community #content {
       width: 47%;
       float: right;
       text-align: center;
+
+      @media screen and (max-width: 560px) {
+        width: 100%;
+        float: none;
+        margin: 0 auto 15px;
+      }
+
       h2 {
         margin-bottom: 15px;
         line-height: 1.2;
@@ -1550,7 +1596,7 @@ ul.showcase {
     .showcase > li {
       width: 50%;
 
-      a {
+      > * {
         margin: 0 auto;
       }
     }
@@ -1566,7 +1612,7 @@ ul.showcase {
       margin: 20px auto;
       width: 100%;
 
-      a {
+      > * {
         margin: 0 auto;
       }
     }
@@ -1579,24 +1625,32 @@ ul.showcase {
 
   width: 33.333%;
   margin: 10px 0;
+
+  > * {
+    display: block;
+    width: 210px;
+  }
+
   &:nth-child(3n+1) {
-    a {
+    > * {
       margin: 0 auto 0 0;
     }
   }
+
   &:nth-child(3n+2) {
-    a {
+    > * {
       margin: 0 auto 0 auto;
     }
   }
+
   &:nth-child(3n+3) {
-    a {
+    > * {
       margin: 0 0 0 auto;
     }
   }
-  a {
+
+  > a {
     background-image: url('/images/about/user_bg.png');
-    display: block;
     height: 103px;
     width: 210px;
     text-align: center;
@@ -1943,10 +1997,6 @@ body.tomster_payment-sent #content {
     li {
       font-size: 15px;
       margin: 10px 0 10px 0;
-
-      p {
-        padding-left: 7px;
-      }
     }
   }
 }
@@ -1978,6 +2028,11 @@ body.tomster_payment-sent #content {
 **/
 
 body.team {
+  #content {
+      margin: 3em auto 0 auto;
+      max-width: 54em;
+      width: 90%;
+  }
   h1, .lead {
     text-align: center;
   }
@@ -1987,18 +2042,27 @@ body.team {
     margin: 4em 0;
     background-color: #dfd7d4;
   }
-  .headshots {
-    width: 760px;
+  #content .headshots { /* #content is needed for specifity override */
+    max-width: 760px;
+    width: 100%;
     margin: 0 auto;
 
     a:hover {
       border-bottom: none;
     }
 
-    td {
-      width: 190px;
+    > li {
+      display: inline-block;
+      width: 24%;
       text-align: center;
       padding: 40px 0 0;
+
+      @media screen and (max-width: 860px) {
+        width: 32%;
+      }
+      @media screen and (max-width: 560px) {
+        width: 49%;
+      }
 
       p {
         margin: 0px 0px 10px 0px;
@@ -2019,7 +2083,7 @@ body.team {
       }
       .social {
         margin-bottom: 0;
-        li {
+        > li {
           display: inline-block;
           padding: 0;
         }

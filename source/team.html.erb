@@ -1,5 +1,6 @@
 ---
 title: "Team"
+responsive: true
 ---
 
 <h1>
@@ -15,41 +16,37 @@ title: "Team"
 
 <% core = data.team.select { |m| m.teams.include?('core') } %>
 
-<table class="headshots">
-  <% core.each_slice(4) do |slice| %>
-    <tr>
-      <% slice.each do |user| %>
-        <td>
-          <a href="<%= user.github %>" rel="nofollow" class="avatar">
-            <img src="/images/team/<%= user.image %>">
+<ul class="headshots">
+  <% core.each do |user| %>
+    <li>
+      <a href="<%= user.github %>" rel="nofollow" class="avatar">
+        <img src="/images/team/<%= user.image %>">
+      </a>
+
+      <p class="name">
+        <%= user.name %>
+      </p>
+
+      <ul class="social">
+        <li>
+          <a class="twitter" href="<%= user.twitter %>">
+            <i class="icon-twitter"></i>
           </a>
+        </li>
 
-          <p class="name">
-            <%= user.name %>
-          </p>
+        <li>
+          <a class="github" href="<%= user.github %>">
+            <i class="icon-github"></i>
+          </a>
+        </li>
+      </ul>
 
-          <ul class="social">
-            <li>
-              <a class="twitter" href="<%= user.twitter %>">
-                <i class="icon-twitter"></i>
-              </a>
-            </li>
-
-            <li>
-              <a class="github" href="<%= user.github %>">
-                <i class="icon-github"></i>
-              </a>
-            </li>
-          </ul>
-
-          <p class="bio">
-            <%= user.bio %>
-          </p>
-        </td>
-      <% end %>
-    </tr>
+      <p class="bio">
+        <%= user.bio %>
+      </p>
+  </li>
   <% end %>
-</table>
+</ul>
 
 <hr>
 
@@ -71,25 +68,21 @@ subteams = subteams.map { |team|
 subteams.sort_by! {|u| [u.type, u.name] }
 %>
 
-<table class="contributors headshots">
-  <% subteams.each_slice(4) do |slice| %>
-    <tr>
-      <% slice.each do |user| %>
-        <td>
-          <a href="<%= user.github %>" rel="nofollow" class="avatar">
-            <img src="/images/team/<%= user.image %>">
+<ul class="contributors headshots">
+  <% subteams.each do |user| %>
+    <li>
+      <a href="<%= user.github %>" rel="nofollow" class="avatar">
+        <img src="/images/team/<%= user.image %>">
 
-            <span class="type"><%= user.type %></span>
-          </a>
+        <span class="type"><%= user.type %></span>
+      </a>
 
-          <p class="name">
-            <%= user.name %>
-          </p>
-        </td>
-      <% end %>
-    </tr>
+      <p class="name">
+        <%= user.name %>
+      </p>
+  </li>
   <% end %>
-</table>
+</ul>
 
 <hr>
 
@@ -104,21 +97,17 @@ subteams.sort_by! {|u| [u.type, u.name] }
 
 <% alumni = data.team.select { |m| m.teams.include?('corealumni') } %>
 
-<table class="headshots">
-  <% alumni.each_slice(4) do |slice| %>
-    <tr>
-      <% slice.each do |user| %>
-        <td>
-          <a href="<%= user.github %>" rel="nofollow">
-            <img src="/images/team/<%= user.image %>" width="150" height="150">
-          </a>
-          <p>
-            <%= user.name %>
-          </p>
-        </td>
-      <% end %>
-    </tr>
+<ul class="headshots">
+  <% alumni.each do |user| %>
+    <li>
+      <a href="<%= user.github %>" rel="nofollow">
+        <img src="/images/team/<%= user.image %>" width="150" height="150">
+      </a>
+      <p>
+        <%= user.name %>
+      </p>
+    </li>
   <% end %>
-</table>
+</ul>
 
 </div>

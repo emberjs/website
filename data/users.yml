@@ -34,7 +34,7 @@
 - url: http://tilde.io/
   image: tilde.png
   alt: Tilde
-  use: "We build online Ember trainings"
+  use: "We build online Ember trainings and use Ember for client consulting projects"
 - url: http://www.bustle.com
   image: bustle.png
   alt: Bustle
@@ -766,7 +766,7 @@
 - url: http://bimpactassessment.net
   image: b-lab.png
   alt: "B Lab"
-  use: "We use Ember to build our products that help people use business as a force for good."
+  use: "We use Ember to build our products."
 - url: http://condenast.com
   image: condenast.png
   alt: "Condé Nast"
@@ -842,7 +842,19 @@
 - url: https://www.splittytravel.com/
   image: splitty-ember.png
   alt: "Splitty"
-  use: "Splitty is using Ember.js to power its ambitious website"
+  use: "Splitty is using Ember.js to power its website"
+- url: https://synap.ac
+  image: synap.png
+  alt: "Synap"
+  use: "Synap's front-end is fully powered by Ember" 
+- url: http://www.wnyc.org/
+  image: wnyc.png
+  alt: WNYC
+  use: "WNYC's front-end is fully powered by Ember" 
+- url: https://freshbooks.com
+  image: freshbooks.png
+  alt: FreshBooks
+  use: "FreshBooks' front-end application is powered by Ember"
 
 
 # ---- PLEASE READ ----
