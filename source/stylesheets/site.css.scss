@@ -21,6 +21,7 @@
 @import 'components/security';
 @import 'components/sponsors';
 @import 'components/logos';
+@import 'components/meetups';
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
@@ -1366,6 +1367,12 @@ body.community_meetups #content {
       width: 221px;
       height: 185px;
       margin: -35px 20px 0 auto;
+
+      @media screen and (max-width: 460px) {
+        float: none;
+        width: 100%;
+        background-repeat: no-repeat;
+      }
     }
     p {
       text-align: left;

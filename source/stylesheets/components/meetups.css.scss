@@ -1,0 +1,25 @@
+body.community_meetups_index.responsive > #content-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body.community_meetups_index.responsive #content {
+  width: 90%;
+}
+
+@media screen and (max-width: 460px) {
+  .meetups .columns {
+    margin: 0;
+  }
+
+  .meetups tr {
+    width: 100%;
+    display: block;
+  }
+
+  .meetups td {
+    width: 100%;
+    display: block;
+  }
+}
