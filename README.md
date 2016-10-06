@@ -58,6 +58,8 @@ You can launch the website via `bundle exec middleman` to preview the generated 
 
 ### Requirements
 
+If the `bundle` command is not found, you can install it with `gem install bundle`.
+
 If the `bundle` command fails to run, you may need to upgrade your Ruby version. The Ember.js website build requires 1.9.3 or newer (2.0.0 recommended). You can use [RVM](https://rvm.io/) to install it:
 
 ``` sh
