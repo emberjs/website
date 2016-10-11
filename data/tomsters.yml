@@ -76,7 +76,7 @@
   image: /images/tomsters/construction.png
 - title: EmberCamp Tomster
   url:
-  date: December 21, 2012
+  date: February 15, 2013
   image: /images/tomsters/embercamp.png
 - title: Fishy Tomster
   url: http://emberjs.com/community/
@@ -93,11 +93,11 @@
 - title: EmberConf 2015
   url: http://www.emberconf.com
   date: November 17, 2014
-  image: /images/tomsters/kayaking.png
+  image: /images/tomsters/emberconf-2015-tomster.png
 - title: EmberConf 2014
   url: http://www.emberconf.com
   date: November 1, 2013
-  image: /images/tomsters/hanggliding.png
+  image: /images/tomsters/emberconf-2014-tomster.png
 - title: Teaching Tomster
   url:
   date: January 14, 2013
@@ -166,3 +166,19 @@
   date: March 8, 2016
   url: http://triangleember.com/
   image: /images/tomsters/raleigh.png
+- title: DC Tomster
+  date: August 29, 2016
+  url: http://www.meetup.com/Ember-JS-DC/
+  image: /images/tomsters/dc-tomster.png
+- title: Austin Zoey
+  date: July 8, 2016
+  url: http://www.meetup.com/Ember-ATX/
+  image: /images/tomsters/austin-zoey.png
+- title: Munich Zoey
+  date: July 19, 2016
+  url: http://www.meetup.com/Ember-js-Munich/
+  image: /images/tomsters/munich-zoey.png
+- title: EmberConf 2016
+  date: March 28, 2016
+  url: http://2016.emberconf.com/
+  image: /images/tomsters/emberconf-2016-tomster.png
