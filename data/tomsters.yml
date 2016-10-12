@@ -113,7 +113,7 @@
 - title: Atlanta Tomster
   url: http://www.meetup.com/Ember-Atlanta-Meetup/
   date: June 11, 2015
-  image: /images/tomsters/atlanta.png
+  image: /images/tomsters/atlanta-tomster.png
 - title: Boston Tomster
   url: http://www.meetup.com/Boston-Ember-js/
   date: May 20, 2015
@@ -182,3 +182,7 @@
   date: March 28, 2016
   url: http://2016.emberconf.com/
   image: /images/tomsters/emberconf-2016-tomster.png
+- title: Atlanta Zoey
+  date: October 11, 2016
+  url: http://www.meetup.com/Ember-Atlanta-Meetup/
+  image: /images/tomsters/atlanta-zoey.png
