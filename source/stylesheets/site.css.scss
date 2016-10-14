@@ -48,6 +48,11 @@ body {
 a {
   color: #f23818;
   text-decoration: none;
+
+  &.active {
+    font-weight: bold;
+    // text-decoration: underline;
+  }
 }
 
 a:hover {
@@ -1697,10 +1702,25 @@ body.deprecations {
   }
 }
 
+#tomster-filter {
+  ul {
+    text-align: center;
+    list-style-type: none;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
 .tomster.section.list {
   margin: 0 auto;
 
-  #tomster-list td {
+  #tomster-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #tomster-list .tomster-wrapper {
     padding: 20px;
   }
 
