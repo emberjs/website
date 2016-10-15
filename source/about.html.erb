@@ -62,50 +62,40 @@ title: "A framework for creating ambitious web applications."
 </div>
 
 <div class="getting-started section">
-  <script type="text/x-handlebars" id="application">
-      <div class="example-tabs">
-        {{#each model as |item|}}
-          {{tab-item item=item selectedTab=selectedTab selectTab='selectTab'}}
-        {{/each}}
-        <span class="tabs-footer"></span>
-      </div>
-      {{syntax-highlight selectedTab.contents}}
-      <div class="example-arrow"></div>
-  </script>
-  <script type="text/x-handlebars" data-template-name="components/tab-item">
-    <a class="{{if isSelected 'active'}}" href="#">{{unbound item.name}}</a>
-  </script>
-
-  <div class="example-app" data-name="binding" data-files="templates/application.hbs">
+  <div class="example-app">
     <h2 class="sub">Auto-Updating Handlebars Templates</h2>
     <p class="prose">Ember makes Handlebars templates even better, by ensuring your HTML
     stays up-to-date when the underlying model changes. To get started, you
     don't even need to write any JavaScript.</p>
+    <div style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;"><iframe src="https://ember-twiddle.com/45d81b7613faa6b9ad2aac6e1fb95b71" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
   </div>
 
-  <div class="example-app" data-name="components" data-files="components/gravatar-image.js templates/application.hbs templates/components/gravatar-image.hbs">
+  <div class="example-app">
     <h2 class="sub">Components</h2>
     <p class="prose">Experience the future of the web platform today with Ember's components.
     Components allow you to create your own application-specific HTML tags,
     using Handlebars to describe their markup and JavaScript to implement
     custom behavior.</p>
+    <div style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;"><iframe src="https://ember-twiddle.com/808b7181756ec08efe2dc795eefb3c3f" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
   </div>
 
-  <div class="example-app example-loading" data-name="loading" data-files="app.js templates/application.hbs">
+  <div class="example-app example-loading">
     <h2 class="sub">Loading Data from a Server</h2>
     <p class="prose">
       Ember.js eliminates the boilerplate of displaying JSON retrieved
       from your server. If you know how to use jQuery, you know how to
       fetch models in Ember.
     </p>
+    <div style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;"><iframe src="https://ember-twiddle.com/927461e47748823ceeab88dcf556bf6b" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
   </div>
 
-  <div id="routing-example" class="example-app" data-name="routing" data-files="app.js templates/application.hbs templates/index.hbs templates/mail.hbs templates/mailbox.hbs templates/mailbox/index.hbs fixtures.js">
+  <div id="routing-example" class="example-app">
     <h2 class="sub">Routing</h2>
     <p class="prose">Build JavaScript apps that don't break the web!
     Ember.js makes it downright simple to create sophisticated,
     multi-page JavaScript applications with great URL support, in a
     fraction of the code you'd write in other frameworks.</p>
+    <div style="position: relative; height: 0px; overflow: hidden; max-width: 100%; padding-bottom: 56.25%;"><iframe src="https://ember-twiddle.com/aae9f2cccb25a5d41ba3a5de05bb13ab" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;"></iframe></div>
   </div>
 </div>
 
