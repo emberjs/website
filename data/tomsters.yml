@@ -2,187 +2,234 @@
   url: http://emberjs.com/
   date: May 16, 2012
   image: /images/tomsters/original.png
+  tags: all tomster
 - title: Salt Lake City Tomster
   url: http://www.meetup.com/emberjs-slc/
   date: September 25, 2014
   image: /images/tomsters/slc.png
+  tags: all tomster meetup
 - title: Seattle Tomster
   url: http://www.meetup.com/Ember-js-Seattle-Meetup/
   date: April 11, 2015
   image: /images/tomsters/seattle.png
+  tags: all tomster meetup
 - title: Philly Tomster
   url: http://www.meetup.com/EmberJS-Philly/
   date: March 13, 2015
   image: /images/tomsters/philly.png
+  tags: all tomster meetup
 - title: Munich Tomster
   url: http://www.meetup.com/Ember-js-Munich/
   date: June 16, 2014
   image: /images/tomsters/munich.png
+  tags: all tomster meetup
 - title: Montevideo Tomster
   url: http://www.meetup.com/ember-montevideo/
   date: April 25, 2015
   image: /images/tomsters/montevideo.png
+  tags: all tomster meetup
 - title: Louisville Tomster
   url: http://www.meetup.com/Ember-js-Louisville
   date: April 9, 2015
   image: /images/tomsters/louisville.png
+  tags: all tomster meetup
 - title: London Tomster
   url: http://emberlondon.com/
   date: July 14, 2014
   image: /images/tomsters/london.png
+  tags: all tomster meetup
 - title: Jacksonville Tomster
   url: http://www.meetup.com/EmberJax/
   date: March 30, 2015
   image: /images/tomsters/jacksonville.png
+  tags: all tomster meetup
 - title: Houston Tomster
   url: http://www.meetup.com/EmberJS-Houston/
   date: March 16, 2015
   image: /images/tomsters/houston.png
+  tags: all tomster meetup
 - title: Dallas Tomster
   url: http://www.meetup.com/Ember-Dallas/
   date: April 20, 2015
   image: /images/tomsters/dallas.png
+  tags: all tomster meetup
 - title: Austin Tomster
   url: http://www.meetup.com/Ember-ATX/
   date: March 25, 2015
   image: /images/tomsters/austin.png
+  tags: all tomster meetup
 - title: BuiltWithEmber Tomster
   url: http://builtwithember.io/
   date: December 3, 2014
   image: /images/tomsters/builtwith.png
+  tags: all tomster
 - title: Ember Sherpa
   url:
   date: November 25, 2014
   image: /images/tomsters/sherpa.png
+  tags: all tomster
 - title: Stable Release Bust
   url: http://www.emberjs.com/builds
   date: December 2, 2013
   image: /images/tomsters/3-release.png
+  tags: all tomster other
 - title: Canary Release Bust
   url: http://www.emberjs.com/builds
   date: December 2, 2013
   image: /images/tomsters/1-canary.png
+  tags: all tomster other
 - title: Beta Release Bust
   url: http://www.emberjs.com/builds
   date: December 2, 2013
   image: /images/tomsters/2-beta.png
+  tags: all tomster other
 - title: RFC Bust
   url:
   date: February 26, 2015
   image: /images/tomsters/0-rfc.png
+  tags: all tomster other
 - title: Construction Tomster
   url:
   date: March 24, 2013
   image: /images/tomsters/construction.png
+  tags: all tomster
 - title: EmberCamp Tomster
   url:
   date: February 15, 2013
   image: /images/tomsters/embercamp.png
+  tags: all tomster conference
 - title: Fishy Tomster
   url: http://emberjs.com/community/
   date: November 17, 2012
   image: /images/tomsters/fishy.png
+  tags: all tomster other
 - title: Deprecated Tomster
   url:
   date: March 24, 2013
   image: /images/tomsters/deprecated.png
+  tags: all tomster other
 - title: 5K Tomster
   url:
   date: March 12, 2014
   image: /images/tomsters/5k.png
+  tags: all tomster other
 - title: EmberConf 2015
   url: http://www.emberconf.com
   date: November 17, 2014
   image: /images/tomsters/emberconf-2015-tomster.png
+  tags: all tomster conference
 - title: EmberConf 2014
   url: http://www.emberconf.com
   date: November 1, 2013
   image: /images/tomsters/emberconf-2014-tomster.png
+  tags: all tomster conference
 - title: Teaching Tomster
   url:
   date: January 14, 2013
   image: /images/tomsters/teaching.png
+  tags: all tomster other
 - title: Office Hours Tomster
   url:
   date: March 25, 2013
   image: /images/tomsters/officehours.png
+  tags: all tomster other
 - title: Pirate Tomster
   url:
   date: May 26, 2015
   image: /images/tomsters/pirate.png
+  tags: all tomster other
 - title: Atlanta Tomster
   url: http://www.meetup.com/Ember-Atlanta-Meetup/
   date: June 11, 2015
   image: /images/tomsters/atlanta-tomster.png
+  tags: all tomster meetup
 - title: Boston Tomster
   url: http://www.meetup.com/Boston-Ember-js/
   date: May 20, 2015
   image: /images/tomsters/boston.png
+  tags: all tomster meetup
 - title: Denver Tomster
   url: http://www.meetup.com/Ember-js-Denver/
   date: July 24, 2015
   image: /images/tomsters/denver.png
+  tags: all tomster meetup
 - title: Vancouver Tomster
   url: http://www.meetup.com/Vancouver-Ember-js/
   date: October 15, 2015
   image: /images/tomsters/vancouver.png
+  tags: all tomster meetup
 - title: Portland Tomster
   url: http://www.meetup.com/Ember-PDX
   date: October 23, 2015
   image: /images/tomsters/portland.png
+  tags: all tomster meetup
 - title: SoCal Tomster
   url: http://www.meetup.com/Ember-SC
   date: January 20, 2016
   image: /images/tomsters/socal.png
+  tags: all tomster meetup
 - title: NYC Tomster
   url: http://www.meetup.com/EmberJS-NYC/
   date: February 2, 2016
   image: /images/tomsters/nyc.png
+  tags: all tomster meetup
 - title: LTS Tomster
   url: http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html
   date: February 25, 2016
   image: /images/tomsters/lts.png
+  tags: all tomster other
 - title: LTS Release Bust
   url: http://www.emberjs.com/builds
   date: February 25, 2016
   image: /images/tomsters/4-lts.png
+  tags: all tomster other
 - title: Columbus Tomster
   url: http://www.meetup.com/ember-columbus/
   date: March 7, 2016
   image: /images/tomsters/columbus.png
+  tags: all tomster meetup
 - title: Amsterdam Tomster
   url: http://www.meetup.com/Ember-js-Amsterdam/
   date: May 31, 2016
   image: /images/tomsters/amsterdam.png
+  tags: all tomster meetup
 - title: San Diego Zoey
   url: http://www.meetup.com/sandiego-ember/
   date: May 31, 2016
   image: /images/tomsters/sandiego-zoey.png
+  tags: all zoey meetup
 - title: Classic Zoey
   date: March 23, 2016
   url: http://www.emberjs.com/tomster
   image: /images/tomsters/zoey.png
+  tags: all zoey
 - title: Raleigh Tomster
   date: March 8, 2016
   url: http://triangleember.com/
   image: /images/tomsters/raleigh.png
+  tags: all tomster meetup
 - title: DC Tomster
   date: August 29, 2016
   url: http://www.meetup.com/Ember-JS-DC/
   image: /images/tomsters/dc-tomster.png
+  tags: all tomster meetup
 - title: Austin Zoey
   date: July 8, 2016
   url: http://www.meetup.com/Ember-ATX/
   image: /images/tomsters/austin-zoey.png
+  tags: all zoey meetup
 - title: Munich Zoey
   date: July 19, 2016
   url: http://www.meetup.com/Ember-js-Munich/
   image: /images/tomsters/munich-zoey.png
+  tags: all zoey meetup
 - title: EmberConf 2016
   date: March 28, 2016
   url: http://2016.emberconf.com/
   image: /images/tomsters/emberconf-2016-tomster.png
+  tags: all tomster conference
 - title: Atlanta Zoey
   date: October 11, 2016
   url: http://www.meetup.com/Ember-Atlanta-Meetup/
   image: /images/tomsters/atlanta-zoey.png
+  tags: all zoey meetup
