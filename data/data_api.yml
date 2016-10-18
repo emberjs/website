@@ -1,6 +1,6 @@
 ---
 project:
-  sha: v2.8.1
+  sha: v2.9.0
 files:
   addon/-private/adapters/build-url-mixin.js:
     name: addon/-private/adapters/build-url-mixin.js
@@ -106,13 +106,6 @@ files:
     classes: {}
     fors:
       DS: 1
-    namespaces: {}
-  addon/-private/system/store/container-instance-cache.js:
-    name: addon/-private/system/store/container-instance-cache.js
-    modules: {}
-    classes:
-      ContainerInstanceCache: 1
-    fors: {}
     namespaces: {}
   addon/-private/system/debug.js:
     name: addon/-private/system/debug.js
@@ -393,7 +386,6 @@ modules:
       DS.FilteredRecordArray: 1
       DS.RecordArray: 1
       DS: 1
-      ContainerInstanceCache: 1
       DS.ManyArray: 1
       DS.PromiseArray: 1
       DS.PromiseObject: 1
@@ -841,33 +833,6 @@ classes:
     description: All Ember Data classes, methods and functions are defined inside
       of this namespace.
     static: 1
-  ContainerInstanceCache:
-    name: ContainerInstanceCache
-    shortname: ContainerInstanceCache
-    classitems: []
-    plugins: []
-    extensions: []
-    plugin_for: []
-    extension_for: []
-    module: ember-data
-    namespace: ''
-    file: addon/-private/system/store/container-instance-cache.js
-    line: 5
-    description: |-
-      The `ContainerInstanceCache` serves as a lazy cache for looking up
-      instances of serializers and adapters. It has some additional logic for
-      finding the 'fallback' adapter or serializer.
-
-      The 'fallback' adapter or serializer is an adapter or serializer that is looked up
-      when the preferred lookup fails. For example, say you try to look up `adapter:post`,
-      but there is no entry (app/adapters/post.js in EmberCLI) for `adapter:post` in the registry.
-
-      The `fallbacks` array passed will then be used; the first entry in the fallbacks array
-      that exists in the container will then be cached for `adapter:post`. So, the next time you
-      look up `adapter:post`, you'll get the `adapter:application` instance (or whatever the fallback
-      was if `adapter:application` doesn't exist).
-    access: private
-    tagname: ''
   DS.ManyArray:
     name: DS.ManyArray
     shortname: DS.ManyArray
@@ -1188,6 +1153,20 @@ classes:
         email: DS.attr('string')
       });
       ```
+
+      By default the boolean transform only allows for values of `true` or
+      `false`. You can opt into allowing `null` values for
+      boolean attributes via `DS.attr('boolean', { allowNull: true })`
+
+      ```app/models/user.js
+      import DS from 'ember-data';
+
+      export default DS.Model.extend({
+        email: DS.attr('string'),
+        username: DS.attr('string'),
+        wantsWeeklyEmail: DS.attr('boolean', { allowNull: true })
+      });
+      ```
     extends: DS.Transform
   DS.DateTransform:
     name: DS.DateTransform
@@ -1205,7 +1184,8 @@ classes:
       The `DS.DateTransform` class is used to serialize and deserialize
       date attributes on Ember Data record objects. This transform is used
       when `date` is passed as the type parameter to the
-      [DS.attr](../../data#method_attr) function.
+      [DS.attr](../../data#method_attr) function. It uses the [`ISO 8601`](https://en.wikipedia.org/wiki/ISO_8601)
+      standard.
 
       ```app/models/score.js
       import DS from 'ember-data';
@@ -2106,11 +2086,40 @@ classes:
 
       // Converts centigrade in the JSON to fahrenheit in the app
       export default DS.Transform.extend({
-        deserialize: function(serialized) {
+        deserialize: function(serialized, options) {
           return (serialized *  1.8) + 32;
         },
-        serialize: function(deserialized) {
+        serialize: function(deserialized, options) {
           return (deserialized - 32) / 1.8;
+        }
+      });
+      ```
+
+      The options passed into the `DS.attr` function when the attribute is
+      declared on the model is also available in the transform.
+
+      ```app/models/post.js
+      export default DS.Model.extend({
+        title: DS.attr('string'),
+        markdown: DS.attr('markdown', {
+          markdown: {
+            gfm: false,
+            sanitize: true
+          }
+        })
+      });
+      ```
+
+      ```app/transforms/markdown.js
+      export default DS.Transform.extend({
+        serialize: function (deserialized, options) {
+          return deserialized.raw;
+        },
+
+        deserialize: function (serialized, options) {
+          var markdownOptions = options.markdown || {};
+
+          return marked(serialized, markdownOptions);
         }
       });
       ```
@@ -3990,11 +3999,12 @@ classitems:
   name: modelName
   type: String
   readonly: ''
+  static: 1
   class: DS.Model
   module: ember-data
   namespace: DS
 - file: addon/-private/system/model/model.js
-  line: 1035
+  line: 1036
   description: |-
     Discards any unsaved changes to the given attribute.
 
@@ -5010,10 +5020,10 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/normalize-model-name.js
-  line: 3
+  line: 6
   description: |-
-    All modelNames are dasherized internally. Changing this function may
-    require changes to other normalization hooks (such as typeForRoot).
+    This method normalizes a modelName into the format Ember Data uses
+    internally.
   itemtype: method
   name: normalizeModelName
   access: public
@@ -5023,7 +5033,7 @@ classitems:
     description: ''
     type: String
   return:
-    description: if the adapter can generate one, an ID
+    description: normalizedModelName
     type: String
   class: DS
   module: ember-data
@@ -6515,7 +6525,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1401
+  line: 1402
   itemtype: method
   name: didUpdateAll
   params:
@@ -6528,7 +6538,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1411
+  line: 1412
   description: |-
     This method returns a filtered array that contains all of the
     known records for a given type in the store.
@@ -6561,7 +6571,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1446
+  line: 1447
   description: |-
     This method unloads all records in the store.
 
@@ -6576,12 +6586,12 @@ classitems:
   params:
   - name: modelName
     description: ''
-    type: String=
+    type: String
   class: DS.Store
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1487
+  line: 1488
   description: |-
     Takes a type and filter function, and returns a live RecordArray that
     remains up to date as new records are loaded into the store or created
@@ -6649,7 +6659,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1574
+  line: 1575
   description: |-
     This method returns if a certain record is already loaded
     in the store. Use this function to know beforehand if a findRecord()
@@ -6679,7 +6689,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1603
+  line: 1604
   description: |-
     If the adapter updates attributes the record will notify
     the store to update its  membership in any filters.
@@ -6700,7 +6710,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1622
+  line: 1623
   description: |-
     This method is called by `record.save`, and gets passed a
     resolver for the promise that `record.save` returns.
@@ -6724,7 +6734,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1645
+  line: 1646
   description: |-
     This method is called at the end of the run loop, and
     flushes any records passed into `scheduleSave`
@@ -6736,7 +6746,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1677
+  line: 1678
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6759,7 +6769,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1706
+  line: 1707
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6779,7 +6789,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1720
+  line: 1721
   description: |-
     This method is called once the promise returned by an
     adapter's `createRecord`, `updateRecord` or `deleteRecord`
@@ -6799,7 +6809,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1734
+  line: 1735
   description: |-
     When an adapter's `createRecord`, `updateRecord` or `deleteRecord`
     resolves with data, this method extracts the ID from the supplied
@@ -6819,7 +6829,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1755
+  line: 1756
   description: Returns a map of IDs to client IDs for a given type.
   itemtype: method
   name: typeMapFor
@@ -6836,7 +6846,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1786
+  line: 1787
   description: This internal method is used by `push`.
   itemtype: method
   name: _load
@@ -6853,11 +6863,14 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1841
+  line: 1842
   description: |-
-    Returns a model class for a particular key. Used by
-    methods that take a type key (like `find`, `createRecord`,
-    etc.)
+    Returns the model class for the particular `modelName`.
+
+    The class of a model might be useful if you want to get a list of all the
+    relationship names of the model, see
+    [`relationshipNames`](http://emberjs.com/api/data/classes/DS.Model.html#property_relationshipNames)
+    for example.
   itemtype: method
   name: modelFor
   params:
@@ -6871,7 +6884,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 1877
+  line: 1881
   description: |-
     Push some data for a given type into the store.
 
@@ -7031,7 +7044,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2105
+  line: 2109
   description: |-
     Push some raw data into the store.
 
@@ -7096,7 +7109,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2179
+  line: 2183
   description: |-
     `normalize` converts a json payload into the normalized form that
     [push](#method_push) expects.
@@ -7126,7 +7139,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2206
+  line: 2210
   description: |-
     Build a brand new record for a given type, ID, and
     initial data.
@@ -7151,7 +7164,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2248
+  line: 2252
   description: |-
     When a record is destroyed, this un-indexes it and
     removes it from any record arrays so it can be GCed.
@@ -7167,7 +7180,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2275
+  line: 2279
   description: |-
     Returns an instance of the adapter for a given type. For
     example, `adapterFor('person')` will return an instance of
@@ -7193,7 +7206,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2307
+  line: 2311
   description: |-
     Returns an instance of the serializer for a given type. For
     example, `serializerFor('person')` will return an instance of
@@ -7224,7 +7237,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/-private/system/store.js
-  line: 2342
+  line: 2346
   description: |-
     Retrieve a particular instance from the
     container cache. If not found, creates it and
@@ -9013,7 +9026,7 @@ classitems:
     ```
 
     By overwriting `modelNameFromPayloadType` you can specify that the
-    `posr` model should be used:
+    `post` model should be used:
 
     ```app/serializers/application.js
     import DS from "ember-data";
@@ -11789,7 +11802,7 @@ classitems:
 
     ```javascript
     shouldReloadRecord: function(store, ticketSnapshot) {
-      var timeDiff = moment().diff(ticketSnapshot.attr('lastAccessedAt')).minutes();
+      var timeDiff = moment().diff(ticketSnapshot.attr('lastAccessedAt'), 'minutes');
       if (timeDiff > 20) {
         return true;
       } else {
@@ -11805,6 +11818,11 @@ classitems:
 
     By default this hook returns `false`, as most UIs should not block user
     interactions while waiting on data update.
+
+    Note that, with default settings, `shouldBackgroundReloadRecord` will always
+    re-fetch the records in the background even if `shouldReloadRecord` returns
+    `false`. You can override `shouldBackgroundReloadRecord` if this does not
+    suit your use case.
   since: 1.13.0
   itemtype: method
   name: shouldReloadRecord
@@ -11822,7 +11840,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/adapter.js
-  line: 522
+  line: 527
   description: |-
     This method is used by the store to determine if the store should
     reload all records from the adapter when records are requested by
@@ -11842,7 +11860,7 @@ classitems:
       var snapshots = snapshotArray.snapshots();
 
       return snapshots.any(function(ticketSnapshot) {
-        var timeDiff = moment().diff(ticketSnapshot.attr('lastAccessedAt')).minutes();
+        var timeDiff = moment().diff(ticketSnapshot.attr('lastAccessedAt'), 'minutes');
         if (timeDiff > 20) {
           return true;
         } else {
@@ -11860,6 +11878,11 @@ classitems:
     By default this methods returns `true` if the passed `snapshotRecordArray`
     is empty (meaning that there are no records locally available yet),
     otherwise it returns `false`.
+
+    Note that, with default settings, `shouldBackgroundReloadAll` will always
+    re-fetch all the records in the background even if `shouldReloadAll` returns
+    `false`. You can override `shouldBackgroundReloadAll` if this does not suit
+    your use case.
   since: 1.13.0
   itemtype: method
   name: shouldReloadAll
@@ -11877,7 +11900,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/adapter.js
-  line: 570
+  line: 580
   description: |-
     This method is used by the store to determine if the store should
     reload a record after the `store.findRecord` method resolves a
@@ -11923,7 +11946,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/adapter.js
-  line: 609
+  line: 619
   description: |-
     This method is used by the store to determine if the store should
     reload a record array after the `store.findAll` method resolves
@@ -12150,7 +12173,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/transform.js
-  line: 41
+  line: 70
   description: |-
     When given a deserialized value from a record attribute this
     method must return the serialized value.
@@ -12175,7 +12198,7 @@ classitems:
   module: ember-data
   namespace: DS
 - file: addon/transform.js
-  line: 60
+  line: 89
   description: |-
     When given a serialize value from a JSON object this method must
     return the deserialized value for the record attribute.
