@@ -1,5 +1,5 @@
 ---
-title: Ember.js 2.8-LTS, 2.8 and 2.9 Beta Released
+title: Ember.js 2.8-LTS, 2.9 and 2.10 Beta Released
 author: Matthew Beale, Yehuda Katz, Godfrey Chan
 tags: Releases
 ---
