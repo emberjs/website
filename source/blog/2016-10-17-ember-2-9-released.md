@@ -8,7 +8,7 @@ Today, we are releasing Ember 2.8-LTS (a long-term support release), Ember 2.9.0
 
 ## Ember.js 2.8-LTS
 
-Ember 2.8-LTS is our second long-term support release. You can install it by running `ember install --save ember#lts-2-8` in your projects.
+Ember 2.8-LTS is our second long-term support release. You can install it by running `bower install --save ember#lts-2-8` in your projects.
 
 The LTS channel is designed for Ember users who would like to upgrade less frequently, while still getting support from the project and the wider ecosystem. At the same time, it allows addon authors to know which versions of Ember to focus their effort on.
 
