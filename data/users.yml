@@ -859,6 +859,10 @@
   image: sugarcrm.png
   alt: SugarCRM
   use: "We use Ember for Mothership, our internal operations management tool"
+- url: https://movil.bbva.es
+  image: bbva.png
+  alt: BBVA
+  use: "The BBVA Mobile Banking App is fully powered by Ember.js"
 
 
 # ---- PLEASE READ ----
