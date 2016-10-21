@@ -846,11 +846,11 @@
 - url: https://synap.ac
   image: synap.png
   alt: "Synap"
-  use: "Synap's front-end is fully powered by Ember" 
+  use: "Synap's front-end is fully powered by Ember"
 - url: http://www.wnyc.org/
   image: wnyc.png
   alt: WNYC
-  use: "WNYC's front-end is fully powered by Ember" 
+  use: "WNYC's front-end is fully powered by Ember"
 - url: https://freshbooks.com
   image: freshbooks.png
   alt: FreshBooks
@@ -863,6 +863,10 @@
   image: bbva.png
   alt: BBVA
   use: "The BBVA Mobile Banking App is fully powered by Ember.js"
+- url: https://travelbank.com
+  image: travelbank.png
+  alt: TravelBank
+  use: "TravelBank's Web and Hybrid Mobile Apps are powered by Ember.js"
 
 
 # ---- PLEASE READ ----
