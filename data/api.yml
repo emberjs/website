@@ -3,8 +3,8 @@ project:
   name: The Ember API
   description: 'The Ember API: a framework for building ambitious web applications'
   url: http://emberjs.com/
-  version: v2.8.2
-  sha: v2.8.2
+  version: v2.9.1
+  sha: v2.9.1
 files:
   bower_components/router.js/lib/router/router.js:
     name: bower_components/router.js/lib/router/router.js
@@ -16544,15 +16544,15 @@ classitems:
     type: Object
     optional: true
   return:
-    description: ''
-    type: Void
+    description: Timer information for use in cancelling, see `run.cancel`.
+    type: "*"
   access: public
   tagname: ''
   class: Ember.run
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 287
+  line: 288
   description: |-
     Immediately flushes any events scheduled in the 'sync' queue. Bindings
     use this queue so this method is a useful way to immediately force all
@@ -16576,7 +16576,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 310
+  line: 311
   description: |-
     Invokes the passed target/method and optional arguments after a specified
     period of time. The last parameter of this method must always be a number
@@ -16621,7 +16621,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 340
+  line: 341
   description: |-
     Schedule a function to run one time during the current RunLoop. This is equivalent
     to calling `scheduleOnce` with the "actions" queue.
@@ -16651,7 +16651,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 363
+  line: 364
   description: |-
     Schedules a function to run one time in a given queue of the current RunLoop.
     Calling this method with the same queue/target/method combination will have
@@ -16724,7 +16724,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 424
+  line: 425
   description: |-
     Schedules an item to run from within a separate run loop, after
     control has been returned to the system. This is equivalent to calling
@@ -16804,7 +16804,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 492
+  line: 493
   description: |-
     Cancels a scheduled item. Must be a value returned by `run.later()`,
     `run.once()`, `run.scheduleOnce()`, `run.next()`, `run.debounce()`, or
@@ -16869,7 +16869,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 551
+  line: 552
   description: |-
     Delay calling the target method until the debounce period has elapsed
     with no additional debounce calls. If `debounce` is called again before
@@ -16960,7 +16960,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 624
+  line: 625
   description: |-
     Ensure that the target method is never called more frequently than
     the specified spacing period. The target method is called immediately.
@@ -17021,7 +17021,7 @@ classitems:
   module: ember-metal
   namespace: Ember
 - file: packages/ember-metal/lib/run_loop.js
-  line: 667
+  line: 668
   description: |-
     Add a new named queue after the specified queue.
 
