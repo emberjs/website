@@ -4,6 +4,33 @@
   margin-left: 1em;
 }
 
+.api-reference-list {
+  display: flex;
+}
+
 .api-reference-list li {
+  flex: 1;
   list-style: none;
+  text-align: center;
+}
+
+.brand-logo {
+  height: 50px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.learning-header {
+  display: flex;
+}
+.learning-header--left {
+  flex: 2;
+}
+.learning-header--right {
+  flex: 1;
+}
+.learning-header--tomster {
+  width: 250px;
 }
