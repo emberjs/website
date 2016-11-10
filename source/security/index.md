@@ -24,7 +24,7 @@ descriptive subject line to avoid having your report be missed. After
 the initial reply to your report, the security team will endeavor to
 keep you informed of the progress being made towards a fix and full
 announcement. As recommended by
-[RFPolicy](http://www.wiretrip.net/p/rfpolicy.html), these updates will
+[RFPolicy](https://dl.packetstormsecurity.net/papers/general/rfpolicy-2.0.txt), these updates will
 be sent at least every five days. In reality, this is more likely to be
 every 24-48 hours.
 
