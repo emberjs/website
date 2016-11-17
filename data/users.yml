@@ -173,6 +173,7 @@
 - url: http://billyapp.com/
   image: billyapp.png
   alt: "Billy Accounting Software"
+  use: "Simple accounting for freelancers and creatives"
 - url: http://llanoseco.com/
   image: llanoseco.png
   alt: LLANO SECO RANCHO
