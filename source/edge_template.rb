@@ -39,7 +39,7 @@ inject_into_class "app/serializers/application_serializer.rb", 'ApplicationSeria
 end
 
 remove_file 'app/assets/javascripts/application.js'
-generate "ember:bootstrap"
+generate "ember:bootstrap", "--javascript-engine js"
 
 file 'app/assets/javascripts/templates/index.js.handlebars', <<-CODE
 <div style="width: 600px; border: 6px solid #eee; margin: 0 auto; padding: 20px; text-align: center; font-family: sans-serif;">
