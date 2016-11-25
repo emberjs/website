@@ -1,0 +1,43 @@
+# Feature statutes:
+#   * RFC
+#   * RFC FCP
+#   * RFC merged
+#   * ~no man's land~
+#   * canary (first time it landed)
+#     * withdrawn (removed from canary)
+#   * beta
+#   * release (version)
+#
+# Feature fields:
+#   - name *
+#   - description *
+#   - status (tomster) *
+#     - RFC
+#     - RFC FCP
+#     - RFC merged
+#     - ~no man's land~
+#     - canary (first time it landed)
+#       - withdrawn (removed from canary)
+#     - beta
+#     - release (version)
+#   - RFC
+#     - id *
+#     - url *
+#     - champions
+#       - name
+#       - handle
+#   - feature-flag
+#     - name
+
+- name: Router Service
+  description: Provices a public router service.
+  rfc:
+    id: 0095
+    url: https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md
+  status: RFC merged
+- name: Ember.String.isHtmlSafe
+  description: Introduce Ember.String.isHtmlSafe() to provide a reliable way to determine if an object is an "html safe string", i.e. was it created with Ember.String.htmlSafe().
+  rfc:
+    id: 0139
+    url: https://github.com/emberjs/rfcs/blob/master/text/0139-isHtmlSafe.md
+  status: RFC merged
