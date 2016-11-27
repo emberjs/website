@@ -8,27 +8,34 @@
 #   * beta
 #   * release (version)
 #
+# Legend:
+# ! -> mandatory
+# * -> field
+# - -> array
+#
 # Feature fields:
-#   - name *
-#   - description *
-#   - status (tomster) *
-#     - RFC
-#     - RFC FCP
-#     - RFC merged
-#     - ~no man's land~
-#     - canary (first time it landed)
-#       - withdrawn (removed from canary)
-#     - beta
-#     - release (version)
-#   - RFC
-#     - id *
-#     - url *
-#     - champions
-#       - name
-#       - handle
-#   - feature-flag
-#     - name
-
+#   ! id (some sort of short id code)
+#   ! name (this might be the same as above)
+#   ! description
+#   ! status (tomster)
+#     * RFC
+#     * RFC FCP
+#     * RFC merged
+#     * ~no man's land~
+#     * canary (first time it landed)
+#       * withdrawn (removed from canary)
+#     * beta
+#     * release (version)
+#   * RFC
+#     ! id
+#     ! url
+#     * champions
+#       * name
+#       * handle
+#   * feature-flag
+#     * name
+#   - blocked by (better name?)
+#      * feature_id
 - name: Router Service
   description: Provices a public router service.
   rfc:
