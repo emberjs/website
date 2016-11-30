@@ -265,10 +265,10 @@ In our continous incremental progress toward making `bower` optional inside of
 Ember CLI we have moved to include Ember.js itself via
 [`ember-source`](https://www.npmjs.com/package/ember-source)–provided via `npm`.
 In 2.11 we will no longer have any packages provided by `bower` in a brand
-new Ember.js application! Please help us test this by attempting to upgrade your
-applications and reporting any issues you discover, both in your applications
-and in CI using `ember-try`. We want to make sure that the upgrade process to
-Ember CLI and Ember.js 2.11 is as smooth as possible.
+new Ember.js application! However, as part of our commitment to provide smooth
+upgrades to our users, the **Ember CLI 2.11 beta release has been delayed to
+later this week** so the team can make sure some last minute issues are
+properly resolved.
 
 Ember CLI 2.11 will not officially support Node.js 0.12 per the
 [Ember Node.js LTS Support policy](http://emberjs.com/blog/2016/09/07/ember-node-lts-support.html).
@@ -286,8 +286,7 @@ preventing pollution of the `tmp` folder inside of your applications.
 - Robert Jackson dramatically [reduced the number of merge steps](https://github.com/ember-cli/ember-cli/pull/6453) inside of the build,
 speeding up the build process.
 
-For more details on the upcoming changes in Ember CLI 2.11, please review the
-[Ember CLI 2.11.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.11.0-beta.1).
+This post will be updated with a link to the release page as soon as it happens.
 
 ## Thank You!
 
