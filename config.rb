@@ -90,7 +90,7 @@ ignore 'javascripts/app/examples/*/templates/*'
 # Builds
 ###
 ['release', 'beta', 'canary', 'tagged'].each do |tab|
-  proxy "/builds/#{tab}.html", '/builds/index.html', ignore: true
+  proxy "/builds/#{tab}.html", '/builds/index.html'
 end
 
 ###
