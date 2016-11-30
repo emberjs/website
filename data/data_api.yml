@@ -2631,21 +2631,12 @@ classitems:
       }
     });
     ```
-  itemtype: method
-  name: urlForDeleteRecord
-  params:
-  - name: id
-    description: ''
-    type: String
-  - name: modelName
-    description: ''
-    type: String
-  - name: snapshot
-    description: ''
-    type: DS.Snapshot
-  return:
-    description: url
-    type: String
+
+    * @method urlForDeleteRecord
+    * @param {String} id
+    * @param {String} modelName
+    * @param {DS.Snapshot} snapshot
+    * @return {String} url
   class: DS.BuildURLMixin
   namespace: DS
 - file: addon/-private/adapters/build-url-mixin.js
@@ -12583,6 +12574,28 @@ classitems:
   module: ember-data
   namespace: Ember
 warnings:
+- message: |-
+    Missing item type
+    Builds a URL for a `record.save()` call when the record has been deleted locally.
+
+    Example:
+
+    ```app/adapters/application.js
+    import DS from 'ember-data';
+
+    export default DS.RESTAdapter.extend({
+      urlForDeleteRecord(id, modelName, snapshot) {
+        return this._super(...arguments) + '/destroy';
+      }
+    });
+    ```
+
+    * @method urlForDeleteRecord
+    * @param {String} id
+    * @param {String} modelName
+    * @param {DS.Snapshot} snapshot
+    * @return {String} url
+  line: " addon/-private/adapters/build-url-mixin.js:348"
 - message: |-
     Missing item type
     Serializes a hasMany relationship as an array of objects containing only `id` and `type`
