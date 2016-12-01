@@ -9,7 +9,9 @@ module Versions
   module Helpers
 
     def current_version
-      @current_version = JSON.parse(open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json').read).last
+      versions = JSON.parse(open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json').read)
+      versions.sort_by! { |version| Gem::Version.new(version[1..-1]) }
+      @current_version = versions.last
     end
   end
 end
