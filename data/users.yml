@@ -543,9 +543,10 @@
 - url: http://www.microsoft.com
   image: microsoft.png
   alt: Microsoft
-- url: https://www.intercom.io
+- url: https://www.intercom.com
   image: intercom.png
   alt: Intercom
+  use: "Intercom's main web application is built with Ember.js"
 - url: http://verdigris.co
   image: verdigris.png
   alt: Verdigris Technologies
