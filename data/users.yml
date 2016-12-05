@@ -465,6 +465,7 @@
 - url: https://www.tailorbrands.com
   image: tailorBrands.png
   alt: Tailor Brands
+  use: "We use Ember to build our main application, creating the first automated branding agency"
 - url: https://www.skedda.com
   image: skedda.png
   alt: Skedda
