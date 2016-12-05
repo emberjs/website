@@ -11,7 +11,11 @@ code firing such deprecations is still supported by the Ember community. After
 the next major revision lands, the supporting code may be removed. This style
 of change management is commonly referred to as [Semantic Versioning](http://semver.org/).
 
-### By Version
+### Ember
 
 * [Version 1.x](/deprecations/v1.x)
 * [Version 2.x](/deprecations/v2.x)
+
+### Ember Data
+
+* [Version 2.x](/deprecations/ember-data/v2.x)
