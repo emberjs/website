@@ -83,46 +83,26 @@ responsive: true
   <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
 
   <div class="showcase">
-    <div class="showcase--item">
-      <div class="showcase--screenshot">
-        <img class="showcase--image" src="images/learn/showcase-super-rentals.png" alt="Super Rentals tutorial application">
-      </div>
-      <div class="showcase--description">
-        <h2>Super Rentals <a href="https://guides.emberjs.com/<%= current_version %>/tutorial/ember-cli/"><i class="icon-link-ext"></i></a></h2>
+    <% data.showcase.each do |showcase| %>
+      <div class="showcase--item">
+        <div class="showcase--screenshot">
+          <img class="showcase--image" src="images/learn/<%= showcase.image.src %>" alt="<%= showcase.image.alt %>">
+        </div>
+        <div class="showcase--description">
+          <h2><%= showcase.name %> <a href="<%= replace_current_version showcase.demo %>"><i class="icon-link-ext"></i></a></h2>
 
-        <ul>
-          <li>Repository: <a href="https://github.com/ember-learn/super-rentals">https://github.com/ember-learn/super-rentals</a></li>
-        </ul>
+          <p>Repository: <a href="<%= showcase.repository %>"><%= showcase.repository %></a></p>
 
-        <p>
-          If you've gone through our <a href="https://guides.emberjs.com/<%= current_version %>/tutorial/ember-cli/">Tutorial</a> you will already be familiar with this application! <strong>Super Rentals</strong> is a good starter project to get acclimated to the Ember.js way of doing things. In this repository you'll be able to see:
-          <ul>
-            <li>Basic routing, and routing with dynamic segments</li>
-            <li>Acceptance, integration, and unit tests using <a href="http://www.ember-cli-mirage.com/">Ember CLI Mirage</a>.</li>
-          </ul>
-        </p>
-      </div>
-    </div>
-    <div class="showcase--item">
-      <div class="showcase--screenshot">
-        <img class="showcase--image" src="images/learn/showcase-builds.png" alt="Builds page application">
-      </div>
-      <div class="showcase--description">
-        <h2>Builds <a href="http://emberjs.com/builds/"><i class="icon-link-ext"></i></a></h2>
+          <p>
+            <%= replace_current_version showcase.description %>
 
-        <ul>
-          <li>Repository: <a href="https://github.com/ember-learn/builds">https://github.com/ember-learn/builds</a></li>
-        </ul>
-
-        <p>
-          This is the application that the Ember.js team built to display our <a href="http://emberjs.com/builds/">various release channels</a>. It is slightly more complex than Super Rentals, and you'll be able to see:
-          <ul>
-            <li>Usage of <a href="http://ember-cli-deploy.com/">Ember CLI Deploy</a> to deploy to S3.</li>
-            <li>Loading of an Ember.js application via JavaScript in the <a href="https://github.com/emberjs/website">website</a>.</li>
-          </ul>
-        </p>
+            <% showcase.features.each do |feature| %>
+              <li><%= feature %></li>
+            <% end %>
+          </p>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 
   <h1 id="faq">Frequently Asked Questions</h1>
