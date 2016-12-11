@@ -13,6 +13,10 @@ module Versions
       versions.sort_by! { |version| Gem::Version.new(version[1..-1]) }
       @current_version = versions.last
     end
+
+    def replace_current_version(input)
+      input.gsub("_CURRENT_VERSION_", current_version)
+    end
   end
 end
 
