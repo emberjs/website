@@ -98,6 +98,8 @@ ignore '*_layout.erb'
 # Don't build API layouts
 ignore 'api/class.html.erb'
 ignore 'api/module.html.erb'
+ignore 'internal_api/class.html.erb'
+ignore 'internal_api/module.html.erb'
 
 # Don't build templates for example apps because they are embedded in other JS
 ignore 'javascripts/app/examples/*/templates/*'
