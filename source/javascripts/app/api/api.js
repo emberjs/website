@@ -17,6 +17,10 @@ $(function() {
   function toggleType() {
     var type = this.getAttribute('data-type');
 
+    if (type === 'private') {
+      this.checked = false;
+    }
+
     $('.'+type).toggle(this.checked);
     $('#api-options input[data-type='+type+']').prop('checked', this.checked);
 
