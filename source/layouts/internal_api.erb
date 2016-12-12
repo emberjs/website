@@ -1,0 +1,55 @@
+<% wrap_layout :layout do %>
+  <% content_for :foot do %>
+    <script type="text/javascript" src="/javascripts/internal_api.js"></script>
+  <% end %>
+
+  <% content_for :sidebar do %>
+    <ol id='toc-list'>
+      <li class='level-1'>
+        <a href="#">Projects</a>
+        <ol>
+          <% @internal_apis.each do |key, opts| %>
+          <li class='level-3 <%= internal_api_li_class(key) %>'>
+            <a href="/<%= opts[:root] %>"><%= opts[:name] %></a>
+          </li>
+          <% end %>
+        </ol>
+      </li>
+
+      <li class='level-1'><a href="<%= internal_sha_url %>" target="_blank"> Tag: <%= internal_sha %></a></li>
+
+      <% internal_li_for(:modules) do %>
+        <a href='#'>Modules</a>
+        <% internal_ol_for(:modules) do %>
+          <% internal_api_modules.each do |id, data| %>
+            <% internal_li_for(:modules, name: data['name'], class: 'sub-selected') do %>
+              <%= internal_api_module_link data['name'] %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      <% internal_li_for(:namespaces) do %>
+        <a href='#'>Namespaces</a>
+        <% internal_ol_for(:namespaces) do %>
+          <% internal_api_namespaces.each do |id, data| %>
+            <% internal_li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
+              <%= internal_api_namespace_link data['name'] %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+
+      <% internal_li_for(:classes) do %>
+        <a href='#'>Classes</a>
+        <% internal_ol_for(:classes) do %>
+          <% internal_api_classes.each do |id, data| %>
+            <% internal_li_for(:classes, name:data['name'], class: 'sub-selected') do %>
+              <%= internal_api_class_link data['name'] %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+  <% end %>
+  <%= yield %>
+<% end %>

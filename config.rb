@@ -39,6 +39,22 @@ activate :api_docs,
     repo_url: "https://github.com/emberjs/data"
   }
 
+activate :internal_api_docs,
+  ember: {
+    name: "Ember",
+    default_class: "Ember",
+    root: "internal",
+    data: "api",
+    repo_url: 'https://github.com/emberjs/ember.js'
+  },
+  data: {
+    name: "Ember Data",
+    default_class: "DS",
+    root: "internal/data",
+    data: "data_api",
+    repo_url: "https://github.com/emberjs/data"
+  }
+
 ###
 # Build
 ###
@@ -136,7 +152,7 @@ helpers do
       classes += ' not-responsive'
     end
 
-    classes
+    classes.gsub('internal', 'api')
   end
 
   def load_example_files
