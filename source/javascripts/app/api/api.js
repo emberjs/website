@@ -17,11 +17,6 @@ $(function() {
   function toggleType() {
     var type = this.getAttribute('data-type');
 
-    if (type === "private") {
-      ls.setItem('api-options-private', 'false')
-      return;
-    }
-
     $('.'+type).toggle(this.checked);
     $('#api-options input[data-type='+type+']').prop('checked', this.checked);
 
@@ -37,6 +32,10 @@ $(function() {
   $('#api-options input').each(initApiOptions);
   $('#api-options input').each(toggleType);
   $('#api-options input').on('change', confirmPaneInputs);
+
+  if (ls) {
+    ls.setItem('api-options-private', 'false');
+  }
 
   // Tabs
   $('.tabs .pane').hide();
