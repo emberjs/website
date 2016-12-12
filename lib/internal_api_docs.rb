@@ -345,7 +345,7 @@ module InternalAPIDocs
     end
 
     def internal_api_classes_for_class(klass)
-      internal_api_classes_for_item(api_class(klass))
+      internal_api_classes_for_item(internal_api_class(klass))
     end
     alias :internal_api_classes_for_namespace :internal_api_classes_for_class
   end
