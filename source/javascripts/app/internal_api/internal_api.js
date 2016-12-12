@@ -4,7 +4,7 @@ $(function() {
   // Restoring method visibility preference from localStorage
   function initApiOptions() {
     var type = this.getAttribute('data-type');
-    var checked = ls ? ls.getItem('api-options-' + type) : undefined;
+    var checked = ls ? ls.getItem('internal-api-options-' + type) : undefined;
 
     if (checked != undefined) {
       // Bools are stored as strings in localStorage
@@ -17,16 +17,11 @@ $(function() {
   function toggleType() {
     var type = this.getAttribute('data-type');
 
-    if (type === "private") {
-      ls.setItem('api-options-private', 'false')
-      return;
-    }
-
     $('.'+type).toggle(this.checked);
     $('#api-options input[data-type='+type+']').prop('checked', this.checked);
 
-    if (ls) {
-      ls.setItem('api-options-' + type, this.checked);
+    if(ls) {
+      ls.setItem('internal-api-options-' + type, this.checked);
     }
   }
 
@@ -55,7 +50,7 @@ $(function() {
     $pane.show();
   }
 
-  $('.tabs > ul li a').click(function() {
+  $('.tabs > ul li a').click(function(){
     var $el = $(this);
     var $tabs = $el.parents('.tabs');
     var href = $el.attr('href');
