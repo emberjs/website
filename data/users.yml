@@ -170,9 +170,10 @@
 - url: https://mist.io
   image: mistio.png
   alt: Mist
-- url: http://billysbilling.com/
-  image: billysbilling.png
-  alt: "Billy's Billing Accounting Software"
+- url: http://billyapp.com/
+  image: billyapp.png
+  alt: "Billy Accounting Software"
+  use: "Billy's main app is built with Ember."
 - url: http://llanoseco.com/
   image: llanoseco.png
   alt: LLANO SECO RANCHO
