@@ -34,3 +34,18 @@
 .learning-header--tomster {
   width: 250px;
 }
+
+.flex-container {
+  display: flex;
+}
+
+.flex-same-width {
+  flex: 1;
+}
+
+.learn-deprecations {
+  text-align: center;
+}
+.learn-deprecations li {
+  list-style: none;
+}
