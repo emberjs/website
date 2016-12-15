@@ -1,5 +1,5 @@
 ---
-title: [2016-11-29] Security Incident: AWS S3 Access Key Exposure
+title: Security Incident - AWS S3 Access Key Exposure
 author: Tom Dale
 tags: Security
 ---
