@@ -1,0 +1,38 @@
+<% wrap_layout :layout do %>
+  <% content_for :foot do %>
+    <script type="text/javascript" src="/javascripts/tutorial.js"></script>
+  <% end %>
+
+  <% content_for :sidebar do %>
+    <ol id='toc-list'>
+      <li class='level-1'>
+        <a href="/learn/tutorial/">Tutorial</a>
+        <ol>
+          <% @sections.each do |section| %>
+            <li class="level-3 <%= current_section_class(section) %>">
+              <a href="/learn/tutorial/<%= section.path %>">
+                <%= section.title %>
+              </a>
+            </li>
+          <% end %>
+        </ol>
+      </li>
+    </ol>
+  <% end %>
+  <article>
+    <h1>
+      <%= current_page.data.title || tutorial_section_title %>
+      <a href="https://github.com/emberjs/website/edit/master/source/<%= current_resource.path.gsub("html", "md") %>" target="_blank" class="edit-page icon-pencil">Edit Page</a>
+    </h1>
+    <hr>
+    <%= yield %>
+  </article>
+  <div class="tutorial-navigation">
+    <% if previous_section %>
+      <%= link_to_previous_section class: "previous-section" %>
+    <% end %>
+    <% if next_section %>
+      <%= link_to_next_section class: "next-section" %>
+    <% end %>
+  </div>
+<% end %>
