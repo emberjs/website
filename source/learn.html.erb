@@ -86,7 +86,7 @@ responsive: true
     <% data.showcase.each do |showcase| %>
       <div class="showcase--item">
         <div class="showcase--screenshot">
-          <img class="showcase--image" src="images/learn/<%= showcase.image.src %>" alt="<%= showcase.image.alt %>">
+          <img class="showcase--image" src="/images/learn/<%= showcase.image.src %>" alt="<%= showcase.image.alt %>">
         </div>
         <div class="showcase--description">
           <h2><%= showcase.name %> <a href="<%= replace_current_version showcase.demo %>"><i class="icon-link-ext"></i></a></h2>
