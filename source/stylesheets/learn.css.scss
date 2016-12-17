@@ -49,3 +49,23 @@
 .learn-deprecations li {
   list-style: none;
 }
+
+.showcase--item {
+  display: flex;
+  flex-direction: row;
+
+  padding: 0.5em;
+}
+
+.showcase--screenshot {
+  flex: 2;
+}
+
+.showcase--image {
+  height: 200px;
+}
+
+.showcase--description {
+  flex: 3.2;
+  padding: 0 0.5rem;
+}
