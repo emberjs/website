@@ -44,6 +44,7 @@
 #   repository: Link to the repository with the source code
 #   demo: Link to a deployed instance of the application
 #   description: |
-#     A short paragraph describing the application
+#     A short paragraph describing the application.
 #   features:
-#     - Description of something unique about the application
+#     - Description of something unique about the application, like
+#       a specific pattern, or addon usage.
