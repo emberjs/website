@@ -882,6 +882,10 @@
   image: forest.png
   alt: Forest
   use: "Forest's front-end is fully powered by Ember.js"
+- url: https://www.clark.de
+  image: clark_x2.png
+  alt: "Clark - Smart Insurance"
+  use: "Clark's consumer ui is powered by Ember.js - available on our website and integrated into our iOS & Android apps."
 
 
 # ---- PLEASE READ ----
