@@ -20,7 +20,12 @@ responsive: true
   <% data.users.each do |user| %>
     <li>
       <a href="<%= user.url %>" rel="nofollow" target="_blank">
-        <img src="/images/about/<%= user.image %>" alt="<%= user.alt %>">
+        <img
+            src="/images/about/<%= user.image %>"
+            <% if sitemap.find_resource_by_path("/images/about/" + user.image.gsub(/(\.\w+)$/, "_x2#{$1}")) %>
+              srcset="<%= "/images/about/" + user.image.gsub(/(\.\w+)$/, "_x2#{$1}") %> 2x, /images/about/<%= user.image %> 1x"
+            <% end %>
+            alt="<%= user.alt %>">
       </a>
     </li>
   <% end %>
