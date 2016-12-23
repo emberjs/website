@@ -22,6 +22,7 @@
 @import 'components/sponsors';
 @import 'components/logos';
 @import 'components/meetups';
+@import 'components/ember-button';
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
