@@ -886,6 +886,11 @@
   image: clark_x2.png
   alt: "Clark - Smart Insurance"
   use: "Clark's consumer ui is powered by Ember.js - available on our website and integrated into our iOS & Android apps."
+- url: https://www.getg5.com
+  image: g5_x2.png
+  alt: G5
+  use: "G5 uses Ember.js for our content management system and various inventory search applications."
+
 
 
 # ---- PLEASE READ ----
