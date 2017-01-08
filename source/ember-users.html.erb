@@ -19,7 +19,7 @@ responsive: true
 <ul class="showcase">
   <% data.users.each do |user| %>
     <li>
-      <a href="<%= user.url %>" rel="nofollow" target="_blank">
+      <a href="<%= user.url %>" rel="nofollow" target="_blank" class="user-showcase__link">
         <img
             src="/images/about/<%= user.image %>"
             <% if sitemap.find_resource_by_path("/images/about/" + user.image.gsub(/(\.\w+)$/, "_x2#{$1}")) %>
