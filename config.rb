@@ -55,6 +55,8 @@ activate :internal_api_docs,
     repo_url: "https://github.com/emberjs/data"
   }
 
+activate :tutorial
+
 ###
 # Build
 ###
@@ -131,7 +133,7 @@ helpers do
     partial(partial_name) if partial_name
   end
 
-  def link_to_page name, url
+  def link_to_page(name, url)
     path = request.path
     current = path =~ Regexp.new('^' + url[1..-1] + '.*\.html')
 

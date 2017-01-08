@@ -1,0 +1,102 @@
+.learn_tutorial {
+  h3 {
+    &.name {
+      text-transform: none;
+      float: left;
+      margin-right: 5px;
+    }
+    &.anchorable-toc {
+      position: relative;
+
+      &:hover a.toc-anchor {
+        display: block;
+      }
+
+      .toc-anchor {
+        display: none;
+        position: absolute;
+        text-decoration: none;
+        border: none;
+        left: -1em;
+        width: 30px;
+        height: 13px;
+        background: url('/images/link.png') no-repeat;
+        background-size: 18px 9px;
+        left: -19px;
+        opacity: 0.5;
+        top: 50%;
+        margin-top: -5px;
+      };
+    }
+  }
+
+  img {
+    margin: 1em 0.5em;
+    width: 100%;
+  }
+
+
+  ol#toc-list {
+    li a {
+      display: block;
+      overflow: hidden;
+      @include ellipsis;
+    }
+  }
+
+  .content {
+    p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
+      font-weight: 400;
+      margin: 1.5em 0;
+      line-height: 1.5em;
+      color: #0C0C0C;
+    }
+  }
+
+  .tutorial-header {
+    text-transform: none;
+  }
+
+  .tutorial-navigation {
+    margin-top: 5em;
+    padding: 1.5em 0;
+
+    a {
+      &::before,
+      &::after {
+        display: inline-block;
+        font-weight: bolder;
+        margin: 0 0.5em;
+        transition: transform $duration;
+      }
+    }
+
+    .previous-section {
+      float: left;
+      &::before {
+        content: "\2039";
+      }
+
+      &:hover::before {
+        transform: translateX(-0.5em);
+      }
+    }
+
+    .next-section {
+      float: right;
+
+      &::after {
+        content: "\203A";
+      }
+
+      &:hover::after {
+        transform: translateX(0.5em);
+      }
+    }
+  }
+
+  #sidebar ol#toc-list li > ol {
+    display: block;
+  }
+}
