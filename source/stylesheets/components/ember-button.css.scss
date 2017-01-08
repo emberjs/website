@@ -1,0 +1,38 @@
+.ember-button {
+  display: block;
+  width: 220px;
+  height: 40px;
+  line-height: 40px;
+  font-family: 'Maven Pro';
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+
+  border-radius: 5px;
+  background-color: #E46651;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+
+  transition: 0.3s box-shadow;
+
+  &:hover {
+    box-shadow: 0px 2px 4px -1px #666;
+    transform: translateY(-1px);
+    transition: 0.3s translateY;
+  }
+
+  &:active {
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.3);
+    transform: translateY(0px);
+  }
+}
+
+.ember-button--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ember-button--community {
+  margin-top: 25px;
+}
