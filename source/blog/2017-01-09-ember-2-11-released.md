@@ -1,13 +1,13 @@
 ---
 title: Ember 2.11 and 2.12 Beta Released
-author: 
+author:
 tags: Releases
 ---
 
 Today, the Ember project is releasing Ember.js, Ember Data and Ember CLI
-version 2.10.0.
+version 2.11.0.
 
-This also kicks off the 2.11 beta cycle for all sub-projects. We encourage our
+This also kicks off the 2.12 beta cycle for all sub-projects. We encourage our
 community (especially addon authors) to help test these beta builds and report
 any bugs before they are published as a final release in six weeks' time. The
 [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
@@ -34,7 +34,7 @@ TBK
 
 TBK
 
-For more details on the changes in Ember.js 2.10, please review the
+For more details on the changes in Ember.js 2.11, please review the
 [Ember.js 2.11.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.11.0).
 
 ### Upcoming changes in Ember.js 2.12
