@@ -28,7 +28,7 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 2.11
 
-Ember.js 2.11 continues to build on the foundation of Glimmer 2, incroporting
+Ember.js 2.11 continues to build on the foundation of Glimmer 2, incorporating
 many bug fixes to improve compatibility and stability since 2.10.
 
 Among other improvements, thanks to the work of [Gavin Joyce](https://github.com/gavinjoyce/),
@@ -76,7 +76,7 @@ from the [RFC](https://github.com/emberjs/rfcs) process:
   private API, which is now deprecated. In addition to providing a public API
   for a sorely needed feature, it also unlocks the opportunity to eliminate one
   of the major performance hotspot in the Ember.js object-model. This will
-  happen in a future release once the community had the chance to migrate to
+  happen in a future release once the community has had the chance to migrate to
   the new API. See pull request [#14360](https://github.com/emberjs/ember.js/pull/14360)
   for additional details.
 
