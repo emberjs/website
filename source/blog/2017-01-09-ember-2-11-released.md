@@ -28,18 +28,68 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 2.11
 
-TBK
+Ember.js 2.11 continues to build on the foundation of Glimmer 2, incroporting
+many bug fixes to improve compatibility and stability since 2.10.
+
+Among other improvements, thanks to the work of [Gavin Joyce](https://github.com/gavinjoyce/),
+this release provides a [much improved](https://github.com/emberjs/ember.js/pull/14723)
+"backtracking re-render" assertion message that provides more helpful and
+actionable information. If you had previously encountered this assertion while
+upgrading to 2.10, we recommend giving 2.11 a try as this should help locate
+the root cause much more quickly.
+
+Additionally, the [last-minute issue](https://github.com/emberjs/ember.js/pull/14649)
+mentioned in the [2.10 blog post](/blog/2016/11/30/ember-2-10-released.html) has been
+fixed in this release as well.
+
+Starting from this release, Ember.js releases will be available on npm via the
+[`ember-source`](https://www.npmjs.com/package/ember-source) package. Please
+refer the Ember CLI section below for more details.
+
+Finally, following the mitigation section in the recent [security incident
+report](/blog/2016/12/14/security-incident-aws-s3-key-exposure.html), this is
+also the first Ember.js release to be published by our automated build system.
 
 #### Other notable changes
 
-TBK
+- Concatenated properties (such as `classNames` and `classNameBindings`) are
+  now [frozen](https://github.com/emberjs/ember.js/pull/14389) in debug builds
+  to help track down unintended mutations.
+
+- The legacy `render` helper (i.e. `{{render 'foo'}}`) has been [deprecated](https://github.com/emberjs/ember.js/pull/14441).
+
+- The private `Component#renderToElement` API has also been [deprecated](https://github.com/emberjs/ember.js/pull/14482).
 
 For more details on the changes in Ember.js 2.11, please review the
 [Ember.js 2.11.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.11.0).
 
 ### Upcoming changes in Ember.js 2.12
 
-TBK
+Ember.js 2.12 will serve as the basis of the next [LTS release](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html)
+and includes additional stability, compatibility and performance improvements.
+
+In addition to those improvements, it also implemented several changes arising
+from the [RFC](https://github.com/emberjs/rfcs) process:
+
+- [RFC #150](https://github.com/emberjs/rfcs/blob/master/text/0150-factory-for.md)
+  adds `factoryFor` as a public API to replace the widely used `_lookupFactory`
+  private API, which is now deprecated. In addition to providing a public API
+  for a sorely needed feature, it also unlocks the opportunity to eliminate one
+  of the major performance hotspot in the Ember.js object-model. This will
+  happen in a future release once the community had the chance to migrate to
+  the new API. See pull request [#14360](https://github.com/emberjs/ember.js/pull/14360)
+  for additional details.
+
+- [RFC #178](https://github.com/emberjs/rfcs/blob/master/text/0178-deprecate-ember-k.md)
+  deprecates the `Ember.K` utility function. See pull request [#14360](https://github.com/emberjs/ember.js/pull/14360)
+  for additional details.
+
+- [RFC #191](https://github.com/emberjs/rfcs/blob/master/text/0191-deprecate-component-lifecycle-hook-args.md)
+  deprecates the private arguments passed to the component lifecycle hooks
+  (`didInitAttrs`, `didReceiveAttrs` and `didUpdateAttrs`). Please note that
+  this only deprecates the usage of the arguments passed to this hook, not the
+  hooks themselves. See pull request [#14711](https://github.com/emberjs/ember.js/pull/14711)
+  for additional details.
 
 For more details on the upcoming changes in Ember.js 2.12, please review the
 [Ember.js 2.12.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v2.12.0-beta.1).
