@@ -81,7 +81,7 @@ from the [RFC](https://github.com/emberjs/rfcs) process:
   for additional details.
 
 - [RFC #178](https://github.com/emberjs/rfcs/blob/master/text/0178-deprecate-ember-k.md)
-  deprecates the `Ember.K` utility function. See pull request [#14360](https://github.com/emberjs/ember.js/pull/14360)
+  deprecates the `Ember.K` utility function. See pull request [#14751](https://github.com/emberjs/ember.js/pull/14751)
   for additional details.
 
 - [RFC #191](https://github.com/emberjs/rfcs/blob/master/text/0191-deprecate-component-lifecycle-hook-args.md)
