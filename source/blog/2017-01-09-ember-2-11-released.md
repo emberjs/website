@@ -102,18 +102,83 @@ Ember Data is the offical data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.11
 
-TBK
+Ember Data 2.11 represents the work of 15 direct contributors
+contributors and over 70 commits.
+
+Ember Data 2.11 continues to expand on the performance improvements
+started in Ember Data
+2.10. [Chris Thoburn](https://github.com/runspired) and
+[Stefan Penner](https://github.com/stefanpenner) contributed several
+prs to allow Ember Data to defer work until it is needed by an
+application or avoid the work all together if it is never
+needed. Overall the process of pushing records into the store in Ember
+Data 2.11 about twice as fast now as it was in 2.10.
+
+The Ember Data 2.11 release concludes an effort to audit the existing
+API docs for Ember Data. The Ember Data community has checked all of
+the API docs and ensured they are clear and contain code examples of
+how to use the API. You can check out the API docs
+[here](http://emberjs.com/api/data/).
+
+#### Deprecations in Ember Data 2.11
+
+Ember Data now issues deprecation warnings for
+`store#serialize()`. Instead, it is recommended that you use
+`record.serialize()` in place of
+`store.serialize(record)`.
+
+`store#lookupAdapter()` and `store#lookupSerializer()` have also been
+deprecated starting in Ember 2.11. These methods were never publicly
+documented. In their place we recommend you use `store#adapterFor()`
+and `store#serializerFor()` respectively.
+
+`store#recordIsLoaded()` is deprecated in favor of
+`store#hasRecordForId()`, as the logic in these two methods has been
+identical since
+[March 2015](https://github.com/emberjs/data/pull/2875).
+
+All of the deprecated methods mentioned above will be supported until
+Ember Data 3.0. Until then they will log a deprecation warning to
+encourage use of the recommended replacement APIs.
+
+
+#### Issues with Ember Data Model Fragments
+
+Due to some internal refactorings Ember Data 2.11 has some
+compatibility issues with the popular
+[Ember Data Model Fragments](https://www.npmjs.com/package/ember-data-model-fragments)
+addon. If you are using this addon with your Ember Data application it
+is recommended that you upgrade to
+[Ember Data Model Fragments 2.11](https://github.com/lytics/ember-data-model-fragments/pull/227)
+at the same time you upgrade Ember Data.
 
 For more details on the changes in Ember Data 2.11, please review the
 [Ember Data 2.11.0 release page](https://github.com/emberjs/data/releases/tag/v2.11.0).
 
 ### Upcoming changes in Ember Data 2.12
 
-TBK
+Ember Data 2.12 contains even more performace improvements and is
+looking to be the fastest ever release of Ember Data.
+
+A new `serializeId()` method has been added to `JSONSerializer`,
+`RESTSerializer` and `JSONAPISerializer`. This is useful if you are
+working with a backend that requires your ids to be something other
+then a string.
+
+```app/serializers/application.js
+import DS from 'ember-data';
+
+export default DS.JSONSerializer.extend({
+  serializeId(snapshot, json, primaryKey) {
+    var id = snapshot.id;
+    json[primaryKey] = parseInt(id, 10);
+   }
+});
+```
 
 #### Deprecations in Ember Data 2.12
 
-TBK
+There are no planned deprecations for Ember Data 2.12.
 
 For more details on the upcoming changes in Ember Data 2.11, please review the
 [Ember Data 2.12.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.12.0-beta.1).
