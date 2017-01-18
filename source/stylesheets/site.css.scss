@@ -17,6 +17,7 @@
 @import 'shared';
 @import 'survey';
 @import 'learn';
+@import 'pages/ember-users';
 @import 'components/legal';
 @import 'components/security';
 @import 'components/sponsors';
@@ -1341,7 +1342,7 @@ body.community_meetups #content {
         margin: 2px 0;
         padding: 0;
         &:before {
-          // Currently the standard res is good enough for retina, since we're already downscaling
+          // Currently the standard res is good enough for retina, since we are already downscaling
           // and the automatically added background-size declaration is problematic
           //@include hidpi('meetups/map-pin', 'png');
           background-image: url('/images/meetups/map-pin.png');
@@ -1663,11 +1664,6 @@ ul.showcase {
   }
 
   > a {
-    background-image: url('/images/about/user_bg.png');
-    height: 103px;
-    width: 210px;
-    text-align: center;
-
     img {
       height: auto;
       width: auto;
