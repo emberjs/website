@@ -31,18 +31,18 @@ Ember.js is the core framework for building ambitious web applications.
 Ember.js 2.11 continues to build on the foundation of Glimmer 2, incorporating
 many bug fixes to improve compatibility and stability since 2.10.
 
-Among other improvements, thanks to the work of [Gavin Joyce](https://github.com/gavinjoyce/),
+Among other improvements and thanks to the work of [Gavin Joyce](https://github.com/gavinjoyce/),
 this release provides a [much improved](https://github.com/emberjs/ember.js/pull/14723)
-"backtracking re-render" assertion message that provides more helpful and
-actionable information. If you had previously encountered this assertion while
-upgrading to 2.10, we recommend giving 2.11 a try as this should help locate
-the root cause much more quickly.
+"backtracking re-render" assertion message. The new message provides actionable
+information that can help track down the source of a backtracking re-render.
+If you had previously encountered this assertion while
+upgrading to 2.10, we recommend giving 2.11 a try.
 
-Additionally, the [last-minute issue](https://github.com/emberjs/ember.js/pull/14649)
+Additionally, the [last-minute issue regarding frozen helper arguments](https://github.com/emberjs/ember.js/pull/14649)
 mentioned in the [2.10 blog post](/blog/2016/11/30/ember-2-10-released.html) has been
-fixed in this release as well.
+fixed in this release.
 
-Starting from this release, Ember.js releases will be available on npm via the
+Starting with 2.11, Ember.js releases will be available on npm via the
 [`ember-source`](https://www.npmjs.com/package/ember-source) package. Please
 refer the Ember CLI section below for more details.
 
@@ -54,11 +54,15 @@ also the first Ember.js release to be published by our automated build system.
 
 - Concatenated properties (such as `classNames` and `classNameBindings`) are
   now [frozen](https://github.com/emberjs/ember.js/pull/14389) in debug builds
-  to help track down unintended mutations.
+  to prevent unintended and unsupported mutations.
 
-- The legacy `render` helper (i.e. `{{render 'foo'}}`) has been [deprecated](https://github.com/emberjs/ember.js/pull/14441).
+- The legacy `render` helper (i.e. `{{render 'foo'}}`) has been deprecated
+  ([issue](https://github.com/emberjs/ember.js/pull/14441), [deprecation
+  guide](http://emberjs.com/deprecations/v2.x/#toc_code-rendertoelement-code)).
 
-- The private `Component#renderToElement` API has also been [deprecated](https://github.com/emberjs/ember.js/pull/14482).
+- The private `Component#renderToElement` API has also been deprecated
+  ([issue](https://github.com/emberjs/ember.js/pull/14482), [deprecation
+  guide](http://emberjs.com/deprecations/v2.x/#toc_code-render-code-helper)).
 
 For more details on the changes in Ember.js 2.11, please review the
 [Ember.js 2.11.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.11.0).
@@ -98,7 +102,7 @@ For more details on the upcoming changes in Ember.js 2.12, please review the
 
 ## Ember Data
 
-Ember Data is the offical data persistence library for Ember.js applications.
+Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.11
 
@@ -109,7 +113,7 @@ Ember Data 2.11 continues to expand on the performance improvements
 started in Ember Data
 2.10. [Chris Thoburn](https://github.com/runspired) and
 [Stefan Penner](https://github.com/stefanpenner) contributed several
-prs to allow Ember Data to defer work until it is needed by an
+pull requests that allow Ember Data to defer work until it is needed by an
 application or avoid the work all together if it is never
 needed. Overall the process of pushing records into the store in Ember
 Data 2.11 is about twice as fast as it was in 2.10.
@@ -117,7 +121,7 @@ Data 2.11 is about twice as fast as it was in 2.10.
 The Ember Data 2.11 release concludes an effort to audit the existing
 API docs for Ember Data. The Ember Data community has checked all of
 the API docs and ensured they are clear and contain code examples of
-how to use the API. You can check out the API docs
+how to use the API. You can see the improved documentation
 [here](http://emberjs.com/api/data/).
 
 #### Deprecations in Ember Data 2.11
@@ -141,23 +145,22 @@ All of the deprecated methods mentioned above will be supported until
 Ember Data 3.0. Until then they will log a deprecation warning to
 encourage use of the recommended replacement APIs.
 
-
 #### Issues with Ember Data Model Fragments
 
-Due to some internal refactorings Ember Data 2.11 has some
-compatibility issues with the popular
+Due to internal refactoring, Ember Data 2.11 has
+compatibility issues with older versions of the popular
 [Ember Data Model Fragments](https://www.npmjs.com/package/ember-data-model-fragments)
-addon. If you are using this addon with your Ember Data application it
+addon. If you are using this addon it
 is recommended that you upgrade to
 [Ember Data Model Fragments 2.11](https://github.com/lytics/ember-data-model-fragments/pull/227)
-at the same time you upgrade Ember Data.
+at the same time as you upgrade Ember Data.
 
 For more details on the changes in Ember Data 2.11, please review the
 [Ember Data 2.11.0 release page](https://github.com/emberjs/data/releases/tag/v2.11.0).
 
 ### Upcoming changes in Ember Data 2.12
 
-Ember Data 2.12 contains even more performace improvements and is
+Ember Data 2.12 contains further performance improvements, and is
 looking to be the fastest ever release of Ember Data.
 
 A new `serializeId()` method has been added to `JSONSerializer`,
@@ -193,17 +196,29 @@ applications.
 ### Upgrading Ember CLI
 
 You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade
-your projects using `yarn` run `yarn upgrade ember-cli`. To upgrade your
-projects using `npm` run `npm install --save-dev ember-cli`. After running the
+your projects using `yarn` run:
+
+```
+yarn upgrade ember-cli
+```
+
+To upgrade your
+projects using `npm` run:
+
+```
+npm install --save-dev ember-cli
+```
+
+After running the
 upgrade command run `ember init` inside of the project directory to apply the
-blueprint changes. You can view those changes for [applications here](https://github.com/ember-cli/ember-new-output/compare/v2.10.0...v2.11.0)
-and [addons here](https://github.com/ember-cli/ember-addon-output/compare/v2.10.0...v2.11.0).
+blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v2.10.0...v2.11.0)
+and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.10.0...v2.11.0).
 
 ### Changes in Ember CLI 2.11
 
 Ember CLI 2.11 no longer supports Node.js 0.12 per the
 [Ember Node.js LTS Support policy](http://emberjs.com/blog/2016/09/07/ember-node-lts-support.html).
-This also applies to a litany of subprojects in the Ember community. Please
+This also applies to a litany of sub-projects in the Ember community. Please
 upgrade your Node.js version. We recommend adopting the most-recently-released
 Node.js LTS.
 
@@ -243,8 +258,8 @@ making rebuilds work for changes in that directory. This may have performance
 consequences, please monitor the resource consumption in your applications to
 ensure that we have not regressed.
 - Stefan Penner and David Hamilton made it so we do a better job at
-[cleanup upon exit of Ember CLI](https://github.com/ember-cli/ember-cli/pull/6423)
-preventing pollution of the `tmp` folder inside of your applications.
+[cleanup upon exit of Ember CLI](https://github.com/ember-cli/ember-cli/pull/6423).
+This work prevents the pollution of the `tmp` folder inside of your applications.
 - Robert Jackson dramatically [reduced the number of merge steps](https://github.com/ember-cli/ember-cli/pull/6453)
 inside of the build, speeding up the build process.
 
@@ -291,7 +306,7 @@ in your applications during the beta period.
 In an oversight, we did not invoke `preprocessTree` and `postprocessTree`
 against addon trees which were nested inside of other addons preventing them
 from interacting with their parent addons in the ideal manner. This has been
-fixed but it is possible that this bugfix will change the build outcome of your
+fixed but it is possible that this bug-fix will change the build outcome of your
 applications. We manually reviewed all public addons and didn't identify any
 likely issues, please report back with any problems you discover in your private
 addons.
