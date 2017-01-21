@@ -112,7 +112,7 @@ started in Ember Data
 prs to allow Ember Data to defer work until it is needed by an
 application or avoid the work all together if it is never
 needed. Overall the process of pushing records into the store in Ember
-Data 2.11 about twice as fast now as it was in 2.10.
+Data 2.11 is about twice as fast as it was in 2.10.
 
 The Ember Data 2.11 release concludes an effort to audit the existing
 API docs for Ember Data. The Ember Data community has checked all of
