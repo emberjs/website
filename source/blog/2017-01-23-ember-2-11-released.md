@@ -1,6 +1,6 @@
 ---
 title: Ember 2.11 and 2.12 Beta Released
-author: Godfrey Chan, Nathan Hammond
+author: Godfrey Chan, Nathan Hammond, Brendan McLoughlin
 tags: Releases
 ---
 
@@ -202,8 +202,7 @@ your projects using `yarn` run:
 yarn upgrade ember-cli
 ```
 
-To upgrade your
-projects using `npm` run:
+To upgrade your projects using `npm` run:
 
 ```
 npm install --save-dev ember-cli
@@ -271,8 +270,8 @@ instructions, please review the [Ember CLI 2.11.0 release page](https://github.c
 We adopted the standard six week release cycle for Ember CLI shortly following
 EmberConf 2016. This constant cadence allows us to get the improvements we've
 collectively been working on into our applications. Ember CLI 2.12 will be the
-most work we've ever had in a six week release and we're ecstatic to get all
-297 commits (not including merges or upstream changes!) into your hands.
+most work we've ever had in a single release cycle and we're ecstatic to get all
+300+ commits (not including merges or upstream changes!) into your hands.
 
 #### Babel
 
@@ -281,7 +280,8 @@ now require that addons which need Babel transpilation supply their own
 `ember-cli-babel` dependency. The root application is _no longer_ wholly
 responsible for the transpilation of all dependent addons. There is a
 deprecation message which should guide you through the steps to make the
-necessary changes in your application.
+necessary changes in your application. This also means that addons themselves
+are responsible for transpiling their code into AMD modules.
 
 We no longer overload the `babel` key inside of `ember-cli-build.js` to
 conditionally use certain arguments for `babel` and others for
@@ -296,10 +296,11 @@ to the newly correct setup.
 
 Tobias Bieniek has been on a mission; we've now completed the move to ESLint
 as the newly recommended linting tool for Ember applications. After upgrading to
-Ember CLI 2.12 and running `ember init` you will be presented with an option to
-remove the existing `ember-cli-jshint` and adopt `ember-cli-eslint`. The process
-should be relatively seamless, please test it out and let us know how it works
-in your applications during the beta period.
+Ember CLI 2.12 and running `ember init` you will be presented with options to
+remove the existing `ember-cli-jshint` and rules and adopt `ember-cli-eslint`.
+The process should be relatively straightforward, though you'll have to migrate
+your styling rules from JSHint to ESLint. Please test it out and let us know how
+it works in your applications during the beta period.
 
 #### Nested Addon `preprocessTree` and `postprocessTree` Invocation
 
@@ -313,12 +314,20 @@ addons.
 
 #### Performance
 
-One of the major themes for the past six weeks has been a focus on the build
+One of the major themes for this release cycle has been a focus on the build
 performance of Ember CLI. We've added instrumentation to understand where we're
 spending time and have begun the consistent incremental work required to bring
 build times down without changing the build output. This has been a team effort
 with contributions from David Hamilton, Robert Jackson, Stefan Penner, Trent
 Willis, and more.
+
+#### Global `npm` Usage
+
+Rather than bundling our own copy of `npm` into Ember CLI we now delegate to the
+system-installed version of `npm`. This should dramatically reduce the install
+time for your `node_modules` directory. Note that we have set the minimum
+supported version to be `npm@3`. If you need to update the version on your
+system you can do so by running `npm install -g npm`.
 
 #### Developers, Developers, Developers, Developers
 
@@ -339,7 +348,7 @@ using this to lay a foundation for making `yarn` a default and _supported_
 option for package management in applications.
 - By virtue of a lot of work in CI and on caching test run times have been
 reduced to seven minutes. Check out [PackageCache](https://github.com/ember-cli/ember-cli/blob/master/tests/helpers/package-cache.js)
-the piece which got us most of the reward.
+which got us most of the reward. More work is being done to allow offline tests.
 - We've introduced an experiments API which allows us to incrementally land
 invasive changes behind an experiment flag. The experiment flag prevents their
 use except on the `canary` branch. This allows us to experiment with API shape
@@ -360,6 +369,9 @@ allow you to specify an existing empty directory.
 in the output file twice.
 - Given that we no longer require `bower` in the default scenario, we now lazily
 install it into your application the first time that you need it.
+- Krati Ahuja split and removed the internal `serve-files` addon which was
+responsible for serving of assets in `ember serve`. This enables progress on
+FastBoot.
 
 For more details on the changes in Ember CLI 2.12.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 2.12.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.12.0-beta.1).
