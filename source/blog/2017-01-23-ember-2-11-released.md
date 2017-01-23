@@ -331,9 +331,9 @@ system you can do so by running `npm install -g npm`.
 
 #### Developers, Developers, Developers, Developers
 
-We've made a tremendous number of behind-the-scene changes to improve the
-ergonomics for contributing to Ember CLI. This leverage is how we achieve
-synergy across all contributors in order to deliver measurable results.
+We've made a tremendous number of behind-the-scene changes to Ember-CLI in
+2.12. Our goal is to make contributing to Ember-CLI simpler and quicker. Some
+of the improvements include:
 
 - We've adopted ESLint for Ember CLI itself, painted a few bikesheds, and
 now have a much more consistent codebase. PR comments around code style should
@@ -356,8 +356,7 @@ and understand problems without committing to publishing a feature. Currently
 the instrumentation changes are behind an experiment flag which allows us to
 understand the needs and write a [much more complete RFC](https://github.com/ember-cli/rfcs/pull/90).
 
-We hope to continue making changes that make it easier to contribute to Ember
-CLI with higher confidence.
+We will continue this effort in upcoming releases.
 
 #### Other Notable Changes
 
