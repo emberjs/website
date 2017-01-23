@@ -331,8 +331,8 @@ system you can do so by running `npm install -g npm`.
 
 #### Developers, Developers, Developers, Developers
 
-We've made a tremendous number of behind-the-scene changes to Ember-CLI in
-2.12. Our goal is to make contributing to Ember-CLI simpler and quicker. Some
+We've made a tremendous number of behind-the-scene changes to Ember CLI in
+2.12. Our goal is to make contributing to Ember CLI simpler and quicker. Some
 of the improvements include:
 
 - We've adopted ESLint for Ember CLI itself, painted a few bikesheds, and
