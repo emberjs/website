@@ -166,7 +166,7 @@ looking to be the fastest ever release of Ember Data.
 A new `serializeId()` method has been added to `JSONSerializer`,
 `RESTSerializer` and `JSONAPISerializer`. This is useful if you are
 working with a backend that requires your ids to be something other
-then a string.
+than a string.
 
 ```app/serializers/application.js
 import DS from 'ember-data';
