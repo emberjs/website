@@ -38,12 +38,14 @@ header {
       padding:0;
       width: 100%;
       max-width: 70em;
+      min-height: 50px;
       li {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-flow: column;
-        flex-flow: column;        
+        flex-flow: column;
+        min-height: 50px;        
         min-width: 100%;
         -webkit-box-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
@@ -56,15 +58,15 @@ header {
           text-align: center;
         }
         a {
-          align-self: stretch;
+          align-self: center;
           box-sizing: border-box;
           border-color: transparent;
           color: white;
           cursor: pointer;
           font-weight: normal;
-          min-height: 40px;
+          line-height: 50px;
+          min-height: 50px;
           min-width:100%;
-          padding: 1em;
           text-align: center;
           text-decoration: none;
           &.disabled {
@@ -112,16 +114,16 @@ header {
             transition: border-color 0.2s ease;
             }
           }
-          &.open {
+          &.expanded {
             background-color: darken(#f5f5f5, 10%);
           }
           .dropdown-menu {
-            display:block;
+            display: flex;
+            flex-flow: column;
             height: 0;
-            margin:0;
-            overflow:hidden;
-            padding:0;
-            position: relative;
+            margin: 0;
+            overflow: hidden;
+            padding: 0;
             visibility: collapse;
             &.active {
               height: auto;
