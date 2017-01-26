@@ -3,8 +3,8 @@ $(function() {
 
   // Restoring method visibility preference from localStorage
   function initApiOptions() {
-    var type = this.getAttribute('data-type');
-    var checked = ls ? ls.getItem('api-options-' + type) : undefined;
+    var type = this.getAttribute('data-type'),
+      checked = ls ? ls.getItem('api-options-' + type) : undefined;
 
     if (checked != undefined) {
       // Bools are stored as strings in localStorage
@@ -24,9 +24,8 @@ $(function() {
     $('.'+type).toggle(this.checked);
     $('#api-options input[data-type='+type+']').prop('checked', this.checked);
 
-    if (ls) {
+    if(ls)
       ls.setItem('api-options-' + type, this.checked);
-    }
   }
 
   function confirmPaneInputs() {
@@ -47,9 +46,9 @@ $(function() {
   $('.tabs ul li:first').addClass('active');
 
   function showPane($tabs, href) {
-    var $ul = $tabs.find('> ul');
-    var $tab = $ul.find('a[href='+href+']');
-    var $pane = $(href);
+    var $ul = $tabs.find('> ul'),
+        $tab = $ul.find('a[href='+href+']'),
+        $pane = $(href);
 
     $ul.find('li').removeClass('active');
     $tab.parent().addClass('active');
@@ -58,10 +57,10 @@ $(function() {
     $pane.show();
   }
 
-  $('.tabs > ul li a').click(function() {
-    var $el = $(this);
-    var $tabs = $el.parents('.tabs');
-    var href = $el.attr('href');
+  $('.tabs > ul li a').click(function(){
+    var $el = $(this),
+        $tabs = $el.parents('.tabs'),
+        href = $el.attr('href');
 
     showPane($tabs, href);
 
@@ -72,7 +71,6 @@ $(function() {
   function checkHash() {
     var hash = window.location.hash;
     var $el = $(hash);
-
     if ($el.length > 0 && !$el.is(':visible')) {
       showPane($el.parents('.tabs'), '#'+$el.parents('.pane').attr('id'));
       $("html, body").scrollTop($el.offset().top);
