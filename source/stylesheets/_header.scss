@@ -1,6 +1,3 @@
-* {
-  box-sizing: border-box;
-}
 header {  
   background: #dd6a58 url("../images/header.svg") top center no-repeat;
   background-size: cover;
@@ -14,7 +11,7 @@ header {
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 100%;
-    min-height: 50px;
+    min-height: 75px;
     margin: auto;
     padding: 0;
     .btn-menu {
@@ -37,8 +34,9 @@ header {
       margin:auto;
       padding:0;
       width: 100%;
-      max-width: 70em;
-      min-height: 50px;
+      @media screen and (min-width: 768px){
+        max-width: 70em;
+      }
       li {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -73,6 +71,8 @@ header {
             cursor: not-allowed;
           }
           &:hover, :focus {
+            border-bottom: none;
+            cursor: pointer;
           }
           &.nav-brand {
             display: -webkit-box;
@@ -131,7 +131,7 @@ header {
               visibility: visible;
               @media screen and (min-width: 768px){
                 background-color: #faf4f1;
-                border: 1px solid #252525;
+                border: 1px solid #aeaeae;
                 display: block;
                 margin-top: 150px;
                 min-width: 160px;
@@ -140,7 +140,6 @@ header {
                 z-index: 1;
               }
             }
-
             li {
               border-color: 1px solid #252525;
               display: block;
@@ -164,10 +163,6 @@ header {
                   &:hover, :focus {
                     background-color: darken(#faf4f1, 10%);
                   }
-                }
-                &:hover, :focus {
-
-                
                 }
               }
             }
