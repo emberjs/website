@@ -8,7 +8,7 @@
 // - Adding a second colum to let the content breath if enough room available
 
 // Main autocomplete wrapper
-.aa-dropdown-menu {
+.ds-dropdown-menu {
     background-color: #FFF;
     border-radius: 4px;
     margin: 6px 0 0;
@@ -110,7 +110,7 @@
 // BREAKPOINT 1:
 // Screen is big enough to display the text snippets
 @media (min-width: $breakpoint-medium) {
-    .aa-dropdown-menu {
+    .ds-dropdown-menu {
         min-width: $dropdown-min-width-medium;
     }
     .algolia-docsearch-suggestion--text {
@@ -123,7 +123,7 @@
 // BREAKPOINT 2:
 // Screen is big enough to display results in two columns
 @media (min-width: $breakpoint-large) {
-    .aa-dropdown-menu {
+    .ds-dropdown-menu {
         min-width: $dropdown-min-width-large;
     }
     .algolia-docsearch-suggestion {
@@ -174,14 +174,14 @@
 /* Algolia Docsearch CSS overrides - https://github.com/algolia/docsearch#customization
    =========================================================================================== */
 
-.aa-dropdown-menu {
+.ds-dropdown-menu {
     right: 0 !important;
     font-size: .8rem;
     border-color: #aaa;
 }
 
 @media (min-width: $breakpoint-large) {
-    .aa-dropdown-menu {
+    .ds-dropdown-menu {
         // The guides search input is on the right-hand
         // side of the header, so it should extend to
         // the left of the input, not to the right.
