@@ -1,4 +1,4 @@
-# Feature statutes:
+# Feature statuses:
 #   * RFC
 #   * RFC FCP
 #   * RFC merged
@@ -92,5 +92,5 @@
   description:
     Provices a public router service.
   rfc:
-    id: 0095
+    id: 95
     url: https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md

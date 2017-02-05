@@ -10,6 +10,19 @@ title: Dashboard
     <p>If you were ever curious about what lies ahead for Ember.js, this page should provide the information you're looking for.</p>
     <p>Here we will track the progress of the various initiatives that continuously shape Ember.js, from their birth as <strong><a href="https://github.com/emberjs/rfcs/pulls">RFCs</a></strong>, through <strong><a href="https://guides.emberjs.com/v2.9.0/configuring-ember/feature-flags/">Feature Flags</a></strong> and eventually into a <strong><a href="/builds">Release</a></strong>.</p>
 
+    <% feature_groups = data.dashboard.group_by { |feature| feature.status } %>
+    <% feature_groups.each do |key, value| %>
+      <div class='status-section'>
+        <h2><%= key %></h2>
+        <% value.each do |feature| %>
+          <div class="card">
+            <a href="<%= feature.rfc.href %>">#<%= feature.rfc.id %></a>
+            <div class='feature-name'><%= feature.name %></div>
+            <div><%= feature.description %></div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
     <table class="feature-list">
       <thead>
         <tr>
