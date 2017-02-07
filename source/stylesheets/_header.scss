@@ -10,13 +10,14 @@ header {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     width: 100%;
     min-height: 75px;
     margin: auto;
     padding: 0;
+    flex-flow: column;
     .mobile-display {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -35,7 +36,7 @@ header {
         display: -ms-flexbox;
         display: flex;
         -ms-flex-flow: row wrap;
-        flex-flow: column;
+        flex-flow: row;
         -webkit-box-flex: 1 0 auto;
         -ms-flex: 1;
         flex: 1 0 auto;
@@ -69,12 +70,14 @@ header {
         flex: 1;
         list-style-type: none;
         margin:auto;
+        min-width: 100%;
         width: 100%;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
         -ms-flex-line-pack: center;
         align-content: center;
+
         @media screen and (min-width:992px){
           max-width: 90%;
         }
@@ -236,19 +239,19 @@ header {
 //helper classes until I figure out how the site css actually works. 
 .hidden-sm {
   @media screen and (max-width: 767px) {
-    visibility: visible;
+    visibility: hidden;
   }
   @media screen and (min-width: 768px) {
-    visibility: hidden;
+    visibility: visible;
   }
 
 }
 .hidden-md {
   @media screen and (max-width: 767px){
-    visibility: hidden;
+    visibility: visible;
   }
   @media screen and (min-width:768px) {
-    visibility: visible;
+    visibility: hidden;
   }
 }
 
