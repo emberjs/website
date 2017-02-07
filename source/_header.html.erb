@@ -1,19 +1,21 @@
-<script type="text/javascript">
-$(function() {
-  $('.js-toggle').on('click', function() {
-    $(this).toggleClass('expanded');
-    if ($(this).attr('aria-expanded') == 'true') {
-      $(this).attr('aria-expanded', 'false');
-    } else {
-      $(this).attr('aria-expanded', 'true');
-    };
-    $(this).siblings().toggleClass('active');
+<% content_for :header do  %>
+  <script type="text/javascript">
+  $(function() {
+    $('.js-toggle').on('click', function() {
+      $(this).toggleClass('expanded');
+      if ($(this).attr('aria-expanded') == 'true') {
+        $(this).attr('aria-expanded', 'false');
+      } else {
+        $(this).attr('aria-expanded', 'true');
+      };
+      $(this).siblings().toggleClass('active');
+    });
+    $('.js-menu-toggle').on('click', function() {
+      $(this).parent().next().toggleClass('active');
+    })
   });
-  $('.js-menu-toggle').on('click', function() {
-    $(this).parent().next().toggleClass('active');
-  })
-});
-</script>
+  </script>
+<% end %>
 <header>
   <nav aria-label="main navigation">
     <div class="mobile-display">
