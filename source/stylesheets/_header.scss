@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 header {  
   background: #dd6a58 url("../images/header.svg") top center no-repeat;
   background-size: cover;
@@ -24,13 +27,13 @@ header {
       display: flex;
       -ms-flex-flow: row wrap;
       flex-flow: row wrap;
-      -webkit-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      justify-content: flex-start;
-      align-items: flex-start;
-      text-align: left;
+      -webkit-box-flex: 1 100%;
+      -ms-flex: 1 100%;
+      flex: 1 100%;
+      justify-content: stretch;
+      align-items: stretch;
       min-width: 100%;
+      min-height: 75px;
       .nav-brand, .btn-menu {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -41,33 +44,43 @@ header {
         -ms-flex: 1;
         flex: 1 0 auto;
         align-items: stretch;
-        align-self: center;
         background-color: transparent;
         color: white;
-        font-size: 1rem;
-        font-weight: bold;
         justify-content: center;
-        letter-spacing: 1px;
         min-height: 100%;
         text-transform: uppercase;
         @media screen and (min-width: 768px) {
-          display: none;
+          display: none !important;
         }
+      }
+      .nav-brand {
+        padding-left: 3%;
+        justify-content: flex-start;
+      }
+      .btn-menu {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+        border: none;
+        
       }
     }
 
 
     .nav-header {
       display: none;
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
       &.active { 
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
+        -webkit-box-flex: 1 100%;
+        -ms-flex: 1 100%;
+        flex: 1 100%;
         list-style-type: none;
         margin:auto;
         min-width: 100%;
@@ -116,6 +129,10 @@ header {
           }
           
           &.nav-dropdown {
+            @media screen and (min-width: 0px) and (max-width: 767px){
+              display: flex;
+              flex-flow: column wrap;
+            }
             .dropdown-caret {
               &:after {
                 display: inline-flex;
@@ -142,8 +159,11 @@ header {
             background-color: darken(#dd6a58, 10%);
           }
           .dropdown-menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
-            flex-flow: column;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
             height: 0;
             margin: 0;
             overflow: hidden;
@@ -155,8 +175,11 @@ header {
               visibility: visible;
               min-width: 100%;
               background-color: #dd6a58;
-              display: flex;
-              flex-flow: column;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
               margin: 0;
               text-align: center;
               @media screen and (min-width: 768px){
@@ -235,11 +258,13 @@ header {
       }
     }
   }
-}
+} 
+
 //helper classes until I figure out how the site css actually works. 
 .hidden-sm {
   @media screen and (max-width: 767px) {
     visibility: hidden;
+    display: none !important;
   }
   @media screen and (min-width: 768px) {
     visibility: visible;
@@ -252,6 +277,7 @@ header {
   }
   @media screen and (min-width:768px) {
     visibility: hidden;
+    display: none !important;
   }
 }
 
