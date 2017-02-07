@@ -2,7 +2,10 @@ header {
   background: #dd6a58 url("../images/header.svg") top center no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 75px;
+  font-family: 'Lato', sans-serif;
   nav {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
@@ -14,14 +17,7 @@ header {
     min-height: 75px;
     margin: auto;
     padding: 0;
-    .btn-menu {
-      display: block;
-      float: right;
-      @media screen and (min-width: 768px) {
-        display: none;
-      }
-    }
-    .nav-header {
+    .mobile-display {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -29,86 +25,114 @@ header {
       flex-flow: row wrap;
       -webkit-box-flex: 1;
       -ms-flex: 1;
-          flex: 1;
-      list-style-type: none;
-      margin:auto;
-      padding:0;
-      width: 100%;
-      @media screen and (min-width: 768px){
-        max-width: 70em;
-      }
-      li {
+      flex: 1;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: left;
+      min-width: 100%;
+      .nav-brand, .btn-menu {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -ms-flex-flow: column;
+        -ms-flex-flow: row wrap;
         flex-flow: column;
-        min-height: 50px;        
-        min-width: 100%;
         -webkit-box-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
+        -ms-flex: 1;
         flex: 1 0 auto;
-        border: 1px solid transparent;
-        justify-content: center;
+        align-items: stretch;
+        align-self: center;
+        background-color: transparent;
+        color: white;
         font-size: 1rem;
-        @media screen and (min-width:992px) {
-          min-width: 13%; 
-          text-align: center;
+        font-weight: bold;
+        justify-content: center;
+        letter-spacing: 1px;
+        min-height: 100%;
+        text-transform: uppercase;
+        @media screen and (min-width: 768px) {
+          display: none;
         }
-        a {
-          align-self: center;
-          box-sizing: border-box;
-          color: white;
-          font-weight: normal;
-          line-height: 75px;
-          min-width:100%;
-          text-align: center;
-          text-decoration: none;
-          &.disabled {
-            cursor: not-allowed;
+      }
+    }
+
+
+    .nav-header {
+      display: none;
+      &.active { 
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        list-style-type: none;
+        margin:auto;
+        width: 100%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        @media screen and (min-width:992px){
+          max-width: 90%;
+        }
+        li {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          min-height: 50px;        
+          min-width: 100%;
+          -webkit-box-flex: 1.5 0 auto;
+          -ms-flex: 1.5 0  auto;
+          flex: 1.5 0 auto;
+          border: 1px solid transparent;
+          justify-content: center;
+          font-size: 1rem;
+          @media screen and (min-width:768px) {
+            min-width: 13%; 
+            text-align: center;
           }
-          &:hover, :focus {
-            border-bottom: none;
-            cursor: pointer;
-          }
-          &.nav-brand {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-flex: 1 0 auto;
-            -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-            padding: 0;
-            img {
-              display: block;
-              margin: auto;
-              padding: 0;
-              max-height: 40px;
-              max-width: 100%; 
+          a {
+            align-self: center;
+            box-sizing: border-box;
+            color: white;
+            font-weight: normal;
+            line-height: 75px;
+            min-width:100%;
+            text-align: center;
+            text-decoration: none;
+            &.disabled {
+              cursor: not-allowed;
+            }
+            &:hover, :focus {
+              border-bottom: none;
+              cursor: pointer;
             }
           }
-        }
-        
-        &.nav-dropdown {
-          .dropdown-caret {
-            &:after{
-            display: inline-flex;
-            vertical-align: middle;
-            width: 4px;
-            height: 4px;
-            border-bottom: 1px solid white;
-            border-right: 1px solid white;
-            content: "";
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -ms-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
-            -webkit-transition: border-color 0.2s ease;
-            -moz-transition: border-color 0.2s ease;
-            -ms-transition: border-color 0.2s ease;
-            -o-transition: border-color 0.2s ease;
-            transition: border-color 0.2s ease;
+          
+          &.nav-dropdown {
+            .dropdown-caret {
+              &:after {
+                display: inline-flex;
+                vertical-align: middle;
+                width: 4px;
+                height: 4px;
+                border-bottom: 1px solid white;
+                border-right: 1px solid white;
+                content: "";
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+                -webkit-transition: border-color 0.2s ease;
+                -moz-transition: border-color 0.2s ease;
+                -ms-transition: border-color 0.2s ease;
+                -o-transition: border-color 0.2s ease;
+                transition: border-color 0.2s ease;
+              }
             }
           }
           .expanded {
@@ -126,73 +150,80 @@ header {
               height: auto;
               overflow: auto;
               visibility: visible;
+              min-width: 100%;
+              background-color: #dd6a58;
+              display: flex;
+              flex-flow: column;
+              margin: 0;
+              text-align: center;
               @media screen and (min-width: 768px){
                 background-color: #faf4f1;
                 border: 1px solid #f7b2a6;
                 display: block;
-                margin-top: 150px;
-                min-width: 200px;
+                margin-top: 75px;
+                min-width: 200px; //this should be the li * 1.618?
+                text-align: left;
                 position: absolute;
-                text-align: left;
                 z-index: 1;
+                margin-left: 42px;
               }
-            }
-            li {
-              border-color: 1px solid #252525;
-              display: block;
-              @media screen and (min-width: 992px){
-                min-width: 100%;
+              li {
+                border-color: 1px solid #252525;
                 display: block;
-                clear: both;
-                text-align: left;
-              }
-              a {
-                min-width:100%;
-                padding: 1em;
-                text-decoration: none;
-                @media screen and (min-width: 992px) {
-                  color: #252525;
+                @media screen and (min-width: 768px){
+                  min-width: 100%;
                   display: block;
                   clear: both;
-                  line-height: 1.4;
-                  vertical-align: middle;
                   text-align: left;
-                  &:hover, :focus {
-                    background-color: darken(#faf4f1, 10%);
+                }
+                a {
+                  min-width:100%;
+                  text-decoration: none;
+                  @media screen and (min-width: 768px) {
+                    color: #252525;
+                    display: block;
+                    clear: both;
+                    line-height: 1.4;
+                    vertical-align: middle;
+                    text-align: left;
+                    padding: 1em;
+                    &:hover, :focus {
+                      background-color: darken(#faf4f1, 5%);
+                    }
                   }
                 }
               }
             }
           }
-        }
-        &.nav-search {
-          -webkit-box-flex: 2 0 auto;
-          -ms-flex: 2 0  auto;
-          flex: 2 0 auto;
-          form {
-            display: inline-block;
-            padding: 0;
-            margin: auto;
-            width: 100%;
-            .algolia-autocomplete {
+          &.nav-search {
+            -webkit-box-flex: 1.5 0 auto;
+            -ms-flex: 1.5 0  auto;
+            flex: 1.5 0 auto;
+            form {
+              display: inline-block;
+              padding: 0;
+              margin: auto;
               width: 100%;
-              .search-input {
+              .algolia-autocomplete {
                 width: 100%;
-                height: 35px;
-                margin-bottom: 0;
-                padding-left: 2.5em;
-                border: none;
-                border-radius: 35px;
-                outline: none;
-                appearance: none;
-                background: image-url("../images/search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
-                box-shadow: none;
-                font-size: 0.9rem;
-                line-height: 35px;
-                color: $white;
-
-                @include placeholder {
+                .search-input {
+                  width: 100%;
+                  height: 35px;
+                  margin-bottom: 0;
+                  padding-left: 2.5em;
+                  border: none;
+                  border-radius: 35px;
+                  outline: none;
+                  appearance: none;
+                  background: image-url("../images/search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
+                  box-shadow: none;
+                  font-size: 0.9rem;
+                  line-height: 35px;
                   color: $white;
+
+                  @include placeholder {
+                    color: $white;
+                  }
                 }
               }
             }
@@ -200,6 +231,24 @@ header {
         }
       }
     }
+  }
+}
+//helper classes until I figure out how the site css actually works. 
+.hidden-sm {
+  @media screen and (max-width: 767px) {
+    visibility: visible;
+  }
+  @media screen and (min-width: 768px) {
+    visibility: hidden;
+  }
+
+}
+.hidden-md {
+  @media screen and (max-width: 767px){
+    visibility: hidden;
+  }
+  @media screen and (min-width:768px) {
+    visibility: visible;
   }
 }
 

@@ -2,22 +2,37 @@
 $(function() {
   $('.js-toggle').on('click', function() {
     $(this).toggleClass('expanded');
+    if ($(this).attr('aria-expanded') == 'true') {
+      $(this).attr('aria-expanded', 'false');
+    } else {
+      $(this).attr('aria-expanded', 'true');
+    };
     $(this).siblings().toggleClass('active');
   });
+  $('.js-menu-toggle').on('click', function() {
+    $(this).parent().next().toggleClass('active');
+  })
 });
 </script>
 <header>
   <nav aria-label="main navigation">
-  <button class="js-toggle btn btn-menu">Menu</button>
+    <div class="mobile-display">
+      <a href="http://emberjs.com/" class="nav-brand hidden-md">
+        <img src="/images/ember-logo.svg" alt="ember homepage" />
+      </a>
+      <button class="js-menu-toggle btn btn-menu">Menu</button>
+    </div>
     <ul class="nav nav-header">
-      <li>
-        <a href="http://emberjs.com/" class="nav-brand">
-          <img src="/images/ember-logo.svg" alt="ember homepage" />
-        </a>
+    <li>
+        <a href="http://emberjs.com/" class="nav-brand hidden-sm">
+      <img src="/images/ember-logo.svg" alt="ember homepage" />
+    </a>
+    </li>
+    </li>
       <li class="nav-dropdown">
-        <a href="#" aria-haspopup="true" role="button" aria-expanded="false" class="js-toggle dropdown-caret" id="js-dropdown">Learn </a>
+        <a href="#" aria-haspopup="true" role="button" aria-expanded="false" class="js-toggle dropdown-caret" id="js-dropdown">Learn   </a>
         <ul class="dropdown-menu">
-          <%= link_to_page "Learn", "/learn" %> 
+          <%= link_to_page "Resources", "/learn" %> 
           <%= link_to_page "Tutorial", "/tutorial" %>
           <%= link_to_page "Guides", "http://guides.emberjs.com" %>
           <%= link_to_page "Deprecations", "/deprecations" %>

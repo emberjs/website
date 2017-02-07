@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <% if current_page.data.responsive.eql? true %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% end %>
     <title>Ember.js - <%= current_page.data.title || @title %></title>
 		<meta property="st:title" content="Ember.js: <%= current_page.data.title || @title %>" />
 		<meta property="og:title" content="Ember.js: <%= current_page.data.title || @title %>" />
@@ -15,9 +18,7 @@
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
     <%= stylesheet_link_tag "site" %>
     <link href="/blog/feed.xml" rel="alternate" type="application/atom+xml" title="Ember.js - Blog" />
-    <% if current_page.data.responsive.eql? true %>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    <% end %>
+    
     <%= yield_content :head %>
   </head>
 
