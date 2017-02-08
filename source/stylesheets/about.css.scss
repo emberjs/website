@@ -146,7 +146,7 @@ body.index, body.about {
     }
   }
 }
-/* 
+/*
 body.index.responsive > #content-wrapper {
   padding: 3em;
   padding-bottom: 1em;
@@ -165,3 +165,10 @@ body.index.responsive #content {
   }
 }
  */
+
+/*
+ * TEMPORARILY HIDE JOB BOARD ON MOBILE
+ */
+body.index.responsive .job-board-banner {
+  display: none;
+}
