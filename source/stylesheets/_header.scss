@@ -1,283 +1,188 @@
-* {
-  box-sizing: border-box;
+.header-nav.container {
+  width: 960px;
+  padding: 0 1rem;
+  list-style-type: none;
+  margin: auto;
 }
-header {  
+
+.responsive .header-nav.container {
+  max-width: 960px;
+  width: auto;
+}
+
+.not-responsive .header {
+  min-width: 960px;
+}
+
+.header a:hover {
+  border-bottom: none;
+}
+
+// The styles bellow were ported from the compiled sass from
+// https://guides.emberjs.com/v2.3.0/
+
+// Ideally we will install bourbon / bittters / neat
+// and reuse the same _base_ stylesheets as the guides.
+// Since that will affect many default styles hence
+// the overall visual aesthetics of the site, this is an intentional
+// intermediate step to quickly port the responsive header.
+
+.header {
   background: #dd6a58 url("../images/header.svg") top center no-repeat;
   background-size: cover;
   color: #fff;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 75px;
-  font-family: 'Lato', sans-serif;
-  nav {
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    min-height: 75px;
-    margin: auto;
-    padding: 0;
-    flex-flow: column;
-    .mobile-display {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
-      -webkit-box-flex: 1 100%;
-      -ms-flex: 1 100%;
-      flex: 1 100%;
-      justify-content: stretch;
-      align-items: stretch;
-      min-width: 100%;
-      min-height: 75px;
-      .nav-brand, .btn-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-flow: row wrap;
-        flex-flow: row;
-        -webkit-box-flex: 1 0 auto;
-        -ms-flex: 1;
-        flex: 1 0 auto;
-        align-items: stretch;
-        background-color: transparent;
-        color: white;
-        justify-content: center;
-        min-height: 100%;
-        text-transform: uppercase;
-        @media screen and (min-width: 768px) {
-          display: none !important;
-        }
-      }
-      .nav-brand {
-        padding-left: 3%;
-        justify-content: flex-start;
-      }
-      .btn-menu {
-        font-size: 1.2rem;
-        letter-spacing: 1px;
-        font-weight: bold;
-        border: none;
-        
-      }
-    }
-
-
-    .nav-header {
-      display: none;
-      @media screen and (min-width: 768px) {
-        display: flex;
-      }
-      &.active { 
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-        -webkit-box-flex: 1 100%;
-        -ms-flex: 1 100%;
-        flex: 1 100%;
-        list-style-type: none;
-        margin:auto;
-        min-width: 100%;
-        width: 100%;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
-
-        @media screen and (min-width:992px){
-          max-width: 90%;
-        }
-        li {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          min-height: 50px;        
-          min-width: 100%;
-          -webkit-box-flex: 1.5 0 auto;
-          -ms-flex: 1.5 0  auto;
-          flex: 1.5 0 auto;
-          border: 1px solid transparent;
-          justify-content: center;
-          font-size: 1rem;
-          @media screen and (min-width:768px) {
-            min-width: 13%; 
-            text-align: center;
-          }
-          a {
-            align-self: center;
-            box-sizing: border-box;
-            color: white;
-            font-weight: normal;
-            line-height: 75px;
-            min-width:100%;
-            text-align: center;
-            text-decoration: none;
-            &.disabled {
-              cursor: not-allowed;
-            }
-            &:hover, :focus {
-              border-bottom: none;
-              cursor: pointer;
-            }
-          }
-          
-          &.nav-dropdown {
-            @media screen and (min-width: 0px) and (max-width: 767px){
-              display: flex;
-              flex-flow: column wrap;
-            }
-            .dropdown-caret {
-              &:after {
-                display: inline-flex;
-                vertical-align: middle;
-                width: 4px;
-                height: 4px;
-                border-bottom: 1px solid white;
-                border-right: 1px solid white;
-                content: "";
-                -webkit-transform: rotate(45deg);
-                -moz-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
-                -o-transform: rotate(45deg);
-                transform: rotate(45deg);
-                -webkit-transition: border-color 0.2s ease;
-                -moz-transition: border-color 0.2s ease;
-                -ms-transition: border-color 0.2s ease;
-                -o-transition: border-color 0.2s ease;
-                transition: border-color 0.2s ease;
-              }
-            }
-          }
-          .expanded {
-            background-color: darken(#dd6a58, 10%);
-          }
-          .dropdown-menu {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-flow: column wrap;
-                flex-flow: column wrap;
-            height: 0;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-            visibility: collapse;
-            &.active {
-              height: auto;
-              overflow: auto;
-              visibility: visible;
-              min-width: 100%;
-              background-color: #dd6a58;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-flow: column wrap;
-                flex-flow: column wrap;
-              margin: 0;
-              text-align: center;
-              @media screen and (min-width: 768px){
-                background-color: #faf4f1;
-                border: 1px solid #f7b2a6;
-                display: block;
-                margin-top: 75px;
-                min-width: 200px; //this should be the li * 1.618?
-                text-align: left;
-                position: absolute;
-                z-index: 1;
-                margin-left: 42px;
-              }
-              li {
-                border-color: 1px solid #252525;
-                display: block;
-                @media screen and (min-width: 768px){
-                  min-width: 100%;
-                  display: block;
-                  clear: both;
-                  text-align: left;
-                }
-                a {
-                  min-width:100%;
-                  text-decoration: none;
-                  @media screen and (min-width: 768px) {
-                    color: #252525;
-                    display: block;
-                    clear: both;
-                    line-height: 1.4;
-                    vertical-align: middle;
-                    text-align: left;
-                    padding: 1em;
-                    &:hover, :focus {
-                      background-color: darken(#faf4f1, 5%);
-                    }
-                  }
-                }
-              }
-            }
-          }
-          &.nav-search {
-            -webkit-box-flex: 1.5 0 auto;
-            -ms-flex: 1.5 0  auto;
-            flex: 1.5 0 auto;
-            form {
-              display: inline-block;
-              padding: 0;
-              margin: auto;
-              width: 100%;
-              .algolia-autocomplete {
-                width: 100%;
-                .search-input {
-                  width: 100%;
-                  height: 35px;
-                  margin-bottom: 0;
-                  padding-left: 2.5em;
-                  border: none;
-                  border-radius: 35px;
-                  outline: none;
-                  appearance: none;
-                  background: image-url("../images/search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
-                  box-shadow: none;
-                  font-size: 0.9rem;
-                  line-height: 35px;
-                  color: $white;
-
-                  @include placeholder {
-                    color: $white;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-} 
-
-//helper classes until I figure out how the site css actually works. 
-.hidden-sm {
-  @media screen and (max-width: 767px) {
-    visibility: hidden;
-    display: none !important;
-  }
-  @media screen and (min-width: 768px) {
-    visibility: visible;
-  }
-
+  padding: 1rem 0;
 }
-.hidden-md {
-  @media screen and (max-width: 767px){
-    visibility: visible;
+
+.header .container {
+  display: flex;
+  display: -webkit-flex;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .header .container {
+    display: block;
   }
-  @media screen and (min-width:768px) {
-    visibility: hidden;
-    display: none !important;
+}
+
+.header .header-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 2.8rem;
+}
+@media screen and (max-width: 53.75rem) {
+  .responsive .header .header-nav {
+    height: auto;
+  }
+}
+
+.header a {
+  color: #fff;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .header a {
+    line-height: 24px;
+  }
+}
+
+.header-nav li {
+  margin-top: 11px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .header-nav li {
+    margin-top: 10px;
+  }
+}
+
+// Desktop
+.header-nav li {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1 0 0;
+  -moz-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  display: inline-block;
+}
+
+@media screen and (max-width: 53.75em) {
+  .responsive .header-nav li {
+    display: inherit;
+  }
+}
+@media screen and (max-width: 53.75em) {
+  .responsive .header-nav li:not(.header-logo):not(.header-search) {
+    width: 32%;
+    display: inline-block;
+  }
+}
+
+
+.header-nav li:not(.header-logo):not(.header-search) {
+  width: auto;
+}
+@media screen and (min-width: 53.75rem) {
+}
+
+.header-nav .header-logo {
+  -webkit-box-flex: 1.5;
+  -moz-box-flex: 1.5;
+  box-flex: 1.5;
+  -webkit-flex: 1.5 0 0;
+  -moz-flex: 1.5 0 0;
+  -ms-flex: 1.5 0 0;
+  flex: 1.5 0 0;
+}
+@media screen and (min-width: 53.75rem) {
+}
+
+.header-nav .header-search {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  box-flex: 2;
+  -webkit-flex: 2 0 0;
+  -moz-flex: 2 0 0;
+  -ms-flex: 2 0 0;
+  flex: 2 0 0;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .header-nav .header-search {
+    display: block;
+  }
+}
+
+.header-logo a {
+  height: 40px;
+  width: 100px;
+  background: url("../images/ember-logo.svg") no-repeat;
+  display: block;
+  margin: -15px auto 0 0;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .header-logo a {
+    margin-left: auto;
+  }
+}
+
+
+.header-search {
+  margin-left: 4%;
+
+  .algolia-autocomplete {
+    display: block !important; // beats `inline-block` added by DocSearch script
+  }
+  .search-input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 0;
+    padding-left: 2.5em;
+    border: none;
+    border-radius: 35px;
+    outline: none;
+    appearance: none;
+    background: image-url("../images/search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
+    box-shadow: none;
+    font-size: 0.9rem;
+    line-height: 35px;
+    color: $white;
+
+    @include placeholder {
+      color: $white;
+    }
+  }
+}
+@media screen and (max-width: 53.75rem) {
+  .responsive .header-search {
+    margin-left: 0;
   }
 }
 
