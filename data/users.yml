@@ -855,6 +855,10 @@
   image: freshbooks.png
   alt: FreshBooks
   use: "FreshBooks' front-end application is powered by Ember"
+- url: https://www.sugarcrm.com
+  image: sugarcrm.png
+  alt: SugarCRM
+  use: "We use Ember for Mothership, our internal operations management tool"
 
 
 # ---- PLEASE READ ----
