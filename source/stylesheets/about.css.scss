@@ -18,6 +18,21 @@
   }
 }
 
+.about-page--header {
+  display: block;
+  clear: both;
+  color: black;
+  font-family: 'Source Sans Pro';
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 1.5em auto 0 auto;
+  max-width: 100%;
+  text-align: center;
+  .bold {
+    font-weight: 400;
+  }
+}
 body.index, body.about {
   background: no-repeat top center #faf4f1;
   background-image: url('/images/background-shades.png');
