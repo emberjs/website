@@ -140,7 +140,7 @@ p {
 
 .section {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
 }
 
 /* Components */
@@ -556,13 +556,17 @@ p {
 .about-header-text {
   display: block;
   margin: 60px auto 0 auto;
-  width: image-width('about/header-text.png');
+  max-width: image-width('about/header-text.png');
   height: image-height('about/header-text.png');
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%;
   border-bottom: none;
   @include hidpi('about/header-text', png);
+
+  background-size: 90% !important;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 #download {
