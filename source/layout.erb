@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <% if current_page.data.responsive.eql? true %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% end %>
     <title>Ember.js - <%= current_page.data.title || @title %></title>
 		<meta property="st:title" content="Ember.js: <%= current_page.data.title || @title %>" />
 		<meta property="og:title" content="Ember.js: <%= current_page.data.title || @title %>" />
