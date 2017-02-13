@@ -107,7 +107,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 ### Changes in Ember Data 2.11
 
 Ember Data 2.11 represents the work of 15 direct contributors
-contributors and over 70 commits.
+and over 70 commits.
 
 Ember Data 2.11 continues to expand on the performance improvements
 started in Ember Data
