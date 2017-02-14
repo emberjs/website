@@ -16,7 +16,7 @@ title: Dashboard
         <h2><%= key %></h2>
         <% value.each do |feature| %>
           <div class="card">
-            <a href="<%= feature.rfc.href %>">#<%= feature.rfc.id %></a>
+            <a href="<%= feature.rfc.url %>">#<%= feature.rfc.id %></a>
             <div class='feature-name'><%= feature.name %></div>
             <div><%= feature.description %></div>
           </div>
