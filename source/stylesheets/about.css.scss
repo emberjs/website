@@ -178,6 +178,9 @@ body.index.responsive .job-board-banner {
 .emberconf {
   text-align: center;
     img {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
       padding-top: 40px;
     }
 	a:hover {
