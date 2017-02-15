@@ -146,3 +146,29 @@ body.index, body.about {
     }
   }
 }
+/*
+body.index.responsive > #content-wrapper {
+  padding: 3em;
+  padding-bottom: 1em;
+  width: 100%;
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+body.index.responsive #content {
+  width: 90%;
+}
+
+@media screen and (max-width: 460px) {
+  body.index.responsive > #content-wrapper {
+    padding: 2em 0 1em;
+  }
+}
+ */
+
+/*
+ * TEMPORARILY HIDE JOB BOARD ON MOBILE
+ */
+body.index.responsive .job-board-banner {
+  display: none;
+}
