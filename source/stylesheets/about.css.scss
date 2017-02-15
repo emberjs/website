@@ -172,3 +172,18 @@ body.index.responsive #content {
 body.index.responsive .job-board-banner {
   display: none;
 }
+
+// The EmberConf CSS is used seasonally; please comment it out when not in use, rather than delete
+
+.emberconf {
+  text-align: center;
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+	a:hover {
+    border-bottom: none;
+  }
+}
