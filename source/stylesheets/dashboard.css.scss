@@ -1,6 +1,36 @@
 @import "variables";
 @import "mixins/hidpi";
 
+$base-border-radius: 10px;
+
+.dashboard {
+  .card {
+    display: inline-block;
+    vertical-align: top;
+
+    width: 296px;
+    min-height: 170px;
+
+    padding: 10px;
+    margin: 7px 5px;
+
+    border: 1px solid #ede8e5;
+    border-radius: $base-border-radius;
+
+    background-color: #f7f2f0;
+    color: #716f6e;
+  }
+
+  .feature-name {
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    font-size: 1.1rem;
+    font-family: Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", Courier, monospace;
+    font-weight: bold;
+  }
+}
+
 .dashboard {
   tr:nth-child(even) td {
     background-color: rgba(0, 0, 0, 0.02);
@@ -50,4 +80,8 @@
     height: 132px;
     margin: 0 auto;
   }
+}
+
+.dashboard > table.feature-list {
+  margin-top: 2em;
 }
