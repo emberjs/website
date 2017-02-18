@@ -1,23 +1,84 @@
 @import "variables";
 @import "mixins/hidpi";
 
-.job-board-banner {
-  z-index: 99998;
-  position: absolute;
-  left: 20px;
-  width: 125px;
-  height: 170px;
+.job-board {
+  display: none;
+  @media screen and (max-width: 768px) {
+    background-color: #1e719b;
+    font-size: 1.2em;
+    min-width: 100%;
+    text-align: center;
+    display: block;
+    clear: both;
+    a {
+        background-image: none;
+        color: white;
+        letter-spacing: 1px;
+        min-width: 100%;
+        display: block;
+        padding: 0.4em;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+        img {
+          margin: -0.2em 0 -0.6em 0.5em;
+          transform: rotate(10deg);
+          max-height: 40px;
+          &:hover, &:focus {
+            text-decoration: none;
+          }
+        }
+        .text-yellow {
+          color: #feeca6;
+        }
+      }
+    }
+  } 
+  .job-board-banner {
+      z-index: 99998;
+      position: absolute;
+      left: 20px;
+      width: 125px;
+      height: 170px;
 
-  text-decoration: none !important;
-  text-indent: -99999px;
+      text-decoration: none !important;
+      text-indent: -99999px;
 
-  @include hidpi('about/job-board-banner', png);
+      @include hidpi('about/job-board-banner', png);
 
-  &:hover {
-    border-bottom: none;
+      &:hover {
+        border-bottom: none;
+      }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    } 
+
+
+
+.about-page--header {
+  display: block;
+  clear: both;
+  color: black;
+  font-family: 'Source Sans Pro';
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 1em auto;
+  max-width: 100%;
+  text-align: center;
+  .bold {
+    font-weight: 400;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0.5 auto;
+    font-size: 2em;
   }
 }
-
 body.index, body.about {
   background: no-repeat top center #faf4f1;
   background-image: url('/images/background-shades.png');
@@ -94,7 +155,7 @@ body.index, body.about {
     border-radius: 10px;
     background-color: white;
     margin: 3em auto;
-    width: 300px;
+    width: 350px;
     text-align: center;
 
     a {
@@ -166,9 +227,17 @@ body.index.responsive #content {
 }
  */
 
-/*
- * TEMPORARILY HIDE JOB BOARD ON MOBILE
- */
-body.index.responsive .job-board-banner {
-  display: none;
+// The EmberConf CSS is used seasonally; please comment it out when not in use, rather than delete
+
+.emberconf {
+  text-align: center;
+    img {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
+      padding-top: 40px;
+    }
+	a:hover {
+    border-bottom: none;
+  }
 }
