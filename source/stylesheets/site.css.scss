@@ -29,7 +29,7 @@
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
 
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -37,9 +37,9 @@ body {
   background-color: #faf4f1;
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-  font-size: 14px;
-  line-height: 1.4em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   color: #444444;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -50,15 +50,6 @@ body {
 a {
   color: #DC2C0D;
   text-decoration: none;
-
-  &.active {
-    font-weight: bold;
-    // text-decoration: underline;
-  }
-}
-
-a:hover {
-  border-bottom: 1px dotted #DC2C0D;
 }
 
 em {
@@ -568,6 +559,7 @@ p {
   background-repeat: no-repeat;
   background-position: 50%;
 }
+
 
 #download {
   width: 280px;
