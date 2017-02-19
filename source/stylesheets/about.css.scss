@@ -1,9 +1,11 @@
 @import "variables";
 @import "mixins/hidpi";
 
+$small-max-width: 767px;
+
 .job-board {
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-max-width) {
     background-color: #1e719b;
     font-size: 1.2em;
     min-width: 100%;
@@ -53,7 +55,7 @@
       &:hover {
         border-bottom: none;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-max-width) {
         display: none;
       }
     } 
@@ -74,7 +76,7 @@
   .bold {
     font-weight: 400;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-max-width) {
     margin: 0.5 auto;
     font-size: 2em;
   }
@@ -85,6 +87,16 @@ body.index, body.about {
   background-image: url('/images/background-shades.svg'), none; // See: http://css-tricks.com/svg-fallbacks/
   @media screen and (min-width: 2000px) { // Stretch background width when wider than source image
     background-size: 100% auto;
+  }
+  .feature {
+    @media screen and (max-width:$small-max-width) {
+      max-width:100%;
+      .feature-img {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
   }
 
   .feature p {
@@ -122,6 +134,12 @@ body.index, body.about {
   }
 
   .getting-started {
+    @media screen and (max-width:$small-max-width) {
+      display:block;
+      clear: both;
+      margin: 0 auto;
+      max-width:100%;
+    }
     h2.sub {
       color: #F23818;
       padding-top: 50px;
@@ -130,8 +148,9 @@ body.index, body.about {
     }
   }
 
-  p.prose {
+  .prose {
     width: 800px;
+    max-width:100%;
   }
 
   .section.gears {
@@ -231,13 +250,13 @@ body.index.responsive #content {
 
 .emberconf {
   text-align: center;
-    img {
-      display: block;
-      max-width: 90%;
-      margin: 0 auto;
-      padding-top: 40px;
-    }
-	a:hover {
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  a:hover {
     border-bottom: none;
   }
 }

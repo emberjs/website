@@ -25,6 +25,8 @@
 @import 'components/meetups';
 @import 'components/ember-button';
 
+$small-max-width: 767px;
+
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
@@ -62,7 +64,7 @@ strong {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  font-family: 'Maven Pro';
+  
   font-weight: bold;
 
   code {
@@ -94,7 +96,6 @@ h2 {
 }
 
 h2, h3{
-  font-family: 'Maven Pro';
   font-weight: bold;
   color: $black-color;
 }
@@ -110,7 +111,6 @@ h4 {
   letter-spacing: 1px;
   margin: 24px 0 12px 0;
 }
-
 
 ul {
   list-style-type: disc;
@@ -132,6 +132,13 @@ p {
 .section {
   margin: 0 auto;
   max-width: 960px;
+  @media screen and (max-width: $small-max-width){
+    max-width:100%;
+    text-align: center;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+  }
 }
 
 /* Components */
@@ -141,7 +148,6 @@ p {
 **/
 
 #sidebar {
-  font-family: 'Maven Pro';
   font-weight: normal;
   margin-top: 38px;
   float: left;
@@ -177,8 +183,7 @@ p {
     text-decoration: none;
     line-height: 1.5em;
     border-bottom: none;
-    color: #d84a32;
-    font-family: 'Maven Pro';
+    color: #d84a32;    
     font-weight: bold;
     cursor: pointer;
 
@@ -219,7 +224,7 @@ p {
         li.sub-selected {
           background-color: #f2d1cb;
           > a {
-            font-family: 'Maven Pro';
+            
             font-weight: bolder;
             color: #282828;
           }
@@ -385,7 +390,6 @@ p {
     width: 700px;
     height: 65px;
     margin: 0 auto;
-
     text-align: center;
 
     li {
@@ -394,12 +398,11 @@ p {
       display: inline-block;
 
       a {
-        font-family: 'Maven Pro';
+        
         font-weight: bold;
         font-size: 13px;
         text-transform: uppercase;
         color: #faf2ee;
-
         text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
         display: block;
         padding: 0px 1em;
@@ -454,19 +457,16 @@ p {
         margin-right: 6px;
         display: block;
       }
-
-      font-family: 'Maven Pro';
+      
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
       text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
-
       display: block;
       padding: 0px 1em 0 0.5em;
       height: 28px;
       line-height: 28px;
-
       background-color: #ff6e56;
       @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
 
@@ -645,6 +645,16 @@ p {
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
+    @media screen and (max-width:$small-max-width) {
+      display: block;
+      clear: both;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 0.25em;
+      float: none;
+      max-width: 100%;
+      width:100%;
+    }
 
     img {
       margin-left: auto;
@@ -786,25 +796,28 @@ p {
   }
 
   .listed {
-    float: left;
-    margin-left: $col-width * 9;
-    margin-top: 20px;
-    text-align: center;
+    padding-top: 20px;
+    display:block;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
 .gears.section {
+  display: block;
+  clear: both;
+  max-width: 100%;
+  margin: 0 auto;
   .gear {
     text-align: center;
     height: 120px;
-
-    .gearplus {
-      padding: 0px 30px 0px 30px;
-      display: inline;
-      line-height: 120px;
+    max-width: 100%;
+    a {
+      display: inline-block;
       img {
-        vertical-align: top;
-        padding-top: 50px;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
       }
     }
   }
@@ -840,7 +853,6 @@ p {
       .name {
         text-align: center;
         color: white;
-        font-family: 'Maven Pro';
         font-weight: normal;
         font-size: 18px;
         margin-top: 55px;
@@ -1558,6 +1570,10 @@ body.security #content {
 
   .section {
     width: 100%;
+    max-width:100%;
+    display:block;
+    clear: both;
+    margin:0 auto;
   }
 
   #content {
@@ -1581,6 +1597,7 @@ body.security #content {
 .showcase {
   margin: 0 auto;
   width: 100%;
+  max-width:100%;
 }
 
 ul.showcase {
@@ -1746,7 +1763,7 @@ body.deprecations {
       float: left;
       font-size: 15px;
       font-weight: bold;
-      font-family: 'Maven Pro';
+      
       text-transform: uppercase;
     }
     .date {
@@ -2188,7 +2205,7 @@ body.team {
   border-top: 1px solid #e5dbd6;
   background-color: #f2ece9;
   overflow: hidden;
-  font-family: 'Maven Pro';
+  
   font-weight: bold;
 
   #footer-wrapper {
@@ -2282,7 +2299,6 @@ body.team {
   display: block;
   width: 220px;
   height: 40px;
-  font-family: 'Maven Pro';
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -2336,8 +2352,6 @@ body.team {
 .small-button {
   width: 74px;
   height: 22px;
-
-  font-family: 'Maven Pro';
   font-weight: normal;
   color: #ffffff;
   line-height: 24px;

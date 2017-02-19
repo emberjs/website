@@ -4,30 +4,30 @@ responsive: true
 ---
 
 <% content_for :foot do %>
-  <script type="text/javascript">
-    $(function() {
-      $('#slider').bxSlider({
-        displaySlideQty: 4,
-        moveSlideQty: 4,
-        auto: true,
-        pager: true,
-        speed: 700,
-        pause: 5000
-      });
+<script type="text/javascript">
+  $(function() {
+    $('#slider').bxSlider({
+      displaySlideQty: 4,
+      moveSlideQty: 4,
+      auto: true,
+      pager: true,
+      speed: 700,
+      pause: 5000
+    });
 
       // Hack to force proper sizing
       $('.bx-wrapper, .bx-window').css('width', 940);
     });
-  </script>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  <%= javascript_include_tag 'app/about/inline-examples', defer: true %>
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<%= javascript_include_tag 'app/about/inline-examples', defer: true %>
 <% end %>
 
 <% content_for :outside_wrapper do %>
-  <div class="job-board">
-      <a href="http://jobs.emberjs.com"><span class="text-yellow"> new</span> Job Board!<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45544/icon-tomster.png" alt="" role="presentation" /></a>
-  </div>
-  <a href="http://jobs.emberjs.com" class="job-board-banner">Post and find jobs on the Ember job board</a>
+<div class="job-board">
+  <a href="http://jobs.emberjs.com"><span class="text-yellow"> new</span> Job Board!<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45544/icon-tomster.png" alt="" role="presentation" /></a>
+</div>
+<a href="http://jobs.emberjs.com" class="job-board-banner">Post and find jobs on the Ember job board</a>
 <% end %>
 
 <div class="about-page--header">
@@ -51,34 +51,34 @@ responsive: true
 </div>
 
 <div class="features section">
-  <h2>More Productive Out of the Box.</h2>
+  <h2>More Productive Out of the Box</h2>
   <div class="feature">
-    <div class="handlebars"></div>
+    <div class="handlebars feature-img"></div>
     <p>Write dramatically less code with Ember's Handlebars integrated templates that update automatically when the underlying data changes.
   </div>
   <div class="feature">
-    <div class="structure"></div>
+    <div class="structure feature-img"></div>
     <p>Don't waste time making trivial choices. Ember.js incorporates common idioms so you can focus on what makes your app special, not reinventing the wheel.</p>
   </div>
   <div class="feature">
-    <div class="productivity"></div>
+    <div class="productivity feature-img"></div>
     <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done&mdash;fast.</p>
   </div>
   <div class="emberconf">
- -    <a href="http://www.emberconf.com"><img src="/images/about/emberconf-banner-2017.png" /></a>
+   <a href="http://www.emberconf.com"><img src="/images/about/emberconf-banner-2017.png" alt="ember conf 2017" /></a>
   </div>
 </div>
 
 <div class="getting-started section">
   <script type="text/x-handlebars" id="application">
-      <div class="example-tabs">
-        {{#each model as |item|}}
-          {{tab-item item=item selectedTab=selectedTab selectTab='selectTab'}}
-        {{/each}}
-        <span class="tabs-footer"></span>
-      </div>
-      {{syntax-highlight selectedTab.contents}}
-      <div class="example-arrow"></div>
+    <div class="example-tabs">
+      {{#each model as |item|}}
+      {{tab-item item=item selectedTab=selectedTab selectTab='selectTab'}}
+      {{/each}}
+      <span class="tabs-footer"></span>
+    </div>
+    {{syntax-highlight selectedTab.contents}}
+    <div class="example-arrow"></div>
   </script>
   <script type="text/x-handlebars" data-template-name="components/tab-item">
     <a class="{{if isSelected 'active'}}" href="#">{{unbound item.name}}</a>
@@ -87,16 +87,16 @@ responsive: true
   <div class="example-app" data-name="binding" data-files="templates/application.hbs">
     <h2 class="sub">Auto-Updating Handlebars Templates</h2>
     <p class="prose">Ember makes Handlebars templates even better, by ensuring your HTML
-    stays up-to-date when the underlying model changes. To get started, you
-    don't even need to write any JavaScript.</p>
+      stays up-to-date when the underlying model changes. To get started, you
+      don't even need to write any JavaScript.</p>
   </div>
 
   <div class="example-app" data-name="components" data-files="components/gravatar-image.js templates/application.hbs templates/components/gravatar-image.hbs">
     <h2 class="sub">Components</h2>
     <p class="prose">Experience the future of the web platform today with Ember's components.
-    Components allow you to create your own application-specific HTML tags,
-    using Handlebars to describe their markup and JavaScript to implement
-    custom behavior.</p>
+      Components allow you to create your own application-specific HTML tags,
+      using Handlebars to describe their markup and JavaScript to implement
+      custom behavior.</p>
   </div>
 
   <div class="example-app example-loading" data-name="loading" data-files="app.js templates/application.hbs">
@@ -111,9 +111,9 @@ responsive: true
   <div id="routing-example" class="example-app" data-name="routing" data-files="app.js templates/application.hbs templates/index.hbs templates/mail.hbs templates/mailbox.hbs templates/mailbox/index.hbs fixtures.js">
     <h2 class="sub">Routing</h2>
     <p class="prose">Build JavaScript apps that don't break the web!
-    Ember.js makes it downright simple to create sophisticated,
-    multi-page JavaScript applications with great URL support, in a
-    fraction of the code you'd write in other frameworks.</p>
+      Ember.js makes it downright simple to create sophisticated,
+      multi-page JavaScript applications with great URL support, in a
+      fraction of the code you'd write in other frameworks.</p>
   </div>
 </div>
 
@@ -122,54 +122,45 @@ responsive: true
 
   <div class="surround">
     <ul id="slider">
-    <% data.users.slice(0,12).each do |user| %>
+      <% data.users.slice(0,12).each do |user| %>
       <li class="user">
         <a href="<%= user.url %>" rel="nofollow">
           <img src="/images/about/<%= user.image %>" width="210" height="103" />
         </a>
       </li>
-    <% end %>
+      <% end %>
     </ul>
   </div>
 
   <div class="listed">
-    <a class="ember-button" href="/ember-users">
-        Meet More Users
+    <a class="ember-button ember-button--centered" href="/ember-users">
+      Meet More Users
     </a>
   </div>
 </div>
 
 <div class="gears section">
-	<h2>Buy Ember.js Gear and Support Development</h2>
-	<div class="gear">
-		<a href="http://devswag.com/products/ember-sticker">
-			<img src="/images/about/ember-sticker.png" width="160" height="120">
-		</a>
-		<div class="gearplus">
-			<img src="/images/about/plus-icon.png" width="20" height="21">
-		</div>
-		<a href="http://devswag.com/products/ember-js-tshirt">
-			<img src="/images/about/ember-shirt.png" width="160" height="120">
-		</a>
-		<div class="gearplus">
-			<img src="/images/about/plus-icon.png" width="20" height="21">
-		</div>
-		<a href="http://devswag.com/products/ember-mascot-stickers-4">
-			<img src="/images/about/ember-hamster-sticker.png" width="160" height="120">
-		</a>
-    <div class="gearplus">
-      <img src="/images/about/plus-icon.png" width="20" height="21">
-    </div>
-    <a href="http://devswag.com/products/ember-mascot-tomster">
-      <img src="/images/about/ember-tomster-plush-2.png" width="160" height="120">
+  <h2>Buy Ember.js Gear and Support Development</h2>
+  <div class="gear">
+    <a href="http://devswag.com/products/ember-sticker">
+      <img src="/images/about/ember-sticker.png">
     </a>
-	</div>
+    <a href="http://devswag.com/products/ember-js-tshirt">
+      <img src="/images/about/ember-shirt.png">
+    </a>
+    <a href="http://devswag.com/products/ember-mascot-stickers-4">
+      <img src="/images/about/ember-hamster-sticker.png">
+    </a>
+    <a href="http://devswag.com/products/ember-mascot-tomster">
+      <img src="/images/about/ember-tomster-plush-2.png">
+    </a>
+  </div>
 </div>
 
 <div class="users section donate">
   <div class="listed">
-    <a class="ember-button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY">
-        Donate to the Project
+    <a class="ember-button ember-button--centered" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY">
+      Donate to the Project
     </a>
   </div>
 </div>
