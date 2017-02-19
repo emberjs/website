@@ -96,7 +96,6 @@ h2 {
 }
 
 h2, h3{
-  
   font-weight: bold;
   color: $black-color;
 }
@@ -112,7 +111,6 @@ h4 {
   letter-spacing: 1px;
   margin: 24px 0 12px 0;
 }
-
 
 ul {
   list-style-type: disc;
@@ -150,7 +148,6 @@ p {
 **/
 
 #sidebar {
-  
   font-weight: normal;
   margin-top: 38px;
   float: left;
@@ -186,8 +183,7 @@ p {
     text-decoration: none;
     line-height: 1.5em;
     border-bottom: none;
-    color: #d84a32;
-    
+    color: #d84a32;    
     font-weight: bold;
     cursor: pointer;
 
@@ -394,7 +390,6 @@ p {
     width: 700px;
     height: 65px;
     margin: 0 auto;
-
     text-align: center;
 
     li {
@@ -408,7 +403,6 @@ p {
         font-size: 13px;
         text-transform: uppercase;
         color: #faf2ee;
-
         text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
         display: block;
         padding: 0px 1em;
@@ -463,19 +457,16 @@ p {
         margin-right: 6px;
         display: block;
       }
-
       
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
       text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
-
       display: block;
       padding: 0px 1em 0 0.5em;
       height: 28px;
       line-height: 28px;
-
       background-color: #ff6e56;
       @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
 
@@ -654,7 +645,7 @@ p {
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
-    @media screen and (max-width:$small-max-width){
+    @media screen and (max-width:$small-max-width) {
       display: block;
       clear: both;
       margin: 0 auto;
@@ -2308,7 +2299,6 @@ body.team {
   display: block;
   width: 220px;
   height: 40px;
-  
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -2362,8 +2352,6 @@ body.team {
 .small-button {
   width: 74px;
   height: 22px;
-
-  
   font-weight: normal;
   color: #ffffff;
   line-height: 24px;
