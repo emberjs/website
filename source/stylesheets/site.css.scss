@@ -25,6 +25,8 @@
 @import 'components/meetups';
 @import 'components/ember-button';
 
+$small-max-width: 767px;
+
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
@@ -132,7 +134,7 @@ p {
 .section {
   margin: 0 auto;
   max-width: 960px;
-  @media screen and (max-width: 767px){
+  @media screen and (max-width: $small-max-width){
     max-width:100%;
     text-align: center;
     display: block;
@@ -652,7 +654,7 @@ p {
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
-    @media screen and (max-width:767px){
+    @media screen and (max-width:$small-max-width){
       display: block;
       clear: both;
       margin: 0 auto;

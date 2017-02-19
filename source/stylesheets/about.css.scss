@@ -1,9 +1,11 @@
 @import "variables";
 @import "mixins/hidpi";
 
+$small-max-width: 767px;
+
 .job-board {
   display: none;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-max-width) {
     background-color: #1e719b;
     font-size: 1.2em;
     min-width: 100%;
@@ -53,7 +55,7 @@
       &:hover {
         border-bottom: none;
       }
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-max-width) {
         display: none;
       }
     } 
@@ -74,7 +76,7 @@
   .bold {
     font-weight: 400;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-max-width) {
     margin: 0.5 auto;
     font-size: 2em;
   }
@@ -87,7 +89,7 @@ body.index, body.about {
     background-size: 100% auto;
   }
   .feature {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:$small-max-width) {
       max-width:100%;
       .feature-img {
         display: block;
@@ -132,7 +134,7 @@ body.index, body.about {
   }
 
   .getting-started {
-    @media screen and (max-width:767px) {
+    @media screen and (max-width:$small-max-width) {
       display:block;
       clear: both;
       margin: 0 auto;
