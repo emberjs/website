@@ -3,7 +3,7 @@ $orange-color: #E1563F;
 $blue-color: #1F58CE;
 $black-color: #252525;
 
-/* Calculated page dimensions. */
+/* Calculated page dimensions. THIS IS BEING DEPRECATED */
 $page-width: 960px;
 $col-width: 40px;
 $col-spacing: 20px;
@@ -31,3 +31,12 @@ $hidpi-min-pixel-ratio: 1.3 !default;
 /* Page-specific variables */
 $builds-sidebar-width: 140px;
 
+/* NEW breakpoints */
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+/* transitional breakpoints to help us move over */
+$screen-xs-max: 767px;
+$screen-sm-max: 991px;
+$screen-md-max: 1199px;
