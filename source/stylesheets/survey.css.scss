@@ -3,7 +3,7 @@
 @import "mixins/hidpi";
 
 .survey-wrapper {
-  padding: 80px 0;
+  padding: 40px 0;
   text-align: center;
   background: white;
 }
@@ -21,6 +21,7 @@
 .survey-container {
   max-width: 960px;
   margin: 0 auto;
+  padding: 20px 0;
 }
 
 .survey-wrapper {
@@ -45,7 +46,7 @@
 .survey-h1 {
   max-width: 400px;
   margin: auto;
-  margin-top: 70px;
+  margin-top: 30px;
   img {
     max-width: 80%;
   }
