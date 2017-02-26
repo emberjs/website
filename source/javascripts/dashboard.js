@@ -38,8 +38,6 @@ $(function() {
       // element.integrity = tagInfo[i].integrity;
       element.async = false;
 
-      console.log(tagInfo[i].src);
-
       document.head.appendChild(element);
     }
   }
