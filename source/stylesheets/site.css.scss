@@ -7,6 +7,7 @@
 @import 'mixins/hidpi';
 @import 'fonts';
 @import 'header';
+@import 'survey-reminder';
 @import 'footer';
 @import 'examples';
 @import 'about';
@@ -2302,7 +2303,7 @@ body.team {
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 40px;
+  line-height: 38px;
   font-size: 14px;
   color: #f6ece8;
   text-align: center;
