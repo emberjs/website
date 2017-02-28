@@ -4,7 +4,7 @@ author: Matthew Beale, Tom Zellman
 tags: Recent Posts
 ---
 
-The past year has been great time to work with the web, and an exciting one to
+The past year has been a great time to work with the web, and an exciting one to
 be building applications with Ember.
 
 - Ember.js completed eight backward-compatible minor version releases in the
