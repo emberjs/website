@@ -7,17 +7,15 @@ responsive: true
 <div class="legal-wrapper">
   <img class="learning-tomster" src="/images/tomsters/teaching-reverse.png" alt="Teaching Tomster" class="learning-tomster">
 
-  <h1>Tutorial</h1>
+  <h1>Learning Ember.js</h1>
 
-  <p>
-    <a href="https://guides.emberjs.com/v2.5.0/tutorial/ember-cli/">Follow our tutorial</a> to build, and deploy, your first Ember.js application!
-  </p>
+  <p>Are you getting started on your Ember.js adventure? Check out our official reading material: </p>
 
-  <h1>Guides</h1>
-
-  <p>
-    Whether you're just getting started and want to get familiar with Ember, or you're looking to refresh your knowledge on a certain feature, <a href="https://guides.emberjs.com/">the Guides</a> are the place for you.
-  </p>
+  <ul>
+    <li><strong>Quick start</strong> <a href="https://guides.emberjs.com/<%= current_version %>/getting-started/quick-start/"><i class="icon-link-ext"></i></a>: An easy breazy introduction to the framework.</li>
+    <li><strong>Tutorial</strong> <a href="https://guides.emberjs.com/<%= current_version %>/tutorial/ember-cli/"><i class="icon-link-ext"></i></a>: Follow our tutorial to build, and deploy, your first Ember.js application!</li>
+    <li><strong>Guides</strong> <a href="https://guides.emberjs.com/"><i class="icon-link-ext"></i></a>: Whether you're just getting started and want to get familiar with Ember, or you're looking to refresh your knowledge on a certain feature, the Guides are the place for you.</li>
+  </ul>
 
   <h1>API Reference</h1>
 
@@ -26,10 +24,39 @@ responsive: true
   </p>
 
   <ul class="api-reference-list">
-    <li><a href="http://emberjs.com/api/">Ember</a></li>
-    <li><a href="http://emberjs.com/api/data/">Ember Data</a></li>
-    <li><a href="http://ember-cli.com/api/">Ember CLI</a></li>
+    <li><a href="http://emberjs.com/api/">
+      <img src="/images/learn/ember.png" class="project-logo" alt="Ember">
+    </a></li>
+    <li><a href="http://emberjs.com/api/data/">
+      <img src="/images/learn/ember-data.png" class="project-logo" alt="Ember Data">
+    </a></li>
+    <li><a href="http://ember-cli.com/api/">
+      <img src="/images/learn/ember-cli.png" class="project-logo" alt="Ember CLI">
+    </a></li>
   </ul>
+
+  <h1 id="deprecations" class="anchorable-toc">Deprecation Guides <a href="http://emberjs.com/deprecations/"><i class="icon-link-ext"></i></a></h1>
+
+  <p>
+    Over the course of the years cruft inevitably sneaks into all software projects. In order to clean up outdated funcionality and guide users, Ember has a deprecation process. You can read our <a href="http://emberjs.com/deprecations/">deprecation guides</a> for more information. You can find below more direct links to Ember and Ember Data versions.
+  </p>
+
+  <div class="flex-container learn-deprecations">
+    <div class="flex-same-width">
+      <h2 id="deprecations-ember" class="anchorable-toc" >Ember</h2>
+
+      <ul>
+        <li><a href="/deprecations/v1.x">1.x</a></li>
+        <li><a href="/deprecations/v2.x">2.x</a></li>
+      </ul>
+    </div>
+    <div class="flex-same-width">
+      <h2 id="deprecations-ember-data" class="anchorable-toc">Ember Data</h2>
+      <ul>
+        <li><a href="/deprecations/ember-data/v2.x">2.x</a></li>
+      </ul>
+    </div>
+  </div>
 
   <h1>Ecosystem</h1>
 
@@ -48,6 +75,51 @@ responsive: true
   <p><strong>Ember Twiddle</strong>: Online code editor so you can share working snippets of code or reproductions of bugs. Try it out <a href="http://ember-twiddle.com/">today</a>!</p>
 
   <p><strong>FastBoot</strong>: Server-side rendering library for Ember applications. Check out the <a href="http://www.ember-fastboot.com/quickstart">Quickstart</a> to get up and running, and the <a href="http://www.ember-fastboot.com/docs/user-guide">User Guide</a> for more detailed information.
+  </p>
+
+  <h1 id="showcase" class="anchorable-toc">Showcase</h1>
+
+  <p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
+  <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
+
+  <div class="showcase">
+    <% data.showcase.each do |showcase| %>
+      <div class="showcase--item">
+        <div class="showcase--screenshot">
+          <img class="showcase--image" src="/images/learn/<%= showcase.image.src %>" alt="<%= showcase.image.alt %>">
+        </div>
+        <div class="showcase--description">
+          <h2><%= showcase.name %> <a href="<%= replace_current_version showcase.demo %>"><i class="icon-link-ext"></i></a></h2>
+
+          <p>Repository: <a href="<%= showcase.repository %>"><%= showcase.repository %></a></p>
+
+          <p>
+            <%= replace_current_version showcase.description %>
+
+            <% showcase.features.each do |feature| %>
+              <li><%= feature %></li>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <h1 id="faq">Frequently Asked Questions</h1>
+
+  <h3 id="faq-future-proof">How do I future-proof my Ember.js application?</h3>
+
+  <p>
+    Ember.js has a strong emphasis on <a href="https://speakerdeck.com/wycats/stability-without-stagnation-lessons-learned-from-shipping-ember-dot-js">Stability without Stagnation</a>, which means that framework developers take great care when designing new functionality to make sure it fits with the existing functionalities, and provides a path forward for users to upgrade without being subjected to churn.
+  </p>
+
+  <p>
+    Ember.js also follow a community-driven process for its development that incorporates <a href="https://github.com/emberjs/rfcs">RFCs for features and deprecations</a> and a <a href="/builds">six-week "train release schedule"</a>.
+    Every six weeks, candidate features are reviewed and either deemed ready to be included in the stable release, or carry on in beta for another cycle until the next release happens.
+  </p>
+
+  <p>
+    In short, the best way to make sure you have a healthy application is to keep an eye on RFCs &mdash; remembering they document intent but not necessarily the final implementation, &mdash; keep your application clean of deprecations, and when possible test your application against beta and canary.
   </p>
 </div>
 <% end %>

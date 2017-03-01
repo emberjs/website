@@ -170,9 +170,10 @@
 - url: https://mist.io
   image: mistio.png
   alt: Mist
-- url: http://billysbilling.com/
-  image: billysbilling.png
-  alt: "Billy's Billing Accounting Software"
+- url: http://billyapp.com/
+  image: billyapp.png
+  alt: "Billy Accounting Software"
+  use: "Billy's main app is built with Ember."
 - url: http://llanoseco.com/
   image: llanoseco.png
   alt: LLANO SECO RANCHO
@@ -465,6 +466,7 @@
 - url: https://www.tailorbrands.com
   image: tailorBrands.png
   alt: Tailor Brands
+  use: "We use Ember to build our main application, creating the first automated branding agency"
 - url: https://www.skedda.com
   image: skedda.png
   alt: Skedda
@@ -543,9 +545,10 @@
 - url: http://www.microsoft.com
   image: microsoft.png
   alt: Microsoft
-- url: https://www.intercom.io
+- url: https://www.intercom.com
   image: intercom.png
   alt: Intercom
+  use: "Intercom's main web application is built with Ember.js"
 - url: http://verdigris.co
   image: verdigris.png
   alt: Verdigris Technologies
@@ -846,11 +849,11 @@
 - url: https://synap.ac
   image: synap.png
   alt: "Synap"
-  use: "Synap's front-end is fully powered by Ember" 
+  use: "Synap's front-end is fully powered by Ember"
 - url: http://www.wnyc.org/
   image: wnyc.png
   alt: WNYC
-  use: "WNYC's front-end is fully powered by Ember" 
+  use: "WNYC's front-end is fully powered by Ember"
 - url: https://freshbooks.com
   image: freshbooks.png
   alt: FreshBooks
@@ -859,6 +862,35 @@
   image: sugarcrm.png
   alt: SugarCRM
   use: "We use Ember for Mothership, our internal operations management tool"
+- url: https://movil.bbva.es
+  image: bbva.png
+  alt: BBVA
+  use: "The BBVA Mobile Banking App is fully powered by Ember.js"
+- url: https://travelbank.com
+  image: travelbank.png
+  alt: TravelBank
+  use: "TravelBank's Web and Hybrid Mobile Apps are powered by Ember.js"
+- url: http://resultadosdigitais.com.br
+  image: resultadosdigitais.png
+  alt: Resultados Digitais
+  use: "Resultados Digitais use Ember.js on the Inbound Marketing platform (RD Station)"
+- url: https://teem.com/
+  image: teem.png
+  alt: Teem
+  use: "Teem uses Ember.js for it's insights, flight board, EventBoard and LobbyConnect system management, and more!"
+- url: http://forestadmin.com
+  image: forest.png
+  alt: Forest
+  use: "Forest's front-end is fully powered by Ember.js"
+- url: https://www.clark.de
+  image: clark_x2.png
+  alt: "Clark - Smart Insurance"
+  use: "Clark's consumer ui is powered by Ember.js - available on our website and integrated into our iOS & Android apps."
+- url: https://www.getg5.com
+  image: g5_x2.png
+  alt: G5
+  use: "G5 uses Ember.js for our content management system and various inventory search applications."
+
 
 
 # ---- PLEASE READ ----

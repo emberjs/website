@@ -1,0 +1,50 @@
+# --- PLEASE READ ----
+# See bottom of file.
+#
+- name: Super Rentals
+  image:
+    src: showcase-super-rentals.png
+    alt: Super Rentals tutorial application
+  repository: https://github.com/ember-learn/super-rentals
+  demo: https://guides.emberjs.com/_CURRENT_VERSION_/tutorial/ember-cli/
+  description: |
+    If you've gone through our <a href="https://guides.emberjs.com/_CURRENT_VERSION_/tutorial/ember-cli/">Tutorial</a> you will already be familiar with this application! <strong>Super Rentals</strong> is a good starter project to get acclimated to the Ember.js way of doing things. In this repository you'll be able to see:
+  features:
+    - Basic routing, and routing with dynamic segments
+    - Acceptance, integration, and unit tests using <a href="http://www.ember-cli-mirage.com/">Ember CLI Mirage</a>.
+- name: Builds
+  image:
+    src: showcase-builds.png
+    alt: Builds page application
+  repository: https://github.com/ember-learn/builds
+  demo: https://emberjs.com/builds
+  description: |
+    This is the application that the Ember.js team built to display our <a href="http://emberjs.com/builds/">various release channels</a>. It is slightly more complex than Super Rentals, and you'll be able to see:
+  features:
+    - Usage of <a href="http://ember-cli-deploy.com/">Ember CLI Deploy</a> to deploy to S3.
+    - Loading of an Ember.js application via JavaScript in the <a href="https://github.com/emberjs/website">website</a>.
+# - name:
+#   image:
+#     src:
+#     alt:
+#   repository:
+#   demo:
+#   description:
+#   features:
+#     -
+#
+# To add a new item, duplicate the item above, uncomment it, and fill it out.
+# Explanation of the fields:
+# - name: The name of the application
+#   image:
+#     src: The filename of the image, without the path. The image
+#          should be at source/images/learn and should be 512x320px
+#          of size.
+#     alt: Description of the image for accessibility
+#   repository: Link to the repository with the source code
+#   demo: Link to a deployed instance of the application
+#   description: |
+#     A short paragraph describing the application.
+#   features:
+#     - Description of something unique about the application, like
+#       a specific pattern, or addon usage.

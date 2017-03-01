@@ -17,11 +17,13 @@
 @import 'shared';
 @import 'survey';
 @import 'learn';
+@import 'pages/ember-users';
 @import 'components/legal';
 @import 'components/security';
 @import 'components/sponsors';
 @import 'components/logos';
 @import 'components/meetups';
+@import 'components/ember-button';
 
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
@@ -46,12 +48,17 @@ body {
 /* Typography */
 
 a {
-  color: #f23818;
+  color: #DC2C0D;
   text-decoration: none;
+
+  &.active {
+    font-weight: bold;
+    // text-decoration: underline;
+  }
 }
 
 a:hover {
-  border-bottom: 1px dotted #f23818;
+  border-bottom: 1px dotted #DC2C0D;
 }
 
 em {
@@ -133,7 +140,7 @@ p {
 
 .section {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
 }
 
 /* Components */
@@ -444,7 +451,6 @@ p {
       width: 150px;
     }
   }
-
   #github {
     position: absolute;
     right: 7px;
@@ -550,13 +556,17 @@ p {
 .about-header-text {
   display: block;
   margin: 60px auto 0 auto;
-  width: image-width('about/header-text.png');
+  max-width: image-width('about/header-text.png');
   height: image-height('about/header-text.png');
   overflow: hidden;
   white-space: nowrap;
   text-indent: 100%;
   border-bottom: none;
   @include hidpi('about/header-text', png);
+
+  background-size: 90% !important;
+  background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 #download {
@@ -665,7 +675,7 @@ p {
     border-radius: 3px;
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff;
     @include clearfix;
-    background: url('/images/about/carousel_bg.png');
+    background-color: #FFF;
     border: 1px solid #d1d1d1;
 
     a:hover {
@@ -772,9 +782,6 @@ p {
     }
 
     a {
-      border-radius: 4px;
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      background: url('/images/about/user_bg.png') no-repeat;
       display: block;
       height: 103px;
       margin-left: 20px;
@@ -1335,7 +1342,7 @@ body.community_meetups #content {
         margin: 2px 0;
         padding: 0;
         &:before {
-          // Currently the standard res is good enough for retina, since we're already downscaling
+          // Currently the standard res is good enough for retina, since we are already downscaling
           // and the automatically added background-size declaration is problematic
           //@include hidpi('meetups/map-pin', 'png');
           background-image: url('/images/meetups/map-pin.png');
@@ -1657,11 +1664,6 @@ ul.showcase {
   }
 
   > a {
-    background-image: url('/images/about/user_bg.png');
-    height: 103px;
-    width: 210px;
-    text-align: center;
-
     img {
       height: auto;
       width: auto;
@@ -1697,10 +1699,25 @@ body.deprecations {
   }
 }
 
+#tomster-filter {
+  ul {
+    text-align: center;
+    list-style-type: none;
+    li {
+      display: inline-block;
+    }
+  }
+}
+
 .tomster.section.list {
   margin: 0 auto;
 
-  #tomster-list td {
+  #tomster-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #tomster-list .tomster-wrapper {
     padding: 20px;
   }
 

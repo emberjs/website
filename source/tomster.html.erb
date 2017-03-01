@@ -2,42 +2,54 @@
 title: "Tomster and Zoey"
 ---
 
+<% content_for :foot do %>
+  <%= javascript_include_tag 'tomster' %>
+<% end %>
+
 <div class="tomster section intro">
   <h1>Tomster and Zoey</h1>
   <p>
     Tomster was the first of many friendly faces of the Ember project and community. Over the years we've dressed and redressed him for all sorts of fun projects and reasons. With the addition of his sister Zoey, you'll see Ember friends around even more.
   <p>
   <p>
-    Tomster is a registered and protected trademark. These images may not be used without specific and explicit consent (which we aim never to hold back unreasonably). If you have questions about using or commissioning a Tomster, <a href="/tomster/faq">check out the FAQ</a>.
+    Tomster is a registered and protected trademark. These images may not be used without specific and explicit consent (which we aim never to hold back unreasonably). If you have questions about using or commissioning a custom Mascot, <a href="/tomster/faq">check out the FAQ</a>.
   </p>
 </div>
 
 <div class="tomster section list">
-  <table id="tomster-list">
+  <div id="tomster-filter">
+    <ul>
+      <li><%= link_to "All", "/tomster" %> | </li>
+      <li><%= link_to "Tomsters", "/tomster", :query => { :filter => 'tomster' } %> | </li>
+      <li><%= link_to "Zoeys", "/tomster", :query => { :filter => 'zoey' }  %> | </li>
+      <li><%= link_to "Meetups", "/tomster", :query => { :filter => 'meetup' }  %> | </li>
+      <li><%= link_to "Conferences", "/tomster", :query => { :filter => 'conference' }  %> | </li>
+      <li><%= link_to "Others", "/tomster", :query => { :filter => 'other' }  %></li>
+    </ul>
+  </div>
+  <div id="tomster-list">
     <% data.tomsters.sort_by {|t| [Date.parse(t.date), t.title] }.reverse.each_slice(2) do |slice| %>
-      <tr>
-        <% slice.each do |tomster| %>
-          <td>
-            <div class="tomster-container">
-              <div class="tomster-image">
-                <img src="<%= tomster.image %>">
-              </div>
-              <div class="tomster-info">
-                <% if tomster.url %>
-                <a href="<%= tomster.url %>" class="title">
-                  <%= tomster.title %>
-                </a>
-                <% else %>
-                  <p class="not-yet-url title"><%= tomster.title %></p>
-                <% end %>
-                <div class="date">
-                  <%= tomster.date %>
-                </div>
+      <% slice.each do |tomster| %>
+        <div class="tomster-wrapper" data-tags="<%= tomster.tags %>">
+          <div class="tomster-container">
+            <div class="tomster-image">
+              <img src="<%= tomster.image %>">
+            </div>
+            <div class="tomster-info">
+              <% if tomster.url %>
+              <a href="<%= tomster.url %>" class="title">
+                <%= tomster.title %>
+              </a>
+              <% else %>
+                <p class="not-yet-url title"><%= tomster.title %></p>
+              <% end %>
+              <div class="date">
+                <%= tomster.date %>
               </div>
             </div>
-          </td>
-        <% end %>
-      </tr>
+          </div>
+        </div>
+      <% end %>
     <% end %>
-  </table>
+  </div>
 </div>
