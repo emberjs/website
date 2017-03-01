@@ -24,12 +24,16 @@ responsive: true
 <% end %>
 
 <% content_for :outside_wrapper do %>
-  <a href="http://jobs.emberjs.com" class="job-board-banner" >Post and find jobs on the Ember job board</a>
+  <div class="job-board">
+      <a href="http://jobs.emberjs.com"><span class="text-yellow"> new</span> Job Board!<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45544/icon-tomster.png" alt="" role="presentation" /></a>
+  </div>
+  <a href="http://jobs.emberjs.com" class="job-board-banner">Post and find jobs on the Ember job board</a>
 <% end %>
 
-<h1 class="about-header-text">
-  A framework for creating ambitious web applications.
-</h1>
+<div class="about-page--header">
+  A framework for creating <br/>
+  <span class="bold">ambitious</span> web applications.
+</div>
 
 <div class="call-to-action">
   <div class="top">
