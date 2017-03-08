@@ -14,6 +14,17 @@
   text-align: center;
 }
 
+@media screen and (max-width: $small-max-width) {
+  .api-reference-list {
+    flex-direction: column;
+
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .project-logo {
   height: 50px;
 
