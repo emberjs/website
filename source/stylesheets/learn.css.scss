@@ -63,13 +63,26 @@
 
 .showcase--item {
   display: flex;
-  flex-direction: row;
 
   padding: 0.5em;
 }
 
+@media screen and (max-width: $small-max-width) {
+  .showcase--item {
+    flex-direction: column;
+  }
+}
+
+
 .showcase--screenshot {
   flex: 2;
+}
+
+@media screen and (max-width: $small-max-width) {
+  .showcase--screenshot {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .showcase--image {
