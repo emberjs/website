@@ -28,13 +28,19 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 2.12
 
+TBK
+
 #### Deprecations in Ember 2.12
 
+TBK
 
 #### Other Notable Changes
 
+TBK
 
 ### Upcoming Changes in Ember.js 2.13
+
+TBK
 
 ---
 
@@ -44,13 +50,19 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.12
 
+TBK
 
 #### Deprecations in Ember Data 2.12
 
+TBK
 
 ### Upcoming changes in Ember Data 2.13
 
+TBK
+
 #### Deprecations in Ember Data 2.13
+
+TBK
 
 ---
 
@@ -81,14 +93,22 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.10.0...v
 
 ### Changes in Ember CLI 2.12
 
+TBK
+
 #### Other Notable Changes
+
+TBK
 
 For more details on the changes in Ember CLI 2.12 and detailed upgrade
 instructions, please review the [Ember CLI 2.12.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.12.0).
 
 ### Upcoming Changes in Ember CLI 2.13
 
+TBK
+
 #### Other Notable Changes
+
+TBK
 
 For more details on the changes in Ember CLI 2.12.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 2.12.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.12.0-beta.1).
