@@ -39,7 +39,7 @@ $small-max-width: 767px;
         }
       }
     }
-  } 
+  }
   .job-board-banner {
       z-index: 99998;
       position: absolute;
@@ -58,7 +58,7 @@ $small-max-width: 767px;
       @media screen and (max-width: $small-max-width) {
         display: none;
       }
-    } 
+    }
 
 
 
@@ -89,7 +89,7 @@ body.index, body.about {
     background-size: 100% auto;
   }
   .feature {
-    @media screen and (max-width:$small-max-width) {
+    @media screen and (max-width: $small-max-width) {
       max-width:100%;
       .feature-img {
         display: block;
