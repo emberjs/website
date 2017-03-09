@@ -1,6 +1,6 @@
 ---
 title: Ember 2.12 and 2.13 Beta Released
-author: 
+author: Godfrey Chan, Brendan McLoughlin
 tags: Releases
 ---
 
