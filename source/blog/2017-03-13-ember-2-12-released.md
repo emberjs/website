@@ -76,8 +76,8 @@ npm install --save-dev ember-cli
 
 After running the
 upgrade command run `ember init` inside of the project directory to apply the
-blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v2.10.0...v2.11.0)
-and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.10.0...v2.11.0).
+blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v2.11.0...v2.12.0)
+and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.11.0...v2.12.0).
 
 ### Changes in Ember CLI 2.12
 
@@ -90,8 +90,8 @@ instructions, please review the [Ember CLI 2.12.0 release page](https://github.c
 
 #### Other Notable Changes
 
-For more details on the changes in Ember CLI 2.12.0-beta.1 and detailed upgrade
-instructions, please review the [Ember CLI 2.12.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.12.0-beta.1).
+For more details on the changes in Ember CLI 2.13.0-beta.1 and detailed upgrade
+instructions, please review the [Ember CLI 2.13.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.13.0-beta.1).
 
 ## Thank You!
 
