@@ -28,13 +28,19 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 2.12
 
+TBK
+
 #### Deprecations in Ember 2.12
 
+TBK
 
 #### Other Notable Changes
 
+TBK
 
 ### Upcoming Changes in Ember.js 2.13
+
+TBK
 
 ---
 
@@ -44,13 +50,19 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.12
 
+TBK
 
 #### Deprecations in Ember Data 2.12
 
+TBK
 
 ### Upcoming changes in Ember Data 2.13
 
+TBK
+
 #### Deprecations in Ember Data 2.13
+
+TBK
 
 ---
 
@@ -81,12 +93,21 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.11.0...v
 
 ### Changes in Ember CLI 2.12
 
+- blueprints use ESLint instead of JSHint
+- `npm` dependency dropped, will use system NPM if v3+ or print warning
+- drop node 0.12
+- `ember-data` dropped from addon blueprint, most addons don't use it
+- `bower` dependency is installed lazily if Ember CLI needs it
+
 #### Other Notable Changes
 
 For more details on the changes in Ember CLI 2.12 and detailed upgrade
 instructions, please review the [Ember CLI 2.12.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.12.0).
 
 ### Upcoming Changes in Ember CLI 2.13
+
+- empty `bower.json` files removed from blueprints, keep the files if you still have bower deps
+- yarn support via `--yarn` and `yarn.lock` auto detection
 
 #### Other Notable Changes
 
