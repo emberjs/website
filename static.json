@@ -1,0 +1,8 @@
+{
+  "root": "build/",
+  "proxies": {
+    "/api-new/": {
+      "origin": "https://ember-versioned-api-docs.herokuapp.com/"
+    }
+  }
+}
