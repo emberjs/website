@@ -1,3 +1,5 @@
+$small-max-width: 767px;
+
 .learning-tomster {
   float: right;
   width: 250px;
@@ -12,6 +14,17 @@
   flex: 1;
   list-style: none;
   text-align: center;
+}
+
+@media screen and (max-width: $small-max-width) {
+  .api-reference-list {
+    flex-direction: column;
+
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .project-logo {
@@ -52,13 +65,26 @@
 
 .showcase--item {
   display: flex;
-  flex-direction: row;
 
   padding: 0.5em;
 }
 
+@media screen and (max-width: $small-max-width) {
+  .showcase--item {
+    flex-direction: column;
+  }
+}
+
+
 .showcase--screenshot {
   flex: 2;
+}
+
+@media screen and (max-width: $small-max-width) {
+  .showcase--screenshot {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .showcase--image {
