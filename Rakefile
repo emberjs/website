@@ -237,3 +237,7 @@ desc "Find organizers for meetup user group_urlname"
 task :findorganizers do |t, args|
   find_meetup_organizers(ENV['force'])
 end
+
+task "assets:precompile" do
+  build
+end
