@@ -111,6 +111,10 @@ ignore 'javascripts/app/examples/*/templates/*'
   proxy "/builds/#{tab}.html", '/builds/index.html'
 end
 
+proxy "/mascots", "/tomster.html"
+proxy "/zoey", "/tomster.html"
+
+
 ###
 # Helpers
 ###
