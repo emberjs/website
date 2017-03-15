@@ -108,6 +108,8 @@ instructions, please review the [Ember CLI 2.12.0 release page](https://github.c
 
 - empty `bower.json` files removed from blueprints, keep the files if you still have bower deps
 - yarn support via `--yarn` and `yarn.lock` auto detection
+- babel@6
+- [rfc #95 - standardize targets](https://github.com/ember-cli/rfcs/blob/master/active/0095-standardise-targets.md)
 
 #### Other Notable Changes
 
