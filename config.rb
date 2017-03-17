@@ -13,6 +13,7 @@ set :markdown, :layout_engine => :erb,
          :lax_html_blocks => true,
          :renderer => Highlighter::HighlightedHTML.new
 
+activate :asset_hash
 activate :directory_indexes
 activate :toc
 activate :sponsors
