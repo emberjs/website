@@ -1,0 +1,8 @@
+{
+  "root": "build/",
+  "proxies": {
+    "/api-new/": {
+      "origin": "${EMBER_API_DOCS_URL}"
+    }
+  }
+}
