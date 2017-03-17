@@ -4,5 +4,10 @@
     "/api-new/": {
       "origin": "${EMBER_API_DOCS_URL}"
     }
+  },
+  "headers": {
+    "/images/**": {
+      "Cache-Control": "max-age=31536000"
+    }
   }
 }
