@@ -294,7 +294,7 @@ challenge for ember-cli.
 After much work, Babel 6 support has been added to Ember CLI internally and for newly generated projects (both applications and addons).
 The latest beta of `ember-cli-babel@6` takes advantage of the new `project.targets` API along with [`babel-preset-env`](https://github.com/babel/babel-preset-env)
 to allow applications to have significantly better control of exactly what is transpiled. `babel-preset-env` utilizes the [caniuse](http://caniuse.com/) and
-[@kangax]'s [ES6 compatibility database](https://kangax.github.io/compat-table/es6/) to know which features are available natively and which
+[@kangax](https://github.com/kangax)'s [ES6 compatibility database](https://kangax.github.io/compat-table/es6/) to know which features are available natively and which
 require transpilation. For example, with the proper targets configuration `ember-cli-babel` will no longer transpile `const` / `let`, 
 `() => { }` functions, `class`, etc.
 
