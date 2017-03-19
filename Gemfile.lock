@@ -201,14 +201,11 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2015.7)
-      tzinfo (>= 1.0.0)
     uber (0.0.15)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     underscore-rails (1.8.3)
-    wdm (0.1.1)
     websocket-driver (0.6.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -247,3 +244,6 @@ DEPENDENCIES
   tzinfo-data
   underscore-rails
   wdm (>= 0.1.0)
+
+BUNDLED WITH
+   1.13.6
