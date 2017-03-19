@@ -221,7 +221,7 @@ to install packages via `ember install ember-cli-template-lint` (to install the 
 introduces roughly 19MB to a freshly generated application's `node_modules` size. As the `npm` client has become more stable (3.x series and
 newer) this has seemed more and more wasteful.
 
-Starting with Ember CLI 2.12, `npm` is no longer a dependency of. If a suitable version of `npm` is present on the system,
+Starting with Ember CLI 2.12, `npm` is no longer a dependency. If a suitable version of `npm` is present on the system,
 it will be used. If `npm` is not found, or a version older than `3.0.0` is found, Ember CLI will emit an error when you run commands that would utilize
 `npm` (e.g. `ember install`, `ember new`, `ember addon`, `ember init`).
 
@@ -230,7 +230,7 @@ addons.
 As of Ember CLI 2.11 a new application has no dependencies via `bower.json`. This means the dependency on `bower` itself is also potential bloat.
 Having `bower`
 as a dependency added roughly 21MB to a new application's total `node_modules` size. In Ember CLI 2.12, bower is only added as a dependency if a command
-requires `bower` and it is not already installed globally.
+requires `bower`.
 
 Combined, these changes result in a `node_modules` size reduction of approximately 40MB for newly generated applications.
 
@@ -261,7 +261,7 @@ hook. This allows addons to access many things that were previously very difficu
 Thanks to [@hjdivad](https://github.com/hjdivad) for proposing and implementing this feature. Please read through [the RFC](https://github.com/ember-cli/rfcs/blob/master/complete/0091-addon-instrumentation-experimental-hooks.md)
 for more details.
 
-#### Target
+#### Targets
 
 In order to allow addons to understand the desired target platforms of the app that they are operating in, a new file has been added
 to all generated projects: `config/targets.js`. This file exposes the supported targets so that tooling such as [autoprefixer](https://github.com/postcss/autoprefixer) 
