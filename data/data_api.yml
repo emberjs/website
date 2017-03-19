@@ -549,8 +549,8 @@ classes:
       import DS from 'ember-data';
 
       export default DS.Model.extend({
-        username: attr('string'),
-        email: attr('string')
+        username: DS.attr('string'),
+        email: DS.attr('string')
       });
       ```
       And you attempted to save a record that did not validate on the backend:
@@ -3163,9 +3163,9 @@ classitems:
     import DS from 'ember-data';
 
     export default DS.Model.extend({
-      firstName: attr('string'),
-      lastName: attr('string'),
-      birthday: attr('date')
+      firstName: DS.attr('string'),
+      lastName: DS.attr('string'),
+      birthday: DS.attr('date')
     });
     ```
 
@@ -3206,9 +3206,9 @@ classitems:
     import DS from 'ember-data';
 
     export default DS.Model.extend({
-      firstName: attr(),
-      lastName: attr('string'),
-      birthday: attr('date')
+      firstName: DS.attr(),
+      lastName: DS.attr('string'),
+      birthday: DS.attr('date')
     });
     ```
 
@@ -3259,9 +3259,9 @@ classitems:
     import DS from 'ember-data';
 
     var Person = DS.Model.extend({
-      firstName: attr('string'),
-      lastName: attr('string'),
-      birthday: attr('date')
+      firstName: DS.attr('string'),
+      lastName: DS.attr('string'),
+      birthday: DS.attr('date')
     });
 
     Person.eachAttribute(function(name, meta) {
@@ -3314,9 +3314,9 @@ classitems:
     import DS from 'ember-data';
 
     var Person = DS.Model.extend({
-      firstName: attr(),
-      lastName: attr('string'),
-      birthday: attr('date')
+      firstName: DS.attr(),
+      lastName: DS.attr('string'),
+      birthday: DS.attr('date')
     });
 
     Person.eachTransformedAttribute(function(name, type) {
@@ -4248,8 +4248,8 @@ classitems:
     import DS from 'ember-data';
 
     export default DS.Model.extend({
-      name: attr('string'),
-      isAdmin: attr('boolean', {
+      name: DS.attr('string'),
+      isAdmin: DS.attr('boolean', {
         defaultValue: false
       })
     });
@@ -13182,9 +13182,9 @@ classitems:
     import DS from 'ember-data';
 
     export default DS.Model.extend({
-      username: attr('string'),
-      email: attr('string'),
-      settings: attr({defaultValue: function() {
+      username: DS.attr('string'),
+      email: DS.attr('string'),
+      settings: DS.attr({defaultValue: function() {
         return {};
       }})
     });
