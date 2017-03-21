@@ -890,6 +890,10 @@
   image: g5_x2.png
   alt: G5
   use: "G5 uses Ember.js for our content management system and various inventory search applications."
+- url: https://www.erdil.fr
+  image: erdil.png
+  alt: Erdil
+  use: "Erdil uses Ember.js for its website and all of its applications."
 
 
 
