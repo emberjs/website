@@ -1,5 +1,4 @@
 {
-  "https_only": true,
   "root": "build/",
   "proxies": {
     "/api-new/": {
