@@ -28,7 +28,7 @@
 // intermediate step to quickly port the responsive header.
 
 .header {
-  background: #dd6a58 url("../images/header.svg") top center no-repeat;
+  background: #dd6a58 image-url("header.svg") top center no-repeat;
   background-size: cover;
   color: #fff;
   padding: 1rem 0;
@@ -142,7 +142,7 @@
 .header-logo a {
   height: 40px;
   width: 100px;
-  background: url("../images/ember-logo.svg") no-repeat;
+  background: image-url("ember-logo.svg") no-repeat;
   display: block;
   margin: -15px auto 0 0;
 }
@@ -169,7 +169,7 @@
     border-radius: 35px;
     outline: none;
     appearance: none;
-    background: image-url("../images/search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
+    background: image-url("search-icon.svg") rgba(white, 0.1) 10px 10px no-repeat;
     box-shadow: none;
     font-size: 0.9rem;
     line-height: 35px;
