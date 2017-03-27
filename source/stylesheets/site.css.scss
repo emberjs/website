@@ -1702,7 +1702,7 @@ body.deprecations {
 
 .tomster.section.intro {
   margin: 3em auto 0;
-  width: 54em;
+  width: 90%;
   h1 {
     text-align: center;
   }
@@ -1728,6 +1728,11 @@ body.deprecations {
 
   #tomster-list .tomster-wrapper {
     padding: 20px;
+    width: 50%;
+
+    @media screen and (max-width: $medium-screen) {
+      width: 100%;
+    }
   }
 
   .tomster-container {
@@ -1741,7 +1746,6 @@ body.deprecations {
 
   .tomster-image {
     text-align: center;
-    width: 438px;
     height: 438px;
     padding: 30px;
     // These next three lines control centering the Tomsters
@@ -1757,17 +1761,17 @@ body.deprecations {
 
   .tomster-info {
     @include clearfix;
-    padding: 12px;
-    height: 41px;
+    display: flex;
+    padding: 6px 12px;
     .title {
-      float: left;
       font-size: 15px;
       font-weight: bold;
-      
       text-transform: uppercase;
+      flex-grow: 1;
+      text-align: left;
     }
     .date {
-      float: right;
+      text-align: right;
     }
     p.not-yet-url {
       // If the Tomster entry has no URL, this controls the formatting
