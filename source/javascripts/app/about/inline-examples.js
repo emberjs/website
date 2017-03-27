@@ -66,7 +66,7 @@ function generateViewerApp($elem, files) {
     output += '</td><td class="code"><pre>' + highlighted + '</pre></td></tr></table>';
 
     output = "<div class='example-highlight'>" + output + "</div>";
-    return new Ember.Handlebars.SafeString(output);
+    return new Ember.String.htmlSafe(output);
   });
 }
 
