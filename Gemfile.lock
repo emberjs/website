@@ -75,7 +75,7 @@ GEM
       middleman (~> 3.0)
       middleman-sprockets (~> 3.0)
       sass
-    ember-source (2.4.1)
+    ember-source (2.9.0)
     erubis (2.7.0)
     eventmachine (1.0.8)
     execjs (2.6.0)
@@ -246,4 +246,4 @@ DEPENDENCIES
   wdm (>= 0.1.0)
 
 BUNDLED WITH
-   1.13.6
+   1.14.3
