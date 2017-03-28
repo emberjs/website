@@ -20,12 +20,10 @@
   "redirects": {
     "/api-new": {
       "url": "/api-new/"
-    },
-    "/sw.js": {
-      "url": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/sw.js"
-    },
-    "/sw-registration.js": {
-      "url": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/sw-registration.js"
     }
+  },
+  "routes": {
+    "/sw.js": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/sw.js",
+    "/sw-registration.js":"https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/sw-registration.js"
   }
 }
