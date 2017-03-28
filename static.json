@@ -20,6 +20,12 @@
   "redirects": {
     "/api-new": {
       "url": "/api-new/"
+    },
+    "/sw.js": {
+      "url": "/api-new/sw.js"
+    },
+    "/sw-registration.js": {
+      "url": "/api-new/sw-registration.js"
     }
   }
 }
