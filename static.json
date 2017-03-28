@@ -2,7 +2,7 @@
   "https_only": true,
   "root": "build/",
   "proxies": {
-    "/api-new": {
+    "/api-new/": {
       "origin": "${EMBER_API_DOCS_URL}"
     }
   },
@@ -15,6 +15,11 @@
     },
     "/stylesheets/**": {
       "Cache-Control": "max-age=31536000"
+    }
+  },
+  "redirects": {
+    "/api-new": {
+      "url": "/api-new/"
     }
   }
 }
