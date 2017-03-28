@@ -22,10 +22,10 @@
       "url": "/api-new/"
     },
     "/sw.js": {
-      "url": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/api-new/sw.js"
+      "url": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/sw.js"
     },
     "/sw-registration.js": {
-      "url": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/api-new/sw-registration.js"
+      "url": "https://ember-api-docs-staging-herokuapp-com.global.ssl.fastly.net/sw-registration.js"
     }
   }
 }
