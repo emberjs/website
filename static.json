@@ -2,7 +2,7 @@
   "https_only": true,
   "root": "build/",
   "proxies": {
-    "/api-new/": {
+    "/api-new": {
       "origin": "${EMBER_API_DOCS_URL}"
     }
   },
