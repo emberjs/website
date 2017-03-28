@@ -21,10 +21,10 @@
     "/api-new": {
       "url": "/api-new/"
     },
-    "sw.js": {
+    "/sw.js": {
       "url": "/api-new/sw.js"
     },
-    "sw-registration.js": {
+    "/sw-registration.js": {
       "url": "/api-new/sw-registration.js"
     }
   }
