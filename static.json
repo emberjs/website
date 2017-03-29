@@ -6,6 +6,7 @@
       "origin": "${EMBER_API_DOCS_URL}"
     }
   },
+  "error_page": "404.html",
   "headers": {
     "/images/**": {
       "Cache-Control": "max-age=31536000"
