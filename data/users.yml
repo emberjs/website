@@ -894,6 +894,10 @@
   image: erdil.png
   alt: Erdil
   use: "Erdil uses Ember.js for its website and all of its applications."
+- url: https://www.rule-of-three.co.uk
+  image: rule-of-three.png
+  alt: Rule of Three
+  use: "Rule of Three uses Ember.js for its entire web experience and content creation."
 
 
 
