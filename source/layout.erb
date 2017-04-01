@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="theme-color" content="#e46652">
     <% if current_page.data.responsive.eql? true %>
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <% end %>
@@ -35,6 +36,7 @@
     <!--<![endif]-->
 
     <%= partial "header" %>
+    <%= partial "survey-reminder" %>
 
     <%= yield_content :outside_wrapper %>
 
