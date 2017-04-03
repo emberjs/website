@@ -26,8 +26,8 @@
   github: https://github.com/ebryn
   twitter: https://twitter.com/ebryn
   image: ebryn.jpg
-  teams: 
-    - core
+  teams:
+    - corealumni
 - name: Kris Selden
   github: https://github.com/krisselden
   twitter: https://twitter.com/krisselden
@@ -102,70 +102,73 @@
 - name: Brendan McLoughlin
   github: https://github.com/bmac
   image: bmcloughlin.png
-  teams: 
+  teams:
     - data
 - name: Christoffer Persson
   github: https://github.com/wecc
   twitter: https://twitter.com/ChristofferP
   image: cpersson.jpg
-  teams: 
+  teams:
     - data
 - name: Clemens Müller
   github: https://github.com/pangratz
   image: cmueller.jpg
-  teams: 
+  teams:
     - data
 - name: Stanley Stuart
   github: https://github.com/fivetanley
   twitter: https://twitter.com/fivetanley
   image: fivetanley.jpg
-  teams: 
+  teams:
     - data
 
 - name: David Baker
   github: https://github.com/acorncom
   image: dbaker.jpg
-  teams: 
+  teams:
     - learning
 - name: Ricardo Mendes
   github: https://github.com/locks
   image: rmendes.jpg
-  teams: 
+  teams:
+    - core
     - learning
 - name: Todd Jordan
   github: https://github.com/toddjordan
   image: tjordan.jpg
-  teams: 
+  teams:
     - learning
 
 - name: Chad Hietala
   github: https://github.com/chadhietala
   image: chietala.jpg
-  teams: 
+  teams:
+    - core
     - cli
 - name: Jacob Bixby
   github: https://github.com/trabus
   image: jbixby.jpg
-  teams: 
+  teams:
     - cli
 - name: Katie Gengler
   github: https://github.com/kategengler
   image: kgengler.jpg
-  teams: 
+  teams:
+    - core
     - cli
 - name: Kelly Selden
   github: https://github.com/kellyselden
   image: kellyselden.jpg
-  teams: 
+  teams:
     - cli
 - name: Nathan Hammond
   github: https://github.com/nathanhammond
   twitter: https://twitter.com/nathanhammond
   image: nhammond.jpg
-  teams: 
+  teams:
     - cli
 - name: Tobias Bieniek
   github: https://github.com/Turbo87
   image: tbieniek.jpg
-  teams: 
+  teams:
     - cli
