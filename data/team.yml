@@ -129,6 +129,7 @@
     - learning
 - name: Ricardo Mendes
   github: https://github.com/locks
+  twitter: https://twitter.com/locks
   image: rmendes.jpg
   teams:
     - core
@@ -141,6 +142,7 @@
 
 - name: Chad Hietala
   github: https://github.com/chadhietala
+  twitter: https://twitter.com/chadhietala
   image: chietala.jpg
   teams:
     - core
@@ -152,6 +154,7 @@
     - cli
 - name: Katie Gengler
   github: https://github.com/kategengler
+  twitter: https://twitter.com/katiegengler
   image: kgengler.jpg
   teams:
     - core
