@@ -898,6 +898,10 @@
   image: rule-of-three.png
   alt: Rule of Three
   use: "Rule of Three uses Ember.js for its entire web experience and content creation."
+- url: https://www.blackbellapp.com
+  image: blackbell.png
+  alt: Blackbell
+  use: "Blackbell uses Ember.js for the user interface of webapps / hybrid native apps of small businesses and hotels."
 
 
 
