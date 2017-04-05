@@ -113,7 +113,10 @@ body.blog.responsive{
 
 article.blog-post {
   h1 {
-    min-height: 24px;
+    background-position: left 9px;
+    text-transform: none;
+    font-size: 34px;
+    min-height: 34px;
     padding-left: 25px;
   }
 
@@ -121,8 +124,21 @@ article.blog-post {
     margin: 35px 0;
   }
 
-  h3.blog-post-author {
+  h3.blog-post-author,
+  h3.blog-post-date {
+    color: #777;
     margin-left: 25px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  h3.blog-post-author {
+    color: #333;
+  }
+
+  hr:first-of-type {
+    margin: 1em 0 1.5em;
   }
 
   li {
