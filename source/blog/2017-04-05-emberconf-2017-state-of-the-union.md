@@ -354,7 +354,7 @@ export default class extends Component {
 
 Ember users love computed properties, but getting used to their syntax can be a challenge. Because Glimmer uses ES6 classes, you can use standard getters and setters:
 
-```ts
+```js
 import Component from '@glimmer/component';
 
 export default class extends Component {
@@ -389,7 +389,7 @@ export default class extends Component {
 
 Actions in Glimmer are just functions, with optional argument currying. Use the `{{action}}` helper to bind the function to the component context:
 
-```ts
+```js
 import Component, { tracked } from '@glimmer/component';
 
 export default class extends Component {
