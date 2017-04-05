@@ -1,5 +1,5 @@
 $(function(){
-  $("#toc-list .level-1 > a").not('[target=_blank]').click(function() {
+  $("#toc-list .level-1 > a.slide-widget-head").not('[target=_blank]').click(function() {
     $(this).parent().find('> ol').slideToggle(function() {
       positionBackToTop(true);
     });
