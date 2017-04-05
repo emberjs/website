@@ -230,7 +230,7 @@ Fundamentally, this is a tradeoff about bookkeeping. Do more bookkeeping upfront
 
 Due to the drop-in nature of the Glimmer upgrade, we knew we couldn't regress on Ember's world-class update performance, even as we worked to improve initial render performance. This required us to find an architecture that would strike the optimal balance between the two.
 
-If you're interested in more of the details, and in particular why the Glimmer VM maintains better performance by default compared to Virtual DOM libraries as your UI scales, I highly recommend Yehuda's blog post explaining the design decisions that helped us hit our performance targets.
+If you're interested in more of the details, and in particular how the Glimmer VM maintains better performance by default compared to Virtual DOM libraries as your UI scales, I highly recommend [Yehuda's blog post explaining the design decisions that helped us hit our performance targets](http://yehudakatz.com/2017/04/05/the-glimmer-vm-boots-fast-and-stays-fast/).
 
 All of this is to say, Glimmer offers a novel approach to rendering component-based web UIs. It's great that Ember users get to take advantage of it. But what about everyone else?
 
