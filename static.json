@@ -21,6 +21,9 @@
   "redirects": {
     "/api-beta": {
       "url": "/api-beta/"
+    },
+    "/tomster": {
+      "url": "/mascot/"
     }
   }
 }
