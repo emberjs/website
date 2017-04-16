@@ -23,7 +23,7 @@
       "url": "/api-beta/"
     },
     "/tomster": {
-      "url": "/mascot/"
+      "url": "/mascot"
     }
   }
 }
