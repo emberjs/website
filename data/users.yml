@@ -903,6 +903,7 @@
   alt: Blackbell
   use: "Blackbell uses Ember.js for the user interface of webapps / hybrid native apps of small businesses and hotels."
 - url: https://noppo.pro
+  image: noppo.png
   alt: Noppo
   use: Noppo uses Ember.js for their in-house CMS and customer facing apps and sites.
 
