@@ -906,6 +906,10 @@
   image: noppo.png
   alt: Noppo
   use: Noppo uses Ember.js for their in-house CMS and customer facing apps and sites.
+- url: https://www.campusboard.co.uk
+  image: campusboard.png
+  alt: Campusboard
+  use: "Campusboard uses Ember.js to power the front-end of its website."
 
 
 # ---- PLEASE READ ----
