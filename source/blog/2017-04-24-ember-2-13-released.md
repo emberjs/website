@@ -55,7 +55,7 @@ TBK
 
 #### Deprecations in Ember Data 2.13
 
-Ember Data 2.12 contains no new deprecations.
+Ember Data 2.13 contains no new deprecations.
 
 For more details on the changes in Ember Data 2.13, please review the
 [Ember Data 2.13.0 release page](https://github.com/emberjs/data/releases/tag/v2.13.0).
