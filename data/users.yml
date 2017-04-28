@@ -910,6 +910,10 @@
   image: campusboard.png
   alt: Campusboard
   use: "Campusboard uses Ember.js to power the front-end of its website."
+- url: https://shipshape.io
+  image: shipshape.png
+  alt: Ship Shape
+  use: "Ship Shape uses Ember.js to power the front-end of its website and for various client work."
 
 
 # ---- PLEASE READ ----
