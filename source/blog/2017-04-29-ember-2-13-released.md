@@ -27,7 +27,33 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 2.13
 
-TBK
+Building on the addition of `factoryFor` in Ember 2.12, Ember 2.13 changes
+the way dependency injection is implemented in the framework. Until 2.12,
+dependencies were injected onto an instance using `extend` to create a subclass.
+This created an excessive number of subclasses during the execution of an
+application. In Ember 2.13 injections are passed to an object via `create`
+during instantiation. This results in a notable performance improvement
+that grows in impact with the complexity of an application.
+
+See [RFC #150](https://github.com/emberjs/rfcs/blob/master/text/0150-factory-for.md)
+and pull request [#14360](https://github.com/emberjs/ember.js/pull/14360) for
+more details about this change.
+
+Additionally, this release contains a further refinement on the "binary VM"
+change landed in 2.12. By using integers for common Glimmer wire-format strings,
+compiled template sizes in 2.13 will see an incremental size reduction.
+
+In addition to these and other improvements, several changes arising
+from the [RFC](https://github.com/emberjs/rfcs) process have been implemented:
+
+- [RFC issue #146](https://github.com/emberjs/rfcs/issues/146) advocated for the
+  addition of `resumeTest` as a compliment to `pauseTest`. This was implemented
+  in [#13663](https://github.com/emberjs/ember.js/pull/13663).
+- [RFC #186](https://github.com/emberjs/rfcs/blob/master/text/0186-track-unique-history-location-state.md)
+  describes the addition of `uuid` as a property on `HistoryLocation` adapters
+  for the router. This addition makes it possible to track scroll locations
+  to a point in browsing history. See pull request [#14011](https://github.com/emberjs/ember.js/pull/14011)
+  for more details.
 
 #### Deprecations in Ember 2.13
 
