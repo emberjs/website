@@ -81,6 +81,9 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.13
 
+Ember Data 2.13 represents the work of 20 direct contributors
+and over 120 commits.
+
 The `ds-extended-errors` ([#3586](https://github.com/emberjs/data/pull/3586) [#4287](https://github.com/emberjs/data/pull/4287)) feature has been enabled on the beta branch for Ember Data 2.13.
 
 This feature introduces an `extend` method on errors which allows
@@ -102,7 +105,7 @@ response.
 * [500] `DS.ServerError`
 
 Thanks to [tchak](https://github.com/tchak) and
-[twokul](https://github.com/tchak) for their work on this feature and
+[twokul](https://github.com/twokul) for their work on this feature and
 [lindyhopchris](https://github.com/lindyhopchris) for his help
 documenting the feature.
 
@@ -122,6 +125,13 @@ For more details on the changes in Ember Data 2.13, please review the
 In 2.14 Ember Data continues its internal refactorings and performance work without
 impacting public APIs. It is shaping up nicely with reduced asset size (~ 3KB savings),
 better warnings and errors around malformed JSONAPI payloads, and simplified internals.
+
+#### Deprecations in Ember Data 2.14
+
+Ember Data 2.14
+[deprecates](https://github.com/emberjs/data/pull/4909/files) the
+private method `didUpdateAll`. If you are using it in your codebase
+please use the updated methods name `_didUpdateAll`.
 
 For more details on the upcoming changes in Ember Data 2.14, please review the
 [Ember Data 2.14.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.14.0-beta.1).
