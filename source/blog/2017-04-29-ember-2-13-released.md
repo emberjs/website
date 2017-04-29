@@ -165,14 +165,69 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.12.0...v
 
 ### Changes in Ember CLI 2.13
 
-TBK
+#### Add support for using `yarn`
+
+Ember CLI projects have been able to utilize `yarn` for dependency management for quite some time, however it was not well supported by
+the default generators. In 2.13 Ember CLI is now "yarn aware", and will use `yarn` for tasks such as `ember install` if it detects that
+`yarn` is installed and a `yarn.lock` exists in the project. You can even instruct `ember new` to generate a new project with a `yarn.lock`
+for you via `ember new foo --yarn`.
+
+#### Enable Instrumentation Hooks
+
+Ember CLI has had the ability to generate custom instrumentation output for builds for a few years now (introduced on 2015-08-24), but
+this information has not been readily accessible. In 2.13 ember-cli exposes this information to addons that implement the `instrumentation`
+hook. This allows addons to access many things that were previously very difficult (e.g. reliable build time reporting).
+
+Thanks to [@hjdivad](https://github.com/hjdivad) for proposing and implementing this feature. Please read through [the RFC](https://github.com/ember-cli/rfcs/blob/master/complete/0091-addon-instrumentation-experimental-hooks.md)
+for more details.
+
+#### Targets
+
+In order to allow addons to understand the desired target platforms of the app that they are operating in, a new file has been added
+to all generated projects: `config/targets.js`. This file exposes the supported targets so that tooling such as [autoprefixer](https://github.com/postcss/autoprefixer) 
+and [babel-preset-env](https://github.com/babel/babel-preset-env) can properly understand the level of transpilation that is needed.
+
+Thanks to [@cibernox](https://github.com/cibernox) for proposing and implementing this feature. [@rwjblue](https://github.com/rwjblue) 
+recently wrote a blog post reviewing the new feature and how to utilize it: [Ember CLI Targets](http://rwjblue.com/2017/04/21/ember-cli-targets/).
+
+#### Babel 6
+
+Babel 6 support has been added to Ember CLI internally and is now used by default for newly generated projects (both applications and addons).
+Due to the way that Ember CLI handles transpilation this transition can be done gradually by updating each addon to utilize newer versions of
+[ember-cli-babel]. Updating your application to start using Babel 6 for its own transpilation is as simple as:
+
+```sh
+# if using yarn:
+yarn upgrade ember-cli-babel@6
+
+# if using npm:
+npm install --save-dev ember-cli-babel@6
+```
+
+#### Other Notable Changes
+
+* `bower.json` is no longer included in a newly generated project.
+* Fix command interruption issues on windows.
+* Added `filesToRemove` property for custom blueprints.
 
 For more details on the changes in Ember CLI 2.13 and detailed upgrade
 instructions, please review the [Ember CLI 2.13.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.13.0).
 
 ### Upcoming Changes in Ember CLI 2.14
 
-TBK
+In Ember CLI 2.14 support was added to `ember new` to allow a blueprint to be consumed from an NPM package. This enables projects to utilize Ember CLI's
+ergonomics to generate non-Ember applications. Common examples of this are:
+
+- Generate a new [Glimmer.js](https://glimmerjs.com/) application. See [glimmerjs/glimmer-blueprint](https://github.com/glimmerjs/glimmer-blueprint).
+- Generate a new [ember-cli-deploy](http://ember-cli-deploy.com/) plugin. See [ember-cli-deploy/plugin-blueprint](https://github.com/ember-cli-deploy/plugin-blueprint).
+
+
+These can be used as simply as:
+
+```
+npm install -g ember-cli@2.14.0-beta.1
+ember new ember-cli-deploy-hello -b @ember-cli-deploy/plugin-blueprint
+```
 
 For more details on the changes in Ember CLI 2.14.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 2.14.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.14.0-beta.1).
