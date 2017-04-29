@@ -60,7 +60,7 @@ from the [RFC](https://github.com/emberjs/rfcs) process have been implemented:
 TBK
 
 For more details on the changes in Ember.js 2.13, please review the
-[Ember.js 2.13.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.12.0).
+[Ember.js 2.13.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.13.0).
 
 ### Upcoming Changes in Ember.js 2.14
 
