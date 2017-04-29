@@ -57,7 +57,11 @@ from the [RFC](https://github.com/emberjs/rfcs) process have been implemented:
 
 #### Deprecations in Ember 2.13
 
-TBK
+A bit of cleanup has been done to reduce confusion (during implementation of the [router service](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md)) which resulted in adding a deprecation for accessing the private `router` property
+of the router. This property has always been private API, but a number of addons have resorted to
+using it due to lack of public API options (though the router service should address these remaining
+cases). Please review the [deprecation guide](https://emberjs.com/deprecations/v2.x/#toc_ember-router-router-renamed-to-ember-router-_routermicrolib)
+for more details.
 
 For more details on the changes in Ember.js 2.13, please review the
 [Ember.js 2.13.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.13.0).
