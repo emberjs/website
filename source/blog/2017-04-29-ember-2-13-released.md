@@ -68,7 +68,7 @@ For more details on the changes in Ember.js 2.13, please review the
 
 ### Upcoming Changes in Ember.js 2.14
 
-TBK
+Ember 2.14 is shaping up to be largely a bugfix release, containing a significant amount of internal cleanup.
 
 For more details on the upcoming changes in Ember.js 2.14, please review the
 [Ember.js 2.14.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v2.14.0-beta.1).
@@ -84,7 +84,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 Ember Data 2.13 represents the work of 20 direct contributors
 and over 120 commits.
 
-The `ds-extended-errors` ([#3586](https://github.com/emberjs/data/pull/3586) [#4287](https://github.com/emberjs/data/pull/4287)) feature has been enabled on the beta branch for Ember Data 2.13.
+The `ds-extended-errors` ([#3586](https://github.com/emberjs/data/pull/3586) [#4287](https://github.com/emberjs/data/pull/4287)) feature has been enabled for Ember Data 2.13.
 
 This feature introduces an `extend` method on errors which allows
 users to create their own custom errors that extend from
