@@ -94,7 +94,7 @@ users to create their own custom errors that extend from
 const MyCustomError = DS.AdapterError.extend({ message: "My custom error." });
 ```
 
-The feature also introduces some new errors to rest adapter which will
+The feature also introduces some new errors to the REST adapter which will
 be used to reject the adapter promises based on http status of the API
 response.
 
@@ -122,7 +122,7 @@ For more details on the changes in Ember Data 2.13, please review the
 
 ### Upcoming changes in Ember Data 2.14
 
-In 2.14 Ember Data continues its internal refactorings and performance work without
+In 2.14, Ember Data continues its internal refactorings and performance work without
 impacting public APIs. It is shaping up nicely with reduced asset size (~ 3KB savings),
 better warnings and errors around malformed JSONAPI payloads, and simplified internals.
 
@@ -168,14 +168,14 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.12.0...v
 #### Add support for using `yarn`
 
 Ember CLI projects have been able to utilize `yarn` for dependency management for quite some time, however it was not well supported by
-the default generators. In 2.13 Ember CLI is now "yarn aware", and will use `yarn` for tasks such as `ember install` if it detects that
+the default generators. In 2.13, Ember CLI is now "yarn aware", and will use `yarn` for tasks such as `ember install` if it detects that
 `yarn` is installed and a `yarn.lock` exists in the project. You can even instruct `ember new` to generate a new project with a `yarn.lock`
 for you via `ember new foo --yarn`.
 
 #### Enable Instrumentation Hooks
 
 Ember CLI has had the ability to generate custom instrumentation output for builds for a few years now (introduced on 2015-08-24), but
-this information has not been readily accessible. In 2.13 ember-cli exposes this information to addons that implement the `instrumentation`
+this information has not been readily accessible. In 2.13, ember-cli exposes this information to addons that implement the `instrumentation`
 hook. This allows addons to access many things that were previously very difficult (e.g. reliable build time reporting).
 
 Thanks to [@hjdivad](https://github.com/hjdivad) for proposing and implementing this feature. Please read through [the RFC](https://github.com/ember-cli/rfcs/blob/master/complete/0091-addon-instrumentation-experimental-hooks.md)
@@ -215,7 +215,7 @@ instructions, please review the [Ember CLI 2.13.0 release page](https://github.c
 
 ### Upcoming Changes in Ember CLI 2.14
 
-In Ember CLI 2.14 support was added to `ember new` to allow a blueprint to be consumed from an NPM package. This enables projects to utilize Ember CLI's
+In Ember CLI 2.14, support was added to `ember new` to allow a blueprint to be consumed from an NPM package. This enables projects to utilize Ember CLI's
 ergonomics to generate non-Ember applications. Common examples of this are:
 
 - Generate a new [Glimmer.js](https://glimmerjs.com/) application. See [glimmerjs/glimmer-blueprint](https://github.com/glimmerjs/glimmer-blueprint).
