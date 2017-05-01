@@ -194,7 +194,7 @@ recently wrote a blog post reviewing the new feature and how to utilize it: [Emb
 
 Babel 6 support has been added to Ember CLI internally and is now used by default for newly generated projects (both applications and addons).
 Due to the way that Ember CLI handles transpilation this transition can be done gradually by updating each addon to utilize newer versions of
-[ember-cli-babel]. Updating your application to start using Babel 6 for its own transpilation is as simple as:
+[ember-cli-babel](https://github.com/babel/ember-cli-babel). Updating your application to start using Babel 6 for its own transpilation is as simple as:
 
 ```sh
 # if using yarn:
