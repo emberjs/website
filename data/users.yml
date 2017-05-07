@@ -918,6 +918,10 @@
   image: rsa.png
   alt: RSA
   use: "RSA uses Ember.js to power the front-end of our NetWitness app and is exploring its use in other apps as well."
+- url: https://campus-discounts.com
+  image: campus-discounts.png
+  alt: Campus Discounts
+  use: "Campus Discounts uses Ember.js to power the front-end of our progressive Web App and hybrid native mobile apps with a rich offline experience as well."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
