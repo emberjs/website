@@ -922,6 +922,10 @@
   image: campus-discounts.png
   alt: Campus Discounts
   use: "Campus Discounts uses Ember.js to power the front-end of our progressive Web App and hybrid native mobile apps with a rich offline experience as well."
+- url: https://www.ligadigital.com
+  image: ligadigital.png
+  alt: LIGADIGITAL
+  use: "LIGADIGITAL's uses Ember.js for most of their internal and external web applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
