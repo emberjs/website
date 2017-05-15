@@ -51,10 +51,16 @@ to be placed in the same directory:
 
 Note that the name of the data project needs to be `ember-data`, not `data`.
 
-Next, navigate into the root directory of this repository and execute `bundle exec rake generate_docs`. This
+Next, do a `git checkout` of the particular commit or tag you wish to generate
+documentation for. For example, to generate documentation for v2.13 you would
+run `git checkout v2.13.0` in both the `ember.js` and `ember-data` directories.
+
+Last, navigate into the root directory of this repository and execute `bundle exec rake generate_docs`. This
 will build the documentation for the `ember.js` and `data` repositories.
 
 You can launch the website via `bundle exec middleman` to preview the generated docs.
+To deploy, open a PR with the changes resulting from `generate_docs` and the
+change will be auto-deployed upon merge.
 
 ### Requirements
 

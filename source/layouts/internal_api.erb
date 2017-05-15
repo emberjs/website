@@ -6,7 +6,7 @@
   <% content_for :sidebar do %>
     <ol id='toc-list'>
       <li class='level-1'>
-        <a href="#">Projects</a>
+        <a class="slide-widget-head" href="#">Projects</a>
         <ol>
           <% @internal_apis.each do |key, opts| %>
           <li class='level-3 <%= internal_api_li_class(key) %>'>
@@ -19,7 +19,7 @@
       <li class='level-1'><a href="<%= internal_sha_url %>" target="_blank"> Tag: <%= internal_sha %></a></li>
 
       <% internal_li_for(:modules) do %>
-        <a href='#'>Modules</a>
+        <a class="slide-widget-head" href='#'>Modules</a>
         <% internal_ol_for(:modules) do %>
           <% internal_api_modules.each do |id, data| %>
             <% internal_li_for(:modules, name: data['name'], class: 'sub-selected') do %>
@@ -30,7 +30,7 @@
       <% end %>
 
       <% internal_li_for(:namespaces) do %>
-        <a href='#'>Namespaces</a>
+        <a class="slide-widget-head" href='#'>Namespaces</a>
         <% internal_ol_for(:namespaces) do %>
           <% internal_api_namespaces.each do |id, data| %>
             <% internal_li_for(:namespaces, name: data['name'], class: 'sub-selected') do %>
@@ -41,7 +41,7 @@
       <% end %>
 
       <% internal_li_for(:classes) do %>
-        <a href='#'>Classes</a>
+        <a class="slide-widget-head" href='#'>Classes</a>
         <% internal_ol_for(:classes) do %>
           <% internal_api_classes.each do |id, data| %>
             <% internal_li_for(:classes, name:data['name'], class: 'sub-selected') do %>

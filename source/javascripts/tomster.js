@@ -6,7 +6,7 @@ $(function() {
   // handle active link
   $('#tomster-filter a').removeClass('active');
   if (filter === 'all') {
-    $('#tomster-filter a[href="/tomster"]').addClass('active');
+    $('#tomster-filter a[href="/mascots"]').addClass('active');
   } else {
     $('#tomster-filter a[href$="' + filter + '"]').addClass('active');
   }

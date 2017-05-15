@@ -7,6 +7,7 @@
 @import 'mixins/hidpi';
 @import 'fonts';
 @import 'header';
+@import 'survey-reminder';
 @import 'footer';
 @import 'examples';
 @import 'about';
@@ -25,11 +26,13 @@
 @import 'components/meetups';
 @import 'components/ember-button';
 
+$small-max-width: 767px;
+
 @mixin width-for-columns($cols) {
   width: $cols * $col-width + ($cols - 1) * $col-spacing;
 }
 
-* {
+*, *:before, *:after {
   box-sizing: border-box;
 }
 
@@ -37,9 +40,9 @@ body {
   background-color: #faf4f1;
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
-  font-size: 14px;
-  line-height: 1.4em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
   color: #444444;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
@@ -50,15 +53,6 @@ body {
 a {
   color: #DC2C0D;
   text-decoration: none;
-
-  &.active {
-    font-weight: bold;
-    // text-decoration: underline;
-  }
-}
-
-a:hover {
-  border-bottom: 1px dotted #DC2C0D;
 }
 
 em {
@@ -71,7 +65,7 @@ strong {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  font-family: 'Maven Pro';
+
   font-weight: bold;
 
   code {
@@ -103,7 +97,6 @@ h2 {
 }
 
 h2, h3{
-  font-family: 'Maven Pro';
   font-weight: bold;
   color: $black-color;
 }
@@ -119,7 +112,6 @@ h4 {
   letter-spacing: 1px;
   margin: 24px 0 12px 0;
 }
-
 
 ul {
   list-style-type: disc;
@@ -141,6 +133,13 @@ p {
 .section {
   margin: 0 auto;
   max-width: 960px;
+  @media screen and (max-width: $small-max-width){
+    max-width:100%;
+    text-align: center;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+  }
 }
 
 /* Components */
@@ -150,7 +149,6 @@ p {
 **/
 
 #sidebar {
-  font-family: 'Maven Pro';
   font-weight: normal;
   margin-top: 38px;
   float: left;
@@ -187,7 +185,6 @@ p {
     line-height: 1.5em;
     border-bottom: none;
     color: #d84a32;
-    font-family: 'Maven Pro';
     font-weight: bold;
     cursor: pointer;
 
@@ -228,7 +225,7 @@ p {
         li.sub-selected {
           background-color: #f2d1cb;
           > a {
-            font-family: 'Maven Pro';
+
             font-weight: bolder;
             color: #282828;
           }
@@ -394,7 +391,6 @@ p {
     width: 700px;
     height: 65px;
     margin: 0 auto;
-
     text-align: center;
 
     li {
@@ -403,12 +399,11 @@ p {
       display: inline-block;
 
       a {
-        font-family: 'Maven Pro';
+
         font-weight: bold;
         font-size: 13px;
         text-transform: uppercase;
         color: #faf2ee;
-
         text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
         display: block;
         padding: 0px 1em;
@@ -464,18 +459,15 @@ p {
         display: block;
       }
 
-      font-family: 'Maven Pro';
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
       color: #faf2ee;
       text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
-
       display: block;
       padding: 0px 1em 0 0.5em;
       height: 28px;
       line-height: 28px;
-
       background-color: #ff6e56;
       @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
 
@@ -569,6 +561,7 @@ p {
   background-position: 50%;
 }
 
+
 #download {
   width: 280px;
   margin: 0 auto;
@@ -653,6 +646,16 @@ p {
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
+    @media screen and (max-width:$small-max-width) {
+      display: block;
+      clear: both;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 0.25em;
+      float: none;
+      max-width: 100%;
+      width:100%;
+    }
 
     img {
       margin-left: auto;
@@ -794,25 +797,28 @@ p {
   }
 
   .listed {
-    float: left;
-    margin-left: $col-width * 9;
-    margin-top: 20px;
-    text-align: center;
+    padding-top: 20px;
+    display:block;
+    margin: 0 auto;
+    width: 100%;
   }
 }
 
 .gears.section {
+  display: block;
+  clear: both;
+  max-width: 100%;
+  margin: 0 auto;
   .gear {
     text-align: center;
     height: 120px;
-
-    .gearplus {
-      padding: 0px 30px 0px 30px;
-      display: inline;
-      line-height: 120px;
+    max-width: 100%;
+    a {
+      display: inline-block;
       img {
-        vertical-align: top;
-        padding-top: 50px;
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
       }
     }
   }
@@ -848,7 +854,6 @@ p {
       .name {
         text-align: center;
         color: white;
-        font-family: 'Maven Pro';
         font-weight: normal;
         font-size: 18px;
         margin-top: 55px;
@@ -1022,13 +1027,13 @@ a.toc-anchor {
     }
 
     blockquote {
-      background-color: rgba(100, 100, 100, 0.1);
+      background-color: #F8E7CF;
       font-style: italic;
       padding: 8px;
 
       > p {
         padding: 0;
-        margin: 0;
+        margin: 1em;
       }
     }
 
@@ -1566,6 +1571,10 @@ body.security #content {
 
   .section {
     width: 100%;
+    max-width:100%;
+    display:block;
+    clear: both;
+    margin:0 auto;
   }
 
   #content {
@@ -1589,6 +1598,7 @@ body.security #content {
 .showcase {
   margin: 0 auto;
   width: 100%;
+  max-width:100%;
 }
 
 ul.showcase {
@@ -1664,6 +1674,10 @@ ul.showcase {
   }
 
   > a {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.8);
+
     img {
       height: auto;
       width: auto;
@@ -1754,7 +1768,7 @@ body.deprecations {
       float: left;
       font-size: 15px;
       font-weight: bold;
-      font-family: 'Maven Pro';
+
       text-transform: uppercase;
     }
     .date {
@@ -2013,16 +2027,6 @@ body.tomster_payment-sent #content {
   .thanks {
     margin-top: 50px;
   }
-
-  ul, ol {
-    margin-bottom: 28px;
-
-    list-style-type: disc;
-    li {
-      font-size: 15px;
-      margin: 10px 0 10px 0;
-    }
-  }
 }
 
 /**
@@ -2196,7 +2200,7 @@ body.team {
   border-top: 1px solid #e5dbd6;
   background-color: #f2ece9;
   overflow: hidden;
-  font-family: 'Maven Pro';
+
   font-weight: bold;
 
   #footer-wrapper {
@@ -2290,11 +2294,10 @@ body.team {
   display: block;
   width: 220px;
   height: 40px;
-  font-family: 'Maven Pro';
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  line-height: 40px;
+  line-height: 38px;
   font-size: 14px;
   color: #f6ece8;
   text-align: center;
@@ -2344,8 +2347,6 @@ body.team {
 .small-button {
   width: 74px;
   height: 22px;
-
-  font-family: 'Maven Pro';
   font-weight: normal;
   color: #ffffff;
   line-height: 24px;

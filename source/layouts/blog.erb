@@ -8,7 +8,8 @@
   <article class="blog-post">
     <h1><%= current_article.title %></h1>
     <% if current_page.data.author %>
-      <h3 class="blog-post-author"><% if current_page.data.guestPost %><span class="btn">Guest Post</span><% else %>Posted By:<% end %> <%= current_page.data.author %> &ndash; <time><%= current_article.date.strftime('%b %d, %Y') %></time></h3>
+      <h3 class="blog-post-author"><% if current_page.data.guestPost %><span class="btn">Guest Post</span><% else %>By<% end %> <%= current_page.data.author %></h3>
+      <h3 class="blog-post-date"><time><%= current_article.date.strftime('%B %-d, %Y') %></time></h3>
     <% end %>
 
     <hr>
@@ -25,7 +26,7 @@
       /* * * DON'T EDIT BELOW THIS LINE * * */
       (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
     </script>

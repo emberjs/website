@@ -8,7 +8,6 @@ module Sponsors
 
   module Helpers
 
-    ::Middleman::Extensions.register(:api_docs, APIDocs)
     def sponsors
       @sponsors ||= data.sponsors.map do |sponsor|
         Sponsor.new(sponsor)
