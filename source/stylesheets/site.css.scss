@@ -64,7 +64,7 @@ strong {
 
 h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
-  
+
   font-weight: bold;
 
   code {
@@ -183,7 +183,7 @@ p {
     text-decoration: none;
     line-height: 1.5em;
     border-bottom: none;
-    color: #d84a32;    
+    color: #d84a32;
     font-weight: bold;
     cursor: pointer;
 
@@ -224,7 +224,7 @@ p {
         li.sub-selected {
           background-color: #f2d1cb;
           > a {
-            
+
             font-weight: bolder;
             color: #282828;
           }
@@ -398,7 +398,7 @@ p {
       display: inline-block;
 
       a {
-        
+
         font-weight: bold;
         font-size: 13px;
         text-transform: uppercase;
@@ -457,7 +457,7 @@ p {
         margin-right: 6px;
         display: block;
       }
-      
+
       font-weight: bold;
       font-size: 12px;
       text-transform: uppercase;
@@ -1026,13 +1026,13 @@ a.toc-anchor {
     }
 
     blockquote {
-      background-color: rgba(100, 100, 100, 0.1);
+      background-color: #F8E7CF;
       font-style: italic;
       padding: 8px;
 
       > p {
         padding: 0;
-        margin: 0;
+        margin: 1em;
       }
     }
 
@@ -1673,6 +1673,10 @@ ul.showcase {
   }
 
   > a {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.8);
+
     img {
       height: auto;
       width: auto;
@@ -2026,16 +2030,6 @@ body.tomster_payment-sent #content {
   .thanks {
     margin-top: 50px;
   }
-
-  ul, ol {
-    margin-bottom: 28px;
-
-    list-style-type: disc;
-    li {
-      font-size: 15px;
-      margin: 10px 0 10px 0;
-    }
-  }
 }
 
 /**
@@ -2209,7 +2203,7 @@ body.team {
   border-top: 1px solid #e5dbd6;
   background-color: #f2ece9;
   overflow: hidden;
-  
+
   font-weight: bold;
 
   #footer-wrapper {

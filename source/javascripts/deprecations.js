@@ -9,7 +9,7 @@
 
     if ($this.prop('tagName') === 'H3') {
       var li = $("<li class='level-1'>" +
-                    "<a href='#" + $this.attr('id') + "'>" + $this.text() + "</a>" +
+                    "<a class='slide-widget-head' href='#" + $this.attr('id') + "'>" + $this.text() + "</a>" +
                     "<ol></ol>" +
                   "</li>");
 

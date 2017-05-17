@@ -1,17 +1,17 @@
 .header-nav.container {
-  width: 960px;
+  width: 980px;
   padding: 0 1rem;
   list-style-type: none;
   margin: auto;
 }
 
 .responsive .header-nav.container {
-  max-width: 960px;
+  max-width: 980px;
   width: auto;
 }
 
 .not-responsive .header {
-  min-width: 960px;
+  min-width: 980px; //do we need this
 }
 
 .header a:hover {
@@ -59,24 +59,16 @@
 
 .header a {
   color: #fff;
-  font-size: 1rem;
+  display: block;
+  font-size: 1.1em;
+  padding: 0.5em 0;
+  text-align: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 53.75rem) {
   .responsive .header a {
-    line-height: 24px;
-  }
-}
-
-.header-nav li {
-  margin-top: 11px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-@media screen and (max-width: 53.75rem) {
-  .responsive .header-nav li {
-    margin-top: 10px;
+    line-height: 24px; //do we need this
   }
 }
 
@@ -144,12 +136,11 @@
   width: 100px;
   background: image-url("ember-logo.svg") no-repeat;
   display: block;
-  margin: -15px auto 0 0;
 }
 
 @media screen and (max-width: 53.75rem) {
   .responsive .header-logo a {
-    margin-left: auto;
+    margin-left: 0 auto;
   }
 }
 

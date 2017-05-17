@@ -164,11 +164,66 @@ a.survey-h2:active:after {
   margin-top: 0;
 }
 
-.survey-wrapper p.large {
-  line-height: 1.6;
+.survey-wrapper {
+  p.large, p.quote {
+    line-height: 1.6;
+    font-size: 18px;
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.4em;
+  }
+
+  .quote {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+
+    quotes: "“" "”" "‘" "’";
+    &:before {
+      content: open-quote;
+    }
+    &:after {
+      content: close-quote;
+    }
+  }
+}
+
+.cluster {
+  padding: 10px 24px 24px;
+  margin: 12px 0;
+  background-color: #f5f2f0;
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .quote {
+    font-size: 18px;
+    font-style: normal;
+    color: #252525;
+  }
+}
+
+.nps-cell {
   font-size: 18px;
-  max-width: 38em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.4em;
+  background-color: #f5f2f0;
+  flex: 1;
+  padding: 4px;
+  margin: 5px;
+}
+
+.nps-row {
+  width: 100%;
+  display: flex;
+  .nps-cell:first-child {
+    margin-left: 0;
+  }
+  .nps-cell:last-child {
+    margin-right: 0;
+  }
+}
+
+.nps-cell-header {
+  background-color: white;
+  font-weight: bold;
 }
