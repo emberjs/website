@@ -175,3 +175,8 @@
   image: tbieniek.jpg
   teams:
     - cli
+- name: Krati Ahuja
+  github: https://github.com/kratiahuja
+  image: krati.jpg
+  teams:
+    - cli
