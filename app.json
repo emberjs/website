@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "scripts": {
+  },
+  "env": {
+    "EMBER_API_DOCS_URL": {
+      "required": true
+    },
+    "LOADERIO_API_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "loaderio"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static.git"
+    }
+  ]
+}
