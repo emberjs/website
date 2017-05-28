@@ -66,54 +66,6 @@ responsive: true
   </div>
 </div>
 
-<div class="getting-started section">
-  <script type="text/x-handlebars" id="application">
-    <div class="example-tabs">
-      {{#each model as |item|}}
-      {{tab-item item=item selectedTab=selectedTab selectTab='selectTab'}}
-      {{/each}}
-      <span class="tabs-footer"></span>
-    </div>
-    {{syntax-highlight selectedTab.contents}}
-    <div class="example-arrow"></div>
-  </script>
-  <script type="text/x-handlebars" data-template-name="components/tab-item">
-    <a class="{{if isSelected 'active'}}" href="#">{{unbound item.name}}</a>
-  </script>
-
-  <div class="example-app" data-name="binding" data-files="templates/application.hbs">
-    <h2 class="sub">Auto-Updating Handlebars Templates</h2>
-    <p class="prose">Ember makes Handlebars templates even better, by ensuring your HTML
-      stays up-to-date when the underlying model changes. To get started, you
-      don't even need to write any JavaScript.</p>
-  </div>
-
-  <div class="example-app" data-name="components" data-files="components/gravatar-image.js templates/application.hbs templates/components/gravatar-image.hbs">
-    <h2 class="sub">Components</h2>
-    <p class="prose">Experience the future of the web platform today with Ember's components.
-      Components allow you to create your own application-specific HTML tags,
-      using Handlebars to describe their markup and JavaScript to implement
-      custom behavior.</p>
-  </div>
-
-  <div class="example-app example-loading" data-name="loading" data-files="app.js templates/application.hbs">
-    <h2 class="sub">Loading Data from a Server</h2>
-    <p class="prose">
-      Ember.js eliminates the boilerplate of displaying JSON retrieved
-      from your server. If you know how to use jQuery, you know how to
-      fetch models in Ember.
-    </p>
-  </div>
-
-  <div id="routing-example" class="example-app" data-name="routing" data-files="app.js templates/application.hbs templates/index.hbs templates/mail.hbs templates/mailbox.hbs templates/mailbox/index.hbs fixtures.js">
-    <h2 class="sub">Routing</h2>
-    <p class="prose">Build JavaScript apps that don't break the web!
-      Ember.js makes it downright simple to create sophisticated,
-      multi-page JavaScript applications with great URL support, in a
-      fraction of the code you'd write in other frameworks.</p>
-  </div>
-</div>
-
 <div class="users section">
   <h2>Who's Using Ember.js?</h2>
 
