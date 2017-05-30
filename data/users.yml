@@ -926,6 +926,10 @@
   image: ligadigital.png
   alt: LIGADIGITAL
   use: "LIGADIGITAL's uses Ember.js for most of their internal and external web applications."
+- url: http://www.mapc.org/
+  image: mapc_logo.png
+  alt: Metropolitan Area Planning Council
+  use: "MAPC uses Ember.js for most of their front end web applications including MassBuilds and TrailsMap"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
