@@ -56,7 +56,7 @@
 }
 
 .footer .container {
-  align-items:center;
+  align-items:top;
   display: flex
 }
 
@@ -104,10 +104,27 @@
   margin: 1rem 0
 }
 
+.footer .footer-contributions {
+  font-size: 11px;
+  text-align: center;
+}
+
+.footer .footer-contributions .contributor {
+  flex: 1 0 11em;
+}
+
+.footer .footer-contributions .logo-heroku {
+  max-height: 35px;
+}
+
+.footer .footer-contributions .logo-fastly {
+  max-height: 45px;
+}
+
 @media screen and (min-width: 53.75rem) {
-  .footer .footer-social {
-    flex:0 0 11em;
-    text-align: right
+  .footer .footer-contributions {
+    display: flex;
+    flex:0 0 21em;
   }
 }
 
