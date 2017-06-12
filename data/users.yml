@@ -930,6 +930,10 @@
   image: mapc_logo.png
   alt: Metropolitan Area Planning Council
   use: "MAPC uses Ember.js for most of their front end web applications including MassBuilds and TrailsMap"
+- url: http://pagerduty.com
+  image: pagerduty.png
+  alt: PagerDuty
+  use: "PagerDuty users Ember.js for most of its front-end application including the Incident Dashboard & management tools."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
