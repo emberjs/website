@@ -20,9 +20,6 @@ activate :sponsors
 activate :highlighter
 activate :column_balancer
 activate :versions
-activate :ember do |config|
-  config.templates_root = 'app/builds/templates'
-end
 
 activate :api_docs,
   ember: {
