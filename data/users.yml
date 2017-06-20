@@ -938,6 +938,10 @@
   image: 201-created.png
   alt: "201 Created"
   use: "Ember.js and JavaScript consulting since 2011."
+- url: http://www.kaliber5.de
+  image: kaliber5.png
+  alt: kaliber5
+  use: "Building most client and own projects with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
