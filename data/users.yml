@@ -11,6 +11,10 @@
 # appearance, submit an image this exact size that already includes
 # the whitespace you want. To support high-resolution displays, consider
 # submitting your image at twice this resolution with dimensions of 420 x 206.
+# Please optimize your images for the web, e.g. by compressing them with some
+# tool or service like https://imageoptim.com. Specifically they should be
+# PNG8 files with alpha transparency, include no meta data and be not larger
+# than 10KB.
 
 # Please do not post links to pages selling Ember consulting
 # services. They will be removed.
