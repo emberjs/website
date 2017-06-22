@@ -1,8 +1,6 @@
 sudo: false
 language: ruby
 cache: bundler
-rvm:
-- 2.2
 script:
 - bundle exec middleman build
 before_install:
