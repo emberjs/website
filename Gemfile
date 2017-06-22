@@ -19,11 +19,6 @@ gem "faraday"
 gem "bourbon"
 gem "neat"
 
-source 'https://rails-assets.org' do
-  gem "rails-assets-js-md5"
-  gem "rails-assets-moment"
-end
-
 group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
