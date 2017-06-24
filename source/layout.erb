@@ -23,6 +23,7 @@
     <% if current_page.data.no_index.eql? true %>
       <meta name="robots" content="noindex">
     <% end %>
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app.css" />
     <%= yield_content :head %>
   </head>
 
@@ -52,7 +53,7 @@
       </div>
     </div>
 
-    <%= partial "footer" %>
+    <main-footer></main-footer>
 
     <%= yield_content :foot %>
     <script type="text/javascript">
@@ -68,5 +69,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app.js"></script>
   </body>
 </html>
