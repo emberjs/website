@@ -7,14 +7,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <% end %>
     <title>Ember.js - <%= current_page.data.title || @title %></title>
-		<meta property="st:title" content="Ember.js: <%= current_page.data.title || @title %>" />
-		<meta property="og:title" content="Ember.js: <%= current_page.data.title || @title %>" />
-		<meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
-		<meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:site" content="@emberjs" />
-		<meta name="twitter:title" content="<%= current_page.data.title || @title %>"/>
-		<meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
+    <meta property="st:title" content="Ember.js: <%= current_page.data.title || @title %>" />
+    <meta property="og:title" content="Ember.js: <%= current_page.data.title || @title %>" />
+    <meta property="og:description" content="Ember.js helps developers be more productive out of the box. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast." />
+    <meta property="og:image" content="http://emberjs.com/images/tomster-sm.png" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@emberjs" />
+    <meta name="twitter:title" content="<%= current_page.data.title || @title %>"/>
+    <meta name="twitter:image" content="http://emberjs.com/images/tomster-twitter-card.png" />
     <link rel="shortcut icon" href="/images/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
     <!--[if lte IE 7 ]><%= stylesheet_link_tag "fonts/fontello-ie7" %><![endif]-->
@@ -23,7 +23,7 @@
     <% if current_page.data.no_index.eql? true %>
       <meta name="robots" content="noindex">
     <% end %>
-    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app.css" />
+    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-6884ead0878be33d7d7680d9315ee606.css" />
     <%= yield_content :head %>
   </head>
 
@@ -36,7 +36,7 @@
       <script type="text/javascript" src="/javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <%= partial "header" %>
+    <main-navbar></main-navbar>
 
     <%= yield_content :outside_wrapper %>
 
@@ -69,6 +69,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app.js"></script>
+    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-c877a2b91310b1eae80ac4310b737d79.js"></script>
   </body>
 </html>
