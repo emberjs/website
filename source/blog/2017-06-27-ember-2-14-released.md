@@ -35,7 +35,7 @@ framework itself. This includes adoption of Babel 6 and using
 [Rollup](https://rollupjs.org/) on internal Ember packages.
 
 The 2.14.0 release of Ember.js comes in as 7k smaller than 2.13.3 minified
-and gzipped. Additionally initial render time of real world apps continues to
+and gzipped. Additionally, initial render time of real world apps continues to
 improve. This benchmark shows time-to-initial render of
 [emberaddons.com](http://emberaddons.com/) measured using
 [ember-macro-benchmark](https://github.com/krisselden/ember-macro-benchmark):
@@ -45,9 +45,10 @@ improve. This benchmark shows time-to-initial render of
 #### Deprecations in Ember 2.14
 
 Deprecations are added to Ember.js when an API will be removed at a later date.
+
 Each deprecation has an entry in the deprecation guide describing the migration
 path to more stable API. Deprecated public APIs are not removed until a major
-release of the frameork.
+release of the framework.
 
 Consider using the
 [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow)
@@ -57,10 +58,10 @@ deprecations.
 Two new deprecations are introduces in Ember 2.14.0:
 
 * `Ember.MODEL_FACTORY_INJECTIONS` is deprecated. This flag enabled DI behavior
-  required by Ember-Data prior to changes landed in Ember 2.11. It is intimate
-  API scheduled for removal in Ember.js 2.17.0. If your application sets this
+  required by Ember Data prior to changes landed in Ember 2.11. It is intimate
+  API scheduled for removal in Ember 2.17.0. If your application sets this
   flag you can safely remove it. See the [deprecation guide
-  entry](https://www.emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed) and [Ember.js PR](https://emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed)
+  entry](https://www.emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed) and the [implementation PR](https://emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed)
   for more details.
 * Use of the `eventManager` property on components and the `canDispatchToEventManager`
   property on `EventManager`s has been deprecated. These rarely used and
