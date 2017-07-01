@@ -61,7 +61,7 @@ Two new deprecations are introduces in Ember 2.14.0:
   required by Ember Data prior to changes landed in Ember 2.11. It is intimate
   API scheduled for removal in Ember 2.17.0. If your application sets this
   flag you can safely remove it. See the [deprecation guide
-  entry](https://www.emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed) and the [PR](https://emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed)
+  entry](https://www.emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed) and the [implementation PR](https://emberjs.com/deprecations/v2.x/#toc_ember-model-em-factory-em-injections-removed)
   for more details.
 * Use of the `eventManager` property on components and the `canDispatchToEventManager`
   property on `EventManager`s has been deprecated. These rarely used and
