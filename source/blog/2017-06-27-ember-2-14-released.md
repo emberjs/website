@@ -106,14 +106,41 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.14
 
+Ember Data `2.14` brings with it a number of performance related optimizations.
+In addition to a large number of minor tweaks, three changes stand out:
+
+*Svelting*
+
+Beginning with the release of `2.14`, the internals of Ember-Data are passed into `rollup` to produce
+ a single micro-lib module. This helps with parse/eval time at boot and reduces both the pre and post-gzip 
+ sizes by ~23Kb and ~3Kb respectively.  We also used babel6 and some manual tuning to further reduce the 
+ transpiled size.  This is the first of many steps to reduce ember-data's default footprint, stay tuned for more.
+
+*Lazy Relationships*
+
+Previously, ember-data would immediately create the connections between records necessary for relationships. 
+This is unnecessary overhead if these relationships aren't immediately accessed.  Beginning in `2.14`, 
+relationship connections are established on-demand once the relationship is accessed.
+
+*Deferred serializer lookup*
+
+Previously, ember-data would lookup the serializer for a requested data type immediately after making the 
+network request.  This strategy allowed the cost of serializer instantiation to be paid while waiting for 
+the network to resolve. However, this strategy turns out to be suboptimal when sending requests for 
+non-critical data. With the prevalence of using fastboot shoebox to pre-load critical data, lowering the cost
+ of secondary requests becomes more optimal.
+
+*Issues with 2.14*
+
+Unfortunately, changes in 2.14 appear to have introduced a number of regressions in less well defined areas 
+of ember-data's usage.  If you experience trouble after upgrading to `2.14`, we suggest locking to `2.13` and 
+either commenting on an existing issue ticked or opening a new issue as appropriate.
+
 
 #### Deprecations in Ember Data 2.14
 
-
-### Upcoming changes in Ember Data 2.15
-
-
-#### Deprecations in Ember Data 2.15
+Several private but non-underscored methods have been deprecated in favor of underscored variants.
+`didUpdateAll` is now `_didUpdateAll`. `buildInternalModel` is now `_buildInternalModel`. 
 
 For more details on the upcoming changes in Ember Data 2.15, please review the
 [Ember Data 2.14.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.15.0-beta.1).
