@@ -109,33 +109,32 @@ Ember Data is the official data persistence library for Ember.js applications.
 Ember Data `2.14` brings with it a number of performance related optimizations.
 In addition to a large number of minor tweaks, three changes stand out:
 
-*Svelting*
+#### Svelting
 
-Beginning with the release of `2.14`, the internals of Ember-Data are passed into `rollup` to produce
- a single micro-lib module. This helps with parse/eval time at boot and reduces both the pre and post-gzip 
- sizes by ~23Kb and ~3Kb respectively.  We also used babel6 and some manual tuning to further reduce the 
- transpiled size.  This is the first of many steps to reduce ember-data's default footprint, stay tuned for more.
+Beginning with the release of Ember Data 2.14, the internals of the library are passed into `rollup` to produce
+a single micro-lib module. This helps with parse/eval time at boot and reduces both the pre and post-gzip 
+sizes by ~23Kb and ~3Kb respectively. We also used Babel 6 and some manual tuning to further reduce the 
+transpiled size. This is the first of many steps to reduce Ember Data's default footprint, stay tuned for more.
 
-*Lazy Relationships*
+#### Lazy Relationships
 
-Previously, ember-data would immediately create the connections between records necessary for relationships. 
-This is unnecessary overhead if these relationships aren't immediately accessed.  Beginning in `2.14`, 
+Previously, Ember Data would immediately create the connections between records necessary for relationships. 
+This is unnecessary overhead if these relationships aren't immediately accessed. Beginning in Ember Data 2.14, 
 relationship connections are established on-demand once the relationship is accessed.
 
-*Deferred serializer lookup*
+#### Deferred serializer lookup
 
-Previously, ember-data would lookup the serializer for a requested data type immediately after making the 
-network request.  This strategy allowed the cost of serializer instantiation to be paid while waiting for 
+Previously, Ember Data would lookup the serializer for a requested data type immediately after making the 
+network request. This strategy allowed the cost of serializer instantiation to be paid while waiting for 
 the network to resolve. However, this strategy turns out to be suboptimal when sending requests for 
-non-critical data. With the prevalence of using fastboot shoebox to pre-load critical data, lowering the cost
- of secondary requests becomes more optimal.
+non-critical data. With the prevalence of using FastBoot shoebox to pre-load critical data, lowering the cost
+of secondary requests becomes more optimal.
 
-*Issues with 2.14*
+#### Issues with Ember Data 2.14
 
-Unfortunately, changes in 2.14 appear to have introduced a number of regressions in less well defined areas 
-of ember-data's usage.  If you experience trouble after upgrading to `2.14`, we suggest locking to `2.13` and 
-either commenting on an existing issue ticked or opening a new issue as appropriate.
-
+Unfortunately, changes in Ember Data 2.14 appear to have introduced a number of regressions in less well
+defined areas of Ember Data's usage. If you experience trouble after upgrading to 2.14, we suggest locking
+to 2.13 and either commenting on an existing issue ticked or opening a new issue as appropriate.
 
 #### Deprecations in Ember Data 2.14
 
