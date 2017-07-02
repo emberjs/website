@@ -672,16 +672,6 @@ ul.showcase {
 }
 
 /**
-  Deprecations Page
-**/
-
-body.deprecations {
-  #content {
-    margin-top: 38px;
-  }
-}
-
-/**
   Tomster Page
 **/
 
@@ -765,6 +755,7 @@ body.deprecations {
     }
   }
 }
+@import 'pages/deprecations';
 
 /**
   Tomster FAQ Page
