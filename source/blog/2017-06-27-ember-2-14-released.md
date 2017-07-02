@@ -109,7 +109,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 Ember Data `2.14` brings with it a number of performance related optimizations.
 In addition to a large number of minor tweaks, three changes stand out:
 
-#### Svelting
+#### Filesize Improvements
 
 Beginning with the release of Ember Data 2.14, the internals of the library are passed into `rollup` to produce
 a single micro-lib module. This helps with parse/eval time at boot and reduces both the pre and post-gzip 
