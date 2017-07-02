@@ -1077,29 +1077,5 @@ body.tomster_payment-sent #content {
 @import 'components/buttons';
 @import 'pages/api';
 @import 'pages/404';
-
-/* Brand Page */
-
-.brand-logo, .brand-small {
-  text-align: center;
-}
-
-.brand-logo > img {
-  width: 300px;
-  background-image: url('/images/brand/brand-bg.png');
-  border: 1px solid #cccccc;
-  margin-top: 10px;
-}
-
-.brand-logo ~ a {
-  text-align: center;
-}
-
-.brand-small > img {
-  width: 150px;
-  background-image: url('/images/brand/brand-bg.png');
-  border: 1px solid #cccccc;
-  margin-top: 10px;
-}
-
+@import 'pages/brand';
 @import 'highlight';
