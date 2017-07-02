@@ -55,7 +55,12 @@ strong {
   font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
 
   font-weight: bold;
@@ -88,7 +93,8 @@ h2 {
   margin: .83em 0;
 }
 
-h2, h3{
+h2,
+h3 {
   font-weight: bold;
   color: $black-color;
 }
@@ -125,7 +131,8 @@ p {
 .section {
   margin: 0 auto;
   max-width: 960px;
-  @media screen and (max-width: $small-max-width){
+
+  @media screen and (max-width: $small-max-width) {
     max-width:100%;
     text-align: center;
     display: block;
@@ -191,6 +198,7 @@ p {
 
   ol#toc-list {
     background: #f9e7e4;
+
     li {
       font-size: 12px;
       list-style: none;
@@ -216,8 +224,8 @@ p {
 
         li.sub-selected {
           background-color: #f2d1cb;
-          > a {
 
+          > a {
             font-weight: bolder;
             color: #282828;
           }
@@ -261,20 +269,22 @@ p {
       }
 
       &.level-2, &.level-3 {
-
         a {
           padding: 6px 1em 6px 1em;
           display: block;
           text-transform: none;
           color: #d84a32;
+
           &:hover {
             background-color: #f2d1cb;
             color: black;
           }
+
           &:active {
             color: rgb(94, 94, 94);
           }
         }
+
         &.sub-selected {
           // fancy me up.
         }
@@ -342,7 +352,6 @@ p {
 /**
   Header
 **/
-
 #header {
   position: absolute;
   width: 100%;
@@ -361,7 +370,9 @@ p {
     position: relative;
   }
 
-  #search form { display: inline-block }
+  #search form {
+    display: inline-block
+  }
 
   #logo {
     position: absolute;
@@ -373,7 +384,8 @@ p {
     @include transform(scale(1));
     @include transition(0.2s);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       @include transform(scale(1.06));
       border: 0;
     }
@@ -391,7 +403,6 @@ p {
       display: inline-block;
 
       a {
-
         font-weight: bold;
         font-size: 13px;
         text-transform: uppercase;
@@ -404,7 +415,9 @@ p {
         text-decoration: none;
         border: 1px solid transparent;
 
-        &:hover { color: #ffffff }
+        &:hover {
+          color: #ffffff
+        }
       }
 
       &.active a {
@@ -428,8 +441,8 @@ p {
     }
   }
 
-  #search{
-    form input.st-search-input{
+  #search {
+    form input.st-search-input {
       margin-left: 12px;
       font-size: 100%;
       padding: 2px 9px 2px 27px;
@@ -438,6 +451,7 @@ p {
       width: 150px;
     }
   }
+
   #github {
     position: absolute;
     right: 7px;
@@ -505,8 +519,12 @@ p {
     float: left;
   }
 
-  ol + h2, ul + h2, p + h2,
-  ol + h3, ul + h3, p + h3,
+  ol + h2,
+  ol + h3,
+  ul + h2,
+  ul + h3,
+  p + h2,
+  p + h3,
   div + h3 {
     margin-top: 1.5em;
   }
@@ -546,7 +564,6 @@ p {
 **/
 
 .ember-users {
-
   .section {
     width: 100%;
     max-width:100%;
@@ -623,9 +640,7 @@ ul.showcase {
 }
 
 .showcase > li {
-
   float: left;
-
   width: 33.333%;
   margin: 10px 0;
 
@@ -682,7 +697,8 @@ body.tomster_faq #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
-  h1, h1:first-child {
+  h1,
+  h1:first-child {
     margin-top: 0;
     padding-bottom: 20px;
   }
@@ -723,10 +739,12 @@ body.tomster_faq #content {
 
 .tomster-faq {
   @include clearfix;
+
   .left-col {
     float: left;
     width: 491px;
   }
+
   .right-col {
     float: left;
     width: 225px;
@@ -746,7 +764,8 @@ body.tomster_payment-sent #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
-  h1, h1:first-child {
+  h1,
+  h1:first-child {
     margin-top: 0;
     padding-bottom: 20px;
   }
@@ -759,10 +778,12 @@ body.tomster_payment-sent #content {
 .tomster-commission,
 .tomster-payment {
   @include clearfix;
+
   .left-col {
     float: left;
     width: 491px;
   }
+
   .right-col {
     float: left;
     width: 225px;
@@ -773,28 +794,34 @@ body.tomster_payment-sent #content {
 
 .tomster-form {
   margin-top: 1.5em;
+
   ul {
     padding: 0;
     margin: 0 !important;
   }
+
   li {
     @include clearfix;
   }
+
   label,
   legend {
     margin-top: 1em;
     margin-bottom: 0.4em;
     display: block;
     font-weight: bold;
+
     &.error {
       color: $orange-color;
       font-size: 12px;
       margin-top: -0.9em;
     }
+
     .req {
       color: $orange-color;
     }
   }
+
   input[type="text"],
   input[type="email"],
   input[type="file"],
@@ -810,56 +837,69 @@ body.tomster_payment-sent #content {
     width: 70%;
     border-radius: 6px;
     box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+
     &:focus {
       border-color: #888;
     }
+
     &.error {
       border-color: $orange-color;
     }
   }
+
   input[type="file"] {
     padding: 15px 10px;
     background-color: transparent;
     cursor: pointer;
+
     &:focus {
       border-color: #ddd;
     }
   }
+
   textarea {
     width: 100%;
     height: 100px;
   }
+
   fieldset {
     .choice {
       display: block;
       margin-top: 0.3em;
     }
+
     label {
       display: inline-block;
       margin: 0;
       padding: 0;
       font-weight: normal;
     }
+
     input.other {
       margin-left: 20px;
       margin-top: 0.1em;
     }
   }
+
   input[type="submit"] {
     margin-top: 1em;
     width: 125px;
     line-height: 35px;
+
     &:hover {
       cursor: pointer;
     }
   }
+
   .inline-field {
     margin-right: 5px;
     float: left;
     line-height: 40px;
+
     input[type="text"] {
       width: auto;
     }
+
     label {
       line-height: 1.6em;
     }
@@ -872,8 +912,11 @@ body.tomster_payment-sent #content {
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
 
-.team, .meetup-assets, .guidelines, .legal, .logos {
-
+.team,
+.meetup-assets,
+.guidelines,
+.legal,
+.logos {
   .section {
     width: 100%;
     margin-top: 0px;
@@ -908,7 +951,9 @@ body.tomster_payment-sent #content {
     width: 220px;
     float: left;
     margin-bottom: 20px;
-    img, a {
+
+    img,
+    a {
       display: block;
       margin: 0 auto;
     }
@@ -925,12 +970,12 @@ body.tomster_payment-sent #content {
 
 .tomsterVar {
   text-align: center;
+
     a:hover {
       text-decoration: none;
       border-bottom: 0px;
     }
 }
-
 
 /**
   Footer
