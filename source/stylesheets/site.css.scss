@@ -538,15 +538,8 @@ p {
 @import 'pages/blog';
 @import 'pages/community';
 @import 'pages/meetups';
-/**
-  Security Page
-**/
-
-body.security #content {
-  margin: 3em auto 0 auto;
-  width: 54em;
-}
 @import 'pages/resources';
+@import 'pages/security';
 
 /**
   Ember Users Page
