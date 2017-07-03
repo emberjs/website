@@ -6,7 +6,8 @@ body.community_resources #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
-  h1, h1:first-child {
+  h1,
+  h1:first-child {
     margin-top: 0;
     padding-bottom: 20px;
   }
@@ -44,7 +45,6 @@ body.community_resources #content {
     }
 
     .bx-wrapper {
-
       .bx-prev,
       .bx-next {
         background: no-repeat;

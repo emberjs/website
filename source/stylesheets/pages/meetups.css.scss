@@ -5,7 +5,8 @@ body.community_meetups #content {
   margin: 3em auto 0 auto;
   width: 54em;
 
-  h1, h1:first-child {
+  h1,
+  h1:first-child {
     margin-top: 0;
     padding-bottom: 20px;
   }
@@ -13,9 +14,11 @@ body.community_meetups #content {
   .section {
     width: auto;
     @include clearfix;
+
     table {
       margin: 2em auto;
     }
+
     .inline_list a:first-child {
       margin-left: 20px;
     }
@@ -41,7 +44,8 @@ body.community_meetups #content {
         font-family: 'Helvetica Neue', Helvetica, Arial, Sans-Serif;
       }
 
-      h2, h3 {
+      h2,
+      h3 {
         font-size: 16px;
         margin: 0 0 5px;
         padding: 0;

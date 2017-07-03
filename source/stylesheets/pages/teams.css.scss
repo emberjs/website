@@ -9,14 +9,14 @@ body.team {
   .lead {
     text-align: center;
   }
-  
+
   hr {
     height: 1px;
     border: none;
     margin: 4em 0;
     background-color: #dfd7d4;
   }
-  
+
   #content .headshots { /* #content is needed for specifity override */
     max-width: 760px;
     width: 100%;
@@ -50,6 +50,7 @@ body.team {
         width: 130px;
         height: 130px;
         border: 2px solid #faf4f1;
+
         &:hover,
         &:active,
         &:focus {
@@ -68,6 +69,7 @@ body.team {
         a {
           color: #7c7a79;
           font-size: 24px;
+
           &:hover {
             color: #444;
           }
@@ -86,6 +88,7 @@ body.team {
       }
 
       .type {
+        display: block;
         position: absolute;
         left: 5px;
         right: 5px;
@@ -93,7 +96,6 @@ body.team {
         color: #fff;
         font-size: 12px;
         font-weight: bold;
-        display: block;
         line-height: 1.5em;
         border-radius: 4px;
         background-color: #f23818;

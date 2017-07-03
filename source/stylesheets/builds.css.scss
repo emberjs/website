@@ -36,15 +36,9 @@
   }
 
   @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
-    .feature .canary {
-      background-size: 198px 263px !important;
-    }
-    .feature .beta {
-      background-size: 198px 263px !important;
-    }
-    .feature .release {
-      background-size: 198px 263px !important;
-    }
+    .feature .canary,
+    .feature .beta,
+    .feature .release,
     .feature .lts {
       background-size: 198px 263px !important;
     }
@@ -212,7 +206,8 @@
       }
     }
 
-    th, td {
+    th,
+    td {
       padding: 8px;
       line-height: 20px;
       text-align: left;
@@ -227,7 +222,8 @@
       border-top: 1px solid #dddddd;
     }
 
-    td, th {
+    td,
+    th {
       &:last-child {
         text-align: right;
       }
@@ -242,6 +238,7 @@
         border-right: 1px solid #f67862;
       }
     }
+
     a.active {
       background-color: #f67862;
       @include background-image(linear-gradient(0deg, #e7624b, #f67862));
@@ -291,7 +288,7 @@
     z-index:2;
     color:#fff;
     background-color:#f67862;
-    content:attr(data-label);
+    content: attr(data-label);
   }
 
   button:after {
@@ -323,6 +320,7 @@
 
   .files-table {
     margin-bottom: 4em;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -330,6 +328,7 @@
 
   #download {
     width: 100%;
+
     #download-ember {
       left: auto;
       margin: 2.5em 0;
@@ -440,5 +439,4 @@
     height: 131.5px;
     margin: 0 auto;
   }
-
 }

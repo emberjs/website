@@ -16,7 +16,8 @@ code {
   padding: 0 0;
 }
 
-#content ul, #content ol {
+#content ul,
+#content ol {
   margin: 1em 1.5em;
 }
 
@@ -56,6 +57,7 @@ code {
 
     li:first-of-type {
       border-top-left-radius: 4px;
+
       a {
         border-top-left-radius: 2px;
       }
@@ -63,6 +65,7 @@ code {
 
     li:last-of-type {
       border-top-right-radius: 4px;
+
       a {
         border-top-right-radius: 2px;
       }
@@ -80,14 +83,15 @@ code {
       border-right: 1px solid #f67862;
     }
 
-    li.active , li {
+    li,
+    li.active {
       &:last-of-type a{
         border-right: 1px solid transparent;
       }
     }
 
     li.active a {
-      background-color:  #f67862;
+      background-color: #f67862;
       @include background-image(linear-gradient(0deg, #e7624b, #f67862));
       border-right: 1px solid #f67862;
       border-top: none;
@@ -102,14 +106,17 @@ code {
     }
 
     margin: 0 0;
+
     a {
       border-right: 1px solid transparent;
       border-left: 1px solid transparent;
     }
+
     padding: 0 0;
 
     li {
       display: table-cell;
+
       a {
         display: block;
         border-top: solid 1px rgb(250, 250, 250);
@@ -128,12 +135,12 @@ code {
           color: black;
           border-bottom: none;
         }
-
       }
     }
 
     border-bottom: solid 1px #e6e4e3;
   }
+
   .pane {
     margin: 1em 1.5em 2em 1.5em;
   }

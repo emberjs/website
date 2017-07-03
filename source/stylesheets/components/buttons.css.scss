@@ -22,7 +22,8 @@
     border-radius: 5px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       border-color: #e27260;
       border-top-color: #ea7a68;
       border-bottom-color: #c1513d;

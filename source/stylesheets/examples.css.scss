@@ -5,7 +5,8 @@
 
 /* The CSS in this file is for the inline examples on the home page.  */
 
-.example-app pre, code {
+.example-app pre,
+code {
   padding:0 3px 2px;
   font-size:12px;
   color:#333333;
@@ -15,6 +16,7 @@
 .example-loading {
   ul {
     margin-left: 0 !important;
+
     li {
       padding: 10px 0;
 
@@ -27,6 +29,7 @@
       .author-name {
         font-size: 12px;
         margin-top: 6px;
+
         a {
           color: black;
 
@@ -149,17 +152,21 @@
       border-bottom-right-radius: 0;
     }
 
-    &:hover:before, &.active:before,
-    &:hover:after, &.active:after {
+    &:hover:before,
+    &:hover:after,
+    &.active:before,
+    &.active:after {
       border-bottom-color: #bbb;
       background-color: #f7f7f7;
     }
 
-    &.active:before, &.active:after {
+    &.active:before,
+    &.active:after {
       padding-bottom: 1px;
     }
 
-    &:before, &:after {
+    &:before,
+    &:after {
       content:'';
       display: block;
       position: absolute;
@@ -452,7 +459,8 @@
   }
 }
 
-body.about, body.index {
+body.about,
+body.index {
   .tabs ul {
     border-bottom-color: #d1d1d1;
   }

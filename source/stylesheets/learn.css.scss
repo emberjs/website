@@ -38,6 +38,7 @@ $small-max-width: 767px;
 .learning-header {
   display: flex;
 }
+
 .learning-header--left {
   flex: 2;
 }
@@ -74,7 +75,6 @@ $small-max-width: 767px;
     flex-direction: column;
   }
 }
-
 
 .showcase--screenshot {
   flex: 2;

@@ -24,6 +24,7 @@
   color: #747474;
   padding-left: 10px;
   padding-right: 10px;
+
   p {
     line-height: 1.8;
   }
@@ -43,6 +44,7 @@
   max-width: 400px;
   margin: auto;
   margin-top: 30px;
+
   img {
     max-width: 80%;
   }
@@ -56,11 +58,12 @@
 .survey-button:link, .survey-button:visited {
   margin-top: 20px;
   margin: auto;
+
   img {
-    padding-top: 2px;
     display: inline;
-    background-color: transparent;
     width: 7px;
+    padding-top: 2px;
+    background-color: transparent;
     transition: 0.2s margin-left ease-in-out;
     margin-left: 5px;
     vertical-align: text-top;
@@ -72,6 +75,7 @@
 }
 .survey-button:hover, .survey-button:active {
   background: #2C92AD;
+
   img {
     margin-left: 10px;
   }
@@ -108,6 +112,7 @@
   width: 135px;
   margin: auto;
   font-size: 11px;
+
   img {
     max-width: 100%;
     border: solid 1px #8E897B;
@@ -165,7 +170,8 @@ a.survey-h2:active:after {
 }
 
 .survey-wrapper {
-  p.large, p.quote {
+  p.large,
+  p.quote {
     line-height: 1.6;
     font-size: 18px;
     max-width: 38em;
@@ -180,9 +186,11 @@ a.survey-h2:active:after {
     font-size: 20px;
 
     quotes: "“" "”" "‘" "’";
+
     &:before {
       content: open-quote;
     }
+
     &:after {
       content: close-quote;
     }
@@ -193,10 +201,12 @@ a.survey-h2:active:after {
   padding: 10px 24px 24px;
   margin: 12px 0;
   background-color: #f5f2f0;
+
   h4 {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
   .quote {
     font-size: 18px;
     font-style: normal;
@@ -215,9 +225,11 @@ a.survey-h2:active:after {
 .nps-row {
   width: 100%;
   display: flex;
+
   .nps-cell:first-child {
     margin-left: 0;
   }
+
   .nps-cell:last-child {
     margin-right: 0;
   }
