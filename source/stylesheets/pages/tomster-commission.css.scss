@@ -1,0 +1,151 @@
+@import 'bourbon';
+@import 'variables';
+
+body.tomster_commission #content,
+body.tomster_commission-sent #content,
+body.tomster_payment #content,
+body.tomster_payment-sent #content {
+  margin: 3em auto 0 auto;
+  width: 54em;
+
+  h1,
+  h1:first-child {
+    margin-top: 0;
+    padding-bottom: 20px;
+  }
+
+  .section {
+    width: auto;
+  }
+}
+
+.tomster-commission,
+.tomster-payment {
+  @include clearfix;
+
+  .left-col {
+    float: left;
+    width: 491px;
+  }
+
+  .right-col {
+    float: left;
+    width: 225px;
+    margin-left: 40px;
+    text-align: center;
+  }
+}
+
+.tomster-form {
+  margin-top: 1.5em;
+
+  ul {
+    padding: 0;
+    margin: 0 !important;
+  }
+
+  li {
+    @include clearfix;
+  }
+
+  label,
+  legend {
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    display: block;
+    font-weight: bold;
+
+    &.error {
+      color: $orange-color;
+      font-size: 12px;
+      margin-top: -0.9em;
+    }
+
+    .req {
+      color: $orange-color;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="file"],
+  textarea {
+    border: none;
+    margin: 0 0 1em;
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    background-color: white;
+    border: 1px solid #ddd;
+    outline: none;
+    width: 70%;
+    border-radius: 6px;
+    box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+
+    &:focus {
+      border-color: #888;
+    }
+
+    &.error {
+      border-color: $orange-color;
+    }
+  }
+
+  input[type="file"] {
+    padding: 15px 10px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+      border-color: #ddd;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+
+  fieldset {
+    .choice {
+      display: block;
+      margin-top: 0.3em;
+    }
+
+    label {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-weight: normal;
+    }
+
+    input.other {
+      margin-left: 20px;
+      margin-top: 0.1em;
+    }
+  }
+
+  input[type="submit"] {
+    margin-top: 1em;
+    width: 125px;
+    line-height: 35px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .inline-field {
+    margin-right: 5px;
+    float: left;
+    line-height: 40px;
+
+    input[type="text"] {
+      width: auto;
+    }
+
+    label {
+      line-height: 1.6em;
+    }
+  }
+}
