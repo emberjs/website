@@ -1,0 +1,83 @@
+a {
+  color: #DC2C0D;
+  text-decoration: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  font-weight: bold;
+
+  code {
+    text-transform: none;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+  color: $orange-color;
+  // border-bottom: solid 1px #d0d0d0;
+  // This styling has been removed from everywhere other than
+  // the API and Guides, like at line 1167.
+  padding-bottom: 20px;
+  line-height: 1.125;
+}
+
+/* This next h1 is so h1s in the middle of the page (ie not the first time)
+have additional breathing room up top */
+
+h1:not(:first-child) {
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: .83em 0;
+}
+
+h2,
+h3 {
+  font-weight: bold;
+  color: $black-color;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 1.618em;
+  color: $orange-color;
+  letter-spacing: 1px;
+  margin: 24px 0 12px 0;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+#slider {
+  list-style-type: none;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+p {
+  margin: 1em 0;
+}
