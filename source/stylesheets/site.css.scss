@@ -5,6 +5,7 @@
 @import 'base/base'; // bitters replacement for our homegrown setup
 @import 'vendor/docsearch';
 @import 'mixins/hidpi';
+@import 'mixins/width-for-columns';
 @import 'fonts';
 @import 'examples';
 @import 'about';
@@ -24,10 +25,6 @@
 @import 'components/ember-button';
 
 $small-max-width: 767px;
-
-@mixin width-for-columns($cols) {
-  width: $cols * $col-width + ($cols - 1) * $col-spacing;
-}
 
 *, *:before, *:after {
   box-sizing: border-box;

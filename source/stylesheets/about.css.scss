@@ -2,8 +2,6 @@
 @import "mixins/hidpi";
 @import "components/call-to-action";
 
-$small-max-width: 767px;
-
 .job-board {
   display: none;
   @media screen and (max-width: $small-max-width) {

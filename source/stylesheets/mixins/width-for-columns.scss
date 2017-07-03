@@ -1,0 +1,3 @@
+@mixin width-for-columns($cols) {
+  width: $cols * $col-width + ($cols - 1) * $col-spacing;
+}
