@@ -1,0 +1,92 @@
+@import 'bourbon';
+@import 'variables';
+
+#footer {
+  min-width: $page-width;
+  margin-top: 60px;
+  padding: 25px 0;
+  border-top: 1px solid #e5dbd6;
+  background-color: #f2ece9;
+  overflow: hidden;
+
+  font-weight: bold;
+
+  #footer-wrapper {
+    width: $page-width;
+    margin: 0 auto;
+    position: relative;
+    @include clearfix;
+  }
+
+  .info {
+    width: 200px;
+    color: #717171;
+    text-transform: uppercase;
+    font-size: 10px;
+    float: left;
+
+    a {
+      color: $orange-color;
+      text-decoration: none;
+    }
+  }
+
+  .statement {
+    font-size: 14px;
+    color: #bbbbbb;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    left: 200px;
+    right: 200px;
+    top: 10px;
+  }
+
+  .links {
+    width: 200px;
+    text-align: right;
+    float: right;
+
+    a {
+      margin: 3px 10px 0;
+      border-bottom: none;
+      opacity: 0.7;
+      @include transition(0.4s);
+
+      &:hover {
+        opacity: 1;
+      }
+
+      i {
+        margin: 0;
+      }
+
+      /*
+        This is for hiding text from users with normal vision
+        but keeping the text for screen readers
+      */
+      span {
+        display: inline-block;
+        width: 1px;
+        text-indent: 200%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .twitter,
+  .github,
+  .googleplus {
+    font-size: 33px;
+    line-height: 35px;
+    color: #464646;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+  }
+
+  .googleplus {
+    font-size: 29px;
+  }
+}
