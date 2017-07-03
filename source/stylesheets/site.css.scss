@@ -38,9 +38,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@import 'typography';
-@import 'structure';
 @import 'base/typography';
+@import 'base/structure';
 
 /**
   Sidebar
