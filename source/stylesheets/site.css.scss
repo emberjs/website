@@ -680,48 +680,6 @@ body.tomster_faq #content {
 @import 'pages/teams';
 
 /**
-  Meetup Assets Page
-**/
-
-#content .meetups {
-  ul {
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    margin-left: 2.5em;
-  }
-
-  li {
-    width: 220px;
-    float: left;
-    margin-bottom: 20px;
-
-    img,
-    a {
-      display: block;
-      margin: 0 auto;
-    }
-  }
-
-  p {
-    text-align: center;
-  }
-}
-
-.second {
-  margin-top: 50px;
-}
-
-.tomsterVar {
-  text-align: center;
-
-    a:hover {
-      text-decoration: none;
-      border-bottom: 0px;
-    }
-}
-
-/**
   Footer
 **/
 
@@ -818,6 +776,9 @@ body.tomster_faq #content {
   margin-left: -60px;
 }
 
+@import 'pages/teams';
+@import 'pages/meetup-assets';
+@import 'components/footer';
 @import 'components/buttons';
 @import 'pages/api';
 @import 'pages/404';
