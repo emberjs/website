@@ -13,7 +13,6 @@
   "formation": {
   },
   "addons": [
-    "loaderio"
   ],
   "buildpacks": [
     {
