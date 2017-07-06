@@ -36,7 +36,10 @@ $base-border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.02);
   }
 
-  td.beta, td.release, td.canary, td.planning {
+  td.beta,
+  td.release,
+  td.canary,
+  td.planning {
     background-repeat: no-repeat;
     background-position: 40% 50%;
     background-size: 43px 64px !important;

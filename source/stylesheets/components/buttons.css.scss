@@ -1,0 +1,95 @@
+@import 'bourbon';
+
+.button {
+  display: block;
+  width: 220px;
+  height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 38px;
+  font-size: 14px;
+  color: #f6ece8;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
+
+  &.orange {
+    border: 1px solid #cb6352;
+    border-top-color: #ea7a68;
+    border-bottom-color: #a04332;
+
+    @include background-image( linear-gradient(to bottom, #fe845a, #d14e37) );
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+    &:hover,
+    &:focus {
+      border-color: #e27260;
+      border-top-color: #ea7a68;
+      border-bottom-color: #c1513d;
+      @include background-image( linear-gradient(to bottom, #fc906b, #e2654e) );
+    }
+
+    &:active {
+      border-color: #c9533d;
+      border-top-color: #92473a;
+      border-bottom-color: #e1583f;
+      @include background-image( linear-gradient(to bottom, #b2412e, #ed7249) );
+      box-shadow: none;
+      text-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0;
+    }
+  }
+
+  &.black {
+    background-image: url('/images/black_buttons.png');
+
+    &:hover {
+      background-position: 0 -46px;
+      border-bottom: none;
+    }
+
+    &:active {
+      background-position: 0 -92px;
+      text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;
+    }
+  }
+}
+
+.small-button {
+  width: 74px;
+  height: 22px;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
+
+  &.orange {
+    background-image: url('/images/small-orange-button.png');
+  }
+
+  &.black {
+    background-image: url('/images/small-black-button.png');
+  }
+}
+
+.button-hero {
+  margin: 30px auto;
+}
+
+a.edit-page {
+  font-size: 18px;
+  color: #444;
+  margin: 0;
+  width: 24px;
+  height: 18px;
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+    border-bottom: 0;
+  }
+}

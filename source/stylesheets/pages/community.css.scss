@@ -1,0 +1,136 @@
+@import 'mixins/hidpi';
+
+body.community #content {
+  margin: 3em auto 0 auto;
+  max-width: 54em;
+  width: 90%;
+
+  > h1 {
+    text-align: center;
+    margin: 3em auto 1em auto;
+  }
+
+  .video {
+      max-width: 640px;
+      margin: 0 auto;
+
+      .embedded-video {
+        position: relative;
+        padding-bottom: 52.25%; /* not quite 16:9 */
+        padding-top: 25px;
+        height: 0;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+  }
+
+  .section {
+    width: auto;
+
+    .image {
+      float: left;
+      margin: 0 20px 15px 0;
+      width: 220px;
+      height: 142px;
+
+      @media screen and (max-width: 560px) {
+        float: none;
+        margin: 0 auto 15px;
+      }
+    }
+
+    &.contribute .image {
+      @include hidpi('community/give', 'png');
+    }
+
+    &.help .image {
+      @include hidpi('community/sos', 'png');
+    }
+
+    &.bugs .image {
+      @include hidpi('community/bug', 'png');
+      float: right;
+      margin: 0 0 15px 20px;
+
+      @media screen and (max-width: 560px) {
+        float: none;
+        margin: 0 auto 15px;
+      }
+    }
+
+    &.meetup {
+      width: 47%;
+      float: left;
+      text-align: center;
+
+      @media screen and (max-width: 560px) {
+        width: 100%;
+        float: none;
+        margin: 0 auto 15px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+
+      .image {
+        @include hidpi('community/meetup', 'png');
+        background-position: center top;
+        float: none;
+        margin: 0 0 15px 20px;
+        width: 221px;
+        height: 185px;
+        margin: 0 auto;
+      }
+
+      .button {
+        margin: 25px auto;
+      }
+    }
+
+    &.learn {
+      width: 47%;
+      float: right;
+      text-align: center;
+
+      @media screen and (max-width: 560px) {
+        width: 100%;
+        float: none;
+        margin: 0 auto 15px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+
+      .image {
+        @include hidpi('community/campster', 'png');
+        background-position: center top;
+        float: none;
+        width: 201px;
+        height: 179px;
+        margin: 0 auto;
+      }
+
+      .button {
+        margin: 25px auto;
+      }
+    }
+    
+    table {
+      margin: 2em auto;
+    }
+
+    .inline_list a:first-child {
+      margin-left: 20px;
+    }
+  }
+}

@@ -3,8 +3,8 @@
 $small-breakpoint: 670px;
 $medium-breakpoint: 1040px;
 
-body.blog.responsive{
-  #content-wrapper{
+body.blog.responsive {
+  #content-wrapper {
     @media screen and (max-width: $medium-breakpoint) {
       width: 100%;
       float: none;
@@ -18,14 +18,17 @@ body.blog.responsive{
       @media screen and (max-width: $medium-breakpoint) {
         width: 30%;
         float: left;
-        &:after{
+
+        &:after {
           width: 100%;
         }
-        .slide-widget-head{
+
+        .slide-widget-head {
           font-size: 1.2em;
         }
-        ol li.level-3{
-          a{
+
+        ol li.level-3 {
+          a {
             font-size: 1.2em;
           }
         }
@@ -36,32 +39,37 @@ body.blog.responsive{
         padding-bottom: 0em;
         min-height: 0;
 
-        &:after{
+        &:after {
           display: none;
         }
       }
       
     }
-    #content.has-sidebar{
+    #content.has-sidebar {
       margin-bottom: 0;
+
       @media screen and (max-width: $medium-breakpoint) {
         width: 70%;
         float: left;
         margin: 0;
         padding: 2rem;
-        .blog-post-summary{
+
+        .blog-post-summary {
           >h2{
             line-height: 1.5;
           }
+
           >p{
             font-size: 1.3em;
             line-height: 1.8em;
           }
+
           >a.read-more{
             font-size: 1.3em;
           }
         }
       }
+
       @media screen and (max-width: $small-breakpoint) {
         width: 100%;
         float: none;
@@ -77,26 +85,27 @@ body.blog.responsive{
       font-size: 1.1em;
       color: #9EABB3;
       text-align: center;
-      a{
+
+      a {
         position: absolute;
         display: inline-block;
-        &.older-posts{
+
+        &.older-posts {
           right: 0;
         }
-        &.newer-posts{
+
+        &.newer-posts {
           left: 0;
         }
       }
-      .page-number{
+
+      .page-number {
         display: inline-block;
         color: #333;
         margin: 0;
       }
     }
-
-
   }
-
 }
 
 .blog {
@@ -158,7 +167,8 @@ article.blog-post {
       padding-bottom: 0.5em;
     }
 
-    ul, ol {
+    ul,
+    ol {
       margin-left: $list-indent;
       margin-bottom: 28px;
 
@@ -177,7 +187,8 @@ article.blog-post {
     width: 100%;
 
     margin: 1em 0;
-    tbody tr{
+
+    tbody tr {
       background: rgba(255, 249, 249, 0.56);
       border-bottom: 1px solid rgba(223, 215, 212, 0.28);
     }
@@ -190,12 +201,14 @@ article.blog-post {
       font-weight: bold;
     }
 
-    th, td {
+    th,
+    td {
       padding: 5px 10px;
     }
 
     &.specific {
-      th, td {
+      th,
+      td {
         padding: 5px 6px;
       }
     }

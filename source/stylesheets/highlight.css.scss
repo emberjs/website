@@ -33,12 +33,15 @@ body.guides .highlight {
     height: 20px;
   }
 
-  &.javascript .ribbon, &.js .ribbon {
+  &.javascript .ribbon,
+  &.js .ribbon {
     @include hidpi('js-ribbon', png);
   }
+
   &.html .ribbon {
     @include hidpi('html-ribbon', png);
   }
+
   &.handlebars .ribbon {
     @include hidpi('handlebars-ribbon', png);
   }
@@ -85,6 +88,7 @@ body.guides .highlight {
 
 .CodeRay {
   width: 100%;
+
   td.line-numbers {
     width: 38px;
     text-align: center;
@@ -125,7 +129,8 @@ body.guides .highlight {
     color: $highlight-orange;
   }
 
-  .key, .function {
+  .key,
+  .function {
     color: #2b1fce;
   }
 

@@ -1,0 +1,23 @@
+.brand-logo,
+.brand-small {
+  text-align: center;
+}
+
+.brand-logo > img,
+.brand-small > img {
+  background-image: url('/images/brand/brand-bg.png');
+  border: 1px solid #cccccc;
+  margin-top: 10px;
+}
+
+.brand-logo > img {
+  width: 300px;
+}
+
+.brand-small > img {
+  width: 150px;
+}
+
+.brand-logo ~ a {
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+.section {
+  margin: 0 auto;
+  max-width: 960px;
+
+  @media screen and (max-width: $small-max-width) {
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    clear: both;
+    margin: 0 auto;
+  }
+}

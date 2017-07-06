@@ -2,10 +2,9 @@
 @import "mixins/hidpi";
 @import "components/call-to-action";
 
-$small-max-width: 767px;
-
 .job-board {
   display: none;
+
   @media screen and (max-width: $small-max-width) {
     background-color: #1e719b;
     font-size: 1.2em;
@@ -13,55 +12,59 @@ $small-max-width: 767px;
     text-align: center;
     display: block;
     clear: both;
+
     a {
-        background-image: none;
-        color: white;
-        letter-spacing: 1px;
-        min-width: 100%;
-        display: block;
-        padding: 0.4em;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        &:hover,
-        &:focus {
-          text-decoration: underline;
+      background-image: none;
+      color: white;
+      letter-spacing: 1px;
+      min-width: 100%;
+      display: block;
+      padding: 0.4em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      img {
+        margin: -0.2em 0 -0.6em 0.5em;
+        transform: rotate(10deg);
+        max-height: 40px;
+        &:hover, &:focus {
+          text-decoration: none;
         }
-        img {
-          margin: -0.2em 0 -0.6em 0.5em;
-          transform: rotate(10deg);
-          max-height: 40px;
-          &:hover, &:focus {
-            text-decoration: none;
-          }
-        }
-        .text-yellow {
-          color: #feeca6;
-        }
+      }
+
+      .text-yellow {
+        color: #feeca6;
       }
     }
   }
-  .job-board-banner {
-      z-index: 99998;
-      position: absolute;
-      left: 20px;
-      width: 125px;
-      height: 170px;
+}
 
-      text-decoration: none !important;
-      text-indent: -99999px;
+.job-board-banner {
+  z-index: 99998;
+  position: absolute;
+  left: 20px;
+  width: 125px;
+  height: 170px;
 
-      @include hidpi('about/job-board-banner', png);
+  text-decoration: none !important;
+  text-indent: -99999px;
 
-      &:hover {
-        border-bottom: none;
-      }
-      @media screen and (max-width: $small-max-width) {
-        display: none;
-      }
-    }
+  @include hidpi('about/job-board-banner', png);
 
+  &:hover {
+    border-bottom: none;
+  }
 
+  @media screen and (max-width: $small-max-width) {
+    display: none;
+  }
+}
 
 .about-page--header {
   display: block;
@@ -74,21 +77,27 @@ $small-max-width: 767px;
   margin: 1em auto;
   max-width: 100%;
   text-align: center;
+
   .bold {
     font-weight: 400;
   }
+
   @media screen and (max-width: $small-max-width) {
     margin: 0.5 auto;
     font-size: 2em;
   }
 }
-body.index, body.about {
+
+body.index,
+body.about {
   background: no-repeat top center #faf4f1;
   background-image: url('/images/background-shades.png');
   background-image: url('/images/background-shades.svg'), none; // See: http://css-tricks.com/svg-fallbacks/
+
   @media screen and (min-width: 2000px) { // Stretch background width when wider than source image
     background-size: 100% auto;
   }
+
   .feature {
     @media screen and (max-width: $small-max-width) {
       max-width:100%;
@@ -108,9 +117,11 @@ body.index, body.about {
     .feature .handlebars {
       background-size: 221px 210px !important;
     }
+
     .feature .structure {
       background-size: 221px 210px !important;
     }
+
     .feature .productivity {
       background-size: 221px 220px !important;
     }
@@ -141,6 +152,7 @@ body.index, body.about {
       margin: 0 auto;
       max-width:100%;
     }
+
     h2.sub {
       color: #F23818;
       padding-top: 50px;
