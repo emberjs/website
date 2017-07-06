@@ -220,7 +220,7 @@ ember new my-new-deploy-plugin -b @ember-cli-deploy/plugin-blueprint
 ```
 
 The package will be downloaded from NPM and used to provide the initial
-blueprint for your Ember-CLI app.
+blueprint for your Ember CLI app.
 
 Two other examples of this feature being used in the wild are:
 
@@ -230,7 +230,7 @@ Two other examples of this feature being used in the wild are:
 #### Other Notable Changes
 
 + Node 7.x on Windows is now supported.
-+ By default, Ember-CLI collects usage information. Documentation has now been
++ By default, Ember CLI collects usage information. Documentation has now been
 added describing what is collected and who has access to this information.
   See
   [Analytics.md](https://github.com/ember-cli/ember-cli/blob/master/Analytics.md)
@@ -238,7 +238,7 @@ added describing what is collected and who has access to this information.
 + A flag `--no-welcome` has been added for `ember new` and `ember init`. Use
   this flag to skip the inclusion of `ember-welcome-page` as a dependency in
   newly created projects.
-+ The Ember-CLI team recommends Ember Addons use the lowest supported Node release when
++ The Ember CLI team recommends Ember Addons use the lowest supported Node release when
   running CI. As of this release, that means Node 4.x.
 
 For more details on the changes in Ember CLI 2.14.0 and detailed upgrade
