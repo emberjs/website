@@ -238,7 +238,7 @@ added describing what is collected and who has access to this information.
 + A flag `--no-welcome` has been added for `ember new` and `ember init`. Use
   this flag to skip the inclusion of `ember-welcome-page` as a dependency in
   newly created projects.
-+ The Ember-CLI team recommends using the lowest supported Node release when
++ The Ember-CLI team recommends Ember Addons use the lowest supported Node release when
   running CI. As of this release, that means Node 4.x.
 
 For more details on the changes in Ember CLI 2.14.0 and detailed upgrade
