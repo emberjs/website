@@ -735,9 +735,9 @@
   alt: "The #1 cloud-based electronic health record platform for doctors and patients"
   use: "The front-end for our main product is all done in Ember"
 - url: https://mypurecloud.com
-  image: inin.png
-  alt: "Interactive Intelligence"
-  use: "Interactive Intelligence uses Ember to develop its realtime collaboration products"
+  image: genesys.png
+  alt: "Genesys"
+  use: "Genesys uses Ember to develop its realtime collaboration products"
 - url: http://simplabs.com
   image: simplabs.png
   alt: "simplabs"
