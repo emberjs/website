@@ -21,38 +21,6 @@ activate :highlighter
 activate :column_balancer
 activate :versions
 
-activate :api_docs,
-  ember: {
-    name: "Ember",
-    default_class: "Ember",
-    root: "api",
-    data: "api",
-    repo_url: 'https://github.com/emberjs/ember.js'
-  },
-  data: {
-    name: "Ember Data",
-    default_class: "DS",
-    root: "api/data",
-    data: "data_api",
-    repo_url: "https://github.com/emberjs/data"
-  }
-
-activate :internal_api_docs,
-  ember: {
-    name: "Ember",
-    default_class: "Ember",
-    root: "internal",
-    data: "api",
-    repo_url: 'https://github.com/emberjs/ember.js'
-  },
-  data: {
-    name: "Ember Data",
-    default_class: "DS",
-    root: "internal/data",
-    data: "data_api",
-    repo_url: "https://github.com/emberjs/data"
-  }
-
 ###
 # Build
 ###
@@ -92,12 +60,6 @@ page '404.html', directory_index: false
 
 # Don't build layouts standalone
 ignore '*_layout.erb'
-
-# Don't build API layouts
-ignore 'api/class.html.erb'
-ignore 'api/module.html.erb'
-ignore 'internal_api/class.html.erb'
-ignore 'internal_api/module.html.erb'
 
 ###
 # Builds
@@ -149,7 +111,6 @@ helpers do
       classes += ' not-responsive'
     end
 
-    classes.gsub('internal', 'api')
   end
 end
 
