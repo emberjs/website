@@ -1,0 +1,38 @@
+---
+title: "Examples"
+responsive: true
+---
+
+<% content_for :outside_wrapper do %>
+<div class="legal-wrapper">
+    <h1 id="examples">Examples</h1>
+
+    <p>In this section you will find applications that are maintained by the Ember.js teams with the help of contributors. While software is always a work in progress, the goal is to showcase patterns and solutions applied in real-world applications.</p>
+    <p>Whether you're simply interested in checking out how some feature is implemented, or you're looking to contribute, one of these projects might pique your interest!</p>
+
+    <div class="showcase">
+        <% data.showcase.each do |showcase| %>
+            <div>
+                <h2><%= showcase.name %> <a href="<%= replace_current_version showcase.demo %>"><i class="icon-link-ext"></i></a></h2>
+
+                <div class="showcase--item">
+                    <div class="showcase--screenshot">
+                        <img class="showcase--image" src="/images/learn/<%= showcase.image.src %>" alt="<%= showcase.image.alt %>">
+                    </div>
+                    <div class="showcase--description">
+                        <p>Repository: <a href="<%= showcase.repository %>"><%= showcase.repository %></a></p>
+
+                        <p>
+                        <%= replace_current_version showcase.description %>
+
+                        <% showcase.features.each do |feature| %>
+                            <li><%= feature %></li>
+                        <% end %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+<% end %>
