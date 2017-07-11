@@ -2,7 +2,7 @@
   "https_only": true,
   "root": "build/",
   "proxies": {
-    "/api-beta/": {
+    "/api/": {
       "origin": "${EMBER_API_DOCS_URL}"
     }
   },
@@ -19,8 +19,8 @@
     }
   },
   "redirects": {
-    "/api-beta": {
-      "url": "/api-beta/"
+    "/api": {
+      "url": "/api/"
     }
   }
 }
