@@ -21,6 +21,12 @@
   "redirects": {
     "/api": {
       "url": "/api/"
+    },
+    "/api-beta": {
+      "url": "/api/"
+    },
+    "/internal": {
+      "url": "/api/"
     }
   }
 }
