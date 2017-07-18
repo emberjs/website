@@ -180,3 +180,13 @@
   image: kratiahuja.jpg
   teams:
     - cli
+- name: Sivakumar Kailasam
+  github: https://github.com/sivakumar-kailasam
+  image: skailasam.jpg
+  teams:
+    - learning
+- name: Terence Lee
+  github: https://github.com/hone
+  image: tlee.png
+  teams:
+    - learning
