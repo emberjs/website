@@ -1,5 +1,4 @@
 sudo: false
-filter_secrets: false
 language: ruby
 cache: bundler
 script:
