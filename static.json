@@ -25,6 +25,9 @@
     "/api-beta": {
       "url": "/api/"
     },
+    "/api-beta/": {
+      "url": "/api/"
+    },
     "/internal": {
       "url": "/api/"
     }
