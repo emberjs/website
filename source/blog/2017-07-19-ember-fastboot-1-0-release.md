@@ -9,7 +9,7 @@ We are thrilled to share that we have released Ember FastBoot 1.0 (including emb
 ## What is Ember FastBoot?
 
 [Ember FastBoot](http://www.ember-fastboot.com/) is a server-side rendering solution for ambitious Ember apps,
-allowing your Ember apps to use principles of progressive enhancement, such as an initial render your app without JavaScript.
+allowing your Ember apps to use principles of progressive enhancement, such as an initial render of your app without JavaScript.
 It provides a complete solution for server-side rendering of your app from development to deployment.
 
 FastBoot works by running your Ember app in Node and shipping the rendered HTML of your initial requested route in your index.html (which also contains scripts for your app to boot in browser) to the user.
