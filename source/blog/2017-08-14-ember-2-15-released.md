@@ -55,8 +55,7 @@ For more details on changes in Ember.js 2.15, please review the
 
 Ember.js 2.16 will introduce two new features:
 
-* TODO
-* TODO
+* RFC 176 - modules API
 
 #### Deprecations in Ember.js 2.16
 
