@@ -103,8 +103,32 @@ applications.
 
 ### Upgrading Ember CLI
 
-You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade
-your projects using `yarn` run:
+You may upgrade Ember CLI separately from Ember.js and Ember Data!
+There is a new experimental tool for Ember CLI upgrades called
+[ember-cli-update](https://github.com/kellyselden/ember-cli-update.git).
+To use it, run this command to install it globally:
+
+```
+npm install -g ember-cli-update
+```
+
+Then run:
+
+```
+ember-cli-update
+```
+
+It runs your system git merge tool if it finds a conflict. This can be pretty
+overwhelming for beginners, so you can run
+
+```
+ember-cli-update --ignore-conflicts
+```
+
+to handle the conflicts yourself.
+
+If this new tool is giving you problems, you can still upgrade your projects
+manually. To upgrade your projects using `yarn` run:
 
 ```
 yarn upgrade ember-cli
