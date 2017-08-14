@@ -324,9 +324,11 @@ PhantomJS has diminished, and as a result is [no longer actively maintained](htt
 
 #### app.import files within node_modules
 
-Ember CLI now supports importing vendor assets from paths within `node_modules`
-using `app.import`.  This makes it easier to consume dependencies using only
-npm, rather than a more complicated mix of npm and bower.
+Ember CLI has an API for importing individual files into the built assets, by
+calling `app.import` within `ember-cli-build.js`.  This API now supports
+importing files from within `node_modules`, making it easier to consume
+dependencies using only npm, rather than a more complicated mix of npm and
+bower.
 
 
 #### Node.js 8 Support
