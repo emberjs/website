@@ -91,7 +91,7 @@ export default Ember.Component.extend({
 Ember 2.15 implements
 [RFC #225](https://github.com/status200/rfcs/blob/ember-engines-mount-params/text/0000-ember-engines-mount-params.md) with some minor tweaks. The `{{mount}}`
 helper, used to invoke an Ember engine, now accepts the named argument of
-`model` to provide a the model of the engine's application controller.
+`model` to provide the model of the engine's application controller.
 
 For example, in an application you might pass some values from a template:
 
