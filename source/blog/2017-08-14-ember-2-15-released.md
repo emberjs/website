@@ -308,19 +308,61 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.14.0...v
 
 ### Changes in Ember CLI 2.15
 
-#### Deprecations in Ember Data 2.15
+#### Chrome by default
 
-Two new deprecations are introduces in Ember Data 2.15:
+Ember CLI will configure new apps to run tests in [headless Chrome](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
+by default, instead of PhantomJS.
 
-* TODO
-* TODO
+PhantomJS has served the wider JavaScript community well for a long time, being
+a practical alternative to running browsers headless via tools like Xvbf.  It
+has however been a proxy for what we really want to test -- the browsers that
+users are running.
+
+Now that we can easily test in headless Chrome the motivation for using
+PhantomJS has diminished, and as a result is [no longer actively maintained](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
+
+
+#### app.import files within node_modules
+
+Ember CLI now supports importing vendor assets from paths within `node_modules`
+using `app.import`.  This makes it easier to consume dependencies using only
+npm, rather than a more complicated mix of npm and bower.
+
+
+#### Node.js 8 Support
+
+Per the Ember CLI [Node.js version support policy](https://github.com/ember-cli/ember-cli/blob/cac87e69f8c636d8b64889a6e214e987428c8dc7/docs/node-support.md) Ember CLI officially supports Node 8 as the active Node.js version and will continue to do so throughout its upcoming [Active LTS window](https://github.com/nodejs/LTS/tree/d9cb7b3059a478a6e33649cfb0a202cf456b2e28#nodejs-long-term-support-working-group).
+
+As part of this support, Ember CLI will no longer report warnings when run under
+Node 8.
+
+#### Improved Error Messages
+
+The improved error messages promised in the 2.14.0 release [blog post](https://www.emberjs.com/blog/2017/07/06/ember-2-14-released.html#toc_upcoming-changes-in-ember-cli-2-15) is shipping with Ember CLI 2.15.0.  No more checking the console for template compilation errors 🎉!
+
+
+#### Other Notable Changes
+
+- Work has begun on internal changes to support tree-shaking.  This is still in
+  its early stages but is a focus of current development.
 
 For more details on the changes in Ember CLI 2.15 and detailed upgrade
 instructions, please review the [Ember CLI  2.15.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.15.0).
 
 ### Upcoming Changes in Ember CLI 2.16
 
-#### Deprecations in Ember CLI 2.16
+#### Addon API for Custom Transforms
+
+Ember CLI 2.16.0 will support addon import transformations via
+`importTransforms`, an implementation of [RFC 108](https://github.com/kratiahuja/rfcs/blob/add-import-api/active/0000-add-custom-transform.md).
+This allows addons to register custom transformations to be run for vendor
+resources included via `app.import`.  This is an advanced feature for addon
+authors.  It is particularly useful for
+[fastboot](https://github.com/ember-fastboot/fastboot) to allow fastboot-aware
+addons to use a declarative API for conditionally importing code in Node.js or
+browser environments.
+
+Thanks to [@kratiahuja](https://github.com/kratiahuja) for proposing and implementing this feature.
 
 For more details on the changes in Ember CLI 2.16.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 2.16.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.16.0-beta.1).
