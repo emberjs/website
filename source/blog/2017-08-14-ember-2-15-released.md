@@ -61,7 +61,7 @@ included in Ember 2.15.
   router service which have improved timing and public-API arguments:
   `routeWillChange` and `routeDidChange`.
 
-Addons wish to use the router service API and support Ember releases prior to
+Addons that wish to use the router service API and support Ember releases prior to
 2.15 should consider the
 [ember-router-service-polyfill](https://github.com/rwjblue/ember-router-service-polyfill).
 
@@ -159,11 +159,11 @@ export default Ember.Component.extend({
 Would in 2.16 conventions be written as:
 
 ```js
-import { inject } from '@ember/service';
+import { inject as service } from '@ember/service';
 import Component from '@ember/component';
 
 export default Component.extend({
-  session: inject(),
+  session: service(),
   title: 'The Curious Case'
 });
 ```
@@ -314,26 +314,24 @@ Ember CLI will configure new apps to run tests in [headless Chrome](https://chro
 by default, instead of PhantomJS.
 
 PhantomJS has served the wider JavaScript community well for a long time, being
-a practical alternative to running browsers headless via tools like Xvbf.  It
-has however been a proxy for what we really want to test -- the browsers that
+a practical alternative to running browsers headless via tools like Xvbf. It
+has, however, been a proxy for what we really want to test–the browsers that
 users are running.
 
 Now that we can easily test in headless Chrome the motivation for using
-PhantomJS has diminished, and as a result is [no longer actively maintained](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
-
+PhantomJS has diminished, and as a result it is [no longer actively maintained](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md).
 
 #### app.import files within node_modules
 
 Ember CLI has an API for importing individual files into the built assets, by
-calling `app.import` within `ember-cli-build.js`.  This API now supports
+calling `app.import` within `ember-cli-build.js`. This API now supports
 importing files from within `node_modules`, making it easier to consume
 dependencies using only npm, rather than a more complicated mix of npm and
 bower.
 
-
 #### Node.js 8 Support
 
-Per the Ember CLI [Node.js version support policy](https://github.com/ember-cli/ember-cli/blob/cac87e69f8c636d8b64889a6e214e987428c8dc7/docs/node-support.md) Ember CLI officially supports Node 8 as the active Node.js version and will continue to do so throughout its upcoming [Active LTS window](https://github.com/nodejs/LTS/tree/d9cb7b3059a478a6e33649cfb0a202cf456b2e28#nodejs-long-term-support-working-group).
+Per the Ember CLI [Node.js version support policy](https://github.com/ember-cli/ember-cli/blob/cac87e69f8c636d8b64889a6e214e987428c8dc7/docs/node-support.md), Ember CLI officially supports Node 8 as the active Node.js version and will continue to do so throughout its upcoming [Active LTS window](https://github.com/nodejs/LTS/tree/d9cb7b3059a478a6e33649cfb0a202cf456b2e28#nodejs-long-term-support-working-group).
 
 As part of this support, Ember CLI will no longer report warnings when run under
 Node 8.
@@ -341,7 +339,6 @@ Node 8.
 #### Improved Error Messages
 
 The improved error messages promised in the 2.14.0 release [blog post](https://www.emberjs.com/blog/2017/07/06/ember-2-14-released.html#toc_upcoming-changes-in-ember-cli-2-15) is shipping with Ember CLI 2.15.0.  No more checking the console for template compilation errors 🎉!
-
 
 #### Other Notable Changes
 
@@ -360,7 +357,7 @@ Ember CLI 2.16.0 will support addon import transformations via
 This allows addons to register custom transformations to be run for vendor
 resources included via `app.import`.  This is an advanced feature for addon
 authors.  It is particularly useful for
-[fastboot](https://github.com/ember-fastboot/fastboot) to allow fastboot-aware
+[FastBoot](https://github.com/ember-fastboot/fastboot) to allow FastBoot-aware
 addons to use a declarative API for conditionally importing code in Node.js or
 browser environments.
 
