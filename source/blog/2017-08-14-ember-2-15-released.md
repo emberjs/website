@@ -174,18 +174,18 @@ opportunities for performance work such as tree-shaking. Adopting a new
 convention for importing the framework is a big task that impacts application
 code, documentation, generators/blueprints, and more.
 
-#### Updating your pre-2.16 application
+#### Updating your application
 
-Existing applications can move to adopt the new import style immediately. To
-update an application:
+To help us test the migration path, existing applications can move to adopt
+the new import style immediately. Using 2.16-beta of Ember is suggested, but
+not actually required. To update an application:
 
-* Upgrade ember-cli-babel to v6.7.2 or greater. This may require you to upgrade
+* Upgrade ember-cli-babel to v6.8.0 or greater. This may require you to upgrade
   ember-cli generally depending on your current version.
 * Install and run the
-[ember-modules-codemod](https://github.com/ember-cli/ember-modules-codemod).
-This
-command will migrate legacy code that imports the `'ember'` package to the
-new modules, updating files in place.
+  [ember-modules-codemod](https://github.com/ember-cli/ember-modules-codemod).
+  This command will migrate legacy code that imports the `'ember'` package to
+  the new modules, updating files in place.
 
 ```
 npm install ember-modules-codemod -g
@@ -195,25 +195,48 @@ ember-modules-codemod
 
 You're using the new import API!
 
-Some applications have used the
-[ember-cli-shims](https://github.com/ember-cli/ember-cli-shims) package which
-implemented an earlier design of Ember's module API. This package continues
-to work, however it should not be considered conventional. The
-[eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember)
-package provides a rule that supports removing the ember-cli-shims modules.
-To migrate these apps use the following steps:
+Many applications use the
+[ember-cli-shims](https://github.com/ember-cli/ember-cli-shims)
+package. This provides the module for `import Ember from 'ember'`. It also
+provides an earlier design of Ember's module API. This package continues
+to work, however in 2.16 it will no longer be a dependency for new
+Ember applications.
 
-* Install eslint-plugin-ember v4.2.0 or greater as a dev dependency for your
+The
+[eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember)
+package provides a linting rule that can remove usage of the legacy modules
+provided by ember-cli-shims.
+To run this follow these steps:
+
+* Install eslint-plugin-ember v4.3.0 or greater as a dev dependency for your
   application.
 * Follow the eslint-plugin-ember
   [usage instructions](https://github.com/ember-cli/eslint-plugin-ember#-usage)
   and update your `.eslintrc.js` appropriately.
-* Run `eslint --fix` to convert ember-cli-shims module usage to plain `'ember'`
+  For more detailed insturctions, see this excellent blog post:
+  [How To Use Ember’s New Module Import Syntax Today](https://medium.com/@Dhaulagiri/embers-javascript-modules-api-b4483782f329)
+* Run `./node_modules/.bin/eslint --fix` to convert ember-cli-shims module usage to plain `'ember'`
   imports.
-* Install the ember-modules-codemod and run it as described above.
+* Run the ember-modules-codemod as described above.
 
-By starting to convert applications in the 2.16-beta cycle you can provide
-valuable feedback about the process and scripts involved.
+By trying these migration steps on your applications, you can provide valuable
+feeback to improve the final process announced with 2.16.
+
+#### Preparing your Addon for 2.16
+
+To prepare your addons for Ember 2.16, we encourage you to take the following
+steps during the beta cycle:
+
+* Upgrade your ember-cli-babel dependency to v6.8.0. This will permit your addon
+  to use the new modules in the `addon/` and `test/` directories.
+* Ensure the `app/` and `test-support/` directories (both part of the dependent
+  app's build) contain only re-exports.
+
+This will ensure applications have a path forward in 2.16 to drop
+ember-cli-shims from their dependencies.
+
+If you have questions please join us in `#-ember-cli` on the Ember.js
+Community Slack.
 
 #### Deprecations in Ember.js 2.16-beta
 
