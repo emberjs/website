@@ -235,8 +235,8 @@ steps during the beta cycle:
 This will ensure applications have a path forward in 2.16 to drop
 ember-cli-shims from their dependencies.
 
-If you have questions please join us in `#-ember-cli` on the Ember.js
-Community Slack.
+If you have questions please join us in [`#-ember-cli` on the Ember.js
+Community Slack](https://embercommunity.slack.com/messages/C045BNHAP/).
 
 #### Deprecations in Ember.js 2.16-beta
 
