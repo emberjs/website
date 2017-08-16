@@ -213,7 +213,7 @@ To run this follow these steps:
 * Follow the eslint-plugin-ember
   [usage instructions](https://github.com/ember-cli/eslint-plugin-ember#-usage)
   and update your `.eslintrc.js` appropriately.
-  For more detailed insturctions, see this excellent blog post:
+  For more detailed instructions, see this excellent blog post:
   [How To Use Ember’s New Module Import Syntax Today](https://medium.com/@Dhaulagiri/embers-javascript-modules-api-b4483782f329)
 * Run `./node_modules/.bin/eslint --fix` to convert ember-cli-shims module usage to plain `'ember'`
   imports.
