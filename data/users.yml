@@ -946,6 +946,10 @@
   image: kaliber5.png
   alt: kaliber5
   use: "Building most client and own projects with Ember.js"
+- url: https://www.icicletech.com/
+  image: icicle-logo.png
+  alt: Icicle Technologies
+  use: "At Icicle, we adopted Ember.js for almost all our product front-ends. Ember.js makes great choices for our developers to be productive. We also recommend it to our clients as the first option to build truly ambitious products."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
