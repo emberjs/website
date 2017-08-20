@@ -15,7 +15,7 @@ process that began just after 1.0 was released.
 This feature allows you to log primitive values (strings, numbers, etc) from within your
 templates. Previously, the `{{log}}` helper only allowed usage of bound property lookup.
 
-```javascript
+```handlebars
 {{log "**LOOKEY HERE**"}}
 ```
 

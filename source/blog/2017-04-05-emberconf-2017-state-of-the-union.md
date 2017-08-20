@@ -46,7 +46,7 @@ Ember was still finding its sea legs, too. There was no Ember App Kit yet, let a
 </html>
 ```
 
-As antiquated as this feels today, this was more or less how most JavaScript apps were written. 
+As antiquated as this feels today, this was more or less how most JavaScript apps were written.
 
 Some parts of Ember are truly embarrassing to look back on. Because IE was so dominant, our rendering engine was optimized for its performance quirks. DOM APIs were extremely slow, so our templates were string-based: render everything as a string of HTML, and then insert it with a single `innerHTML` operation. (Modern rendering engines like React, Angular, and Glimmer all create their own DOM instead of asking the browser to parse HTML.)
 

@@ -267,15 +267,15 @@ Now, whenever you call `findRecord` or `findAll`, and the record is already cach
 
 For example, if you are building an events ticketing system, in which users can only reserve tickets for 20 minutes at a time, and want to ensure that in each route you have data that is no more than 20 minutes old you could write:
 
-```js 
+```js
 shouldReloadRecord: function(store, ticketSnapshot) {
   let timeDiff = moment().diff(ticketSnapshot.attr('lastAccessedAt')).minutes();
   if (timeDiff > 20) {
-    return true;    
+    return true;
   } else {
     return false;
   }
-}, 
+},
 ```
 
 This method would ensure that whenever you do `findRecord('ticket')` you will
@@ -284,10 +284,10 @@ version is more than 20 minutes old, `findRecord` will not resolve until you fet
 the latest version. By default this hook returns false, as most UIs should not block
 user interactions while waiting on data update.
 
-You can also customize whether you should try and do a background update. For example, if you do not want to fetch complex data over a mobile connection, or 
+You can also customize whether you should try and do a background update. For example, if you do not want to fetch complex data over a mobile connection, or
 if the network is down, you can implement `shouldBackgroundReloadRecord`
 
-```js 
+```js
 shouldBackgroundReloadRecord: function(store, snapshot) {
   if (window.navigator.connection === 'cellular' ||
   	window.navigator.connection === 'none') {

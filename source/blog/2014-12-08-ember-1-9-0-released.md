@@ -71,8 +71,7 @@ implementation then updated every Handlebars helper to the new API.
 Ember.js routes have long supported an `activate` and `deactivate` hook.
 For example:
 
-```js
-// app/routes/index.js
+```app/routes/index.js
 export default Ember.Route.extend({
   activate: function(){
     collectAnalytics();
@@ -82,8 +81,7 @@ export default Ember.Route.extend({
 
 Ember.js 1.9 introduces corresponding events for these hooks.
 
-```js
-// app/routes/index.js
+```app/routes/index.js
 export default Ember.Route.extend({
   collectAnalytics: function(){
     collectAnalytics();
@@ -153,9 +151,7 @@ is a step toward that goal.
 
 Two Ember helpers support context switching. The first is `{{each}}`:
 
-```handlebars
-{{! app/templates/people.hbs }}
-
+```app/templates/people.hbs
 {{! this context is the controller }}
 {{#each model}}
   {{name}} {{! this context is each person }}
@@ -164,9 +160,7 @@ Two Ember helpers support context switching. The first is `{{each}}`:
 
 The non-context switching version of this helper is now preferred:
 
-```handlebars
-{{! app/templates/people.hbs }}
-
+```app/templates/people.hbs
 {{! this context is the controller }}
 {{#each person in model}}
   {{person.name}} {{! this context is still the controller }}
@@ -175,9 +169,7 @@ The non-context switching version of this helper is now preferred:
 
 The second helper is `{{with}}`:
 
-```handlebars
-{{! app/templates/person.hbs }}
-
+```app/templates/person.hbs
 {{! this context is the controller }}
 {{#with model}}
   {{name}} {{! this context is the person }}
@@ -186,9 +178,7 @@ The second helper is `{{with}}`:
 
 The non-context switching version of this helper is now preferred:
 
-```handlebars
-{{! app/templates/person.hbs }}
-
+```app/templates/person.hbs
 {{! this context is the controller }}
 {{#with model as person}}
   {{person.name}} {{! this context is still the controller }}
@@ -266,8 +256,7 @@ Preserving template scope context results in easier to read templates.
 
 Any component in Ember 1.10 can use this feature. For example:
 
-```handlebars
-{{! app/templates/components/my-unordered-list.hbs }}
+```app/templates/components/my-unordered-list.hbs
 <ul>
   {{#each items as |item|}}
     <li>{{yield item}}</li>
@@ -275,8 +264,7 @@ Any component in Ember 1.10 can use this feature. For example:
 </ul>
 ```
 
-```handlebars
-{{! app/templates/index.hbs }}
+```app/templates/index.hbs
 {{#my-unordered-list items=cars as |car|}}
   Auto: {{car.name}}
 {{/my-unordered-list}}
