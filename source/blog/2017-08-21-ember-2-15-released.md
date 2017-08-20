@@ -32,7 +32,7 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 2.15
 
-Ember.js 2.15 is an incremental, backwards compatible release of Ember with
+Ember.js 2.15.0 is an incremental, backwards compatible release of Ember with
 bug fixes, performance improvements, and minor deprecations.
 
 #### Public Router Service: Phase 1
@@ -42,28 +42,15 @@ Initial support for the public router service API
 is included in this release. The effort on this feature has been split
 into two phases:
 
-**Phase 1**, completed in 2.15.
+**Phase 1** is completed in 2.15.0.
 
-* Implement a public service that exposes `currentRouteName`,
-  `currentURL`, `location`, and `rootURL` properties.
+* Implement a public service named `'router'`.
+* Expose the `currentRouteName`,
+  `currentURL`, `location`, and `rootURL` on the service.
 * Additionally expose
   `transitionTo` and `replaceWith` as methods on the service.
-* Add the method `urlFor` to the service for generating URLs based on a
+* Provide the method `urlFor` to the service for generating URLs based on a
   route name and models.
-
-**Phase 2**, pending implementation of the new public `RouteInfo` API. Not
-included in Ember 2.15.
-
-* Expand the service with the methods `isActive`, `recognize`, and
-  `recognizeAndLoad`.
-* Deprecate the `willTransition` and `didTransition` router hooks (not the
-  route actions of the same name). Replace them with events emitted by the
-  router service which have improved timing and public-API arguments:
-  `routeWillChange` and `routeDidChange`.
-
-Addons that wish to use the router service API and support Ember releases prior to
-2.15 should consider the
-[ember-router-service-polyfill](https://github.com/rwjblue/ember-router-service-polyfill).
 
 An example of this API would be to transition to another route from a
 component:
@@ -86,16 +73,31 @@ export default Ember.Component.extend({
 });
 ```
 
+**Phase 2** is pending implementation of the new public `RouteInfo` API. It is
+not included in Ember 2.15.0.
+
+* Expand the service with the methods `isActive`, `recognize`, and
+  `recognizeAndLoad`.
+* Deprecate the `willTransition` and `didTransition` router hooks (not the
+  route actions of the same name). Replace them with events emitted by the
+  router service which have improved timing and public API arguments:
+  `routeWillChange` and `routeDidChange`.
+
+Addons that wish to use the router service API and support Ember releases prior to
+2.15.0 should consider the
+[ember-router-service-polyfill](https://github.com/rwjblue/ember-router-service-polyfill).
+
+
 #### `{{mount}}` helper `model` argument
 
-Ember 2.15 implements
+Ember 2.15.0 implements
 [RFC #225](https://github.com/status200/rfcs/blob/ember-engines-mount-params/text/0000-ember-engines-mount-params.md) with some minor tweaks. The `{{mount}}`
 helper, used to invoke an Ember engine, now accepts the named argument of
-`model` to provide the model of the engine's application controller.
+`model` for an engine's application controller.
 
 For example, in an application you might pass some values from a template:
 
-```hbs
+```handlebars
 <div>
  <h1>Application template!</h1>
  {{mount 'admin' model=(hash
@@ -107,8 +109,7 @@ For example, in an application you might pass some values from a template:
 
 And in an engine access those values on the `model` property:
 
-```hbs
-{{! admin/app/templates/application.hbs }}
+```admin/app/templates/application.hbs
 <h2>Admin area: {{model.title}}</h2>
 <div>
   Please sign in: {{model.signInButton}}
@@ -119,7 +120,7 @@ And in an engine access those values on the `model` property:
 
 Other changes include:
 
-* Ember 2.15 blueprints will no longer generate names for initializers and
+* Ember 2.15.0 blueprints will no longer generate names for initializers and
   instance initializers.
 * The deprecated API `_lookupFactory` has been removed in this release. See
   the [deprecation
@@ -131,21 +132,21 @@ Other changes include:
   assertion stripping in production builds, and a more complete Glimmer-VM
   implementation of the `(component` helper.
 
-No new deprecations are included in Ember 2.15
+No new deprecations are included in Ember 2.15.0
 
-For more details on changes in Ember.js 2.15, please review the
+For more details on changes in Ember.js 2.15.0, please review the
 [Ember.js 2.15.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.15.0).
 
 ### Upcoming Changes in Ember.js 2.16-beta
 
 Ember.js 2.16-beta continues to improve the framework with minor bug fixes.
-Additionally there is a major change in usage coming in 2.16:
+Additionally there is a major change in conventional usage coming in 2.16.
 
 #### Ember.js Modules API
 
 In Ember.js 2.16 the recommended way to access framework code in Ember
 applications will be via the JavaScript modules API described in
-[RFC #176](https://github.com/emberjs/rfcs/blob/master/text/0176-javascript-module-api.md). For example this basic component definition in 2.15:
+[RFC #176](https://github.com/emberjs/rfcs/blob/master/text/0176-javascript-module-api.md). For example this basic component definition in 2.15.0:
 
 ```js
 import Ember from 'ember';
@@ -187,7 +188,7 @@ not actually required. To update an application:
   This command will migrate legacy code that imports the `'ember'` package to
   the new modules, updating files in place.
 
-```
+```sh
 npm install ember-modules-codemod -g
 cd my-ember-app
 ember-modules-codemod
@@ -259,23 +260,17 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.15
 
-#### Deprecations in Ember Data 2.15
+Ember Data 2.14 contained a number of performance improvements summarized
+in the [2.14 release
+post](https://emberjs.com/blog/2017/07/06/ember-2-14-released.html#toc_changes-in-ember-data-2-14).
+Most of the development effort in the beta cycle has been to address regressions
+introduced by those changes. 2.15.0 contains no new features or deprecations,
+but does include the same bugfixes as can be found in 2.14.10.
 
-Two new deprecations are introduces in Ember Data 2.15:
-
-* TODO
-* TODO
-
-For more details on changes in Ember Data 2.15, please review the
+For details on changes in Ember Data 2.15.0, please review the
 [Ember Data 2.15.0 release page](https://github.com/emberjs/data/releases/tag/v2.15.0).
 
-
-### Upcoming changes in Ember Data 2.16
-
-
-#### Deprecations in Ember Data 2.16
-
-For more details on the upcoming changes in Ember Data 2.16, please review the
+For details on the upcoming changes in Ember Data 2.16, please review the
 [Ember Data 2.16.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.16.0-beta.1).
 
 ---
@@ -338,7 +333,7 @@ by default, instead of PhantomJS.
 
 PhantomJS has served the wider JavaScript community well for a long time, being
 a practical alternative to running browsers headless via tools like Xvbf. It
-has, however, been a proxy for what we really want to test–the browsers that
+has, however, been a proxy for what we really want to test– the browsers that
 users are running.
 
 Now that we can easily test in headless Chrome the motivation for using
@@ -365,8 +360,8 @@ The improved error messages promised in the 2.14.0 release [blog post](https://w
 
 #### Other Notable Changes
 
-- Work has begun on internal changes to support tree-shaking.  This is still in
-  its early stages but is a focus of current development.
+Work has begun on internal changes to support tree-shaking.  This is still in
+its early stages but is a focus of current development.
 
 For more details on the changes in Ember CLI 2.15 and detailed upgrade
 instructions, please review the [Ember CLI  2.15.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.15.0).
