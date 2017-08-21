@@ -141,8 +141,9 @@ The `{{#linkTo}}` Handlebars helper now has a `disabledWhen` option that
 can be bound to conditionally disable a link:
 
 ```handlebars
-{{#linkTo 'upgradeAccount' disabledWhen=isPremiumUser}}Upgrade
-Account{{/linkTo}}
+{{#linkTo 'upgradeAccount' disabledWhen=isPremiumUser}}
+  Upgrade Account
+{{/linkTo}}
 ```
 
 Thanks to Trek Glowacki for this improvement.

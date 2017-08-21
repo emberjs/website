@@ -53,8 +53,7 @@ However, there is still another potential exploit vector: bound attributes.
 Let's say you display a profile for your users and allow them to supply
 an arbitrary homepage that your app links to:
 
-```handlebars
-{{!-- templates/user.hbs --}}
+```app/templates/user.hbs
 First Name: {{firstName}}
 Homepage: <a {{bind-attr href=homepageUrl}}>{{homepageUrl}}</a>
 ```

@@ -182,7 +182,7 @@ vendor/
 lib/
   ember-histogram/ // incubator for packages
     skylight/
-    bower.json 
+    bower.json
 modules/           // non-MVC stuff
   underscore.js
 ```

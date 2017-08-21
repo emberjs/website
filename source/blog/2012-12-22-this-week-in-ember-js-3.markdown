@@ -52,22 +52,24 @@ Ember.Handlebars just got a little bit smarter. `Ember.Handlebars.registerBoundH
 provides a way to easily create your own bound custom helpers.
 
 #### Example:
+
 ```javascript
-  Ember.Handlebars.registerBoundHelper('capitalize', function(value) {
-    return value.toUpperCase();
-  });
+Ember.Handlebars.registerBoundHelper('capitalize', function(value) {
+  return value.toUpperCase();
+});
 ```
+
 which can be used in your templates as follows:
 
 ```handlebars
-  {{capitalize name}}
+{{capitalize name}}
 ```
 
 ### Ember.Object.create behavior change
 
-The new behavior will call computed property setters instead of overwriting them.  
+The new behavior will call computed property setters instead of overwriting them.
 We suggest using `Ember.Object.extend()` to create classes and use `create` to initialize
-properties on your instance. The old behavior is available via `createWithMixins`.  
+properties on your instance. The old behavior is available via `createWithMixins`.
 This change should increase object creation performance by 2x.
 
 ### Other changes of note
@@ -85,6 +87,6 @@ The very first Ember Camp in SF is happening on the 15th February 2013.
 Looking to learn Ember? There's also an [Introduction to Ember](http://www.embertraining.com/)
 event in the week leading up to Ember Camp.
 
-Enjoy your holiday,  
-Bradley Priest  
+Enjoy your holiday,
+Bradley Priest
 [@bradleypriest](https://twitter.com/bradleypriest)

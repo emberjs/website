@@ -91,13 +91,11 @@ This helper is introduced to make the new contextual components feature
 more convenient, and it will often be used with the `{{yield` helper. For
 example:
 
-```handlebars
-{{! app/templates/components/nice-person.hbs }}
+```app/templates/components/nice-person.hbs
 {{yield (hash name='Bob')}}
 ```
 
-```handlebars
-{{! app/templates/index.hbs }}
+```app/templates/index.hbs
 {{#nice-person as |person|}}
   Hello, my name is {{person.name}}
 {{/nice-person}}
@@ -120,8 +118,7 @@ privately share data, but be invoked in a flexible manner. For example,
 this `{{alert-box}}` component yields a contextual component composed
 of the `alert-box-button` component and the attribute `onclick`:
 
-```handlebars
-{{! app/templates/components/alert-box.hbs }}
+```app/templates/components/alert-box.hbs
 <div class="alert-box">
   {{yield (hash
     close-button=(component 'alert-box-button' onclick=(action 'close'))
@@ -129,8 +126,7 @@ of the `alert-box-button` component and the attribute `onclick`:
 </div>
 ```
 
-```handlebars
-{{! app/templates/index.hbs }}
+```app/templates/index.hbs
 {{#alert-box as |box|}}
   Danger, Will Robinson!
   <div style="float:right">

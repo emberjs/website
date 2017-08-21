@@ -49,8 +49,7 @@ relationships and belongs-to relationships:
 
 Consider the following `post` model:
 
-```js
-// app/models/post.js
+```app/models/post.js
 import Model from 'ember-data/model';
 import { belongsTo, hasMany } from 'ember-data/relationships';
 

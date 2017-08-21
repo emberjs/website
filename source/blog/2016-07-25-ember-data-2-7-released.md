@@ -77,8 +77,7 @@ Data 2.7.
 
 Allow `null`/`undefined` values for boolean attributes via `attr('boolean', { allowNull: true })`
 
-```js
-// app/models/user.js
+```app/models/user.js
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -148,8 +147,7 @@ request using `jQuery.ajax` and attaches success and failure handlers.
 Say your API handles creation of resources via PUT, this can now be
 customized as follows:
 
-``` js
-// adapters/application.js
+```adapters/application.js
 import DS from 'ember-data';
 
 export default DS.RESTAdapter.extend({

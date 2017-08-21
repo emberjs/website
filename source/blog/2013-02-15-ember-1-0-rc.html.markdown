@@ -36,7 +36,7 @@ to do the same thing.
 If you want every item in a `{{#each}}` to be wrapped in an `ObjectController`,
 you can do so easily:
 
-```js
+```handlebars
 {{#each posts itemController="post"}}
   {{!-- `this` in here is each post wrapped in an App.PostController --}}
 {{/each}}
