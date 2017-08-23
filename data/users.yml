@@ -950,6 +950,10 @@
   image: icicle-logo.png
   alt: Icicle Technologies
   use: "At Icicle, we adopted Ember.js for almost all our product front-ends. Ember.js makes great choices for our developers to be productive. We also recommend it to our clients as the first option to build truly ambitious products."
+- url: https://www.salonized.com/
+  image: salonized-logo.png
+  alt: Salonized
+  use: "At Salonized we use Ember.js for the frontend of our application."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
