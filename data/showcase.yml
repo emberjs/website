@@ -6,7 +6,7 @@
     src: showcase-super-rentals.png
     alt: Super Rentals tutorial application
   repository: https://github.com/ember-learn/super-rentals
-  demo: https://guides.emberjs.com/_CURRENT_VERSION_/tutorial/ember-cli/
+  demo: https://ember-learn-super-rentals.herokuapp.com/rentals
   description: |
     If you've gone through our <a href="https://guides.emberjs.com/_CURRENT_VERSION_/tutorial/ember-cli/">Tutorial</a> you will already be familiar with this application! <strong>Super Rentals</strong> is a good starter project to get acclimated to the Ember.js way of doing things. In this repository you'll be able to see:
   features:
