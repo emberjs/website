@@ -73,6 +73,9 @@ export default Ember.Component.extend({
 });
 ```
 
+For more details on these APIs see the [RouterService API
+documentation](https://www.emberjs.com/api/ember/2.15/classes/RouterService).
+
 **Phase 2** is pending implementation of the new public `RouteInfo` API. It is
 not included in Ember 2.15.0.
 
@@ -265,13 +268,10 @@ in the [2.14 release
 post](https://emberjs.com/blog/2017/07/06/ember-2-14-released.html#toc_changes-in-ember-data-2-14).
 Most of the development effort in the beta cycle has been to address regressions
 introduced by those changes. 2.15.0 contains no new features or deprecations,
-but does include the same bugfixes as can be found in 2.14.10.
+but does include the same bugfixes as can be found in 2.14.11.
 
 For details on changes in Ember Data 2.15.0, please review the
 [Ember Data 2.15.0 release page](https://github.com/emberjs/data/releases/tag/v2.15.0).
-
-For details on the upcoming changes in Ember Data 2.16, please review the
-[Ember Data 2.16.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.16.0-beta.1).
 
 ---
 
