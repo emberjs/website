@@ -954,6 +954,11 @@
   image: salonized-logo.png
   alt: Salonized
   use: "At Salonized we use Ember.js for the frontend of our application."
+- url: https://www.lariat.co
+  image: lariat.png
+  alt: Lariat 
+  use: "We use Ember.js for all UI development at Lariat."
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must email listing@emberjs.com
