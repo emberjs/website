@@ -190,3 +190,8 @@
   image: tlee.png
   teams:
     - learning
+- name: Jen Weber
+  github: https://github.com/jenweber
+  image: jweber.jpg
+  teams:
+    - learning
