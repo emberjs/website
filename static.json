@@ -4,7 +4,10 @@
   "proxies": {
     "/api/": {
       "origin": "${EMBER_API_DOCS_URL}"
-    }
+    },
+	"/statusboard": {
+	  "origin": "https://ember-learn.github.io/statusboard/"
+	}
   },
   "error_page": "404.html",
   "headers": {
