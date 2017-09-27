@@ -60,11 +60,8 @@ locations:
     lat: 41.896917
     lng: -87.643547
     organizers:
-    - organizer: Trek Glowacki
-      profileImage: http://photos2.meetupstatic.com/photos/member/b/2/1/8/thumb_192885592.jpeg
-    - organizer: Erik Bryn
-    - organizer: Sean Massa
-      profileImage: http://photos3.meetupstatic.com/photos/member/6/f/0/2/thumb_9568418.jpeg
+    - organizer: Melanie Sumner
+      profileImage: https://secure.meetupstatic.com/photos/member/4/8/6/f/highres_264978543.jpeg
   - location: Boston, MA
     url: http://www.meetup.com/Boston-Ember-js/
     image: 02boston.png
