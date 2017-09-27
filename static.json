@@ -33,6 +33,9 @@
     },
     "/internal": {
       "url": "/api/"
+    },
+    "/dashboard": {
+      "url": "/statusboard"
     }
   }
 }
