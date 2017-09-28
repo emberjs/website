@@ -32,35 +32,7 @@ The force=true flag will overwrite all existing organizer data
 
 #### API Documentation
 
-You can preview the API documentation by generating the docs from the source code. To begin, ensure
-that you have the necessary dependencies:
-
-- Node
-- npm
-- Ruby
-- bundler
-
-Next, clone the three repositories: [`ember.js`](https://github.com/emberjs/ember.js),
-[`data`](https://github.com/emberjs/data), and this repository, `website`. The repositories need
-to be placed in the same directory:
-
-    emberjs/
-        website/
-        ember.js/
-        ember-data/
-
-Note that the name of the data project needs to be `ember-data`, not `data`.
-
-Next, do a `git checkout` of the particular commit or tag you wish to generate
-documentation for. For example, to generate documentation for v2.13 you would
-run `git checkout v2.13.0` in both the `ember.js` and `ember-data` directories.
-
-Last, navigate into the root directory of this repository and execute `bundle exec rake generate_docs`. This
-will build the documentation for the `ember.js` and `data` repositories.
-
-You can launch the website via `bundle exec middleman` to preview the generated docs.
-To deploy, open a PR with the changes resulting from `generate_docs` and the
-change will be auto-deployed upon merge.
+API documentation has been moved to a separate repo, please see https://github.com/ember-learn/ember-api-docs/
 
 ### Requirements
 
