@@ -76,12 +76,14 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.16
 
+Ember Data 2.16 is a bugfix release. It contains no new features but
+it does have several bugfixes for [build warnings](https://github.com/emberjs/data/pull/5196),
+[header parsing](https://github.com/emberjs/data/pull/5029) and
+[outdated dependecies](https://github.com/emberjs/data/pull/5044).
+
 #### Deprecations in Ember Data 2.16
 
-Two new deprecations are introduces in Ember Data 2.16:
-
-* TODO
-* TODO
+There are no new deprecations introduced in Ember Data 2.16.
 
 For more details on changes in Ember Data 2.16, please review the
 [Ember Data 2.16.0 release page](https://github.com/emberjs/data/releases/tag/v2.16.0).
@@ -89,8 +91,15 @@ For more details on changes in Ember Data 2.16, please review the
 
 ### Upcoming changes in Ember Data 2.17
 
+Due to a late start in the Ember Data 2.16 beta cycle the Ember Data
+2.17.0-beta.1 release is currently the same code as 2.16.0. The beta
+releases will continue to receive beta bugfixes and it is expected to
+diverge from Ember Data 2.16.0 by the time 2.17.0 is released in 6
+weeks.
 
 #### Deprecations in Ember Data 2.17
+
+There are no planned deprecations introduced in Ember Data 2.17.
 
 For more details on the upcoming changes in Ember Data 2.17, please review the
 [Ember Data 2.17.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.17.0-beta.1).
