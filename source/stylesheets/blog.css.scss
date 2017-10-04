@@ -121,16 +121,23 @@ body.blog.responsive {
 }
 
 article.blog-post {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;  
   h1 {
     background-position: left 9px;
     text-transform: none;
     font-size: 34px;
     min-height: 34px;
     padding-left: 25px;
+    color: #E04E39;
   }
 
   h2 {
-    margin: 35px 0;
+    text-transform: capitalize;
+    &.anchorable-toc {
+      margin-top: 1.8em !important;
+      font-size: 1.66667em; //to match elsewhere
+
+    }
   }
 
   h3.blog-post-author,
@@ -163,10 +170,16 @@ article.blog-post {
   }
 
   .chapter {
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+
     h1 {
       padding-bottom: 0.5em;
     }
-
+    h2 {
+      text-transform: capitalize;
+    }
     ul,
     ol {
       margin-left: $list-indent;
