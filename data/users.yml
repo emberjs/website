@@ -958,6 +958,10 @@
   image: lariat.png
   alt: Lariat 
   use: "We use Ember.js for all UI development at Lariat."
+- url: https://crowdscriber.com/
+  image: crowdscriber.png
+  alt: Crowdscriber
+  use: "Crowdscriber uses Ember.js for its primary front-end application."
 
 
 # ---- PLEASE READ ----
