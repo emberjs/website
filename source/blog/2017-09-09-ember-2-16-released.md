@@ -133,9 +133,9 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.15.0...v
 
 ### Changes in Ember CLI 2.16
 
-#### Deprecations in Ember Data 2.16
+#### Deprecations in Ember CLI 2.16
 
-Two new deprecations are introduces in Ember Data 2.16:
+Two new deprecations are introduces in Ember CLI 2.16:
 
 * TODO
 * TODO
