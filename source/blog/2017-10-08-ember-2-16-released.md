@@ -124,7 +124,7 @@ To run this follow these steps:
 * Run `./node_modules/.bin/eslint --fix` to convert ember-cli-shims module usage to plain `'ember'`
   imports.
 * Run the ember-modules-codemod as described above. This will convert the
-  `'ember'` imports to their modern module API equivilents.
+  `'ember'` imports to their modern module API equivalents.
 
 Your application not no longer contains any usage of the legacy modules.
 
@@ -142,7 +142,7 @@ steps as an addon maintainer (or contributor!):
   Ember API support.
 
 Taking these steps will ensure addon users have a smooth path from previous
-versions of Emner to 2.16 and beyond.
+versions of Ember to 2.16 and beyond.
 
 If you have questions please join us in [`#-ember-cli` on the Ember.js
 Community Slack](https://embercommunity.slack.com/messages/C045BNHAP/).
@@ -162,7 +162,7 @@ For more details on changes in Ember.js 2.16, please review the
 
 ### Upcoming Changes in Ember.js 2.17
 
-Ember.js 2.17 will contain no new features. Instead it will primarially
+Ember.js 2.17 will contain no new features. Instead it will primarily
 include bug fixes, performance, and stability work.
 
 For more details on the upcoming changes in Ember.js 2.17, please review the
@@ -177,9 +177,9 @@ Ember Data is the official data persistence library for Ember.js applications.
 ### Changes in Ember Data 2.16
 
 Ember Data 2.16 is a bugfix release. It contains no new features but
-it does have several bugfixes for [build warnings](https://github.com/emberjs/data/pull/5196),
+it does have several bug fixes for [build warnings](https://github.com/emberjs/data/pull/5196),
 [header parsing](https://github.com/emberjs/data/pull/5029) and
-[outdated dependecies](https://github.com/emberjs/data/pull/5044).
+[outdated dependencies](https://github.com/emberjs/data/pull/5044).
 
 There are no new deprecations introduced in Ember Data 2.16.
 
@@ -190,7 +190,7 @@ For more details on changes in Ember Data 2.16, please review the
 
 Due to a late start in the Ember Data 2.16 beta cycle the Ember Data
 2.17.0-beta.1 release is currently the same code as 2.16.0. The beta
-releases will continue to receive beta bugfixes and it is expected to
+releases will continue to receive beta bug fixes and it is expected to
 diverge from Ember Data 2.16.0 by the time 2.17.0 is released in 6
 weeks.
 
@@ -230,7 +230,7 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.15.0...v
 
 ### Changes in Ember CLI 2.16
 
-Ember CLI 2.16 is primarially contains bug fixes and performance improvements.
+Ember CLI 2.16 is primarily contains bug fixes and performance improvements.
 It contains no major new functionality.
 
 Other changes include:
@@ -243,8 +243,8 @@ Other changes include:
   for more details.
 * `ember install` now supports scoped npm packages, for example `ember install @cardstack/git`.
   See [ember-cli/ember-cli#7109](https://github.com/ember-cli/ember-cli/pull/7109) for more details.
-* Several internal refactorings were undertaken that begin support for the
-  unmerged [Ember CLI strategies
+* Several internal refactoring efforts were undertaken that begin support for the
+  un-merged [Ember CLI strategies
   RFC](https://github.com/ember-cli/rfcs/pull/110).
 
 No new deprecations are added in Ember CLI 2.16.
