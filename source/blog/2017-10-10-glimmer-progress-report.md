@@ -18,10 +18,11 @@ There were two primary motivations for releasing Glimmer.js as a standalone proj
    next-generation component library might look like, without creating churn for
    Ember users.
 
-Because Ember's rendering layer is built on top of the shared Glimmer VM, our
-intent has always been that successful experiments make their way upstream to
-Ember users. And, once stabilized, we'd like Glimmer.js to be the
-default component API for new Ember apps—but it's still too premature to set any timelines for that today.
+Because Ember's rendering layer is built on top of the shared Glimmer VM,
+successful experiments have a clear path to make their way upstream to Ember
+users. And, once stabilized, we'd like Glimmer.js to be the default component
+API for new Ember apps—but it's still too premature to set any timelines for
+that today.
 
 ## Unlocking Experimentation
 
