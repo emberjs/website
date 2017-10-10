@@ -181,7 +181,7 @@ components, i.e., templates that don't have a single root element.
 While we've supported this in Ember for a long time, we were nervous about the
 potential for confusion if you typed something like `<my-button />` in a
 template, which looks like a Web Component, and it didn't always correlate to a single
-lement in the DOM.
+element in the DOM.
 
 Today in Glimmer.js, it is a compile-time error if your component template
 doesn't have a single root element. With `<Capital>` components, we will remove
