@@ -666,4 +666,8 @@ repositories.
 [glimmer.js]: https://github.com/glimmerjs/glimmer.js
 
 Thank you so much for reading this far, and I can't wait to get all of this cool
-stuff into your hands!
+stuff into your hands. We are looking forward to seeing what the community can
+build with these powerful primitives. We'll post again once we've released the
+next version of Glimmer.js with these features integrated, so stay tuned to the
+blog. And if you've got any questions or want to help out, leave a comment below
+or come see us on GitHub!
