@@ -84,6 +84,7 @@
 - url: http://www.bluetubeinteractive.com
   image: bluetube.png
   alt: Bluetube
+  inactive: true
 - url: http://www.mashape.com
   image: mashape.png
   alt: Mashape
@@ -171,6 +172,7 @@
 - url: http://unspace.ca
   image: unspace.png
   alt: Unspace
+  inactive: true
 - url: https://mist.io
   image: mistio.png
   alt: Mist
@@ -241,9 +243,11 @@
 - url: https://owner.urbanspoon.com
   image: urbanspoon.png
   alt: Urbanspoon
+  inactive: true
 - url: http://caliper.io
   image: caliper.png
   alt: Caliper
+  inactive: true
 - url: http://basho.com
   image: basho.png
   alt: Basho
@@ -437,6 +441,7 @@
 - url: http://app.getwashio.com/
   image: washio.png
   alt: Washio
+  inactive: true
 - url: http://www.jebbit.com
   image: jebbit.png
   alt: Jebbit
