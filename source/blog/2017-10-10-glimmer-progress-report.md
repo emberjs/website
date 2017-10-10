@@ -308,7 +308,7 @@ the parent component.
 
 Occasionally, though, it can be helpful to break out of the current DOM tree and
 render a component's content somewhere else. While there are many different use
-cases, the most common one I've seen is for rendering modals dialogs.
+cases, the most common one I've seen is for rendering modal dialogs.
 
 This is easy to do now with the built-in `{{in-element}}` helper. This helper
 will render the block you pass to it inside a foreign element. (In React-land,
