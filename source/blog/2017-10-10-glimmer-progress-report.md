@@ -4,9 +4,9 @@ author: Tom Dale
 tags: Recent Posts
 ---
 
-At EmberConf in March of this year, [we announced Glimmer.js][ann-glimmer-js], a library for
-building modern UI components for the web. I wanted to give an update on what
-we've been working on since then.
+At EmberConf in March of this year, [we announced Glimmer.js][ann-glimmer-js], a
+library for building modern UI components optimized for the mobile web. I wanted
+to give an update on what we've been working on since then.
 
 [ann-glimmer-js]: https://emberjs.com/blog/2017/04/05/emberconf-2017-state-of-the-union.html#toc_introducing-glimmer-js 
 
@@ -59,14 +59,13 @@ LinkedIn using Glimmer.js to build a production application.
 > way to extract is first to actually do.
 
 If you notice that a lot of the items I describe below are performance-related,
-that is at least partly due to our product's near-maniacal focus on mobile
-load times. We are extremely excited about some of the recent breakthroughs
-we've made and have enjoyed proving out some of the more esoteric ideas in a
-real app.
+that is at least partly due to our product's near-maniacal focus on mobile load
+times. We are extremely excited about some of the recent breakthroughs we've
+made and have enjoyed proving out some of our more esoteric ideas in a real app.
 
 ## What's New in Glimmer
 
-### `<my-component />` → `<Component />`
+### Adopting `<Capital />` Components
 
 One of the most eagerly-awaited features of Glimmer.js is "angle bracket
 components," or components that you invoke `<like-this />` instead of
@@ -74,14 +73,14 @@ components," or components that you invoke `<like-this />` instead of
 disambiguates components from the dynamic data that flows through them.
 It also unifies the attribute syntax between HTML and components:
 
-```hbs
+```handlebars
 {{! Ember }}
 {{my-button title=title label=(t "Do Something")}}
 
 {{! HTML }}
 <button title={{title}} label={{t "Do Something"}}></button>
 
-{{! Glimmer.js }}
+{{! Glimmer.js (today) }}
 <my-button @title={{title}} @label={{t "Do Something"}} />
 ```
 
@@ -139,8 +138,8 @@ with a capital letter*.
 
 Our above example turns into this:
 
-```hbs
-{{! new Glimmer }}
+```handlebars
+{{! new Glimmer.js }}
 <Button @title={{title}} @label={{t "Do Something"}} />
 ```
 
@@ -154,14 +153,15 @@ or not, whereas the original Glimmer.js syntax was ambiguous.
 Second, for better or worse, many people consider React to be an "industry
 standard" and aligning component naming makes Glimmer templates feel that much
 more familiar. (Although do note that we are just adopting the naming
-convention, not JSX itself! While component invocation will look similar, JSX
-will not work in a Glimmer template.)
+convention, not JSX itself!)
 
-This change also helps us solve the problem of "fragment" or "tagless" components, i.e.,
-templates that don't have a single root element. We were always nervous about
-the potential for confusion if you typed something like `<my-button />` in a
-template, which looks like a custom element, and it sometimes had a root element
-in the DOM and sometimes did not.
+This change also helps us solve the problem of "fragment" or "tagless"
+components, i.e., templates that don't have a single root element.
+
+While we've supported this in Ember for a long time, we were nervous about the
+potential for confusion if you typed something like `<my-button />` in a
+template, which looks like a Web Component, and it didn't always correlate to a single
+lement in the DOM.
 
 Today in Glimmer.js, it is a compile-time error if your component template
 doesn't have a single root element. With `<Capital>` components, we will remove
@@ -255,7 +255,7 @@ With Glimmer.js, you explicitly disambiguate between properties and attributes v
 the presence of the `@` sigil. In symmetry with HTML, attributes do not have `@`,
 while component arguments (`props` in React parlance) do:
 
-```hbs
+```handlebars
 <HiResImage @src="corgi.jpg" @hiResSrc="corgi@2x.jpg" width="100%" />
 ```
 
@@ -284,7 +284,7 @@ export default class HiResImage extends Component {
 }
 ```
 
-```hbs
+```handlebars
 {{#if hiRes}}
   <img src={{@hiResSrc}} ...attributes>
 {{else}}
@@ -327,7 +327,7 @@ export default class Modal extends Component {
 }
 ```
 
-```hbs
+```handlebars
 {{#in-element modalElement}}
   <h1>Modal</h1>
   {{yield}}
@@ -337,7 +337,7 @@ export default class Modal extends Component {
 Now in my app, I can invoke my `Modal` component as deep into the hierarchy as I
 want, and the content will be rendered into the root modal element:
 
-```hbs
+```handlebars
 {{#if hasErrors}}
   <Modal>
     <p>You dun goofed:</p>
@@ -536,7 +536,7 @@ comment annotations for where dynamic sections start and end.
 
 For example, given this template:
 
-```hbs
+```handlebars
 <span class="user__name">{{@user.name}}</span>
 ```
 
