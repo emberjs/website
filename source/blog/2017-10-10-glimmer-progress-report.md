@@ -59,7 +59,7 @@ LinkedIn using Glimmer.js to build a production application.
 > way to extract is first to actually do.
 
 If you notice that a lot of the items I describe below are performance-related,
-that is at least partly due to our product's near-maniacal focus on mobile load
+that is at least partly due to our product's all-consuming focus on mobile load
 times. We are extremely excited about some of the recent breakthroughs we've
 made and have enjoyed proving out some of our more esoteric ideas in a real app.
 
