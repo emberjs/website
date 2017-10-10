@@ -1,5 +1,5 @@
 ---
-title: "Glimmer.js Progress Report: October 2017"
+title: "Glimmer.js Progress Report"
 author: Tom Dale
 tags: Recent Posts
 ---
@@ -65,6 +65,20 @@ made and have enjoyed proving out some of our more esoteric ideas in a real app.
 
 ## What's New in Glimmer
 
+We've been really, really busy and I've got a ton of updates to share with you. This blog post
+got pretty long, so here's the short version:
+
+<strong>
+
+1. We're adopting `<Capital />`-style component syntax.
+2. We're adding support for customizing a component's DOM attributes with `...attributes`.
+3. You'll be able to teleport your component's elements anywhere in the DOM with the built-in `{{in-element}}` helper.
+4. We've now got what we think might just be the fastest component library in the running, with:
+   1. Compiled binary bytecode
+   2. Incremental rendering
+   3. SSR with incremental rehydration
+</strong>
+
 ### Adopting `<Capital />` Components
 
 One of the most eagerly-awaited features of Glimmer.js is "angle bracket
@@ -103,7 +117,7 @@ The compromise was that custom elements must have a dash, keeping single-word
 elements reserved for future versions of the HTML standard.
 
 Of course, Ember components don't have the same problem, because they use
-`{{`/`}}` as delimeters instead of `<`/`>`. Nonetheless, we preemptively adopted
+`{{` and `}}` as delimeters instead of `<` and `>`. Nonetheless, we preemptively adopted
 this constraint because we assumed Web Components were going to take the world
 by storm and at some point we would need to migrate Ember components to Web
 Components.
@@ -120,7 +134,7 @@ feels. I hate the cognitive overhead of having to invent silly names like
 Unfortunately, this puts us in a bit of a pickle:
 
 1. We want to drop the annoying `dasherized-component` requirement.
-2. We want to adopt `<angle-brackets>` syntax for components, but now we have
+2. We want to adopt `<angle>` brackets syntax for components, but now we have
    the same naming collision hazard as Web Components.
 3. People want to use Web Components in their apps, so how do we know if
    `<my-button>` means "create a custom element" or "create a Glimmer
@@ -150,7 +164,13 @@ template, and we can improve syntax highlighting in editor plugins to make it
 stand out even more. It also makes it clear when you're invoking a Web Component
 or not, whereas the original Glimmer.js syntax was ambiguous.
 
-Second, for better or worse, many people consider React to be an "industry
+Second, I hate the friction of having to invent a two-word name. The app I work
+on has at least three different conventions people use to prefix or suffix
+components. It feels bad and makes templates look more noisy than they should.
+When we switched from dasherized to capitals, it felt viscerally like an
+improvement.
+
+Third, for better or worse, many people consider React to be an "industry
 standard" and aligning component naming makes Glimmer templates feel that much
 more familiar. (Although do note that we are just adopting the naming
 convention, not JSX itself!)
@@ -204,7 +224,7 @@ install from npm and use in their apps. It wraps an `<img>` element and renders
 a low-resolution image by default, swapping in a high-resolution image when
 clicked.
 
-```jsx
+```HiResImage.jsx
 import { Component } from 'react';
 
 export default class HiResImage extends Component {
@@ -220,14 +240,14 @@ export default class HiResImage extends Component {
 
 Now we can use the component like this:
 
-```jsx
+```HiResImage.jsx
 <HiResImage src="corgi.jpg" hiResSrc="corgi@2x.jpg" />
 ```
 
 But what happens if I want to set the width of the underlying `img` element via
 its `width` attribute?
 
-```jsx
+```HiResImage.jsx
 <HiResImage width="100%" src="corgi.jpg" hiResSrc="corgi@2x.jpg" />
 ```
 
@@ -255,7 +275,7 @@ With Glimmer.js, you explicitly disambiguate between properties and attributes v
 the presence of the `@` sigil. In symmetry with HTML, attributes do not have `@`,
 while component arguments (`props` in React parlance) do:
 
-```handlebars
+```template.hbs
 <HiResImage @src="corgi.jpg" @hiResSrc="corgi@2x.jpg" width="100%" />
 ```
 
@@ -272,7 +292,7 @@ attributes from the outside onto an element).
 
 In our case, the Glimmer.js version of the `HiResImage` component might look like this:
 
-```js
+```component.js
 import Component, { tracked } from '@glimmer/component';
 
 export default class HiResImage extends Component {
@@ -284,7 +304,7 @@ export default class HiResImage extends Component {
 }
 ```
 
-```handlebars
+```template.hbs
 {{#if hiRes}}
   <img src={{@hiResSrc}} ...attributes>
 {{else}}
@@ -319,7 +339,7 @@ For example, if I had a `Modal` component and I wanted to always render its
 content into a specially-styled element at the root of the body (with `position:
 fixed`, say), I might write it like this:
 
-```ts
+```component.js
 import Component from '@glimmer/component';
 
 export default class Modal extends Component {
@@ -327,7 +347,7 @@ export default class Modal extends Component {
 }
 ```
 
-```handlebars
+```template.hbs
 {{#in-element modalElement}}
   <h1>Modal</h1>
   {{yield}}
@@ -337,7 +357,7 @@ export default class Modal extends Component {
 Now in my app, I can invoke my `Modal` component as deep into the hierarchy as I
 want, and the content will be rendered into the root modal element:
 
-```handlebars
+```template.hbs
 {{#if hasErrors}}
   <Modal>
     <p>You dun goofed:</p>
@@ -387,8 +407,8 @@ use this JSON-based approach.
 As exciting as this was, we knew that JSON was not the final word in compactly
 and efficiently representing compiled templates.
 
-At runtime, Glimmer VM would gather the JSON for each template and compile them
-into a final, internal representation that was just a large array of 32-bit
+At runtime, the Glimmer VM today gathers the JSON for each template and compiles
+them into a final, internal representation that is just a large array of 32-bit
 integers. After looking at traces of real-world Glimmer.js apps, we knew we
 could improve boot times by precomputing this final compilation step at build
 time.
@@ -430,9 +450,13 @@ what the heck a `.gbx` file is (the file extension of compiled binaries), and
 require manual configuration. You probably want H2 Push for this, but that's
 its own can of worms.
 
-Getting these optimally deployed will probably suck for a while, but I have
+Getting these optimally deployed will probably be painful for a while, but I have
 faith that the Ember community will do what it does best and rally around a set
 of shared, high quality solutions for dealing with this.
+
+If you're curious about the details of how binary templates work, don't miss
+Chad's [recent post about the optimizing
+compiler](https://www.linkedin.com/pulse/glimmers-optimizing-compiler-chad-hietala/).
 
 ### Server-Side Rendering
 
@@ -557,8 +581,8 @@ see a pristine DOM in your developer tools.
 
 [rehydrate-builder]: https://github.com/glimmerjs/glimmer-vm/blob/72a1483/packages/%40glimmer/runtime/lib/vm/rehydrate-builder.ts#L20
 
-We have rehydration working in our app, and intend to include it in the scope of
-the work to make SSR a first-class, easy-to-use API.
+We have rehydration working in our app, and we consider it to be a first-class
+part of the Glimmer SSR story.
 
 ### Incremental Rendering
 
@@ -629,7 +653,7 @@ Glimmer unlocks. In this post, I've focused on features that are either done or
 close to being done, and haven't yet mentioned some of the ideas we're excited
 to try, like running Glimmer in a Web Worker, porting the core VM to
 WebAssembly, and more. We've also been working closely with our browser
-implementer friends, to see what lessons can be applied to the web platform so
+implementer friends to see what lessons can be applied to the web platform so
 everyone benefits from our experimentation.
 
 Lastly, I'd like to thank LinkedIn and Tilde for funding a great deal of the
