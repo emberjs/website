@@ -70,7 +70,7 @@ code, documentation, generators/blueprints, and more. We've made the following
 changes to prepare for the shift in usage:
 
 * The [Ember.js
-API documentation](https://emberjs.com/api/ember) and
+API documentation](https://emberjs.com/api/) and
 [Ember guides](https://guides.emberjs.com/v2.16.0/) have been updated to reflect the new API.
 * The [application
 blueprints](https://github.com/ember-cli/ember-cli/tree/master/blueprints/app)
