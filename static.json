@@ -8,6 +8,12 @@
     "/api/ember/2.16/modules/@ember%2Fapplication": {
       "origin": "${EMBER_API_DOCS_URL}/ember/2.16/module/@ember%2Fapplication"
     },
+    "/api/ember/2.16/modules/@ember%2Farray": {
+      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/module/@ember/array"
+    },
+    "/api/ember/2.16/modules/@ember/component": {
+      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/module/@ember/component"
+    },
     "/statusboard": {
       "origin": "https://ember-learn.github.io/statusboard/"
     }
