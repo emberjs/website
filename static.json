@@ -5,18 +5,6 @@
     "/api/": {
       "origin": "${EMBER_API_DOCS_URL}"
     },
-    "/api/ember/2.16/modules/@ember%2Fapplication": {
-      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/modules/@ember%2Fapplication"
-    },
-    "/api/ember/2.16/modules/@ember%2Farray": {
-      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/modules/@ember/array"
-    },
-    "/api/ember/2.16/modules/@ember/component": {
-      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/modules/@ember/component"
-    },
-    "/api/ember/2.16/modules/@ember/controller": {
-      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/modules/@ember%2Fcontroller"
-    },
     "/statusboard": {
       "origin": "https://ember-learn.github.io/statusboard/"
     }
