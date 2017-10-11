@@ -5,9 +5,12 @@
     "/api/": {
       "origin": "${EMBER_API_DOCS_URL}"
     },
-	"/statusboard": {
-	  "origin": "https://ember-learn.github.io/statusboard/"
-	}
+    "/api/ember/2.16/modules/@ember%2Fapplication": {
+      "origin": "${EMBER_API_DOCS_URL}/ember/2.16/module/@ember%2Fapplication"
+    },
+    "/statusboard": {
+      "origin": "https://ember-learn.github.io/statusboard/"
+    }
   },
   "error_page": "404.html",
   "headers": {
