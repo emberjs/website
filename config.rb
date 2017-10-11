@@ -14,7 +14,12 @@ set :markdown,
   :lax_html_blocks => true,
   :renderer => Highlighter::HighlightedHTML.new
 
-activate :asset_hash, :ignore => [/^sw/]
+activate :asset_hash, :ignore => [
+  /^sw/,
+  'tomster-sm.png',
+  'tomster-twitter-card.png'
+]
+
 activate :directory_indexes
 activate :toc
 activate :sponsors
