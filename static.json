@@ -33,7 +33,9 @@
     },
     "/internal": {
       "url": "/api/"
+    },
+    "/tomster/":  {
+      "url": "/mascots/"
     }
   }
 }
-
