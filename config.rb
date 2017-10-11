@@ -8,10 +8,11 @@ Dir['./lib/*'].each { |f| require f }
 set(:logging, ENV['RACK_ENV'] != 'production')
 
 set :markdown_engine, :redcarpet
-set :markdown, :layout_engine => :erb,
-         :fenced_code_blocks => true,
-         :lax_html_blocks => true,
-         :renderer => Highlighter::HighlightedHTML.new
+set :markdown,
+  :layout_engine => :erb,
+  :fenced_code_blocks => true,
+  :lax_html_blocks => true,
+  :renderer => Highlighter::HighlightedHTML.new
 
 activate :asset_hash, :ignore => [/^sw/]
 activate :directory_indexes
@@ -117,5 +118,4 @@ end
 ###
 # Redirects (These must be last!)
 ###
-
 activate :alias

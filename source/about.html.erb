@@ -5,19 +5,19 @@ responsive: true
 
 <% content_for :foot do %>
 <script type="text/javascript">
-  $(function() {
-    $('#slider').bxSlider({
-      displaySlideQty: 4,
-      moveSlideQty: 4,
-      auto: true,
-      pager: true,
-      speed: 700,
-      pause: 5000
-    });
+$(function() {
+  $('#slider').bxSlider({
+    displaySlideQty: 4,
+    moveSlideQty: 4,
+    auto: true,
+    pager: true,
+    speed: 700,
+    pause: 5000
+  });
 
-      // Hack to force proper sizing
-      $('.bx-wrapper, .bx-window').css('width', 940);
-    });
+  // Hack to force proper sizing
+  $('.bx-wrapper, .bx-window').css('width', 940);
+});
 </script>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <% end %>
