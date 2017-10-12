@@ -1,13 +1,7 @@
 # ---- PLEASE READ ----
-# To have your pull request accepted, you must email listing@emberjs.com
-# with the subject line "Ember User Logo Contact". Please include the
-# name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants. If you want to be nice,
-# add a link to the PR, so we don't have to go find it, too :p
-
+# To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
 # Please be sure the logo you upload has a transparent background,
-# and adequate whitespace so it's not crammed against the edges. The size
-# of the space you're filling is max 210 x 103. To best control
+# and adequate whitespace so it's not crammed against the edges. The size of the space you're filling is max 210 x 103. To best control
 # appearance, submit an image this exact size that already includes
 # the whitespace you want. To support high-resolution displays, consider
 # submitting your image at twice this resolution with dimensions of 420 x 206.
@@ -16,7 +10,7 @@
 # PNG8 files with alpha transparency, include no meta data and be not larger
 # than 10KB.
 
-# Please do not post links to pages selling Ember consulting
+# Please do not post links directly to pages selling Ember consulting
 # services. They will be removed.
 
 # These logos are in a particular order, most recently, that being the
@@ -26,8 +20,7 @@
 # As of August 2015, new entries are required to also fill in the "use" field;
 # specifically, tell us in a couple words what you use Ember for. This info will
 # not be published on the site, but will help us verify that new entrants belong
-# on this list. This will also help keep the list current in the future, since it
-# will become easier to verify if the specific use is still current.
+# on this list. This will also help keep the list current in the future, since it will become easier to verify if the specified use is still current.
 
 - url: http://www.mheducation.com/
   image: mhelabs.png
@@ -194,10 +187,10 @@
   alt: Pertino
 - url: http://www.summit.com/mobile
   image: summit_electric_supply.png
-  alt:
+  alt: Summit Electric Supply
 - url: https://spoton.it
   image: spoton.png
-  alt:
+  alt: Spoton
 - url: http://simplereach.com
   image: simplereach.png
   alt: SimpleReach
@@ -961,7 +954,7 @@
   use: "At Salonized we use Ember.js for the frontend of our application."
 - url: https://www.lariat.co
   image: lariat.png
-  alt: Lariat 
+  alt: Lariat
   use: "We use Ember.js for all UI development at Lariat."
 - url: https://crowdscriber.com/
   image: crowdscriber.png
@@ -974,16 +967,12 @@
 
 
 # ---- PLEASE READ ----
-# To have your pull request accepted, you must email listing@emberjs.com
-# with the subject line "Ember User Logo Contact". Please include the
-# name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants.
+# To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
 
-# Please also be sure the logo you  upload has a transparent background,
+# Please also be sure the logo you upload has a transparent background,
 # and adequate whitespace. See further comments atop this file.
 
 # As of August 2015, new entries are required to also fill in the "use" field;
 # specifically, tell us in a couple words what you use Ember for. This info will
 # not be published on the site, but will help us verify that new entrants belong
-# on this list. This will also help keep the list current in the future, since it
-# will become easier to verify if the specific use is still current.
+# on this list. This will also help keep the list current in the future, since it will become easier to verify if the specific use is still current.
