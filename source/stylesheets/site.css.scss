@@ -1,7 +1,7 @@
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
 @import 'bourbon';
-@import 'variables';
+@import 'base/variables';
 @import 'base/base'; // bitters replacement for our homegrown setup
 @import 'vendor/docsearch';
 @import 'mixins/hidpi';

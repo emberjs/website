@@ -24,6 +24,7 @@ $sidebar-width: $col-width * 4 + $col-spacing * 3;
 $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 
 /* Typography */
+$base-line-height: 1.5;
 $list-indent: 32px;
 $base-font-family: 'Helvetica Neue','Source Sans Pro', sans-serif;
 $heading-font-family: $base-font-family;
