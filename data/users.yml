@@ -967,6 +967,10 @@
   image: crowdscriber.png
   alt: Crowdscriber
   use: "Crowdscriber uses Ember.js for its primary front-end application."
+- url: https://profuzdigital.com/
+  image: profuzdigital.png
+  alt: Profuz Digital
+  use: "We use Ember.js for the complete frontend (comprising of more than 15000 LOC as of October 2017) of our product."
 
 
 # ---- PLEASE READ ----
