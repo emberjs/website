@@ -1,6 +1,6 @@
 @import 'bourbon';
-@import "mixins/hidpi";
-@import "variables";
+@import 'mixins/hidpi';
+@import 'base/variables';
 
 body.community_resources #content {
   margin: 3em auto 0 auto;
