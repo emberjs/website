@@ -33,11 +33,7 @@ $footer-font-family: proxima-nova, sans-serif;
 
 /* Code highlight */
 $highlight-border-radius: 5px;
-/* $highlight-yellow: #F5E090; */
-/* $highlight-green: #C3F590; */
 $highlight-red: #EC605E;
-/* $highlight-blue: #90D7F5; */
-/* $highlight-cyan: #78CEC8; */
 $highlight-added: #5D7D5D;
 $highlight-removed: #905454;
 $code-background: $dark-gray;
@@ -52,18 +48,6 @@ $highlight-green-light: #E8F4E5;
 $highlight-orange: #8F4A2C;
 $highlight-yellow: #F8EEC7;
 $highlight-red: #FFECEC;
-
-/* $highlight-colors: ( */
-        /* attribute-name: $highlight-red, */
-        /* comment: $medium-gray, */
-        /* content: $highlight-cyan, */
-        /* function: $highlight-red, */
-        /* key: $highlight-red, */
-        /* keyword: $highlight-yellow, */
-        /* local-variable: $highlight-red, */
-        /* string: $highlight-cyan, */
-        /* tag: $highlight-red, */
-/* ); */
 
 /* Misc */
 $hidpi-min-pixel-ratio: 1.3 !default;
