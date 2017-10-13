@@ -238,6 +238,11 @@
   url: https://www.meetup.com/Ember-js-Berlin/
   image: /images/tomsters/berlin-tomster.png
   tags: all tomster meetup
+- title: Serbia Tomster
+  date: October 16, 2016
+  url: http://ember.rs/index.html
+  image: /images/tomsters/berlin-tomster.png
+  tags: all tomster meetup
 
 # - title:
 #   date:
