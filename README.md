@@ -7,6 +7,10 @@ The website for the Ember.js project.
 
 To get started:
 
+## Running locally with Docker (recommended)
+
+## Running locally with Ruby and Middleman
+
 ``` sh
 git clone https://github.com/emberjs/website.git
 cd website
