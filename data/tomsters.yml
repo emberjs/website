@@ -243,6 +243,11 @@
   url: http://ember.rs/index.html
   image: /images/tomsters/serbia-tomster.png
   tags: all tomster meetup
+- title: EmberConf 2017
+  date: March 27, 2017
+  url: 2017.emberconf.com
+  image: /images/tomsters/emberconf-2017
+  tags: all tomster zoey conference
 
 # - title:
 #   date:
