@@ -1,12 +1,12 @@
 .legal-wrapper {
-  padding: 3em 1rem;
-  padding-bottom: 1em;
-  max-width: 960px;
-  margin: 0 auto;
+	padding: 3em 1rem;
+	padding-bottom: 1em;
+	max-width: 960px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 460px) {
+	    padding: 2em 1em 1em 1em;
+	}
 }
 
-@media screen and (max-width: 460px) {
-  .legal-wrapper {
-    padding: 2em 1em 1em 1em;
-  }
-}
+
