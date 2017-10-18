@@ -30,7 +30,7 @@ $small-max-width: 767px;
 
 body {
   background-color: white;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $base-font-family;
   line-height: 1.5;
   color: #444444;
   -webkit-font-smoothing: antialiased;
