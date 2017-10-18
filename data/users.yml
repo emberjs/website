@@ -964,6 +964,10 @@
   image: profuzdigital.png
   alt: Profuz Digital
   use: "We use Ember.js for the complete frontend (comprising of more than 15000 LOC as of October 2017) of our product."
+- url: https://planninglabs.nyc/
+  image: nyc_dcp_logo.png
+  alt: NYC Planning Labs
+  use: "We use EmberJS for all of our ambitious Planning Labs projects."
 
 
 # ---- PLEASE READ ----
