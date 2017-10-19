@@ -22,6 +22,43 @@
 # not be published on the site, but will help us verify that new entrants belong
 # on this list. This will also help keep the list current in the future, since it will become easier to verify if the specified use is still current.
 
+- url: http://www.microsoft.com
+  image: microsoft.png
+  alt: Microsoft
+- url: https://www.netflix.com/
+  image: netflix.png
+  alt: Netflix
+- url: http://www.linkedin.com
+  image: linkedin.png
+  alt: LinkedIn
+- url: http://www.groupon.com
+  image: groupon.png
+  alt: Groupon
+- url: http://www.twitch.tv
+  image: twitch.png
+  alt: Twitch
+- url: http://yahoo.com
+  image: yahoo.png
+  alt: Yahoo!
+- url: http://www.zendesk.com/
+  image: zendesk.png
+  alt: Zendesk
+- url: http://squareup.com/
+  image: square.png
+  alt: Square
+- url: http://travis-ci.org
+  image: travisci.png
+  alt: Travis CI
+- url: https://www.intercom.com
+  image: intercom.png
+  alt: Intercom
+  use: "Intercom's main web application is built with Ember.js"
+- url: http://www.discourse.org
+  image: discourse.png
+  alt: Discourse
+- url: https://www.ted.com
+  image: ted.png
+  alt: TED
 - url: http://www.mheducation.com/
   image: mhelabs.png
   alt: McGraw-Hill
@@ -35,27 +72,12 @@
 - url: http://www.bustle.com
   image: bustle.png
   alt: Bustle
-- url: http://yahoo.com
-  image: yahoo.png
-  alt: Yahoo!
-- url: http://www.zendesk.com/
-  image: zendesk.png
-  alt: Zendesk
-- url: http://squareup.com/
-  image: square.png
-  alt: Square
-- url: http://www.discourse.org
-  image: discourse.png
-  alt: Discourse
 - url: https://addepar.com/
   image: addepar.png
   alt: Addepar
 - url: http://livingsocial.com/
   image: livingsocial.png
   alt: Living Social
-- url: http://www.groupon.com
-  image: groupon.png
-  alt: Groupon
 - url: http://www.timbuk2.com/
   image: timbuk2.png
   alt: Timbuk2
@@ -197,9 +219,6 @@
 - url: http://crowdhall.com
   image: crowdhall.png
   alt: CrowdHall
-- url: http://travis-ci.org
-  image: travisci.png
-  alt: Travis CI
 - url: http://boxee.tv
   image: boxee.png
   alt: Boxee
@@ -209,9 +228,6 @@
 - url: http://www.avalara.com
   image: avalara.png
   alt: Avalara
-- url: http://www.twitch.tv
-  image: twitch.png
-  alt: Twitch
 - url: http://www.eatwith.com
   image: eatwith.png
   alt: Eatwith
@@ -490,9 +506,6 @@
 - url: https://getpoynt.com
   image: poynt.png
   alt: Poynt
-- url: https://www.ted.com
-  image: ted.png
-  alt: TED
 - url: http://www.zybooks.com
   image: zybooks.png
   alt: zyBooks
@@ -520,9 +533,6 @@
 - url: http://www.xlab.si
   image: xlab.png
   alt: XLAB
-- url: https://www.netflix.com/
-  image: netflix.png
-  alt: Netflix
 - url: http://roomle.com
   image: roomle.png
   alt: ROOMLE
@@ -544,13 +554,6 @@
 - url: http://www.checkmate.io
   image: checkmate.png
   alt: Instant Checkmate
-- url: http://www.microsoft.com
-  image: microsoft.png
-  alt: Microsoft
-- url: https://www.intercom.com
-  image: intercom.png
-  alt: Intercom
-  use: "Intercom's main web application is built with Ember.js"
 - url: http://verdigris.co
   image: verdigris.png
   alt: Verdigris Technologies
@@ -611,9 +614,6 @@
 - url: http://www.molecule.io/
   image: molecule.png
   alt: Molecule
-- url: http://www.linkedin.com
-  image: linkedin.png
-  alt: LinkedIn
 - url: https://www.gozooga.com
   image: gozooga.png
   alt: Gozooga
