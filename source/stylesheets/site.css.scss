@@ -45,16 +45,29 @@ body {
 
 #sidebar {
   font-weight: normal;
-  margin-top: 38px;
-  float: left;
-  width: $sidebar-width;
-  min-height: 475px;
-  margin-bottom: 28px;
-  padding-bottom: 120px;
   background: #f4ece9;
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
+  
+  @media (min-width: 48em) {
+    margin-top: 38px;
+    float: left;
+    width: 22.5%;
+    min-height: 475px;
+    margin-bottom: 28px;
+    padding-bottom: 120px;
+
+    &:after {
+      @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
+      position: absolute;
+      bottom: 0px;
+      left: -1px;
+      width: 220px;
+      height: 120px;
+      content: '';
+    }
+  }
 
   #back-to-top {
     padding-left: 13px;
@@ -186,16 +199,6 @@ body {
         }
       }
     }
-  }
-
-  &:after {
-    @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
-    position: absolute;
-    bottom: 0px;
-    left: -1px;
-    width: 220px;
-    height: 120px;
-    content: '';
   }
 }
 
@@ -409,9 +412,14 @@ body {
 
 #content {
   &.has-sidebar {
-    margin: 38px 0 90px 2.1em;
-    width: $content-width;
-    float: left;
+    margin-top: 38px;
+    margin-bottom: 90px;
+    
+    @media (min-width: 48em) {
+      width: 72.5%;
+      float: left;
+      margin-left: 5%;
+    }
   }
 
   ol + h2,
