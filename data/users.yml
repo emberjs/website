@@ -1,70 +1,97 @@
 # ---- PLEASE READ ----
-# To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
-# Please be sure the logo you upload has a transparent background,
-# and adequate whitespace so it's not crammed against the edges. The size of the space you're filling is max 210 x 103. To best control
-# appearance, submit an image this exact size that already includes
-# the whitespace you want. To support high-resolution displays, consider
-# submitting your image at twice this resolution with dimensions of 420 x 206.
-# Please optimize your images for the web, e.g. by compressing them with some
-# tool or service like https://imageoptim.com. Specifically they should be
-# PNG8 files with alpha transparency, include no meta data and be not larger
-# than 10KB.
+# To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D.
+#
+# Please be sure the logo you upload has a transparent background, and adequate whitespace so it's not crammed against the edges. The size of the space you're filling is max 210 x 103. To best control appearance, submit an image this exact size that already includes the whitespace you want. To support high-resolution displays, consider submitting your image at twice this resolution with dimensions of 420 x 206.
+#
+# Please optimize your images for the web, e.g. by compressing them with some tool or service like https://imageoptim.com. Specifically they should be PNG8 files with alpha transparency, include no meta data and be not larger than 10KB.
+#
+# Please do not post links directly to pages selling Ember consulting services. They will be removed.
+#
+# These logos are in a particular order, most recently, that being the order in which people made their requests. Be respectful to those who came before you and add your name to the *bottom*.
+#
+# As of August 2015, new entries are required to also fill in the "use" field; specifically, tell us in a couple words what you use Ember for. This info will not be published on the site, but will help us verify that new entrants belong on this list. This will also help keep the list current in the future, since it will become easier to verify if the specified use is still current.
 
-# Please do not post links directly to pages selling Ember consulting
-# services. They will be removed.
-
-# These logos are in a particular order, most recently, that being the
-# order in which people made their requests. Be respectful to those who
-# came before you and add your name to the *bottom*.
-
-# As of August 2015, new entries are required to also fill in the "use" field;
-# specifically, tell us in a couple words what you use Ember for. This info will
-# not be published on the site, but will help us verify that new entrants belong
-# on this list. This will also help keep the list current in the future, since it will become easier to verify if the specified use is still current.
-
-- url: http://www.mheducation.com/
-  image: mhelabs.png
-  alt: McGraw-Hill
-- url: https://www.yapp.us/
-  image: yapp.png
-  alt: Yapp
-- url: http://tilde.io/
-  image: tilde.png
-  alt: Tilde
-  use: "We build online Ember trainings and use Ember for client consulting projects"
-- url: http://www.bustle.com
-  image: bustle.png
-  alt: Bustle
-- url: http://yahoo.com
-  image: yahoo.png
-  alt: Yahoo!
-- url: http://www.zendesk.com/
-  image: zendesk.png
-  alt: Zendesk
+- url: http://www.microsoft.com
+  image: microsoft.png
+  alt: Microsoft
+- url: https://www.intercom.com
+  image: intercom.png
+  alt: Intercom
+  use: "Intercom's main web application is built with Ember.js"
+- url: https://www.netflix.com/
+  image: netflix.png
+  alt: Netflix
+- url: http://heroku.com/
+  image: heroku.png
+  alt: heroku
+- url: http://www.skylight.io
+  image: skylight.png
+  alt: skylight
+  use: "The entire Skylight front-end is built using Ember"
+- url: http://www.linkedin.com
+  image: linkedin.png
+  alt: LinkedIn
 - url: http://squareup.com/
   image: square.png
   alt: Square
-- url: http://www.discourse.org
-  image: discourse.png
-  alt: Discourse
-- url: https://addepar.com/
-  image: addepar.png
-  alt: Addepar
+- url: http://www.zendesk.com/
+  image: zendesk.png
+  alt: Zendesk
+- url: https://www.blueapron.com
+  image: blue-apron.png
+  alt: Blue Apron
+  use: "Powering our internal desktop and mobile warehouse management system"
+- url: https://www.kickstarter.com/
+  image: kickstarter.png
+  alt: Kickstarter
+  use: "Powering our creator dashboard and other tools"
+- url: http://www.codeschool.com
+  image: codeschool.png
+  alt: Code School
+- url: https://ibotta.com/
+  image: ibotta.png
+  alt: "Ibotta"
+  use: "We use Ember for building our internal and external web applications."
+- url: http://travis-ci.org
+  image: travisci.png
+  alt: Travis CI
+- url: https://www.ted.com
+  image: ted.png
+  alt: TED
 - url: http://livingsocial.com/
   image: livingsocial.png
   alt: Living Social
+- url: http://www.bustle.com
+  image: bustle.png
+  alt: Bustle
 - url: http://www.groupon.com
   image: groupon.png
   alt: Groupon
 - url: http://www.timbuk2.com/
   image: timbuk2.png
   alt: Timbuk2
+- url: https://addepar.com/
+  image: addepar.png
+  alt: Addepar
+- url: http://tilde.io/
+  image: tilde.png
+  alt: Tilde
+  use: "We build online Ember trainings and use Ember for client consulting projects"
 - url: http://www.benefitcloud.com/
   image: benefitcloud.png
   alt: Benefitcloud
 - url: http://www.topicus.nl/
   image: topicus.png
   alt: Topicus
+- url: http://www.mheducation.com/
+  image: mhelabs.png
+  alt: McGraw-Hill
+- url: https://www.yapp.us/
+  image: yapp.png
+  alt: Yapp
+- url: http://www.discourse.org
+  image: discourse.png
+  alt: Discourse
 - url: http://www.gemfury.com/
   image: gemfury.png
   alt: Gemfury
@@ -93,6 +120,9 @@
 - url: http://grouptalent.com
   image: grouptalent.png
   alt: GroupTalent
+- url: http://yahoo.com
+  image: yahoo.png
+  alt: Yahoo!
 - url: http://www.kohactive.com
   image: kohactive.png
   alt: kohactive
@@ -197,9 +227,6 @@
 - url: http://crowdhall.com
   image: crowdhall.png
   alt: CrowdHall
-- url: http://travis-ci.org
-  image: travisci.png
-  alt: Travis CI
 - url: http://boxee.tv
   image: boxee.png
   alt: Boxee
@@ -356,9 +383,6 @@
 - url: http://www.brightin.nl
   image: brightin.png
   alt: Brightin
-- url: http://www.codeschool.com
-  image: codeschool.png
-  alt: Code School
 - url: http://www.gooddata.com/
   image: gooddata.png
   alt: GoodData
@@ -490,9 +514,6 @@
 - url: https://getpoynt.com
   image: poynt.png
   alt: Poynt
-- url: https://www.ted.com
-  image: ted.png
-  alt: TED
 - url: http://www.zybooks.com
   image: zybooks.png
   alt: zyBooks
@@ -520,9 +541,6 @@
 - url: http://www.xlab.si
   image: xlab.png
   alt: XLAB
-- url: https://www.netflix.com/
-  image: netflix.png
-  alt: Netflix
 - url: http://roomle.com
   image: roomle.png
   alt: ROOMLE
@@ -532,9 +550,6 @@
 - url: http://blimp.io
   image: blimp.png
   alt: Blimp
-- url: http://heroku.com/
-  image: heroku.png
-  alt: heroku
 - url: http://www.kotive.com
   image: kotive.png
   alt: Kotive
@@ -544,13 +559,6 @@
 - url: http://www.checkmate.io
   image: checkmate.png
   alt: Instant Checkmate
-- url: http://www.microsoft.com
-  image: microsoft.png
-  alt: Microsoft
-- url: https://www.intercom.com
-  image: intercom.png
-  alt: Intercom
-  use: "Intercom's main web application is built with Ember.js"
 - url: http://verdigris.co
   image: verdigris.png
   alt: Verdigris Technologies
@@ -611,9 +619,6 @@
 - url: http://www.molecule.io/
   image: molecule.png
   alt: Molecule
-- url: http://www.linkedin.com
-  image: linkedin.png
-  alt: LinkedIn
 - url: https://www.gozooga.com
   image: gozooga.png
   alt: Gozooga
@@ -632,10 +637,6 @@
 - url: http://www.trampos.co/
   image: trampos-co.png
   alt: trampos
-- url: http://www.skylight.io
-  image: skylight.png
-  alt: skylight
-  use: "The entire Skylight front-end is built using Ember"
 - url: http://monegraph.com
   image: monegraph.png
   alt: Monegraph
@@ -668,10 +669,6 @@
   image: privatt.png
   alt: Privatt
   use: "Our front-end for Privatt Data Enterprise is built using Ember"
-- url: https://www.blueapron.com
-  image: blue-apron.png
-  alt: Blue Apron
-  use: "Powering our internal desktop and mobile warehouse management system"
 - url: http://www.totalpartyplanner.com/
   image: tpp.png
   alt: Total Party Planner
@@ -680,10 +677,6 @@
   image: shearwater.png
   alt: Shearwater
   use: "Ember powers our scalable mentorship and reporting platform"
-- url: https://www.kickstarter.com/
-  image: kickstarter.png
-  alt: Kickstarter
-  use: "Powering our creator dashboard and other tools"
 - url: https://flood.io/
   image: flood.png
   alt: Flood IO
@@ -784,10 +777,6 @@
   image: mammothhr.png
   alt: "MammothHR"
   use: "We use Ember to power our HR Support Center as well as several internal tools."
-- url: https://ibotta.com/
-  image: ibotta.png
-  alt: "Ibotta"
-  use: "We use Ember for building our internal and external web applications."
 - url: http://wikia.com
   image: wikia.png
   alt: "Wikia - Home of Fandom"
