@@ -1,5 +1,6 @@
 ---
 title: Deprecations
+responsive: true
 ---
 
 ## Deprecations
