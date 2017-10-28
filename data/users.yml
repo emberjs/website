@@ -957,6 +957,10 @@
   image: nyc_dcp_logo.png
   alt: NYC Planning Labs
   use: "We use EmberJS for all of our ambitious Planning Labs projects."
+- url: "https://canopy.cloud"
+  image: canopy.png
+  alt: Canopy
+  use: "Canopy uses Ember for its primary data visualization platform"
 
 
 # ---- PLEASE READ ----
