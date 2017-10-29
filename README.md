@@ -11,7 +11,7 @@ To get started:
 
 This is the recommended method for new contributors.
 Although the website is built with Ruby, most work is done in Markdown files.
-You don't need to know Ruby or install its dependencies to help out. Simply follow
+You don't need to know Ruby or install its dependencies to help out. Follow
 the Docker container instructions below to install and run locally.
 
 First, install [Docker and Compose](https://store.docker.com/search?offering=community&type=edition) and leave it running.
