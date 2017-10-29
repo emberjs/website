@@ -1,3 +1,12 @@
+html {
+	font-size: 16px;
+}
+
+body {
+	font-size: 1em;
+	line-height: 1.7;
+}
+
 a {
   color: #DC2C0D;
   text-decoration: none;
@@ -25,10 +34,19 @@ h6 {
   }
 }
 
+h1, 
+h2, 
+h3,
+h4{
+  line-height: 1;
+	margin-top: 1.25em; 
+	margin-bottom: 0.5em;  
+}
+
 h1 {
-  font-size: 24px;
+  font-size: 3.157em;
   margin-top: 0;
-  color: $orange-color;
+  color: $orange;
   padding-bottom: 20px;
   line-height: 1.125;
 }
@@ -41,8 +59,10 @@ h1:not(:first-child) {
 }
 
 h2 {
-  font-size: 22px;
+  color: $orange-darker;
+  font-size: 2.369em;
   margin: .83em 0;
+  
 }
 
 h2,
@@ -52,13 +72,14 @@ h3 {
 }
 
 h3 {
-  font-size: 18px;
+  color: $orange-darkest;
+  font-size: 1.777em;
 }
 
 h4 {
-  font-size: 16px;
+  font-size: 1.333em;
   line-height: 1.618em;
-  color: $orange-color;
+  color: #222;
   letter-spacing: 1px;
   margin: 24px 0 12px 0;
 }
