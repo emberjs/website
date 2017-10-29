@@ -20,7 +20,6 @@ strong {
   font-weight: bold;
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -44,13 +43,14 @@ h4{
 }
 
 h1 {
-  max-width: 100%;
-  text-transform: capitalize;
-  font-size: 3.157em;
-  margin-top: 0;
   color: $orange;
-  padding-bottom: 20px;
+  font-size: 3.157em;
+  font-weight: bold;
   line-height: 1.125;
+  margin-top: 0;
+  max-width: 100%;
+  padding-bottom: 20px;
+  text-transform: capitalize;
 }
 
 /* This next h1 is so h1s in the middle of the page (ie not the first time)
