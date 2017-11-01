@@ -3,24 +3,27 @@
 .call-to-action {
   background-color: white;
   margin: 3em auto;
+  max-width: 90%;
   text-align: center;
 
   a {
-    color: #D0351A;
-    border: 1px #DDD solid;
-    font-size: 0.7rem;
-    border-radius: 7px;
     background-color: white;
+    border-radius: 7px;
+    border: 1px $orange-dark solid;
+    color: $orange-dark;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0.5em 1em;
     text-transform: uppercase;
-    padding: 0.5rem;
 
     &:hover {
       color: white;
-      background-color: #D0351A;
+      background-color: $orange-dark;
+      cursor: pointer;
     }
   }
 }
-
 .call-to-action__box {
   box-shadow: 0 0 4px 1px #DDDDDD;
 }
@@ -31,34 +34,34 @@
 
   h1 {
     padding-bottom: 0;
-    color: #666;
-    text-transform: capitalize;
+    color: #4d4d4d;
+    text-transform: none;
   }
 
   .cta-copy {
     width: 80%;
     margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.5;
   }
 }
 
 .call-to-action__bottom {
-  display: none;
-  margin: 0;
-  padding-left: 2em;
-
-  background-color: #E46651;
+  // display: none;
+  background-color: $orange;
   color: white;
-
   font-family: monospace;
-  text-align: left;
   line-height: 0.5;
+  margin: 0;
   overflow: hidden;
+  padding-left: 2em;
+  text-align: left;
 }
 
 @media screen and (min-width: $screen-sm-min) {
   .call-to-action {
     border-radius: 10px;
-    width: 350px;
+    width: 425px;
   }
 
   .call-to-action__box {
@@ -70,8 +73,9 @@
     border-top-right-radius: 10px;
 
     h1 {
+      font-size: 2.5em;
       margin-top: 1rem;
-      padding-bottom: 0.5rem;
+      // padding-bottom: 0.5rem;
     }
   }
 
