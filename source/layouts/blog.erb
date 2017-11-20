@@ -7,18 +7,27 @@
   <% end %>
   <article class="blog-post">
     <h1><%= current_article.title %></h1>
+    <% if current_page.data.guestPost %>
+      <span class="post-tag">Guest Post</span>
+    <% elsif current_page.data.syndicatedPost %>
+      <span class="post-tag">Syndicated Post</span>
+    <% end %>
     <% if current_page.data.author %>
-      <h3 class="blog-post-author"><% if current_page.data.guestPost %><span class="btn">Guest Post</span><% else %>By<% end %> <%= current_page.data.author %></h3>
+      <h3 class="blog-post-author">By <%= current_page.data.author %></h3>
       <h3 class="blog-post-date"><time><%= current_article.date.strftime('%B %-d, %Y') %></time></h3>
     <% end %>
 
     <hr>
 
     <%= yield %>
-
+    <% if current_page.data.syndicatedPost %>
+      <h5 class="original-post-url">
+        Original Posted at: <%= link_to(current_page.data.url, current_page.data.url) %>
+      </h5>
+    <% end %>
     <hr>
 
-    <div id="disqus_thread"></div> 
+    <div id="disqus_thread"></div>
     <script type="text/javascript">
       /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
       var disqus_shortname = 'emberblog'; // required: replace example with your forum shortname
