@@ -1,0 +1,99 @@
+---
+title: LTS Releases
+responsive: true
+---
+
+<% content_for :outside_wrapper do %>
+<div class="legal-wrapper">
+  <article>
+    <h1>Ember LTS Release</h1>
+    <section>
+      <p>Currently, Ember uses <a href="http://emberjs.com/blog/2013/09/06/new-ember-release-process.html">release channels</a> to help users balance between a desire for new features (canary or beta channels) with stability (the release channel). While semver
+        guarantees mean that upgrades are quite straightforward, some users aren't able to upgrade every six weeks. To address <a href="https://github.com/emberjs/rfcs/blob/master/text/0056-improved-release-cycle.md#problems-with-the-1x-model">these needs</a>,
+        we are announcing a new <abbr title="Long-Term Support">LTS</abbr> release channel.
+      </p>
+      <p>
+        <strong>Ember 2.4 will be the first LTS release of the core framework, and will continue every four releases thereafter.</strong> Additionally, we've updated the <a href="http://emberjs.com/builds/">emberjs.com/builds</a> page with better guidance about when and how to use each of the channels.
+      </p>
+      <p>
+        <img src="/images/blog/2016-02/lts-tomster-8974c71c.png" class="float-right" alt="LTS Tomster" width="200">
+      </p>
+      <p>For our users, LTS releases allow you to upgrade less frequently while still getting support from the Ember project and the wider ecosystem.</p>
+      <p>For addon authors, LTS releases allow you to know which versions of Ember to focus effort on.</p>
+      <p>
+        As a project, Ember will provide security and critical bugfixes for the most recent LTS release, in addition to the most recent release (as we do today). We will also avoid breaking heavily used private APIs without first deprecating them in a previous LTS release.
+      </p>
+      <p>You can read more about the problems we tried to solve and details about how it works in <a href="https://github.com/emberjs/rfcs/blob/master/text/0056-improved-release-cycle.md#proposal-lts-releases">RFC #56</a>.</p>
+    </section>
+    <section>
+      <h3 class="anchorable-toc" id="toc_the-lts-release-process"><a class="toc-anchor" href="#toc_the-lts-release-process"></a>The LTS Release Process</h3>
+      <p>
+        The existing release channels allow you to make a tradeoff. On canary, you get features as quickly as they land, but get no guarantees about those features. On the stable release channel, you have to wait 12 weeks for features to stabilize and make
+        their way through the beta process, but you are rewarded with semver guarantees.
+      </p>
+
+      <p>While this provides all the flexibility you need to make stability vs. features tradeoff, there is another orthogonal dimension: how often you can schedule time to upgrade. LTS releases give the community an alternative, sanctioned schedule that works
+        better for users who prefer a slower pace.</p>
+
+      <p>By synchronizing the timing that these users upgrade, the community can decide to focus energy on specific versions, rather than a scattershot attempt to support every possible combination. This should result in more consistent support and easier
+        upgrades for users on the LTS channel.</p>
+
+      <p>The Ember 2.4 branch will be moved into the LTS release channel six weeks after Ember 2.4.0. In other words, Ember 2.4 LTS will ship at the same time as Ember 2.5.0. This means that features begin on Canary, spend six weeks on beta before making it
+        into the stable channel, and spend another six weeks on the stable channel before making it into the LTS release channel.</p>
+
+      <p>This same process repeats every four releases, meaning that the next release on the LTS channel will be Ember 2.8 LTS, which will ship at the same time as Ember 2.9.0.</p>
+
+      <p>For example, the expected release of Ember 2.4 stable (currently in beta) is on February 26th. To give you a sense for the cadence of our release channels, the projected release timeline is as follows.</p>
+
+      <p><img src="/images/blog/2016-02/Releases@3x-35aa8db3.svg" alt="LTS release timeline" class="release-timeline"></p>
+
+      <p><strong>LTS releases will receive critical bugfixes for 6 release cycles (36 weeks).</strong> This means we will support Ember 2.4 LTS with critical bugfixes until Ember 2.10.0 is released, around November 4, 2016.</p>
+
+      <p><strong>LTS releases will receive security patches for 10 release cycles (60 weeks).</strong> This means we will support Ember 2.4 LTS with security patches at least until Ember 2.14.0 is released, around April 21, 2017.</p>
+
+      <p>As you can see in the above diagram, Ember 2.8 LTS is projected to ship around September 23, 2016. This gives you plenty of time to complete the migration to the next LTS release once it comes out. As always, because Ember 2.8 is semver compatible
+        with Ember 2.4, the upgrade should be relatively smooth.</p>
+
+      <p>By the time 2.8 rolls around in roughly six months, any addons that make use of the private <code>view</code> APIs should have had a chance to update.</p>
+    </section>
+    <section>
+      <h3 class="anchorable-toc" id="toc_the-lts-guarantees"><a class="toc-anchor" href="#toc_the-lts-guarantees"></a>The LTS Guarantees</h3>
+      <p>What makes an LTS release different than a stable Ember release? LTS releases come with guarantees about API stability and security:</p>
+      <ul>
+        <li>
+          <p>
+            Because each LTS release will receive security fixes for 60 weeks, we will backport them to at least the two most recent LTS releases. <a href="http://emberjs.com/security/">Read more aboutEmber's security policy</a>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Release notes for each LTS will contain a summary of features and deprecations added since the previous LTS. This will likely consist of a number of links to documentation, guides, and release notes for stable releases.
+          </p>
+        </li>
+        <li>
+          <p>Addons and applications should constrain themselves to using Ember's public APIs. However, in practice we recognize that experimentation and use of "intimate" APIs is a reality. To ensure addons and apps using these intimate APIs have a migration
+            path forward, any change to a heavily used private APIs will receive a deprecation warning in at least one LTS release. This gives LTS users and the addon community about six months to migrate away. For example, the <code>view</code> APIs (private
+            in Ember 2.x) will be marked as deprecated in Ember 2.4 LTS, and removed before Ember 2.8 LTS.
+          </p>
+        </li>
+        <li>
+          <p>We encourage addon authors to maintain support for the latest LTS release, in addition to tracking changes in the stable releases.</p>
+        </li>
+      </ul>
+      <p>In practice, since these releases still abide by <a href="http://semver.org/">semantic versioning</a>, upgrading from LTS release to LTS release should not be significantly more work than upgrading along the six-week release cycle.</p>
+      <p>Upgrading less frequently will mean, of course, that a developer will wait longer to take advantage of new features. Additionally, it means the changes in best practices between releases (and in the number of deprecations) may feel more significant.</p>
+    </section>
+    <section>
+      <h3 class="anchorable-toc" id="toc_legacy-view-and-controller-addons"><a class="toc-anchor" href="#toc_legacy-view-and-controller-addons"></a>Legacy View and Controller Addons</h3>
+      <p>
+        Ember has provided the <a href="https://github.com/emberjs/ember-legacy-views">ember-legacy-views</a> and <a href="https://github.com/emberjs/ember-legacy-controllers">ember-legacy-controllers</a> addons since Ember 1.13. For large codebases, these
+        addons provide a slower off-ramp for legacy view and controller features. Big apps can move to Ember 2.0 without the complete removal of views.
+      </p>
+      <p>
+        These addons rely on several private APIs expected to undergo significant refactoring in Ember 2.5 or 2.6. Therefore, the Ember 2.4 LTS will likely be the last LTS to support these addons. They will become unsupported in September or October with
+        the release of Ember 2.8 LTS.
+      </p>
+    </section>
+  </article>
+</div>
+<% end %>
