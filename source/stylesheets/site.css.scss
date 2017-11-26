@@ -570,9 +570,9 @@ ul.showcase {
   }
 
   > a {
-    background-color: white;
+    background-color: rgba(231, 117, 99, 0.11);
     border-radius: 5px;
-    box-shadow: 0px 1px 4px -1px rgba(0,0,0,0.8);
+    border: 2px solid #fb9887;
 
     img {
       height: auto;
@@ -585,7 +585,7 @@ ul.showcase {
 }
 
 .showcase a:hover {
-  border-bottom: none;
+  box-shadow: 5px 5px 15px -1px rgb(245, 223, 219);
 }
 
 @import 'pages/deprecations';
