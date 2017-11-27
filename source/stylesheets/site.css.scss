@@ -467,6 +467,11 @@ body {
 **/
 
 .ember-users {
+  h1 {
+    &.no-capitalize {
+      text-transform: none;
+    }
+  }
   .section {
     width: 100%;
     max-width:100%;
@@ -570,7 +575,7 @@ ul.showcase {
   }
 
   > a {
-    background-color: rgba(231, 117, 99, 0.11);
+    background-color: transparent;
     border-radius: 5px;
     border: 2px solid #fb9887;
 
