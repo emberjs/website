@@ -4,20 +4,21 @@ author: Ricardo Mendes
 tags: Releases
 ---
 
-Today the Ember project is releasing version 2.17.0 of Ember.js, Ember Data, and Ember CLI.
+Today the Ember project is releasing version 2.17.0 of Ember.js, Ember Data, and
+Ember CLI.
 
-This release kicks off the 2.18 beta cycle for all sub-projects. We encourage our
-community (especially addon authors) to help test these beta builds and report
-any bugs before they are published as a final release in six weeks' time. The
-[ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
+This release kicks off the 2.18 beta cycle for all sub-projects. We encourage
+our community (especially addon authors) to help test these beta builds and
+report any bugs before they are published as a final release in six weeks' time.
+The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
 continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
-- [Release Dashboard](http://emberjs.com/builds/)
-- [The Ember Release Cycle](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html)
-- [The Ember Project](http://emberjs.com/blog/2015/06/16/ember-project-at-2-0.html)
-- [Ember LTS Releases](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html)
+* [Release Dashboard](http://emberjs.com/builds/)
+* [The Ember Release Cycle](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html)
+* [The Ember Project](http://emberjs.com/blog/2015/06/16/ember-project-at-2-0.html)
+* [Ember LTS Releases](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html)
 
 ---
 
@@ -40,8 +41,8 @@ release of the framework.
 
 Consider using the
 [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow)
-addon if you would like to upgrade your application without immediately addressing
-deprecations.
+addon if you would like to upgrade your application without immediately
+addressing deprecations.
 
 Two new deprecations are introduces in Ember.js 2.17:
 
@@ -86,9 +87,16 @@ Two new deprecations are introduces in Ember Data 2.17:
 For more details on changes in Ember Data 2.17, please review the
 [Ember Data 2.17.0 release page](https://github.com/emberjs/data/releases/tag/v2.17.0).
 
-
 ### Upcoming changes in Ember Data 2.18
 
+* [#6955](https://github.com/ember-cli/ember-cli/pull/6955) Discover
+  dependencies of npm-linked addons [@ef4](https://github.com/ef4)
+
+* [#7419](https://github.com/ember-cli/ember-cli/pull/7419) Delete
+  crossdomain.xml [@sandstrom](https://github.com/sandstrom)
+
+* [#7406](https://github.com/ember-cli/ember-cli/pull/7406) Remove livereload
+  url from output [@topaxi](https://github.com/topaxi)
 
 #### Deprecations in Ember Data 2.18
 
@@ -117,33 +125,77 @@ To upgrade your projects using `npm` run:
 npm install --save-dev ember-cli
 ```
 
-After running the
-upgrade command run `ember init` inside of the project directory to apply the
-blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v2.15.0...v2.17.0)
-and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.15.0...v2.17.0).
+After running the upgrade command run `ember init` inside of the project
+directory to apply the blueprint changes. You can preview those changes for
+[applications](https://github.com/ember-cli/ember-new-output/compare/v2.15.0...v2.17.0)
+and
+[addons](https://github.com/ember-cli/ember-addon-output/compare/v2.15.0...v2.17.0).
 
 ### Changes in Ember CLI 2.17
 
-#### Deprecations in Ember Data 2.17
+Ember CLI previously displayed a warning when you removed `ember-cli-shims`, but
+the dependency is no longer needed if none of your dependencies are using the
+old shims and all of them are using `ember-cli-babel` 6.6.0 or above.
 
-Two new deprecations are introduces in Ember Data 2.17:
+With the release of Ember 2.17, Ember 2.16 is an LTS candidate. To ensure that
+the default `ember-try` configurations are up to date for new applications,
+Ember 2.8 LTS was retired from the configuration and Ember 2.16 was added.
 
-* TODO
-* TODO
+Continuing the trend towards headless browsers, `ember test` in Ember CLI 2.17
+will now run the tests in headless Chrome. To achieve the previous behaviour,
+use `ember test --server`.
 
-For more details on the changes in Ember CLI 2.17 and detailed upgrade
-instructions, please review the [Ember CLI  2.17.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.17.0).
+#### Node.js 9 Support
+
+Per the Ember CLI Node.js version support policy, Ember CLI officially supports
+Node 9 as the active Node.js version and will continue to do so throught its
+[Active window](https://github.com/ember-cli/ember-cli/blob/026cefd5de36c0ae448883067450f51f2e127bbf/docs/node-support.md).
+
+As part of this support, Ember CLI will no longer report warnings when run under
+Node 9.
+
+Node 7 will report warnings as its support period has terminated.
+
+#### Other Notable Changes
+
+* The build pipeline went through an internal refactoring to make it more
+  flexible and composable.
+* Fixed bug where the `app/` tree was being linted even if it was not present.
+* Ensured `test-support` and `addon-test-support` trees are linted.
+
+#### Deprecations in Ember CLI 2.17
+
+No new deprecations were added in Ember CLI 2.17.
 
 ### Upcoming Changes in Ember CLI 2.18
 
+The next version of Ember CLI will see some user experience improvements.
+
+`crossdomain.xml` will no longer be generated for new applications. The file was
+an artifact from a time when Flash was a popular vector for security exploits.
+Now that that is no longer a concern, the file is not necessary.
+
+The `livereload` URL was removed from the output of `ember server`. Users would
+get confused because this URL is printed right away when running the development
+server, but the actual URL the application is running under will only be shown
+when the build is finished. Users would click the `livereload` URL and be
+greeted with a blank page and errors.
+
+If you used `npm link` with a dependency that had itself `npm link`
+dependencies, they would be silently dropped in previous versions of Ember CLI.
+This is now addressed.
+
 #### Deprecations in Ember CLI 2.18
 
+There are no deprecations planned for Ember CLI 2.18.
+
 For more details on the changes in Ember CLI 2.18.0-beta.1 and detailed upgrade
-instructions, please review the [Ember CLI 2.18.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.18.0-beta.1).
+instructions, please review the
+[Ember CLI 2.18.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.18.0-beta.1).
 
 ## Thank You!
 
-As a community-driven open-source project with an ambitious scope, each of
-these releases serve as a reminder that the Ember project would not have been
-possible without your continued support. We are extremely grateful to our
-contributors for their efforts.
+As a community-driven open-source project with an ambitious scope, each of these
+releases serve as a reminder that the Ember project would not have been possible
+without your continued support. We are extremely grateful to our contributors
+for their efforts.
