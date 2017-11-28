@@ -200,3 +200,8 @@
   image: jjordan.jpg
   teams:
     - learning
+- name: Melanie Sumner
+  github: https://github.com/melsumner
+  image: msumner.jpg
+  teams:
+    - learning
