@@ -135,15 +135,16 @@ and
 
 Ember CLI previously displayed a warning when you removed `ember-cli-shims`, but
 the dependency is no longer needed if none of your dependencies are using the
-old shims and all of them are using `ember-cli-babel` 6.6.0 or above.
+old shims and all of them are using `ember-cli-babel` 6.6.0 or above. Due to
+that, the warning has been removed in the new release.
 
-With the release of Ember 2.17, Ember 2.16 is an LTS candidate. To ensure that
-the default `ember-try` configurations are up to date for new applications,
+With the release of Ember 2.17, Ember 2.16 becomes an LTS release. To ensure
+that the default `ember-try` configurations are up to date for new applications,
 Ember 2.8 LTS was retired from the configuration and Ember 2.16 was added.
 
-Continuing the trend towards headless browsers, `ember test` in Ember CLI 2.17
-will now run the tests in headless Chrome. To achieve the previous behaviour,
-use `ember test --server`.
+Ember CLI has been using headless Chrome for `ember test` for a while. In Ember
+CLI 2.17 you now have the option to run your tests in a browser window using
+`ember test --server`.
 
 #### Node.js 9 Support
 
