@@ -1,12 +1,6 @@
 # ---- PLEASE READ ----
-# To have your pull request accepted, you must email listing@emberjs.com
-# with the subject line "Ember Sponsor Logo Contact". Please include the
-# name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants, as well as an
-# explanation of why you should be listed here.
-
-# Please also be sure the logo you upload has a transparent background,
-# and adequate whitespace.
+# This section is maintained by the Core Team alone, based on sponsorship
+# received, financial and otherwise. Before submitting a PR, talk to Leah.
 
 - url: http://tilde.io/
   image: tilde.png
@@ -55,10 +49,17 @@
   image: 201-created.png
   type: "Matthew Beale"
   term_start: 2015-01-01
+- url: https://www.discourse.com
+  image: discourse.png
+  type: "Performance"
+  term_start: 2018-01-01
+  term_end: 2018-12-31
+- url: https://www.bookingsync.com
+  image: bookingsync.png
+  type: "Subteam F2F"
+  term_start: 2017-01-01
+  term_end: 2018-07-01
 
 # ---- PLEASE READ ----
-# To have your pull request accepted, you must email listing@emberjs.com
-# with the subject line "Ember Sponsor Logo Contact". Please include the
-# name and email of a contact we can reach out to should we ever need
-# to make changes to this page or get logo variants, as well as an
-# explanation of why you should be listed here.
+# This section is maintained by the Core Team alone, based on sponsorship
+# received, financial and otherwise. Before submitting a PR, talk to Leah.
