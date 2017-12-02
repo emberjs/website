@@ -248,6 +248,31 @@
   url: 2017.emberconf.com
   image: /images/tomsters/emberconf-2017.png
   tags: all tomster zoey conference
+- title: Skylight
+  date: April 6, 2016
+  url: http://www.skylight.io
+  image: /images/tomsters/corp/skylight-both.png
+  tags: all tomster zoey corp
+- title: Simplabs
+  date: October 15, 2017
+  url: http://www.simplabs.com
+  image: /images/tomsters/corp/simplabs-both.png
+  tags: all tomster zoey corp
+- title: St Petersburg
+  date: November 23, 2017
+  url: https://ember-js-spb.timepad.ru/event/524391/
+  image: /images/tomsters/st-petersburg-tomster.png
+  tags: all tomster
+- title: 2017 Cancer Fundraiser
+  date: June 1, 2017
+  url: http://www.embercares.com
+  image: /images/tomsters/cancer-zoey.png
+  tags: all zoey other
+- title: 2017 Cancer Fundraiser
+  date: June 1, 2017
+  url: http://www.embercares.com
+  image: /images/tomsters/cancer-tomster.png
+  tags: all tomster other
 
 # - title:
 #   date:
