@@ -10,6 +10,10 @@ body {
 a {
   color: $orange-darker;
   text-decoration: none;
+  &:hover, :focus {
+    color: $orange-darkest;
+    border-bottom: 2px dotted $orange-darkest;
+  }
 }
 
 em {
