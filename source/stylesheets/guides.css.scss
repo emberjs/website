@@ -1,25 +1,26 @@
 @import "base/variables";
 @import "mixins/hidpi";
+@import "base/typography";
 
 body.guides, body.blog, body.api {
   p {
     margin: 1.5em 0;
     line-height: 1.5em;
-    color: #0c0c0c;
+    color: #0c0c0c;//TODO replace with variable to ensure consistency
   }
 
   sup {
     vertical-align: super;
     font-weight: 100;
-    color: gray;
+    color: gray; //TODO replace with variable to ensure consistency
     font-size: 11px
   }
 
   code {
     font-family: Menlo, Courier, monospace;
     font-size: 90%;
-    color: #666;
-    background-color: rgba(0, 0, 0, 0.04);
+    color: #666; //TODO replace with variable to ensure consistency
+    background-color: rgba(0, 0, 0, 0.04); //TODO replace with variable to ensure consistency
     padding: 3px;
     border-radius: 5px;
   }
@@ -29,8 +30,6 @@ body.guides, body.blog, body.api {
   }
 
   h1 {
-    font-size: 22px;
-    color: $orange-color;
     padding: 0px 0px 3.5em 2em;
     background: no-repeat top left;
     @include hidpi('chapter-mark', 'png');
@@ -44,7 +43,7 @@ body.guides, body.blog, body.api {
     height: 1px;
     border: none;
     margin: 40px 0;
-    background-color: #dfd7d4;
+    background-color: #dfd7d4; //TODO replace with variable to ensure consistency
 
     &:first-of-type {
       margin: 8px 0;

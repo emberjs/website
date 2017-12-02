@@ -27,9 +27,9 @@
 // Main category headers
 .algolia-docsearch-suggestion--category-header {
     display: none;
-    border: 2px solid white;
+    border: 2px solid $white;
     background: $color-category-header-background;
-    color: white;
+    color: $white;
     font-weight: 600;
     padding: 5px 10px;
     text-align: left;

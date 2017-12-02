@@ -1,13 +1,12 @@
 @import 'mixins/hidpi';
+@import "base/typography";
 
 body.community #content {
-  margin: 3em auto 0 auto;
   max-width: 54em;
   width: 90%;
 
   > h1 {
     text-align: center;
-    margin: 3em auto 1em auto;
   }
 
   .video {
@@ -120,7 +119,7 @@ body.community #content {
         margin: 0 auto;
       }
 
-      .button {
+      .button { //TODO we shouldn't need this
         margin: 25px auto;
       }
     }

@@ -4,11 +4,11 @@ html {
 
 body {
 	font-size: 1em;
-	line-height: 1.7;
+	line-height: 1.618;
 }
 
 a {
-  color: #DC2C0D;
+  color: $orange-darker;
   text-decoration: none;
 }
 
@@ -35,7 +35,7 @@ h6 {
 h1, 
 h2, 
 h3,
-h4{
+h4 {
   line-height: 1;
 	margin-top: 1.25em; 
 	margin-bottom: 0.5em;  
@@ -46,28 +46,13 @@ h1 {
   font-size: 3.157em;
   font-weight: bold;
   line-height: 1.125;
-  margin-top: 0;
   max-width: 100%;
-}
-
-/* This next h1 is so h1s in the middle of the page (ie not the first time)
-have additional breathing room up top */
-
-h1:not(:first-child) {
-  margin-top: 40px;
 }
 
 h2 {
   color: $orange-darker;
   font-size: 2.369em;
-  margin: .83em 0;
-  
-}
-
-h2,
-h3 {
-  font-weight: bold;
-  color: $black-color;
+  margin: 0.83em 0;  
 }
 
 h3 {

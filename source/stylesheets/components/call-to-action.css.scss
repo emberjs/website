@@ -1,13 +1,13 @@
 @import "base/variables";
 
 .call-to-action {
-  background-color: white;
+  background-color: $white;
   margin: 3em auto;
   max-width: 90%;
   text-align: center;
 
   a {
-    background-color: white;
+    background-color: $white;
     border-radius: 7px;
     border: 1px $orange-darker solid;
     color: $orange-darker;
@@ -18,7 +18,7 @@
     text-transform: uppercase;
 
     &:hover {
-      color: white;
+      color: $white;
       background-color: $orange-darker;
       cursor: pointer;
     }
@@ -49,7 +49,7 @@
 .call-to-action__bottom {
   // display: none;
   background-color: $orange;
-  color: white;
+  color: $white;
   font-family: monospace;
   line-height: 0.5;
   margin: 0;
