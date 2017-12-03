@@ -1,3 +1,5 @@
+@import "variables";
+
 html {
 	font-size: 16px;
 }
@@ -97,4 +99,20 @@ ol {
 
 p {
   margin: 1em 0;
+}
+.cta-contribute {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0.2em 0;
+  text-align: center;
+  a {
+    color: $orange-darker;
+    padding: 1em;
+    text-decoration: underline;
+    &:hover, :focus {
+      color: $orange-darkest;
+      cursor: pointer;
+    }
+  }
 }
