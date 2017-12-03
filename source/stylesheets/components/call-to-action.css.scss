@@ -1,5 +1,4 @@
 @import "base/variables";
-@import "base/typography";
 
 .call-to-action {
   background-color: $white;
@@ -17,6 +16,7 @@
     letter-spacing: 1px;
     padding: 0.5em 1em;
     text-transform: uppercase;
+    transition: all 0.3s ease 0s;
 
     &:hover {
       color: $white;
