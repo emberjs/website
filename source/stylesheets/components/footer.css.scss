@@ -5,10 +5,9 @@
   min-width: $page-width;
   margin-top: 60px;
   padding: 25px 0;
-  border-top: 1px solid #e5dbd6;
-  background-color: #f2ece9;
+  border-top: 1px solid #e5dbd6; //TODO replace with variable to ensure consistency
+  background-color: #f2ece9; //TODO replace with variable to ensure consistency
   overflow: hidden;
-
   font-weight: bold;
 
   #footer-wrapper {
@@ -20,20 +19,20 @@
 
   .info {
     width: 200px;
-    color: #717171;
+    color: #717171;//TODO replace with variable to ensure consistency
     text-transform: uppercase;
     font-size: 10px;
     float: left;
 
     a {
-      color: $orange-color;
+      color: $orange;
       text-decoration: none;
     }
   }
 
   .statement {
     font-size: 14px;
-    color: #bbbbbb;
+    color: #bbbbbb; //TODO replace with variable to ensure consistency
     text-transform: uppercase;
     position: absolute;
     text-align: center;
@@ -80,7 +79,7 @@
   .googleplus {
     font-size: 33px;
     line-height: 35px;
-    color: #464646;
+    color: #464646; //TODO replace with variable to ensure consistency
     height: 35px;
     width: 35px;
     display: inline-block;

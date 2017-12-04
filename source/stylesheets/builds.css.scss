@@ -175,7 +175,7 @@
       &.active {
         background-color: #f23818;
         background-image: linear-gradient(0deg, #e7624b, #f67862);
-        color: white;
+        color: $white;
         border: 1px solid transparent;
 
         &:hover {
@@ -244,7 +244,7 @@
       @include background-image(linear-gradient(0deg, #e7624b, #f67862));
       border-right: 1px solid #f67862;
       border-top: none;
-      color: white;
+      color: $white;
       border-top: 1px solid rgba(255, 255, 255, 0.4);
     }
   }

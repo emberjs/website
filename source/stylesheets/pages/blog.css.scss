@@ -1,17 +1,16 @@
 @import 'base/variables';
 
 .blog {
-
   h5.blog-post-summary-author {
     font-size: 10px;
-    color: gray;
+    color: gray;//TODO replace with variable to ensure consistency
   }
 
   article {
     margin: 0 0 3em 0;
     padding: 0 0 3em 0;
 
-    border-bottom: solid 1px #e0e0e0;
+    border-bottom: solid 1px #e0e0e0;//TODO replace with variable to ensure consistency
 
     &:last-child {
       border-bottom: none;
@@ -32,14 +31,14 @@
     }
 
     .post-tag {
-      color: #4d4d4d;
+      color: #4d4d4d;//TODO replace with variable to ensure consistency
       font-size: 1em;
       font-weight: bold;
     }
 
     .blog-post-author {
       font-size: 10px;
-      color: gray;
+      color: gray;//TODO replace with variable to ensure consistency
       top: 59px;
       margin-left: 45px;
     }
@@ -56,13 +55,13 @@
 
     figure {
       width: 100%;
-      background-color: white;
+      background-color: $white;
       padding: 10px;
-      border: 1px solid #cccccc;
+      border: 1px solid #cccccc; //TODO replace with variable to ensure consistency
     }
 
     blockquote {
-      background-color: #F8E7CF;
+      background-color: #F8E7CF;//TODO replace with variable to ensure consistency
       font-style: italic;
       padding: 8px;
 
@@ -75,7 +74,7 @@
     img {
       display: block;
       margin: 0 auto;
-      background-color: white;
+      background-color: $white;
       max-width: 100%;
     }
 
@@ -118,11 +117,11 @@
 
       thead th {
         font-weight: bold;
-        border-bottom: 2px solid $orange-color;
+        border-bottom: 2px solid $orange;
       }
 
       tbody td {
-        border-bottom: 1px solid lighten($orange-color, 20%);
+        border-bottom: 1px solid lighten($orange, 10%);
       }
     }
   }

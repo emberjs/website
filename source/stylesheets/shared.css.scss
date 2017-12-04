@@ -1,6 +1,7 @@
 @import "bourbon";
 @import "base/variables";
 @import "mixins/hidpi";
+@import "base/typography";
 
 code {
   font-family: Menlo, Courier, monospace;
@@ -39,7 +40,7 @@ code {
   overflow: hidden;
   position: relative;
   margin: 2em 0;
-  box-shadow: 0 1px white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px $white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .tabs {
@@ -96,11 +97,11 @@ code {
       border-right: 1px solid #f67862;
       border-top: none;
 
-      color: white;
+      color: $white;
       border-top: 1px solid rgba(255, 255, 255, 0.4);
 
       &:hover {
-        color: white;
+        color: $white;
         @include background-image(linear-gradient(0deg, #e7624b, #f67862));
       }
     }

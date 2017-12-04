@@ -5,7 +5,7 @@ body.tomster_commission #content,
 body.tomster_commission-sent #content,
 body.tomster_payment #content,
 body.tomster_payment-sent #content {
-  margin: 3em auto 0 auto;
+  // margin: 3em auto 0 auto;
   width: 54em;
 
   h1,
@@ -56,13 +56,13 @@ body.tomster_payment-sent #content {
     font-weight: bold;
 
     &.error {
-      color: $orange-color;
+      color: $orange-darker;
       font-size: 12px;
       margin-top: -0.9em;
     }
 
     .req {
-      color: $orange-color;
+      color: $orange-darker;
     }
   }
 
@@ -75,19 +75,19 @@ body.tomster_payment-sent #content {
     display: block;
     padding: 10px;
     font-size: 14px;
-    background-color: white;
+    background-color: $white; 
     border: 1px solid #ddd;
     outline: none;
     width: 70%;
     border-radius: 6px;
-    box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px $white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 
     &:focus {
       border-color: #888;
     }
 
     &.error {
-      border-color: $orange-color;
+      border-color: $orange-darker;
     }
   }
 
