@@ -2,7 +2,7 @@
 
 .blog {
   h5.blog-post-summary-author {
-    font-size: 10px;
+    font-size: 0.9em;
     color: gray;//TODO replace with variable to ensure consistency
   }
 
@@ -28,6 +28,11 @@
 
     h2.blog-post-title {
       margin-bottom: 0;
+      time {
+        display: block;
+        font-size: 0.7em;
+        color: $dark-gray;
+      }
     }
 
     .post-tag {
