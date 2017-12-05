@@ -387,8 +387,6 @@ locations:
       profileImage: https://secure.meetupstatic.com/photos/member/c/3/4/d/member_268429997.jpeg
     - organizer: Chris Westra
       profileImage: https://secure.meetupstatic.com/photos/member/c/4/c/e/member_238430382.jpeg
-    - organizer: James Martinez
-      profileImage: http://photos2.meetupstatic.com/photos/member/6/d/7/2/member_244288018.jpeg
   - location: Phoenix, AZ
     url: http://www.meetup.com/EmberJS-Phoenix
     lat: 33.377826
