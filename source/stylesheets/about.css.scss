@@ -1,12 +1,10 @@
 @import "base/variables";
 @import "mixins/hidpi";
-@import "components/call-to-action";
-// The EmberConf CSS is used seasonally; please comment it out when not in use, rather than delete
+@import "components/call-to-action"; // The EmberConf CSS is used seasonally; please comment it out when not in use, rather than delete
 // @import "components/ember-conf";
 
 .job-board {
   display: none;
-
   @media screen and (max-width: $small-max-width) {
     background-color: #1e719b;
     font-size: 1.2em;
@@ -26,8 +24,8 @@
       text-decoration: none;
       text-transform: uppercase;
 
-      &:hover,
-      &:focus {
+      &:focus,
+      &:hover {
         text-decoration: underline;
       }
 
@@ -35,7 +33,9 @@
         margin: -0.2em 0 -0.6em 0.5em;
         transform: rotate(10deg);
         max-height: 40px;
-        &:hover, &:focus {
+
+        &:focus,
+        &:hover {
           text-decoration: none;
         }
       }
@@ -53,20 +53,88 @@
   left: 20px;
   width: 125px;
   height: 170px;
-
   text-decoration: none !important;
   text-indent: -99999px;
-
   @include hidpi('about/job-board-banner', png);
 
   &:hover {
     border-bottom: none;
   }
-
   @media screen and (max-width: $small-max-width) {
     display: none;
   }
 }
+// EmberConf CSS; comment out when not in use
+
+.emberconf-callout {
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  .wrapper {
+    background-color: #001D36;
+    background-repeat: no-repeat;
+    background-size: auto 95% !important;
+    @include hidpi('about/emberconf-callout-bg', png);
+    margin-top: 1em;
+    overflow: hidden;
+    padding-bottom: 1em;
+    position: relative;
+    text-align: center;
+    @media screen and (min-width: $screen-sm-min) {
+      background-size: cover;
+      overflow: visible;
+      padding-bottom: 0;
+    }
+  }
+
+  p {
+    color: white;
+    display: block;
+    padding: 0 20px;
+    position: relative;
+    @media screen and (min-width: $screen-sm-min) {
+      display: inline-block;
+      padding: 20px 0 20px 120px;
+    }
+
+    &:before {
+      bottom: -90px;
+      content: '';
+      display: block;
+      height: 107px;
+      @include hidpi('about/party-tomster', png);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain!important;
+      right: 10px;
+      width: 75px;
+      @media screen and (min-width: $screen-sm-min) {
+        bottom: -51px;
+        display: block;
+        height: 142px;
+        left: 0;
+        width: 100px;
+      }
+    }
+  }
+
+  a {
+    background: #4AA0B8;
+    border-radius: 0.25em;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 0.5em 1em;
+    position: relative;
+    text-transform: uppercase;
+    top: -.5em;
+    @media screen and (min-width: $screen-sm-min) {
+      top: 0;
+    }
+  }
+}
+// End EmberConf Code
 
 .about-page--header {
   display: block;
@@ -83,26 +151,26 @@
   .bold {
     font-weight: 400;
   }
-
   @media screen and (max-width: $small-max-width) {
     margin: 0.5 auto;
     font-size: 2em;
   }
 }
 
-body.index,
-body.about {
+body.about,
+body.index {
   background: no-repeat top center #faf4f1;
-  background-image: url('/images/background-shades.png');
+  background-image: url("/images/background-shades.png");
   background-image: url('/images/background-shades.svg'), none; // See: http://css-tricks.com/svg-fallbacks/
-
-  @media screen and (min-width: 2000px) { // Stretch background width when wider than source image
+  @media screen and (min-width: 2000px) {
+    // Stretch background width when wider than source image
     background-size: 100% auto;
   }
 
   .feature {
     @media screen and (max-width: $small-max-width) {
-      max-width:100%;
+      max-width: 100%;
+
       .feature-img {
         display: block;
         margin: 0 auto;
@@ -114,7 +182,6 @@ body.about {
   .feature p {
     margin-top: 1.5em;
   }
-
   @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
     .feature .handlebars {
       background-size: 221px 210px !important;
@@ -149,10 +216,10 @@ body.about {
 
   .getting-started {
     @media screen and (max-width:$small-max-width) {
-      display:block;
+      display: block;
       clear: both;
       margin: 0 auto;
-      max-width:100%;
+      max-width: 100%;
     }
 
     h2.sub {
@@ -165,7 +232,7 @@ body.about {
 
   .prose {
     width: 800px;
-    max-width:100%;
+    max-width: 100%;
   }
 
   .section.gears {
@@ -185,4 +252,3 @@ body.about {
     text-align: center;
   }
 }
-
