@@ -77,28 +77,28 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.17
 
+Ember.js 2.17 will contain no new features. The changes introduced in
+Ember Data 2.17 mostly focus on bug fixes, improved documentation and
+build improvments to support changes in the ember-cli ecosystem and
+fix a regression in support for build using Node 4.x.
+
 #### Deprecations in Ember Data 2.17
 
-Two new deprecations are introduces in Ember Data 2.17:
-
-* TODO
-* TODO
+No new deprecations are introduced in Ember Data 2.17.
 
 For more details on changes in Ember Data 2.17, please review the
 [Ember Data 2.17.0 release page](https://github.com/emberjs/data/releases/tag/v2.17.0).
 
 ### Upcoming changes in Ember Data 2.18
 
-* [#6955](https://github.com/ember-cli/ember-cli/pull/6955) Discover
-  dependencies of npm-linked addons [@ef4](https://github.com/ef4)
-
-* [#7419](https://github.com/ember-cli/ember-cli/pull/7419) Delete
-  crossdomain.xml [@sandstrom](https://github.com/sandstrom)
-
-* [#7406](https://github.com/ember-cli/ember-cli/pull/7406) Remove livereload
-  url from output [@topaxi](https://github.com/topaxi)
+No major new features are planned for Ember Data 2.18. The Ember Data
+2.18 is expected to focus on bug fixes around relationships. Some of
+the bigger bug fixes are expected to be backported to older releases
+durring the 2.18 beta cycle.
 
 #### Deprecations in Ember Data 2.18
+
+No new deprecations are planned in Ember Data 2.18.
 
 For more details on the upcoming changes in Ember Data 2.18, please review the
 [Ember Data 2.18.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.18.0-beta.1).
