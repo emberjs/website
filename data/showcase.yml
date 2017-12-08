@@ -30,11 +30,10 @@
   repository: https://github.com/ember-learn/ember-api-docs
   demo: https://emberjs.com/api/
   description: |
-    This application was built to display our <a href="http://emberjs.com/api/">versioned API docs</a>. It is a good example of a <a href="https://www.smashingmagazine.com/2016/08/a-beginners-guide-to-progressive-web-apps/"><abbr title="Progressive Web App">PWA</abbr></a>.  You'll be able to learn about:
+    This application was built to display our <a href="http://emberjs.com/api/">versioned API docs</a>.  You'll be able to learn about:
   features:
-    - See a more full-featured Ember web app in action
+    - A more full-featured Ember web app in action
     - Usage of <a href="https://ember-fastboot.com/">Ember FastBoot</a>.
-    - Enabling <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">service workers</a> and defining <a href="https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/">web app manifests</a> to enhance your ember apps into progressive web apps.
 # - name:
 #   image:
 #     src:
