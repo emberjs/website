@@ -1,12 +1,83 @@
 .emberconf {
   text-align: center;
+
   img {
     display: block;
     max-width: 90%;
     margin: 0 auto;
     padding-top: 40px;
   }
+
   a:hover {
     border-bottom: none;
+  }
+}
+
+.emberconf-callout {
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  .wrapper {
+    background-color: #001D36;
+    background-repeat: no-repeat;
+    background-size: auto 95% !important;
+    @include hidpi('about/emberconf-callout-bg', png);
+    margin-top: 1em;
+    overflow: hidden;
+    padding-bottom: 1em;
+    position: relative;
+    text-align: center;
+    @media screen and (min-width: $screen-sm-min) {
+      background-size: cover;
+      overflow: visible;
+      padding-bottom: 0;
+    }
+  }
+
+  p {
+    color: white;
+    display: block;
+    padding: 0 20px;
+    position: relative;
+    @media screen and (min-width: $screen-sm-min) {
+      display: inline-block;
+      padding: 20px 0 20px 120px;
+    }
+
+    &:before {
+      bottom: -90px;
+      content: '';
+      display: block;
+      height: 107px;
+      @include hidpi('about/party-tomster', png);
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain!important;
+      right: 10px;
+      width: 75px;
+      @media screen and (min-width: $screen-sm-min) {
+        bottom: -51px;
+        display: block;
+        height: 142px;
+        left: 0;
+        width: 100px;
+      }
+    }
+  }
+
+  a {
+    background: #4AA0B8;
+    border-radius: 0.25em;
+    color: white;
+    font-size: 0.75em;
+    font-weight: bold;
+    margin-left: 1em;
+    padding: 0.5em 1em;
+    position: relative;
+    text-transform: uppercase;
+    top: -.5em;
+    @media screen and (min-width: $screen-sm-min) {
+      top: 0;
+    }
   }
 }
