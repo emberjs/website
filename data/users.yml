@@ -251,9 +251,9 @@
 - url: http://inthepocket.mobi/
   image: inthepocket.png
   alt: In The Pocket
-- url: http://www.veriskhealth.com
-  image: verisk_health.png
-  alt: Verisk Health
+- url: https://www.verscend.com/
+  image: verscend.png
+  alt: Verscend
 - url: https://universe.com
   image: universe.png
   alt: Universe
