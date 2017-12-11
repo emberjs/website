@@ -1,6 +1,6 @@
 ---
 title: Ember 2.17 and 2.18 Beta Released
-author: Ricardo Mendes
+author: Ricardo Mendes, Brendan McLoughlin
 tags: Releases
 ---
 
@@ -12,6 +12,9 @@ our community (especially addon authors) to help test these beta builds and
 report any bugs before they are published as a final release in six weeks' time.
 The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
 continuously test your projects against the latest Ember releases.
+
+Despite an initial delay on these releases, and an additional delay on this announcement,
+the [Ember 3.0 Release Schedule](https://emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html#toc_the-ember-3-0-release-schedule) is unchanged.
 
 You can read more about our general release process here:
 
@@ -29,45 +32,27 @@ Ember.js is the core framework for building ambitious web applications.
 ### Changes in Ember.js 2.17
 
 Ember.js 2.17 is an incremental, backwards compatible release of Ember with
-bugfixes, performance improvements, and minor deprecations.
+bugfixes and performance improvements.
 
 #### Deprecations in Ember 2.17
 
-Deprecations are added to Ember.js when an API will be removed at a later date.
-
-Each deprecation has an entry in the deprecation guide describing the migration
-path to more stable API. Deprecated public APIs are not removed until a major
-release of the framework.
-
-Consider using the
-[ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow)
-addon if you would like to upgrade your application without immediately
-addressing deprecations.
-
-Two new deprecations are introduces in Ember.js 2.17:
-
-* TODO
-* TODO
+There were no new deprecations introduced in 2.17.
 
 For more details on changes in Ember.js 2.17, please review the
 [Ember.js 2.17.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.17.0).
 
 ### Upcoming Changes in Ember.js 2.18
 
-Ember.js 2.18 will introduce two new features:
-
-* TODO
-* TODO
+Ember.js 2.18 will see the [removal of the `router.router` deprecations](https://github.com/emberjs/ember.js/pull/15754) and respective code.
 
 #### Deprecations in Ember.js 2.18
 
-Two new deprecations are introduces in Ember.js 2.18:
+One new deprecations are introduces in Ember.js 2.18:
 
-* TODO
-* TODO
+* [`targetObject`](/deprecations/v2.x/#toc_code-targetobject-code).
 
 For more details on the upcoming changes in Ember.js 2.18, please review the
-[Ember.js 2.18.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v2.18.0-beta.1).
+[Ember.js 2.18.0-beta.1](https://github.com/emberjs/ember.js/releases/tag/v2.18.0-beta.1) and [Ember.js 2.18.0-beta.2](https://github.com/emberjs/ember.js/releases/tag/v2.18.0-beta.2) release pages.
 
 ---
 
