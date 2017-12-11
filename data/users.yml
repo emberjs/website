@@ -961,6 +961,10 @@
   image: canopy.png
   alt: Canopy
   use: "Canopy uses Ember for its primary data visualization platform"
+- url: "https://fusemachines.com"
+  image: fusemachines.png
+  alt: Fusemachines
+  use: "Fusemachines uses Ember for most of its client facing Web applications"
 
 
 # ---- PLEASE READ ----
