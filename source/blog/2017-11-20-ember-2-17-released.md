@@ -35,6 +35,13 @@ Ember.js is the core framework for building ambitious web applications.
 Ember.js 2.17 is an incremental, backwards compatible release of Ember with
 bugfixes and performance improvements.
 
+Some of the more notorious fixes were:
+
+* The `filter`/`map`/`sort` computed properties now [properly expand dependent keys using braces, like `items.@each.{prop1,prop2}`](https://github.com/emberjs/ember.js/pull/15855).
+* Unhandles rejections are [no longer thrown twice](https://github.com/emberjs/ember.js/pull/15871).
+* Passing `false` to `link-to`'s `activeClass` no longer [erroneously appends transitioning classes](https://github.com/emberjs/ember.js/pull/15265).
+* Not passing all query params to `RouterService`'s `transitionTo` no longer [throws an error](https://github.com/emberjs/ember.js/pull/15613).
+
 #### Deprecations in Ember 2.17
 
 There were no new deprecations introduced in 2.17.
@@ -48,7 +55,7 @@ Ember.js 2.18 will see the [removal of the `router.router` deprecations](https:/
 
 #### Deprecations in Ember.js 2.18
 
-One new deprecations are introduces in Ember.js 2.18:
+One new deprecation was introduced in Ember.js 2.18:
 
 * [`targetObject`](/deprecations/v2.x/#toc_code-targetobject-code).
 
