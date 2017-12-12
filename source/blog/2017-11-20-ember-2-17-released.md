@@ -15,6 +15,7 @@ continuously test your projects against the latest Ember releases.
 
 Despite an initial delay on these releases, and an additional delay on this announcement,
 the [Ember 3.0 Release Schedule](https://emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html#toc_the-ember-3-0-release-schedule) is unchanged.
+This means that Ember 2.18 and the first beta of Ember 3.0 will be release on January 1st, 2018.
 
 You can read more about our general release process here:
 
