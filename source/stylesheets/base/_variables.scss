@@ -2,6 +2,24 @@
 $orange: #E04E39;
 $orange-darker: darken($orange, 10);
 $orange-darkest: darken($orange, 20);
+
+$white: #fdfdfd;
+$black: #212121;
+
+$blue: #1e719b; //used for tiny accents like the "job board" graphic
+$blue-lighter: #74b0ce;
+$gray: #454545;
+$gray-lighter: #999999;
+$gray-lightest: #eeeeee;
+
+$linen: #f9e7e4; //white-darkest? but I think this is the same as brown-lightest aka "tan"
+
+/* status colors */
+$red: #D50000;
+$yellow: #a86500; //this passes color contrast checks
+$green: green; //#008000
+
+/* Deprecating these colors/variables */
 $blue-color: #3c64b6;
 $black-color: #252525;
 $light-brown: #b67d47;
@@ -9,13 +27,10 @@ $brown: #865931;
 $medium-gray: #999;
 $dark-gray: #444545;
 $tan: #fffdf9;
-$white: #fdfdfd;
-$black: #212121;
 $creme: #FFFBF5;
-$linen: #f9e7e4;
 
-$base-background-color: $creme;
-$sidebar-background-color: #FFFDF9;
+$base-background-color: $white;
+$sidebar-background-color: $white;
 
 /* Calculated page dimensions. THIS IS BEING DEPRECATED */
 $page-width: 960px;

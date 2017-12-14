@@ -1,3 +1,6 @@
+@import "base/variables";
+@import "mixins/hidpi";
+
 .emberconf {
   text-align: center;
 
@@ -79,6 +82,7 @@
     @media screen and (min-width: $screen-sm-min) {
       top: 0;
     }
+
     &:hover {
       border: none;
       color: #fff;
