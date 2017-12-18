@@ -1,12 +1,12 @@
 ---
-title: Ember 2.18 and 2.19 Beta Released
+title: Ember 2.18 and 3.0 Beta Released
 author: Ricardo Mendes
 tags: Releases
 ---
 
 Today the Ember project is releasing version 2.18.0 of Ember.js, Ember Data, and Ember CLI.
 
-This release kicks off the 2.19 beta cycle for all sub-projects. We encourage our
+This release kicks off the 3.0 beta cycle for all sub-projects. We encourage our
 community (especially addon authors) to help test these beta builds and report
 any bugs before they are published as a final release in six weeks' time. The
 [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
@@ -14,10 +14,10 @@ continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
-- [Release Dashboard](http://emberjs.com/builds/)
-- [The Ember Release Cycle](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html)
-- [The Ember Project](http://emberjs.com/blog/2015/06/16/ember-project-at-2-0.html)
-- [Ember LTS Releases](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html)
+* [Release Dashboard](http://emberjs.com/builds/)
+* [The Ember Release Cycle](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html)
+* [The Ember Project](http://emberjs.com/blog/2015/06/16/ember-project-at-2-0.html)
+* [Ember LTS Releases](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html)
 
 ---
 
@@ -51,22 +51,22 @@ Two new deprecations are introduces in Ember.js 2.18:
 For more details on changes in Ember.js 2.18, please review the
 [Ember.js 2.18.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.18.0).
 
-### Upcoming Changes in Ember.js 2.19
+### Upcoming Changes in Ember.js 3.0
 
-Ember.js 2.19 will introduce two new features:
-
-* TODO
-* TODO
-
-#### Deprecations in Ember.js 2.19
-
-Two new deprecations are introduces in Ember.js 2.19:
+Ember.js 3.0 will introduce two new features:
 
 * TODO
 * TODO
 
-For more details on the upcoming changes in Ember.js 2.19, please review the
-[Ember.js 2.19.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v2.19.0-beta.1).
+#### Deprecations in Ember.js 3.0
+
+Two new deprecations are introduces in Ember.js 3.0:
+
+* TODO
+* TODO
+
+For more details on the upcoming changes in Ember.js 3.0, please review the
+[Ember.js 3.0.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.0.0-beta.1).
 
 ---
 
@@ -86,14 +86,12 @@ Two new deprecations are introduces in Ember Data 2.18:
 For more details on changes in Ember Data 2.18, please review the
 [Ember Data 2.18.0 release page](https://github.com/emberjs/data/releases/tag/v2.18.0).
 
+### Upcoming changes in Ember Data 3.0
 
-### Upcoming changes in Ember Data 2.19
+#### Deprecations in Ember Data 3.0
 
-
-#### Deprecations in Ember Data 2.19
-
-For more details on the upcoming changes in Ember Data 2.19, please review the
-[Ember Data 2.19.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v2.19.0-beta.1).
+For more details on the upcoming changes in Ember Data 3.0, please review the
+[Ember Data 3.0.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.0.0-beta.1).
 
 ---
 
@@ -132,14 +130,14 @@ Two new deprecations are introduces in Ember CLI 2.18:
 * TODO
 
 For more details on the changes in Ember CLI 2.18 and detailed upgrade
-instructions, please review the [Ember CLI  2.18.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.18.0).
+instructions, please review the [Ember CLI 2.18.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.18.0).
 
-### Upcoming Changes in Ember CLI 2.19
+### Upcoming Changes in Ember CLI 3.0
 
-#### Deprecations in Ember CLI 2.19
+#### Deprecations in Ember CLI 3.0
 
-For more details on the changes in Ember CLI 2.19.0-beta.1 and detailed upgrade
-instructions, please review the [Ember CLI 2.19.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.19.0-beta.1).
+For more details on the changes in Ember CLI 3.0.0-beta.1 and detailed upgrade
+instructions, please review the [Ember CLI 3.0.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.0.0-beta.1).
 
 ## Thank You!
 
