@@ -1,9 +1,16 @@
 @import 'base/variables';
 
+#content.has-sidebar {
+  h1 {
+    margin-top: 0; //get rid of this after you eliminate all of the #content CSS rules. 
+    border-bottom: 1px solid lightgray;
+  }
+}
 .blog {
   .blog-post-summary-author {
     font-size: 0.9em;
     color: $gray;
+    margin-top: 0;
   }
 
   article {
@@ -29,8 +36,8 @@
       margin-bottom: 0;
       time {
         display: block;
-        font-size: 0.6em;
-        color: $dark-gray;
+        font-size: 0.5em;
+        color: $gray-darker;
       }
     }
 
