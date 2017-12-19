@@ -130,30 +130,21 @@ article.blog-post {
     color: #E04E39;
   }
 
-  h2 {
-    text-transform: capitalize;
-    &.anchorable-toc {
-      margin-top: 1.8em !important;
-      font-size: 1.66667em; //to match elsewhere
-
-    }
-  }
-
-  h3.blog-post-author,
-  h3.blog-post-date {
-    color: #777;
+  .blog-post-author,
+  .blog-post-date {
+    color: $gray;
     margin-left: 25px;
     font-size: 16px;
     font-weight: normal;
     text-transform: none;
   }
 
-  h3.blog-post-author {
-    color: #333;
+  .blog-post-author {
+    color: $black;
   }
 
   hr:first-of-type {
-    margin: 1em 0 1.5em;
+    margin-bottom: 1.5em;
   }
 
   li {
@@ -169,13 +160,6 @@ article.blog-post {
   }
 
   .chapter {
-    h1 {
-      padding-bottom: 0.5em;
-    }
-
-    h2 {
-      text-transform: capitalize;
-    }
     ul,
     ol {
       margin-left: $list-indent;

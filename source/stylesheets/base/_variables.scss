@@ -11,6 +11,8 @@ $blue-lighter: #74b0ce;
 $gray: #454545;
 $gray-lighter: #999999;
 $gray-lightest: #eeeeee;
+$gray-darker: darken($gray, 10%);
+$gray-darkest: darken($gray, 15%);
 
 $linen: #f9e7e4; //white-darkest? but I think this is the same as brown-lightest aka "tan"
 

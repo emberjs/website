@@ -1,15 +1,14 @@
 @import 'base/variables';
 
 .blog {
-  h5.blog-post-summary-author {
+  .blog-post-summary-author {
     font-size: 0.9em;
-    color: gray;//TODO replace with variable to ensure consistency
+    color: $gray;
   }
 
   article {
     margin: 0 0 3em 0;
     padding: 0 0 3em 0;
-
     border-bottom: solid 1px #e0e0e0;//TODO replace with variable to ensure consistency
 
     &:last-child {
@@ -26,43 +25,39 @@
       }
     }
 
-    h2.blog-post-title {
+    .blog-post-title {
       margin-bottom: 0;
       time {
         display: block;
-        font-size: 0.7em;
+        font-size: 0.6em;
         color: $dark-gray;
       }
     }
 
     .post-tag {
-      color: #4d4d4d;//TODO replace with variable to ensure consistency
+      color: $gray;
       font-size: 1em;
       font-weight: bold;
     }
 
     .blog-post-author {
       font-size: 10px;
-      color: gray;//TODO replace with variable to ensure consistency
+      color: $gray;
       top: 59px;
       margin-left: 45px;
     }
 
     .original-post-url {
-      color: gray;
+      color: $gray;
       font-size: 12px;
       text-transform: none;
-    }
-
-    h1 {
-      padding-bottom: 0;
     }
 
     figure {
       width: 100%;
       background-color: $white;
       padding: 10px;
-      border: 1px solid #cccccc; //TODO replace with variable to ensure consistency
+      border: 1px solid $gray-lightest; 
     }
 
     blockquote {
