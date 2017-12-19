@@ -961,6 +961,10 @@
   image: canopy.png
   alt: Canopy
   use: "Canopy uses Ember for its primary data visualization platform"
+- url: "https://lendix.com"
+  image: lendix.png
+  alt: Lendix
+  use: "We use Ember for our marketplace"
 
 
 # ---- PLEASE READ ----
