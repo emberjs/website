@@ -1,13 +1,16 @@
 ---
-title: Ember 2.17 and 2.18 Beta Released
+title: Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released
 author: Ricardo Mendes, Brendan McLoughlin
 tags: Releases
 ---
 
-Today the Ember project is releasing version 2.17.0 of Ember.js, Ember Data, and
+*Updated on December 19, 2017 to include information about Ember.js 2.16-LTS.*
+
+Today the Ember project is releasing Ember.js 2.16 LTS (a long-term support
+release) and version 2.17.0 of Ember.js, Ember Data, and
 Ember CLI.
 
-This release kicks off the 2.18 beta cycle for all sub-projects. We encourage
+This release also kicks off the 2.18 beta cycle for all sub-projects. We encourage
 our community (especially addon authors) to help test these beta builds and
 report any bugs before they are published as a final release in six weeks' time.
 The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
@@ -29,6 +32,34 @@ You can read more about our general release process here:
 ## Ember.js
 
 Ember.js is the core framework for building ambitious web applications.
+
+### Ember.js 2.16-LTS
+
+Ember 2.16-LTS is the latest long-term support release. You can install it
+by upgrading `ember-source` to `~2.16.2` in your `package.json`.
+
+The LTS channel is designed for Ember users who would like to upgrade less
+frequently, while still getting support from the project and the wider
+ecosystem. At the same time, it allows addon authors to know which versions
+of Ember to focus their effort on.
+
+Per our [usual policy](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html),
+Ember 2.16-LTS is released six weeks after the
+[2.16.0 stable release](https://www.emberjs.com/blog/2017/10/11/ember-2-16-released.html).
+This allows ample time to fix any reported regressions and ensures a rock
+solid LTS release. It will continue to receive critical bugfixes for six
+release cycles (roughly August 2018), and security patches for ten release
+cycles (roughly Janurary 2019).
+
+Meanwhile, Ember 2.12-LTS will continue to receive critical bugfixes for another
+two release cycles (roughly Feburary 2018), and security patches for six release
+cycles (roughly August 2018). Users of Ember 2.12-LTS should make use of this
+overlapping period to transition over to Ember 2.16-LTS.
+
+---
+
+For more details on the changes landing in Ember.js 2.16-LTS, please review the
+[Ember.js 2.16.2 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.16.2/CHANGELOG.md).
 
 ### Changes in Ember.js 2.17
 
