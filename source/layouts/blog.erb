@@ -13,8 +13,8 @@
       <span class="post-tag">Syndicated Post</span>
     <% end %>
     <% if current_page.data.author %>
-      <h3 class="blog-post-author">By <%= current_page.data.author %></h3>
-      <h3 class="blog-post-date"><time><%= current_article.date.strftime('%B %-d, %Y') %></time></h3>
+      <div class="blog-post-author">By <%= current_page.data.author %></div>
+      <div class="blog-post-date"><time><%= current_article.date.strftime('%B %-d, %Y') %></time></div>
     <% end %>
 
     <hr>
