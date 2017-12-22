@@ -105,9 +105,9 @@
   image: bluetube.png
   alt: Bluetube
   inactive: true
-- url: http://www.mashape.com
+- url: https://konghq.com/
   image: mashape.png
-  alt: Mashape
+  alt: Kong
 - url: http://www.skovik.com
   image: skovik.png
   alt: Skovik
@@ -126,9 +126,9 @@
 - url: http://www.kohactive.com
   image: kohactive.png
   alt: kohactive
-- url: http://www.captaintrain.com
+- url: https://www.trainline.eu/
   image: captain-train.png
-  alt: Captain Train
+  alt: Trainline
 - url: http://withassociates.com
   image: withassociates.png
   alt: With Associates
@@ -386,7 +386,7 @@
 - url: http://www.gooddata.com/
   image: gooddata.png
   alt: GoodData
-- url: http://www.cruxandco.com/
+- url: http://www.crx.io/
   image: crux.png
   alt: Crux Consulting
 - url: https://huboard.com
@@ -434,9 +434,9 @@
 - url: http://www.acentera.com
   image: acentera.png
   alt: ACenterA Cloud Services
-- url: http://greenfieldhq.com
+- url: https://www.raizlabs.com/
   image: greenfield.png
-  alt: Greenfield
+  alt: Raiz Labs
 - url: http://typework.com
   image: typework.png
   alt: Typework
@@ -449,9 +449,9 @@
 - url: http://www.hstry.co
   image: hstry.png
   alt: HSTRY
-- url: http://www.netuitive.com
+- url: https://www.metricly.com/
   image: netuitive_ember_logo.png
-  alt: Netuitive
+  alt: Metricly
 - url: http://www.thinkific.com
   image: thinkific.png
   alt: Thinkific
@@ -499,9 +499,9 @@
 - url: http://poeticsystems.com
   image: poetic.png
   alt: Poetic Systems
-- url: http://redowlanalytics.com
+- url:  https://www.forcepoint.com
   image: redowlanalytics.png
-  alt: RedOwl
+  alt: Forcepoint
 - url: https://www.solvace.com
   image: solvace.png
   alt: Solvace
@@ -511,7 +511,7 @@
 - url: http://www.zenefits.com
   image: zenefits.png
   alt: Zenefits
-- url: https://getpoynt.com
+- url: https://poynt.com/
   image: poynt.png
   alt: Poynt
 - url: http://www.zybooks.com
@@ -553,9 +553,9 @@
 - url: http://www.kotive.com
   image: kotive.png
   alt: Kotive
-- url: http://gettinderbox.com/
+- url: https://octiv.com/
   image: tinderbox.png
-  alt: TinderBox
+  alt: Octiv
 - url: http://www.checkmate.io
   image: checkmate.png
   alt: Instant Checkmate
