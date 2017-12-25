@@ -965,6 +965,10 @@
   image: lendix.png
   alt: Lendix
   use: "We use Ember for our marketplace"
+- url: "https://www.nimbo-x.com"
+  image: nimbo-x.png
+  alt: Nimbo X
+  use: "We use Ember to make a EHR that actually works for you. Modern, cloud based, mobile, free"
 
 
 # ---- PLEASE READ ----
