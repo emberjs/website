@@ -1,13 +1,16 @@
 ---
-title: Ember 2.13 and 2.14 Beta Released
-author: 
+title: Ember 2.12-LTS, Ember 2.13 and 2.14 Beta Released
+author:
 tags: Releases
 ---
 
-Today the Ember project is releasing version 2.13.0 of Ember.js, Ember Data, and Ember CLI.
+*Updated on December 19, 2017 to include information about Ember.js 2.12-LTS.*
 
-This release kicks off the 2.14 beta cycle for all sub-projects. We encourage our
-community (especially addon authors) to help test these beta builds and report
+Today the Ember project is releasing Ember.js 2.12 LTS (a long-term support
+release) and version 2.13.0 of Ember.js, Ember Data, and Ember CLI.
+
+This release also kicks off the 2.14 beta cycle for all sub-projects. We encourage
+our community (especially addon authors) to help test these beta builds and report
 any bugs before they are published as a final release in six weeks' time. The
 [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
 continuously test your projects against the latest Ember releases.
@@ -24,6 +27,34 @@ You can read more about our general release process here:
 ## Ember.js
 
 Ember.js is the core framework for building ambitious web applications.
+
+### Ember.js 2.12-LTS
+
+Ember 2.12-LTS is our third long-term support release. You can install it
+by upgrading `ember-source` to `~2.12.2` in your `package.json`.
+
+The LTS channel is designed for Ember users who would like to upgrade less
+frequently, while still getting support from the project and the wider
+ecosystem. At the same time, it allows addon authors to know which versions
+of Ember to focus their effort on.
+
+Per our [usual policy](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html),
+Ember 2.12-LTS is released six weeks after the
+[2.12.0 stable release](https://www.emberjs.com/blog/2017/03/19/ember-2-12-released.html).
+This allows ample time to fix any reported regressions and ensures a rock
+solid LTS release. It will continue to receive critical bugfixes for six
+release cycles (roughly Janurary 2018), and security patches for ten release
+cycles (roughly June 2018).
+
+Meanwhile, Ember 2.8-LTS will continue to receive critical bugfixes for another
+two release cycles (roughly July 2017), and security patches for six release
+cycles (roughly February 2018). Users of Ember 2.8-LTS should make use of this
+overlapping period to transition over to Ember 2.12-LTS.
+
+---
+
+For more details on the changes landing in Ember.js 2.12-LTS, please review the
+[Ember.js 2.12.2 CHANGELOG](https://github.com/emberjs/ember.js/blob/v2.12.2/CHANGELOG.md).
 
 ### Changes in Ember.js 2.13
 
@@ -115,7 +146,7 @@ Ember Data 2.13 deprecates the `data-adapter`, `injectStore`,
 `transforms`, and `store` Ember application initializers that Ember Data injects
 into apps. The deprecation was proposed via [an RFC](https://github.com/emberjs/rfcs/blob/master/text/0181-deprecate-ember-data-initializers.md),
 and the Ember Data team proactively submitted pull-requests for all usages of
-these initializers in open source addons. 
+these initializers in open source addons.
 
 For more details on the changes in Ember Data 2.13, please review the
 [Ember Data 2.13.0 release page](https://github.com/emberjs/data/releases/tag/v2.13.0).
@@ -184,10 +215,10 @@ for more details.
 #### Targets
 
 In order to allow addons to understand the desired target platforms of the app that they are operating in, a new file has been added
-to all generated projects: `config/targets.js`. This file exposes the supported targets so that tooling such as [autoprefixer](https://github.com/postcss/autoprefixer) 
+to all generated projects: `config/targets.js`. This file exposes the supported targets so that tooling such as [autoprefixer](https://github.com/postcss/autoprefixer)
 and [babel-preset-env](https://github.com/babel/babel-preset-env) can properly understand the level of transpilation that is needed.
 
-Thanks to [@cibernox](https://github.com/cibernox) for proposing and implementing this feature. [@rwjblue](https://github.com/rwjblue) 
+Thanks to [@cibernox](https://github.com/cibernox) for proposing and implementing this feature. [@rwjblue](https://github.com/rwjblue)
 recently wrote a blog post reviewing the new feature and how to utilize it: [Ember CLI Targets](http://rwjblue.com/2017/04/21/ember-cli-targets/).
 
 #### Babel 6

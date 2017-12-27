@@ -1,15 +1,38 @@
 @import 'base/variables';
 
+#content.has-sidebar {
+  h1 {
+    margin-top: 0; //get rid of this after you eliminate all of the #content CSS rules. 
+    border-bottom: 1px solid lightgray;
+  }
+}
+#content.has-sidebar {
+  article.blog-post {
+    h1 {
+      border-bottom: none;
+      font-size: 2.9em; //TODO revisit h1 size, maybe we need to bump them all down one size
+      line-height: 1;
+      margin-bottom: 0;
+    }
+    h1, h2 {
+      + p {
+        &:first-of-type {
+          font-size: 1.3em;
+        }
+      }
+    }
+  }
+}
 .blog {
-  h5.blog-post-summary-author {
+  .blog-post-summary-author {
     font-size: 0.9em;
-    color: gray;//TODO replace with variable to ensure consistency
+    color: $gray;
+    margin-top: 0;
   }
 
   article {
     margin: 0 0 3em 0;
     padding: 0 0 3em 0;
-
     border-bottom: solid 1px #e0e0e0;//TODO replace with variable to ensure consistency
 
     &:last-child {
@@ -26,43 +49,33 @@
       }
     }
 
-    h2.blog-post-title {
+    .blog-post-title {
       margin-bottom: 0;
       time {
+        color: $gray-darker;
         display: block;
-        font-size: 0.7em;
-        color: $dark-gray;
+        font-size: 0.5em;
+        margin-top: 7px; //so when you hover over the title, you don't chop off the top of the date. 
       }
     }
 
     .post-tag {
-      color: #4d4d4d;//TODO replace with variable to ensure consistency
+      color: $gray;
       font-size: 1em;
       font-weight: bold;
     }
 
-    .blog-post-author {
-      font-size: 10px;
-      color: gray;//TODO replace with variable to ensure consistency
-      top: 59px;
-      margin-left: 45px;
-    }
-
     .original-post-url {
-      color: gray;
+      color: $gray;
       font-size: 12px;
       text-transform: none;
-    }
-
-    h1 {
-      padding-bottom: 0;
     }
 
     figure {
       width: 100%;
       background-color: $white;
       padding: 10px;
-      border: 1px solid #cccccc; //TODO replace with variable to ensure consistency
+      border: 1px solid $gray-lightest; 
     }
 
     blockquote {

@@ -82,5 +82,11 @@
     @media screen and (min-width: $screen-sm-min) {
       top: 0;
     }
+
+    &:hover {
+      border: none;
+      color: #fff;
+      background-color: $orange;
+    }
   }
 }
