@@ -6,8 +6,8 @@
 
   img {
     display: block;
-    max-width: 90%;
     margin: 0 auto;
+    max-width: 90%;
     padding-top: 40px;
   }
 
@@ -17,10 +17,22 @@
 }
 
 .emberconf-callout {
+  display: block;
   margin-bottom: 1em;
   overflow: hidden;
 
-  .wrapper {
+  &:hover {
+    border: none;
+
+    p:after {
+      @media screen and (min-width: $screen-sm-min) {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .callout-body {
     background-color: #001D36;
     background-repeat: no-repeat;
     background-size: auto 95% !important;
@@ -37,7 +49,7 @@
     }
   }
 
-  p {
+  .text-wrapper {
     color: white;
     display: block;
     padding: 0 20px;
@@ -48,7 +60,7 @@
     }
 
     &:before {
-      bottom: -90px;
+      bottom: -103px;
       content: '';
       display: block;
       height: 107px;
@@ -59,7 +71,7 @@
       right: 10px;
       width: 75px;
       @media screen and (min-width: $screen-sm-min) {
-        bottom: -51px;
+        bottom: -26px;
         display: block;
         height: 142px;
         left: 0;
@@ -68,25 +80,48 @@
     }
   }
 
-  a {
+  p {
+    padding-bottom: 4px;
+
+    &:after {
+      @media screen and (min-width: $screen-sm-min) {
+        background: #9B5C74;
+        content: '';
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: relative;
+        transition: width 130ms ease-in-out, left 130ms ease-in-out;
+        width: 0;
+      }
+    }
+    strong {
+      color: #E5B246;
+      text-transform: uppercase;
+      letter-spacing: -.035em;
+    }
+  }
+
+  .button {
     background: #4AA0B8;
     border-radius: 0.25em;
     color: white;
+    display: inline;
     font-size: 0.75em;
     font-weight: bold;
     margin-left: 1em;
     padding: 0.5em 1em;
     position: relative;
-    text-transform: uppercase;
+    text-transform: none;
     top: -.5em;
     @media screen and (min-width: $screen-sm-min) {
       top: 0;
     }
 
     &:hover {
+      background-color: $orange;
       border: none;
       color: #fff;
-      background-color: $orange;
     }
   }
 }
