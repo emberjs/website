@@ -132,19 +132,52 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.17.0...v
 
 ### Changes in Ember CLI 2.18
 
+Ember CLI 2.18 is an incremental release, featuring bugfixes and improvements.
+
+#### Node 7 removed from CI testing matrix
+
+According to the [Node.js support policy]() of the Ember CLI project,
+Node 7 is removed from the testing matrix.
+If you are developing an application using Ember CLI, it is recommended that you upgrade your Node to one of the [active LTS]() versions to guarantee security updates.
+
+#### Addon dependencies when using npm link
+
+Previously, if you were npm-linking an addon that had itself npm-linked a dependency, Ember CLI would fail to find it. This is now fixed.
+
+#### `crossdomain.xml` from blueprints
+
+`crossdomain.xml` was originally introduced to limit vulnerabilities with using the Flash Player,
+by declaring which servers it could connect to outside the one currently hosting it.
+Browsers have since disabled Flash for security reasons, rendering the file moot.
+Ember CLI 2.18 will no longer generate the file when generating new applications.
+
+#### ESLint default configuration and overriding
+
+* #7443 Use overrides for a single .eslintrc.js. @rwjblue
+* #7455 Add eslint-plugin-ember to default linting config. @rwjblue
+
+I guess the biggest user-facing change is the ESLint thing. We now only have a single .eslintrc.js file and that includes eslint-plugin-ember by default.
+
 #### Deprecations in Ember CLI 2.18
 
-Two new deprecations are introduces in Ember CLI 2.18:
-
-* TODO
-* TODO
+Ember CLI 2.18 does not introduce new deprecations
 
 For more details on the changes in Ember CLI 2.18 and detailed upgrade
 instructions, please review the [Ember CLI 2.18.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.18.0).
 
 ### Upcoming Changes in Ember CLI 3.0
 
+Ember CLI 3.0 will feature a much improved README for the addon blueprint.
+The improvements include:
+
+* An automatically generated "Installation" section
+* An empty "Usage" section
+* A "License" section
+* [Setext headings](http://spec.commonmark.org/0.28/#setext-heading) to emphasize sections when in raw text mode.
+
 #### Deprecations in Ember CLI 3.0
+
+Ember CLI 3.0 does not introduce new deprecations.
 
 For more details on the changes in Ember CLI 3.0.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.0.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.0.0-beta.1).
