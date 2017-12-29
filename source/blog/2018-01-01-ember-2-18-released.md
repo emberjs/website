@@ -37,21 +37,7 @@ bugfixes, performance improvements, and minor deprecations.
 
 #### Deprecations in Ember 2.18
 
-Deprecations are added to Ember.js when an API will be removed at a later date.
-
-Each deprecation has an entry in the deprecation guide describing the migration
-path to more stable API. Deprecated public APIs are not removed until a major
-release of the framework.
-
-Consider using the
-[ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow)
-addon if you would like to upgrade your application without immediately addressing
-deprecations.
-
-Two new deprecations are introduces in Ember.js 2.18:
-
-* TODO
-* TODO
+Ember 2.18 does not introduce new deprecations.
 
 For more details on changes in Ember.js 2.18, please review the
 [Ember.js 2.18.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.18.0).
@@ -67,13 +53,12 @@ To enable these developers to upgrade piecemeal, we have created the [ember=2=le
 The `ember-2-legacy` addon will enable developers to selectively opt into continuing to use removed APIs until a time when they can migrate away from them.
 
 The list of removed APIs is as follows:
+* TODO
+* TODO
 
 #### Deprecations in Ember.js 3.0
 
-Two new deprecations are introduces in Ember.js 3.0:
-
-* TODO
-* TODO
+No new deprecations are introduced in Ember.js 3.0.
 
 For more details on the upcoming changes in Ember.js 3.0, please review the
 [Ember.js 3.0.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.0.0-beta.1).
