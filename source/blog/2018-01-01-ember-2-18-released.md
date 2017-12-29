@@ -48,13 +48,22 @@ Ember.js 3.0 represents the first release in the 3,0 series.
 Repeating what happened in the previous cycle, Ember 3.0 will remove a number of public APIs.
 
 Some developers might still be relying on some of these removed APIs.
-To enable these developers to upgrade piecemeal, we have created the [ember=2=legacy]() addon.
+To enable these developers to upgrade piecemeal, we have created the [ember=2=legacy](https://github.com/emberjs/ember-2-legacy) addon.
 
 The `ember-2-legacy` addon will enable developers to selectively opt into continuing to use removed APIs until a time when they can migrate away from them.
 
-The list of removed APIs is as follows:
-* TODO
-* TODO
+Developers should reference the [2.x series deprecation guide](https://www.emberjs.com/deprecations/v2.x/) to see which pieces of public API will be removed in 3.x and how to migrate.
+
+Public APIs to be removed in 3.0 are as follows:
+* `didInitAttrs` is removed and can be [replaced with `init`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs)
+* One form of declaring an `observer` where dependent keys are stated after the callback (they should go before the callback as described in the [API docs](https://emberjs.com/api/ember/2.17/classes/@ember%2Fobject/methods/observer?anchor=observer))
+* Enumerable and Array `contains` should be [replaced with `includes`](https://www.emberjs.com/deprecations/v2.x/#toc_enumerable-contains)
+* Providing `{{link-to}}` with a param wrapped in a controller
+* Specifying `defaultLayout` to a component, rather than [layout](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-defaultlayout)
+* Using `Ember.Handlebars.SafeString` [instead of `Ember.String.htmlSafe`](https://www.emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring)
+* `Ember.K` should be replaced with [inline functions](https://www.emberjs.com/deprecations/v2.x/#toc_deprecations-added-in-2-12)
+
+The Ember 3.x series will also drop support for Internet Explorer 9 and 10. Earlier this year, Microsoft [announced end of life](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support) for these browser versions, ending their own technical and security updates.
 
 #### Deprecations in Ember.js 3.0
 
@@ -121,9 +130,9 @@ Ember CLI 2.18 is an incremental release, featuring bugfixes and improvements.
 
 #### Node 7 removed from CI testing matrix
 
-According to the [Node.js support policy]() of the Ember CLI project,
+According to the [Node.js support policy](https://github.com/ember-cli/ember-cli/blob/master/docs/node-support.md) of the Ember CLI project,
 Node 7 is removed from the testing matrix.
-If you are developing an application using Ember CLI, it is recommended that you upgrade your Node to one of the [active LTS]() versions to guarantee security updates.
+If you are developing an application using Ember CLI, it is recommended that you upgrade your Node to one of the [active LTS](https://github.com/nodejs/Release) versions to guarantee security updates.
 
 #### Addon dependencies when using npm link
 
