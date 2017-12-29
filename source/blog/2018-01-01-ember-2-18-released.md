@@ -12,6 +12,11 @@ any bugs before they are published as a final release in six weeks' time. The
 [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
 continuously test your projects against the latest Ember releases.
 
+After 2.5 years and 18 minor releases, Ember 2.18 marks the end of the 2.x series.
+As the last release in the series, 2.18 is an LTS candidate to ensure a smooth upgrade path going into the 3.x series.
+
+You can see the full release schedule up to 3.5 in [“The Road to Ember 3.0”](https://www.emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html).
+
 You can read more about our general release process here:
 
 * [Release Dashboard](http://emberjs.com/builds/)
@@ -53,10 +58,15 @@ For more details on changes in Ember.js 2.18, please review the
 
 ### Upcoming Changes in Ember.js 3.0
 
-Ember.js 3.0 will introduce two new features:
+Ember.js 3.0 represents the first release in the 3,0 series.
+Repeating what happened in the previous cycle, Ember 3.0 will remove a number of public APIs.
 
-* TODO
-* TODO
+Some developers might still be relying on some of these removed APIs.
+To enable these developers to upgrade piecemeal, we have created the [ember=2=legacy]() addon.
+
+The `ember-2-legacy` addon will enable developers to selectively opt into continuing to use removed APIs until a time when they can migrate away from them.
+
+The list of removed APIs is as follows:
 
 #### Deprecations in Ember.js 3.0
 
