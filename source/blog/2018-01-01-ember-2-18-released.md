@@ -82,10 +82,10 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 #### Deprecations in Ember Data 2.18
 
-Two new deprecations are introduces in Ember Data 2.18:
+One new deprecation is introduced in Ember Data 2.18:
 
-* TODO
-* TODO
+* Support for "production-like" values of `EMBER_ENV` [will be removed](https://github.com/emberjs/data/pull/5239).
+For example, custom production names like `production-qa` should be replaced with `production`
 
 For more details on changes in Ember Data 2.18, please review the
 [Ember Data 2.18.0 release page](https://github.com/emberjs/data/releases/tag/v2.18.0).
