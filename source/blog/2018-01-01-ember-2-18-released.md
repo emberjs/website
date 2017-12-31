@@ -19,6 +19,12 @@ all of which have been deprecated since at least Ember 2.14 (released July 2017)
 Extended support for removed Ember.js APIs will be provided via an
 optional addon through Ember 3.4.
 
+Additionally Ember 3.0 removes support for Microsoft Internet Explorer 9,
+IE 10, and PhantomJS. This includes support for these platforms by Ember.js,
+Ember Data, and Ember CLI. For more details about this decision see
+[RFC 252](https://github.com/emberjs/rfcs/blob/master/text/0252-browser-support-changes.md)
+and the discussion on [RFC PR #252](https://github.com/emberjs/rfcs/pull/252).
+
 We need the help of the Ember community (especially addon authors) to help test
 the 3.0 beta builds and transition path for 2.x codebases. If you encounter any
 unexpected changes in features not marked as deprecated in 2.18 while testing
@@ -60,9 +66,12 @@ For more details on changes in Ember.js 2.18, please review the
 
 ### Upcoming Changes in Ember.js 3.0
 
-Ember.js 3.0 represents the first release in the 3.0 series.
-Repeating what happened in the previous cycle,
-Ember 3.0 will remove a number of public APIs.
+Ember.js 3.0 is the first release in the 3.x series. It introduces no new
+public API or deprecations. Included are bugfixes and most importantly the removal of
+previously deprecated public API from the 2.x cycle. This release drops support
+for IE9, IE10, and PhantomJS.
+
+#### Removed APIs in Ember.js 3.0
 
 Some developers might still be relying on some of these removed APIs.
 To enable these developers to upgrade piecemeal, we have created the [ember-2-legacy](https://github.com/emberjs/ember-2-legacy) addon.
@@ -81,11 +90,9 @@ Public APIs to be removed in 3.0 are as follows:
 * Using `Ember.Handlebars.SafeString` [instead of `Ember.String.htmlSafe`](https://www.emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring)
 * `Ember.K` should be replaced with [inline functions](https://www.emberjs.com/deprecations/v2.x/#toc_deprecations-added-in-2-12)
 
+#### Browser Support in Ember.js 3.0
+
 The Ember 3.x series will also drop support for Internet Explorer 9 and 10. Earlier this year, Microsoft [announced end of life](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support) for these browser versions, ending their own technical and security updates.
-
-#### Deprecations in Ember.js 3.0
-
-No new deprecations are introduced in Ember.js 3.0.
 
 For more details on the upcoming changes in Ember.js 3.0, please review the
 [Ember.js 3.0.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.0.0-beta.1).
