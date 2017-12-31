@@ -4,18 +4,30 @@ author: Ricardo Mendes
 tags: Releases
 ---
 
-Today the Ember project is releasing version 2.18.0 of Ember.js, Ember Data, and Ember CLI.
+Today the Ember project is releasing version 2.18.0 of Ember.js, Ember Data,
+and Ember CLI.
 
-This release kicks off the 3.0 beta cycle for all sub-projects. We encourage our
-community (especially addon authors) to help test these beta builds and report
-any bugs before they are published as a final release in six weeks' time. The
-[ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
-continuously test your projects against the latest Ember releases.
+**After 2.5 years and 18 minor releases, Ember 2.18 marks the end of the project's 2.x series**.
+To ensure a smooth upgrade path going into the 3.x series, 2.18 has been
+declared an LTS candidate. In six weeks the latest 2.18 build will succeed
+Ember 2.16.2 as the latest LTS release. As an LTS it will
+receive bugfix support until Ember 3.5 is released.
 
-After 2.5 years and 18 minor releases, Ember 2.18 marks the end of the 2.x series.
-As the last release in the series, 2.18 is an LTS candidate to ensure a smooth upgrade path going into the 3.x series.
+**Today we also kick off the 3.0 beta cycle for all sub-projects.** Ember 3.0
+introduces no new features. Instead, it removes support for deprecated public APIs,
+all of which have been deprecated since at least Ember 2.14 (released July 2017).
+Extended support for removed Ember.js APIs will be provided via an
+optional addon through Ember 3.4.
 
-You can see the full release schedule up to 3.5 in [“The Road to Ember 3.0”](https://www.emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html).
+We need the help of the Ember community (especially addon authors) to help test
+the 3.0 beta builds and transition path for 2.x codebases. If you encounter any
+unexpected changes in features not marked as deprecated in 2.18 while testing
+Ember 3.0 beta, please open an issue on the appropriate repo.
+
+You can read more about our detailed transition plans through Ember 3.5
+in
+[The Road to Ember 3.0](https://www.emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html)
+and below.
 
 You can read more about our general release process here:
 
@@ -28,33 +40,39 @@ You can read more about our general release process here:
 
 ## Ember.js
 
-Ember.js is the core framework for building ambitious web applications.
+Ember.js is the core of the Ember framework. It provides routing,
+rendering, and dependency injection features.
 
 ### Changes in Ember.js 2.18
 
-Ember.js 2.18 is an incremental, backwards compatible release of Ember with
-bugfixes, performance improvements, and minor deprecations.
+Ember.js 2.18 is an incremental and backwards compatible release of Ember which
+includes minor bugfixes. No new features or public API deprecations are
+introduced.
 
-#### Deprecations in Ember 2.18
-
-Ember 2.18 does not introduce new deprecations.
+"Intimate API" refers to API surface that maintainers never intended to become
+public, but which still has some small use in the wild. 2.18.0 adds an intimate
+API deprecation for passing `targetObject` to a component invocation. Support
+for this API will be removed in Ember 3.5. See
+[PR #14590](https://github.com/emberjs/ember.js/pull/14590) for more details.
 
 For more details on changes in Ember.js 2.18, please review the
 [Ember.js 2.18.0 release page](https://github.com/emberjs/ember.js/releases/tag/v2.18.0).
 
 ### Upcoming Changes in Ember.js 3.0
 
-Ember.js 3.0 represents the first release in the 3,0 series.
-Repeating what happened in the previous cycle, Ember 3.0 will remove a number of public APIs.
+Ember.js 3.0 represents the first release in the 3.0 series.
+Repeating what happened in the previous cycle,
+Ember 3.0 will remove a number of public APIs.
 
 Some developers might still be relying on some of these removed APIs.
-To enable these developers to upgrade piecemeal, we have created the [ember=2=legacy](https://github.com/emberjs/ember-2-legacy) addon.
+To enable these developers to upgrade piecemeal, we have created the [ember-2-legacy](https://github.com/emberjs/ember-2-legacy) addon.
 
 The `ember-2-legacy` addon will enable developers to selectively opt into continuing to use removed APIs until a time when they can migrate away from them.
 
 Developers should reference the [2.x series deprecation guide](https://www.emberjs.com/deprecations/v2.x/) to see which pieces of public API will be removed in 3.x and how to migrate.
 
 Public APIs to be removed in 3.0 are as follows:
+
 * `didInitAttrs` is removed and can be [replaced with `init`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs)
 * One form of declaring an `observer` where dependent keys are stated after the callback (they should go before the callback as described in the [API docs](https://emberjs.com/api/ember/2.17/classes/@ember%2Fobject/methods/observer?anchor=observer))
 * Enumerable and Array `contains` should be [replaced with `includes`](https://www.emberjs.com/deprecations/v2.x/#toc_enumerable-contains)
