@@ -51,9 +51,18 @@ rendering, and dependency injection features.
 
 ### Changes in Ember.js 2.18
 
-Ember.js 2.18 is an incremental and backwards compatible release of Ember which
-includes minor bugfixes. No new features or public API deprecations are
+Ember.js 2.18 is an incremental and backwards compatible release which
+includes minor bug fixes. No new features or public API deprecations are
 introduced.
+
+2.18 is light on changes because we want the final release of the 2.x cycle to
+be as stable and battle-tested as possible. 2.8 is an LTS candidate, which means
+after six weeks it will be promoted to an LTS release. As an LTS release it
+will receive bug fixes until Ember 3.5 is released and security patches until
+Ember 3.9 is released.
+
+2.18 is the final release of Ember.js to support IE9, IE10, and PhantomJS. It is
+also the final release published for Bower.
 
 "Intimate API" refers to API surface that maintainers never intended to become
 public, but which still has some small use in the wild. 2.18.0 adds an intimate
@@ -67,7 +76,7 @@ For more details on changes in Ember.js 2.18, please review the
 ### Upcoming Changes in Ember.js 3.0
 
 Ember.js 3.0 is the first release in the 3.x series. It introduces no new
-public API or deprecations. Included are bugfixes and most importantly the removal of
+public API or deprecations. Instead, it is comprised of bug fixes and the removal of
 previously deprecated public API from the 2.x cycle. This release drops support
 for IE9, IE10, and PhantomJS.
 
@@ -75,21 +84,20 @@ for IE9, IE10, and PhantomJS.
 
 The public APIs removed in 3.0-beta.1 do not yet represent the complete list
 of removals planned for 3.0 stable.
-You can keep track of the effort on
-[emberjs/ember.js#15876](https://github.com/emberjs/ember.js/issues/15876).
-For an exhaustive list planned 3.0 removals and migration guidance see the
+For an exhaustive list of planned 3.0 removals and migration guidance see the
 [Ember.js 2.x deprecation guide](https://www.emberjs.com/deprecations/v2.x/)
-(any entry "until: 3.0").
+(any entry "until: 3.0") and the quest issue
+[emberjs/ember.js#15876](https://github.com/emberjs/ember.js/issues/15876).
 
-The list of public API removals included in 3.0-beta.1 is below.
+The list of public API removals included in 3.0-beta.1 are:
 
 * The `{{render}}` helper has been removed. Any remaining usage should be
   [migrated to components](https://emberjs.com/deprecations/v2.x/#toc_code-render-code-helper).
 * `didInitAttrs` is removed and can be [replaced with `init`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs)
-* A form of declaring an observer where dependent keys are stated after the callback is removed. Dependent keys should be passed before the callback as described in the [API docs](https://emberjs.com/api/ember/2.17/classes/@ember%2Fobject/methods/observer?anchor=observer).
+* Declaring an observer with dependent keys after the callback is removed. Dependent keys should be passed before the callback as described in the [API docs](https://emberjs.com/api/ember/2.17/classes/@ember%2Fobject/methods/observer?anchor=observer).
 * `Enumerable#contains` and `Array#contains` methods are removed. Instead usage should be [replaced with `includes`](https://www.emberjs.com/deprecations/v2.x/#toc_enumerable-contains).
-* A behavior of `{{link-to}}` where `model` properties would be unwrapped from
-  a passed controller has been removed.
+* `{{link-to}}` unwrapped the `model` property from passed controllers. This
+  behavior has been removed.
 * Specifying `defaultLayout` on a component rather than [`layout`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-defaultlayout) has been removed.
 * `Ember.Handlebars.SafeString` has been removed. Instead, use [`Ember.String.htmlSafe`](https://www.emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring) or the `import { htmlSafe } from '@ember/string'`.
 * `Ember.K` has been removed. Usage should be replaced with [inline functions](https://www.emberjs.com/deprecations/v2.x/#toc_deprecations-added-in-2-12).
@@ -100,7 +108,7 @@ The list of public API removals included in 3.0-beta.1 is below.
 Further planned public API removals for 3.0 include:
 
 * Ember's legacy binding system, including `Ember.Binding` and the `fooBinding`
-  microsyntax. See the [migration guide](https://emberjs.com/deprecations/v2.x/#toc_ember-binding) for details.
+  micro-syntax. See the [migration guide](https://emberjs.com/deprecations/v2.x/#toc_ember-binding) for details.
 * Ember's `Map`, `MapWithDefault`, and `OrderedSet` classes. These should be
   replaced with native features or with implementations from other libraries.
 
@@ -108,19 +116,27 @@ Please see [emberjs/ember.js#15876](https://github.com/emberjs/ember.js/issues/1
 for more details (including about previously deprecated private or intimate
 API removals) and updates during the beta cycle.
 
-#### Transitioning to 3.x with `ember-2-legacy`
+#### Transitioning to 3.x with ember-2-legacy
 
-Some developers might still be relying on some of these removed APIs.
-To enable these developers to upgrade piecemeal, we have created the [ember-2-legacy](https://github.com/emberjs/ember-2-legacy) addon.
+Public APIs removed in Ember.js 3.0 have each been ported to the
+[ember-2-legacy](https://github.com/emberjs/ember-2-legacy) addon. This addon
+makes it possible for applications to adopt 3.0 even if they still
+require features unsupported by the core of the framework.
 
-The `ember-2-legacy` addon will enable developers to selectively opt into continuing to use removed APIs until a time when they can migrate away from them.
+This addon will not include support for removed intimate or private APIs, nor
+will it enable support for IE9, IE10, PhantomJS, or Bower. In [The Road to Ember
+3.0](https://www.emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html#toc_transitioning-to-3-0)
+we committed to support this addon through Ember.js 3.4, the first LTS
+candidate of the 3.x cycle.
 
-#### Browser Support in Ember.js 3.0
+#### Other Ember.js 3.0 Changes
 
-The Ember 3.x series will also drop support for Internet Explorer 9 and 10. Earlier this year, Microsoft [announced end of life](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support) for these browser versions, ending their own technical and security updates.
+Ember.js 3.0 removes support for IE9,
+IE 10, and PhantomJS. For more details about this decision see
+[RFC 252](https://github.com/emberjs/rfcs/blob/master/text/0252-browser-support-changes.md)
+and the discussion on [RFC PR #252](https://github.com/emberjs/rfcs/pull/252).
 
-Finally, Ember 3.0 will not be published on Bower. 2.18 will be the last release
-of Ember published to Bower.
+Finally, Ember.js 3.0 will not be published for Bower.
 
 For more details on the upcoming changes in Ember.js 3.0, please review the
 [Ember.js 3.0.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.0.0-beta.1).
@@ -136,9 +152,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 Ember Data 2.18 contains no new features. The changes introduced in
 Ember Data 2.18 mostly focus on bug fixes and improved documentation.
 
-#### Deprecations in Ember Data 2.18
-
-One new deprecation is introduced in Ember Data 2.18:
+One public API deprecation targeting **Ember Data 4.0** is introduced in Ember Data 2.18:
 
 * Support for "production-like" values of `EMBER_ENV` [will be removed](https://github.com/emberjs/data/pull/5239).
 For example, custom production names like `production-qa` should be replaced with `production`
@@ -155,9 +169,7 @@ that are shipped with Ember Data and used by Ember CLI when you use
 work on the [QUnit Blueprints Quest
 Issue](https://github.com/emberjs/data/issues/5292).
 
-#### Deprecations in Ember Data 3.0
-
-There are no new deprecations in Ember Data 3.0.
+There are no deprecations introduced in Ember Data 3.0.
 
 For more details on the upcoming changes in Ember Data 3.0, please review the
 [Ember Data 3.0.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.0.0-beta.1).
@@ -169,29 +181,21 @@ For more details on the upcoming changes in Ember Data 3.0, please review the
 Ember CLI is the command line interface for managing and packaging Ember.js
 applications.
 
-### Upgrading Ember CLI
-
-You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade
-your projects using `yarn` run:
-
-```
-yarn upgrade ember-cli
-```
-
-To upgrade your projects using `npm` run:
-
-```
-npm install --save-dev ember-cli
-```
-
-After running the
-upgrade command run `ember init` inside of the project directory to apply the
-blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v2.17.0...v2.18.0)
-and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.17.0...v2.18.0).
-
 ### Changes in Ember CLI 2.18
 
-Ember CLI 2.18 is an incremental release, featuring bugfixes and improvements.
+Ember CLI 2.18 is an incremental release featuring bug fixes and improvements.
+This release does not introduce any new deprecations.
+
+#### ESLint configuration changes
+
+Newly generate Ember applications will now have only a single `.eslintrc.js`
+file. This file uses the "overrides" feature of ESLint to customize rules
+appropriately for test or Node.js files.
+
+For more details see:
+
+* [ember-cli/ember-cli#7443](https://github.com/ember-cli/ember-cli/pull/7443) Use overrides for a single `.eslintrc.js`.
+* [ember-cli/ember-cli#7455](https://github.com/ember-cli/ember-cli/pull/7455) Add eslint-plugin-ember to default linting config.
 
 #### Node 7 removed from CI testing matrix
 
@@ -203,23 +207,14 @@ If you are developing an application using Ember CLI, it is recommended that you
 
 Previously, if you were npm-linking an addon that had itself npm-linked a dependency, Ember CLI would fail to find it. This is now fixed.
 
-#### `crossdomain.xml` from blueprints
+#### `crossdomain.xml` removed for new applications
 
-`crossdomain.xml` was originally introduced to limit vulnerabilities with using the Flash Player,
-by declaring which servers it could connect to outside the one currently hosting it.
+`crossdomain.xml` was originally introduced to limit vulnerabilities when
+using the Flash Player.
+It did this by declaring which hosts the Flash Player could connect to outside
+the one hosting the file.
 Browsers have since disabled Flash for security reasons, rendering the file moot.
-Ember CLI 2.18 will no longer generate the file when generating new applications.
-
-#### ESLint default configuration and overriding
-
-* #7443 Use overrides for a single .eslintrc.js. @rwjblue
-* #7455 Add eslint-plugin-ember to default linting config. @rwjblue
-
-I guess the biggest user-facing change is the ESLint thing. We now only have a single .eslintrc.js file and that includes eslint-plugin-ember by default.
-
-#### Deprecations in Ember CLI 2.18
-
-Ember CLI 2.18 does not introduce new deprecations
+Ember CLI 2.18 will no longer generate the file for new applications.
 
 For more details on the changes in Ember CLI 2.18 and detailed upgrade
 instructions, please review the [Ember CLI 2.18.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v2.18.0).
@@ -234,9 +229,7 @@ The improvements include:
 * A "License" section
 * [Setext headings](http://spec.commonmark.org/0.28/#setext-heading) to emphasize sections when in raw text mode.
 
-#### Deprecations in Ember CLI 3.0
-
-Ember CLI 3.0 does not introduce new deprecations.
+Ember CLI 3.0 does not introduce any new deprecations.
 
 For more details on the changes in Ember CLI 3.0.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.0.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.0.0-beta.1).
