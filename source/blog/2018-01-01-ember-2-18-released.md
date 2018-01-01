@@ -190,7 +190,7 @@ This release does not introduce any new deprecations.
 
 Newly generate Ember applications will now have only a single `.eslintrc.js`
 file. This file uses the "overrides" feature of ESLint to customize rules
-appropriately for test or Node.js files.
+appropriately for test or Node files.
 
 For more details see:
 
@@ -199,7 +199,7 @@ For more details see:
 
 #### Node 7 removed from CI testing matrix
 
-According to the [Node.js support policy](https://github.com/ember-cli/ember-cli/blob/master/docs/node-support.md) of the Ember CLI project,
+According to the [Node support policy](https://github.com/ember-cli/ember-cli/blob/master/docs/node-support.md) of the Ember CLI project,
 Node 7 is removed from the testing matrix.
 If you are developing an application using Ember CLI, it is recommended that you upgrade your Node to one of the [active LTS](https://github.com/nodejs/Release) versions to guarantee security updates.
 
