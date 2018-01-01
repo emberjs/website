@@ -105,7 +105,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.18
 
-Ember.js 2.18 contains no new features. The changes introduced in
+Ember.js Data 2.18 contains no new features. The changes introduced in
 Ember Data 2.18 mostly focus on bug fixes and improved documentation.
 
 #### Deprecations in Ember Data 2.18
@@ -121,7 +121,7 @@ For more details on changes in Ember Data 2.18, please review the
 ### Upcoming changes in Ember Data 3.0
 
 Ember Data 3.0 contains major improvements in the testing blueprints
-that are shipped with Ember Data and use by ember-cli when you use
+that are shipped with Ember Data and used by ember-cli when you use
 `ember generate` `model`, `adapter`, or `serializer`.  Big thanks to
 [@alexander-alvarez](https://github.com/alexander-alvarez) for all his
 work on the [QUnit Blueprints Quest
