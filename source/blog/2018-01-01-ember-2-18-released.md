@@ -11,7 +11,7 @@ and Ember CLI.
 To ensure a smooth upgrade path going into the 3.x series, 2.18 has been
 declared an LTS candidate. In six weeks the latest 2.18 build will succeed
 Ember 2.16.2 as the latest LTS release. As an LTS it will
-receive bugfix support until Ember 3.5 is released.
+receive bug fixes until Ember 3.5 is released.
 
 **Today we also kick off the 3.0 beta cycle for all sub-projects.** Ember 3.0
 introduces no new features. Instead, it removes support for deprecated public APIs,
@@ -19,16 +19,16 @@ all of which have been deprecated since at least Ember 2.14 (released July 2017)
 Extended support for removed Ember.js APIs will be provided via an
 optional addon through Ember 3.4.
 
-Additionally Ember 3.0 removes support for Microsoft Internet Explorer 9,
+Ember 3.0 removes support for Microsoft Internet Explorer 9,
 IE 10, and PhantomJS. This includes support for these platforms by Ember.js,
 Ember Data, and Ember CLI. For more details about this decision see
 [RFC 252](https://github.com/emberjs/rfcs/blob/master/text/0252-browser-support-changes.md)
 and the discussion on [RFC PR #252](https://github.com/emberjs/rfcs/pull/252).
 
-We need the help of the Ember community (especially addon authors) to help test
+We need the help of the Ember community (especially addon authors) to test
 the 3.0 beta builds and transition path for 2.x codebases. If you encounter any
-unexpected changes in features not marked as deprecated in 2.18 while testing
-Ember 3.0 beta, please open an issue on the appropriate repo.
+unexpected changes while testing Ember 3.0 beta, especially in features not
+previously marked as deprecated by 2.14, please open an issue on the appropriate repo.
 
 You can read more about our detailed transition plans through Ember 3.5
 in
@@ -73,26 +73,54 @@ for IE9, IE10, and PhantomJS.
 
 #### Removed APIs in Ember.js 3.0
 
+The public APIs removed in 3.0-beta.1 do not yet represent the complete list
+of removals planned for 3.0 stable.
+You can keep track of the effort on
+[emberjs/ember.js#15876](https://github.com/emberjs/ember.js/issues/15876).
+For an exhaustive list planned 3.0 removals and migration guidance see the
+[Ember.js 2.x deprecation guide](https://www.emberjs.com/deprecations/v2.x/)
+(any entry "until: 3.0").
+
+The list of public API removals included in 3.0-beta.1 is below.
+
+* The `{{render}}` helper has been removed. Any remaining usage should be
+  [migrated to components](https://emberjs.com/deprecations/v2.x/#toc_code-render-code-helper).
+* `didInitAttrs` is removed and can be [replaced with `init`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs)
+* A form of declaring an observer where dependent keys are stated after the callback is removed. Dependent keys should be passed before the callback as described in the [API docs](https://emberjs.com/api/ember/2.17/classes/@ember%2Fobject/methods/observer?anchor=observer).
+* `Enumerable#contains` and `Array#contains` methods are removed. Instead usage should be [replaced with `includes`](https://www.emberjs.com/deprecations/v2.x/#toc_enumerable-contains).
+* A behavior of `{{link-to}}` where `model` properties would be unwrapped from
+  a passed controller has been removed.
+* Specifying `defaultLayout` on a component rather than [`layout`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-defaultlayout) has been removed.
+* `Ember.Handlebars.SafeString` has been removed. Instead, use [`Ember.String.htmlSafe`](https://www.emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring) or the `import { htmlSafe } from '@ember/string'`.
+* `Ember.K` has been removed. Usage should be replaced with [inline functions](https://www.emberjs.com/deprecations/v2.x/#toc_deprecations-added-in-2-12).
+* Support for legacy initializers with two arguments (container, application)
+  has been removed in favor of
+  [a single argument of `application`](https://emberjs.com/deprecations/v2.x/#toc_initializer-arity).
+
+Further planned public API removals for 3.0 include:
+
+* Ember's legacy binding system, including `Ember.Binding` and the `fooBinding`
+  microsyntax. See the [migration guide](https://emberjs.com/deprecations/v2.x/#toc_ember-binding) for details.
+* Ember's `Map`, `MapWithDefault`, and `OrderedSet` classes. These should be
+  replaced with native features or with implementations from other libraries.
+
+Please see [emberjs/ember.js#15876](https://github.com/emberjs/ember.js/issues/15876)
+for more details (including about previously deprecated private or intimate
+API removals) and updates during the beta cycle.
+
+#### Transitioning to 3.x with `ember-2-legacy`
+
 Some developers might still be relying on some of these removed APIs.
 To enable these developers to upgrade piecemeal, we have created the [ember-2-legacy](https://github.com/emberjs/ember-2-legacy) addon.
 
 The `ember-2-legacy` addon will enable developers to selectively opt into continuing to use removed APIs until a time when they can migrate away from them.
 
-Developers should reference the [2.x series deprecation guide](https://www.emberjs.com/deprecations/v2.x/) to see which pieces of public API will be removed in 3.x and how to migrate.
-
-Public APIs to be removed in 3.0 are as follows:
-
-* `didInitAttrs` is removed and can be [replaced with `init`](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-didinitattrs)
-* One form of declaring an `observer` where dependent keys are stated after the callback (they should go before the callback as described in the [API docs](https://emberjs.com/api/ember/2.17/classes/@ember%2Fobject/methods/observer?anchor=observer))
-* Enumerable and Array `contains` should be [replaced with `includes`](https://www.emberjs.com/deprecations/v2.x/#toc_enumerable-contains)
-* Providing `{{link-to}}` with a param wrapped in a controller
-* Specifying `defaultLayout` to a component, rather than [layout](https://www.emberjs.com/deprecations/v2.x/#toc_ember-component-defaultlayout)
-* Using `Ember.Handlebars.SafeString` [instead of `Ember.String.htmlSafe`](https://www.emberjs.com/deprecations/v2.x/#toc_use-ember-string-htmlsafe-over-ember-handlebars-safestring)
-* `Ember.K` should be replaced with [inline functions](https://www.emberjs.com/deprecations/v2.x/#toc_deprecations-added-in-2-12)
-
 #### Browser Support in Ember.js 3.0
 
 The Ember 3.x series will also drop support for Internet Explorer 9 and 10. Earlier this year, Microsoft [announced end of life](https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support) for these browser versions, ending their own technical and security updates.
+
+Finally, Ember 3.0 will not be published on Bower. 2.18 will be the last release
+of Ember published to Bower.
 
 For more details on the upcoming changes in Ember.js 3.0, please review the
 [Ember.js 3.0.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.0.0-beta.1).
@@ -105,7 +133,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 2.18
 
-Ember.js Data 2.18 contains no new features. The changes introduced in
+Ember Data 2.18 contains no new features. The changes introduced in
 Ember Data 2.18 mostly focus on bug fixes and improved documentation.
 
 #### Deprecations in Ember Data 2.18
@@ -121,7 +149,7 @@ For more details on changes in Ember Data 2.18, please review the
 ### Upcoming changes in Ember Data 3.0
 
 Ember Data 3.0 contains major improvements in the testing blueprints
-that are shipped with Ember Data and used by ember-cli when you use
+that are shipped with Ember Data and used by Ember CLI when you use
 `ember generate` `model`, `adapter`, or `serializer`.  Big thanks to
 [@alexander-alvarez](https://github.com/alexander-alvarez) for all his
 work on the [QUnit Blueprints Quest
