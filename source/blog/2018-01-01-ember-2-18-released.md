@@ -10,7 +10,7 @@ and Ember CLI.
 **After 2.5 years and 18 minor releases, Ember 2.18 marks the end of the project's 2.x series**.
 To ensure a smooth upgrade path going into the 3.x series, 2.18 has been
 declared an LTS candidate. In six weeks the latest 2.18 build will succeed
-Ember 2.16.2 as the latest LTS release. As an LTS it will
+Ember 2.16.2 as the latest LTS release. As an LTS, it will
 receive bug fixes until Ember 3.5 is released.
 
 **Today we also kick off the 3.0 beta cycle for all sub-projects.** Ember 3.0
@@ -56,8 +56,8 @@ includes minor bug fixes. No new features or public API deprecations are
 introduced.
 
 2.18 is light on changes because we want the final release of the 2.x cycle to
-be as stable and battle-tested as possible. 2.8 is an LTS candidate, which means
-after six weeks it will be promoted to an LTS release. As an LTS release it
+be as stable and battle-tested as possible. 2.18 is an LTS candidate, which means
+that after six weeks it will be promoted to an LTS release. As an LTS release it
 will receive bug fixes until Ember 3.5 is released and security patches until
 Ember 3.9 is released.
 
