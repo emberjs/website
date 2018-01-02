@@ -1,6 +1,7 @@
 ---
 title: Ember 2.18 and 3.0 Beta Released
 author: Ricardo Mendes, Matthew Beale, Brendan McLoughlin
+responsive: true
 tags: Releases
 ---
 
