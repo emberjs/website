@@ -118,6 +118,22 @@ helpers do
     end
 
   end
+
+  def sub_pages(dir)
+    sitemap.resources.select do |resource|
+      resource.path.start_with?(dir)
+    end
+  end
+
+  def get_content(page = current_page)
+    content = page.render({layout: false})
+    return content
+  end
+
+  def pages_by_version(dir)
+    pages = sub_pages(dir)
+    pages.group_by {|d| d.data.since }.sort
+  end
 end
 
 ###
