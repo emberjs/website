@@ -1,0 +1,28 @@
+---
+title: Deprecations for v2.x
+alias: guides/deprecations/
+layout: deprecations
+responsive: true
+---
+
+<h2> Deprecations Added in Ember 2.x </h2>
+<p>
+  What follows is a list of deprecations introduced to Ember.js during the 2.x
+  cycle.
+</p>
+<p>
+  For more information on deprecations in Ember, see the [main deprecations page]
+  (/deprecations).
+</p>
+
+<% pages_by_version('deprecations/ember/v2').each do |since, resources| %>
+	<h3> Deprecations Added in Ember <%= since %> </h3>
+  <% resources.each do |resource| %>
+    <h4><%= resource.data.name %> </h4>
+    <h6>until: <%= resource.data.until %> </h6>
+    <h6>id: <%= resource.data.id %> </h6>
+    <p>
+      <%=  get_content(resource) %>
+    </p>
+  <% end %>
+<% end %>
