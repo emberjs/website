@@ -73,6 +73,10 @@
       text-transform: uppercase;
       flex-grow: 1;
       text-align: left;
+      &:hover, :focus {
+        border-bottom: none;
+        text-decoration: underline;
+      }
     }
 
     .date {
