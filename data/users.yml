@@ -969,6 +969,10 @@
   image: nimbo-x.png
   alt: Nimbo X
   use: "We use Ember to make a cloud based EHR"
+- url: "http://www.toyotaconnected.com"
+  image: toyota-connected.png
+  alt: Toyota Connected
+  use: "Toyota Connected uses Ember for building our internal and external web applications."
 
 
 # ---- PLEASE READ ----
