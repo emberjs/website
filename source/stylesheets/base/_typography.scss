@@ -1,12 +1,8 @@
 @import "variables";
 
-html {
-	font-size: 16px;
-}
-
 body {
-	font-size: 1em;
-	line-height: 1.618;
+	font-size: 18px;
+	line-height: 1.5;
 }
 
 a {
@@ -32,43 +28,47 @@ h5,
 h6 {
   text-transform: uppercase;
   font-weight: bold;
-
   code {
     text-transform: none;
   }
 }
 
-h1, 
 h2, 
 h3,
 h4 {
   line-height: 1;
 	margin-top: 1.25em; 
-	margin-bottom: 0.5em;  
+  margin-bottom: 0.5em;  
+  + p {
+    margin-top: 0;
+  }
 }
 
 h1 {
-  color: $orange;
-  font-size: 3.157em;
+  color: $gray;
+  font-size: 2.441em;
   font-weight: bold;
   line-height: 1.125;
   max-width: 100%;
+  + p {
+    margin-top: 0;
+  }
 }
 
 h2 {
-  color: $orange-darker;
-  font-size: 2.369em;
-  margin: 0.83em 0;  
+  color: $orange-darkest;
+  font-size: 1.953em;
+  margin: 1.341em 0 0.2em 0; 
 }
 
 h3 {
-  color: $orange-darkest;
-  font-size: 1.777em;
+  color: $gray-darker;
+  font-size: 1.563em;
 }
 
 h4 {
-  font-size: 1.333em;
-  line-height: 1.618em;
+  font-size: 1.25em;
+  line-height: 1em;
   color: #222;
   letter-spacing: 1px;
   margin: 24px 0 12px 0;
@@ -85,10 +85,23 @@ ul {
 ol {
   list-style-type: decimal;
 }
+ol + h2,
+ol + h3,
+ul + h2,
+ul + h3,
+p + h2,
+p + h3,
+div + h3 {
+  margin-top: 1.5em;
+}
 
 p {
   margin: 1em 0;
 }
-.lead {
-  font-size: 1.3em;
-}
+
+// helper classes
+.lead { font-size: 1.3em; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.heading-underline { border-bottom: 1px solid lightgray };
