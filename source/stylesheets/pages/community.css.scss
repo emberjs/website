@@ -1,4 +1,5 @@
 @import 'mixins/hidpi';
+@import 'base/base';
 
 body.community #content {
   max-width: 54em;
@@ -34,7 +35,7 @@ body.community #content {
 
     .image {
       float: left;
-      margin: 0 20px 15px 0;
+      margin: 15px 20px 15px 0;
       width: 220px;
       height: 142px;
 

@@ -1,12 +1,10 @@
 @import 'bourbon';
-@import 'base/variables';
+@import 'base/base';
 
 body.tomster_commission #content,
 body.tomster_commission-sent #content,
 body.tomster_payment #content,
 body.tomster_payment-sent #content {
-  // margin: 3em auto 0 auto;
-  width: 54em;
 
   h1,
   h1:first-child {
