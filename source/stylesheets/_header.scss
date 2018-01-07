@@ -1,0 +1,144 @@
+/**
+  Header
+**/
+#header {
+  position: absolute;
+  width: 100%;
+  min-width: $page-width;
+  top: 0;
+  height: 60px;
+  background: $orange top center;
+  @include hidpi('navigation_background', png);
+  border-bottom: 1px solid $orange-darker;
+  z-index: 10; /* The header is on top to have proper drop-shadow. */
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+
+  #wrapper {
+    width: $page-width;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  #search form {
+    display: inline-block
+  }
+
+  #logo {
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    width: 103px;
+    height: 40px;
+    @include hidpi('ember_logo', 'png');
+    transform: scale(1);
+    transition:0.2s;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.06);
+      border: 0;
+    }
+  }
+
+  #nav {
+    width: 700px;
+    height: 65px;
+    margin: 0 auto;
+    text-align: center;
+
+    li {
+      line-height: 26px;
+      margin: 18px 0 0;
+      display: inline-block;
+
+      a {
+        font-weight: bold;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: #faf2ee;
+        text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
+        display: block;
+        padding: 0px 1em;
+        height: 26px;
+        line-height: 26px;
+        text-decoration: none;
+        border: 1px solid transparent;
+
+        &:hover {
+          color: $white
+        }
+      }
+
+      &.active a {
+        color: #331915;
+        text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0px;
+        background-color: #bf4737;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        border: 1px solid #923c2e;
+        box-shadow:
+          rgba(255, 255, 255, 0.15) 0 1px 0px,
+          inset rgba(0, 0, 0, 0.17) 0 1px 1px;
+
+        &:hover {
+          color: black;
+          background-color: rgba(0, 0, 0, 0.17);
+        }
+      }
+
+    }
+  }
+
+  #search {
+    form input.st-search-input {
+      margin-left: 12px;
+      font-size: 100%;
+      padding: 2px 9px 2px 27px;
+      height: 26px;
+      background-position: 7px 6px;
+      width: 150px;
+    }
+  }
+
+  #github {
+    position: absolute;
+    right: 7px;
+    top: 17px;
+
+    a {
+      img {
+        float: left;
+        margin-top: 7px;
+        margin-right: 6px;
+        display: block;
+      }
+
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #faf2ee;
+      text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
+      display: block;
+      padding: 0px 1em 0 0.5em;
+      height: 28px;
+      line-height: 28px;
+      background-color: #ff6e56;
+      background-image: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
+
+      border: 1px solid #a93926;
+      border-radius: 4px;
+      box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;
+
+      &:hover {
+        color: #ffffff;
+        background: #f86c55;
+      }
+    }
+
+    .icon-fork {
+      font-size: 1.4em;
+      margin-left: 0;
+      vertical-align: middle;
+    }
+  }
+}

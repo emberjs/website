@@ -1,6 +1,12 @@
+.footer {
+  display: block;
+  clear: both;
+  margin: 0 auto;
+  max-width: 100%;
+}
 .footer > .container {
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .not-responsive .footer > .container {
@@ -16,14 +22,14 @@
 
 @media screen and (max-width: 53.75rem) {
   .responsive .footer .container {
-    padding: 2rem 1rem;
+    padding: 2em 1em;
 
     .footer-info {
       margin-top: 12px;
       margin-bottom: 12px;
     }
     .footer-statement {
-      margin: 1.1rem 0;
+      margin: 1.1em 0;
     }
     .footer-social {
       line-height: 32px;
@@ -53,7 +59,7 @@
 }
 
 .footer .container {
-  padding: 1.875rem 1rem
+  padding: 1.875em 0;
 }
 
 .footer .container {
@@ -80,7 +86,7 @@
 
 .footer .footer-info {
   flex:0 0 18em;
-  text-align: left
+  text-align: left;
 }
 
 @media screen and (max-width: 53.75rem) {
@@ -126,6 +132,8 @@
   .footer .footer-contributions {
     display: flex;
     flex:0 0 21em;
+    max-width: 100%;
+    flex-flow: row wrap;
   }
 }
 

@@ -3,24 +3,24 @@ title: "Team"
 responsive: true
 ---
 
-<h1>
+<h1 class="text-center">
   The Team Behind Ember
 </h1>
-
 <p class="lead">
+<br/>
   Ember is an Open Source project that relies on the tireless support of individual contributors.<br>
-  These are the members of our Core Team:
 </p>
 
-<div class="team section">
+<section class="team section">
+<h2 class="text-center">The Core Team</h2>
 
 <% core = data.team.select { |m| m.teams.include?('core') } %>
 
 <ul class="headshots">
   <% core.each do |user| %>
     <li>
-      <a href="<%= user.github %>" rel="nofollow" class="avatar">
-        <img src="/images/team/<%= user.image %>">
+      <a href="<%= user.github %>" rel="nofollow" class="avatar" aria-label="<%= user.name %>">
+        <img src="/images/team/<%= user.image %>" alt="" role="presentation">
       </a>
 
       <p class="name">
@@ -29,14 +29,14 @@ responsive: true
 
       <ul class="social">
         <li>
-          <a class="twitter" href="<%= user.twitter %>">
-            <i class="icon-twitter"></i>
+          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+            <i class="icon-twitter" aria-hidden="true"></i>
           </a>
         </li>
 
         <li>
-          <a class="github" href="<%= user.github %>">
-            <i class="icon-github"></i>
+          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+            <i class="icon-github" aria-hidden="true"></i>
           </a>
         </li>
       </ul>
@@ -47,67 +47,63 @@ responsive: true
   </li>
   <% end %>
 </ul>
+</section>
 
-<hr>
+<hr/>
+<section class="team section">
+  <h2 class="text-center">
+    The Ember Subteams
+  </h2>
+  <p class="lead">
+    In addition to the Core Team, the following people contribute significantly to the Ember project. We're grateful for their assistance.
+  </p>
 
-<h1>
-  The Ember Subteams
-</h1>
+  <%
+  subteams = ['cli', 'data', 'learning'];
+  subteams = subteams.map { |team|
+    data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
+  }.flatten
 
-<p class="lead">
-  In addition to the Core Team, the following people contribute significantly to the Ember project.<br>
-  We're grateful for their assistance.
-</p>
+  subteams.sort_by! {|u| [u.type, u.name] }
+  %>
 
-<%
-subteams = ['cli', 'data', 'learning'];
-subteams = subteams.map { |team|
-  data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
-}.flatten
+  <ul class="contributors headshots">
+    <% subteams.each do |user| %>
+      <li>
+        <a href="<%= user.github %>" rel="nofollow" class="avatar" aria-label="<%= user.name %>">
+          <img src="/images/team/<%= user.image %>" role="presentation" alt="">
 
-subteams.sort_by! {|u| [u.type, u.name] }
-%>
+          <span class="type"><%= user.type %></span>
+        </a>
 
-<ul class="contributors headshots">
-  <% subteams.each do |user| %>
-    <li>
-      <a href="<%= user.github %>" rel="nofollow" class="avatar">
-        <img src="/images/team/<%= user.image %>">
-
-        <span class="type"><%= user.type %></span>
-      </a>
-
-      <p class="name">
-        <%= user.name %>
-      </p>
-  </li>
-  <% end %>
-</ul>
-
-<hr>
-
-<h1>
-  Ember Core Alumni
-</h1>
-
-<p class="lead">
-  Serving as a member of the Core Team of an open source project like Ember is a huge amount of work.<br>
-  These are retired members of the Ember Core Team, to whom we will always be grateful:
-</p>
-
-<% alumni = data.team.select { |m| m.teams.include?('corealumni') } %>
-
-<ul class="headshots">
-  <% alumni.each do |user| %>
-    <li>
-      <a href="<%= user.github %>" rel="nofollow">
-        <img src="/images/team/<%= user.image %>" width="150" height="150">
-      </a>
-      <p>
-        <%= user.name %>
-      </p>
+        <p class="name">
+          <%= user.name %>
+        </p>
     </li>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+</section>
+<hr/>
+<section class="team section">
+<h2 class="text-center">
+    Ember Core Alumni
+  </h2>
+  <p class="lead">
+    Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are retired members of the Ember Core Team, to whom we will always be grateful:
+  </p>
 
-</div>
+  <% alumni = data.team.select { |m| m.teams.include?('corealumni') } %>
+
+  <ul class="headshots">
+    <% alumni.each do |user| %>
+      <li>
+        <a href="<%= user.github %>" rel="nofollow" aria-label="<%= user.name %>">
+          <img src="/images/team/<%= user.image %>" width="150" height="150" alt="" role="presentation"/>
+        </a>
+        <p>
+          <%= user.name %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
+</section>
