@@ -2,6 +2,7 @@
 $orange: #E04E39;
 $orange-darker: darken($orange, 10);
 $orange-darkest: darken($orange, 20);
+$orange-lightest: #f9e7e4; // aka "linen"
 
 $white: #fdfdfd;
 $black: #212121;
@@ -14,7 +15,7 @@ $gray-lightest: #eeeeee;
 $gray-darker: darken($gray, 10%);
 $gray-darkest: darken($gray, 15%);
 
-$linen: #f9e7e4; //white-darkest? but I think this is the same as brown-lightest aka "tan"
+ 
 
 /* status colors */
 $red: #D50000;
@@ -44,7 +45,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 /* Typography */
 $base-line-height: 1.5;
 $list-indent: 32px;
-$base-font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+$base-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 $heading-font-family: $base-font-family;
 $monospace-font-family: Menlo, Courier, monospace;
 $footer-font-family: proxima-nova, sans-serif;
@@ -86,9 +87,9 @@ $screen-sm-max: 991px;
 $screen-md-max: 1199px;
 
 // Font Sizes
-$base-font-size: 1rem;
-$small-font-size: 0.75rem;
-$large-font-size: 1.5rem;
+$base-font-size: 18px;
+$small-font-size: 0.75em;
+$large-font-size: 2em;
 
 // Spacing
 $base-spacing: $base-line-height * 1em;
