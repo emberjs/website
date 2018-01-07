@@ -5,14 +5,11 @@
 @import 'base/base'; // bitters replacement for our homegrown setup
 @import 'base/typography';
 @import 'base/structure';
-@import 'base/shared';
 
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
-
 @import 'vendor/docsearch';
-
-@import 'fonts';
+@import 'fonts'; //do we need this?
 
 @import 'components/buttons';
 @import 'components/ember-button';
@@ -23,6 +20,7 @@
 @import 'components/security';
 @import 'components/sponsors';
 
+@import 'shared';
 @import 'about';
 @import 'blog';
 @import 'builds';
