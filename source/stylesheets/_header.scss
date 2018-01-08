@@ -1,4 +1,7 @@
 header {
+  font-weight: normal;
+	font-size: 16px;
+	line-height: 1.2;
   .navbar {
 		&.navbar-inverse {
 			background-color: $orange;
@@ -32,7 +35,10 @@ header {
 					&.active {
 						a {
 							background-color: white;
-							color: $orange-darkest;
+              color: $orange-darkest;
+              &:hover, :focus {
+                border-bottom: none;
+              }
 						}
 					}
 					&.open {
@@ -978,37 +984,4 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .navbar-header:after,
 .navbar-collapse:after {
   clear: both;
-}
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.pull-right {
-  float: right !important;
-}
-.pull-left {
-  float: left !important;
-}
-.hide {
-  display: none !important;
-}
-.show {
-  display: block !important;
-}
-.invisible {
-  visibility: hidden;
-}
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.hidden {
-  display: none !important;
-}
-.affix {
-  position: fixed;
 }
