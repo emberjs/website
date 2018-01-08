@@ -7,7 +7,7 @@
     padding: 3em 0;
     width: 100%;
     margin: 0 auto;
-    min-height: 90vh;
+    min-height: 65vh;
     @include clearfix;
     @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
       padding: 1em 0;
