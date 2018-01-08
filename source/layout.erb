@@ -38,7 +38,7 @@
       <script type="text/javascript" src="/javascripts/common-modern.js"></script>
     <!--<![endif]-->
 
-    <main-navbar></main-navbar>
+    <%= partial "header" %>
 
     <%= yield_content :outside_wrapper %>
 
@@ -55,7 +55,7 @@
       </div>
     </div>
 
-    <main-footer></main-footer>
+    <%= partial "footer" %>
 
     <%= yield_content :foot %>
     <script type="text/javascript">
@@ -72,6 +72,6 @@
       })();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
-    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+    # <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
   </body>
 </html>
