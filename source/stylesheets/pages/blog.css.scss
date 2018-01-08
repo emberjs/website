@@ -53,6 +53,7 @@
         color: $gray-darker;
         display: block;
         font-size: 0.5em;
+        font-style: italic;
         margin-top: 7px; //so when you hover over the title, you don't chop off the top of the date. 
       }
     }
@@ -141,4 +142,9 @@
       }
     }
   }
+}
+
+.api-info-box {
+  background-color: #eeeeee;
+  padding: 30px 50px; 
 }

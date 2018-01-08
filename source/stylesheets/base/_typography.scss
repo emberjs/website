@@ -2,30 +2,28 @@
 
 body {
 	font-size: 18px;
+  font-weight: normal;
   line-height: 1.5;
   @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
     font-size: 16px;
     line-height: 1.2;
   }
 }
-
 a {
-  color: $orange-darker;
   text-decoration: none;
+  color: $orange-darker;
   &:hover, :focus {
     color: $orange-darkest;
-    border-bottom: 2px dotted $orange-darkest;
   }
 }
-
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  font-weight: bold;
-  code {
-    text-transform: none;
+p {
+  a {
+    color: $orange-darker;
+    text-decoration: underline;
+    &:hover, :focus {
+      color: $orange-darkest;
+      cursor: pointer;
+    }
   }
 }
 
@@ -45,7 +43,7 @@ h4 {
 
 h1 {
   color: $gray;
-  font-size: 2.441em;
+  font-size: 2em;
   font-weight: bold;
   line-height: 1.125;
   max-width: 100%;
@@ -59,21 +57,23 @@ h1 {
 
 h2 {
   color: $orange-darkest;
-  font-size: 1.953em;
-  margin: 1.3em 0 0.6em 0; 
+  font-size: 1.75em;
+  margin: 2em 0 0.2em 0;
+  font-weight: bold; 
 
 }
 
 h3 {
   color: $gray-darker;
-  font-size: 1.563em;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 h4 {
-  font-size: 1.25em;
-  line-height: 1em;
-  color: #222;
-  letter-spacing: 1px;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
   margin: 24px 0 12px 0;
 }
 
@@ -111,4 +111,4 @@ p {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
-.heading-underline { border-bottom: 1px solid lightgray };
+.heading-underline { border-bottom: 1px solid lightgray }
