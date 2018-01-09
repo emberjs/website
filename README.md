@@ -36,7 +36,7 @@ API documentation has been moved to a separate repo, please see https://github.c
 
 ### Requirements
 
-If the `bundle` command is not found, you can install it with `gem install bundle`.
+If the `bundle` command is not found, you can install it with `gem install bundler`.
 
 If the `bundle` command fails to run, you may need to upgrade your Ruby version. Please check the current supported version that described at [.ruby-version](https://github.com/emberjs/website/blob/master/.ruby-version).
 You can use [RVM](https://rvm.io/) to install it:
