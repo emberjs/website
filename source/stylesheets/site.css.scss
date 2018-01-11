@@ -94,7 +94,7 @@ body {
     padding-bottom: 120px;
 
     &:after {
-     background-image: linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1));
+     background: linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1));
       position: absolute;
       bottom: 0px;
       left: -1px;
@@ -198,7 +198,7 @@ body {
 
         &.selected > a {
           background-color: #f16f58;
-          background-image: linear-gradient(-90deg, #f67862, #e7624b);
+          background: linear-gradient(-90deg, #f67862, #e7624b);
           margin-left: -1px;
           margin-right: -1px;
           color: $white;
@@ -413,7 +413,7 @@ body {
       height: 28px;
       line-height: 28px;
       background-color: #ff6e56;
-      background-image: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
+      background: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
       border: 1px solid #a93926;
       border-radius: 4px;
       box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;
