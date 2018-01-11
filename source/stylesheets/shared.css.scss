@@ -95,7 +95,7 @@ code {
 
     li.active a {
       background-color: #f67862;
-      background-image: linear-gradient(0deg, #e7624b, #f67862);
+      background: linear-gradient(0deg, #e7624b, #f67862);
       border-right: 1px solid #f67862;
       border-top: none;
       color: $white;
@@ -103,7 +103,7 @@ code {
 
       &:hover {
         color: $white;
-        background-image: linear-gradient(0deg, #e7624b, #f67862);
+        background: linear-gradient(0deg, #e7624b, #f67862);
       }
     }
 
@@ -124,7 +124,7 @@ code {
         border-top: solid 1px rgb(250, 250, 250);
         border-right: solid 1px #e6e4e3;
         background-color: #f3f3f3;
-        background-image: linear-gradient(0deg, #f3f3f3, #ebebeb);
+        background: linear-gradient(0deg, #f3f3f3, #ebebeb);
         padding: 0.5em 1em;
         text-align: center;
         font-weight: normal;
@@ -132,7 +132,7 @@ code {
 
         &:hover {
           background-color: #ebebeb;
-          background-image: linear-gradient(0deg, #ebebeb, #f3f3f3);
+          background: linear-gradient(0deg, #ebebeb, #f3f3f3);
           color: black;
           border-bottom: none;
         }

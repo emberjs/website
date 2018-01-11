@@ -17,7 +17,7 @@
     border: 1px solid #cb6352;
     border-top-color: #ea7a68;
     border-bottom-color: #a04332;
-    background-image: linear-gradient(to bottom, #fe845a, #d14e37);
+    background: linear-gradient(to bottom, #fe845a, #d14e37);
 
     border-radius: 5px;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
@@ -27,14 +27,14 @@
       border-color: #e27260;
       border-top-color: #ea7a68;
       border-bottom-color: #c1513d;
-      background-image: linear-gradient(to bottom, #fc906b, #e2654e);
+      background: linear-gradient(to bottom, #fc906b, #e2654e);
     }
 
     &:active {
       border-color: #c9533d;
       border-top-color: #92473a;
       border-bottom-color: #e1583f;
-      background-image: linear-gradient(to bottom, #b2412e, #ed7249);
+      background: linear-gradient(to bottom, #b2412e, #ed7249);
       box-shadow: none;
       text-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0;
     }
