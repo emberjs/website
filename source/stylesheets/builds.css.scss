@@ -2,6 +2,7 @@
 @import "compass/css3/transform";
 @import "base/variables";
 @import "mixins/hidpi";
+@import "mixins/helpers";
 
 // the builds page is an ember app inserted into the master layout, replicate styling
 // content -> builds page ( sidebar / subcontent )
@@ -52,7 +53,8 @@
   }
 
   .tiny-beta-image {
-    @include hidpi('builds/tiny_beta', 'png');
+    @include hidpi("builds/tiny_beta", "png");
+
     width: 48px;
     height: 64px;
     margin: 0 auto;
@@ -62,7 +64,8 @@
   }
 
   .small-release-image {
-    @include hidpi('builds/small_release', 'png');
+    @include hidpi("builds/small_release", "png");
+
     width: 99px;
     height: 132px;
     margin: 0 auto;
@@ -78,12 +81,12 @@
     margin-top: 5px;
     text-align: center;
     font-size: smaller;
-    color: rgb(138,89,52);
+    color: rgb(138, 89, 52);
   }
 
   .beta-current-version {
     margin-top: -5px;
-    color: rgb(178,133,91);
+    color: rgb(178, 133, 91);
     text-align: center;
     font-size: x-small;
   }
@@ -114,28 +117,32 @@
   }
 
   .feature .canary {
-    @include hidpi('builds/canary', 'png');
+    @include hidpi("builds/canary", "png");
+
     width: 198px;
     height: 263px;
     margin: 0 auto;
   }
 
   .feature .beta {
-    @include hidpi('builds/beta', 'png');
+    @include hidpi("builds/beta", "png");
+
     width: 198px;
     height: 263px;
     margin: 0 auto;
   }
 
   .feature .release {
-    @include hidpi('builds/release', 'png');
+    @include hidpi("builds/release", "png");
+
     width: 198px;
     height: 263px;
     margin: 0 auto;
   }
 
   .feature .lts {
-    @include hidpi('builds/lts', 'png');
+    @include hidpi("builds/lts", "png");
+
     width: 198px;
     height: 263px;
     margin: 0 auto;
@@ -240,7 +247,7 @@
 
     a.active {
       background-color: #f67862;
-      @include background-image(linear-gradient(0deg, #e7624b, #f67862));
+      background-image: linear-gradient(0deg, #e7624b, #f67862);
       border-right: 1px solid #f67862;
       border-top: none;
       color: $white;
@@ -249,18 +256,18 @@
   }
 
   button {
-    position:relative;
-    border:0;
-    margin:0;
-    padding:0;
+    position: relative;
+    border: 0;
+    margin: 0;
+    padding: 0;
     width: 70px;
-    cursor:pointer;
-    font-size:11px;
-    font-weight:normal;
-    color:rgba(0,0,0,0);
-    background:transparent;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0);
+    background: transparent;
     border-radius: .25rem;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
   }
 
@@ -268,38 +275,37 @@
   button:after,
   button:before {
     padding: 7px 3px;
-    @include transition(0.75s,background-color .125s);
-    @include transform-style(preserve-3d);
+    transition: all 0.75s ease;
   }
 
   button:after,
   button:before {
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     border-radius: .25rem;
-    @include backface-visibility( hidden);
+    backface-visibility: hidden;
   }
 
   button:before {
-    z-index:2;
-    color:#fff;
-    background-color:#f67862;
+    z-index: 2;
+    color: #fff;
+    background-color: #f67862;
     content: attr(data-label);
   }
 
   button:after {
-    z-index:1;
-    background-color:#999;
+    z-index: 1;
+    background-color: #999;
     color: #fff;
-    @include rotateX(180deg);
-    content:'Copied';
+    transform: rotateX(180deg);
+    content: 'Copied'; //TODO bad a11y
   }
 
   button.loading {
-    @include rotateX(180deg);
+    transform: rotateX(180deg);
   }
 
   .loading-spinner {
@@ -349,12 +355,14 @@
     line-height: 1.5;
     margin-bottom: 20px;
     padding: 0.5em;
+
     p {
       display: block;
       margin: auto;
       padding-left: 5px;
-      width: 80%;      
+      width: 80%;
     }
+
     .btn {
       background-color: lighten($orange, 45%);
       border-radius: 3px;
@@ -366,6 +374,7 @@
       margin: auto;
       padding: 0.5em 0.8em;
       width: 20%;
+
       &:hover, :focus {
         border-bottom: none;
       }
@@ -400,7 +409,8 @@
 
   .channel {
     text-align: left;
-    @include clearfix();
+
+    @include clearfix;
   }
 
   .channel .tomster {
@@ -408,6 +418,7 @@
     margin: 0 20px;
     width: 10%;
     padding: 10px 0;
+
     &:hover {
       border: 0;
     }
@@ -416,13 +427,14 @@
   .channel .description {
     width: 80%;
     padding: 20px 0;
+
     &.last {
       border-bottom: 1px dotted #E5DBD6;
     }
   }
 
   .channel .canary {
-    background-image: url('/images/builds/canary.png');
+    background-image: url("/images/builds/canary.png");
     background-size: cover;
     width: 99px;
     height: 131.5px;
@@ -430,7 +442,7 @@
   }
 
   .channel .beta {
-    background-image: url('/images/builds/beta.png');
+    background-image: url("/images/builds/beta.png");
     background-size: cover;
     width: 99px;
     height: 131.5px;
@@ -438,7 +450,7 @@
   }
 
   .channel .release {
-    background-image: url('/images/builds/release.png');
+    background-image: url("/images/builds/release.png");
     background-size: cover;
     width: 99px;
     height: 131.5px;
@@ -446,7 +458,7 @@
   }
 
   .channel .lts {
-    background-image: url('/images/builds/lts.png');
+    background-image: url("/images/builds/lts.png");
     background-size: cover;
     width: 99px;
     height: 131.5px;

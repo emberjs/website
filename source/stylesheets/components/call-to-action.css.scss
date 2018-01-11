@@ -25,6 +25,7 @@
     }
   }
 }
+
 .call-to-action__box {
   box-shadow: 0 0 4px 1px #DDDDDD;
 }
@@ -76,7 +77,9 @@
     h1 {
       font-size: 2.5em;
       margin-top: 1rem;
+
       // padding-bottom: 0.5rem;
+   
     }
   }
 
@@ -84,6 +87,5 @@
     display: inherit;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-
   }
 }

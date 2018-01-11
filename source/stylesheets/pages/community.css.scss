@@ -1,5 +1,5 @@
-@import 'mixins/hidpi';
-@import 'base/base';
+@import "mixins/hidpi";
+@import "base/base";
 
 body.community #content {
   h1 {
@@ -7,23 +7,25 @@ body.community #content {
   }
 
   .video {
-      max-width: 640px;
-      margin: 0 auto;
+    max-width: 640px;
+    margin: 0 auto;
 
-      .embedded-video {
-        position: relative;
-        padding-bottom: 52.25%; /* not quite 16:9 */
-        padding-top: 25px;
-        height: 0;
+    .embedded-video {
+      position: relative;
+      padding-bottom: 52.25%;
 
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
+      /* not quite 16:9 */
+      padding-top: 25px;
+      height: 0;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
+    }
   }
 
   .section {
@@ -40,15 +42,16 @@ body.community #content {
     }
 
     &.contribute .image {
-      @include hidpi('community/give', 'png');
+      @include hidpi("community/give", "png");
     }
 
     &.help .image {
-      @include hidpi('community/sos', 'png');
+      @include hidpi("community/sos", "png");
     }
 
     &.bugs .image {
-      @include hidpi('community/bug', 'png');
+      @include hidpi("community/bug", "png");
+
       float: right;
       margin: 0 0 15px 20px;
 
@@ -70,7 +73,8 @@ body.community #content {
       }
 
       .image {
-        @include hidpi('community/meetup', 'png');
+        @include hidpi("community/meetup", "png");
+
         background-position: center top;
         float: none;
         margin: 0 0 15px 20px;
@@ -96,7 +100,8 @@ body.community #content {
       }
 
       .image {
-        @include hidpi('community/campster', 'png');
+        @include hidpi("community/campster", "png");
+
         background-position: center top;
         float: none;
         width: 201px;
@@ -104,11 +109,12 @@ body.community #content {
         margin: 0 auto;
       }
 
-      .button { //TODO we shouldn't need this
+      .button {
+        //TODO we shouldn't need this
         margin: 25px auto;
       }
     }
-    
+
     table {
       margin: 2em auto;
     }

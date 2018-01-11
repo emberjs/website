@@ -24,12 +24,15 @@
     background-color: #001D36;
     background-repeat: no-repeat;
     background-size: auto 95% !important;
-    @include hidpi('about/emberconf-callout-bg', png);
+
+    @include hidpi("about/emberconf-callout-bg", png);
+
     margin-top: 1em;
     overflow: hidden;
     padding-bottom: 1em;
     position: relative;
     text-align: center;
+
     @media screen and (min-width: $screen-sm-min) {
       background-size: cover;
       overflow: visible;
@@ -42,6 +45,7 @@
     display: block;
     padding: 0 20px;
     position: relative;
+
     @media screen and (min-width: $screen-sm-min) {
       display: inline-block;
       padding: 20px 0 20px 120px;
@@ -52,12 +56,15 @@
       content: '';
       display: block;
       height: 107px;
-      @include hidpi('about/party-tomster', png);
+
+      @include hidpi("about/party-tomster", png);
+
       position: absolute;
       background-repeat: no-repeat;
-      background-size: contain!important;
+      background-size: contain !important;
       right: 10px;
       width: 75px;
+
       @media screen and (min-width: $screen-sm-min) {
         bottom: -51px;
         display: block;
@@ -79,6 +86,7 @@
     position: relative;
     text-transform: uppercase;
     top: -.5em;
+
     @media screen and (min-width: $screen-sm-min) {
       top: 0;
     }

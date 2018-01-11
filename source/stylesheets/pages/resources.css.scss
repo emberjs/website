@@ -1,6 +1,6 @@
-@import 'bourbon';
-@import 'mixins/hidpi';
-@import 'base/base';
+@import "bourbon";
+@import "mixins/hidpi";
+@import "base/base";
 
 body.community_resources #content {
   margin: 3em auto 0 auto;
@@ -14,6 +14,7 @@ body.community_resources #content {
 
   .section {
     width: auto;
+
     @include clearfix;
 
     table {
@@ -48,7 +49,9 @@ body.community_resources #content {
       .bx-prev,
       .bx-next {
         background: no-repeat;
-        @include hidpi('about/carousel_controls', png);
+
+        @include hidpi("about/carousel_controls", png);
+
         float: left;
         height: 220px;
         width: 30px;
@@ -82,6 +85,7 @@ body.community_resources #content {
 
       .bx-pager {
         @include clearfix;
+
         font-size: 0;
         height: 28px;
         line-height: 0;
@@ -91,7 +95,9 @@ body.community_resources #content {
 
         .pager-link {
           background: 0 0 no-repeat;
-          @include hidpi('about/carousel_dots', png);
+
+          @include hidpi("about/carousel_dots", png);
+
           height: 11px;
           width: 10px;
           margin-left: 10px;
@@ -123,7 +129,9 @@ body.community_resources #content {
     &.empty {
       display: block;
       height: 220px;
-      visibility: hidden; /*Take up space, but be invisible*/
+      visibility: hidden;
+
+      /*Take up space, but be invisible*/
     }
 
     a {

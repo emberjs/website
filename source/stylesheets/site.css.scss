@@ -1,51 +1,57 @@
-@import 'compass/reset';
-@import 'compass/typography/text/ellipsis';
-@import 'bourbon';
-@import 'base/variables';
-@import 'base/base'; // bitters replacement for our homegrown setup
-@import 'base/typography';
-@import 'base/structure';
+@import "compass/reset";
+@import "compass/typography/text/ellipsis";
+@import "bourbon";
+@import "base/variables";
+@import "base/base";
 
-@import 'mixins/hidpi';
-@import 'mixins/width-for-columns';
-@import 'vendor/docsearch';
-@import 'fonts'; //do we need this?
+// bitters replacement for our homegrown setup
+@import "base/typography";
+@import "base/structure";
 
-@import 'components/buttons';
-@import 'components/ember-button';
-@import 'components/footer';
-@import 'components/legal';
-@import 'components/logos';
-@import 'components/meetups';
-@import 'components/security';
-@import 'components/sponsors';
+@import "mixins/helpers";
+@import "mixins/hidpi";
+@import "mixins/width-for-columns";
+@import "vendor/docsearch";
+@import "fonts";
 
-@import 'shared';
-@import 'about';
-@import 'blog';
-@import 'builds';
-@import 'examples';
-@import 'guides';
-@import 'highlight';
-@import 'survey';
 
-@import 'pages/404';
-@import 'pages/about';
-@import 'pages/blog';
-@import 'pages/brand';
-@import 'pages/community';
-@import 'pages/deprecations';
-@import 'pages/ember-users';
-@import 'pages/guides';
-@import 'pages/learn';
-@import 'pages/mascots';
-@import 'pages/meetup-assets';
-@import 'pages/meetups';
-@import 'pages/resources';
-@import 'pages/security';
-@import 'pages/sponsors';
-@import 'pages/teams';
-@import 'pages/tomster-commission';
+//do we need this?
+
+@import "components/buttons";
+@import "components/ember-button";
+@import "components/footer";
+@import "components/legal";
+@import "components/logos";
+@import "components/meetups";
+@import "components/security";
+@import "components/sponsors";
+
+@import "shared";
+@import "about";
+@import "blog";
+@import "builds";
+@import "examples";
+@import "guides";
+@import "highlight";
+@import "survey";
+
+@import "pages/404";
+@import "pages/about";
+@import "pages/blog";
+@import "pages/brand";
+@import "pages/community";
+@import "pages/deprecations";
+@import "pages/ember-users";
+@import "pages/guides";
+@import "pages/learn";
+@import "pages/mascots";
+@import "pages/meetup-assets";
+@import "pages/meetups";
+@import "pages/resources";
+@import "pages/security";
+@import "pages/sponsors";
+@import "pages/teams";
+@import "pages/tomster-commission";
 
 $small-max-width: 767px;
 
@@ -56,12 +62,13 @@ $small-max-width: 767px;
 body {
   background-color: $white;
   font-family: $base-font-family;
-  font-weight: normal; //for iOS
+  font-weight: normal;
+
+  //for iOS
   line-height: 1.5;
   color: #444444;
   -webkit-font-smoothing: antialiased;
 }
-
 
 /**
   Sidebar
@@ -71,13 +78,14 @@ body {
     margin-top: 3em;
   }
 }
+
 #sidebar {
   font-weight: normal;
   background: #f4ece9;
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
-  
+
   @media (min-width: 48em) {
     float: left;
     width: 22.5%;
@@ -86,7 +94,7 @@ body {
     padding-bottom: 120px;
 
     &:after {
-      @include background-image(linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1)));
+     background-image: linear-gradient(rgba(250, 244, 241, 0), rgba(251, 245, 241, 1));
       position: absolute;
       bottom: 0px;
       left: -1px;
@@ -100,7 +108,7 @@ body {
     padding-left: 13px;
     text-align: center;
     display: none;
-    @include transition(opacity 0.05s linear);
+    transition: opacity 0.05s linear;
 
     @media screen and (max-width: 1200px) {
       padding-left: 0px;
@@ -166,7 +174,6 @@ body {
             color: #282828;
           }
         }
-
       }
 
       &.level-1 {
@@ -191,7 +198,7 @@ body {
 
         &.selected > a {
           background-color: #f16f58;
-          @include background-image(linear-gradient(-90deg, #f67862, #e7624b));
+          background-image: linear-gradient(-90deg, #f67862, #e7624b);
           margin-left: -1px;
           margin-right: -1px;
           color: $white;
@@ -238,13 +245,21 @@ body {
     padding: 0px 0px 5px 15px;
     padding-right: 10px;
     margin-left: 10px;
-    background: no-repeat url('/images/search-icon.png');
+    background: no-repeat url("/images/search-icon.png");
   }
 
   border: 0;
-  input:-webkit-input-placeholder { font-style: italic; }
-  input:         -moz-placeholder { font-style: italic; }
-  input:         -moz-placeholder { font-style: italic; }
+
+  input:-webkit-input-placeholder {
+    font-style: italic;
+  }
+
+  input: -moz-placeholder {
+    font-style: italic;
+  };
+  input: -moz-placeholder {
+    font-style: italic;
+  };
 
   input {
     background: none;
@@ -258,7 +273,7 @@ body {
   }
 
   button {
-    background: no-repeat url('/images/search-erase.png');
+    background: no-repeat url("/images/search-erase.png");
     width: 14px;
     border: 0px;
     height: 14px;
@@ -281,9 +296,13 @@ body {
   top: 0;
   height: 60px;
   background: $orange top center;
-  @include hidpi('navigation_background', png);
+
+  @include hidpi("navigation_background", png);
+
   border-bottom: 1px solid $orange-darker;
-  z-index: 10; /* The header is on top to have proper drop-shadow. */
+  z-index: 10;
+
+  /* The header is on top to have proper drop-shadow. */
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 
   #wrapper {
@@ -293,7 +312,7 @@ body {
   }
 
   #search form {
-    display: inline-block
+    display: inline-block;
   }
 
   #logo {
@@ -302,13 +321,14 @@ body {
     top: 6px;
     width: 103px;
     height: 40px;
-    @include hidpi('ember_logo', 'png');
-    @include transform(scale(1));
-    @include transition(0.2s);
+
+    @include hidpi("ember_logo", "png");
+    transform: scale(1);
+    transition: all 0.2s ease;
 
     &:hover,
     &:focus {
-      @include transform(scale(1.06));
+      transform: scale(1.06);
       border: 0;
     }
   }
@@ -338,7 +358,7 @@ body {
         border: 1px solid transparent;
 
         &:hover {
-          color: #ffffff
+          color: #ffffff;
         }
       }
 
@@ -349,16 +369,13 @@ body {
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 3px;
         border: 1px solid #923c2e;
-        box-shadow:
-          rgba(255, 255, 255, 0.15) 0 1px 0px,
-          inset rgba(0, 0, 0, 0.17) 0 1px 1px;
+        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0px, inset rgba(0, 0, 0, 0.17) 0 1px 1px;
 
         &:hover {
           color: black;
           background-color: rgba(0, 0, 0, 0.17);
         }
       }
-
     }
   }
 
@@ -396,8 +413,7 @@ body {
       height: 28px;
       line-height: 28px;
       background-color: #ff6e56;
-      @include background-image(linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%));
-
+      background-image: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
       border: 1px solid #a93926;
       border-radius: 4px;
       box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;
@@ -418,14 +434,14 @@ body {
 
 #content-wrapper {
   &.grid {
-    background-image: url('/images/grid.png');
+    background-image: url("/images/grid.png");
   }
 }
 
 #content {
   &.has-sidebar {
     margin-bottom: 90px;
-    
+
     @media (min-width: 48em) {
       width: 72.5%;
       float: left;
@@ -446,13 +462,12 @@ body {
     background-color: #ffffff;
     padding: 1em;
     color: #666666;
+
     code {
       color: #777777;
     }
   }
 }
-
-
 
 /**
   Ember Users Page
@@ -464,17 +479,17 @@ body {
     text-align: center;
     margin: 0 auto;
   }
-
 }
 
 .showcase {
   margin: 0 auto;
   width: 100%;
-  max-width:100%;
+  max-width: 100%;
 }
 
 ul.showcase {
   @include clearfix;
+
   list-style-type: none;
 }
 
@@ -562,8 +577,6 @@ ul.showcase {
   box-shadow: 5px 5px 15px -1px rgb(245, 223, 219);
 }
 
-
-
 /**
   Tomster FAQ Page
 **/
@@ -584,7 +597,7 @@ body.tomster_faq #content {
     padding-left: 13px;
     text-align: center;
     display: none;
-    @include transition(opacity 0.05s linear);
+    transition: opacity 0.05s linear;
 
     @media screen and (max-width: 1200px) {
       padding-left: 0px;
@@ -603,6 +616,7 @@ body.tomster_faq #content {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+
   @include clearfix;
 
   .left-col {
@@ -610,6 +624,7 @@ body.tomster_faq #content {
     // width: 491px;
     flex: 2;
     flex-flow: row wrap;
+
     ol {
       li {
         text-align: left;
@@ -623,24 +638,22 @@ body.tomster_faq #content {
     // margin-left: 40px;
     // text-align: center;
     flex: 1;
+
     @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
       display: none;
     }
   }
 }
 
-
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
 
-  .rightFloat {
-    float: right;
-    padding: 2px;
-  }
-
+.rightFloat {
+  float: right;
+  padding: 2px;
+}
 
 .screenshot {
   margin-left: -60px;
 }
-

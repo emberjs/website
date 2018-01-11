@@ -1,10 +1,11 @@
-@import 'bourbon';
+@import "bourbon";
 @import "mixins/hidpi";
-@import 'base/base';
+@import "base/base";
 
 body.community_meetups #content {
   .section {
     width: auto;
+
     @include clearfix;
 
     table {
@@ -61,6 +62,7 @@ body.community_meetups #content {
 
       .organizer {
         @include clearfix;
+
         margin: 15px 0;
         height: 40px;
       }
@@ -137,7 +139,7 @@ body.community_meetups #content {
           // Currently the standard res is good enough for retina, since we are already downscaling
           // and the automatically added background-size declaration is problematic
           //@include hidpi('meetups/map-pin', 'png');
-          background-image: url('/images/meetups/map-pin.png');
+          background-image: url("/images/meetups/map-pin.png");
           background-size: 9px auto;
           width: 9px;
           height: 12px;
@@ -162,7 +164,8 @@ body.community_meetups #content {
 
   .start {
     .image {
-      @include hidpi('community/meetup', 'png');
+      @include hidpi("community/meetup", "png");
+
       background-position: center top;
       float: left;
       width: 221px;

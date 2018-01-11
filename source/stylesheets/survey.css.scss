@@ -32,7 +32,7 @@
 
 .survey-wrapper-header {
   background: #fff;
-  background: url('/images/survey/bg.jpg') repeat;
+  background: url("/images/survey/bg.jpg") repeat;
   background-size: cover;
 }
 
@@ -49,6 +49,7 @@
     max-width: 80%;
   }
 }
+
 @media screen and (max-width: 360px) {
   .survey-h1 {
     margin-top: 0px;
@@ -73,6 +74,7 @@
 .survey-border-top {
   border-top: 1px solid #e5dbd6;
 }
+
 .survey-button:hover, .survey-button:active {
   background: #2C92AD;
 
@@ -103,11 +105,13 @@
 }
 
 @media screen and (max-width: 760px) {
-  .survey-column.survey-column { /* specificity hack */
+  .survey-column.survey-column {
+    /* specificity hack */
     width: 100%;
     float: none;
   }
 }
+
 .survey-credits {
   width: 135px;
   margin: auto;
@@ -147,7 +151,6 @@ a.survey-h2:active:after {
   color: #cccccc;
 }
 
-
 @media screen and (max-width: 460px) {
   .survey-h2 {
     font-size: 22px;
@@ -165,7 +168,7 @@ a.survey-h2:active:after {
   display: none;
 }
 
-.survey-wrapper ~ .footer{
+.survey-wrapper ~ .footer {
   margin-top: 0;
 }
 
@@ -184,7 +187,6 @@ a.survey-h2:active:after {
     font-style: italic;
     font-weight: 500;
     font-size: 20px;
-
     quotes: "“" "”" "‘" "’";
 
     &:before {

@@ -1,4 +1,4 @@
-@import 'base/variables';
+@import "base/variables";
 
 .ember-button {
   background-color: $orange;
@@ -22,13 +22,13 @@
     border-bottom: none;
     box-shadow: 0px 2px 4px -1px #666;
     color: white;
-    text-decoration:none;
+    text-decoration: none;
     transform: translateY(-1px);
     transition: 0.3s translateY;
   }
 
   &:active {
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.3);
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3);
     transform: translateY(0px);
   }
 }

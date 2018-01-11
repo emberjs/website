@@ -2,12 +2,16 @@
 $orange: #E04E39;
 $orange-darker: darken($orange, 10);
 $orange-darkest: darken($orange, 20);
-$orange-lightest: #f9e7e4; // aka "linen"
+$orange-lightest: #f9e7e4;
+
+// aka "linen"
 
 $white: #fdfdfd;
 $black: #212121;
 
-$blue: #1e719b; //used for tiny accents like the "job board" graphic
+$blue: #1e719b;
+
+//used for tiny accents like the "job board" graphic
 $blue-lighter: #74b0ce;
 $gray: #454545;
 $gray-lighter: #999999;
@@ -15,12 +19,14 @@ $gray-lightest: #eeeeee;
 $gray-darker: darken($gray, 10%);
 $gray-darkest: darken($gray, 15%);
 
- 
-
 /* status colors */
 $red: #D50000;
-$yellow: #a86500; //this passes color contrast checks
-$green: green; //#008000
+$yellow: #a86500;
+
+//this passes color contrast checks
+$green: green;
+
+//#008000
 
 /* Deprecating these colors/variables */
 $blue-color: #3c64b6;
@@ -45,7 +51,7 @@ $content-width: $page-width - $sidebar-width - $col-spacing * 2;
 /* Typography */
 $base-line-height: 1.5;
 $list-indent: 32px;
-$base-font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+$base-font-family: "Roboto", "Helvetica Neue", sans-serif;
 $heading-font-family: $base-font-family;
 $monospace-font-family: Menlo, Courier, monospace;
 $footer-font-family: proxima-nova, sans-serif;

@@ -1,4 +1,5 @@
-@import 'base/base';
+@import "base/base";
+
 body.team {
   hr {
     height: 1px;
@@ -7,7 +8,8 @@ body.team {
     background-color: #dfd7d4;
   }
 
-  #content .headshots { /* #content is needed for specifity override */
+  #content .headshots {
+    /* #content is needed for specifity override */
     max-width: 760px;
     width: 100%;
     margin: 0 auto;
@@ -25,6 +27,7 @@ body.team {
       @media screen and (max-width: 860px) {
         width: 32%;
       }
+
       @media screen and (max-width: 560px) {
         width: 49%;
       }
