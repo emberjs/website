@@ -1,10 +1,11 @@
-@import 'base/base';
+@import "base/base";
 
 #content.has-sidebar {
   h1 {
     border-bottom: 1px solid lightgray;
   }
 }
+
 #content.has-sidebar {
   article.blog-post {
     h1 {
@@ -12,6 +13,7 @@
       line-height: 1;
       margin-bottom: 0;
     }
+
     h1, h2 {
       + p {
         &:first-of-type {
@@ -21,6 +23,7 @@
     }
   }
 }
+
 .blog {
   .blog-post-summary-author {
     font-size: 0.9em;
@@ -31,7 +34,9 @@
   article {
     margin: 0 0 3em 0;
     padding: 0 0 3em 0;
-    border-bottom: solid 1px #e0e0e0;//TODO replace with variable to ensure consistency
+    border-bottom: solid 1px #e0e0e0;
+
+    //TODO replace with variable to ensure consistency
 
     &:last-child {
       border-bottom: none;
@@ -49,12 +54,16 @@
 
     .blog-post-title {
       margin-bottom: 0;
+
       time {
         color: $gray-darker;
         display: block;
         font-size: 0.5em;
         font-style: italic;
-        margin-top: 7px; //so when you hover over the title, you don't chop off the top of the date. 
+        margin-top: 7px;
+
+        //so when you hover over the title, you don't chop off the top of the date.
+     
       }
     }
 
@@ -74,11 +83,13 @@
       width: 100%;
       background-color: $white;
       padding: 10px;
-      border: 1px solid $gray-lightest; 
+      border: 1px solid $gray-lightest;
     }
 
     blockquote {
-      background-color: #F8E7CF;//TODO replace with variable to ensure consistency
+      background-color: #F8E7CF;
+
+      //TODO replace with variable to ensure consistency
       font-style: italic;
       padding: 8px;
 
@@ -146,5 +157,5 @@
 
 .api-info-box {
   background-color: #eeeeee;
-  padding: 30px 50px; 
+  padding: 30px 50px;
 }

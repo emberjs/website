@@ -35,15 +35,15 @@ body.guides .highlight {
 
   &.javascript .ribbon,
   &.js .ribbon {
-    @include hidpi('js-ribbon', png);
+    @include hidpi("js-ribbon", png);
   }
 
   &.html .ribbon {
-    @include hidpi('html-ribbon', png);
+    @include hidpi("html-ribbon", png);
   }
 
   &.handlebars .ribbon {
-    @include hidpi('handlebars-ribbon', png);
+    @include hidpi("handlebars-ribbon", png);
   }
 
   .highlight-line {
@@ -142,6 +142,7 @@ body.guides .highlight {
     background-color: #ffecec;
     color: #bd2c00;
   }
+
   .insert {
     background-color: #eaffea;
     color: #55a532;
@@ -155,7 +156,6 @@ body.guides .highlight {
   td {
     padding: 5px 10px;
   }
-
 }
 
 .handlebars {
@@ -170,6 +170,7 @@ body.guides .highlight {
       .attribute-name {
         color: $highlight-green;
       }
+
       .attribute-value,
       .content {
         color: darken($highlight-green, 10%);

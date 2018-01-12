@@ -1,11 +1,13 @@
 @import "base/variables";
 @import "mixins/hidpi";
 @import "components/call-to-action";
+
 // The EmberConf CSS is used seasonally; please comment it out when not in use, rather than delete
 @import "components/ember-conf";
 
 .job-board {
   display: none;
+
   @media screen and (max-width: $small-max-width) {
     background-color: #1e719b;
     font-size: 1.2em;
@@ -56,16 +58,17 @@
   height: 170px;
   text-decoration: none !important;
   text-indent: -99999px;
-  @include hidpi('about/job-board-banner', png);
+
+  @include hidpi("about/job-board-banner", png);
 
   &:hover {
     border-bottom: none;
   }
+
   @media screen and (max-width: $small-max-width) {
     display: none;
   }
 }
-
 
 .about-page--header {
   display: block;
@@ -82,6 +85,7 @@
   .bold {
     font-weight: 400;
   }
+
   @media screen and (max-width: $small-max-width) {
     margin: 0.5 auto;
     font-size: 2em;
@@ -92,7 +96,9 @@ body.about,
 body.index {
   background: no-repeat top center #faf4f1;
   background-image: url("/images/background-shades.png");
-  background-image: url('/images/background-shades.svg'), none; // See: http://css-tricks.com/svg-fallbacks/
+  background-image: url("/images/background-shades.svg"), none;
+
+  // See: http://css-tricks.com/svg-fallbacks/
   @media screen and (min-width: 2000px) {
     // Stretch background width when wider than source image
     background-size: 100% auto;
@@ -113,6 +119,7 @@ body.index {
   .feature p {
     margin-top: 1.5em;
   }
+
   @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
     .feature .handlebars {
       background-size: 221px 210px !important;
@@ -128,25 +135,28 @@ body.index {
   }
 
   .feature .handlebars {
-    @include hidpi('about/ember-handlebars-sm', 'png');
+    @include hidpi("about/ember-handlebars-sm", "png");
+
     width: 221px;
     height: 177px;
   }
 
   .feature .structure {
-    @include hidpi('about/ember-structure-sm', 'png');
+    @include hidpi("about/ember-structure-sm", "png");
+
     width: 193px;
     height: 184px;
   }
 
   .feature .productivity {
-    @include hidpi('about/ember-productivity-sm', 'png');
+    @include hidpi("about/ember-productivity-sm", "png");
+
     width: 221px;
     height: 184px;
   }
 
   .getting-started {
-    @media screen and (max-width:$small-max-width) {
+    @media screen and (max-width: $small-max-width) {
       display: block;
       clear: both;
       margin: 0 auto;

@@ -8,9 +8,13 @@
   top: 0;
   height: 60px;
   background: $orange top center;
-  @include hidpi('navigation_background', png);
+
+  @include hidpi("navigation_background", png);
+
   border-bottom: 1px solid $orange-darker;
-  z-index: 10; /* The header is on top to have proper drop-shadow. */
+  z-index: 10;
+
+  /* The header is on top to have proper drop-shadow. */
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 
   #wrapper {
@@ -20,7 +24,7 @@
   }
 
   #search form {
-    display: inline-block
+    display: inline-block;
   }
 
   #logo {
@@ -29,9 +33,11 @@
     top: 6px;
     width: 103px;
     height: 40px;
-    @include hidpi('ember_logo', 'png');
+
+    @include hidpi("ember_logo", "png");
+
     transform: scale(1);
-    transition:0.2s;
+    transition: 0.2s;
 
     &:hover,
     &:focus {
@@ -65,7 +71,7 @@
         border: 1px solid transparent;
 
         &:hover {
-          color: $white
+          color: $white;
         }
       }
 
@@ -76,16 +82,13 @@
         background-color: rgba(0, 0, 0, 0.2);
         border-radius: 3px;
         border: 1px solid #923c2e;
-        box-shadow:
-          rgba(255, 255, 255, 0.15) 0 1px 0px,
-          inset rgba(0, 0, 0, 0.17) 0 1px 1px;
+        box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0px, inset rgba(0, 0, 0, 0.17) 0 1px 1px;
 
         &:hover {
           color: black;
           background-color: rgba(0, 0, 0, 0.17);
         }
       }
-
     }
   }
 
@@ -123,8 +126,7 @@
       height: 28px;
       line-height: 28px;
       background-color: #ff6e56;
-      background-image: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
-
+      background: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
       border: 1px solid #a93926;
       border-radius: 4px;
       box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;

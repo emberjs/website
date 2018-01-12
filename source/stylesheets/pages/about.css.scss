@@ -1,12 +1,15 @@
-@import 'bourbon';
-@import 'mixins/hidpi';
-@import 'mixins/width-for-columns';
-@import 'base/base';
+@import "bourbon";
+@import "mixins/helpers";
+@import "mixins/hidpi";
+@import "mixins/width-for-columns";
+@import "base/base";
 
 .section {
   overflow: hidden;
+
   table.columns {
     margin: 0 auto;
+
     td {
       vertical-align: top;
       padding-right: 50px;
@@ -19,10 +22,12 @@
 
   .feature {
     @include width-for-columns(4);
+
     float: left;
     margin-left: $col-width + $col-spacing;
     margin-right: $col-spacing;
-    @media screen and (max-width:$small-max-width) {
+
+    @media screen and (max-width: $small-max-width) {
       display: block;
       clear: both;
       margin: 0 auto;
@@ -30,7 +35,7 @@
       padding: 0 0.25em;
       float: none;
       max-width: 100%;
-      width:100%;
+      width: 100%;
     }
 
     img {
@@ -48,10 +53,11 @@
 #content .users.section {
   .surround {
     @include clearfix;
+
     background-color: #FFF;
     border-radius: 3px;
     border: 1px solid #d1d1d1;
-    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0 #fff;
     margin: 0 auto;
     max-width: 100%;
     padding-top: 19px;
@@ -72,11 +78,12 @@
     }
 
     .bx-wrapper {
-
       .bx-prev,
       .bx-next {
         background: no-repeat;
-        @include hidpi('about/carousel_controls', png);
+
+        @include hidpi("about/carousel_controls", png);
+
         float: left;
         height: 28px;
         width: 30px;
@@ -113,8 +120,11 @@
 
       .bx-pager {
         @include clearfix;
+
         background: bottom repeat-x #f4f4f4;
-        @include hidpi('about/carousel_pager_bg', png);
+
+        @include hidpi("about/carousel_pager_bg", png);
+
         border-left: 1px solid #fafafa;
         border-right: 1px solid #fafafa;
         border-top: 1px solid #fefefe;
@@ -127,7 +137,9 @@
 
         .pager-link {
           background: 0 0 no-repeat;
-          @include hidpi('about/carousel_dots', png);
+
+          @include hidpi("about/carousel_dots", png);
+
           height: 11px;
           width: 10px;
           margin-left: 10px;
@@ -153,17 +165,21 @@
   .user {
     position: relative;
     float: left;
-    @media screen and (min-width: 0px) and (max-width:767px) {
+
+    @media screen and (min-width: 0px) and (max-width: 767px) {
       width: 50%;
     }
-    @media screen and (min-width:768px) {
+
+    @media screen and (min-width: 768px) {
       width: 230px;
     }
 
     &.empty {
       display: block;
       height: 210px;
-      visibility: hidden; /*Take up space, but be invisible*/
+      visibility: hidden;
+
+      /*Take up space, but be invisible*/
     }
 
     a {
@@ -180,7 +196,7 @@
 
   .listed {
     padding-top: 20px;
-    display:block;
+    display: block;
     margin: 0 auto;
     width: 100%;
   }
@@ -191,12 +207,15 @@
   clear: both;
   max-width: 100%;
   margin: 0 auto;
+
   .gear {
     text-align: center;
     height: 120px;
     max-width: 100%;
+
     a {
       display: inline-block;
+
       img {
         display: block;
         max-width: 100%;
@@ -215,6 +234,7 @@
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 3px;
     border-radius: 6px;
+
     @include width-for-columns(4);
 
     &:first-of-type {
@@ -230,7 +250,7 @@
       opacity: 0;
       background-color: rgba(0, 0, 0, 0.85);
       -webkit-font-smoothing: antialiased;
-      @include transition(opacity 0.1s linear);
+      transition: opacity 0.1s linear;
       border-radius: 6px;
 
       .name {
@@ -279,7 +299,7 @@ a.toc-anchor {
   left: -1em;
   width: 30px;
   height: 13px;
-  background: url('/images/link.png') no-repeat;
+  background: url("/images/link.png") no-repeat;
   background-size: 18px 9px;
   left: -22px;
   opacity: 0.5;

@@ -4,6 +4,7 @@
   margin: 0 auto;
   max-width: 100%;
 }
+
 .footer > .container {
   max-width: 960px;
   margin: 0 auto;
@@ -12,6 +13,7 @@
 .not-responsive .footer > .container {
   width: 960px;
 }
+
 .not-responsive .footer {
   min-width: 960px;
 }
@@ -28,15 +30,18 @@
       margin-top: 12px;
       margin-bottom: 12px;
     }
+
     .footer-statement {
       margin: 1.1em 0;
     }
+
     .footer-social {
       line-height: 32px;
       margin-bottom: 18px;
     }
   }
 }
+
 // The styles bellow were ported from the compiled sass from
 // https://guides.emberjs.com/v2.3.0/
 
@@ -63,8 +68,8 @@
 }
 
 .footer .container {
-  align-items:top;
-  display: flex
+  align-items: top;
+  display: flex;
 }
 
 @media screen and (max-width: 53.75rem) {
@@ -76,16 +81,17 @@
 
 .footer .footer-info {
   color: #555;
+
   // font-size: 0.75rem;
   font-size: 11px;
   line-height: 24px;
   font-weight: 600;
   margin: 0.875rem 0;
-  text-transform: uppercase
+  text-transform: uppercase;
 }
 
 .footer .footer-info {
-  flex:0 0 18em;
+  flex: 0 0 18em;
   text-align: left;
 }
 
@@ -96,7 +102,7 @@
 }
 
 .footer .footer-info a {
-  color: #C0260B
+  color: #C0260B;
 }
 
 .footer .footer-statement {
@@ -108,7 +114,7 @@
 }
 
 .footer .footer-social {
-  margin: 1rem 0
+  margin: 1rem 0;
 }
 
 .footer .footer-contributions {
@@ -131,7 +137,7 @@
 @media screen and (min-width: 53.75rem) {
   .footer .footer-contributions {
     display: flex;
-    flex:0 0 21em;
+    flex: 0 0 21em;
     max-width: 100%;
     flex-flow: row wrap;
   }
@@ -144,10 +150,10 @@
   color: #999;
   font-size: 1.5rem;
   margin-left: 0.75rem;
-  opacity: 0.7
+  opacity: 0.7;
 }
 
 .footer .footer-social a:hover {
   color: #dd6a58;
-  opacity: 1
+  opacity: 1;
 }

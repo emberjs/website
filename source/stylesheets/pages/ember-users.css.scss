@@ -1,10 +1,11 @@
-@import 'base/base';
+@import "base/base";
 
 .user-showcase__link {
-    width: 210px;
-    height: 103px;
-    text-align: center;
+  width: 210px;
+  height: 103px;
+  text-align: center;
 }
+
 .no-capitalize {
-    text-transform: none;
+  text-transform: none;
 }

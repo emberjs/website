@@ -5,7 +5,7 @@ $hidpi-debug: false !default;
 
 // Change default filename postfix
 // default: imagename_x2.png
-$hidpi-postfix: '_x2' !default;
+$hidpi-postfix: "_x2" !default;
 
 // Default pixel ratio: 1.3 to support Nexus 7
 // Depending on your target, you may want to set a
@@ -14,8 +14,8 @@ $hidpi-postfix: '_x2' !default;
 $hidpi-min-pixel-ratio: 1.3 !default;
 
 @mixin hidpi-abstract($image, $extension, $postfix: $hidpi-postfix) {
-  $image-fullname: '#{$image}.#{$extension}';
-  $image-hidpi-fullname: '#{$image}#{$postfix}.#{$extension}';
+  $image-fullname: "#{$image}.#{$extension}";
+  $image-hidpi-fullname: "#{$image}#{$postfix}.#{$extension}";
 
   background-image: image-url($image-hidpi-fullname);
   background-size: image-width($image-fullname) image-height($image-fullname);
@@ -25,21 +25,23 @@ $hidpi-min-pixel-ratio: 1.3 !default;
   @if $hidpi-debug {
     @if $image {
       @include hidpi-abstract($image, $extension, $postfix);
-    } @else {
+    }
+    @else {
       @content;
     }
-  } @else {
+  }
+  @else {
     @if $image {
-      background-image: image-url('#{$image}.#{$extension}');
+      background-image: image-url("#{$image}.#{$extension}");
     }
+
     // Inspired by:
     // http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
-    @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio),
-           (min-resolution: $hidpi-min-pixel-ratio * 96dpi),
-           (min-resolution: $hidpi-min-pixel-ratio * 1dppx) {
+    @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio * 96dpi), (min-resolution: $hidpi-min-pixel-ratio * 1dppx) {
       @if $image {
         @include hidpi-abstract($image, $extension, $postfix);
-      } @else {
+      }
+      @else {
         @content;
       }
     }
