@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
 @import 'bourbon';
@@ -9,7 +11,9 @@
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
 @import 'vendor/docsearch';
-@import 'fonts'; //do we need this?
+@import 'fonts'; 
+@import 'header';
+@import 'footer';
 
 @import 'components/buttons';
 @import 'components/ember-button';
