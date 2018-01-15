@@ -37,9 +37,7 @@
     <!--[if gte IE 9]><!-->
       <script type="text/javascript" src="/javascripts/common-modern.js"></script>
     <!--<![endif]-->
-
-    <main-navbar></main-navbar>
-
+    <%= partial "header" %>
     <%= yield_content :outside_wrapper %>
 
     <div id="content-wrapper" class="content-wrapper">
