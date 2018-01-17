@@ -1009,6 +1009,10 @@
   image: toyota-connected.png
   alt: Toyota Connected
   use: "Toyota Connected uses Ember for building our internal and external web applications."
+- url: "https://app.qonto.eu"
+  image: qonto.png
+  alt: Qonto
+  use: "Qonto uses Ember to build the front-end of our bank account management interface"
 
 
 # ---- PLEASE READ ----
