@@ -9,7 +9,7 @@
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
 @import 'vendor/docsearch';
-@import 'fonts'; //do we need this?
+@import 'fonts';
 
 @import 'components/buttons';
 @import 'components/ember-button';
@@ -66,6 +66,8 @@ body {
 /**
   Sidebar
 **/
+
+
 .sidebar {
   @media screen and (min-width: 48em) {
     margin-top: 3em;
@@ -77,7 +79,7 @@ body {
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
-  
+
   @media (min-width: 48em) {
     float: left;
     width: 22.5%;
@@ -269,11 +271,15 @@ body {
   }
 }
 
+
 /* Pages */
+
 
 /**
   Header
 **/
+
+
 #header {
   position: absolute;
   width: 100%;
@@ -425,7 +431,7 @@ body {
 #content {
   &.has-sidebar {
     margin-bottom: 90px;
-    
+
     @media (min-width: 48em) {
       width: 72.5%;
       float: left;
@@ -453,10 +459,10 @@ body {
 }
 
 
-
 /**
   Ember Users Page
 **/
+
 
 .ember-users {
   .button {
@@ -563,10 +569,10 @@ ul.showcase {
 }
 
 
-
 /**
   Tomster FAQ Page
 **/
+
 
 body.tomster_faq #content {
   li {
@@ -606,8 +612,6 @@ body.tomster_faq #content {
   @include clearfix;
 
   .left-col {
-    // float: left;
-    // width: 491px;
     flex: 2;
     flex-flow: row wrap;
     ol {
@@ -618,10 +622,6 @@ body.tomster_faq #content {
   }
 
   .right-col {
-    // float: left;
-    // width: 225px;
-    // margin-left: 40px;
-    // text-align: center;
     flex: 1;
     @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
       display: none;
@@ -634,13 +634,12 @@ body.tomster_faq #content {
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
 
-  .rightFloat {
-    float: right;
-    padding: 2px;
-  }
 
+.rightFloat {
+  float: right;
+  padding: 2px;
+}
 
 .screenshot {
   margin-left: -60px;
 }
-
