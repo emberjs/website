@@ -1,11 +1,9 @@
 @import 'mixins/hidpi';
+@import 'base/base';
 
 body.community #content {
-  max-width: 54em;
-  width: 90%;
-
-  > h1 {
-    text-align: center;
+  h1 {
+    margin-bottom: 0.5em;
   }
 
   .video {
@@ -29,11 +27,9 @@ body.community #content {
   }
 
   .section {
-    width: auto;
-
     .image {
       float: left;
-      margin: 0 20px 15px 0;
+      margin: 15px 20px 15px 0;
       width: 220px;
       height: 142px;
 
@@ -73,11 +69,6 @@ body.community #content {
         margin: 0 auto 15px;
       }
 
-      h2 {
-        margin-bottom: 10px;
-        line-height: 1.2;
-      }
-
       .image {
         @include hidpi('community/meetup', 'png');
         background-position: center top;
@@ -102,11 +93,6 @@ body.community #content {
         width: 100%;
         float: none;
         margin: 0 auto 15px;
-      }
-
-      h2 {
-        margin-bottom: 15px;
-        line-height: 1.2;
       }
 
       .image {

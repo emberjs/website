@@ -4,6 +4,8 @@ author: Matthew Beale
 tags: Releases
 ---
 
+*Updated on December 19, 2017 to include information about Ember.js 2.8-LTS.*
+
 Today the Ember project is releasing version 2.15.0 of Ember.js, Ember Data, and Ember CLI.
 
 This release kicks off the 2.16 beta cycle for all sub-projects. We encourage our
@@ -12,10 +14,16 @@ any bugs before they are published as a final release in six weeks' time. The
 [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
 continuously test your projects against the latest Ember releases.
 
-This release also marks the conclusion of security patch support for Ember.js
-2.4-LTS. 2.4-LTS was released in April of 2016, and was the first Long-Term
-Support release of Ember.js. We're pleased with the impact of LTS releases on
-the Ember project and look forward to continuing the practice.
+This release also marks the conclusion of critical bugfixes support for Ember.js
+2.8-LTS, which was released in October 2016. We strongly recommend LTS users to
+migrate to 2.12-LTS immediately. 2.8-LTS will continue to receive security patches
+for another four releases (around May 2017).
+
+At the same time, this release also concludes security patch support for Ember.js
+2.4-LTS, which was released in April of 2016.
+
+We're pleased with the impact of LTS releases on the Ember project and look forward
+to continuing the practice.
 
 You can read more about our general release process here:
 

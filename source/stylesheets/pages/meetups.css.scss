@@ -1,16 +1,8 @@
 @import 'bourbon';
 @import "mixins/hidpi";
+@import 'base/base';
 
 body.community_meetups #content {
-  margin: 3em auto 0 auto;
-  width: 54em;
-
-  h1,
-  h1:first-child {
-    margin-top: 0;
-    padding-bottom: 20px;
-  }
-
   .section {
     width: auto;
     @include clearfix;
@@ -175,7 +167,7 @@ body.community_meetups #content {
       float: left;
       width: 221px;
       height: 185px;
-      margin: -35px 20px 0 auto;
+      margin: 15px 20px 0 auto;
 
       @media screen and (max-width: 460px) {
         float: none;

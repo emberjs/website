@@ -2,24 +2,24 @@
 @import "mixins/hidpi";
 @import "base/typography";
 
-body.guides, body.blog, body.api {
+body.guides, body.api {
   p {
     margin: 1.5em 0;
     line-height: 1.5em;
-    color: #0c0c0c;//TODO replace with variable to ensure consistency
+    color: $black;
   }
 
   sup {
     vertical-align: super;
     font-weight: 100;
-    color: gray; //TODO replace with variable to ensure consistency
+    color: $gray; 
     font-size: 11px
   }
 
   code {
     font-family: Menlo, Courier, monospace;
     font-size: 90%;
-    color: #666; //TODO replace with variable to ensure consistency
+    color: $gray;
     background-color: rgba(0, 0, 0, 0.04); //TODO replace with variable to ensure consistency
     padding: 3px;
     border-radius: 5px;

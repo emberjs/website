@@ -1,8 +1,25 @@
+.content-wrapper {
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  @include clearfix;
+  .main {
+    padding: 3em 0;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 65vh;
+    @include clearfix;
+    @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+      padding: 1em 0;
+      min-height: auto;
+    }
+  }
+}
 .section {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 100%;
 
-  @media screen and (max-width: $small-max-width) {
+  @media screen and (max-width: $screen-sm-max) {
     max-width: 100%;
     text-align: center;
     display: block;

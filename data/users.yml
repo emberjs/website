@@ -101,16 +101,18 @@
 - url: http://inst.ag/
   image: instagrille.png
   alt: Pixsta
+  inactive: true
 - url: http://www.bluetubeinteractive.com
   image: bluetube.png
   alt: Bluetube
   inactive: true
-- url: http://www.mashape.com
+- url: https://konghq.com/
   image: mashape.png
-  alt: Mashape
+  alt: Kong
 - url: http://www.skovik.com
   image: skovik.png
   alt: Skovik
+  inactive: true
 - url: http://entwine.me/
   image: twine.png
   alt: Twine
@@ -120,15 +122,16 @@
 - url: http://grouptalent.com
   image: grouptalent.png
   alt: GroupTalent
+  inactive: true
 - url: http://yahoo.com
   image: yahoo.png
   alt: Yahoo!
 - url: http://www.kohactive.com
   image: kohactive.png
   alt: kohactive
-- url: http://www.captaintrain.com
+- url: https://www.trainline.eu/
   image: captain-train.png
-  alt: Captain Train
+  alt: Trainline
 - url: http://withassociates.com
   image: withassociates.png
   alt: With Associates
@@ -138,6 +141,7 @@
 - url: http://www.brainistic.com
   image: brainistic.png
   alt: Brainistic
+  inactive: true
 - url: http://kabisa.nl/
   image: kabisa.png
   alt: Kabisa
@@ -162,6 +166,7 @@
 - url: http://www.playtin.com
   image: playtin.png
   alt: PLAYTIN
+  inactive: true
 - url:  http://vsco.co
   image: visualsupplyco.png
   alt: Visual Supply Co
@@ -180,6 +185,7 @@
 - url: http://www.appdrones.com/
   image: appdrones.png
   alt: App drones
+  inactive: true
 - url: http://dockyard.com
   image: dockyard.png
   alt: DockYard
@@ -199,6 +205,7 @@
 - url: https://mist.io
   image: mistio.png
   alt: Mist
+  inactive: true
 - url: http://billyapp.com/
   image: billyapp.png
   alt: "Billy Accounting Software"
@@ -227,9 +234,11 @@
 - url: http://crowdhall.com
   image: crowdhall.png
   alt: CrowdHall
+  inactive: true
 - url: http://boxee.tv
   image: boxee.png
   alt: Boxee
+  inactive: true
 - url: http://www.crowdflower.com
   image: crowdflower.png
   alt: CrowdFlower
@@ -274,6 +283,7 @@
 - url: http://maginatics.com
   image: maginatics.png
   alt: Maginatics
+  inactive: true
 - url: http://www.homeandstone.com
   image: homeandstone.png
   alt: Home & Stone
@@ -289,6 +299,7 @@
 - url: http://neo.com
   image: neo.png
   alt: Neo Innovation
+  inactive: true
 - url: http://www.leadfeeder.com
   image: leadfeeder.png
   alt: Leadfeeder
@@ -317,6 +328,7 @@
 - url: http://noesissoftware.com
   image: noesissoftware.png
   alt: Noesis Solutions
+  inactive: true
 - url: https://5apps.com
   image: 5apps.png
   alt: 5apps Deploy
@@ -329,15 +341,18 @@
 - url: http://radflex.pt
   image: radflex.png
   alt: Light Speck
+  inactive: true
 - url: http://meetmantra.com
   image: mantra.png
   alt: Mantra, Inc
+  inactive: true
 - url: http://www.runtastic.com
   image: runtastic.png
   alt: Runtastic
 - url: http://www.enthuse.me
   image: enthuseme.png
   alt: Enthuse
+  inactive: true
 - url: https://www.chronosave.com
   image: chronosave.png
   alt: ChronoSave
@@ -353,18 +368,22 @@
 - url: http://www.khelkund.com/football
   image: khelkund.png
   alt: khelkund
+  inactive: true
 - url: https://centroy.com
   image: centroy.png
   alt: Centroy
+  inactive: true
 - url: http://pluckit.io
   image: pluck.png
   alt: Pluck
+  inactive: true
 - url: http://flockler.com
   image: flockler_x2.png
   alt: Flockler
 - url: http://www.astonishdesign.com
   image: astonishdesign.png
   alt: Praxent
+  inactive: true
 - url: http://rankinity.com
   image: rankinity.png
   alt: Rankinity
@@ -374,9 +393,11 @@
 - url: https://beta.bondable.com
   image: bondable.png
   alt: Bondable
+  inactive: true
 - url: https://asknative.com
   image: asknative.png
   alt: Asknative
+  inactive: true
 - url: http://vijo.inn.ac
   image: vijo.png
   alt: Innovation Accelerator
@@ -386,7 +407,7 @@
 - url: http://www.gooddata.com/
   image: gooddata.png
   alt: GoodData
-- url: http://www.cruxandco.com/
+- url: http://www.crx.io/
   image: crux.png
   alt: Crux Consulting
 - url: https://huboard.com
@@ -401,6 +422,7 @@
 - url: https://www.balancedpayments.com/
   image: balanced.png
   alt: Balanced
+  inactive: true
 - url: https://www.livenation.com/
   image: livenationlabs.png
   alt: Live Nation
@@ -410,6 +432,7 @@
 - url: http://www.unlockable.com/
   image: unlockable.png
   alt: Unlockable
+  inactive: true
 - url: http://orchestrate.io
   image: orchestrate.png
   alt: Orchestrate
@@ -434,24 +457,25 @@
 - url: http://www.acentera.com
   image: acentera.png
   alt: ACenterA Cloud Services
-- url: http://greenfieldhq.com
+- url: https://www.raizlabs.com/
   image: greenfield.png
-  alt: Greenfield
+  alt: Raiz Labs
 - url: http://typework.com
   image: typework.png
   alt: Typework
 - url: https://garagesocial.com/ember-js
   image: garagesocial.png
   alt: Garagesocial
+  inactive: true
 - url: http://sush.io
   image: sushio.png
   alt: Sush
 - url: http://www.hstry.co
   image: hstry.png
   alt: HSTRY
-- url: http://www.netuitive.com
+- url: https://www.metricly.com/
   image: netuitive_ember_logo.png
-  alt: Netuitive
+  alt: Metricly
 - url: http://www.thinkific.com
   image: thinkific.png
   alt: Thinkific
@@ -465,6 +489,7 @@
 - url: http://zing.co
   image: zing.png
   alt: Zing
+  inactive: true
 - url: http://screenlight.tv
   image: screenlight.png
   alt: ScreenLight
@@ -477,6 +502,7 @@
 - url: https://www.pushmote.com
   image: pushmote.png
   alt: Pushmote
+  inactive: true
 - url: http://echobind.com
   image: echobind.png
   alt: echobind
@@ -499,9 +525,9 @@
 - url: http://poeticsystems.com
   image: poetic.png
   alt: Poetic Systems
-- url: http://redowlanalytics.com
+- url:  https://www.forcepoint.com
   image: redowlanalytics.png
-  alt: RedOwl
+  alt: Forcepoint
 - url: https://www.solvace.com
   image: solvace.png
   alt: Solvace
@@ -511,7 +537,7 @@
 - url: http://www.zenefits.com
   image: zenefits.png
   alt: Zenefits
-- url: https://getpoynt.com
+- url: https://poynt.com/
   image: poynt.png
   alt: Poynt
 - url: http://www.zybooks.com
@@ -547,15 +573,16 @@
 - url: http://www.claroapps.com
   image: claroapps.png
   alt: Claro Apps
+  inactive: true
 - url: http://blimp.io
   image: blimp.png
   alt: Blimp
 - url: http://www.kotive.com
   image: kotive.png
   alt: Kotive
-- url: http://gettinderbox.com/
+- url: https://octiv.com/
   image: tinderbox.png
-  alt: TinderBox
+  alt: Octiv
 - url: http://www.checkmate.io
   image: checkmate.png
   alt: Instant Checkmate
@@ -574,6 +601,7 @@
 - url: https://sparehanger.com
   image: sparehanger.png
   alt: Sparehanger
+  inactive: true
 - url: https://mingleville.com
   image: mingleville.png
   alt: MingleVille
@@ -610,6 +638,7 @@
 - url: http://whatsdueapp.com
   image: whatsdue.png
   alt: WhatsDue
+  inactive: true
 - url: https://www.apprentus.com
   image: apprentus.png
   alt: Apprentus
@@ -622,6 +651,7 @@
 - url: https://www.gozooga.com
   image: gozooga.png
   alt: Gozooga
+  inactive: true
 - url: http://secondstreet.com/
   image: secondstreet.png
   alt: Second Street
@@ -649,6 +679,7 @@
   image: velocitylabs.png
   alt: "Velocity Labs"
   use: "Consultancy who uses Ember to built our clients awesome client-side apps"
+  inactive: true
 - url: http://www.infegy.com
   image: infegy-atlas-emberjs-logo.png
   alt: Infegy Inc.
@@ -677,6 +708,7 @@
   image: shearwater.png
   alt: Shearwater
   use: "Ember powers our scalable mentorship and reporting platform"
+  inactive: true
 - url: https://flood.io/
   image: flood.png
   alt: Flood IO
@@ -737,6 +769,7 @@
   image: bankfacil.png
   alt: "bankfacil"
   use: "Ember is powering the new Bankfacil customer frontend"
+  inactive: true
 - url: http://testdouble.com/
   image: testdouble.png
   alt: "Test Double"
@@ -789,6 +822,7 @@
   image: feedza.png
   alt: "Feedza"
   use: "The feedza web app was built with Ember"
+  inactive: true
 - url: https://inquicker.com/
   image: inquicker.png
   alt: "InQuicker"
@@ -889,6 +923,7 @@
   image: rule-of-three.png
   alt: Rule of Three
   use: "Rule of Three uses Ember.js for its entire web experience and content creation."
+  inactive: true
 - url: https://www.blackbellapp.com
   image: blackbell.png
   alt: Blackbell
@@ -897,6 +932,7 @@
   image: noppo.png
   alt: Noppo
   use: Noppo uses Ember.js for their in-house CMS and customer facing apps and sites.
+  inactive: true
 - url: https://www.campusboard.co.uk
   image: campusboard.png
   alt: Campusboard
@@ -961,6 +997,22 @@
   image: canopy.png
   alt: Canopy
   use: "Canopy uses Ember for its primary data visualization platform"
+- url: "https://lendix.com"
+  image: lendix.png
+  alt: Lendix
+  use: "We use Ember for our marketplace"
+- url: "https://www.nimbo-x.com"
+  image: nimbo-x.png
+  alt: Nimbo X
+  use: "We use Ember to make a cloud based EHR"
+- url: "http://www.toyotaconnected.com"
+  image: toyota-connected.png
+  alt: Toyota Connected
+  use: "Toyota Connected uses Ember for building our internal and external web applications."
+- url: "https://app.qonto.eu"
+  image: qonto.png
+  alt: Qonto
+  use: "Qonto uses Ember to build the front-end of our bank account management interface"
 
 
 # ---- PLEASE READ ----

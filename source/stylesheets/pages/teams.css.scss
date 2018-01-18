@@ -1,15 +1,5 @@
+@import 'base/base';
 body.team {
-  #content {
-      margin: 3em auto 0 auto;
-      max-width: 54em;
-      width: 90%;
-  }
-
-  h1,
-  .lead {
-    text-align: center;
-  }
-
   hr {
     height: 1px;
     border: none;
@@ -95,10 +85,9 @@ body.team {
         top: -9px;
         color: #fff;
         font-size: 12px;
-        font-weight: bold;
         line-height: 1.5em;
-        border-radius: 4px;
-        background-color: #f23818;
+        border-radius: 2px;
+        background-color: $orange-darker;
       }
     }
   }
