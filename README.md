@@ -1,7 +1,7 @@
 ## Ember Website
 [![Build Status](https://travis-ci.org/emberjs/website.svg?branch=master)](https://travis-ci.org/emberjs/website)
 
-The website for the Ember.js project.
+This repository contains the source code and content for the [Ember.js project main website](https://emberjs.com).
 
 ### Contributing
 
