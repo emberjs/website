@@ -54,9 +54,11 @@
 .learning-header--left {
   flex: 2;
 }
+
 .learning-header--right {
   flex: 1;
 }
+
 .learning-header--tomster {
   width: 250px;
 }
@@ -72,13 +74,13 @@
 .learn-deprecations {
   text-align: center;
 }
+
 .learn-deprecations li {
   list-style: none;
 }
 
 .showcase--item {
   display: flex;
-
   padding: 0.5em;
 }
 
@@ -101,8 +103,6 @@
     float: right;
     max-width: 150px;
     display: block;
-    
-
   }
 }
 
