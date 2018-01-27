@@ -74,25 +74,55 @@ header {
 			}
 			form.navbar-right {
 				.form-control {
-					background-color: $orange-lightest;
-					border-color: $orange-darkest;
-          border-right-color: transparent;
-          border-right: 0;
+					background-color: rgba(255,255,255,0.2);
+					border-color: transparent;
+					border-right: 0;
+					box-shadow: none;
+					border-radius: 35px;
+					color: white;
+					&::placeholder {
+						color: $orange-lightest;
+					}
         }
         .input-group {
+					min-width: 100%;
           span.algolia-autocomplete {
-            display: inline !important;
+						@media screen and (min-width:768px) {
+							display: inline !important;
+						}
 
           }
         }
 				.input-group-addon {
-					background-color: $orange-lightest;
-					border-color: $orange-darkest;
-					border-left-color: transparent;
+					background-color: transparent;
+					border-color: transparent;
 					margin-left: -1px;
-					color: $orange-darkest;
+					.glyphicon {
+						color: $orange-lightest;
+						font-size: 16px;
+						margin-left: -60px;
+					}
 				}
 			}
 		}
 	}
+}
+
+// Search highlight
+.ds-suggestions, .ds-dataset-1 .ds-dataset-1, .algolia-docsearch {
+  z-index:1000 !important;
+}
+.algolia-docsearch-footer {
+  border-top-color: $orange-lighter;
+}
+.algolia-docsearch-suggestion {
+  border-bottom-color: $orange-lighter;
+}
+.algolia-docsearch-suggestion--highlight {
+  color: $orange-darker;
+}
+.algolia-docsearch-suggestion--subcategory-column {
+  border-right-color: $orange-lighter;
+  color: $gray-darkest;
+  background-color: $orange-lightest;
 }

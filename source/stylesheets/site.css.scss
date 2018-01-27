@@ -649,18 +649,3 @@ body.tomster_faq #content {
 }
 
 
-// Search highlight
-.algolia-docsearch-footer {
-  border-top-color: $orange-lighter;
-}
-.algolia-docsearch-suggestion {
-  border-bottom-color: $orange-lighter;
-}
-.algolia-docsearch-suggestion--highlight {
-  color: $orange-darker;
-}
-.algolia-docsearch-suggestion--subcategory-column {
-  border-right-color: $orange-lighter;
-  color: $gray-darkest;
-  background-color: $orange-lightest;
-}
