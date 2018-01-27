@@ -648,3 +648,8 @@ body.tomster_faq #content {
   margin-left: -60px;
 }
 
+
+// Search highlight
+.algolia-docsearch-suggestion--highlight {
+  color: $orange-darker;
+}
