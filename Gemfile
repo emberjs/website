@@ -16,8 +16,8 @@ gem "underscore-rails"
 gem "gmaps4rails"
 gem "geocoder"
 gem "faraday"
-gem "bourbon"
-gem "neat"
+gem "bourbon", "~> 4.2.7"
+gem "neat", "~> 1.8.0"
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sass-rails', '>= 3.2'
 gem 'middleman-bootstrap-navbar'
