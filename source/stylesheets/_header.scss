@@ -109,8 +109,12 @@ header {
 }
 
 // Search highlight
-.ds-suggestions, .ds-dataset-1 .ds-dataset-1, .algolia-docsearch {
-  z-index:1000 !important;
+.ds-dataset-1 {
+	span.ds-suggestions {
+		@media screen and (min-width:0px) and (max-width:768px) {  
+			z-index:1000 !important;
+		}
+	}
 }
 .algolia-docsearch-footer {
   border-top-color: $orange-lighter;
