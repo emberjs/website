@@ -67,9 +67,18 @@
       </ul>
      </li>
    </ul>
-   <form class="navbar-form navbar-right">
+   <form class="navbar-form navbar-right searchbox">
     <div class="input-group">
-     <input type="text" class="form-control" placeholder="Search..." id="search-input">
+     <input type="text" 
+     class="form-control search input ds-input" 
+     placeholder="Search..." 
+     id="search-input" 
+     role="combobox" 
+     aria-expanded="false" 
+     aria-owns="algolia-autocomplete-listbox-0" 
+       autocorrect="off"
+       autocapitalize="none"
+       spellcheck="false" />
      <div class="input-group-addon">
       <span class="glyphicon glyphicon-search" aria-hidden="true"></span></div>
     </div>
