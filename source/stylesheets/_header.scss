@@ -72,48 +72,40 @@ header {
 					}
 				}
 			}
-			form.navbar-right {
-				.form-control {
-					background-color: rgba(255,255,255,0.2);
+			form.navbar-right.navbar-form {
+				@media screen and (min-width: 768px) {
+					margin-bottom: 0;
+				}
+        .input-group {
+					min-width: 100%;
+        }
+				.form-control { 
+					background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
 					border-color: transparent;
 					border-right: 0;
 					box-shadow: none;
 					border-radius: 35px;
 					color: white;
-					&::placeholder {
-						color: $orange-lightest;
+					padding-left: 2.5em;
+					&::-ms-input-placeholder {
+						color: $orange-lightest !important;
+					}
+					&:-ms-input-placeholder{
+						color: $orange-lightest !important;
+					} 					
+					&::placeholder{
+						color: $orange-lightest !important;
+					} 
+					&:placeholder {
+						color: $orange-lightest !important;
 					}
         }
-        .input-group {
-					min-width: 100%;
-          span.algolia-autocomplete {
-						@media screen and (min-width:768px) {
-							display: inline !important;
-						}
-
-          }
-        }
-				.input-group-addon {
-					background-color: transparent;
-					border-color: transparent;
-					margin-left: -1px;
-					.glyphicon {
-						color: $orange-lightest;
-						font-size: 16px;
-						margin-left: -60px;
-					}
-				}
 			}
 		}
 	}
 }
 
-// Search highlight
-span.ds-dropdown-menu {
-	@media screen and (min-width:768px) and (max-width:2500px) {
-		margin-top: 35px !important;
-	}
-}
+// Algolia overrides
 .ds-dataset-1 {
 	span.ds-suggestions {
 		@media screen and (min-width:0px) and (max-width:768px) {  
