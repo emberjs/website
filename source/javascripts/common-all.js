@@ -4,3 +4,4 @@
 //= require app/docsearch.js
 //= require underscore
 //= require gmaps/google
+//= require bootstrap-sprockets
