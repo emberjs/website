@@ -1017,7 +1017,10 @@
   image: qonto.png
   alt: Qonto
   use: "Qonto uses Ember to build the front-end of our bank account management interface"
-
+- url: "https://fusemachines.com"
+  image: fusemachines.png
+  alt: Fusemachines
+  use: "Fusemachines uses Ember for most of its client facing Web applications"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
