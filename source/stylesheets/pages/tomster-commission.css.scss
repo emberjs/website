@@ -45,7 +45,7 @@
 
   label,
   legend {
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-bottom: 0.4em;
     display: block;
     font-weight: bold;
@@ -63,6 +63,9 @@
       color: $orange-darker;
     }
   }
+  input[type="radio"] {
+    display: inline-block;
+  }
 
   input[type="text"],
   input[type="email"],
@@ -76,7 +79,7 @@
     background-color: $white; 
     border: 1px solid #ddd;
     outline: none;
-    width: 70%;
+    width: 100%;
     border-radius: 6px;
     box-shadow: 0 1px $white, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 
