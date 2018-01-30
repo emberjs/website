@@ -241,8 +241,8 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v2.15.0...v
 
 ### Changes in Ember CLI 2.16
 
-Ember CLI 2.16.0 upgrades the application build pipeline to use Uglify 2.0.
-Uglify 2.0 introduces support for minification of modern JavaScript features.
+Ember CLI 2.16.0 upgrades the application build pipeline to use uglify-es.
+uglify-es introduces support for minification of modern JavaScript features.
 With this change, Ember CLI can now generate minified production builds of
 non-transpiled JavaScript code.
 

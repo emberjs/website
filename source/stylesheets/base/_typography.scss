@@ -1,76 +1,79 @@
 @import "variables";
 
-html {
-	font-size: 16px;
-}
-
 body {
-	font-size: 1em;
-	line-height: 1.618;
+	font-size: 18px;
+  font-weight: normal;
+  line-height: 1.5;
+  @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+    font-size: 16px;
+    line-height: 1.2;
+  }
 }
-
 a {
-  color: $orange-darker;
   text-decoration: none;
+  color: $orange-darker;
   &:hover, :focus {
     color: $orange-darkest;
-    border-bottom: 2px dotted $orange-darkest;
+  }
+}
+p {
+  a {
+    color: $orange-darker;
+    text-decoration: underline;
+    &:hover, :focus {
+      color: $orange-darkest;
+      cursor: pointer;
+    }
   }
 }
 
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: bold;
-}
-
-h3,
-h4,
-h5,
-h6 {
-  text-transform: uppercase;
-  font-weight: bold;
-
-  code {
-    text-transform: none;
-  }
-}
-
-h1, 
 h2, 
 h3,
 h4 {
   line-height: 1;
 	margin-top: 1.25em; 
-	margin-bottom: 0.5em;  
+  margin-bottom: 0.5em;  
+  @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+  + p {
+    margin-top: 0;
+  }
 }
 
 h1 {
-  color: $orange;
-  font-size: 3.157em;
+  color: $gray;
+  font-size: 2em;
   font-weight: bold;
   line-height: 1.125;
   max-width: 100%;
+  @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+  + p {
+    margin-top: 0;
+  }
 }
 
 h2 {
-  color: $orange-darker;
-  font-size: 2.369em;
-  margin: 0.83em 0;  
+  color: $orange-darkest;
+  font-size: 1.75em;
+  margin: 2em 0 0.2em 0;
+  font-weight: bold; 
+
 }
 
 h3 {
-  color: $orange-darkest;
-  font-size: 1.777em;
+  color: $gray-darker;
+  font-size: 1.3em;
+  font-weight: bold;
 }
 
 h4 {
-  font-size: 1.333em;
-  line-height: 1.618em;
-  color: #222;
-  letter-spacing: 1px;
+  font-size: 1.1em;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
   margin: 24px 0 12px 0;
 }
 
@@ -85,10 +88,27 @@ ul {
 ol {
   list-style-type: decimal;
 }
+// ol + h2,
+// ol + h3,
+// ul + h2,
+// ul + h3,
+// p + h2,
+// p + h3,
+// div + h3 {
+//   margin-top: 1.5em;
+// }
 
 p {
   margin: 1em 0;
+  @media screen and (min-width:0) and (max-width:$screen-sm-max) {
+    margin: 0 auto;
+    padding: 0.5em;
+  }
 }
-.lead {
-  font-size: 1.3em;
-}
+
+// helper classes
+.lead { font-size: 1.3em; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.heading-underline { border-bottom: 1px solid lightgray }

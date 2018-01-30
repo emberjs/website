@@ -1,0 +1,155 @@
+@import "base/base";
+/**
+  Header
+**/
+header {
+	.navbar {
+    margin-bottom: 0;
+		&.navbar-inverse {
+			background-color: $orange;
+			border-radius: 0;
+			border-color: transparent;
+			.navbar-collapse, .navbar-form {
+				border-color: $orange-darkest;
+			}
+			.navbar-toggle {
+				border-color: white;
+				&:hover {
+					background-color: $orange-darker;
+				}
+			}
+			.navbar-brand {
+				img {
+				  margin-top: -10px;
+					@media screen and (min-width: 768px) {
+						margin-top: -10px;
+						margin-bottom: 0;
+						padding-bottom: 0;
+						margin-right: 10px;
+					}
+				}
+			}
+			.navbar-nav {
+				li {
+					a {
+            color: white;
+            &:focus {
+              outline: 5px auto -webkit-focus-ring-color;
+            }
+					}
+					&.active {
+						a {
+							background-color: white;
+							color: $orange-darkest;
+						}
+					}
+					&.open {
+						a {
+							background-color: white;
+							color: $orange-darkest;
+						}
+						.dropdown-menu {
+							background-color: white;
+							border-radius: 0;
+							@media screen and (min-width:768px){
+								border-radius: 0 0 4px 4px;
+								border-color-top: white;
+							}
+							li {
+								a {
+									&:hover,
+									:focus {
+										background-color: $orange-lightest;
+                    color: $orange-darkest;
+                    outline: 0 !important;
+									}
+								}
+								&.divider {
+									background-color: $orange-lightest;
+								}
+							}
+						}
+					}
+				}
+			}
+			form.navbar-right.navbar-form {
+				@media screen and (min-width: 768px) {
+					margin-bottom: 0;
+				}
+        .input-group {
+					min-width: 100%;
+        }
+				.form-control { 
+					background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
+					border-color: transparent;
+					border-right: 0;
+					box-shadow: none;
+					border-radius: 35px;
+					color: white;
+					padding-left: 2.5em;
+					&::-ms-input-placeholder {
+						color: $orange-lightest !important;
+					}
+					&:-ms-input-placeholder{
+						color: $orange-lightest !important;
+					} 					
+					&::placeholder{
+						color: $orange-lightest !important;
+					} 
+					&:placeholder {
+						color: $orange-lightest !important;
+					}
+        }
+			}
+		}
+	}
+}
+
+// Algolia overrides
+.ds-dataset-1 {
+	span.ds-suggestions {
+		@media screen and (min-width:0px) and (max-width:768px) {  
+			z-index:1000 !important;
+		}
+	}
+}
+.algolia-docsearch-footer {
+  border-top-color: $orange-lighter;
+}
+.algolia-docsearch-suggestion {
+  border-bottom-color: $orange-lighter;
+}
+.algolia-docsearch-suggestion--highlight {
+  color: $orange-darker;
+}
+.algolia-docsearch-suggestion--subcategory-column {
+  border-right-color: $orange-lighter;
+  color: $gray-darkest;
+  background-color: $orange-lightest;
+}
+.algolia-autocomplete {
+	width: 100%;
+}
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+	width: 100%;
+}
+.algolia-autocomplete .aa-hint {
+	color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #999;
+	border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+	cursor: pointer;
+	padding: 5px 4px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+	background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+	font-weight: bold;
+	font-style: normal;
+}

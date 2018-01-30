@@ -1,11 +1,9 @@
-@import 'base/grid-settings';
+@import 'base/base';
 
 .tomster.section.intro {
-  margin: 3em auto 0;
-  width: 90%;
-
   h1 {
     text-align: center;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -73,6 +71,10 @@
       text-transform: uppercase;
       flex-grow: 1;
       text-align: left;
+      &:hover, :focus {
+        border-bottom: none;
+        text-decoration: underline;
+      }
     }
 
     .date {

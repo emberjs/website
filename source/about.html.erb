@@ -1,5 +1,5 @@
 ---
-title: "A framework for creating ambitious web applications."
+title: "Homepage"
 responsive: true
 ---
 
@@ -61,7 +61,7 @@ $(function() {
 
 </div>
 <div class="features section">
-  <h2>More Productive Out of the Box</h2>
+  <h2 class="text-center">More Productive Out of the Box</h2>
   <div class="feature">
     <div class="handlebars feature-img"></div>
     <p>Write dramatically less code with Ember's Handlebars integrated templates that update automatically when the underlying data changes.
@@ -77,14 +77,14 @@ $(function() {
 </div>
 
 <div class="users section">
-  <h2>Who's Using Ember.js?</h2>
+<h2 class="text-center">Who's Using Ember.js?</h2>
 
   <div class="surround">
     <ul id="slider">
       <% data.users.slice(0,12).each do |user| %>
       <li class="user">
         <a href="<%= user.url %>" rel="nofollow">
-          <img src="/images/about/<%= user.image %>" width="210" height="103" />
+          <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>"/>
         </a>
       </li>
       <% end %>
@@ -99,7 +99,7 @@ $(function() {
 </div>
 
 <div class="gears section">
-  <h2>Buy Ember.js Gear and Support Development</h2>
+<h2 class="text-center">Buy Ember.js Gear and Support Development</h2>
   <div class="gear">
     <a href="http://devswag.com/products/ember-sticker">
       <img src="/images/about/ember-sticker.png">

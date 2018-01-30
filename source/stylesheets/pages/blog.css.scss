@@ -1,8 +1,7 @@
-@import 'base/variables';
+@import 'base/base';
 
 #content.has-sidebar {
   h1 {
-    margin-top: 0; //get rid of this after you eliminate all of the #content CSS rules. 
     border-bottom: 1px solid lightgray;
   }
 }
@@ -10,7 +9,6 @@
   article.blog-post {
     h1 {
       border-bottom: none;
-      font-size: 2.9em; //TODO revisit h1 size, maybe we need to bump them all down one size
       line-height: 1;
       margin-bottom: 0;
     }
@@ -55,6 +53,7 @@
         color: $gray-darker;
         display: block;
         font-size: 0.5em;
+        font-style: italic;
         margin-top: 7px; //so when you hover over the title, you don't chop off the top of the date. 
       }
     }
@@ -143,4 +142,9 @@
       }
     }
   }
+}
+
+.api-info-box {
+  background-color: #eeeeee;
+  padding: 30px 50px; 
 }

@@ -27,7 +27,6 @@
   }
 
   #subcontent {
-    margin-left: 30px;
     width: 770px;
   }
 
@@ -340,23 +339,37 @@
    */
 
   .old-version-warning {
-    background-color: #dd6a58;
-    color: #FFFBF5;
-    padding: .5em;
+    align-content: center;
+    background-color: $orange;
     border-radius: 3px;
-    margin-bottom: 20px;
+    box-sizing: border-box;
+    color: $white;
+    display: flex;
+    font-size: 0.9em;
     line-height: 1.5;
-  }
-
-  .old-version-warning .btn {
-    float: right;
-    font-weight: bold;
-    font-size: 12px;
-    color: #FFFBF5;
-    padding: 0.3em 0.8em;
-    background-color: #e69082;
-    border-radius: 3px;
-    line-height: 1.4;
+    margin-bottom: 20px;
+    padding: 0.5em;
+    p {
+      display: block;
+      margin: auto;
+      padding-left: 5px;
+      width: 80%;      
+    }
+    .btn {
+      background-color: lighten($orange, 45%);
+      border-radius: 3px;
+      color: $orange-darkest;
+      display: block;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.4;
+      margin: auto;
+      padding: 0.5em 0.8em;
+      width: 20%;
+      &:hover, :focus {
+        border-bottom: none;
+      }
+    }
   }
 
   .icon-attention-circled:before {

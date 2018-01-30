@@ -19,7 +19,9 @@ activate :asset_hash, :ignore => [
   'tomster-sm.png',
   'tomster-twitter-card.png'
 ]
-
+activate :bootstrap_navbar do |bootstrap_navbar|
+  bootstrap_navbar.bootstrap_version = '3.3.7'
+end
 activate :directory_indexes
 activate :toc
 activate :sponsors

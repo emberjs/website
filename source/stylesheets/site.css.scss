@@ -1,26 +1,55 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
 @import 'bourbon';
+@import 'base/variables';
 @import 'base/base'; // bitters replacement for our homegrown setup
-@import 'vendor/docsearch';
+@import 'base/typography';
+@import 'base/structure';
+
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
-@import 'fonts';
-@import 'examples';
-@import 'about';
-@import 'guides';
-@import 'blog';
-@import 'builds';
-@import 'shared';
-@import 'survey';
-@import 'learn';
-@import 'pages/ember-users';
+@import 'vendor/docsearch';
+@import 'fonts'; 
+@import 'header';
+@import 'footer';
+
+@import 'components/buttons';
+@import 'components/ember-button';
+@import 'components/footer';
 @import 'components/legal';
-@import 'components/security';
-@import 'components/sponsors';
 @import 'components/logos';
 @import 'components/meetups';
-@import 'components/ember-button';
+@import 'components/security';
+@import 'components/sponsors';
+
+@import 'shared';
+@import 'about';
+@import 'blog';
+@import 'builds';
+@import 'examples';
+@import 'guides';
+@import 'highlight';
+@import 'survey';
+
+@import 'pages/404';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/brand';
+@import 'pages/community';
+@import 'pages/deprecations';
+@import 'pages/ember-users';
+@import 'pages/guides';
+@import 'pages/learn';
+@import 'pages/mascots';
+@import 'pages/meetup-assets';
+@import 'pages/meetups';
+@import 'pages/resources';
+@import 'pages/security';
+@import 'pages/sponsors';
+@import 'pages/teams';
+@import 'pages/tomster-commission';
 
 $small-max-width: 767px;
 
@@ -37,13 +66,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@import 'base/typography';
-@import 'base/structure';
 
 /**
   Sidebar
 **/
-
+.sidebar {
+  @media screen and (min-width: 48em) {
+    margin-top: 3em;
+  }
+}
 #sidebar {
   font-weight: normal;
   background: #f4ece9;
@@ -52,7 +83,6 @@ body {
   position: relative;
   
   @media (min-width: 48em) {
-    margin-top: 38px;
     float: left;
     width: 22.5%;
     min-height: 475px;
@@ -193,10 +223,6 @@ body {
           &:active {
             color: rgb(94, 94, 94);
           }
-        }
-
-        &.sub-selected {
-          // fancy me up.
         }
       }
     }
@@ -395,25 +421,13 @@ body {
 }
 
 #content-wrapper {
-  @include clearfix;
-  width: 960px;
-  padding: 0px 0px 20px 0px;
-  margin: 0 auto;
-  position: relative;
-
   &.grid {
     background-image: url('/images/grid.png');
   }
 }
 
-.responsive #content-wrapper {
-    max-width: 960px;
-    width: 100%;
-}
-
 #content {
   &.has-sidebar {
-    margin-top: 38px;
     margin-bottom: 90px;
     
     @media (min-width: 48em) {
@@ -421,19 +435,6 @@ body {
       float: left;
       margin-left: 5%;
     }
-  }
-
-  ol + h2,
-  ol + h3,
-  ul + h2,
-  ul + h3,
-  p + h2,
-  p + h3,
-  div + h3 {
-    margin-top: 1.5em;
-  }
-
-  .tabs > ul {
   }
 
   figure {
@@ -455,48 +456,19 @@ body {
   }
 }
 
-@import 'pages/about';
-@import 'pages/guides';
-@import 'pages/blog';
-@import 'pages/community';
-@import 'pages/meetups';
-@import 'pages/resources';
-@import 'pages/security';
+
 
 /**
   Ember Users Page
 **/
 
 .ember-users {
-  h1 {
-    &.no-capitalize {
-      text-transform: none;
-    }
-  }
-  .section {
-    width: 100%;
-    max-width:100%;
-    display:block;
-    clear: both;
-    margin:0 auto;
-  }
-
-  #content {
-    margin: 3em auto 0 auto;
-    max-width: 54em;
-    width: 90%;
-  }
-
   .button {
     display: block;
     text-align: center;
     margin: 0 auto;
   }
 
-}
-
-.ember-users_index .users.section {
-  margin-top: 0px;
 }
 
 .showcase {
@@ -594,27 +566,13 @@ ul.showcase {
   box-shadow: 5px 5px 15px -1px rgb(245, 223, 219);
 }
 
-@import 'pages/deprecations';
-@import 'pages/mascots';
+
 
 /**
   Tomster FAQ Page
 **/
 
 body.tomster_faq #content {
-  margin: 3em auto 0 auto;
-  width: 54em;
-
-  h1,
-  h1:first-child {
-    margin-top: 0;
-    padding-bottom: 20px;
-  }
-
-  .section {
-    width: auto;
-  }
-
   li {
     margin-bottom: 4px;
   }
@@ -646,57 +604,48 @@ body.tomster_faq #content {
 }
 
 .tomster-faq {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
   @include clearfix;
 
   .left-col {
-    float: left;
-    width: 491px;
+    // float: left;
+    // width: 491px;
+    flex: 2;
+    flex-flow: row wrap;
+    ol {
+      li {
+        text-align: left;
+      }
+    }
   }
 
   .right-col {
-    float: left;
-    width: 225px;
-    margin-left: 40px;
-    text-align: center;
+    // float: left;
+    // width: 225px;
+    // margin-left: 40px;
+    // text-align: center;
+    flex: 1;
+    @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+      display: none;
+    }
   }
 }
 
-@import 'pages/tomster-commission';
-@import 'pages/sponsors';
 
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
-
-.team,
-.meetup-assets,
-.guidelines,
-.legal,
-.logos {
-  .section {
-    width: 100%;
-    margin-top: 0px;
-  }
 
   .rightFloat {
     float: right;
     padding: 2px;
   }
 
-  #content {
-    margin: 3em auto 0 auto;
-    width: 54em;
-  }
-}
 
 .screenshot {
   margin-left: -60px;
 }
 
-@import 'pages/teams';
-@import 'pages/meetup-assets';
-@import 'components/footer';
-@import 'components/buttons';
-@import 'pages/404';
-@import 'pages/brand';
-@import 'highlight';
+

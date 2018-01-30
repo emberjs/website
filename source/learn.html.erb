@@ -5,14 +5,15 @@ responsive: true
 
 <% content_for :outside_wrapper do %>
 <div class="legal-wrapper">
-  <img class="learning-tomster" src="/images/tomsters/teaching-reverse.png" alt="Teaching Tomster" class="learning-tomster">
   <article>
     <h1>Learning Ember.js</h1>
-    <p>Are you getting started on your Ember.js adventure? Check out our official reading material: </p>
+    <p><img src="/images/tomsters/teaching-reverse.png" alt="" role="presentation" class="learning-tomster"> Are you getting started on your Ember.js adventure? Check out our official reading material:
+    </p>
+
     <ul>
-      <li><strong>Quick start</strong> <a href="https://guides.emberjs.com/current/getting-started/quick-start/"><i class="icon-link-ext"></i></a>: An easy breezy introduction to the framework.</li>
-      <li><strong>Tutorial</strong> <a href="https://guides.emberjs.com/current/tutorial/ember-cli/"><i class="icon-link-ext"></i></a>: Follow our tutorial to build, and deploy, your first Ember.js application!</li>
-      <li><strong>Guides</strong> <a href="https://guides.emberjs.com/"><i class="icon-link-ext"></i></a>: Whether you're just getting started and want to get familiar with Ember, or you're looking to refresh your knowledge on a certain feature, the Guides are the place for you.</li>
+      <li> <a href="https://guides.emberjs.com/current/getting-started/quick-start/"><strong>Quick start</strong><i class="icon-link-ext"></i></a>: An easy breezy introduction to the framework.</li>
+      <li> <a href="https://guides.emberjs.com/current/tutorial/ember-cli/"><strong>Tutorial</strong><i class="icon-link-ext"></i></a>: Follow our tutorial to build, and deploy, your first Ember.js application!</li>
+      <li> <a href="https://guides.emberjs.com/"><strong>Guides</strong><i class="icon-link-ext"></i></a>: Whether you're just getting started and want to get familiar with Ember, or you're looking to refresh your knowledge on a certain feature, the Guides are the place for you.</li>
     </ul>
     <section>
       <h2>API Reference</h2>
@@ -34,7 +35,7 @@ responsive: true
       </ul>
     </section>
     <section>
-      <h2 id="deprecations" class="anchorable-toc">Deprecation Guides <a href="http://emberjs.com/deprecations/"><i class="icon-link-ext"></i></a></h2>
+      <h2 id="deprecations" class="anchorable-toc"> <a href="http://emberjs.com/deprecations/">Deprecation Guides<i class="icon-link-ext"></i></a></h2>
       <p>
         Over the course of the years cruft inevitably sneaks into all software projects. In order to clean up outdated functionality and guide users, Ember has a deprecation process. You can read our <a href="http://emberjs.com/deprecations/">deprecation guides</a> for more information. You can find below more direct links to Ember and Ember Data versions.
       </p>
@@ -46,6 +47,7 @@ responsive: true
           <ul>
             <li><a href="/deprecations/v1.x">1.x</a></li>
             <li><a href="/deprecations/v2.x">2.x</a></li>
+            <li><a href="/deprecations/v3.x">3.x</a></li>
           </ul>
         </div>
         <div class="flex-same-width">
@@ -88,21 +90,28 @@ responsive: true
               <img class="showcase--image" src="/images/learn/<%= showcase.image.src %>" alt="<%= showcase.image.alt %>">
             </div>
             <div class="showcase--description">
-              <h3><%= showcase.name %> <a href="<%= replace_current_version showcase.demo %>"><i class="icon-link-ext"></i></a></h3>
+              <h3> <a href="<%= replace_current_version showcase.demo %>"><%= showcase.name %><i class="icon-link-ext"></i></a></h3>
 
               <p>Repository: <a href="<%= showcase.repository %>"><%= showcase.repository %></a></p>
 
               <p>
                 <%= replace_current_version showcase.description %>
-
+                <ul>
                 <% showcase.features.each do |feature| %>
                   <li><%= feature %></li>
                 <% end %>
+                </ul>
               </p>
             </div>
           </div>
         <% end %>
       </div>
+    </section>
+    <section>
+      <a href="/statusboard"><h2 id="statusboard">Status Board</h2></a>
+      <p>
+        Interested in seeing the overall picture of what we're working on next? Check out our <a href="/statusboard">Status Board</a> for more details!
+      </p>
     </section>
     <section>
       <h2 id="faq">Frequently Asked Questions</h2>
@@ -121,9 +130,9 @@ responsive: true
       <p>
         In short, the best way to make sure you have a healthy application is to keep an eye on RFCs &mdash; remembering they document intent but not necessarily the final implementation, &mdash; keep your application clean of deprecations, and when possible test your application against beta and canary.
       </p>
-      
+
       <h3 id="faq-component-data">Should components load data?</h3>
-      
+
       <p>
         You can find more information at the <a href="https://youtu.be/y7aHMj6VVJY?t=1129">Boston meetup Core Team panel.</a>
       </p>

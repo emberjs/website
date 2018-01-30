@@ -1,0 +1,117 @@
+@import 'base/base';
+
+.learn {
+
+  article ul {
+    padding-left: 1.5em;
+  }
+
+  .api-reference-list {
+    padding-left: 0;
+  }
+
+}
+
+.learning-tomster {
+  float: right;
+  width: 250px;
+  margin-left: 1em;
+}
+
+.api-reference-list {
+  display: flex;
+}
+
+.api-reference-list li {
+  flex: 1;
+  list-style: none;
+  text-align: center;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .api-reference-list {
+    flex-direction: column;
+
+    li {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.project-logo {
+  height: 50px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.learning-header {
+  display: flex;
+}
+
+.learning-header--left {
+  flex: 2;
+}
+.learning-header--right {
+  flex: 1;
+}
+.learning-header--tomster {
+  width: 250px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-same-width {
+  flex: 1;
+}
+
+.learn-deprecations {
+  text-align: center;
+}
+.learn-deprecations li {
+  list-style: none;
+}
+
+.showcase--item {
+  display: flex;
+
+  padding: 0.5em;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .showcase--item {
+    flex-direction: column;
+  }
+}
+
+.showcase--screenshot {
+  flex: 2;
+}
+
+@media screen and (max-width: $screen-sm-max) {
+  .showcase--screenshot {
+    display: flex;
+    justify-content: center;
+  }
+  .learning-tomster {
+    float: right;
+    max-width: 150px;
+    display: block;
+    
+
+  }
+}
+
+.showcase--image {
+  height: 200px;
+  width: 300px;
+}
+
+.showcase--description {
+  flex: 3.2;
+  padding: 0 0.5rem;
+}

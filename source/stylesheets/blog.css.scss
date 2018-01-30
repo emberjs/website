@@ -137,6 +137,10 @@ article.blog-post {
   .blog-post-author {
     color: $black;
   }
+  
+  .blog-post-date {    
+    font-style: italic;
+  }
 
   hr:first-of-type {
     margin-bottom: 1.5em;
