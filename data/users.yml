@@ -1009,6 +1009,10 @@
   image: toyota-connected.png
   alt: Toyota Connected
   use: "Toyota Connected uses Ember for building our internal and external web applications."
+- url: "https://www.khorus.com/"
+  image: khorus.png
+  alt: Khorus
+  use: "Khorus uses Ember.js for its primary front-end application."
 - url: "https://app.qonto.eu"
   image: qonto.png
   alt: Qonto
