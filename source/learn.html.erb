@@ -7,9 +7,9 @@ responsive: true
 <div class="legal-wrapper">
   <article>
     <h1>Learning Ember.js</h1>
-    <p><img src="/images/tomsters/teaching-reverse.png" alt="" role="presentation" class="learning-tomster"> Are you getting started on your Ember.js adventure? Check out our official reading material: 
+    <p><img src="/images/tomsters/teaching-reverse.png" alt="" role="presentation" class="learning-tomster"> Are you getting started on your Ember.js adventure? Check out our official reading material:
     </p>
-    
+
     <ul>
       <li> <a href="https://guides.emberjs.com/current/getting-started/quick-start/"><strong>Quick start</strong><i class="icon-link-ext"></i></a>: An easy breezy introduction to the framework.</li>
       <li> <a href="https://guides.emberjs.com/current/tutorial/ember-cli/"><strong>Tutorial</strong><i class="icon-link-ext"></i></a>: Follow our tutorial to build, and deploy, your first Ember.js application!</li>
@@ -47,6 +47,7 @@ responsive: true
           <ul>
             <li><a href="/deprecations/v1.x">1.x</a></li>
             <li><a href="/deprecations/v2.x">2.x</a></li>
+            <li><a href="/deprecations/v3.x">3.x</a></li>
           </ul>
         </div>
         <div class="flex-same-width">
@@ -95,10 +96,11 @@ responsive: true
 
               <p>
                 <%= replace_current_version showcase.description %>
-
+                <ul>
                 <% showcase.features.each do |feature| %>
                   <li><%= feature %></li>
                 <% end %>
+                </ul>
               </p>
             </div>
           </div>
@@ -128,9 +130,9 @@ responsive: true
       <p>
         In short, the best way to make sure you have a healthy application is to keep an eye on RFCs &mdash; remembering they document intent but not necessarily the final implementation, &mdash; keep your application clean of deprecations, and when possible test your application against beta and canary.
       </p>
-      
+
       <h3 id="faq-component-data">Should components load data?</h3>
-      
+
       <p>
         You can find more information at the <a href="https://youtu.be/y7aHMj6VVJY?t=1129">Boston meetup Core Team panel.</a>
       </p>

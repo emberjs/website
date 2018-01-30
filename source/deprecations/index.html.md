@@ -16,6 +16,7 @@ of change management is commonly referred to as [Semantic Versioning](http://sem
 
 * [Version 1.x](/deprecations/v1.x)
 * [Version 2.x](/deprecations/v2.x)
+* [Version 3.x](/deprecations/v3.x)
 
 ### Ember Data
 

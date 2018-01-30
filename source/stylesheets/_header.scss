@@ -1,144 +1,155 @@
+@import "base/base";
 /**
   Header
 **/
-#header {
-  position: absolute;
-  width: 100%;
-  min-width: $page-width;
-  top: 0;
-  height: 60px;
-  background: $orange top center;
-  @include hidpi('navigation_background', png);
-  border-bottom: 1px solid $orange-darker;
-  z-index: 10; /* The header is on top to have proper drop-shadow. */
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
-
-  #wrapper {
-    width: $page-width;
-    margin: 0 auto;
-    position: relative;
-  }
-
-  #search form {
-    display: inline-block
-  }
-
-  #logo {
-    position: absolute;
-    left: 7px;
-    top: 6px;
-    width: 103px;
-    height: 40px;
-    @include hidpi('ember_logo', 'png');
-    transform: scale(1);
-    transition:0.2s;
-
-    &:hover,
-    &:focus {
-      transform: scale(1.06);
-      border: 0;
-    }
-  }
-
-  #nav {
-    width: 700px;
-    height: 65px;
-    margin: 0 auto;
-    text-align: center;
-
-    li {
-      line-height: 26px;
-      margin: 18px 0 0;
-      display: inline-block;
-
-      a {
-        font-weight: bold;
-        font-size: 13px;
-        text-transform: uppercase;
-        color: #faf2ee;
-        text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
-        display: block;
-        padding: 0px 1em;
-        height: 26px;
-        line-height: 26px;
-        text-decoration: none;
-        border: 1px solid transparent;
-
-        &:hover {
-          color: $white
+header {
+	.navbar {
+    margin-bottom: 0;
+		&.navbar-inverse {
+			background-color: $orange;
+			border-radius: 0;
+			border-color: transparent;
+			.navbar-collapse, .navbar-form {
+				border-color: $orange-darkest;
+			}
+			.navbar-toggle {
+				border-color: white;
+				&:hover {
+					background-color: $orange-darker;
+				}
+			}
+			.navbar-brand {
+				img {
+				  margin-top: -10px;
+					@media screen and (min-width: 768px) {
+						margin-top: -10px;
+						margin-bottom: 0;
+						padding-bottom: 0;
+						margin-right: 10px;
+					}
+				}
+			}
+			.navbar-nav {
+				li {
+					a {
+            color: white;
+            &:focus {
+              outline: 5px auto -webkit-focus-ring-color;
+            }
+					}
+					&.active {
+						a {
+							background-color: white;
+							color: $orange-darkest;
+						}
+					}
+					&.open {
+						a {
+							background-color: white;
+							color: $orange-darkest;
+						}
+						.dropdown-menu {
+							background-color: white;
+							border-radius: 0;
+							@media screen and (min-width:768px){
+								border-radius: 0 0 4px 4px;
+								border-color-top: white;
+							}
+							li {
+								a {
+									&:hover,
+									:focus {
+										background-color: $orange-lightest;
+                    color: $orange-darkest;
+                    outline: 0 !important;
+									}
+								}
+								&.divider {
+									background-color: $orange-lightest;
+								}
+							}
+						}
+					}
+				}
+			}
+			form.navbar-right.navbar-form {
+				@media screen and (min-width: 768px) {
+					margin-bottom: 0;
+				}
+        .input-group {
+					min-width: 100%;
         }
-      }
-
-      &.active a {
-        color: #331915;
-        text-shadow: rgba(255, 255, 255, 0.2) 0 1px 0px;
-        background-color: #bf4737;
-        background-color: rgba(0, 0, 0, 0.2);
-        border-radius: 3px;
-        border: 1px solid #923c2e;
-        box-shadow:
-          rgba(255, 255, 255, 0.15) 0 1px 0px,
-          inset rgba(0, 0, 0, 0.17) 0 1px 1px;
-
-        &:hover {
-          color: black;
-          background-color: rgba(0, 0, 0, 0.17);
+				.form-control { 
+					background: url(/images/search-icon.svg) rgba(255, 255, 255, 0.1) 10px 8px no-repeat;
+					border-color: transparent;
+					border-right: 0;
+					box-shadow: none;
+					border-radius: 35px;
+					color: white;
+					padding-left: 2.5em;
+					&::-ms-input-placeholder {
+						color: $orange-lightest !important;
+					}
+					&:-ms-input-placeholder{
+						color: $orange-lightest !important;
+					} 					
+					&::placeholder{
+						color: $orange-lightest !important;
+					} 
+					&:placeholder {
+						color: $orange-lightest !important;
+					}
         }
-      }
+			}
+		}
+	}
+}
 
-    }
-  }
-
-  #search {
-    form input.st-search-input {
-      margin-left: 12px;
-      font-size: 100%;
-      padding: 2px 9px 2px 27px;
-      height: 26px;
-      background-position: 7px 6px;
-      width: 150px;
-    }
-  }
-
-  #github {
-    position: absolute;
-    right: 7px;
-    top: 17px;
-
-    a {
-      img {
-        float: left;
-        margin-top: 7px;
-        margin-right: 6px;
-        display: block;
-      }
-
-      font-weight: bold;
-      font-size: 12px;
-      text-transform: uppercase;
-      color: #faf2ee;
-      text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 0px;
-      display: block;
-      padding: 0px 1em 0 0.5em;
-      height: 28px;
-      line-height: 28px;
-      background-color: #ff6e56;
-      background-image: linear-gradient(to bottom, #ff6e56 0%, #ed4f35 100%);
-
-      border: 1px solid #a93926;
-      border-radius: 4px;
-      box-shadow: inset rgba(255, 255, 255, 0.17) 0 1px 1px;
-
-      &:hover {
-        color: #ffffff;
-        background: #f86c55;
-      }
-    }
-
-    .icon-fork {
-      font-size: 1.4em;
-      margin-left: 0;
-      vertical-align: middle;
-    }
-  }
+// Algolia overrides
+.ds-dataset-1 {
+	span.ds-suggestions {
+		@media screen and (min-width:0px) and (max-width:768px) {  
+			z-index:1000 !important;
+		}
+	}
+}
+.algolia-docsearch-footer {
+  border-top-color: $orange-lighter;
+}
+.algolia-docsearch-suggestion {
+  border-bottom-color: $orange-lighter;
+}
+.algolia-docsearch-suggestion--highlight {
+  color: $orange-darker;
+}
+.algolia-docsearch-suggestion--subcategory-column {
+  border-right-color: $orange-lighter;
+  color: $gray-darkest;
+  background-color: $orange-lightest;
+}
+.algolia-autocomplete {
+	width: 100%;
+}
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+	width: 100%;
+}
+.algolia-autocomplete .aa-hint {
+	color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #999;
+	border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+	cursor: pointer;
+	padding: 5px 4px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+	background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+	font-weight: bold;
+	font-style: normal;
 }
