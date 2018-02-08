@@ -151,3 +151,28 @@ code {
   @include hidpi('code_background', 'gif');
   box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
 }
+
+.ul-inline {
+	align-items: stretch;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	list-style: none;
+	margin: auto;
+	padding: 1em 0;
+	li {
+		flex: 1 1 1;
+		a {
+			background-color: $orange;
+      border-radius: 2px;
+      color: $white;
+			margin: 0 0.2em;
+      padding: 0.5em 1em;
+      text-decoration: none;
+			&:hover {
+        background-color: $orange-darker;
+        text-decoration: none;
+			}
+		}
+	}
+}
