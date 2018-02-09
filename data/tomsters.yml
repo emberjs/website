@@ -273,6 +273,12 @@
   url: http://www.embercares.com
   image: /images/tomsters/cancer-tomster.png
   tags: all tomster other
+- title: Bulgaria
+  date: February 8, 2018
+  url: https://www.meetup.com/Ember-js-Bulgaria/events/244998038/
+  image: /images/tomsters/bulgaria.png
+  tags: all tomster
+
 
 # - title:
 #   date:
