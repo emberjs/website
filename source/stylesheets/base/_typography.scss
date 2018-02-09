@@ -108,7 +108,7 @@ p {
 
 // helper classes
 .lead { font-size: 1.3em; }
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
 .heading-underline { border-bottom: 1px solid lightgray }
