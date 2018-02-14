@@ -28,9 +28,8 @@ first time today, get started by running:
 ```
 
 Additionally, today the 3.1 beta cycle begins for these same projects. We've
-split out the beta release details into a separate [Ember 3.1-beta Release
-Post](/blog/2018/02/14/ember-3-1-beta-released.html) to keep this one
-focused on app migration steps and guidance.
+split out the beta release details into a separate forthcoming post to keep this
+one focused on app migration steps and guidance.
 
 Finally, today we're also promoting Ember 2.18 to LTS ([2.18 release
 post](/blog/2018/01/01/ember-2-18-released.html)). This is the last release of
