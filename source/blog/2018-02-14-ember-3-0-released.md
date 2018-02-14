@@ -22,14 +22,15 @@ migration strategies are available. If you're interested in trying Ember for the
 first time today, get started by running:
 
 ```bash
-> yarn global add ember-cli # Or npm install -g ember-cli
-> ember new my-project
-> cd my-project
-> ember serve # Then visit http://localhost:4200
+yarn global add ember-cli # Or npm install -g ember-cli
+ember new my-project
+cd my-project
+ember serve # Then visit http://localhost:4200
 ```
 
 Additionally, today the 3.1 beta cycle begins for these same projects. We've
-split out the beta release details into a separate forthcoming post to keep this
+split out the beta release details into a separate [Ember 3.1-beta blog
+post](/blog/2018/02/16/ember-3-1-beta-released.html) to keep this
 one focused on app migration steps and guidance.
 
 Finally, today we're also promoting Ember 2.18 to LTS ([2.18 release
