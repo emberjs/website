@@ -53,6 +53,10 @@ transition for your users in the coming months.
 The first LTS of Ember 3.x will be Ember 3.4. Any migration steps we describe
 for moving between Ember 2.18 and 3.0 will also apply to 2.18-LTS and 3.4-LTS.
 
+For further details about this decision see [RFC #252](https://github.com/emberjs/rfcs/blob/master/text/0252-browser-support-changes.md)
+and [The Road to Ember 3.0: Browser Support in
+3.0](https://www.emberjs.com/blog/2017/10/03/the-road-to-ember-3-0.html#toc_browser-support-in-3-0).
+
 ### Global Build and Bower Support in 3.0
 
 Ember 3.0 completes a re-orientation of the project away from script tag driven
@@ -116,9 +120,10 @@ and [RFC #268](https://github.com/emberjs/rfcs/blob/master/text/0268-acceptance-
 
 You can find the final documentation for these test helpers at:
 
-* https://github.com/emberjs/ember-test-helpers/blob/master/API.md
+* [github.com/emberjs/ember-test-helpers/blob/master/API.md](https://github.com/emberjs/ember-test-helpers/blob/master/API.md)
 
-And additionally the [Ember.js Testing Guides](TODO) have been updated.
+And additionally the [Ember.js Testing
+Guides](https://guides.emberjs.com/v3.0.0/testing/) have been updated.
 
 The testing API available in previous Ember releases remains supported and
 un-deprecated in 3.0. If you would like to migrate tests using the old APIs
@@ -241,9 +246,14 @@ instructions, please review the [Ember CLI 3.0.0 release page](https://github.co
 ---
 
 To ensure as many applications as possible make the transition from 2.x to
-3.x, all public APIs removed in Ember 3.0 have been extracted into the
+3.x, all public APIs removed in Ember.js 3.0 have been extracted into the
 [ember-2-legacy](https://github.com/emberjs/ember-2-legacy) addon. This addon
-will be supported through Ember 3.4, the first LTS of the 3.x series.
+will be supported through Ember.js 3.4, the first LTS of the 3.x series.
+
+The addon maintains support for all APIs in the [Ember.js 2.x deprecations
+guide](https://www.emberjs.com/deprecations/v2.x/). Please note that these are
+only APIs from Ember.js itself, and there is no extended support addon for
+features removed from Ember Data or Ember CLI.
 
 Applications that need to upgrade through several versions may want to consider
 the
