@@ -1,5 +1,6 @@
 ---
 title: Ember 3.0 Released
+responsive: true
 author: Matthew Beale
 tags: Releases
 ---

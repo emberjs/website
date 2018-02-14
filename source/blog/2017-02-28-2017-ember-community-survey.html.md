@@ -1,5 +1,6 @@
 ---
 title: "2017 Ember Community Survey"
+responsive: true
 author: Matthew Beale, Tom Zellman
 tags: Recent Posts
 ---

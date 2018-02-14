@@ -1,5 +1,6 @@
 ---
 title: "Glimmer.js Progress Report"
+responsive: true
 author: Tom Dale
 tags: Recent Posts
 ---

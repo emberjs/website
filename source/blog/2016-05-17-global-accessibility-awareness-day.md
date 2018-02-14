@@ -1,5 +1,6 @@
 ---
 title: Global Accessibility Awareness Day
+responsive: true
 author: Nathan Hammond, Matthew Beale
 guestPost: true
 tags: Recent Posts, Ember A11y

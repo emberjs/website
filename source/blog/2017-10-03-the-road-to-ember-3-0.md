@@ -1,5 +1,6 @@
 ---
 title: The Road to Ember 3.0
+responsive: true
 author: Matthew Beale
 tags: Recent Posts
 ---

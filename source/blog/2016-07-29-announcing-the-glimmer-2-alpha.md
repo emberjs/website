@@ -1,5 +1,6 @@
 ---
 title: Announcing The Glimmer 2 Alpha
+responsive: true
 author: Godfrey Chan
 tags: Releases
 ---

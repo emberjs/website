@@ -1,5 +1,6 @@
 ---
 title: Ember 2.15 and 2.16 Beta Released
+responsive: true
 author: Matthew Beale
 tags: Releases
 ---

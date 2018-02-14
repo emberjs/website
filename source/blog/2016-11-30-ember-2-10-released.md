@@ -1,5 +1,6 @@
 ---
 title: Ember 2.10 and 2.11 Beta Released
+responsive: true
 author: Godfrey Chan, Brendan McLoughlin, Nathan Hammond
 tags: Releases
 ---

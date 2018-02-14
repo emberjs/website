@@ -1,5 +1,6 @@
 ---
 title: Ember Node.js LTS Support
+responsive: true
 author: Nathan Hammond
 tags: Recent Posts, Ember CLI
 ---
