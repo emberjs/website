@@ -153,9 +153,7 @@ body.blog.responsive {
       list-style: disc;
       li {
         max-width: 100% !important;
-        code {
-          overflow-x: scroll;
-        }
+        word-wrap: break-word;
       }
     }
   }
