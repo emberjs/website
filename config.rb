@@ -113,11 +113,7 @@ helpers do
     classes = super
     return 'not-found' if classes == '404'
 
-    if page.responsive
-      classes += ' responsive'
-    else
-      classes += ' not-responsive'
-    end
+    classes += ' responsive'
 
   end
 end
