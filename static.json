@@ -7,6 +7,9 @@
     },
     "/statusboard": {
       "origin": "https://ember-learn.github.io/statusboard/"
+    },
+    "/rfcs": {
+      "origin": "https://emberjs.github.io/rfcs/"
     }
   },
   "error_page": "404.html",
