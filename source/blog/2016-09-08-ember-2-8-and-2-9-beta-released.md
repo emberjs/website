@@ -1,5 +1,6 @@
 ---
 title: Ember.js 2.8 and 2.9 Beta Released
+responsive: true
 author: Godfrey Chan
 tags: Releases
 ---

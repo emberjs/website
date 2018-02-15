@@ -1,5 +1,6 @@
 ---
 title: Ember Data 2.5 and 2.6 Beta Released
+responsive: true
 author: Brendan McLoughlin
 tags: Ember Data
 ---

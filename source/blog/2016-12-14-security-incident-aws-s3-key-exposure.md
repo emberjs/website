@@ -1,5 +1,6 @@
 ---
 title: Security Incident - AWS S3 Access Key Exposure
+responsive: true
 author: Tom Dale
 tags: Security
 ---

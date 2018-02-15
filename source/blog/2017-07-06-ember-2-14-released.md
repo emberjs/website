@@ -1,5 +1,6 @@
 ---
 title: Ember 2.14 and 2.15 Beta Released
+responsive: true
 author: Matthew Beale, Chris Thoburn, Alex Navasardyan
 tags: Releases
 ---
