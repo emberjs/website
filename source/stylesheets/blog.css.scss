@@ -17,7 +17,7 @@ body.blog.responsive {
     #sidebar {
       @media screen and (max-width: $medium-breakpoint) {
         width: 30%;
-        float: left;
+        float: right;
 
         &:after {
           width: 100%;
@@ -50,25 +50,11 @@ body.blog.responsive {
 
       @media screen and (max-width: $medium-breakpoint) {
         width: 70%;
-        float: left;
+        float: right;
         margin: 0;
         padding: 2rem;
-
-        .blog-post-summary {
-          >h2{
-            line-height: 1.5;
-          }
-
-          >p{
-            font-size: 1.3em;
-            line-height: 1.8em;
-          }
-
-          >a.read-more{
-            font-size: 1.3em;
-          }
         }
-      }
+
 
       @media screen and (max-width: $small-breakpoint) {
         width: 100%;
@@ -124,7 +110,7 @@ body.blog.responsive {
   .blog-post-header {
     .blog-post-title {
       background-position: left 9px;
-      margin-top: 0.5em;
+      margin-top: 0.7em;
       text-align: left;
       text-transform: none;
     }
@@ -132,11 +118,12 @@ body.blog.responsive {
       display: block;
       font-size: 0.8em;
       font-weight: normal;
+      margin-bottom: 0.5em;
       text-transform: uppercase;
       .blog-post-date {
         display: inline-block;
         color: $gray;
-        padding: 0 0.25em;  
+        padding: 0 0.25em 0 0;  
       }
       .blog-post-author {
         display: inline-block;
@@ -151,8 +138,27 @@ body.blog.responsive {
     }
   }
   .blog-post-body {
+    max-width: 100%;
+    h2 {
+      margin-bottom: 0;
+      margin-top: 0.75em;
+      text-align: left;
+    }
     p {
-      
+      @media screen and (max-width: 991px) and (min-width: 0) {
+        padding: 0.5em 0;
+      }
+    }
+    ul {
+      list-style: disc;
+      li {
+        max-width: 100% !important;
+        overflow: hidden;
+        white-space: nowrap;
+        code {
+          overflow-x: scroll;
+        }
+      }
     }
   }
   .blog-post-footer {
