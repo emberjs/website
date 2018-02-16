@@ -3,6 +3,7 @@
 .call-to-action {
   background-color: $white;
   margin: 3em auto;
+  width: 450px;
   max-width: 90%;
   text-align: center;
 
@@ -64,7 +65,7 @@
 @media screen and (min-width: $screen-sm-min) {
   .call-to-action {
     border-radius: 10px;
-    width: 425px;
+    width: 450px;
   }
 
   .call-to-action__box {
@@ -87,6 +88,7 @@
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 1em;
+    width: 450px;
 
     p {
       font-size: 1.34em;
