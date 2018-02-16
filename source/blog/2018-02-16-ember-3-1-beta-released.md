@@ -299,11 +299,10 @@ applications.
 
 Ember CLI contains minor bug fixes and improvements.
 
-Additionally, it changes the default application and addon blueprint to
-align `ember test` and `npm test`, where previously their behaviors diverged.
-`ember test` or `npm test` will run the codebase test suite, `ember test:all`
-or `npm test:all` will run the test suite across all variants configured in
-`config/ember-try.js`.
+Additionally, it changes the default addon blueprint to align `npm test` with
+the behavior of the app blueprint, which is running `ember test`.
+Previously `npm test` in an addon would run `ember try:each`, which is now
+available as `npm run test:all` (or `yarn test:all` for those running yarn).
 
 For more details on the changes in Ember CLI 3.1.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.1.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.1.0-beta.1).
