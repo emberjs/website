@@ -3,25 +3,29 @@
 .call-to-action {
   background-color: $white;
   margin: 3em auto;
+  width: 450px;
   max-width: 90%;
   text-align: center;
 
   a {
     background-color: $white;
-    border-radius: 7px;
+    border-radius: 3px;
     border: 1px $orange-darker solid;
     color: $orange-darker;
     font-size: 0.9em;
     font-weight: bold;
+    height: 48px;
     letter-spacing: 1px;
     padding: 0.5em 1em;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
 
     &:hover {
-      color: $white;
       background-color: $orange-darker;
+      color: $white;
       cursor: pointer;
+      text-decoration: none;
+
     }
   }
 }
@@ -48,21 +52,20 @@
 }
 
 .call-to-action__bottom {
-  // display: none;
   background-color: $orange;
   color: $white;
   font-family: monospace;
   line-height: 0.5;
   margin: 0;
   overflow: hidden;
-  padding-left: 2em;
+  padding-left: 1em;
   text-align: left;
 }
 
 @media screen and (min-width: $screen-sm-min) {
   .call-to-action {
     border-radius: 10px;
-    width: 425px;
+    width: 450px;
   }
 
   .call-to-action__box {
@@ -84,6 +87,14 @@
     display: inherit;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    padding: 1em;
+    width: 450px;
 
+    p {
+      font-size: 1.34em;
+      line-height: 1.2;
+      margin: 0;
+      padding: 0;
+    }
   }
 }
