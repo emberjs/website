@@ -1,0 +1,40 @@
+/* 
+Variables exist in base/_variables 
+#TODO Ask the team which colors to use. Currently using $temp-orange-color and $temp-blue-color  
+*/
+
+$temp-orange-color: #E1563F;
+$temp-blue-color: #1F58CE;
+
+
+
+.survey-reminder-wrapper {
+  background: white;
+  color: $temp-orange-color;
+  text-align: center;
+  line-height: 2.2;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #e5dbd6;
+  a, strong {
+    color: $temp-blue-color;
+  }
+  a {
+    border-bottom: 1px dotted $temp-blue-color;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+.survey-reminder-container {
+  width: 960px;
+  margin: auto;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .survey-reminder-container {
+    width: inherit;
+    line-height: 1.5;
+    padding: 0.8rem 1rem;
+  }
+}
