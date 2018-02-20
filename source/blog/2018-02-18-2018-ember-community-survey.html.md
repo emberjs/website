@@ -1,6 +1,6 @@
 ---
 title: "2018 Ember Community Survey"
-author: Akanksha Dharkar, Matthew Beale, Issac Izer
+author: Akanksha Dharkar, Matthew Beale, Isaac Ezer
 tags: Recent Posts
 ---
 
