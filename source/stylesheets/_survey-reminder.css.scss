@@ -1,25 +1,18 @@
-/* 
-Variables exist in base/_variables 
-#TODO Ask the team which colors to use. Currently using $temp-orange-color and $temp-blue-color  
-*/
-
-$temp-orange-color: #E1563F;
-$temp-blue-color: #1F58CE;
-
-
+$orange-color: #E1563F;
+$blue-color: #1F58CE;
 
 .survey-reminder-wrapper {
   background: white;
-  color: $temp-orange-color;
+  color: $orange-color;
   text-align: center;
   line-height: 2.2;
   font-size: 1.2rem;
   border-bottom: 1px solid #e5dbd6;
   a, strong {
-    color: $temp-blue-color;
+    color: $blue-color;
   }
   a {
-    border-bottom: 1px dotted $temp-blue-color;
+    border-bottom: 1px dotted $blue-color;
   }
 
   &.hidden {
