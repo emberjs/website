@@ -13,7 +13,7 @@ no_survey_reminder: true
 <div class="survey-wrapper survey-wrapper-header">
   <div class="survey-header survey-container">
     <h1 class="survey-h1">
-      <img src="/images/survey/logo2017.png" alt="Ember Community Survey 2018" />
+      <img src="/images/survey/logo2018.png" alt="Ember Community Survey 2018" />
     </h1>
 
     <h2 class="survey-tagline">
@@ -29,7 +29,7 @@ no_survey_reminder: true
 <div class="survey-wrapper survey-border-top">
 
   <a href="http://emberconf.com/">
-    <img class="survey-image" src="/images/survey/emberconf-banner-2017.png" alt="EmberConf Tickets" />
+    <img class="survey-image" src="/images/survey/emberconf-banner-2018.png" alt="EmberConf Tickets" />
   </a>
 
   <div class="survey-body survey-container">
@@ -107,7 +107,7 @@ no_survey_reminder: true
                 var diff = new Date(+d1) - new Date(+d0);
                 return Math.ceil(diff / 8.64e7);
             }
-            var numDays = daysDifference(Date.now(), Date.UTC(2017, 2, 21));
+            var numDays = daysDifference(Date.now(), Date.UTC(2018, 2, 6)); // Month is zero-indexed, 2 = March
             if (numDays >= 1) {
                 document.getElementsByClassName('survey-time-left')[0].innerHTML =
                     '' + numDays + (numDays === 1 ? ' day' : ' days');
