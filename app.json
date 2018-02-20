@@ -3,6 +3,9 @@
   "scripts": {
   },
   "env": {
+    "DEPRECATION_APP_URL": {
+      "required": true
+    },
     "EMBER_API_DOCS_URL": {
       "required": true
     },
