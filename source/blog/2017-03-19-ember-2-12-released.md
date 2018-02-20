@@ -1,5 +1,6 @@
 ---
 title: Ember 2.12 and 2.13 Beta Released
+responsive: true
 author: Matthew Beale, Brendan McLoughlin, Robert Jackson
 tags: Releases
 ---

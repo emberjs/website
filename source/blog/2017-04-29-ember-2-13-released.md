@@ -1,5 +1,6 @@
 ---
 title: Ember 2.12-LTS, Ember 2.13 and 2.14 Beta Released
+responsive: true
 author:
 tags: Releases
 ---

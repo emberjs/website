@@ -1,5 +1,6 @@
 ---
 title: Ember FastBoot 1.0 Released
+responsive: true
 author: Tom Dale, Krati Ahuja
 tags: Releases
 ---

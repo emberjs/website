@@ -1,5 +1,6 @@
 ---
 title: Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released
+responsive: true
 author: Ricardo Mendes, Brendan McLoughlin
 tags: Releases
 ---

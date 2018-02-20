@@ -1,5 +1,6 @@
 ---
 title: Introducing Subteams
+responsive: true
 author: Tom Dale
 tags: Recent Posts
 ---
