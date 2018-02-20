@@ -9,11 +9,11 @@ be building applications with Ember.
 
 
 - Ember.js completed another seven backward-compatible minor version releases in the
-  last year, [2.12 through 2.18].
+  last year, 2.12 through 2.18.
   Included were two more of the framework's Long-Term Support (LTS) releases. 
   Version 2.18 was declared as an LTS candidate, marking the end of the project's 2.x series.
-- Ember 3.0 and 3.1 beta verions also came into existance, marking the beginning of the 3.x 
-  series (http://emberjs.com/blog/tags/releases.html).
+- Ember 3.0 and 3.1 beta verions also came into existance, marking the beginning of the [3.x 
+  series](http://emberjs.com/blog/tags/releases.html).
   3.0 removes public API deprecated in Ember 2.x releases. 
   3.0 does not introduce new public APIs or breaking changes.
 - Ember FastBoot 1.0, a server-side rendering solution for Ember apps, was also released 
