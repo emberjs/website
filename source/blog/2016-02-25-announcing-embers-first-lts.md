@@ -1,5 +1,6 @@
 ---
 title: Announcing Ember's First LTS Release
+responsive: true
 author: Matthew Beale, Yehuda Katz, Godfrey Chan
 tags: Recent Posts
 ---
