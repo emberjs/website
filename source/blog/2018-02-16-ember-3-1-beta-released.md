@@ -70,7 +70,7 @@ export default Component.extend({
 
   message: computed('name', function() {
     return `Hello ${this.name}!`;
-  });
+  })
 
 });
 ```
