@@ -35,7 +35,7 @@ and we're looking forward to
 sharing the results at [EmberConf 2018](http://emberconf.com/) on March 13th.
 A vast number of people, nearly 1600 participants, took part in the survey in 2017 ([2017 survey results](https://www.emberjs.com/ember-community-survey-2017/))
 
-Completing the survey should take about twelve minutes. We've shortened the
+Completing the survey should take about 15 minutes. We've shortened the
 survey compared to last year, and created opportunities for you to share
 feedback as free-form text. All submissions are completely anonymous, and
 demographic data about the community is not released in the same raw data files
