@@ -1,24 +1,24 @@
 ---
 title: "2018 Ember Community Survey"
-author: Akanksha Dharkar, Matthew Beale, Isaac Ezer
+author: Akanksha Dharkar, Isaac Ezer, Matthew Beale
 tags: Recent Posts
 ---
 
 The last year has been a wonderful time to work with the web, and a thrilling one to
 be building applications with Ember.
 
-- Ember.js completed another seven backward-compatible minor version releases in the
-  last year, 2.12 through 2.18.
-  Included were two more of the framework's Long-Term Support (LTS) releases.
-  Version 2.18 was declared as an LTS candidate, marking the end of the project's 2.x series.
-- Ember 3.0 and 3.1 beta verions also came into existance, marking the beginning of the [3.x
+- Ember.js completed seven backward-compatible minor version releases in the
+  last year: 2.12 through 2.18.
+  Included were three Long-Term Support (LTS) releases.
+  Version 2.18 was declared as an LTS and is the final release of the project's 2.x series.
+- Ember 3.0 and 3.1 beta versions also came into existence, marking the beginning of the [3.x
   series](http://emberjs.com/blog/tags/releases.html).
   3.0 removes public API deprecated in Ember 2.x releases.
-  3.0 does not introduce new public APIs or breaking changes.
-- Ember FastBoot 1.0, a server-side rendering solution for Ember apps, was also released
-  (including ember-cli-fastboot addon,fastboot-app-server and other FastBoot libraries).
-- [Glimmer.js](https://emberjs.com/blog/2017/10/10/glimmer-progress-report.html),
-  a major rewrite of Ember's rendering system, also experienced a lot progress, containing <Capital />-style component syntax, support for customization of DOM attributes, compiled binary bytecode, incremental rendering, SSR with incremental rehydration. It might just be the fastest component library in the running!
+- [Ember FastBoot](https://www.ember-fastboot.com/), a server-side rendering solution for Ember apps, reached 1.0.
+- The Glimmer VM,
+Ember's rendering system, also experienced a lot progress. This includes
+implementations of `<Capital />`-style component syntax, compiled binary
+byte-code, incremental rendering, and SSR with incremental rehydration. The [October Glimmer Progress Report](https://emberjs.com/blog/2017/10/10/glimmer-progress-report.html) is a good place to look for details.
 - The [Ember.js addon community](https://www.emberaddons.com/) grew from 3500
   to almost 4500 publicly available addons!
 
@@ -35,8 +35,13 @@ and we're looking forward to
 sharing the results at [EmberConf 2018](http://emberconf.com/) on March 13th.
 A vast number of people, nearly 1600 participants, took part in the survey in 2017 ([2017 survey results](https://www.emberjs.com/ember-community-survey-2017/))
 
-Completing the survey should take about fifteen minutes. Submissions will be
-accepted until March 7th.
+Completing the survey should take about twelve minutes. We've shortened the
+survey compared to last year, and created opportunities for you to share
+feedback as free-form text. All submissions are completely anonymous, and
+demographic data about the community is not released in the same raw data files
+as the free-form text and other answers.
+
+Submissions will be accepted until March 7th.
 
 Please help us spread the word by sharing the
 [survey landing page](/ember-community-survey-2018) on your social
