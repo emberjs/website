@@ -63,8 +63,6 @@ config.ignored_sitemap_matchers[:source_dotfiles] = proc { |file|
 # Pages
 ###
 
-page 'guides*', layout: :guide
-
 page 'community.html'
 
 page 'index.html', proxy: 'about.html'
