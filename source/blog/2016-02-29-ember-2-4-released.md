@@ -1,5 +1,6 @@
 ---
 title: Ember.js 2.4 and 2.5 Beta Released
+responsive: true
 author: Matthew Beale
 tags: Releases
 ---
