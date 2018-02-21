@@ -1,15 +1,15 @@
 .survey-reminder-wrapper {
   background: $white;
-  color: $orange;
   text-align: center;
   line-height: 2.2;
-  font-size: 1.2rem;
+  padding-top: 1px;
+  font-size: 100%;
   border-bottom: 1px solid #e5dbd6;
-  a, strong {
-    color: $blue;
+  strong {
+    font-weight: bold;
   }
   a {
-    border-bottom: 1px dotted $blue;
+    text-decoration: underline;
   }
 
   &.hidden {
