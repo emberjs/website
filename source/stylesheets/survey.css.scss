@@ -60,13 +60,13 @@
   margin: auto;
 
   img {
-    display: inline;
-    width: 7px;
-    padding-top: 2px;
     background-color: transparent;
-    transition: 0.2s margin-left ease-in-out;
+    display: inline;
     margin-left: 5px;
+    padding-top: 2px;
+    transition: 0.2s margin-left ease-in-out;
     vertical-align: text-top;
+    width: 7px;
   }
 }
 
@@ -74,7 +74,7 @@
   border-top: 1px solid #e5dbd6;
 }
 .survey-button:hover, .survey-button:active {
-  background: #2C92AD;
+  // background: #2C92AD;
 
   img {
     margin-left: 10px;

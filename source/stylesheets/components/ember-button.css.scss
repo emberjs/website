@@ -25,6 +25,11 @@
     text-decoration:none !important;
     transform: translateY(-1px);
     transition: 0.3s translateY;
+    .btn-image {
+      margin-left: 5%;
+      transition: 0.2s margin-left ease-in-out;
+      
+    }
   }
 
   &:active {
@@ -38,7 +43,7 @@
     display: inline-block;
     margin-left: 2%;
     margin-bottom: 2%;
-    vertical-align: middle;    
+    vertical-align: middle;   
   }
 }
 

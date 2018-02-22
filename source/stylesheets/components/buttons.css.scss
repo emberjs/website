@@ -29,8 +29,6 @@
   }
 
   &.black {
-    // background-image: url('/images/black_buttons.png');
-
     &:hover {
       background-position: 0 -46px;
       border-bottom: none;
@@ -51,14 +49,6 @@
   line-height: 24px;
   text-transform: uppercase;
   text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
-
-  // &.orange {
-  //   background-image: url('/images/small-orange-button.png');
-  // }
-
-  // &.black {
-  //   background-image: url('/images/small-black-button.png');
-  // }
 }
 
 .button-hero {
