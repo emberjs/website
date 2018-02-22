@@ -27,8 +27,8 @@ With 2018 already under way, we would like your help to learn
 about who is in the Ember community and how they work with the framework.
 To that end, we're pleased to announce the official 2018 Ember Community Survey.
 
-<a href="/ember-community-survey-2018" class="survey-button orange button">
-  Survey Landing Page <img src="/images/survey/right-arrow.png" alt="Arrow to the right" />
+<a href="/ember-community-survey-2018" class="ember-button ember-button--centered">
+  Survey Landing Page <img src="/images/survey/right-arrow.png" alt="" role="presentation" class="btn-image" />
 </a>
 
 This is our fourth year learning about the community's makeup and interests,
