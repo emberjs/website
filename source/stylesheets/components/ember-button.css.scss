@@ -14,7 +14,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease-in-out 0s;
   width: 220px;
 
   &:hover, &:focus {
@@ -40,10 +40,11 @@
   }
   .btn-image {
     background-color: transparent;
-    display: inline-block;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    vertical-align: middle;   
+    display: inline;
+    margin-left: 5px;
+    padding-top: 2px;
+    transition: 0.2s margin-left ease-in-out;
+    vertical-align: text-top;
   }
 }
 

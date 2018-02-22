@@ -15,7 +15,7 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease-in-out 0s;
   width: 220px;
   
   &:hover, &:focus {
