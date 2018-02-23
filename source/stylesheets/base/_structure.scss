@@ -1,7 +1,10 @@
 .content-wrapper {
-  max-width: 960px;
-  width: 100%;
   margin: 0 auto;
+  max-width: 1120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+
   @include clearfix;
   .main {
     padding: 3em 0;

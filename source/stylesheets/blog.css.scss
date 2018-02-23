@@ -97,13 +97,31 @@ body.blog.responsive {
 
 .blog {
   .btn {
+    background-color: $orange;
+    border-radius: 5px;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.35);
+    color: $white;
+    display: block;
+    font-size: 0.9em;
     font-weight: bold;
-    font-size: 12px;
-    color: #FFFBF5;
-    padding: 0.3rem 0.6rem 0.2rem;
-    background-color: #e69082;
-    border-radius: 3px;
-    line-height: 1.4;
+    height: 40px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    width: 220px;
+    
+    &:hover, &:focus {
+      background-color: $orange-darker;
+      border-bottom: none;
+      box-shadow: 0px 2px 4px -1px #666;
+      color: $white;
+      text-decoration: none;
+      transform: translateY(-1px);
+      transition: 0.3s translateY;
+    }
   }
 }
 .blog-post {
