@@ -843,10 +843,10 @@
   image: airhelp.png
   alt: "AirHelp"
   use: "AirHelp web app is built with Ember"
-- url: http://www.samewave.com/
+- url: https://www.samewave.com
   image: samewave.png
   alt: "Samewave"
-  use: "We use Ember together with Cordova to power our v2 hybrid IOS and Android app."
+  use: "We use Ember to power the UI of our web app, hybrid mobile apps (Cordova) and desktop apps (Electron)."
 - url: https://www.stealthworker.com
   image: stealth_worker.png
   alt: "Stealth Worker"
