@@ -1021,6 +1021,10 @@
   image: fusemachines.png
   alt: Fusemachines
   use: "Fusemachines uses Ember for most of its client facing Web applications"
+- url: "http://www.hyperlogs.com"
+  image: hyperlogs.png
+  alt: Hyperlogs
+  use: "Hyperlogs uses Ember for its time tracking web app"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
