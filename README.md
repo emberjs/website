@@ -18,6 +18,8 @@ The best way to get started is to find issue labeled "good first issue" or "help
 [Ember Community Slack](https://ember-community-slackin.herokuapp.com/).
 Like most open source projects, contributors are encouraged to open an issue
 to propose changes and iterate on ideas before investing time in coding.
+Some tips for working with git/GitHub can be found in
+[Making your first pull request](https://github.com/emberjs/guides/blob/master/CONTRIBUTING.md#making-your-first-pull-request) in the Guides respository.
 
 ## Running locally with Docker (recommended)
 
