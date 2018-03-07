@@ -1028,7 +1028,7 @@
   url: "http://www.shyftanalytics.com"
   image: shyft.png
   alt: SHYFT
-  use: "SHYFT Analytics uses Ember for the SHYFT Platform, its Enterprise Cloud for Life Sciences."
+  use: "SHYFT Analytics uses Ember for the SHYFT Platform."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
