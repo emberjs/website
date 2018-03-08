@@ -1025,10 +1025,14 @@
   image: hyperlogs.png
   alt: Hyperlogs
   use: "Hyperlogs uses Ember for its time tracking web app"
-  url: "http://www.shyftanalytics.com"
+- url: "http://www.shyftanalytics.com"
   image: shyft.png
   alt: SHYFT
   use: "SHYFT Analytics uses Ember for the SHYFT Platform."
+- url: "https://www.fitbit.com"
+  image: fitbit.png
+  alt: Fitbit Inc.
+  use: "Fitbit uses Ember for external and internal web applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
