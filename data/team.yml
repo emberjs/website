@@ -206,3 +206,8 @@
   teams:
     - core
     - learning
+- name: Alex Navasardyan
+  github: https://github.com/twokul
+  image: anavasardyan.jpg
+  teams:
+    - cli
