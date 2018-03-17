@@ -54,6 +54,11 @@ end
 
 page '/blog/feed.xml', layout: false
 
+# For fastly cert verification
+config.ignored_sitemap_matchers[:source_dotfiles] = proc { |file|
+  file =~ %r{/\.} && file !~ %r{/\.well-known}
+}
+
 ###
 # Pages
 ###
