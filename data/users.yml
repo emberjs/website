@@ -1033,6 +1033,10 @@
   image: fitbit.png
   alt: Fitbit Inc.
   use: "Fitbit uses Ember for external and internal web applications."
+- url: "https://envoy.com/"
+  image: envoy.png
+  alt: Envoy
+  use: "Envoy's dashboard is built with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
