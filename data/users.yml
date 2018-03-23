@@ -1033,6 +1033,10 @@
   image: fitbit.png
   alt: Fitbit Inc.
   use: "Fitbit uses Ember for external and internal web applications."
+- url: "https://www.ig.com"
+  image: ig.png
+  alt: IG
+  use: "IG uses Ember for its retail financial trading platform and internal web applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
