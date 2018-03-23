@@ -1041,6 +1041,10 @@
   image: envoy.png
   alt: Envoy
   use: "Envoy's dashboard is built with Ember.js"
+- url: "http://www.concordnow.com/"
+  image: concord.png
+  alt: Concord
+  use: "The Concord webapp is built using Ember"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
