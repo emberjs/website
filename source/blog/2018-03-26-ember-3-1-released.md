@@ -74,14 +74,13 @@ For more details on the upcoming changes in Ember.js 3.2, please review the
 
 Ember Data is the official data persistence library for Ember.js applications.
 
+Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
+
 ### Changes in Ember Data 3.1
 
 #### Deprecations in Ember Data 3.1
 
-Two new deprecations are introduces in Ember Data 3.1:
-
-* TODO
-* TODO
+No new deprecations are introduced in Ember Data 3.1.
 
 For more details on changes in Ember Data 3.1, please review the
 [Ember Data 3.1.0 release page](https://github.com/emberjs/data/releases/tag/v3.1.0).
@@ -89,8 +88,38 @@ For more details on changes in Ember Data 3.1, please review the
 
 ### Upcoming changes in Ember Data 3.2
 
+Ember Data 3.2 removes [all current feature
+flags](https://github.com/emberjs/data/pull/5384) for Ember
+Data. These feature flags have gone stale and Ember Data is going to
+attempt to go a different direction with some of the planned changes
+for 2018. Many of these feature flags have been around for a long
+time, if your app depends on enabling these feature flag to run please
+reach out to the Ember Data team by opening a github issue on the
+[Ember Data repo](https://github.com/emberjs/data/issues) and the
+Ember Data team will try to assist with the transition.
+
+#### `ds-improved-ajax` Feature Flag
+Durring the Ember Data 3.2 beta cycle, the Ember Data team is planning
+on releasing an addon that will support the `ds-improved-ajax` API.
+
+#### `ds-pushpayload-return` Feature Flag
+
+If you rely on the `ds-pushpayload-return` feature flag you can use
+the following pattern to manually serialize the API response and push
+the record into the store.
+
+```js
+let store = this.get('store');
+let ModelClass = store.modelFor('foo');
+let serializer = store.serializerFor('foo');
+let normalized = store.normalizeResponse(store, ModelClass, payload, null, 'query');
+
+return store.push(normalized);
+```
 
 #### Deprecations in Ember Data 3.2
+
+There are no new deprecations planned for Ember Data 3.2.
 
 For more details on the upcoming changes in Ember Data 3.2, please review the
 [Ember Data 3.2.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.2.0-beta.1).
