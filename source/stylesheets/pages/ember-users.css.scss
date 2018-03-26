@@ -22,19 +22,17 @@
             background-color: white;
             border-radius: 5px;
             border: 2px solid $orange;
-            height: 103px;
-            max-height: 103px;
+            display: inline-flex;
+            height: 105px;
             max-width: 100%;
             padding: 5px;
             width: 210px;
-            text-align: center;
-            display: inline-flex;
             img {
-                height: auto;
-                max-height: 103px;
-                max-width: 100%;                
                 display: block;
+                height: auto;
                 margin: auto !important;
+                max-height: 100%;
+                max-width: 100%;                
             }
             &:hover {
                 box-shadow: 5px 5px 15px -1px rgb(245, 223, 219);
