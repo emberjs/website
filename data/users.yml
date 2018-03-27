@@ -1045,6 +1045,10 @@
   image: concord.png
   alt: Concord
   use: "The Concord webapp is built using Ember"
+- url: "https://cos.io"
+  image: cos.png
+  alt: Center for Open Science
+  use: "OSF Preprints and OSF Registries are built with Ember.js and we are incrementally migrating the main OSF (https://osf.io) to Ember"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
