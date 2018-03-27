@@ -1049,6 +1049,10 @@
   image: cos.png
   alt: Center for Open Science
   use: "OSF Preprints and OSF Registries are built with Ember.js and we are incrementally migrating the main OSF (https://osf.io) to Ember"
+- url: "https://www.productive.io?ref=emberjs"
+  image: productive.png
+  alt: Productive
+  use: "Productive uses Ember for its main web applications."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
