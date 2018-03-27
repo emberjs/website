@@ -99,7 +99,7 @@ reach out to the Ember Data team by opening a github issue on the
 Ember Data team will try to assist with the transition.
 
 #### `ds-improved-ajax` Feature Flag
-Durring the Ember Data 3.2 beta cycle, the Ember Data team is planning
+During the Ember Data 3.2 beta cycle, the Ember Data team is planning
 on releasing an addon that will support the `ds-improved-ajax` API.
 
 #### `ds-pushpayload-return` Feature Flag
@@ -109,12 +109,23 @@ the following pattern to manually serialize the API response and push
 the record into the store.
 
 ```js
-let store = this.get('store');
-let ModelClass = store.modelFor('foo');
-let serializer = store.serializerFor('foo');
-let normalized = store.normalizeResponse(store, ModelClass, payload, null, 'query');
+export function pushPayload(store, modelName, rawPayload) {
+   let ModelClass = store.modelFor(modelName);
+   let serializer = store.serializerFor(modelName);
 
-return store.push(normalized);
+   let jsonApiPayload = serializer.normalizeResponse(store, ModelClass, rawPayload, null, 'query');
+
+  return store.push(jsonApiPayload);
+}
+```
+
+```diff
++import { pushPayload } from '<app-name>/utils/push-payload';
+
+...
+
+-this.get('store').pushPayload(modelName, rawPayload);
++pushPayload(this.get('store'), modelName, rawPayload);
 ```
 
 #### Deprecations in Ember Data 3.2
