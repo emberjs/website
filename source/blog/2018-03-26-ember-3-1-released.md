@@ -211,7 +211,7 @@ Consider using the
 addon if you would like to upgrade your application without immediately addressing
 deprecations.
 
-Two new deprecations are introduces in Ember.js 3.1:
+Two new deprecations are introduced in Ember.js 3.1:
 
 - Calling `array.get('@each')` is deprecated. `@each` may only be used as dependency key.
 - The private APIs `propertyWillChange` and `propertyDidChange` will be removed after the first LTS of the 3.x cycle. You should remove any calls to `propertyWillChange` and replace any calls to `propertyDidChange` with `notifyPropertyChange`. This applies to both the Ember global version and the EmberObject method version.
@@ -252,7 +252,7 @@ Ember.js 3.2 will introduce two new features:
 
 #### Deprecations in Ember.js 3.2
 
-Three new deprecations are introduces in Ember.js 3.2:
+Three new deprecations are introduced in Ember.js 3.2:
 
 - Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
 - The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined
@@ -360,7 +360,7 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.0.0...v3
 
 #### Deprecations in Ember CLI 3.1
 
-Two new deprecations are introduces in Ember CLI 3.1:
+Two new deprecations are introduced in Ember CLI 3.1:
 
 * TODO
 * TODO
