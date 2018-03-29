@@ -287,7 +287,7 @@ flags](https://github.com/emberjs/data/pull/5384) for Ember
 Data. These feature flags have gone stale and Ember Data is going to
 attempt to go a different direction with some of the planned changes
 for 2018. Many of these feature flags have been around for a long
-time, if your app depends on enabling these feature flag to run please
+time. If your app depends on enabling these feature flag to run, please
 reach out to the Ember Data team by opening a github issue on the
 [Ember Data repo](https://github.com/emberjs/data/issues) and the
 Ember Data team will try to assist with the transition.
