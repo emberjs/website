@@ -1061,6 +1061,10 @@
   image: deic.png
   alt: "Danish e-Infrastructure Cooperation"
   use: "DeIC's DDoS Protection System client (ddps.deic.dk) is built with Ember"
+- url: "https://www.fastly.com"
+  image: fastly.png
+  alt: Fastly
+  use: "Fastly uses Ember to build our control panel (https://manage.fastly.com/) as well as other internal/external projects."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
