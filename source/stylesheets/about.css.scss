@@ -6,46 +6,46 @@
 
 .job-board {
   display: none;
-  // @media screen and (max-width: $small-max-width) {
-  //   background-color: #1e719b;
-  //   font-size: 1.2em;
-  //   min-width: 100%;
-  //   text-align: center;
-  //   display: block;
-  //   clear: both;
+  @media screen and (max-width: $small-max-width) {
+    background-color: #1e719b;
+    font-size: 1.2em;
+    min-width: 100%;
+    text-align: center;
+    display: block;
+    clear: both;
 
-  //   a {
-  //     background-image: none;
-  //     color: $white;
-  //     letter-spacing: 1px;
-  //     min-width: 100%;
-  //     display: block;
-  //     padding: 0.4em;
-  //     text-align: center;
-  //     text-decoration: none;
-  //     text-transform: uppercase;
+    a {
+      background-image: none;
+      color: $white;
+      letter-spacing: 1px;
+      min-width: 100%;
+      display: block;
+      padding: 0.4em;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
 
-  //     &:focus,
-  //     &:hover {
-  //       text-decoration: underline;
-  //     }
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
 
-  //     img {
-  //       margin: -0.2em 0 -0.6em 0.5em;
-  //       transform: rotate(10deg);
-  //       max-height: 40px;
+      img {
+        margin: -0.2em 0 -0.6em 0.5em;
+        transform: rotate(10deg);
+        max-height: 40px;
 
-  //       &:focus,
-  //       &:hover {
-  //         text-decoration: none;
-  //       }
-  //     }
+        &:focus,
+        &:hover {
+          text-decoration: none;
+        }
+      }
 
-  //     .text-yellow {
-  //       color: #feeca6;
-  //     }
-  //   }
-  // }
+      .text-yellow {
+        color: #feeca6;
+      }
+    }
+  }
 }
 
 .job-board-banner {
