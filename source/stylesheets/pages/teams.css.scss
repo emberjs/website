@@ -3,7 +3,7 @@ body.team {
   hr {
     height: 1px;
     border: none;
-    margin: 4em 0;
+    margin: 1em 0 0.5em 0;
     background-color: #dfd7d4;
   }
 
@@ -30,7 +30,7 @@ body.team {
       }
 
       p {
-        margin: 0px 0px 10px 0px;
+        margin: 0px 0px 5px 0px;
         font-weight: bold;
       }
 
@@ -49,7 +49,7 @@ body.team {
       }
 
       .social {
-        margin-bottom: 0;
+        margin: 0 auto !important;
 
         > li {
           display: inline-block;
@@ -73,21 +73,21 @@ body.team {
       }
 
       img {
-        width: 66px;
-        height: 66px;
+        width: 100px;
+        height: 100px;
       }
 
       .type {
-        display: block;
-        position: absolute;
-        left: 5px;
-        right: 5px;
-        top: -9px;
-        color: #fff;
-        font-size: 12px;
-        line-height: 1.5em;
-        border-radius: 2px;
-        background-color: $orange-darker;
+        display: none;
+        // position: absolute;
+        // left: 5px;
+        // right: 5px;
+        // top: -9px;
+        // color: #fff;
+        // font-size: 12px;
+        // line-height: 1.5em;
+        // border-radius: 2px;
+        // background-color: $orange-darker;
       }
     }
   }
