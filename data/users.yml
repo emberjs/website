@@ -1053,6 +1053,10 @@
   image: productive.png
   alt: Productive
   use: "Productive uses Ember for its main web applications."
+- url: "https://www.princess.com"
+  image: Princess_Cruises_CBN_logo.png
+  alt: Princess Cruises
+  use: "Princess Cruises is using Ember to guide our guests throughout their cruise Search Experience."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
