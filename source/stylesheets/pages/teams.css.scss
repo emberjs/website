@@ -8,38 +8,42 @@ body.team {
   }
 
   #content .headshots { /* #content is needed for specifity override */
-    max-width: 760px;
-    width: 100%;
     margin: 0 auto;
+    max-width: 90%;
+    text-align: center;
+    width: 100%;
 
     a:hover {
       border-bottom: none;
     }
 
     > li {
+      box-sizing: border-box;
       display: inline-block;
-      width: 24%;
-      text-align: center;
       padding: 40px 0 0;
+      text-align: center;
+      width: 20%;
 
-      @media screen and (max-width: 860px) {
-        width: 32%;
-      }
-      @media screen and (max-width: 560px) {
+      @media screen and (max-width: 600px) {
         width: 49%;
       }
 
       p {
-        margin: 0px 0px 5px 0px;
         font-weight: bold;
+        margin: 0px 0px 5px 0px;
       }
 
       img {
-        margin-bottom: 10px;
         border-radius: 50%;
-        width: 130px;
-        height: 130px;
         border: 2px solid #faf4f1;
+        height: 120px;
+        margin-bottom: 10px;
+        width: 120px;
+
+        &.alumni {
+          height: 90px;
+          width: 90px;
+        }
 
         &:hover,
         &:active,
@@ -47,7 +51,6 @@ body.team {
           border: 0;
         }
       }
-
       .social {
         margin: 0 auto !important;
 
@@ -68,26 +71,20 @@ body.team {
     }
 
     &.contributors {
+      li {
+        width: 19%;
+      }
       .avatar {
         position: relative;
       }
 
       img {
-        width: 100px;
-        height: 100px;
+        height: 90px;
+        width: 90px;
       }
 
       .type {
         display: none;
-        // position: absolute;
-        // left: 5px;
-        // right: 5px;
-        // top: -9px;
-        // color: #fff;
-        // font-size: 12px;
-        // line-height: 1.5em;
-        // border-radius: 2px;
-        // background-color: $orange-darker;
       }
     }
   }
