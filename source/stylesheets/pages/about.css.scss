@@ -16,12 +16,17 @@
 
 .features.section {
   @include clearfix;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  h2 {
+    flex: 0 0 100%;
+  }
 
   .feature {
     @include width-for-columns(4);
-    float: left;
-    margin-left: $col-width + $col-spacing;
-    margin-right: $col-spacing;
+    margin: 0 $col-spacing;
     @media screen and (max-width:$small-max-width) {
       display: block;
       clear: both;

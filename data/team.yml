@@ -204,4 +204,10 @@
   github: https://github.com/melsumner
   image: msumner.jpg
   teams:
+    - core
     - learning
+- name: Alex Navasardyan
+  github: https://github.com/twokul
+  image: anavasardyan.jpg
+  teams:
+    - cli
