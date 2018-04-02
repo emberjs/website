@@ -7,8 +7,7 @@ responsive: true
   The Team Behind Ember
 </h1>
 <p class="lead">
-<br/>
-  Ember is an Open Source project that relies on the tireless support of individual contributors.<br>
+  Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams that guide the development and instruction of Ember.js. 
 </p>
 
 <section class="team section">
@@ -19,8 +18,8 @@ responsive: true
 <ul class="headshots">
   <% core.each do |user| %>
     <li>
-      <a href="<%= user.github %>" rel="nofollow" class="avatar" aria-label="<%= user.name %>">
-        <img src="/images/team/<%= user.image %>" alt="" role="presentation">
+      <a href="<%= user.github %>" rel="nofollow" class="avatar">
+        <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
       </a>
 
       <p class="name">
@@ -52,19 +51,64 @@ responsive: true
 <hr/>
 <section class="team section">
   <h2 class="text-center">
-    The Ember Subteams
+    The Ember CLI Team
   </h2>
   <p class="lead">
-    In addition to the Core Team, the following people contribute significantly to the Ember project. We're grateful for their assistance.
+    
   </p>
 
   <%
-  subteams = ['cli', 'data', 'learning'];
+  subteams = ['cli'];
   subteams = subteams.map { |team|
     data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
   }.flatten
 
-  subteams.sort_by! {|u| [u.type, u.name] }
+  subteams.sort_by! {|u| [u.last] }
+  %>
+
+  <ul class="contributors headshots">
+    <% subteams.each do |user| %>
+      <li>
+        <a href="<%= user.github %>" rel="nofollow" class="avatar" >
+          <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
+        </a>
+
+        <p class="name">
+          <%= user.name %>
+        </p>
+        <ul class="social">
+        <li>
+          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+            <i class="icon-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li>
+          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+            <i class="icon-github" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <% end %>
+  </ul>
+</section>
+<hr/>
+<section class="team section">
+  <h2 class="text-center">
+    The Ember Data Team
+  </h2>
+  <p class="lead">
+    
+  </p>
+
+  <%
+  subteams = ['data'];
+  subteams = subteams.map { |team|
+    data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
+  }.flatten
+
+  subteams.sort_by! {|u| [u.last] }
   %>
 
   <ul class="contributors headshots">
@@ -72,13 +116,69 @@ responsive: true
       <li>
         <a href="<%= user.github %>" rel="nofollow" class="avatar" aria-label="<%= user.name %>">
           <img src="/images/team/<%= user.image %>" role="presentation" alt="">
-
-          <span class="type"><%= user.type %></span>
         </a>
 
         <p class="name">
           <%= user.name %>
         </p>
+        <ul class="social">
+        <li>
+          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+            <i class="icon-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li>
+          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+            <i class="icon-github" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </li>
+    <% end %>
+  </ul>
+</section>
+<hr/>
+<section class="team section">
+  <h2 class="text-center">
+    The Ember Learning Team
+  </h2>
+  <p class="lead">
+    
+  </p>
+
+  <%
+  subteams = ['learning'];
+  subteams = subteams.map { |team|
+    data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
+  }.flatten
+
+  subteams.sort_by! {|u| [u.last] }
+  %>
+
+  <ul class="contributors headshots">
+    <% subteams.each do |user| %>
+      <li>
+        <a href="<%= user.github %>" rel="nofollow" class="avatar">
+          <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
+        </a>
+
+        <p class="name">
+          <%= user.name %>
+        </p>
+        <ul class="social">
+        <li>
+          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+            <i class="icon-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <li>
+          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+            <i class="icon-github" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
     </li>
     <% end %>
   </ul>
@@ -97,8 +197,8 @@ responsive: true
   <ul class="headshots">
     <% alumni.each do |user| %>
       <li>
-        <a href="<%= user.github %>" rel="nofollow" aria-label="<%= user.name %>">
-          <img src="/images/team/<%= user.image %>" width="150" height="150" alt="" role="presentation"/>
+        <a href="<%= user.github %>" rel="nofollow">
+          <img class="alumni" src="/images/team/<%= user.image %>" alt="<%= user.name %>" />
         </a>
         <p>
           <%= user.name %>
