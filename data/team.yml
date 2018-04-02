@@ -134,7 +134,7 @@
   first: Brendan
   last: McLoughlin
   github: https://github.com/bmac
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/BezoMaxo
   image: bmcloughlin.png
   teams:
     - data
@@ -150,7 +150,7 @@
   first: Clemens
   last: Müller
   github: https://github.com/pangratz
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/pangratz
   image: cmueller.jpg
   teams:
     - data
@@ -166,7 +166,7 @@
   first: David
   last: Baker
   github: https://github.com/acorncom
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/acorncom
   image: dbaker.jpg
   teams:
     - learning
@@ -183,7 +183,7 @@
   first: Todd
   last: Jordan
   github: https://github.com/toddjordan
-  twitter: https://twitter.com/ 
+  twitter: https://twitter.com/tddjordan 
   image: tjordan.jpg
   teams:
     - learning
@@ -201,7 +201,7 @@
   first: Jacob
   last: Bixby
   github: https://github.com/trabus
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/trabus
   image: jbixby.jpg
   teams:
     - cli
@@ -218,7 +218,7 @@
   first: Kelly
   last: Selden
   github: https://github.com/kellyselden
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/kellyselden
   image: kellyselden.jpg
   teams:
     - cli
@@ -234,7 +234,7 @@
   first: Tobias
   last: Bieniek
   github: https://github.com/Turbo87
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/TobiasBieniek
   image: tbieniek.jpg
   teams:
     - cli
@@ -242,7 +242,7 @@
   first: Krati
   last: Ahuja
   github: https://github.com/kratiahuja
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/kratiahuja
   image: kratiahuja.jpg
   teams:
     - cli
@@ -250,7 +250,7 @@
   first: Sivakumar
   last: Kailasam
   github: https://github.com/sivakumar-kailasam
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/sivakumar_k
   image: skailasam.jpg
   teams:
     - learning
@@ -258,7 +258,7 @@
   first: Terence
   last: Lee
   github: https://github.com/hone
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/hone02
   image: tlee.png
   teams:
     - learning
@@ -266,7 +266,7 @@
   first: Jen
   last: Weber
   github: https://github.com/jenweber
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/jwwweber
   image: jweber.jpg
   teams:
     - learning
@@ -274,7 +274,7 @@
   first: Jessica
   last: Jordan
   github: https://github.com/jessica-jordan
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/jjordan_dev
   image: jjordan.jpg
   teams:
     - learning
@@ -291,7 +291,7 @@
   first: Alex
   last: Navasardyan
   github: https://github.com/twokul
-  twitter: https://twitter.com/
+  twitter: https://twitter.com/twokul
   image: anavasardyan.jpg
   teams:
     - cli
