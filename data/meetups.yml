@@ -63,19 +63,18 @@ locations:
     - organizer: Melanie Sumner
       profileImage: https://secure.meetupstatic.com/photos/member/4/8/6/f/highres_264978543.jpeg
   - location: Boston, MA
-    url: http://www.meetup.com/Boston-Ember-js/
+    url: https://www.meetup.com/Boston-Ember-js-Community/
     image: 02boston.png
     lat: 42.35327
     lng: -71.052556
     organizers:
-    - organizer: Brian Cardarella
-      profileImage: http://photos1.meetupstatic.com/photos/member/1/6/0/a/thumb_75605642.jpeg
-    - organizer: Chris Ball
-      profileImage: http://photos1.meetupstatic.com/photos/member/e/1/7/0/thumb_227337712.jpeg
-    - organizer: Dan McClain
-      profileImage: http://photos3.meetupstatic.com/photos/member/7/3/5/c/thumb_77009532.jpeg
-    - organizer: Robert Jackson
-      profileImage: http://photos1.meetupstatic.com/photos/member/8/2/a/c/thumb_138033452.jpeg
+    - organizer: Jen Weber
+      profileImage: https://avatars1.githubusercontent.com/u/16627268
+    - organizer: "0xADADA"
+      profileImage: https://secure.meetupstatic.com/photos/member/7/a/0/d/thumb_266011245.jpeg
+    - organizer: "Alvin Crespo"
+      profileImage: https://secure.meetupstatic.com/photos/member/d/6/8/7/thumb_261594919.jpeg
+
   - location: Nashville, TN
     url: http://www.meetup.com/Nashville-EmberJS
     lat: 36.152706
