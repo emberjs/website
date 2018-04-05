@@ -6,7 +6,7 @@ responsive: true
 <h1 class="text-center">
   The Team Behind Ember
 </h1>
-<p class="lead">
+<p class="lead text-center">
   Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams that guide the development and instruction of Ember.js. 
 </p>
 
@@ -53,7 +53,7 @@ responsive: true
   <h2 class="text-center">
     The Ember CLI Team
   </h2>
-  <p class="lead">
+  <p class="lead text-center">
     
   </p>
 
@@ -68,7 +68,7 @@ responsive: true
 
   <ul class="contributors headshots">
     <% subteams.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow" class="avatar" >
           <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
         </a>
@@ -98,7 +98,7 @@ responsive: true
   <h2 class="text-center">
     The Ember Data Team
   </h2>
-  <p class="lead">
+  <p class="lead text-center">
     
   </p>
 
@@ -113,7 +113,7 @@ responsive: true
 
   <ul class="contributors headshots">
     <% subteams.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow" class="avatar" aria-label="<%= user.name %>">
           <img src="/images/team/<%= user.image %>" role="presentation" alt="">
         </a>
@@ -158,7 +158,7 @@ responsive: true
 
   <ul class="contributors headshots">
     <% subteams.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow" class="avatar">
           <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
         </a>
@@ -188,15 +188,15 @@ responsive: true
 <h2 class="text-center">
     Ember Core Alumni
   </h2>
-  <p class="lead">
-    Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are retired members of the Ember Core Team, to whom we will always be grateful:
+  <p class="lead text-center">
+    Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are retired members of the Ember Core Team, to whom we will always be grateful.
   </p>
 
   <% alumni = data.team.select { |m| m.teams.include?('corealumni') } %>
 
   <ul class="headshots">
     <% alumni.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow">
           <img class="alumni" src="/images/team/<%= user.image %>" alt="<%= user.name %>" />
         </a>
