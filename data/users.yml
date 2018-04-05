@@ -58,6 +58,10 @@
 - url: https://www.ted.com
   image: ted.png
   alt: TED
+- url: https://deic.dk/
+  image: deic.png
+  alt: "Danish e-Infrastructure Cooperation"
+  use: "DeIC's DDoS Protection System client is built with Ember"
 - url: http://livingsocial.com/
   image: livingsocial.png
   alt: Living Social
