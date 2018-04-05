@@ -158,9 +158,16 @@ body.blog.responsive {
   .blog-post-body {
     max-width: 100%;
     h2 {
-      margin-bottom: 0;
+      margin-bottom: 0.5em;
       margin-top: 0.75em;
       text-align: left;
+    }
+    code {
+      // this is different than code in other places. We are making it more readable for the blog.
+      background-color: rgba(0,0,0,0.1);
+      color: #222;
+      font-size: 0.9em;
+      padding: 0 4px 1px;
     }
     p {
       @media screen and (max-width: 991px) and (min-width: 0) {

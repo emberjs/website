@@ -30,8 +30,9 @@ Ember.js is the core framework for building ambitious web applications.
 
 Ember 3.1 is a minor release containing several new features and bug fixes. It includes a bump of Glimmer VM, Ember's rendering implementation, to version 0.30.5.
 
-#### ES5 Getters for Computed Properties
-Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's`defineProperty`. In recent years native JavaScript setter and getter implementations have become fast and mature.
+#### ES5 Getters for Computed Properties (1 of 5)
+
+Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's `defineProperty`. In recent years native JavaScript setter and getter implementations have become fast and mature.
 
 Starting in Ember 3.1 (and described in [RFC281](https://github.com/emberjs/rfcs/blob/master/text/0281-es5-getters.md)) you are now able to read the value of a computed property using a native ES5 getter. For example, this component which uses computed properties:
 
@@ -74,10 +75,10 @@ export default Component.extend({
 Legacy `get` features are not deprecated or removed in 3.1. In fact there are
 several cases where you must still use `get`:
 
-* If you are calling `get` with a chained path. For example in `this.get('a.b.c')` if `b` is `undefined` the return value is `undefined`. Converting this
+- If you are calling `get` with a chained path. For example in `this.get('a.b.c')` if `b` is `undefined` the return value is `undefined`. Converting this
 to `this.a.b.c` when `b` is `undefined` would instead raise an exception.
-* If your object is using `unknownProperty` you must continue to use `get`. Using an ES5 getter on an object with `unknownProperty` will cause an assertion failure in development.
-* Ember Data returns promise proxy objects when you read an async relationship and from other API. Ember proxy objects, including promise proxies, still require that you call `get` to read values.
+- If your object is using `unknownProperty` you must continue to use `get`. Using an ES5 getter on an object with `unknownProperty` will cause an assertion failure in development.
+- Ember Data returns promise proxy objects when you read an async relationship and from other API. Ember proxy objects, including promise proxies, still require that you call `get` to read values.
 
 With these caveats in mind, how should you know if you can convert a `get` call to a native getter? If you have code where `get` is called on `this` you likely can convert it. If you have a `get` on another object, `anything.get('foo')`, you should exercise caution when converting to a native getter.
 
@@ -85,7 +86,7 @@ The community-provided [es5-getter-ember-codemod](https://github.com/rondale-sc/
 
 Thanks to [Chris Garrett](https://twitter.com/pzuraq) for pushing forward work on ES5 getters with support from [Godfrey Chan](https://twitter.com/chancancode), [Robert Jackson](https://twitter.com/rwjblue/), and [Kris Selden](https://twitter.com/krisselden)). Thanks to [Jonathan Jackson](https://twitter.com/rondale_sc/) for his work on the codemod.
 
-#### Introducing Optional Features
+#### Introducing Optional Features (2 of 5)
 
 Because major releases of Ember are not supposed to make breaking changes without prior deprecation, the project has been extremely conservative about changing behaviors that don't have a clear deprecation path. As a result, we've had several quirks of the framework linger into the 3.x series.
 
@@ -101,7 +102,7 @@ ember install @ember/optional-features
 
 Thanks to [Godfrey Chan](https://twitter.com/chancancode) and [Robert Jackson](https://twitter.com/rwjblue/) for their work on the optional features system.
 
-#### New Optional Feature: Application Template Wrapper
+#### New Optional Feature: Application Template Wrapper (3 of 5) 
 
 Ember applications have long created a wrapping `div` around their rendered content: `<div class="ember-view">`. With ember-optional-features, this functionality can now be disabled:
 
@@ -115,7 +116,7 @@ Additionally, enabling this feature will prompt you to optionally run a codemod 
 
 Although disabling this feature will eventually be the default for Ember, leaving the feature enabled is not deprecated in this release. You can read more details about this optional feature and the motivations for introducing it in [RFC #280](https://github.com/emberjs/rfcs/blob/master/text/0280-remove-application-wrapper.md).
 
-#### New Optional Feature: Template-only Glimmer Components
+#### New Optional Feature: Template-only Glimmer Components (4 of 5)
 
 Ember components implicitly create an element in the DOM where they are invoked, and the contents of their templates are then treated as "innerHTML" inside that DOM element. For example, this component template:
 
@@ -179,7 +180,7 @@ However, enabling this feature will prompt you to optionally run a codemod which
 
 Although enabling this feature will eventually be the default for Ember, leaving the feature disabled is not deprecated in this release. You can read more details about this optional feature and the motivations for introducing it in [RFC #278](https://github.com/emberjs/rfcs/blob/master/text/0278-template-only-components.md).
 
-#### Positional Params Bug Fix
+#### Positional Params Bug Fix (5 of 5)
 
 Ember introduced contextual components in Ember 2.3. Contextual components close over arguments and are intended to do so in a manner consistent with closures in JavaScript.
 
@@ -198,7 +199,7 @@ In Ember 3.1 we've corrected the implementation to act like a proper closure. In
 For more information about this change see
 [emberjs/ember.js#15287](https://github.com/emberjs/ember.js/pull/15287).
 
-#### Deprecations in Ember 3.1
+### Deprecations in Ember 3.1
 
 Deprecations are added to Ember.js when an API will be removed at a later date.
 
@@ -211,10 +212,10 @@ Consider using the
 addon if you would like to upgrade your application without immediately addressing
 deprecations.
 
-Two new deprecations are introduced in Ember.js 3.1:
+**Two** new deprecations are introduced in Ember.js 3.1:
 
-- Calling `array.get('@each')` is deprecated. `@each` may only be used as dependency key.
-- The private APIs `propertyWillChange` and `propertyDidChange` will be removed after the first LTS of the 3.x cycle. You should remove any calls to `propertyWillChange` and replace any calls to `propertyDidChange` with `notifyPropertyChange`. This applies to both the Ember global version and the EmberObject method version.
+1. Calling `array.get('@each')` is deprecated. `@each` may only be used as dependency key.
+2. The private APIs `propertyWillChange` and `propertyDidChange` will be removed after the first LTS of the 3.x cycle. You should remove any calls to `propertyWillChange` and replace any calls to `propertyDidChange` with `notifyPropertyChange`. This applies to both the Ember global version and the EmberObject method version.
 
 For example, the following:
 
@@ -238,7 +239,7 @@ doStuff(object);
 object.notifyPropertyChange('someProperty');
 ```
 
-If you are an addon author and need to support both Ember applications greater than 3.1 *and* less than 3.1 you can use the polyfill [ember-notify-property-change-polyfill](https://github.com/rondale-sc/ember-notify-property-change-polyfill)
+If you are an addon author and need to support both Ember applications greater than 3.1 *and* less than 3.1 you can use the polyfill [ember-notify-property-change-polyfill](https://github.com/rondale-sc/ember-notify-property-change-polyfill).
 
 For more details on changes in Ember.js 3.1, please review the
 [Ember.js 3.1.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.1.0).
@@ -250,14 +251,14 @@ Ember.js 3.2 will introduce two new features:
 * TODO
 * TODO
 
-#### Deprecations in Ember.js 3.2
+### Deprecations in Ember.js 3.2
 
-Three new deprecations are introduced in Ember.js 3.2:
+**Three** new deprecations are introduced in Ember.js 3.2:
 
-- Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
-- The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined
+1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
+2. The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined
 properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
-- Use defineProperty to define computed properties. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
+3. Use defineProperty to define computed properties. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
 
 For more details on the upcoming changes in Ember.js 3.2, please review the
 [Ember.js 3.2.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0-beta.1).
@@ -272,15 +273,57 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 ### Changes in Ember Data 3.1
 
-#### Deprecations in Ember Data 3.1
+[#5273](https://github.com/emberjs/data/pull/5273) client-side-delete semantics `unloadRecord`
 
-No new deprecations are introduced in Ember Data 3.1.
+### Deprecations in Ember Data 3.1
+
+**Two** new deprecations are introduced in Ember Data 3.1.
+
+- `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, ember-data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` will be deprecated and removed from Ember "soon" [(https://github.com/emberjs/rfcs/pull/237)](https://github.com/emberjs/rfcs/pull/237) and we would like to confirm that Ember Data will work without deprecation before and after that happens.`Ember.Map` differs from native `Map` in a few ways:
+  * `Ember.Map` has custom `copy` and `isEmpty` methods which are not present in native `Map`
+  * `Ember.Map` adds a static `create` method (which simply instantiates itself with `new Ember.Map()`)
+  * `Ember.Map` does not accept constructor arguments
+  * `Ember.Map` does not have:
+    * `@@species`
+    * `@@iterator`
+    * `entries`
+    * `values`
+  This implementation adds a deprecated backwards compatibility for:
+  * `copy`
+  * `isEmpty`
+
+This is needed because `Map` requires instantiation with `new` and by default Babel transpilation will do `superConstructor.apply(this, arguments)` which throws an error with native `Map`. The desired code (if we lived in an "only native class" world) would be:
+
+  ```js
+  export default class MapWithDeprecations extends Map {
+    constructor(options) {
+      super();
+      this.defaultValue = options.defaultValue;
+    }
+    get(key) {
+      let hasValue = this.has(key);
+      if (hasValue) {
+        return super.get(key);
+      } else {
+        let defaultValue = this.defaultValue(key);
+        this.set(key, defaultValue);
+        return defaultValue;
+      }
+    }
+  }
+  ```
 
 For more details on changes in Ember Data 3.1, please review the
 [Ember Data 3.1.0 release page](https://github.com/emberjs/data/releases/tag/v3.1.0).
 
 
 ### Upcoming changes in Ember Data 3.2
+
+#### Lazy Relationship Payloads (1 of 4)
+
+[#5230](https://github.com/emberjs/data/pull/5230) [BUGFIX] enable lazy-relationship payloads to work with polymorphic relationships
+
+#### Ember Data Feature Flag Removal (2 of 4)
 
 Ember Data 3.2 removes [all current feature
 flags](https://github.com/emberjs/data/pull/5384) for Ember
@@ -292,11 +335,12 @@ reach out to the Ember Data team by opening a github issue on the
 [Ember Data repo](https://github.com/emberjs/data/issues) and the
 Ember Data team will try to assist with the transition.
 
-#### `ds-improved-ajax` Feature Flag
+#### Feature Flag `ds-improved-ajax` (3 of 4)
+
 During the Ember Data 3.2 beta cycle, the Ember Data team is planning
 on releasing an addon that will support the `ds-improved-ajax` API.
 
-#### `ds-pushpayload-return` Feature Flag
+#### Feature Flag `ds-pushpayload-return` (4 of 4)
 
 If you rely on the `ds-pushpayload-return` feature flag you can use
 the following pattern to manually serialize the API response and push
@@ -322,7 +366,7 @@ export function pushPayload(store, modelName, rawPayload) {
 +pushPayload(this.get('store'), modelName, rawPayload);
 ```
 
-#### Deprecations in Ember Data 3.2
+### Deprecations in Ember Data 3.2
 
 There are no new deprecations planned for Ember Data 3.2.
 
@@ -358,19 +402,59 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.0.0...v3
 
 ### Changes in Ember CLI 3.1
 
-#### Deprecations in Ember CLI 3.1
+- [#7601](https://github.com/ember-cli/ember-cli/pull/7601) blueprints/addon: Replace `test` with `test:all` [@Turbo87](https://github.com/Turbo87)
 
-Two new deprecations are introduced in Ember CLI 3.1:
+`test` will run `ember test` now (like in apps), `test:all` will use `ember-try` to run tests in all configured scenarios
 
-* TODO
-* TODO
+- [#7492](https://github.com/ember-cli/ember-cli/pull/7492) Use yarn instead of npm when part of a yarn workspace root [@thetimothyp](https://github.com/thetimothyp)
+
+`yarn.lock` file detection improved
+
+- [#7573](https://github.com/ember-cli/ember-cli/pull/7573) Install optional dependencies when creating a new project [@t-sauer](https://github.com/t-sauer)
+
+Fixes issues with the Glimmer blueprints
+
+- [#7586](https://github.com/ember-cli/ember-cli/pull/7586) add feature flag to project.isModuleUnification [@GavinJoyce](https://github.com/GavinJoyce)
+- [#7541](https://github.com/ember-cli/ember-cli/pull/7541) Add `project.isModuleUnification()` [@GavinJoyce](https://github.com/GavinJoyce)
+
+Module Unification continues...
+
+### Deprecations in Ember CLI 3.1
+
+No new deprecations are introduced in Ember CLI 3.1:
 
 For more details on the changes in Ember CLI 3.1 and detailed upgrade
 instructions, please review the [Ember CLI  3.1.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.1.0).
 
 ### Upcoming Changes in Ember CLI 3.2
 
-#### Deprecations in Ember CLI 3.2
+- [#7605](https://github.com/ember-cli/ember-cli/pull/7605) blueprints/app: Add `qunit-dom` dependency by default [@Turbo87](https://github.com/Turbo87)
+
+`qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it you don't have to add it.
+https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
+
+- [#7501](https://github.com/ember-cli/ember-cli/pull/7501) add delayed transpilation [@kellyselden](https://github.com/kellyselden)
+- [#7650](https://github.com/ember-cli/ember-cli/pull/7650) compile all addons at once optimization [@kellyselden](https://github.com/kellyselden)
+
+experiments with more efficient transpilation
+
+- [#7637](https://github.com/ember-cli/ember-cli/pull/7637) More comprehensive detect if ember-cli is being run within CI or not. [@ember-cli](https://github.com/ember-cli)
+
+see https://github.com/watson/ci-info/
+
+- [#7658](https://github.com/ember-cli/ember-cli/pull/7658) Module Unification Addon blueprint [@cibernox](https://github.com/cibernox)
+- [#7490](https://github.com/ember-cli/ember-cli/pull/7490) Module Unification Addons [@ember-cli](https://github.com/ember-cli)
+- [#7660](https://github.com/ember-cli/ember-cli/pull/7660) improve logic for if addon is module-unification [@iezer](https://github.com/iezer)
+- [#7667](https://github.com/ember-cli/ember-cli/pull/7667) MU addons must generate a MU dummy app [@cibernox](https://github.com/cibernox)
+- [#7678](https://github.com/ember-cli/ember-cli/pull/7678) Use a recent release of Ember canary for MU [@ember-cli](https://github.com/ember-cli)
+
+Module Unification continues...
+
+### Deprecations in Ember CLI 3.2
+
+- [#7676](https://github.com/ember-cli/ember-cli/pull/7676) Deprecate ember-cli-babel 5.x [@raytiley](https://github.com/raytiley)
+
+Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and will be dropped soon.
 
 For more details on the changes in Ember CLI 3.2.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.2.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0-beta.1).
