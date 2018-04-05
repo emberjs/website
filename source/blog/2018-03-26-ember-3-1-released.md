@@ -248,16 +248,15 @@ For more details on changes in Ember.js 3.1, please review the
 
 Ember.js 3.2 will introduce two new features:
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 ### Deprecations in Ember.js 3.2
 
 **Three** new deprecations are introduced in Ember.js 3.2:
 
 1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
-2. The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined
-properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
+2. The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
 3. Use defineProperty to define computed properties. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
 
 For more details on the upcoming changes in Ember.js 3.2, please review the
@@ -279,18 +278,17 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
-- `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, ember-data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` will be deprecated and removed from Ember "soon" [(https://github.com/emberjs/rfcs/pull/237)](https://github.com/emberjs/rfcs/pull/237) and we would like to confirm that Ember Data will work without deprecation before and after that happens.`Ember.Map` differs from native `Map` in a few ways:
-  * `Ember.Map` has custom `copy` and `isEmpty` methods which are not present in native `Map`
-  * `Ember.Map` adds a static `create` method (which simply instantiates itself with `new Ember.Map()`)
-  * `Ember.Map` does not accept constructor arguments
-  * `Ember.Map` does not have:
-    * `@@species`
-    * `@@iterator`
-    * `entries`
-    * `values`
-  This implementation adds a deprecated backwards compatibility for:
-  * `copy`
-  * `isEmpty`
+* `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, ember-data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` will be deprecated and removed from Ember "soon" [(https://github.com/emberjs/rfcs/pull/237)](https://github.com/emberjs/rfcs/pull/237) and we would like to confirm that Ember Data will work without deprecation before and after that happens.`Ember.Map` differs from native `Map` in a few ways:
+    * `Ember.Map` has custom `copy` and `isEmpty` methods which are not present in native `Map`
+    * `Ember.Map` adds a static `create` method (which simply instantiates itself with `new Ember.Map()`)
+    * `Ember.Map` does not accept constructor arguments
+    * `Ember.Map` does not have:
+      * `@@species`
+      * `@@iterator`
+      * `entries`
+      * `values` This implementation adds a deprecated backwards compatibility for:
+          * `copy`
+          * `isEmpty`
 
 This is needed because `Map` requires instantiation with `new` and by default Babel transpilation will do `superConstructor.apply(this, arguments)` which throws an error with native `Map`. The desired code (if we lived in an "only native class" world) would be:
 
@@ -316,7 +314,6 @@ This is needed because `Map` requires instantiation with `new` and by default Ba
 For more details on changes in Ember Data 3.1, please review the
 [Ember Data 3.1.0 release page](https://github.com/emberjs/data/releases/tag/v3.1.0).
 
-
 ### Upcoming changes in Ember Data 3.2
 
 #### Lazy Relationship Payloads (1 of 4)
@@ -325,26 +322,16 @@ For more details on changes in Ember Data 3.1, please review the
 
 #### Ember Data Feature Flag Removal (2 of 4)
 
-Ember Data 3.2 removes [all current feature
-flags](https://github.com/emberjs/data/pull/5384) for Ember
-Data. These feature flags have gone stale and Ember Data is going to
-attempt to go a different direction with some of the planned changes
-for 2018. Many of these feature flags have been around for a long
-time. If your app depends on enabling these feature flag to run, please
-reach out to the Ember Data team by opening a github issue on the
-[Ember Data repo](https://github.com/emberjs/data/issues) and the
-Ember Data team will try to assist with the transition.
+Ember Data 3.2 removes [all current feature flags](https://github.com/emberjs/data/pull/5384) for Ember Data. These feature flags have gone stale and Ember Data is going to
+attempt to go a different direction with some of the planned changes for 2018. Many of these feature flags have been around for a long time. If your app depends on enabling these feature flag to run, please reach out to the Ember Data team by opening a github issue on the [Ember Data repo](https://github.com/emberjs/data/issues) and the Ember Data team will try to assist with the transition.
 
 #### Feature Flag `ds-improved-ajax` (3 of 4)
 
-During the Ember Data 3.2 beta cycle, the Ember Data team is planning
-on releasing an addon that will support the `ds-improved-ajax` API.
+During the Ember Data 3.2 beta cycle, the Ember Data team is planning on releasing an addon that will support the `ds-improved-ajax` API.
 
 #### Feature Flag `ds-pushpayload-return` (4 of 4)
 
-If you rely on the `ds-pushpayload-return` feature flag you can use
-the following pattern to manually serialize the API response and push
-the record into the store.
+If you rely on the `ds-pushpayload-return` feature flag you can use the following pattern to manually serialize the API response and push the record into the store.
 
 ```js
 export function pushPayload(store, modelName, rawPayload) {
@@ -370,35 +357,29 @@ export function pushPayload(store, modelName, rawPayload) {
 
 There are no new deprecations planned for Ember Data 3.2.
 
-For more details on the upcoming changes in Ember Data 3.2, please review the
-[Ember Data 3.2.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.2.0-beta.1).
+For more details on the upcoming changes in Ember Data 3.2, please review the [Ember Data 3.2.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.2.0-beta.1).
 
 ---
 
 ## Ember CLI
 
-Ember CLI is the command line interface for managing and packaging Ember.js
-applications.
+Ember CLI is the command line interface for managing and packaging Ember.js applications.
 
 ### Upgrading Ember CLI
 
-You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade
-your projects using `yarn` run:
+You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade your projects using `yarn` run:
 
-```
+```bash
 yarn upgrade ember-cli
 ```
 
 To upgrade your projects using `npm` run:
 
-```
+```bash
 npm install --save-dev ember-cli
 ```
 
-After running the
-upgrade command run `ember init` inside of the project directory to apply the
-blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.0.0...v3.1.0)
-and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.0.0...v3.1.0).
+After running the upgrade command run `ember init` inside of the project directory to apply the blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.0.0...v3.1.0) and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.0.0...v3.1.0).
 
 ### Changes in Ember CLI 3.1
 
@@ -423,15 +404,13 @@ Module Unification continues...
 
 No new deprecations are introduced in Ember CLI 3.1:
 
-For more details on the changes in Ember CLI 3.1 and detailed upgrade
-instructions, please review the [Ember CLI  3.1.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.1.0).
+For more details on the changes in Ember CLI 3.1 and detailed upgrade instructions, please review the [Ember CLI  3.1.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.1.0).
 
 ### Upcoming Changes in Ember CLI 3.2
 
 - [#7605](https://github.com/ember-cli/ember-cli/pull/7605) blueprints/app: Add `qunit-dom` dependency by default [@Turbo87](https://github.com/Turbo87)
 
-`qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it you don't have to add it.
-https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
+`qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
 
 - [#7501](https://github.com/ember-cli/ember-cli/pull/7501) add delayed transpilation [@kellyselden](https://github.com/kellyselden)
 - [#7650](https://github.com/ember-cli/ember-cli/pull/7650) compile all addons at once optimization [@kellyselden](https://github.com/kellyselden)
