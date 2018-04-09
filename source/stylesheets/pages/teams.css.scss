@@ -3,15 +3,22 @@ body.team {
   hr {
     height: 1px;
     border: none;
-    margin: 1em 0 0.5em 0;
     background-color: #dfd7d4;
   }
 
-  #content .headshots { /* #content is needed for specifity override */
-    margin: 0 auto;
-    max-width: 90%;
-    text-align: center;
+  .headshots { /* #content is needed for specifity override */
+    margin: 0 auto !important;
+    justify-content: center;
     width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      padding-left: 1%;
+      padding-right: 1%;
+    }
 
     a:hover {
       border-bottom: none;
@@ -19,21 +26,31 @@ body.team {
 
     > li {
       box-sizing: border-box;
-      display: inline-block;
+      display: flex;
+      flex-flow: column wrap;
       padding: 40px 0 0;
       text-align: center;
-      width: 20%;
-
-      @media screen and (max-width: 600px) {
+      width: 25%;
+      flex: 1 1 auto;
+      text-align: center;
+      @media screen and (min-width: 0px) and (max-width: 767px) {
         width: 49%;
+        &.team-avatar {
+          width: 33% !important;
+        }
+      }    
+      &.team-avatar {
+        width: 20%;
       }
-
       p {
+        flex: 1;
         font-weight: bold;
         margin: 0px 0px 5px 0px;
+        min-width: 100%;
       }
 
       img {
+        flex: 1;
         border-radius: 50%;
         border: 2px solid #faf4f1;
         height: 120px;
@@ -52,6 +69,8 @@ body.team {
         }
       }
       .social {
+        flex: 1;
+        min-width: 100%;
         margin: 0 auto !important;
 
         > li {
@@ -71,9 +90,6 @@ body.team {
     }
 
     &.contributors {
-      li {
-        width: 19%;
-      }
       .avatar {
         position: relative;
       }

@@ -68,7 +68,7 @@ responsive: true
 
   <ul class="contributors headshots">
     <% subteams.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow" class="avatar" >
           <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
         </a>
@@ -113,7 +113,7 @@ responsive: true
 
   <ul class="contributors headshots">
     <% subteams.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow" class="avatar" aria-label="<%= user.name %>">
           <img src="/images/team/<%= user.image %>" role="presentation" alt="">
         </a>
@@ -159,7 +159,7 @@ responsive: true
 
   <ul class="contributors headshots">
     <% subteams.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow" class="avatar">
           <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
         </a>
@@ -197,7 +197,7 @@ responsive: true
 
   <ul class="headshots">
     <% alumni.each do |user| %>
-      <li>
+      <li class="team-avatar">
         <a href="<%= user.github %>" rel="nofollow">
           <img class="alumni" src="/images/team/<%= user.image %>" alt="<%= user.name %>" />
         </a>
