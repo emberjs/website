@@ -43,13 +43,11 @@ h1 {
 }
 
 h2 {
-	margin-top: 1.25em; 
-  color: $orange-darkest;
+	color: $orange-darkest;
   font-size: 1.75em;
   font-weight: bold; 
   line-height: 1;
-  margin-bottom: 0.5em;  
-  margin: 2em 0 0.2em 0;
+  margin: 2em 0 0.5em 0;
   @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
     text-align: center;
   }
