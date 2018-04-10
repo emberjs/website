@@ -59,7 +59,7 @@
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff;
     margin: 0 auto;
     max-width: 100%;
-    padding-top: 19px;
+    // padding-top: 19px;
     width: 940px;
 
     a:hover {
@@ -114,6 +114,9 @@
       .bx-window {
         border-bottom: 1px solid #d1d1d1;
         height: 124px;
+        .user.pager {
+          margin: 11px 0 !important;
+        }
       }
 
       .bx-pager {
