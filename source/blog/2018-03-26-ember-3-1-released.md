@@ -246,12 +246,13 @@ For more details on changes in Ember.js 3.1, please review the
 
 ### Upcoming Changes in Ember.js 3.2
 
-Ember.js 3.2 will introduce two new features:
+#### New Feature(s)
 
-- TODO
-- TODO
+Ember.js 3.2 will introduce one new feature:
 
-### Deprecations in Ember.js 3.2
+1. Enabled block `let` handlebars helper by default - [emberjs/rfcs#286](https://github.com/emberjs/rfcs/blob/master/text/0286-block-let-template-helper.md)
+
+#### Deprecation(s)
 
 **Three** new deprecations are introduced in Ember.js 3.2:
 
@@ -272,9 +273,11 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 ### Changes in Ember Data 3.1
 
+#### New Feature(s)
+
 [#5273](https://github.com/emberjs/data/pull/5273) client-side-delete semantics `unloadRecord`
 
-### Deprecations in Ember Data 3.1
+#### Deprecation(s)
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
