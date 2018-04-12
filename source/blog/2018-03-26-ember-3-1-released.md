@@ -416,31 +416,21 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
   - compile all addons at once optimization [#7650](https://github.com/ember-cli/ember-cli/pull/7650).
 - More comprehensive detect if ember-cli is being run within CI or not. [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see https://github.com/watson/ci-info/.
 - Module Unification Continues...
-  - [#7658](https://github.com/ember-cli/ember-cli/pull/7658) Module Unification Addon blueprint
-  - [#7490](https://github.com/ember-cli/ember-cli/pull/7490) Module Unification Addons
-  - [#7660](https://github.com/ember-cli/ember-cli/pull/7660) improve logic for if addon is module-unification
-  - [#7667](https://github.com/ember-cli/ember-cli/pull/7667) MU addons must generate a MU dummy app
-  - [#7678](https://github.com/ember-cli/ember-cli/pull/7678) Use a recent release of Ember canary for MU
+  - Module Unification Addon blueprint [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658).
+  - Module Unification Addons [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490).
+  - Improve logic for if addon is module-unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660).
+  - MU addons must generate a MU dummy app [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667).
+  - Use a recent release of Ember canary for MU [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
 
 ### Deprecations in Ember CLI 3.2
 
-- [#7676](https://github.com/ember-cli/ember-cli/pull/7676) Deprecate ember-cli-babel 5.x 
-
-Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and will be dropped soon.
+- Deprecate ember-cli-babel 5.x [(#7676)](https://github.com/ember-cli/ember-cli/pull/7676). Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and will be dropped soon.
 
 For more details on the changes in Ember CLI 3.2.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.2.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0-beta.1).
 
-Thank you to 
-[@Turbo87](https://github.com/Turbo87), 
-[@cibernox](https://github.com/cibernox), 
-[@iezer](https://github.com/iezer)
-[@kellyselden](https://github.com/kellyselden), 
-[@raytiley](https://github.com/raytiley) & 
-[@t-sauer](https://github.com/t-sauer)
-[@thetimothyp](https://github.com/thetimothyp), 
-[@GavinJoyce](https://github.com/GavinJoyce)
-for your incredible work on ember-cli! 
+Thank you to [@GavinJoyce](https://github.com/GavinJoyce), [@Turbo87](https://github.com/Turbo87), [@cibernox](https://github.com/cibernox), [@iezer](https://github.com/iezer), [@kellyselden](https://github.com/kellyselden), [@raytiley](https://github.com/raytiley), [@t-sauer](https://github.com/t-sauer), and [@thetimothyp](https://github.com/thetimothyp)
+for your incredible work on ember-cli!
 
 ## Thank You!
 
