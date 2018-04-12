@@ -394,8 +394,7 @@ You can preview those changes for [applications](https://github.com/ember-cli/em
 
 - Updates to blueprints & addons- replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
 - Yarn related changes: 
-  - [#7492](https://github.com/ember-cli/ember-cli/pull/7492) Use yarn instead of npm when part of a yarn workspace root.
-  - `yarn.lock` file detection improved
+  - `yarn.lock` file detection improved - Use yarn instead of npm when part of a yarn workspace root [(#7492)](https://github.com/ember-cli/ember-cli/pull/7492).
 - Ability to install optional dependencies when creating a new project [(#7573)](https://github.com/ember-cli/ember-cli/pull/7573).
 - Glimmer blueprint fixes:
   - Added feature flag to `project.isModuleUnification` [(#7586)](https://github.com/ember-cli/ember-cli/pull/7586).
@@ -409,27 +408,19 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Upcoming Changes in Ember CLI 3.2
 
-- [#7605](https://github.com/ember-cli/ember-cli/pull/7605) blueprints/app: Add `qunit-dom` dependency by default 
-
-<!-- in beta qunit-dom is a big deal, needs maybe an example and definitely links to docs etc. -->
-Qunit-Dom - `qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
-
-- [#7501](https://github.com/ember-cli/ember-cli/pull/7501) add delayed transpilation 
-- [#7650](https://github.com/ember-cli/ember-cli/pull/7650) compile all addons at once optimization 
-
-Experiments with more efficient transpilation
-<!-- there is probably something to say about the transpilation improvements -->
-
-- [#7637](https://github.com/ember-cli/ember-cli/pull/7637) More comprehensive detect if ember-cli is being run within CI or not.
-
-see https://github.com/watson/ci-info/
-
-- [#7658](https://github.com/ember-cli/ember-cli/pull/7658) Module Unification Addon blueprint
-- [#7490](https://github.com/ember-cli/ember-cli/pull/7490) Module Unification Addons
-- [#7660](https://github.com/ember-cli/ember-cli/pull/7660) improve logic for if addon is module-unification
-- [#7667](https://github.com/ember-cli/ember-cli/pull/7667) MU addons must generate a MU dummy app
-- [#7678](https://github.com/ember-cli/ember-cli/pull/7678) Use a recent release of Ember canary for MU
-
+- Qunit-dom <!-- in beta qunit-dom is a big deal, needs maybe an example and definitely links to docs etc. -->
+  - `qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
+  - Added `qunit-dom` dependency by default for blueprints/addons [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
+- Experiments with more efficient transpilation <!-- there is probably something to say about the transpilation improvements -->
+  - add delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501).
+  - compile all addons at once optimization [#7650](https://github.com/ember-cli/ember-cli/pull/7650).
+- More comprehensive detect if ember-cli is being run within CI or not. [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see https://github.com/watson/ci-info/.
+- Module Unification Continues...
+  - [#7658](https://github.com/ember-cli/ember-cli/pull/7658) Module Unification Addon blueprint
+  - [#7490](https://github.com/ember-cli/ember-cli/pull/7490) Module Unification Addons
+  - [#7660](https://github.com/ember-cli/ember-cli/pull/7660) improve logic for if addon is module-unification
+  - [#7667](https://github.com/ember-cli/ember-cli/pull/7667) MU addons must generate a MU dummy app
+  - [#7678](https://github.com/ember-cli/ember-cli/pull/7678) Use a recent release of Ember canary for MU
 
 ### Deprecations in Ember CLI 3.2
 
