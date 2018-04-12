@@ -392,11 +392,11 @@ You can preview those changes for [applications](https://github.com/ember-cli/em
 
 #### New Features
 
-- Updates to blueprints & addons- replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
-- Yarn related changes: 
+1. Updates to blueprints & addons- replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
+2. Yarn related changes: 
   - `yarn.lock` file detection improved - Use yarn instead of npm when part of a yarn workspace root [(#7492)](https://github.com/ember-cli/ember-cli/pull/7492).
-- Ability to install optional dependencies when creating a new project [(#7573)](https://github.com/ember-cli/ember-cli/pull/7573).
-- Glimmer blueprint fixes:
+3. Ability to install optional dependencies when creating a new project [(#7573)](https://github.com/ember-cli/ember-cli/pull/7573).
+4. Glimmer blueprint fixes:
   - Added feature flag to `project.isModuleUnification` [(#7586)](https://github.com/ember-cli/ember-cli/pull/7586).
   - Added `project.isModuleUnification()` [(#7541)](https://github.com/ember-cli/ember-cli/pull/7541).
 
