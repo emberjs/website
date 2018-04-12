@@ -408,14 +408,14 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Upcoming Changes in Ember CLI 3.2
 
-- Qunit-dom <!-- in beta qunit-dom is a big deal, needs maybe an example and definitely links to docs etc. -->
+1. Qunit-dom
   - `qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
   - Added `qunit-dom` dependency by default for blueprints/addons [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
-- Experiments with more efficient transpilation <!-- there is probably something to say about the transpilation improvements -->
+2. Experiments with more efficient transpilation
   - add delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501).
   - compile all addons at once optimization [#7650](https://github.com/ember-cli/ember-cli/pull/7650).
-- More comprehensive detect if ember-cli is being run within CI or not. [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see https://github.com/watson/ci-info/.
-- Module Unification Continues...
+3. More comprehensive detect if ember-cli is being run within CI or not. [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see https://github.com/watson/ci-info/.
+4. Module Unification Continues...
   - Module Unification Addon blueprint [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658).
   - Module Unification Addons [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490).
   - Improve logic for if addon is module-unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660).
