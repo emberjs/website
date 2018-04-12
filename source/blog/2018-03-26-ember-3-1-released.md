@@ -246,13 +246,13 @@ For more details on changes in Ember.js 3.1, please review the
 
 ### Upcoming Changes in Ember.js 3.2
 
-#### New Feature(s)
+#### New Features
 
 Ember.js 3.2 will introduce one new feature:
 
 1. Enabled block `let` handlebars helper by default - [emberjs/rfcs#286](https://github.com/emberjs/rfcs/blob/master/text/0286-block-let-template-helper.md)
 
-#### Deprecation(s)
+#### Deprecations
 
 **Three** new deprecations are introduced in Ember.js 3.2:
 
@@ -273,11 +273,11 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 ### Changes in Ember Data 3.1
 
-#### New Feature(s)
+#### New Features
 
 [#5273](https://github.com/emberjs/data/pull/5273) client-side-delete semantics `unloadRecord`
 
-#### Deprecation(s)
+#### Deprecations
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
@@ -370,40 +370,38 @@ Ember CLI is the command line interface for managing and packaging Ember.js appl
 
 ### Upgrading Ember CLI
 
-You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade your projects using `yarn` run:
+You may upgrade Ember CLI separately from Ember.js and Ember Data! You can do this either with yarn or npm. 
+
+To upgrade your projects using `yarn`, run:
 
 ```bash
 yarn upgrade ember-cli
 ```
 
-To upgrade your projects using `npm` run:
+To upgrade your projects using `npm`, run:
 
 ```bash
 npm install --save-dev ember-cli
 ```
 
-After running the upgrade command run `ember init` inside of the project directory to apply the blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.0.0...v3.1.0) and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.0.0...v3.1.0).
+After running the upgrade command, run `ember init` inside of the project directory to apply the blueprint changes.
+
+You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.0.0...v3.1.0) and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.0.0...v3.1.0).
 
 ### Changes in Ember CLI 3.1
 
-- [#7601](https://github.com/ember-cli/ember-cli/pull/7601) blueprints/addon: Replace `test` with `test:all` [@Turbo87](https://github.com/Turbo87)
+#### New Features
 
-`test` will run `ember test` now (like in apps), `test:all` will use `ember-try` to run tests in all configured scenarios
+- Updates to blueprints & addons- replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
+- Yarn related changes: 
+  - [#7492](https://github.com/ember-cli/ember-cli/pull/7492) Use yarn instead of npm when part of a yarn workspace root.
+  - `yarn.lock` file detection improved
+- Ability to install optional dependencies when creating a new project [(#7573)](https://github.com/ember-cli/ember-cli/pull/7573).
+- Glimmer blueprint fixes:
+  - Added feature flag to `project.isModuleUnification` [(#7586)](https://github.com/ember-cli/ember-cli/pull/7586).
+  - Added `project.isModuleUnification()` [(#7541)](https://github.com/ember-cli/ember-cli/pull/7541).
 
-- [#7492](https://github.com/ember-cli/ember-cli/pull/7492) Use yarn instead of npm when part of a yarn workspace root [@thetimothyp](https://github.com/thetimothyp)
-
-`yarn.lock` file detection improved
-
-- [#7573](https://github.com/ember-cli/ember-cli/pull/7573) Install optional dependencies when creating a new project [@t-sauer](https://github.com/t-sauer)
-
-Fixes issues with the Glimmer blueprints
-
-- [#7586](https://github.com/ember-cli/ember-cli/pull/7586) add feature flag to project.isModuleUnification [@GavinJoyce](https://github.com/GavinJoyce)
-- [#7541](https://github.com/ember-cli/ember-cli/pull/7541) Add `project.isModuleUnification()` [@GavinJoyce](https://github.com/GavinJoyce)
-
-Module Unification continues...
-
-### Deprecations in Ember CLI 3.1
+#### Deprecations
 
 No new deprecations are introduced in Ember CLI 3.1:
 
@@ -411,35 +409,47 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Upcoming Changes in Ember CLI 3.2
 
-- [#7605](https://github.com/ember-cli/ember-cli/pull/7605) blueprints/app: Add `qunit-dom` dependency by default [@Turbo87](https://github.com/Turbo87)
+- [#7605](https://github.com/ember-cli/ember-cli/pull/7605) blueprints/app: Add `qunit-dom` dependency by default 
 
-`qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
+<!-- in beta qunit-dom is a big deal, needs maybe an example and definitely links to docs etc. -->
+Qunit-Dom - `qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
 
-- [#7501](https://github.com/ember-cli/ember-cli/pull/7501) add delayed transpilation [@kellyselden](https://github.com/kellyselden)
-- [#7650](https://github.com/ember-cli/ember-cli/pull/7650) compile all addons at once optimization [@kellyselden](https://github.com/kellyselden)
+- [#7501](https://github.com/ember-cli/ember-cli/pull/7501) add delayed transpilation 
+- [#7650](https://github.com/ember-cli/ember-cli/pull/7650) compile all addons at once optimization 
 
-experiments with more efficient transpilation
+Experiments with more efficient transpilation
+<!-- there is probably something to say about the transpilation improvements -->
 
-- [#7637](https://github.com/ember-cli/ember-cli/pull/7637) More comprehensive detect if ember-cli is being run within CI or not. [@ember-cli](https://github.com/ember-cli)
+- [#7637](https://github.com/ember-cli/ember-cli/pull/7637) More comprehensive detect if ember-cli is being run within CI or not.
 
 see https://github.com/watson/ci-info/
 
-- [#7658](https://github.com/ember-cli/ember-cli/pull/7658) Module Unification Addon blueprint [@cibernox](https://github.com/cibernox)
-- [#7490](https://github.com/ember-cli/ember-cli/pull/7490) Module Unification Addons [@ember-cli](https://github.com/ember-cli)
-- [#7660](https://github.com/ember-cli/ember-cli/pull/7660) improve logic for if addon is module-unification [@iezer](https://github.com/iezer)
-- [#7667](https://github.com/ember-cli/ember-cli/pull/7667) MU addons must generate a MU dummy app [@cibernox](https://github.com/cibernox)
-- [#7678](https://github.com/ember-cli/ember-cli/pull/7678) Use a recent release of Ember canary for MU [@ember-cli](https://github.com/ember-cli)
+- [#7658](https://github.com/ember-cli/ember-cli/pull/7658) Module Unification Addon blueprint
+- [#7490](https://github.com/ember-cli/ember-cli/pull/7490) Module Unification Addons
+- [#7660](https://github.com/ember-cli/ember-cli/pull/7660) improve logic for if addon is module-unification
+- [#7667](https://github.com/ember-cli/ember-cli/pull/7667) MU addons must generate a MU dummy app
+- [#7678](https://github.com/ember-cli/ember-cli/pull/7678) Use a recent release of Ember canary for MU
 
-Module Unification continues...
 
 ### Deprecations in Ember CLI 3.2
 
-- [#7676](https://github.com/ember-cli/ember-cli/pull/7676) Deprecate ember-cli-babel 5.x [@raytiley](https://github.com/raytiley)
+- [#7676](https://github.com/ember-cli/ember-cli/pull/7676) Deprecate ember-cli-babel 5.x 
 
 Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and will be dropped soon.
 
 For more details on the changes in Ember CLI 3.2.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.2.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0-beta.1).
+
+Thank you to 
+[@Turbo87](https://github.com/Turbo87), 
+[@cibernox](https://github.com/cibernox), 
+[@iezer](https://github.com/iezer)
+[@kellyselden](https://github.com/kellyselden), 
+[@raytiley](https://github.com/raytiley) & 
+[@t-sauer](https://github.com/t-sauer)
+[@thetimothyp](https://github.com/thetimothyp), 
+[@GavinJoyce](https://github.com/GavinJoyce)
+for your incredible work on ember-cli! 
 
 ## Thank You!
 
