@@ -390,19 +390,19 @@ You can preview those changes for [applications](https://github.com/ember-cli/em
 
 ### Changes in Ember CLI 3.1
 
-#### New Features
+#### `ember test:all`
 
-1. Updates to blueprints and addons–replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
-2. Yarn related changes: 
-  - `yarn.lock` file detection improved - Use yarn instead of npm when part of a yarn workspace root [(#7492)](https://github.com/ember-cli/ember-cli/pull/7492).
-3. Ability to install optional dependencies when creating a new project [(#7573)](https://github.com/ember-cli/ember-cli/pull/7573).
-4. Glimmer blueprint fixes:
-  - Added feature flag to `project.isModuleUnification` [(#7586)](https://github.com/ember-cli/ember-cli/pull/7586).
-  - Added `project.isModuleUnification()` [(#7541)](https://github.com/ember-cli/ember-cli/pull/7541).
+Previously, `npm test` would run all configured scenarios of `ember-try`. This was confusing due to `npm test` and `ember test` having different behaviors, as well as `npm test` doing different things depending on whether it was being run by an app or an addon. The fact that the command would also run several hard to cancel processes for the `ember-try` scenarios also worsened the developer experience.
+
+To address this, `npm test` was changed to run `ember test`, and a new `npm test:all` was introduced with the old behavior of running `ember-try` scenarios.
+
+#### Yarn lock file detection
+
+Ember CLI will now correctly detect if the project is part of a Yarn workspace root, and adequately use Yarn instead of npm.
 
 #### Deprecations
 
-No new deprecations are introduced in Ember CLI 3.1:
+No new deprecations are introduced in Ember CLI 3.1.
 
 For more details on the changes in Ember CLI 3.1 and detailed upgrade instructions, please review the [Ember CLI  3.1.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.1.0).
 
@@ -424,7 +424,9 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Deprecations in Ember CLI 3.2
 
-- Deprecate ember-cli-babel 5.x [(#7676)](https://github.com/ember-cli/ember-cli/pull/7676). Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and will be dropped soon.
+#### ember-cli-babel 5
+
+This release of Ember CLI [deprecates `ember-cli-babel` 5.x](https://github.com/ember-cli/ember-cli/pull/7676). Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and is expected to be dropped soon.
 
 For more details on the changes in Ember CLI 3.2.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.2.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0-beta.1).
