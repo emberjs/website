@@ -492,16 +492,6 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/7/5/a/thumb_102061882.jpeg
     - organizer: Jordane R.
       profileImage: http://photos4.meetupstatic.com/photos/member/a/f/c/0/thumb_222224992.jpeg
-  - location: Madrid, Spain
-    url: http://www.meetup.com/Ember-js-Madrid/
-    image: 24madrid.png
-    lat: 40.4165
-    lng: -3.70256
-    organizers:
-    - organizer: Laura Paredes
-      profileImage: http://photos4.meetupstatic.com/photos/member/a/1/d/8/thumb_147281432.jpeg
-    - organizer: Sergio Arbeo
-      profileImage: http://photos3.meetupstatic.com/photos/member/9/9/f/4/thumb_134019412.jpeg
   - location: Munich, Germany
     url: http://www.meetup.com/Ember-js-Munich/
     image: 12munich.png
