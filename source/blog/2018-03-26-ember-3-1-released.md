@@ -412,16 +412,16 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 **Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605). 
 
-This is, to put it quite simply, totally awesome. It means that this code: 
+This is, to put it quite simply, totally awesome. It means that this code:
 
 ```js
-assert.equal(this.element.querySelector('.title').textContent.trim(), 'Hello World!');
+assert.equal(document.querySelector('.title').textContent.trim(), 'Hello World!');
 ```
 
-becomes this: 
+becomes this:
 
 ```js
-assert.equal(find('.title').textContent.trim(), 'Hello World!');
+assert.dom('.title').hasText('Hello World!');
 ```
 
 See what I mean? Totally awesome. <3
