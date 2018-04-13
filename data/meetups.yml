@@ -240,17 +240,6 @@ locations:
       profileImage: http://photos1.meetupstatic.com/photos/member/9/1/a/c/thumb_107077292.jpeg
     - organizer: Kait Olson
       profileImage: http://photos2.meetupstatic.com/photos/member/3/4/7/8/thumb_163753432.jpeg
-  - location: Pittsburgh, PA
-    url: http://www.meetup.com/Ember-js-Pittsburgh/
-    lat: 40.44062479999999
-    lng: -79.9958864
-    organizers:
-    - organizer: Craig Teegarden
-      profileImage: http://photos1.meetupstatic.com/photos/member/c/7/8/0/thumb_167211072.jpeg
-    - organizer: Steve Cotter
-      profileImage: http://photos3.meetupstatic.com/photos/member/9/b/a/c/thumb_167979852.jpeg
-    - organizer: Steve McCarthy
-      profileImage: http://photos4.meetupstatic.com/photos/member/d/f/a/4/thumb_126537252.jpeg
   - location: Denver, CO
     url: http://www.meetup.com/Ember-js-Denver/
     lat: 39.7384357
@@ -614,7 +603,7 @@ locations:
     - organizer: Lauri Jutila
       profileImage: http://photos2.meetupstatic.com/photos/member/8/3/6/0/highres_246093632.jpeg
   - location: Bielsko-Biala, Poland
-    url: https://www.meetup.com/Ember-js-BB/    
+    url: https://www.meetup.com/Ember-js-BB/
     lat: 49.818163
     lng: 19.0439223
     organizers:
@@ -623,7 +612,7 @@ locations:
     - organizer: Maciej Kwaśniak
       profileImage: https://secure.meetupstatic.com/photos/member/8/8/8/3/member_266374947.jpeg
     - organizer: Dawid Pośliński
-      profileImage: https://secure.meetupstatic.com/photos/member/7/f/9/1/member_267332657.jpeg   
+      profileImage: https://secure.meetupstatic.com/photos/member/7/f/9/1/member_267332657.jpeg
     - organizer: Michał Staśkiewicz
       profileImage: https://secure.meetupstatic.com/photos/member/b/9/8/0/member_267407488.jpeg
 - area: Asia
