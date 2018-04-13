@@ -410,15 +410,25 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 #### New Features
 
-**Qunit Dom** - The `qunit-dom` dependency will be added by default to all apps and addons; opt out by removing it from your package.json file. See https://github.com/simplabs/qunit-dom-codemod to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605). 
+**Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605). 
 
-**Experiments with more efficient transpilation** - Until now, addons were responsible for compiling their own JS/HBS/CSS and returning AMD/CSS. Now they return the raw code, and the app uses its own processors (babel, htmlbars) to compile it. This is required to do proper tree-shaking and code-splitting. Delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501) and all-at-once addon optimization after compilation [(#7650)](https://github.com/ember-cli/ember-cli/pull/7650) have been added. Additionally, more comprehensive methods to detect if ember-cli is being run within CI or not have also been added [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see https://github.com/watson/ci-info/.
+This is, to put it quite simply, totally awesome. It means that this code: 
 
-**Module Unification Continues** - You can now generate an addon using the module unification layout with the command `MODULE_UNIFICATION=true ember addon my-addon` or `MODULE_UNIFICATION=true ember addon my-addon --yarn` [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658).
-  - Module Unification Addons [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490).
-  - Improve logic for if addon is module-unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660).
-  - MU addons must generate a MU dummy app [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667).
-  - Use a recent release of Ember canary for MU [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).v
+```js
+assert.equal(this.element.querySelector('.title').textContent.trim(), 'Hello World!');
+```
+
+becomes this: 
+
+```js
+assert.equal(find('.title').textContent.trim(), 'Hello World!');
+```
+
+See what I mean? Totally awesome. <3
+
+**Experiments with more efficient transpilation** - Until now, addons were responsible for compiling their own JS/HBS/CSS and returning AMD/CSS. Now they return the raw code, and the app uses its own processors (babel, htmlbars) to compile it. This is required to do proper tree-shaking and code-splitting. Delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501) and all-at-once addon optimization after compilation [(#7650)](https://github.com/ember-cli/ember-cli/pull/7650) have been added. Additionally, more comprehensive methods to detect if ember-cli is being run within CI or not have also been added [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see [https://github.com/watson/ci-info/](https://github.com/watson/ci-info/).
+
+**Module Unification Continues** - You can now generate an addon using the Module Unification layout [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490)! Use the command `MODULE_UNIFICATION=true ember addon my-addon` to try it out [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658). We also improved the logic to support addons that use Module Unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660), added the blueprint for a dummy app to addons that use Module Unification [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667), and updated the version of Ember used in Module Unification [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
 
 #### Deprecations
 
