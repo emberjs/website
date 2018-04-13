@@ -1,6 +1,6 @@
 ---
 title: Ember 3.1 and 3.2 Beta Released
-author: Ricardo Mendes
+author: Melanie Sumner
 tags: Releases
 responsive: true
 ---
@@ -32,7 +32,7 @@ Ember 3.1 is a minor release containing several new features and bug fixes. It i
 
 #### ES5 Getters for Computed Properties (1 of 5)
 
-Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's `defineProperty`. In recent years native JavaScript setter and getter implementations have become fast and mature.
+Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's `defineProperty`. In recent years, native JavaScript setter and getter implementations have become fast and mature.
 
 Starting in Ember 3.1 (and described in [RFC281](https://github.com/emberjs/rfcs/blob/master/text/0281-es5-getters.md)) you are now able to read the value of a computed property using a native ES5 getter. For example, this component which uses computed properties:
 
@@ -80,7 +80,7 @@ to `this.a.b.c` when `b` is `undefined` would instead raise an exception.
 - If your object is using `unknownProperty` you must continue to use `get`. Using an ES5 getter on an object with `unknownProperty` will cause an assertion failure in development.
 - Ember Data returns promise proxy objects when you read an async relationship and from other API. Ember proxy objects, including promise proxies, still require that you call `get` to read values.
 
-With these caveats in mind, how should you know if you can convert a `get` call to a native getter? If you have code where `get` is called on `this` you likely can convert it. If you have a `get` on another object, `anything.get('foo')`, you should exercise caution when converting to a native getter.
+With these caveats in mind, how should you know if you can convert a `get` call to a native getter? If you have code where `get` is called on `this`, you likely can convert it. If you have a `get` on another object, `anything.get('foo')`, you should exercise caution when converting to a native getter.
 
 The community-provided [es5-getter-ember-codemod](https://github.com/rondale-sc/es5-getter-ember-codemod) is a great way to convert your existing codebase to ES5 getters. It follows the conservative guidelines and only converts `this.get`. Note that it cannot make all possible conversions to the new API, nor can it ensure 100% of the conversions it makes are correct. If your app has poor test coverage or you lack any confidence in your ability to make regression checks, a manual and gradual conversion process may be more appropriate.
 
@@ -281,7 +281,7 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
-* `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, ember-data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` will be deprecated and removed from Ember "soon" [(https://github.com/emberjs/rfcs/pull/237)](https://github.com/emberjs/rfcs/pull/237) and we would like to confirm that Ember Data will work without deprecation before and after that happens.`Ember.Map` differs from native `Map` in a few ways:
+* `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, Ember Data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` will be deprecated and removed from Ember "soon" [(https://github.com/emberjs/rfcs/pull/237)](https://github.com/emberjs/rfcs/pull/237) and we would like to confirm that Ember Data will work without deprecation before and after that happens.`Ember.Map` differs from native `Map` in a few ways:
     * `Ember.Map` has custom `copy` and `isEmpty` methods which are not present in native `Map`
     * `Ember.Map` adds a static `create` method (which simply instantiates itself with `new Ember.Map()`)
     * `Ember.Map` does not accept constructor arguments
@@ -334,7 +334,7 @@ During the Ember Data 3.2 beta cycle, the Ember Data team is planning on releasi
 
 #### Feature Flag `ds-pushpayload-return` (4 of 4)
 
-If you rely on the `ds-pushpayload-return` feature flag you can use the following pattern to manually serialize the API response and push the record into the store.
+If you rely on the `ds-pushpayload-return` feature flag, you can use the following pattern to manually serialize the API response and push the record into the store.
 
 ```js
 export function pushPayload(store, modelName, rawPayload) {
@@ -392,7 +392,7 @@ You can preview those changes for [applications](https://github.com/ember-cli/em
 
 #### New Features
 
-1. Updates to blueprints & addons- replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
+1. Updates to blueprints and addons–replace `test` with `test:all`. The command `test` will now run `ember test` (like it does in apps); the `test:all` command will use `ember-try` to run tests in all configured scenarios [(#7601)](https://github.com/ember-cli/ember-cli/pull/7601).
 2. Yarn related changes: 
   - `yarn.lock` file detection improved - Use yarn instead of npm when part of a yarn workspace root [(#7492)](https://github.com/ember-cli/ember-cli/pull/7492).
 3. Ability to install optional dependencies when creating a new project [(#7573)](https://github.com/ember-cli/ember-cli/pull/7573).
@@ -408,7 +408,7 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Upcoming Changes in Ember CLI 3.2
 
-1. Qunit-dom
+1. qunit-dom
   - `qunit-dom` will be added by default to all apps and addons, if you don't (plan to) use it, you don't have to add it. https://github.com/simplabs/qunit-dom-codemod exists to ease migration.
   - Added `qunit-dom` dependency by default for blueprints/addons [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
 2. Experiments with more efficient transpilation
