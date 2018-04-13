@@ -30,7 +30,7 @@ Ember.js is the core framework for building ambitious web applications.
 
 Ember 3.1 is a minor release containing several new features and bug fixes. It includes a bump of Glimmer VM, Ember's rendering implementation, to version 0.30.5.
 
-#### ES5 Getters for Computed Properties (1 of 5)
+#### ES5 Getters for Computed Properties (1 of 3)
 
 Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's `defineProperty`. In recent years, native JavaScript setter and getter implementations have become fast and mature.
 
@@ -86,7 +86,7 @@ The community-provided [es5-getter-ember-codemod](https://github.com/rondale-sc/
 
 Thanks to [Chris Garrett](https://twitter.com/pzuraq) for pushing forward work on ES5 getters with support from [Godfrey Chan](https://twitter.com/chancancode), [Robert Jackson](https://twitter.com/rwjblue/), and [Kris Selden](https://twitter.com/krisselden)). Thanks to [Jonathan Jackson](https://twitter.com/rondale_sc/) for his work on the codemod.
 
-#### Introducing Optional Features (2 of 5)
+#### Introducing Optional Features (2 of 3)
 
 Because major releases of Ember are not supposed to make breaking changes without prior deprecation, the project has been extremely conservative about changing behaviors that don't have a clear deprecation path. As a result, we've had several quirks of the framework linger into the 3.x series.
 
@@ -102,7 +102,7 @@ ember install @ember/optional-features
 
 Thanks to [Godfrey Chan](https://twitter.com/chancancode) and [Robert Jackson](https://twitter.com/rwjblue/) for their work on the optional features system.
 
-#### New Optional Feature: Application Template Wrapper (3 of 5) 
+**New Optional Feature: Application Template Wrapper**
 
 Ember applications have long created a wrapping `div` around their rendered content: `<div class="ember-view">`. With ember-optional-features, this functionality can now be disabled:
 
@@ -116,7 +116,7 @@ Additionally, enabling this feature will prompt you to optionally run a codemod 
 
 Although disabling this feature will eventually be the default for Ember, leaving the feature enabled is not deprecated in this release. You can read more details about this optional feature and the motivations for introducing it in [RFC #280](https://github.com/emberjs/rfcs/blob/master/text/0280-remove-application-wrapper.md).
 
-#### New Optional Feature: Template-only Glimmer Components (4 of 5)
+**New Optional Feature: Template-only Glimmer Components**
 
 Ember components implicitly create an element in the DOM where they are invoked, and the contents of their templates are then treated as "innerHTML" inside that DOM element. For example, this component template:
 
@@ -180,7 +180,7 @@ However, enabling this feature will prompt you to optionally run a codemod which
 
 Although enabling this feature will eventually be the default for Ember, leaving the feature disabled is not deprecated in this release. You can read more details about this optional feature and the motivations for introducing it in [RFC #278](https://github.com/emberjs/rfcs/blob/master/text/0278-template-only-components.md).
 
-#### Positional Params Bug Fix (5 of 5)
+#### Positional Params Bug Fix (3 of 3)
 
 Ember introduced contextual components in Ember 2.3. Contextual components close over arguments and are intended to do so in a manner consistent with closures in JavaScript.
 
