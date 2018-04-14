@@ -1,7 +1,8 @@
 --- 
 title: Ember 1.0 Prerelease
 author: Peter Wagenet
-tags: Releases
+tags: Releases, 1, Prerelease, 2012, Router
+responsive: true
 ---
 
 We're pleased to announce the Ember 1.0 Prerelease. It's been a couple

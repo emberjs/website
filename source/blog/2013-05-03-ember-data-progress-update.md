@@ -1,7 +1,8 @@
 ---
 title: Ember Data Progress Update
 author: Tom Dale
-tags: Recent Posts
+tags: Recent Posts, JSON, JSON API, RESTAdapter, 2013, 1
+responsive: true
 ---
 
 Just over a month ago, we told you about our [plans for stabilizing Ember

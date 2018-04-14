@@ -1,7 +1,8 @@
 ---
 title: Stabilizing Ember Data
 author: Tom Dale & Yehuda Katz
-tags: Recent Posts
+tags: Recent Posts, Ember Data, 2013, Adapter, 1
+responsive: true
 ---
 
 Yesterday, we gave you an update on our progress making Ember.js easier

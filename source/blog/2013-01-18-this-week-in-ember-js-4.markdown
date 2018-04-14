@@ -1,8 +1,9 @@
 ---
 title: This Week in Ember
 date: 2013/01/18
-tags: Recent Posts
+tags: Recent Posts, EmberCamp, 2013, Roadmap, 1
 author: Tom Dale & Yehuda Katz
+responsive: true
 ---
 
 It's been a big month for Ember.js, and we're excited about the progress

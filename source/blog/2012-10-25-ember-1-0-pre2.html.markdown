@@ -1,7 +1,8 @@
 ---
 title: Ember 1.0 Prerelease 2
 author: Peter Wagenet
-tags: Releases
+tags: Releases, 2012, 1, Prerelease
+responsive: true
 ---
 
 Ember 1.0 Prerelease 2 is out now. This is mainly a bug fix release

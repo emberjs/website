@@ -1,7 +1,8 @@
 ---
 title: Ember 1.0 RC2
 author: Yehuda Katz
-tags: Releases
+tags: Releases, 1, Controllers, 2013
+responsive: true
 ---
 
 Today, we're releasing the second Release Candidate of Ember 1.0.

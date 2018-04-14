@@ -1,8 +1,9 @@
 ---
 title: This Week in Ember.js
 date: 2012/12/22
-tags: Recent Posts
+tags: Recent Posts, 2012, 1, Roadmap, JSONSerializer, Router, Handlebars
 author: Bradley Priest
+responsive: true
 ---
 
 Only a few more days left, I hope everyone's had a great 2012,

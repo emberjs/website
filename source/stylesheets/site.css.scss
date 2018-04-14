@@ -173,7 +173,8 @@ body {
       &.level-1 {
         text-transform: uppercase;
 
-        > a {
+        > a, .level-1-text {
+          font-weight: bold;
           display: block;
           color: #443331;
           border-top: 1px solid #d5ccc8;

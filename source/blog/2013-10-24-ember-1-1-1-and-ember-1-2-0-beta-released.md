@@ -1,7 +1,8 @@
 ---
 title: Ember 1.1.1 and 1.2 Beta Released
 author: Tom Dale
-tags: Releases
+tags: Releases, 1.1, 2013
+responsive: true
 ---
 
 Hot off the heels of our 1.0 release, we've got two new bundles of
