@@ -1,7 +1,7 @@
 ---
 title: Ember 3.1 and 3.2 Beta Released
 author: Melanie Sumner, Kenneth Larsen
-tags: Releases
+tags: Releases, 2018, 3, 3.1, 3.2
 responsive: true
 ---
 
