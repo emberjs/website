@@ -426,7 +426,7 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 This is, to put it quite simply, totally awesome. It means that this code:
 
 ```js
-assert.equal(document.querySelector('.title').textContent.trim(), 'Hello World!');
+assert.equal(this.element.querySelector('.title').textContent.trim(), 'Hello World!');
 ```
 
 becomes this:
