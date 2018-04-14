@@ -1,7 +1,8 @@
 ---
 title: "Compiling templates with Ember 1.10"
 author: "Robert Jackson"
-tags: Recent Posts
+tags: Recent Posts, 2015
+responsive: true
 ---
 
 As many of you know, Ember 1.10 will be the first version of Ember that uses [HTMLBars](https://github.com/tildeio/htmlbars) as its templating engine. With this change you may need to change the way you compile your templates.

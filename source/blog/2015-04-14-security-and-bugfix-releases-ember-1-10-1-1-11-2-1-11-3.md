@@ -1,7 +1,8 @@
 ---
 title: Security and Bugfix Releases - Ember 1.10.1, 1.11.2, 1.11.3
 author: Matthew Beale
-tags: Releases, Security
+tags: Releases, Security, 2015
+responsive: true
 ---
 
 Because developers trust Ember.js to handle sensitive customer data in

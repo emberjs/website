@@ -1,7 +1,8 @@
 ---
 title: Ember Data v1.0.0-beta.19.1 Released
 author: Stanley Stuart
-tags: Ember Data
+tags: Ember Data, 2015
+responsive: true
 ---
 
 Ember Data 19.1 contains fixes for a few regressions. Thanks to everyone

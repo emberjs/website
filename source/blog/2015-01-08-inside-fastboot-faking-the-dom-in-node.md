@@ -1,7 +1,8 @@
 ---
 title: "Inside FastBoot: Faking the DOM in Node"
 author: "Yehuda Katz & Tom Dale"
-tags: Recent Posts, Inside FastBoot
+tags: Recent Posts, Inside FastBoot, 2015
+responsive: true
 ---
 
 As we [announced in the inaugural blog post in our Inside FastBoot

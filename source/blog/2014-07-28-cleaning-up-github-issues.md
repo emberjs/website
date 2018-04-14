@@ -1,7 +1,8 @@
 ---
 title: Cleaning Up Github Issues
 author: Peter Wagenet
-tags: Recent Posts
+tags: Recent Posts, 2014
+responsive: true
 ---
 
 If you've been following along, the Ember issues tracker has grown to over 200 active issues. While this is better than some other large OSS projects, it's still too large for us on the core team to easily keep track of. There are also a number of issues that are over six months old and even a year or two old.

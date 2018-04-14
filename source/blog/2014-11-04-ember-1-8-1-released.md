@@ -1,7 +1,8 @@
 ---
 title: Ember.js 1.8.1 Released
 author: Matthew Beale
-tags: Releases
+tags: Releases, 2014, 1, 1.8
+responsive: true
 ---
 
 Today we are releasing Ember.js 1.8.1, a patch-level release of Ember that

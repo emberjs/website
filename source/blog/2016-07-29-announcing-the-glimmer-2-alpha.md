@@ -1,8 +1,8 @@
 ---
 title: Announcing The Glimmer 2 Alpha
-responsive: true
 author: Godfrey Chan
-tags: Releases
+tags: Releases, 2016, Announcement, Glimmer
+responsive: true
 ---
 
 In this year's [EmberConf keynote](https://www.youtube.com/watch?v=OInJBwS8VDQ&list=PL4eq2DPpyBblc8aQAd516-jGMdAhEeUiW),  Yehuda mentioned that we are working on a highly optimized rendering engine for Ember called Glimmer 2.

@@ -1,7 +1,8 @@
 ---
 title: Ember Data 2.2 and 2.3 Beta Released
 author: Brendan McLoughlin
-tags: Ember Data
+tags: Ember Data, 2015
+responsive: true
 ---
 
 Ember Data 2.2, a minor version release of Ember Data with bug fixes

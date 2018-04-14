@@ -1,8 +1,8 @@
 ---
 title: Ember.js 2.4-LTS, 2.5, and 2.6 Beta Released
-responsive: true
 author: Matthew Beale
-tags: Releases
+tags: Releases, 2016, 2, 2.4, 2.5, 2.6
+responsive: true
 ---
 
 Ember 2.4-LTS, the first Ember Long-Term Support release, lands today as Ember

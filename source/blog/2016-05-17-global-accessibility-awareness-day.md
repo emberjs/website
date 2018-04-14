@@ -3,7 +3,7 @@ title: Global Accessibility Awareness Day
 responsive: true
 author: Nathan Hammond, Matthew Beale
 guestPost: true
-tags: Recent Posts, Ember A11y
+tags: Recent Posts, Ember A11y, 2016
 ---
 
 May 19, 2016 marks the fifth annual **[Global Accessibility Awareness Day (GAAD)](http://www.globalaccessibilityawarenessday.org/)** and this year we're encouraging you, the Ember.js community, to participate. We want to make our framework, addons, and the applications we collectively build and maintain accessible to all users.

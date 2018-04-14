@@ -1,7 +1,8 @@
 ---
 title: Ember 1.6.1 Released
 author: Robert Jackson
-tags: Releases
+tags: Releases, 2014, 1, 1.6
+responsive: true
 ---
 
 Shortly after Ember 1.6.0 was released a regression was identified regarding custom error substates.

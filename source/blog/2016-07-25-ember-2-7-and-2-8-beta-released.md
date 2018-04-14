@@ -1,8 +1,8 @@
 ---
 title: Ember.js 2.7 and 2.8 Beta Released
-responsive: true
 author: Dan Gebhardt
-tags: Releases
+tags: Releases, 2016, 2.7, 2.8
+responsive: true
 ---
 
 Ember.js 2.7, a minor version release of Ember with backwards compatible

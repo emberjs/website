@@ -1,7 +1,8 @@
 ---
 title: Core Team Meeting Minutes - 2014/04/04
 author: Robert Jackson
-tags: Core Team Meeting Minutes
+tags: Core Team Meeting Minutes, 2014
+responsive: true
 ---
 
 Although most of our collaboration takes place on Github, IRC

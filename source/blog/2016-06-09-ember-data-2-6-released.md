@@ -2,7 +2,8 @@
 title: Ember Data 2.6 and 2.7 Beta Released
 responsive: true
 author: Brendan McLoughlin
-tags: Ember Data
+tags: Ember Data, 2016
+responsive: true
 ---
 
 Ember Data 2.6, a minor version release of Ember Data, is

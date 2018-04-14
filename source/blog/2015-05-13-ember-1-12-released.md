@@ -1,7 +1,8 @@
 ---
 title: Ember.js 1.12 and 1.13 Beta (Glimmer!) Released
 author: Yehuda Katz & Matthew Beale
-tags: Releases
+tags: Releases, 2015
+responsive: true
 ---
 
 We are please to announce the release of Ember.js 1.12 and the first beta in the 1.13 series.
