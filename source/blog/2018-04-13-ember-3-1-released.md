@@ -2,6 +2,7 @@
 title: Ember 3.1 and 3.2 Beta Released
 author: Melanie Sumner, Kenneth Larsen
 tags: Releases
+alias : "blog/2018/03/26/ember-3-1-released.html"
 responsive: true
 ---
 
@@ -381,7 +382,7 @@ Ember CLI is the command line interface for managing and packaging Ember.js appl
 
 ### Upgrading Ember CLI
 
-You may upgrade Ember CLI separately from Ember.js and Ember Data! You can do this either with yarn or npm. 
+You may upgrade Ember CLI separately from Ember.js and Ember Data! You can do this either with yarn or npm.
 
 To upgrade your projects using `yarn`, run:
 
@@ -421,7 +422,7 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 #### New Features
 
-**Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605). 
+**Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
 
 This is, to put it quite simply, totally awesome. It means that this code:
 
