@@ -268,7 +268,7 @@ You can read more about it in [RFC #286 - Block `let` template helper](https://g
 
 1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
 2. The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
-3. This next one typically won't affect most apps, but it might affect some addons. You'll need to replace directly assigned computed properties, and use `defineProperty` to define computed properties instead. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
+3. Update: replace directly assigned computed properties. Use `defineProperty` to define computed properties. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
 
 For more details on the upcoming changes in Ember.js 3.2, please review the
 [Ember.js 3.2.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0-beta.1).
@@ -291,7 +291,7 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
-* `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, Ember Data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` will be deprecated and removed from Ember "soon" [(https://github.com/emberjs/rfcs/pull/237)](https://github.com/emberjs/rfcs/pull/237) and we would like to confirm that Ember Data will work without deprecation before and after that happens.`Ember.Map` differs from native `Map` in a few ways:
+* `Ember.Map` was a private API provided by Ember (for quite some time). Unfortunately, Ember Data made `Ember.Map` part of its public API surface via documentation blocks. `Ember.Map` is [scheduled for deprecation](scheduled for deprecation), after we make sure that Ember Data will continue working after this feature is deprecated and removed.`Ember.Map` differs from native `Map` in a few ways:
     * `Ember.Map` has custom `copy` and `isEmpty` methods which are not present in native `Map`
     * `Ember.Map` adds a static `create` method (which simply instantiates itself with `new Ember.Map()`)
     * `Ember.Map` does not accept constructor arguments
@@ -303,7 +303,7 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
           * `copy`
           * `isEmpty`
 
-This is needed because `Map` requires instantiation with `new` and by default Babel transpilation will do `superConstructor.apply(this, arguments)` which throws an error with native `Map`. The desired code (if we lived in an "only native class" world) would be:
+This is needed because `Map` requires instantiation with `new`, and by default Babel transpilation will do `superConstructor.apply(this, arguments)` which throws an error with native `Map`. The desired code (if we lived in an "only native class" world) would be:
 
   ```js
   export default class MapWithDeprecations extends Map {
@@ -331,7 +331,8 @@ For more details on changes in Ember Data 3.1, please review the
 
 #### Lazy Relationship Payloads (1 of 4)
 
-[#5230](https://github.com/emberjs/data/pull/5230) [BUGFIX] enable lazy-relationship payloads to work with polymorphic relationships
+Due to [implementation details](https://github.com/emberjs/data/pull/5230) in the parsing of lazy relationships, polymorphic relationships were not supported, causing newly encountered polymorphic types to dereference previous payloads.
+This issue is now addressed.
 
 #### Ember Data Feature Flag Removal (2 of 4)
 
