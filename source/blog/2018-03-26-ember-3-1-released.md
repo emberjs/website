@@ -246,11 +246,21 @@ For more details on changes in Ember.js 3.1, please review the
 
 ### Upcoming Changes in Ember.js 3.2
 
-#### New Features
+#### let template helper
 
-Ember.js 3.2 will introduce one new feature:
+Ember.js 3.2 introduces a new feature, the block `let` template helper.
+This helper enables you to introduce bindings in your templates, without having to make them properties of the respective controller or component.
 
-1. Enabled block `let` handlebars helper by default - [emberjs/rfcs#286](https://github.com/emberjs/rfcs/blob/master/text/0286-block-let-template-helper.md)
+For example, imagine you want you need to pass the same hash of options to two different different components, you can now do the following:
+
+```hbs
+{{#let (hash theme="fairyfloss" indentation=4) as |options|}}
+  {{code-editor options=options}}
+  {{code-preview options=options}}
+{{/let}}
+```
+
+You can read more about it in [RFC #286 - Block `let` template helper](https://github.com/emberjs/rfcs/blob/master/text/0286-block-let-template-helper.md).
 
 #### Deprecations
 
