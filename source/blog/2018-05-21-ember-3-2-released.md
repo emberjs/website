@@ -47,7 +47,7 @@ Three new deprecations are introduces in Ember.js 3.2:
 
 1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. 
 
-In Microsoft Edge and IE11, uses of console beyond calling its methods may require more subtle changes than simply substituting console wherever Logger appears. In Edge and IE11, uses of console beyond calling its methods may need more subtle changes. It might not be enough simply substituting console wherever Logger  appears. In these browsers, they will behave as they do in other browsers when the development tools are open. 
+In Microsoft Edge and IE11, uses of console beyond calling its methods may require more subtle changes than simply substituting console wherever `Logger` appears. In Edge and IE11, uses of console beyond calling its methods may need more subtle changes. It might not be enough simply substituting console wherever `Logger`  appears. In these browsers, they will behave as they do in other browsers when the development tools are open. 
 
 But, when run  normally, calls to its methods must not be bound to anything other than  the console object. If not, you will receive an Invalid calling object exception. This is a known inconsistency with these browsers. 
 
@@ -98,8 +98,40 @@ if (console.debug) {
 
 If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will need to test for the existence of console before calling its methods. If you do much logging, you may find it convenient to define your own wrapper. Writing the wrapper as a service will provide for dependency injection by tests and perhaps even clients.
 
-* TODO
-* TODO
+2. The `Router#route` private API has been renamed to `Router#_route`. This is to avoid collisions with user-defined properties or methods.
+
+If you want access to the router, you should inject the router service into the route like this:
+
+```
+import Route from '@ember/routing/route';
+import { inject as service } from '@ember/service';
+
+export default Route.extend({
+  router: service()
+});
+```
+
+3. Use defineProperty to define computed properties. 
+
+Although uncommon, it is possible to assign computed properties directly to objects. This way they are implicitly computed from eg Ember.get. 
+
+Assigning computed properties directly is deprecated to support ES5 getter computed properties. You should replace these assignments with calls to defineProperty.
+
+For example, the following:
+
+```
+let object = {};
+object.key = Ember.computed(() => 'value');
+Ember.get(object, 'key') === 'value';
+```
+
+Should be changed to:
+
+```
+let object = {};
+Ember.defineProperty(object, 'key', Ember.computed(() => 'value'));
+Ember.get(object, 'key') === 'value';
+```
 
 For more details on changes in Ember.js 3.2, please review the
 [Ember.js 3.2.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0).
