@@ -47,7 +47,7 @@ Three new deprecations are introduces in Ember.js 3.2:
 
 1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. 
 
-In Microsoft Edge and IE11, uses of console beyond calling its methods may require more subtle changes than simply substituting console wherever `Logger` appears. In Edge and IE11, uses of console beyond calling its methods may need more subtle changes. It might not be enough simply substituting console wherever `Logger`  appears. In these browsers, they will behave as they do in other browsers when the development tools are open. 
+In Microsoft Edge and IE11, uses of console beyond calling its methods may require more subtle changes than simply substituting console wherever `Logger` appears. In these browsers, they will behave as they do in other browsers when the development tools are open. 
 
 But, when run  normally, calls to its methods must not be bound to anything other than  the console object. If not, you will receive an Invalid calling object exception. This is a known inconsistency with these browsers. 
 
