@@ -252,7 +252,7 @@ For more details on changes in Ember.js 3.1, please review the
 Ember.js 3.2 introduces a new feature, the block `let` template helper.
 This helper enables you to introduce bindings in your templates, without having to make them properties of the respective controller or component.
 
-For example, imagine you want you need to pass the same hash of options to two different different components, you can now do the following:
+For example, imagine you want or need to pass the same hash of options to two different different components, you can now do the following:
 
 ```hbs
 {{#let (hash theme="fairyfloss" indentation=4) as |options|}}
