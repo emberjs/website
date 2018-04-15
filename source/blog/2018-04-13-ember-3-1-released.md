@@ -200,7 +200,7 @@ In Ember 3.1 we've corrected the implementation to act like a proper closure. In
 For more information about this change see
 [emberjs/ember.js#15287](https://github.com/emberjs/ember.js/pull/15287).
 
-### Deprecations in Ember 3.1
+### Deprecations in Ember 3.1 (2)
 
 Deprecations are added to Ember.js when an API will be removed at a later date.
 
@@ -247,7 +247,9 @@ For more details on changes in Ember.js 3.1, please review the
 
 ### Upcoming Changes in Ember.js 3.2
 
-#### let template helper
+#### New Features (1)
+
+##### let template helper
 
 Ember.js 3.2 introduces a new feature, the block `let` template helper.
 This helper enables you to introduce bindings in your templates, without having to make them properties of the respective controller or component.
@@ -263,13 +265,21 @@ For example, imagine you want you need to pass the same hash of options to two d
 
 You can read more about it in [RFC #286 - Block `let` template helper](https://github.com/emberjs/rfcs/blob/master/text/0286-block-let-template-helper.md).
 
-#### Deprecations
+#### Deprecations (3)
 
 **Three** new deprecations are introduced in Ember.js 3.2:
 
-1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
-2. The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
-3. Update: replace directly assigned computed properties. Use `defineProperty` to define computed properties. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
+##### Ember.Logger
+
+Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
+
+##### Router#route
+
+The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
+
+##### defineProperty
+
+This next one typically won't affect most apps, but it might affect some addons. You'll need to replace directly assigned computed properties, and use `defineProperty` to define computed properties instead. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
 
 For more details on the upcoming changes in Ember.js 3.2, please review the
 [Ember.js 3.2.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0-beta.1).
@@ -284,11 +294,11 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 ### Changes in Ember Data 3.1
 
-#### New Features
+#### New Features (1)
 
 [#5273](https://github.com/emberjs/data/pull/5273) client-side-delete semantics `unloadRecord`
 
-#### Deprecations
+#### Deprecations (2)
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
@@ -402,17 +412,19 @@ You can preview those changes for [applications](https://github.com/ember-cli/em
 
 ### Changes in Ember CLI 3.1
 
-#### `ember test:all`
+#### New Features (2) 
+
+##### `ember test:all`
 
 Previously, `npm test` would run all configured scenarios of `ember-try`. This was confusing due to `npm test` and `ember test` having different behaviors, as well as `npm test` doing different things depending on whether it was being run by an app or an addon. The fact that the command would also run several hard to cancel processes for the `ember-try` scenarios also worsened the developer experience.
 
 To address this, `npm test` was changed to run `ember test`, and a new `npm test:all` was introduced with the old behavior of running `ember-try` scenarios.
 
-#### Yarn lock file detection
+##### Yarn lock file detection
 
 Ember CLI will now correctly detect if the project is part of a Yarn workspace root, and adequately use Yarn instead of npm.
 
-#### Deprecations
+#### Deprecations (0)
 
 No new deprecations are introduced in Ember CLI 3.1.
 
@@ -420,7 +432,7 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Upcoming Changes in Ember CLI 3.2
 
-#### New Features
+#### New Features (3)
 
 **Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
 
@@ -442,7 +454,7 @@ See what I mean? Totally awesome. <3
 
 **Module Unification (new file layout) Continues** - You can now generate an addon using the Module Unification layout [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490)! Use the command `MODULE_UNIFICATION=true ember addon my-addon` to try it out [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658). We also improved the logic to support addons that use Module Unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660), added the blueprint for a dummy app to addons that use Module Unification [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667), and updated the version of Ember used in Module Unification [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
 
-#### Deprecations
+#### Deprecations (1)
 
 #### ember-cli-babel 5
 
@@ -456,7 +468,4 @@ for your incredible work on ember-cli!
 
 ## Thank You!
 
-As a community-driven open-source project with an ambitious scope, each of
-these releases serve as a reminder that the Ember project would not have been
-possible without your continued support. We are extremely grateful to our
-contributors for their efforts.
+As a community-driven open-source project with an ambitious scope, each of these releases serve as a reminder that the Ember project would not have been possible without your  continued support. We are extremely grateful to our contributors for their efforts.
