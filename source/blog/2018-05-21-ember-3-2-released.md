@@ -43,7 +43,60 @@ Consider using the
 addon if you would like to upgrade your application without immediately addressing
 deprecations.
 
-Two new deprecations are introduces in Ember.js 3.2:
+Three new deprecations are introduces in Ember.js 3.2:
+
+1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. 
+
+In Microsoft Edge and IE11, uses of console beyond calling its methods may require more subtle changes than simply substituting console wherever Logger appears. In Edge and IE11, uses of console beyond calling its methods may need more subtle changes. It might not be enough simply substituting console wherever Logger  appears. In these browsers, they will behave as they do in other browsers when the development tools are open. 
+
+But, when run  normally, calls to its methods must not be bound to anything other than  the console object. If not, you will receive an Invalid calling object exception. This is a known inconsistency with these browsers. 
+
+To avoid this, transform the following:
+
+```
+var print = Logger.log; // assigning method to variable
+```
+
+to:
+
+```
+// assigning method bound to console to variable
+var print = console.log.bind(console);
+```
+
+Also, transform any of the following:
+
+```
+Logger.info.apply(undefined, arguments); // or
+Logger.info.apply(null, arguments); // or
+Logger.info.apply(this, arguments); // or
+```
+
+to:
+
+```
+console.info.apply(console, arguments);
+```
+
+Finally, because node versions before version 9 don't support console.debug, you may want to transform the following:
+
+```
+Logger.debug(message);
+```
+
+to:
+
+```
+if (console.debug) {
+  console.debug(message);
+} else {
+  console.log(message);
+}
+```
+
+**Add-on Authors**
+
+If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will need to test for the existence of console before calling its methods. If you do much logging, you may find it convenient to define your own wrapper. Writing the wrapper as a service will provide for dependency injection by tests and perhaps even clients.
 
 * TODO
 * TODO
