@@ -31,7 +31,17 @@ Ember.js is the core framework for building ambitious web applications.
 
 Ember 3.1 is a minor release containing several new features and bug fixes. It includes a bump of Glimmer VM, Ember's rendering implementation, to version 0.30.5.
 
-#### ES5 Getters for Computed Properties (1 of 3)
+#### Named Arguments (1 of 4)
+
+Named arguments are here! This allows you to reference component arguments as `{{@foo}}` when passed in as `{{my-component  foo=123}}`.
+
+From [RFC 276](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md): Until now, the way to access named arguments passed in from the caller was to reference `{{name}}`. The (first) problem with this approach is that the `{{name}}` syntax is highly ambigious, as it could be referring to a local variable (block param), a helper or a named argument from the caller (which actually works by accessing auto-reflected `{{this.name}}`) or a property on the component class (such as a computed property).
+
+Since the `{{foo}}` syntax still works on `Ember.Component` (which is the only kind of components available today) via the auto-reflection mechanism, we are not really in a rush to migrate the community (and the guides, etc) to using the new syntax. In the meantime, this could be viewed as a tool to improve clarity in templates. 
+
+While we think writing `{{@foo}}` would be a best practice for new code going forward, the community can migrate at its own pace one component at a time.
+
+#### ES5 Getters for Computed Properties (2 of 4)
 
 Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's `defineProperty`. In recent years, native JavaScript setter and getter implementations have become fast and mature.
 
@@ -87,7 +97,7 @@ The community-provided [es5-getter-ember-codemod](https://github.com/rondale-sc/
 
 Thanks to [Chris Garrett](https://twitter.com/pzuraq) for pushing forward work on ES5 getters with support from [Godfrey Chan](https://twitter.com/chancancode), [Robert Jackson](https://twitter.com/rwjblue/), and [Kris Selden](https://twitter.com/krisselden)). Thanks to [Jonathan Jackson](https://twitter.com/rondale_sc/) for his work on the codemod.
 
-#### Introducing Optional Features (2 of 3)
+#### Introducing Optional Features (3 of 4)
 
 Because major releases of Ember are not supposed to make breaking changes without prior deprecation, the project has been extremely conservative about changing behaviors that don't have a clear deprecation path. As a result, we've had several quirks of the framework linger into the 3.x series.
 
@@ -181,7 +191,7 @@ However, enabling this feature will prompt you to optionally run a codemod which
 
 Although enabling this feature will eventually be the default for Ember, leaving the feature disabled is not deprecated in this release. You can read more details about this optional feature and the motivations for introducing it in [RFC #278](https://github.com/emberjs/rfcs/blob/master/text/0278-template-only-components.md).
 
-#### Positional Params Bug Fix (3 of 3)
+#### Positional Params Bug Fix (4 of 4)
 
 Ember introduced contextual components in Ember 2.3. Contextual components close over arguments and are intended to do so in a manner consistent with closures in JavaScript.
 
