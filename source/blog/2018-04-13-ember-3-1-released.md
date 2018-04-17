@@ -210,7 +210,7 @@ In Ember 3.1 we've corrected the implementation to act like a proper closure. In
 For more information about this change see
 [emberjs/ember.js#15287](https://github.com/emberjs/ember.js/pull/15287).
 
-### Deprecations in Ember 3.1 (2)
+### Deprecations in Ember 3.1
 
 Deprecations are added to Ember.js when an API will be removed at a later date.
 
