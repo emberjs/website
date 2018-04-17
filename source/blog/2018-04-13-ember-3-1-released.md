@@ -33,11 +33,11 @@ Ember 3.1 is a minor release containing several new features and bug fixes. It i
 
 #### Named Arguments (1 of 4)
 
-Named arguments are here! This allows you to reference component arguments as `{{@foo}}` when passed in as `{{my-component  foo=123}}`.
+Named arguments are here! This allows you to reference component arguments as `{{@name}}` when passed in as `{{user-profile name="Zoey"}}`.
 
 From [RFC 276](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md): Until now, the way to access named arguments passed in from the caller was to reference `{{name}}`. The (first) problem with this approach is that the `{{name}}` syntax is highly ambigious, as it could be referring to a local variable (block param), a helper or a named argument from the caller (which actually works by accessing auto-reflected `{{this.name}}`) or a property on the component class (such as a computed property).
 
-Since the `{{foo}}` syntax still works on `Ember.Component` (which is the only kind of components available today) via the auto-reflection mechanism, we are not really in a rush to migrate the community (and the guides, etc) to using the new syntax. In the meantime, this could be viewed as a tool to improve clarity in templates. 
+Since the `{{foo}}` syntax still works on `Component` (which is the only kind of components available today) via the auto-reflection mechanism, we are not really in a rush to migrate the community (and the guides, etc) to using the new syntax. In the meantime, this could be viewed as a tool to improve clarity in templates. 
 
 While we think writing `{{@foo}}` would be a best practice for new code going forward, the community can migrate at its own pace one component at a time.
 
