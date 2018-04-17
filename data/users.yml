@@ -1061,6 +1061,10 @@
   image: deic.png
   alt: "Danish e-Infrastructure Cooperation"
   use: "DeIC's DDoS Protection System client (ddps.deic.dk) is built with Ember"
+- url: "https://www.roofstock.com"
+  image: roofstock.png
+  alt: "Roofstock.com"
+  use: "Roofstock.com is built with Ember"
 - url: "https://www.fastly.com"
   image: fastly.png
   alt: Fastly
