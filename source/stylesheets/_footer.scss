@@ -107,10 +107,6 @@
   line-height: 26.4px;
 }
 
-.footer .footer-social {
-  margin: 1rem 0
-}
-
 .footer .footer-contributions {
   font-size: 11px;
   text-align: center;
@@ -137,17 +133,22 @@
   }
 }
 
+.footer .footer-social {
+  margin: 1rem 0
+}
+
 .footer .footer-social a {
   -webkit-transition: opacity 200ms, color 200ms;
   -moz-transition: opacity 200ms, color 200ms;
   transition: opacity 200ms, color 200ms;
+  display: inline-block;
   color: #999;
   font-size: 1.5rem;
-  margin-left: 0.75rem;
-  opacity: 0.7
+  margin-left: 0.75em;
+  opacity: 0.7;
 }
 
 .footer .footer-social a:hover {
   color: #dd6a58;
-  opacity: 1
+  opacity: 1;
 }
