@@ -1069,6 +1069,15 @@
   image: fastly.png
   alt: Fastly
   use: "Fastly uses Ember to build our control panel (https://manage.fastly.com/) as well as other internal/external projects."
+- url: "https://www.outdoorsy.com"
+  image: outdoorsy.png
+  alt: Outdoorsy
+  use: "Outdoorsy uses Ember to power our search and reservation web applications"
+- url: "https://www.wheelbasepro.com"
+  image: wheelbasepro.png
+  alt: Wheelbase
+  use: "Wheelbase is built using Ember"
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
