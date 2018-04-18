@@ -1,9 +1,8 @@
 ---
-
 title: Ember 3.2 and 3.3 Beta Released
 author: Ricardo Mendes
-
-## tags: Releases
+tags: Releases
+---
 
 Today the Ember project is releasing version 3.2.0 of Ember.js, Ember Data, and Ember CLI.
 
@@ -181,15 +180,15 @@ For more details on changes in Ember.js 3.2, please review the
 
 Ember.js 3.3 will introduce two new features:
 
-- TODO
-- TODO
+* TODO
+* TODO
 
 #### Deprecations in Ember.js 3.3
 
 Two new deprecations are introduces in Ember.js 3.3:
 
-- TODO
-- TODO
+* TODO
+* TODO
 
 For more details on the upcoming changes in Ember.js 3.3, please review the
 [Ember.js 3.3.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.3.0-beta.1).
@@ -206,8 +205,8 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 Two new deprecations are introduces in Ember Data 3.2:
 
-- TODO
-- TODO
+* TODO
+* TODO
 
 For more details on changes in Ember Data 3.2, please review the
 [Ember Data 3.2.0 release page](https://github.com/emberjs/data/releases/tag/v3.2.0).
@@ -252,8 +251,8 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.1.0...v3
 
 Two new deprecations are introduces in Ember CLI 3.2:
 
-- TODO
-- TODO
+* TODO
+* TODO
 
 For more details on the changes in Ember CLI 3.2 and detailed upgrade
 instructions, please review the [Ember CLI  3.2.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0).
