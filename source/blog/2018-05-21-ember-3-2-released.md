@@ -1,8 +1,9 @@
 ---
+
 title: Ember 3.2 and 3.3 Beta Released
 author: Ricardo Mendes
-tags: Releases
----
+
+## tags: Releases
 
 Today the Ember project is releasing version 3.2.0 of Ember.js, Ember Data, and Ember CLI.
 
@@ -29,6 +30,46 @@ Ember.js is the core framework for building ambitious web applications.
 
 Ember.js 3.2 is an incremental, backwards compatible release of Ember with
 bugfixes, performance improvements, and minor deprecations.
+
+#### Block let template helper
+
+The new `let` template helper makes it possible to create new bindings in templates. It is like `with` but without the conditional rendering of the block depending on values passed to the block.
+
+Let's say we need to capitalize the first name and last name in our template. We could do something like this:
+
+```
+Welcome back {{concat (capitalize person.firstName) ' ' (capitalize person.lastName)}}
+
+Account Details:
+First Name: {{capitalize person.firstName}}
+Last Name: {{capitalize person.lastName}}
+```
+
+This could result in an error since we have to keep track of this throughout the template. Thankfully, this is now easier with the `let`helper:
+
+```
+{{#let (capitalize person.firstName) (capitalize person.lastName)
+  as |firstName lastName|
+}}
+  Welcome back {{concat firstName ' ' lastName}}
+
+  Account Details:
+  First Name: {{firstName}}
+  Last Name: {{lastName}}
+{{/let}}
+```
+
+Now you can use `firstName` and `lastName` inside the `let` block with the comfort of knowing that the logic is in a single place. This is a neat way of introducing bindings in your templates without making them properties on the controller or component.
+
+What is important to know about the `let` helper is that it only works as a block helper. This means that you cannot do like this:
+
+```
+{{let
+  firstName=(capitalize person.firstName)
+  lastName=(capitalize person.lastName)
+}}
+```
+
 
 #### Deprecations in Ember 3.2
 
@@ -140,15 +181,15 @@ For more details on changes in Ember.js 3.2, please review the
 
 Ember.js 3.3 will introduce two new features:
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 #### Deprecations in Ember.js 3.3
 
 Two new deprecations are introduces in Ember.js 3.3:
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 For more details on the upcoming changes in Ember.js 3.3, please review the
 [Ember.js 3.3.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.3.0-beta.1).
@@ -165,15 +206,13 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 Two new deprecations are introduces in Ember Data 3.2:
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 For more details on changes in Ember Data 3.2, please review the
 [Ember Data 3.2.0 release page](https://github.com/emberjs/data/releases/tag/v3.2.0).
 
-
 ### Upcoming changes in Ember Data 3.3
-
 
 #### Deprecations in Ember Data 3.3
 
@@ -213,8 +252,8 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.1.0...v3
 
 Two new deprecations are introduces in Ember CLI 3.2:
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 For more details on the changes in Ember CLI 3.2 and detailed upgrade
 instructions, please review the [Ember CLI  3.2.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0).
