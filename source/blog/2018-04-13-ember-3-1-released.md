@@ -31,7 +31,17 @@ Ember.js is the core framework for building ambitious web applications.
 
 Ember 3.1 is a minor release containing several new features and bug fixes. It includes a bump of Glimmer VM, Ember's rendering implementation, to version 0.30.5.
 
-#### ES5 Getters for Computed Properties (1 of 3)
+#### Named Arguments (1 of 4)
+
+Named arguments are here! This allows you to reference component arguments as `{{@name}}` when passed in as `{{user-profile name="Zoey"}}`.
+
+From [RFC 276](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md): Until now, the way to access named arguments passed in from the caller was to reference `{{name}}`. The (first) problem with this approach is that the `{{name}}` syntax is highly ambigious, as it could be referring to a local variable (block param), a helper or a named argument from the caller (which actually works by accessing auto-reflected `{{this.name}}`) or a property on the component class (such as a computed property).
+
+Since the `{{foo}}` syntax still works on `Component` (which is the only kind of components available today) via the auto-reflection mechanism, we are not really in a rush to migrate the community (and the guides, etc) to using the new syntax. In the meantime, this could be viewed as a tool to improve clarity in templates. 
+
+While we think writing `{{@foo}}` would be a best practice for new code going forward, the community can migrate at its own pace one component at a time.
+
+#### ES5 Getters for Computed Properties (2 of 4)
 
 Ember's object system has long used `set` and `get` to access properties. These APIs came from the codebase's origins in SproutCore, and predated ES5's `defineProperty`. In recent years, native JavaScript setter and getter implementations have become fast and mature.
 
@@ -87,7 +97,7 @@ The community-provided [es5-getter-ember-codemod](https://github.com/rondale-sc/
 
 Thanks to [Chris Garrett](https://twitter.com/pzuraq) for pushing forward work on ES5 getters with support from [Godfrey Chan](https://twitter.com/chancancode), [Robert Jackson](https://twitter.com/rwjblue/), and [Kris Selden](https://twitter.com/krisselden)). Thanks to [Jonathan Jackson](https://twitter.com/rondale_sc/) for his work on the codemod.
 
-#### Introducing Optional Features (2 of 3)
+#### Introducing Optional Features (3 of 4)
 
 Because major releases of Ember are not supposed to make breaking changes without prior deprecation, the project has been extremely conservative about changing behaviors that don't have a clear deprecation path. As a result, we've had several quirks of the framework linger into the 3.x series.
 
@@ -181,7 +191,7 @@ However, enabling this feature will prompt you to optionally run a codemod which
 
 Although enabling this feature will eventually be the default for Ember, leaving the feature disabled is not deprecated in this release. You can read more details about this optional feature and the motivations for introducing it in [RFC #278](https://github.com/emberjs/rfcs/blob/master/text/0278-template-only-components.md).
 
-#### Positional Params Bug Fix (3 of 3)
+#### Positional Params Bug Fix (4 of 4)
 
 Ember introduced contextual components in Ember 2.3. Contextual components close over arguments and are intended to do so in a manner consistent with closures in JavaScript.
 
@@ -247,7 +257,9 @@ For more details on changes in Ember.js 3.1, please review the
 
 ### Upcoming Changes in Ember.js 3.2
 
-#### let template helper
+#### New Features (1)
+
+##### let template helper
 
 Ember.js 3.2 introduces a new feature, the block `let` template helper.
 This helper enables you to introduce bindings in your templates, without having to make them properties of the respective controller or component.
@@ -263,13 +275,21 @@ For example, imagine you want to pass the same hash of options to two different 
 
 You can read more about it in [RFC #286 - Block `let` template helper](https://github.com/emberjs/rfcs/blob/master/text/0286-block-let-template-helper.md).
 
-#### Deprecations
+#### Deprecations (3)
 
 **Three** new deprecations are introduced in Ember.js 3.2:
 
-1. Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
-2. The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
-3. Update: replace directly assigned computed properties. Use `defineProperty` to define computed properties. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
+##### Ember.Logger
+
+Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-console-deprecate-logger)
+
+##### Router#route
+
+The `Router#route` private API has been renamed to `Router#_route` to avoid collisions with user-defined properties or methods. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-routing-route-router)
+
+##### defineProperty
+
+This next one typically won't affect most apps, but it might affect some addons. You'll need to replace directly assigned computed properties, and use `defineProperty` to define computed properties instead. Read more about this deprecation on the [deprecation page.](https://emberjs.com/deprecations/v3.x#toc_ember-meta-descriptor-on-object)
 
 For more details on the upcoming changes in Ember.js 3.2, please review the
 [Ember.js 3.2.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0-beta.1).
@@ -284,11 +304,11 @@ Ember Data 3.1 contains bug fixes and build improvements for Ember Data.
 
 ### Changes in Ember Data 3.1
 
-#### New Features
+#### New Features (1)
 
 [#5273](https://github.com/emberjs/data/pull/5273) client-side-delete semantics `unloadRecord`
 
-#### Deprecations
+#### Deprecations (2)
 
 **Two** new deprecations are introduced in Ember Data 3.1.
 
@@ -402,17 +422,19 @@ You can preview those changes for [applications](https://github.com/ember-cli/em
 
 ### Changes in Ember CLI 3.1
 
-#### `ember test:all`
+#### New Features (2) 
+
+##### `ember test:all`
 
 Previously, `npm test` would run all configured scenarios of `ember-try`. This was confusing due to `npm test` and `ember test` having different behaviors, as well as `npm test` doing different things depending on whether it was being run by an app or an addon. The fact that the command would also run several hard to cancel processes for the `ember-try` scenarios also worsened the developer experience.
 
 To address this, `npm test` was changed to run `ember test`, and a new `npm test:all` was introduced with the old behavior of running `ember-try` scenarios.
 
-#### Yarn lock file detection
+##### Yarn lock file detection
 
 Ember CLI will now correctly detect if the project is part of a Yarn workspace root, and adequately use Yarn instead of npm.
 
-#### Deprecations
+#### Deprecations (0)
 
 No new deprecations are introduced in Ember CLI 3.1.
 
@@ -420,7 +442,7 @@ For more details on the changes in Ember CLI 3.1 and detailed upgrade instructio
 
 ### Upcoming Changes in Ember CLI 3.2
 
-#### New Features
+#### New Features (3)
 
 **Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
 
@@ -440,9 +462,9 @@ See what I mean? Totally awesome. <3
 
 **Experiments with more efficient transpilation** - Until now, addons were responsible for compiling their own JS/HBS/CSS and returning AMD/CSS. Now they return the raw code, and the app uses its own processors (babel, htmlbars) to compile it. This is required to do proper tree-shaking and code-splitting. Delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501) and all-at-once addon optimization after compilation [(#7650)](https://github.com/ember-cli/ember-cli/pull/7650) have been added. Additionally, more comprehensive methods to detect if ember-cli is being run within CI or not have also been added [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see [https://github.com/watson/ci-info/](https://github.com/watson/ci-info/).
 
-**Module Unification Continues** - You can now generate an addon using the Module Unification layout [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490)! Use the command `MODULE_UNIFICATION=true ember addon my-addon` to try it out [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658). We also improved the logic to support addons that use Module Unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660), added the blueprint for a dummy app to addons that use Module Unification [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667), and updated the version of Ember used in Module Unification [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
+**Module Unification (new file layout) Continues** - You can now generate an addon using the Module Unification layout [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490)! Use the command `MODULE_UNIFICATION=true ember addon my-addon` to try it out [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658). We also improved the logic to support addons that use Module Unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660), added the blueprint for a dummy app to addons that use Module Unification [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667), and updated the version of Ember used in Module Unification [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
 
-#### Deprecations
+#### Deprecations (1)
 
 #### ember-cli-babel 5
 
@@ -456,7 +478,4 @@ for your incredible work on ember-cli!
 
 ## Thank You!
 
-As a community-driven open-source project with an ambitious scope, each of
-these releases serve as a reminder that the Ember project would not have been
-possible without your continued support. We are extremely grateful to our
-contributors for their efforts.
+As a community-driven open-source project with an ambitious scope, each of these releases serve as a reminder that the Ember project would not have been possible without your  continued support. We are extremely grateful to our contributors for their efforts.
