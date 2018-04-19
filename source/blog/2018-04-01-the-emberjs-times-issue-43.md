@@ -50,7 +50,7 @@ and give your thoughts and suggestions in the discussion.
 
 <a class="ember-button ember-button--centered href="/blog/2018/04/13/ember-3-1-released.html">Read more</a>
 
-## Say More
+##[Say More](https://github.com/emberjs/rfcs/pull/327]
 
 A new RFC has landed by [@jgwhite](https://github.com/jgwhite) titled "Semantic Test Selectors."  The motivation behind this RFC first appeared in the talk [Say More] at EmberConf 2018.  Basically the RFC describes, in 2 parts, how to write tests that "say more" about what the test is actually doing by writing less.  
 
@@ -73,7 +73,7 @@ How do we get there?  One way is accessibility.  By delivering accessible, first
 > — <cite>if we want to access a UI element in a test, we do so as if we were using a screen reader.</cite>
 
 
-Want to know more? The RFC is incredibly will written and it deserves a proper reading.  Head over to [issue 327](https://github.com/emberjs/rfcs/pull/327] to be part of an evolutionary way to test your ember apps!
+Want to know more? The RFC is incredibly well written and it deserves a proper reading.  Head over to [issue 327](https://github.com/emberjs/rfcs/pull/327] to be part of an evolutionary way to test your Ember apps!
 ---
 
 ## [EMBER LEARN](yoururl)
@@ -102,7 +102,7 @@ Want to know more? The RFC is incredibly will written and it deserves a proper r
 Ember Times would like to give a shoutout to <a href="https://github.com/runspired">@runspired</a> (Chris Thoburn), for being incredibly helpful and responsive in a majority of the Slack channels this last week. Chris is major contributor to the ember ecosystem and an integral part of the ember-data subteam.  He has been super supportive in helping community members migrate through the many versions of Ember data from 2.12 all the way to 3.2.0-beta.2.  Additionally Chris shares his intimate knowledge of the ember-data internals to make it easier for everyone to understand why things work in a particular way and to also shed some light on how ember-data will work in the future.  Thanks @runspired!
 
 ## We love Ember Times
-Do you? If so, contribute!  Ember Times is always looking for people to help spread the word about all things Ember.  Drop by the Slack channel to say "hi!" and learn how to get started.        
+Do you? If so, contribute!  [Ember Times](https://embercommunity.slack.com/channels/topic-embertimes) is always looking for people to help spread the word about all things Ember.  Drop by the Slack channel to say "hi!" and learn how to get started.        
 
 That's another wrap!  ✨
 
