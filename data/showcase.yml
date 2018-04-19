@@ -34,6 +34,18 @@
   features:
     - A more full-featured Ember web app in action
     - Usage of <a href="https://ember-fastboot.com/">Ember FastBoot</a>.
+- name: Deprecations
+  image:
+    src: showcase-deprecations.png
+    alt: Deprecations application
+  repository: https://github.com/ember-learn/deprecation-app
+  demo: https://emberjs.com/deprecations
+  description: |
+    This application was built to showcase Ember deprecations at <a href="http://emberjs.com/deprecations/">deprecations app</a>.  You'll be able to learn and identify deprecations for each major release such as:
+  features:
+    - Deprecations for each version of Ember from <a href="https://emberjs.com/deprecations/v1.x">1.X</a> through <a href="https://emberjs.com/deprecations/v3.x">3.X</a>.
+    - Ember Data specific deprecations in <a href="https://emberjs.com/deprecations/ember-data/v2.x">Ember 2.X</a>.
+    - Ember CLI specific deprecations in <a href="https://emberjs.com/deprecations/ember-cli/v2.x">Ember 2.X</a>.
 # - name:
 #   image:
 #     src:
