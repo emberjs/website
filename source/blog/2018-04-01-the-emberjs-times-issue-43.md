@@ -53,7 +53,7 @@ and give your thoughts and suggestions in the discussion.
 
 <a class="ember-button ember-button--centered href="/blog/2018/04/13/ember-3-1-released.html">Read more</a>
 
-## Say More
+##[Say More](https://github.com/emberjs/rfcs/pull/327]
 
 A new RFC (Request for Comments) has landed by [@jgwhite](https://github.com/jgwhite) titled "Semantic Test Selectors."
 The motivation behind this RFC first appeared in the talk [Say More] at EmberConf 2018.
@@ -79,7 +79,8 @@ By delivering accessible, first-class ember apps by default, you instantly have 
 As [@jgwhite](https://github.com/jgwhite)  eloquently puts it
 > — <cite>if we want to access a UI element in a test, we do so as if we were using a screen reader.</cite>
 
-Want to know more? The RFC is incredibly will written and it deserves a proper reading.  Head over to [issue 327](https://github.com/emberjs/rfcs/pull/327] to be part of an evolutionary way to test your ember apps!
+Want to know more? The RFC is incredibly well written and it deserves a proper reading.  Head over to [RFC#327](https://github.com/emberjs/rfcs/pull/327] to be part of an evolutionary way to test your Ember apps!
+
 ---
 
 ## [Learning Team happenings](https://ember-twiddle.com/)
@@ -154,7 +155,6 @@ Drop by the Slack channel to [say "hi!"](https://embercommunity.slack.com/messag
 
 <a class="ember-button ember-button--centered href="https://discuss.emberjs.com/t/readers-question-when-will-we-be-able-to-use-decorators-in-ember-apps/14583">Read more</a>
 
----       
 
 That's another wrap!  ✨
 
