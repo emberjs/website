@@ -59,7 +59,7 @@ and give your thoughts and suggestions in the discussion.
 
 ---
 
-## [Readers' Questions: When and how will we be able to use decorators in Ember apps?](#yoururl)
+## [Readers' Questions: When and how will we be able to use decorators in Ember apps?](https://discuss.emberjs.com/t/readers-question-when-will-we-be-able-to-use-decorators-in-ember-apps/14583))
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
@@ -68,9 +68,9 @@ and give your thoughts and suggestions in the discussion.
   </p>
  <p>In his detailed write-up <a href="https://github.com/pzuraq">@pzuraq</a> will answer everything you need to know about the current state of the decorators
   proposal itself and when you will be able to decorate your own application. Read the full answer 
-  on the <a href="#">offical Ember forum</a>.
+  on the <a href="https://discuss.emberjs.com/t/readers-question-when-will-we-be-able-to-use-decorators-in-ember-apps/14583">offical Ember forum</a>.
 </div>
-<a class="ember-button ember-button--centered href="#">Read more</a> 
+<a class="ember-button ember-button--centered href="https://discuss.emberjs.com/t/readers-question-when-will-we-be-able-to-use-decorators-in-ember-apps/14583">Read more</a>
 
 ---
 
