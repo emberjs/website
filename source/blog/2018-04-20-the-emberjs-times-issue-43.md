@@ -2,7 +2,7 @@
 title: The Ember.js Times - Issue No. 43
 author: Alon Bukai, Ryan Mark, Amy Lam, Ricardo Mendes, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times
-alias : "blog/2018/04/01/the-emberjs-times-issue-43.html"
+alias : "blog/2018/04/20/the-emberjs-times-issue-43.html"
 responsive: true
 ---
 
@@ -50,7 +50,15 @@ and give your thoughts and suggestions in the discussion.
 
 <a class="ember-button ember-button--centered href="/blog/2018/04/13/ember-3-1-released.html">Read more</a>
 
+[Ember CLI Update Updated](https://github.com/ember-cli/ember-cli-update#options): Ember CLI Update, which last week was brought in under the official ember-cli GitHub organization, has gotten an update. It now has two new commands that will help you keep your apps updated and using the latest and greatest in Emberland.
+These new commands are `--dry-run` and `--list-codemods`. 
+The first, `--dry-run`, will give you a quick explanation of what running the update will do. For example running `ember-cli-update --dry-run` on an app running Ember v2.15.1 would output: *Would update from 2.15.1 to 3.1.2.*
+The second, `--list-codemods`, will give you a list of the available codemods along with more info about them. Currently the codemods supported are: `ember-modules-codemod`, `ember-qunit-codemod`, `ember-test-helpers-codemod`, and `es5-getter-ember-codemod`. That last codemod helps your project use the native ES5 getters that were described up above.
+A quick reminder that `ember-cli-update` has been accepted to be the *official* way to update Ember apps so if you aren't currently using it, now is a great time to start!
+
 ---
+
+
 
 ## [EMBER LEARN](yoururl)
 
