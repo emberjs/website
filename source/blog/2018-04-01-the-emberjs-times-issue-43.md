@@ -41,7 +41,10 @@ and give your thoughts and suggestions in the discussion.
   <img class="transparent padded float-left small" src="/images/brand/ember_Ember-Light.png" alt="Ember Brand Logo" />
 
   <p>
-    [MAIN TEXT]
+    With Ember 3.1 you now get ES5 getters for computed properties since our target browsers support ES5 getters. The motivation is to improve developer ergonomics and interoperability with other tooling and libraries. For the property to recompute you still need to use this.set() or Ember.set().</p>
+  <p>
+    Yet, this doesn’t mean that this.get() is now deprecated. There’s actually still a lot of cases where you should use this.get() instead of the ES5 getter. 
+    You can read all about it in the <a href="https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_es5-getters-for-computed-properties-1-of-3">release post</a>.
   </p>
 </div>
 
