@@ -12,7 +12,7 @@ var apiKey = '<%= data.search.api_key %>';
 var inputSelector = '#search-input';
 var indexName = 'emberjs_versions';
 var hitsPerPage = 10;
-var facetFilters = '[["version:' + currentRevision + '","tags:api"]]';
+var facetFilters = '[["version:' + currentRevision + '"]]';
 
 $(window).load(function () {
     docsearch({
