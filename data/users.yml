@@ -52,7 +52,7 @@
   image: ibotta.png
   alt: "Ibotta"
   use: "We use Ember for building our internal and external web applications."
-- url: http://travis-ci.org
+- url: http://travis-ci.com
   image: travisci.png
   alt: Travis CI
 - url: https://www.ted.com
