@@ -54,10 +54,11 @@ and give your thoughts and suggestions in the discussion.
 
 ---
 
-## [EMBER LEARN](yoururl)
+## [Learning Team happenings](https://ember-twiddle.com/)
 
+[Ember Twiddle](https://ember-twiddle.com/) now (finally!) uses Babel 6 instead of Babel 5 to transpile your code. Please encourage folks to test the canary so that any issues with Ember addons and existing twiddles might be found. Thanks for the update [@Gaurav0](https://github.com/Gaurav0)!
 
-[MAIN TEXT]
+The Learning Team merged a bunch of pull requests in emberjs/guides recently, many from first time contributors - thank you [@sdhull](https://github.com/sdhull). [@rmminusrfslash](https://github.com/rmminusrfslash), [@karan-pathak](https://github.com/karan-pathak) and [@chrisrng](https://github.com/chrisrng). The Learning Team is working on closing out outstanding issues and PRs on emberjs/guides in an effort to launch the built with Ember [ember-learn/guides-app](https://github.com/ember-learn/guides-app) in its place! 🔜
 
 ---
 
