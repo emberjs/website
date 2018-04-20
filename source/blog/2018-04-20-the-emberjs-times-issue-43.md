@@ -148,6 +148,8 @@ and shares his in-depth knowledge of ember-data internals to make it easier for 
 ## [Readers' Questions: When and how will we be able to use decorators in Ember apps?](https://discuss.emberjs.com/t/readers-question-when-will-we-be-able-to-use-decorators-in-ember-apps/14583)
 
 <div class="blog-row">
+  <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
+
   <p>In this week's <strong>brand new</strong> Readers’ Question it's all about the new and cool and shiny that will
   be coming to your Ember apps soon: When will we be able to make use of the <strong>decorator syntax</strong> when writing Ember apps?
   </p>
