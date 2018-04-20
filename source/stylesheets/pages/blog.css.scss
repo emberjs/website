@@ -43,6 +43,23 @@
       float: right;
     }
 
+    img.float-left {
+      float: left;
+    }
+
+    img.small {
+      width: 33%;
+      height: auto;
+    }
+
+    img.transparent {
+      background-color: transparent;
+    }
+
+    img.padded {
+      margin: .5em 1em;
+    }
+
     ul {
       list-style: disc;
     }
@@ -77,6 +94,14 @@
         border-bottom: 1px solid lighten($orange, 10%);
       }
     }
+  }
+}
+
+.blog-row {
+  &:before, &:after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }
 
