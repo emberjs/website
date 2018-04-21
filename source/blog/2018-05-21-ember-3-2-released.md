@@ -30,7 +30,8 @@ Ember.js is the core framework for building ambitious web applications.
 Ember.js 3.2 is an incremental, backwards compatible release of Ember with
 bugfixes, performance improvements, and minor deprecations.
 
-#### Block let template helper
+#### New Features (1)
+##### Block let template helper (1 of 1)
 
 The new `let` template helper makes it possible to create new bindings in templates. It is like `with` but without the conditional rendering of the block depending on values passed to the block.
 
@@ -200,13 +201,46 @@ For more details on the upcoming changes in Ember.js 3.3, please review the
 Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.2
+#### New Features (4)
+##### Lazy Relationship Payloads (1 of 4)
+In Ember Data 2.14 lazy-relationship parsing was introduced. Because this parsing used left-side/right-side keying this ment it was not compatible with polymorphic relationships.
+
+With Ember Data 3.2 this is [now fixed](https://github.com/emberjs/data/pull/5230).
+
+##### Ember Data Feature Flag Removal (2 of 4)
+The current feature flags for Ember Data has gone stale, therefore they are all [removed in Ember Data 3.2](https://github.com/emberjs/data/pull/5384). Ember Data is going to attempt to go in a different direction with some of the planned changes for 2018.
+
+If your app depends on enabling these feature flag to run, please reach out to the Ember Data team by opening a github issue on the [Ember Data repo](https://github.com/emberjs/data/issues) and the Ember Data team will try to assist with the transition.
+
+##### Feature Flag `ds-improved-ajax` (3 of 4)
+The Ember Data team has released an addon that will support the `ds-improved-ajax` API.
+
+##### Feature Flag `ds-pushpayload-return` (4 of 4)
+If you rely on the `ds-pushpayload-return` feature flag, you can use the following pattern to manually serialize the API response and push the record into the store.
+
+```js
+export function pushPayload(store, modelName, rawPayload) {
+   let ModelClass = store.modelFor(modelName);
+   let serializer = store.serializerFor(modelName);
+
+   let jsonApiPayload = serializer.normalizeResponse(store, ModelClass, rawPayload, null, 'query');
+
+  return store.push(jsonApiPayload);
+}
+```
+
+```diff
++import { pushPayload } from '<app-name>/utils/push-payload';
+
+...
+
+-this.get('store').pushPayload(modelName, rawPayload);
++pushPayload(this.get('store'), modelName, rawPayload);
+```
 
 #### Deprecations in Ember Data 3.2
 
-Two new deprecations are introduces in Ember Data 3.2:
-
-* TODO
-* TODO
+There are no deprecations introduced in Ember Data 3.2.
 
 For more details on changes in Ember Data 3.2, please review the
 [Ember Data 3.2.0 release page](https://github.com/emberjs/data/releases/tag/v3.2.0).
