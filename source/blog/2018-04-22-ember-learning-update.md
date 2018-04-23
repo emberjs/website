@@ -24,7 +24,7 @@ We were able to identify categories of work that naturally fell in to one of two
 - API Docs (version support, modules API, Broccoli)
 - Tutorials (101 Quickstart, 201 Contacts, 301 Super Rentals)
 - Infrastructure (subdomains, Ember-izing the website)
-- Internal Evangelism (office hours, mentoring, simply contribution process)
+- Internal Evangelism (office hours, mentoring, simplify contribution process)
 - Tooling and Maintenance (Inspector, Language Servers, Twiddle)
 
 ### Marketing
@@ -33,4 +33,4 @@ We were able to identify categories of work that naturally fell in to one of two
 - External Evangelism (tech group outreach, podcast & blog collaboration)
 - Traditional Marketing (Blog, Ember Doctrine, Why Ember, Testimonials)
 
-There's more to this list, but we hope this gives everyone a good idea of the direction we are heading- and where every Ember user can help along the way. We invite you to join us- visit the #team-learning Slack channel to find out more!
+There's more to this list, but we hope this gives everyone a good idea of the direction we are heading. The Ember Learning Team meets every Thursday at 1pm EST. Meeting details are in the topic of the #team-learning channel on Slack- we invite you to join us!
