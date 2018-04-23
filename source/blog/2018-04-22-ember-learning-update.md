@@ -1,11 +1,13 @@
 ---
 title: Community Update from the Learning Team
 author: The Ember Learning Team
-tags: Recent Posts, learning, marketing
+tags: Recent Posts, Learning, Marketing, Roadmap, Community
 responsive: true
 ---
 
-In order to keep the community updated while we move initiatives forward, we'd like to share with you the major outcomes from our face to face meeting that took place right after EmberConf 2018. The learning team (and friends!) spent the day reviewing our current workload, extracting all of the ideas from `@locks` brain, and reviewing priorities for the upcoming year.
+Each Ember team meets in person at EmberConf. For many of us, it was our first chance to sit down in person and plan together! This is important for us because it allows us spend an entire day getting to know each other and plan for the upcoming year.
+
+In order to keep the community updated while we move initiatives forward, we'd like to share with you the major outcomes from our face to face meeting. The learning team (and friends!) spent the day reviewing our current workload, extracting all of the ideas from `@locks` brain, and reviewing priorities for the upcoming year.
 
 ## Goals
 
