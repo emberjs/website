@@ -5,7 +5,7 @@ tags: Recent Posts, learning, marketing
 responsive: true
 ---
 
-In order to keep the community updated while we move initiatives forward, we'd like to share with you the major outcomes from our face to face meeting that took place right after EmberConf 2018.
+In order to keep the community updated while we move initiatives forward, we'd like to share with you the major outcomes from our face to face meeting that took place right after EmberConf 2018. The learning team (and friends!) spent the day reviewing our current workload, extracting all of the ideas from `@locks` brain, and reviewing priorities for the upcoming year.
 
 ## Goals
 
@@ -33,4 +33,4 @@ We were able to identify categories of work that naturally fell in to one of two
 - External Evangelism (tech group outreach, podcast & blog collaboration)
 - Traditional Marketing (Blog, Ember Doctrine, Why Ember, Testimonials)
 
-There's more to this list, but we hope to give you a good idea of the direction where we are trying to go- and where every Ember user can help along the way! 
+There's more to this list, but we hope this gives everyone a good idea of the direction we are heading- and where every Ember user can help along the way. We invite you to join us- visit the #team-learning Slack channel to find out more!
