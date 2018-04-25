@@ -21,7 +21,14 @@ Here's a recap of what happened in Emberland these days ✨
 
 ---
 
-## [EMBER - ENTER YOUR TITLE HERE](https://github.com/emberjs/ember.js/releases/tag/v3.1.1)
+## [EMBER - Ember 3.1.1 Released](https://github.com/emberjs/ember.js/releases/tag/v3.1.1)
+This week a patch for Ember was released. It includes several bug fixes but here are a few selected ones:
+
+[A bug](https://github.com/emberjs/ember.js/issues/16379) was introduced in Ember 3.1 that caused `ariaRole` to not be appended if this was initially set as being `false`. The expected behaviour here is that if I initially set the `ariaRole` to false it should not be appended, but I might want to dynamically change this later on. This is now fixed with Ember 3.1.1.
+
+After upgrading to 3.1 [some people](https://github.com/emberjs/ember.js/issues/16503) started seeing errors like `Cannot read property 'syscall' of null`. This was caused by `ComponentDefinitions` leaking heap space. This has as well been fixed in Ember 3.1.1.
+
+Ember 3.1.1 contains several more fixes. You can go though them all in [the release change log.](https://github.com/emberjs/ember.js/releases/tag/v3.1.1) 
 
 ---
 
