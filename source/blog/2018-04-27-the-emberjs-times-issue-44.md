@@ -44,7 +44,9 @@ Ember 3.1.1 contains several more fixes. You can go though them all in [the rele
 
 ---
 
-## [EMBER LEARN - ENTER YOUR TITLE HERE](enter-your-url-where-this-section-should-link-to-here)
+## [Learning Team corner](https://emberjs.com/blog/2018/04/22/ember-learning-update.html)
+
+The Learning Team met IRL at EmberConf and shared the results of that meeting on [the Ember blog](https://emberjs.com/blog/2018/04/22/ember-learning-update.html). Initiatives for the new year were grouped into two directions - User Support and Marketing.
 
 ---
 
