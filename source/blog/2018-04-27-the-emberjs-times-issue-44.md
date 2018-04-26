@@ -2,7 +2,7 @@
 title: The Ember.js Times - Issue No. 44
 author: all the people
 tags: Recent Posts, Newsletter, Ember.js Times
-alias : "blog/2018/04/01/the-emberjs-times-issue-44.html"
+alias : "blog/2018/04/27/the-emberjs-times-issue-44.html"
 responsive: true
 ---
 
@@ -40,7 +40,7 @@ This week a patch for Ember was released. It includes several bug fixes but here
 
 After upgrading to 3.1 [some people](https://github.com/emberjs/ember.js/issues/16503) started seeing errors like `Cannot read property 'syscall' of null`. This was caused by `ComponentDefinitions` leaking heap space. This has as well been fixed in Ember 3.1.1.
 
-Ember 3.1.1 contains several more fixes. You can go though them all in [the release change log.](https://github.com/emberjs/ember.js/releases/tag/v3.1.1) 
+Ember 3.1.1 contains several more fixes. You can go though them all in [the release change log.](https://github.com/emberjs/ember.js/releases/tag/v3.1.1)
 
 ---
 
