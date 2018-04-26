@@ -48,6 +48,8 @@ Ember 3.1.1 contains several more fixes. You can go though them all in [the rele
 
 The Learning Team met IRL at EmberConf and shared the results of that meeting on [the Ember blog](https://emberjs.com/blog/2018/04/22/ember-learning-update.html). Initiatives for the new year were grouped into two directions - User Support and Marketing.
 
+The new guides app will be launching soon! The main difference is that is in an Ember app, making it easier for Ember folks to contribute. And because of [prember](https://github.com/ef4/prember), it's fully SEO-friendly! Deprecation for the old guides is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated).
+
 ---
 
 ## [SECTION - ENTER YOUR TITLE HERE](enter-your-url-where-this-section-should-link-to-here)
