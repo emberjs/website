@@ -28,13 +28,15 @@ This week a patch for Ember was released. It includes several bug fixes but here
 
 After upgrading to 3.1 [some people](https://github.com/emberjs/ember.js/issues/16503) started seeing errors like `Cannot read property 'syscall' of null`. This was caused by `ComponentDefinitions` leaking heap space. This has as well been fixed in Ember 3.1.1.
 
-Ember 3.1.1 contains several more fixes. You can go though them all in [the release change log.](https://github.com/emberjs/ember.js/releases/tag/v3.1.1) 
+Ember 3.1.1 contains several more fixes. You can go though them all in [the release change log.](https://github.com/emberjs/ember.js/releases/tag/v3.1.1)
 
 ---
 
 ## [Learning Team corner](https://emberjs.com/blog/2018/04/22/ember-learning-update.html)
 
 The Learning Team met IRL at EmberConf and shared the results of that meeting on [the Ember blog](https://emberjs.com/blog/2018/04/22/ember-learning-update.html). Initiatives for the new year were grouped into two directions - User Support and Marketing.
+
+The new guides app will be launching soon! The main difference is that is in an Ember app, making it easier for Ember folks to contribute. And because of [prember](https://github.com/ef4/prember), it's fully SEO-friendly! Deprecation for the old guides is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated).
 
 ---
 
