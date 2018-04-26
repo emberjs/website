@@ -25,11 +25,19 @@ This means that you will be able to user your favorite command line tool even
 on the latest version of NodeJS smoothly and without any worries.
 
 Also lots of efforts are underway to bring Treeshaking capabilities to your
-Ember app very soon. Several contributons this week ([1](https://github.com/ember-cli/ember-cli/pull/7788),
+Ember app very soon. Several contributions this week ([1](https://github.com/ember-cli/ember-cli/pull/7788),
 [2](https://github.com/ember-cli/ember-cli/pull/7786),
 [3](https://github.com/ember-cli/ember-cli/pull/7784)) aimed at improving the internal
 packaging manager of Ember CLI. Wanna know more about the new exciting things
-that are arriving for Ember CLI in 2018? Be sure to not miss the annual [roadmap for 2018](https://discuss.emberjs.com/t/ember-cli-2018-edition/14543)!
+that are on the horizon for Ember CLI in 2018? Do not miss the annual [roadmap for 2018](https://discuss.emberjs.com/t/ember-cli-2018-edition/14543) - it's worth the read!
+
+Finally, `ember-cli-update`, _the way_ to update your Ember apps still needs
+an update from you to make its adoption in the Ember community as smooth as possible.
+
+You can help out by [updating](https://github.com/ember-cli/ember-cli-update/issues/288) any of the several official documentation resources to both
+mention the command line tool and to show how to use it.
+Also more help is wanted in reminding `ember-cli-update` users if [a new version is out](https://github.com/ember-cli/ember-cli-update/issues/326).
+We're looking forward to your upgrades! ✨
 
 ---
 
@@ -49,11 +57,6 @@ Ember 3.1.1 contains several more fixes. You can go though them all in [the rele
 The Learning Team met IRL at EmberConf and shared the results of that meeting on [the Ember blog](https://emberjs.com/blog/2018/04/22/ember-learning-update.html). Initiatives for the new year were grouped into two directions - User Support and Marketing.
 
 The new guides app will be launching soon! The main difference is that is in an Ember app, making it easier for Ember folks to contribute. And because of [prember](https://github.com/ef4/prember), it's fully SEO-friendly! Deprecation for the old guides is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated).
-
----
-
-## [SECTION - ENTER YOUR TITLE HERE](enter-your-url-where-this-section-should-link-to-here)
-
 
 ---
 
