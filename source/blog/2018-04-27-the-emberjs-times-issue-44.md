@@ -69,14 +69,23 @@ The new guides app will be launching soon! The main difference is that is in an 
 
 ---
 
-## [Readers' Questions: ENTER QUESTION TITLE HERE](link-to-question)
+## [More Questions & more Answers for Readers' Questions](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
-  <p>...</p>
+  <p>With learning team efforts being in overdrive this week,
+  we want to take the chance to point you to some of previous, great answers to previous, great questions by Ember.js Times readers:</p>
+  <ul>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-how-far-are-we-from-being-able-to-just-use-any-npm-package-via-the-import-statement/14462" target="readersq">
+    Readers’ Questions #5: “How far are we from being able to just use any npm package via the import statement?”</a></li>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-is-it-bad-to-load-data-in-components/14521" target="readersq">
+    Readers’ Questions #6: “Is it bad to load data in components?”</a></li>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-when-will-we-be-able-to-use-decorators-in-ember-apps/14583" target="readersq">
+    Readers’ Questions #7: “When will we be able to use decorators in Ember apps?”</a></li>
+  </ul>
 </div>
 
-<a class="ember-button ember-button--centered" href="#link-to-question">Read more</a>
+Apart from that we’d like to ask you for many more questions to be answered in future editions of the Ember.js Times!
 
 **Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core). And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
 
