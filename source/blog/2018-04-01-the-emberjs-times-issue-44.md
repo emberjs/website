@@ -17,7 +17,19 @@ Here's a recap of what happened in Emberland these days ✨
 
 ---
 
-## [EMBER CLI](enter-your-url-here)
+## [All good from 10 to 4 in Ember CLI](https://github.com/ember-cli/ember-cli/pull/7791)
+
+This week contributors to Ember CLI worked on improving the test suite by
+[extending the list of Node versions](https://github.com/ember-cli/ember-cli/pull/7791) tested against.
+This means that you will be able to user your favorite command line tool even
+on the latest version of NodeJS smoothly and without any worries.
+
+Also lots of efforts are underway to bring Treeshaking capabilities to your
+Ember app very soon. Several contributons this week ([1](https://github.com/ember-cli/ember-cli/pull/7788),
+[2](https://github.com/ember-cli/ember-cli/pull/7786),
+[3](https://github.com/ember-cli/ember-cli/pull/7784)) aimed at improving the internal
+packaging manager of Ember CLI. Wanna know more about the new exciting things
+that are arriving for Ember CLI in 2018? Be sure to not miss the annual [roadmap for 2018](https://discuss.emberjs.com/t/ember-cli-2018-edition/14543)!
 
 ---
 
