@@ -8,11 +8,11 @@ responsive: true
 
 ಹಲೋ Emberistas!
 
-This week you may again enjoy the newsletter in both [the e-mail](https://the-emberjs-times.ongoodbits.com/)
-and the [blog format](https://emberjs.com/blog/2018/04/27/the-emberjs-times-issue-44.html) and share it even better with all your Ember friends.
+You can find our newsletter in both [the e-mail](https://the-emberjs-times.ongoodbits.com/)
+and the [blog format](https://emberjs.com/blog/2018/04/27/the-emberjs-times-issue-44.html). Share it even better with all your Ember friends!
 
 In this edition we will tell you more about updates for Ember CLI, what's upcoming
-for Ember documentation very, very soon and all the things about the latest Ember patch release
+for Ember documentation very, very soon, and all the things about the latest Ember patch release
 neither you nor your Ember app should miss.
 
 Here's a recap of what happened in Emberland these days ✨
@@ -20,45 +20,62 @@ Here's a recap of what happened in Emberland these days ✨
 ---
 
 ## [Ember 3.1.1 Released](https://github.com/emberjs/ember.js/releases/tag/v3.1.1)
-This week a patch for Ember was released. It includes several bug fixes but here are a few selected ones:
+This week, a patch for Ember was released. It includes several bug fixes, but here are a few selected ones:
 
-[A bug](https://github.com/emberjs/ember.js/issues/16379) was introduced in Ember 3.1 that caused `ariaRole` to not be appended if this was initially set as being `false`. The expected behaviour here is that if I initially set the `ariaRole` to false it should not be appended, but I might want to dynamically change this later on. This is now fixed with Ember 3.1.1.
+[A bug](https://github.com/emberjs/ember.js/issues/16379) was introduced in Ember 3.1 that caused `ariaRole` to not be appended if this was initially set as being `false`. The expected behaviour here is that if you initially set the `ariaRole` to false it should not be appended, but you might want to dynamically change this later on. This is now fixed with Ember 3.1.1.
 
-After upgrading to 3.1 [some people](https://github.com/emberjs/ember.js/issues/16503) started seeing errors like `Cannot read property 'syscall' of null`. This was caused by `ComponentDefinitions` leaking heap space. This has as well been fixed in Ember 3.1.1.
+After upgrading to 3.1 [some people](https://github.com/emberjs/ember.js/issues/16503) started seeing errors like `Cannot read property 'syscall' of null`. This was caused by `ComponentDefinitions` leaking heap space. This has been fixed in Ember 3.1.1.
 
 Ember 3.1.1 contains several more fixes. You can go though them all in [the release change log.](https://github.com/emberjs/ember.js/releases/tag/v3.1.1)
+
+_Look! I'm a beautiful butterfly! - Heimlich, A Bug's Life_
 
 ---
 
 ## [All good from 10 to 4 in Ember CLI](https://github.com/ember-cli/ember-cli/pull/7791)
 
-This week contributors to Ember CLI worked on improving the test suite by
+This week, contributors to Ember CLI worked on improving the test suite by
 [extending the list of Node versions](https://github.com/ember-cli/ember-cli/pull/7791) tested against.
-This means that you will be able to user your favorite command line tool even
-on the latest version of NodeJS smoothly and without any worries.
+This means that you will be able to use your favorite command line tool
+on the the latest version smoothly and without any worries.
 
-Also lots of efforts are underway to bring Treeshaking capabilities to your
-Ember app very soon. Several contributions this week ([1](https://github.com/ember-cli/ember-cli/pull/7788),
+Lots of efforts are underway to bring Treeshaking capabilities to your
+Ember app very soon. Treeshaking is the removal of unused code in order
+to decrease app bundle size. Several contributions this week ([1](https://github.com/ember-cli/ember-cli/pull/7788),
 [2](https://github.com/ember-cli/ember-cli/pull/7786),
 [3](https://github.com/ember-cli/ember-cli/pull/7784)) aimed at improving the internal
 packaging manager of Ember CLI. Wanna know more about the new exciting things
 that are on the horizon for Ember CLI in 2018? Do not miss the annual [roadmap for 2018](https://discuss.emberjs.com/t/ember-cli-2018-edition/14543) - it's worth the read!
 
-Finally, `ember-cli-update`, _the way_ to update your Ember apps still needs
-an update from you to make its adoption in the Ember community as smooth as possible.
+Finally, `ember-cli-update` is _the way_ to update your Ember apps, but our documentation
+hasn't caught up! You can help by [contributing](https://github.com/ember-cli/ember-cli-update/issues/288) 
+to one of several official documentation resources, like the ember-cli website.
+Also, more help is wanted in reminding `ember-cli-update` users when [a new version is out](https://github.com/ember-cli/ember-cli-update/issues/326).
 
-You can help out by [updating](https://github.com/ember-cli/ember-cli-update/issues/288) any of the several official documentation resources to both
-mention the command line tool and to show how to use it.
-Also more help is wanted in reminding `ember-cli-update` users if [a new version is out](https://github.com/ember-cli/ember-cli-update/issues/326).
 We're looking forward to your upgrades! ✨
 
 ---
 
-## [Learning Team corner](https://emberjs.com/blog/2018/04/22/ember-learning-update.html)
+## [Learning Team Corner](https://emberjs.com/blog/2018/04/22/ember-learning-update.html)
 
 The Learning Team met IRL at EmberConf and shared the results of that meeting on [the Ember blog](https://emberjs.com/blog/2018/04/22/ember-learning-update.html). Initiatives for the new year were grouped into two directions - User Support and Marketing.
 
-The new guides app will be launching soon! The main difference is that is in an Ember app, making it easier for Ember folks to contribute. And because of [prember](https://github.com/ef4/prember), it's fully SEO-friendly! Deprecation for the old guides is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated).
+Some big things are happening over the next few weeks for The Guides! A new app will be launching soon! [Chris
+Manson](https://github.com/mansona) has been working on this project since November, together with a few other
+contributors. Many others have been dreaming of it for years. 
+The main difference is that The Guides have been coverted to an Ember app (instead of a Ruby app), 
+making it easier for new people to contribute and for the team to maintain. 
+And, because of [prember](https://github.com/ef4/prember), it's SEO-friendly! Deprecation for the old guides app is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated). Very soon, Pull Requests and Issues will be
+frozen, and contributions to The Guides will continue in one of two new repositories. The WIP 
+[guides-app](https://github.com/ember-learn/guides-app) is the Ember app that will control layout and functionality,
+while [guides-source](https://github.com/ember-learn/guides-source) contains the written content in the form
+of versioned markdown files. In the future, most pull requests will be made to the guides-source to keep our content
+up to date and continually improving. 
+
+The Learning Team and Friends appreciate your patience during the final launch steps.
+As we tie up loose ends and move to production, we'll give updates via the 
+[Ember Community Slack](https://ember-community-slackin.herokuapp.com/)
+#-team-learning and #-announcements channels.
 
 ---
 
