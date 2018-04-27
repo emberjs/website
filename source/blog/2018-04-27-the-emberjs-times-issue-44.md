@@ -9,11 +9,12 @@ responsive: true
 ಹಲೋ Emberistas!
 
 You can find our newsletter in both [the e-mail](https://the-emberjs-times.ongoodbits.com/)
-and the [blog format](https://emberjs.com/blog/2018/04/27/the-emberjs-times-issue-44.html). Share it even better with all your Ember friends!
+and the [blog format](https://emberjs.com/blog/2018/04/27/the-emberjs-times-issue-44.html). 
+Share it even more easily with all your Ember friends!
 
-In this edition we will tell you more about updates for Ember CLI, what's upcoming
-for Ember documentation very, very soon, and all the things about the latest Ember patch release
-neither you nor your Ember app should miss.
+In this edition, we will share updates for Ember CLI, what's upcoming
+for Ember documentation very, very soon, and the latest Ember patch release that
+neither you nor your apps should miss.
 
 Here's a recap of what happened in Emberland these days ✨
 
@@ -62,10 +63,10 @@ The Learning Team met IRL at EmberConf and shared the results of that meeting on
 
 Some big things are happening over the next few weeks for The Guides! A new app will be launching soon! [Chris
 Manson](https://github.com/mansona) has been working on this project since November, together with a few other
-contributors. Many others have been dreaming of it for years. 
+contributors. Many have been dreaming of it for years. 
 The main difference is that The Guides have been coverted to an Ember app (instead of a Ruby app), 
 making it easier for new people to contribute and for the team to maintain. 
-And, because of [prember](https://github.com/ef4/prember), it's SEO-friendly! Deprecation for the old guides app is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated). Very soon, Pull Requests and Issues will be
+And, because of [prember](https://github.com/ef4/prember), it's SEO-friendly! Deprecation of the old guides app is happening [here](https://github.com/emberjs/guides#notice-this-repository-is-deprecated). Very soon, Pull Requests and Issues will be
 frozen, and contributions to The Guides will continue in one of two new repositories. The WIP 
 [guides-app](https://github.com/ember-learn/guides-app) is the Ember app that will control layout and functionality,
 while [guides-source](https://github.com/ember-learn/guides-source) contains the written content in the form
