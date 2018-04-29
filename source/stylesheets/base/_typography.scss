@@ -12,7 +12,7 @@ body {
 a {
   text-decoration: none;
   color: $orange-darker;
-  &:hover, :focus {
+  &:hover, &:focus {
     color: $orange-darkest;
   }
 }
@@ -20,7 +20,7 @@ p {
   a {
     color: $orange-darker;
     text-decoration: underline;
-    &:hover, :focus {
+    &:hover, &:focus {
       color: $orange-darkest;
       cursor: pointer;
     }
@@ -45,7 +45,7 @@ h1 {
 h2 {
 	color: $orange-darkest;
   font-size: 1.75em;
-  font-weight: bold; 
+  font-weight: bold;
   line-height: 1;
   margin: 2em 0 0.5em 0;
   @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
@@ -63,8 +63,8 @@ h3 {
   font-size: 1.3em;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 0.5em;  
-  margin-top: 1.25em; 
+  margin-bottom: 0.5em;
+  margin-top: 1.25em;
   + p {
     margin-top: 0 !important;
     padding-top: 0 !important;

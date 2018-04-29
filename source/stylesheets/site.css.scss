@@ -11,7 +11,7 @@
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
 @import 'vendor/docsearch';
-@import 'fonts'; 
+@import 'fonts';
 @import 'header';
 @import 'survey-reminder';
 @import 'footer';
@@ -78,7 +78,7 @@ body {
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
-  
+
   @media (min-width: 48em) {
     float: left;
     width: 22.5%;
@@ -426,7 +426,7 @@ body {
 #content {
   &.has-sidebar {
     margin-bottom: 90px;
-    
+
     @media (min-width: 48em) {
       width: 72.5%;
       float: left;
@@ -526,7 +526,6 @@ body.tomster_faq #content {
   }
 }
 
-
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
@@ -541,4 +540,6 @@ body.tomster_faq #content {
   margin-left: -60px;
 }
 
-
+.cta-contribute {
+  text-align: center;
+}
