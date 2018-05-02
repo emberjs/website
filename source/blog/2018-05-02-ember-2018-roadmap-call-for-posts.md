@@ -46,7 +46,7 @@ To kickoff the process, we've collected some early posts:
 
 * [Be loud and be ready - my hopes for Ember.js in 2018](https://gist.github.com/jenweber/a9fbea98478fc3841fb8b24f7dc961c8) by Jen Weber
 * [TODO TODO TODO](LINK LINK LINK) by Ryan Toronto and Sam Selikoff
-* [TODO TODO TODO](LINK LINK LINK) by Matthew Beale
+* [Blog Post for an Ambitious Framework](https://blog.201-created.com/blog-post-for-an-ambitious-framework-d7e9248893fa) by Matthew Beale and the [201 Created](https://www.201-created.com/) team
 * [TODO TODO TODO](LINK LINK LINK) by Melanie Sumner 
 
 #### Preliminary Timeline
