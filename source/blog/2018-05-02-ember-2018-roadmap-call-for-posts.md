@@ -45,7 +45,7 @@ Here are some broad ideas that might help you get started:
 To kickoff the process, we've collected some early posts:
 
 * [Be loud and be ready - my hopes for Ember.js in 2018](https://gist.github.com/jenweber/a9fbea98478fc3841fb8b24f7dc961c8) by Jen Weber
-* [TODO TODO TODO](LINK LINK LINK) by Ryan Toronto and Sam Selikoff
+* [Our wish for Ember in 2018: Overcommunication](https://embermap.com/notes/107-our-wish-for-ember-in-2018-overcommunication) by Ryan Toronto and Sam Selikoff
 * [Blog Post for an Ambitious Framework](https://blog.201-created.com/blog-post-for-an-ambitious-framework-d7e9248893fa) by Matthew Beale and the [201 Created](https://www.201-created.com/) team
 * [TODO TODO TODO](LINK LINK LINK) by Melanie Sumner 
 
