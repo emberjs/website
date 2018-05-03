@@ -20,9 +20,9 @@ Here's a recap of what happened in Emberland these days ✨
 
 ---
 
-## [Listen to your Broccoli and it will tell you how to eat it](your-main-url-here)
+## [Listen to your Broccoli and it will tell you how to eat it](http://www.oligriffiths.com/broccolijs/)
 
-You might already know that Broccoli takes care of your asset pipeline. But do you know **how** it works? [Oli Griffiths](https://twitter.com/oligriffiths) has made an [amazing tutorial](http://www.oligriffiths.com/broccolijs/) on *the asset pipeline for ambitious applications*. It takes you through the basic setup and guide you through the journey of sass preprocessing, debugging and fingerprints.
+You might already know that Broccoli takes care of your asset pipeline. But do you know **how** it works? [Oli Griffiths](https://twitter.com/oligriffiths) has made an [amazing tutorial](http://www.oligriffiths.com/broccolijs/) on *the asset pipeline for ambitious applications*. It takes you through the basic setup and guides you through the journey of sass preprocessing, debugging and fingerprints.
 
 
 
