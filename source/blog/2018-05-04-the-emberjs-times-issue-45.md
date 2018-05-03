@@ -1,6 +1,6 @@
 ---
 title: The Ember.js Times - Issue No. 45
-author: all the people
+author: Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jen Weber, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times
 alias : "blog/2018/05/04/the-emberjs-times-issue-44.html"
 responsive: true
@@ -8,15 +8,29 @@ responsive: true
 
 Hey there Emberistas!
 
-...
+Lots of programmers and writers in the Ember community have been busy this week and therefore
+we have several new data-driven RFCs, new community efforts, an outstanding update to
+Ember inspector to present for you.
 
-Here's a recap of what happened in Emberland these days ✨
+As well as a sincere reminder to eat your veggies! 🥒🥕
 
 ---
 
-## [EMBER](your-main-url-here)
+## [I hope my build never lets me down again in Ember 🐹](https://github.com/emberjs/rfcs/pull/328)
 
-<a class="ember-button ember-button--centered" href="#your-main-url-here">Read more</a>
+Have you ever made a change in the source code of your Ember app and subsequently awaited
+the reload of the browser tab for your app to no avail?
+Seconds, minutes, a coffee later -
+and you might have checked your terminal window at last: finding that syntax error in your template
+which led to a failing build and prevented the reload.
+
+If that sounds familiar to you, be sure to check out this new RFC this week:
+It proposes the automatic inclusion of **<i>ember-cli-build-notifications</i>**
+into new Ember apps. It's an addon providing system notifications for failing Ember app builds by default.
+
+The RFC proposal also discusses several alternative techniques to improve developer ergonomics regarding
+app builds. If you're curious, check out the [full RFC here](https://github.com/emberjs/rfcs/pull/328)
+and leave your thoughts on it.
 
 ---
 
@@ -24,15 +38,39 @@ Here's a recap of what happened in Emberland these days ✨
 
 You might already know that Broccoli takes care of your asset pipeline. But do you know **how** it works? [Oli Griffiths](https://twitter.com/oligriffiths) has made an [amazing tutorial](http://www.oligriffiths.com/broccolijs/) on *the asset pipeline for ambitious applications*. It takes you through the basic setup and guides you through the journey of sass preprocessing, debugging and fingerprints.
 
+---
 
+## [EMBER INSPECTOR COOL TITLE](url?)
+
+![Ember Inspector Dark Mode Screenshot](/images/blog/emberjstimes/ember-inspector-dark.png)
 
 ---
 
-## [EMBER DATA TITLE HERE](https://github.com/emberjs/rfcs/pull/329)
+## [Spring Cleaning for Ember Data powered by RFCs 📟🐹](https://github.com/emberjs/rfcs/pull/329)
 
-mention final comment period of this RFC: https://github.com/emberjs/rfcs/pull/326
-and also this new RFC: https://github.com/emberjs/rfcs/pull/329
-here
+A particular RFC (Request for Comments) has entered the final comment period with incredible speed:
+It proposes the **deprecation** of <em>ember-data</em>'s `Array.filter` method and explains
+how this change will not only improve the maintainability of the
+<i>ember-data</i> project but also impact the **performance** of Ember apps positively.
+
+You can [read the full RFC here](https://github.com/emberjs/rfcs/pull/326) and
+leave your comments below it.
+
+If you're making use of `this.get('store').filter` in your app or addon,
+check out the documentation of the <i>ember-data-filter</i> addon and
+follow the dedicated [guide on how to refactor this easily](https://github.com/ember-data/ember-data-filter#recommended-refactor-guide).
+
+In other <i>ember-data</i> news, another proposal focuses on removing usage of the `Ember.Evented` mixin
+in <i>ember-data</i> specifically.
+This would also lead to the future removal of several lifecycle hooks and methods
+on e.g. `Model`s and other Ember Data classes. You can learn more about
+the design of this proposed deprecation in [the original RFC](https://github.com/emberjs/rfcs/pull/329).
+
+Also, this week contributors to Ember Data focused on already getting the [cleanup
+work](https://github.com/emberjs/data/pull/5459) underway to leave the
+soon-to-be deprecated `store.filter` behind for good.
+Finally, a [bug fix](https://github.com/emberjs/data/pull/5461) for breaking up async relationships has landed. ✨
+
 
 ---
 
@@ -49,14 +87,20 @@ here
 
 ## [Contributor's Corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
-...
+<p>This week a warm thank you goes to <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/mikeu" target="gh-user">@mikeu</a>, <a href="https://github.com/shearichard" target="gh-user">@shearichard</a>, <a href="https://github.com/frank06" target="gh-user">@frank06</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/SeanHealy33" target="gh-user">@SeanHealy33</a>, <a href="https://github.com/fivetanley" target="gh-user">@fivetanley</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/chriskrycho" target="gh-user">@chriskrycho</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/josemarluedke" target="gh-user">@josemarluedke</a>, <a href="https://github.com/lifeart" target="gh-user">@lifeart</a>, <a href="https://github.com/lupestro" target="gh-user">@lupestro</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/greenkeeper[bot]" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/dcombslinkedin" target="gh-user">@dcombslinkedin</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/dgeb" target="gh-user">@dgeb</a>, <a href="https://github.com/anehx" target="gh-user">@anehx</a> and <a href="https://github.com/dfreeman" target="gh-user">@dfreeman</a> for contributing to Ember core projects this week 💖
+</p>
 
 ---
 
-## [More Questions & more Answers for Readers' Questions](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Got a question? We’re looking forward to it!](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
+
+  <p>Do you wonder about something that is related to Ember, Ember Data, Glimmer or addons in the Ember
+  ecosystem but you don't know where to ask?
+
+  Then Readers’ Questions is just for you. In the form of a Q & A members of the Ember Team will answer your questions - and we will post their answer in one of the future editions of the Ember.js Times!</p>
 </div>
 
 
@@ -68,4 +112,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-all the people
+Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jen Weber, Jessica Jordan and the Learning Team
