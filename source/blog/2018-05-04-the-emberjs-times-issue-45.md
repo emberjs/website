@@ -8,9 +8,7 @@ responsive: true
 
 Hey there Emberistas!
 
-Lots of programmers and writers in the Ember community have been busy this week and therefore
-we have several new data-driven RFCs, new community efforts, an outstanding update to
-Ember inspector to present for you.
+Lots of Ember programmers and writers have been busy this week and therefore we have several new data-driven RFCs, community efforts, and an outstanding update to Ember inspector to present to you.
 
 As well as a sincere reminder to eat your veggies! 🥒🥕
 
@@ -19,18 +17,17 @@ As well as a sincere reminder to eat your veggies! 🥒🥕
 ## [I hope my build never lets me down again in Ember 🐹](https://github.com/emberjs/rfcs/pull/328)
 
 Have you ever made a change in the source code of your Ember app and subsequently awaited
-the reload of the browser tab for your app to no avail?
+the reload of your app's browser tab, to no avail?
 Seconds, minutes, a coffee later -
-and you might have checked your terminal window at last: finding that syntax error in your template
-which led to a failing build and prevented the reload.
+you might have checked your terminal window - then at last, finding that syntax error in your template
+that led to a failing build and prevented the reload.
 
-If that sounds familiar to you, be sure to check out this new RFC this week:
-It proposes the automatic inclusion of **<i>ember-cli-build-notifications</i>**
+Sounds familiar? This week's RFC proposes the automatic inclusion of **<i>ember-cli-build-notifications</i>**
 into new Ember apps. It's an addon providing system notifications for failing Ember app builds by default.
 
 The RFC proposal also discusses several alternative techniques to improve developer ergonomics regarding
 app builds. If you're curious, check out the [full RFC here](https://github.com/emberjs/rfcs/pull/328)
-and leave your thoughts on it.
+and leave your thoughts on it!
 
 ---
 
@@ -46,15 +43,15 @@ You might already know that Broccoli takes care of your asset pipeline. But do y
 
 ---
 
-## [Spring Cleaning for Ember Data powered by RFCs 📟🐹](https://github.com/emberjs/rfcs/pull/329)
+## [Spring cleaning for Ember Data powered by RFCs 📟🐹](https://github.com/emberjs/rfcs/pull/329)
 
-A particular RFC (Request for Comments) has entered the final comment period with incredible speed:
+A particular RFC (Request for Comments) has entered the final comment period with incredible speed.
 It proposes the **deprecation** of <em>ember-data</em>'s `Array.filter` method and explains
 how this change will not only improve the maintainability of the
 <i>ember-data</i> project but also impact the **performance** of Ember apps positively.
 
 You can [read the full RFC here](https://github.com/emberjs/rfcs/pull/326) and
-leave your comments below it.
+leave your comments for it.
 
 If you're making use of `this.get('store').filter` in your app or addon,
 check out the documentation of the <i>ember-data-filter</i> addon and
@@ -97,14 +94,12 @@ Finally, a [bug fix](https://github.com/emberjs/data/pull/5461) for breaking up 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Do you wonder about something that is related to Ember, Ember Data, Glimmer or addons in the Ember
-  ecosystem but you don't know where to ask?
-
-  Then Readers’ Questions is just for you. In the form of a Q & A members of the Ember Team will answer your questions - and we will post their answer in one of the future editions of the Ember.js Times!</p>
+  <p>Do you wonder about something that is related to Ember, Ember Data, Glimmer, or addons in the Ember
+  ecosystem, but you don't know where to ask? Readers’ Questions are just for you!</p>
 </div>
 
 
-**Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core). And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
+**Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core) and a member of the Ember team will answer your question in a future edition of the Ember.js Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
 
 ---
 
