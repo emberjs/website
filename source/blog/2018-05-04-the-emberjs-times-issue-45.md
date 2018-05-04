@@ -47,9 +47,9 @@ The Ember Inspector project is on a roll! v3.1.0 has the new component tree and 
 ## [Spring cleaning for Ember Data powered by RFCs 📟🐹](https://github.com/emberjs/rfcs/pull/329)
 
 A particular RFC has entered the final comment period with incredible speed!
-It proposes the **deprecation** of <em>ember-data</em>'s `Array.filter` method and explains
+It proposes the **deprecation** of Ember Data's `Array.filter` method and explains
 how this change will not only improve the maintainability of the
-<i>ember-data</i> project, but also improve the **performance** of Ember apps.
+Ember Data project, but also improve the **performance** of Ember apps.
 
 You can [read the full RFC here](https://github.com/emberjs/rfcs/pull/326) and
 leave your comments for it.
@@ -58,13 +58,13 @@ If you're making use of `this.get('store').filter` in your app or addon,
 check out the documentation of the <i>ember-data-filter</i> addon and
 follow the dedicated [guide on how to refactor this easily](https://github.com/ember-data/ember-data-filter#recommended-refactor-guide).
 
-In other <i>ember-data</i> news, another proposal focuses on removing usage of the `Ember.Evented` mixin
-in <i>ember-data</i> specifically.
+In other Ember Data news, another proposal focuses on removing usage of the `Ember.Evented` mixin
+in Ember Data specifically.
 This would also lead to the future removal of several lifecycle hooks and methods
 on `Model`s and other Ember Data classes. You can learn more about
 the design of this proposed deprecation in [the original RFC](https://github.com/emberjs/rfcs/pull/329).
 
-This week, contributors to Ember Data focused on getting some [cleanup
+This week, contributors focused on getting some [cleanup
 work](https://github.com/emberjs/data/pull/5459) underway to leave the
 soon-to-be deprecated `store.filter` behind for good.
 Finally, a [bug fix](https://github.com/emberjs/data/pull/5461) for breaking up async relationships has landed. ✨
