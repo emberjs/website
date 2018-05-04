@@ -8,7 +8,7 @@ responsive: true
 
 こんにちは Emberistas!
 
-Lots of Ember programmers and writers have been busy this week! We have several new data-driven RFCs (📝 Requests for Comments), community efforts, and an outstanding update to Ember inspector to present to you.
+Lots of Ember programmers and writers have been busy this week! We have several new data-driven RFCs (📝 Requests for Comments), community efforts, and an outstanding update to Ember Inspector to present to you.
 
 As well as a sincere reminder to eat your veggies! 🥒🥕
 
