@@ -281,19 +281,46 @@ and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.1.0...v3
 
 ### Changes in Ember CLI 3.2
 
-#### Deprecations in Ember CLI 3.2
+#### New Features (3)
+**Qunit Dom** - In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
 
-Two new deprecations are introduces in Ember CLI 3.2:
+This is, to put it quite simply, totally awesome. It means that this code:
 
-* TODO
-* TODO
+```js
+assert.equal(this.element.querySelector('.title').textContent.trim(), 'Hello World!');
+```
+
+becomes this:
+
+```js
+assert.dom('.title').hasText('Hello World!');
+```
+
+See what I mean? Totally awesome. <3
+
+**Experiments with more efficient transpilation** - Until now, addons were responsible for compiling their own JS/HBS/CSS and returning AMD/CSS. Now they return the raw code, and the app uses its own processors (babel, htmlbars) to compile it. This is required to do proper tree-shaking and code-splitting. Delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501) and all-at-once addon optimization after compilation [(#7650)](https://github.com/ember-cli/ember-cli/pull/7650) have been added. Additionally, more comprehensive methods to detect if ember-cli is being run within CI or not have also been added [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see [https://github.com/watson/ci-info/](https://github.com/watson/ci-info/).
+
+**Module Unification (new file layout) Continues** - You can now generate an addon using the Module Unification layout [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490)! Use the command `MODULE_UNIFICATION=true ember addon my-addon` to try it out [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658). We also improved the logic to support addons that use Module Unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660), added the blueprint for a dummy app to addons that use Module Unification [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667), and updated the version of Ember used in Module Unification [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
+
+#### Deprecations (1)
+
+##### ember-cli-babel 5
+
+This release of Ember CLI [deprecates `ember-cli-babel` 5.x](https://github.com/ember-cli/ember-cli/pull/7676). Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and is expected to be dropped soon.
+
+For more details on the changes in Ember CLI 3.2.0-beta.1 and detailed upgrade
+instructions, please review the [Ember CLI 3.2.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0-beta.1).
+
+Thank you to [@GavinJoyce](https://github.com/GavinJoyce), [@Turbo87](https://github.com/Turbo87), [@cibernox](https://github.com/cibernox), [@iezer](https://github.com/iezer), [@kellyselden](https://github.com/kellyselden), [@raytiley](https://github.com/raytiley), [@t-sauer](https://github.com/t-sauer), and [@thetimothyp](https://github.com/thetimothyp)
+for your incredible work on ember-cli!
 
 For more details on the changes in Ember CLI 3.2 and detailed upgrade
 instructions, please review the [Ember CLI  3.2.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0).
 
-### Upcoming Changes in Ember CLI 3.3
+### Changes in Ember CLI 3.3
 
-#### Deprecations in Ember CLI 3.3
+#### New Features (x)
+#### Deprecations (x)
 
 For more details on the changes in Ember CLI 3.3.0-beta.1 and detailed upgrade
 instructions, please review the [Ember CLI 3.3.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.3.0-beta.1).
