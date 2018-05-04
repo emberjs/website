@@ -6,7 +6,7 @@ alias : "blog/2018/05/04/the-emberjs-times-issue-44.html"
 responsive: true
 ---
 
-Hey there Emberistas!
+こんにちは Emberistas!
 
 Lots of Ember programmers and writers have been busy this week! We have several new data-driven RFCs (📝 Requests for Comments), community efforts, and an outstanding update to Ember inspector to present to you.
 
@@ -75,7 +75,7 @@ Finally, a [bug fix](https://github.com/emberjs/data/pull/5461) for breaking up 
 
 The Ember team would like you (yes, you!) to write a blog post to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
 
-Write your blog post by May 30th. Tweet a link to the post with the hashtag #EmberJS2018. Topic ideas could include: ideas for community programs, framework features, documentation improvements, ecosystem needs, or tooling enhancements. 
+Write your **blog post** by **May 30th**. Tweet a link to the post with the hashtag **#EmberJS2018**. Topic ideas could include: ideas for community programs, framework features, documentation improvements, ecosystem needs, or tooling enhancements.
 
 Check out Katie Gengler's awesome [call for blog posts here](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html) and get writing!
 
@@ -83,7 +83,7 @@ Check out Katie Gengler's awesome [call for blog posts here](https://emberjs.com
 
 ## [The Stack Overflow problem](https://medium.com/front-end-hacking/whats-up-with-ember-js-and-stack-overflow-1961ac29ebde)
 
-Jen Weber and Chris Manson are taking a deep dive into Ember's presence on Stack Overflow this month. They're even recording their efforts once a week at 9am EST on Fridays! You can tune into their [YouTube channel](https://www.youtube.com/channel/UCyErLHzPqLAkL1F-SivFDcA) or [Twitch stream](https://www.twitch.tv/videos/252443184). 
+Jen Weber and Chris Manson are taking a deep dive into Ember's presence on Stack Overflow this month. They're even recording their efforts once a week at **9am EST on Fridays**! You can tune into their [YouTube channel](https://www.youtube.com/channel/UCyErLHzPqLAkL1F-SivFDcA) or [Twitch stream](https://www.twitch.tv/videos/252443184).
 
 Collectively, question by question, we can try to create a better Ember presence on Stack Overflow. Check out some tips and tricks on how to get involved in the Stack Overflow effort in the [What’s up with Ember.js and Stack Overflow?](https://medium.com/front-end-hacking/whats-up-with-ember-js-and-stack-overflow-1961ac29ebde) post. It's gonna be...May. 🥁
 
@@ -103,10 +103,10 @@ Collectively, question by question, we can try to create a better Ember presence
 
   <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember
   ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="bit.ly/ask-ember-core" target="ask-ember-core">https://bit.ly/ask-ember-core</a> and a member of the Ember team will answer in a future edition of the Ember.js Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 </div>
 
-
-**Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core) and a member of the Ember team will answer in a future edition of the Ember.js Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
 
 ---
 
