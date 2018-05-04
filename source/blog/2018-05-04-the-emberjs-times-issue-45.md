@@ -8,7 +8,7 @@ responsive: true
 
 Hey there Emberistas!
 
-Lots of Ember programmers and writers have been busy this week and therefore we have several new data-driven RFCs, community efforts, and an outstanding update to Ember inspector to present to you.
+Lots of Ember programmers and writers have been busy this week! We have several new data-driven RFCs (📝 Requests for Comments), community efforts, and an outstanding update to Ember inspector to present to you.
 
 As well as a sincere reminder to eat your veggies! 🥒🥕
 
@@ -18,11 +18,10 @@ As well as a sincere reminder to eat your veggies! 🥒🥕
 
 Have you ever made a change in the source code of your Ember app and subsequently awaited
 the reload of your app's browser tab, to no avail?
-Seconds, minutes, a coffee later -
-you might have checked your terminal window - then at last, finding that syntax error in your template
-that led to a failing build and prevented the reload.
+Seconds, minutes, a coffee later—you might have checked your terminal window—then at last, you find that syntax error in your template
+that led to a failing build, preventing the reload.
 
-Sounds familiar? This week's RFC proposes the automatic inclusion of **<i>ember-cli-build-notifications</i>**
+This week's RFC proposes the automatic inclusion of **<i>ember-cli-build-notifications</i>**
 into new Ember apps. It's an addon providing system notifications for failing Ember app builds by default.
 
 The RFC proposal also discusses several alternative techniques to improve developer ergonomics regarding
@@ -37,18 +36,20 @@ You might already know that Broccoli takes care of your asset pipeline. But do y
 
 ---
 
-## [EMBER INSPECTOR COOL TITLE](url?)
+## [Ember Inspector dark mode](https://github.com/emberjs/ember-inspector)
 
 ![Ember Inspector Dark Mode Screenshot](/images/blog/emberjstimes/ember-inspector-dark.png)
+
+The Ember Inspector project is on a roll! v3.1.0 has the new component tree and dark mode. Change your theme from light to dark in Chrome/Firefox dev tools. 🖤
 
 ---
 
 ## [Spring cleaning for Ember Data powered by RFCs 📟🐹](https://github.com/emberjs/rfcs/pull/329)
 
-A particular RFC (Request for Comments) has entered the final comment period with incredible speed.
+A particular RFC has entered the final comment period with incredible speed!
 It proposes the **deprecation** of <em>ember-data</em>'s `Array.filter` method and explains
 how this change will not only improve the maintainability of the
-<i>ember-data</i> project but also impact the **performance** of Ember apps positively.
+<i>ember-data</i> project, but also improve the **performance** of Ember apps.
 
 You can [read the full RFC here](https://github.com/emberjs/rfcs/pull/326) and
 leave your comments for it.
@@ -60,31 +61,36 @@ follow the dedicated [guide on how to refactor this easily](https://github.com/e
 In other <i>ember-data</i> news, another proposal focuses on removing usage of the `Ember.Evented` mixin
 in <i>ember-data</i> specifically.
 This would also lead to the future removal of several lifecycle hooks and methods
-on e.g. `Model`s and other Ember Data classes. You can learn more about
+on `Model`s and other Ember Data classes. You can learn more about
 the design of this proposed deprecation in [the original RFC](https://github.com/emberjs/rfcs/pull/329).
 
-Also, this week contributors to Ember Data focused on already getting the [cleanup
+This week, contributors to Ember Data focused on getting some [cleanup
 work](https://github.com/emberjs/data/pull/5459) underway to leave the
 soon-to-be deprecated `store.filter` behind for good.
 Finally, a [bug fix](https://github.com/emberjs/data/pull/5461) for breaking up async relationships has landed. ✨
 
+---
+
+## [#EmberJS2018: blog posts wanted](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
+
+The Ember team would like you (yes, you!) to write a blog post to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
+
+Write your blog post by May 30th. Tweet a link to the post with the hashtag #EmberJS2018. Topic ideas could include: ideas for community programs, framework features, documentation improvements, ecosystem needs, or tooling enhancements. 
+
+Check out Katie Gengler's awesome [call for blog posts here](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html) and get writing!
 
 ---
 
 ## [JEN'S BLOG POST ON ](your-main-url-here)
 
-...
 
----
-
-## [Learning Team Corner](your-main-url-here)
 
 ---
 
 
-## [Contributor's Corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
+## [Contributor's corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
-<p>This week a warm thank you goes to <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/mikeu" target="gh-user">@mikeu</a>, <a href="https://github.com/shearichard" target="gh-user">@shearichard</a>, <a href="https://github.com/frank06" target="gh-user">@frank06</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/SeanHealy33" target="gh-user">@SeanHealy33</a>, <a href="https://github.com/fivetanley" target="gh-user">@fivetanley</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/chriskrycho" target="gh-user">@chriskrycho</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/josemarluedke" target="gh-user">@josemarluedke</a>, <a href="https://github.com/lifeart" target="gh-user">@lifeart</a>, <a href="https://github.com/lupestro" target="gh-user">@lupestro</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/greenkeeper[bot]" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/dcombslinkedin" target="gh-user">@dcombslinkedin</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/dgeb" target="gh-user">@dgeb</a>, <a href="https://github.com/anehx" target="gh-user">@anehx</a> and <a href="https://github.com/dfreeman" target="gh-user">@dfreeman</a> for contributing to Ember core projects this week 💖
+<p>This week a warm thank you goes to <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/mikeu" target="gh-user">@mikeu</a>, <a href="https://github.com/shearichard" target="gh-user">@shearichard</a>, <a href="https://github.com/frank06" target="gh-user">@frank06</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/SeanHealy33" target="gh-user">@SeanHealy33</a>, <a href="https://github.com/fivetanley" target="gh-user">@fivetanley</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/chriskrycho" target="gh-user">@chriskrycho</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/josemarluedke" target="gh-user">@josemarluedke</a>, <a href="https://github.com/lifeart" target="gh-user">@lifeart</a>, <a href="https://github.com/lupestro" target="gh-user">@lupestro</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/greenkeeper[bot]" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/dcombslinkedin" target="gh-user">@dcombslinkedin</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/dgeb" target="gh-user">@dgeb</a>, <a href="https://github.com/anehx" target="gh-user">@anehx</a> and <a href="https://github.com/dfreeman" target="gh-user">@dfreeman</a> for contributing to Ember core projects this week. 💖
 </p>
 
 ---
@@ -94,12 +100,12 @@ Finally, a [bug fix](https://github.com/emberjs/data/pull/5461) for breaking up 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Do you wonder about something that is related to Ember, Ember Data, Glimmer, or addons in the Ember
-  ecosystem, but you don't know where to ask? Readers’ Questions are just for you!</p>
+  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember
+  ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
 </div>
 
 
-**Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core) and a member of the Ember team will answer your question in a future edition of the Ember.js Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
+**Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core) and a member of the Ember team will answer in a future edition of the Ember.js Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
 
 ---
 
