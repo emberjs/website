@@ -81,12 +81,13 @@ Check out Katie Gengler's awesome [call for blog posts here](https://emberjs.com
 
 ---
 
-## [JEN'S BLOG POST ON ](your-main-url-here)
+## [The Stack Overflow problem](https://medium.com/front-end-hacking/whats-up-with-ember-js-and-stack-overflow-1961ac29ebde)
 
+Jen Weber and Chris Manson are taking a deep dive into Ember's presence on Stack Overflow this month. They're even recording their efforts once a week at 9am EST on Fridays! You can tune into their [YouTube channel](https://www.youtube.com/channel/UCyErLHzPqLAkL1F-SivFDcA) or [Twitch stream](https://www.twitch.tv/videos/252443184). 
 
+Collectively, question by question, we can try to create a better Ember presence on Stack Overflow. Check out some tips and tricks on how to get involved in the Stack Overflow effort in the [What’s up with Ember.js and Stack Overflow?](https://medium.com/front-end-hacking/whats-up-with-ember-js-and-stack-overflow-1961ac29ebde) post. It's gonna be...May. 🥁
 
 ---
-
 
 ## [Contributor's corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
