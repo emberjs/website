@@ -52,7 +52,7 @@
   image: ibotta.png
   alt: "Ibotta"
   use: "We use Ember for building our internal and external web applications."
-- url: http://travis-ci.org
+- url: http://travis-ci.com
   image: travisci.png
   alt: Travis CI
 - url: https://www.ted.com
@@ -1061,10 +1061,27 @@
   image: deic.png
   alt: "Danish e-Infrastructure Cooperation"
   use: "DeIC's DDoS Protection System client (ddps.deic.dk) is built with Ember"
+- url: "https://www.roofstock.com"
+  image: roofstock.png
+  alt: "Roofstock.com"
+  use: "Roofstock.com is built with Ember"
 - url: "https://www.fastly.com"
   image: fastly.png
   alt: Fastly
   use: "Fastly uses Ember to build our control panel (https://manage.fastly.com/) as well as other internal/external projects."
+- url: "https://www.outdoorsy.com"
+  image: outdoorsy.png
+  alt: Outdoorsy
+  use: "Outdoorsy uses Ember to power our search and reservation web applications"
+- url: "https://www.wheelbasepro.com"
+  image: wheelbasepro.png
+  alt: Wheelbase
+  use: "Wheelbase is built using Ember"
+- url: "https://www.verizondigitalmedia.com/"
+  image: verizon-digital-media-services.png
+  alt: Verizon Digital Media Services
+  use: "Verizon Digital Media Services uses Ember to build our customer-facing CDN configuration portal (https://my.edgecast.com/) and other internal projects."
+
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
