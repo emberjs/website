@@ -4,9 +4,9 @@
 This repository contains the source code and content for some of the [Ember.js public website](https://emberjs.com): the home, blog, community, and about pages.
 
 Other parts of the public website are separate apps: 
-- [The Guides](https://github.com/emberjs/guides) 
 - [API Docs](https://github.com/ember-learn/ember-api-docs) 
 - [Deprecations](https://github.com/ember-learn/deprecation-app) 
+- [The Guides](https://github.com/ember-learn/guides-source)
 - [Builds](https://github.com/ember-learn/builds)
 - [Status Board](https://github.com/ember-learn/statusboard)
 
@@ -19,7 +19,7 @@ The best way to get started is to find issue labeled "good first issue" or "help
 Like most open source projects, contributors are encouraged to open an issue
 to propose changes and iterate on ideas before investing time in coding.
 Some tips for working with git/GitHub can be found in
-[Making your first pull request](https://github.com/emberjs/guides/blob/master/CONTRIBUTING.md#making-your-first-pull-request) in the Guides respository.
+[Making your first pull request](https://github.com/ember-learn/guides-source/blob/master/CONTRIBUTING.md#making-your-first-pull-request) in the Guides respository.
 
 ## Running locally with Docker (recommended)
 
