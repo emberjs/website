@@ -24,7 +24,7 @@ Intro Text....
 ## [EMBER LEARN THINGS](https://emberguides.stonecircle.io/release/)
 The Learning Team has been working on a new and improved version of the Guides app. It's now made with Ember.js as is more shiny than ever. The Guides app is almost ready for a proper release but before we do so we would love for you to [try it out](https://emberguides.stonecircle.io/release/). If you find any issues then please [report them](https://github.com/ember-learn/guides-app/issues).
 
-Or if you feel in a particulary good mood look through existing [issues](https://github.com/ember-learn/guides-app/issues) and start contributing to the new Guides App.
+Or if you feel in a particulary good mood look through existing issues in the [Guides app](https://github.com/ember-learn/guides-app/issues) or the [Guides source](https://github.com/ember-learn/guides-source/issues) and start contributing to the new guides.
 
 ---
 
