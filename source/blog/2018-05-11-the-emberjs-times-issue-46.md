@@ -62,13 +62,13 @@ Or if you feel in a particulary good mood, look through existing issues in the [
 
 ---
 
-## [Moar #EmberJS2018 blog posts!](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
+## [Moar #EmberJS2018 blog posts wanted!](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
 
 We've already seen a lot of thoughtful blog posts from the Ember team's [call for community blog posts](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html). But we're hoping for more! Have something to say?
 
-Write a blog post to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
+Write a blog post*by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
 
-Write your **blog post** by **May 30th**. Tweet a link to the post with the hashtag **#EmberJS2018**. Topic ideas could include: ideas for community programs, framework features, documentation improvements, ecosystem needs, or tooling enhancements.
+Looking for inspiration? Check out the [**#EmberJS2018** hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter.
 
 ---
 
