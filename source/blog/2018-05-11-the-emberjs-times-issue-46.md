@@ -14,6 +14,18 @@ This week we'll highlight a new RFC deprecating features from ancient Ember time
 
 ---
 
+## [Moar #EmberJS2018 blog posts wanted!](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
+
+![Original Tomster Mascot Image](/images/tomsters/original.png)
+
+We've already seen a lot of thoughtful blog posts from the Ember team's [call for community blog posts](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html). But we're hoping for more! Have something to say?
+
+Write a blog post by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
+
+Looking for inspiration? Check out the [**#EmberJS2018** hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter or [@zinyado's repo collecting posts](https://github.com/zinyando/emberjs2018-posts) on GitHub.
+
+---
+
 ## [Global resolution and more for Ember 🐹](https://github.com/emberjs/rfcs/pull/331)
 
 [@Gaurav0](https://github.com/Gaurav0) has submitted an RFC to finally **deprecate the Globals resolver** and the related API. The Globals resolver is primarily a holdover from the early days of Ember when people used Ember without Ember CLI.
@@ -53,17 +65,6 @@ The Learning Team has been working on a new and improved version of the Guides a
 Or if you feel in a particulary good mood, look through existing issues in the [Guides app](https://github.com/ember-learn/guides-app/issues) or the [Guides source](https://github.com/ember-learn/guides-source/issues) and start contributing to the new guides.
 
 ---
-
-## [Moar #EmberJS2018 blog posts wanted!](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
-
-We've already seen a lot of thoughtful blog posts from the Ember team's [call for community blog posts](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html). But we're hoping for more! Have something to say?
-
-Write a blog post by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
-
-Looking for inspiration? Check out the [**#EmberJS2018** hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter or [@zinyado's repo collecting posts](https://github.com/zinyando/emberjs2018-posts) on GitHub.
-
----
-
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
