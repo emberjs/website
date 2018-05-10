@@ -28,7 +28,38 @@ Or if you feel in a particulary good mood look through existing issues in the [G
 
 ---
 
-## [SOMETHING ELSE HERE](#your-url-here)
+## [Deprecate Globals Resolver RFC](https://github.com/emberjs/rfcs/pull/331)
+Gaurav Munjal has submitted an RFC to finally deprecate the globals resolver and related api.
+The globals resolver is primarily a holdover from when people used Ember without Ember-CLI
+and looks like this:
+
+```
+// app.js
+var App = Ember.Application.create();
+
+App.Router.map(function() {
+  this.route('about');
+});
+
+App.AboutRoute = Ember.Route.extend({
+  model: function() {
+    return ['red', 'yellow', 'blue'];
+  }
+});
+```
+
+```
+// index.html
+<script type="text/x-handlebars" data-template-name="index">
+  <ul>
+    {{#each model as |item|}}
+      <li>{{item}}</li>
+    {{/each}}
+  </ul>
+</script>
+
+Using Ember-CLI instead has been recommended for years, but anyone still using this api should
+read the RFC and comment on why they might still need it.
 
 
 ---
