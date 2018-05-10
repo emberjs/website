@@ -66,7 +66,7 @@ Or if you feel in a particulary good mood, look through existing issues in the [
 
 We've already seen a lot of thoughtful blog posts from the Ember team's [call for community blog posts](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html). But we're hoping for more! Have something to say?
 
-Write a blog post*by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
+Write a blog post by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
 
 Looking for inspiration? Check out the [**#EmberJS2018** hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter.
 
@@ -80,7 +80,7 @@ Looking for inspiration? Check out the [**#EmberJS2018** hashtag](https://twitte
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
-Many thanks to this week's contributors <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/toddjordan" target="gh-user">@toddjordan</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a> and <a href="https://github.com/nummi" target="gh-user">@nummi</a> for contributing to Ember core projects this week. 🐹
+Many thanks to  <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/toddjordan" target="gh-user">@toddjordan</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a> and <a href="https://github.com/nummi" target="gh-user">@nummi</a> for contributing to Ember core projects this week. 💖
 
 ---
 
