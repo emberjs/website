@@ -22,7 +22,7 @@ We've already seen a lot of thoughtful blog posts from the Ember team's [call fo
 
 Write a blog post by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
 
-Looking for inspiration? Check out the [**#EmberJS2018** hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter or [@zinyado's repo collecting posts](https://github.com/zinyando/emberjs2018-posts) on GitHub.
+Looking for inspiration? Check out the [#EmberJS2018 hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter or [@zinyado's repo collecting posts](https://github.com/zinyando/emberjs2018-posts) on GitHub.
 
 ---
 
@@ -52,7 +52,7 @@ App.AboutRoute = Ember.Route.extend({
 });
 ```
 
-Using Ember CLI as the build tool for Ember apps has been recommended for years and is widely adopted in the community. Yet, if you're an active user of the Globals resolver API you should definitely give the [original proposal for deprecating](https://github.com/emberjs/rfcs/pull/331) it a read and leave your thoughts on its use cases in the comments.
+Using Ember CLI as the build tool for Ember apps has been recommended for years and is widely adopted in the community. Yet, if you're an active user of the Globals resolver API you should definitely give the [original proposal for deprecating it](https://github.com/emberjs/rfcs/pull/331) a read and leave your thoughts on its use cases in the comments.
 
 
 Furthermore, contributors to Ember this week worked on preventing memory leaks in tests ([1](https://github.com/emberjs/ember.js/pull/16620), [2](https://github.com/emberjs/ember-qunit/pull/328)), nifty bug fixes ([3](https://github.com/emberjs/ember.js/pull/16615), [4](https://github.com/emberjs/ember.js/pull/16613)) and more internal and devops-driven improvements ([5](https://github.com/emberjs/ember.js/pull/16617), [6](https://github.com/emberjs/ember.js/pull/16616), [7](https://github.com/emberjs/ember.js/pull/16582)).
