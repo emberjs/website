@@ -16,11 +16,13 @@ This week we'll highlight a new RFC deprecating features from ancient Ember time
 
 ## [Moar #EmberJS2018 blog posts wanted!](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
 
-![Original Tomster Mascot Image](/images/tomsters/original.png)
+<div class="blog-row">
+  <img class="float-left small transparent padded" alt="Original Tomster Mascot Image" title="Tomster loves your blog posts about Ember.js" src="/images/tomsters/original.png" />
 
-We've already seen a lot of thoughtful blog posts from the Ember team's [call for community blog posts](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html). But we're hoping for more! Have something to say?
+  <p>We've already seen a lot of thoughtful blog posts from the Ember team's <a href="https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html" target="cta-blogs">call for community blog posts</a>. But we're hoping for more! Have something to say?</p>
 
-Write a blog post by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
+<p>Write a blog post by <strong>May 30th</strong> to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.</p>
+</div>
 
 Looking for inspiration? Check out the [#EmberJS2018 hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter or [@zinyado's repo collecting posts](https://github.com/zinyando/emberjs2018-posts) on GitHub.
 
@@ -77,7 +79,7 @@ Many thanks to <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>This week's Readers’ Question revolves around Promises: Why does Ember ship with <code>RSVP.Promise</code> by default and why would it not rely on a regular Promise polyfill instead?
+  <p>This week's Readers’ Question revolves around Promises: Why does Ember ship with <code>RSVP.Promise</code> by default and why would it not rely on a regular Promise polyfill instead?</p>
 
 <p>In his detailed write-up, Ember Core team member <a href="https://github.com/ef4" target="gh-user">@ef4</a> will answer everything you need to know about the origin of <code>RSVP</code> in Ember, what it has been and still is used for and if Ember will be going all in regarding native Promises in the future.
 You can read <a href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-still-use-rsvp/14736" target="embertimesq">the full answer</a> on the offical Ember forum.</p>
