@@ -72,18 +72,19 @@ Many thanks to <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a
 
 ---
 
-## [Readers' Questions: Why use RSVP instead of native Promises?](#hopefully-getting-one-in-this-week)
+## [Readers’ Questions: “Why does Ember still use RSVP?”](https://discuss.emberjs.com/t/readers-questions-why-does-ember-still-use-rsvp/14736)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>This week's Readers’ Question revolves around Promises: Why does Ember ship with <code>RSVP</code> by default and why would it not rely on the Promise polyfill instead?
+  <p>This week's Readers’ Question revolves around Promises: Why does Ember ship with <code>RSVP.Promise</code> by default and why would it not rely on a regular Promise polyfill instead?
 
-<p>In his detailed write-up, Ember Core team member <a href="https://github.com/ef4" target="gh-user">@ef4</a> will answer everything you need to know about the origin of <code>RSVP</code> in Ember, what it has been and still is used for and if there will be going all in regarding native Promises as well. You can read <a href="#update-link-once-reply-is-live" target="embertimesq">his full answer</a> on the offical Ember forum.</p>
+<p>In his detailed write-up, Ember Core team member <a href="https://github.com/ef4" target="gh-user">@ef4</a> will answer everything you need to know about the origin of <code>RSVP</code> in Ember, what it has been and still is used for and if Ember will be going all in regarding native Promises in the future.
+You can read <a href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-still-use-rsvp/14736" target="embertimesq">the full answer</a> on the offical Ember forum.</p>
 </div>
 
 <div class="blog-row">
-<a class="ember-button ember-button--centered" href="#update-link-once-reply-is-live">Read more</a>
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-still-use-rsvp/14736" target="embertimesq">Read more</a>
 </div>
 
 **Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core). And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
