@@ -35,6 +35,40 @@ There's an [RFC](https://github.com/emberjs/rfcs/pull/329) on removing usage of 
 
 ---
 
+## [Recasting Call 🎬 for Templates](https://github.com/ember-template-lint/ember-template-recast)
+
+Are you an Ember addon author who wants to be able to change the template of host apps? Or are you an Ember developer who tinkers with templates or template-related codemods? Then, the new Ember addon [ember-template-recast](https://github.com/ember-template-lint/ember-template-recast) is just for you.
+Ember Template Recast allows you to transform templates easily in a non-destructive manner - this means, that you can modify specific parts of your templates while preserving formatting like whitespaces and linebreaks from your original template at the same time.
+
+The `templateRecast` API is almost as straightforward as an `ember install`. Check it out:
+
+```
+const anExampleTemplate = `
+{{list-item
+  title="Ember"
+}}`;
+
+// create an abstraction of your template (AST)
+let ast = templateRecast.parse(anExampleTemplate);
+
+// modify your template
+ast.body[0].hash[0].key = 'header';
+ast.body[0].hash[0].value += ' is awesome';
+
+// reprint your AST...
+templateRecast.print(ast);
+
+/* ...to return your modified template, formatting included 💁🏻
+	{{list-item
+	  header="Ember is awesome"
+	}}
+*/
+```
+
+Try it out [here](https://github.com/ember-template-lint/ember-template-recast) and transform your templates today ✨
+
+---
+
 ## [SOMETHING ELSE HERE](#your-url-here)
 
 
