@@ -30,8 +30,8 @@ Again you can enjoy reading the Ember.js Times in both the [e-mail](https://the-
 
 ---
 
-## [SOMETHING ELSE HERE](#your-url-here)
-
+## [RFC for removing `Ember.Evented`](https://github.com/emberjs/rfcs/pull/329)
+There's an [RFC](https://github.com/emberjs/rfcs/pull/329) on removing usage of the `Ember.Evented` mixin in Ember Data specifically. This would also lead to the future removal of several lifecycle hooks and methods on `Model`s and other Ember Data classes. The use of `Ember.Evented` is mostly a legacy from pre 1.0 of Ember Data and is simply not needed anymore. You can follow the discussion and read all about the implications of this change on the [RFC pull request.](https://github.com/emberjs/rfcs/pull/329)
 
 ---
 
