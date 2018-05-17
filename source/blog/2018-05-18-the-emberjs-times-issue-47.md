@@ -98,6 +98,8 @@ Try it out [here](https://github.com/ember-template-lint/ember-template-recast) 
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
+<p>A big thank you goes to the people who contributed to Ember core projects this week: <a href="https://github.com/csantero" target="gh-user">@csantero</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/miguelcobain" target="gh-user">@miguelcobain</a>, <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/jimenglish81" target="gh-user">@jimenglish81</a>, <a href="https://github.com/josemarluedke" target="gh-user">@josemarluedke</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/dcombslinkedin" target="gh-user">@dcombslinkedin</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/sivakumar-kailasam" target="gh-user">@sivakumar-kailasam</a>, <a href="https://github.com/efx" target="gh-user">@efx</a> and <a href="https://github.com/mansona" target="gh-user">@mansona</a>. 💕</p>
+
 
 ---
 
