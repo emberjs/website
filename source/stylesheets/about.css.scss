@@ -183,3 +183,13 @@ body.index {
     text-align: center;
   }
 }
+
+.surround {
+  height: 103px;
+  overflow: hidden;
+  #slider {
+    li {
+      width: 234px !important;
+    }
+  }
+}

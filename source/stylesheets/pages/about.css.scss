@@ -78,39 +78,6 @@
 
     .bx-wrapper {
 
-      .bx-prev,
-      .bx-next {
-        background: no-repeat;
-        @include hidpi('about/carousel_controls', png);
-        float: left;
-        height: 28px;
-        width: 30px;
-      }
-
-      .bx-prev,
-      .bx-next,
-      .pager-link {
-        text-indent: -9999px;
-      }
-
-      .bx-prev {
-        background-position: left;
-        border-right: 1px solid #d1d1d1;
-        float: right;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-
-      .bx-next {
-        background-position: right;
-        border-left: 1px solid #d1d1d1;
-        float: right;
-        position: absolute;
-        bottom: 0;
-        right: 1px;
-      }
-
       .bx-window {
         border-bottom: 1px solid #d1d1d1;
         height: 124px;
@@ -118,55 +85,12 @@
           margin: 11px 0 !important;
         }
       }
-
-      .bx-pager {
-        @include clearfix;
-        background: bottom repeat-x #f4f4f4;
-        @include hidpi('about/carousel_pager_bg', png);
-        border-left: 1px solid #fafafa;
-        border-right: 1px solid #fafafa;
-        border-top: 1px solid #fefefe;
-        font-size: 0;
-        height: 28px;
-        line-height: 0;
-        margin: 0 29px;
-        padding-top: 9px;
-        text-align: center;
-
-        .pager-link {
-          background: 0 0 no-repeat;
-          @include hidpi('about/carousel_dots', png);
-          height: 11px;
-          width: 10px;
-          margin-left: 10px;
-          display: inline-block;
-
-          &.pager-active,
-          &.pager-active:hover {
-            background-position: -22px 0;
-          }
-
-          &:hover {
-            background-position: -11px 0;
-          }
-
-          &:first-of-type {
-            margin-left: 0;
-          }
-        }
-      }
     }
   }
 
   .user {
-    position: relative;
-    float: left;
-    @media screen and (min-width: 0px) and (max-width:767px) {
-      width: 50%;
-    }
-    @media screen and (min-width:768px) {
-      width: 230px;
-    }
+
+
 
     &.empty {
       display: block;

@@ -7,12 +7,15 @@ responsive: true
 <script type="text/javascript">
 $(function() {
   $('#slider').bxSlider({
-    displaySlideQty: 4,
-    moveSlideQty: 4,
+    minSlides: 1,
+    maxSlides: 4,
     auto: true,
-    pager: true,
+    slideWidth: 234,
+    pager: false,
+    shrinkItems: true,
     speed: 700,
-    pause: 5000
+    pause: 5000,
+    touchEnabled: false
   });
 
   // Hack to force proper sizing
