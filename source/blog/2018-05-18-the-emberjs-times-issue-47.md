@@ -27,6 +27,9 @@ Again you can enjoy reading the Ember.js Times in both the [e-mail](https://the-
 
 ## [EMBER LEARN THINGS](#your-url-here)
 
+12 months in a year. 12 eggs in a dozen. 12 days to submit your blog posts for the [#EmberJS2018 Roadmap RFC](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)! 📝
+
+Need to beat writer's block? Listen to Ember Core team member [Chad Hietala](https://github.com/chadhietala) on The Changelog podcast, discussing [Ember four years later](https://changelog.com/podcast/293). And you can peruse blog posts from the community on [@zinyado's repo](https://github.com/zinyando/emberjs2018-posts) or the [#EmberJS2018 hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter. Get your two cents in by May 30th.
 
 ---
 
