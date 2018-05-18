@@ -10,7 +10,7 @@ responsive: true
 
 Again you can enjoy reading the Ember.js Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/18/issue-47) and the [blog format](https://emberjs.com/blog/2018/05/18/the-emberjs-times-issue-47.html) to share it even better with your Ember friends.
 
-This week we have several RFCs from the Ember Data 📟 project for you, as well as an #Emberjs2018 countdown, a new way to cast some template transform magic 🎩 and a recap of what has happened in Readers' Questions for you:
+This week we have **several RFCs** from the Ember Data 📟 project for you, as well as an **#EmberJS2018 countdown**, a new way to cast some **template transform magic** 🎩 and a recap of what has happened in Readers' Questions for you:
 
 ---
 
@@ -51,10 +51,10 @@ Need to beat writer's block? Listen to Ember Core team member [Chad Hietala](htt
 
 ## [More Ember Data: RFC for removing `Ember.Evented`](https://github.com/emberjs/rfcs/pull/329)
 
-There's an [RFC](https://github.com/emberjs/rfcs/pull/329) on removing usage of the `Ember.Evented` mixin in Ember Data specifically. This would also lead to the future **removal** of several **lifecycle hooks** and methods on `Model`s and other Ember Data classes. 
+There's an RFC on removing usage of the `Ember.Evented` mixin in Ember Data specifically. This would also lead to the future **removal** of several **lifecycle hooks** and methods on `Model`s and other Ember Data classes.
 
 The use of `Ember.Evented` is mostly a legacy from pre 1.0 of Ember Data and is simply not needed anymore. 
-You can **follow the discussion** and read all about the implications of this change on the [RFC pull request.](https://github.com/emberjs/rfcs/pull/329)
+You can **follow the discussion** and read all about the implications of this change on the [RFC pull request](https://github.com/emberjs/rfcs/pull/329).
 
 ---
 
