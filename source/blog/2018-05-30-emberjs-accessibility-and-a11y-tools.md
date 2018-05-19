@@ -6,15 +6,15 @@ alias : "blog/2018/05/30/ember-accessibility-and-a11y-tools.html"
 responsive: true
 ---
 
-With just a few lines of code, you can audit your Ember.js app for accessibility, get customized advice on how fix problems, and see visual indications of which things on a page need work. We'll walk through an example using the Super Rentals app from Ember's official tutorials. I will also share some of the latest work being done on Ember.js itself to make it better for accessibility out of the box.
+With just a few lines of code, you can audit your Ember.js app for accessibility, get customized advice on how fix problems, and see visual indications of which things on a page need work. We'll walk through an example using the [Super Rentals](https://github.com/ember-learn/super-rentals) app from Ember's [official tutorials](https://guides.emberjs.com/current/tutorial/ember-cli/). I will also share some of the latest work being done on Ember.js itself to make it better for accessibility out of the box.
 
-An accessible app is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`.
+An [accessible app](https://en.wikipedia.org/wiki/Web_accessibility) is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`.
 
 _This article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax._
 
 ## Using ember-a11y-testing
 
-We don't have to learn a thousand rules to start building accessible apps. There are amazing community contributors who are working hard to make it as easy as possible to follow web best practices, and they created a set of tools referred to as ember-a11y. ember-a11y-testing is an addon that reveals actionable improvements to your app's accessibility and guides us through making the changes.
+We don't have to learn a thousand rules to start building accessible apps. There are amazing community contributors who are working hard to make it as easy as possible to follow web best practices, and they created a set of tools referred to as [ember-a11y](https://github.com/ember-a11y). [ember-a11y-testing](https://github.com/ember-a11y/ember-a11y-testing) is an addon that reveals actionable improvements to your app's accessibility and guides us through making the changes.
 
 ```bash
 ember install ember-a11y-testing
@@ -29,11 +29,11 @@ See these weird stripes? Those are an indication that we have some problems with
 
 <!-- IMAGE -->
 
-The link in the error message brings us to this color contrast checker, where we can play around with font sizes, font colors, and backgrounds until the view meets the standards.
+The link in the error message brings us to this [color contrast checker](https://medium.com/r/?url=https%3A%2F%2Fdequeuniversity.com%2Frules%2Faxe%2F2.5%2Fcolor-contrast%3Fapplication%3DaxeAPI), where we can play around with font sizes, font colors, and backgrounds until the view meets the standards.
 
 <!-- IMAGE -->
 
-In this way, learning the rules and standards of accessibility can be incremental. It's like having an accessibility expert inside the app.
+In this way, learning the rules and standards of accessibility can be incremental. It's like having an accessibility expert inside the app. Once you have a handle on most of the issues, you can use some configuration settings to toggle the check on and off so that your development server build times are faster.
 
 ### Add accessibility checks during Integration tests
 
@@ -53,6 +53,7 @@ test('accesibility check', function(assert) {
 It's important to incorporate the check into the test suite, because in larger apps, it's nearly impossible to know how adjusting the value of a CSS color variable will affect every single UI state. It's better to have programmatic checks to prevent things from slipping through the cracks. Combined with Continuous Integration (CI) pipelines, we can make accessibility a requirement to merge, without us needing to personally implore coworkers to follow the standards.
 
 ### Run the test suite
+
 Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests] to see the browser-based test runner. Sure enough, we see some problems! The error message says to check the developer console. In the console are the specific things that need to change in the markup, as well as the links to the learning resources like we saw when looking at the console for the app itself. 
 
 <!-- IMAGE -->
@@ -83,7 +84,7 @@ Now the filter has a label, and the tests pass!
 
 ### Using ember-a11y-landmarks for roles
 
-ember-a11y-landmarks helps manage the roles that should go on semantic tags like `<header>` and `<nav>`, without needing to learn the intricacies of when to use them.
+The [ember-a11y-landmarks](https://github.com/ember-a11y/ember-a11y-landmarks) addon helps manage the roles that should go on semantic tags like `<header>` and `<nav>`, without needing to learn the intricacies of when to use them.
 
 One huge thing you can do to improve an app's accessibility is to use semantic tags in the HTML. For example, always use `<button>` for buttons, instead of making them `divs`. However, some semantic tags still need extra attributes called roles for screen readers to work right, and they only need them some of the time based on their position in the DOM. ember-a11y-landmarks to the rescue!
 
@@ -111,7 +112,7 @@ One common issue in single page application frameworks is that they wrap a devel
 
 ### Using the ember-a11y addon for focus management
 
-While ember-a11y refers to a whole bunch of tools, there's one that's simply called ember-a11y. The main task of this addon is to handle focus correctly so that users with Assistive Technology can navigate content as changes happen inside the `{{outlet}}` of a route. 
+While ember-a11y refers to a whole bunch of tools, there's one addon that is simply called [ember-a11y](https://github.com/ember-a11y/ember-a11y) too. The main task of this addon is to handle focus correctly so that users with Assistive Technology can navigate content as changes happen inside the `{{outlet}}` of a route. 
 
 ```
 ember install ember-a11y
@@ -126,11 +127,13 @@ The problem is that screen readers rely heavily on what has focus. Imagine if yo
 > The current implementation of this addon will immediately apply focus to the most relevant piece of content based on actions users take (clicking buttons, links, etc). This allows screen readers to catch changes and read the right information, thus providing a much better experience for blind users.
 
 ## What next?
+
 It's our responsibility as developers to build inclusive tech, so keep learning! [Melanie Sumner's](https://github.com/MelSumner) EmberConf talk [Accessibility for All](https://www.youtube.com/watch?v=6ydNf7e5P00) is a fast, concise introduction to accessibility in Ember, and [this article series](http://www.melsumner.com/blog/accessibility/a11y-accessibility-guide-ember-developers/) provides a deeper dive. There are also more ember-a11y addons available that solve different accessibility challenges. 
 
 Almost all of us will have a disability at some point in our lives. Accessible web practices lead to better user experience - things like improved keyboard navigation, text that is still readable on a dim monitor, and clear pointers on how to interact with a UI. 
 
 Here are some ways you can help improve accessibility in Ember and the JavaScript ecosystem:
+- Research and try out other [ember-a11y](https://github.com/ember-a11y) tools
 - Make your own apps accessible
 - Include a11y considerations in your talks and articles
 - Contribute to addons that help solve these problems
