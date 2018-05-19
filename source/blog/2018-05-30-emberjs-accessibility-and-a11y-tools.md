@@ -14,14 +14,16 @@ _This guest article was written as of Ember.js version 3.1. The same approach ap
 
 ## Using ember-a11y-testing
 
-We don't have to learn a thousand rules to start building accessible apps. There are amazing community contributors who are working hard to make it as easy as possible to follow web best practices, and they created a set of tools referred to as [ember-a11y](https://github.com/ember-a11y). [ember-a11y-testing](https://github.com/ember-a11y/ember-a11y-testing) is an addon that reveals actionable improvements to your app's accessibility and guides us through making the changes.
+We don't have to learn a thousand rules to start building accessible apps. There are amazing community contributors who are working hard to make it as easy as possible to follow web best practices, and they created a set of tools referred to as [ember-a11y](https://github.com/ember-a11y).
+
+[ember-a11y-testing](https://github.com/ember-a11y/ember-a11y-testing) is an addon that reveals actionable improvements to your app's accessibility and guides us through making the changes.
 
 ```bash
 ember install ember-a11y-testing
 ember server
 ```
 
-After installing ember-a11y-testing, it gets to work right away! Navigate to [http://localhost:4200] and take a look.
+After installing ember-a11y-testing, it gets to work right away! Navigate to [http://localhost:4200](http://localhost:4200) and take a look.
 
 ![Striped elements showing contrast problems](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/a11y-testing-stripes.png)
 
@@ -33,9 +35,9 @@ The link in the console error message brings us to this [color contrast checker]
 
 In this way, learning the rules and standards of accessibility can be incremental. It's like having an accessibility expert inside the app. Once you have a handle on most of the issues, you can use some configuration settings to toggle the check on and off so that your development server build times are faster.
 
-### Add accessibility checks during Integration tests
+### Add accessibility checks during Rendering tests
 
-Integration tests are a way to simulate user behavior, like clicking around and filling in forms. The ember-a11y-testing helpers can be added right in with your existing test suite. This test navigates to the index of the project and checks for any issues:
+[Rendering tests](https://guides.emberjs.com/v3.1.0/testing/#toc_rendering-tests) are a way to simulate user behavior, like clicking around and filling in forms. The ember-a11y-testing helpers can be added right in with your existing test suite. This test navigates to the index of the project and checks for any issues:
 
 ```javascript
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
@@ -50,7 +52,7 @@ It's important to incorporate the check into the test suite, because in larger a
 
 ### Run the test suite
 
-Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests] to see the browser-based test runner. Sure enough, we see some problems! The error message says to check the developer console. In the console are the specific things that need to change in the markup, how important they are, as well as the links to the learning resources like we saw when looking at the console for the app itself. 
+Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests](http://localhost:4200/tests) to see the browser-based test runner. Sure enough, we see some problems! The error message says to check the developer console. In the console are the specific things that need to change in the markup, how important they are, as well as the links to the learning resources like we saw when looking at the console for the app itself. 
 
 ![Errors in the tests route](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/route-tests-errors.png)
 
