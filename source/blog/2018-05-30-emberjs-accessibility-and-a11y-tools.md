@@ -23,15 +23,13 @@ ember server
 
 After installing ember-a11y-testing, it gets to work right away! Navigate to [http://localhost:4200] and take a look.
 
-<!-- IMAGE -->
+![Striped elements showing contrast problems](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/a11y-testing-stripes.png)
 
 See these weird stripes? Those are an indication that we have some problems with the elements. Due to color choices and text size, the content might be hard for some people to read. The list of issues show up as a console error in this view too. But how do we fix them?
 
-<!-- IMAGE -->
+![Instructions for resolving the error](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/console-errors.png)
 
-The link in the error message brings us to this [color contrast checker](https://medium.com/r/?url=https%3A%2F%2Fdequeuniversity.com%2Frules%2Faxe%2F2.5%2Fcolor-contrast%3Fapplication%3DaxeAPI), where we can play around with font sizes, font colors, and backgrounds until the view meets the standards.
-
-<!-- IMAGE -->
+The link in the console error message brings us to this [color contrast checker](https://medium.com/r/?url=https%3A%2F%2Fdequeuniversity.com%2Frules%2Faxe%2F2.5%2Fcolor-contrast%3Fapplication%3DaxeAPI), where we can play around with font sizes, font colors, and backgrounds until the view meets the standards.
 
 In this way, learning the rules and standards of accessibility can be incremental. It's like having an accessibility expert inside the app. Once you have a handle on most of the issues, you can use some configuration settings to toggle the check on and off so that your development server build times are faster.
 
@@ -39,11 +37,9 @@ In this way, learning the rules and standards of accessibility can be incrementa
 
 Integration tests are a way to simulate user behavior, like clicking around and filling in forms. The ember-a11y-testing helpers can be added right in with your existing test suite. This test navigates to the index of the project and checks for any issues:
 
-<!-- UPDATE TO 3.X syntax -->
-
 ```javascript
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
-test('accesibility check', function(assert) {
+test('accessibility check', function(assert) {
  visit('/');
  a11yAudit();
  andThen(() => assert.ok(true, 'no a11y errors found!'));
@@ -54,9 +50,9 @@ It's important to incorporate the check into the test suite, because in larger a
 
 ### Run the test suite
 
-Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests] to see the browser-based test runner. Sure enough, we see some problems! The error message says to check the developer console. In the console are the specific things that need to change in the markup, as well as the links to the learning resources like we saw when looking at the console for the app itself. 
+Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests] to see the browser-based test runner. Sure enough, we see some problems! The error message says to check the developer console. In the console are the specific things that need to change in the markup, how important they are, as well as the links to the learning resources like we saw when looking at the console for the app itself. 
 
-<!-- IMAGE -->
+![Errors in the tests route](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/route-tests-errors.png)
 
 This is awesome because we don't need to become an expert on form accessibility to get started down the right track.
 
@@ -70,6 +66,8 @@ Here's what the form looks like before changes:
 {{input id="filterByCity" value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter By City"}}
 ```
 
+![A form without labels](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/form-without-labels.png)
+
 Let's add the label. The `for` attribute should match the input id.
 
 ```handlebars
@@ -79,6 +77,8 @@ Let's add the label. The `for` attribute should match the input id.
 
 {{input id="filterByCity" value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter By City"}}
 ```
+
+![A form with labels](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/form-with-labels.png)
 
 Now the filter has a label, and the tests pass!
 
@@ -117,7 +117,7 @@ While ember-a11y refers to a whole bunch of tools, there's one addon that is sim
 ```
 ember install ember-a11y
 ```
-All I have to do is install it and replace instances of `{{outlet}}` with 
+Install it and replace instances of `{{outlet}}` with 
 `{{focusing-outlet}}`.
 
 So why is this necessary? If you're looking at a decently accessible website and you hit the tab key, you'll see the focus jump between different elements - things get highlighted. Front end frameworks like Ember sometimes get in the way of the DOM structure that works best for screen reader focus, since as you move between routes, only part of the page changes. The contents of `{{outlet}}` are dynamic. 
