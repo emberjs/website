@@ -8,9 +8,9 @@ responsive: true
 
 With just a few lines of code, you can audit your Ember.js app for accessibility, get customized advice on how fix problems, and see visual indications of which things on a page need work. We'll walk through an example using the [Super Rentals](https://github.com/ember-learn/super-rentals) app from Ember's [official tutorials](https://guides.emberjs.com/current/tutorial/ember-cli/). I will also share some of the latest work being done on Ember.js itself to make it better for accessibility out of the box.
 
-An [accessible app](https://en.wikipedia.org/wiki/Web_accessibility) is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`.
+An [accessible app](https://en.wikipedia.org/wiki/Web_accessibility) is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`. There are set standards called the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), and in many cases, [it's the law](https://www.w3.org/WAI/Policy/).
 
-_This guest article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax. Anyone can write a guest article - get in touch if you are interested!_
+_This article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax. Anyone can write a guest article - get in touch if you are interested!_
 
 ## Using ember-a11y-testing
 
