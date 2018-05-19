@@ -10,7 +10,7 @@ With just a few lines of code, you can audit your Ember.js app for accessibility
 
 An [accessible app](https://en.wikipedia.org/wiki/Web_accessibility) is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`.
 
-_This article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax._
+_This guest article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax. Anyone can write a guest article - get in touch if you are interested!_
 
 ## Using ember-a11y-testing
 
