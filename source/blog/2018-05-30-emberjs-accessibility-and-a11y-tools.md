@@ -102,13 +102,13 @@ And here's the html output with the correct role assigned:
 
 ## Structural application concerns
 
-I learned from [Robert DeLuca](https://github.com/Robdel12) that [most front end frameworks have flaws](https://medium.com/@robdel12/single-page-apps-routers-are-broken-255daa310cf) that affect Assistive Technology like screen readers. However, there's a lot of progress being made in Ember itself, our community addons, and by our pals working in other frameworks! You can learn more in the recent JavaScript [State of Accessibility](https://www.youtube.com/watch?v=aoyLG2gTFpI) panel hosted by [ThisDot Media](https://www.thisdot.co/). Jump to the Ember segment presented by Melanie Sumner [here](https://youtu.be/aoyLG2gTFpI?t=2432)
+I learned from [Robert DeLuca](https://github.com/Robdel12) that [most front end frameworks have flaws](https://medium.com/@robdel12/single-page-apps-routers-are-broken-255daa310cf) that affect Assistive Technology like screen readers. However, there's a lot of progress being made in Ember itself, our community addons, and by our pals working in other frameworks! You can learn more in the recent JavaScript [State of Accessibility](https://www.youtube.com/watch?v=aoyLG2gTFpI) panel hosted by [ThisDot Media](https://www.thisdot.co/). Jump to the Ember segment presented by Melanie Sumner [here](https://youtu.be/aoyLG2gTFpI?t=2432).
 
 With the release of 3.1, Ember.js introduced some new features within the framework itself, and community addons continue to help drive progress on the remaining concerns. Historically, many new features in Ember originated as community addons.
 
 ### New options for out-of-the-box accessibility
 
-One common issue in single page application frameworks is that they wrap a developer's content in extra `divs`. However, some elemements like `<header>` should be direct descendents of the `body` element. [RFC 280](https://github.com/emberjs/rfcs/blob/master/text/0280-remove-application-wrapper.md) proposed an option for removing the application-level `div` wrapper (an RFC, or Request for Comments, is the main way that new features are proposed and opened for community feedback). That RFC was accepted, meaning that work could begin to add the feature into Ember, and the new option shipped in version 3.1. You can learn more about it and how to enable the feature in the [release blog post](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_introducing-optional-features-3-of-4).
+One common issue in single page application frameworks is that they wrap a developer's content in extra `divs`. However, some elements like `<header>` should be direct descendants of the `body` element. [RFC 280](https://github.com/emberjs/rfcs/blob/master/text/0280-remove-application-wrapper.md) proposed an option for removing the application-level `div` wrapper (an RFC, or Request for Comments, is the main way that new features are proposed and opened for community feedback). That RFC was accepted, meaning that work could begin to add the feature into Ember, and the new option shipped in version 3.1. You can learn more about it and how to enable the feature in the [release blog post](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_introducing-optional-features-3-of-4).
 
 ### Using the ember-a11y addon for focus management
 
@@ -128,7 +128,7 @@ The problem is that screen readers rely heavily on what has focus. Imagine if yo
 
 ## What next?
 
-It's our responsibility as developers to build inclusive tech, so keep learning! [Melanie Sumner's](https://github.com/MelSumner) EmberConf talk [Accessibility for All](https://www.youtube.com/watch?v=6ydNf7e5P00) is a fast, concise introduction to accessibility in Ember, and [this article series](http://www.melsumner.com/blog/accessibility/a11y-accessibility-guide-ember-developers/) provides a deeper dive. There are also more ember-a11y addons available that solve different accessibility challenges. 
+It's our responsibility as developers to build inclusive tech, so keep learning! [Melanie Sumner's](https://github.com/MelSumner) EmberConf talk [Accessibility for All](https://www.youtube.com/watch?v=6ydNf7e5P00) is a fast, concise introduction to accessibility in Ember, and [this article series](http://www.melsumner.com/blog/accessibility/a11y-accessibility-guide-ember-developers/) provides a deeper dive. There are also more ember-a11y addons available that solve different issues. 
 
 Almost all of us will have a disability at some point in our lives. Accessible web practices lead to better user experience - things like improved keyboard navigation, text that is still readable on a dim monitor, and clear pointers on how to interact with a UI. 
 
@@ -146,6 +146,6 @@ Accessible apps are better for everyone.
 
 ## Thanks
 
-Our community's improvements are the result of the hard work of many people! Shared solutions take more time to develop, but we can all move forward together. These are our superpowers.
+Our community's improvements are the result of the hard work of many people! Shared solutions take more time to develop, but we can all move forward together.
 
 Many thanks to Melanie Sumner for raising the profile of accessibility in Ember, the team behind ember-a11y, contributors involved in getting some features into Ember itself, Robert DeLuca for inspiring involvement, and everyone who encourages others to adopt accessible practices.
