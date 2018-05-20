@@ -37,7 +37,7 @@ The new `let` template helper makes it possible to create new bindings in templa
 
 Let's say we need to capitalize the first name and last name in our template. We could do something like this:
 
-```hbs
+```handlebars
 Welcome back {{concat (capitalize person.firstName) ' ' (capitalize person.lastName)}}
 
 Account Details:
@@ -47,7 +47,7 @@ Last Name: {{capitalize person.lastName}}
 
 This could result in an error since we have to keep track of this throughout the template. Thankfully, this is now easier with the `let` helper:
 
-```hbs
+```handlebars
 {{#let (capitalize person.firstName) (capitalize person.lastName)
   as |firstName lastName|
 }}
@@ -63,7 +63,7 @@ Now you can use `firstName` and `lastName` inside the `let` block with the comfo
 
 What is important to know about the `let` helper is that it only works as a block helper. This means that you cannot do like this:
 
-```hbs
+```handlebars
 {{let
   firstName=(capitalize person.firstName)
   lastName=(capitalize person.lastName)
@@ -72,13 +72,11 @@ What is important to know about the `let` helper is that it only works as a bloc
 
 #### Deprecations (3)
 
-Deprecations are added to Ember.js when an API will be removed at a later date.
-
-Each deprecation has an entry in the deprecation guide describing the migration path to more stable API. Deprecated public APIs are not removed until a major release of the framework.
+Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-##### Use of Ember.Logger
+##### Use of Ember.Logger (1 of 3)
 
 Use of `Ember.Logger` is deprecated. You should replace any calls to `Ember.Logger` with calls to `console`.
 
@@ -86,42 +84,42 @@ In Microsoft Edge and IE11, uses of console beyond calling its methods may requi
 
 But, when run normally, calls to its methods must not be bound to anything other than  the console object. If not, you will receive an Invalid calling object exception. This is a known inconsistency with these browsers.
 
-To avoid this, transform the following:
+To avoid this, transform this:
 
-```js
+```javascript
 var print = Logger.log; // assigning method to variable
 ```
 
-to:
+into this:
 
-```js
+```javascript
 // assigning method bound to console to variable
 var print = console.log.bind(console);
 ```
 
 Also, transform any of the following:
 
-```js
+```javascript
 Logger.info.apply(undefined, arguments); // or
 Logger.info.apply(null, arguments); // or
 Logger.info.apply(this, arguments); // or
 ```
 
-to:
+into this:
 
-```js
+```javascript
 console.info.apply(console, arguments);
 ```
 
 Finally, because node versions before version 9 don't support console.debug, you may want to transform the following:
 
-```js
+```javascript
 Logger.debug(message);
 ```
 
-to:
+into this:
 
-```js
+```javascript
 if (console.debug) {
   console.debug(message);
 } else {
@@ -129,16 +127,13 @@ if (console.debug) {
 }
 ```
 
-**Note for Add-on Authors**
+**Note for Add-on Authors** - If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will need to test for the existence of console before calling its methods. If you do much logging, you may find it convenient to define your own wrapper. Writing the wrapper as a service will provide for dependency injection by tests and perhaps even clients.
 
-If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will need to test for the existence of console before calling its methods. If you do much logging, you may find it convenient to define your own wrapper. Writing the wrapper as a service will provide for dependency injection by tests and perhaps even clients.
+##### Private API Router#route renamed (2 of 3)
 
-##### Private API Router#route renamed
-The `Router#route` private API has been renamed to `Router#_route`. This is to avoid collisions with user-defined properties or methods.
+In order to avoid collisions with user-defined properties or methods, the `Router#route` private API has been renamed to `Router#_route`. If you want access to the router, you should inject the router service into the route like this:
 
-If you want access to the router, you should inject the router service into the route like this:
-
-```js
+```javascript
 import Route from '@ember/routing/route';
 import { inject as service } from '@ember/service';
 
@@ -147,25 +142,21 @@ export default Route.extend({
 });
 ```
 
-##### Define computed properties with defineProperty
+##### Define computed properties with defineProperty (3 of 3)
 
-Use defineProperty to define computed properties.
-
-Although uncommon, it is possible to assign computed properties directly to objects. This way they are implicitly computed from eg Ember.get.
-
-Assigning computed properties directly is deprecated to support ES5 getter computed properties. You should replace these assignments with calls to `defineProperty`.
+Use `defineProperty` to define computed properties. Although uncommon, it is possible to assign computed properties directly to objects. This way they are implicitly computed from things like `Ember.get`. Assigning computed properties directly is deprecated to support ES5 getter computed properties, and you should replace these assignments with calls to `defineProperty`.
 
 For example, the following:
 
-```js
+```javascript
 let object = {};
 object.key = Ember.computed(() => 'value');
 Ember.get(object, 'key') === 'value';
 ```
 
-Should be changed to:
+Should be changed to this:
 
-```js
+```javascript
 let object = {};
 Ember.defineProperty(object, 'key', Ember.computed(() => 'value'));
 Ember.get(object, 'key') === 'value';
@@ -173,17 +164,19 @@ Ember.get(object, 'key') === 'value';
 
 For more details on changes in Ember.js 3.2, please review the [Ember.js 3.2.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0).
 
-### Upcoming Changes in Ember.js 3.3
+### Upcoming Changes in Ember.js 3.3 (Beta)
+
+There are (#) new features and (#) deprecations in Ember.js 3.3 (beta). 
 
 #### New Features (#)
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 #### Deprecations (#)
 
-* TODO
-* TODO
+- TODO
+- TODO
 
 For more details on the upcoming changes in Ember.js 3.3, please review the [Ember.js 3.3.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.3.0-beta.1).
 
@@ -194,7 +187,8 @@ For more details on the upcoming changes in Ember.js 3.3, please review the [Emb
 Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.2
-There are four (4) new features in 3.2, but there are zero (0) deprecations. 
+
+There are four (4) new features and zero (0) deprecations.
 
 #### New Features (4)
 
@@ -218,7 +212,7 @@ The Ember Data team has released an addon that will support the `ds-improved-aja
 
 If you rely on the `ds-pushpayload-return` feature flag, you can use the following pattern to manually serialize the API response and push the record into the store.
 
-```js
+```javascript
 export function pushPayload(store, modelName, rawPayload) {
    let ModelClass = store.modelFor(modelName);
    let serializer = store.serializerFor(modelName);
@@ -248,11 +242,15 @@ For more details on changes in Ember Data 3.2, please review the
 ### Upcoming changes in Ember Data 3.3
 
 There are (#) new features and (#) deprecations for Ember Data 3.3.
+
 #### New Features (#)
 
-* TODO
-* TODO
+- TODO
+- TODO
+
 #### Deprecations (#)
+
+- TODO
 
 For more details on the upcoming changes in Ember Data 3.3, please review the
 [Ember Data 3.3.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.3.0-beta.1).
@@ -269,13 +267,13 @@ applications.
 You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade
 your projects using `yarn` run:
 
-```js
+```bash
 yarn upgrade ember-cli
 ```
 
 To upgrade your projects using `npm` run:
 
-```js
+```bash
 npm install --save-dev ember-cli
 ```
 
@@ -296,29 +294,29 @@ In order to make DOM assertions more readable, the `qunit-dom` dependency will b
 
 This is, to put it quite simply, totally awesome. It means that this code:
 
-```js
+```javascript
 assert.equal(this.element.querySelector('.title').textContent.trim(), 'Hello World!');
 ```
 
 becomes this:
 
-```js
+```javascript
 assert.dom('.title').hasText('Hello World!');
 ```
 
 See what I mean? Totally awesome. <3
 
-##### Experiments with more efficient transpilation
+##### Experiments with more efficient transpilation (2 of 3)
 
 Until now, addons were responsible for compiling their own JS/HBS/CSS and returning AMD/CSS. Now they return the raw code, and the app uses its own processors (babel, htmlbars) to compile it. This is required to do proper tree-shaking and code-splitting. Delayed transpilation [(#7501)](https://github.com/ember-cli/ember-cli/pull/7501) and all-at-once addon optimization after compilation [(#7650)](https://github.com/ember-cli/ember-cli/pull/7650) have been added. Additionally, more comprehensive methods to detect if ember-cli is being run within CI or not have also been added [(#7637)](https://github.com/ember-cli/ember-cli/pull/7637) - see [https://github.com/watson/ci-info/](https://github.com/watson/ci-info/).
 
-##### Module Unification (new file layout) Continues 
+##### Module Unification (new file layout) Continues (3 of 3)
 
 You can now generate an addon using the Module Unification layout [(#7490)](https://github.com/ember-cli/ember-cli/pull/7490)! Use the command `MODULE_UNIFICATION=true ember addon my-addon` to try it out [(#7658)](https://github.com/ember-cli/ember-cli/pull/7658). We also improved the logic to support addons that use Module Unification [(#7660)](https://github.com/ember-cli/ember-cli/pull/7660), added the blueprint for a dummy app to addons that use Module Unification [(#7667)](https://github.com/ember-cli/ember-cli/pull/7667), and updated the version of Ember used in Module Unification [(#7678)](https://github.com/ember-cli/ember-cli/pull/7678).
 
 #### Deprecations (1)
 
-##### ember-cli-babel 5
+##### ember-cli-babel 5 (1 of 1)
 
 This release of Ember CLI [deprecates `ember-cli-babel` 5.x](https://github.com/ember-cli/ember-cli/pull/7676). Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and is expected to be dropped soon.
 
