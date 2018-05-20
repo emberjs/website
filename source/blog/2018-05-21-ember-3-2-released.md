@@ -1,7 +1,8 @@
 ---
 title: Ember 3.2 and 3.3 Beta Released
 author: Ricardo Mendes, Melanie Sumner & Kenneth Larsen
-tags: Releases, 2018, 3
+tags: Releases, 2018, 3, 3.2, 3.3
+responsive: true
 ---
 
 Today the Ember project is releasing version 3.2.0 of Ember.js, Ember Data, and Ember CLI.
@@ -166,7 +167,7 @@ For more details on changes in Ember.js 3.2, please review the [Ember.js 3.2.0 r
 
 ### Upcoming Changes in Ember.js 3.3 (Beta)
 
-There are (#) new features and (#) deprecations in Ember.js 3.3 (beta). 
+There are (#) new features and (#) deprecations in the Ember.js 3.3 beta release.
 
 #### New Features (#)
 
@@ -188,7 +189,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.2
 
-There are four (4) new features and zero (0) deprecations.
+There are four (4) new features and zero (0) deprecations in the Ember Data 3.2 release.
 
 #### New Features (4)
 
@@ -241,11 +242,10 @@ For more details on changes in Ember Data 3.2, please review the
 
 ### Upcoming changes in Ember Data 3.3
 
-There are (#) new features and (#) deprecations for Ember Data 3.3.
+There are (#) new features and (#) deprecations in the Ember Data 3.3 beta release.
 
 #### New Features (#)
 
-- TODO
 - TODO
 
 #### Deprecations (#)
@@ -259,13 +259,11 @@ For more details on the upcoming changes in Ember Data 3.3, please review the
 
 ## Ember CLI
 
-Ember CLI is the command line interface for managing and packaging Ember.js
-applications.
+Ember CLI is the command line interface for managing and packaging Ember.js applications.
 
 ### Upgrading Ember CLI
 
-You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade
-your projects using `yarn` run:
+You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade your projects using `yarn` run:
 
 ```bash
 yarn upgrade ember-cli
@@ -277,14 +275,11 @@ To upgrade your projects using `npm` run:
 npm install --save-dev ember-cli
 ```
 
-After running the
-upgrade command run `ember init` inside of the project directory to apply the
-blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.1.0...v3.2.0)
-and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.1.0...v3.2.0).
+After running the upgrade command run `ember init` inside of the project directory to apply the blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.1.0...v3.2.0) and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.1.0...v3.2.0).
 
 ### Changes in Ember CLI 3.2
 
-There are three (3) new features and one (1) deprecation in Ember CLI 3.2.
+There are three (3) new features and one (1) deprecation in the Ember CLI 3.2 release.
 
 #### New Features (3)
 
@@ -331,13 +326,19 @@ instructions, please review the [Ember CLI  3.2.0 release page](https://github.c
 
 ### Changes in Ember CLI 3.3
 
-There are three (3) new features and one (1) deprecation in Ember CLI 3.3.
+There are three (3) new features and one (1) deprecation in the Ember CLI 3.3 beta release.
 
 #### New Features (#)
+
+- TODO
+- TODO
+- TODO
+
 #### Deprecations (#)
 
-For more details on the changes in Ember CLI 3.3.0-beta.1 and detailed upgrade
-instructions, please review the [Ember CLI 3.3.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.3.0-beta.1).
+- TODO
+
+For more details on the changes in Ember CLI 3.3.0-beta.1 and detailed upgrade instructions, please review the [Ember CLI 3.3.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.3.0-beta.1).
 
 ## Thank You!
 
