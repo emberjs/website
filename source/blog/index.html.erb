@@ -6,7 +6,7 @@ per_page: 10
 ---
 
 <% partial_for :head, 'head' %>
-<% partial_for :sidebar, 'sidebar' %>
+
 <h1 class="text-left">News & Updates</h1>
 <% page_articles.each_with_index do |article, i| %>
   <article class="blog-post">
@@ -37,10 +37,13 @@ per_page: 10
     </div>
   </article>
 <% end %>
+<% partial_for :sidebar, 'sidebar' %>
 
 <div class="pagination">
    <% if prev_page %>
       <a class="newer-posts" href="<%= prev_page.url %>">Newer articles</a>
+    <% else %>
+      <a class="newer-posts disabled" href="#" aria-disabled="true">Newer articles</a>
     <% end %>
    <p class="page-number">Page <%= page_number %> of <%= num_pages %></p>
     <% if next_page %>
