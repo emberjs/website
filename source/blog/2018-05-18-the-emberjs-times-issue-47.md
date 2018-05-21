@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 47
 author: Tobias Bieniek, Robert Jackson, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Ryan Mark, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times
+tags: Recent Posts, Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/18/the-emberjs-times-issue-47.html"
 responsive: true
 ---

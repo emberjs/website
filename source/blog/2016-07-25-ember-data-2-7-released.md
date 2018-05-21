@@ -1,8 +1,8 @@
 ---
 title: Ember Data 2.7 and 2.8 Beta Released
-responsive: true
 author: Brendan McLoughlin
-tags: Ember Data, Releases
+tags: Ember Data, Releases, 2016, Version 2.x, 2.7, 2.8
+responsive: true
 ---
 
 Ember Data 2.7, a minor version release of Ember Data, is

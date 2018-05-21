@@ -1,7 +1,8 @@
 ---
 title: The Ember 2.x Project
 author: Yehuda Katz
-tags: Recent Posts
+tags: Recent Posts, 2015, Version 2.x
+responsive: true
 ---
 
 For the past several years, when we've talked about "Ember releases", we were always talking about releases of the Ember codebase itself.

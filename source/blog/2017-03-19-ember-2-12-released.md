@@ -2,7 +2,7 @@
 title: Ember 2.12 and 2.13 Beta Released
 responsive: true
 author: Matthew Beale, Brendan McLoughlin, Robert Jackson
-tags: Releases
+tags: Releases, 2017, Version 2.x, 2.12, 2.13
 ---
 
 Today the Ember project is releasing version 2.12.0 of Ember.js, Ember Data, and Ember CLI.

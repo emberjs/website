@@ -42,21 +42,26 @@
     <%= yield_content :outside_wrapper %>
 
     <div id="content-wrapper" class="content-wrapper">
-      <% sidebar = rendered_partial_for(:sidebar) || yield_content(:sidebar) %>
-      <% if sidebar %>
-        <div id="sidebar" class="sidebar" role="complementary">
-          <%= sidebar %>
-          <div id="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
-        </div>
-      <% end %>
+      
+    <% sidebar = rendered_partial_for(:sidebar) || yield_content(:sidebar) %>
       <div id="content" class="main<% if sidebar %> has-sidebar<% end %>" role="main">
         <%= yield %>
       </div>
-      <div class="cta-contribute">
-        <a title="Use GitHub to suggest an edit to this page" href="https://www.github.com/emberjs/website">
-          Contribute to this page
-        </a>
-      </div>
+      <% if sidebar %>
+        <aside class="sidebar" role="complementary">
+          <%= sidebar %>
+          <div id="back-to-top" class="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
+        </aside>
+        
+      <% end %>
+      
+      
+    </div>
+
+    <div class="cta-contribute">
+      <a title="Use GitHub to suggest an edit to this page" href="https://www.github.com/emberjs/website">
+        Contribute to this page
+      </a>
     </div>
 
     <main-footer></main-footer>

@@ -1,7 +1,8 @@
 ---
 title: What's Coming in Ember in 2014
 author: Tom Dale
-tags: Recent Posts
+tags: Recent Posts, Roadmap, 2013
+responsive: true
 ---
 
 Every few months, the Ember core team likes to get together to discuss

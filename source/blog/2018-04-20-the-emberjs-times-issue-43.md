@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 43
 author: Kenneth Larsen, Chris Garrett, Sivakumar Kailasam, Alon Bukai, Amy Lam, Ryan Mark, Ricardo Mendes, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times
+tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/04/20/the-emberjs-times-issue-43.html"
 responsive: true
 ---

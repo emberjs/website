@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 46
 author: Gaurav Munjal, Edward Faulkner, Sivakumar Kailasam, Kenneth Larsen, Amy Lam, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times
+tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/11/the-emberjs-times-issue-46.html"
 responsive: true
 ---

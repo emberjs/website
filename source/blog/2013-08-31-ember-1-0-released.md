@@ -1,7 +1,8 @@
 ---
 title: Ember 1.0 Released
 author: The Core Team
-tags: Releases
+tags: Releases, 2013, Version 1.x, Router, Testing, Performance
+responsive: true
 ---
 
 Today, we're excited to announce the final release of Ember.js 1.0.

@@ -2,7 +2,7 @@
 title: Ember.js 2.8-LTS, 2.9 and 2.10 Beta Released
 responsive: true
 author: Matthew Beale, Yehuda Katz, Godfrey Chan
-tags: Releases
+tags: Releases, 2016, 2.9, 2.10, Version 2.x
 ---
 
 Today, we are releasing Ember 2.8-LTS (a long-term support release), Ember 2.9.0 and Ember 2.10 beta.

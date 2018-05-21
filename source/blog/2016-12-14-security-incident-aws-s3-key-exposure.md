@@ -2,7 +2,7 @@
 title: Security Incident - AWS S3 Access Key Exposure
 responsive: true
 author: Tom Dale
-tags: Security
+tags: Security, 2016
 ---
 
 On November 29th, 2016, the Ember security team was notified that version `2.11.0-beta.1` of the `ember-source` npm package inadvertently included a file that contained an AWS access key. This access key had permissions for full read/write access to the Ember S3 buckets.

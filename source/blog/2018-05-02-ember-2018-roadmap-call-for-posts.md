@@ -1,7 +1,7 @@
 ---
 title: "Ember's 2018 Roadmap: A Call for Blog Posts"
 author: Katie Gengler
-tags: Recent Posts, Roadmap
+tags: Recent Posts, Roadmap, 2018
 alias : "blog/2018/05/02/ember-2018-roadmap-call-for-posts.html"
 responsive: true
 ---

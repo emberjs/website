@@ -1,7 +1,8 @@
 ---
 title: Handlebars Version Compatibility
 author: Robert Jackson
-tags: Recent Posts
+tags: Recent Posts, 2014, Handlebars
+responsive: true
 ---
 
 Handlebars 2.0 was released just a few weeks ago, and since its release we have received many

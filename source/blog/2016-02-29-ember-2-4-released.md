@@ -2,7 +2,8 @@
 title: Ember.js 2.4 and 2.5 Beta Released
 responsive: true
 author: Matthew Beale
-tags: Releases
+tags: Releases, 2016, Version 2.x, 2.4, 2.5
+responsive: true
 ---
 
 Ember.js 2.4, a minor version release of Ember with backwards compatible

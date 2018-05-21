@@ -2,7 +2,7 @@
 title: Ember 2.14 and 2.15 Beta Released
 responsive: true
 author: Matthew Beale, Chris Thoburn, Alex Navasardyan
-tags: Releases
+tags: Releases, Version 2.x, 2017, 2.14, 2.15
 ---
 
 Today the Ember project is releasing version 2.14.0 of Ember.js, Ember Data, and Ember CLI. You may have noticed we're a few weeks late on this release, as the
