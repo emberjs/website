@@ -1,7 +1,7 @@
 ---
 title: Ember Data 0.13
 author: Tom Dale
-tags: Releases, Ember Data, 2013, 1
+tags: Releases, Ember Data, 2013, Version 1.x
 responsive: true
 ---
 

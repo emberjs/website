@@ -1,7 +1,7 @@
 ---
 title: Announcing the Ember.js Security Policy
 author: Tom Dale
-tags: Recent Posts, Security, 2013, 1
+tags: Recent Posts, Security, 2013, Version 1.x
 responsive: true
 ---
 

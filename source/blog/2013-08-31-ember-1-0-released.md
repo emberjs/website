@@ -1,7 +1,7 @@
 ---
 title: Ember 1.0 Released
 author: The Core Team
-tags: Releases, 2013, 1, Router, Testing, Performance
+tags: Releases, 2013, Version 1.x, Router, Testing, Performance
 responsive: true
 ---
 

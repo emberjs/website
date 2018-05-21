@@ -1,7 +1,7 @@
 ---
 title: Ember 1.1.2 Released
 author: Peter Wagenet
-tags: Releases, 1.1.2, 1.2, 2013
+tags: Releases, 1.1.2, 1.2, 2013, Version 1.x
 responsive: true
 ---
 

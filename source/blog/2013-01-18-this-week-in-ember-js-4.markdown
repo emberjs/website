@@ -1,7 +1,7 @@
 ---
 title: This Week in Ember
 date: 2013/01/18
-tags: Recent Posts, EmberCamp, 2013, Roadmap, 1
+tags: Recent Posts, EmberCamp, 2013, Roadmap, Version 1.x
 author: Tom Dale & Yehuda Katz
 responsive: true
 ---

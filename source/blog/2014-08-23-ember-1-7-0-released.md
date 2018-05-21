@@ -1,7 +1,7 @@
 ---
 title: Ember 1.7.0 and 1.8 Beta Released
 author: Alex Navasardyan
-tags: Releases, 2014
+tags: Releases, 2014, Version 1.x
 responsive: true
 ---
 

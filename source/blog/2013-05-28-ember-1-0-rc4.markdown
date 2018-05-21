@@ -1,7 +1,7 @@
 ---
 title: Ember 1.0 RC4
 author: Tom Dale
-tags: Releases, 2013, 1, Controller
+tags: Releases, 2013, Version 1.x, Controller
 responsive: true
 ---
 

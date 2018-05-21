@@ -1,7 +1,7 @@
 ---
 title: Ember 1.0 RC3
 author: Stefan Penner
-tags: Releases, 1, Performance, Testing
+tags: Releases, Version 1.x, Performance, Testing
 responsive: true
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Ember Data v1.0.0-beta.14 Released
 author: Stanley Stuart
-tags: Ember Data, 2014
+tags: Ember Data, 2014, Version 1.x
 responsive: true
 ---
 

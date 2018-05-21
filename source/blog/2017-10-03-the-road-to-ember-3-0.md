@@ -2,7 +2,7 @@
 title: The Road to Ember 3.0
 responsive: true
 author: Matthew Beale
-tags: Recent Posts, roadmap, 3, 2017
+tags: Recent Posts, Roadmap, 2017
 ---
 
 Today the Ember.js Core Team is happy to announce our plans for the release of Ember 3.0. Ember 3.0 will arrive 2.5 years and 18 minor revisions after the release of Ember 2.0. The final release of the 2.x series will be Ember 2.18 on January 1st, 2018.

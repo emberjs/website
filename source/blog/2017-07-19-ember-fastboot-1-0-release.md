@@ -2,7 +2,7 @@
 title: Ember FastBoot 1.0 Released
 responsive: true
 author: Tom Dale, Krati Ahuja
-tags: Releases, fastboot, 2017
+tags: Releases, Fastboot, 2017
 ---
 
 We are thrilled to share that we have released Ember FastBoot 1.0 (including ember-cli-fastboot addon, fastboot-app-server and other FastBoot libraries).

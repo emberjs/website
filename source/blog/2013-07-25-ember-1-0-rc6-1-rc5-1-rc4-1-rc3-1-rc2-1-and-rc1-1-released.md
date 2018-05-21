@@ -1,7 +1,7 @@
 ---
 title: Ember 1.0 RC6.1, RC5.1, RC4.1, RC3.1, RC2.1 RC1.1 Released
 author: Tom Dale
-tags: Releases, Security, 2013, 1
+tags: Releases, Security, 2013, Version 1.x
 responsive: true
 ---
 

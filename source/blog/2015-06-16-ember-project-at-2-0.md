@@ -1,7 +1,7 @@
 ---
 title: The Ember 2.x Project
 author: Yehuda Katz
-tags: Recent Posts, 2015
+tags: Recent Posts, 2015, Version 2.x
 responsive: true
 ---
 

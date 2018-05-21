@@ -1,7 +1,7 @@
 ---
 title: Ember 1.6.0 and 1.7 Beta Released
 author: Robert Jackson
-tags: Releases, 2014, 1, 1.6, 1.7
+tags: Releases, 2014, Version 1.x, 1.6, 1.7
 responsive: true
 ---
 

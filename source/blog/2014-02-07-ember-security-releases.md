@@ -1,7 +1,7 @@
 ---
 title: Security Releases - Ember 1.2.2, and 1.3.2
 author: Robert Jackson
-tags: Releases, Security, 1, 1.2, 1.3, 2014
+tags: Releases, Security, Version 1.x, 1.2, 1.3, 2014
 responsive: true
 ---
 

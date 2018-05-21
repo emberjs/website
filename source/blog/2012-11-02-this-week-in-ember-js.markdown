@@ -1,7 +1,7 @@
 ---
 title: This Week in Ember.js
 date:  2012/11/02
-tags: Recent Posts, 1, Roadmap, 2012
+tags: Recent Posts, Version 1.x, Roadmap, 2012
 author: Tom Dale
 responsive: true
 ---

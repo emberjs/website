@@ -2,7 +2,7 @@
 title: Ember 2.16-LTS, Ember 2.17 and 2.18 Beta Released
 responsive: true
 author: Ricardo Mendes, Brendan McLoughlin
-tags: Releases, 2017, 2, 2.17, 2.18
+tags: Releases, 2017, Version 2.x, 2.17, 2.18
 ---
 
 *Updated on December 19, 2017 to include information about Ember.js 2.16-LTS.*

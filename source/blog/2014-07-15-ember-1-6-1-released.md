@@ -1,7 +1,7 @@
 ---
 title: Ember 1.6.1 Released
 author: Robert Jackson
-tags: Releases, 2014, 1, 1.6
+tags: Releases, 2014, Version 1.x, 1.6
 responsive: true
 ---
 

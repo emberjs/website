@@ -1,7 +1,7 @@
 ---
 title: Ember.js 2.7 and 2.8 Beta Released
 author: Dan Gebhardt
-tags: Releases, 2016, 2.7, 2.8
+tags: Releases, 2016, 2.7, 2.8, Version 2.x
 responsive: true
 ---
 

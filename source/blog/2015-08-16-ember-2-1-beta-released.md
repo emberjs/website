@@ -1,7 +1,7 @@
 ---
 title: Ember.js 2.1 Beta Released
 author: Matthew Beale
-tags: Releases, 2015
+tags: Releases, 2015, Version 2.x
 responsive: true
 ---
 

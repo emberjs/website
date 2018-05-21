@@ -2,7 +2,7 @@
 title: Ember 2.18 and 3.0 Beta Released
 author: Ricardo Mendes, Matthew Beale, Brendan McLoughlin
 responsive: true
-tags: Releases, 2, 3, 2.18, 3.0, 2018
+tags: Releases, Version 2.x, Version 3.x, 2.18, 3.0, 2018
 ---
 
 Today the Ember project is releasing version 2.18.0 of Ember.js, Ember Data,

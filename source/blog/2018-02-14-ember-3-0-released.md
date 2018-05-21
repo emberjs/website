@@ -2,7 +2,7 @@
 title: Ember 3.0 Released
 responsive: true
 author: Matthew Beale
-tags: Releases, 2018, 3, 3.0
+tags: Releases, 2018, Version 3.x, 3.0
 ---
 
 Today the Ember project is releasing version 3.0.0 of Ember.js, Ember Data, and

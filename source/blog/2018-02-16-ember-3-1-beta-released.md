@@ -2,7 +2,7 @@
 title: Ember 3.1 Beta Released
 responsive: true
 author: Matthew Beale
-tags: Releases, 3, 3.1, 2018
+tags: Releases, Version 3.x, 3.1, 2018
 ---
 
 Today we're releasing Ember 3.1-beta.1, including releases of Ember.js, Ember

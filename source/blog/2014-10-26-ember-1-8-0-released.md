@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.8.0 and 1.9 Beta Released
 author: Matthew Beale
-tags: Releases, 2014, 1, 1.8, 1.9
+tags: Releases, 2014, Version 1.x, 1.8, 1.9
 responsive: true
 ---
 

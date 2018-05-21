@@ -1,7 +1,7 @@
 ---
 title: Security Releases - Ember 1.0.1, 1.1.3, 1.2.1, and 1.3.1
 author: Tom Dale
-tags: Releases, Security, 1, 1.1, 1.2, 1.3, 2014
+tags: Releases, Security, Version 1.x, 1.1, 1.2, 1.3, 2014
 responsive: true
 ---
 

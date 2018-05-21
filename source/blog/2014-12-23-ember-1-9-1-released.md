@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.9.1 Released
 author: Tom Dale
-tags: Releases, 2014
+tags: Releases, 2014, Version 1.x
 responsive: true
 ---
 

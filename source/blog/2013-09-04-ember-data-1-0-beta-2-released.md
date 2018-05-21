@@ -1,7 +1,7 @@
 ---
 title: Ember Data 1.0.0 Beta 2 Released
 author: Yehuda Katz
-tags: Releases, Ember Data, 2013, 1, Data
+tags: Releases, Ember Data, 2013, Version 1.x, Data
 responsive: true
 ---
 

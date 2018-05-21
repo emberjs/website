@@ -1,7 +1,7 @@
 ---
 title: Ember Data v2.0 Released and v2.1 Beta Released
 author: Tom Dale and the Ember Data Team
-tags: Ember Data, 2015
+tags: Ember Data, 2015, Version 2.x
 responsive: true
 ---
 

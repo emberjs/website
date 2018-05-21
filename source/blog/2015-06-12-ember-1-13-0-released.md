@@ -1,7 +1,7 @@
 ---
 title: Ember.js 1.13.0 and 2.0 Beta Released
 author: Matthew Beale and Yehuda Katz
-tags: Releases, 2015
+tags: Releases, 2015, Version 1.x
 responsive: true
 ---
 

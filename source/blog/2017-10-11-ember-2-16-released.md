@@ -2,7 +2,7 @@
 title: Ember 2.16 and 2.17 Beta Released
 responsive: true
 author: Matthew Beale
-tags: Releases, 2017, 2
+tags: Releases, 2017, Version 2.x
 ---
 
 Today the Ember project is releasing version 2.16.0 of Ember.js, Ember Data, and Ember CLI.

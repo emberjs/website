@@ -1,7 +1,7 @@
 ---
 title: "Compiling templates with Ember 1.10"
 author: "Robert Jackson"
-tags: Recent Posts, 2015
+tags: Recent Posts, 2015, Version 1.x
 responsive: true
 ---
 
