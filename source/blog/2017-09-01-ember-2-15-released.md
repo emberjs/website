@@ -2,7 +2,7 @@
 title: Ember 2.15 and 2.16 Beta Released
 responsive: true
 author: Matthew Beale
-tags: Releases
+tags: Releases, 2017, 2
 ---
 
 *Updated on December 19, 2017 to include information about Ember.js 2.8-LTS.*

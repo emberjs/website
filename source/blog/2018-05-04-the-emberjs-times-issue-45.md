@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 45
 author: Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jen Weber, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times
+tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/04/the-emberjs-times-issue-44.html"
 responsive: true
 ---

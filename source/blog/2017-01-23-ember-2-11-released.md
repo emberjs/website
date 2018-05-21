@@ -2,7 +2,7 @@
 title: Ember 2.11 and 2.12 Beta Released
 responsive: true
 author: Godfrey Chan, Nathan Hammond, Brendan McLoughlin
-tags: Releases
+tags: Releases, 2017, 2.11, 2.12
 ---
 
 *Updated on December 19, 2017 to include information about Ember.js 2.4-LTS.*

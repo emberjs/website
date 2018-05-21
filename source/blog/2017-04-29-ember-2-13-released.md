@@ -1,8 +1,8 @@
 ---
 title: Ember 2.12-LTS, Ember 2.13 and 2.14 Beta Released
 responsive: true
-author:
-tags: Releases
+author: The Ember Team
+tags: Releases, 2017, 2, 2.13, 2.14
 ---
 
 *Updated on December 19, 2017 to include information about Ember.js 2.12-LTS.*
