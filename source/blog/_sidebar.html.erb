@@ -15,6 +15,15 @@
     <li class="list-item"><a href="<%= tag_path 'Releases'%>">More Releases...</a></li>
   </ul>
 
+  <h4 class="list-group-title" id="newsletter">Ember.js Times</h4>
+  <ul class="list-group" aria-labelledby="newsletter">
+    <% blog.tags['Newsletter'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
+      <li class='list-item'><%= link_to article.title, article %></li>
+    <% end %>
+    <li class="list-item"><a href="<%= tag_path 'Newsletter'%>">More Issues...</a></li>
+  </ul>
+
+
   <h4 class="list-group-title" id="browse-year">Browse by Year</h4>
   <ul class="list-group" aria-labelledby="browse-year">
     <li class="list-item list-inline">
@@ -60,7 +69,6 @@
     <li class="list-item"><a href="<%= tag_path 'Ember Data'%>">Ember Data</a></li>
     <li class="list-item"><a href="<%= tag_path 'Performance'%>">Performance</a></li>
     <li class="list-item"><a href="<%= tag_path 'Roadmap'%>">Roadmap</a></li>
-    <li class="list-item"><a href="<%= tag_path 'Router'%>">Router</a></li>
     <li class="list-item"><a href="<%= tag_path 'Security'%>">Security</a></li>
     <li class="list-item"><a href="<%= tag_path 'Testing'%>">Testing</a></li>
   </ul>
