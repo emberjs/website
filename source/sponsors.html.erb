@@ -3,43 +3,41 @@ title: "Sponsors"
 responsive: true
 ---
 
-<h1>
-  Ember Sponsors and Friends
-</h1>
+<h1>Ember Sponsors and Friends</h1>
 
-<p>
+<p class="intro">
   It's still early in the life of the project, but we couldn't have gotten as far as we have without the support&mdash;both financial and technical&mdash;of the following companies:
 </p>
 
 <div class="sponsors section">
-  <h2>Current Sponsors</h2>
+  <h2 class="text-center">Current Sponsors</h2>
 
-  <ul class="showcase">
+  <ul class="sponsors-list">
     <% current_sponsors.each do |user| %>
-      <li>
+      <li class="sponsors-list-item>
         <a href="<%= user.url %>" rel="nofollow">
           <img src="/images/about/<%= user.image %>">
         </a>
-        <h5><%=user.term %></h5>
+        <h3><%=user.term %></h3>
         <p id="sponsorType"><%=user.type %></p>
     </li>
     <% end %>
   </ul>
 
-<h2>Past Sponsors</h2>
+<h2 class="text-center">Past Sponsors</h2>
 
-  <ul class="showcase">
+  <ul class="sponsors-list">
     <% past_sponsors.each do |user| %>
-      <li>
+      <li class="sponsors-list-item>
         <a href="<%= user.url %>" rel="nofollow">
           <img src="/images/about/<%= user.image %>">
         </a>
-        <h5><%=user.term %></h5>
+        <h3><%=user.term %></h3>
         <p id="sponsorType"><%=user.type %></p>
     </li>
     <% end %>
   </ul>
 
-  <p class="thanks">A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original Ember website.</p>
+  <p class="thanks text-center">A special thanks to <a href="https://dribbble.com/mg">Matt Grantham</a> for design of the original Ember website.</p>
 
 </div>
