@@ -108,6 +108,8 @@ And here's the html output with the correct role assigned:
 </footer>
 ```
 
+There's also some good news! Some of the use cases for this addon are addressed by new options available [in Ember itself}(#new-options-for-out-of-the-box-accessibility)!
+
 ## Structural application concerns
 
 Now that we've covered how to fix your own individual app, let's talk about what has been done to help make an Ember app more accessible from day one.
