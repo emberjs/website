@@ -149,14 +149,15 @@ There are already many community addons available that solve different issues. W
 Almost all of us will have a disability at some point in our lives. Accessible web practices lead to better user experience --- things like improved keyboard navigation, text that is still readable on a dim monitor, and clear pointers on how to interact with a UI. 
 
 Here are some ways you can help improve accessibility in Ember and the JavaScript ecosystem:
-* Research and try out other [ember-a11y](https://github.com/ember-a11y) tools
-* Make your own apps accessible
-* Include a11y considerations in your talks and articles
-* Contribute to addons that help solve these problems
-* Guide your coworkers and collaborators through the learning process
-* Avoid language that perpetuates the idea that accessibility is too hard. Focus
+
+- Research and try out other [ember-a11y](https://github.com/ember-a11y) tools
+- Make your own apps accessible
+- Include a11y considerations in your talks and articles
+- Contribute to addons that help solve these problems
+- Guide your coworkers and collaborators through the learning process
+- Avoid language that perpetuates the idea that accessibility is too hard. Focus
 on the tools that make it easier and our responsibilities as developers.
-* Support and comment on RFCs that help make Ember more accessible out of the box
+- Support and comment on RFCs that help make Ember more accessible out of the box
 
 Accessible apps are better for everyone.
 
@@ -164,4 +165,4 @@ Accessible apps are better for everyone.
 
 Our community's improvements are the result of the hard work of many people! Shared solutions take more time to develop, but we can all move forward together.
 
-Many thanks to Melanie Sumner for raising the profile of accessibility in Ember, the team behind ember-a11y, contributors involved in getting some features into Ember itself, Robert DeLuca for inspiring involvement, and everyone who encourages others to adopt accessible practices.
+Many thanks to everyone who raises the profile of accessibility in Ember, the team behind ember-a11y, contributors involved in getting some features into Ember itself, and those who encourage others to adopt accessible practices.
