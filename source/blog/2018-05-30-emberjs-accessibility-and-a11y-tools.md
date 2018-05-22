@@ -165,4 +165,4 @@ Accessible apps are better for everyone.
 
 Our community's improvements are the result of the hard work of many people! Shared solutions take more time to develop, but we can all move forward together.
 
-Many thanks to everyone who raises the profile of accessibility in Ember, the team behind ember-a11y, contributors involved in getting some features into Ember itself, and those who encourage others to adopt accessible practices.
+Many thanks to everyone who raises the profile of accessibility in Ember, the team behind a11y addons, contributors involved in getting some features into Ember itself, and those who encourage others to adopt accessible practices. Extra thanks to [Sean Massa](https://github.com/EndangeredMassa) and [Melanie Sumner](https://github.com/MelSumner) for reviewing this post.
