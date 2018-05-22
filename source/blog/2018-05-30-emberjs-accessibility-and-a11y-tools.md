@@ -132,7 +132,7 @@ The problem is that screen readers rely heavily on what has focus. Imagine if yo
 
 It's our responsibility as developers to build inclusive tech, so keep learning and building! [Melanie Sumner's](https://github.com/MelSumner) EmberConf talk [Accessibility for All](https://www.youtube.com/watch?v=6ydNf7e5P00) is a fast, concise introduction to accessibility in Ember, and [this article series](http://www.melsumner.com/blog/accessibility/a11y-accessibility-guide-ember-developers/) provides a deeper dive.
 
-There are also many addons available that solve different issues, and while we still have a ways to go, new advances are being made. For example, there's a [Semantic Test Selectors RFC](https://github.com/emberjs/rfcs/pull/327) underway and an [experimental addon](https://github.com/tradegecko/ember-semantic-test-helpers) in development! These efforts  followed [Jamie White's](https://github.com/jgwhite) talk [Say More](https://www.youtube.com/watch?v=iAyRVPSOpy8) from EmberConf.
+There are also many addons available that solve different issues, and while we still have a ways to go, new advances are being made. For example, there's a [Semantic Test Selectors RFC](https://github.com/emberjs/rfcs/pull/327) being drafted and an [experimental addon](https://github.com/tradegecko/ember-semantic-test-helpers) in development! These efforts  followed [Jamie White's](https://github.com/jgwhite) talk [Say More](https://www.youtube.com/watch?v=iAyRVPSOpy8) from EmberConf.
 
 Almost all of us will have a disability at some point in our lives. Accessible web practices lead to better user experience - things like improved keyboard navigation, text that is still readable on a dim monitor, and clear pointers on how to interact with a UI. 
 
