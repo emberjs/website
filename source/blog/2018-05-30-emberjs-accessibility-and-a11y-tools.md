@@ -82,11 +82,13 @@ Let's add the label. The `for` attribute should match the input id.
 
 ![A form with labels](/images/blog/2018-05-30-emberjs-accessibility-and-a11y-tools/form-with-labels.png)
 
-Now the filter has a label, and the tests pass!
+Now the filter has a label, and the tests pass! 
 
-### Using ember-a11y-landmarks for roles
+Fixing issues with contrast, aria labels, and DOM elements is an important step towards building an accessible app. That said, there are some tools that help reduce the amount of work that you have to do by hand, and we'll cover those next.
 
-The [ember-a11y-landmarks](https://github.com/ember-a11y/ember-a11y-landmarks) addon helps manage the roles that should go on semantic tags like `<header>` and `<nav>`, without needing to learn the intricacies of when to use them.
+## Using ember-a11y-landmarks for roles
+
+Here's just one example of an addon that helps reduce the number of changes to make by hand. The [ember-a11y-landmarks](https://github.com/ember-a11y/ember-a11y-landmarks) addon helps manage the roles that should go on semantic tags like `<header>` and `<nav>`, without needing to learn the intricacies of when to use them.
 
 One huge thing you can do to improve an app's accessibility is to use semantic tags in the HTML. For example, always use `<button>` for buttons, instead of making them `divs`. However, some semantic tags still need extra attributes called roles for screen readers to work right, and they only need them some of the time based on their position in the DOM. ember-a11y-landmarks to the rescue!
 
@@ -96,13 +98,19 @@ To use this addon, wrap content in the ally-landmark block and say what kind of 
 {{#a11y-landmark tagName="footer"}}
    This is a footer!
 {{/a11y-landmark}}
+```
+
 And here's the html output with the correct role assigned:
+
+```
 <footer id="ember337" role="contentinfo" class="ember-view"> 
   This is a footer!
 </footer>
 ```
 
 ## Structural application concerns
+
+Now that we've covered how to fix your own individual app, let's talk about what has been done to help make an Ember app more accessible from day one.
 
 I learned from [Robert DeLuca](https://github.com/Robdel12) that [most front end frameworks have flaws](https://medium.com/@robdel12/single-page-apps-routers-are-broken-255daa310cf) that affect Assistive Technology like screen readers. However, there's a lot of progress being made in Ember itself, our community addons, and by our pals working in other frameworks! You can learn more in the recent JavaScript [State of Accessibility](https://www.youtube.com/watch?v=aoyLG2gTFpI) panel hosted by [ThisDot Media](https://www.thisdot.co/). Jump to the Ember segment presented by Melanie Sumner [here](https://youtu.be/aoyLG2gTFpI?t=2432).
 
