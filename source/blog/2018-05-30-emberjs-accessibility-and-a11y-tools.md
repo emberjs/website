@@ -10,7 +10,7 @@ With just a few lines of code, you can audit your Ember.js app for accessibility
 
 An [accessible app](https://en.wikipedia.org/wiki/Web_accessibility) is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`. There are set standards called the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), and in many cases, [it's the law](https://www.w3.org/WAI/Policy/).
 
-_This article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax. Anyone can write a guest article - get in touch if you are interested!_
+_This article was written as of Ember.js version 3.1. The same approach applies for all 2.x apps, with some changes to test syntax. Anyone can write a guest article --- get in touch if you are interested!_
 
 ## Using ember-a11y-testing
 
@@ -112,17 +112,19 @@ There's also some good news! Some of the use cases for this addon are addressed 
 
 ## Structural application concerns
 
-Now that we've covered how to fix your own individual app, let's talk about what has been done to help make an Ember app more accessible from day one.
-
-I learned from [Robert DeLuca](https://github.com/Robdel12) that [most front end frameworks have flaws](https://medium.com/@robdel12/single-page-apps-routers-are-broken-255daa310cf) that affect Assistive Technology like screen readers. However, there's a lot of progress being made in Ember itself, our community addons, and by our pals working in other frameworks! You can learn more in the recent JavaScript [State of Accessibility](https://www.youtube.com/watch?v=aoyLG2gTFpI) panel hosted by [ThisDot Media](https://www.thisdot.co/). Jump to the Ember segment presented by Melanie Sumner [here](https://youtu.be/aoyLG2gTFpI?t=2432).
+Now that we've covered how to fix individual app problems like color contrast, let's talk about what needs to be done to help fix issues that affect all Ember apps.
 
 With the release of 3.1, Ember.js introduced some new features within the framework itself, and community addons continue to help drive progress on the remaining concerns. Historically, many new features in Ember originated as community addons.
+
+There's a lot of progress being made in Ember itself, our community addons, and by our pals working in other frameworks! You can learn more in the recent JavaScript [State of Accessibility](https://www.youtube.com/watch?v=aoyLG2gTFpI) panel hosted by [ThisDot Media](https://www.thisdot.co/). Jump to the Ember segment presented by Melanie Sumner [here](https://youtu.be/aoyLG2gTFpI?t=2432).
 
 ### New options for out-of-the-box accessibility
 
 One common issue in single page application frameworks is that they wrap a developer's content in extra `divs`. However, some elements like `<header>` should be direct descendants of the `body` element. [RFC 280](https://github.com/emberjs/rfcs/blob/master/text/0280-remove-application-wrapper.md) proposed an option for removing the application-level `div` wrapper (an RFC, or Request for Comments, is the main way that new features are proposed and opened for community feedback). That RFC was accepted, meaning that work could begin to add the feature into Ember, and the new option shipped in version 3.1. You can learn more about it and how to enable the feature in the [release blog post](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_introducing-optional-features-3-of-4).
 
 ### Using the ember-a11y addon for focus management
+
+I learned from [Robert DeLuca](https://github.com/Robdel12) that [most front end frameworks have flaws](https://medium.com/@robdel12/single-page-apps-routers-are-broken-255daa310cf) that affect Assistive Technology like screen readers. One of those flaws is focus management, and there's already an addon for it. 
 
 While ember-a11y refers to a whole bunch of tools, there's one addon that is simply called [ember-a11y](https://github.com/ember-a11y/ember-a11y) too. The main task of this addon is to handle focus correctly so that users with Assistive Technology can navigate content as changes happen inside the `{{outlet}}` of a route. 
 
@@ -144,7 +146,7 @@ It's our responsibility as developers to build inclusive tech, so keep learning 
 
 There are already many community addons available that solve different issues. While we still have a ways to go, new advances are being made too. For example, there is a [Semantic Test Selectors RFC](https://github.com/emberjs/rfcs/pull/327) being drafted and an [experimental addon](https://github.com/tradegecko/ember-semantic-test-helpers) in development to go with it! These efforts followed [Jamie White's](https://github.com/jgwhite) talk from EmberConf, [Say More](https://www.youtube.com/watch?v=iAyRVPSOpy8).
 
-Almost all of us will have a disability at some point in our lives. Accessible web practices lead to better user experience - things like improved keyboard navigation, text that is still readable on a dim monitor, and clear pointers on how to interact with a UI. 
+Almost all of us will have a disability at some point in our lives. Accessible web practices lead to better user experience --- things like improved keyboard navigation, text that is still readable on a dim monitor, and clear pointers on how to interact with a UI. 
 
 Here are some ways you can help improve accessibility in Ember and the JavaScript ecosystem:
 - Research and try out other [ember-a11y](https://github.com/ember-a11y) tools
