@@ -142,7 +142,7 @@ Here are some ways you can help improve accessibility in Ember and the JavaScrip
 - Guide your coworkers and collaborators through the learning process
 - Avoid language that perpetuates the idea that accessibility is too hard. Focus
 on the tools that make it easier and our responsibilities as developers.
-- Lead an RFC to make Ember more accessible out of the box
+- Support and comment on RFCs that help make Ember more accessible out of the box
 
 Accessible apps are better for everyone.
 
