@@ -3,67 +3,70 @@ title: "Team"
 responsive: true
 ---
 
-<h1 class="text-center">
-  The Team Behind Ember
-</h1>
+<h1 class="text-center">The Team Behind Ember</h1>
+
 <p class="lead text-center">
-  Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams that guide the development and instruction of Ember.js. 
+  Ember is an Open Source project that relies on the tireless support of individual contributors. These are the teams 
+  that guide the development and instruction of Ember.js. 
 </p>
 
 <section class="team section">
-<h2 class="text-center">The Core Team</h2>
+  <h2 class="text-center">The Core Team</h2>
 
-<% core = data.team.select { |m| m.teams.include?('core') } %>
+  <% core = data.team.select { |m| m.teams.include?('core') } %>
 
-<ul class="headshots">
-  <% core.each do |user| %>
-    <li>
-      <a href="<%= user.github %>" rel="nofollow" class="avatar">
-        <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
-      </a>
+  <ul class="headshots">
+    <% core.each do |user| %>
+      <li>
+        <a href="<%= user.github %>" rel="nofollow" class="avatar">
+          <img src="/images/team/<%= user.image %>" alt="<%= user.name %>">
+        </a>
 
-      <p class="name">
-        <%= user.name %>
-      </p>
+        <p class="name">
+          <%= user.name %>
+        </p>
 
-      <ul class="social">
-        <li>
-          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
-            <i class="icon-twitter" aria-hidden="true"></i>
-          </a>
-        </li>
+        <ul class="social">
+          <li>
+            <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+              <i class="icon-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
 
-        <li>
-          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
-            <i class="icon-github" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+              <i class="icon-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
 
-      <p class="bio">
-        <%= user.bio %>
-      </p>
-  </li>
-  <% end %>
-</ul>
+        <p class="bio">
+          <%= user.bio %>
+        </p>
+      </li>
+    <% end %>
+  </ul>
 </section>
 
 <hr/>
+
 <section class="team section">
-  <h2 class="text-center">
-    The Ember CLI Team
-  </h2>
+  <h2 class="text-center">The Ember CLI Team</h2>
+
   <p class="lead text-center">
-  The Ember CLI team is responsible for maintaining ember-cli, the command line interface for managing and packaging Ember.js applications and addons. The team also maintains many of the addons in the default blueprint as well as fastboot.
+    The Ember CLI team is responsible for maintaining ember-cli, the command line interface for managing and packaging 
+    Ember.js applications and addons. The team also maintains many of the addons in the default blueprint as well as 
+    fastboot.
   </p>
 
   <%
-  subteams = ['cli'];
-  subteams = subteams.map { |team|
-    data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
-  }.flatten
+    subteams = ['cli'];
 
-  subteams.sort_by! {|u| [u.last] }
+    subteams = subteams.map { |team|
+      data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
+    }.flatten
+
+    subteams.sort_by! {|u| [u.last] }
   %>
 
   <ul class="contributors headshots">
@@ -76,39 +79,42 @@ responsive: true
         <p class="name">
           <%= user.name %>
         </p>
-        <ul class="social">
-        <li>
-          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
-            <i class="icon-twitter" aria-hidden="true"></i>
-          </a>
-        </li>
 
-        <li>
-          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
-            <i class="icon-github" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </li>
+        <ul class="social">
+          <li>
+            <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+              <i class="icon-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li>
+            <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+              <i class="icon-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
     <% end %>
   </ul>
 </section>
+
 <hr/>
+
 <section class="team section">
-  <h2 class="text-center">
-    The Ember Data Team
-  </h2>
+  <h2 class="text-center">The Ember Data Team</h2>
+  
   <p class="lead text-center">
-  The Ember Data team is responsible for the official data persistence library for Ember.js applications.
+    The Ember Data team is responsible for the official data persistence library for Ember.js applications.
   </p>
 
   <%
-  subteams = ['data'];
-  subteams = subteams.map { |team|
-    data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
-  }.flatten
+    subteams = ['data'];
 
-  subteams.sort_by! {|u| [u.last] }
+    subteams = subteams.map { |team|
+      data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
+    }.flatten
+
+    subteams.sort_by! {|u| [u.last] }
   %>
 
   <ul class="contributors headshots">
@@ -121,40 +127,43 @@ responsive: true
         <p class="name">
           <%= user.name %>
         </p>
-        <ul class="social">
-        <li>
-          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
-            <i class="icon-twitter" aria-hidden="true"></i>
-          </a>
-        </li>
 
-        <li>
-          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
-            <i class="icon-github" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </li>
+        <ul class="social">
+          <li>
+            <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+              <i class="icon-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li>
+            <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+              <i class="icon-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
     <% end %>
   </ul>
 </section>
+
 <hr/>
+
 <section class="team section">
-  <h2 class="text-center">
-    The Ember Learning Team
-  </h2>
+  <h2 class="text-center">The Ember Learning Team</h2>
+
   <p class="lead text-center">
-    The Ember Learning Team is responsible for keeping the guides and API documentation accurate and up-to-date. They also manage the community outreach coordination and other initiatives that support learning Ember.
+    The mission of the Ember Learning Team is to empower Ember users to learn, build and teach. This team is responsible
+    for keeping the guides and API documentation updated, and manages the initiatives that support learning Ember.
   </p>
 
-
   <%
-  subteams = ['learning'];
-  subteams = subteams.map { |team|
-    data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
-  }.flatten
+    subteams = ['learning'];
 
-  subteams.sort_by! {|u| [u.last] }
+    subteams = subteams.map { |team|
+      data.team.select {|u| u.teams.include?(team); }.map {|u| u['type'] = team; u }
+    }.flatten
+
+    subteams.sort_by! {|u| [u.last] }
   %>
 
   <ul class="contributors headshots">
@@ -167,30 +176,33 @@ responsive: true
         <p class="name">
           <%= user.name %>
         </p>
-        <ul class="social">
-        <li>
-          <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
-            <i class="icon-twitter" aria-hidden="true"></i>
-          </a>
-        </li>
 
-        <li>
-          <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
-            <i class="icon-github" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </li>
+        <ul class="social">
+          <li>
+            <a class="twitter" href="<%= user.twitter %>" aria-label="<%= user.name %> Twitter">
+              <i class="icon-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li>
+            <a class="github" href="<%= user.github %>" aria-label="<%= user.name %> Github Profile">
+              <i class="icon-github" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </li>
     <% end %>
   </ul>
 </section>
+
 <hr/>
+
 <section class="team section">
-<h2 class="text-center">
-    Ember Core Alumni
-  </h2>
+  <h2 class="text-center">Ember Core Alumni</h2>
+
   <p class="lead text-center">
-    Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are retired members of the Ember Core Team, to whom we will always be grateful.
+    Serving as a member of the Core Team of an open source project like Ember is a huge amount of work. These are 
+    retired members of the Ember Core Team, to whom we will always be grateful.
   </p>
 
   <% alumni = data.team.select { |m| m.teams.include?('corealumni') } %>
@@ -201,6 +213,7 @@ responsive: true
         <a href="<%= user.github %>" rel="nofollow">
           <img class="alumni" src="/images/team/<%= user.image %>" alt="<%= user.name %>" />
         </a>
+    
         <p>
           <%= user.name %>
         </p>
