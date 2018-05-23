@@ -128,3 +128,5 @@ end
 # Redirects (These must be last!)
 ###
 activate :alias
+
+redirect "homepage-survey.html", to: "https://embermarketing.typeform.com/to/JJECA8"

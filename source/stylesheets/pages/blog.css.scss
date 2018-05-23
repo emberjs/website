@@ -82,6 +82,22 @@
       list-style: decimal;
     }
 
+    .grid {
+      display: flex;
+    }
+
+    .col {
+      padding: 0 12px
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .spacer {
+      height: 1.6em;
+    }
+
     table.figure {
       float: left;
       margin-bottom: 20px;
