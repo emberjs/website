@@ -37,8 +37,17 @@ Halloechen Emberistas!
 
 ---
 
-## [YOUR SECTION TITLE HERE](#your-url-here)
+## Updates to the `ember-cli-addon-docs`(https://github.com/ember-learn/ember-cli-addon-docs)
 
+It’s becoming harder to have an excuse to not document your software libraries as the AddonDocs is getting easier to use by the day.
+
+A real-world example of its usage is the the ember-decorators documentation: <a href='http://ember-decorators.github.io/ember-decorators/latest/docs' target='_blank'>ember-decorators</a>, which was recently revamped by leveraging the add-on, have a go at it and inspire yourself to your own documentation.
+
+Also, on the most recent releases, the following neatest features were made available:
+
+- new version selector: good news for when you feel nostalgic about old documentation. Now you can add to your navigation a version selector control that will enable you to jump back and forth to different documentation versions with ease, check it out <a href='https://github.com/ember-learn/ember-cli-addon-docs/pull/156' target='_blank'>here</a>.
+
+- "Magic mirror, on the wall – who is the most beautiful documentation one of all?" The AddonDocs has an even prettier UI now thanks to the `ember-cli-tailwind`, if you are unfamiliar with Tailwind, make yourself a favour and deep dive into its power <a href='https://tailwindcss.com/' target='_blank'>here</a>.
 
 ---
 
