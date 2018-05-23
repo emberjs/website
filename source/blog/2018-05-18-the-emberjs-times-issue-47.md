@@ -6,7 +6,7 @@ alias : "blog/2018/05/18/the-emberjs-times-issue-47.html"
 responsive: true
 ---
 
-여보세요 Emberistas!
+안녕하세요 Emberistas!
 
 Again you can enjoy reading the Ember.js Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/18/issue-47) and the [blog format](https://emberjs.com/blog/2018/05/18/the-emberjs-times-issue-47.html) to share it even better with your Ember friends.
 
