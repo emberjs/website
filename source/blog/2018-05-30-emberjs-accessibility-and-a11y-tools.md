@@ -41,6 +41,7 @@ In this way, learning the rules and standards of accessibility can be incrementa
 
 ```javascript
 import a11yAudit from 'ember-a11y-testing/test-support/audit';
+// ... normal test boilerplate ...
 test('accessibility check', function(assert) {
  visit('/');
  a11yAudit();
