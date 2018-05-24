@@ -12,7 +12,12 @@ Halloechen Emberistas!
 
 ---
 
-## [YOUR SECTION TITLE HERE](#your-url-here)
+## [What is your wish for Ember in 2018?](https://emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html)
+There’s a week left of the Ember’s 2018 call for blog posts. There’s already been a lot of great blog posts from the community, but we’re hoping for more!
+
+Write a blog post by **May 30th** to propose goals and direction for Ember in the remainder of 2018. The content of these posts will help the core team to draft their first Roadmap RFC.
+
+Looking for inspiration? Check out the [#EmberJS2018 hashtag](https://twitter.com/search?q=%23EmberJS2018) on Twitter or [@zinyado’s repo collection posts](https://github.com/zinyando/emberjs2018-posts) on GitHub.
 
 
 ---
