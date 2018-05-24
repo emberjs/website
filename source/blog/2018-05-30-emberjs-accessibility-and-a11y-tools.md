@@ -18,7 +18,16 @@ We don't have to learn a thousand rules to start building accessible apps. There
 
 [ember-a11y-testing](https://github.com/ember-a11y/ember-a11y-testing) is an addon that reveals actionable improvements to your app's accessibility and guides us through making the changes.
 
+Let's start by cloning an example app to try the tools on:
+
 ```bash
+git clone git@github.com:ember-learn/super-rentals.git
+cd super-rentals
+yarn # or npm install
+
+Next, install ember-a11y-testing and start the app:
+
+```
 ember install ember-a11y-testing
 ember server
 ```
