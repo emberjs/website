@@ -138,7 +138,7 @@ So why is this necessary? If you're looking at a decently accessible website and
 
 The problem is that screen readers rely heavily on what has focus. Imagine if you had to start reading at the very top of the page whenever a route in your app changed, instead of just reading the content that is new, or if you weren't able to tell that some content had changed! ember-a11y corrects for that focus problem so that Assistive Technology navigation using focus works correctly. From the README:
 
-> The current implementation of this addon will immediately apply focus to the most relevant piece of content based on actions users take (clicking buttons, links, etc). This allows screen readers to catch changes and read the right information, thus providing a much better experience for blind users.
+> The current implementation of this addon will immediately apply focus to the most relevant piece of content based on actions users take (clicking buttons, links, etc). This allows screen readers to catch changes and read the right information, thus providing a much better experience for screen reader users.
 
 ## What next?
 
