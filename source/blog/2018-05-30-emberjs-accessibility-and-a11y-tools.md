@@ -161,7 +161,7 @@ Almost all of us will have a disability at some point in our lives. Accessible w
 Here are some ways you can help improve accessibility in Ember and the JavaScript ecosystem:
 
 - Research and try out other [ember-a11y](https://github.com/ember-a11y) tools
-- Make your own apps accessible
+- Make your own apps accessible, and let the world know about it! You can use #emberjs and #a11y to spread the word on Twitter, for example
 - Include a11y considerations in your talks and articles
 - Contribute to addons that help solve these problems
 - Guide your coworkers and collaborators through the learning process
