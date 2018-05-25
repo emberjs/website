@@ -27,7 +27,7 @@ Looking for inspiration? Check out the [#EmberJS2018 hashtag](https://twitter.co
 Recently, lots of work has landed 🛬 in Ember CLI to bring the long-awaited **Packager feature** to life ([1](https://github.com/ember-cli/ember-cli/pull/7826), [2](https://github.com/ember-cli/ember-cli/pull/7818), [3](https://github.com/ember-cli/ember-cli/pull/7816), [4](https://github.com/ember-cli/ember-cli/pull/7796), [5](https://github.com/ember-cli/ember-cli/pull/7788)). The Packager will increase the **flexibility** of Ember's **build pipeline**, paving the way for other neat features like code splitting and tree shaking and finally allowing developers to further reduce the filesize of their applications by dramatic amounts.
 
 Want a recap of what's in for the Packager feature? Be sure to check out both the  the [original RFC (Request for Comments) proposal](https://github.com/chadhietala/rfcs/blob/packager/active/0002-packager.md), as well as [this year's update](https://github.com/ember-cli/rfcs/blob/master/active/0051-packaging.md) that details the motivation behind it.
-And want to know **when** it will finally land for an Ember app near you? Of course we'll let you know asap 🔜 in one of the upcoming editions of the Ember.js Times!
+And want to know **when** it will finally land for an Ember app near you? Of course we'll let you know ASAP 🔜 in one of the upcoming editions of the Ember.js Times!
 
 ---
 
@@ -41,8 +41,13 @@ And want to know **when** it will finally land for an Ember app near you? Of cou
 
 ---
 
-## [YOUR SECTION TITLE HERE](#your-url-here)
+## [New Ember Guides launched 🚀](https://guides.emberjs.com/)
 
+The new [guides.ember.js.com](https://guides.emberjs.com) is live, hooray! [ember-learn/guides-app](https://github.com/ember-learn/guides-app) contains the static site generator that powers the guides source. The app itself outputs JSON that contains the content, an Ember app that is designed to consume that JSON, and static HTML that is powered by [Prember](https://github.com/ef4/prember) and [FastBoot](https://www.ember-fastboot.com/).
+
+Looking for repositories for the other parts of [emberjs.com](https://emberjs.com/)? Check out [website](https://github.com/emberjs/website), [ember-api-docs](https://github.com/ember-learn/ember-api-docs), [super-rentals tutorial](https://github.com/ember-learn/super-rentals), [statusboard](https://github.com/ember-learn/statusboard), [deprecation-app](https://github.com/ember-learn/deprecation-app), and [styleguide](https://github.com/ember-learn/ember-styleguide).
+
+We'll go more into the tech behind the new guides in a future issue of the Times. Congrats to [@masona](https://github.com/mansona) and team on the launch!
 
 ---
 
