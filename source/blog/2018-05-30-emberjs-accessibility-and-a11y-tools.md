@@ -24,6 +24,7 @@ Let's start by cloning an example app to try the tools on:
 git clone git@github.com:ember-learn/super-rentals.git
 cd super-rentals
 yarn # or npm install
+```
 
 Next, install ember-a11y-testing and start the app:
 
