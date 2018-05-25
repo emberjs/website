@@ -55,7 +55,7 @@ Moving forward, the only part of our site that's not Ember is the website repo, 
 
 ## [Shiny new ember-cli-addon-docs ✨](https://github.com/ember-learn/ember-cli-addon-docs)
 
-It’s becoming harder to have an excuse to not document your software libraries as the `ember-cli-addon-docs` are getting easier to use day-by-day.
+The `ember-cli-addon-docs` are getting easier to use day-by-day, so there's no excuse to leave your software libraries undocumented anymore...
 
 A real-world example of its usage is the `ember-decorators` documentation: <a href='http://ember-decorators.github.io/ember-decorators/latest/docs' target='_blank'>ember-decorators</a>, which was recently revamped by leveraging the add-on. Have a go at it and inspire yourself 👩‍🎨 to your own documentation!
 
