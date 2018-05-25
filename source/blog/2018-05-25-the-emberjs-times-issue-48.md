@@ -43,11 +43,13 @@ And want to know **when** it will finally land for an Ember app near you? Of cou
 
 ## [New Ember Guides launched 🚀](https://guides.emberjs.com/)
 
-The new [guides.ember.js.com](https://guides.emberjs.com) is live, hooray! [ember-learn/guides-app](https://github.com/ember-learn/guides-app) contains the static site generator that powers the guides source. The app itself outputs JSON that contains the content, an Ember app that is designed to consume that JSON, and static HTML that is powered by [Prember](https://github.com/ef4/prember) and [FastBoot](https://www.ember-fastboot.com/).
+The new [guides.emberjs.com](https://guides.emberjs.com) is live, hooray!
 
-Looking for repositories for the other parts of [emberjs.com](https://emberjs.com/)? Check out [website](https://github.com/emberjs/website), [ember-api-docs](https://github.com/ember-learn/ember-api-docs), [super-rentals tutorial](https://github.com/ember-learn/super-rentals), [statusboard](https://github.com/ember-learn/statusboard), [deprecation-app](https://github.com/ember-learn/deprecation-app), and [styleguide](https://github.com/ember-learn/ember-styleguide).
+The Guides are a cornerstone of the Ember experience, and one of our community's strengths is that anyone can get involved. So, it's important to make it easier for everyone to create content or functionality. For this reason, a team of contributors have been working for months to convert the Guides from a Ruby/Middleman app into an Ember app. Now, to help with content, contributors only need to work with markdown files, and to see how things would look on the website, they run an Ember app!
 
-We'll go more into the tech behind the new guides in a future issue of the Times. Congrats to [@masona](https://github.com/mansona) and team on the launch!
+[ember-learn/guides-app](https://github.com/ember-learn/guides-app) contains the static site generator that pulls written content from guides-source markdown files. The guides-app produces static HTML using [Prember](https://github.com/ef4/prember) and [FastBoot](https://www.ember-fastboot.com/). The app is currently served through Heroku who supports Ember in a big way by sponsoring hosting and advice. (Did you know that it takes a ton of back end infrastructure to run a front-end framework project? Other parts of our website rely on support from Fastly, like the API docs. We're thankful to have so many friends of open source!)
+
+Moving forward, the only part of our site that's not Ember is the website repo, which includes the home page, the blog, and some other odds and ends. Everything else has already been moved into Ember apps! If you want to help out, drop by the [#team-learning](https://embercommunity.slack.com/messages/C04KG57CF/) channel.
 
 ---
 
@@ -89,4 +91,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-Miguel Gomes, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jessica Jordan and the Learning Team
+Miguel Gomes, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jessica Jordan, Jen Weber and the Learning Team
