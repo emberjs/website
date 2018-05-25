@@ -27,7 +27,7 @@ Looking for inspiration? Check out the [#EmberJS2018 hashtag](https://twitter.co
 Recently, lots of work has landed 🛬 in Ember CLI to bring the long-awaited **Packager feature** to life ([1](https://github.com/ember-cli/ember-cli/pull/7826), [2](https://github.com/ember-cli/ember-cli/pull/7818), [3](https://github.com/ember-cli/ember-cli/pull/7816), [4](https://github.com/ember-cli/ember-cli/pull/7796), [5](https://github.com/ember-cli/ember-cli/pull/7788)). The Packager will increase the **flexibility** of Ember's **build pipeline**, paving the way for other neat features like code splitting and tree shaking and finally allowing developers to further reduce the filesize of their applications by dramatic amounts.
 
 Want a recap of what's in for the Packager feature? Be sure to check out both the  the [original RFC (Request for Comments) proposal](https://github.com/chadhietala/rfcs/blob/packager/active/0002-packager.md), as well as [this year's update](https://github.com/ember-cli/rfcs/blob/master/active/0051-packaging.md) that details the motivation behind it.
-And want to know **when** it will finally land for an Ember app near you? Of course we'll let you know asap 🔜 in one of the upcoming editions of the Ember.js Times!
+And want to know **when** it will finally land for an Ember app near you? Of course we'll let you know ASAP 🔜 in one of the upcoming editions of the Ember.js Times!
 
 ---
 
@@ -41,14 +41,21 @@ And want to know **when** it will finally land for an Ember app near you? Of cou
 
 ---
 
-## [YOUR SECTION TITLE HERE](#your-url-here)
+## [New Ember Guides launched 🚀](https://guides.emberjs.com/)
 
+The new [guides.emberjs.com](https://guides.emberjs.com) is live, hooray!
+
+The Guides are a cornerstone of the Ember experience, and one of our community's strengths is that anyone can get involved. So, it's important to make it easier for everyone to create content or functionality. For this reason, a team of contributors have been working for months to convert the Guides from a Ruby/Middleman app into an Ember app. Now, to help with content, contributors only need to work with markdown files, and to see how things would look on the website, they run an Ember app!
+
+[ember-learn/guides-app](https://github.com/ember-learn/guides-app) contains the static site generator that pulls written content from guides-source markdown files. The guides-app produces static HTML using [Prember](https://github.com/ef4/prember) and [FastBoot](https://www.ember-fastboot.com/). The app is currently served through Heroku who supports Ember in a big way by sponsoring hosting and advice. (Did you know that it takes a ton of back end infrastructure to run a front-end framework project? Other parts of our website rely on support from Fastly, like the API docs. We're thankful to have so many friends of open source!)
+
+Moving forward, the only part of our site that's not Ember is the website repo, which includes the home page, the blog, and some other odds and ends. Everything else has already been moved into Ember apps! If you want to help out, drop by the [#team-learning](https://embercommunity.slack.com/messages/C04KG57CF/) channel.
 
 ---
 
 ## [Shiny new ember-cli-addon-docs ✨](https://github.com/ember-learn/ember-cli-addon-docs)
 
-It’s becoming harder to have an excuse to not document your software libraries as the `ember-cli-addon-docs` are getting easier to use day-by-day.
+The `ember-cli-addon-docs` are getting easier to use day-by-day, so there's no excuse to leave your software libraries undocumented anymore...
 
 A real-world example of its usage is the `ember-decorators` documentation: <a href='http://ember-decorators.github.io/ember-decorators/latest/docs' target='_blank'>ember-decorators</a>, which was recently revamped by leveraging the add-on. Have a go at it and inspire yourself 👩‍🎨 to your own documentation!
 
@@ -84,4 +91,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-Miguel Gomes, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jessica Jordan and the Learning Team
+Miguel Gomes, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jessica Jordan, Jen Weber and the Learning Team
