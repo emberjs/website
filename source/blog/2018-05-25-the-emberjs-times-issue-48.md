@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 48
 author: Miguel Gomes, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jessica Jordan, Jen Weber
-tags: Newsletter, Ember.js Times, 2018
+tags: Recent Posts, Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/25/the-emberjs-times-issue-48.html"
 responsive: true
 ---
