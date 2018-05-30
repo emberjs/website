@@ -1089,7 +1089,10 @@
   image: a2system-logo.png
   alt: A2System
   use: "We use Ember to build amazing web applications"
-
+- url: http://www.shx.com.br/site/
+  image: shx.png
+  alt: SHX
+  use: "All of our products are built with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
