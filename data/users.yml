@@ -1081,7 +1081,7 @@
   image: verizon-digital-media-services.png
   alt: Verizon Digital Media Services
   use: "Verizon Digital Media Services uses Ember to build our customer-facing CDN configuration portal (https://my.edgecast.com/) and other internal projects."
-  url: "https://mobilunity.com/"
+- url: "https://mobilunity.com/"
   image: mobilunity.png
   alt: Mobilunity
   use: "Development of SPAs for hosting companies and domain name providers."
