@@ -6,6 +6,16 @@ alias : "blog/2018/06/01/the-emberjs-times-issue-49.html"
 responsive: true
 ---
 
+<section class="breaking-news blog-row">
+  <h3><a href="https://twitter.com/eaf4/status/1002258968910159873" target="npm">Breaking News: Just import from NPM! 🚨</a></h3>
+  <p>Just before the editorial deadline we received reports from the Internet,
+   that there is now a way to easily <code>npm install</code> a <strong>package</strong> and <strong>import</strong> it into your Ember app.
+   The addon <a href="https://github.com/ef4/ember-auto-import" target="emberauto">ember-auto-import</a>
+   will allow <strong>zero-configuration imports</strong> out of the box today
+   and should be a suitable until the <a href="https://www.emberjs.com/blog/2018/05/25/the-emberjs-times-issue-48.html#toc_a-href-https-github-com-ember-cli-ember-cli-pull-7826-a-package-out-for-delivery-to-ember-cli-a" target="package">Packager feature</a> lands in Ember CLI.
+   Reports also claim that addon author and Ember Core team member <a href="https://github.com/ef4" target="ed">@ef4</a> stated that <a href="https://twitter.com/eaf4/status/1002258968910159873" target="inspire">his work was heavily inspired</a> by a particular blog post series using the hashtag <a href="https://github.com/zinyando/emberjs2018-posts" target="ember18">EmberJS2018</a>.</p>
+</section>
+
 Привіт Emberistas!
 
 This week we have a 🌟 Special Edition 🌟😲 for you: we'll take a look into the internals of the new
