@@ -1,21 +1,23 @@
 ---
 title: The Ember.js Times - Issue No. 49
-author: the crowd
-tags: Newsletter, Ember.js Times, 2018
+author: Chris Manson, Amy Lam, Ryan Mark, Jessica Jordan
+tags: Recent Posts, Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/01/the-emberjs-times-issue-49.html"
 responsive: true
 ---
 
-... Emberistas!
+Привіт Emberistas!
 
-This week we have a special edition for you: We take a deep-dive into the internals of the new
-Ember Guides app.
+This week we have a 🌟 Special Edition 🌟😲 for you: we'll take a look into the internals of the new
+Ember Guides website, which has had a [complete make-over and relaunched this month](https://www.emberjs.com/blog/2018/05/25/the-emberjs-times-issue-48.html#toc_a-href-https-guides-emberjs-com-new-ember-guides-launched-a) to finally run on an amazing Ember app. This will finally make contributions through the Ember community immensely easier.✨
+
+In this special edition of the Ember.js Times, [@real_ate](https://github.com/mansona) who championed the migration of the Guides will let us have a peek into [the new app's](https://github.com/ember-learn/guides-app) internals and into its Broccoli powered build pipeline. So get ready to hit your recommended daily intake of veggies 🥒🥕 and read on:
 
 ---
 
 This is the second part of a 6 part series on how we rebuilt the new Ember Guides from the ground up
 over the course of six months, converting it into an Ember app in the process. If you want to see
-the first part in this series check it out [here](/the-right-way-to-build-the-ember-guides/) and you
+the first part in this series check it out [here](https://blog.stonecircle.io/the-right-way-to-build-the-ember-guides/). You
 can keep track of the posts by following the RSS feed at the top of the page.
 
 ## Initial experiments
@@ -44,7 +46,7 @@ easier to deal with, and you get to make use of the simplicity of Ember Data.
 Broccoli is an `asset pipeline` that deals very effectively with the file system. It is all Just
 Javascript™️, so it is in theory quite easy to work with. One of the issues that makes Broccoli more
 challenging to work with is the lack of documentation, or at least that used to be the case. Over
-the last few months [Oli Griffiths](http://www.oligriffiths.com/) has been very active in the
+the last few months [Oli Griffiths](https://github.com/oligriffiths) has been very active in the
 Broccoli community and has recently published a [Broccoli
 Tutorial](https://github.com/oligriffiths/broccolijs-tutorial). There is also much work going on
 behind the scenes to make Broccoli more straight-forward to work with and a much more powerful tool,
@@ -305,9 +307,9 @@ As always you can reach out to me on [Twitter](https://twitter.com/real_ate), or
 ...
 
 
-## We would like to thank everyone who made the new Guides App possible!
+## [And last, but not least...](https://github.com/ember-learn/guides-app/graphs/contributors)
 
-<p>
+<p> We'd like to thank everyone who made the new Guides app possible! Big kudos to <a href="https://github.com/mansona" target="contributor">mansona</a>, <a href="https://github.com/sivakumar-kailasam" target="contributor">sivakumar-kailasam</a>, <a href="https://github.com/jenweber" target="contributor">jenweber</a>, <a href="https://github.com/rwwagner90" target="contributor">rwwagner90</a>, <a href="https://github.com/chrismou" target="contributor">chrismou</a>, <a href="https://github.com/localpcguy" target="contributor">localpcguy</a>, <a href="https://github.com/acorncom" target="contributor">acorncom</a>, and <a href="https://github.com/dopin" target="contributor">dopin</a> - we appreciate all your efforts you put into renewing one of our most favorite documentation sites! 💖
 </p>
 
 
@@ -317,4 +319,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Manson, Amy Lam, Ryan Mark, Jessica Jordan and the Learning Team
