@@ -23,14 +23,55 @@
   .thanks {
     margin-top: 50px;
   }
+  
+  }
+
   .sponsors-list {
+    display: flex !important;
+    flex-flow: row wrap;
+    justify-content: space-between;
     list-style: none;
-    margin: 0;
+    margin: auto !important;
     padding: 0;
     text-align: center;
-    .sponsor-list-item {
-      border: 1px solid red;
+        
+    .sponsors-list-item {
+      display: flex !important;
+      flex-direction: column;
+      flex: 1;
+      justify-content: flex-end;
+      min-width: 100%;
+      padding: 0.5em;
+      @media screen and (min-width: 768px) {
+        min-width: 25em;
+      }
+      a {
+        align-items: flex-start;
+        display: flex;
+        max-width: 100%;
+        
+        .sponsor-item-img {
+          align-self: flex-start;
+          display: block;
+          height: auto;
+          margin: auto;
+          max-width: 325px;
+          padding: 0;
+          text-align: center;
+        }
+      }
+      .sponsor-item-name {
+        align-self: flex-end;
+        margin: 0.5em auto 0.1em auto;
+        width: 100%;
 
+      }
+      .sponsor-item-type {
+        align-self: flex-end;
+        margin: 0;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.2;
+      }
     }
   }
-}
