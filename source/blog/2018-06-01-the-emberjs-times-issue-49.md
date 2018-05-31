@@ -1,6 +1,6 @@
 ---
 title: The Ember.js Times - Issue No. 49
-author: Chris Manson, Amy Lam, Ryan Mark, Jessica Jordan
+author: Chris Manson, Sivakumar Kailasam, Amy Lam, Ryan Mark, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/01/the-emberjs-times-issue-49.html"
 responsive: true
@@ -16,7 +16,7 @@ responsive: true
    Reports also claim that addon author and Ember Core team member <a href="https://github.com/ef4" target="ed">@ef4</a> stated that <a href="https://twitter.com/eaf4/status/1002258968910159873" target="inspire">his work was heavily inspired</a> by a particular blog post series using the hashtag <a href="https://github.com/zinyando/emberjs2018-posts" target="ember18">EmberJS2018</a>.</p>
 </section>
 
-Привіт Emberistas!
+ਸਤ ਸ੍ਰੀ ਅਕਾਲ Emberistas!
 
 This week we have a 🌟 Special Edition 🌟😲 for you: we'll take a look into the internals of the new
 Ember Guides website, which has had a [complete make-over and relaunched this month](https://www.emberjs.com/blog/2018/05/25/the-emberjs-times-issue-48.html#toc_a-href-https-guides-emberjs-com-new-ember-guides-launched-a) to finally run on an amazing Ember app. This will finally make contributions through the Ember community immensely easier.✨
@@ -39,45 +39,46 @@ experiment that he had started to get the ball rolling. It was called
 
 > translate a directory (or set of directories) of Markdown documents into a static JSONAPI
 
-Having worked extensively with Broccoli many years ago (before ember-cli was the official build
-system for Ember), I thought to myself "What's the worst that could happen" and jumped straight into
+Having worked extensively with Broccoli many years ago (before Ember CLI was the official build
+system for Ember), I thought to myself "What's the worst that could happen?" and jumped straight into
 the code. The thing about Broccoli is that it's almost the opposite of "riding a bike" and you very
 quickly forget everything about it if you haven't been using it for a while 😣
 
-## Why Broccoli or JSON:API
+## Why we used Broccoli & JSON:API
 
 Anyone who has been following Ember for any reasonable amount of time knows that Ember Data works
-great with JSONAPI, and if your backend already speaks JSON:API and follows the spec you are
+great with JSON:API, and if your backend already speaks JSON:API and follows the spec you are
 essentially ready to go! If you have ever needed to integrate a hand-rolled, bespoke API's endpoints
 with Ember Data you know that it is essentially just a process of translating things into JSON:API
 in Javascript before it goes into Ember Data. If you're using JSON:API upfront things are a lot
 easier to deal with, and you get to make use of the simplicity of Ember Data.
 
-Broccoli is an `asset pipeline` that deals very effectively with the file system. It is all Just
-Javascript™️, so it is in theory quite easy to work with. One of the issues that makes Broccoli more
+Broccoli is an **asset pipeline** that deals very effectively with the file system. It is all Just
+Javascript™️, so it is in theory quite easy to handle. One of the issues that makes Broccoli more
 challenging to work with is the lack of documentation, or at least that used to be the case. Over
 the last few months [Oli Griffiths](https://github.com/oligriffiths) has been very active in the
 Broccoli community and has recently published a [Broccoli
 Tutorial](https://github.com/oligriffiths/broccolijs-tutorial). There is also much work going on
-behind the scenes to make Broccoli more straight-forward to work with and a much more powerful tool,
-for example Oli is currently [working on an
+behind the scenes to make Broccoli more straight-forward to work with and a much more powerful tool:
+For example, Oli is currently [working on an
 experiment](https://github.com/ember-cli/ember-cli/pull/7798) to bring Broccoli 1.x support to
-ember-cli which will (hopefully) make life much better for Windows developers. [Jen Weber](https://github.com/jenweber) is also working on updating the [ember-cli documentation](https://ember-cli.com/user-guide/) so
-it should soon be a bit easier to know how to get started adding to ember-cli with Broccoli 🎉
+Ember CLI which will (hopefully) make life much better for Windows developers. [Jen Weber](https://github.com/jenweber) is also working on updating the [Ember CLI documentation](https://ember-cli.com/user-guide/) so
+it should soon be a bit easier to get started modifying your build pipeline in Ember CLI via Broccoli 🎉
 
-Having made these original decisions, we ultimately decided to build something called [broccoli-static-site-json](https://github.com/stonecircle/broccoli-static-site-json) which as you can see has very similar goals to broccoli-blog-api:
+Having made these original decisions, we ultimately decided to build something called [broccoli-static-site-json](https://github.com/stonecircle/broccoli-static-site-json) which as you can see has very similar goals to `broccoli-blog-api`:
 
 > Simple Broccoli plugin that parses collections of markdown files and exposes them as JSON:API documents in the output tree, under the specified paths. It also supports the use of front-matter to define meta-data for each markdown file.
 
-Since the early days of broccoli-static-site-json things have gotten a tiny bit more complicated (more flexibility usually means more complexity) but to understand the basics of how effective Broccoli has been for this use case we can go back and look at the files at the very first commit on the 7 Nov 2017. We are going to go into more detail below but if you want to follow along you can find the main index file [here](https://github.com/stonecircle/broccoli-static-site-json/blob/95cfe954e48da203eacba5fa154333cbc0b3a81d/index.js).
+Since the early days of `broccoli-static-site-json` things have gotten a tiny bit more complicated (more flexibility usually means more complexity) but to understand the basics of how effective Broccoli has been for this use case we can go back and look at the files at the very first commit on the 7 Nov 2017. We are going to go into more detail below but if you want to follow along you can find the main index file [here](https://github.com/stonecircle/broccoli-static-site-json/blob/95cfe954e48da203eacba5fa154333cbc0b3a81d/index.js).
 
 ## The main plugin
 
-The simple early experiment of the broccoli-static-site-json had an index.js file (the only active file at the time) with a total of 119 lines of code, the main active lines making up the `build()` of the Broccoli plugin just adding up to 50 lines of code, which is definitely small enough for us to deep dive into in this post. 💪
+The simple early experiment of the `broccoli-static-site-json` had an `index.js` file (the only active file at the time) with a total of 119 lines of code, the main active lines making up the `build()` of the Broccoli plugin just adding up to 50 lines of code, which is definitely small enough for us to deep dive into in this post. 💪
 
 I'm going to give a very brief overview of the structure of a Broccoli plugin and then go into detail of each line of the main `build()` function.
 
 ### Structure of a Broccoli plugin
+
 Here is a basic example of a plugin
 
 ```js
@@ -104,7 +105,7 @@ class BroccoliStaticSiteJson extends Plugin {
 module.exports = BroccoliStaticSiteJson;
 ```
 
-This isn't exactly the _most_ basic example of a plugin as it has some of the business logic and API of broccoli-static-site-json exposed. It is not 100% obvious by the above example but it is telling us that if we wanted to use this plugin we would do something like this:
+This isn't exactly the _most_ basic example of a plugin as it has some of the business logic and API of `broccoli-static-site-json` exposed. It is not 100% obvious by the above example but it is telling us that if we wanted to use this plugin we would do something like this:
 
 ```js
 const jsonTree = new StaticSiteJson('input', {
@@ -112,9 +113,9 @@ const jsonTree = new StaticSiteJson('input', {
 })
 ```
 
-This is just setting the local `folder` and the `contentFolder` in the options hash for the StaticSiteJson class and will eventually be how we tell the plugin to look for Markdown files in the `input` folder and put the output JSON:API files in `output-jsons`. The contentFolder is optional and will default to `content`.
+This is just setting the local `folder` and the `contentFolder` in the options hash for the `StaticSiteJson` class and will eventually be useful to tell the plugin to look for Markdown files in the `input` folder and put the output JSON:API files in `output-jsons`. The contentFolder is optional and will default to `content`.
 
-When this is used in ember-cli or any other Broccoli pipeline the `build()` function is called. This is where most of the work happens.
+When this is used in Ember CLI or any other Broccoli pipeline the `build()` function is called. This is where most of the work happens.
 
 ### The build() function
 
@@ -189,7 +190,7 @@ you can read more about these functions on the official NodeJS documentation for
 
 #### Creating the Table of Contents from the pages file
 
-Before I started building broccoli-static-site-json [Ricardo Mendes a.k.a. @locks](https://github.com/locks) and [Jared Galanis](https://github.com/jaredgalanis) had begun the process of building the Markdown sources directories that would allow us to manage different versions of the Ember Guides more effectively. One of the key aspects of this structure was that it included a [`pages.yml`](https://github.com/ember-learn/guides-source/blob/master/guides/v2.15.0/pages.yml) file that specified the Table of Contents (ToC) for any particular version of the Guides. What we needed to do as part of this process was to parse this YAML file and output a JSON:API based file in the output directory. Here is the code for that:
+Before I started building `broccoli-static-site-json` [Ricardo Mendes a.k.a. @locks](https://github.com/locks) and [Jared Galanis](https://github.com/jaredgalanis) had begun the process of building the Markdown sources directories that would allow us to manage different versions of the Ember Guides more effectively. One of the key aspects of this structure was that it included a [`pages.yml`](https://github.com/ember-learn/guides-source/blob/master/guides/v2.15.0/pages.yml) file that specified the Table of Contents (ToC) for any particular version of the Guides. What we needed to do as part of this process was to parse this YAML file and output a JSON:API based file in the output directory. Here is the code for that:
 
 ```js
 // build pages file
@@ -329,4 +330,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-Chris Manson, Amy Lam, Ryan Mark, Jessica Jordan and the Learning Team
+Chris Manson, Sivakumar Kailasam, Amy Lam, Ryan Mark, Jessica Jordan and the Learning Team
