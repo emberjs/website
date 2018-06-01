@@ -1,6 +1,14 @@
-.logos section {
-  margin: 25px 0;
-  overflow: hidden;
+// .logos section {
+//   margin: 10px 0;
+//   overflow: hidden;
+// }
+.logos #content section > ul {
+  list-style-type: none;
+  margin: 0;
+  & > li {
+    margin-top: 15px;
+    overflow: hidden;
+  }
 }
 #content .brand-logos {
   margin: 0 0 5px 0;
@@ -17,7 +25,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 0px;
   }
-
   @media screen and (min-width: $screen-sm-max) {
     padding: 0;
   }
@@ -35,9 +42,12 @@
   padding: 10px 20px;
   border-radius: 4px;
   flex-direction: column;
+  @media screen and (min-width: $medium-screen) {
+    padding: 20px 30px;
+  }
   @media screen and (min-width: $screen-sm-max) {
     flex-basis: 25%;
-    padding: 20px 40px;
+    padding: 20px 60px;
   }
 
   &:nth-child(1) {

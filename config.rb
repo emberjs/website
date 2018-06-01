@@ -28,7 +28,6 @@ activate :sponsors
 activate :highlighter
 activate :column_balancer
 activate :versions
-
 ###
 # Build
 ###
