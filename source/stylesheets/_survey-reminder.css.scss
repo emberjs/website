@@ -1,0 +1,32 @@
+.survey-reminder-wrapper {
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  line-height: 2.2;
+  padding-top: 1px;
+  font-size: 100%;
+  border-bottom: 1px solid #e5dbd6;
+  strong {
+    font-weight: bold;
+  }
+  a {
+    text-decoration: underline;
+    color: $white;
+  }
+
+  &.hidden {
+    display: none;
+  }
+}
+.survey-reminder-container {
+  width: 960px;
+  margin: auto;
+}
+
+@media screen and (max-width: 53.75rem) {
+  .responsive .survey-reminder-container {
+    width: inherit;
+    line-height: 1.5;
+    padding: 0.8rem 1rem;
+  }
+}

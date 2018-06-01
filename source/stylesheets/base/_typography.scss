@@ -12,7 +12,7 @@ body {
 a {
   text-decoration: none;
   color: $orange-darker;
-  &:hover, :focus {
+  &:hover, &:focus {
     color: $orange-darkest;
   }
 }
@@ -20,32 +20,19 @@ p {
   a {
     color: $orange-darker;
     text-decoration: underline;
-    &:hover, :focus {
+    &:hover, &:focus {
       color: $orange-darkest;
       cursor: pointer;
     }
   }
 }
 
-h2, 
-h3,
-h4 {
-  line-height: 1;
-	margin-top: 1.25em; 
-  margin-bottom: 0.5em;  
-  @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
-    text-align: center;
-  }
-  + p {
-    margin-top: 0;
-  }
-}
-
 h1 {
   color: $gray;
-  font-size: 2em;
+  font-size: 2.25em;
   font-weight: bold;
   line-height: 1.125;
+  margin-bottom: 0.5em;
   max-width: 100%;
   @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
     text-align: center;
@@ -56,10 +43,18 @@ h1 {
 }
 
 h2 {
-  color: $orange-darkest;
+	color: $orange-darkest;
   font-size: 1.75em;
-  margin: 2em 0 0.2em 0;
-  font-weight: bold; 
+  font-weight: bold;
+  line-height: 1;
+  margin: 2em 0 0.5em 0;
+  @media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+    text-align: center;
+  }
+
+  + p {
+    margin-top: 0;
+  }
 
 }
 
@@ -67,6 +62,13 @@ h3 {
   color: $gray-darker;
   font-size: 1.3em;
   font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0.5em;
+  margin-top: 1.25em;
+  + p {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
 }
 
 h4 {
@@ -104,11 +106,15 @@ p {
     margin: 0 auto;
     padding: 0.5em;
   }
+  strong {
+    font-weight: bold !important;
+  }
 }
+
 
 // helper classes
 .lead { font-size: 1.3em; }
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
+.text-center { text-align: center !important; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
 .heading-underline { border-bottom: 1px solid lightgray }

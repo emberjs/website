@@ -1,10 +1,50 @@
 @import 'base/base';
 
-.user-showcase__link {
-    width: 210px;
-    height: 103px;
-    text-align: center;
-}
-.no-capitalize {
-    text-transform: none;
-}
+  .main {
+      margin: 0 auto;
+  }
+  .user-showcase {
+    align-content: middle;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: auto !important;
+    padding: 0;
+    width: 100%;
+    li {
+        min-width: 0;
+        margin: 0.5em;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        a {
+            background-color: white;
+            border-radius: 5px;
+            border: 2px solid $orange;
+            display: inline-flex;
+            height: 105px;
+            max-width: 100%;
+            padding: 5px;
+            width: 210px;
+            img {
+                display: block;
+                height: auto;
+                margin: auto !important;
+                max-height: 100%;
+                max-width: 100%;                
+            }
+            &:hover {
+                box-shadow: 5px 5px 15px -1px rgb(245, 223, 219);
+            }
+        }
+    }
+  }
+  
+  
+  
+  
+  
+  
+    
+  

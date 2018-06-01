@@ -1,7 +1,8 @@
 ---
 title: Another Ember 2.x Status Update
 author: Yehuda Katz
-tags: Recent Posts
+tags: Recent Posts, 2015
+responsive: true
 ---
 
 We're just a few weeks away from the release of Ember 1.13 and Ember 2.0 beta, and while there's been a lot of focus on those releases, the trains will keep rolling on June 12. There will be a 2.1 release 6 weeks hence, and a 2.2 release 6 weeks later.

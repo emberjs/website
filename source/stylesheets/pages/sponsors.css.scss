@@ -23,4 +23,26 @@
   .thanks {
     margin-top: 50px;
   }
+  .sponsors-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .sponsors-list-item {
+      border: 2px solid #E04E39;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 20px;
+      margin: 30px;
+
+      img {
+        height: 103px;
+        width: auto;
+      }
+    }
+  }
 }

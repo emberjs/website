@@ -80,31 +80,8 @@
     }
   }
 
-  p {
-    padding-bottom: 4px;
-    font-size: .9em;
-
-    &:after {
-      @media screen and (min-width: $screen-sm-min) {
-        background: #9B5C74;
-        content: '';
-        display: block;
-        height: 1px;
-        left: 50%;
-        position: relative;
-        transition: width 130ms ease-in-out, left 130ms ease-in-out;
-        width: 0;
-      }
-    }
-    strong {
-      color: #E5B246;
-      text-transform: uppercase;
-      letter-spacing: -.03em;
-    }
-  }
-
-  .button {
-    background: #4AA0B8;
+  a {
+    background: #00829a;
     border-radius: 0.25em;
     color: white;
     display: inline;

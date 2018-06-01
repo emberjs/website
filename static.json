@@ -2,11 +2,14 @@
   "https_only": true,
   "root": "build/",
   "proxies": {
-    "/api/": {
+    "/api": {
       "origin": "${EMBER_API_DOCS_URL}"
     },
     "/statusboard": {
       "origin": "https://ember-learn.github.io/statusboard/"
+    },
+    "/deprecations": {
+      "origin": "${DEPRECATION_APP_URL}"
     }
   },
   "error_page": "404.html",
@@ -22,23 +25,20 @@
     }
   },
   "redirects": {
-    "/api": {
-      "url": "/api/"
-    },
-    "/api-beta": {
-      "url": "/api/"
-    },
-    "/api-beta/": {
-      "url": "/api/"
-    },
     "/internal": {
-      "url": "/api/"
+      "url": "/api"
     },
     "/tomster/":  {
       "url": "/mascots/"
     },
     "/dashboard": {
       "url": "/statusboard"
+    },
+    "/guides": {
+      "url": "https://guides.emberjs.com/"
+    },
+    "/guides/": {
+      "url": "https://guides.emberjs.com/"
     }
   }
 }

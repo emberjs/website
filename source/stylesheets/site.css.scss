@@ -1,3 +1,5 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import 'compass/reset';
 @import 'compass/typography/text/ellipsis';
 @import 'bourbon';
@@ -9,23 +11,22 @@
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
 @import 'vendor/docsearch';
-@import 'fonts'; //do we need this?
+@import 'fonts';
+@import 'header';
+@import 'survey-reminder';
+@import 'footer';
 
 @import 'components/buttons';
 @import 'components/ember-button';
 @import 'components/footer';
 @import 'components/legal';
-@import 'components/logos';
 @import 'components/meetups';
-@import 'components/security';
-@import 'components/sponsors';
 
 @import 'shared';
 @import 'about';
 @import 'blog';
 @import 'builds';
 @import 'examples';
-@import 'guides';
 @import 'highlight';
 @import 'survey';
 
@@ -34,9 +35,7 @@
 @import 'pages/blog';
 @import 'pages/brand';
 @import 'pages/community';
-@import 'pages/deprecations';
 @import 'pages/ember-users';
-@import 'pages/guides';
 @import 'pages/learn';
 @import 'pages/mascots';
 @import 'pages/meetup-assets';
@@ -54,12 +53,12 @@ $small-max-width: 767px;
 }
 
 body {
-  background-color: $white;
+  -webkit-font-smoothing: antialiased;
+  background-color: rgba(250,235,232,0.36); //white is too white in contrast to ember orange
+  color: #444444;
   font-family: $base-font-family;
   font-weight: normal; //for iOS
   line-height: 1.5;
-  color: #444444;
-  -webkit-font-smoothing: antialiased;
 }
 
 
@@ -77,7 +76,7 @@ body {
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
-  
+
   @media (min-width: 48em) {
     float: left;
     width: 22.5%;
@@ -172,7 +171,8 @@ body {
       &.level-1 {
         text-transform: uppercase;
 
-        > a {
+        > a, .level-1-text {
+          font-weight: bold;
           display: block;
           color: #443331;
           border-top: 1px solid #d5ccc8;
@@ -425,7 +425,7 @@ body {
 #content {
   &.has-sidebar {
     margin-bottom: 90px;
-    
+
     @media (min-width: 48em) {
       width: 72.5%;
       float: left;
@@ -457,111 +457,7 @@ body {
 /**
   Ember Users Page
 **/
-
-.ember-users {
-  .button {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-}
-
-.showcase {
-  margin: 0 auto;
-  width: 100%;
-  max-width:100%;
-}
-
-ul.showcase {
-  @include clearfix;
-  list-style-type: none;
-}
-
-#content ul.showcase {
-  margin: 0;
-  padding: 0 1px;
-}
-
-#content .showcase li {
-  background: transparent;
-  border-bottom: none;
-}
-
-@media screen and (max-width: 780px) {
-  #content {
-    .showcase > li {
-      width: 50%;
-
-      > * {
-        margin: 0 auto;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 560px) {
-  #content {
-    .showcase > li {
-      display: block;
-      float: none;
-      margin: 20px auto;
-      width: 100%;
-
-      > * {
-        margin: 0 auto;
-      }
-    }
-  }
-}
-
-.showcase > li {
-  float: left;
-  width: 33.333%;
-  margin: 10px 0;
-
-  > * {
-    display: block;
-    width: 210px;
-  }
-
-  &:nth-child(3n+1) {
-    > * {
-      margin: 0 auto 0 0;
-    }
-  }
-
-  &:nth-child(3n+2) {
-    > * {
-      margin: 0 auto 0 auto;
-    }
-  }
-
-  &:nth-child(3n+3) {
-    > * {
-      margin: 0 0 0 auto;
-    }
-  }
-
-  > a {
-    background-color: transparent;
-    border-radius: 5px;
-    border: 2px solid #fb9887;
-
-    img {
-      height: auto;
-      width: auto;
-      max-height: 103px;
-      max-width: 210px;
-      padding: 5px;
-    }
-  }
-}
-
-.showcase a:hover {
-  box-shadow: 5px 5px 15px -1px rgb(245, 223, 219);
-}
-
+// Go look in pages/ember-users
 
 
 /**
@@ -580,7 +476,7 @@ body.tomster_faq #content {
     background-color: #dfd7d4;
   }
 
-  #back-to-top {
+  .back-to-top {
     padding-left: 13px;
     text-align: center;
     display: none;
@@ -629,7 +525,6 @@ body.tomster_faq #content {
   }
 }
 
-
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
@@ -644,3 +539,6 @@ body.tomster_faq #content {
   margin-left: -60px;
 }
 
+.cta-contribute {
+  text-align: center;
+}

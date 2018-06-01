@@ -1,31 +1,35 @@
 <% partial_for :head, 'blog/head' %>
 <% partial_for :sidebar, 'blog/sidebar' %>
-
+<% partial_for :foot, 'footer' %>
 <% wrap_layout :layout do %>
-  <% content_for :foot do %>
-    <script type="text/javascript" src="/javascripts/blog.js"></script>
-  <% end %>
+  
   <article class="blog-post">
-    <h1><%= current_article.title %></h1>
-    <% if current_page.data.guestPost %>
-      <span class="post-tag">Guest Post</span>
-    <% elsif current_page.data.syndicatedPost %>
-      <span class="post-tag">Syndicated Post</span>
-    <% end %>
-    <% if current_page.data.author %>
-      <div class="blog-post-author">By <%= current_page.data.author %></div>
-      <div class="blog-post-date"><time><%= current_article.date.strftime('%B %-d, %Y') %></time></div>
-    <% end %>
-
-    <hr>
-
-    <%= yield %>
-    <% if current_page.data.syndicatedPost %>
-      <h5 class="original-post-url">
-        Original Posted at: <%= link_to(current_page.data.url, current_page.data.url) %>
-      </h5>
-    <% end %>
-    <hr>
+    <div class="blog-post-header">
+      <h1 class="blog-post-title"><%= current_article.title %></h1>
+      <div class="blog-post-meta">
+        <% if current_page.data.author %>
+          <time class="blog-post-date"><%= current_article.date.strftime('%B %-d, %Y') %></time>
+          <div class="blog-post-author">By <%= current_page.data.author %></div>
+        <% end %>
+        <% if current_page.data.guestPost %>
+          <div class="blog-post-tag">Guest Post</div>
+        <% elsif current_page.data.syndicatedPost %>
+          <div class="blog-post-tag">Syndicated Post</div>
+        <% end %>
+      </div>
+    </div>
+    <div class="blog-post-body" id="toc-content">
+      <%= yield %>
+    </div>
+    <div class="blog-post-footer">
+      <% if current_page.data.syndicatedPost %>
+        <div class="original-post-url">
+          Original Posted at: <%= link_to(current_page.data.url, current_page.data.url) %>
+        </div>
+      <% end %>
+    </div>
+  </article>
+  <hr>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
@@ -41,5 +45,5 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </article>
+    <script type="text/javascript" src="/javascripts/toc.js"></script>
 <% end %>

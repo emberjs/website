@@ -1,40 +1,54 @@
 - name: Yehuda Katz
+  first: Yehuda
+  last: Katz
   github: https://github.com/wycats
   twitter: https://twitter.com/wycats
   image: ykatz.jpg
   teams:
     - core
 - name: Tom Dale
+  first: Tom
+  Last: Dale
   github: https://github.com/tomdale
   twitter: https://twitter.com/tomdale
   image: tdale.jpg
   teams:
     - core
 - name: Peter Wagenet
+  first: Peter
+  last: Wagenet
   github: https://github.com/wagenet
   twitter: https://twitter.com/wagenet
   image: pwagenet.jpg
   teams:
     - corealumni
 - name: Trek Glowacki
+  first: Trek
+  last: Glowack
   github: https://github.com/trek
   twitter: https://twitter.com/trek
   image: tglowaki.jpg
   teams:
     - corealumni
 - name: Erik Bryn
+  first: Erik
+  last: Bryn
   github: https://github.com/ebryn
   twitter: https://twitter.com/ebryn
   image: ebryn.jpg
   teams:
     - corealumni
 - name: Kris Selden
+  first: Kris
+  last: Selden
   github: https://github.com/krisselden
   twitter: https://twitter.com/krisselden
   image: kselden.jpg
   teams:
     - core
 - name: Stefan Penner
+  first: Stefan
+  last: Penner
   github: https://github.com/stefanpenner
   twitter: https://twitter.com/stefanpenner
   image: spenner.jpg
@@ -42,6 +56,8 @@
     - core
     - cli
 - name: Leah Silber
+  first: Leah
+  last: Silber
   github: https://github.com/wifelette
   twitter: https://twitter.com/wifelette
   image: lsilber.jpg
@@ -49,12 +65,16 @@
     - core
     - learning
 - name: Alex Matchneer
+  first: Alex
+  last: Matchneer
   github: https://github.com/machty
   twitter: https://twitter.com/machty
   image: amatchneer.jpg
   teams:
     - corealumni
 - name: Robert Jackson
+  first: Robert
+  last: Jackson
   github: https://github.com/rwjblue
   twitter: https://twitter.com/rwjblue
   image: rjackson.jpg
@@ -62,6 +82,8 @@
     - core
     - cli
 - name: Igor Terzic
+  first: Igor
+  last: Terzic
   github: https://github.com/igorT
   twitter: https://twitter.com/terzicigor
   image: iterzic.jpeg
@@ -69,65 +91,88 @@
     - core
     - data
 - name: Matthew Beale
+  first: Matthew
+  last: Beale
   github: https://github.com/mixonic
   twitter: https://twitter.com/mixonic
   image: mbeale.jpg
   teams:
     - core
 - name: Edward Faulkner
+  first: Edward
+  last: Faulkner
   github: https://github.com/ef4
   twitter: https://twitter.com/eaf4
   image: efaulkner.jpg
   teams:
     - core
 - name: Martin Muñoz
+  first: Martin
+  last: Muñoz
   github: https://github.com/mmun
   twitter: https://twitter.com/_mmun
   image: mmunoz.jpg
   teams:
     - core
 - name: Dan Gebhardt
+  first: Dan
+  last: Gebhardt
   github: https://github.com/dgeb
   twitter: https://twitter.com/dgeb
   image: dgeb.jpg
   teams:
     - core
 - name: Godfrey Chan
+  first: Godfrey
+  last: Chan
   github: https://github.com/chancancode
   twitter: https://twitter.com/chancancode
   image: godfrey.jpg
   teams:
     - core
-
 - name: Brendan McLoughlin
+  first: Brendan
+  last: McLoughlin
   github: https://github.com/bmac
+  twitter: https://twitter.com/BezoMaxo
   image: bmcloughlin.png
   teams:
     - data
 - name: Christoffer Persson
+  first: Christoffer
+  last: Persson
   github: https://github.com/wecc
   twitter: https://twitter.com/ChristofferP
   image: cpersson.jpg
   teams:
     - data
 - name: Clemens Müller
+  first: Clemens
+  last: Müller
   github: https://github.com/pangratz
+  twitter: https://twitter.com/pangratz
   image: cmueller.jpg
   teams:
     - data
 - name: Stanley Stuart
+  first: Stanley
+  last: Stuart
   github: https://github.com/fivetanley
   twitter: https://twitter.com/fivetanley
   image: fivetanley.jpg
   teams:
     - data
-
 - name: David Baker
+  first: David
+  last: Baker
   github: https://github.com/acorncom
+  twitter: https://twitter.com/acorncom
   image: dbaker.jpg
   teams:
     - learning
 - name: Ricardo Mendes
+  first: Ricardo
+  last: Mendes
   github: https://github.com/locks
   twitter: https://twitter.com/locks
   image: rmendes.jpg
@@ -135,12 +180,17 @@
     - core
     - learning
 - name: Todd Jordan
+  first: Todd
+  last: Jordan
   github: https://github.com/toddjordan
+  twitter: https://twitter.com/tddjordan 
   image: tjordan.jpg
   teams:
     - learning
 
 - name: Chad Hietala
+  first: Chad
+  last: Hietala
   github: https://github.com/chadhietala
   twitter: https://twitter.com/chadhietala
   image: chietala.jpg
@@ -148,11 +198,16 @@
     - core
     - cli
 - name: Jacob Bixby
+  first: Jacob
+  last: Bixby
   github: https://github.com/trabus
+  twitter: https://twitter.com/trabus
   image: jbixby.jpg
   teams:
     - cli
 - name: Katie Gengler
+  first: Katie
+  last: Gengler
   github: https://github.com/kategengler
   twitter: https://twitter.com/katiegengler
   image: kgengler.jpg
@@ -160,48 +215,83 @@
     - core
     - cli
 - name: Kelly Selden
+  first: Kelly
+  last: Selden
   github: https://github.com/kellyselden
+  twitter: https://twitter.com/kellyselden
   image: kellyselden.jpg
   teams:
     - cli
 - name: Nathan Hammond
+  first: Nathan
+  last: Hammond
   github: https://github.com/nathanhammond
   twitter: https://twitter.com/nathanhammond
   image: nhammond.jpg
   teams:
     - cli
 - name: Tobias Bieniek
+  first: Tobias
+  last: Bieniek
   github: https://github.com/Turbo87
+  twitter: https://twitter.com/TobiasBieniek
   image: tbieniek.jpg
   teams:
     - cli
 - name: Krati Ahuja
+  first: Krati
+  last: Ahuja
   github: https://github.com/kratiahuja
+  twitter: https://twitter.com/kratiahuja
   image: kratiahuja.jpg
   teams:
     - cli
 - name: Sivakumar Kailasam
+  first: Sivakumar
+  last: Kailasam
   github: https://github.com/sivakumar-kailasam
+  twitter: https://twitter.com/sivakumar_k
   image: skailasam.jpg
   teams:
     - learning
 - name: Terence Lee
+  first: Terence
+  last: Lee
   github: https://github.com/hone
+  twitter: https://twitter.com/hone02
   image: tlee.png
   teams:
     - learning
 - name: Jen Weber
+  first: Jen
+  last: Weber
   github: https://github.com/jenweber
+  twitter: https://twitter.com/jwwweber
   image: jweber.jpg
   teams:
     - learning
 - name: Jessica Jordan
+  first: Jessica
+  last: Jordan
   github: https://github.com/jessica-jordan
+  twitter: https://twitter.com/jjordan_dev
   image: jjordan.jpg
   teams:
     - learning
 - name: Melanie Sumner
+  first: Melanie
+  last: Sumner
   github: https://github.com/melsumner
+  twitter: https://twitter.com/melaniersumner
   image: msumner.jpg
   teams:
+    - core
     - learning
+- name: Alex Navasardyan
+  first: Alex
+  last: Navasardyan
+  github: https://github.com/twokul
+  twitter: https://twitter.com/twokul
+  image: anavasardyan.jpg
+  teams:
+    - cli

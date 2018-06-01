@@ -3,7 +3,7 @@ title: "Users"
 responsive: true
 ---
 
-<h1 class="no-capitalize">
+<h1>
   See Who's Using Ember.js
 </h1>
 
@@ -16,7 +16,7 @@ responsive: true
 
 <div class="users section">
 
-<ul class="showcase">
+<ul class="user-showcase">
   <% data.users.each do |user| %>
     <li>
       <a href="<%= user.url %>" rel="nofollow" target="_blank" class="user-showcase__link">
@@ -36,7 +36,7 @@ responsive: true
 </a> -->
 
 <p>
-  To add your company or project to this page, <a href="https://github.com/emberjs/website">submit a Pull Request</a>.<br>Be sure that your logo has a transparent background and includes adequate white space.<br>Additional instructions are in the code.
+  To add your company or project to this page, <a href="https://github.com/emberjs/website" rel="nofollow">submit a Pull Request</a>.<br>Be sure that your logo has a transparent background and includes adequate white space.<br>Additional instructions are in the <a href="https://github.com/emberjs/website/blob/master/data/users.yml#L1" target="_blank" rel="nofollow">code</a>.
 </p>
 
 </div>

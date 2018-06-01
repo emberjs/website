@@ -3,43 +3,64 @@ body.team {
   hr {
     height: 1px;
     border: none;
-    margin: 4em 0;
     background-color: #dfd7d4;
   }
 
-  #content .headshots { /* #content is needed for specifity override */
-    max-width: 760px;
+  .headshots { /* #content is needed for specifity override */
+    margin: 0 auto !important;
+    justify-content: center;
     width: 100%;
-    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none !important;
+    padding-left: 5%;
+    padding-right: 5%;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      padding-left: 1%;
+      padding-right: 1%;
+    }
 
     a:hover {
       border-bottom: none;
     }
 
     > li {
-      display: inline-block;
-      width: 24%;
-      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      flex-flow: column wrap;
       padding: 40px 0 0;
-
-      @media screen and (max-width: 860px) {
-        width: 32%;
-      }
-      @media screen and (max-width: 560px) {
+      text-align: center;
+      width: 25%;
+      flex: 1 1 auto;
+      text-align: center;
+      @media screen and (min-width: 0px) and (max-width: 767px) {
         width: 49%;
+        &.team-avatar {
+          width: 33% !important;
+        }
+      }    
+      &.team-avatar {
+        width: 20%;
       }
-
       p {
-        margin: 0px 0px 10px 0px;
+        flex: 1;
         font-weight: bold;
+        margin: 0px 0px 5px 0px;
+        min-width: 100%;
       }
 
       img {
-        margin-bottom: 10px;
+        flex: 1;
         border-radius: 50%;
-        width: 130px;
-        height: 130px;
         border: 2px solid #faf4f1;
+        height: 120px;
+        margin-bottom: 10px;
+        width: 120px;
+
+        &.alumni {
+          height: 90px;
+          width: 90px;
+        }
 
         &:hover,
         &:active,
@@ -47,9 +68,10 @@ body.team {
           border: 0;
         }
       }
-
       .social {
-        margin-bottom: 0;
+        flex: 1;
+        min-width: 100%;
+        margin: 0 auto !important;
 
         > li {
           display: inline-block;
@@ -73,21 +95,12 @@ body.team {
       }
 
       img {
-        width: 66px;
-        height: 66px;
+        height: 90px;
+        width: 90px;
       }
 
       .type {
-        display: block;
-        position: absolute;
-        left: 5px;
-        right: 5px;
-        top: -9px;
-        color: #fff;
-        font-size: 12px;
-        line-height: 1.5em;
-        border-radius: 2px;
-        background-color: $orange-darker;
+        display: none;
       }
     }
   }

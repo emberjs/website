@@ -1,7 +1,8 @@
 ---
 title: Ember Data Progress Update
 author: Tom Dale
-tags: Recent Posts
+tags: Recent Posts, Ember Data, 2013, Version 1.x
+responsive: true
 ---
 
 Just over a month ago, we told you about our [plans for stabilizing Ember

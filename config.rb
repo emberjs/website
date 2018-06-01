@@ -19,7 +19,9 @@ activate :asset_hash, :ignore => [
   'tomster-sm.png',
   'tomster-twitter-card.png'
 ]
-
+activate :bootstrap_navbar do |bootstrap_navbar|
+  bootstrap_navbar.bootstrap_version = '3.3.7'
+end
 activate :directory_indexes
 activate :toc
 activate :sponsors
@@ -52,11 +54,14 @@ end
 
 page '/blog/feed.xml', layout: false
 
+# For fastly cert verification
+config.ignored_sitemap_matchers[:source_dotfiles] = proc { |file|
+  file =~ %r{/\.} && file !~ %r{/\.well-known}
+}
+
 ###
 # Pages
 ###
-
-page 'guides*', layout: :guide
 
 page 'community.html'
 
@@ -111,11 +116,7 @@ helpers do
     classes = super
     return 'not-found' if classes == '404'
 
-    if page.responsive
-      classes += ' responsive'
-    else
-      classes += ' not-responsive'
-    end
+    classes += ' responsive'
 
   end
 end

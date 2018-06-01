@@ -1,7 +1,8 @@
 ---
 title: "Inside FastBoot: The Road to Server-Side Rendering"
 author: "Yehuda Katz & Tom Dale"
-tags: Recent Posts
+tags: Recent Posts, 2014
+responsive: true
 ---
 
 Using JavaScript to write fast, interactive web applications has exploded in popularity over the past few years. JavaScript apps offer many strengths over traditional server-rendered applications. Most notably, rich interactions and lightning-fast responses to user clicks allow for UIs that previously were only the domain of native apps.

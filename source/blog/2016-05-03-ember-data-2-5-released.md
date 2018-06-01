@@ -1,7 +1,8 @@
 ---
 title: Ember Data 2.5 and 2.6 Beta Released
 author: Brendan McLoughlin
-tags: Ember Data
+tags: Ember Data, Releases, 2016
+responsive: true
 ---
 
 Ember Data 2.5, a minor version release of Ember Data, is released. This release represents the work of over 31 direct contributors, and over 137 commits.

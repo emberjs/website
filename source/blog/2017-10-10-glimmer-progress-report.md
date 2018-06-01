@@ -1,7 +1,8 @@
 ---
 title: "Glimmer.js Progress Report"
+responsive: true
 author: Tom Dale
-tags: Recent Posts
+tags: Recent Posts, glimmer, 2017
 ---
 
 At EmberConf in March of this year, [we announced Glimmer.js][ann-glimmer-js], a

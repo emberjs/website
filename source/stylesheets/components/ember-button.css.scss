@@ -6,7 +6,7 @@
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
   color: $white;
   display: block;
-  font-size: 0.9em;
+  font-size: 0.8em;
   font-weight: bold;
   height: 40px;
   letter-spacing: 1px;
@@ -14,22 +14,37 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease-in-out 0s;
   width: 220px;
 
-  &:hover {
-    background-color: darken($orange, 2%);
+  &:hover, &:focus {
+    background-color: darken($orange, 2%) !important;
     border-bottom: none;
     box-shadow: 0px 2px 4px -1px #666;
-    color: white;
-    text-decoration:none;
+    color: white !important; 
+    text-decoration:none !important;
     transform: translateY(-1px);
     transition: 0.3s translateY;
+    .btn-image {
+      margin-left: 5%;
+      transition: 0.2s margin-left ease-in-out;
+      
+    }
   }
 
   &:active {
     box-shadow: inset 0px 2px 4px rgba(0,0,0,0.3);
+    color: $white !important;
+    text-decoration: none !important;
     transform: translateY(0px);
+  }
+  .btn-image {
+    background-color: transparent;
+    display: inline;
+    margin-left: 5px;
+    padding-top: 2px;
+    transition: 0.2s margin-left ease-in-out;
+    vertical-align: text-top;
   }
 }
 

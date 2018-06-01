@@ -114,12 +114,12 @@
   image: /images/tomsters/5k.png
   tags: all tomster other
 - title: EmberConf 2015
-  url: http://www.emberconf.com
+  url: http://2015.emberconf.com/
   date: November 17, 2014
   image: /images/tomsters/emberconf-2015-tomster.png
   tags: all tomster conference
 - title: EmberConf 2014
-  url: http://www.emberconf.com
+  url: http://2014.emberconf.com/
   date: November 1, 2013
   image: /images/tomsters/emberconf-2014-tomster.png
   tags: all tomster conference
@@ -245,7 +245,7 @@
   tags: all tomster meetup
 - title: EmberConf 2017
   date: March 27, 2017
-  url: 2017.emberconf.com
+  url: https://2017.emberconf.com
   image: /images/tomsters/emberconf-2017.png
   tags: all tomster zoey conference
 - title: Skylight
@@ -262,7 +262,7 @@
   date: November 23, 2017
   url: https://ember-js-spb.timepad.ru/event/524391/
   image: /images/tomsters/st-petersburg-tomster.png
-  tags: all tomster
+  tags: all tomster meetup
 - title: 2017 Cancer Fundraiser
   date: June 1, 2017
   url: http://www.embercares.com
@@ -273,6 +273,39 @@
   url: http://www.embercares.com
   image: /images/tomsters/cancer-tomster.png
   tags: all tomster other
+- title: Bulgaria
+  date: February 8, 2018
+  url: https://www.meetup.com/Ember-js-Bulgaria/events/244998038/
+  image: /images/tomsters/bulgaria.png
+  tags: all tomster meetup
+- title: CrowdStrike
+  date: February 20, 2018
+  url: http://www.crowdstrike.com
+  image: /images/tomsters/corp/crowdstrike-both.png
+  tags: all tomster zoey corp
+- title: EmberConf 2018
+  date: March 12, 2018
+  url: http://www.emberconf.com
+  image: /images/tomsters/emberconf-2018.png
+  tags: all tomster zoey conference
+- title: Chicago
+  date: March 8, 2018
+  url: https://www.meetup.com/Chicago-Ember-js/
+  image: /images/tomsters/chicago-tomster.png
+  tags: all tomster meetup
+- title: Chicago
+  date: March 8, 2018
+  url: https://www.meetup.com/Chicago-Ember-js/
+  image: /images/tomsters/chicago-zoey.png
+  tags: all zoey meetup
+- title: Ember A11y
+  date: March 10, 2018
+  image: /images/tomsters/a11y-tomster.png
+  tags: all tomster other
+- title: Ember A11y
+  date: March 10, 2018
+  image: /images/tomsters/a11y-zoey.png
+  tags: all zoey other
 
 # - title:
 #   date:

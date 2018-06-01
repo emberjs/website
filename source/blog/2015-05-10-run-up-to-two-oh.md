@@ -1,7 +1,8 @@
 ---
 title: The Transition to Ember 2.0 in Detail
 author: Yehuda
-tags: Compatibility, Recent Posts
+tags: Compatibility, Recent Posts, 2015
+responsive: trues
 ---
 
 As we approach the eve of the release of Ember 1.13-beta, it's a good

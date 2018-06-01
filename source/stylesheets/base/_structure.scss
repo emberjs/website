@@ -1,7 +1,10 @@
 .content-wrapper {
-  max-width: 960px;
-  width: 100%;
   margin: 0 auto;
+  max-width: 1120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+
   @include clearfix;
   .main {
     padding: 3em 0;
@@ -17,7 +20,7 @@
 }
 .section {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 100% !important;
 
   @media screen and (max-width: $screen-sm-max) {
     max-width: 100%;
@@ -25,5 +28,12 @@
     display: block;
     clear: both;
     margin: 0 auto;
+  }
+}
+
+
+.container {
+  @media (min-width: 768px) and (max-width:991px) {
+    width: 850px;
   }
 }

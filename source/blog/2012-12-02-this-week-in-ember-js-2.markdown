@@ -1,8 +1,9 @@
 ---
 title: This Week in Ember.js
 date: 2012/12/02
-tags: Recent Posts
+tags: Recent Posts, Roadmap, Version 1.x, 2012
 author: Bradley Priest
+responsive: true
 ---
 
 There's been a lot of exciting changes going in the Ember.js community, here's a recap of some of the biggest updates.

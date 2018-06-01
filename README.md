@@ -1,11 +1,53 @@
-## Ember Website
+# Ember Website
 [![Build Status](https://travis-ci.org/emberjs/website.svg?branch=master)](https://travis-ci.org/emberjs/website)
 
-The website for the Ember.js project.
+This repository contains the source code and content for some of the [Ember.js public website](https://emberjs.com): the home, blog, community, and about pages.
 
-### Contributing
+Other parts of the public website are separate apps: 
+- [API Docs](https://github.com/ember-learn/ember-api-docs) 
+- [Deprecations](https://github.com/ember-learn/deprecation-app) 
+- [The Guides](https://github.com/ember-learn/guides-source)
+- [Builds](https://github.com/ember-learn/builds)
+- [Status Board](https://github.com/ember-learn/statusboard)
 
-To get started:
+## Contributing
+
+New contributors are welcome! The website is maintained by an all-volunteer team, and we are thankful for your help.
+
+The best way to get started is to find issue labeled "good first issue" or "help wanted." If you have questions or want a buddy to pair with, drop by the #-team-learning channel on the 
+[Ember Community Slack](https://ember-community-slackin.herokuapp.com/).
+Like most open source projects, contributors are encouraged to open an issue
+to propose changes and iterate on ideas before investing time in coding.
+Some tips for working with git/GitHub can be found in
+[Making your first pull request](https://github.com/ember-learn/guides-source/blob/master/CONTRIBUTING.md#making-your-first-pull-request) in the Guides respository.
+
+## Running locally with Docker (recommended)
+
+This is the recommended method to run the website app locally.
+Although the website is built with Ruby, most work is done in Markdown files.
+You don't need to know Ruby or install its dependencies to help out. Follow
+the Docker container instructions below to install and run locally.
+
+First, install [Docker and Compose](https://store.docker.com/search?offering=community&type=edition) and leave it running.
+
+Next, the commands below will install all necessary dependencies for the website
+app and start a server. This will take a little while to run,
+possibly a few minutes. The dependencies will be installed inside a Docker
+container, and do not affect your normal developer environment. 
+
+```sh
+git clone git://github.com/emberjs/website.git
+cd website
+docker-compose build
+docker-compose up
+```
+Subsequent runs will be much faster once all the dependencies are installed. 
+
+You can view the site locally at [http://localhost:4567](http://localhost:4567)
+
+## Running locally with Ruby and Middleman
+If you are unable to use Docker as described above, here's how to get started
+installing dependencies.
 
 ``` sh
 git clone https://github.com/emberjs/website.git
@@ -29,10 +71,6 @@ rake findorganizers [force=true]
 
 The force=true flag will overwrite all existing organizer data
 ```
-
-#### API Documentation
-
-API documentation has been moved to a separate repo, please see https://github.com/ember-learn/ember-api-docs/
 
 ### Requirements
 

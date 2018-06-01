@@ -22,16 +22,12 @@ code {
   margin: 1em 1.5em;
 }
 
-#content ul {
-  list-style-type: none;
-}
-
 #content .highlight .scroller {
   overflow: auto;
 }
 
 #content .highlight {
-  @include hidpi('code_background', 'gif');
+  @include hidpi("code_background", "gif");
   border: 1px solid #d1d1d1;
   border-radius: 5px;
   font-size: 12px;
@@ -86,7 +82,7 @@ code {
 
     li,
     li.active {
-      &:last-of-type a{
+      &:last-of-type a {
         border-right: 1px solid transparent;
       }
     }
@@ -128,7 +124,7 @@ code {
         text-align: center;
         font-weight: normal;
         color: #443331;
-        font-family: 'Helvetica Neue';
+        font-family: "Helvetica Neue";
 
         &:hover {
           background-color: #ebebeb;
@@ -148,6 +144,34 @@ code {
 }
 
 @mixin well {
-  @include hidpi('code_background', 'gif');
+  @include hidpi("code_background", "gif");
   box-shadow: 0 1px #ffffff, inset -1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ul-inline {
+  align-items: stretch;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  list-style: none;
+  margin: auto;
+  padding: 1em 0;
+
+  li {
+    flex: 1 1 1;
+
+    a {
+      background-color: $orange;
+      border-radius: 2px;
+      color: $white;
+      margin: 0 0.2em;
+      padding: 0.5em 1em;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $orange-darker;
+        text-decoration: none;
+      }
+    }
+  }
 }

@@ -1,7 +1,8 @@
 ---
 title: "2016 Ember Community Survey"
+responsive: true
 author: Matthew Beale, Ryan LaBouve
-tags: Recent Posts
+tags: Recent Posts, Survey, 2016
 ---
 
 2015 was an incredible year to be a web developer, and great year to be

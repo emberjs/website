@@ -1,8 +1,9 @@
 ---
 title: This Week in Ember.js
 date:  2012/11/02
-tags: Recent Posts
+tags: Recent Posts, Version 1.x, Roadmap, 2012
 author: Tom Dale
+responsive: true
 ---
 
 There's a lot of work happening on Ember.js and sometimes it's hard to keep track of what's going on. Here's what me and Yehuda got done this week.

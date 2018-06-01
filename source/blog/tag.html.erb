@@ -1,32 +1,52 @@
 ---
 pageable: true
 per_page: 12
+responsive: true
 ---
 <% @title = tagname %>
 
-<% partial_for :sidebar, 'sidebar' %>
-
-<h1><%= tagname %></h1>
+<h1 class="text-left"><%= tagname %></h1>
 
 <% page_articles.each_with_index do |article, i| %>
-  <article class="blog-post-summary">
-    <h2 class="blog-post-title"><%= link_to article.title, article %> &ndash; <time><%= article.date.strftime('%b %d, %Y') %></time></span></h2>
-    <% if article.data.guestPost %>
-      <span class="post-tag">Guest Post</span>
-    <% elsif article.data.syndicatedPost %>
-      <span class="post-tag">Syndicated Post</span>
-    <% end %>
+  <article class="blog-post">
+  <div class="blog-post-header">
+  <h2 class="blog-post-title"><%= link_to article.title, article %> </h2>
+  <div class="blog-post-meta">
+    <time class="blog-post-date"><%= article.date.strftime('%b %d, %Y') %></time>
     <% if article.data.author %>
-      <h5 class="blog-post-summary-author">
-        Posted By: <%= article.data.author %>
-      </h5>
+      <div class="blog-post-author">By <%= article.data.author %></div>
     <% end %>
-    <%= article.summary %>
-    <%= link_to "Read more...", article %>
-    <% if article.data.syndicatedPost %>
-    <h5 class="original-post-url">
-      Original Posted at: <%= link_to(article.data.url, article.data.url) %>
-    </h5>
+    <% if article.data.guestPost %>
+      <div class="blog-post-tag">Guest Post</div>
+    <% elsif article.data.syndicatedPost %>
+      <div class="blog-post-tag">Syndicated Post</div>
     <% end %>
-  </article>
+  </div>
+</div>
+<div class="blog-post-body">
+  <%= article.summary %>
+</div>
+<div class="blog-post-footer">
+  <%= link_to "Read more...", article, :class => "read-more" %>
+  <% if article.data.syndicatedPost %>
+  <div class="original-post-url">
+    Original Posted at: <%= link_to(article.data.url, article.data.url) %>
+  </div>
+  <% end %>
+</div>
+</article>
 <% end %>
+
+<div class="pagination">
+   <% if prev_page %>
+      <a class="newer-posts" href="<%= prev_page.url %>">Newer articles</a>
+    <% else %>
+      <a class="newer-posts disabled" href="#" aria-disabled="true">Newer articles</a>
+    <% end %>
+   <p class="page-number">Page <%= page_number %> of <%= num_pages %></p>
+    <% if next_page %>
+      <a class="older-posts" href="<%= next_page.url %>">Older articles</a>
+    <% end %>
+</div>
+
+<% partial_for :sidebar, 'sidebar' %>

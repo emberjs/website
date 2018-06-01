@@ -1,32 +1,6 @@
 @import 'base/base';
 
-#content.has-sidebar {
-  h1 {
-    border-bottom: 1px solid lightgray;
-  }
-}
-#content.has-sidebar {
-  article.blog-post {
-    h1 {
-      border-bottom: none;
-      line-height: 1;
-      margin-bottom: 0;
-    }
-    h1, h2 {
-      + p {
-        &:first-of-type {
-          font-size: 1.3em;
-        }
-      }
-    }
-  }
-}
 .blog {
-  .blog-post-summary-author {
-    font-size: 0.9em;
-    color: $gray;
-    margin-top: 0;
-  }
 
   article {
     margin: 0 0 3em 0;
@@ -36,40 +10,6 @@
     &:last-child {
       border-bottom: none;
     }
-
-    &.blog-post {
-      .post-tag {
-        margin-left: 25px;
-      }
-
-      .original-post-url {
-        font-size: 16px;
-      }
-    }
-
-    .blog-post-title {
-      margin-bottom: 0;
-      time {
-        color: $gray-darker;
-        display: block;
-        font-size: 0.5em;
-        font-style: italic;
-        margin-top: 7px; //so when you hover over the title, you don't chop off the top of the date. 
-      }
-    }
-
-    .post-tag {
-      color: $gray;
-      font-size: 1em;
-      font-weight: bold;
-    }
-
-    .original-post-url {
-      color: $gray;
-      font-size: 12px;
-      text-transform: none;
-    }
-
     figure {
       width: 100%;
       background-color: $white;
@@ -103,8 +43,21 @@
       float: right;
     }
 
-    ul, ol {
-      margin-left: 1.5em;
+    img.float-left {
+      float: left;
+    }
+
+    img.small {
+      width: 33%;
+      height: auto;
+    }
+
+    img.transparent {
+      background-color: transparent;
+    }
+
+    img.padded {
+      margin: .5em 1em;
     }
 
     ul {
@@ -144,7 +97,24 @@
   }
 }
 
+.blog-row {
+  &:before, &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &.breaking-news {
+    font-style: italic;
+    border-color: $orange-darker;
+    border-style: solid;
+    border-bottom-width: 1px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
 .api-info-box {
   background-color: #eeeeee;
-  padding: 30px 50px; 
+  padding: 30px 50px;
 }

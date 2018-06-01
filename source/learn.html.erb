@@ -37,31 +37,19 @@ responsive: true
     <section>
       <h2 id="deprecations" class="anchorable-toc"> <a href="http://emberjs.com/deprecations/">Deprecation Guides<i class="icon-link-ext"></i></a></h2>
       <p>
-        Over the course of the years cruft inevitably sneaks into all software projects. In order to clean up outdated functionality and guide users, Ember has a deprecation process. You can read our <a href="http://emberjs.com/deprecations/">deprecation guides</a> for more information. You can find below more direct links to Ember and Ember Data versions.
+        The broader JavaScript ecosystem is always changing and evolving, so Ember has processes
+        and tools in place to protect your app from churn while still providing the best new web
+        app features. Ember uses a careful deprecation process to roll out changes to the API.
+        You can read our <a href="http://emberjs.com/deprecations/">deprecation guides</a>
+        to see past and upcoming deprecations. Major changes are often accompanied by codemod tools,
+        which are often announced in release blog posts.
       </p>
-
-      <div class="flex-container learn-deprecations">
-        <div class="flex-same-width">
-          <h3 id="deprecations-ember" class="anchorable-toc" >Ember</h3>
-
-          <ul>
-            <li><a href="/deprecations/v1.x">1.x</a></li>
-            <li><a href="/deprecations/v2.x">2.x</a></li>
-          </ul>
-        </div>
-        <div class="flex-same-width">
-          <h3 id="deprecations-ember-data" class="anchorable-toc">Ember Data</h3>
-          <ul>
-            <li><a href="/deprecations/ember-data/v2.x">2.x</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
+   </section>
     <section>
       <h2>Ecosystem</h2>
 
       <p>
-        One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. What follows are some of the projects more closely maintained by the several Ember teams.
+        One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. For example, here are some projects closely maintained by Ember teams:
       </p>
 
       <p>
@@ -115,25 +103,52 @@ responsive: true
     <section>
       <h2 id="faq">Frequently Asked Questions</h2>
 
+      <h3 id="faq-glimmer">What is Glimmer? Do I need to learn it too?</h3>
+
+      <p>
+        Glimmer is a rendering engine used in Ember. However, in order to build Ember apps, you don't need to know anything about Glimmer, other than it's super fast and that the contributors to the core codebase love to geek out about it. It's all behind the scenes. If you're curious to know how the Glimmer project fits into the roadmap for Ember's development, you can <a href="https://discuss.emberjs.com/t/readers-questions-will-breaking-up-ember-remove-the-need-for-glimmer-js/14325">learn more here</a>.
+      </p>
+
+      <h3 id="faq-pitch">How do I pitch Ember at my company?</h3>
+
+      <p>
+        Here are some <a href="https://discuss.emberjs.com/t/readers-questions-how-do-i-pitch-ember-at-my-company/14289"> strategies</a> that may help you out.
+      </p>
+
+      <h3 id="faq-controllers">Is it ok to use controllers?</h3>
+
+      <p>
+        Yes. Controllers are the right place to put URL query params, actions and attributes that need to be passed from the route level to components, and lifecycle hook code.
+      </p>
+
       <h3 id="faq-future-proof">How do I future-proof my Ember.js application?</h3>
-
+      
       <p>
-        Ember.js has a strong emphasis on <a href="https://speakerdeck.com/wycats/stability-without-stagnation-lessons-learned-from-shipping-ember-dot-js">Stability without Stagnation</a>, which means that framework developers take great care when designing new functionality to make sure it fits with the existing functionalities, and provides a path forward for users to upgrade without being subjected to churn.
+        You should not try to future proof your application. Ember.js has a strong emphasis on developer productivity, which means that framework developers take great care when designing new functionality and provide migration paths. Here are some ways to keep up to date on future changes:
       </p>
 
+      <ul>
+        <li>
+          Feature Flags: Many new features are implemented under optional flags so that users can try them out and report any issues.
+        </li>
+        <li>
+          RFCs: Ember.js follows a community-driven process for its development that incorporates <a href="https://github.com/emberjs/rfcs">RFCs for features and deprecations.</a> An RFC is a Request for Comments. Before changes are made to Ember's API, they are proposed publicly and the community is asked to review and comment. Anyone can create an RFC, not just Core Team members. RFCs undergo many edits to incorporate community feedback. If a proposal has enough support, it is merged, meaning that work may begin to integrate the functionality into the codebase.
+        </li>
+        <li>
+          Deprecations: The <a href="http://emberjs.com/deprecations/">Deprecation Guides</a> contain upcoming deprecations and how to resolve them.
+        </li>
+        <li>
+          Codemods: When it's time for a major version upgrade, and there are syntax edits to make, tools like codemods are provided to help you make changes quickly. 
+        </li>
+        <li>
+          LTS lifecycle: If you won't be updating your app versions frequently, consider using the Long Term Support (LTS) versions of Ember. These are usually every 4 minor releases (for example, 2.8, 2.12, 2.16) and final major releases (2.18). LTS versions have extended windows for bugfixes and security updates.
+        </li>
+        <li>
+          Release schedule: Every six weeks, candidate features are reviewed and either deemed ready to be included in the stable release, or carry on in beta for another cycle until the next release happens.
+        </li>
+      </ul>
       <p>
-        Ember.js also follow a community-driven process for its development that incorporates <a href="https://github.com/emberjs/rfcs">RFCs for features and deprecations</a> and a <a href="/builds">six-week "train release schedule"</a>.
-        Every six weeks, candidate features are reviewed and either deemed ready to be included in the stable release, or carry on in beta for another cycle until the next release happens.
-      </p>
-
-      <p>
-        In short, the best way to make sure you have a healthy application is to keep an eye on RFCs &mdash; remembering they document intent but not necessarily the final implementation, &mdash; keep your application clean of deprecations, and when possible test your application against beta and canary.
-      </p>
-
-      <h3 id="faq-component-data">Should components load data?</h3>
-
-      <p>
-        You can find more information at the <a href="https://youtu.be/y7aHMj6VVJY?t=1129">Boston meetup Core Team panel.</a>
+        In short, the best way to make sure you have a healthy application is to comment on RFCs, clean up deprecations when you see them, and when possible, test your application against beta and canary releases of Ember.
       </p>
     </section>
   </article>

@@ -1,0 +1,1182 @@
+---
+title: "Ember Community Survey 2018"
+responsive: true
+no_survey_reminder: true
+---
+<% content_for :outside_wrapper do %>
+<div class="survey-reminder-wrapper hidden">
+  <div class="survey-reminder-container">
+    You have <strong class="survey-time-left"></strong> left to submit your response!
+  </div>
+</div>
+
+<div class="survey-wrapper survey-wrapper-header">
+  <div class="survey-header survey-container">
+    <h1 class="survey-h1">
+      <img src="/images/survey/logo2018.png" alt="Ember Community Survey 2018" />
+    </h1>
+
+    <h4 class="survey-tagline">
+      A project to learn who is using Ember, and how.
+    </h4>
+
+    <h3>With over 1300 responses, here are the 2018 survey results!</h3>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#new-release-adoption" id="new-release-adoption" class="survey-h2">
+      New Release Adoption
+    </a>
+    <div id="chart-new-release-adoption" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+
+    <p class="large">
+      During the course of the survey, Ember 3.0 became the latest stable
+      release of the framework. Despite the feature removals in 3.0, over a
+      quarter of survey participants are using the newest release. Ember 1.13
+      usage continues to drop slowly, and this year only 8% of developers
+      report working with a 1.13 app and 5% using a pre-1.13 version.
+    </p>
+
+    <div class="survey-row">
+      <div class="survey-column half">
+        <div id="chart-ember-overall-adoption" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+      </div>
+      <div class="survey-column half">
+        <div id="chart-ember-data-adoption" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+      </div>
+
+      <p class="large">
+      Ember Data adoption follows a similar curve to Ember, with the majority of respondents on 3.0 or 2.18. Older Ember Data usage also continues to drop, with respondents on 1.13 at 7% (down from 10% last year) and on pre-1.13 at 4% (down from 7% last year).
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#how-likely-to-recommend-ember" id="how-likely-to-recommend-ember" class="survey-h2">
+      Recommending Ember
+    </a>
+    <div id="chart-recommending-ember" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+      We asked respondents how likely they were to recommend Ember to a friend or colleague.
+      An average recommendation score is 8.2, and the calculated <a href='https://en.wikipedia.org/wiki/Net_Promoter'>Net Promoter Score</a> is 35.4.
+      The plurality of responses were a 10.
+    </p>
+
+    <p class="large">
+      Using the recommendation scores we created three segments of Detractors (1-6), Passives (7-8), and Promoters (9-10).
+      Participants reported their reasoning for their score as free-form text,
+      and below we've provided the most frequent category of responses in
+      each segment based on similarity analysis.
+    </p>
+
+    <p class="large">
+      Here is a flavor of what reasons participants gave for their scoring:
+    </p>
+
+    <div class="cluster">
+      <h4>Score: 10</h4>
+      <aside class="quote">Ember has been a great experience for me over the last few years. The documentation is very mature, great examples in the wild, mature addon ecosystem, helpful community, etc. Convention over configuration is really great too. I've been able to jump to different organizations and teams within those organizations, and be able to quickly contribute to projects.</aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Score: 2</h4>
+      <aside class="quote">The learning curve and restrictiveness of the framework are too steep. They would be better off learning something more specific to their needs.</aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Score: 10</h4>
+      <aside class="quote">Ember <em>respects</em> its users through thoughtful innovation with deprecation workflow and RFC process. As a <em>large</em> enterprise, I can bet on the Ember community because I know my investments will be cumulative over time.</aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Score: 10</h4>
+      <aside class="quote">I've used Ember for almost 5 years now and the development experience is as good as anything I've ever used.  It allows me to build powerful user experiences with minimal concern about the underlying functionality of the FE.  There is typically a "suggested" way to do something, if not a documented best practice and almost any external library I've ever had to use was easily decomposable into native Ember components.</aside>
+    </div>
+
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#how-can-we-improve-ember" id="how-can-we-improve-ember" class="survey-h2">
+      How Can We Improve Ember?
+    </a>
+    <p class="large">
+    As the last question of the survey we asked participants:
+    "What would it take for you to feel great about using and recommending Ember for new projects?" Using text similarity analysis, we identified the most commonly mentioned topics. Here they are, in descending order.
+    </p>
+
+    <div class="cluster">
+      <h4>Ember Data</h4>
+      <aside class="quote">
+        I like the way it seems like the framework is headed in the sense that it is being “destructured” into different optional pieces. I think that will be great for adoption. Our biggest pain points have been around Ember Data (long-unaddressed issues, missing features like relationship dirty tracking, performance) so some addressing of those would also be nice. Overall though I already feel great about using it and recommending it. I’ve used it for a couple personal projects already and would love to in the future.
+      </aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Documentation</h4>
+      <aside class="quote">
+        If Ember were easier to learn, and easier to work around the framework, perhaps less verbose I would feel great about using and recommending it more. 
+        I love the thinking that drives Ember, it is clear and predictable (similar to Rails).
+        That being said, the documentation was difficult to get through and it was hard to maintain the philosophical clarity down into the details of the code.
+      </aside>
+
+      <br>
+
+      <aside class="quote">
+        Simplification of the mental model for Ember. 
+
+        After spending the last few months with React for the first time, I see the initial appeal - it's a vastly simply mental model. I realize that this is not entirely fair - React would be better compared to Glimmer than all of Ember.
+
+        For a sufficiently complex app, I have no doubt that an Ember implementation would be much easier to learn &amp; maintain.
+
+        But for new or simple apps, there's overhead that is intimidating to newcomers and irksome to veterans such as myself.
+
+        Even if we only compare React to Ember's view/component layer, React is still much simpler to learn and reason about. 
+
+        And like it or not, the rest of the JS world compares React directly to Ember, and it feels futile to attempt to change that comparison. We need to do better in that comparison, not try to change everyone's mind that it's the wrong comparison to make.
+      </aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Glimmer</h4>
+      <aside class="quote">
+    I think we need more new features. Glimmer components and some of the other major new usability enhancements that've been on the roadmap for some time would be really huge in selling Ember to the wider community. We still have that reputation of being the same framework we were 4 years ago ... and I think it's undeserved. We are technically making strides past many other frameworks at this point, and I think showing what Ember is now capable of will finally break that mentality.
+      </aside>
+    </div>
+
+    <div class="cluster">
+      <h4>Community</h4>
+      <aside class="quote">
+        Showing leadership in adopting new web standards and tech (e.g. WebAssembly).  Keep pushing performance (Glimmer).  Maintain Ember's identity.  Continue to foster a great community.
+      </aside>
+
+      <br>
+
+      <aside class="quote">
+I wish the leadership was more vocal to the broader JS community. We're doing amazing things and too many devs don't even know what Ember is. Perhaps more critically, the whole framework seems to be balanced on the shoulders of just a few people, and I'd like to see that number grow. The "bus factor" risk appears to be pretty bad for the core libraries.
+      </aside>
+    </div>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#ember-for-hire" id="ember-for-hire" class="survey-h2">
+      Ember for Hire
+    </a>
+    <div class="survey-row">
+      <div class="survey-column half">
+        <div id="chart-ember-hire-employer-using-ember" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+      </div>
+      <div class="survey-column half">
+        <div id="chart-ember-getting-hired" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+      </div>
+    </div>
+
+    <p class="large">
+      The number of employers already using Ember rose this year, up to 52% from 39% last year, and the numbers for whom Ember knowledge was important or very important also both grew.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#ember-in-the-enterprise" id="ember-in-the-enterprise" class="survey-h2">
+      Ember In the Enterprise
+    </a>
+    <div id="chart-ember-production-apps-detail"
+         style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    Ember apps with large user bases have grown again this year, with a large increase in apps that have thousands of users.
+    This year the survey included 2 additional responses: "Tens of Thousands" and "Hundreds of Thousands".
+    The chart immediately above shows the detailed breakdown of 2018's responses.
+    </p>
+
+    <div id="chart-embereno-employment"
+         style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+
+    <p class="large">
+      More Embereños are working on products than ever before, with 80% of respondents reporting that they work on products.
+    </p>
+
+    <div id="chart-application-users"
+         style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+
+    <div id="chart-team-size"
+         style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    Ember-focused developer teams are getting larger.  This year the survey included a response to indicate that one's Ember team is greater than 500 developers, and
+    2.4% of the respondents reported that they work in teams of 500+ other Ember developers!
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#long-lived-codebases" id="long-lived-codebases" class="survey-h2">
+      Long-Lived Codebases
+    </a>
+    <div id="chart-long-lived-codebases"
+         style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    This chart shows the percentage of respondents who were maintaining an Ember app created
+    in 2014 (technically, between March 2014 and March 2015) at the time they answered this question.
+    The percentage of the community maintaining these now 3+ year old apps has declined every year but a significant
+    number of respondents still do work on these apps, indicating that some Ember codebases can really stand the test of time.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#community-participation" id="community-participation" class="survey-h2">
+      Community Participation
+    </a>
+    <div id="chart-community-participation" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    This chart shows some of the biggest changes in response from last year (in both positive and negative directions) to the question of how community members stay up to date with Ember.
+    Notably, usage of RFCs (reading, writing, and commenting upon) has grown dramatically this year.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#server-side" id="server-side" class="survey-h2">
+      Server-side &amp; Tools
+    </a>
+
+    <div id="chart-server-side" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <div id="chart-server-side-frameworks" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    Ruby continues to be the dominant server-side language used, but enterprise-focused languages are gaining in prominence this year, reflecting
+    the trend borne out by other charts that show more Ember usage in enterprise situations. Participants using .NET increased from 8.8% to 10.5% this year,
+    and Java increased from 3rd-most popular last year (21%) to 2nd most popular this year, with 26% usage.
+    JavaScript is now the third most-popular server side language, at 22%.
+
+    <br>
+    <span style="font-size: smaller">Note: The "None" response was added in 2018.</span>
+
+    </p>
+
+    <div id="chart-editor-tool" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    VS Code has really taken over, vaulting from 4th place last year (19%) to 38% and first place this year, dethroning last year's editor champion, Atom (now in second place at 28%).
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#browser-requirements" id="browser-requirements" class="survey-h2">
+      Browser Requirements
+    </a>
+    <div id="chart-browser-requirements" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+    <p class="large">
+    Developers need to support browsers before IE11 less than ever before.
+    As Ember 3.0 only supports IE11 and up, most developers now have
+    a browser support requirement un-related to specific browser versions.
+    Next year we're going to look for a new way to ask this question that
+    captures Chrome-only sites, the UCBrowser, and other data points we
+    feel are missing.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#demographics" id="demographics" class="survey-h2">
+      Demographics
+    </a>
+    <div id="chart-demographics-region" style="height: 400px; max-width: 800px; margin: 0 auto"></div>
+
+    <p class="large">
+    Each year we capture demographic information in addition to details
+    about how the community interacts with the Ember project. The summary of locations
+    participants call home remains mostly unchanged this year.
+    </p>
+
+    <p class="large">
+    The percentage of women participants this year was 4%, roughly the same as
+    last year.
+    Improving the diversity of our community is important to many of us.
+    Programs in the community like <a href='http://emberwomen.com/'>Women Helping Women</a>
+    make a difference.
+    </p>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+  <div class="survey-body survey-container">
+    <a href="#closing-thoughts" id="closing-thoughts" class="survey-h2 mono">
+      Closing Thoughts
+    </a>
+
+    <p class="large">
+      We would like to thank everyone who took the time to participate in the 2018 Ember Community Survey! We hope this information can provide a platform for discussion and ideas around the entire Ember ecosystem as it moves forward.
+    </p>
+
+    <p class="large">
+      You can view a <a href="https://embersurvey.typeform.com/report/tKfRLF/bty0Y6WzPoKB2Whw">summary of the responses to all questions</a>
+      from the survey, and you can view the <a href="/ember-community-survey-2018/ember-community-survey-2018-results-shuffled.csv">raw survey data</a>.
+      You can also view the <a href="/ember-community-survey-2018/ember-community-survey-2018-demographics-shuffled.csv">demographic data</a>, which has been decoupled from the primary corpora.
+    </p>
+
+    <p class="large">
+    This is the fourth year of the Ember Community Survey. To see results for previous years, you can visit the
+    <a href='https://www.emberjs.com/ember-community-survey-2017/'>2017</a>, <a href='https://www.emberjs.com/ember-community-survey-2016/'>2016</a>
+    and <a href='https://www.201-created.com/ember-community-survey-2015/'>2015</a> survey results pages.
+    </p>
+
+    <p class="large">
+      Questions? Feedback? Please email <a href="mailto:survey@201-created.com">survey@201-created.com</a>
+    </p>
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <div class="addthis_sharing_toolbox"></div>
+  </div>
+  <div class="survey-credits">
+    <p>Brought to you by</p>
+    <a href="http://www.201-created.com/">
+      <img src="/images/survey/201-Created-Square@1x.png" alt="201 Created" />
+    </a>
+  </div>
+</div>
+<% end %>
+
+<% content_for :foot do %>
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56d691fe9146ba05"></script>
+  <script src="//code.highcharts.com/highcharts.js"></script>
+  <script src="//code.highcharts.com/highcharts-more.js"></script>
+  <script src="//code.highcharts.com/modules/drilldown.js"></script>
+<script>
+$(function () {
+
+  var emberOrange = '#f23818',
+      darkGrayColor = '#4b4b4b',
+      lightGrayColor = '#c0c0c0',
+      lighterGrayColor = '#dedede',
+      lightGreenColor = '#489a6e';
+  var color2015 = lighterGrayColor;
+  var color2016 = lightGrayColor;
+  var color2017 = darkGrayColor;
+  var color2018 = emberOrange;
+  var colorFutureYear = lightGreenColor;
+
+  var theme = {
+    colors: [color2016, color2017, color2018, lightGreenColor],
+    credits: {
+      enabled: false
+    }
+  };
+  Highcharts.setOptions(theme);
+
+  $('#chart-ember-overall-adoption').highcharts({
+    chart: { type: 'column' },
+    title: { text: 'Breakdown of Ember use by Version' },
+    subtitle: { text: '' },
+    yAxis: { title: { text: 'Percent' } },
+    xAxis: {
+      categories: [
+        'Pre 1.13',
+        '1.13',
+        '2.0',
+        '2.1',
+        '2.2',
+        '2.3',
+        '2.4 LTS',
+        '2.5',
+        '2.6',
+        '2.7',
+        '2.8 LTS',
+        '2.9',
+        '2.10',
+        '2.11',
+        '2.12',
+        '2.13',
+        '2.14',
+        '2.15',
+        '2.16',
+        '2.17',
+        '2.18',
+        '3.0',
+      ]
+    },
+    series: [{
+      name: '2016',
+      color: color2016,
+      data: [
+        4 + 2 + 3 + 4 + 3 + 4 + 6 + 6,
+        36,
+        8,
+        6,
+        12,
+        27,
+        47,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+      ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [
+        9.46,
+        14.45,
+        2.97,
+        2.1,
+        2.02,
+        4.48,
+        11.29,
+        4.35,
+        4.48,
+        5.8,
+        21.2,
+        10.09,
+        21.6,
+        40.88,
+        19.31,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+      ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [
+        5,
+        7.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1.4,
+        7,
+        2,
+        2.7,
+        2.7,
+        11.4, // 2.12
+        7,
+        8,
+        6.6,
+        23.5, // 2.16
+        9.3,
+        43.2,
+        27.8, // 3.0
+      ]
+    }]
+  });
+  $('#chart-community-participation').highcharts({
+    chart: { type: 'bar' },
+    title: { text: 'How do you stay up to date with Ember?' },
+    subtitle: { text: 'Movers and Shakers from Last Year' },
+    plotOptions: {
+      bar: {
+        dataLabels: {
+          enabled: true,
+          format: '{y}%'
+        }
+      }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'top',
+        x: -40,
+        y: 80,
+        floating: true,
+        borderWidth: 1,
+        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+        shadow: true
+    },
+    tooltip: {
+      enabled: true,
+      valueSuffix: '%'
+    },
+    yAxis: { min: 0, title: { text: null } },
+    xAxis: {
+      categories: [
+        'Writing RFCs', 'Commenting on RFCs', 'Reading RFCs',
+        'Opening PRs', 'Stack Overflow', 'emberjs.com blog'
+      ],
+      title: { text: null }
+    },
+    series: [{
+      name: '2017',
+      color: color2017,
+      data: [ 1.9, 5.2, 33.3, 16.4, 41.6, 49.8 ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 3.0, 9.8, 52.2, 23.8, 34.2, 57.8 ]
+    }]
+  });
+  $('#chart-long-lived-codebases').highcharts({
+    chart: { type: 'column' },
+    title: { text: 'Do you maintain an app started between March 2014 and March 2015?' },
+    subtitle: { text:
+      'Percent of Survey Participants Currently Maintaining an Ember App Created in 2014' },
+    xAxis: { },
+    tooltip: { enabled: false },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      color: color2015,
+      name: '2015',
+      data: [ 79.5 ]
+    }, {
+      color: color2016,
+      name: '2016',
+      data: [ 38.6, ]
+    }, {
+      color: color2017,
+      name: '2017',
+      data: [ 34.3, ]
+    }, {
+      color: color2018,
+      name: '2018',
+      data: [ 31.3, ]
+    }]
+  });
+
+  $('#chart-server-side').highcharts({
+    chart: { type: 'column' },
+    title: { text: 'What is the primary language of your server-side stack?' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category' },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2016',
+      color: color2016,
+      data: [
+        { y: 41, name: 'Ruby' },
+        { y: 17, name: 'Java' },
+        { y: 24, name: 'JavaScript' },
+        { y: 12, name: 'Python' },
+        { y: 8, name: '.NET' },
+        { y: 13, name: 'PHP' },
+        { y: 6, name: 'Elixir / Erlang' },
+        { y: 5, name: 'Go' },
+        { y: 2, name: 'Scala' },
+        { y: 0, name: 'TypeScript' }
+      ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [
+        {name: 'Ruby', y:	36.97},
+        {name: 'Java', y:	20.57},
+        {name: 'JavaScript', y:	24.54},
+        {name: 'Python', y:	13.5},
+        {name: '.NET', y:	8.71},
+        {name: 'PHP', y:	12.43},
+        {name: 'Elixir / Erlang', y:	7.95},
+        {name: 'Go', y:	6.44},
+        {name: 'Scala', y:	2.65},
+        {name: 'TypeScript', y:	1.58}
+      ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [
+        {name: 'Ruby', y:	33.7},
+        {name: 'Java', y:	26.4},
+        {name: 'JavaScript', y:	22.1},
+        {name: 'Python', y:	11.9},
+        {name: '.NET', y:	10.5},
+        {name: 'PHP', y:	10.3},
+        {name: 'Elixir / Erlang', y: 9.2},
+        {name: 'Go', y:	6.5},
+        {name: 'Scala', y: 2.6},
+        {name: 'TypeScript', y:	2.6}
+      ]
+    }]
+  });
+
+  $('#chart-server-side-frameworks').highcharts({
+    chart: { type: 'column' },
+    title: { text: 'Which server-side framework(s) do you use?' },
+    subtitle: { text: 'Top 8' },
+    xAxis: { 
+      categories: [
+        'Rails (Ruby)',
+        'Express (JavaScript)',
+        'Phoenix (Elixir)',
+        'Spring / Spring Boot (Java)',
+        'Django (Python)',
+        'MVC (.NET)',
+        'None*',
+        'Flask (Python)'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2016',
+      color: color2016,
+      data: [ 46.1, 25.8, 10.6, 11.0, 9, 7.6, 0, 5.7 ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [ 37.9, 20.4, 10.1, 8.8, 10.0, 6.2, 0, 5.8 ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 35.0, 21.6, 12.5, 20.5, 8.2, 7.7, 7.6, 5.7 ]
+    }]
+  });
+
+  $('#chart-browser-requirements').highcharts({
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Which browser versions do your applications target?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'Modern browsers',
+        'Mobile browsers',
+        'IE 11',
+        'IE 10',
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+    series: [{
+      name: '2016',
+      color: color2016,
+      data: [ 93.6, 49.0, 39.6, 27.7, ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [ 94.26, 44.2, 38.5, 19.2 ],
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 96.5, 52, 45.8, 10.1 ]
+    }, {
+      name: 'Expected for 2019',
+      color: colorFutureYear,
+      data: [ 97.7, 57.3, 29.7, 3.7 ]
+    }]
+  });
+
+  $('#chart-recommending-ember').highcharts({
+    chart: { type: 'spline' },
+    title: { text: 'How Likely Are You To Recommend Ember?' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Responses' }
+    },
+    series: [{
+      name: '2018',
+      color: color2018,
+      data: [
+          [1, 25],
+          [2, 14],
+          [3, 22],
+          [4, 17],
+          [5, 42],
+          [6, 58],
+          [7, 144],
+          [8, 307],
+          [9, 195],
+          [10, 445]
+      ]
+    }]
+  });
+
+  $('#chart-editor-tool').highcharts({
+    chart: { type: 'column' },
+    title: { text: 'What is your preferred text editor?' },
+    subtitle: { text: '' },
+    xAxis: {
+      // TODO: reorganize these to be in decreasing order of 2018 popularity?
+      categories: [
+        'Atom',
+        'Sublime Text',
+        'Vim',
+        'WebStorm / IntelliJ',
+        'VS Code',
+        'Emacs',
+        'Visual Studio',
+        'Notepad++'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2016',
+      color: color2016,
+      data: [ 39, 39.2, 29.24, 20.6, 6, 3.9, 5, 3.2 ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [ 38.11, 26.56, 26.37, 21.08, 19.31, 4.04, 3.97, 2.27 ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 28.2, 20.3, 20.5, 19, 37.9, 3.5, 0, 1.9 ]
+    }]
+  });
+
+  $('#chart-ember-production-apps-detail').highcharts({
+    chart: { type: 'column' },
+    title: {
+      text: 'Which of these best describes your use of Ember in production applications?'
+    },
+    subtitle: { text: '2018 Results Only' },
+    xAxis: {
+      categories: [
+        'Prototypes only',
+        'Tens of users',
+        'Hundreds of users',
+        'Thousands of users',
+        '10s of Thousands of users',
+        '100s of Thousands of users',
+        'Millions of users'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2018',
+      color: color2018,
+      data: [ 9.1, 23.3, 34.5, 30.7, 17.7, 11.1, 9.8 ]
+    }]
+  });
+
+  $('#chart-embereno-employment').highcharts({
+    chart: { type: 'bar' },
+    title: { text: 'What Best Describes Your Employment Situation?' },
+    subtitle: { text: 'Top 4 Responses, Year by Year' },
+    xAxis: {
+      categories: [
+        'Working on product(s)',
+        'In a firm doing consulting/client work',
+        'Working on internal Ember tooling/products',
+        'Independent Product Developer'
+      ]
+    },
+    yAxis: { title: { text: 'Percent' } },
+    series: [
+    {
+      name: '2016',
+      color: color2016,
+      data: [ 59.3, 15.1, 23.4, 16.3 ], 
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [ 74.8, 14.1, 12.8, 13.7 ],
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 80.2, 12.7, 11.8, 10.6 ]
+    }]
+  });
+
+  $('#chart-application-users').highcharts({
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'Who uses your applications?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'B2B',
+        'B2C',
+        'Internal users'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+    series: [{
+      name: '2016',
+      data: [ 62.6, 48.6, 43.8 ]
+    }, {
+      name: '2017',
+      data: [ 65.6, 49, 39 ]
+    }, {
+      name: '2018',
+      data: [ 69.5, 49.4, 39.9 ]
+    }]
+  });
+
+  $('#chart-team-size').highcharts({
+    chart: {
+      type: 'column'
+    },
+    title: {
+      text: 'How many developers at your company work with Ember?'
+    },
+    subtitle: {
+      text: ''
+    },
+    xAxis: {
+      categories: [
+        'None',
+        '1–10',
+        '11–20',
+        '21–50',
+        '51–100',
+        'More than 100'
+      ]
+    },
+    yAxis: {
+      title: {
+        text: 'Percent'
+      }
+    },
+    series: [{
+      name: '2015',
+      color: color2015,
+      data: [ 15.5, 78, 3.7, 1.7, 0.8, 0.3 ]
+    }, {
+      name: '2016',
+      color: color2016,
+      data: [ 12, 74, 6, 4, 2, 1 ]
+    }, {
+      name: '2017',
+      color: color2017,
+      data: [ 8.7, 69.8, 6.8, 4.8, 2.5, 2 ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [ 7.2, 62.5, 9.4, 5.3, 3.9, 6.4 ]
+    }]
+  });
+
+  $('#chart-ember-hire-employer-using-ember').highcharts({
+    chart: { type: 'column' },
+    title: { text: 'When starting your most recent job...' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2017',
+      color: color2017,
+      data: [
+        {name: 'My employer was not using Ember', y: 53.63},
+        {name: 'My employer was already using Ember', y: 38.74},
+        {name: 'Does not apply (e.g. I am a student)', y: 6.56}
+      ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [
+        {name: 'My employer was not using Ember', y: 43.1},
+        {name: 'My employer was already using Ember', y: 52.3},
+        {name: 'Does not apply (e.g. I am a student)', y: 4.5}
+      ]
+    }]
+  });
+
+  $('#chart-ember-getting-hired').highcharts({
+    chart: { type: 'column' },
+    title: {
+      text: 'When getting hired to your most recent job, your pre-existing knowledge of Ember was...'
+    },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2017',
+      color: color2017,
+      data: [
+        {name: 'I did not know Ember', y: 47.13},
+        {name: 'Unimportant', y: 25.49},
+        {name: 'Very important', y: 12.87},
+        {name: 'Important', y: 12.87}
+      ]
+    }, {
+      name: '2018',
+      color: color2018,
+      data: [
+        {name: 'I did not know Ember', y: 40.9},
+        {name: 'Unimportant', y: 27.2},
+        {name: 'Very important', y: 18.1},
+        {name: 'Important', y: 13.8}
+      ]
+    }]
+  });
+
+  $("#chart-demographics-region").highcharts({
+    chart: { type: 'column' },
+    title: { text: 'In which region do you live?' },
+    subtitle: { text: '' },
+    xAxis: { type: 'category', },
+    yAxis: { title: { text: 'Percent' } },
+    series: [{
+      name: '2018',
+      color: color2018,
+      data: [
+        {name: 'North America	', y: 53.7 },
+        {name: 'Europe	', y: 32.7},
+        {name: 'Asia	', y: 7.8},
+        {name: 'Oceania	', y: 3.4},
+        {name: 'South America	', y: 3.2},
+        {name: 'Africa	', y: 0.5},
+        {name: 'Central America	', y: 0.5},
+        {name: 'Other', y: 0.4}
+      ]
+    }],
+    /*
+    TODO get the data for this, add "drilldown" keys above
+    drilldown: {
+      series: [{
+        name: 'North America',
+        id: 'North America',
+        data: [
+          {name: 'White', y: 80},
+          {name: 'Asian', y: 7.2},
+          {name: 'Prefer not to answer', y: 6.2},
+          {name: 'Hispanic, Latino, or Spanish origin', y: 6.1},
+          {name: 'Black or African American', y: 2.2},
+          {name: 'Middle Eastern or North African', y: 1.1}
+        ]
+      },{
+        name: 'Europe',
+        id: 'Europe',
+        data: [
+          {name: 'White', y: 81},
+          {name: 'Prefer not to answer', y: 10.1},
+          {name: 'Hispanic, Latino, or Spanish origin', y: 5.4},
+          {name: 'American Indian or Alaskan Native', y: 6.1},
+          {name: 'Middle Eastern or North African', y: 1.9},
+          {name: 'Asian', y: 1},
+          {name: 'Black or African American', y: 0.8}
+        ]
+      },{
+        name: 'Asia',
+        id: 'Asia',
+        data: [
+          {name: 'Asian', y: 67},
+          {name: 'White', y: 12},
+          {name: 'Prefer not to answer', y: 8.9}
+        ]
+      }]
+    }
+    */
+  });
+
+
+  function makeVersionChart(versionData, title, chartId) {
+
+    var seriesData = [];
+
+    for (var i = 0; i < versionData.length; ++i){
+        var _series = {
+          name: versionData[i].year,
+          type: 'spline',
+          data: versionData[i].data.map(function (d) {
+            return d && d.value;
+          })
+        };
+        if (versionData[i].color){
+            _series.color = versionData[i].color;
+        }
+        seriesData.push(_series);
+    }
+
+    $(chartId).highcharts({
+      title: { text: title },
+      subtitle: { text: '' },
+      tooltip: {
+        shared: true,
+        crosshairs: true,
+        formatter: function () {
+          var releasesPrior = (+this.x);
+          var s = '<b>' + (+this.x) + ' Release' + (releasesPrior !== 1 ? 's' : '') + ' Prior to Survey</b>';
+          for (var i = 0; i < this.points.length; ++i) {
+            var point = this.points[i],
+              seriesName = point.series.name;
+            s += '<br/><span style="color:' + point.color + '">●</span>' + seriesName + ': ';
+            var labels;
+            for(var j = 0; j < versionData.length; ++j){
+                if (versionData[j].year === seriesName){
+                    labels = versionData[j].data;
+                }
+            }
+            var label = labels[labels.length - 1 - releasesPrior].label;
+            s += label + ' Release (' + point.y + '%)';
+          }
+          return s;
+        }
+      },
+      plotOptions: { series: { marker: { enabled: false } } },
+      yAxis: {
+        title: { text: 'Percent' }
+      },
+      xAxis: {
+        categories: [ '13', '12', '11', '10', '9', '8', '7', '6', '5', '4', '3', '2', '1', '0', ],
+        title: {
+          text: 'Releases Prior to Survey'
+        }
+      },
+      series: seriesData
+    });
+  }
+
+
+  var emberVersionData = [{year: '2015',
+    color: color2015,
+    data:[
+    null,
+    null,
+    null,
+    {value: 3, label: '1.0'},
+    {value: 1, label: '1.1'},
+    {value: 0.7, label: '1.2'},
+    {value: 2, label: '1.3'},
+    {value: 2.6, label: '1.4'},
+    {value: 3.9, label: '1.5'},
+    {value: 6.8, label: '1.6'},
+    {value: 15, label: '1.7'},
+    {value: 31.7, label: '1.8'},
+    {value: 39.5, label: '1.9'},
+    {value: 35, label: '1.10'},
+    ]}, {year: '2016',
+    color: color2016,
+    data: [
+    {value: 1.8, label: '1.6'},
+    {value: 2.7, label: '1.7'},
+    {value: 3.5, label: '1.8'},
+    {value: 2.6, label: '1.9'},
+    {value: 3.9, label: '1.10'},
+    {value: 6, label: '1.11'},
+    {value: 5.8, label: '1.12'},
+    {value: 36, label: '1.13 LTS'},
+    {value: 8.2, label: '2.0'},
+    {value: 6.3, label: '2.1'},
+    {value: 11.5, label: '2.2'},
+    {value: 27, label: '2.3'},
+    {value: 47, label: '2.4 LTS'},
+    null,
+     ]}, {year: '2017',
+     color: color2017,
+     data: [
+    {value: 14.5, label: '1.13 LTS'},
+    {value: 3, label: '2.0'},
+    {value: 2.1, label: '2.1'},
+    {value: 2, label: '2.2'},
+    {value: 4.5, label: '2.3'},
+    {value: 11.3, label: '2.4 LTS'},
+    {value: 4.4, label: '2.5'},
+    {value: 4.5, label: '2.6'},
+    {value: 5.8, label: '2.7'},
+    {value: 21.2, label: '2.8 LTS'},
+    {value: 10, label: '2.9'},
+    {value: 22, label: '2.10'},
+    {value: 41, label: '2.11'},
+    {value: 19.3, label: '2.12 LTS'}
+  ]}, {year: '2018',
+    color: color2018,
+    data: [
+    {value: 8.6, label: '2.0-2.6' },
+    {value: 1.5, label: '2.7'},
+    {value: 7.1, label: '2.8 LTS'},
+    {value: 2.1, label: '2.9'},
+    {value: 2.8, label: '2.10'},
+    {value: 2.7, label: '2.11'},
+    {value: 11.6, label: '2.12 LTS'},
+    {value: 7.1, label: '2.13'},
+    {value: 8.1, label: '2.14'},
+    {value: 6.7, label: '2.15'},
+    {value: 23.8, label: '2.16 LTS'},
+    {value: 9.4, label: '2.17'},
+    {value: 43.8, label: '2.18 LTS'},
+    {value: 28.2, label: '3.0'}
+  ]}];
+  makeVersionChart(emberVersionData, 'Which version(s) of Ember are used in your apps?',
+    '#chart-new-release-adoption');
+
+  var emberDataVersionData = [{year:
+    '2016',
+    color: color2016,
+    data:[
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {value: 27, label: '1.13'},
+    {value: 6, label: '2.0'},
+    {value: 4, label: '2.1'},
+    {value: 8, label: '2.2'},
+    {value: 21, label: '2.3'},
+    {value: 42, label: '2.4'},
+    null,
+  ]}, {year: '2017', color: color2017, data: [
+    {value: 9, label: '1.13'},
+    {value: 2.15, label: '2.0'},
+    {value: 2.1, label: '2.1'},
+    {value: 1.5, label: '2.2'},
+    {value: 2.8, label: '2.3'},
+    {value: 7, label: '2.4'},
+    {value: 3, label: '2.5'},
+    {value: 4, label: '2.6'},
+    {value: 4, label: '2.7'},
+    {value: 13.8, label: '2.8'},
+    {value: 7, label: '2.9'},
+    {value: 21.6, label: '2.10'},
+    {value: 34.9, label: '2.11'},
+    {value: 17, label: 'stable (2.12)'}
+  ]}, {year: '2018', color: color2018, data: [
+    {value: 5.9, label: '2.0-2.6'},
+    {value: 1, label: '2.7'},
+    {value: 5.2, label: '2.8'},
+    {value: 2, label: '2.9'},
+    {value: 2.3, label: '2.10'},
+    {value: 2.5, label: '2.11'},
+    {value: 12.5, label: '2.12'},
+    {value: 6.2, label: '2.13'},
+    {value: 6.2, label: '2.14'},
+    {value: 0, label: '2.15'},
+    {value: 17.2, label: '2.16'},
+    {value: 6.8, label: '2.17'},
+    {value: 35.8, label: '2.18'},
+    {value: 21.5, label: '3.0'},
+  ]}];
+  makeVersionChart(emberDataVersionData, 'Which versions of Ember Data are used in your apps?',
+    '#chart-ember-data-adoption');
+
+
+});
+</script>
+<% end %>

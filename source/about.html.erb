@@ -1,5 +1,5 @@
 ---
-title: "A framework for creating ambitious web applications."
+title: "Homepage"
 responsive: true
 ---
 <% content_for :foot do %>
@@ -29,8 +29,8 @@ responsive: true
   <a href="http://jobs.emberjs.com" class="job-board-banner">Post and find jobs on the Ember job board</a>
 <% end %>
 <div class="about-page--header">
-  A framework for creating <br/>
-  <span class="bold">ambitious</span> web applications.
+  A framework for<br/>
+  <span class="bold">ambitious</span> web developers.
 </div>
 <div class="call-to-action">
   <div class="call-to-action__box">
@@ -47,14 +47,7 @@ responsive: true
     </div>
   </div>
 </div>
-<a class="emberconf-callout" href="http://emberconf.com" target="_blank">
-  <div class="callout-body">
-    <div class="text-wrapper">
-       <p><strong>Registration is now open</strong> for EmberConf 2018 &middot; March 12-14 &middot; Portland, OR</p>
-     </div>
-    <span class="button">Learn more</span>
-  </div>
-</a>
+
 <div class="features section">
   <h2 class="text-center">More Productive Out of the Box</h2>
   <div class="feature">
@@ -70,16 +63,27 @@ responsive: true
       <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done&mdash;fast.</p>
     </div>
   </div>
-  <div class="users section">
-    <h2>Who's Using Ember.js?</h2>
-    <div class="surround">
-      <ul id="slider">
-        <% data.users.slice(0,12).each do |user| %>
-          <li class="user">
-            <a href="<%= user.url %>" rel="nofollow">
-          <img src="/images/about/<%= user.image %>" width="210" height="103" />
-          </a>
-        </li>
+  <div class="feature">
+    <div class="structure feature-img"></div>
+    <p>Don't waste time making trivial choices. Ember.js incorporates common idioms so you can focus on what makes your app special, not reinventing the wheel.</p>
+  </div>
+  <div class="feature">
+    <div class="productivity feature-img"></div>
+    <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done&mdash;fast.</p>
+  </div>
+</div>
+
+<div class="users section">
+<h2 class="text-center">Who's Using Ember.js?</h2>
+
+  <div class="surround">
+    <ul id="slider">
+      <% data.users.slice(0,12).each do |user| %>
+      <li class="user">
+        <a href="<%= user.url %>" rel="nofollow">
+          <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>"/>
+        </a>
+      </li>
       <% end %>
     </ul>
   </div>

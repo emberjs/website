@@ -58,23 +58,13 @@
 .survey-button:link, .survey-button:visited {
   margin-top: 20px;
   margin: auto;
-
-  img {
-    display: inline;
-    width: 7px;
-    padding-top: 2px;
-    background-color: transparent;
-    transition: 0.2s margin-left ease-in-out;
-    margin-left: 5px;
-    vertical-align: text-top;
-  }
 }
 
 .survey-border-top {
   border-top: 1px solid #e5dbd6;
 }
 .survey-button:hover, .survey-button:active {
-  background: #2C92AD;
+  // background: #2C92AD;
 
   img {
     margin-left: 10px;
@@ -120,9 +110,7 @@
 }
 
 .survey-tagline {
-  font-size: 14px;
-  color: #A4A4A4;
-  margin-bottom: 20px;
+  margin: 20px 0 40px;
 }
 
 .survey-h2,

@@ -6,26 +6,6 @@ body.community #content {
     margin-bottom: 0.5em;
   }
 
-  .video {
-      max-width: 640px;
-      margin: 0 auto;
-
-      .embedded-video {
-        position: relative;
-        padding-bottom: 52.25%; /* not quite 16:9 */
-        padding-top: 25px;
-        height: 0;
-
-        iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-      }
-  }
-
   .section {
     .image {
       float: left;
@@ -108,7 +88,32 @@ body.community #content {
         margin: 25px auto;
       }
     }
-    
+
+    &.meetup-video {
+      clear: both;
+      padding-top: 64px;
+
+      .video {
+        max-width: 640px;
+        margin: 0 auto;
+
+        .embedded-video {
+          position: relative;
+          padding-bottom: 52.25%; /* not quite 16:9 */
+          padding-top: 25px;
+          height: 0;
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
     table {
       margin: 2em auto;
     }

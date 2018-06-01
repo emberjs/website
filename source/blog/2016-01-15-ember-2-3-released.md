@@ -1,7 +1,8 @@
 ---
 title: Ember.js 2.3 and 2.4 Beta Released
 author: Matthew Beale
-tags: Releases
+tags: Releases, 2016, Version 2.x
+responsive: true
 ---
 
 Ember.js 2.3, a minor version release of Ember with backwards compatible

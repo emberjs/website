@@ -1,7 +1,8 @@
 ---
 title: Introducing Subteams
+responsive: true
 author: Tom Dale
-tags: Recent Posts
+tags: Recent Posts, Announcement, Roadmap, 2016
 ---
 
 I'm very happy to share with you our plan to scale Ember's day-to-day

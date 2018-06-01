@@ -52,7 +52,7 @@
   image: ibotta.png
   alt: "Ibotta"
   use: "We use Ember for building our internal and external web applications."
-- url: http://travis-ci.org
+- url: http://travis-ci.com
   image: travisci.png
   alt: Travis CI
 - url: https://www.ted.com
@@ -843,10 +843,10 @@
   image: airhelp.png
   alt: "AirHelp"
   use: "AirHelp web app is built with Ember"
-- url: http://www.samewave.com/
+- url: https://www.samewave.com
   image: samewave.png
   alt: "Samewave"
-  use: "We use Ember together with Cordova to power our v2 hybrid IOS and Android app."
+  use: "We use Ember to power the UI of our web app, hybrid mobile apps (Cordova) and desktop apps (Electron)."
 - url: https://www.stealthworker.com
   image: stealth_worker.png
   alt: "Stealth Worker"
@@ -1009,10 +1009,86 @@
   image: toyota-connected.png
   alt: Toyota Connected
   use: "Toyota Connected uses Ember for building our internal and external web applications."
+- url: "https://www.khorus.com/"
+  image: khorus.png
+  alt: Khorus
+  use: "Khorus uses Ember.js for its primary front-end application."
 - url: "https://app.qonto.eu"
   image: qonto.png
   alt: Qonto
   use: "Qonto uses Ember to build the front-end of our bank account management interface"
+- url: "https://fusemachines.com"
+  image: fusemachines.png
+  alt: Fusemachines
+  use: "Fusemachines uses Ember for most of its client facing Web applications"
+- url: "http://www.hyperlogs.com"
+  image: hyperlogs.png
+  alt: Hyperlogs
+  use: "Hyperlogs uses Ember for its time tracking web app"
+- url: "http://www.shyftanalytics.com"
+  image: shyft.png
+  alt: SHYFT
+  use: "SHYFT Analytics uses Ember for the SHYFT Platform."
+- url: "https://www.fitbit.com"
+  image: fitbit.png
+  alt: Fitbit Inc.
+  use: "Fitbit uses Ember for external and internal web applications."
+- url: "https://www.ig.com"
+  image: ig.png
+  alt: IG
+  use: "IG uses Ember for its retail financial trading platform and internal web applications."
+- url: "https://envoy.com/"
+  image: envoy.png
+  alt: Envoy
+  use: "Envoy's dashboard is built with Ember.js"
+- url: "http://www.concordnow.com/"
+  image: concord.png
+  alt: Concord
+  use: "The Concord webapp is built using Ember"
+- url: "https://cos.io"
+  image: cos.png
+  alt: Center for Open Science
+  use: "OSF Preprints and OSF Registries are built with Ember.js and we are incrementally migrating the main OSF (https://osf.io) to Ember"
+- url: "https://www.productive.io?ref=emberjs"
+  image: productive.png
+  alt: Productive
+  use: "Productive uses Ember for its main web applications."
+- url: "https://www.princess.com"
+  image: Princess_Cruises_CBN_logo.png
+  alt: Princess Cruises
+  use: "Princess Cruises is using Ember to guide our guests throughout their cruise Search Experience."
+- url: https://deic.dk/
+  image: deic.png
+  alt: "Danish e-Infrastructure Cooperation"
+  use: "DeIC's DDoS Protection System client (ddps.deic.dk) is built with Ember"
+- url: "https://www.roofstock.com"
+  image: roofstock.png
+  alt: "Roofstock.com"
+  use: "Roofstock.com is built with Ember"
+- url: "https://www.fastly.com"
+  image: fastly.png
+  alt: Fastly
+  use: "Fastly uses Ember to build our control panel (https://manage.fastly.com/) as well as other internal/external projects."
+- url: "https://www.outdoorsy.com"
+  image: outdoorsy.png
+  alt: Outdoorsy
+  use: "Outdoorsy uses Ember to power our search and reservation web applications"
+- url: "https://www.wheelbasepro.com"
+  image: wheelbasepro.png
+  alt: Wheelbase
+  use: "Wheelbase is built using Ember"
+- url: "https://www.verizondigitalmedia.com/"
+  image: verizon-digital-media-services.png
+  alt: Verizon Digital Media Services
+  use: "Verizon Digital Media Services uses Ember to build our customer-facing CDN configuration portal (https://my.edgecast.com/) and other internal projects."
+- url: https://www.tourme.com/
+  image: tourme-logo.png
+  alt: Tourme
+  use: "The entire Tourme web is built with Ember.js"
+- url: https://www.a2system.net/
+  image: a2system-logo.png
+  alt: A2System
+  use: "We use Ember to build amazing web applications"
 
 
 # ---- PLEASE READ ----

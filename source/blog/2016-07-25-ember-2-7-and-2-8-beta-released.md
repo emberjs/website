@@ -1,7 +1,8 @@
 ---
 title: Ember.js 2.7 and 2.8 Beta Released
 author: Dan Gebhardt
-tags: Releases
+tags: Releases, 2016, 2.7, 2.8, Version 2.x
+responsive: true
 ---
 
 Ember.js 2.7, a minor version release of Ember with backwards compatible
@@ -114,7 +115,7 @@ written by [@trentmwillis](https://github.com/trentmwillis).
 
 This release will introduce a set of low-level APIs for the core functionailty
 along with the ususal semver guarentee. While the ember-engines addon itself
-remains expermental, the introduction of these public APIs means that **ember-engines
+remains experimental, the introduction of these public APIs means that **ember-engines
 is now usable with Ember.js 2.8 beta**.
 
 Work on engines has proceeded over the past year in both Ember core as well as

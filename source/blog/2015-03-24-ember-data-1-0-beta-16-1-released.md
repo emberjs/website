@@ -1,7 +1,8 @@
 ---
 title: Ember Data v1.0.0-beta.16.1 Released
 author: Brendan McLoughlin
-tags: Ember Data
+tags: Ember Data, 2015, Version 1.x
+responsive: true
 ---
 
 Ember Data v1.0.0-beta.16.1 is a bugfix release that fixes 2
