@@ -28,7 +28,7 @@ In this special edition of The Ember.js Times, [@real_ate](https://github.com/ma
 This is the second part of a six part series on how we rebuilt the new Ember Guides from the ground up
 over the course of six months, converting it into an Ember app in the process. If you want to see
 the first part in this series check it out [here](https://blog.stonecircle.io/the-right-way-to-build-the-ember-guides/). You
-can keep track of the posts by following the RSS feed at the top of the page.
+can keep track of the future posts by following the RSS feed at the top of the [Stone Circle blog](https://blog.stonecircle.io).
 
 ## Initial experiments
 
