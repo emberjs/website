@@ -129,4 +129,4 @@ end
 ###
 activate :alias
 
-redirect "homepage-survey.html", to: "https://embermarketing.typeform.com/to/JJECA8"
+redirect "homepage-survey.html", to: "https://tilde.wufoo.com/forms/welcome-to-the-ember-homepage-survey/"
