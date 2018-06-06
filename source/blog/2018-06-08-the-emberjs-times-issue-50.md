@@ -13,6 +13,19 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/08/the-embe
 
 ---
 
+## [Lets Send SendAction Away!](https://github.com/emberjs/rfcs/pull/335)
+The time has come. `component#sendAction` has served the Ember community well for years but in a new [RFC by @cibernox](https://github.com/emberjs/rfcs/pull/335) he proposes to deprecate this feature. In the old days, before v1.13, `component#sendAction` was the only way to bubble up actions from components. Since v1.13 we have _closure actions_ which are more intuitive and flexible and they are the current recommended Ember Way™ for doing actions in components.
+
+_Closure actions_ have been the recommended way to do actions in components for almost 3 years. Also `component#sendAction` is not even mentioned in the guides anymore so there is really little reason to keep it around. So look out for a new deprecation near you, coming soon!
+
+If you want to learn more about why _closure actions_ are preferred over `component#sendAction` then you can check out [this blog post from 2016](http://miguelcamba.com/blog/2016/01/24/ember-closure-actions-in-depth).
+
+Read more about this proposal and join the RFC discussion:
+
+<a class="ember-button ember-button--centered" href="https://github.com/emberjs/rfcs/pull/335">Read more</a>
+
+---
+
 ## [RFC Deprecating Ember Utils](https://github.com/emberjs/rfcs/pull/334)
 A new RFC has been posted on deprecating `Ember.{isEmpty, isBlank, isNone, isPresent}`. The motivation of this is to clean up utils that do not provide much value over writing plain old Javascript. There's already a discussion going on whether this is a good decision or not. You can follow the discussion and read the RFC at the [RFC repository](https://github.com/emberjs/rfcs/pull/334).
 
