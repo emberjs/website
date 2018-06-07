@@ -1,6 +1,6 @@
 ---
 title: The Ember.js Times - Issue No. 50
-author: the crowd
+author: Kenneth Larsen, Sivakumar Kailasam, Alon Bukai, Ryan Mark, Amy Lam, Jen Weber, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/08/the-emberjs-times-issue-50.html"
 responsive: true
@@ -82,15 +82,16 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
   <p>In this week's Readers' Question we're talking about contribution - and first-time contributions to Ember in particular.
-  Ember Learning team member [@jessica-jordan]() highlights in her answer which repositories are a great
-  starting point for a first contribution to the Ember ecosystem, how you can find something interesting to work on and where you can reach out to other community members to make your contribution a real success.</p>
-
-  <a class="ember-button ember-button--centered" href="#">Read more</a>
-
+  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer which repositories are a great starting point for a first contribution to the Ember ecosystem, how you can find an interesting issue to work on and where you can reach out to other community members to make your contribution a real success.</p>
 </div>
 
-<p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+<div class="blog-row">
+  <a class="ember-button" href="#">Read more</a>
+</div>
 
+<div class="blog-row">
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+</div>
 
 ---
 
@@ -98,4 +99,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Kenneth Larsen, Sivakumar Kailasam, Alon Bukai, Ryan Mark, Amy Lam, Jen Weber, Jessica Jordan and the Learning Team
