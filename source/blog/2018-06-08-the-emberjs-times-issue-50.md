@@ -57,8 +57,8 @@ Read all about the RFC and bring your thoughts for the final process in the [RFC
 
 ---
 
-## [SECTION TITLE](#section-url)
-
+## [Got Something to Share?](https://airtable.com/shrDbeo2Y80OPG0kC)
+We all love reading the Ember blog. It’s an awesome way to find out what’s happening in the community and to keep up to date on all things Ember. Sometimes though, you may think to yourself, “I’ve got something to say!”. Awesome! Whether your passion is authoring addons or tinkering with broccoli, contributing to the blog is an excellent opportunity to connect with the community. Well getting started could not be any easier! If you want to write a guest blog post for the website, make your way over to [Ember.js Guest Blog Post Invitation](https://airtable.com/shrDbeo2Y80OPG0kC), and fill out the form!
 
 
 ---
