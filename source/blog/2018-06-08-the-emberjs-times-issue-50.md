@@ -76,16 +76,21 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 
 ---
 
-## [Got a question? Ask Readers' Questions!🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: I'd like to contribute to Ember. How can I get started? 🤓](#)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>...</p>
+  <p>In this week's Readers' Question we're talking about contribution - and first-time contributions to Ember in particular.
+  Ember Learning team member [@jessica-jordan]() highlights in her answer which repositories are a great
+  starting point for a first contribution to the Ember ecosystem, how you can find something interesting to work on and where you can reach out to other community members to make your contribution a real success.</p>
+
+  <a class="ember-button ember-button--centered" href="#">Read more</a>
+
+</div>
 
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
-</div>
 
 ---
 
