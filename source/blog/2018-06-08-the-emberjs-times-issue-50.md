@@ -13,14 +13,15 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/08/the-embe
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
+## [RFC Deprecating Ember Utils](https://github.com/emberjs/rfcs/pull/334)
+A new RFC has been posted on deprecating `Ember.{isEmpty, isBlank, isNone, isPresent}`. The motivation of this is to clean up utils that do not provide much value over writing plain old Javascript. There's already a discussion going on whether this is a good decision or not. You can follow the discussion and read the RFC at the [RFC repository](https://github.com/emberjs/rfcs/pull/334).
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Global Resolver RFC in Final Process](https://github.com/emberjs/rfcs/pull/331)
+The RFC to deprecate global resolver is has now entered the final stage. The motivation of this RFC is the fact that we have transitioned to using Ember-CLI. The globals resolver is primarily used for Ember without Ember-CLI.
 
+Read all about the RFC and bring your thoughts for the final process in the [RFC repository](https://github.com/emberjs/rfcs/pull/331).
 
 
 ---
