@@ -16,7 +16,7 @@ last, but not least, a **brand-new Readers' Question** for you 📚:
 ---
 
 ## [Lets Send SendAction Away!](https://github.com/emberjs/rfcs/pull/335)
-The time has come. `component#sendAction` has served the Ember community well for years but in a new [RFC by @cibernox](https://github.com/emberjs/rfcs/pull/335) he proposes to deprecate this feature. In the old days, before v1.13, `component#sendAction` was the only way to bubble up actions from components. Since v1.13 we have _closure actions_ which are more intuitive and flexible and they are the current recommended Ember Way™ for doing actions in components.
+The time has come. `component#sendAction` has served the Ember community well for years but in a new [RFC by @cibernox](https://github.com/emberjs/rfcs/pull/335) he proposes to deprecate this feature. In the old days, before v1.13, `component#sendAction` was the only way to **bubble up actions** from components. Since v1.13 we have _closure actions_ which are more intuitive and flexible and they are the current recommended Ember Way™ for doing actions in components.
 
 _Closure actions_ have been the recommended way to do actions in components for almost 3 years. Also `component#sendAction` is not even mentioned in the guides anymore so there is really little reason to keep it around. So look out for a new deprecation near you, coming soon!
 
@@ -28,16 +28,15 @@ Read more about this proposal and join the RFC discussion:
 
 ---
 
-## [RFC Deprecating Ember Utils](https://github.com/emberjs/rfcs/pull/334)
-A new RFC has been posted on deprecating `Ember.{isEmpty, isBlank, isNone, isPresent}`. The motivation of this is to clean up utils that do not provide much value over writing plain old Javascript. There's already a discussion going on whether this is a good decision or not. You can follow the discussion and read the RFC at the [RFC repository](https://github.com/emberjs/rfcs/pull/334).
+## [RFC Deprecating Ember Utils 🛠](https://github.com/emberjs/rfcs/pull/334)
+A new RFC has been posted on deprecating `Ember.{isEmpty, isBlank, isNone, isPresent}`. The motivation of this is to **clean up** utils that do not provide much value over writing plain old Javascript. There's already a discussion going on whether this is a good decision or not. You can follow the discussion and read the RFC at the [RFC repository](https://github.com/emberjs/rfcs/pull/334).
 
 ---
 
-## [Global Resolver RFC in Final Process](https://github.com/emberjs/rfcs/pull/331)
-The RFC to deprecate global resolver is has now entered the final stage. The motivation of this RFC is the fact that we have transitioned to using Ember-CLI. The globals resolver is primarily used for Ember without Ember-CLI.
+## [Global Resolver RFC in Final Process 👨‍⚖️‍](https://github.com/emberjs/rfcs/pull/331)
+The RFC to **deprecate global resolver** is has now entered the final stage. The motivation of this RFC is the fact that we have transitioned to using Ember CLI. The globals resolver is primarily used for Ember without Ember CLI.
 
 Read all about the RFC and bring your thoughts for the final process in the [RFC repository](https://github.com/emberjs/rfcs/pull/331).
-
 
 ---
 
@@ -49,7 +48,6 @@ These weeks lots of new improvements and fixes landed ([1](https://github.com/em
 According to internal sources, there have already been **successful test runs** using the experimental version of this [Rollup](https://rollupjs.org/guide/en) powered packager 😲 for bundling and tree-shaking
 different open-source Ember 🐹 projects.
 We'll keep you posted with more news from the field soon!
-
 
 ---
 
@@ -66,8 +64,7 @@ We'll keep you posted with more news from the field soon!
 ---
 
 ## [Got Something to Share?](https://airtable.com/shrDbeo2Y80OPG0kC)
-We all love reading the Ember blog. It’s an awesome way to find out what’s happening in the community and to keep up to date on all things Ember. Sometimes though, you may think to yourself, “I’ve got something to say!”. Awesome! Whether your passion is authoring addons or tinkering with broccoli, contributing to the blog is an excellent opportunity to connect with the community. Well getting started could not be any easier! If you want to write a guest blog post for the website, make your way over to [Ember.js Guest Blog Post Invitation](https://airtable.com/shrDbeo2Y80OPG0kC), and fill out the form!
-
+We all love reading the Ember blog. It’s an awesome way to find out what’s happening in the community and to keep up to date on all things Ember. Sometimes though, you may think to yourself, “I’ve got something to say!”. Awesome! Whether your passion is authoring addons or tinkering with broccoli, **contributing to the blog** is an excellent opportunity to connect with the community. Well, getting started could not be any easier! If you want to write a guest blog post for the website, make your way over to [Ember.js Guest Blog Post Invitation](https://airtable.com/shrDbeo2Y80OPG0kC), and fill out the form!
 
 ---
 
