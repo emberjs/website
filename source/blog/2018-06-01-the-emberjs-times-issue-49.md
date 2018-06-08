@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 49
 author: Chris Manson, Sivakumar Kailasam, Amy Lam, Ryan Mark, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, 2018
+tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/01/the-emberjs-times-issue-49.html"
 responsive: true
 ---
