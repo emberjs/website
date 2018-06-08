@@ -310,6 +310,7 @@
 - url: http://www.thoughtbot.com
   image: thoughtbot.png
   alt: thoughtbot
+  use: "We use Ember to build products that our clients and their users will love"
 - url: http://www.elastic.io
   image: elasticio.png
   alt: Elastic
