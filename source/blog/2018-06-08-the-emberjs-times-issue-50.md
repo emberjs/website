@@ -78,7 +78,7 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 
 ---
 
-## [Readers' Questions: I'd like to contribute to Ember. How can I get started? 🤓](#)
+## [Readers' Questions: I'd like to contribute to Ember. How can I get started? 🤓](https://discuss.emberjs.com/t/readers-questions-id-like-to-contribute-to-ember-how-can-i-get-started/14915)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
@@ -88,7 +88,7 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 </div>
 
 <div class="blog-row">
-  <a class="ember-button" href="#">Read more</a>
+  <a class="ember-button" href="https://discuss.emberjs.com/t/readers-questions-id-like-to-contribute-to-ember-how-can-i-get-started/14915">Read more</a>
 </div>
 
 <div class="blog-row">
