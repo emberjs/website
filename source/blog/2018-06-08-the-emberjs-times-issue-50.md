@@ -51,10 +51,6 @@ We'll keep you posted with more news from the field soon!
 
 ---
 
-## [SECTION TITLE](#section-url)
-
----
-
 ## [Got Something to Share?](https://airtable.com/shrDbeo2Y80OPG0kC)
 We all love reading the Ember blog. It’s an awesome way to find out what’s happening in the community and to keep up to date on all things Ember. Sometimes though, you may think to yourself, “I’ve got something to say!”. Awesome! Whether your passion is authoring addons or tinkering with broccoli, **contributing to the blog** is an excellent opportunity to connect with the community. Well, getting started could not be any easier! If you want to write a guest blog post for the website, make your way over to [Ember.js Guest Blog Post Invitation](https://airtable.com/shrDbeo2Y80OPG0kC), and fill out the form!
 
@@ -83,8 +79,8 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>In **this week's Readers' Question** we're talking about **contribution** - and **first-time** contributions to Ember in particular.
-  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer which repositories are a great starting point for a first contribution to the Ember ecosystem, how you can find an interesting issue to work on and where you can reach out to other community members to make your contribution a **real success**. 💪</p>
+  <p>In <strong>this week's Readers' Question</strong> we're talking about contribution - and <strong>first-time contributions</strong> to Ember in particular.
+  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer which repositories are a great starting point for a first contribution to the Ember ecosystem, how you can find an interesting issue to work on and where you can reach out to other community members to make your contribution a <strong>real success</strong> 💪.</p>
 </div>
 
 <div class="blog-row">
@@ -92,7 +88,7 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 </div>
 
 <div class="blog-row">
-  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> at <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 </div>
 
 ---
