@@ -60,11 +60,13 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 
 ---
 
-<img class="float-left small transparent padded" alt="Shortest Ember Book" title="Shortest Ember Book" src="/images/about/shortest-ember-book.jpg" />
-
 ## [The Shortest Ember Book](https://github.com/ember-learn/the-shortest-ember-book)
 
-The Shortest Ember Book is [here](https://github.com/ember-learn/the-shortest-ember-book)! The goal is to quickly and concisely communicate what Ember is, how it works, and steps to get started. Anyone is welcome to print the book! Meetup organizers, speakers, and conference table hosts are especially encouraged to print and distribute copies. Shoutout to [Braden Lawrence](http://www.bradenlawrence.com/portfolio) for the designs and [Jen Weber](https://github.com/jenweber) for leading the project.
+<div class="blog-row">
+  <img class="float-left small transparent padded" alt="Shortest Ember Book" title="Shortest Ember Book" src="/images/about/shortest-ember-book.jpg" />
+
+  <p>The Shortest Ember Book is [here](https://github.com/ember-learn/the-shortest-ember-book)! The goal is to quickly and concisely communicate what Ember is, how it works, and steps to get started. Anyone is welcome to print the book! Meetup organizers, speakers, and conference table hosts are especially encouraged to print and distribute copies. Shoutout to [Braden Lawrence](http://www.bradenlawrence.com/portfolio) for the designs and [Jen Weber](https://github.com/jenweber) for leading the project.</p>
+</div>
 
 ---
 
