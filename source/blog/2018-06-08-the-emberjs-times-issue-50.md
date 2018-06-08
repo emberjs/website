@@ -60,12 +60,12 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 
 ---
 
-## [The Shortest Ember Book](https://github.com/ember-learn/the-shortest-ember-book)
+## [The Shortest Ember Book 📖🐹](https://github.com/ember-learn/the-shortest-ember-book)
 
 <div class="blog-row">
-  <img class="float-left small transparent padded" alt="Shortest Ember Book" title="Shortest Ember Book" src="/images/about/shortest-ember-book.jpg" />
+  <img class="float-left medium transparent padded pad-l0" alt="Shortest Ember Book" title="Shortest Ember Book" src="/images/about/shortest-ember-book.jpg" />
 
-  <p>The Shortest Ember Book is [here](https://github.com/ember-learn/the-shortest-ember-book)! The goal is to quickly and concisely communicate what Ember is, how it works, and steps to get started. Anyone is welcome to print the book! Meetup organizers, speakers, and conference table hosts are especially encouraged to print and distribute copies. Shoutout to [Braden Lawrence](http://www.bradenlawrence.com/portfolio) for the designs and [Jen Weber](https://github.com/jenweber) for leading the project.</p>
+  <p><strong>The Shortest Ember Book</strong> is <a href="https://github.com/ember-learn/the-shortest-ember-book" target="emberbook">here</a>! The goal is to quickly and concisely communicate <strong>what Ember is</strong>, how it works, and steps to get started. Anyone is welcome to print the book! Meetup organizers, speakers, and conference table hosts are especially encouraged to print and distribute copies. Shoutout to <a href="http://www.bradenlawrence.com/portfolio" target="braden">Braden Lawrence</a> for the designs and <a href="https://github.com/jenweber" target="jen">Jen Weber</a> for leading the project.</p>
 </div>
 
 ---
@@ -78,13 +78,13 @@ We all love reading the Ember blog. It’s an awesome way to find out what’s h
 
 ---
 
-## [Readers' Questions: I'd like to contribute to Ember. How can I get started? 🤓](https://discuss.emberjs.com/t/readers-questions-id-like-to-contribute-to-ember-how-can-i-get-started/14915)
+## [Readers' Questions: "I'd like to contribute to Ember. How can I get started?" 🤓](https://discuss.emberjs.com/t/readers-questions-id-like-to-contribute-to-ember-how-can-i-get-started/14915)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>In this week's Readers' Question we're talking about contribution - and first-time contributions to Ember in particular.
-  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer which repositories are a great starting point for a first contribution to the Ember ecosystem, how you can find an interesting issue to work on and where you can reach out to other community members to make your contribution a real success.</p>
+  <p>In **this week's Readers' Question** we're talking about **contribution** - and **first-time** contributions to Ember in particular.
+  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer which repositories are a great starting point for a first contribution to the Ember ecosystem, how you can find an interesting issue to work on and where you can reach out to other community members to make your contribution a **real success**. 💪</p>
 </div>
 
 <div class="blog-row">

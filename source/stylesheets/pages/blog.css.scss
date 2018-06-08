@@ -14,7 +14,7 @@
       width: 100%;
       background-color: $white;
       padding: 10px;
-      border: 1px solid $gray-lightest; 
+      border: 1px solid $gray-lightest;
     }
 
     blockquote {
@@ -52,12 +52,21 @@
       height: auto;
     }
 
+    img.medium {
+      width: 50%;
+      height: auto;
+    }
+
     img.transparent {
       background-color: transparent;
     }
 
     img.padded {
       margin: .5em 1em;
+    }
+
+    img.pad-l0 {
+      margin-left: 0;
     }
 
     ul {
@@ -107,5 +116,5 @@
 
 .api-info-box {
   background-color: #eeeeee;
-  padding: 30px 50px; 
+  padding: 30px 50px;
 }
