@@ -35,7 +35,7 @@
       "url": "/statusboard"
     },
     "/guides(.*)": {
-      "url": "https://guides.emberjs.com$1",
+      "url": "https://guides.emberjs.com/release$1",
       "regex": true
     }
   }
