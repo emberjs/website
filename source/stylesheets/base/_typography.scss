@@ -65,6 +65,10 @@ h3 {
   line-height: 1;
   margin-bottom: 0.5em;
   margin-top: 1.25em;
+	@media screen and (min-width: 0) and (max-width: $screen-sm-max) {
+		margin-left: .5rem;
+		margin-right: .5rem;
+	}
   + p {
     margin-top: 0 !important;
     padding-top: 0 !important;
