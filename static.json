@@ -34,11 +34,9 @@
     "/dashboard": {
       "url": "/statusboard"
     },
-    "/guides": {
-      "url": "https://guides.emberjs.com/"
-    },
-    "/guides/": {
-      "url": "https://guides.emberjs.com/"
+    "/guides(.*)": {
+      "url": "https://guides.emberjs.com$1",
+      "regex": true
     }
   }
 }
