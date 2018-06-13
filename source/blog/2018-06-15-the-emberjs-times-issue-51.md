@@ -13,9 +13,13 @@ We have a couple of **fresh 🥒 Ember RFCs** (Request for Comments) in for you
 ...
 ---
 
-## [SECTION TITLE](#section-url)
+## [New release of Ember Twiddle](https://ember-twiddle.com)
 
----
+Ember Twiddle v0.14.0 was released on Monday June 4. It includes support for Ember 2.18, Babel 6, and new module imports.
+The entire [changelog](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.14.0) shows all the work that has gone into this. 
+The next version is also being worked on, supporting Ember 3.0 - Ember 3.2.
+You can test that out now at [canary.ember-twiddle.com](https://canary.ember-twiddle.com).
+Ember Twiddle is a playground website for developing small Ember applications backed by Github gists.
 
 ## [SECTION TITLE](#section-url)
 
