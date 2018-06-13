@@ -21,7 +21,14 @@ The next version is also being worked on, supporting Ember 3.0 - Ember 3.2.
 You can test that out now at [canary.ember-twiddle.com](https://canary.ember-twiddle.com).
 Ember Twiddle is a playground website for developing small Ember applications backed by Github gists.
 
-## [SECTION TITLE](#section-url)
+## [It's visibly time to deprecate isVisible 👀](https://github.com/emberjs/rfcs/pull/324)
+A new RFC has been posted on deprecating `Component#isVisible`. The motivation is related to the confusion associated to setting the isVisible property on a component. Also, modern Ember applications are already avoiding using isVisible in favor of simpler conditionals in the template. Given that `Component#isVisible` is a public API, deprecating now would schedule for removal in the next major version release (4.0). 
+
+No sweat, other options are still available to hide elements, such as:
+
+- `<div hidden={{boolean}}></div>`
+- Wrapping the component in a template conditional `{{#if}}` statement. 
+- Using the Components `classNames` and `classNameBindings`
 
 ---
 
