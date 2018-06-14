@@ -49,7 +49,26 @@ Named arguments already landed in [Ember 3.1](https://www.emberjs.com/blog/2018/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [The Future of Ember is now](https://blog.usejournal.com/emberjs2018-my-safari-into-the-future-e4f31a4902ea)
+
+Quite recently **a plethora of RFCs (Request for Comments)** proposed ground-breaking, **new
+features** for Ember. These included the proposals for [ES5 Getters](https://github.com/emberjs/rfcs/blob/master/text/0281-es5-getters.md) and [named arguments for Components](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md) which already found their way into the **previous 3.1 release** in a [stable fashion](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_changes-in-ember-js-3-1).
+But what about all the other cool things that we mentioned in previous editions of the Ember Times?
+When are all of these proposal finally gonna land?
+
+Features which haven't found their way into a stable release and have not been recommended by the [official Guides](https://github.com/ember-learn/guides-app) yet,
+might in fact have landed already. Like a hidden gem they just sit there for a while, only noticed by a few,
+but still ready to be tested and improved until they make it into a stable release.
+And so it seems some of the most exciting API changes in Ember this year have still **gone unnoticed**:
+But [AngleBracketComponents](#toc_a-href-https-github-com-rwjblue-ember-angle-bracket-invocation-polyfill-is-your-components-not-pointy-enough-a),
+ES6 Classes, the new folder structure à la Module Unification and even Glimmer Components can be used in Ember apps today -
+with a little help from feature flags, canary releases and the Ember addon ecosystem.
+
+But **how** do you make the future of Ember happen in your apps today? If you're wondering about that, check out [this excellent How-To](https://blog.usejournal.com/emberjs2018-my-safari-into-the-future-e4f31a4902ea) by [@chrism](https://github.com/chrism/),
+a **step-by-step guide** for those who want to **try out the future of Ember** in their applications.
+Because you don't have to wait for the future of Ember until another day; the future of Ember is **now**.
+
+<a class="ember-button ember-button--centered" href="https://blog.usejournal.com/emberjs2018-my-safari-into-the-future-e4f31a4902ea" target="futureofember">Try out the Future of Ember</a>
 
 ---
 
