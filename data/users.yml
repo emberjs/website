@@ -1090,6 +1090,10 @@
   image: a2system-logo.png
   alt: A2System
   use: "We use Ember to build amazing web applications"
+- url: https://www.redshelf.com
+  image: redshelf.png
+  alt: RedShelf
+  use: "Redshelf uses Ember to build our web apps, textbook readers, and tools."
 
 
 # ---- PLEASE READ ----
