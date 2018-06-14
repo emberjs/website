@@ -28,7 +28,9 @@ No sweat, other options are still available to hide elements, such as:
 
 - `<div hidden={{boolean}}></div>`
 - Wrapping the component in a template conditional `{{#if}}` statement. 
-- Using the Components `classNames` and `classNameBindings`
+- Using the Component's `classNames` and `classNameBindings`
+
+A heads-up that this RFC has entered the FCP (Final Comment Period), so this week might be your last chance to comment on it!
 
 ---
 
