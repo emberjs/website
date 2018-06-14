@@ -22,7 +22,7 @@ You can test that out now at [canary.ember-twiddle.com](https://canary.ember-twi
 Ember Twiddle is a playground website for developing small Ember applications backed by Github gists.
 
 ## [Is Your Components Not Pointy Enough?](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
-[ember-angle-bracket-invocation-polyfill](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill) provides a polyfill for angle bracket invocation syntax as described in [RFC 311](https://github.com/emberjs/rfcs/pull/311).  It includes features such as invoking components via angle brackets using TitleCase, self-closing syntax, paths much more.
+[ember-angle-bracket-invocation-polyfill](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill) provides a polyfill for angle bracket invocation syntax as described in [RFC 311](https://github.com/emberjs/rfcs/pull/311).  It includes features such as invoking components via angle brackets using TitleCase, self-closing syntax, paths and much more.
 
 If you’re interested in using this the best documentation is in the RFC itself.
 ---
@@ -32,6 +32,8 @@ Another polyfill that is now available is [ember-named-arguments-polyfill](https
 
 This is helpful for add-on authors who want to leverage the named arguments feature for a cleaner template. So, components receiving an argument named `foo` can now do:
 `{{@foo}}`. This allows you to easily distinguish arguments from local variables, computed properties and such.
+
+Named arguments already landed in [Ember 3.1](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_named-arguments-1-of-4) so this polyfill is for everyone who didn't upgrade but still want the feature.
 
 ---
 
