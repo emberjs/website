@@ -25,6 +25,18 @@ Ember Twiddle is a playground website for developing small Ember applications ba
 [ember-angle-bracket-invocation-polyfill](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill) provides a polyfill for angle bracket invocation syntax as described in [RFC 311](https://github.com/emberjs/rfcs/pull/311).  It includes features such as invoking components via angle brackets using TitleCase, self-closing syntax, paths and much more.
 
 If you’re interested in using this the best documentation is in the RFC itself.
+
+## [It's visibly time to deprecate isVisible 👀](https://github.com/emberjs/rfcs/pull/324)
+A new RFC has been posted on deprecating `Component#isVisible`. The motivation is related to the confusion associated to setting the isVisible property on a component. Also, modern Ember applications are already avoiding using isVisible in favor of simpler conditionals in the template. Given that `Component#isVisible` is a public API, deprecating now would schedule for removal in the next major version release (4.0). 
+
+No sweat, other options are still available to hide elements, such as:
+
+- `<div hidden={{boolean}}></div>`
+- Wrapping the component in a template conditional `{{#if}}` statement. 
+- Using the Component's `classNames` and `classNameBindings`
+
+A heads-up that this RFC has entered the FCP (Final Comment Period), so this week might be your last chance to comment on it!
+
 ---
 
 ## [Back To the Future](https://github.com/rwjblue/ember-named-arguments-polyfill)
