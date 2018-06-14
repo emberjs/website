@@ -16,10 +16,15 @@ We have a couple of **fresh 🥒 Ember RFCs** (Request for Comments) in for you
 ## [New release of Ember Twiddle](https://ember-twiddle.com)
 
 Ember Twiddle v0.14.0 was released on Monday June 4. It includes support for Ember 2.18, Babel 6, and new module imports.
-The entire [changelog](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.14.0) shows all the work that has gone into this. 
+The entire [changelog](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.14.0) shows all the work that has gone into this.
 The next version is also being worked on, supporting Ember 3.0 - Ember 3.2.
 You can test that out now at [canary.ember-twiddle.com](https://canary.ember-twiddle.com).
 Ember Twiddle is a playground website for developing small Ember applications backed by Github gists.
+
+## [Is Your Components Not Pointy Enough?](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
+[ember-angle-bracket-invocation-polyfill](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill) provides a polyfill for angle bracket invocation syntax as described in [RFC 311](https://github.com/emberjs/rfcs/pull/311).  It includes features such as invoking components via angle brackets using TitleCase, self-closing syntax, paths and much more.
+
+If you’re interested in using this the best documentation is in the RFC itself.
 
 ## [It's visibly time to deprecate isVisible 👀](https://github.com/emberjs/rfcs/pull/324)
 A new RFC has been posted on deprecating `Component#isVisible`. The motivation is related to the confusion associated to setting the isVisible property on a component. Also, modern Ember applications are already avoiding using isVisible in favor of simpler conditionals in the template. Given that `Component#isVisible` is a public API, deprecating now would schedule for removal in the next major version release (4.0). 
@@ -34,7 +39,13 @@ A heads-up that this RFC has entered the FCP (Final Comment Period), so this wee
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Back To the Future](https://github.com/rwjblue/ember-named-arguments-polyfill)
+Another polyfill that is now available is [ember-named-arguments-polyfill](https://github.com/rwjblue/ember-named-arguments-polyfill) which polyfills the named arguments feature to work for Ember 2.10+.
+
+This is helpful for add-on authors who want to leverage the named arguments feature for a cleaner template. So, components receiving an argument named `foo` can now do:
+`{{@foo}}`. This allows you to easily distinguish arguments from local variables, computed properties and such.
+
+Named arguments already landed in [Ember 3.1](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_named-arguments-1-of-4) so this polyfill is for everyone who didn't upgrade but still want the feature.
 
 ---
 
