@@ -9,8 +9,9 @@ responsive: true
 ... Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/15/the-emberjs-times-issue-51.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/06/15/issue-51) what has been going on in Emberland this week.
-We have a couple of **fresh 🥒 Ember RFCs** (Request for Comments) in for you
-...
+We have a reminder for a couple of RFC (Request for Comments) which have entered their **Final Comment Period (FCP)** for you,
+as well as a look into the **Future of Ember** and an **engine**-powered **Roadmap** highlight for you.
+This is what's happened in Emberland this week 🐹:
 ---
 
 ## [New release of Ember Twiddle](https://ember-twiddle.com)
@@ -79,36 +80,40 @@ Because you don't have to wait for the future of Ember until another day; the fu
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Start the Engine and Go For 1.0 🏍](https://discuss.emberjs.com/t/engines-1-0-roadmap/14914)
+
+This week [the long-awaited Roadmap](https://discuss.emberjs.com/t/engines-1-0-roadmap/14914) leading to the **first major release of Ember Engines** has been published. It includes **a to-do list** of features and improvements that are required to land before a _v1.0_ becomes reality,
+including support for loading route-less engines lazily and a refactor of the build pipeline to be powered by the [upcoming Packager feature in Ember CLI](https://github.com/ember-cli/rfcs/blob/master/active/0051-packaging.md).
+
+If you're a user of Ember Engines yourself, be sure to not only join the [discussion on the Ember Forum](https://discuss.emberjs.com/t/engines-1-0-roadmap/14914),
+but also **provide** the necessary **feedback** on [how you are using Ember Engines](https://airtable.com/shrZ4fnIa6ayNinHH)
+to make the 1.0 Roadmap a real success. ✨
 
 ---
 
-## [SECTION TITLE](#section-url)
-
----
-
-## [SECTION TITLE](#section-url)
-
----
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.1.0/contributing/repositories/)
 
-<p>This week we'd like to thank ...
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/xg-wang" target="gh-user">@xg-wang</a>, <a href="https://github.com/alexmasita" target="gh-user">@alexmasita</a>, <a href="https://github.com/Serabe" target="gh-user">@Serabe</a>, <a href="https://github.com/sandydoo" target="gh-user">@sandydoo</a>, <a href="https://github.com/mdbiscan" target="gh-user">@mdbiscan</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/andreavaghi" target="gh-user">@andreavaghi</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/nataliemok" target="gh-user">@nataliemok</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pablobm" target="gh-user">@pablobm</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/kevinansfield" target="gh-user">@kevinansfield</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/mmun" target="gh-user">@mmun</a>, <a href="https://github.com/lbdm44" target="gh-user">@lbdm44</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/chrism" target="gh-user">@chrism</a>, <a href="https://github.com/givanse" target="gh-user">@givanse</a>, <a href="https://github.com/thoov" target="gh-user">@thoov</a>, <a href="https://github.com/cyk" target="gh-user">@cyk</a>, <a href="https://github.com/NullVoxPopuli" target="gh-user">@NullVoxPopuli</a>, <a href="https://github.com/dnachev" target="gh-user">@dnachev</a>, <a href="https://github.com/gokatz" target="gh-user">@gokatz</a>, <a href="https://github.com/knownasilya" target="gh-user">@knownasilya</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/antidis" target="gh-user">@antidis</a>, <a href="https://github.com/dctalbot" target="gh-user">@dctalbot</a>, <a href="https://github.com/joehany" target="gh-user">@joehany</a>, <a href="https://github.com/rodrigoyoshida" target="gh-user">@rodrigoyoshida</a>, <a href="https://github.com/MattSwanson" target="gh-user">@MattSwanson</a> and <a href="https://github.com/progand" target="gh-user">@progand</a> for their contributions to Ember and related repositories! 💕
 </p>
 
 ---
 
-## [Readers' Questions: ??? 🤓](question-url)
+## [More Questions & more Answers for Readers' Questions 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>...</p>
+  <p>With core team efforts focusing in on important bug fixes for Ember itself, we want to take the chance to recap some of the **previous, great answers** to previous, **great questions** by Ember.js Times readers:</p>
+
+  <ul>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-is-it-bad-to-load-data-in-components/14521" target="rquestion">Readers’ Questions #6: “Is it bad to load data in components?”</a></li>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-when-will-we-be-able-to-use-decorators-in-ember-apps/14583" target="rquestion">Readers’ Questions #7: “When will we be able to use decorators in Ember apps?”</a></li>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-still-use-rsvp/14736" target="rquestion">Readers’ Questions #8: “Why does Ember still use RSVP?”</a></li>
+    <li><a href="https://discuss.emberjs.com/t/readers-questions-id-like-to-contribute-to-ember-how-can-i-get-started/14915" target="rquestion">Readers’ Questions #9: “I’d like to contribute to Ember. How can I get started?”</a></li>
+  </ul>
 </div>
 
-<div class="blog-row">
-  <a class="ember-button" href="#">Read more</a>
-</div>
 
 <div class="blog-row">
   <p><strong>Submit your own</strong> short and sweet <strong>question</strong> at <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
