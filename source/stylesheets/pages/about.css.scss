@@ -27,6 +27,7 @@
   .feature {
     @include width-for-columns(4);
     margin: 0 $col-spacing;
+    width: 29%;
     @media screen and (max-width:$small-max-width) {
       display: block;
       clear: both;
