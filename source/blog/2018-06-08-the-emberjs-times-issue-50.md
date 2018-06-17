@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 50
 author: Kenneth Larsen, Sivakumar Kailasam, Alon Bukai, Ryan Mark, Amy Lam, Jen Weber, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, 2018
+tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/08/the-emberjs-times-issue-50.html"
 responsive: true
 ---
