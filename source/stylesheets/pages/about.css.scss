@@ -296,6 +296,16 @@ a.toc-anchor {
   margin-top: -5px;
 }
 
-.about__listing-button {
-  margin-top: 10px;
+.about__listing-button-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
+.about__listing-button {
+  margin: 10px 10px 0 10px;
+  @media screen and (min-width:0) and (max-width: 991px) {
+    min-width: 100%;
+  }
+}
+
