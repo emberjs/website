@@ -1,12 +1,12 @@
 ---
-title: "Ember.js accessibility and a11y tools"
+title: "Ember accessibility and a11y tools"
 author: Jen Weber
 tags: Recent Posts, a11y, accessibility, testing, addons
 alias : "blog/2018/06/17/ember-accessibility-and-a11y-tools.html"
 responsive: true
 ---
 
-What is it like to build an accessible Ember app? With just a few lines of code, you can audit your app for accessibility, get customized advice on how fix problems, and see visual indications of which things on a page need work. We'll walk through an example using the [Super Rentals](https://github.com/ember-learn/super-rentals) app from Ember's [official tutorials](https://guides.emberjs.com/current/tutorial/ember-cli/). We'll also cover some improvements being made in Ember.js itself.
+What is it like to build an accessible Ember app? With just a few lines of code, you can audit your app for problems, get customized advice on how to fix them, and see visual indications of which things on a page need work. We'll walk through an example using the [Super Rentals](https://github.com/ember-learn/super-rentals) app from Ember's [official tutorials](https://guides.emberjs.com/current/tutorial/ember-cli/). We'll also cover some improvements being made to Ember itself for a better experience out of the box.
 
 An [accessible app](https://en.wikipedia.org/wiki/Web_accessibility) is one that gives all users equal access to information and functionality, including those who use Assistive Technology like screen readers. This kind of work is sometimes abbreviated as `a11y`. There are set standards called the [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), and in many cases, [it's the law](https://www.w3.org/WAI/Policy/).
 
@@ -35,11 +35,11 @@ ember server
 
 After installing ember-a11y-testing, it gets to work right away! Navigate to [http://localhost:4200](http://localhost:4200) and take a look.
 
-![Striped elements showing contrast problems](/images/blog/2018-06-17-emberjs-accessibility-and-a11y-tools/a11y-testing-stripes.png)
+![Striped elements showing contrast problems](/images/blog/2018-06-17-ember-accessibility-and-a11y-tools/a11y-testing-stripes.png)
 
 See these weird stripes? Those are an indication that we have some problems with the elements. Due to color choices and text size, the content might be hard for some people to read. The list of issues show up as a console error in this view too. But how do we fix them?
 
-![Instructions for resolving the error](/images/blog/2018-06-17-emberjs-accessibility-and-a11y-tools/console-errors.png)
+![Instructions for resolving the error](/images/blog/2018-06-17-ember-accessibility-and-a11y-tools/console-errors.png)
 
 The link in the console error message brings us to this [color contrast checker](https://medium.com/r/?url=https%3A%2F%2Fdequeuniversity.com%2Frules%2Faxe%2F2.5%2Fcolor-contrast%3Fapplication%3DaxeAPI), where we can play around with font sizes, font colors, and backgrounds until the view meets the standards.
 
@@ -63,9 +63,9 @@ It's important to incorporate the check into the test suite, because in larger a
 
 ### Run the test suite
 
-Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests](http://localhost:4200/tests) to see the browser-based test runner. Sure enough, we see some problems! The error message says to check the developer console. In the console are the specific things that need to change in the markup, how important they are, as well as the links to the learning resources like we saw when looking at the console for the app itself. 
+Start up your app with `ember serve` and then navigate to [http://localhost:4200/tests](http://localhost:4200/tests) to see the browser-based test runner. Sure enough, we see some problems! Just like we saw in the console earlier, there are specific error messages and links to resources that help us to fix the problems.
 
-![Errors in the tests route](/images/blog/2018-06-17-emberjs-accessibility-and-a11y-tools/route-tests-errors.png)
+![Errors in the tests route](/images/blog/2018-06-17-ember-accessibility-and-a11y-tools/route-test-errors.png)
 
 This is awesome because we don't need to become an expert on form accessibility to get started down the right track.
 
@@ -79,7 +79,7 @@ Here's what the form looks like before changes:
 {{input id="filterByCity" value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter By City"}}
 ```
 
-![A form without labels](/images/blog/2018-06-17-emberjs-accessibility-and-a11y-tools/form-without-labels.png)
+![A form without labels](/images/blog/2018-06-17-ember-accessibility-and-a11y-tools/form-without-labels.png)
 
 Let's add the label. The `for` attribute should match the input id.
 
@@ -91,7 +91,7 @@ Let's add the label. The `for` attribute should match the input id.
 {{input id="filterByCity" value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter By City"}}
 ```
 
-![A form with labels](/images/blog/2018-06-17-emberjs-accessibility-and-a11y-tools/form-with-labels.png)
+![A form with labels](/images/blog/2018-06-17-ember-accessibility-and-a11y-tools/form-with-labels.png)
 
 Now the filter has a label, and the tests pass! 
 
@@ -176,4 +176,4 @@ Accessible apps are better for everyone.
 
 Our community's improvements are the result of the hard work of many people! Shared solutions take more time to develop, but we can all move forward together.
 
-Many thanks to everyone who raises the profile of accessibility in Ember, the team behind a11y addons, contributors involved in getting some features into Ember itself, and those who encourage others to adopt accessible practices. Extra thanks to [Sean Massa](https://github.com/EndangeredMassa) and [Melanie Sumner](https://github.com/MelSumner) for reviewing this post.
+Many thanks to everyone who raises the profile of accessibility in Ember, the team behind a11y addons, contributors involved in getting some features into Ember itself, and those who encourage others to adopt accessible practices. Extra thanks to [Sean Massa](https://github.com/EndangeredMassa), [Melanie Sumner](https://github.com/MelSumner), [Jamie White](https://github.com/jgwhite), and [Robert DeLuca](https://github.com/Robdel12) for reviewing this post.
