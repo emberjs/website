@@ -1090,6 +1090,14 @@
   image: a2system-logo.png
   alt: A2System
   use: "We use Ember to build amazing web applications"
+- url: https://www.redshelf.com
+  image: redshelf.png
+  alt: RedShelf
+  use: "Redshelf uses Ember to build our web apps, textbook readers, and tools."
+- url: https://appknox.com/
+  image: appknox-logo.png
+  alt: Appknox - Mobile App Security Testing
+  use: "We use EmberJS for our security dashboard(https://secure.appknox.com/) and also for our internal sales & security dashboard"  
 - url: "https://mobilunity.com/"
   image: mobilunity.png
   alt: Mobilunity
