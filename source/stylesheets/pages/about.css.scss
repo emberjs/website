@@ -116,7 +116,8 @@
         border-bottom: 1px solid #d1d1d1;
         height: 124px;
         .user.pager {
-          margin: 11px 0 !important;
+          margin: 11px !important;
+          min-width: 177px;
         }
       }
 
@@ -163,7 +164,7 @@
     position: relative;
     float: left;
     @media screen and (min-width: 0px) and (max-width:767px) {
-      width: 50%;
+      width: 175px;
     }
     @media screen and (min-width:768px) {
       width: 230px;
@@ -296,6 +297,20 @@ a.toc-anchor {
   margin-top: -5px;
 }
 
-.about__listing-button {
-  margin-top: 10px;
+.about__listing-button-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  @media screen and (min-width:0) and (max-width: 991px) {
+    flex-flow: row wrap;
+  }
 }
+.about__listing-button {
+  margin: 10px 10px 0 10px;
+  @media screen and (min-width:0) and (max-width: 991px) {
+    min-width: 100%;
+    margin: 10px auto;
+  }
+}
+
