@@ -13,7 +13,36 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/22/the-embe
 
 ---
 
-## [SECTION TITLE](section url)
+## [Native Class Constructor Update 🛠](https://github.com/emberjs/rfcs/pull/337)
+
+There is currently an open RFC proposing to change the behavior of EmberObject's constructor.
+
+Native class syntax with EmberObject has almost reached full feature parity, meaning soon Ember will be able to ship native classes.
+However, early adopters of native classes have experienced some serious issues due to the current behaviour of the class constructor. The issue is caused by the fact that properties passed to `EmberObject.create` are assigned to the instance in the root class `constructor`. Due to the way that native class fields work, this means that they are assigned _before_ any subclasses' fields are assigned, causing subclass fields to overwrite any value passed to `create`.
+
+The new implementation of the Ember Object would look like the following:
+
+```js
+class EmberObject {
+  constructor(props) {
+    // ..class setup things
+  }
+
+  static create(props) {
+    let instance = new this(props);
+
+    Object.assign(instance, props);
+    instance.init();
+
+    return instance;
+  }
+}
+```
+
+This would assign the properties _after_ all of the class fields for any subclasses have been assigned.
+
+One thing worth mentioning is that EmberObject will likely be deprecated in the near future and that ideally for non-Ember classes (things that aren't Components, Services, etc.) users should drop EmberObject altogether and use native classes only.
+
 
 
 ---
