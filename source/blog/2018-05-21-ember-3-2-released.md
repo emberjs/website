@@ -171,13 +171,18 @@ There are (#) new features and (#) deprecations in the Ember.js 3.3 beta release
 
 #### New Features (#)
 
-- TODO
-- TODO
+The ability to opt-out of jQuery integration with `@ember/optional-features`'s `ember feature:disable jquery-integration`. This was done as part of [emberjs/rfcs#294](https://github.com/emberjs/rfcs/pull/294).
 
 #### Deprecations (#)
 
-- TODO
-- TODO
+Added deprecations for:
+
+- Ember.copy - [emberjs/rfcs#322](https://github.com/emberjs/rfcs/pull/322)
+- Ember.Copyable - [emberjs/rfcs#322](https://github.com/emberjs/rfcs/pull/322)
+- Ember.Map - [emberjs/rfcs#237](https://github.com/emberjs/rfcs/pull/237)
+- Ember.OrderedSet - [emberjs/rfcs#237](https://github.com/emberjs/rfcs/pull/237)
+- Ember.MapWithDefault - [emberjs/rfcs#237](https://github.com/emberjs/rfcs/pull/237)
+- Deprecate accessing jQuery.Event#originalEvent - [emberjs/rfcs#294](https://github.com/emberjs/rfcs/pull/294)
 
 For more details on the upcoming changes in Ember.js 3.3, please review the [Ember.js 3.3.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.3.0-beta.1).
 
