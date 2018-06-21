@@ -23,8 +23,10 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/22/the-embe
 
 ---
 
-## [SECTION TITLE](section url)
+## [New Tutorial on Accessibility](https://emberjs.com/blog/2018/06/17/ember-accessibility-and-a11y-tools.html)
+Ever wondered how to write accessible Ember apps? Jen Weber wrote a [great tutorial](https://emberjs.com/blog/2018/06/17/ember-accessibility-and-a11y-tools.html) explaining all you need to get started. She takes you through setting up `ember-a11y-testing`, a tool made to do automated accessibility testing, adding accessibility checks to rendering tests and how to fix the issues found.
 
+The tutorial ends with a nice section on what to do next. One thing is automated testing but as developers our responsibility is much bigger than that.
 
 ---
 
