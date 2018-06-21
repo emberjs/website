@@ -167,7 +167,7 @@ For more details on changes in Ember.js 3.2, please review the [Ember.js 3.2.0 r
 
 ### Upcoming Changes in Ember.js 3.3 (Beta)
 
-There are (#) new features and (#) deprecations in the Ember.js 3.3 beta release.
+There is 1 new feature and 6 deprecations in the Ember.js 3.3 beta release.
 
 #### New Features (#)
 
