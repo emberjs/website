@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 52
-author: the crowd
+author: Miguel Braga Gomes, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/06/22/the-ember-times-issue-52.html"
 responsive: true
@@ -149,4 +149,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Miguel Braga Gomes, Kenneth Larsen, Jessica Jordan and the Learning Team
