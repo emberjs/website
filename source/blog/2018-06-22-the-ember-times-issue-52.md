@@ -10,7 +10,7 @@ Emberistas שלום! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/22/the-ember-times-issue-52.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/06/22/the-ember-times-issue-52) what has been going on in Emberland this week.
 
-Those **Request for Comments (RFCs)** just keep on coming and this is why we present **4 entirely new** proposals
+Those **Request for Comments (RFCs)** just keep coming and this is why we present **4 entirely new** proposals
 that you shouldn't miss this week.
 We also have an amazing **tutorial** for creating **accessible web applications** for you, to give you a head start in developing, shipping and testing your apps for **a11y** 👭
 
@@ -21,7 +21,7 @@ Check out what's been going in Emberland 🐹 these days:
 ## [An Object Upgrade with Class 🌟](https://github.com/emberjs/rfcs/pull/338)
 
 <div class="blog-row">
-  <img class="transparent padded pad-l0" alt="New Class Syntax in Ember" title="Example Class Syntax in Ember" src="/images/blog/emberjstimes/esclassexample.png" />
+  <img class="transparent padded pad-l0" alt="ES Class Syntax in Ember Code Example" title="Example Class Syntax in Ember" src="/images/blog/emberjstimes/esclassexample.png" />
 </div>
 
 For Ember the road ahead is beset with **native ES classes**.
@@ -40,10 +40,11 @@ and how `EmberObject` can be safely deprecated in the further future.
 It highlights that this will reinvent Ember's **learning story** and
 therefore it'll facilitate the **adoption** of the framework **in the wider JavaScript community**.
 
-Still, not sure what all the fuzz is about? 🤔 Be sure to check out [this great introduction into ES Classes in Ember](https://medium.com/build-addepar/es-classes-in-ember-js-63e948e9d78e) and the original [RFC proposal](https://github.com/emberjs/rfcs/pull/338)
-- we'd like to hear your thoughts! 💬
+Still, not sure what all the fuzz is about? 🤔
+Be sure to check out [this great introduction into ES Classes in Ember](https://medium.com/build-addepar/es-classes-in-ember-js-63e948e9d78e)
+and the original [RFC proposal](https://github.com/emberjs/rfcs/pull/338) - we'd like to hear your thoughts! 💬
 
-
+---
 
 ## [Native Class Constructor Update 🛠](https://github.com/emberjs/rfcs/pull/337)
 
@@ -88,10 +89,10 @@ The tutorial ends with a nice section on what to do next. One thing is automated
 
 ## [Hello, Link. Wake up. The Great Router wants to talk to you! 🎆](https://github.com/emberjs/rfcs/pull/339)
 
-Ever wondered what and in which order you have to pass in parameters to the popular `link-to` helper
+Ever wondered how many and in which order you have to pass in parameters to the popular `link-to` helper
 to make your transition work?
 
-With lots of inspiration 💭 from the folks of Reactland ⚛️ another new RFC made it in this week
+With lots of inspiration 💭 from routing solutions in Reactland ⚛️ another new RFC made it in this week
 to help you in this exact situation: It proposes the introduction of a `Link` component to Ember's public API.
 With dedicated **named arguments** it should be clearer what your links have to do to make that **route transition** a success.
 
@@ -109,7 +110,6 @@ and also less confusion on what either method does for any Ember users which is 
 
 Read the [full proposal](https://github.com/emberjs/rfcs/pull/340) to learn more about
 the deprecation story and comment on the pull request what you think about it. 📣
-
 
 ---
 
@@ -131,6 +131,8 @@ the deprecation story and comment on the pull request what you think about it. �
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
 </div>
+
+---
 
 ## [The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 
