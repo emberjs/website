@@ -29,7 +29,7 @@ Last summer the first [Request for Comments (RFC) for making ES classes](https:/
 a real thing in Ember had been merged and changed the future outlook for Ember's public API drastically.
 The proposal crafted the idea of making the well-aged `EmberObject` model cross-compatible with the more modern ES Class syntax.
 This paved the way for Ember to evolve with the latest state of the JavaScript ecosystem in mind.
-Since then, early adopters in the community have been able to [experiment with ES Class syntax](http://ember-decorators.github.io/ember-decorators/latest/)in their apps
+Since then, early adopters in the community have been able to [experiment with ES Class syntax](http://ember-decorators.github.io/ember-decorators/latest/) in their apps
 by making use of the addon `ember-decorators` - seeing the classy ✨ future of Ember for themselves.
 
 Now the follow-up [Native Class Roadmap RFC](https://github.com/emberjs/rfcs/pull/338) from the author of [RFC#240](https://emberjs.github.io/rfcs/0240-es-classes.html) has made its debut.
