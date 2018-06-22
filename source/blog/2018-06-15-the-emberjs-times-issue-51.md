@@ -1,7 +1,7 @@
 ---
 title: The Ember.js Times - Issue No. 51
 author: Gaurav Munjal, Melanie Sumner, Miguel Braga Gomes, Sivakumar Kailasam, Kenneth Larsen, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, 2018
+tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/15/the-emberjs-times-issue-51.html"
 responsive: true
 ---
