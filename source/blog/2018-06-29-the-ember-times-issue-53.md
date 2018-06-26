@@ -16,9 +16,12 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Need for Speed: Ember Edition - Speed Up Ember Builds](https://github.com/ember-cli/ember-cli/issues/7645#issuecomment-399369290)
+> Have Ember CLI build times been causing you *grief*? Do you want to shave 20 seconds from your rebuilds? 
 
+> [Tomasz Smykowski](https://github.com/tomaszs) has been experimenting with building on [SSD vs RAM Disk](https://emberjs-developer.quora.com/How-to-make-Ember-js-CLI-ember-s-32-times-faster). He has seen up to **32x** speeds! [Tobias Bieniek](https://github.com/Turbo87) chimed in that soon Broccoli 2 will be fully integrated in Ember CLI and most platforms will get this speedup by default by using the system tmp folder instead of the current `in-project` tmp folder. 
 
+> Look for this speedup soon in an Ember App near you!
 ---
 
 ## [SECTION TITLE](#section-url)
