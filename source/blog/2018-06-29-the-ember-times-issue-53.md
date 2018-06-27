@@ -21,8 +21,12 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Oh, No(de) He Didn't!](https://github.com/ef4/ember-auto-import)
+[Edward Faulkner](https://github.com/ef4) has just released version 1.0 of `ember-auto-import`. This addon allows you to add dependencies using NPM or Yarn with zero configuration. It can be used both in apps and addons and deduplicates correctly across all addons and the app itself.
 
+All you have to do is type `ember install ember-auto-import` and you’re ready to add whatever dependency you want to your project using NPM or yarn.
+
+Read all about the version 1.0 release on the [forum](https://discuss.emberjs.com/t/ember-auto-import-1-0-released/14997).
 
 ---
 
