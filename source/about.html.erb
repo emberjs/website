@@ -2,46 +2,43 @@
 title: "Homepage"
 responsive: true
 ---
-
 <% content_for :foot do %>
-<script type="text/javascript">
-$(function() {
-  $('#slider').bxSlider({
-    displaySlideQty: 4,
-    moveSlideQty: 4,
-    auto: true,
-    pager: true,
-    speed: 700,
-    pause: 5000
-  });
+  <script type="text/javascript">
+    $(function() {
+      $('#slider').bxSlider({
+        displaySlideQty: 4,
+        moveSlideQty: 4,
+        auto: true,
+        pager: true,
+        speed: 700,
+        pause: 5000
+      });
 
-  // Hack to force proper sizing
-  $('.bx-wrapper, .bx-window').css('width', 940);
-});
-</script>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      // Hack to force proper sizing
+      $('.bx-wrapper, .bx-window').css('width', 940);
+    });
+  </script>
+  <script>
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
 <% end %>
-
 <% content_for :outside_wrapper do %>
-<div class="job-board">
-  <a href="http://jobs.emberjs.com"><span class="text-yellow"> new</span> Job Board!<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45544/icon-tomster.png" alt="" role="presentation" /></a>
-</div>
-<a href="http://jobs.emberjs.com" class="job-board-banner">Post and find jobs on the Ember job board</a>
+  <div class="job-board">
+    <a href="http://jobs.emberjs.com"><span class="text-yellow"> new</span> Job Board!<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/45544/icon-tomster.png" alt="" role="presentation" /></a>
+  </div>
+  <a href="http://jobs.emberjs.com" class="job-board-banner">Post and find jobs on the Ember job board</a>
 <% end %>
-
 <div class="about-page--header">
   A framework for<br/>
   <span class="bold">ambitious</span> web developers.
 </div>
-
 <div class="call-to-action">
   <div class="call-to-action__box">
     <div class="call-to-action__top">
-      <h1>Get Started</h1>
+      <h1>Try it out!</h1>
       <div class="cta-copy">
         <p>Build your first Ember application with our 5 minute tutorial.</p>
       </div>
-
       <a href="https://guides.emberjs.com/current/getting-started/quick-start/">View Quick Start guide</a>
     </div>
     <div class="call-to-action__bottom">
@@ -52,63 +49,69 @@ $(function() {
 </div>
 
 <div class="features section">
-  <h2 class="text-center">More Productive Out of the Box</h2>
+  <h2 class="text-center">Highly Productive Out of the Box</h2>
   <div class="feature">
     <div class="handlebars feature-img"></div>
-    <p>Write dramatically less code with Ember's Handlebars integrated templates that update automatically when the underlying data changes.
-  </div>
-  <div class="feature">
-    <div class="structure feature-img"></div>
-    <p>Don't waste time making trivial choices. Ember.js incorporates common idioms so you can focus on what makes your app special, not reinventing the wheel.</p>
-  </div>
-  <div class="feature">
-    <div class="productivity feature-img"></div>
-    <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done&mdash;fast.</p>
-  </div>
-</div>
+    <p>Developers write dramatically less code with integrated templates that update automatically when the underlying data changes.</p>
+    
+    </div>
+    <div class="feature">
+      <div class="structure feature-img"></div>
+      <p>No need to waste time on trivial choices. Ember's abstractions allow developers to focus on what makes your app <i>unique</i>.</p>
+    
+    </div>
+    <div class="feature">
+      <div class="productivity feature-img"></div>
+      <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help developers <i>efficiently</i> get the job done.</p>
+    
 
-<div class="users section">
-<h2 class="text-center">Who's Using Ember.js?</h2>
-
-  <div class="surround">
-    <ul id="slider">
-      <% data.users.slice(0,12).each do |user| %>
-      <li class="user">
-        <a href="<%= user.url %>" rel="nofollow">
-          <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>"/>
-        </a>
-      </li>
-      <% end %>
-    </ul>
+    </div>
   </div>
-
-  <div class="about__listing-button">
-    <a class="ember-button ember-button--centered" href="/ember-users">
-      Meet More Users
-    </a>
+  <div class="users section">
+    <h2 class="text-center">Who's Using Ember.js?</h2>
+    <div class="surround">
+      <ul id="slider">
+        <% data.users.slice(0,12).each do |user| %>
+        <li class="user">
+          <a href="<%= user.url %>" rel="nofollow">
+            <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>"/>
+          </a>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="about__listing-button">
+      <a class="ember-button ember-button--centered" href="/ember-users">
+        Meet More Users
+      </a>
+    </div>
   </div>
-</div>
-
-<div class="gears section">
-<h2 class="text-center">Buy Ember.js Gear and Support Development</h2>
-  <div class="gear">
-    <a href="http://devswag.com/products/ember-sticker">
-      <img src="/images/about/ember-sticker.png">
-    </a>
-    <a href="http://devswag.com/products/ember-js-tshirt">
-      <img src="/images/about/ember-shirt.png">
-    </a>
-    <a href="http://devswag.com/products/ember-mascot-stickers-4">
-      <img src="/images/about/ember-hamster-sticker.png">
-    </a>
-    <a href="http://devswag.com/products/ember-mascot-tomster">
-      <img src="/images/about/ember-tomster-plush-2.png">
-    </a>
+  <div class="gears section">
+    <h2 class="text-center">Buy Ember.js Gear and Support Development</h2>
+    <div class="gear">
+      <a href="http://devswag.com/products/ember-sticker">
+        <img src="/images/about/ember-sticker.png" alt="ember stickers">
+      </a>
+      <a href="http://devswag.com/products/ember-js-tshirt">
+        <img src="/images/about/ember-shirt.png" alt="ember tee shirt">
+      </a>
+      <a href="http://devswag.com/products/ember-mascot-stickers-4">
+        <img src="/images/about/ember-hamster-sticker.png" alt="tomster stickers">
+      </a>
+      <a href="http://devswag.com/products/ember-mascot-tomster">
+        <img src="/images/about/ember-tomster-plush-2.png" alt="tomster plush toys">
+      </a>
+    </div>
   </div>
-</div>
-
-<div class="about__listing-button">
-  <a class="ember-button ember-button--centered" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY">
-    Donate
-  </a>
+  <div class="about__listing-button-group">
+    <div class="about__listing-button">
+      <a class="ember-button ember-button--centered" href="https://devswag.com/collections/ember">
+        Buy Ember Gear
+      </a>
+    </div>
+    <div class="about__listing-button">
+      <a class="ember-button ember-button--centered" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=QRRZTQ5GM7PSY">
+        Donate
+      </a>
+    </div>
 </div>

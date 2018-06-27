@@ -310,6 +310,7 @@
 - url: http://www.thoughtbot.com
   image: thoughtbot.png
   alt: thoughtbot
+  use: "We use Ember to build products that our clients and their users will love"
 - url: http://www.elastic.io
   image: elasticio.png
   alt: Elastic
@@ -1089,7 +1090,23 @@
   image: a2system-logo.png
   alt: A2System
   use: "We use Ember to build amazing web applications"
-- url: http://www.shx.com.br/site/
+- url: https://www.redshelf.com
+  image: redshelf.png
+  alt: RedShelf
+  use: "Redshelf uses Ember to build our web apps, textbook readers, and tools."
+- url: https://appknox.com/
+  image: appknox-logo.png
+  alt: Appknox - Mobile App Security Testing
+  use: "We use EmberJS for our security dashboard(https://secure.appknox.com/) and also for our internal sales & security dashboard"  
+- url: "https://mobilunity.com/"
+  image: mobilunity.png
+  alt: Mobilunity
+  use: "Development of SPAs for hosting companies and domain name providers."
+- url: https://www.people-doc.com
+  image: peopledoc.png
+  alt: PeopleDoc - HR Service Delivery - HR Document Management Software
+  use: "PeopleDoc uses Ember to build our customer-facing projects and other internal projects."
+  - url: http://www.shx.com.br/site/
   image: shx.png
   alt: SHX
   use: "All of our products are built with Ember.js"

@@ -31,7 +31,7 @@ We were able to identify categories of work that naturally fell in to one of two
 
 ### Marketing
 
-- Website (devsign, upgrades & maintenance)
+- Website ("devsign", upgrades & maintenance)
 - External Evangelism (tech group outreach, podcast & blog collaboration)
 - Traditional Marketing (Blog, Ember Doctrine, Why Ember, Testimonials)
 
