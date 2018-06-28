@@ -74,7 +74,8 @@ class EmberObject {
 
 This would assign the properties _after_ all of the class fields for any subclasses have been assigned.
 
-One thing worth mentioning is that `EmberObject` will likely be deprecated in the near future and that ideally for non-Ember classes (things that aren't Components, Services, etc.) users should drop `EmberObject` altogether and use native classes only.
+One thing worth mentioning is that the RFC claims that `EmberObject` might not be necessary in the future.
+The RFC states that, in this possible scenario, users would drop `EmberObject` ideally for non-Ember classes (things that aren’t Components, Services, etc.) altogether and that they would use native classes only.
 
 👉 As always, all comments to this [RFC](https://github.com/emberjs/rfcs/pull/337) are more than welcome, so let's help out in order to finalize it! ✨
 
