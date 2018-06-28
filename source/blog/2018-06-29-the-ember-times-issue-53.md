@@ -53,7 +53,8 @@ Read all about the version 1.0 release on the [forum](https://discuss.emberjs.co
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
-<p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
+<p>A warm thank you 💛 goes to <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/lennyburdette" target="gh-user">@lennyburdette</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a> and <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>
+</span> for contributing to Ember and related repositories this week! 💕
 </p>
 
 ---
