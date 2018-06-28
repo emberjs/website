@@ -59,15 +59,26 @@ Read all about the version 1.0 release on the [forum](https://discuss.emberjs.co
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: “Can I start using Module Unification in my app?”](https://discuss.emberjs.com/t/readers-questions-can-i-start-using-module-unification-in-my-app/15029)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+  <p>This week's Readers' Question dives into the realm of cutting-edge Ember features: The avid Ember Times
+  reader <code>sandstrom</code> asks if and how you're able to <strong>use Module Unification (MU)</strong> - a reformed way to structure your app's project directory - in your Ember application today.
+  Is it true that you can have your own, MU-structured project already?</p>
 
-<p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+   <p>In her detailed answer to this question, Ember Learning team member <a href="https://github.com/jenweber" target="githubjen">@jenweber</a> explains which <strong>benefits</strong> MU brings to your Ember app
+   and also if it can be used today already. You can <a href="https://discuss.emberjs.com/t/readers-questions-can-i-start-using-module-unification-in-my-app/15029" target="rq2">read the full answer on the official Ember Forum</a>.</p>
+  <p>
+</div>
 
+<div class="blog-row">
+  <a class="ember-button" href="https://discuss.emberjs.com/t/readers-questions-can-i-start-using-module-unification-in-my-app/15029">Read more</a>
+</div>
+
+<div class="blog-row">
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🙂</p>
 </div>
 
 ---
@@ -80,7 +91,6 @@ And if you've always wanted to be an OSS journalist yourself,
 drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 on the Ember Community [Slack Chat](https://ember-community-slackin.herokuapp.com/)
 and **write** the next edition of the Ember Times **together with us**!
-
 
 ---
 
