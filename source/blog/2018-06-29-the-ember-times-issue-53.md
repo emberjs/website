@@ -11,7 +11,8 @@ Mholweni Emberistas! 🐹
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/29/the-ember-times-issue-53.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/06/29/the-ember-times-issue-53) what has been going on in Emberland this week.
 
 And this week we not only have an insider tip on how to dramatically **reduce** your **app build times** 🕐 for you,
-but we're also reporting back on **easy-peasy module imports** 🙌 and - last, but not least! - presenting you a **brand-new Readers' Question** 💯 in this edition of the Ember Times. Check it out 🐹:
+but we're also reporting back on **easy-peasy module imports** 🙌 and - last, but not least! - presenting you a **brand-new Readers' Question** 💯 in this edition of the Ember Times.
+Check it out 🐹:
 
 ---
 
@@ -25,6 +26,7 @@ Upgrading RAM wasn't found to be helpful however the biggest gain was found by u
 [Tobias Bieniek](https://github.com/Turbo87) chimed in that current efforts to integrate Broccoli 2 into Ember CLI are underway and that most platforms would get this speedup by default once the usually RAM Disk powered, system temporary folder instead of the current _in-project_ `tmp` folder is used due to the Broccoli update.
 
 Look for this speedup soon in an Ember App near you!
+
 ---
 
 ## [Oh, No(de) He Didn't!](https://github.com/ef4/ember-auto-import)
@@ -36,7 +38,7 @@ Read all about the version 1.0 release on the [forum](https://discuss.emberjs.co
 
 ---
 
-## [Camping in Illinois with EmberCamp Chicago 🐹🏕](http://embercamp.com/)
+## [Camping in Illinois with EmberCamp Chicago 🏕](http://embercamp.com/)
 
   <img class="float-left small transparent padded" alt="Chicago Zoey Mascot" title="Zoey Chicago Mascot" src="/images/tomsters/chicago-zoey.png" />
 
@@ -57,16 +59,6 @@ you're a developer who is also a lady 👩🏻‍💻 !
 > "So, what do you want to be when you grow up?"
 >
 > "I don't know...I want go on adventures I think--not get stuck in one place. How about you?"
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
