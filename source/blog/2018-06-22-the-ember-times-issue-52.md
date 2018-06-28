@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 52
 author: Miguel Braga Gomes, Kenneth Larsen, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Recent Posts, Newsletter, Ember.js Times, The Ember Times, 2018
 alias : "blog/2018/06/22/the-ember-times-issue-52.html"
 responsive: true
 ---
@@ -134,14 +134,14 @@ the deprecation story and comment on the pull request what you think about it. �
 
 ---
 
-## [The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
+## [The The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 
-The **Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
+The **The Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
 [Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
 And if you've always wanted to be an OSS journalist yourself,
 drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 on the Ember Community [Slack Chat](https://ember-community-slackin.herokuapp.com/)
-and **write** the next edition of the Ember Times **together with us**!
+and **write** the next edition of the The Ember Times **together with us**!
 
 
 ---

@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 44
+title: The Ember Times - Issue No. 44
 author: Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jen Weber, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/04/27/the-emberjs-times-issue-44.html"
@@ -109,7 +109,7 @@ As we tie up loose ends and move to production, we'll give updates via the
   </ul>
 </div>
 
-Apart from that we’d like to ask you for **many more questions** to be answered in future editions of the Ember.js Times!
+Apart from that we’d like to ask you for **many more questions** to be answered in future editions of The Ember Times!
 
 **Submit your own** short and sweet **question** under [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core). And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞
 

@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 47
+title: The Ember Times - Issue No. 47
 author: Tobias Bieniek, Robert Jackson, Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Ryan Mark, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/18/the-emberjs-times-issue-47.html"
@@ -8,7 +8,7 @@ responsive: true
 
 안녕하세요 Emberistas!
 
-Again you can enjoy reading the Ember.js Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/18/issue-47) and the [blog format](https://emberjs.com/blog/2018/05/18/the-emberjs-times-issue-47.html) to share it even better with your Ember friends.
+Again you can enjoy reading The Ember Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/18/issue-47) and the [blog format](https://emberjs.com/blog/2018/05/18/the-emberjs-times-issue-47.html) to share it even better with your Ember friends.
 
 This week we have **several RFCs** from the Ember Data 📟 project for you, as well as an **#EmberJS2018 countdown**, a new way to cast some **template transform magic** 🎩 and a recap of what has happened in Readers' Questions for you:
 

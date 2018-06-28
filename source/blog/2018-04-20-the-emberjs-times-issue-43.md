@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 43
+title: The Ember Times - Issue No. 43
 author: Kenneth Larsen, Chris Garrett, Sivakumar Kailasam, Alon Bukai, Amy Lam, Ryan Mark, Ricardo Mendes, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/04/20/the-emberjs-times-issue-43.html"
@@ -93,7 +93,7 @@ The Learning Team merged a bunch of pull requests in emberjs/guides recently, ma
 ---
 
 ## [We love Ember.js Times 😍](https://embercommunity.slack.com/messages/C8P6UPWNN/)
-Do you? If so, contribute!  The Ember.js Times is always looking for people to help spread the word about all things Ember.
+Do you? If so, contribute!  The Ember Times is always looking for people to help spread the word about all things Ember.
 Drop by the Slack channel to [say "hi!"](https://embercommunity.slack.com/messages/C8P6UPWNN/) and learn how to get started.
 
 ---
@@ -137,7 +137,7 @@ so if you aren't currently using it, now is a great time to start!
 ---
 
 ## [Slack ⭐️](https://ember-community-slackin.herokuapp.com/)
-Ember Times would like to give a shoutout to <a href="https://github.com/runspired">@runspired</a> (Chris Thoburn), for being incredibly helpful and responsive in a majority of the Slack channels this last week
+The Ember Times would like to give a shoutout to <a href="https://github.com/runspired">@runspired</a> (Chris Thoburn), for being incredibly helpful and responsive in a majority of the Slack channels this last week
 by supporting community members migrate through the many versions of Ember data from 2.12 all the way to 3.2.0-beta.2.
 
 Chris is a major contributor to the Ember ecosystem and to ember-data specifically.
