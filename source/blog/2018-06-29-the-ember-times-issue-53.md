@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 53
-author: the crowd
+author: Kenneth Larsen, Sivakumar Kailasam, Alon Bukai, Ryan Mark, Jen Weber, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/06/29/the-ember-times-issue-53.html"
 responsive: true
@@ -36,8 +36,27 @@ Read all about the version 1.0 release on the [forum](https://discuss.emberjs.co
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Camping in Illinois with EmberCamp Chicago 🐹🏕](http://embercamp.com/)
 
+  <img class="float-left small transparent padded" alt="Chicago Zoey Mascot" title="Zoey Chicago Mascot" src="/images/tomsters/chicago-zoey.png" />
+
+**EmberCamp Chicago** is coming! Join over one hundred other Emberistas ✨ for a one day camping trip ⛺️ to Chicago's Chase Tower
+on September 21st!
+Read more about the event on [the official website](http://embercamp.com/).
+
+And also important:
+Among the motto _"It's Easy In Ember"_ the event organizers are curious about **your talk ideas**; and more than happy
+to support you in making your proposal a real success! 🌟
+The [Call for Proposals](https://cfp.emberconf.com/events/embercamp-chicago-2018) for talk submissions is still **open until July 22**.
+Unsure if you can **see yourself speaking** in the first place but curious what public speaking is about? Find ideas,
+inspiration, answers to your questions and support in the
+[#topic-talks](https://embercommunity.slack.com/archives/C9RSE508J/p1530056392000168) channel
+on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/), as well as in the [#women-in-ember](https://embercommunity.slack.com/archives/C0851DA22/p1530137047000189) chat room if
+you're a developer who is also a lady 👩🏻‍💻 !
+
+> "So, what do you want to be when you grow up?"
+>
+> "I don't know...I want go on adventures I think--not get stuck in one place. How about you?"
 
 ---
 
@@ -94,9 +113,8 @@ and **write** the next edition of the Ember Times **together with us**!
 
 ---
 
-
 That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Kenneth Larsen, Sivakumar Kailasam, Alon Bukai, Ryan Mark, Jen Weber, Jessica Jordan and the Learning Team
