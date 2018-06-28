@@ -6,20 +6,19 @@ alias : "blog/2018/06/29/the-ember-times-issue-53.html"
 responsive: true
 ---
 
-...Emberistas! 🐹
+Mholweni Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/29/the-ember-times-issue-53.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/06/29/the-ember-times-issue-53) what has been going on in Emberland this week.
 
-...
-
-Check out what's been going in Emberland 🐹 these days:
+And this week we not only have an insider tip on how to dramatically **reduce** your **app build times** 🕐 for you,
+but we're also reporting back on **easy-peasy module imports** 🙌 and - last, but not least! - presenting you a **brand-new Readers' Question** 💯 in this edition of the Ember Times. Check it out 🐹:
 
 ---
 
 ## [Need for Speed: Ember Edition - Speed Up Ember Builds](https://github.com/ember-cli/ember-cli/issues/7645#issuecomment-399369290)
-> Have Ember CLI build times been causing you *grief*? Do you want to shave 20 seconds from your rebuilds? 
+>Have Ember CLI build times been causing you *grief*? Do you want to shave 20 seconds from your rebuilds?
 
-> [Tomasz Smykowski](https://github.com/tomaszs) has been experimenting with building on [SSD vs RAM Disk](https://emberjs-developer.quora.com/How-to-make-Ember-js-CLI-ember-s-32-times-faster). He has seen up to **32x** speeds! Speedups were found when upgrading to a faster processer and using an SSD. Upgrading RAM wasn't found to be helpful however the biggest gain was found by using a RAM disk to hold the project folder which allowed 3x speed gains during builds. The drawback of this is that when the computer shuts down the RAM disk is wiped clean (so make sure you commit often!) [Tobias Bieniek](https://github.com/Turbo87) chimed in that soon Broccoli 2 will be fully integrated in Ember CLI and most platforms will get this speedup by default by using the system tmp folder instead of the current `in-project` tmp folder. 
+> [Tomasz Smykowski](https://github.com/tomaszs) has been experimenting with building on [SSD vs RAM Disk](https://emberjs-developer.quora.com/How-to-make-Ember-js-CLI-ember-s-32-times-faster). He has seen up to **32x** speeds! Speedups were found when upgrading to a faster processer and using an SSD. Upgrading RAM wasn't found to be helpful however the biggest gain was found by using a RAM disk to hold the project folder which allowed 3x speed gains during builds. The drawback of this is that when the computer shuts down the RAM disk is wiped clean (so make sure you commit often!) [Tobias Bieniek](https://github.com/Turbo87) chimed in that soon Broccoli 2 will be fully integrated in Ember CLI and most platforms will get this speedup by default by using the system tmp folder instead of the current `in-project` tmp folder.
 
 > Look for this speedup soon in an Ember App near you!
 ---
