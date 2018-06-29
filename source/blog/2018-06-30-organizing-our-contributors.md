@@ -15,7 +15,7 @@ As often happens, the way things naturally evolved wasn’t necessarily the best
 
 **Moving forward, all the official teams will be known as Core teams:** Ember.js Core, Ember CLI Core, Ember Data Core, and Ember Learning Core. The intent is to make it clear that we are all peers. In some areas this was already true, and in others we will work to make it true.
 
-All that as it is, we also can’t lose our central coordination point, so along with these reorganized teams, we’re establishing the Ember Steering Committee. The Steering Committee will take the lead on community support responsibilities that we’re previously under the Core Team’s purview, while the newly-refined Ember.js Core sticks with the technical leadership responsibilities. 
+All that as it is, we also can’t lose our central coordination point, so along with these reorganized teams, we’re establishing the Ember Steering Committee. The Steering Committee will take the lead on community support responsibilities that were previously under the Core Team’s purview, while the newly-refined Ember.js Core sticks with the technical leadership responsibilities.
 
 The Steering Committee will be responsible for things including, but not limited to:
 
@@ -41,8 +41,8 @@ The Ember.js Core Team will retain its traditional technical leadership responsi
 
 The initial membership of the Steering Committee comes from people on Ember.js Core who were already working on community support tasks: Leah Silber, Melanie Sumner, Yehuda Katz, Tom Dale, Edward Faulkner and Katie Gengler.
 
-How will this change impact the wider community? Hopefully you’ll notice both jobs being done more effectively than before. Look for more great things from coming soon, including a ton of framework features landing in the 3.x series, and a refresh of the public website and messaging.
+How will this change impact the wider community? Hopefully you’ll notice both jobs being done more effectively than before. Look for more great things coming soon, including a ton of framework features landing in the 3.x series, and a refresh of the public website and messaging.
 
-Lastly, Ember.js would not be what it is without a huge community of leaders: addon maintainers, strike team members, RFC authors, meetup organizers, and more. And with respect to the duties now reorganized under the steering committee, specifically to Leah Silber, who has been managing most of these responsibilities on her own as part of her Ember Core Team responsibilities since first organizing the very first Ember logo and website way back in 2011. 
+Lastly, Ember.js would not be what it is without a huge community of leaders: addon maintainers, strike team members, RFC authors, meetup organizers, and more. And with respect to the duties now reorganized under the steering committee, especially to Leah Silber, who has been managing most of these responsibilities on her own as part of her Ember Core Team responsibilities since first organizing the very first Ember logo and website way back in 2011.
 
 We’re so thankful to all of you for your work and for this incredible opportunity to build awesome things together.
