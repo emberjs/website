@@ -247,21 +247,6 @@ There are no deprecations introduced in Ember Data 3.2.
 For more details on changes in Ember Data 3.2, please review the
 [Ember Data 3.2.0 release page](https://github.com/emberjs/data/releases/tag/v3.2.0).
 
-### Upcoming changes in Ember Data 3.3
-
-There are (#) new features and (#) deprecations in the Ember Data 3.3 beta release.
-
-#### New Features (#)
-
-- TODO
-
-#### Deprecations (#)
-
-- TODO
-
-For more details on the upcoming changes in Ember Data 3.3, please review the
-[Ember Data 3.3.0-beta.1 release page](https://github.com/emberjs/data/releases/tag/v3.3.0-beta.1).
-
 ---
 
 ## Ember CLI
