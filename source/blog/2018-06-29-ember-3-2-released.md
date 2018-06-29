@@ -275,9 +275,9 @@ There are three (3) new features and one (1) deprecation in the Ember CLI 3.2 re
 
 #### New Features (3)
 
-##### Qunit Dom (1 of 3)
+##### qunit-dom (1 of 3)
 
-In order to make DOM assertions more readable, the `qunit-dom` dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration [(#7605)](https://github.com/ember-cli/ember-cli/pull/7605).
+In order to make DOM assertions more readable, the [qunit-dom](https://github.com/simplabs/qunit-dom/) dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration.
 
 This is, to put it quite simply, totally awesome. It means that this code:
 
