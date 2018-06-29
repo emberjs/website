@@ -145,22 +145,24 @@ export default Route.extend({
 
 ##### Define computed properties with defineProperty (3 of 3)
 
-Use `defineProperty` to define computed properties. Although uncommon, it is possible to assign computed properties directly to objects. This way they are implicitly computed from things like `Ember.get`. Assigning computed properties directly is deprecated to support ES5 getter computed properties, and you should replace these assignments with calls to `defineProperty`.
+Use `defineProperty` (via `import { defineProperty } from '@ember/object';`) to define computed properties. Although uncommon, it is possible to assign computed properties directly to objects. This way they are implicitly computed from things like `Ember.get`. Assigning computed properties directly is deprecated to support ES5 getter computed properties, and you should replace these assignments with calls to `defineProperty`.
 
 For example, the following:
 
 ```javascript
+import { computed, get } from '@ember/object';
 let object = {};
-object.key = Ember.computed(() => 'value');
-Ember.get(object, 'key') === 'value';
+object.key = computed(() => 'value');
+get(object, 'key') === 'value';
 ```
 
 Should be changed to this:
 
 ```javascript
+import { computed, defineProperty, get } from '@ember/object';
 let object = {};
-Ember.defineProperty(object, 'key', Ember.computed(() => 'value'));
-Ember.get(object, 'key') === 'value';
+defineProperty(object, 'key', computed(() => 'value'));
+get(object, 'key') === 'value';
 ```
 
 For more details on changes in Ember.js 3.2, please review the [Ember.js 3.2.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0).
