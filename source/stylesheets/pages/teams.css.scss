@@ -21,7 +21,7 @@ body.team {
       flex: 1 1 1;
       height: 175px;
       justify-content: center;
-      margin: 1em 0.5em;
+      margin: 1.5em 0.75em;
       padding: 0;
       text-align: center;
       width: 150px;
@@ -30,8 +30,8 @@ body.team {
         align-content: center;
         display: flex;
         font-size: 1em;
-        font-size: calc( 14px + 4 * ((100vw - 500px) / 1500)); //this follows so that browsers that support it will use this instead
-        font-weight: bold;
+        font-size: calc( 14px + 3 * ((100vw - 500px) / 1500)); //this follows so that browsers that support it will use this instead
+        font-weight: normal;
         justify-content: center;
         line-height: 1;
         min-width: 100%;
