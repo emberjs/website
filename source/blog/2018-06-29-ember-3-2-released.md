@@ -1,7 +1,7 @@
 ---
-title: Ember 3.2 and 3.3 Beta Released
-author: Ricardo Mendes, Melanie Sumner & Kenneth Larsen
-tags: Releases, 2018, 3, 3.2, 3.3
+title: Ember 3.2 Released
+author: Rober Jackson, Melanie Sumner & Kenneth Larsen
+tags: Releases, 2018, 3, 3.2
 responsive: true
 ---
 
