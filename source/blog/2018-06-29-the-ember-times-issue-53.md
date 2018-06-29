@@ -12,17 +12,17 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/29/the-embe
 
 And this week we not only have an insider tip on how to dramatically **reduce** your **app build times** 🕐 for you,
 but we're also reporting back on **easy-peasy module imports** 🙌 and - last, but not least! - presenting you a **brand-new Readers' Question** 💯 in this edition of the Ember Times.
-Check it out 🐹:
+Check it out!
 
 ---
 
 ## [Need for Speed: Ember Edition - Speed Up Ember Builds](https://github.com/ember-cli/ember-cli/issues/7645)
 
-Have Ember CLI build times been causing you *grief*? Do you want to shave 20 seconds from your rebuilds?
+<p>Have Ember CLI build times been causing you <span style="font-style: italic;">grief</span>? Do you want to shave 20 seconds from your rebuilds?</p>
 
 [Tomasz Smykowski](https://github.com/tomaszs) has been experimenting with building on [SSD vs RAM Disk](https://emberjs-developer.quora.com/How-to-make-Ember-js-CLI-ember-s-32-times-faster). He has seen up to **32x** speed improvements! Speedups were found when upgrading to a faster processor and using an SSD.
 
-Upgrading RAM wasn't found to be helpful however the biggest gain was found by using a RAM disk to hold the project folder which allowed 3x speed gains during builds. The drawback of this is that when the computer shuts down the RAM disk is wiped clean (so make sure you commit often!).
+Upgrading RAM wasn't found to be helpful however the biggest gain was found by using a **RAM disk** to hold the project folder which allowed 3x speed gains during builds. The drawback of this is that when the computer shuts down the RAM disk is wiped clean (so make sure you commit often!).
 [Tobias Bieniek](https://github.com/Turbo87) chimed in that current efforts to integrate Broccoli 2 into Ember CLI are underway and that most platforms would get this speedup by default once the usually RAM Disk powered, system temporary folder instead of the current _in-project_ `tmp` folder is used due to the Broccoli update.
 
 Look for this speedup soon in an Ember App near you!
@@ -30,7 +30,7 @@ Look for this speedup soon in an Ember App near you!
 ---
 
 ## [Oh, No(de) He Didn't!](https://github.com/ef4/ember-auto-import)
-[Edward Faulkner](https://github.com/ef4) has just released version 1.0 of `ember-auto-import`. This addon allows you to add dependencies using NPM or Yarn with zero configuration. It can be used both in apps and addons and deduplicates correctly across all addons and the app itself.
+[Edward Faulkner](https://github.com/ef4) has just released version 1.0 of `ember-auto-import`. This addon allows you to add dependencies using NPM or Yarn with **zero configuration**. It can be used both in apps and addons and deduplicates correctly across all addons and the app itself.
 
 All you have to do is type `ember install ember-auto-import` and you’re ready to add whatever dependency you want to your project using NPM or yarn.
 
@@ -40,7 +40,7 @@ Read all about the version 1.0 release on the [forum](https://discuss.emberjs.co
 
 ## [Camping in Illinois with EmberCamp Chicago 🏕](http://embercamp.com/)
 
-  <img class="float-left small transparent padded" alt="Chicago Zoey Mascot" title="Zoey Chicago Mascot" src="/images/tomsters/chicago-zoey.png" />
+<img class="float-left extra-small transparent padded" alt="Chicago Zoey Mascot" title="Zoey Chicago Mascot" src="/images/tomsters/chicago-zoey.png" />
 
 **EmberCamp Chicago** is coming! Join over one hundred other Emberistas ✨ for a one day camping trip ⛺️ to Chicago's Chase Tower
 on September 21st!
@@ -50,7 +50,9 @@ And also important:
 Among the motto _"It's Easy In Ember"_ the event organizers are curious about **your talk ideas**; and more than happy
 to support you in making your proposal a real success! 🌟
 The [Call for Proposals](https://cfp.emberconf.com/events/embercamp-chicago-2018) for talk submissions is still **open until July 22**.
-Unsure if you can **see yourself speaking** in the first place but curious what public speaking is about? Find ideas,
+Unsure if you can **see yourself speaking** in the first place but curious what public speaking is about?
+
+Find ideas,
 inspiration, answers to your questions and support in the
 [#topic-talks](https://embercommunity.slack.com/archives/C9RSE508J/p1530056392000168) channel
 on the [Ember Community Slack](https://ember-community-slackin.herokuapp.com/), as well as in the [#women-in-ember](https://embercommunity.slack.com/archives/C0851DA22/p1530137047000189) chat room if
@@ -59,6 +61,17 @@ you're a developer who is also a lady 👩🏻‍💻 !
 > "So, what do you want to be when you grow up?"
 >
 > "I don't know...I want go on adventures I think--not get stuck in one place. How about you?"
+
+---
+
+## [Transforms: More than Meets the Eye 👀](https://github.com/emberjs/rfcs/pull/343)
+
+[@Alonski](https://github.com/Alonski) composed an RFC to deprecate the usage of Transforms in Ember Data.  The RFC gathered some attention. Although the core reason for the RFC was discussed, [a comment](https://github.com/emberjs/rfcs/pull/343#issuecomment-400382952) by <a href="https://github.com/runspired" target="gh-user">@runspired</a>, one of the maintainers of Ember Data, stands out from the rest:
+Recently the Ember Data team has met and discussed deprecating the transforms, yet leaving them as a feature of the **current** model layer. **Current model layer?** There is another model layer? Yes! Because of the most recent [RecordData RFC](https://github.com/emberjs/rfcs/pull/293), Ember Data is now poised to accept alternative model layers.
+
+If you are interested in what an alternative model layer looks like, check out [ember-m3](https://github.com/hjdivad/ember-m3). That's not all, the comments on this RFC also give us a glimpse into Ember Data's future - there are RFCs coming (not yet published) that  will eventually split up Ember Data into multiple packages.
+
+Interested in the whole conversation? Checkout [@Alonski's](https://github.com/Alonski) RFC [here](https://github.com/emberjs/rfcs/pull/343).
 
 ---
 
