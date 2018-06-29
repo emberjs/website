@@ -130,9 +130,9 @@ if (console.debug) {
 
 **Note for Add-on Authors** - If your add-on needs to support both Ember 2.x and Ember 3.x clients, you will need to test for the existence of console before calling its methods. If you do much logging, you may find it convenient to define your own wrapper. Writing the wrapper as a service will provide for dependency injection by tests and perhaps even clients.
 
-##### Private API Router#route renamed (2 of 3)
+##### Private API Router#router renamed (2 of 3)
 
-In order to avoid collisions with user-defined properties or methods, the `Router#route` private API has been renamed to `Router#_route`. If you want access to the router, you should inject the router service into the route like this:
+In order to avoid collisions with user-defined properties or methods, the `Router#router` private API has been renamed to `Router#_router`. If you want access to the router, you should inject the router service into the route like this:
 
 ```javascript
 import Route from '@ember/routing/route';
