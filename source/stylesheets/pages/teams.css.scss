@@ -29,7 +29,8 @@ body.team {
       .team-member-name {
         align-content: center;
         display: flex;
-        font-size: calc( 14px + 8 * ((100vw - 500px) / 1500));
+        font-size: 1em;
+        font-size: calc( 14px + 4 * ((100vw - 500px) / 1500)); //this follows so that browsers that support it will use this instead
         font-weight: bold;
         justify-content: center;
         line-height: 1;
