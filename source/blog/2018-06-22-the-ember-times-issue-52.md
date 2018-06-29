@@ -134,14 +134,14 @@ the deprecation story and comment on the pull request what you think about it. �
 
 ---
 
-## [The The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
+## [The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 
 The **The Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
 [Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
 And if you've always wanted to be an OSS journalist yourself,
 drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 on the Ember Community [Slack Chat](https://ember-community-slackin.herokuapp.com/)
-and **write** the next edition of the The Ember Times **together with us**!
+and **write** the next edition of the Ember Times **together with us**!
 
 
 ---

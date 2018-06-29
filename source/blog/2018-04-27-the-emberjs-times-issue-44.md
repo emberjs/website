@@ -42,7 +42,7 @@ Ember 3.1.1 contains several more fixes. You can go though them all in [the rele
 This week, contributors to Ember CLI worked on improving the test suite by
 [extending the list of Node versions](https://github.com/ember-cli/ember-cli/pull/7791) tested against.
 This means that you will be able to use your favorite command line tool
-on the the latest version smoothly and without any worries.
+on the latest version smoothly and without any worries.
 
 Lots of efforts are underway to bring **Treeshaking capabilities** to your
 Ember app very soon. Treeshaking is the removal of unused code in order

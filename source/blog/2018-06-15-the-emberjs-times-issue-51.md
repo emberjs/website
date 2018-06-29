@@ -30,7 +30,7 @@ Named arguments already landed in [Ember 3.1](https://www.emberjs.com/blog/2018/
 
 Quite recently **a plethora of RFCs (Request for Comments)** proposed ground-breaking, **new
 features** for Ember. These included the proposals for [ES5 Getters](https://github.com/emberjs/rfcs/blob/master/text/0281-es5-getters.md) and [named arguments for Components](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md) which already found their way into the **previous 3.1 release** in a [stable fashion](https://www.emberjs.com/blog/2018/04/13/ember-3-1-released.html#toc_changes-in-ember-js-3-1).
-But what about all the other cool things that we mentioned in previous editions of the The Ember Times?
+But what about all the other cool things that we mentioned in previous editions of the Ember Times?
 When are all of these proposal finally gonna land?
 
 Features which haven't found their way into a stable release and have not been recommended by the [official Guides](https://github.com/ember-learn/guides-app) yet,
@@ -120,7 +120,7 @@ A heads-up that this RFC has entered the FCP (Final Comment Period), so this wee
   <p><strong>Submit your own</strong> short and sweet <strong>question</strong> at <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 </div>
 
-## [The The Ember Times is What We Make It 🙌](https://the-emberjs-times.ongoodbits.com/)
+## [The Ember Times is What We Make It 🙌](https://the-emberjs-times.ongoodbits.com/)
 
 The **The Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
 [Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
