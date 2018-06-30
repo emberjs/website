@@ -171,11 +171,11 @@ For more details on changes in Ember.js 3.2, please review the [Ember.js 3.2.0 r
 
 There is 1 new feature and 6 deprecations in the Ember.js 3.3 beta release.
 
-#### New Features (#)
+#### New Features (6)
 
 The ability to opt-out of jQuery integration with `@ember/optional-features`'s `ember feature:disable jquery-integration`. This was done as part of [emberjs/rfcs#294](https://github.com/emberjs/rfcs/pull/294).
 
-#### Deprecations (#)
+#### Deprecations (6)
 
 Added deprecations for:
 
