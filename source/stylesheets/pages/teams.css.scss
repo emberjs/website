@@ -6,72 +6,59 @@ body.team {
     background-color: #dfd7d4;
   }
 
-  .headshots { /* #content is needed for specifity override */
-    margin: 0 auto !important;
-    justify-content: center;
+  .list-team { /* #content is needed for specifity override */
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    list-style-type: none !important;
-    padding-left: 5%;
-    padding-right: 5%;
-    @media screen and (min-width: 0px) and (max-width: 767px) {
-      padding-left: 1%;
-      padding-right: 1%;
-    }
+    list-style-type: none;
+    justify-content: flex-start;
 
-    a:hover {
-      border-bottom: none;
-    }
-
-    > li {
-      box-sizing: border-box;
+    .list-team-item {
+      align-items: center;
       display: flex;
-      flex-flow: column wrap;
-      padding: 40px 0 0;
+      flex-flow: row wrap;
+      flex-grow: 1;
+      flex: 1 1 1;
+      height: 175px;
+      justify-content: center;
+      margin: 1.5em 0.75em;
+      padding: 0;
       text-align: center;
-      width: 25%;
-      flex: 1 1 auto;
-      text-align: center;
-      @media screen and (min-width: 0px) and (max-width: 767px) {
-        width: 49%;
-        &.team-avatar {
-          width: 33% !important;
-        }
-      }    
-      &.team-avatar {
-        width: 20%;
-      }
-      p {
-        flex: 1;
-        font-weight: bold;
-        margin: 0px 0px 5px 0px;
+      width: 150px;
+
+      .team-member-name {
+        align-content: center;
+        display: flex;
+        font-size: 1em;
+        font-size: calc( 14px + 3 * ((100vw - 500px) / 1500)); //this follows so that browsers that support it will use this instead
+        font-weight: normal;
+        justify-content: center;
+        line-height: 1;
         min-width: 100%;
       }
 
-      img {
-        flex: 1;
-        border-radius: 50%;
-        border: 2px solid #faf4f1;
-        height: 120px;
-        margin-bottom: 10px;
-        width: 120px;
-
-        &.alumni {
-          height: 90px;
-          width: 90px;
-        }
+      .team-member-image {
+        align-self: center;
+        border-radius: 50%;      
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        margin: auto;
+        width: 100px;
 
         &:hover,
         &:active,
         &:focus {
-          border: 0;
+          border-color: transparent;
         }
       }
-      .social {
+
+      .team-member-social {
+        display: flex;
         flex: 1;
-        min-width: 100%;
+        justify-content: center;
         margin: 0 auto !important;
+        min-width: 100%;
 
         > li {
           display: inline-block;
@@ -86,21 +73,6 @@ body.team {
             color: #444;
           }
         }
-      }
-    }
-
-    &.contributors {
-      .avatar {
-        position: relative;
-      }
-
-      img {
-        height: 90px;
-        width: 90px;
-      }
-
-      .type {
-        display: none;
       }
     }
   }
