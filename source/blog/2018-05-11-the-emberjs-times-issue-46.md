@@ -10,7 +10,7 @@ responsive: true
 
 Again you can enjoy reading The Ember Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/11/issue-46) and the [blog format](https://emberjs.com/blog/2018/05/11/the-emberjs-times-issue-46.html) to share it even better with your Ember friends.
 
-This week we'll highlight a new RFC deprecating features from ancient The Ember Times and a sweet reminder for blogging about your best wishes for Ember and - last, but not least - we have a brand-new Readers' Question❓✨ for you!
+This week we'll highlight a new RFC deprecating features from ancient Ember times and a sweet reminder for blogging about your best wishes for Ember and - last, but not least - we have a brand-new Readers' Question❓✨ for you!
 
 ---
 
