@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 45
+title: The Ember Times - Issue No. 45
 author: Kenneth Larsen, Sivakumar Kailasam, Amy Lam, Jen Weber, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/04/the-emberjs-times-issue-44.html"
@@ -104,7 +104,7 @@ Collectively, question by question, we can try to create a better Ember presence
   <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember
   ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
 
-  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="bit.ly/ask-ember-core" target="ask-ember-core">https://bit.ly/ask-ember-core</a> and a member of the Ember team will answer in a future edition of the Ember.js Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="bit.ly/ask-ember-core" target="ask-ember-core">https://bit.ly/ask-ember-core</a> and a member of the Ember team will answer in a future edition of The Ember Times. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 </div>
 
 
