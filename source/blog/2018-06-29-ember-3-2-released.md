@@ -167,27 +167,6 @@ get(object, 'key') === 'value';
 
 For more details on changes in Ember.js 3.2, please review the [Ember.js 3.2.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.2.0).
 
-### Upcoming Changes in Ember.js 3.3 (Beta)
-
-There is 1 new feature and 6 deprecations in the Ember.js 3.3 beta release.
-
-#### New Features (6)
-
-The ability to opt-out of jQuery integration with `@ember/optional-features`'s `ember feature:disable jquery-integration`. This was done as part of [emberjs/rfcs#294](https://github.com/emberjs/rfcs/pull/294).
-
-#### Deprecations (6)
-
-Added deprecations for:
-
-- Ember.copy - [emberjs/rfcs#322](https://github.com/emberjs/rfcs/pull/322)
-- Ember.Copyable - [emberjs/rfcs#322](https://github.com/emberjs/rfcs/pull/322)
-- Ember.Map - [emberjs/rfcs#237](https://github.com/emberjs/rfcs/pull/237)
-- Ember.OrderedSet - [emberjs/rfcs#237](https://github.com/emberjs/rfcs/pull/237)
-- Ember.MapWithDefault - [emberjs/rfcs#237](https://github.com/emberjs/rfcs/pull/237)
-- Deprecate accessing jQuery.Event#originalEvent - [emberjs/rfcs#294](https://github.com/emberjs/rfcs/pull/294)
-
-For more details on the upcoming changes in Ember.js 3.3, please review the [Ember.js 3.3.0-beta.1 release page](https://github.com/emberjs/ember.js/releases/tag/v3.3.0-beta.1).
-
 ---
 
 ## Ember Data
@@ -202,7 +181,7 @@ There are four (4) new features and zero (0) deprecations in the Ember Data 3.2 
 
 ##### Lazy Relationship Payloads (1 of 4)
 
-In Ember Data 2.14 lazy-relationship parsing was introduced. Because this parsing used left-side/right-side keying this ment it was not compatible with polymorphic relationships.
+In Ember Data 2.14 lazy-relationship parsing was introduced. Because this parsing used left-side/right-side keying, this meant it was not compatible with polymorphic relationships.
 
 With Ember Data 3.2 this is [now fixed](https://github.com/emberjs/data/pull/5230).
 
@@ -271,11 +250,11 @@ After running the upgrade command run `ember init` inside of the project directo
 
 ### Changes in Ember CLI 3.2
 
-There are three (3) new features and one (1) deprecation in the Ember CLI 3.2 release.
+There is one (1) new features and one (1) deprecation in the Ember CLI 3.2 release.
 
 #### New Features (1)
 
-##### qunit-dom
+##### qunit-dom (1 of 1)
 
 In order to make DOM assertions more readable, the [qunit-dom](https://github.com/simplabs/qunit-dom/) dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration.
 
