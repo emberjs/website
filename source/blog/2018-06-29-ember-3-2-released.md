@@ -7,10 +7,8 @@ responsive: true
 
 Today the Ember project is releasing version 3.2.0 of Ember.js, Ember Data, and Ember CLI.
 
-This release kicks off the 3.3 beta cycle for all sub-projects. We encourage our
-community (especially addon authors) to help test these beta builds and report
-any bugs before they are published as a final release in six weeks' time. The
-[ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
+This release kicks off the 3.3 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report
+any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
 continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
@@ -62,7 +60,7 @@ This could result in an error since we have to keep track of this throughout the
 
 Now you can use `firstName` and `lastName` inside the `let` block with the comfort of knowing that the logic is in a single place. This is a neat way of introducing bindings in your templates without making them properties on the controller or component.
 
-What is important to know about the `let` helper is that it only works as a block helper. This means that you cannot do like this:
+What is important to know about the `let` helper is that it only works as a block helper. This means that you cannot do something like this:
 
 ```handlebars
 {{let
@@ -73,7 +71,7 @@ What is important to know about the `let` helper is that it only works as a bloc
 
 #### Deprecations (3)
 
-Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to more stable API. Deprecated public APIs are not removed until a major release of the framework.
+Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
@@ -187,9 +185,9 @@ With Ember Data 3.2 this is [now fixed](https://github.com/emberjs/data/pull/523
 
 ##### Ember Data Feature Flag Removal (2 of 4)
 
-The current feature flags for Ember Data has gone stale, therefore they are all [removed in Ember Data 3.2](https://github.com/emberjs/data/pull/5384). Ember Data is going to attempt to go in a different direction with some of the planned changes for 2018.
+The current feature flags for Ember Data have gone stale, therefore they are all [removed in Ember Data 3.2](https://github.com/emberjs/data/pull/5384). Ember Data is going to attempt to go in a different direction with some of the planned changes for 2018.
 
-If your app depends on enabling these feature flag to run, please reach out to the Ember Data team by opening a github issue on the [Ember Data repo](https://github.com/emberjs/data/issues) and the Ember Data team will try to assist with the transition.
+If your app depends on enabling these feature flags to run, please reach out to the Ember Data team by opening a github issue on the [Ember Data repo](https://github.com/emberjs/data/issues) and the Ember Data team will try to assist with the transition.
 
 ##### Feature Flag `ds-improved-ajax` (3 of 4)
 
