@@ -137,7 +137,7 @@ the deprecation story and comment on the pull request what you think about it. ð
 
 ## [The Ember Times is What We Make It ðŸ™Œ](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 
-The **Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
+The **The Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
 [Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
 And if you've always wanted to be an OSS journalist yourself,
 drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)

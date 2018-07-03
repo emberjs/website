@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 49
+title: The Ember Times - Issue No. 49
 author: Chris Manson, Sivakumar Kailasam, Amy Lam, Ryan Mark, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/01/the-emberjs-times-issue-49.html"
@@ -21,7 +21,7 @@ responsive: true
 This week we have a 🌟 **Special Edition** 🌟😲 for you: we'll take a look into the internals of the new
 Ember Guides website, which has had a [complete makeover and relaunched this month](https://www.emberjs.com/blog/2018/05/25/the-emberjs-times-issue-48.html#toc_a-href-https-guides-emberjs-com-new-ember-guides-launched-a) to finally run on an amazing Ember app. This will finally make contributions through the Ember community immensely easier. ✨
 
-In this special edition of The Ember.js Times, [@real_ate](https://github.com/mansona) who championed the **migration of the Guides** will let us have a peek into [the new app's](https://github.com/ember-learn/guides-app) internals and into its **Broccoli** powered **build pipeline**. So get ready to hit your recommended daily intake of veggies 🥒🥕 and read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/01/the-emberjs-times-issue-49.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/06/01/issue-49) about what has been going on in Emberland this week...
+In this special edition of The Ember Times, [@real_ate](https://github.com/mansona) who championed the **migration of the Guides** will let us have a peek into [the new app's](https://github.com/ember-learn/guides-app) internals and into its **Broccoli** powered **build pipeline**. So get ready to hit your recommended daily intake of veggies 🥒🥕 and read either on the [Ember blog](https://www.emberjs.com/blog/2018/06/01/the-emberjs-times-issue-49.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/06/01/issue-49) about what has been going on in Emberland this week...
 
 ---
 

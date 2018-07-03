@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 51
+title: The Ember Times - Issue No. 51
 author: Gaurav Munjal, Melanie Sumner, Miguel Braga Gomes, Sivakumar Kailasam, Kenneth Larsen, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/06/15/the-emberjs-times-issue-51.html"
@@ -122,7 +122,7 @@ A heads-up that this RFC has entered the FCP (Final Comment Period), so this wee
 
 ## [The Ember Times is What We Make It 🙌](https://the-emberjs-times.ongoodbits.com/)
 
-The **Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
+The **The Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
 [Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
 If you ❤️ what you're reading and you feel like a **writer** at heart,
 drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/convo/C4TD5JJ7R-1497022015.688894/) on the Ember Community Slack Chat to join the discussion or even **become the co-author** of a future edition!
