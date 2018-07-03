@@ -250,15 +250,15 @@ After running the upgrade command run `ember init` inside of the project directo
 
 ### Changes in Ember CLI 3.2
 
-There is one (1) new features and one (1) deprecation in the Ember CLI 3.2 release.
+There are two (2) new features and one (1) deprecation in the Ember CLI 3.2 release.
 
-#### New Features (1)
+#### New Features and Updates (2)
 
-##### qunit-dom (1 of 1)
+##### qunit-dom (1 of 2)
 
 In order to make DOM assertions more readable, the [qunit-dom](https://github.com/simplabs/qunit-dom/) dependency will be added **by default** to all apps and addons. Opt out by removing it from your package.json file. See [https://github.com/simplabs/qunit-dom-codemod](https://github.com/simplabs/qunit-dom-codemod) to ease migration.
 
-This is, to put it quite simply, totally awesome. It means that this code:
+This code:
 
 ```javascript
 assert.equal(this.element.querySelector('.title').textContent.trim(), 'Hello World!');
@@ -270,7 +270,9 @@ becomes this:
 assert.dom('.title').hasText('Hello World!');
 ```
 
-See what I mean? Totally awesome. <3
+##### Update `ember-cli-qunit` dependency (2 of 2)
+
+When upgrading an Ember 2.18 app to Ember 3.0, the version of `ember-cli-qunit` was not updated from ^4.1.1. If there was already a package lockfile, then the version of it wouldn't be updated, making the `find()` helper unavailable in the Ember 3.0 style of testing. This has now been updated in the blueprint package.json to ^4.3.2, to ensure that `find()` will be available in upgraded projects. It should be noted that this problem doesn't occur for newly-created projects or for projects that don't have an NPM or Yarn package lockfile, because the version constraint ^4.1.1 will pull down 4.3.2 or newer.
 
 #### Deprecations (1)
 
@@ -278,10 +280,11 @@ See what I mean? Totally awesome. <3
 
 This release of Ember CLI [deprecates `ember-cli-babel` 5.x](https://github.com/ember-cli/ember-cli/pull/7676). Babel 6 support has been out for a long time now and works quite well. Babel 5 support is deprecated and is expected to be dropped soon.
 
-For more details on the changes in Ember CLI 3.2.0-beta.1 and detailed upgrade
-instructions, please review the [Ember CLI 3.2.0-beta.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0-beta.1).
+---
 
-Thank you to [@GavinJoyce](https://github.com/GavinJoyce), [@Turbo87](https://github.com/Turbo87), [@cibernox](https://github.com/cibernox), [@iezer](https://github.com/iezer), [@kellyselden](https://github.com/kellyselden), [@raytiley](https://github.com/raytiley), [@t-sauer](https://github.com/t-sauer), and [@thetimothyp](https://github.com/thetimothyp)
+There were some other bug fixes in this version release that were not included in this blog post. For more details on the changes in Ember CLI 3.2.0 and detailed upgrade instructions, please review the [Ember CLI 3.2.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.2.0).
+
+Thank you to [@rwjblue](https://github.com/rwjblue), [@Turbo87](https://github.com/Turbo87), [@ef4](https://github.com/ef4), [@CodingItWrong](https://github.com/CodingItWrong), [@kellyselden](https://github.com/kellyselden), [@stefanpenner](https://github.com/stefanpenner), [@dnachev](https://github.com/dnachev), and [@twokul](https://github.com/twokul)
 for your incredible work on ember-cli!
 
 For more details on the changes in Ember CLI 3.2 and detailed upgrade
