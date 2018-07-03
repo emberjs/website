@@ -132,6 +132,28 @@ body.blog.responsive {
       }
     }
   }
+
+  .blog-header--invisible {
+    visibility: hidden;
+    position: absolute;
+  }
+
+  .ember-times-logo {
+    background-image: url('/images/brand/ember_Times-Light.png');
+    background-position: left center;
+    background-color: transparent;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    margin: 0 0 0.7em;
+    &.large {
+      background-size: 75%;
+      height: 155px;
+      @media screen and (max-width: $small-breakpoint) {
+        background-size: 90%;
+        height: 100px;
+      }
+    }
+  }
 }
 
 .blog {
@@ -190,7 +212,6 @@ body.blog.responsive {
       .blog-post-tag {
         display: block;
         width: 100%;
-
       }
     }
   }
