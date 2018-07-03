@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 52
 author: Miguel Braga Gomes, Kenneth Larsen, Jessica Jordan
-tags: Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, The Ember Times, 2018
 alias : "blog/2018/06/22/the-ember-times-issue-52.html"
 responsive: true
 ---
