@@ -3,9 +3,10 @@ title: Ember 3.2 Released
 author: Robert Jackson, Melanie Sumner & Kenneth Larsen
 tags: Releases, 2018, 3, 3.2
 responsive: true
+alias : "blog/2018/06/29/ember-3-2-released.html"
 ---
 
-Today the Ember project is releasing version 3.2.0 of Ember.js, Ember Data, and Ember CLI.
+Today the Ember project is releasing version 3.2.0 of Ember.js, Ember Data, and Ember CLI- a little later than planned, for sure! Thank you for your support and patience. 
 
 This release kicks off the 3.3 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report
 any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
@@ -17,6 +18,8 @@ You can read more about our general release process here:
 - [The Ember Release Cycle](http://emberjs.com/blog/2013/09/06/new-ember-release-process.html)
 - [The Ember Project](http://emberjs.com/blog/2015/06/16/ember-project-at-2-0.html)
 - [Ember LTS Releases](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html)
+
+Note that we didn't include 3.3 beta features in this blog post, mostly because we were so focused on getting 3.2 out the door, and had to prioritize. Thank you for understanding!
 
 ---
 
