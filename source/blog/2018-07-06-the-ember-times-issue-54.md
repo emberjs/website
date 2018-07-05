@@ -49,7 +49,7 @@ get all the TypeScript neatness to your test suite today and type on! ⌨
 
 ---
 
-## [Twiddle Your Thumbs No More](#section-url)
+## [Twiddle Your Thumbs No More](https://ember-twiddle.com/)
 
 [Ember Twiddle](https://ember-twiddle.com/) support for the latest (v3.2.2) release of Ember and Ember Data is here! With the great efforts of [@Guarav0](https://github.com/Gaurav0), [@rwjblue](https://github.com/rwjblue) and [@gokatz](https://github.com/gokatz) you can now use the latest and greatest in Ember Land in your favorite browser Ember environment. 
 
