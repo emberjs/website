@@ -21,8 +21,16 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Organising the Organisers](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html)
+The Ember Team has published a new blog post outlining some structural changes to the Core teams. It contains two changes: A new Steering Committee and a renaming of some of the existing teams.
 
+The Steering Committee will be responsible for areas like community guidelines, managing Ember’s brand, dealing with legal questions and much more. 
+
+The renaming of the Ember teams means that moving forward, all the official teams will be known as Core teams: Ember.js Core, Ember CLI Core, Ember Data Core, and Ember Learning Core.
+
+The intent here is to make it clear that all members of the teams are peers.
+
+You can read all about the changes in the [Ember blog post](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html)
 
 ---
 
