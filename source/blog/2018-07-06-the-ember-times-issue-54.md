@@ -22,7 +22,7 @@ Check out what's been going in Emberland 🐹 these days:
 ---
 
 ## [Organising the Organisers](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html)
-The Ember Team has published a new blog post outlining some structural changes to the core teams. It contains two changes: A new steering committee and a renaming of some of the existing teams.
+The Ember Team has published a new blog post outlining some structural changes to the Core teams. It contains two changes: A new Steering Committee and a renaming of some of the existing teams.
 
 The Steering Committee will be responsible for areas like community guidelines, managing Ember’s brand, dealing with legal questions and much more. 
 
