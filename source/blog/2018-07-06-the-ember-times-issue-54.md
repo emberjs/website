@@ -1,12 +1,12 @@
 ---
 title: The Ember Times - Issue No. 54
-author: the crowd
+author: Jessica Jordan, Alon Bukai, Amy Lam, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/06/the-ember-times-issue-54.html"
 responsive: true
 ---
 
-...Emberistas! 🐹
+привет Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/06/the-ember-times-issue-54.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/07/the-ember-times-issue-54) what has been going on in Emberland this week.
 
@@ -61,8 +61,7 @@ get all the TypeScript neatness to your test suite today and type on! ⌨
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
-<p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
-</p>
+A warm thank you 💕 goes to [@krisselden](https://github.com/krisselden), [@Alonski](https://github.com/Alonski), [@kennethlarsen](https://github.com/kennethlarsen), [@jessica-jordan](https://github.com/jessica-jordan), [@MelSumner](https://github.com/MelSumner), [@pete-the-pete](https://github.com/pete-the-pete), [@hakilebara](https://github.com/hakilebara), [@teddyzeenny](https://github.com/teddyzeenny), [@oskarrough](https://github.com/oskarrough)
 
 ---
 
@@ -96,4 +95,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Jessica Jordan, Alon Bukai, Amy Lam, Kenneth Larsen and the Learning Team
