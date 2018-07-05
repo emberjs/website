@@ -24,7 +24,7 @@ Check out what's been going in Emberland 🐹 these days:
 ## [Organising the Organisers](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html)
 The Ember Team has published a new blog post outlining some structural changes to the Core teams. It contains two changes: A new Steering Committee and a renaming of some of the existing teams.
 
-The Steering Committee will be responsible for areas like community guidelines, managing Ember’s brand, dealing with legal questions and much more. 
+The Steering Committee will be responsible for areas like community guidelines, managing Ember’s brand, dealing with legal questions and much more.
 
 The renaming of the Ember teams means that moving forward, all the official teams will be known as Core teams: Ember.js Core, Ember CLI Core, Ember Data Core, and Ember Learning Core.
 
@@ -51,7 +51,7 @@ get all the TypeScript neatness to your test suite today and type on! ⌨
 
 ## [Twiddle Your Thumbs No More](https://ember-twiddle.com/)
 
-[Ember Twiddle](https://ember-twiddle.com/) support for the latest (v3.2.2) release of Ember and Ember Data is here! With the great efforts of [@Guarav0](https://github.com/Gaurav0), [@rwjblue](https://github.com/rwjblue) and [@gokatz](https://github.com/gokatz) you can now use the latest and greatest in Ember Land in your favorite browser Ember environment. 
+[Ember Twiddle](https://ember-twiddle.com/) support for the latest (v3.2.2) release of Ember and Ember Data is here! With the great efforts of [@Guarav0](https://github.com/Gaurav0), [@rwjblue](https://github.com/rwjblue) and [@gokatz](https://github.com/gokatz) you can now use the latest and greatest in Ember Land in your favorite browser Ember environment.
 
 Some cool updates are new keyboard shortcuts for `run now` and `save` as well as a shortcut for quickly commenting javascript code.
 There are also some updates to the contribution guide and of course it now supports Ember 3.0 - 3.2 out of the box!
@@ -62,8 +62,31 @@ Now is a great time to check out this amazing tool!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Upgrade ⬆️ Your App up to 11 with Ember 3.2 🐹](https://www.emberjs.com/blog/2018/07/02/ember-3-2-released.html)
 
+The time has come. The long awaited [version 3.2 release of Ember, Ember CLI and Ember Data](https://www.emberjs.com/blog/2018/07/02/ember-3-2-released.html) is out in the wild!
+
+A little later than previously planned, this release makes up for the waiting with neat new features,
+including the handy [let helper for on the spot creation of bindings in your templates](https://emberjs.github.io/rfcs/0286-block-let-template-helper.html) or
+the ✨ testing assertion library [qunit-dom](https://github.com/simplabs/qunit-dom)
+which is now added to your v3.2+ app on your very first `ember new`.
+
+Ember Data's latest release
+[removes](https://www.emberjs.com/blog/2018/07/02/ember-3-2-released.html#toc_ember-data-feature-flag-removal-2-of-4) several **stale feature flags** -
+put into place to allow users an opt-in to experimental features which have now become outdated
+to make way for more recent developments of the addon.
+If you're relying on any of these features in your app, be sure to
+**reach out** to the Ember Data team for support with the transition [by opening an issue here](https://github.com/emberjs/data/issues).
+
+You can also check out the release blog post's **Deprecations** sections to ensure that you're app is prepared for the
+next major release. Read all about 👀 it on the Ember Blog:
+
+<div class="blog-row">
+  <a class="ember-button"
+    href="https://www.emberjs.com/blog/2018/07/02/ember-3-2-released.html"
+    target="blog"
+    aria-label="Read more about the 3.2 Ember release on the Ember blog">Read more</a>
+</div>
 
 ---
 
