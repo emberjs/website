@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 53
 author: Kenneth Larsen, Sivakumar Kailasam, Alon Bukai, Ryan Mark, Jen Weber, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/06/29/the-ember-times-issue-53.html"
 responsive: true
 ---
