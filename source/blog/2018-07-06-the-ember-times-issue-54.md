@@ -30,7 +30,7 @@ The renaming of the Ember teams means that moving forward, all the official team
 
 The intent here is to make it clear that all members of the teams are peers.
 
-You can read all about the changes in the [Ember blog post](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html)
+You can read all about the changes in the [Ember blog post](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html).
 
 ---
 
@@ -53,7 +53,7 @@ get all the TypeScript neatness to your test suite today and type on! ⌨
 
 [Ember Twiddle](https://ember-twiddle.com/) support for the latest (v3.2.2) release of Ember and Ember Data is here! With the great efforts of [@Guarav0](https://github.com/Gaurav0), [@rwjblue](https://github.com/rwjblue) and [@gokatz](https://github.com/gokatz) you can now use the latest and greatest in Ember Land in your favorite browser Ember environment.
 
-Some cool updates are new keyboard shortcuts for `run now` and `save` as well as a shortcut for quickly commenting javascript code.
+Some cool updates are new keyboard shortcuts for `run now` and `save` as well as a shortcut for quickly commenting JavaScript code.
 There are also some updates to the contribution guide and of course it now supports Ember 3.0 - 3.2 out of the box!
 
 Ember Twiddle, currently at `v0.15.0` is a great tool that allows creating simple Ember apps to showcase ideas, bugs, issues, demos and more. It allows using addons with the included `twiddle.json` and has a built-in generator just like Ember-CLI. There are even different keyboard layouts such as Vim, Emacs, Sublime and more.
@@ -90,9 +90,14 @@ next major release. Read all about 👀 it on the Ember Blog:
 
 ---
 
+## [Open Source Live](https://www.youtube.com/watch?v=Dx0vfMyQJMU&feature=youtu.be)
+Now that the Guides and Deprecations have been moved into Ember apps, [emberjs.com](https://emberjs.com/) needs to be moved to an Ember app too! [Chris Manson](https://github.com/mansona) and [Melanie Sumner](https://github.com/MelSumner) recorded their latest pairing session, where they are working on adding the beta [ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide) to the new [ember-learn/ember-website](https://github.com/ember-learn/ember-website) (a rewrite of [emberjs/website](https://github.com/emberjs/website) in Ember, so as to make it easier to contribute to). Check out the video to learn more about Learning Team happenings and pair programming for knowledge sharing!
+
+---
+
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
-A warm thank you 💕 goes to [@krisselden](https://github.com/krisselden), [@Alonski](https://github.com/Alonski), [@kennethlarsen](https://github.com/kennethlarsen), [@jessica-jordan](https://github.com/jessica-jordan), [@MelSumner](https://github.com/MelSumner), [@pete-the-pete](https://github.com/pete-the-pete), [@hakilebara](https://github.com/hakilebara), [@teddyzeenny](https://github.com/teddyzeenny), [@oskarrough](https://github.com/oskarrough)
+A warm thank you 💕 goes to [@krisselden](https://github.com/krisselden), [@Alonski](https://github.com/Alonski), [@kennethlarsen](https://github.com/kennethlarsen), [@jessica-jordan](https://github.com/jessica-jordan), [@MelSumner](https://github.com/MelSumner), [@pete-the-pete](https://github.com/pete-the-pete), [@hakilebara](https://github.com/hakilebara), [@teddyzeenny](https://github.com/teddyzeenny), and [@oskarrough](https://github.com/oskarrough).
 
 ---
 
