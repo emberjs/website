@@ -1097,7 +1097,7 @@
 - url: "https://appknox.com/"
   image: appknox-logo.png
   alt: Appknox - Mobile App Security Testing
-  use: "We use EmberJS for our security dashboard(https://secure.appknox.com/) and also for our internal sales & security dashboard"  
+  use: "We use EmberJS for our security dashboard(https://secure.appknox.com/) and also for our internal sales & security dashboard"
 - url: "https://mobilunity.com/"
   image: mobilunity.png
   alt: Mobilunity
@@ -1110,6 +1110,10 @@
   image: shx.png
   alt: SHX
   use: "All of our products are built with Ember.js"
+- url: "http://mocklab.io"
+  image: mocklab_logo.png
+  alt: MockLab
+  use: "MockLab's main web UI (https://app.mocklab.io) is built with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
