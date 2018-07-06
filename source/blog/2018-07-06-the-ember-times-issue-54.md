@@ -8,22 +8,21 @@ responsive: true
 
 привет Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/06/the-ember-times-issue-54.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/07/the-ember-times-issue-54) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/06/the-ember-times-issue-54.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/06/the-ember-times-issue-54) what has been going on in Emberland this week.
 
-...
 
 This week you can read all about the **📦 Ember 3.2** and how the **🐹 Core Team has reorganised**.
-There's also great tips on how you can improve your testing with the new and improved **🚀QUnit DOM**. 
+There's also a great tip on how you can improve your testing with the new and improved **🚀QUnit DOM**. 
 At last, there's news about **👩‍💻 Twiddle** as well as a nice **📹 video on the Ember Styleguide**. Enjoy!
 
 ---
 
 ## [Organising the Organisers](https://emberjs.com/blog/2018/06/30/organizing-our-contributors.html)
-The Ember Team has published a new blog post outlining some structural changes to the Core teams. It contains two changes: A new Steering Committee and a renaming of some of the existing teams.
+The Ember Team has published a new blog post outlining some **structural changes** to the **Core teams**. It contains two changes: A new Steering Committee and a renaming of some of the existing teams.
 
 The Steering Committee will be responsible for areas like community guidelines, managing Ember’s brand, dealing with legal questions and much more.
 
-The renaming of the Ember teams means that moving forward, all the official teams will be known as Core teams: Ember.js Core, Ember CLI Core, Ember Data Core, and Ember Learning Core.
+The renaming of the **Ember teams** means that moving forward, all the official teams will be known as Core teams: Ember.js Core, Ember CLI Core, Ember Data Core, and Ember Learning Core.
 
 The intent here is to make it clear that all members of the teams are peers.
 
@@ -48,9 +47,9 @@ get all the TypeScript neatness to your test suite today and type on! ⌨
 
 ## [Twiddle Your Thumbs No More](https://ember-twiddle.com/)
 
-[Ember Twiddle](https://ember-twiddle.com/) support for the latest (v3.2.2) release of Ember and Ember Data is here! With the great efforts of [@Guarav0](https://github.com/Gaurav0), [@rwjblue](https://github.com/rwjblue) and [@gokatz](https://github.com/gokatz) you can now use the latest and greatest in Ember Land in your favorite browser Ember environment.
+[Ember Twiddle](https://ember-twiddle.com/) support for the latest (v3.2.2) release of Ember and Ember Data is here! With the great efforts of [@Gaurav0](https://github.com/Gaurav0), [@rwjblue](https://github.com/rwjblue) and [@gokatz](https://github.com/gokatz) you can now use the latest and greatest in Ember Land in your favorite browser Ember environment.
 
-Some cool updates are new keyboard shortcuts for `run now` and `save` as well as a shortcut for quickly commenting JavaScript code.
+Some cool updates are **new keyboard shortcuts** for `run now` and `save` as well as a shortcut for quickly commenting JavaScript code.
 There are also some updates to the contribution guide and of course it now supports Ember 3.0 - 3.2 out of the box!
 
 Ember Twiddle, currently at `v0.15.0` is a great tool that allows creating simple Ember apps to showcase ideas, bugs, issues, demos and more. It allows using addons with the included `twiddle.json` and has a built-in generator just like Ember-CLI. There are even different keyboard layouts such as Vim, Emacs, Sublime and more.
@@ -88,7 +87,7 @@ next major release. Read all about 👀 it on the Ember Blog:
 ---
 
 ## [Open Source Live](https://www.youtube.com/watch?v=Dx0vfMyQJMU&feature=youtu.be)
-Now that the Guides and Deprecations have been moved into Ember apps, [emberjs.com](https://emberjs.com/) needs to be moved to an Ember app too! [Chris Manson](https://github.com/mansona) and [Melanie Sumner](https://github.com/MelSumner) recorded their latest pairing session, where they are working on adding the beta [ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide) to the new [ember-learn/ember-website](https://github.com/ember-learn/ember-website) (a rewrite of [emberjs/website](https://github.com/emberjs/website) in Ember, so as to make it easier to contribute to). Check out the video to learn more about Learning Team happenings and pair programming for knowledge sharing!
+Now that the Guides and Deprecations have been moved into Ember apps, [emberjs.com](https://emberjs.com/) needs to be moved to an Ember app too! [Chris Manson](https://github.com/mansona) and [Melanie Sumner](https://github.com/MelSumner) recorded their **latest pairing session**, where they are working on **adding the beta** [ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide) to the new [ember-learn/ember-website](https://github.com/ember-learn/ember-website) (a rewrite of [emberjs/website](https://github.com/emberjs/website) in Ember, so as to make it easier to contribute to). Check out the video to learn more about Learning Team happenings and pair programming for knowledge sharing!
 
 ---
 
