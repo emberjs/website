@@ -21,7 +21,10 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Don't Worry, Ember CLI Got You Covered](https://github.com/ember-cli/ember-cli-update)
+The **number one** tool for updating Ember.js apps or addons just got **even better**. The [newest version](https://github.com/ember-cli/ember-cli-update/releases) of `ember-cli-update` now runs `qunit-dom-codemod` for you. This mean that you with close to no effort at all can utilize this great addon for your tests.
+
+And the cool things is that `ember-cli-update` fetches new codemods **during runtime** - so no need to update to get this nice codemod! You can visit the addon page for [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to read all about it or visit [qunit-dom](https://github.com/simplabs/qunit-dom) to learn about all the nice features it provides.
 
 
 ---
