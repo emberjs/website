@@ -36,8 +36,22 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Find Ember on the Interwebs with the Power of SEO 🔎](https://embercommunity.slack.com/archives/CAHEZTMBK)
 
+These past days, weeks and months lots of efforts have been focused on improving the
+discoverability of official Ember resources including the website, the Guides or the API docs.
+The visibility of these sites to various search engines 🔍 , for example, DuckDuckGo, Baidu, AOL Search, Dogpile or Google
+plays a major role in how easy it is for developers to find the information they are looking for.
+To improve Ember's visibility on the web, Search-Engine Optimization (SEO) of these pages is one of the most effective measures.
+
+Simple, yet effective improvements for Ember sites included tests of functional redirects ([1](https://github.com/emberjs/website/pull/3394)) and fixes for broken links ([2](https://github.com/emberjs/website/pull/3271), [3](https://github.com/emberjs/website/pull/3183), [4](https://github.com/emberjs/website/pull/3182)).
+Other high-impact efforts included a [new meta data structure for the new Guides](https://github.com/ember-learn/guides-app/pull/135)
+and the continuous evaluation of web crawler data.
+
+If you have previous experience with SEO and you're interested in casting some keyword magic ✨🎩 for Ember sites,
+check out the [\#st-website](https://embercommunity.slack.com/archives/CAHEZTMBK) channel on the
+[Ember Community Slack Chat](https://ember-community-slackin.herokuapp.com/)
+and join other SEO analysts in their quest to make Ember the No. 1 search result on [Ask.com](https://ask.com/web?o=0&l=dir&qo=serpSearchTopBox&q=the+most+ambitious+JS+mvc+framework+must+have+a+cute+mascot).
 
 ---
 
