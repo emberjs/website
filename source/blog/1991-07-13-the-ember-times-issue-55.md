@@ -2,7 +2,7 @@
 title: The Ember Times - Issue No. 55
 author: the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/2018/07/13-the-ember-times-issue-55.html"
+alias : "blog/1991/07/13-the-ember-times-issue-55.html"
 responsive: true
 ---
 
