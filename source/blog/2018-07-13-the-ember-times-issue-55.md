@@ -36,8 +36,13 @@ You can visit the addon page for [ember-cli-update](https://github.com/ember-cli
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember CLI docs project ✨](https://github.com/sivakumar-kailasam/cli-guides/pull/4)
 
+Our beloved contributor <a href="https://github.com/jenweber" target="gh-user">@jenweber</a> is making an amazing job by putting together a tutorial for Ember addons creation, soon to be RFC'd. 👏
+
+If you would like to be part of it from the beginning, now it is a great chance to help out with its direction, you can see the work in progress <a href='https://github.com/sivakumar-kailasam/cli-guides/pull/4' target='_blank'>here</a>.
+
+All comments and new writers are more than welcome! 📢
 
 ---
 
