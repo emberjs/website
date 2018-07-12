@@ -38,9 +38,9 @@ You can visit the addon page for [ember-cli-update](https://github.com/ember-cli
 
 ## [Have you ever dreamt about creating your very own RFC? ✨](https://github.com/emberjs/rfcs/pulls)
 
-If you've wondered how **Request for Comments** come about, now you have a great chance to peak into its thought process, it might look like they pop up overnight, but there is actually a lot of work and support that goes into them before they are ready.
+If you've ever wondered how **Request for Comments** come about, now you have a great chance to peak into its thought process. It might look like they pop up overnight, but there is actually a lot of work and support that goes into them before they are ready.
 
-As an example, our beloved contributor <a href="https://github.com/jenweber" target="gh-user">@jenweber</a> is making an amazing job by putting together tutorials for `ember-cli`. 👏  More specifically basic commands and how to make your first addon.
+As an example, our beloved contributor [@jenweber](https://github.com/jenweber) is doing an amazing job by putting together tutorials for `ember-cli`. 👏 More specifically basic commands and how to make your first addon.
 
 In order for this specific RFC to be ready the following steps are being taken:
 
@@ -48,7 +48,7 @@ In order for this specific RFC to be ready the following steps are being taken:
 
 - Find a co-inspirator to iterate your ideas with 👭
 
-- Reach out to the cli-teams to get more ideas and feedback 💡
+- Reach out to the CLI Teams to get more ideas and feedback 💡
 
 - Get a couple of early reviewers 🤓
 
@@ -58,9 +58,13 @@ In order for this specific RFC to be ready the following steps are being taken:
 
 - Publish it 🚀 
 
+- ❔❔❔
+
+- Profit 🤑
+
 Not all the above steps are mandatory, but it gives you a pretty good notion of what might be involved.
 
-And now that you know, why not stay tuned for this specific RFC and make your contribution? All comments and new writers are more than welcome! 📢
+And now that you know, why not stay tuned for this specific RFC and make your contribution? All comments and new writers are more than welcome! Check it out here! 📢
 
 ---
 
