@@ -109,4 +109,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Sivakumar Kailasam, Jessica Jordan, Alon Bukai and the Learning Team
