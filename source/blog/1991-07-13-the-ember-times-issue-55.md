@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 55
-author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Sivakumar Kailasam, Jessica Jordan, Alon Bukai
+author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Sivakumar Kailasam, Jessica Jordan, Alon Bukai, Ryan Mark
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/1991/07/13-the-ember-times-issue-55.html"
 responsive: true
@@ -36,7 +36,13 @@ You can visit the addon page for [ember-cli-update](https://github.com/ember-cli
 
 ---
 
-## [SECTION TITLE](#section-url)
+## Start Small - How I Became an Ember Addon Maintainer by [Ryan Mark](github.com/tylerturdenpants)
+
+[Ember User Activity](https://github.com/elwayman02/ember-user-activity/) is a great addon.  It fits my needs and works perfectly...until I needed to use Fastboot. Seeing how others had solved Fastboot related compatibility issues, I cloned [`ember-user-activty`](https://github.com/elwayman02/ember-user-activity/) and got to work.  After a few suggested tweaks by the author, my PR was merged, and a new version was released.  A few weeks later, a new version of ember-cli was released.  I've always updated my own app, but I had never done an addon.  Excited about this new challenge, I updated [`ember-user-activty`](https://github.com/elwayman02/ember-user-activity/) to the latest ember-cli.  Moments later, after submitting my PR, the author sent me an invitation to collaborate. The author asked if I could help him maintain the addon, and I enthusiastically agreed.  As of today, I have published a handful of releases. Even though I didn't create the addon, I had ownership, and it was exciting to be apart of the addon community.
+
+TL;DR, one of the easiest ways to contribute, and possibly becoming a collaborator/maintainer of an addon, is doing small, chore like work for the author.  Authors, and even current maintainers, always appreciate the help.  Not only does it keep the addon fresh, but often the addon needs a fix or two to be compatible, allowing for even more contributing.
+
+Interested in contributing in a hurry? According to [@mixonic](https://twitter.com/mixonic), an Ember.js core team member, the version of Ember.js used in [TodoMVC](http://todomvc.com/examples/emberjs/) has been out of date and he's asking for help. Check out the [conversation](https://github.com/tastejs/todomvc/pull/1790) and lend a helping hand!
 
 
 ---
