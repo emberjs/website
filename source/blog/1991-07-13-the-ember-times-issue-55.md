@@ -44,10 +44,10 @@ You can visit the addon page for [ember-cli-update](https://github.com/ember-cli
 ## [Find Ember on the Interwebs with the Power of SEO 🔎](https://embercommunity.slack.com/archives/CAHEZTMBK)
 
 These past days, weeks and months lots of efforts have been focused on improving the
-discoverability of official Ember resources including the website, the Guides or the API docs.
+**discoverability of official Ember resources** including the website, the Guides or the API docs.
 The visibility of these sites to various search engines 🔍 , for example, DuckDuckGo, Baidu, AOL Search, Dogpile or Google
 plays a major role in how easy it is for developers to find the information they are looking for.
-To improve Ember's visibility on the web, Search-Engine Optimization (SEO) of these pages is one of the most effective measures.
+To improve Ember's visibility on the web, **Search-Engine Optimization (SEO)** of these pages is one of the most effective measures.
 
 Simple, yet effective improvements for Ember sites included tests of functional redirects ([1](https://github.com/emberjs/website/pull/3394)) and fixes for broken links ([2](https://github.com/emberjs/website/pull/3271), [3](https://github.com/emberjs/website/pull/3183), [4](https://github.com/emberjs/website/pull/3182)).
 Other high-impact efforts included a [new meta data structure for the new Guides](https://github.com/ember-learn/guides-app/pull/135)
@@ -74,7 +74,7 @@ Have some thoughts on the proposal? Get involved on the [RFC](https://github.com
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
-<p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
+<p>This week we'd like to thank <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/thoov" target="gh-user">@thoov</a>, <a href="https://github.com/DanielRosenwasser" target="gh-user">@DanielRosenwasser</a>, <a href="https://github.com/stopdropandrew" target="gh-user">@stopdropandrew</a>, <a href="https://github.com/ijlee2" target="gh-user">@ijlee2</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/pete-the-pete" target="gh-user">@pete-the-pete</a>, <a href="https://github.com/john-griffin" target="gh-user">@john-griffin</a>, <a href="https://github.com/gabrielgrant" target="gh-user">@gabrielgrant</a>, <a href="https://github.com/localpcguy" target="gh-user">@localpcguy</a>, <a href="https://github.com/kasunvp" target="gh-user">@kasunvp</a>, <a href="https://github.com/mike-north" target="gh-user">@mike-north</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/jrock2004" target="gh-user">@jrock2004</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a>, <a href="https://github.com/wagenet" target="gh-user">@wagenet</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/ThiefZero" target="gh-user">@ThiefZero</a>, <a href="https://github.com/jpadilla" target="gh-user">@jpadilla</a> and <a href="https://github.com/heqian" target="gh-user">@heqian</a> for their contributions to Ember and related repositories! 💕
 </p>
 
 ---
