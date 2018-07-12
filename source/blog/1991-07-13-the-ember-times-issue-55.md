@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 55
-author: the crowd
+author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Sivakumar Kailasam, Jessica Jordan, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/1991/07/13-the-ember-times-issue-55.html"
 responsive: true
