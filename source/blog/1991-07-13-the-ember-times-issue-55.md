@@ -64,7 +64,7 @@ In order for this specific RFC to be ready the following steps are being taken:
 
 Not all the above steps are mandatory, but it gives you a pretty good notion of what might be involved.
 
-And now that you know, why not stay tuned for this specific RFC and make your contribution? All comments and new writers are more than welcome! Check it out here! 📢
+And now that you know, why not stay tuned for this specific RFC and make your contribution? All comments and new writers are more than welcome! <a href='https://github.com/sivakumar-kailasam/cli-guides/pull/4' target='_blank'>Click here to learn more!</a> 📢
 
 ---
 
