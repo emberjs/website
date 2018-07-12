@@ -60,6 +60,14 @@ and join other SEO analysts in their quest to make Ember the No. 1 search result
 
 ---
 
+## [RFC: Goodbye Slack, Hello Discord](https://github.com/emberjs/rfcs/pull/345)
+
+[@MelSumner](https://github.com/MelSumner) has proposed an [RFC](https://github.com/emberjs/rfcs/pull/345) recommending that the Ember community chat move from Slack to Discord. Ever had a message on the Ember Slack disappear on you in a channel or DM? Discord stores chat logs forever, so losing history would no longer be an issue. Better communication and transparency FTW!
+
+Our one gripe with the potential move is the confusion between [Discourse](https://discuss.emberjs.com/) and [Discord](https://discordapp.com/)... 😅
+
+---
+
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
 <p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
