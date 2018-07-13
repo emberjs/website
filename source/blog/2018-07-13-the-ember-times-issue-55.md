@@ -2,7 +2,7 @@
 title: The Ember Times - Issue No. 55
 author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Sivakumar Kailasam, Jessica Jordan, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/1991/07/13-the-ember-times-issue-55.html"
+alias : "blog/2018/07/13-the-ember-times-issue-55.html"
 responsive: true
 ---
 
@@ -14,20 +14,12 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-embe
 
 Check out what's been going in Emberland 🐹 these days:
 
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Don't Worry, Ember CLI Got You Covered](https://github.com/ember-cli/ember-cli-update) 🖳
 The **number one** tool for updating Ember.js apps or addons just got **even better**. The [newest version](https://github.com/ember-cli/ember-cli-update/releases) of `ember-cli-update` now runs `qunit-dom-codemod` for you. This means that you, with close to no effort at all, can utilize this great addon for your tests.
 
 And the cool things is that `ember-cli-update` fetches new codemods **during runtime** - so no need to update to get this nice codemod! To run the codemod just type `ember-cli-update --run-codemods` and magic will take care of the rest for you.
 
 You can visit the addon page for [ember-cli-update](https://github.com/ember-cli/ember-cli-update) to read all about it or visit [qunit-dom](https://github.com/simplabs/qunit-dom) to learn about all the nice features it provides.
-
 
 ---
 
@@ -104,7 +96,7 @@ Have some thoughts on the proposal? Get involved on the [RFC](https://github.com
 
 ---
 
-## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
+## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/) 🤝
 
 <p>This week we'd like to thank <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/thoov" target="gh-user">@thoov</a>, <a href="https://github.com/DanielRosenwasser" target="gh-user">@DanielRosenwasser</a>, <a href="https://github.com/stopdropandrew" target="gh-user">@stopdropandrew</a>, <a href="https://github.com/ijlee2" target="gh-user">@ijlee2</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/pete-the-pete" target="gh-user">@pete-the-pete</a>, <a href="https://github.com/john-griffin" target="gh-user">@john-griffin</a>, <a href="https://github.com/gabrielgrant" target="gh-user">@gabrielgrant</a>, <a href="https://github.com/localpcguy" target="gh-user">@localpcguy</a>, <a href="https://github.com/kasunvp" target="gh-user">@kasunvp</a>, <a href="https://github.com/mike-north" target="gh-user">@mike-north</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/jrock2004" target="gh-user">@jrock2004</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a>, <a href="https://github.com/wagenet" target="gh-user">@wagenet</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/ThiefZero" target="gh-user">@ThiefZero</a>, <a href="https://github.com/jpadilla" target="gh-user">@jpadilla</a> and <a href="https://github.com/heqian" target="gh-user">@heqian</a> for their contributions to Ember and related repositories! 💕
 </p>
