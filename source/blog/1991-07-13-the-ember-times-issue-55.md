@@ -36,8 +36,35 @@ You can visit the addon page for [ember-cli-update](https://github.com/ember-cli
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Have you ever dreamt about creating your very own RFC? ✨](https://github.com/emberjs/rfcs/pulls)
 
+If you've ever wondered how **Request for Comments** come about, now you have a great chance to peak into its thought process. It might look like they pop up overnight, but there is actually a lot of work and support that goes into them before they are ready.
+
+As an example, our beloved contributor [@jenweber](https://github.com/jenweber) is doing an amazing job by putting together tutorials for `ember-cli`. 👏 More specifically basic commands and how to make your first addon.
+
+In order for this specific RFC to be ready the following steps are being taken:
+
+- Brainstorm about which parts of Ember need more documentation 🤔
+
+- Find a co-inspirator to iterate your ideas with 👭
+
+- Reach out to the CLI Teams to get more ideas and feedback 💡
+
+- Get a couple of early reviewers 🤓
+
+- Draft the RFC and get more feedback from all the stakeholders 📖 
+
+- Make a proof of concept 👨‍💻 
+
+- Publish it 🚀 
+
+- ❔❔❔
+
+- Profit 🤑
+
+Not all the above steps are mandatory, but it gives you a pretty good notion of what might be involved.
+
+And now that you know, why not stay tuned for this specific RFC and make your contribution? All comments and new writers are more than welcome! <a href='https://github.com/sivakumar-kailasam/cli-guides/pull/4' target='_blank'>Click here to learn more!</a> 📢
 
 ---
 
