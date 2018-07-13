@@ -10,11 +10,11 @@ nuqneH Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-55.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/the-ember-times-issue-55) what has been going on in Emberland this week.
 
-This week you can learn about **updating** your Ember app 🖳. Learn from firsthand experience how to become an **addon maintainer** 💪. Get some tips on writing your own **RFCs** ✨. Check out the new **SEO tactics** of Ember 🔎 and last but not least learn about the potential move of Ember to a new **chat platform** 💬. Go ahead and enjoy!
+This week you can learn about **updating** your Ember app 💁🏻. Learn from firsthand experience how to become an **addon maintainer** 💪. Get some tips on writing your own **RFCs** ✨. Check out the new **SEO tactics** of Ember 🔎 and last but not least learn about the potential move of Ember to a new **chat platform** 💬. Go ahead and enjoy!
 
 ---
 
-## [Don't Worry, Ember CLI Got You Covered](https://github.com/ember-cli/ember-cli-update) 🖳
+## [Don't Worry, Ember CLI Got You Covered 💻](https://github.com/ember-cli/ember-cli-update)
 The **number one** tool for updating Ember.js apps or addons just got **even better**. The [newest version](https://github.com/ember-cli/ember-cli-update/releases) of `ember-cli-update` now runs `qunit-dom-codemod` for you. This means that you, with close to no effort at all, can utilize this great addon for your tests.
 
 And the cool thing is that `ember-cli-update` fetches new codemods **during runtime** - so no need to update to get this nice codemod! To run the codemod just type `ember-cli-update --run-codemods` and magic will take care of the rest for you.
