@@ -14,6 +14,11 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-embe
 
 Check out what's been going in Emberland 🐹 these days:
 
+## IDEAS
+- Edward Faulkner@eaf4
+Would you like to use dynamic import() to lazy-load deps into your Ember app right now? Here's a video showing how: https://eaf4.com/dynamic-import-into-your-ember-app/
+- ember weekly podcast
+- https://twitter.com/mixonic/status/1017487614121684992
 ---
 
 ## [SECTION TITLE](#section-url)
