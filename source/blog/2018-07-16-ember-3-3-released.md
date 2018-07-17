@@ -5,11 +5,9 @@ tags: Releases, 2018, 3, 3.3
 responsive: true
 ---
 
-Today the Ember project is releasing version 3.3.0 of Ember.js, Ember Data, and Ember CLI- a little later than planned, for sure! Thank you for your support and patience. 
+Today the Ember project is releasing version 3.3.0 of Ember.js, Ember Data, and Ember CLI. We know, 3.2 seems like it just came out yesterday! But we wanted to (stay? get back?) on track. So 3.3.0 is here! 
 
-This release kicks off the 3.3 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report
-any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to
-continuously test your projects against the latest Ember releases.
+This release kicks off the 3.4 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
@@ -26,17 +24,33 @@ Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.3
 
-Ember.js 3.3 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is xxxx () new feature and xxxx () deprecations in this version.
+Ember.js 3.3 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There are one (1) new feature, three (3) deprecations, and eight (8) bugfixes in this version.
 
-#### New Features ()
+#### New Features (1)
 
+**Implement optional jQuery Integration (1 of 1)**
 
-#### Deprecations ()
+See [emberjs/rfcs#294](https://github.com/emberjs/rfcs/blob/master/text/0294-optional-jquery.md) to get more prose
+
+#### Deprecations (3)
 
 Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
+**Operation "make jQuery optional" continues (1 of 3)**
+We implemented a deprecation that removes access from `jQuery.Event#originalEvent`
+Read the full RFC: [emberjs/rfcs#294](https://github.com/emberjs/rfcs/blob/master/text/0294-optional-jquery.md).
+
+**deprecation of three private, unused classes (2 of 3)**
+Implemented deprecation of `Ember.Map`, `Ember.MapWithDefault`, and `Ember.OrderedSet` because not only were they private classes, they had also remained unused in Ember for some time now. Read the full (rendered) RFC: [emberjs/rfc#237](https://github.com/Serabe/rfcs/blob/dbc64fd66c602c68cfe03e91bfa2d031f4907423/text/0000-deprecation-ember-map.md)
+
+**deprecation of copy/copyable (3 of 3)**
+We've implemented deprecation of `Ember.copy` and `Ember.Copyable` - the `copy` function and `Copyable` mixin of `@ember/object/internals`. Ember isn't using it internally- it's leftover from SproutCore(!), and we're at the point where we realized we could clean this one up. 
+
+Shallow copies of the form `copy(x)` or `copy(x, false)` can be replaced mechanically with `Object.assign({}, x)`. 
+
+If you're using it in your addon, you might want to read the entire text of the RFC for advice on how to replace this in your addon: [emberjs/rfcs#322](https://github.com/lupestro/rfcs/blob/a7db06396cdd080e06f1b99fd728ab8a4e191a79/text/0322-deprecate-copy-copyable.md).
 
 For more details on changes in Ember.js 3.3, please review the [Ember.js 3.3.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.3.0).
 
