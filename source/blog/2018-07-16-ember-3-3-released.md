@@ -1,6 +1,6 @@
 ---
 title: Ember 3.3 Released
-author: Melanie Sumner
+author: Melanie Sumner, Brendan McLoughlin
 tags: Releases, 2018, 3, 3.3
 responsive: true
 ---
