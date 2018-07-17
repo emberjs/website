@@ -62,13 +62,20 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.3
 
-There are xxxx () new features and xxxx () deprecations in the Ember Data 3.3 release.
+Since Ember Data 3.2 was just released two weeks, ago we did not feel
+confident that the changes in the beta branch had recieved enough
+testing. As a result, we have decided to re-release Ember Data 3.2 as
+Ember Data 3.3 to maintain the release train cadence. Ember Data
+3.3.0-beta.1 will be released again as 3.4.0-beta.1 so it can continue
+to be evaludated for a full beta cycle.
 
-#### New Features ()
+#### New Features (0)
 
-#### Deprecations ()
+There are no new features in Ember Data 3.3.0.
 
-There are xxxx deprecations introduced in Ember Data 3.3.
+#### Deprecations (0)
+
+There are no deprecations introduced in Ember Data 3.3.
 
 For more details on changes in Ember Data 3.3, please review the
 [Ember Data 3.3.0 release page](https://github.com/emberjs/data/releases/tag/v3.3.0).
