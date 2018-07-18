@@ -1,11 +1,11 @@
 ---
 title: Ember 3.3 Released
-author: Melanie Sumner, Brendan McLoughlin
+author: Melanie Sumner, Brendan McLoughlin, and Alex Navasardyan
 tags: Releases, 2018, 3, 3.3
 responsive: true
 ---
 
-Today the Ember project is releasing version 3.3.0 of Ember.js, Ember Data, and Ember CLI. While ember-data and ember-cli only released recently, Ember.js released 3.2 over six weeks ago. Releasing 3.3 ensures that Ember.js does not have an excessively long time between releases.
+Today the Ember project is releasing version 3.3 of Ember.js, Ember Data, and Ember CLI. While ember-data and ember-cli only released recently, Ember.js released 3.2 over six weeks ago. Releasing 3.3 ensures that Ember.js does not have an excessively long time between releases.
 
 This release kicks off the 3.4 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
