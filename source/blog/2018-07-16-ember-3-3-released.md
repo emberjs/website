@@ -5,7 +5,7 @@ tags: Releases, 2018, 3, 3.3
 responsive: true
 ---
 
-Today the Ember project is releasing version 3.3.0 of Ember.js, Ember Data, and Ember CLI. We know, 3.2 seems like it just came out yesterday! However, we are really continuing 3.3 today because Ember.js had already completed a beta cycle, so we're catching ember-data & ember-cli up with Ember.
+Today the Ember project is releasing version 3.3.0 of Ember.js, Ember Data, and Ember CLI. While ember-data and ember-cli only released recently, Ember.js released 3.2 over six weeks ago. Releasing 3.3 ensures that Ember.js does not have an excessively long time between releases.
 
 This release kicks off the 3.4 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
@@ -62,7 +62,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.3
 
-Since Ember Data 3.2 was just released two weeks, ago we did not feel confident that the changes in the beta branch had received enough
+Since Ember Data 3.2 was just released two weeks ago we did not feel confident that the changes in the beta branch had received enough
 testing. As a result, we have decided to re-release Ember Data 3.2 as Ember Data 3.3 to maintain the release train cadence. Ember Data
 3.3.0-beta.1 will be released again as 3.4.0-beta.1 so it can continue to be evaluated for a full beta cycle.
 
@@ -97,7 +97,13 @@ To upgrade your projects using `npm` run:
 npm install --save-dev ember-cli
 ```
 
-After running the upgrade command run `ember init` inside of the project directory to apply the blueprint changes. You can preview those changes for [applications](https://github.com/ember-cli/ember-new-output/compare/v3.2.0...v3.3.0) and [addons](https://github.com/ember-cli/ember-addon-output/compare/v3.2.0...v3.3.0).
+After running the upgrade command, make sure to install (if you haven't already) ember-cli-update globally:
+
+```bash
+npm install -g ember-cli-update
+```
+
+This utility will help you to update your app or add-on to the latest Ember CLI version. You will probably encounter merge conflicts, in which the default behavior is to let you resolve conflicts on your own.
 
 ### Changes in Ember CLI 3.3
 
