@@ -8,7 +8,7 @@ responsive: true
 
 nuqneH Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-55.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/the-ember-times-issue-55) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-55.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/issue-55) what has been going on in Emberland this week.
 
 This week you can learn about **updating** your Ember app 💁🏻. Learn from firsthand experience how to become an **addon maintainer** 💪. Get some tips on writing your own **RFCs** ✨. Check out the new **SEO tactics** of Ember 🔎 and last but not least learn about the potential move of Ember to a new **chat platform** 💬. Go ahead and enjoy!
 
