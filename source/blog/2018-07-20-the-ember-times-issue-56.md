@@ -8,7 +8,7 @@ responsive: true
 
 Ia orana Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/the-ember-times-issue-56) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/20/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/20/issue-56) what has been going on in Emberland this week.
 
 ...
 
