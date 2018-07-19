@@ -21,26 +21,25 @@ Would you like to use dynamic import() to lazy-load deps into your Ember app rig
 - https://twitter.com/oligriffiths/status/1019257665925648390?s=19
 ---
 
-## [TodoMVC Ember update ✨](https://github.com/tastejs/todomvc/pull/1790)
-
-On our last edition, we mentioned that [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute on the TodoMVC Ember.js update. The <a href='https://github.com/tastejs/todomvc/pull/1790' target='_blank'>PR</a> is now closed and the bump to Ember 2.13.3 was a success, a big thank you from the community to everyone involved.
-
-TodoMVC helps you decide what MV* framework to use on your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each framework capabilities.
-
-We know which one is our favourite. 🐹
-
-Why not stop by and see it in action <a href='http://todomvc.com/' target='_blank'>here</a> or maybe become a contributor <a href='https://github.com/tastejs/todomvc/blob/master/contributing.md' target='_blank'>here</a>.
-
-Have fun with the "Speed-dating of MV* frameworks"!
-
----
-
 ## [Got Dependencies? 📦](https://github.com/ef4/ember-auto-import#dynamic-import)
 We’ve previously highlighted the great `ember-auto-import` by the wizard,[Edward Faulkner](https://github.com/ef4) 🧙, as a way to import npm packages into your Ember app. With the latest update **it just got way cooler**.
 
 As he demonstrates in this [nice screencast](https://eaf4.com/dynamic-import-into-your-ember-app/) with v1.2.0 you can now lazy load dependencies via `import()`! The dynamic `import()` will load the dependency as well as all its recursive dependencies via a separate Javascript file **at runtime**. That’s really awesome.
 
 To get started, watch the screencast or dive into the [documentation](https://github.com/ef4/ember-auto-import#dynamic-import).
+
+---
+
+## [TodoMVC Ember.js Update ✨](https://github.com/tastejs/todomvc/pull/1790)
+
+On our last edition, we mentioned that [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute on the TodoMVC Ember.js update. The [PR](https://github.com/tastejs/todomvc/pull/1790) is now closed and the bump to Ember 2.13.3 was a success, a big thank you from the community to everyone involved.
+
+[TodoMVC](http://todomvc.com/) helps you decide what MV* framework to use on your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each framework capabilities.
+
+We all know which one is our favorite...🐹, so why not stop by and see it in action at [http://todomvc.com/emberjs](http://todomvc.com/examples/emberjs), or maybe become a [contributor](https://github.com/tastejs/todomvc/blob/master/contributing.md).
+
+Have fun with the "Speed-dating of MV" frameworks"!
+
 ---
 
 ## [SECTION TITLE](#section-url)
@@ -59,7 +58,7 @@ To get started, watch the screencast or dive into the [documentation](https://gi
 
 ## [RFC Roundup with @rwjblue](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue)
 
-The Ember Weekend podcast is back on the mic! Want to hear more about some recent RFCs? @rwjblue discusses [RFC #276: Named Arguments Syntax (`{{@foo}}`)](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md), [RFC #213: Custom Components API](https://github.com/emberjs/rfcs/pull/213), and [RFC #311: Introduce `<AngleBracketInvocationSyntax />`](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) in [Ember Weekend's latest podcast](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue). Entertaining and informative! TIL "splatributes". Subscribe to Ember Weekend [here](https://itunes.apple.com/us/podcast/ember-weekend/id981719021) on iTunes. 🎙
+The Ember Weekend podcast is back on the mic! Want to hear more about some recent RFCs? [@rwjblue](https://github.com/rwjblue) discusses [RFC #276: Named Arguments Syntax (`{{@foo}}`)](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md), [RFC #213: Custom Components API](https://github.com/emberjs/rfcs/pull/213), and [RFC #311: Introduce `<AngleBracketInvocationSyntax />`](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) in [Ember Weekend's latest podcast](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue). Entertaining and informative! TIL "splatributes". Subscribe to Ember Weekend [here](https://itunes.apple.com/us/podcast/ember-weekend/id981719021) on iTunes. 🎙
 
 ---
 
