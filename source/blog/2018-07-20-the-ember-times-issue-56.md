@@ -42,8 +42,19 @@ Have fun with the "Speed-dating of MV" frameworks"!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [On the Heels of 3.2: Ember 3.3 Released 🎉](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html)
 
+<img class="float-right small transparent padded" alt="Release Bust Tomster" title="Ember Stable Release" src="/images/tomsters/3-release.png" />
+
+Although you might remember a not too far away, [previous 3.2 release](https://emberjs.com/blog/2018/07/02/ember-3-2-released.html), this week the **latest 3.3 release** of Ember.js, Ember CLI and Ember Data has been [published](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html).
+This will guarantee that the publishing of Ember.js in particular stays in sync with the planned schedule of the overall release cycle.
+
+The new minor release of Ember.js includes a switch that allows you to **include _jQuery_** into your app **optionally**,
+by using the `jquery-integration` flag of [`@ember/optional-features`](https://github.com/emberjs/ember-optional-features).
+There are also some more **new deprecations** that you shouldn't miss to make your Ember app ready for the future! ⏰
+**Read more** about these and other details of the 3.3 release in [the official release blog post](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html).
+
+<a class="ember-button ember-button--centered" href="https://emberjs.com/blog/2018/07/16/ember-3-3-released.html" target="threedotthreerelease">Read more</a>
 
 ---
 
