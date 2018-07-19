@@ -21,8 +21,17 @@ Would you like to use dynamic import() to lazy-load deps into your Ember app rig
 - https://twitter.com/oligriffiths/status/1019257665925648390?s=19
 ---
 
-## [SECTION TITLE](#section-url)
+## [TodoMVC Ember update ✨](https://github.com/tastejs/todomvc/pull/1790)
 
+On our last edition, we mentioned that [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute on the TodoMVC Ember.js update. The <a href='https://github.com/tastejs/todomvc/pull/1790' target='_blank'>PR</a> is now closed and the bump to Ember 2.13.3 was a success, a big thank you from the community to everyone involved.
+
+TodoMVC helps you decide what MV* framework to use on your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each framework capabilities.
+
+We know which one is our favourite. 🐹
+
+Why not stop by and see it in action <a href='http://todomvc.com/' target='_blank'>here</a> or maybe become a contributor <a href='https://github.com/tastejs/todomvc/blob/master/contributing.md' target='_blank'>here</a>.
+
+Have fun with the "Speed-dating of MV* frameworks"!
 
 ---
 
