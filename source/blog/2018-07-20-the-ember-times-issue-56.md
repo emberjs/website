@@ -1,12 +1,12 @@
 ---
 title: The Ember Times - Issue No. 56
-author: the crowd
+author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/2018/07/13-the-ember-times-issue-56.html"
+alias : "blog/2018/07/20-the-ember-times-issue-56.html"
 responsive: true
 ---
 
-nuqneH Emberistas! 🐹
+Ia orana Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/the-ember-times-issue-56) what has been going on in Emberland this week.
 
