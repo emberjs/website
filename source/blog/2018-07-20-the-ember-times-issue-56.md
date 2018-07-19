@@ -75,7 +75,8 @@ The Ember Weekend podcast is back on the mic! Want to hear more about some recen
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
-<p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
+<p>This week a warm thank you goes out to <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/ef4" target="gh-user">@ef4</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/Gabbyjose" target="gh-user">@Gabbyjose</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/jelhan" target="gh-user">@jelhan</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/2hu12" target="gh-user">@2hu12</a> and <a href="https://github.com/oligriffiths" target="gh-user">@oligriffiths</a>
+</span> for their contributions to Ember and related repositories! 💕
 </p>
 
 ---
