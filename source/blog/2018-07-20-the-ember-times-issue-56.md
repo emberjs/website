@@ -17,8 +17,8 @@ Check out what's been going in Emberland 🐹 these days:
 ## IDEAS
 - Edward Faulkner@eaf4
 Would you like to use dynamic import() to lazy-load deps into your Ember app right now? Here's a video showing how: https://eaf4.com/dynamic-import-into-your-ember-app/
-- ember weekly podcast
 - https://twitter.com/mixonic/status/1017487614121684992
+- https://twitter.com/oligriffiths/status/1019257665925648390?s=19
 ---
 
 ## [SECTION TITLE](#section-url)
@@ -38,11 +38,11 @@ Would you like to use dynamic import() to lazy-load deps into your Ember app rig
 
 ## [SECTION TITLE](#section-url)
 
-
 ---
 
-## [SECTION TITLE](#section-url)
+## [RFC Roundup with @rwjblue](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue)
 
+The Ember Weekend podcast is back on the mic! Want to hear more about some recent RFCs? @rwjblue discusses [RFC #276: Named Arguments Syntax (`{{@foo}}`)](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md), [RFC #213: Custom Components API](https://github.com/emberjs/rfcs/pull/213), and [RFC #311: Introduce `<AngleBracketInvocationSyntax />`](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) in [Ember Weekend's latest podcast](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue). Entertaining and informative! TIL "splatributes". Subscribe to Ember Weekend [here](https://itunes.apple.com/us/podcast/ember-weekend/id981719021) on iTunes. 🎙
 
 ---
 
@@ -66,15 +66,8 @@ Would you like to use dynamic import() to lazy-load deps into your Ember app rig
 
 ---
 
-## [The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
-
-The **Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
-[Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
-And if you've always wanted to be an OSS journalist yourself,
-drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
-on the Ember Community [Slack Chat](https://ember-community-slackin.herokuapp.com/)
-and **write** the next edition of the Ember Times **together with us**!
-
+Have a suggestion for next week's Ember Times? Want to write for us? Pop into [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
+on the Ember Community [Slack](https://ember-community-slackin.herokuapp.com/) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 ---
 
