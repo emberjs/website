@@ -19,6 +19,7 @@ Check out what's been going in Emberland 🐹 these days:
 Would you like to use dynamic import() to lazy-load deps into your Ember app right now? Here's a video showing how: https://eaf4.com/dynamic-import-into-your-ember-app/
 - ember weekly podcast
 - https://twitter.com/mixonic/status/1017487614121684992
+- https://twitter.com/oligriffiths/status/1019257665925648390?s=19
 ---
 
 ## [SECTION TITLE](#section-url)
