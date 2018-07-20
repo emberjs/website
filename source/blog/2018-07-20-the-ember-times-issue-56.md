@@ -35,7 +35,7 @@ Last week, [@mixonic](https://github.com/mixonic) was looking for a helping hand
 
 We all know which one is our favorite...🐹, so why not stop by and see it in action at [http://todomvc.com/emberjs](http://todomvc.com/examples/emberjs), or maybe become a [contributor](https://github.com/tastejs/todomvc/blob/master/contributing.md) yourself.
 
-Have fun with the "Speed-dating of MV" frameworks"!
+Have fun with the "Speed-dating of MV* frameworks"!
 
 ---
 
