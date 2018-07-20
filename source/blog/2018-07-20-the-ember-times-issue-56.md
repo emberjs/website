@@ -10,8 +10,8 @@ Ia orana Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/20/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/20/issue-56) what has been going on in Emberland this week.
 
-Learn more about **lazily loaded** dependencies with **ember-auto-import** ✨, the latest **upgrade** of Ember in the obligatory
-**"Hello World" example** for JavaScript libraries, aka **TodoMVC** 📝 and the latest **Ember 3.3 release** ⬆️.
+Learn more about **lazily loaded** dependencies with **ember-auto-import** ✨, the latest **update of Ember in TodoMVC**, the obligatory
+**"Hello World" example** for JavaScript libraries 📝, and the latest **Ember 3.3 release** ⬆️.
 Be sure to also join us on a tour 🚌 through recent **RFCs (Request for Comments)** proposing features that will land
 in an Ember app near you soon! 🚀
 
@@ -19,9 +19,9 @@ in an Ember app near you soon! 🚀
 
 ## [Got Dependencies? 📦](https://github.com/ef4/ember-auto-import#dynamic-import)
 
-We’ve previously highlighted the great `ember-auto-import` by the wizard,[Edward Faulkner](https://github.com/ef4)🌟, as a way to import npm packages into your Ember app. With the latest update **it just got way cooler**.
+We’ve previously highlighted the great `ember-auto-import` by the wizardly [Edward Faulkner](https://github.com/ef4)🌟 as a way to import npm packages into your Ember app. With the latest update it just got way cooler.
 
-As he demonstrates in this [nice screencast](https://eaf4.com/dynamic-import-into-your-ember-app/) with v1.2.0 you can now lazy load dependencies via `import()`! The dynamic `import()` will load the dependency as well as all its recursive dependencies via a separate Javascript file **at runtime**. That’s really awesome.
+As he demonstrates in this [nice screencast](https://eaf4.com/dynamic-import-into-your-ember-app/), with v1.2.0 you can now lazy load dependencies via `import()`! The dynamic `import()` will load the dependency as well as all its recursive dependencies via a separate JavaScript file **at runtime**. That’s really awesome.
 
 To get started, watch the screencast or dive into the [documentation](https://github.com/ef4/ember-auto-import#dynamic-import).
 
@@ -29,9 +29,9 @@ To get started, watch the screencast or dive into the [documentation](https://gi
 
 ## [TodoMVC Ember.js Update ✨](https://github.com/tastejs/todomvc/pull/1790)
 
-Last week, [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute to the [TodoMVC Ember.js update](https://twitter.com/mixonic/status/1017487614121684992). The [PR](https://github.com/tastejs/todomvc/pull/1912) is now merged and the bump to Ember 3.2 was a success, a big thank you from the community to [@zoltan-nz](https://github.com/zoltan-nz) and everyone involved.
+Last week, [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute to the [TodoMVC Ember.js update](https://twitter.com/mixonic/status/1017487614121684992). The [PR](https://github.com/tastejs/todomvc/pull/1912) is now merged and the bump to Ember 3.2 was a success. A big thank you from the community to [@zoltan-nz](https://github.com/zoltan-nz) and everyone involved.
 
-[TodoMVC](http://todomvc.com/) helps you decide what MV* framework to use on your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each framework capabilities.
+[TodoMVC](http://todomvc.com/) helps you decide what MV* framework to use for your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each framework capabilities.
 
 We all know which one is our favorite...🐹, so why not stop by and see it in action at [http://todomvc.com/emberjs](http://todomvc.com/examples/emberjs), or maybe become a [contributor](https://github.com/tastejs/todomvc/blob/master/contributing.md) yourself.
 
@@ -55,7 +55,7 @@ The new minor release of Ember.js includes several **new deprecations** that you
 
 ## [RFC Roundup with @rwjblue](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue)
 
-The Ember Weekend podcast is back on the mic! Want to hear more about some recent RFCs? [@rwjblue](https://github.com/rwjblue) discusses [RFC #276: Named Arguments Syntax (`@foo`)](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md), [RFC #213: Custom Components API](https://github.com/emberjs/rfcs/pull/213), and [RFC #311: Introduce `<AngleBracketInvocationSyntax />`](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) in [Ember Weekend's latest podcast](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue). Entertaining and informative! TIL "splatributes" aka rest parameters. Subscribe to Ember Weekend [here](https://itunes.apple.com/us/podcast/ember-weekend/id981719021) on iTunes. 🎙
+The Ember Weekend podcast is back on the mic! Want to hear more about some recent RFCs? [@rwjblue](https://github.com/rwjblue) discusses [RFC #276: Named Arguments Syntax (`@foo`)](https://github.com/emberjs/rfcs/blob/master/text/0276-named-args.md), [RFC #213: Custom Components API](https://github.com/emberjs/rfcs/pull/213), and [RFC #311: Introduce `<AngleBracketInvocationSyntax />`](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) in [the latest episode](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue). Entertaining and informative! TIL rest parameters are also known as "splatributes". Subscribe to Ember Weekend [here](https://itunes.apple.com/us/podcast/ember-weekend/id981719021) on iTunes. 🎙
 
 ---
 
