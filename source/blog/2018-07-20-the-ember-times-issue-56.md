@@ -31,11 +31,11 @@ To get started, watch the screencast or dive into the [documentation](https://gi
 
 Last week, [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute to the [TodoMVC Ember.js update](https://twitter.com/mixonic/status/1017487614121684992). The [PR](https://github.com/tastejs/todomvc/pull/1912) is now merged and the bump to Ember 3.2 was a success. A big thank you from the community to [@zoltan-nz](https://github.com/zoltan-nz) and everyone involved.
 
-[TodoMVC](http://todomvc.com/) helps you decide what MV* framework to use for your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each framework capabilities.
+[TodoMVC](http://todomvc.com/) helps you decide what MV* framework to use for your projects by providing the classic todo app built in a number of different frameworks and therefore exposing each frameworks' capabilities.
 
 We all know which one is our favorite...🐹, so why not stop by and see it in action at [http://todomvc.com/emberjs](http://todomvc.com/examples/emberjs), or maybe become a [contributor](https://github.com/tastejs/todomvc/blob/master/contributing.md) yourself.
 
-Have fun with the "Speed-dating of MV* frameworks"!
+Have fun with the "Speed-dating of MV" frameworks"!
 
 ---
 
@@ -43,7 +43,7 @@ Have fun with the "Speed-dating of MV* frameworks"!
 
 <img class="float-right small transparent padded" alt="Release Bust Tomster" title="Ember Stable Release" src="/images/tomsters/3-release.png" />
 
-Although you might remember a not too far away, [previous 3.2 release](https://emberjs.com/blog/2018/07/02/ember-3-2-released.html), this week the **latest 3.3 release** of Ember.js, Ember CLI and Ember Data has been [published](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html).
+Although you might remember a not too far away, [previous 3.2 release](https://emberjs.com/blog/2018/07/02/ember-3-2-released.html), this week the **latest 3.3 releases** of Ember.js, Ember CLI and Ember Data have been [published](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html).
 This will guarantee that the publishing of Ember.js in particular stays in sync with the planned schedule of the overall release cycle.
 
 The new minor release of Ember.js includes several **new deprecations** that you shouldn't miss to make your Ember app ready for the future! ⏰
