@@ -8,7 +8,7 @@ responsive: true
 
 Ia orana Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/the-ember-times-issue-56) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/20/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/20/issue-56) what has been going on in Emberland this week.
 
 ...
 
@@ -42,8 +42,19 @@ Have fun with the "Speed-dating of MV" frameworks"!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [On the Heels of 3.2: Ember 3.3 Released 🎉](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html)
 
+<img class="float-right small transparent padded" alt="Release Bust Tomster" title="Ember Stable Release" src="/images/tomsters/3-release.png" />
+
+Although you might remember a not too far away, [previous 3.2 release](https://emberjs.com/blog/2018/07/02/ember-3-2-released.html), this week the **latest 3.3 release** of Ember.js, Ember CLI and Ember Data has been [published](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html).
+This will guarantee that the publishing of Ember.js in particular stays in sync with the planned schedule of the overall release cycle.
+
+The new minor release of Ember.js includes a switch that allows you to **include _jQuery_** into your app **optionally**,
+by using the `jquery-integration` flag of [`@ember/optional-features`](https://github.com/emberjs/ember-optional-features).
+There are also some more **new deprecations** that you shouldn't miss to make your Ember app ready for the future! ⏰
+**Read more** about these and other details of the 3.3 release in [the official release blog post](https://emberjs.com/blog/2018/07/16/ember-3-3-released.html).
+
+<a class="ember-button ember-button--centered" href="https://emberjs.com/blog/2018/07/16/ember-3-3-released.html" target="threedotthreerelease">Read more</a>
 
 ---
 
@@ -64,7 +75,8 @@ The Ember Weekend podcast is back on the mic! Want to hear more about some recen
 
 ## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
 
-<p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
+<p>This week a warm thank you goes out to <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/ef4" target="gh-user">@ef4</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/Gabbyjose" target="gh-user">@Gabbyjose</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/jelhan" target="gh-user">@jelhan</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/2hu12" target="gh-user">@2hu12</a> and <a href="https://github.com/oligriffiths" target="gh-user">@oligriffiths</a>
+</span> for their contributions to Ember and related repositories! 💕
 </p>
 
 ---
