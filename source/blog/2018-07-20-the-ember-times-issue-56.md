@@ -27,7 +27,7 @@ To get started, watch the screencast or dive into the [documentation](https://gi
 
 ---
 
-## [TodoMVC Ember.js Update ✨](https://github.com/tastejs/todomvc/pull/1790)
+## [TodoMVC Ember.js Update ✨](https://github.com/tastejs/todomvc/pull/1912)
 
 Last week, [@mixonic](https://github.com/mixonic) was looking for a helping hand to contribute to the [TodoMVC Ember.js update](https://twitter.com/mixonic/status/1017487614121684992). The [PR](https://github.com/tastejs/todomvc/pull/1912) is now merged and the bump to Ember 3.2 was a success. A big thank you from the community to [@zoltan-nz](https://github.com/zoltan-nz) and everyone involved.
 
