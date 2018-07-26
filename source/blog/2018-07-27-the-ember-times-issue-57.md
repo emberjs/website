@@ -12,13 +12,23 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/27/the-embe
 
 ---
 
-## [Ember Inspector - Help shape the future!](https://github.com/emberjs/ember-inspector)
+
+## [Ember Inspector - Help Shape The Future!](https://github.com/emberjs/ember-inspector)
 We're pushing hard to make Ember Inspector the world class dev tools you deserve, and would love to get your input and help!
 We would like to hear about feature requests and ideas you have, pain points you have experienced, and anything and everything
 you can think of, that you would like to see make it into future iterations of Ember Inspector. Please check out the [discuss post](https://discuss.emberjs.com/t/ember-inspector-call-for-feature-requests-pain-points-and-contributors/15187)
 and leave your thoughts, and feel free to stop by the `#ember-inspector` channel on Slack to chat about things or let us know you want 
 to help contribute!
 
+## [Pointy single word components available 👈](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
+
+Since last Monday single word component names are now possible with the **angle bracket invocation syntax**.
+
+Invoking components via angle brackets was already available, the novelty is that you can now use this syntax with single word components as well.
+
+For example, the polyfil supports components names such as `<Button>`, `<Modal>` and `<Tab>`.
+
+To find out more, check out the relevant RFC section [here](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md#tag-name)
 
 ---
 
@@ -27,7 +37,17 @@ to help contribute!
 
 ---
 
-## [SECTION]()
+## [Get to Know Ember Data Internals Live and in Action 🎥](https://www.twitch.tv/runspired)
+
+**Live streams** are amazing for sharing knowledge about the internals of your favorite libraries.
+On his [Twitch channel](https://www.twitch.tv/runspired),
+Ember Data contributor [@runspired](https://github.com/runspired) will take you on a **tour through Ember Data**
+and highlight characteristics of the project.
+
+The first stream about writing and refactoring Ember Data's test suite already went live past Sunday,
+but there'll be more to come in the future! ✨
+You can check out and comment on the [announcement thread on Twitter](https://twitter.com/Runspired/status/1020528036762988544).  and tune into [@runspired's stream channel](https://www.twitch.tv/runspired)
+for future streaming sessions, broadcasting **every Tuesday & Friday** at **1pm Pacific Time / 4pm Eastern Time / 8pm UTC**.
 
 
 ---
