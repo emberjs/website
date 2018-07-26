@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 57
-author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Alon Bukai
+author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Alon Bukai, Chris Ng
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/27-the-ember-times-issue-56.html"
 responsive: true
@@ -29,6 +29,20 @@ Invoking components via angle brackets was already available, the novelty is tha
 For example, the polyfil supports components names such as `<Button>`, `<Modal>` and `<Tab>`.
 
 To find out more, check out the relevant RFC section [here](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md#tag-name)
+
+---
+
+## Readers' Questions: "What's the difference between ember-lifeline and ember-concurrency and which one should be used?" 🔄
+
+This week's Readers' Question refers to two different Ember Addons which makes working with async easier. Since single page applications are often long lived, scheduled asynchronous work need to be managed and cleaned up when not in use like when we transition to another route. If we don’t, we can end up with asynchronous calls attempting to act on already destroyed elements which can trigger errors and memory leaks.
+
+The [ember-lifeline](https://github.com/ember-lifeline/ember-lifeline) Addon introduces several functional utility methods to help manage async states by associating async behavior to object instances. Ember provides the run loop to schedule work and exposes an [API](https://guides.emberjs.com/release/applications/run-loop/) that lifeline uses to override key lifecycle hooks to provide the necessary cleanup for you so you don’t have to think about it. Lifeline also exposes a primitive, [disposables](https://github.com/ember-lifeline/ember-lifeline/#registerdisposable), which allows lifeline to clean up any resources that are outside of Ember's lifecyle.
+
+The [ember-concurrency](https://github.com/machty/ember-concurrency) Addon uses [generator functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) to reduce the boilerplate code around maintaining concurrency while adding structure to async code by providing a [Task primitive](http://ember-concurrency.com/docs/task-function-syntax/). It uses a declarative API to ensure that only one instance of an operation is running at a time by enforcing logical boundaries.
+
+There is _some_ overlap between the two (both have logic to run through a list of disposables/tasks), however each Addon could be used independently or together to solve their respective challenges. To read more about each Addon check out their respective repos:
+- [ember-concurrency](https://github.com/machty/ember-concurrency)
+- [ember-lifeline](https://github.com/ember-lifeline/ember-lifeline)
 
 ---
 
