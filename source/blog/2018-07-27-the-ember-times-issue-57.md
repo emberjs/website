@@ -14,7 +14,7 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/27/the-embe
 
 
 ## [Ember Inspector - Help Shape The Future!](https://github.com/emberjs/ember-inspector)
-We're pushing hard to make Ember Inspector the world class dev tools you deserve, and would love to get your input and help!
+We're pushing hard to make Ember Inspector the world class DevTools you deserve, and would love to get your input and help!
 We would like to hear about feature requests and ideas you have, pain points you have experienced, and anything and everything
 you can think of, that you would like to see make it into future iterations of Ember Inspector. Please check out the [discuss post](https://discuss.emberjs.com/t/ember-inspector-call-for-feature-requests-pain-points-and-contributors/15187)
 and leave your thoughts, and feel free to stop by the `#ember-inspector` channel on Slack to chat about things or let us know you want 
