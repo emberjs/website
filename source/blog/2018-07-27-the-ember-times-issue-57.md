@@ -12,8 +12,15 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/27/the-embe
 
 ---
 
-## [SECTION]()
+## [Pointy single word components available 👈](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
 
+Since last Monday single word component names are now possible with the **angle bracket invocation syntax**.
+
+Invoking components via angle brackets was already available, the novelty is that you can now use this syntax with single word components as well.
+
+For example, the polyfil supports components names such as `<Button>`, `<Modal>` and `<Tab>`.
+
+To find out more, check out the relevant RFC section [here](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md#tag-name)
 
 ---
 
