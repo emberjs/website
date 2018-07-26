@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 57
-author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Alon Bukai
+author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Alon Bukai, Chris Ng
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/27-the-ember-times-issue-56.html"
 responsive: true
@@ -17,7 +17,7 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/27/the-embe
 We're pushing hard to make Ember Inspector the world class DevTools you deserve, and would love to get your input and help!
 We would like to hear about feature requests and ideas you have, pain points you have experienced, and anything and everything
 you can think of, that you would like to see make it into future iterations of Ember Inspector. Please check out the [discuss post](https://discuss.emberjs.com/t/ember-inspector-call-for-feature-requests-pain-points-and-contributors/15187)
-and leave your thoughts, and feel free to stop by the `#ember-inspector` channel on Slack to chat about things or let us know you want 
+and leave your thoughts, and feel free to stop by the `#ember-inspector` channel on Slack to chat about things or let us know you want
 to help contribute!
 
 ## [Pointy single word components available 👈](https://github.com/rwjblue/ember-angle-bracket-invocation-polyfill)
@@ -29,6 +29,20 @@ Invoking components via angle brackets was already available, the novelty is tha
 For example, the polyfil supports components names such as `<Button>`, `<Modal>` and `<Tab>`.
 
 To find out more, check out the relevant RFC section [here](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md#tag-name)
+
+---
+
+## Readers' Questions: "What's the difference between ember-lifeline and ember-concurrency and which one should be used?" 🔄
+
+This week's Readers' Question refers to two different Ember addons that make working with async easier. Since single page applications are often long lived, scheduled asynchronous work needs to be managed and cleaned up when not in use (e.g, when transitioning to another route). If we don’t, we can end up with asynchronous calls attempting to act on already destroyed elements which can trigger errors and memory leaks.
+
+The [ember-lifeline](https://github.com/ember-lifeline/ember-lifeline) addon introduces several functional utility methods to help manage async states by associating async behavior to object instances. Ember provides the run loop to schedule work and exposes an [API](https://guides.emberjs.com/release/applications/run-loop/) that lifeline uses to override key lifecycle hooks and provides the necessary cleanup for you so that you don’t have to think about it. Lifeline also exposes a primitive, [disposables](https://github.com/ember-lifeline/ember-lifeline/#registerdisposable), which allows lifeline to clean up any resources that are outside of Ember's lifecyle.
+
+The [ember-concurrency](https://github.com/machty/ember-concurrency) addon uses [generator functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) to reduce the boilerplate code around maintaining concurrency while adding structure to async code by providing a [Task primitive](http://ember-concurrency.com/docs/task-function-syntax/). It uses a declarative API to ensure that only one instance of an operation is running at a time by enforcing logical boundaries.
+
+There is _some_ overlap between the two (both have logic to run through a list of disposables/tasks), however each addon could be used independently or together to solve their respective challenges. To read more about each addon check out their respective repos:
+- [ember-concurrency](https://github.com/machty/ember-concurrency)
+- [ember-lifeline](https://github.com/ember-lifeline/ember-lifeline)
 
 ---
 
