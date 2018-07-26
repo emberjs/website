@@ -29,7 +29,17 @@ To find out more, check out the relevant RFC section [here](https://github.com/e
 
 ---
 
-## [SECTION]()
+## [Get to Know Ember Data Internals Live and in Action 🎥](https://www.twitch.tv/runspired)
+
+**Live streams** are amazing for sharing knowledge about the internals of your favorite libraries.
+On his [Twitch channel](https://www.twitch.tv/runspired),
+Ember Data contributor [@runspired](https://github.com/runspired) will take you on a **tour through Ember Data**
+and highlight characteristics of the project.
+
+The first stream about writing and refactoring Ember Data's test suite already went live past Sunday,
+but there'll be more to come in the future! ✨
+You can check out and comment on the [announcement thread on Twitter](https://twitter.com/Runspired/status/1020528036762988544).  and tune into [@runspired's stream channel](https://www.twitch.tv/runspired)
+for future streaming sessions, broadcasting **every Tuesday & Friday** at **1pm Pacific Time / 4pm Eastern Time / 8pm UTC**.
 
 
 ---
