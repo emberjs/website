@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 57
-author: Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Robert Wagner, Chris Ng
+author: Amy Lam, Miguel Braga Gomes, Ryan Mark, Sivakumar Kailasam, Jessica Jordan, Robert Wagner, Chris Ng
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/27-the-ember-times-issue-57.html"
 responsive: true
@@ -30,20 +30,6 @@ To find out more, check out the relevant RFC section [here](https://github.com/e
 
 ---
 
-## Readers' Questions: "What's the difference between ember-lifeline and ember-concurrency and which one should be used?" 🔄
-
-This week's Readers' Question refers to two different Ember addons that make working with async easier. Since single page applications are often long lived, scheduled asynchronous work needs to be managed and cleaned up when not in use (e.g, when transitioning to another route). If we don’t, we can end up with asynchronous calls attempting to act on already destroyed elements which can trigger errors and memory leaks.
-
-The [ember-lifeline](https://github.com/ember-lifeline/ember-lifeline) addon introduces several functional utility methods to help manage async states by associating async behavior to object instances. Ember provides the run loop to schedule work and exposes an [API](https://guides.emberjs.com/release/applications/run-loop/) that lifeline uses to override key lifecycle hooks and provides the necessary cleanup for you so that you don’t have to think about it. Lifeline also exposes a primitive, [disposables](https://github.com/ember-lifeline/ember-lifeline/#registerdisposable), which allows lifeline to clean up any resources that are outside of Ember's lifecyle.
-
-The [ember-concurrency](https://github.com/machty/ember-concurrency) addon uses [generator functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator) to reduce the boilerplate code around maintaining concurrency while adding structure to async code by providing a [Task primitive](http://ember-concurrency.com/docs/task-function-syntax/). It uses a declarative API to ensure that only one instance of an operation is running at a time by enforcing logical boundaries.
-
-There is _some_ overlap between the two (both have logic to run through a list of disposables/tasks), however each addon could be used independently or together to solve their respective challenges. To read more about each addon check out their respective repos:
-- [ember-concurrency](https://github.com/machty/ember-concurrency)
-- [ember-lifeline](https://github.com/ember-lifeline/ember-lifeline)
-
----
-
 ## [Get to know Ember Data internals live and in action 🎥](https://www.twitch.tv/runspired)
 
 **Live streams** are amazing for sharing knowledge about the internals of your favorite libraries. On his [Twitch channel](https://www.twitch.tv/runspired), Ember Data contributor [@runspired](https://github.com/runspired) will take you on a **tour through Ember Data** and highlight characteristics of the project.
@@ -52,24 +38,32 @@ The first stream about writing and refactoring Ember Data's test suite already w
 
 ---
 
-### [Ember + WebAssembly just got way easier](https://medium.com/@lukedeniston/ember-webassembly-just-got-way-easier-1e4ec6ca40ab)
+## [Ember + WebAssembly just got way easier](https://medium.com/@lukedeniston/ember-webassembly-just-got-way-easier-1e4ec6ca40ab)
 
 Thanks to @ef4's [ember-auto-import](https://github.com/ef4/ember-auto-import), importing Wasm modules is now a breeze! [@luketheobscure](https://github.com/luketheobscure) wrote about his experience and created a [wasm-example app](https://github.com/luketheobscure/wasm-example) in Ember. Check out his writeup on [Medium](https://medium.com/@lukedeniston/ember-webassembly-just-got-way-easier-1e4ec6ca40ab).
 
 ---
 
-## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
+## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
+
+<p>This week we'd like to thank the work and effort made by <a href="https://github.com/mike-north" target="gh-user">@mike-north</a>, <a href="https://github.com/toddjordan" target="gh-user">@toddjordan</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/sumeetattree" target="gh-user">@sumeetattree</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/bgentry" target="gh-user">@bgentry</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/krisselden" target="gh-user">@krisselden</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/arthirm" target="gh-user">@arthirm</a>, <a href="https://github.com/astronomersiva" target="gh-user">@astronomersiva</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dependabot[bot]" target="gh-user">@dependabot[bot]</a>, <a href="https://github.com/dfreeman" target="gh-user">@dfreeman</a>, <a href="https://github.com/savvymas" target="gh-user">@savvymas</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/ef4" target="gh-user">@ef4</a>, <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, <a href="https://github.com/maciej-ka" target="gh-user">@maciej-ka</a>, <a href="https://github.com/melaniespath" target="gh-user">@melaniespath</a> and <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>. We appreciate your contributions to Ember and related repositories 💖!</p>
 
 ---
 
-## [Got a question? 🤔 Ask Readers' Questions!](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: "What's the difference between ember-lifeline and ember-concurrency and which one should be used?" 🤔](https://discuss.emberjs.com/t/readers-questions-whats-the-difference-between-ember-lifeline-and-ember-concurrency-and-which-one-should-be-used/15197)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem? Ask away at [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core) and we'll present the answer in a future Ember Times. There are no silly questions! 🐹
+  <p>This week's Readers' Question operates <strong>asynchronously</strong>: Both <code>ember-concurrency</code> and
+  <code>ember-lifeline</code> are popular addons for managing async behaviour in your Ember applications
+  as smoothly as possible. But what's the <strong>difference</strong> between those two?
 
+   <p>In his detailed answer to this question, Ember developer and writer <a href="https://github.com/chrisrng" target="githubchris">@chrisrng</a> presents the <strong>strengths of either addon</strong> to handle application state. You can <a href="https://discuss.emberjs.com/t/readers-questions-whats-the-difference-between-ember-lifeline-and-ember-concurrency-and-which-one-should-be-used/15197" target="rq3">read the full answer on the official Ember Forum</a>.</p>
+  <p>
 </div>
+
+Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem? Ask away at [bit.ly/ask-ember-core](https://bit.ly/ask-ember-core) and we'll present the answer in a future Ember Times. There are no silly questions! 🐹
 
 ---
 
@@ -82,4 +76,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Robert Wagner, Chris Ng, and the Learning Team
+Amy Lam, Miguel Braga Gomes, Ryan Mark, Sivakumar Kailasam, Jessica Jordan, Robert Wagner, Chris Ng, and the Learning Team
