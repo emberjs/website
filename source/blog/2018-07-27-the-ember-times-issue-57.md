@@ -38,7 +38,7 @@ The first stream about writing and refactoring Ember Data's test suite already w
 
 ---
 
-### [Ember + WebAssembly just got way easier](https://medium.com/@lukedeniston/ember-webassembly-just-got-way-easier-1e4ec6ca40ab)
+## [Ember + WebAssembly just got way easier](https://medium.com/@lukedeniston/ember-webassembly-just-got-way-easier-1e4ec6ca40ab)
 
 Thanks to @ef4's [ember-auto-import](https://github.com/ef4/ember-auto-import), importing Wasm modules is now a breeze! [@luketheobscure](https://github.com/luketheobscure) wrote about his experience and created a [wasm-example app](https://github.com/luketheobscure/wasm-example) in Ember. Check out his writeup on [Medium](https://medium.com/@lukedeniston/ember-webassembly-just-got-way-easier-1e4ec6ca40ab).
 
