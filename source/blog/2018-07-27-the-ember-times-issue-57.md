@@ -10,7 +10,7 @@ responsive: true
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/27/the-ember-times-issue-57.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/27/issue-57) what has been going on in Emberland this week.
 
-This week you can learn about how to make **ember-inspector** best inspector ever✨, **single word angle-bracket invocation**, and how **Ember + WebAssembly** are now the best of friends 👐. Find out when to grab a snack 🍿 and join the **ember-data** live streams 🎥 . Confused about **ember-lifeline** and **ember-concurrency**? Checkout the brand-new Readers' Question 💯 in this edition of the Ember Times to unravel the mystery.
+This week you can learn about how to make **ember-inspector** best inspector ever ✨, **single word angle-bracket invocation**, and how **Ember + WebAssembly** are now the best of friends 👐. Find out when to grab a snack 🍿 and join the **ember-data** live streams 🎥 . Confused about **ember-lifeline** and **ember-concurrency**? Checkout the brand-new Readers' Question 💯 in this edition of the Ember Times to unravel the mystery.
 
 ---
 
@@ -52,7 +52,7 @@ Thanks to @ef4's [ember-auto-import](https://github.com/ef4/ember-auto-import), 
 
 ---
 
-## [Readers' Questions: "What's the difference between ember-lifeline and ember-concurrency and which one should be used?" 🤔](https://discuss.emberjs.com/t/readers-questions-whats-the-difference-between-ember-lifeline-and-ember-concurrency-and-which-one-should-be-used/15197)
+## [Readers' Question: "What's the difference between ember-lifeline and ember-concurrency and which one should be used?" 🤔](https://discuss.emberjs.com/t/readers-questions-whats-the-difference-between-ember-lifeline-and-ember-concurrency-and-which-one-should-be-used/15197)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
