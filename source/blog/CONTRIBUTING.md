@@ -41,6 +41,6 @@ git remote add upstream https://github.com/emberjs/website
 And last but not least, you can set the origin by doing:
 
 ```sh
-git remote add upstream https://github.com/YOUR_USERNAME/website
+git remote add origin https://github.com/YOUR_USERNAME/website
 ```
 
