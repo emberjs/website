@@ -12,6 +12,7 @@ The process to publish a new weekly post is as follows:
 - The championing editor of the week creates a branch with the MD file containing next week blog post
 - Editors will then pull request against that branch with changes to that file
 - Once the new blog post file is complete, the newly created branch is merged back into the website
+- As a last step, the content is copied over to [Goodbits](https://the-emberjs-times.ongoodbits.com/), which is the tool currently being used to send the newsletter and manage its subscriptions
 
 The Reader's Questions section of the newsletter is usually answered by core team members, but anyone can give a helping hand. 
 The answers are posted on [discuss.emberjs.com](https://discuss.emberjs.com/) and linked back to the weekly blog post.
@@ -31,3 +32,15 @@ git fetch upstream
 git checkout -b newblogpostbranch upstream/newblogpostbranch
 git push -u origin newblogpostbranch
 ```
+To set the upstream you can use:
+
+```sh
+git remote add upstream https://github.com/emberjs/website
+```
+
+And last but not least, you can set the origin by doing:
+
+```sh
+git remote add upstream https://github.com/YOUR_USERNAME/website
+```
+
