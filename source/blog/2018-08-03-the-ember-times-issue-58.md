@@ -37,8 +37,23 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A Special Thank You For All Your Efforts 🙇](https://github.com/ember-learn)
 
+<div class="blog-row">
+  <img class="float-left transparent" alt="" title="Ember Style Guide Docs" src="/images/blog/emberjstimes/styleguide-docs-screenshot.png" />
+</div>
+
+Even though we're already trying to highlight the amazing and consistent efforts of community contributors 
+in our weekly **Contributors' Corner**, we'd like to take the time to say a special thank you
+to a couple of ambitious contributors to learning resources specifically:
+
+We're grateful for all the outstanding contributions [@hakilebara](https://github.com/hakilebara) made to learning resources
+recently. This included a [from-the-scratch setup](https://github.com/ember-learn/ember-styleguide/pull/76) of the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) docs and [improvements to the offical Guides](https://github.com/ember-learn/guides-source/pull/112).
+
+We also appreciate all the efforts by [@sivakumar-kailasam](https://github.com/sivakumar-kailasam) and [@toddjordan](https://github.com/toddjordan)
+to fix missing modules, upgrade and improve the Ember API Docs these days ([1](https://github.com/ember-learn/algolia-index-update-scripts/pull/4), [2](https://github.com/emberjs/ember.js/pull/16836), [3](https://github.com/ember-learn/ember-jsonapi-docs/commits?author=sivakumar-kailasam&since=2018-06-30T22:00:00Z&until=2018-07-31T22:00:00Z)).
+
+Thank you for all your work! ❤️
 
 ---
 
