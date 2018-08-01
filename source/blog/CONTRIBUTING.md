@@ -17,6 +17,18 @@ The process to publish a new weekly post is as follows:
 The Reader's Questions section of the newsletter is usually answered by core team members, but anyone can give a helping hand. 
 The answers are posted on [discuss.emberjs.com](https://discuss.emberjs.com/) and linked back to the weekly blog post.
 
+### Goodbits
+
+To prepare the newsletter broadcast on Goodbits the following steps are necessary:
+
+- Log into Goodbits
+- From the list of emails, duplicate one of the latest entries to create a new draft one
+- Edit the blocks from the newly duplicated draft, with the new blog post content
+- Select 'Prepare to send'
+- Choose the option 'Send later' and schedule it to Friday 9 PM UTC
+
+### Pushing your changes
+
 A typical Git forking workflow can be used to contribute:
 
 - Fork the repo
