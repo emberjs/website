@@ -27,7 +27,7 @@ To prepare the newsletter broadcast on Goodbits the following steps are necessar
 - Select 'Prepare to send'
 - Choose the option 'Send later' and schedule it to Friday 9 PM UTC
 
-## What is new in Ember land
+### What is new in Ember land
 
 There is a tool available to gather the weekly contributions on Ember repos and to generate the contributors' list, here: [what-is-new-in-emberland](https://github.com/jessica-jordan/whats-new-in-emberland). It's an Ember app 🐹, you can simply download, build it and serve it!
 
