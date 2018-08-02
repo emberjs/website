@@ -34,7 +34,7 @@ Check out what's been going in Emberland 🐹 these days:
 
 ## [Ember-toggle updated 🛠](https://github.com/knownasilya/ember-toggle/blob/master/CHANGELOG.md#530-2018-07-31)
 
-The accessibilty on [ember-toggle](https://github.com/knownasilya/ember-toggle) was improved. 
+The accessibilty on [ember-toggle](https://github.com/knownasilya/ember-toggle) has stepped up.
 
 According to its changelog, the new version [5.3.0](https://github.com/knownasilya/ember-toggle/compare/v5.2.4...v5.3.0) was released last Tuesday, making possible to use the spacebar to change the state of the toggle once highlighted.
 
