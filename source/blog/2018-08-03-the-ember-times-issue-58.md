@@ -27,8 +27,13 @@ Check out what's been going in Emberland 🐹 these days:
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember Homepage survey](https://www.emberjs.com/blog/2018/07/30/ember-homepage-survey.html)
 
+We're redesigning emberjs.com and we need your help.
+
+We want to find out what makes you continue to use Ember in a world full of alternatives, so we can better communicate Ember's value proposition to others who might find similar success.
+
+By taking a few minutes to [answer these questions](https://www.emberjs.com/homepage-survey), you can help influence the messaging behind Ember's future homepage and any other marketing materials we create.
 
 ---
 
@@ -38,7 +43,7 @@ The accessibilty on [ember-toggle](https://github.com/knownasilya/ember-toggle) 
 
 According to its changelog, the new version [5.3.0](https://github.com/knownasilya/ember-toggle/compare/v5.2.4...v5.3.0) was released last Tuesday, making it possible to use the spacebar to change the state of the toggle once highlighted.
 
-Awesome news! We love Ember addons. 🐹 ❤️ 📦 
+Awesome news! We love Ember addons. 🐹 ❤️ 📦
 
 ---
 
@@ -48,7 +53,7 @@ Awesome news! We love Ember addons. 🐹 ❤️ 📦
   <img class="float-left transparent" alt="" title="Ember Style Guide Docs" src="/images/blog/emberjstimes/styleguide-docs-screenshot.png" />
 </div>
 
-Even though we're already trying to highlight the amazing and consistent efforts of community contributors 
+Even though we're already trying to highlight the amazing and consistent efforts of community contributors
 in our weekly **Contributors' Corner**, we'd like to take the time to say a special thank you
 to a couple of ambitious contributors to learning resources specifically:
 
