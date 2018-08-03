@@ -6,18 +6,12 @@ alias : "blog/2018/08/03-the-ember-times-issue-58.html"
 responsive: true
 ---
 
-nuqneH Emberistas! 🐹
+Xin chào Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/2018/07/13/the-ember-times-issue-56.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/07/13/the-ember-times-issue-56) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/2018/08/03/the-ember-times-issue-58.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/08/03/issue-58) what has been going on in Emberland this week.
 
-...
-
-Check out what's been going in Emberland 🐹 these days:
-
-
----
-
-## [SECTION TITLE](#section-url)
+This time we have a call-to-action to shape the future of the **new Ember homepage** 🎨👩‍🎨 for you, as well as a brand-new **RFC (Request for Comments) for the Ember CLI Docs** 📖,
+important **accessibility** updates for **ember-toggle** 🔘 and a special **thank you note** for some of our dedicated contributors ✨
 
 
 ---
@@ -71,9 +65,9 @@ Thank you for all your work! ❤️
 
 ---
 
-## [Contributors' Corner](https://guides.emberjs.com/v3.2.0/contributing/repositories/)
+## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our parents for their contributions to Ember and related repositories! 💕
+<p>This week we'd like to thank <a href="https://github.com/smfoote" target="gh-user">@smfoote</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/nlfurniss" target="gh-user">@nlfurniss</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/jelhan" target="gh-user">@jelhan</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/teddyzeenny" target="gh-user">@teddyzeenny</a>, <a href="https://github.com/Bestra" target="gh-user">@Bestra</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/ggayowsky" target="gh-user">@ggayowsky</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/leobugoni" target="gh-user">@leobugoni</a>, <a href="https://github.com/kanongil" target="gh-user">@kanongil</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/scalvert" target="gh-user">@scalvert</a>, <a href="https://github.com/miguelcobain" target="gh-user">@miguelcobain</a>, <a href="https://github.com/jrowlingson" target="gh-user">@jrowlingson</a>, <a href="https://github.com/savvymas" target="gh-user">@savvymas</a>, <a href="https://github.com/chilicoder" target="gh-user">@chilicoder</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/cspanring" target="gh-user">@cspanring</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/matthewjramos" target="gh-user">@matthewjramos</a> and <a href="https://github.com/maciej-ka" target="gh-user">@maciej-ka</a> for their contributions to Ember and related repositories! 💕
 </p>
 
 ---
@@ -94,7 +88,7 @@ Thank you for all your work! ❤️
 ## [The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 
 The **Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
-[Subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get the next edition **right to your inbox**.
+Follow us on Twitter via [@embertimes](https://twitter.com/embertimes) to get notified when the next edition is out and [subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get The Ember Times **right to your inbox**.
 And if you've always wanted to be an OSS journalist yourself,
 drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 on the Ember Community [Slack Chat](https://ember-community-slackin.herokuapp.com/)
