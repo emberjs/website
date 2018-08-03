@@ -8,7 +8,7 @@ responsive: true
 
 Xin chào Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/2018/08/03/the-ember-times-issue-58.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/08/03/issue-58) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/2018/08/03/the-ember-times-issue-58.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com) what has been going on in Emberland this week.
 
 This time we have a call-to-action to shape the future of the **new Ember homepage** 🎨👩‍🎨 for you, as well as a brand-new **RFC for the Ember CLI Docs** 📖,
 important **accessibility** updates for **ember-toggle** 🔘 and a special **thank you note** for some of our dedicated contributors ✨
@@ -20,7 +20,7 @@ important **accessibility** updates for **ember-toggle** 🔘 and a special **th
 
 There’s a [brand new RFC (Request for Comments)](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber) prepared a great overview of what needs to change to make **Ember CLI documentation great again**. This is especially important since these changes could empower new contributors, correct outdated information and make the learning process way easier.
 
-Besides a restructure of the information architecture Jen proposes to use personas as a way of understanding what changes are needed as well as transforming the site into an Ember app.
+Besides a restructure of the information architecture, Jen proposes to use personas as a way of understanding what changes are needed, as well as transforming the site into an Ember app.
 
 Community feedback is as always appreciated. Head over to the [proposal](https://github.com/ember-cli/rfcs/pull/120) and **leave your comments** below.
 
@@ -52,12 +52,9 @@ Awesome news! We love Ember addons. 🐹 ❤️ 📦
   <img class="float-left transparent" alt="" title="Ember Style Guide Docs" src="/images/blog/emberjstimes/styleguide-docs-screenshot.png" />
 </div>
 
-Even though we're already trying to highlight the amazing and consistent efforts of community contributors
-in our weekly **Contributors' Corner**, we'd like to take the time to say a special thank you
-to a couple of ambitious contributors to learning resources specifically:
+Even though we're already trying to highlight the amazing and consistent efforts of community contributors in our weekly **Contributors' Corner**, we'd like to take the time to say a special thank you to a couple of ambitious contributors to learning resources specifically:
 
-We're grateful for all the outstanding contributions [@hakilebara](https://github.com/hakilebara) made to learning resources
-recently. This included a [from-the-scratch setup](https://github.com/ember-learn/ember-styleguide/pull/76) of the [ember-styleguide](https://github.com/ember-learn/ember-styleguide) docs and [improvements to the offical Guides](https://github.com/ember-learn/guides-source/pull/112).
+We're grateful for all the outstanding contributions [@hakilebara](https://github.com/hakilebara) made to learning resources recently. This included a [from-the-scratch setup](https://github.com/ember-learn/ember-styleguide/pull/76) of the [ember-styleguide docs](https://github.com/ember-learn/ember-styleguide) and [improvements to the offical Guides](https://github.com/ember-learn/guides-source/pull/112).
 
 We also appreciate all the efforts by [@sivakumar-kailasam](https://github.com/sivakumar-kailasam) and [@toddjordan](https://github.com/toddjordan)
 to fix missing modules, upgrade and improve the Ember API Docs these days ([1](https://github.com/ember-learn/algolia-index-update-scripts/pull/4), [2](https://github.com/emberjs/ember.js/pull/16836), [3](https://github.com/ember-learn/ember-jsonapi-docs/commits?author=sivakumar-kailasam&since=2018-06-30T22:00:00Z&until=2018-07-31T22:00:00Z)).
@@ -89,11 +86,10 @@ Thank you for all your work! ❤️
 ## [The Ember Times is What We Make It 🙌](https://embercommunity.slack.com/messages/C8P6UPWNN/)
 
 The **Ember Times** is a **weekly news editorial** featuring all the new things that are going on in Emberland.
+
 Follow us on Twitter via [@embertimes](https://twitter.com/embertimes) to get notified when the next edition is out and [subscribe to our e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) to get The Ember Times **right to your inbox**.
-And if you've always wanted to be an OSS journalist yourself,
-drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/)
-on the Ember Community [Slack Chat](https://ember-community-slackin.herokuapp.com/)
-and **write** the next edition of the Ember Times **together with us**!
+
+And if you've always wanted to be an OSS journalist yourself, drop by [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/) on the Ember Community [Slack chat](https://ember-community-slackin.herokuapp.com/) and **write** the next edition of the Ember Times **together with us**!
 
 
 ---
