@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 56
 author: Kenneth Larsen, Amy Lam, Miguel Braga Gomes, Ryan Mark, Jessica Jordan, Alon Bukai
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/20-the-ember-times-issue-56.html"
 responsive: true
 ---
