@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 54
 author: Sivakumar Kailasam, Jessica Jordan, Alon Bukai, Amy Lam, Kenneth Larsen
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/06/the-ember-times-issue-54.html"
 responsive: true
 ---
