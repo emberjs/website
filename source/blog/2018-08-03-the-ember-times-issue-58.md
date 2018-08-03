@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 58
-author: the crowd
+author: Ryan Toronto, Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/03-the-ember-times-issue-58.html"
 responsive: true
@@ -10,34 +10,35 @@ Xin chào Emberistas! 🐹
 
 Read either on the [Ember blog](https://www.emberjs.com/blog/2018/08/03/the-ember-times-issue-58.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/2018/08/03/issue-58) what has been going on in Emberland this week.
 
-This time we have a call-to-action to shape the future of the **new Ember homepage** 🎨👩‍🎨 for you, as well as a brand-new **RFC (Request for Comments) for the Ember CLI Docs** 📖,
+This time we have a call-to-action to shape the future of the **new Ember homepage** 🎨👩‍🎨 for you, as well as a brand-new **RFC for the Ember CLI Docs** 📖,
 important **accessibility** updates for **ember-toggle** 🔘 and a special **thank you note** for some of our dedicated contributors ✨
 
 
 ---
 
-## [The Quest for Better Documentation](https://github.com/emberjs/website/pull/3481)
-There’s a [brand new RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber) prepared a great overview of what needs to change to make **Ember CLI documentation great again**. This is especially important since these change could empower new contributors, correct outdated information and make the learning process way easier.
+## [The Quest for Better Documentation](https://github.com/ember-cli/rfcs/pull/120)
+
+There’s a [brand new RFC (Request for Comments)](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber) prepared a great overview of what needs to change to make **Ember CLI documentation great again**. This is especially important since these changes could empower new contributors, correct outdated information and make the learning process way easier.
 
 Besides a restructure of the information architecture Jen proposes to use personas as a way of understanding what changes are needed as well as transforming the site into an Ember app.
 
-Community feedback is as always appreciated. Head over to the [proposal](https://github.com/ember-cli/rfcs/pull/120) and leave your comments below.
+Community feedback is as always appreciated. Head over to the [proposal](https://github.com/ember-cli/rfcs/pull/120) and **leave your comments** below.
 
 ---
 
-## [Ember Homepage survey](https://www.emberjs.com/blog/2018/07/30/ember-homepage-survey.html)
+## [Ember Homepage Survey](https://www.emberjs.com/blog/2018/07/30/ember-homepage-survey.html)
 
-We're redesigning emberjs.com and we need your help.
+We're **redesigning** [emberjs.com](https://emberjs.com/) and we need your help.
 
 We want to find out what makes you continue to use Ember in a world full of alternatives, so we can better communicate Ember's value proposition to others who might find similar success.
 
-By taking a few minutes to [answer these questions](https://www.emberjs.com/homepage-survey), you can help influence the messaging behind Ember's future homepage and any other marketing materials we create.
+By taking a **few minutes** to [answer these questions](https://www.emberjs.com/homepage-survey), you can **help influence** the messaging behind Ember's future homepage and any other marketing materials we create.
 
 ---
 
-## [Ember-toggle updated 🛠](https://github.com/knownasilya/ember-toggle/blob/master/CHANGELOG.md#530-2018-07-31)
+## [Ember-Toggle Updated 🛠](https://github.com/knownasilya/ember-toggle/blob/master/CHANGELOG.md#530-2018-07-31)
 
-The accessibilty on [ember-toggle](https://github.com/knownasilya/ember-toggle) has stepped up.
+The **accessibilty** on [ember-toggle](https://github.com/knownasilya/ember-toggle) has stepped up.
 
 According to its changelog, the new version [5.3.0](https://github.com/knownasilya/ember-toggle/compare/v5.2.4...v5.3.0) was released last Tuesday, making it possible to use the spacebar to change the state of the toggle once highlighted.
 
@@ -102,4 +103,4 @@ That's another wrap!  ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Ryan Toronto, Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan and the Learning Team
