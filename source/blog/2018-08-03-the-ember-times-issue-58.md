@@ -23,9 +23,11 @@ Check out what's been going in Emberland 🐹 these days:
 ---
 
 ## [The Quest for Better Documentation](https://github.com/emberjs/website/pull/3481)
-There’s a [brand new RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber?lang=da) prepared a great overview of what needs to change to make **Ember CLI documentation great again**. This is especially important since these change could empower new contributors, correct outdated information and make new the learning process way easier.
+There’s a [brand new RFC](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber) prepared a great overview of what needs to change to make **Ember CLI documentation great again**. This is especially important since these change could empower new contributors, correct outdated information and make the learning process way easier.
 
 Besides a restructure of the information architecture Jen proposes to use personas as a way of understanding what changes are needed as well as transforming the site into an Ember app.
+
+Community feedback is as always appreciated. Head over to the [proposal](https://github.com/ember-cli/rfcs/pull/120) and leave your comments below.
 
 ---
 
