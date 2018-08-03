@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 57
 author: Amy Lam, Miguel Braga Gomes, Ryan Mark, Sivakumar Kailasam, Jessica Jordan, Robert Wagner, Chris Ng
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/07/27-the-ember-times-issue-57.html"
 responsive: true
 ---
