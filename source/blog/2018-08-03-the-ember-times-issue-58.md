@@ -18,7 +18,7 @@ important **accessibility** updates for **ember-toggle** 🔘 and a special **th
 
 ## [The Quest for Better Documentation](https://github.com/ember-cli/rfcs/pull/120)
 
-There’s a [brand new RFC (Request for Comments)](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber) prepared a great overview of what needs to change to make **Ember CLI documentation great again**. This is especially important since these changes could empower new contributors, correct outdated information and make the learning process way easier.
+There’s a [brand new RFC (Request for Comments)](https://github.com/jenweber/rfcs-1/blob/cli-guides/active/0000-cli-guides.md) for restructuring and refreshing the Ember CLI docs. [Jen Weber](https://twitter.com/jwwweber) prepared a great overview of what needs to change to improve **Ember CLI documentation**. This is especially important since these changes could empower new contributors, correct outdated information and make the learning process way easier.
 
 Besides a restructure of the information architecture, Jen proposes to use personas as a way of understanding what changes are needed, as well as transforming the site into an Ember app.
 
