@@ -1,3 +1,26 @@
+# General
+
+The Ember blog is the official news outlet of the Ember Learning Core team.
+You can publish new posts by adding a markdown file (`.md`) to the `source/blog` directory.
+
+
+## Language Checking with Alex
+
+This project uses [Alex](https://github.com/wooorm/alex)
+- a wording linter for insensitive language - to make sure that new posts are as inviting and approachable to its readers as possible.
+
+The Travis CI process for this project will run `alex` on all new changes which have been made
+in the `source/blog/` directory and issue a warning if it encounters any controversial language.
+
+If you'd like to lint your changes locally, you can install `alex` and run it from your command line
+to only check your current changes as follows:
+
+```bash
+npm install -g alex
+bash scripts/language-check.sh
+```
+
+
 # Ember Times
 
 The Ember Times is a blog newsletter with weekly updates from the Ember land.
