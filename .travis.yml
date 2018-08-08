@@ -2,5 +2,7 @@ sudo: false
 language: ruby
 cache: bundler
 script:
+- npm install alex --global
+- bash scripts/language-check.sh
 - bundle exec middleman build
 
