@@ -14,8 +14,13 @@ Read either on the [Ember blog](https://www.emberjs.com/blog/xxxx/xx/xx/the-embe
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A framework for ambitious Chrome Extensions ⚙](https://envoy.engineering/a-framework-for-ambitious-chrome-extensions-b08d1f4b944d)
 
+[Esteban](https://github.com/esbanarango) wrote an article on how he used Ember to create Chrome Extensions by combining multiple addons from around the community. He found a ton of of great _starter_ and _boilerplate_ projects on [GitHub](www.github.com) and identified some key [ember-cli](https://github.com/ember-cli/ember-cli) projects that make working with [Chrome’s Extension API](https://developer.chrome.com/extensions/api_index) much easier.
+
+Specifically, Esteban mentions 3 ember-cli addons: [ember-cli-deploy-chrome-app](https://github.com/rmachielse/ember-cli-deploy-chrome-app), [ember-cli-post-build-copy](https://github.com/tgsoverly/ember-cli-post-build-copy), and [ember-cli-concat](https://github.com/sir-dunxalot/ember-cli-concat) that was instrumental in creating ambitious Chrome Extensions using Ember. He leveraged [ember-concurrency](https://github.com/machty/ember-concurrency) ([or you can use ember-lifeline](https://discuss.emberjs.com/t/readers-questions-whats-the-difference-between-ember-lifeline-and-ember-concurrency-and-which-one-should-be-used/15197)) to deal with the callback design structure API that Chrome provides (which was promisified using [chrome-promise](https://github.com/tfoxy/chrome-promise)).
+
+Read more about his journey at Esteban’s [blog post](https://envoy.engineering/a-framework-for-ambitious-chrome-extensions-b08d1f4b944d).
 
 ---
 
