@@ -61,8 +61,9 @@ our friends' at Ember Weekend in which [@rwjblue](https://github.com/rwjblue) ex
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [ember-experiments](https://github.com/outdoorsy/ember-experiments)
 
+The Outdoorsy 🌲 team was able to open source an internal library they've been using on [Outdoorsy.com](https://www.outdoorsy.com/). It allows you to define A/B and multivariate (A/B/C) tests in your apps to track both conversion rate improvements and feature feedback. They hook it into [ember-metrics](https://github.com/poteto/ember-metrics) and track conversions in Mixpanel, but it's not opinionated on how you should do that. Hope it's useful to people!
 
 ---
 
