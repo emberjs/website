@@ -31,8 +31,9 @@ You can already test this by [getting the beta](https://github.com/ember-cli/emb
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Mirage 1.0 🔜](https://github.com/samselikoff/ember-cli-mirage/releases/tag/v0.4.8)
 
+[ember-cli-mirage](http://www.ember-cli-mirage.com/) is a popular client-side mock server to develop, test and prototype your app. [@samselikoff](https://github.com/samselikoff) has released Mirage 0.4.8. ✨ And there are only 9 bugs to close out before shipping Mirage 1.0! Please help with the march to 1.0 by upgrading to [v0.4.8](https://github.com/samselikoff/ember-cli-mirage/releases/tag/v0.4.8) today and reporting back any issues. Drop by [#ec-mirage](https://embercommunity.slack.com/messages/C0TG21RPW/) if you have any trouble upgrading! Hopefully, everything will be 200 🆗.
 
 ---
 
