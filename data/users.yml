@@ -1114,6 +1114,10 @@
   image: mocklab_logo.png
   alt: MockLab
   use: "MockLab's main web UI (https://app.mocklab.io) is built with Ember.js"
+- url: "https://www.vivi.io/"
+  image: vivi.png
+  alt: Vivi
+  use: "Vivi uses Ember to power our app as well as our box web console"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
