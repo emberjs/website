@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Read either on the [Ember blog](https://www.emberjs.com/blog/xxxx/xx/xx/the-ember-times-issue-XX.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/xxxx/xx/xx/issue-XX) what has been going on in Emberland this week.
+Read either on the [Ember blog](https://www.emberjs.com/blog/xxxx/xx/xx/the-ember-times-issue-XX.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
