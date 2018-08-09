@@ -24,8 +24,10 @@ Read more about his journey at Esteban’s [blog post](https://envoy.engineering
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [One Port to Rule Them All](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.0-beta.2)
+With `ember-cli@3.4.0-beta.2` you now have the ability to enable the live reloading server and the normal development app server to share a **single port**. With the current state of Ember CLI it opens two HTTP servers - one for the assets and one to support live reloading on file changes.
 
+You can already test this by [getting the beta](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.0-beta.2) and see if it works for you. Remember to also check the rest of the changelog for the beta. And if you're interested in the actual work for making the single port work the check out [the PR](https://github.com/ember-cli/ember-cli/pull/7940).
 
 ---
 
