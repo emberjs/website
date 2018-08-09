@@ -31,8 +31,27 @@ You can already test this by [getting the beta](https://github.com/ember-cli/emb
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Knowing Boundaries with the Component Manager Bounds RFC](https://github.com/emberjs/rfcs/pull/351)
 
+A new Request for Comments (RFC) is aiming to improve the flexibility of another previously
+RFC'ed feature that is interesting for Ember addon authors who are passionate about `Components`.
+The [Component Manager™ feature](https://emberjs.github.io/rfcs/0213-custom-components.html) which had
+already had been accepted by the Ember community in the [spring of this year](https://github.com/emberjs/rfcs/pull/213#issuecomment-374981569) defines a **new low-level primitive** that would allow developers to create flexible and efficient **component base classes**
+which can easily be extended from. This can for example be leveraged by UI addons that expose
+components to their parent apps and which want to allow end users to extend from these base components themselves.
+
+And today the saga of the Manager of Custom Components continues:
+The author of the original RFC \#213 now presents a [follow-up](https://github.com/emberjs/rfcs/pull/351)
+proposing the optional **exposure** of `bounds` - the DOM boundaries of a component - through the Component Manager feature.
+This will allow any addon authors who would like to create custom components using the
+Component Manager feature to get a hold of the **component's DOM**, provide end users access to it via
+specific life cycle hooks and allowing DOM manipulation.
+
+Curious to learn more? Be sure to check out the [original proposal](https://github.com/emberjs/rfcs/blob/4f541c350cd4f366eed66fa80ef320bb38656b20/text/0000-Component-Manager-Bounds.md)
+and to not miss the [RFC Roundup Podcast session](https://emberweekend.com/episodes/rfc-roundup-with-rwjblue) over at
+our friends' at Ember Weekend in which [@rwjblue](https://github.com/rwjblue) explains what the **RFC \#213** for the Component Manager is about.
+
+<a class="ember-button ember-button--centered" href="https://github.com/emberjs/rfcs/blob/4f541c350cd4f366eed66fa80ef320bb38656b20/text/0000-Component-Manager-Bounds.md" target="compmanager">Read more</a>
 
 ---
 
