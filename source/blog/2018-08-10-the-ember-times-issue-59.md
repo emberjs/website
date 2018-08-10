@@ -1,16 +1,16 @@
 ---
-title: The Ember Times - Issue No. XX
-author: the crowd
+title: The Ember Times - Issue No. 59
+author: Chris Ng, Amy Lam, Ryan Mark, Alon Bukai, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/08/10-the-ember-times-issue-59.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Merhaba Emberistas! 🐹
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+<INTRO HERE>
 
 ---
 
@@ -116,4 +116,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Ng, Amy Lam, Ryan Mark, Alon Bukai, Kenneth Larsen, Jessica Jordan and the Learning Team
