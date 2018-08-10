@@ -10,7 +10,7 @@ Merhaba Emberistas! 🐹
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
-<INTRO HERE>
+This week's edition is jammed packed! Take a journey and find out how to use Ember to create **Chrome Extensions**. Test drive the latest **Ember-CLI beta** features.  Dive deep into the **Component Manager Bounds** RFC. Learn how to help ship **Mirage 1.0**.  Need Ember powered **A/B experiments** ? Outdoorsy open sourced an addon that might just help.
 
 ---
 
