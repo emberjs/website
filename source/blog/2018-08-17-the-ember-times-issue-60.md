@@ -54,8 +54,16 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A wizard to create Ember projects 🧙‍](https://github.com/gossi/ember-cli-create)
 
+[@Gossi](https://github.com/gossi) released `ember-cli-create`, a project that allows you to create new Ember projects using a simple UI.
+
+It visually provides options to choose from when generating the scaffold, for example:
+
+- Which type of project (addon or app)
+- Features to be installed
+
+Take a peek [here](https://github.com/gossi/ember-cli-create) 👀 or maybe ping [Gossi](https://twitter.com/unistyler) for questions, suggestions or appreciations. ❤️
 
 ---
 
