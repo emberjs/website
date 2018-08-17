@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan
+author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/17-the-ember-times-issue-60.html"
 responsive: true
@@ -73,12 +73,16 @@ For the most up-to-date Ember reference material, check out the [Guides](https:/
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers’ Questions: “What is meant by the term ‘Data down, actions up’?” 🤔](https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+  <p>This week's Readers' Question is all about best practices in Ember apps and one of the most popular design patterns - the **"Data Down, Actions Up"
+  paradigm** - is explained in more detail. Read this week's answer by <a href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="gh-jj">@jessica-jordan</a> on the <a href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="discuss">official Ember Forum here</a>.</p>
+
+<p><a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="compmanager">Read more</a></p>
+
 
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
@@ -95,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan and the Learning Team
+Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes and the Learning Team
