@@ -37,8 +37,9 @@ If you have new (and of course friendly! ❤️) information to add to the conve
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember Data RFC champions wanted 💪](https://github.com/emberjs/rfcs/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3AT-ember-data+label%3A%22Needs+Champion%22)
 
+On an Open Source diet? Or looking for moar? [@runspired](https://github.com/runspired) [tweets](https://twitter.com/Runspired/status/1030260354519982080) that Ember Data has a number of smaller "bite sized" RFC requests that need champions, and they'd love your help! Check it out [on GitHub](https://github.com/emberjs/rfcs/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3AT-ember-data+label%3A%22Needs+Champion%2).
 
 ---
 
