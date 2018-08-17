@@ -43,26 +43,6 @@ On an Open Source diet? Or looking for moar? [@runspired](https://github.com/run
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [A wizard to create Ember projects ✨‍](https://github.com/gossi/ember-cli-create)
 
 [@Gossi](https://github.com/gossi) released `ember-cli-create`, a project that allows you to create new Ember projects using a simple UI.
