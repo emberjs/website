@@ -1,12 +1,12 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/08/17-the-ember-times-issue-60.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+OLÀ Emberistas! 🐹
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
@@ -114,4 +114,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan and the Learning Team
