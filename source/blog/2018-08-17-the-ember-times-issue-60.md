@@ -53,11 +53,6 @@ All you have to do is run `ember install ember-cli-webfont ` and you’re ready
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [A wizard to create Ember projects 🧙‍](https://github.com/gossi/ember-cli-create)
 
 [@Gossi](https://github.com/gossi) released `ember-cli-create`, a project that allows you to create new Ember projects using a simple UI.
@@ -68,6 +63,16 @@ It visually provides options to choose from when generating the scaffold, for ex
 - Features to be installed
 
 Take a peek [here](https://github.com/gossi/ember-cli-create) 👀 or maybe ping [Gossi](https://twitter.com/unistyler) for questions, suggestions or appreciations. ❤️
+
+---
+
+## [Must Read for new hires on your Ember team! 🐹](https://medium.com/front-end-hacking/how-to-use-ember-2-code-in-your-ember-3-app-9ed15c28bad6)
+
+[@jenweber](https://github.com/jenweber) breaks down the differences between Ember 2 and 3 in her latest [Medium post](https://medium.com/front-end-hacking/how-to-use-ember-2-code-in-your-ember-3-app-9ed15c28bad6) in an approachable and informative way! Share with coworkers, friends, and folks on the interweb that are new to Ember.
+
+Ember 3 apps must use the new import-what-you-need approach. `this.get` is optional in Ember 3, except properties that are Promise proxies. (Note: If you haven't upgraded to Ember 3 yet, give [ember-cli-update](https://github.com/ember-cli/ember-cli-update#readme) a try to take advantage of codemods!) Testing is also somewhat different. Check out [@turbo87](https://github.com/turbo87/)'s [2018 EmberConf talk](https://www.youtube.com/watch?v=8D-O4cSteRk) for a deeper dive.
+
+For the most up-to-date Ember reference material, check out the [Guides](https://guides.emberjs.com/release/), the official [Tutorials](https://guides.emberjs.com/release/tutorial/ember-cli/), and the [API docs](https://emberjs.com/api). Elsewhere on the web, stick with resources from 2016 and beyond to stay current. 💯
 
 ---
 
