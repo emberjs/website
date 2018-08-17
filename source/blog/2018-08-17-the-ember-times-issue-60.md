@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan
+author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/17-the-ember-times-issue-60.html"
 responsive: true
@@ -118,4 +118,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan and the Learning Team
+Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes and the Learning Team
