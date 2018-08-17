@@ -14,7 +14,7 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [Taking Web Fonts to the Next Level 🤩](https://github.com/vitch/ember-cli-webfont)
+## [Taking Web Fonts to the Next Level 🔠](https://github.com/vitch/ember-cli-webfont)
 Do you like web fonts? Of course you do! Then it’s a good thing that `ember-cli-webfonts` just released version 1.0 🎉
 
 Now you can use the `webfonts-generator` to **easily generate web fonts** as part of your ember build process. By default the addon expects to find SVG files in `app/webfont-svg` but all of this can be customised alongside with class prefixes, base selectors, font names and much more.
@@ -23,6 +23,30 @@ All you have to do is run `ember install ember-cli-webfont ` and you’re ready
 
 ---
 
+## [Community Talk: Ember Discord RFC in Final Comment Period](https://github.com/emberjs/rfcs/pull/345)
+
+The **Request for Comments (RFC)** proposing a move of the community's real-time communication from
+[Slack](https://ember-community-slackin.herokuapp.com/) to [Discord](https://discordapp.com/) has entered the **Final Comment Period (FCP)** and is most likely to close this weekend.
+
+A plethora of comments and suggestions from the community have already come in about the proposed migration.
+If you're interested to join the discussion yourself, please take your time to
+read the [entire proposal here](https://github.com/MelSumner/rfcs/blob/feature/rfc-discord/text/0000-discord.md) and
+the comments along the RFC which have [already been made](https://github.com/emberjs/rfcs/pull/345).
+
+If you have new (and of course friendly! ❤️) information to add to the conversation, please do so [in the RFC's comments section](https://github.com/emberjs/rfcs/pull/345). And once again: Thank you all for all your feedback! ✨
+
+---
+
+## [SECTION TITLE](#section-url)
+
+
+---
+
+## [SECTION TITLE](#section-url)
+
+
+---
+
 ## [SECTION TITLE](#section-url)
 
 
@@ -38,22 +62,7 @@ All you have to do is run `ember install ember-cli-webfont ` and you’re ready
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [A wizard to create Ember projects 🧙‍](https://github.com/gossi/ember-cli-create)
+## [A wizard to create Ember projects ✨‍](https://github.com/gossi/ember-cli-create)
 
 [@Gossi](https://github.com/gossi) released `ember-cli-create`, a project that allows you to create new Ember projects using a simple UI.
 
@@ -79,7 +88,7 @@ For the most up-to-date Ember reference material, check out the [Guides](https:/
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/camerondubas" target="gh-user">@camerondubas</a>, <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/deanylev" target="gh-user">@deanylev</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a> and <a href="https://github.com/mschinis" target="gh-user">@mschinis</a> for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
