@@ -14,7 +14,7 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [Taking Web Fonts to the Next Level 🤩](https://github.com/vitch/ember-cli-webfont)
+## [Taking Web Fonts to the Next Level 🔠](https://github.com/vitch/ember-cli-webfont)
 Do you like web fonts? Of course you do! Then it’s a good thing that `ember-cli-webfonts` just released version 1.0 🎉
 
 Now you can use the `webfonts-generator` to **easily generate web fonts** as part of your ember build process. By default the addon expects to find SVG files in `app/webfont-svg` but all of this can be customised alongside with class prefixes, base selectors, font names and much more.
@@ -53,7 +53,7 @@ All you have to do is run `ember install ember-cli-webfont ` and you’re ready
 
 ---
 
-## [A wizard to create Ember projects 🧙‍](https://github.com/gossi/ember-cli-create)
+## [A wizard to create Ember projects ✨‍](https://github.com/gossi/ember-cli-create)
 
 [@Gossi](https://github.com/gossi) released `ember-cli-create`, a project that allows you to create new Ember projects using a simple UI.
 
