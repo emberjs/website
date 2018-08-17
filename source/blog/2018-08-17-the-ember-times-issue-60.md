@@ -1,5 +1,5 @@
 ---
-title: The Ember Times - Issue No. XX
+title: The Ember Times - Issue No. 60
 author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/17-the-ember-times-issue-60.html"
@@ -10,7 +10,7 @@ Olà Emberistas! 🐹
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week's Ember Times is all about **cool web fonts** 😎, community **chat** migrations and encouraging your inner **Ember Data RFC champion** 🛡. We also have lots of **Ember app wizardry** ✨ with `ember-cli-create`, a guide for using **learning resources** of all **Ember versions** efficiently and - last, but not least - a **brand-new Readers' Question** for you! 💁🏻
 
 ---
 
@@ -78,11 +78,11 @@ For the most up-to-date Ember reference material, check out the [Guides](https:/
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>This week's Readers' Question is all about best practices in Ember apps and one of the most popular design patterns - the **"Data Down, Actions Up"
-  paradigm** - is explained in more detail. Read this week's answer by <a href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="gh-jj">@jessica-jordan</a> on the <a href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="discuss">official Ember Forum here</a>.</p>
+  <p>This week's Readers' Question is all about best practices in Ember apps and one of the most popular design patterns - the <strong>"Data Down, Actions Up"
+  paradigm</strong> - is explained in more detail. Read this week's answer by <a href="https://github.com/jessica-jordan" target="gh-jj">@jessica-jordan</a> on the <a href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="discuss">official Ember Forum here</a>.</p>
 
-<p><a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="compmanager">Read more</a></p>
-
+<p><a class="ember-button" href="https://discuss.emberjs.com/t/readers-questions-what-is-meant-by-the-term-data-down-actions-up/15311" target="compmanager">Read more</a></p>
+<br/>
 
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
