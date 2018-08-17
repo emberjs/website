@@ -6,7 +6,7 @@ alias : "blog/2018/08/17-the-ember-times-issue-60.html"
 responsive: true
 ---
 
-OLÀ Emberistas! 🐹
+Olà Emberistas! 🐹
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
