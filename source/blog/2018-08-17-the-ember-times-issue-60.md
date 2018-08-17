@@ -23,8 +23,17 @@ All you have to do is run `ember install ember-cli-webfont ` and you’re ready
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Community Talk: Ember Discord RFC in Final Comment Period](https://github.com/emberjs/rfcs/pull/345)
 
+The **Request for Comments (RFC)** proposing a move of the community's real-time communication from
+[Slack](https://ember-community-slackin.herokuapp.com/) to [Discord](https://discordapp.com/) has entered the **Final Comment Period (FCP)** and is most likely to close this weekend.
+
+A plethora of comments and suggestions from the community have already come in about the proposed migration.
+If you're interested to join the discussion yourself, please take your time to
+read the [entire proposal here](https://github.com/MelSumner/rfcs/blob/feature/rfc-discord/text/0000-discord.md) and
+the comments along the RFC which have [already been made](https://github.com/emberjs/rfcs/pull/345).
+
+If you have new (and of course friendly! ❤️) information to add to the conversation, please do so [in the RFC's comments section](https://github.com/emberjs/rfcs/pull/345). And once again: Thank you all for all your feedback! ✨
 
 ---
 
