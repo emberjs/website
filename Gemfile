@@ -22,7 +22,8 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sass-rails', '>= 3.2'
 gem 'middleman-bootstrap-navbar'
 gem 'eventmachine', '1.0.9.1'
-gem 'loofah', '2.2.1'
+gem 'loofah', ">= 2.2.2"
+gem 'rails-html-sanitizer', '>= 1.0.4'
 
 group :development, :test do
   gem 'pry'
