@@ -19,7 +19,15 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Jazz Up Your Tags with Modifiers ✨](https://github.com/emberjs/rfcs/pull/353)
+
+A new **Request for Comments (RFC)** might bring new life to your HTML tags:
+The [proposal for Modifiers](https://github.com/emberjs/rfcs/blob/new-modifiers/text/0000-modifiers.md) presents a possible future API for components in Ember which allows to
+add custom behaviour, like event listeners or styles, to DOM nodes in your components. **Reliable access to DOM nodes** will be guaranteed by the means of these **element modifiers**, alleviating issues with the `outerHTML` semantics [mentioned in the `this.bounds` RFC](https://github.com/emberjs/rfcs/pull/351#issuecomment-412123046) which proposed a new way of accessing the root element of future Ember components.
+
+This **RFC is a successor** of the previous [RFC#111: Element Modifiers](https://github.com/emberjs/rfcs/pull/112) and aims to bring many of the previously mentioned ideas back into discussion.
+
+Be sure to [read the original proposal over at Github](https://github.com/emberjs/rfcs/pull/353) and share your thoughts and questions in [the comments for the RFC's pull request](https://github.com/emberjs/rfcs/pull/353).
 
 
 ---
