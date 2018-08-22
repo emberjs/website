@@ -19,7 +19,15 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Jazz Up Your Tags with Modifiers ✨](https://github.com/emberjs/rfcs/pull/353)
+
+A new **Request for Comments (RFC)** might bring new life to your HTML tags:
+The [proposal for Modifiers](https://github.com/emberjs/rfcs/blob/new-modifiers/text/0000-modifiers.md) presents a possible future API for components in Ember which allows to
+add custom behaviour, like event listeners or styles, to DOM nodes in your components. **Reliable access to DOM nodes** will be guaranteed by the means of these **element modifiers**, alleviating issues with the `outerHTML` semantics [mentioned in the `this.bounds` RFC](https://github.com/emberjs/rfcs/pull/351#issuecomment-412123046) which proposed a new way of accessing the root element of future Ember components.
+
+This **RFC is a successor** of the previous [RFC#111: Element Modifiers](https://github.com/emberjs/rfcs/pull/112) and aims to bring many of the previously mentioned ideas back into discussion.
+
+Be sure to [read the original proposal over at Github](https://github.com/emberjs/rfcs/pull/353) and share your thoughts and questions in [the comments for the RFC's pull request](https://github.com/emberjs/rfcs/pull/353).
 
 
 ---
@@ -66,12 +74,17 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: "Why does Ember use Broccoli and how is it different from Webpack, Rollup, Parcel?"](#url-to-be-updated)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+  <p>The JavaScript ecosystem is full of <strong>bundlers</strong>, like Webpack, Rollup.js, Microbundle among others. But what differentiates one from the other? And what makes Broccoli so special to be part of Ember's build pipeline?</p>
+
+<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="#url-to-be-updated" target="rq">full answer on the official Ember Forum.</a></p>
+
+<p><a class="ember-button" href="#url-to-be-updated" target="rq">Read more</a></p>
+<br/>
 
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
