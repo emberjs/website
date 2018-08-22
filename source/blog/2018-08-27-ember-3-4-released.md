@@ -27,7 +27,7 @@ Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfi
 #### New Features (X)
 
 
-#### Deprecations (X)
+#### Deprecations (1)
 
 Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
@@ -35,6 +35,19 @@ Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/e
 
 
 For more details on changes in Ember.js 3.4, please review the [Ember.js 3.4.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.4.0).
+
+
+Use closure actions instead of `sendAction` (1 of 1)
+
+In Ember 1.13 closure actions were introduced as a recommended replacement for `sendAction`. With `sendAction` the developer passes the name of an action, and when `sendAction` is called Ember.js would look up that action in the parent context and invoke it if present. This had a handful of caveats:
+
+* Since the action is not looked up until it's about to be invoked, it's easier for a typo in the action's name to go undetected.
+
+* Using `sendAction` you cannot receive the return value of the invoked action.
+
+Closure actions solve those problems and on top are also more intuitive to use.
+
+To read more about this deprecation and how to refactor your existing code have a look at [the deprecations page](https://emberjs.com/deprecations/v3.x#toc_ember-component-send-action).
 
 ---
 
