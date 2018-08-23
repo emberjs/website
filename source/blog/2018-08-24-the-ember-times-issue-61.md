@@ -62,11 +62,17 @@ Be sure to [read the original proposal over at Github](https://github.com/emberj
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember-Truth-Helpers was updated 🙌](https://github.com/jmurphyau/ember-truth-helpers)
 
+`Ember-truth-helpers` is an Ember addon that provides helpers for truth logic in if and unless statements.
+
+On the new version `v2.1.0`, [@jmurphyau](https://github.com/jmurphyau) has added the `is-empty` helper to the library. 🎉
+
+This will make our lives easier when checking for empty values in our templates.
+
+You can have closer look at the change [here](https://github.com/jmurphyau/ember-truth-helpers/commit/cd4147e4ed76dfc5cf585ea87c6e08fcf99b7e16) 👀
 
 ---
-
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
