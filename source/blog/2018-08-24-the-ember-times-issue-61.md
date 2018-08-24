@@ -37,7 +37,7 @@ This new feature comes with two feature flags `store.shouldTrackAsyncRequests `
 
 ## [Podcast: Melanie Sumner on empowering JavaScript engineers 💪](https://twitter.com/samselikoff/status/1032298098901639169)
 
-This week [Sam Selikoff](https://github.com/samselikoff) interviewed Ember Core team member Melanie Sumner ([@MelSumner](https://github.com/MelSumner)) for [The EmberMap Podcast](https://embermap.com/). Melanie talked about her path from getting starting making Ember accessible to now being a leader in the Ember community as a core team member. Ember, for Melanie, was one of the first times in tech where she felt welcome. This is in huge part because of the welcoming Ember community
+This week [@samselikoff](https://github.com/samselikoff) interviewed Ember Core team member Melanie Sumner ([@MelSumner](https://github.com/MelSumner)) for [The EmberMap Podcast](https://embermap.com/). Melanie talked about her path from getting starting making Ember accessible to now being a leader in the Ember community as a core team member. Ember, for Melanie, was one of the first times in tech where she felt welcome. This is in huge part because of the welcoming Ember community
 
 Melanie talked about empowering other people to feel included. This, to her, was the key to scaling yourself since you can only do so much as an individual. Inclusion to get other people involved will effectively create _“clones”_ of yourself. This is how she participates in a vision that is shared by helping create a community.
 
