@@ -68,17 +68,12 @@ You can take a closer look at the change [here](https://github.com/jmurphyau/emb
 
 ---
 
-## [Readers' Questions: "Why does Ember use Broccoli and how is it different from Webpack, Rollup, Parcel?"](#url-to-be-updated)
+## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>The JavaScript ecosystem is full of <strong>bundlers</strong>, like Webpack, Rollup.js, Microbundle among others. But what differentiates one from the other? And what makes Broccoli so special to be part of Ember's build pipeline?</p>
-
-<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="#url-to-be-updated" target="rq">full answer on the official Ember Forum</a>.</p>
-
-<p><a class="ember-button" href="#url-to-be-updated" target="rq">Read more</a></p>
-<br/>
+  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
 
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
