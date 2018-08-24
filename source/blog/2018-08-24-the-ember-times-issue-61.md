@@ -37,7 +37,7 @@ A new PR has been merged to Ember Data that improves your use of `async ... awai
 
 The feature works in non-production environments and they made sure that the test-waiter does not cause waiting by default in order to prevent breaking any apps that upgrade their version of Ember Data.
 
-This new feature comes with two feature flags `store.shouldTrackAsyncRequests `  and `store.generateStackTracesForTrackedRequests`. To learn all about them and some more information on this new feature, be sure to check out [the pull request.](https://github.com/emberjs/data/pull/5545)
+This new feature comes with two feature flags `store.shouldTrackAsyncRequests `  and `store.generateStackTracesForTrackedRequests`. To learn all about them and some more information on this new feature, be sure to check out [the pull request](https://github.com/emberjs/data/pull/5545).
 
 ---
 
@@ -52,9 +52,9 @@ Melanie mentioned how she practices **Servant Leadership** which she described a
 Sam and Melanie then talked about the native accessibility story for Ember going through the ARIA spec and seeing if it makes sense to implement it in Ember. There are loads of opportunity here as even having a modal or select dropdown be both accessible and customizable would be a huge leap for web developers. Having that built into Ember by default will be a game changer.
 
 Click the links below watch the full interview:
-- 🎥 EmberMap: [https://embermap.com/topics/the-embermap-podcast/melanie-sumner-on-empowering-javascript-engineers](https://embermap.com/topics/the-embermap-podcast/melanie-sumner-on-empowering-javascript-engineers)
-- 🎙️ iTunes: [https://itunes.apple.com/us/podcast/the-embermap-podcast/id1288274408?mt=2](https://itunes.apple.com/us/podcast/the-embermap-podcast/id1288274408?mt=2)
-- 📺 YouTube: [https://www.youtube.com/watch?v=KXFYNhNgn_Q](https://www.youtube.com/watch?v=KXFYNhNgn_Q)
+- 🎥 [EmberMap](https://embermap.com/topics/the-embermap-podcast/melanie-sumner-on-empowering-javascript-engineers)
+- 🎙️ [iTunes](https://itunes.apple.com/us/podcast/the-embermap-podcast/id1288274408?mt=2)
+- 📺 [YouTube](https://www.youtube.com/watch?v=KXFYNhNgn_Q)
 
 ---
 
@@ -81,10 +81,10 @@ Click the links below watch the full interview:
 ## [Ember-Truth-Helpers was updated 🙌](https://github.com/jmurphyau/ember-truth-helpers)
 
 `Ember-truth-helpers` is an Ember addon that provides helpers for truth logic in `if` and `unless` statements.
-As of version `v2.1.0`, [@jmurphyau](https://github.com/jmurphyau) has added the `is-empty` helper to the library. 🎉
+As of version `v2.1.0`, [@jamesarosen](https://github.com/jamesarosen) and [@jmurphyau](https://github.com/jmurphyau) added the `is-empty` helper to the library. 🎉
 This will make our lives easier when checking for empty values in our templates.
 
-You can have closer look at the change [here](https://github.com/jmurphyau/ember-truth-helpers/commit/cd4147e4ed76dfc5cf585ea87c6e08fcf99b7e16) 👀
+You can have closer look at the change [here](https://github.com/jmurphyau/ember-truth-helpers/commit/cd4147e4ed76dfc5cf585ea87c6e08fcf99b7e16). 👀
 
 
 ---
@@ -102,7 +102,7 @@ You can have closer look at the change [here](https://github.com/jmurphyau/ember
 
   <p>The JavaScript ecosystem is full of <strong>bundlers</strong>, like Webpack, Rollup.js, Microbundle among others. But what differentiates one from the other? And what makes Broccoli so special to be part of Ember's build pipeline?</p>
 
-<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="#url-to-be-updated" target="rq">full answer on the official Ember Forum.</a></p>
+<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="#url-to-be-updated" target="rq">full answer on the official Ember Forum</a>.</p>
 
 <p><a class="ember-button" href="#url-to-be-updated" target="rq">Read more</a></p>
 <br/>
