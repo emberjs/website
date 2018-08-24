@@ -41,8 +41,20 @@ This new feature comes with two feature flags `store.shouldTrackAsyncRequests `
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Podcast: Melanie Sumner on empowering JavaScript engineers 💪](https://twitter.com/samselikoff/status/1032298098901639169)
 
+This week [Sam Selikoff](https://github.com/samselikoff) interviewed Ember Core team member Melanie Sumner ([@MelSumner](https://github.com/MelSumner)) for [The EmberMap Podcast](https://embermap.com/). Melanie talked about her path from getting starting making Ember accessible to now being a leader in the Ember community as a core team member. Ember, for Melanie, was one of the first time in tech where she felt welcome. This is a huge part because of the welcoming Ember community.
+
+Melanie talked about empowering other people to feel included. This, to her, was the key to scaling yourself since you can only do so much as an individual. Inclusion to get other people involved will effectively create _“clones”_ of yourself. This is how she participates in a vision that is shared by helping create a community.
+
+Melanie mentioned how she practices **Servant Leadership** which she described as “not asking anyone to do something that I wouldn’t do myself.” This goes with the ethos Ember represents which is to invest in the long term by working with others so that they may feel welcome and contribute back into the community.
+
+Sam and Melanie then talked about the native accessibility story for Ember going through the ARIA spec and seeing if it makes sense to implement it in Ember. There are loads of opportunity here as even having a modal or select dropdown be both accessible and customizable would be a huge leap for web developers. Having that built into Ember by default will be a game changer.
+
+Click the links below watch the full interview:
+- 🎥 EmberMap: [https://embermap.com/topics/the-embermap-podcast/melanie-sumner-on-empowering-javascript-engineers](https://embermap.com/topics/the-embermap-podcast/melanie-sumner-on-empowering-javascript-engineers)
+- 🎙️ iTunes: [https://itunes.apple.com/us/podcast/the-embermap-podcast/id1288274408?mt=2](https://itunes.apple.com/us/podcast/the-embermap-podcast/id1288274408?mt=2)
+- 📺 YouTube: [https://www.youtube.com/watch?v=KXFYNhNgn_Q](https://www.youtube.com/watch?v=KXFYNhNgn_Q)
 
 ---
 
