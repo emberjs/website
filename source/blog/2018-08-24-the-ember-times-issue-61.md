@@ -14,11 +14,6 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Jazz Up Your Tags with Modifiers ✨](https://github.com/emberjs/rfcs/pull/353)
 
 A new **Request for Comments (RFC)** might bring new life to your HTML tags:
@@ -29,10 +24,9 @@ This **RFC is a successor** of the previous [RFC#112: Element Modifiers](https:/
 
 Be sure to [read the original proposal over at Github](https://github.com/emberjs/rfcs/pull/353) and share your thoughts and questions in [the comments for the RFC's pull request](https://github.com/emberjs/rfcs/pull/353).
 
-
 ---
 
-## [Wait for it...](https://github.com/emberjs/data/pull/5545)
+## [I'm willing to wait for it 🎶](https://github.com/emberjs/data/pull/5545)
 A new PR has been merged to Ember Data that improves your use of `async ... await` while simultaneously detecting asynchronous test leaks in their data layer.
 
 The feature works in non-production environments and they made sure that the test-waiter does not cause waiting by default in order to prevent breaking any apps that upgrade their version of Ember Data.
@@ -58,26 +52,6 @@ Click the links below watch the full interview:
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Ember-Truth-Helpers was updated 🙌](https://github.com/jmurphyau/ember-truth-helpers)
 
 `Ember-truth-helpers` is an Ember addon that provides helpers for truth logic in `if` and `unless` statements.
@@ -85,7 +59,6 @@ As of version `v2.1.0`, [@jamesarosen](https://github.com/jamesarosen) and [@jmu
 This will make our lives easier when checking for empty values in our templates.
 
 You can take a closer look at the change [here](https://github.com/jmurphyau/ember-truth-helpers/commit/cd4147e4ed76dfc5cf585ea87c6e08fcf99b7e16). 👀
-
 
 ---
 
