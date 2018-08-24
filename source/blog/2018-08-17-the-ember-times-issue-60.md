@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 60
 author: Miguel Braga Gomes, Amy Lam, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/17-the-ember-times-issue-60.html"
 responsive: true
 ---
