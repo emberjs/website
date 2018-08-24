@@ -10,7 +10,7 @@ responsive: true
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week we have a fresh RFC for **modifying** your **HTML elements** 🛠 for you, as well as long-**awaited async**  news from **Ember Data** 🕓, an **empowering podcast** session ❤️ and truthful **updates** for `ember-truth-helpers`! Check it out ✨
 
 ---
 
