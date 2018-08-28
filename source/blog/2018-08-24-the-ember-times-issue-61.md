@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 61
 author: Chris Ng, Miguel Braga Gomes, Amy Lam, Alon Bukai, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/24/the-ember-times-issue-61.html"
 responsive: true
 ---
