@@ -9,10 +9,9 @@ module Versions
   module Helpers
 
     def current_version
+      require 'yaml'
       require 'open-uri'
-      versions = JSON.parse(open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json').read)
-      versions.sort_by! { |version| Gem::Version.new(version[1..-1]) }
-      @current_version = versions.last
+      @current_version = YAML.parse(open('https://raw.githubusercontent.com/ember-learn/guides-source/master/versions.yml')).to_ruby['currentVersion']
     end
 
     def replace_current_version(input)
