@@ -10,9 +10,8 @@ module Versions
 
     def current_version
       require 'open-uri'
-      versions = JSON.parse(open('https://raw.githubusercontent.com/emberjs/guides.emberjs.com/master/snapshots/versions.json').read)
-      versions.sort_by! { |version| Gem::Version.new(version[1..-1]) }
-      @current_version = versions.last
+      versions = JSON.parse(open('https://guides.emberjs.com/content/versions.json').read)
+      @current_version = versions['data']['attributes']['current-version']
     end
 
     def replace_current_version(input)
