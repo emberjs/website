@@ -41,8 +41,47 @@ Read more in the [rendered pull request on GitHub](https://github.com/emberjs/rf
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Module Unification with Ember Addons](https://github.com/emberjs/rfcs/pull/367) 🎁
+[Module Unification Packages](https://github.com/emberjs/rfcs/pull/367) is a new RFC, created by [@mixonic](https://github.com/mixonic), that sets out to describe how packages, **Ember Addons**, work and how apps and addons will migrate to the new [Module Unification](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) structure from the classic structure. This RFC iterates on and is set to replace another RFC called [Module Unification Namespaces](https://github.com/emberjs/rfcs/pull/309) which had some syntax, like the `::` syntax, that proved problematic.
 
+This RFC proposes to add a new `{{use}}` helper that will be used to call external components that are provided by addons. This helper is a subset of the javascript imports that we are used to. 
+
+An example: In this template the `{{use}}` helper imports a component `Widget` from the `gadget` addon.
+
+```hbs
+{{! invokes node_modules/gadget/src/ui/components/Widget/component.js }}
+
+{{use Widget from 'gadget'}}
+<Widget @options=someOptions @value=someValue />
+```
+
+Something else that is proposed in this RFC is the use of a template `prelude.hbs` that, **at compile time**, will be injected into every template in the app. This can be used to inject global components such as the widely used `{{t 'token'}}` component used for *internationalization*. 
+
+Services also get some **love** in this RFC. The suggestion is that all service calls to addons will become more verbose in that the injected service will need to provide where to inject from. 
+
+An example:
+
+```js
+export default Ember.Component.extend({
+
+  // inject src/services/geo.js
+  geo: inject(),
+
+  // inject node_modules/ember-stripe-service/src/services/store.js
+  checkoutService: inject('stripe', { package: 'ember-stripe-service' }),
+
+  // inject node_modules/ember-simple-auth/src/services/session.js
+  session: inject({ package: 'ember-simple-auth' })
+
+});
+```
+
+There is also some proposals regarding `owner` APIs such as `owner.lookup()` and `owner.factoryFor()` which have also become more explicit.
+
+All in all this, **very well written**, RFC is a great chance to learn about possible changes to Ember and the Module Unification structure.
+If you have any concerns or questions feel free to ask in the [RFC issue](https://github.com/emberjs/rfcs/pull/367) and join in on the conversation.
+
+This RFC is not complete and is a bit rough around the edges but it is a step in the right direction and will hopefully be finalized soon so that we can start using it in an Ember version in the near future.
 
 ---
 
