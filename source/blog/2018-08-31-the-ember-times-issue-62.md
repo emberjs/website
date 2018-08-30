@@ -42,9 +42,9 @@ Read more in the [rendered pull request on GitHub](https://github.com/emberjs/rf
 ---
 
 ## [Module Unification with Ember Addons](https://github.com/emberjs/rfcs/pull/367) 🎁
-[Module Unification Packages](https://github.com/emberjs/rfcs/pull/367) is a new RFC, created by [@mixonic](https://github.com/mixonic), that sets out to describe how packages, **Ember Addons**, work and how apps and addons will migrate to the new [Module Unification](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) structure from the classic structure. This RFC iterates on and is set to replace another RFC called [Module Unification Namespaces](https://github.com/emberjs/rfcs/pull/309) which had some syntax, like the `::` syntax, that proved problematic.
+[Module Unification Packages](https://github.com/emberjs/rfcs/pull/367) is a new RFC, created by [@mixonic](https://github.com/mixonic), that sets out to describe how Ember apps and addons will migrate to the new [Module Unification](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) structure from the classic structure. This RFC iterates on and is set to replace another RFC called [Module Unification Namespaces](https://github.com/emberjs/rfcs/pull/309) which had some syntax, like the `::` syntax, that proved problematic.
 
-This RFC proposes to add a new `{{use}}` helper that will be used to call external components that are provided by addons. This helper is a subset of the javascript imports that we are used to. 
+This RFC proposes to add a new `{{use}}` helper. This helper imports components from an addon into an application's template. This helper provides a subset of the functionality of the JavaScript imports that we are used to, albeit with a slightly different syntax. 
 
 An example: In this template the `{{use}}` helper imports a component `Widget` from the `gadget` addon.
 
@@ -52,12 +52,12 @@ An example: In this template the `{{use}}` helper imports a component `Widget` f
 {{! invokes node_modules/gadget/src/ui/components/Widget/component.js }}
 
 {{use Widget from 'gadget'}}
-<Widget @options=someOptions @value=someValue />
+<Widget @options={{someOptions}} @value={{someValue}} />
 ```
 
 Something else that is proposed in this RFC is the use of a template `prelude.hbs` that, **at compile time**, will be injected into every template in the app. This can be used to inject global components such as the widely used `{{t 'token'}}` component used for *internationalization*. 
 
-Services also get some **love** in this RFC. The suggestion is that all service calls to addons will become more verbose in that the injected service will need to provide where to inject from. 
+Services also get some **love** in this RFC. The suggestion is that all service injections from an addon to an app will need to be explicit about their source package. This results in more verbosity, but also greater clarity and opportunity for optimizations.
 
 An example:
 
@@ -76,10 +76,10 @@ export default Ember.Component.extend({
 });
 ```
 
-There is also some proposals regarding `owner` APIs such as `owner.lookup()` and `owner.factoryFor()` which have also become more explicit.
+There are also some proposals regarding `owner` APIs such as `owner.lookup()` and `owner.factoryFor()` which have also become more explicit.
 
 All in all this, **very well written**, RFC is a great chance to learn about possible changes to Ember and the Module Unification structure.
-If you have any concerns or questions feel free to ask in the [RFC issue](https://github.com/emberjs/rfcs/pull/367) and join in on the conversation.
+If you have any concerns or questions feel free to ask in the [RFC issue](https://github.com/emberjs/rfcs/pull/367) and join in on the conversation by visiting `#st-module-unification` on the Ember.js Community Slack.
 
 This RFC is not complete and is a bit rough around the edges but it is a step in the right direction and will hopefully be finalized soon so that we can start using it in an Ember version in the near future.
 
