@@ -828,6 +828,7 @@
   image: inquicker.png
   alt: "InQuicker"
   use: "We use Ember for our new customer-facing applications."
+  inactive: true
 - url: http://number42.de/
   image: num42.png
   alt: "number42"
