@@ -1,8 +1,8 @@
 ---
-title: The Ember Times - Issue No. XX
-author: the crowd
+title: The Ember Times - Issue No. 62
+author: Nick Schot, Frédéric Soumaré, Chris Ng, Alon Bukai, Edward Faulkner, Oli Griffiths, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/08/31-the-ember-times-issue-62.html"
 responsive: true
 ---
 
@@ -157,4 +157,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Nick Schot, Frédéric Soumaré, Chris Ng, Alon Bukai, Edward Faulkner, Oli Griffiths, Kenneth Larsen, Jessica Jordan and the Learning Team
