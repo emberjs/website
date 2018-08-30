@@ -90,8 +90,11 @@ This RFC is not complete and is a bit rough around the edges but it is a step in
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Prompted To Update ✨](https://twitter.com/kellyselden/status/1034197684595257345)
 
+<img src="/images/blog/emberjstimes/embercliupdate-codemod-prompts.png" alt="Terminal window showing Ember CLI Update's Codemod Prompts, including ember-modules-codemod, ember-qunit-codemod, ember-test-helpers-codemod, es5-getter-ember-codemod, qunit-dom-codemod" />
+
+Your favorite tool for **updating your Ember app**, addon or Glimmer app to any desired version is back again to make your developer life even **easier**: 🌟[**Ember CLI Update**](https://github.com/ember-cli/ember-cli-update) now [offers you dedicated command-line prompts](https://twitter.com/kellyselden/status/1034197684595257345) to apply **as many codemods as you wish**. Simply run `ember-cli-update --run-codemods`, select which codemods to run and upgrade your Ember app to the next level! ⬆️
 
 ---
 
