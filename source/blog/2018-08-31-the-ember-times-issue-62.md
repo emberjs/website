@@ -44,7 +44,7 @@ Read more in the [rendered pull request on GitHub](https://github.com/emberjs/rf
 ## [Module Unification with Ember Addons](https://github.com/emberjs/rfcs/pull/367) 🎁
 [Module Unification Packages](https://github.com/emberjs/rfcs/pull/367) is a new RFC, created by [@mixonic](https://github.com/mixonic), that sets out to describe how Ember apps and addons will migrate to the new [Module Unification](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) structure from the classic structure. This RFC iterates on and is set to replace another RFC called [Module Unification Namespaces](https://github.com/emberjs/rfcs/pull/309) which had some syntax, like the `::` syntax, that proved problematic.
 
-This RFC proposes to add a new `{{use}}` helper. This helper imports components from an addon into an application's template. This helper provides a subset of the functionality of the JavaScript imports that we are used to, albeit with a slightly different syntax. 
+This RFC proposes to add a new `{{use}}` helper. This helper imports components from an addon into an application's template. This helper provides a subset of the functionality of the JavaScript imports that we are used to, albeit with a slightly different syntax.
 
 An example: In this template the `{{use}}` helper imports a component `Widget` from the `gadget` addon.
 
@@ -55,7 +55,7 @@ An example: In this template the `{{use}}` helper imports a component `Widget` f
 <Widget @options={{someOptions}} @value={{someValue}} />
 ```
 
-Something else that is proposed in this RFC is the use of a template `prelude.hbs` that, **at compile time**, will be injected into every template in the app. This can be used to inject global components such as the widely used `{{t 'token'}}` component used for *internationalization*. 
+Something else that is proposed in this RFC is the use of a template `prelude.hbs` that, **at compile time**, will be injected into every template in the app. This can be used to inject global components such as the widely used `{{t 'token'}}` component used for *internationalization*.
 
 Services also get some **love** in this RFC. The suggestion is that all service injections from an addon to an app will need to be explicit about their source package. This results in more verbosity, but also greater clarity and opportunity for optimizations.
 
@@ -130,12 +130,17 @@ Your favorite tool for **updating your Ember app**, addon or Glimmer app to any 
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: "Why does Ember use Broccoli and how is it different from Webpack, Rollup, Parcel?"](https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384)
 
-<div class="blog-row">
-  <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
+ <div class="blog-row">
+<img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+<p>The JavaScript ecosystem is full of <strong>solutions for packaging JavaScript apps</strong>, like Webpack, Rollup.js and Microbundle among others. But what differentiates one from the other? And what makes Broccoli so special to be part of Ember's build pipeline?</p>
+
+<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384" target="rq">full answer on the official Ember Forum.</a></p>
+
+<p><a class="ember-button" href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384" target="rq">Read more</a></p>
+<br/>
 
 <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 
