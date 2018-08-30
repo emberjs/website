@@ -6,11 +6,11 @@ alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Привет Emberistas! 🐹
 
 Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Have a look into the next year of Ember with the **official 2018 Roadmap RFC** 🌆 and read up on plans for **Module Unification with Ember Addons** 🐹. We also **prompt** ❗️you to check out **Ember CLI Update** for fresh ✨ updates and last, but not least, we have a **brand-new 🔥 Readers' Question** 🌿 in for you this week:
 
 ---
 
