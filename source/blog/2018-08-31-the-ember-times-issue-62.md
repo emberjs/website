@@ -41,6 +41,17 @@ Read more in the [rendered pull request on GitHub](https://github.com/emberjs/rf
 
 ---
 
+## [RFC: I Promise You It's Good](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md)
+[A new proposal](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md) by [Stanley Stuart](https://github.com/fivetanley) to return a promise from `DS.Model.save()` is ready for you to read and comment. 
+
+The idea here is to make `DS.Model.save()` return an `RSVP.Promise` instead of a `PromiseObject`. This is to remove the dependency on promise proxies, improve async consistency and enable new functionality in Ember Data. 
+
+The only drawback of this is if you are already relying on this behaviour you’ll probably have to refactor your code to either use patterns like `async/await` or [ember-concurrency](http://ember-concurrency.com/).
+
+[Read the whole proposal](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md) and share your thoughts.
+
+---
+
 ## [Module Unification with Ember Addons](https://github.com/emberjs/rfcs/pull/367) 🎁
 [Module Unification Packages](https://github.com/emberjs/rfcs/pull/367) is a new RFC, created by [@mixonic](https://github.com/mixonic), that sets out to describe how Ember apps and addons will migrate to the new [Module Unification](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) structure from the classic structure. This RFC iterates on and is set to replace another RFC called [Module Unification Namespaces](https://github.com/emberjs/rfcs/pull/309) which had some syntax, like the `::` syntax, that proved problematic.
 
