@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 61
 author: Chris Ng, Miguel Braga Gomes, Amy Lam, Alon Bukai, Ryan Mark, Kenneth Larsen, Jessica Jordan, Ricardo Mendes
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/24/the-ember-times-issue-61.html"
 responsive: true
 ---
@@ -41,6 +41,7 @@ This week [@samselikoff](https://github.com/samselikoff) interviewed Ember Core 
 
 Melanie talked about empowering other people to feel included. This, to her, was the key to scaling yourself since you can only do so much as an individual. Inclusion to get other people involved will effectively create _“clones”_ of yourself. This is how she participates in a vision that is shared by helping create a community.
 
+<!--alex ignore servant-->
 Melanie mentioned how she practices **Servant Leadership** which she described as “not asking anyone to do something that I wouldn’t do myself.” This goes with the ethos Ember represents which is to invest in the long term by working with others so that they may feel welcome and contribute back into the community.
 
 Sam and Melanie then talked about the native accessibility story for Ember going through the [ARIA spec](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) and seeing if it makes sense to implement it in Ember. There are loads of opportunities here as even having a modal or select dropdown be both accessible and customizable would be a huge leap for web developers. Having that built into Ember by default will be a game changer.
