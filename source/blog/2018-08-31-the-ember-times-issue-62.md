@@ -16,7 +16,7 @@ Have a look into the next year of Ember with the **official 2018 Roadmap RFC** �
 
 ## [RFC: Ember 2018 Roadmap 🛣](https://github.com/emberjs/rfcs/pull/364)
 
-[Tom Dale](https://github.com/tomdale) published an [RFC](https://github.com/emberjs/rfcs/pull/364) for the Ember 2018 Roadmap based on the feedback collected from the [#EmberJS2018 call for blog posts](https://www.emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html) earlier this year. Tom identified 3 key goals for Ember in 2018 along with 2 real world use cases to focus on.
+[Tom Dale](https://github.com/tomdale) published an [RFC (Request for Comments)](https://github.com/emberjs/rfcs/pull/364) for the Ember 2018 Roadmap based on the feedback collected from the [#EmberJS2018 call for blog posts](https://www.emberjs.com/blog/2018/05/02/ember-2018-roadmap-call-for-posts.html) earlier this year. Tom identified 3 key goals for Ember in 2018 along with 2 real world use cases to focus on.
 
 ### Goals:
 
@@ -42,9 +42,10 @@ Read more in the [rendered pull request on GitHub](https://github.com/emberjs/rf
 ---
 
 ## [RFC: I Promise You It's Good](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md)
-[A new proposal](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md) by [Stanley Stuart](https://github.com/fivetanley) to return a promise from `DS.Model.save()` is ready for you to read and comment. 
 
-The idea here is to make `DS.Model.save()` return an `RSVP.Promise` instead of a `PromiseObject`. This is to remove the dependency on promise proxies, improve async consistency and enable new functionality in Ember Data. 
+[A new proposal](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md) by [Stanley Stuart](https://github.com/fivetanley) to return a promise from `DS.Model.save()` is ready for you to read and comment.
+
+The idea here is to make `DS.Model.save()` return an `RSVP.Promise` instead of a `PromiseObject`. This is to remove the dependency on promise proxies, improve async consistency and enable new functionality in Ember Data.
 
 The only drawback of this is if you are already relying on this behaviour you’ll probably have to refactor your code to either use patterns like `async/await` or [ember-concurrency](http://ember-concurrency.com/).
 
@@ -53,13 +54,14 @@ The only drawback of this is if you are already relying on this behaviour you’
 ---
 
 ## [Module Unification with Ember Addons](https://github.com/emberjs/rfcs/pull/367) 🎁
+
 [Module Unification Packages](https://github.com/emberjs/rfcs/pull/367) is a new RFC, created by [@mixonic](https://github.com/mixonic), that sets out to describe how Ember apps and addons will migrate to the new [Module Unification](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md) structure from the classic structure. This RFC iterates on and is set to replace another RFC called [Module Unification Namespaces](https://github.com/emberjs/rfcs/pull/309) which had some syntax, like the `::` syntax, that proved problematic.
 
 This RFC proposes to add a new `{{use}}` helper. This helper imports components from an addon into an application's template. This helper provides a subset of the functionality of the JavaScript imports that we are used to, albeit with a slightly different syntax.
 
 An example: In this template the `{{use}}` helper imports a component `Widget` from the `gadget` addon.
 
-```hbs
+```handlebars
 {{! invokes node_modules/gadget/src/ui/components/Widget/component.js }}
 
 {{use Widget from 'gadget'}}
@@ -68,7 +70,7 @@ An example: In this template the `{{use}}` helper imports a component `Widget` f
 
 Something else that is proposed in this RFC is the use of a template `prelude.hbs` that, **at compile time**, will be injected into every template in the app. This can be used to inject global components such as the widely used `{{t 'token'}}` component used for *internationalization*.
 
-Services also get some **love** in this RFC. The suggestion is that all service injections from an addon to an app will need to be explicit about their source package. This results in more verbosity, but also greater clarity and opportunity for optimizations.
+Services also get some **appreciation** in this RFC. The suggestion is that all service injections from an addon to an app will need to be explicit about their source package. This results in more verbosity, but also greater clarity and opportunity for optimizations.
 
 An example:
 
@@ -89,15 +91,10 @@ export default Ember.Component.extend({
 
 There are also some proposals regarding `owner` APIs such as `owner.lookup()` and `owner.factoryFor()` which have also become more explicit.
 
-All in all this, **very well written**, RFC is a great chance to learn about possible changes to Ember and the Module Unification structure.
-If you have any concerns or questions feel free to ask in the [RFC issue](https://github.com/emberjs/rfcs/pull/367) and join in on the conversation by visiting `#st-module-unification` on the Ember.js Community Slack.
+All in all this **very well written** RFC is a great chance to learn about possible changes to Ember and the Module Unification structure.
+If you have any concerns or questions feel free to ask in the [RFC issue](https://github.com/emberjs/rfcs/pull/367) and join in on the conversation by visiting the [`#st-module-unification` channel](https://embercommunity.slack.com/messages/C5JN29NTC/) on the Ember.js Community Slack.
 
 This RFC is not complete and is a bit rough around the edges but it is a step in the right direction and will hopefully be finalized soon so that we can start using it in an Ember version in the near future.
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -105,35 +102,11 @@ This RFC is not complete and is a bit rough around the edges but it is a step in
 
 <img src="/images/blog/emberjstimes/embercliupdate-codemod-prompts.png" alt="Terminal window showing Ember CLI Update's Codemod Prompts, including ember-modules-codemod, ember-qunit-codemod, ember-test-helpers-codemod, es5-getter-ember-codemod, qunit-dom-codemod" />
 
-Your favorite tool for **updating your Ember app**, addon or Glimmer app to any desired version is back again to make your developer life even **easier**: 🌟[**Ember CLI Update**](https://github.com/ember-cli/ember-cli-update) now [offers you dedicated command-line prompts](https://twitter.com/kellyselden/status/1034197684595257345) to apply **as many codemods as you wish**. Simply run `ember-cli-update --run-codemods`, select which codemods to run and upgrade your Ember app to the next level! ⬆️
+Your favorite tool for **updating your Ember app**, addon or Glimmer app to any desired version is back again to make your developer life even **easier**: 🌟[**Ember CLI Update**](https://github.com/ember-cli/ember-cli-update) now [offers you dedicated command-line prompts](https://twitter.com/kellyselden/status/1034197684595257345) to apply **as many codemods as you wish**.
+
+Simply run `ember-cli-update --run-codemods`, select which codemods to run and upgrade your Ember app to the next level! ⬆️
 
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -148,7 +121,7 @@ Your favorite tool for **updating your Ember app**, addon or Glimmer app to any 
 
 <p>The JavaScript ecosystem is full of <strong>solutions for packaging JavaScript apps</strong>, like Webpack, Rollup.js and Microbundle among others. But what differentiates one from the other? And what makes Broccoli so special to be part of Ember's build pipeline?</p>
 
-<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384" target="rq">full answer on the official Ember Forum.</a></p>
+<p>In this week's Readers' Question, Ember Learning Core team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> will highlight the <strong>differences</strong> between some of the most <strong>popular JavaScript bundlers and build tools</strong> and explain why Ember CLI embraced <strong>Broccoli</strong> as its tool of choice early on. You can read her <a href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384" target="rq">full answer on the official Ember Forum.</a></p>
 
 <p><a class="ember-button" href="https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384" target="rq">Read more</a></p>
 <br/>
