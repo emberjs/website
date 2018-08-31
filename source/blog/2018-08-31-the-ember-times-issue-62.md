@@ -46,7 +46,7 @@ Read more in the [rendered pull request on GitHub](https://github.com/emberjs/rf
 
 The idea here is to make `DS.Model.save()` return an `RSVP.Promise` instead of a `PromiseObject`. This is to remove the dependency on promise proxies, improve async consistency and enable new functionality in Ember Data. 
 
-The only drawback of this is if you are already relying on this behaviour you’ll probably have to refactor your code to either use patterns like `async/await` or `ember-concurrency`.
+The only drawback of this is if you are already relying on this behaviour you’ll probably have to refactor your code to either use patterns like `async/await` or [ember-concurrency](http://ember-concurrency.com/).
 
 [Read the whole proposal](https://github.com/fivetanley/rfcs/blob/deprecate-promise-object-save/text/0000-ember-data-return-promise-from-ds-model-save.md) and share your thoughts.
 
