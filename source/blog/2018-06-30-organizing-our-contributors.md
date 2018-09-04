@@ -1,7 +1,7 @@
 ---
 title: Organizing Our Contributors
 author: The Ember Team
-tags: Recent Posts, Announcement, Community, 2018
+tags: Recent Posts, Announcement, Community, 2018, Leadership
 responsive: true
 ---
 
