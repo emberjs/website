@@ -1,7 +1,7 @@
 ---
 title: "Ember accessibility and a11y tools"
 author: Jen Weber
-tags: Recent Posts, a11y, accessibility, testing, addons
+tags: Recent Posts, a11y, accessibility, testing, addons, Tech
 alias : "blog/2018/06/17/ember-accessibility-and-a11y-tools.html"
 responsive: true
 ---

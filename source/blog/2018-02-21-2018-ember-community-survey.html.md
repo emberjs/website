@@ -2,7 +2,7 @@
 title: "2018 Ember Community Survey"
 responsive: true
 author: Akanksha Dharkar, Isaac Ezer, Matthew Beale
-tags: Recent Posts, Survey, 2018
+tags: Recent Posts, Survey, 2018, Community
 ---
 
 The last year has been a wonderful time to work with the web, and a thrilling one to

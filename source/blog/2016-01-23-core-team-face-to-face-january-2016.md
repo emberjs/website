@@ -1,7 +1,7 @@
 ---
 title: Core Team Face to Face, January 2016
 author: Tom Dale
-tags: Core Team Meeting Minutes, Recent Posts, 2016
+tags: Core Team Meeting Minutes, Recent Posts, 2016, Leadership
 responsive: true
 ---
 

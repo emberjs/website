@@ -1,7 +1,7 @@
 ---
 title: Introducing Zoey
 author: Leah Silber
-tags: Recent Posts, Mascot, 2016
+tags: Recent Posts, Mascot, 2016, Community
 responsive: true
 ---
 

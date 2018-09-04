@@ -2,7 +2,7 @@
 title: "2017 Ember Community Survey"
 responsive: true
 author: Matthew Beale, Tom Zellman
-tags: Recent Posts, Survey, 2017
+tags: Recent Posts, Survey, 2017, Community
 ---
 
 The past year has been a great time to work with the web, and an exciting one to

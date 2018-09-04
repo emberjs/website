@@ -1,7 +1,7 @@
 ---
 title: Ember Homepage survey
 author: Ryan Toronto
-tags: Recent Posts, Marketing, 2018
+tags: Recent Posts, Marketing, 2018, Community
 responsive: true
 ---
 

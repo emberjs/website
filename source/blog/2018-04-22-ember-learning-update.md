@@ -1,7 +1,7 @@
 ---
 title: Community Update from the Learning Team
 author: The Ember Learning Team
-tags: Recent Posts, Learning, Marketing, Roadmap, Community, 2018
+tags: Recent Posts, Learning, Marketing, Roadmap, Community, 2018, Leadership
 responsive: true
 ---
 
