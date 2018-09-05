@@ -1119,6 +1119,10 @@
   image: vivi.png
   alt: Vivi
   use: "Vivi uses Ember to power our app as well as our box web console"
+- url: "https://adfinis-sygroup.ch"
+  image: adfinis-sygroup.png
+  alt: Adfinis SyGroup
+  use: "Adfinis SyGroup uses Ember.js to build our customer, internal and open source projects."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
