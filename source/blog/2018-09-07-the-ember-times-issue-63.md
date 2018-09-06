@@ -52,8 +52,15 @@ The time has come: The **Ember Community is starting its big move over to [Disco
 
 ---
 
-## [SECTION TITLE](#section-url)
+## New Computed Property RFCs Deprecating [volatile()](https://github.com/emberjs/rfcs/pull/370) and [readOnly()](https://github.com/emberjs/rfcs/pull/369) 2️⃣
 
+[Chris Garrett](https://github.com/pzuraq) proposed two new RFCs on [computed properties](https://guides.emberjs.com/release/object-model/computed-properties/). Both RFCs are centered around deprecating functions to adjust the defaults to what the common use cases developers face and to better align with [native class syntax](https://github.com/emberjs/rfcs/pull/338).
+
+The RFC to [deprecate computed overridability and readOnly()](https://github.com/emberjs/rfcs/pull/369) seeks to align computed properties to the native class syntax getters and setters by deprecating computed overridability (colloquially known as "clobbering") and make computeds read-only by default turning this uncommonly used feature to an opt-in using the overridable API.
+
+Similarly, the RFC to [deprecate computed().volatile()](https://github.com/emberjs/rfcs/pull/370) was proposed to favour native accessors rather than relying on the volatile API to provide that functionality. This is to align what users expect versus what the framework does, which is almost exactly what the native accessors do except it swallows notification changes.
+
+Join the conversation at the respective pull requests for [volatile()](https://github.com/emberjs/rfcs/pull/370) and [readOnly()](https://github.com/emberjs/rfcs/pull/369)!
 
 ---
 
