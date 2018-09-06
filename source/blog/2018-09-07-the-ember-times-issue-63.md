@@ -81,6 +81,16 @@ Quoting Tom on his final reasoning: 'Let's make sure we're fostering a community
 
 ---
 
+## [A Special Thank You To A Year-Long Contributor 🙇](https://github.com/emberjs/website/pull/3541)
+
+<!--alex ignore alumna-alumnus-->
+This week we'd like to take a moment to say a huge thank you to an incredibly dedicated contributor:
+[**Martin Muñoz (@mmun)**](https://github.com/mmun) who has not only been an active contributor to Ember for years, but also an Ember Core Team member [has joined the Ember _Alumna_ this week](https://github.com/emberjs/website/pull/3541).
+
+Since [his first pull request to the ember.js repository](https://github.com/emberjs/ember.js/pull/9831) - submitting a bug fix for failing tests for the former `ember-views` package - Martin has been an actively contributing to Ember and related projects. In [June 2015 Martin joined the Ember Core Team](https://github.com/emberjs/website/commit/7e982770cafb7e42fce672e46f42887c093426e5#diff-0afb5ba76daf47aa6b21310bc1701cab) and dedicated his time to help Ember become the framework and the community we ❤️ today. We're grateful for all the hard work he had put into the project, but also for all the understanding, support and compassion he has shown to anyone in the community each day. With this we'd like to say once more: thank you, Martin!
+
+---
+
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
