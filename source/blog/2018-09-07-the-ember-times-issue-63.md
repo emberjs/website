@@ -57,8 +57,27 @@ The time has come: The **Ember Community is starting its big move over to [Disco
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A bigger Ember tent ⛺](https://discuss.emberjs.com/t/a-bigger-ember-tent/15383)
 
+The expression 'Ember is a big tent' was recently used by [Tom Dale](https://github.com/tomdale) in response to an Ember developer when he asked if [Ember was still a welcoming community](https://discuss.emberjs.com/t/are-we-still-a-welcoming-community/15285).
+
+With this topic in mind, Tom Dale shares the following thoughts:
+
+- Everyone is encouraged to share their thoughts about the framework and the path it's taking, even if it is to disagree with the core team or with the community in general, the community will fail if people believe they have to stay silent.
+
+- It is dangerous when developer communities create mantras that they repeat endlessly, as the original context around the why can get lost, and then people can tend to postulate the mantra without knowing its original purpose forgetting that underlying assumptions behind it can change.
+
+- There is no 'right way' of building an Ember app, no one but the developer in question knows better what are the particular tools that are necessary to make the team more productive and a project a success.
+
+- We, as Ember developers would be doing a disservice to ourselves if we don't follow along with other existing frameworks and the wider JavaScript ecosystem to borrow their ideas.
+
+- We should put ourselves in other's shoes to understand the frustration other people experience and offer to help and provide constructive criticism, before getting defensive.
+
+The big tent analogy used, meant that Ember is an open community that welcomes different individuals with different thoughts and opinions about the framework and the correct way of leveraging it for our own projects.
+
+Although Ember comes with a set of defaults and guidelines, it is unrealistic to think that those same defaults fit every project in every situation.
+
+Quoting Tom on his final reasoning: 'Let's make sure we're fostering a community that doesn't squish ideas.'
 
 ---
 
