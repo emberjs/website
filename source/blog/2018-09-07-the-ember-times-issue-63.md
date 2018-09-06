@@ -56,7 +56,7 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 
 ## [A bigger Ember tent ⛺](https://discuss.emberjs.com/t/a-bigger-ember-tent/15383)
 
-The expression 'Ember is a big tent' was recently used by Tom Dale in response to an Ember developer when he asked if [Ember was still a welcoming community](https://discuss.emberjs.com/t/are-we-still-a-welcoming-community/15285).
+The expression 'Ember is a big tent' was recently used by [Tom Dale](https://github.com/tomdale) in response to an Ember developer when he asked if [Ember was still a welcoming community](https://discuss.emberjs.com/t/are-we-still-a-welcoming-community/15285).
 
 With this topic in mind, Tom Dale shares the following thoughts:
 
