@@ -8,8 +8,6 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/) what has been going on in Emberland this week.
-
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 ---
@@ -24,6 +22,18 @@ Read either on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) o
 The time has come: The **Ember Community is starting its big move over to [Discord](https://discord.gg/zT3asNS)**. As proposed in the [original and just recently accepted RFC (Request For Comments) for the migration](https://github.com/emberjs/rfcs/pull/345) you can now **chat** with your **Ember friends** 🐹👭👬👫 from all around the world on the Ember Discord server. This comes - among other benefits - with the advantage of **unlimited message history**.
 
 [Check out the new community chat today](https://discord.gg/zT3asNS), be sure to **set up your profile** as described in the [#setup-profile channel]() and to join [#discord-server-admin]() to gain access to your favorite discussions 💬.
+
+---
+
+## [Ember Data: RecordData Meta Quest](https://github.com/emberjs/data/issues/5618)
+
+The Ember Data team is looking for community help to bring RecordData to a stable release! You can read more about RecordData in [RFC #293](https://github.com/emberjs/rfcs/pull/293). RecordData codifies the internals of Ember Data, giving addon developers needed API access with more confidence and stability.
+
+Community action items:
+
+* Once [3.5.0-beta.2](https://github.com/emberjs/data/pull/5616) is released, configure your apps/addons to test against this version!
+* Report errors encountered, and help triage/replicate as much as possible.
+* Help refactor existing addons to utilize RecordData instead of likely-removed intimate APIs. For a good starter list, see Ember Data's [external-partner tests](https://github.com/emberjs/data/blob/master/.travis.yml#L87-L103).
 
 ---
 
@@ -129,7 +139,7 @@ Since [his first pull request to the ember.js repository](https://github.com/emb
 
 ---
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#topic-embertimes](https://embercommunity.slack.com/messages/C8P6UPWNN/) on Slack or tweet us [@embertimes](https://twitter.com/embertimes) on Twitter.
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 ---
 
