@@ -30,7 +30,7 @@ The time has come: The **Ember Community is starting its big move over to [Disco
 ## [RFC: Ember Editions](https://github.com/emberjs/rfcs/blob/9c7fe3f4e947b5f79050214334a98673494c25d7/text/0000-editions.md)
 [@davewasmer](https://github.com/davewasmer) has written a RFC introducing the concepts of **editions**. The idea is that every few years Ember will declare a new edition of Ember that bundles up accumulated incremental improvements into a cohesive package.
 
-The benefit of this being that this gives the Ember Community an opportunity to bring our documentation and marketing up-to-date to reflect the improvements we’ve made since the previous edition. According to the RFC, the right time to declare a new edition is when: 
+The benefit of this being that this gives the Ember Community an opportunity to bring our documentation and marketing up-to-date to reflect the improvements we’ve made since the previous edition. According to the RFC, the right time to declare a new edition is when:
 
 
 * A significant, coherent set of new features and APIs have all landed in the stable channel.
@@ -68,12 +68,13 @@ Make sure to [read the entire RFC](https://github.com/emberjs/rfcs/blob/9c7fe3f4
 
 The RFC to [deprecate computed overridability and readOnly()](https://github.com/emberjs/rfcs/pull/369) seeks to align computed properties to the native class syntax getters and setters by deprecating computed overridability (colloquially known as "clobbering") and make computeds read-only by default turning this uncommonly used feature to an opt-in using the overridable API.
 
-Similarly, the RFC to [deprecate computed().volatile()](https://github.com/emberjs/rfcs/pull/370) was proposed to favour native accessors rather than relying on the volatile API to provide that functionality. This is to align what users expect versus what the framework does, which is almost exactly what the native accessors do except it swallows notification changes.
+Similarly, the RFC to [deprecate computed().volatile()](https://github.com/emberjs/rfcs/pull/370) was proposed to favour native accessors rather than relying on the volatile API to provide that functionality. This is to align what users expect a property does when it's value changes versus what the framework does, including notification changes.
 
 Join the conversation at the respective pull requests for [volatile()](https://github.com/emberjs/rfcs/pull/370) and [readOnly()](https://github.com/emberjs/rfcs/pull/369)!
 
 ---
 
+<!--alex ignore bigger-->
 ## [A bigger Ember tent ⛺](https://discuss.emberjs.com/t/a-bigger-ember-tent/15383)
 
 The expression 'Ember is a big tent' was recently used by [Tom Dale](https://github.com/tomdale) in response to an Ember developer when he asked if [Ember was still a welcoming community](https://discuss.emberjs.com/t/are-we-still-a-welcoming-community/15285).
