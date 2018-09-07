@@ -12,11 +12,11 @@ responsive: true
 
 ---
 
-## [Meet Your Ember 🐹 Friends At Discord 🗨](https://discord.gg/zT3asNS)
+## [Meet your Ember 🐹 friends at Discord 🗨](https://discord.gg/zT3asNS)
 
 The time has come: The **Ember Community is starting its big move over to [Discord](https://discord.gg/zT3asNS)**. As proposed in the [original and just recently accepted RFC (Request For Comments) for the migration](https://github.com/emberjs/rfcs/pull/345) you can now **chat** with your **Ember friends** 🐹👭👬👫 from all around the world on the Ember Discord server. This comes - among other benefits - with the advantage of **unlimited message history**.
 
-[Check out the new community chat today](https://discord.gg/zT3asNS), be sure to **set up your profile** as described in the [#setup-profile channel]() and to join [#discord-server-admin]() to gain access to your favorite discussions 💬.
+[Check out the new community chat today](https://discord.gg/zT3asNS), be sure to **set up your profile** as described in the `#setup-profile` channel and to join `#discord-server-admin` to gain access to your favorite discussions 💬.
 
 ---
 
@@ -37,7 +37,6 @@ Community action items:
 
 The benefit of this being that this gives the Ember Community an opportunity to bring our documentation and marketing up-to-date to reflect the improvements we’ve made since the previous edition. According to the RFC, the right time to declare a new edition is when:
 
-
 * A significant, coherent set of new features and APIs have all landed in the stable channel.
 * Error messages and the developer ergonomics of those new features have been fully polished.
 * Tooling (the Ember Inspector, blueprints, codemods, etc.) has been updated to work with these new features.
@@ -47,9 +46,9 @@ Make sure to [read the entire RFC](https://github.com/emberjs/rfcs/blob/9c7fe3f4
 
 ---
 
-## New Computed Property RFCs Deprecating [volatile()](https://github.com/emberjs/rfcs/pull/370) and [readOnly()](https://github.com/emberjs/rfcs/pull/369) 2️⃣
+## New computed property RFCs deprecating [volatile()](https://github.com/emberjs/rfcs/pull/370) and [readOnly()](https://github.com/emberjs/rfcs/pull/369) 2️⃣
 
-[Chris Garrett](https://github.com/pzuraq) proposed two new RFCs on [computed properties](https://guides.emberjs.com/release/object-model/computed-properties/). Both RFCs are centered around deprecating functions to adjust the defaults to what the common use cases developers face and to better align with [native class syntax](https://github.com/emberjs/rfcs/pull/338).
+[@pzuraq](https://github.com/pzuraq) proposed two new RFCs on [computed properties](https://guides.emberjs.com/release/object-model/computed-properties/). Both RFCs are centered around deprecating functions to adjust the defaults to what the common use cases developers face and to better align with [native class syntax](https://github.com/emberjs/rfcs/pull/338).
 
 The RFC to [deprecate computed overridability and readOnly()](https://github.com/emberjs/rfcs/pull/369) seeks to align computed properties to the native class syntax getters and setters by deprecating computed overridability (colloquially known as "clobbering") and make computeds read-only by default turning this uncommonly used feature to an opt-in using the overridable API.
 
@@ -62,7 +61,7 @@ Join the conversation at the respective pull requests for [volatile()](https://g
 <!--alex ignore bigger-->
 ## [A bigger Ember tent ⛺](https://discuss.emberjs.com/t/a-bigger-ember-tent/15383)
 
-The expression 'Ember is a big tent' was recently used by [Tom Dale](https://github.com/tomdale) in response to an Ember developer when he asked if [Ember was still a welcoming community](https://discuss.emberjs.com/t/are-we-still-a-welcoming-community/15285).
+The expression "Ember is a big tent" was recently used by [@tomdale](https://github.com/tomdale) in response to an Ember developer when he asked if [Ember was still a welcoming community](https://discuss.emberjs.com/t/are-we-still-a-welcoming-community/15285).
 
 With this topic in mind, Tom Dale shares the following thoughts:
 
@@ -70,7 +69,7 @@ With this topic in mind, Tom Dale shares the following thoughts:
 
 - It is dangerous when developer communities create mantras that they repeat endlessly, as the original context around the why can get lost, and then people can tend to postulate the mantra without knowing its original purpose forgetting that underlying assumptions behind it can change.
 
-- There is no 'right way' of building an Ember app, no one but the developer in question knows better what are the particular tools that are necessary to make the team more productive and a project a success.
+- There is no "right way" of building an Ember app, no one but the developer in question knows better what are the particular tools that are necessary to make the team more productive and a project a success.
 
 - We, as Ember developers would be doing a disservice to ourselves if we don't follow along with other existing frameworks and the wider JavaScript ecosystem to borrow their ideas.
 
@@ -80,11 +79,11 @@ The big tent analogy used, meant that Ember is an open community that welcomes d
 
 Although Ember comes with a set of defaults and guidelines, it is unrealistic to think that those same defaults fit every project in every situation.
 
-Quoting Tom on his final reasoning: 'Let's make sure we're fostering a community that doesn't squish ideas.'
+Quoting Tom on his final reasoning: "Let's make sure we're fostering a community that doesn't squish ideas."
 
 ---
 
-## [A Special Thank You To A Year-Long Contributor 🙇](https://github.com/emberjs/website/pull/3541)
+## [A special thank you to a long-time contributor 🙇](https://github.com/emberjs/website/pull/3541)
 
 <!--alex ignore alumna-alumnus-->
 This week we'd like to take a moment to say a huge thank you to an incredibly dedicated contributor:
@@ -96,7 +95,7 @@ Since [his first pull request to the ember.js repository](https://github.com/emb
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank <a href="https://github.com/btecu" target="gh-user">@btecu</a>, <a href="https://github.com/cibernox" target="gh-user">@cibernox</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/Dhaulagiri" target="gh-user">@Dhaulagiri</a>, <a href="https://github.com/pieter-v" target="gh-user">@pieter-v</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/andrewpye" target="gh-user">@andrewpye</a>, <a href="https://github.com/blimmer" target="gh-user">@blimmer</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/kturney" target="gh-user">@kturney</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/happycollision" target="gh-user">@happycollision</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/nlfurniss" target="gh-user">@nlfurniss</a>, <a href="https://github.com/vitch" target="gh-user">@vitch</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/astronomersiva" target="gh-user">@astronomersiva</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/22a" target="gh-user">@22a</a>, <a href="https://github.com/dependabot[bot]" target="gh-user">@dependabot[bot]</a>, <a href="https://github.com/veelenga" target="gh-user">@veelenga</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/sivakumar-kailasam" target="gh-user">@sivakumar-kailasam</a> and <a href="https://github.com/anotheredward" target="gh-user">@anotheredward</a> for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/btecu" target="gh-user">@btecu</a>, <a href="https://github.com/cibernox" target="gh-user">@cibernox</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/Dhaulagiri" target="gh-user">@Dhaulagiri</a>, <a href="https://github.com/pieter-v" target="gh-user">@pieter-v</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/andrewpye" target="gh-user">@andrewpye</a>, <a href="https://github.com/blimmer" target="gh-user">@blimmer</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/kturney" target="gh-user">@kturney</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/happycollision" target="gh-user">@happycollision</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/nlfurniss" target="gh-user">@nlfurniss</a>, <a href="https://github.com/vitch" target="gh-user">@vitch</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/astronomersiva" target="gh-user">@astronomersiva</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/22a" target="gh-user">@22a</a>, <a href="https://github.com/veelenga" target="gh-user">@veelenga</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/sivakumar-kailasam" target="gh-user">@sivakumar-kailasam</a> and <a href="https://github.com/anotheredward" target="gh-user">@anotheredward</a> for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
