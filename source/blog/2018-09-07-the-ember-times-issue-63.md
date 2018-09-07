@@ -27,9 +27,18 @@ The time has come: The **Ember Community is starting its big move over to [Disco
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [RFC: Ember Editions](https://github.com/emberjs/rfcs/blob/9c7fe3f4e947b5f79050214334a98673494c25d7/text/0000-editions.md)
+[Dave Wasmer](https://github.com/davewasmer) has written a RFC introducing the concepts of **editions**. The idea is that every few years Ember will declare a new edition of Ember that bundles up accumulated incremental improvements into a cohesive package.
+
+The benefit of this being that this gives the Ember Community an opportunity to bring our documentation and marketing up-to-date to reflect the improvements we’ve made since the previous edition. According to the RFC, the right time to declare a new edition is when: 
 
 
+* A significant, coherent set of new features and APIs have all landed in the stable channel.
+* Error messages and the developer ergonomics of those new features have been fully polished.
+* Tooling (the Ember Inspector, blueprints, codemods, etc.) has been updated to work with these new features.
+* API documentation, guides, tutorials, and example code has been updated to incorporate the new features.
+
+Make sure to [read the entire RFC](https://github.com/emberjs/rfcs/blob/9c7fe3f4e947b5f79050214334a98673494c25d7/text/0000-editions.md) and [leave a comment with your thoughts](https://github.com/emberjs/rfcs/pull/371).
 ---
 
 ## [SECTION TITLE](#section-url)
