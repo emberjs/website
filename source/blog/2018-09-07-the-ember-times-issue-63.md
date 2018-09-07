@@ -88,10 +88,20 @@ Quoting Tom on his final reasoning: 'Let's make sure we're fostering a community
 
 ---
 
+## [A Special Thank You To A Year-Long Contributor 🙇](https://github.com/emberjs/website/pull/3541)
+
+<!--alex ignore alumna-alumnus-->
+This week we'd like to take a moment to say a huge thank you to an incredibly dedicated contributor:
+[**Martin Muñoz (@mmun)**](https://github.com/mmun) who has not only been an active contributor to Ember for years, but also an Ember Core Team member [has joined the Ember _Alumna_ this week](https://github.com/emberjs/website/pull/3541).
+
+Since [his first pull request to the ember.js repository](https://github.com/emberjs/ember.js/pull/9831) - submitting a bug fix for failing tests for the former `ember-views` package - Martin has been an actively contributing to Ember and related projects. In [June 2015 Martin joined the Ember Core Team](https://github.com/emberjs/website/commit/7e982770cafb7e42fce672e46f42887c093426e5#diff-0afb5ba76daf47aa6b21310bc1701cab) and dedicated his time to help Ember become the framework and the community we ❤️ today. We're grateful for all the hard work he had put into the project, but also for all the understanding, support and compassion he has shown to anyone in the community each day. With this we'd like to say once more: thank you, Martin!
+
+---
+
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/btecu" target="gh-user">@btecu</a>, <a href="https://github.com/cibernox" target="gh-user">@cibernox</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/Dhaulagiri" target="gh-user">@Dhaulagiri</a>, <a href="https://github.com/pieter-v" target="gh-user">@pieter-v</a>, <a href="https://github.com/Mi6u3l" target="gh-user">@Mi6u3l</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/andrewpye" target="gh-user">@andrewpye</a>, <a href="https://github.com/blimmer" target="gh-user">@blimmer</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/kturney" target="gh-user">@kturney</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/happycollision" target="gh-user">@happycollision</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/nlfurniss" target="gh-user">@nlfurniss</a>, <a href="https://github.com/vitch" target="gh-user">@vitch</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/astronomersiva" target="gh-user">@astronomersiva</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/22a" target="gh-user">@22a</a>, <a href="https://github.com/dependabot[bot]" target="gh-user">@dependabot[bot]</a>, <a href="https://github.com/veelenga" target="gh-user">@veelenga</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/sivakumar-kailasam" target="gh-user">@sivakumar-kailasam</a> and <a href="https://github.com/anotheredward" target="gh-user">@anotheredward</a> for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
