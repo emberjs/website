@@ -12,11 +12,6 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Meet Your Ember 🐹 Friends At Discord 🗨](https://discord.gg/zT3asNS)
 
 The time has come: The **Ember Community is starting its big move over to [Discord](https://discord.gg/zT3asNS)**. As proposed in the [original and just recently accepted RFC (Request For Comments) for the migration](https://github.com/emberjs/rfcs/pull/345) you can now **chat** with your **Ember friends** 🐹👭👬👫 from all around the world on the Ember Discord server. This comes - among other benefits - with the advantage of **unlimited message history**.
@@ -49,26 +44,6 @@ The benefit of this being that this gives the Ember Community an opportunity to 
 * API documentation, guides, tutorials, and example code has been updated to incorporate the new features.
 
 Make sure to [read the entire RFC](https://github.com/emberjs/rfcs/blob/9c7fe3f4e947b5f79050214334a98673494c25d7/text/0000-editions.md) and [leave a comment with your thoughts](https://github.com/emberjs/rfcs/pull/371).
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -118,7 +93,6 @@ This week we'd like to take a moment to say a huge thank you to an incredibly de
 Since [his first pull request to the ember.js repository](https://github.com/emberjs/ember.js/pull/9831) - submitting a bug fix for failing tests for the former `ember-views` package - Martin has been an actively contributing to Ember and related projects. In [June 2015 Martin joined the Ember Core Team](https://github.com/emberjs/website/commit/7e982770cafb7e42fce672e46f42887c093426e5#diff-0afb5ba76daf47aa6b21310bc1701cab) and dedicated his time to help Ember become the framework and the community we ❤️ today. We're grateful for all the hard work he had put into the project, but also for all the understanding, support and compassion he has shown to anyone in the community each day. With this we'd like to say once more: thank you, Martin!
 
 ---
-
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
