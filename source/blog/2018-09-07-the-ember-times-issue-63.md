@@ -25,6 +25,18 @@ The time has come: The **Ember Community is starting its big move over to [Disco
 
 ---
 
+## [Ember Data: RecordData Meta Quest](https://github.com/emberjs/data/issues/5618)
+
+The Ember Data team is looking for community help to bring RecordData to a stable release! You can read more about RecordData in [RFC #293](https://github.com/emberjs/rfcs/pull/293). RecordData codifies the internals of Ember Data, giving addon developers needed API access with more confidence and stability.
+
+Community action items:
+
+* Once [3.5.0-beta.2](https://github.com/emberjs/data/pull/5616) is released, configure your apps/addons to test against this version!
+* Report errors encountered, and help triage/replicate as much as possible.
+* Help refactor existing addons to utilize RecordData instead of likely-removed intimate APIs. For a good starter list, see Ember Data's [external-partner tests](https://github.com/emberjs/data/blob/master/.travis.yml#L87-L103).
+
+---
+
 ## [RFC: Ember Editions](https://github.com/emberjs/rfcs/blob/9c7fe3f4e947b5f79050214334a98673494c25d7/text/0000-editions.md)
 [@davewasmer](https://github.com/davewasmer) has written a RFC introducing the concepts of **editions**. The idea is that every few years Ember will declare a new edition of Ember that bundles up accumulated incremental improvements into a cohesive package.
 
@@ -37,18 +49,6 @@ The benefit of this being that this gives the Ember Community an opportunity to 
 * API documentation, guides, tutorials, and example code has been updated to incorporate the new features.
 
 Make sure to [read the entire RFC](https://github.com/emberjs/rfcs/blob/9c7fe3f4e947b5f79050214334a98673494c25d7/text/0000-editions.md) and [leave a comment with your thoughts](https://github.com/emberjs/rfcs/pull/371).
-
----
-
-## [Ember Data: RecordData Meta Quest](https://github.com/emberjs/data/issues/5618)
-
-The Ember Data team is looking for community help to bring RecordData to a stable release! You can read more about RecordData in [RFC #293](https://github.com/emberjs/rfcs/pull/293). RecordData brings a much needed codification to the internals of Ember Data, giving addon developers needed API access with more confidence and stability.
-
-Community action items:
-
-* Once [3.5.0-beta.2](https://github.com/emberjs/data/pull/5616) is released, configure your apps/addons to test against this version!
-* Report errors encountered, and help triage/replicate as much as possible.
-* Help refactor existing addons to utilize RecordData instead of likely-removed intimate APIs. For a good starter list, see Ember Data's [external-partner tests](https://github.com/emberjs/data/blob/master/.travis.yml#L87-L103).
 
 ---
 
