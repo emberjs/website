@@ -6,9 +6,9 @@ alias : "blog/2018/09/07-the-ember-times-issue-63.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Sholem-aleykhem Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Be sure to join the new Ember community chat on Discord 💬! This week, you can have a look into Ember Data's Meta Quest 🔜, some fresh 🍎 RFCs, thoughts on fostering the Ember community 💛, and a special thank you to @mmun 🎉.
 
 ---
 
