@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 62
 author: Nick Schot, Frédéric Soumaré, Chris Ng, Alon Bukai, Edward Faulkner, Oli Griffiths, Kenneth Larsen, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/08/31-the-ember-times-issue-62.html"
 responsive: true
 ---

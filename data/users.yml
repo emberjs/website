@@ -1119,6 +1119,10 @@
   image: vivi.png
   alt: Vivi
   use: "Vivi uses Ember to power our app as well as our box web console"
+- url: "https://smile.io/"
+  image: smileio.png
+  alt: Smile.io
+  use: "Smile's main web application is built with Ember.js"
 - url: "https://adfinis-sygroup.ch"
   image: adfinis-sygroup.png
   alt: Adfinis SyGroup
