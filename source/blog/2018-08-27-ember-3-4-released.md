@@ -59,6 +59,43 @@ To dive into the possibilities of this new features please refer to [the guides]
 
 Custom component manager (2 of 2)
 
+The second new feature of Ember 3.4 is the custom component manager. This API will allow addon authors to provide special-purpose component base classes that their users can subclass from in apps. These components are invokable in templates just like any other Ember components (descendants of `Ember.Component`) today.
+
+Component managers are registered with the `component-manger` type in the application's registry. Similar to services, component managers are singleton objects (i.e. `{ singleton: true, instantiate: true }`), meaning that Ember will create and maintain (at most) one instance of each unique component manager for every application instance.
+
+To register a component manager, an addon will put it inside its `app` tree:
+```js
+// ember-basic-component/app/component-managers/basic.js
+
+import EmberObject from '@ember/object';
+
+export default EmberObject.extend({
+  // ...
+});
+```
+This allows the component manager to participate in the DI system – receiving injections, using services, etc. Alternatively, component managers can also be registered with imperative API. This could be useful for testing or opt-ing out of the DI system. For example:
+
+```js
+// ember-basic-component/app/initializers/register-basic-component-manager.js
+
+const MANAGER = {
+  // ...
+};
+
+export function initialize(application) {
+  // We want to use a POJO here, so we are opt-ing out of instantiation
+  application.register('component-manager:basic', MANAGER, { instantiate: false });
+}
+
+export default {
+  name: 'register-basic-component-manager',
+  initialize
+};
+```
+
+For more information on how to use the custom component mananger please refer to [the RFC](https://github.com/emberjs/rfcs/blob/master/text/0213-custom-components.md).
+
+
 #### Deprecations (1)
 
 Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
