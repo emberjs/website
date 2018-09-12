@@ -24,8 +24,40 @@ Ember.js is the core framework for building ambitious web applications.
 
 Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is one (1) new feature, three (3) deprecations, and eight (8) bugfixes in this version.
 
-#### New Features (X)
+#### New Features (2)
+Angle Bracket Invocation (1 of 2)
 
+In Ember 3.4 it is now possible to use angle bracket invocation. This means that you're now able to replace the classic invocation syntax:
+
+```hbs
+{{site-header user=this.user class=(if this.user.isAdmin "admin")}}
+
+{{#super-select selected=this.user.country as |option|}}
+  {{#each this.availableCountries as |country|}}
+    {{#s.option value=country}}{{country.name}}{{/s.option}}
+  {{/each}}
+{{/super-select}}
+```
+
+with the angle bracket invocation syntax:
+
+```hbs
+<SiteHeader @user={{this.user}} class={{if this.user.isAdmin "admin"}} />
+
+<SuperSelect @selected={{this.user.country}} as |Option|>
+  {{#each this.availableCountries as |country|}}
+    <Option @value={{country}}>{{country.name}}</Option>
+  {{/each}}
+</SuperSelect>
+```
+
+It's important to note that the classic invocation syntax isn't deprecated in favour of this new invocation. You're free to still use the classic invocation syntax but the angle bracket invocation do have a few advantages.
+
+By using angle bracket invocation you introduce more clarity to your templates. The main advantage of the angle bracket invocation syntax is clarity. Because component invocation is often encapsulating important pieces of UI, a dedicated syntax would help visually distinguish them from other handlebars constructs, such as control flow and dynamic values. This can be seen in the example shown above – the angle bracket syntax made it very easy to see the component invocations as well as the `{{#each}}` loop, especially with syntax highlight.
+
+To dive into the possibilities of this new features please refer to [the guides](#TODO)
+
+Custom component manager (2 of 2)
 
 #### Deprecations (1)
 
