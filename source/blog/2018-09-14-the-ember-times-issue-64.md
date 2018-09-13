@@ -21,8 +21,13 @@ Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A Public Factory 🏭 For Your Models ](https://github.com/emberjs/rfcs/pull/372)
 
+A brand-new 🔥 **Request For Comments (RFC)** makes addon authors' and Ember power users' 💪 hearts ♡ leap for joy:
+The previously [deprecated Ember Data `store` method `modelFactoryFor`](https://github.com/emberjs/data/blob/v3.3.1/addon/-private/system/store.js#L2083) is making its comeback as an official, **public API**.
+This new public method will allow users to provide any kind of `ModelClass` (and not only the default `DS.Model` provided by Ember Data) to applications if needed.
+
+Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) and leave your questions and suggestions in the comments below!
 
 ---
 
