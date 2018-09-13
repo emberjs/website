@@ -1,8 +1,8 @@
 ---
-title: The Ember Times - Issue No. XX
+title: The Ember Times - Issue No. 64
 author: the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/09/14-the-ember-times-issue-64.html"
 responsive: true
 ---
 
