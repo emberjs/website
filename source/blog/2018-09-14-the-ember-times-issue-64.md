@@ -40,7 +40,7 @@ Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) 
 
 Ember Core Team member [@chadhietala](https://github.com/chadhietala) proposed 2 RFCs around Element Modifiers – one for the [Modifier Manager](https://github.com/emberjs/rfcs/pull/373) and the other for the [Element Modifier](https://github.com/emberjs/rfcs/pull/353) itself.
 
-Element Modifiers provide stable access of the DOM node they are installed on similar to the `{{action}}` modifier. Unlike a component, there is no template/layout for an element modifier. Unlike a helper, an element modifier does not return a value. An element modifier is invoked in "element space". This is the space between `<` and `>` opening an HTML tag.
+Element Modifiers provide stable access of the DOM node they are installed on. Unlike a component, there is no template/layout for an element modifier. Unlike a helper, an element modifier does not return a value. An element modifier is invoked in "element space". This is the space between `<` and `>` opening an HTML tag.
 
 Here is an example of the element modifier syntax in action:
 ```
