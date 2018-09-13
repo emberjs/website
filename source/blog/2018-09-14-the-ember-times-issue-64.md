@@ -12,8 +12,12 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Everyone's Moved! 📦 Meet Your Ember 🐹 Friends On Discord 🗣](https://discord.gg/zT3asNS)
 
+It's done! 👌 The **community chat has** finally **moved** over to [Discord](https://discordapp.com/)!
+Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other Emberistas from all around the globe in many different topic channels with **unlimited message history** 💌✨.
+
+[Join today](https://discord.gg/zT3asNS)) and be sure to get setup as described in the `#setup-profile` channel. To start chatting, request the _community-member_ role in `#discord-server-admin`, so the undaunted org admins can make sure THAT YOU ARE NOT A BOT BUT A REAL HUMAN JUST LIKE US HA-HA 🤖.
 
 ---
 
