@@ -36,8 +36,20 @@ Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Element Modifier RFCs ⚛️](https://github.com/emberjs/rfcs/pull/373)
 
+Ember Core Team member [@chadhietala](https://github.com/chadhietala) proposed 2 RFCs around Element Modifiers – one for the [Modifier Manager](https://github.com/emberjs/rfcs/pull/373) and the other for the [Element Modifier](https://github.com/emberjs/rfcs/pull/353) itself.
+
+Element Modifiers provide stable access of the DOM node they are installed on. Unlike a component, there is no template/layout for an element modifier. Unlike a helper, an element modifier does not return a value. An element modifier is invoked in "element space". This is the space between `<` and `>` opening an HTML tag.
+
+Here is an example of the element modifier syntax in action:
+```
+<button {{effect 'fade-in'}}>Save</button>
+```
+
+The [Modifier Manager RFC](https://github.com/emberjs/rfcs/pull/373) proposes to add a low level primitive for defining an element modifier which is responsible for coordinating the lifecycle events that occurs when invoking, installing and updating an element modifier. Most app developers would not need interact with the manager but it would allow the community to experiment with and iterate on this API outside of the core framework.
+
+See more in the respective RFCs for [Element Modifier](https://github.com/emberjs/rfcs/pull/353) and [Modifier Manager](https://github.com/emberjs/rfcs/pull/373).
 
 ---
 
