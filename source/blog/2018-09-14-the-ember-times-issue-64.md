@@ -36,7 +36,7 @@ Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) 
 
 ---
 
-## [Element Modifiers RFCs ⚛️](https://github.com/emberjs/rfcs/pull/373)
+## [Element Modifier RFCs ⚛️](https://github.com/emberjs/rfcs/pull/373)
 
 Ember Core Team member [@chadhietala](https://github.com/chadhietala) proposed 2 RFCs around Element Modifiers – one for the [Modifier Manager](https://github.com/emberjs/rfcs/pull/373) and the other for the [Element Modifier](https://github.com/emberjs/rfcs/pull/353) itself.
 
