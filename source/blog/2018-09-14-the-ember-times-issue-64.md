@@ -1,8 +1,8 @@
 ---
-title: The Ember Times - Issue No. XX
+title: The Ember Times - Issue No. 64
 author: the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/09/14-the-ember-times-issue-64.html"
 responsive: true
 ---
 
@@ -12,13 +12,22 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Everyone's Moved! 📦 Meet Your Ember 🐹 Friends On Discord 🗣](https://discord.gg/zT3asNS)
 
+It's done! 👌 The **community chat has** finally **moved** over to [Discord](https://discordapp.com/)!
+Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other Emberistas from all around the globe in many different topic channels with **unlimited message history** 💌✨.
+
+[Join today](https://discord.gg/zT3asNS)) and be sure to get setup as described in the `#setup-profile` channel. To start chatting, request the _community-member_ role in `#discord-server-admin`, so the undaunted org admins can make sure THAT YOU ARE NOT A BOT BUT A REAL HUMAN JUST LIKE US HA-HA 🤖.
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A Public Factory 🏭 For Your Models ](https://github.com/emberjs/rfcs/pull/372)
 
+A brand-new 🔥 **Request For Comments (RFC)** makes addon authors' and Ember power users' 💪 hearts ♡ leap for joy:
+The previously [deprecated Ember Data `store` method `modelFactoryFor`](https://github.com/emberjs/data/blob/v3.3.1/addon/-private/system/store.js#L2083) is making its comeback as an official, **public API**.
+This new public method will allow users to provide any kind of `ModelClass` (and not only the default `DS.Model` provided by Ember Data) to applications if needed.
+
+Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) and leave your questions and suggestions in the comments below!
 
 ---
 
@@ -60,7 +69,8 @@ responsive: true
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/mike-north" target="gh-user">@mike-north</a>, <a href="https://github.com/IzzatN" target="gh-user">@IzzatN</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/nathanhammond" target="gh-user">@nathanhammond</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/nlfurniss" target="gh-user">@nlfurniss</a>, <a href="https://github.com/thorsteinsson" target="gh-user">@thorsteinsson</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/dnalagatla" target="gh-user">@dnalagatla</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/ryanto" target="gh-user">@ryanto</a>, <a href="https://github.com/22a" target="gh-user">@22a</a>, <a href="https://github.com/Kerrick" target="gh-user">@Kerrick</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/thereR4lights" target="gh-user">@thereR4lights</a> and <a href="https://github.com/dependabot[bot]" target="gh-user">@dependabot[bot]</a>
+for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
