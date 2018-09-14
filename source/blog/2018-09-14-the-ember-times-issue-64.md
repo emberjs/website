@@ -12,7 +12,7 @@ responsive: true
 
 ---
 
-## [Everyone's Moved! 📦 Meet Your Ember 🐹 Friends On Discord 🗣](https://discord.gg/zT3asNS)
+## [Everyone's Moved! 📦 Meet Your Ember 🐹 Friends on Discord 🗣](https://discord.gg/zT3asNS)
 
 It's done! 👌 The **community chat has** finally **moved** over to [Discord](https://discordapp.com/)!
 Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other Emberistas from all around the globe in many different topic channels with **unlimited message history** 💌✨.
@@ -21,7 +21,7 @@ Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other 
 
 ---
 
-## [A Public Factory 🏭 For Your Models ](https://github.com/emberjs/rfcs/pull/372)
+## [A Public Factory 🏭 for Your Models ](https://github.com/emberjs/rfcs/pull/372)
 
 A brand-new 🔥 **Request For Comments (RFC)** makes addon authors' and Ember power users' 💪 hearts ♡ leap for joy:
 The previously [deprecated Ember Data `store` method `modelFactoryFor`](https://github.com/emberjs/data/blob/v3.3.1/addon/-private/system/store.js#L2083) is making its comeback as an official, **public API**.
@@ -64,13 +64,15 @@ See more in the respective RFCs for [Element Modifier](https://github.com/emberj
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Even More Help Wanted 🚧 on Ember Data](https://twitter.com/Runspired/status/1038659570401337345)
 
+We talked about contributing to Ember Data last week. This week there are even more ways to get involved! Help [@runspired](https://github.com/runspired) ship [ember-data/json-api-validator](https://github.com/ember-data/json-api-validator). He writes that this addon will enable you to write clearer normalization tests, catch those pesky and usually silent formatting issues, and leave you with actionable errors instead of head-scratching ones! Run the test suite or check out some of the repo issues [here](https://github.com/ember-data/json-api-validator/issues/).
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New Learning Team Members 😄](https://twitter.com/emberjs/status/1039542375234789377)
 
+The Ember Learning Core Team is pleased to announce two new members. [@mansona](https://github.com/mansona) and [@amyrlam](https://github.com/amyrlam) have both been working for over a year to make Ember more accessible to contributors. Can’t wait to see what they get up to next!
 
 ---
 
@@ -97,7 +99,7 @@ for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
