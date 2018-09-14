@@ -6,9 +6,9 @@ alias : "blog/2018/09/14-the-ember-times-issue-64.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Olá Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week we're sharing news about the 🆕 Ember community Discord chat 💬, some fresh 🥑 RFCs, the State of JavaScript 2018 Survey 📝, Ember Data Help Wanted 🏗, and welcoming new Learning Team members 👋!  
 
 ---
 
@@ -73,21 +73,6 @@ We talked about contributing to Ember Data last week. This week there are even m
 ## [New Learning Team Members 😄](https://twitter.com/emberjs/status/1039542375234789377)
 
 The Ember Learning Core Team is pleased to announce two new members. [@mansona](https://github.com/mansona) and [@amyrlam](https://github.com/amyrlam) have both been working for over a year to make Ember more accessible to contributors. Can’t wait to see what they get up to next!
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
