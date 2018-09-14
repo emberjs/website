@@ -48,8 +48,9 @@ See more in the respective RFCs for [Element Modifier](https://github.com/emberj
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Even More Help Wanted 🚧 on Ember Data](https://twitter.com/Runspired/status/1038659570401337345)
 
+We talked about contributing to Ember Data last week. This week there are even more ways to get involved! Help [@runspired](https://github.com/runspired) ship [ember-data/json-api-validator](https://github.com/ember-data/json-api-validator). He writes that this addon will enable you to write clearer normalization tests, catch those pesky and usually silent formatting issues, and leave you with actionable errors instead of head-scratching ones! Run the test suite or check out some of the repo issues [here](https://github.com/ember-data/json-api-validator/issues/).
 
 ---
 
