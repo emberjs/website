@@ -17,7 +17,7 @@ responsive: true
 It's done! 👌 The **community chat has** finally **moved** over to [Discord](https://discordapp.com/)!
 Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other Emberistas from all around the globe in many different topic channels with **unlimited message history** 💌✨.
 
-[Join today](https://discord.gg/zT3asNS)) and be sure to get setup as described in the `#setup-profile` channel. To start chatting, request the _community-member_ role in `#discord-server-admin`, so the undaunted org admins can make sure THAT YOU ARE NOT A BOT BUT A REAL HUMAN JUST LIKE US HA-HA 🤖.
+[Join today](https://discord.gg/zT3asNS) and be sure to get setup as described in the `#setup-profile` channel. To start chatting, request the _community-member_ role in `#discord-server-admin`, so the undaunted org admins can make sure THAT YOU ARE NOT A BOT BUT A REAL HUMAN JUST LIKE US HA-HA 🤖.
 
 ---
 
@@ -31,8 +31,19 @@ Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [State of JavaScript 2018 Survey Is Here Again 🗳️](https://medium.freecodecamp.org/take-the-state-of-javascript-2018-survey-c43be2fcaa9)
 
+"Just like Christmas or the flu, the **State of JavaScript** survey comes back around every year. But unlike these, it’s something to actually look forward to!" - [Sacha Greif](https://twitter.com/SachaGreif/status/1037603748917403648)
+
+[State of JavaScript](https://stateofjs.com/) is **the** yearly JavaScript survey that aims to gauge the whole JavaScript community across all frameworks, libraries, regional location and more. It tries to find out with which technologies developers are **most happy** with as well as which technologies are coming up and becoming popular in JavaScript. 
+
+Last year there were over **20,000 entries** and while Ember was known by most, many either didn't want to learn it or had used it in the past and didn't want to again. With all of the **improvements to Ember** these past few years, **we can do better**!
+
+So go and [fill out the survey](https://stateofjs.com/) and **show your support for Ember** in 2018! Make your **voice heard**! 📣
+
+Check out the [Twitter](https://twitter.com/SachaGreif/status/1037603748917403648) or [Medium](https://medium.freecodecamp.org/take-the-state-of-javascript-2018-survey-c43be2fcaa9) post to learn more.
+
+🎉 [Take the survey!](https://stateofjs.com/) 🎉
 
 ---
 
