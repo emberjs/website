@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 63
 author: Jessica Jordan, Miguel Braga Gomes, Chris Ng, Kenneth Larsen, Amy Lam, Ryan Mark
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/09/07-the-ember-times-issue-63.html"
 responsive: true
 ---
