@@ -54,8 +54,9 @@ We talked about contributing to Ember Data last week. This week there are even m
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New Learning Team Members 😄](https://twitter.com/emberjs/status/1039542375234789377)
 
+The Ember Learning Core Team is pleased to announce two new members. [@mansona](https://github.com/mansona) and [@amyrlam](https://github.com/amyrlam) have both been working for over a year to make Ember more accessible to contributors. Can’t wait to see what they get up to next!
 
 ---
 
