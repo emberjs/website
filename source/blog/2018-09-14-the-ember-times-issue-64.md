@@ -12,27 +12,22 @@ responsive: true
 
 ---
 
-## [Everyone's Moved! 📦 Meet Your Ember 🐹 Friends On Discord 🗣](https://discord.gg/zT3asNS)
+## [Everyone's Moved! 📦 Meet Your Ember 🐹 Friends on Discord 🗣](https://discord.gg/zT3asNS)
 
 It's done! 👌 The **community chat has** finally **moved** over to [Discord](https://discordapp.com/)!
 Even more **modern** than _IRC_ and _ICQ_ combined, you can now chat with other Emberistas from all around the globe in many different topic channels with **unlimited message history** 💌✨.
 
-[Join today](https://discord.gg/zT3asNS)) and be sure to get setup as described in the `#setup-profile` channel. To start chatting, request the _community-member_ role in `#discord-server-admin`, so the undaunted org admins can make sure THAT YOU ARE NOT A BOT BUT A REAL HUMAN JUST LIKE US HA-HA 🤖.
+[Join today](https://discord.gg/zT3asNS) and be sure to get setup as described in the `#setup-profile` channel. To start chatting, request the _community-member_ role in `#discord-server-admin`, so the undaunted org admins can make sure THAT YOU ARE NOT A BOT BUT A REAL HUMAN JUST LIKE US HA-HA 🤖.
 
 ---
 
-## [A Public Factory 🏭 For Your Models ](https://github.com/emberjs/rfcs/pull/372)
+## [A Public Factory 🏭 for Your Models ](https://github.com/emberjs/rfcs/pull/372)
 
 A brand-new 🔥 **Request For Comments (RFC)** makes addon authors' and Ember power users' 💪 hearts ♡ leap for joy:
 The previously [deprecated Ember Data `store` method `modelFactoryFor`](https://github.com/emberjs/data/blob/v3.3.1/addon/-private/system/store.js#L2083) is making its comeback as an official, **public API**.
 This new public method will allow users to provide any kind of `ModelClass` (and not only the default `DS.Model` provided by Ember Data) to applications if needed.
 
 Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) and leave your questions and suggestions in the comments below!
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -86,7 +81,7 @@ for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
