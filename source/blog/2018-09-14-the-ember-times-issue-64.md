@@ -31,6 +31,22 @@ Curious? [**Read the full proposal**](https://github.com/emberjs/rfcs/pull/372) 
 
 ---
 
+## [State of JavaScript 2018 Survey Is Here Again 🗳️](https://medium.freecodecamp.org/take-the-state-of-javascript-2018-survey-c43be2fcaa9)
+
+"Just like [the holidays] or the flu, the **State of JavaScript** survey comes back around every year. But unlike these, it’s something to actually look forward to!" - [Sacha Greif](https://twitter.com/SachaGreif/status/1037603748917403648)
+
+[State of JavaScript](https://stateofjs.com/) is **the** yearly JavaScript survey that aims to gauge the whole JavaScript community across all frameworks, libraries, regional location and more. It tries to find out with which technologies developers are **most happy** with as well as which technologies are coming up and becoming popular in JavaScript. 
+
+Last year there were over **20,000 entries** and while Ember was known by most, many either didn't want to learn it or had used it in the past and didn't want to again. With all of the **improvements to Ember** these past few years, **we can do better**!
+
+So go and [fill out the survey](https://stateofjs.com/) and **show your support for Ember** in 2018! Make your **voice heard**! 📣
+
+Check out the [Twitter](https://twitter.com/SachaGreif/status/1037603748917403648) or [Medium](https://medium.freecodecamp.org/take-the-state-of-javascript-2018-survey-c43be2fcaa9) post to learn more.
+
+🎉 [Take the survey!](https://stateofjs.com/) 🎉
+
+---
+
 ## [Element Modifier RFCs ⚛️](https://github.com/emberjs/rfcs/pull/373)
 
 Ember Core Team member [@chadhietala](https://github.com/chadhietala) proposed 2 RFCs around Element Modifiers – one for the [Modifier Manager](https://github.com/emberjs/rfcs/pull/373) and the other for the [Element Modifier](https://github.com/emberjs/rfcs/pull/353) itself.
