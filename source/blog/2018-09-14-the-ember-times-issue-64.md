@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 64
-author: the crowd
+author: Alon Bukai, Chris Ng, Amy Lam, Ryan Mark, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/09/14-the-ember-times-issue-64.html"
 responsive: true
@@ -106,4 +106,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Alon Bukai, Chris Ng, Amy Lam, Ryan Mark, Jessica Jordan and the Learning Team
