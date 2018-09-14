@@ -54,7 +54,8 @@ Ember Core Team member [@chadhietala](https://github.com/chadhietala) proposed 2
 Element Modifiers provide stable access of the DOM node they are installed on. Unlike a component, there is no template/layout for an element modifier. Unlike a helper, an element modifier does not return a value. An element modifier is invoked in "element space". This is the space between `<` and `>` opening an HTML tag.
 
 Here is an example of the element modifier syntax in action:
-```
+
+```handlebars
 <button {{effect 'fade-in'}}>Save</button>
 ```
 
