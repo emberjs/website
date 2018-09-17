@@ -54,35 +54,35 @@ with the angle bracket invocation syntax:
 </SuperSelect>
 ```
 
-It's important to note that the classic invocation syntax isn't deprecated in favour of this new invocation. You're free to still use the classic invocation syntax but the angle bracket invocation do have a few advantages.
+**It's important to note that the classic invocation syntax is not deprecated in favour of this new invocation.** You're still free to use the classic invocation syntax; but users should be aware that angle bracket invocation does have a few advantages.
 
-By using angle bracket invocation you introduce more clarity to your templates. The main advantage of the angle bracket invocation syntax is clarity. Because component invocation is often encapsulating important pieces of UI, a dedicated syntax would help visually distinguish them from other handlebars constructs, such as control flow and dynamic values. This can be seen in the example shown above – the angle bracket syntax made it very easy to see the component invocations as well as the `{{#each}}` loop, especially with syntax highlight.
+The main advantage of the angle bracket invocation syntax is clarity. Because component invocation is often encapsulating important pieces of UI, a dedicated syntax would help visually distinguish them from other handlebars constructs, such as control flow and dynamic values. This can be seen in the example shown above – the angle bracket syntax made it very easy to see the component invocations as well as the `{{#each}}` loop, especially with syntax highlight.
 
 To dive into the possibilities of this new features please refer to [the guides](#TODO)
 
 Custom component manager (2 of 2)
 
-#### Deprecations (1)
+#### Deprecations (2)
 
 Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-
 For more details on changes in Ember.js 3.4, please review the [Ember.js 3.4.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.4.0).
 
-
-Use closure actions instead of `sendAction` (1 of 1)
+**Use closure actions instead of `sendAction` (1 of 2)**
 
 In Ember 1.13 closure actions were introduced as a recommended replacement for `sendAction`. With `sendAction` the developer passes the name of an action, and when `sendAction` is called Ember.js would look up that action in the parent context and invoke it if present. This had a handful of caveats:
 
-* Since the action is not looked up until it's about to be invoked, it's easier for a typo in the action's name to go undetected.
+- Since the action is not looked up until it's about to be invoked, it's easier for a typo in the action's name to go undetected.
+- Using `sendAction` you cannot receive the return value of the invoked action.
 
-* Using `sendAction` you cannot receive the return value of the invoked action.
-
-Closure actions solve those problems and on top are also more intuitive to use.
+Closure actions solve those problems and are also more intuitive to use.
 
 To read more about this deprecation and how to refactor your existing code have a look at [the deprecations page](https://emberjs.com/deprecations/v3.x#toc_ember-component-send-action).
+
+**Ember 2 Legacy (2 of 2)**
+ Version 3.4 is the last version of Ember that will work with the polyfill addon for features that were deprecated in 2.x. If you have been using [ember-2-legacy](https://github.com/emberjs/ember-2-legacy), it's time to move forward.
 
 ---
 
