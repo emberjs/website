@@ -2,6 +2,8 @@ require 'redcarpet'
 require 'active_support'
 require 'active_support/core_ext'
 
+
+
 Dir['./lib/*'].each { |f| require f }
 
 # Debugging
@@ -28,6 +30,8 @@ activate :sponsors
 activate :highlighter
 activate :column_balancer
 activate :versions
+
+
 ###
 # Build
 ###
