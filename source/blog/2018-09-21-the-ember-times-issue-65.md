@@ -58,7 +58,7 @@ To learn more, [@rwjblue](https://github.com/rwjblue) together with [@mike-north
 
 ## [Ember is a modern framework, tell your friends 😄](https://dev.to/nullvoxpopuli/the-emberjs-of-the-future-today-12c)
 
-<!--alex ignore hooks-->
+<!--alex ignore hooks destroy-->
 Community member [@NullVoxPopuli](https://github.com/NullVoxPopuli) has written a summary of a set of his favorite features that showcase how Ember is a modern framework, and can be attractive to people looking for all the shiny things. Check out [The EmberJS of the future... today!](https://dev.to/nullvoxpopuli/the-emberjs-of-the-future-today-12c) where he discusses async lifecycle hooks, syntax for components, testing, dependency injection, keyboard accessibility and more.
 
 ---
