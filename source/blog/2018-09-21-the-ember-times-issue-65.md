@@ -52,8 +52,13 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Published sparkles-component 1.1.0 ✨](https://twitter.com/rwjblue/status/1042162296854925314)
 
+[@rwjblue](https://github.com/rwjblue) released version 1.1.0 of the [sparkles-component](https://github.com/rwjblue/sparkles-component) which includes [TypeScript](https://www.typescriptlang.org/) conversion of the library.
+
+The sparkles-component is an addon used to experiment with [glimmer component](https://github.com/glimmerjs/glimmer.js/tree/master/packages/%40glimmer/component) style APIs in Ember apps via existing public APIs. It supports most of the `@glimmer/component` API including lifecycle hooks (constructor, didInsertElement, didUpdate, destroy), @tracked properties, ES base class, and decorator support (with the release of 1.1.0, this supports consuming via TypeScript).
+
+To learn more, [@rwjblue](https://github.com/rwjblue) together with [@mike-north](https://github.com/mike-north) live streamed converting the library from JavaScript to TypeScript. You can watch the [live replay on Twitch](https://www.twitch.tv/videos/311556611).
 
 ---
 
