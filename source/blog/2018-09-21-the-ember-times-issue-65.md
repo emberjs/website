@@ -44,12 +44,6 @@ responsive: true
 
 ## [SECTION TITLE](#section-url)
 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
 ---
 
 ## [Published sparkles-component 1.1.0 ✨](https://twitter.com/rwjblue/status/1042162296854925314)
@@ -60,6 +54,13 @@ responsive: true
 The sparkles-component is an addon used to experiment with [glimmer component](https://github.com/glimmerjs/glimmer.js/tree/master/packages/%40glimmer/component) style APIs in Ember apps via existing public APIs. It supports most of the `@glimmer/component` API including lifecycle hooks (constructor, didInsertElement, didUpdate, destroy), @tracked properties, ES base class, and decorator support (with the release of 1.1.0, this supports consuming via TypeScript).
 
 To learn more, [@rwjblue](https://github.com/rwjblue) together with [@mike-north](https://github.com/mike-north) live streamed converting the library from JavaScript to TypeScript. You can watch the [live replay on Twitch](https://www.twitch.tv/videos/311556611).
+
+---
+
+## [Ember is a modern framework, tell your friends 😄](https://dev.to/nullvoxpopuli/the-emberjs-of-the-future-today-12c)
+
+<!--alex ignore hooks destroy-->
+Community member [@NullVoxPopuli](https://github.com/NullVoxPopuli) has written a summary of a set of his favorite features that showcase how Ember is a modern framework, and can be attractive to people looking for all the shiny things. Check out [The EmberJS of the future... today!](https://dev.to/nullvoxpopuli/the-emberjs-of-the-future-today-12c) where he discusses async lifecycle hooks, syntax for components, testing, dependency injection, keyboard accessibility and more.
 
 ---
 
@@ -92,4 +93,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng and the Learning Team
+Chris Ng, L. Preston Sego III and the Learning Team
