@@ -1123,6 +1123,10 @@
   image: smileio.png
   alt: Smile.io
   use: "Smile's main web application is built with Ember.js"
+- url: "https://www.viavisolutions.com"
+  image: viavi.png
+  alt: VIAVI Solutions
+  use: "VIAVI Solutions uses Ember.js in a variety of our intranet applications"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
