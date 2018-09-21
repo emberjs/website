@@ -64,6 +64,11 @@ Community member [@NullVoxPopuli](https://github.com/NullVoxPopuli) has written 
 
 ---
 
+## [Boston-Built ember-css-modules 1.0 AKA "The Big Dig" Is Here 🏗](https://twitter.com/__dfreeman/status/1042837440417988610)
+
+[salsify/ember-css-modules](https://github.com/salsify/ember-css-modules) has launched a 1.0 thanks to bug reports, feature ideas and pull requests from the community over the past couple years! ember-css-modules provides Ember-flavored support for [CSS Modules](https://github.com/css-modules/css-modules). With the addon, styling is a first-class citizen alongside templates and JavaScript, with one CSS file per component. 
+
+---
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
