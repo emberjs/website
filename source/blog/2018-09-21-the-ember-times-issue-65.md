@@ -12,9 +12,29 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Deprecate All the Property 🏠 Modifiers ](https://github.com/emberjs/rfcs/pull/375)
 
+Remember `.property()`?
 
+```js
+fullName: computed(function() {
+  // ...
+}).property('firstName', 'lastName'),
+```
+
+This **modifier** for **computed properties** in Ember has been around for quite a while.
+And even though computed properties have already allowed to pass in dependent keys as an argument directly, e.g....
+
+```js
+fullName: computed('firstName', 'lastName', function() {
+  // ...
+}),
+```
+
+...the modifier hasn't been deprecated yet. The main obstacle for the deprecation has been
+the one valid use of `.property()`: It is required for cp macros, such as `filter` or `map` which receive a callback function as their argument.
+
+A **brand-new 🔥 Request for Comments (RFC)** 🚒 proposes to transition away from the usage of `.property` for these macros to allow the deprecation of the otherwise redundant API. Curious readers can **learn more** about the motivation and the design of this move [in the original proposal](https://github.com/pzuraq/emberjs-rfcs/blob/deprecate-computed-property-modifier/text/0000-deprecate-computed-property-modifier.md).
 ---
 
 ## [SECTION TITLE](#section-url)
@@ -66,13 +86,13 @@ Community member [@NullVoxPopuli](https://github.com/NullVoxPopuli) has written 
 
 ## [Boston-Built ember-css-modules 1.0 AKA "The Big Dig" Is Here 🏗](https://twitter.com/__dfreeman/status/1042837440417988610)
 
-[salsify/ember-css-modules](https://github.com/salsify/ember-css-modules) has launched a 1.0 thanks to bug reports, feature ideas and pull requests from the community over the past couple years! ember-css-modules provides Ember-flavored support for [CSS Modules](https://github.com/css-modules/css-modules). With the addon, styling is a first-class citizen alongside templates and JavaScript, with one CSS file per component. 
+[salsify/ember-css-modules](https://github.com/salsify/ember-css-modules) has launched a 1.0 thanks to bug reports, feature ideas and pull requests from the community over the past couple years! ember-css-modules provides Ember-flavored support for [CSS Modules](https://github.com/css-modules/css-modules). With the addon, styling is a first-class citizen alongside templates and JavaScript, with one CSS file per component.
 
 ---
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/toddjordan" target="gh-user">@toddjordan</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/anehx" target="gh-user">@anehx</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/balinterdi" target="gh-user">@balinterdi</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/dcombslinkedin" target="gh-user">@dcombslinkedin</a>, <a href="https://github.com/twokul" target="gh-user">@twokul</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/quajo" target="gh-user">@quajo</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/smfoote" target="gh-user">@smfoote</a>, <a href="https://github.com/EndangeredMassa" target="gh-user">@EndangeredMassa</a>, <a href="https://github.com/dependabot[bot]" target="gh-user">@dependabot[bot]</a>, <a href="https://github.com/jfdnc" target="gh-user">@jfdnc</a> and <a href="https://github.com/adityasrini" target="gh-user">@adityasrini</a> for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
@@ -98,4 +118,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, L. Preston Sego III and the Learning Team
+Chris Ng, L. Preston Sego III, Amy Lam, Ryan Mark, Jessica Jordan and the Learning Team
