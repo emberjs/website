@@ -60,7 +60,7 @@ responsive: true
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
