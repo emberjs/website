@@ -118,4 +118,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, L. Preston Sego III and the Learning Team
+Chris Ng, L. Preston Sego III, Amy Lam, Ryan Mark, Jessica Jordan and the Learning Team
