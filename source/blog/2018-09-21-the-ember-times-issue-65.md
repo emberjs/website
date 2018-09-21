@@ -12,9 +12,29 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Deprecate All the Property 🏠 Modifiers ](https://github.com/emberjs/rfcs/pull/375)
 
+Remember `.property()`?
 
+```js
+fullName: computed(function() {
+  // ...
+}).property('firstName', 'lastName'),
+```
+
+This **modifier** for **computed properties** in Ember has been around for quite a while.
+And even though computed properties have already allowed to pass in dependent keys as an argument directly, e.g....
+
+```js
+fullName: computed('firstName', 'lastName', function() {
+  // ...
+}),
+```
+
+...the modifier hasn't been deprecated yet. The main obstacle for the deprecation has been
+the one valid use of `.property()`: It is required for cp macros, such as `filter` or `map` which receive a callback function as their argument.
+
+A **brand-new 🔥 Request for Comments (RFC)** 🚒 proposes to transition away from the usage of `.property` for these macros to allow the deprecation of the otherwise redundant API. Curious readers can **learn more** about the motivation and the design of this move [in the original proposal](https://github.com/pzuraq/emberjs-rfcs/blob/deprecate-computed-property-modifier/text/0000-deprecate-computed-property-modifier.md).
 ---
 
 ## [SECTION TITLE](#section-url)
