@@ -8,7 +8,7 @@ responsive: true
 
 Ahoj Emberistas! 🐹
 
-In this week's edition we're sharing news about a fresh 🥒  RFC to deprecate `.property()`, exciting addon updates 🚀 for sparkles-component and ember-css-modules, and how Ember is a modern framework - tell your friends! 
+In this week's edition we're sharing news about a fresh 🥒  RFC to deprecate `.property()`, exciting addon updates 🚀 for sparkles-component and ember-css-modules, and how Ember is a modern framework 🎉 - tell your friends! 
 
 ---
 
