@@ -40,6 +40,13 @@ The process to publish a new weekly post is as follows:
 The Reader's Questions section of the newsletter is usually answered by core team members, but anyone can give a helping hand. 
 The answers are posted on [discuss.emberjs.com](https://discuss.emberjs.com/) and linked back to the weekly blog post.
 
+## Writing Style Guide
+
+* Use Title Case for section headings, when in doubt use https://titlecaseconverter.com/.
+* In general, refer to people by their GitHub handle, e.g. `[@your_name_here](https://www.github.com/your_name_here)`. (If the person is mentioned more than one time in the same paragraph, feel free to deviate after one @ mention!]
+* We tend to refer to `Ember`, `Ember Data`, and `Ember CLI` as their name (versus the repo name) because we mention them so often. For most other repos, use the repo name e.g. `[machty/ember-concurrency](https://github.com/machty/ember-concurrency)`.
+* Add your name to the author list at the bottom of the Times when submitting a PR for the week.
+
 ### Goodbits
 
 To prepare the newsletter broadcast on Goodbits the following steps are necessary:
@@ -50,11 +57,11 @@ To prepare the newsletter broadcast on Goodbits the following steps are necessar
 - Select 'Prepare to send'
 - Choose the option 'Send later' and schedule it to Friday 9 PM UTC
 
-### What is new in Ember land
+### What Is New in Ember Land
 
 There is a tool available to gather the weekly contributions on Ember repos and to generate the contributors' list, here: [what-is-new-in-emberland](https://github.com/jessica-jordan/whats-new-in-emberland). It's an Ember app 🐹, you can simply download, build it and serve it!
 
-### Pushing your changes to the blog post
+### Pushing Your Changes to the Blog Post
 
 A typical Git forking workflow can be used to contribute:
 
