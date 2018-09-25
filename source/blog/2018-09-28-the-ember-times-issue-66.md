@@ -52,11 +52,39 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Issue Triage 🕵️](https://paper.dropbox.com/doc/Ember.js-Issue-Triage--ANXsBgi3NQNstI7fSMQIONfOAg-Bh6AEHTj1Bt4rXq0Awg4R)
 
+<p>
+  This week we had 5 volunteers helping 🚑 &nbsp;triage old issues that were inactive,
+  we closed 9 and labelled 31 of 50 from last week that need a submitter response 🙀.
+  Those 31 may be closed in the next week or two. Together, we addressed 17 issues
+  that were inactive (and are still open 📂). We are beginning to establish a cadence
+  again of a team addressing issue triage 🛠️ on Friday mornings.
+</p>
+<p>
+  Thanks for your
+  <a href="https://paper.dropbox.com/doc/Triage-2018-09-21--ANXmzEWQ5mVFnbfufGK81Tj5Ag-BIKVPVdJqOS8q46TxJQKu">
+    triage contributions
+  </a> over the past two weeks 🤩… 
+  <a href="https://github.com/yohanmishkin" target="gh-user">@yininge</a>,
+  <a href="https://github.com/ryanlabouve" target="gh-user">@ryanlabouve</a>,
+  <a href="https://github.com/yohanmishkin" target="gh-user">@yohanmishkin</a>,
+  <a href="https://github.com/esbanarango" target="gh-user">@esbanarango</a>,
+  <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, and
+  <a href="https://github.com/yohanmishkin" target="gh-user">@pixelhandler</a>.
+</p>
+<p>
+  The <em>@emberjs/issues-team</em> objective is to increase signal-to-noise ratio of issues
+  and 🐛 &nbsp;bugs so that the core team (and contributors) can take action to resolve bugs,
+  and spend less effort sorting the issues queue. Currently there are about 67 open bugs, of
+  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>)
+  , and 1 with a pull request - total count about 270. Our aim is to get down to 150 in the next
+  couple months. If you'd like to help see the
+  <a href="https://discordapp.com/channels/480462759797063690/480523776845414412">#issue-triage</a>
+  room in the community Discord chat.
+</p>
 
 ---
-
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
