@@ -17,7 +17,12 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [The Addon Test Is Right Where It Belongs ❤️](https://github.com/emberjs/rfcs/pull/378)
+
+<!--alex ignore host-hostess-->
+Spending too much time looking for the **test files** of your **in-repo addon**? Feeling too exhausted to maintain a large test suite in which addon and host app test cases are meshed together? It doesn't have to be this way.
+
+Read more about how **collocated in-repo test files** are able to make your developer life easier in [this **shiny, new Request for Comments (RFC)**](https://github.com/emberjs/rfcs/pull/378). And as always, be sure to **leave your questions or ❤️ emojis** right below the RFC's pull request description! ✨
 
 
 ---
