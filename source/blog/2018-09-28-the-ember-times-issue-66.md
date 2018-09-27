@@ -77,7 +77,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
   Thanks for your
   <a href="https://paper.dropbox.com/doc/Triage-2018-09-21--ANXmzEWQ5mVFnbfufGK81Tj5Ag-BIKVPVdJqOS8q46TxJQKu">
     triage contributions
-  </a> over the past two weeks 🤩… 
+  </a> over the past two weeks 🙏…
   <a href="https://github.com/yohanmishkin" target="gh-user">@yininge</a>,
   <a href="https://github.com/ryanlabouve" target="gh-user">@ryanlabouve</a>,
   <a href="https://github.com/yohanmishkin" target="gh-user">@yohanmishkin</a>,
