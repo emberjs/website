@@ -39,8 +39,15 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [And Today's Special On The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
 
+Ever had the need to read **query params (QPs)** off a `Controller` and pass it down to a component to change its UI state depending on the QP value?
+
+Ever had a hard time passing down QP values through layers and layers of components to do just that?
+
+It doesn't have to be this way. Read [this new RFC](https://github.com/emberjs/rfcs/pull/380) about exposing QPs as a _computed property_ on the `RouterService`. It proposes that this `Service` can then be injected into components easily which makes laborious passing of QP data obsolete.
+
+As always, **leave your comments** and appreciation [below the original proposal](https://github.com/emberjs/rfcs/pull/380) as long as it's **still under discussion**!
 
 ---
 
