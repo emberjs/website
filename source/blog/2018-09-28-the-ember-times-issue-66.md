@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -39,8 +39,15 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [And Today's Special On The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
 
+Ever had the need to read **query params (QPs)** off a `Controller` and pass it down to a component to change its UI state depending on the QP value?
+
+Ever had a hard time passing down QP values through layers and layers of components to do just that?
+
+It doesn't have to be this way. Read [this new RFC](https://github.com/emberjs/rfcs/pull/380) about exposing QPs as a _computed property_ on the `RouterService`. It proposes that this `Service` can then be injected into components easily which makes laborious passing of QP data obsolete.
+
+As always, **leave your comments** and appreciation [below the original proposal](https://github.com/emberjs/rfcs/pull/380) as long as it's **still under discussion**!
 
 ---
 
@@ -77,7 +84,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
   Thanks for your
   <a href="https://paper.dropbox.com/doc/Triage-2018-09-21--ANXmzEWQ5mVFnbfufGK81Tj5Ag-BIKVPVdJqOS8q46TxJQKu">
     triage contributions
-  </a> over the past two weeks 🤩… 
+  </a> over the past two weeks 🙏…
   <a href="https://github.com/yohanmishkin" target="gh-user">@yininge</a>,
   <a href="https://github.com/ryanlabouve" target="gh-user">@ryanlabouve</a>,
   <a href="https://github.com/yohanmishkin" target="gh-user">@yohanmishkin</a>,
@@ -100,7 +107,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/iezer" target="gh-user">@iezer</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/mfeckie" target="gh-user">@mfeckie</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/greenkeeper[bot]" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/gandalfar" target="gh-user">@gandalfar</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/hybridmuse" target="gh-user">@hybridmuse</a> for their contributions to Ember and related repositories 💖!</p>
 
 ---
 
@@ -128,4 +135,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan and the Learning Team
