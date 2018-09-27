@@ -1,11 +1,13 @@
 ---
 title: Ember 3.4 Released
-author: Melanie Sumner, Kenneth Larsen
+author: Melanie Sumner, Kenneth Larsen, David Baker
 tags: Releases, 2018, 3, 3.4
 responsive: true
 ---
 
 Today the Ember project is releasing version 3.4 of Ember.js, Ember Data, and Ember CLI. This release kicks off the 3.5 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
+
+**NOTE:** Due to some bugs found once people started using the release version of Ember-CLI 3.4, we delayed this blog post while we ironed out issues. At this point, things are pretty stable and upgrading should be fine.
 
 You can read more about our general release process here:
 
@@ -58,7 +60,7 @@ with the angle bracket invocation syntax:
 
 The main advantage of the angle bracket invocation syntax is clarity. Because component invocation is often encapsulating important pieces of UI, a dedicated syntax would help visually distinguish them from other handlebars constructs, such as control flow and dynamic values. This can be seen in the example shown above – the angle bracket syntax made it very easy to see the component invocations as well as the `{{#each}}` loop, especially with syntax highlight.
 
-To dive into the possibilities of this new features please refer to [the guides](#TODO)
+Guides will be updated to reflect the new syntax in the coming weeks.
 
 Custom component manager (2 of 2)
 
