@@ -94,13 +94,19 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.4
 
+Ember Data 3.4 is the first Ember Data LTS release. As a result the
+Ember Data team has focused on stability for this release. We've
+released a ton of bug fixes (and backported many of these fixes to
+older 3.x releases) to address many known issues that have been
+reported over the last several months.
 
 #### New Features (0)
 
-
+No new features introduced in Ember Data 3.4.
 
 #### Deprecations (0)
 
+No new deprecations introduced in Ember Data 3.4.
 
 
 For more details on changes in Ember Data 3.4, please review the
