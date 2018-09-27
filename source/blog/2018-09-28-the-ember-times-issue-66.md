@@ -27,8 +27,15 @@ Read more about how **collocated in-repo test files** are able to make your deve
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [ember-cli-deprecation-workflow 1.0.0 release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
 
+This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [1.0.0 of ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
+
+[ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) is an addon geared towards making Ember upgrades easier by allowing you to work through deprecations without massive console noise from Ember 1.x and 2.x deprecations.
+
+It silences the `console.log` noise or "deprecation spew" via configuration so that only unhandled deprecations will be displayed in your console. And now that the spew has settled down, you can process one deprecation at a time while ensuring that no new deprecations are introduced.
+
+Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecation-workflow)!
 
 ---
 
