@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 65
 author: Chris Ng, L. Preston Sego III, Amy Lam, Ryan Mark, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/09/21-the-ember-times-issue-65.html"
 responsive: true
 ---
