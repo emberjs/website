@@ -27,7 +27,7 @@ Read more about how **collocated in-repo test files** are able to make your deve
 
 ---
 
-## [ember-cli-deprecation-workflow 1.0.0 release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
+## [ember-cli-deprecation-workflow 1.0.0 Release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
 
 This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [1.0.0 of ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
 
@@ -85,19 +85,18 @@ As always, **leave your comments** and appreciation [below the original proposal
   <a href="https://paper.dropbox.com/doc/Triage-2018-09-21--ANXmzEWQ5mVFnbfufGK81Tj5Ag-BIKVPVdJqOS8q46TxJQKu">
     triage contributions
   </a> over the past two weeks 🙏…
-  <a href="https://github.com/yohanmishkin" target="gh-user">@yininge</a>,
+  <a href="https://github.com/yininge" target="gh-user">@yininge</a>,
   <a href="https://github.com/ryanlabouve" target="gh-user">@ryanlabouve</a>,
   <a href="https://github.com/yohanmishkin" target="gh-user">@yohanmishkin</a>,
   <a href="https://github.com/esbanarango" target="gh-user">@esbanarango</a>,
   <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, and
-  <a href="https://github.com/yohanmishkin" target="gh-user">@pixelhandler</a>.
+  <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>.
 </p>
 <p>
   The <em>@emberjs/issues-team</em> objective is to increase signal-to-noise ratio of issues
   and 🐛 &nbsp;bugs so that the core team (and contributors) can take action to resolve bugs,
   and spend less effort sorting the issues queue. Currently there are about 67 open bugs, of
-  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>)
-  , and 1 with a pull request - total count about 270. Our aim is to get down to 150 in the next
+  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>), and one with a pull request - total count about 270. Our aim is to get down to 150 in the next
   couple months. If you'd like to help see the
   <a href="https://discordapp.com/channels/480462759797063690/480523776845414412">#issue-triage</a>
   room in the community Discord chat.
