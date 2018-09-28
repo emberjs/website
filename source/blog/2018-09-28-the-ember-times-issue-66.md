@@ -58,7 +58,7 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 Inspired by **Module Unification**, [@NullVoxPopuli](https://github.com/NullVoxPopuli) has
 written an article on **general project structure for single page apps.**
-In the article he explains how strucure is not specific to Ember, React, Vue, or anything else,
+In the article he explains how structure is not specific to Ember, React, Vue, or anything else,
 but just needs to meet a set of guidelines for some common desired goals.
 
 Read it here: [_A general and flexible file structure that works for all projects in any ecosystem_](https://dev.to/nullvoxpopuli/a-general-and-flexible-file-structure-that-works-for-all-projects-in-any-ecosystem-1lp9)
