@@ -36,7 +36,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ---
 
-## [And Today's Special On The Router Menu: Query Params 🥡](https://github.com/emberjs/rfcs/pull/380)
+## [And Today's Special on The Router Menu: Query Params 👨‍🍳](https://github.com/emberjs/rfcs/pull/380)
 
 Ever had the need to read **query params (QPs)** off a `Controller` and pass it down to a component to change its UI state depending on the QP value?
 
@@ -48,10 +48,22 @@ As always, **leave your comments** and appreciation [below the original proposal
 
 ---
 
-## [The Missing Docs Has Returned](https://github.com/emberjs/ember.js/pull/17002)
+## [The Missing Docs Has Returned 📃](https://github.com/emberjs/ember.js/pull/17002)
 There has been [some documentation missing](https://github.com/emberjs/ember.js/issues/16993) from the Ember API docs from the release of 3.3 to 3.4. [@Gaurav0](https://github.com/Gaurav0) has done some great detective work 🕵  and [fixed these issues](https://github.com/emberjs/ember.js/pull/17002) which means that **the missing documentation is now back.**
 
 Going forward the plan is to provide better testing for cases like this so you always have access to the documentation you need.
+
+---
+
+## [Project Structure for Single Page Apps 📂](https://dev.to/nullvoxpopuli/a-general-and-flexible-file-structure-that-works-for-all-projects-in-any-ecosystem-1lp9)
+
+Inspired by **Module Unification**, [@NullVoxPopuli](https://github.com/NullVoxPopuli) has
+written an article on **general project structure for single page apps.**
+In the article he explains how strucure is not specific to Ember, React, Vue, or anything else,
+but just needs to meet a set of guidelines for some common desired goals.
+
+Read it here: [_A general and flexible file structure that works for all projects in any ecosystem_](https://dev.to/nullvoxpopuli/a-general-and-flexible-file-structure-that-works-for-all-projects-in-any-ecosystem-1lp9)
+
 
 ---
 
@@ -109,9 +121,9 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 ## #embertimes
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? **Join us** at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
+Want to write for the Ember Times? Have a suggestion for next week's issue? **Join us** at **#support-ember-times** on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
-Keep on top of what's been going on in Emberland this week by **subscribing to our [e-mail newsletter**](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
+Keep on top of what's been going on in Emberland this week by **subscribing to our** [**e-mail newsletter**](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
 ---
 
