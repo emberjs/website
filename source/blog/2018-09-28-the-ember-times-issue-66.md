@@ -58,7 +58,7 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 Inspired by **Module Unification**, [@NullVoxPopuli](https://github.com/NullVoxPopuli) has
 written an article on **general project structure for single page apps.**
-In the article he explains how strucure is not specific to Ember, React, Vue, or anything else,
+In the article he explains how structure is not specific to Ember, React, Vue, or anything else,
 but just needs to meet a set of guidelines for some common desired goals.
 
 Read it here: [_A general and flexible file structure that works for all projects in any ecosystem_](https://dev.to/nullvoxpopuli/a-general-and-flexible-file-structure-that-works-for-all-projects-in-any-ecosystem-1lp9)
@@ -99,7 +99,7 @@ Read it here: [_A general and flexible file structure that works for all project
 
 ---
 
-## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
+## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
 <p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/iezer" target="gh-user">@iezer</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/mfeckie" target="gh-user">@mfeckie</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/gandalfar" target="gh-user">@gandalfar</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/hybridmuse" target="gh-user">@hybridmuse</a> for their contributions to Ember and related repositories! 💖</p>
 
@@ -118,7 +118,7 @@ Read it here: [_A general and flexible file structure that works for all project
 
 ---
 
-## #embertimes
+## #embertimes 📰
 
 Want to write for the Ember Times? Have a suggestion for next week's issue? **Join us** at **#support-ember-times** on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
