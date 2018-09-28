@@ -1,15 +1,15 @@
 ---
-title: The Ember Times - Issue No. XX
+title: The Ember Times - Issue No. 66
 author: Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/09/28-the-ember-times-issue-66.html"
 responsive: true
 ---
 
 Emberistas سلام! 🐹
 
 Don't miss brand-new 🔥 **RFCs for collocated addon tests** and **Router** served **query params** this week!
-We also have news from **Ember CLI Deprecation Workflow** and a _Lost & Found_ 🕵🏾‍♀️ from the **Ember API Docs** for you,
+We also have news from **Ember CLI Deprecation Workflow** and a _Lost & Found_ 🕵🏾‍ from the **Ember API Docs** for you,
 as well as a **Thank You note** for the most amazing **Issue Triaging** Experts! 🙂
 
 ---
@@ -25,11 +25,11 @@ Read more about how **collocated in-repo test files** are able to make your deve
 
 ## [ember-cli-deprecation-workflow 1.0.0 Release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
 
-This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [1.0.0 of ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
+This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [**1.0.0 of ember-cli-deprecation-workflow**](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
 
 [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) is an addon geared towards making Ember upgrades easier by allowing you to work through deprecations without massive console noise from Ember 1.x and 2.x deprecations.
 
-It silences the `console.log` noise or "deprecation spew" via configuration so that only unhandled deprecations will be displayed in your console. And now that the spew has settled down, you can process one deprecation at a time while ensuring that no new deprecations are introduced.
+It silences the `console.log` noise or "deprecation spew" via configuration so that **only unhandled deprecations** will be **displayed in your console**. And now that the spew has settled down, you can process one deprecation at a time while ensuring that no new deprecations are introduced.
 
 Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecation-workflow)!
 
@@ -57,7 +57,7 @@ Going forward the plan is to provide better testing for cases like this so you a
 ## [Issue Triage 🕵️](https://paper.dropbox.com/doc/Ember.js-Issue-Triage--ANXsBgi3NQNstI7fSMQIONfOAg-Bh6AEHTj1Bt4rXq0Awg4R)
 
 <p>
-  This week we had 5 volunteers helping 🚑 &nbsp;triage old issues that were inactive,
+  This week we had <strong>5 volunteers</strong> helping 🚑 &nbsp;<strong>triage old issues</strong> that were inactive,
   we closed 9 and labelled 31 of 50 from last week that need a submitter response 🙀.
   Those 31 may be closed in the next week or two. Together, we addressed 17 issues
   that were inactive (and are still open 📂). We are beginning to establish a cadence
@@ -76,11 +76,11 @@ Going forward the plan is to provide better testing for cases like this so you a
   <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>.
 </p>
 <p>
-  The <em>@emberjs/issues-team</em> objective is to increase signal-to-noise ratio of issues
+  The <em>@emberjs/issues-team</em> objective is to <strong>increase signal-to-noise ratio of issues</strong>
   and 🐛 &nbsp;bugs so that the core team (and contributors) can take action to resolve bugs,
   and spend less effort sorting the issues queue. Currently there are about 67 open bugs, of
   those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>), and one with a pull request - total count about 270. Our aim is to get down to 150 in the next
-  couple months. If you'd like to help see the
+  couple months. If you'd like to <strong>help</strong> see the
   <a href="https://discordapp.com/channels/480462759797063690/480523776845414412">#issue-triage</a>
   room in the community Discord chat.
 </p>
@@ -108,9 +108,9 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 ## #embertimes
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
+Want to write for the Ember Times? Have a suggestion for next week's issue? **Join us** at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
-Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
+Keep on top of what's been going on in Emberland this week by **subscribing to our [e-mail newsletter**](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
 ---
 
