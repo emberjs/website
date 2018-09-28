@@ -27,7 +27,7 @@ Read more about how **collocated in-repo test files** are able to make your deve
 
 ---
 
-## [ember-cli-deprecation-workflow 1.0.0 release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
+## [ember-cli-deprecation-workflow 1.0.0 Release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
 
 This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [1.0.0 of ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
 
@@ -39,7 +39,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ---
 
-## [And Today's Special On The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
+## [And Today's Special on The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
 
 Ever had the need to read **query params (QPs)** off a `Controller` and pass it down to a component to change its UI state depending on the QP value?
 
@@ -87,19 +87,18 @@ Going forward the plan is to provide better testing for cases like this so you a
   <a href="https://paper.dropbox.com/doc/Triage-2018-09-21--ANXmzEWQ5mVFnbfufGK81Tj5Ag-BIKVPVdJqOS8q46TxJQKu">
     triage contributions
   </a> over the past two weeks 🙏…
-  <a href="https://github.com/yohanmishkin" target="gh-user">@yininge</a>,
+  <a href="https://github.com/yininge" target="gh-user">@yininge</a>,
   <a href="https://github.com/ryanlabouve" target="gh-user">@ryanlabouve</a>,
   <a href="https://github.com/yohanmishkin" target="gh-user">@yohanmishkin</a>,
   <a href="https://github.com/esbanarango" target="gh-user">@esbanarango</a>,
   <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, and
-  <a href="https://github.com/yohanmishkin" target="gh-user">@pixelhandler</a>.
+  <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>.
 </p>
 <p>
   The <em>@emberjs/issues-team</em> objective is to increase signal-to-noise ratio of issues
   and 🐛 &nbsp;bugs so that the core team (and contributors) can take action to resolve bugs,
   and spend less effort sorting the issues queue. Currently there are about 67 open bugs, of
-  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>)
-  , and 1 with a pull request - total count about 270. Our aim is to get down to 150 in the next
+  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>), and one with a pull request - total count about 270. Our aim is to get down to 150 in the next
   couple months. If you'd like to help see the
   <a href="https://discordapp.com/channels/480462759797063690/480523776845414412">#issue-triage</a>
   room in the community Discord chat.
@@ -109,11 +108,11 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/iezer" target="gh-user">@iezer</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/mfeckie" target="gh-user">@mfeckie</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/greenkeeper[bot]" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/gandalfar" target="gh-user">@gandalfar</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/hybridmuse" target="gh-user">@hybridmuse</a> for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/iezer" target="gh-user">@iezer</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/mfeckie" target="gh-user">@mfeckie</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/gandalfar" target="gh-user">@gandalfar</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/hybridmuse" target="gh-user">@hybridmuse</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
@@ -126,9 +125,11 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 ---
 
+## #embertimes
+
 Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
 
-You can find our posts on what's been going on in Emberland this week on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/).
+Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
 ---
 
