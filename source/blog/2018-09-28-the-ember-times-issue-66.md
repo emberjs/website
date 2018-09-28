@@ -54,6 +54,18 @@ Going forward the plan is to provide better testing for cases like this so you a
 
 ---
 
+## [Project Structure for Single Page Apps](https://dev.to/nullvoxpopuli/a-general-and-flexible-file-structure-that-works-for-all-projects-in-any-ecosystem-1lp9)
+
+Inspired by **Module Unification**, [@NullVoxPopuli](https://github.com/NullVoxPopuli) has
+written an article on **general project structure for single page apps.**
+In the article he explains how strucure is not specific to Ember, React, Vue, or anything else,
+but just needs to meet a set of guidelines for some common desired goals.
+
+Read it here: [_A general and flexible file structure that works for all projects in any ecosystem_](https://dev.to/nullvoxpopuli/a-general-and-flexible-file-structure-that-works-for-all-projects-in-any-ecosystem-1lp9)
+
+
+---
+
 ## [Issue Triage 🕵️](https://paper.dropbox.com/doc/Ember.js-Issue-Triage--ANXsBgi3NQNstI7fSMQIONfOAg-Bh6AEHTj1Bt4rXq0Awg4R)
 
 <p>
