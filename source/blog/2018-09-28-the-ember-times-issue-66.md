@@ -39,7 +39,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ---
 
-## [And Today's Special On The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
+## [And Today's Special on The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
 
 Ever had the need to read **query params (QPs)** off a `Controller` and pass it down to a component to change its UI state depending on the QP value?
 
