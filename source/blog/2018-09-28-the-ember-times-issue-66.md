@@ -1,19 +1,14 @@
 ---
-title: The Ember Times - Issue No. XX
+title: The Ember Times - Issue No. 66
 author: Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/09/28-the-ember-times-issue-66.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Moni Bambo Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -39,7 +34,7 @@ Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecati
 
 ---
 
-## [And Today's Special On The Router Menu: Query Params](https://github.com/emberjs/rfcs/pull/380)
+## [And Today's Special On The Router Menu: Query Params 🥡](https://github.com/emberjs/rfcs/pull/380)
 
 Ever had the need to read **query params (QPs)** off a `Controller` and pass it down to a component to change its UI state depending on the QP value?
 
@@ -135,4 +130,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan and the Learning Team
+Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan, Alon Bukai and the Learning Team
