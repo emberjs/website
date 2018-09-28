@@ -6,9 +6,11 @@ alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Emberistas سلام! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Don't miss brand-new 🔥 **RFCs for collocated addon tests** and **Router** served **query params** this week!
+We also have news from **Ember CLI Deprecation Workflow** and a _Lost & Found_ 🕵🏾‍♀️ from the **Ember API Docs** for you,
+as well as a **Thank You note** for the most amazing **Issue Triaging** Experts! 🙂
 
 ---
 
