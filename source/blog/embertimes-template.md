@@ -58,7 +58,7 @@ responsive: true
 ---
 
 
-## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
+## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
 <p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
 
@@ -77,7 +77,7 @@ responsive: true
 
 ---
 
-## #embertimes
+## #embertimes 📰
 
 Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
 
