@@ -52,7 +52,7 @@ As always, **leave your comments** and appreciation [below the original proposal
 ---
 
 ## [The Missing Docs Has Returned](https://github.com/emberjs/ember.js/pull/17002)
-There has been [some documentation missing](https://github.com/emberjs/ember.js/issues/16993) from the Ember API docs from the release of 3.3 to 3.4. [@Gaurav0](https://github.com/Gaurav0) has done some great detective work 🕵  and [fixed these issues](https://github.com/emberjs/ember.js/pull/17002) which means that **the missing documentation now is back.**
+There has been [some documentation missing](https://github.com/emberjs/ember.js/issues/16993) from the Ember API docs from the release of 3.3 to 3.4. [@Gaurav0](https://github.com/Gaurav0) has done some great detective work 🕵  and [fixed these issues](https://github.com/emberjs/ember.js/pull/17002) which means that **the missing documentation is now back.**
 
 Going forward the plan is to provide better testing for cases like this so you always have access to the documentation you need.
 
