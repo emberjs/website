@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 66
 author: Bill Heaton, Chris Ng, Ryan Mark, L. Preston Sego III, Amy Lam, Kenneth Larsen, Jessica Jordan, Alon Bukai
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/09/28-the-ember-times-issue-66.html"
 responsive: true
 ---
