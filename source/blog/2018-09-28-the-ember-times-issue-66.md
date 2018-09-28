@@ -1,14 +1,17 @@
 ---
 title: The Ember Times - Issue No. 66
-author: Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan
+author: Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Kenneth Larsen, Jessica Jordan, Alon Bukai
+
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/09/28-the-ember-times-issue-66.html"
 responsive: true
 ---
 
-Moni Bambo Emberistas! 🐹
+Emberistas سلام! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Don't miss brand-new 🔥 **RFCs for collocated addon tests** and **Router** served **query params** this week!
+We also have news from **Ember CLI Deprecation Workflow** and a _Lost & Found_ 🕵🏾‍ from the **Ember API Docs** for you,
+as well as a **Thank You note** for the most amazing **Issue Triaging** Experts! 🙂
 
 ---
 
@@ -19,16 +22,15 @@ Spending too much time looking for the **test files** of your **in-repo addon**?
 
 Read more about how **collocated in-repo test files** are able to make your developer life easier in [this **shiny, new Request for Comments (RFC)**](https://github.com/emberjs/rfcs/pull/378). And as always, be sure to **leave your questions or ❤️ emojis** right below the RFC's pull request description! ✨
 
-
 ---
 
-## [ember-cli-deprecation-workflow 1.0.0 release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
+## [ember-cli-deprecation-workflow 1.0.0 Release 🎉](https://twitter.com/rwjblue/status/1045031033274605575)
 
-This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [1.0.0 of ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
+This week, [@rwjblue](https://github.com/rwjblue) (with help from [@mixonic](https://github.com/mixonic), [@atsao](https://github.com/atsao), and [@gaurav0](https://github.com/Gaurav0)) released [**1.0.0 of ember-cli-deprecation-workflow**](https://github.com/mixonic/ember-cli-deprecation-workflow/releases/tag/v1.0.0)!
 
 [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) is an addon geared towards making Ember upgrades easier by allowing you to work through deprecations without massive console noise from Ember 1.x and 2.x deprecations.
 
-It silences the `console.log` noise or "deprecation spew" via configuration so that only unhandled deprecations will be displayed in your console. And now that the spew has settled down, you can process one deprecation at a time while ensuring that no new deprecations are introduced.
+It silences the `console.log` noise or "deprecation spew" via configuration so that **only unhandled deprecations** will be **displayed in your console**. And now that the spew has settled down, you can process one deprecation at a time while ensuring that no new deprecations are introduced.
 
 Check it out on the [GitHub repo](https://github.com/mixonic/ember-cli-deprecation-workflow)!
 
@@ -46,30 +48,17 @@ As always, **leave your comments** and appreciation [below the original proposal
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [The Missing Docs Has Returned](https://github.com/emberjs/ember.js/pull/17002)
+There has been [some documentation missing](https://github.com/emberjs/ember.js/issues/16993) from the Ember API docs from the release of 3.3 to 3.4. [@Gaurav0](https://github.com/Gaurav0) has done some great detective work 🕵  and [fixed these issues](https://github.com/emberjs/ember.js/pull/17002) which means that **the missing documentation is now back.**
 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+Going forward the plan is to provide better testing for cases like this so you always have access to the documentation you need.
 
 ---
 
 ## [Issue Triage 🕵️](https://paper.dropbox.com/doc/Ember.js-Issue-Triage--ANXsBgi3NQNstI7fSMQIONfOAg-Bh6AEHTj1Bt4rXq0Awg4R)
 
 <p>
-  This week we had 5 volunteers helping 🚑 &nbsp;triage old issues that were inactive,
+  This week we had <strong>5 volunteers</strong> helping 🚑 &nbsp;<strong>triage old issues</strong> that were inactive,
   we closed 9 and labelled 31 of 50 from last week that need a submitter response 🙀.
   Those 31 may be closed in the next week or two. Together, we addressed 17 issues
   that were inactive (and are still open 📂). We are beginning to establish a cadence
@@ -80,20 +69,19 @@ As always, **leave your comments** and appreciation [below the original proposal
   <a href="https://paper.dropbox.com/doc/Triage-2018-09-21--ANXmzEWQ5mVFnbfufGK81Tj5Ag-BIKVPVdJqOS8q46TxJQKu">
     triage contributions
   </a> over the past two weeks 🙏…
-  <a href="https://github.com/yohanmishkin" target="gh-user">@yininge</a>,
+  <a href="https://github.com/yininge" target="gh-user">@yininge</a>,
   <a href="https://github.com/ryanlabouve" target="gh-user">@ryanlabouve</a>,
   <a href="https://github.com/yohanmishkin" target="gh-user">@yohanmishkin</a>,
   <a href="https://github.com/esbanarango" target="gh-user">@esbanarango</a>,
   <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, and
-  <a href="https://github.com/yohanmishkin" target="gh-user">@pixelhandler</a>.
+  <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>.
 </p>
 <p>
-  The <em>@emberjs/issues-team</em> objective is to increase signal-to-noise ratio of issues
+  The <em>@emberjs/issues-team</em> objective is to <strong>increase signal-to-noise ratio of issues</strong>
   and 🐛 &nbsp;bugs so that the core team (and contributors) can take action to resolve bugs,
   and spend less effort sorting the issues queue. Currently there are about 67 open bugs, of
-  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>)
-  , and 1 with a pull request - total count about 270. Our aim is to get down to 150 in the next
-  couple months. If you'd like to help see the
+  those 25 had a reproduction (e.g. using <a href="https://ember-twiddle.com">ember-twiddle.com</a>), and one with a pull request - total count about 270. Our aim is to get down to 150 in the next
+  couple months. If you'd like to <strong>help</strong> see the
   <a href="https://discordapp.com/channels/480462759797063690/480523776845414412">#issue-triage</a>
   room in the community Discord chat.
 </p>
@@ -102,11 +90,11 @@ As always, **leave your comments** and appreciation [below the original proposal
 
 ## [Contributors' Corner](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/iezer" target="gh-user">@iezer</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/mfeckie" target="gh-user">@mfeckie</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/greenkeeper[bot]" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/gandalfar" target="gh-user">@gandalfar</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/hybridmuse" target="gh-user">@hybridmuse</a> for their contributions to Ember and related repositories 💖!</p>
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/iezer" target="gh-user">@iezer</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/pixelhandler" target="gh-user">@pixelhandler</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/jrjohnson" target="gh-user">@jrjohnson</a>, <a href="https://github.com/tmquinn" target="gh-user">@tmquinn</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/mfeckie" target="gh-user">@mfeckie</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/SparshithNR" target="gh-user">@SparshithNR</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/gandalfar" target="gh-user">@gandalfar</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/hybridmuse" target="gh-user">@hybridmuse</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
-## [Got a question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
@@ -119,9 +107,11 @@ As always, **leave your comments** and appreciation [below the original proposal
 
 ---
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+## #embertimes
 
-You can find our posts on what's been going on in Emberland this week on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html) or in our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/).
+Want to write for the Ember Times? Have a suggestion for next week's issue? **Join us** at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
+
+Keep on top of what's been going on in Emberland this week by **subscribing to our [e-mail newsletter**](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
 ---
 
@@ -130,4 +120,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan, Alon Bukai and the Learning Team
+Bill Heaton, Chris Ng, Ryan Mark, Amy Lam, Kenneth Larsen, Jessica Jordan, Alon Bukai and the Learning Team
