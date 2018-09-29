@@ -1123,6 +1123,10 @@
   image: smileio.png
   alt: Smile.io
   use: "Smile's main web application is built with Ember.js"
+- url: "https://adfinis-sygroup.ch"
+  image: adfinis-sygroup.png
+  alt: Adfinis SyGroup
+  use: "Adfinis SyGroup uses Ember.js to build our customer, internal and open source projects."
 - url: "https://www.viavisolutions.com"
   image: viavi.png
   alt: VIAVI Solutions
