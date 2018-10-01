@@ -30,7 +30,7 @@
   }
 }
 
-.brand-logos li {
+.brand-logos > li {
   min-height: 110px;
   border: 1px solid rgba($black, .3);
   background-image: url("/images/brand/brand-bg.png");
@@ -60,6 +60,16 @@
 
   &:nth-child(3) {
     background-color: rgba($orange-darker, .9);
+  }
+}
+
+#content .brand-logos ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  li {
+    flex-basis: 25%;
   }
 }
 
