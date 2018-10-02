@@ -38,7 +38,7 @@ steps you can take:
 3. Post on the [Ember.js discussion forums](http://discuss.emberjs.com/)
    or ask in #emberjs.
 
-Please note that the discussion forums and #emberjs IRC channel are public
+Please note that the discussion forums and [emberjs discord server](https://discordapp.com/invite/zT3asNS) are public
 areas. When escalating in these venues, please do not discuss your
 issue. Simply say that you’re trying to get a hold of someone from the
 security team.
