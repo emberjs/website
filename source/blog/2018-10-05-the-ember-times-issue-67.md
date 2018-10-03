@@ -1,19 +1,32 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Ryan Mark, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Hello, pleased to eat you, Emberistas! -Dracula 🧛‍♂️
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Fall is here and so is Hacktoberfest! We're also sharing... 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Hacktoberfest 🎃🍻👨‍💻](https://hacktoberfest.digitalocean.com/)
 
+Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?! 
+
+Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on Discord and ask away with questions! Here are some issues to get you started:
+* [ember-learn/cli-guides-source](https://github.com/ember-learn/cli-guides-source/issues)
+* [ember-learn/ember-api-docs](https://github.com/ember-learn/ember-api-docs/labels/hacktoberfest)
+* [ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
+* [ember-learn/guides-source](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3Ahacktoberfest)
+* [emberjs/data](https://github.com/emberjs/data/labels/Hacktoberfest)
+* [emberjs/website](https://github.com/emberjs/website/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
+* [kaliber5/ember-bootstrap](https://github.com/kaliber5/ember-bootstrap/labels/Hacktoberfest)
+
+And don't forget to register on the [Hacktoberfest site](https://hacktoberfest.digitalocean.com/). 👻
 
 ---
 
@@ -79,7 +92,7 @@ responsive: true
 
 ## #embertimes 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at #support-ember-times on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
@@ -90,4 +103,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Ryan Mark, Amy Lam and the Learning Team
