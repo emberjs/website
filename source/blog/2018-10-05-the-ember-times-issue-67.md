@@ -18,14 +18,15 @@ Fall is here and so is Hacktoberfest! We're also sharing...
 Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?! 
 
 Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on Discord and ask away with questions! Here are some issues to get you started:
-* [emberjs/data](https://github.com/emberjs/data/labels/Hacktoberfest)
-* [ember-learn/guides-source](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3Ahacktoberfest)
 * [ember-learn/cli-guides-source](https://github.com/ember-learn/cli-guides-source/issues)
 * [ember-learn/ember-api-docs](https://github.com/ember-learn/ember-api-docs/labels/hacktoberfest)
+* [ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
+* [ember-learn/guides-source](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3Ahacktoberfest)
+* [emberjs/data](https://github.com/emberjs/data/labels/Hacktoberfest)
+* [emberjs/website](https://github.com/emberjs/website/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
 * [kaliber5/ember-bootstrap](https://github.com/kaliber5/ember-bootstrap/labels/Hacktoberfest)
 
 And don't forget to register on the [Hacktoberfest site](https://hacktoberfest.digitalocean.com/). 👻
-
 
 ---
 
