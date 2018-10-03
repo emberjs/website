@@ -33,7 +33,7 @@ It is part of the [Emberjs.com](https://emberjs.com/) website and managed by the
 
 ## Contributing
 
-Anyone can become an Ember times editor. The best way to start is to join #topic-embertimes channel on [Ember Community Slack](https://ember-community-slackin.herokuapp.com/). New blog posts are released every Friday. 
+Anyone can become an Ember times editor. The best way to start is to join [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) channel on [Ember Community Discord](https://discordapp.com/invite/zT3asNS). New blog posts are released every Friday.
 
 The process to publish a new weekly post is as follows:
 
