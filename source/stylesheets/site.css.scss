@@ -13,6 +13,7 @@
 @import 'vendor/docsearch';
 @import 'fonts';
 @import 'header';
+@import 'footer';
 @import 'survey-reminder';
 @import 'footer';
 
@@ -540,5 +541,7 @@ body.tomster_faq #content {
 }
 
 .cta-contribute {
+  font-size: 0.9em;
+  margin: 3em auto 1em auto;
   text-align: center;
 }

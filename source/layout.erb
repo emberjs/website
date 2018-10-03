@@ -25,7 +25,6 @@
     <% if current_page.data.no_index.eql? true %>
       <meta name="robots" content="noindex">
     <% end %>
-    <link rel="stylesheet" href="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-cf72b59a166beb307683d9d0dae6bb0f.css" />
     <%= yield_content :head %>
   </head>
 
@@ -60,11 +59,11 @@
 
     <div class="cta-contribute">
       <a title="Use GitHub to suggest an edit to this page" href="https://www.github.com/emberjs/website">
-        Contribute to this page
+        <small>Contribute to this page</small>
       </a>
     </div>
 
-    <main-footer></main-footer>
+    <%= partial "footer" %>
 
     <%= yield_content :foot %>
     <script type="text/javascript">
@@ -81,6 +80,6 @@
       })();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/custom-elements/1.0.0/custom-elements.min.js"></script>
-    <script src="https://glimmer-styleguide.global.ssl.fastly.net/glimmer-styleguide/master/app-e9fb0ee612345875c7e6f01760c81101.js"></script>
+    <script defer src="https://www.fastly-insights.com/insights.js?k=a78f015b-bbf7-440f-ba64-ccd4f870c45b"></script>
   </body>
 </html>

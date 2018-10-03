@@ -5,15 +5,17 @@
   twitter: https://twitter.com/wycats
   image: ykatz.jpg
   teams:
-    - core
+    - corejs
+    - steering
 - name: Tom Dale
   first: Tom
-  Last: Dale
+  last: Dale
   github: https://github.com/tomdale
   twitter: https://twitter.com/tomdale
   image: tdale.jpg
   teams:
-    - core
+    - corejs
+    - steering
 - name: Peter Wagenet
   first: Peter
   last: Wagenet
@@ -21,7 +23,7 @@
   twitter: https://twitter.com/wagenet
   image: pwagenet.jpg
   teams:
-    - corealumni
+    - alumni
 - name: Trek Glowacki
   first: Trek
   last: Glowack
@@ -29,7 +31,7 @@
   twitter: https://twitter.com/trek
   image: tglowaki.jpg
   teams:
-    - corealumni
+    - alumni
 - name: Erik Bryn
   first: Erik
   last: Bryn
@@ -37,7 +39,7 @@
   twitter: https://twitter.com/ebryn
   image: ebryn.jpg
   teams:
-    - corealumni
+    - alumni
 - name: Kris Selden
   first: Kris
   last: Selden
@@ -45,7 +47,7 @@
   twitter: https://twitter.com/krisselden
   image: kselden.jpg
   teams:
-    - core
+    - corejs
 - name: Stefan Penner
   first: Stefan
   last: Penner
@@ -53,7 +55,7 @@
   twitter: https://twitter.com/stefanpenner
   image: spenner.jpg
   teams:
-    - core
+    - corejs
     - cli
 - name: Leah Silber
   first: Leah
@@ -62,8 +64,9 @@
   twitter: https://twitter.com/wifelette
   image: lsilber.jpg
   teams:
-    - core
+    - corejs
     - learning
+    - steering
 - name: Alex Matchneer
   first: Alex
   last: Matchneer
@@ -71,7 +74,7 @@
   twitter: https://twitter.com/machty
   image: amatchneer.jpg
   teams:
-    - corealumni
+    - alumni
 - name: Robert Jackson
   first: Robert
   last: Jackson
@@ -79,7 +82,7 @@
   twitter: https://twitter.com/rwjblue
   image: rjackson.jpg
   teams:
-    - core
+    - corejs
     - cli
 - name: Igor Terzic
   first: Igor
@@ -88,7 +91,7 @@
   twitter: https://twitter.com/terzicigor
   image: iterzic.jpeg
   teams:
-    - core
+    - corejs
     - data
 - name: Matthew Beale
   first: Matthew
@@ -97,7 +100,7 @@
   twitter: https://twitter.com/mixonic
   image: mbeale.jpg
   teams:
-    - core
+    - corejs
 - name: Edward Faulkner
   first: Edward
   last: Faulkner
@@ -105,7 +108,8 @@
   twitter: https://twitter.com/eaf4
   image: efaulkner.jpg
   teams:
-    - core
+    - corejs
+    - steering
 - name: Martin Muñoz
   first: Martin
   last: Muñoz
@@ -113,7 +117,7 @@
   twitter: https://twitter.com/_mmun
   image: mmunoz.jpg
   teams:
-    - core
+    - alumni
 - name: Dan Gebhardt
   first: Dan
   last: Gebhardt
@@ -121,7 +125,7 @@
   twitter: https://twitter.com/dgeb
   image: dgeb.jpg
   teams:
-    - core
+    - corejs
 - name: Godfrey Chan
   first: Godfrey
   last: Chan
@@ -129,7 +133,7 @@
   twitter: https://twitter.com/chancancode
   image: godfrey.jpg
   teams:
-    - core
+    - corejs
 - name: Brendan McLoughlin
   first: Brendan
   last: McLoughlin
@@ -177,7 +181,7 @@
   twitter: https://twitter.com/locks
   image: rmendes.jpg
   teams:
-    - core
+    - corejs
     - learning
 - name: Todd Jordan
   first: Todd
@@ -195,8 +199,7 @@
   twitter: https://twitter.com/chadhietala
   image: chietala.jpg
   teams:
-    - core
-    - cli
+    - corejs
 - name: Jacob Bixby
   first: Jacob
   last: Bixby
@@ -204,7 +207,7 @@
   twitter: https://twitter.com/trabus
   image: jbixby.jpg
   teams:
-    - cli
+    - alumni
 - name: Katie Gengler
   first: Katie
   last: Gengler
@@ -212,8 +215,9 @@
   twitter: https://twitter.com/katiegengler
   image: kgengler.jpg
   teams:
-    - core
+    - corejs
     - cli
+    - steering
 - name: Kelly Selden
   first: Kelly
   last: Selden
@@ -229,7 +233,7 @@
   twitter: https://twitter.com/nathanhammond
   image: nhammond.jpg
   teams:
-    - cli
+    - alumni
 - name: Tobias Bieniek
   first: Tobias
   last: Bieniek
@@ -285,8 +289,9 @@
   twitter: https://twitter.com/melaniersumner
   image: msumner.jpg
   teams:
-    - core
+    - corejs
     - learning
+    - steering
 - name: Alex Navasardyan
   first: Alex
   last: Navasardyan

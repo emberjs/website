@@ -5,7 +5,12 @@ responsive: true
 ---
 <% @title = tagname %>
 
-<h1 class="text-left"><%= tagname %></h1>
+<% if tagname == 'Newsletter' || tagname == 'Ember Times' %>
+  <h1 class="text-left blog-header--invisible"><%= tagname %></h1>
+  <div class="large ember-times-logo"></div>
+<% else %>
+  <h1 class="text-left"><%= tagname %></h1>
+<% end %>
 
 <% page_articles.each_with_index do |article, i| %>
   <article class="blog-post">

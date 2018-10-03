@@ -111,12 +111,16 @@ helpers do
     "<li#{class_name}><a href=\"#{url}\">#{name}</a></li>"
   end
 
+  def inline_svg(path_to_file_inside_images)
+    image_path = File.join(config[:source], config[:images_dir], path_to_file_inside_images)
+    File.open(image_path, &:read)
+  end
+
   def page_classes(page)
     classes = super
     return 'not-found' if classes == '404'
 
     classes += ' responsive'
-
   end
 end
 
@@ -124,3 +128,5 @@ end
 # Redirects (These must be last!)
 ###
 activate :alias
+
+redirect "homepage-survey.html", to: "https://tilde.wufoo.com/forms/welcome-to-the-ember-homepage-survey/"

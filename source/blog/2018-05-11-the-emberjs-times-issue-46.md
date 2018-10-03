@@ -1,5 +1,5 @@
 ---
-title: The Ember.js Times - Issue No. 46
+title: The Ember Times - Issue No. 46
 author: Gaurav Munjal, Edward Faulkner, Sivakumar Kailasam, Kenneth Larsen, Amy Lam, Jessica Jordan
 tags: Newsletter, Ember.js Times, 2018
 alias : "blog/2018/05/11/the-emberjs-times-issue-46.html"
@@ -8,7 +8,7 @@ responsive: true
 
 හෙලෝ Emberistas!
 
-Again you can enjoy reading the Ember.js Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/11/issue-46) and the [blog format](https://emberjs.com/blog/2018/05/11/the-emberjs-times-issue-46.html) to share it even better with your Ember friends.
+Again you can enjoy reading The Ember Times in both the [e-mail](https://the-emberjs-times.ongoodbits.com/2018/05/11/issue-46) and the [blog format](https://emberjs.com/blog/2018/05/11/the-emberjs-times-issue-46.html) to share it even better with your Ember friends.
 
 This week we'll highlight a new RFC deprecating features from ancient Ember times and a sweet reminder for blogging about your best wishes for Ember and - last, but not least - we have a brand-new Readers' Question❓✨ for you!
 

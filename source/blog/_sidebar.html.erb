@@ -1,5 +1,5 @@
   <div class="blog-sidebar">
-  <h4 class="list-group-title" id="recent-posts">Recent Posts</h4>
+  <h3 class="list-group-title" id="recent-posts">Recent Posts</h3>
   <ul class="list-group" aria-labelledby="recent-posts">
     <% blog.tags['Recent Posts'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
       <li class='list-item'><%= link_to article.title, article %></li>
@@ -7,7 +7,7 @@
     <li class="list-item"><a href="<%= tag_path 'Recent posts'%>">More Recent Posts...</a></li>
   </ul>
 
-  <h4 class="list-group-title" id="releases">Releases</h4>
+  <h3 class="list-group-title" id="releases">Releases</h3>
   <ul class="list-group" aria-labelledby="releases">
     <% blog.tags['Releases'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
       <li class='list-item'><%= link_to article.title, article %></li>
@@ -15,7 +15,7 @@
     <li class="list-item"><a href="<%= tag_path 'Releases'%>">More Releases...</a></li>
   </ul>
 
-  <h4 class="list-group-title" id="newsletter">Ember.js Times</h4>
+  <h3 class="list-group-title" id="newsletter">Ember.js Times</h3>
   <ul class="list-group" aria-labelledby="newsletter">
     <% blog.tags['Newsletter'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
       <li class='list-item'><%= link_to article.title, article %></li>
@@ -24,7 +24,7 @@
   </ul>
 
 
-  <h4 class="list-group-title" id="browse-year">Browse by Year</h4>
+  <h3 class="list-group-title" id="browse-year">Browse by Year</h3>
   <ul class="list-group" aria-labelledby="browse-year">
     <li class="list-item list-inline">
       <a href="<%= tag_path '2012'%>">2012</a>
@@ -49,7 +49,7 @@
     </li>
   </ul>
 
-  <h4 class="list-group-title" id="browse-version">Browse by Major Version</h4>
+  <h3 class="list-group-title" id="browse-version">Browse by Major Version</h3>
   <ul class="list-group" aria-labelledby="browse-version">
     <li class="list-item list-inline">
       <a href="<%= tag_path 'version 1.x'%>">1.x</a>
@@ -62,11 +62,12 @@
     </li>
   </ul>
 
-  <h4 class="list-group-title" id="browse-subject">Browse by Subject</h4>
+  <h3 class="list-group-title" id="browse-subject">Browse by Subject</h3>
   <ul class="list-group" aria-labelledby="browse-subject">
     <li class="list-item"><a href="<%= tag_path 'Announcement'%>">Announcements</a></li>
     <li class="list-item"><a href="<%= tag_path 'Ember CLI'%>">Ember CLI</a></li>
     <li class="list-item"><a href="<%= tag_path 'Ember Data'%>">Ember Data</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Newsletter'%>">Newsletter</a></li>
     <li class="list-item"><a href="<%= tag_path 'Performance'%>">Performance</a></li>
     <li class="list-item"><a href="<%= tag_path 'Roadmap'%>">Roadmap</a></li>
     <li class="list-item"><a href="<%= tag_path 'Security'%>">Security</a></li>
