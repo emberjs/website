@@ -1,7 +1,8 @@
 .meetup-assets {
   .example-meetups-logo {
     float: right;
-    @include margin(null null 15px 15px);
+    margin-bottom: 15px;
+    margin-left: 15px;
     max-width: 45%;
   }
   .meetups-header {
