@@ -44,7 +44,8 @@ To try this out today just use this [starter kit](https://codesandbox.io/s/githu
 
 To learn more make sure to check out the [blog post](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa) and follow [Mike on Twitter](https://twitter.com/michaellnorth/status/1047231228020023296) to stay updated!
 
-=======
+---
+
 ## [Introducing: Storybook for Ember! 📖](https://github.com/storybooks/storybook/pull/4237)
 
 With the [v4.0.0 alpha release](https://github.com/storybooks/storybook/releases/tag/v4.0.0-alpha.24) of Storybook, [@gabrielcsapo](https://github.com/gabrielcsapo) helped provide an exciting addition to Ember tooling - [adding Storybook support](https://github.com/storybooks/storybook/pull/4237)!
