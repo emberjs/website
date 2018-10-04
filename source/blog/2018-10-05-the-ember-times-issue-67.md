@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 67
-author: Ryan Mark, Amy Lam, Alon Bukai
+author: Alon Bukai, Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/05-the-ember-times-issue-67.html"
 responsive: true
@@ -9,13 +9,13 @@ responsive: true
 Hello, pleased to eat you, Emberistas! -Dracula 🧛‍♂️
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Fall is here and so is Hacktoberfest! We're also sharing... 
+Fall is here and so is Hacktoberfest! We're also sharing...
 
 ---
 
 ## [Hacktoberfest 🎃🍻👨‍💻](https://hacktoberfest.digitalocean.com/)
 
-Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?! 
+Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?!
 
 Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on Discord and ask away with questions! Here are some issues to get you started:
 * [ember-learn/cli-guides-source](https://github.com/ember-learn/cli-guides-source/issues)
@@ -43,6 +43,14 @@ There are of course a few issues that Mike is working on fixing, but we believe 
 To try this out today just use this [starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output) or if you are feeling adventurous try out this [TypeScript start kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/typescript)
 
 To learn more make sure to check out the [blog post](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa) and follow [Mike on Twitter](https://twitter.com/michaellnorth/status/1047231228020023296) to stay updated!
+=======
+## [Introducing: Storybook for Ember! 📖](https://github.com/storybooks/storybook/pull/4237)
+
+With the [v4.0.0 alpha release](https://github.com/storybooks/storybook/releases/tag/v4.0.0-alpha.24) of Storybook, [@gabrielcsapo](https://github.com/gabrielcsapo) helped provide an exciting addition to Ember tooling - [adding Storybook support](https://github.com/storybooks/storybook/pull/4237)!
+
+[Storybook](https://github.com/storybooks/storybook) is a separate UI **development environment** for your UI components. It allows you to explore your **component library**, work on a **single component in isolation**, and view the **different states of each component**. This enables developers to see the functioning UI of the component along with expectations on what to pass as arguments to that component to behave in a certain way.
+
+There are plenty of [featured examples](https://storybook.js.org/examples/) that you can reference to see how Storybook works. We are excited to see the productivity and convenience this tool will bring to Ember!
 
 ---
 
@@ -66,13 +74,20 @@ To learn more make sure to check out the [blog post](https://medium.com/@mikenor
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Create the Freshest Ember ClI Docs 🥒](https://github.com/ember-learn/cli-guides-source/issues/3)
 
+Do you ❤️ **Ember CLI**? And would you like to help the community to share this appreciation even further?
+Then be sure, to check out this [**new Quest Issue** for writing the brand-new documentation for Ember CLI](https://github.com/ember-learn/cli-guides-source/issues/3)! 💛
+
+**Help is needed** for anything ranging from copy-pasta-ing 🍝 to greenfield writing. To sign up and join the crowd, simply [add a comment to the Quest Issue](https://github.com/ember-learn/cli-guides-source/issues/3) and volunteer for a task.
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember Twiddle to the Next Level 🐹🎢](https://ember-twiddle.com/)
 
+Your favorite tool for **sharing** Ember specific **code examples** with your colleagues and friends is out with a brand-new patch release! [**Ember Twiddle v0.15.1**](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.15.1) comes with **support** for the **latest version of Ember** and **ember-decorators**, improved installation instructions and much more.
+
+In case you haven't twiddled yet, it's about time to [create your first Twiddle today](https://ember-twiddle.com/)! 📝
 
 ---
 
@@ -84,7 +99,7 @@ To learn more make sure to check out the [blog post](https://medium.com/@mikenor
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/kgautreaux" target="gh-user">@kgautreaux</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jeffdaley" target="gh-user">@jeffdaley</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/RyanGee" target="gh-user">@RyanGee</a>, <a href="https://github.com/ftonato" target="gh-user">@ftonato</a>, <a href="https://github.com/ruandev" target="gh-user">@ruandev</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/patrickmcintire-viavi" target="gh-user">@patrickmcintire-viavi</a>, <a href="https://github.com/Dhaulagiri" target="gh-user">@Dhaulagiri</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/makepanic" target="gh-user">@makepanic</a>, <a href="https://github.com/hjdivad" target="gh-user">@hjdivad</a>, <a href="https://github.com/toddjordan" target="gh-user">@toddjordan</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/chiragpat" target="gh-user">@chiragpat</a>, <a href="https://github.com/rondale-sc" target="gh-user">@rondale-sc</a>, <a href="https://github.com/smfoote" target="gh-user">@smfoote</a>, <a href="https://github.com/HuggableSquare" target="gh-user">@HuggableSquare</a>, <a href="https://github.com/ynotdraw" target="gh-user">@ynotdraw</a>, <a href="https://github.com/localpcguy" target="gh-user">@localpcguy</a>, <a href="https://github.com/ybakos" target="gh-user">@ybakos</a>, <a href="https://github.com/nightire" target="gh-user">@nightire</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/josemarluedke" target="gh-user">@josemarluedke</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/patocallaghan" target="gh-user">@patocallaghan</a>, <a href="https://github.com/underoot" target="gh-user">@underoot</a>, <a href="https://github.com/BradenLawrence" target="gh-user">@BradenLawrence</a>, <a href="https://github.com/Akash4927" target="gh-user">@Akash4927</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/gokatz" target="gh-user">@gokatz</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/Parrryy" target="gh-user">@Parrryy</a>, <a href="https://github.com/John-E5" target="gh-user">@John-E5</a>, <a href="https://github.com/donofriov" target="gh-user">@donofriov</a> and <a href="https://github.com/CosmicWebServices" target="gh-user">@CosmicWebServices</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -103,7 +118,7 @@ To learn more make sure to check out the [blog post](https://medium.com/@mikenor
 
 ## #embertimes 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
@@ -114,4 +129,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Ryan Mark, Amy Lam, Alon Bukai and the Learning Team
+Alon Bukai, Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan and the Learning Team
