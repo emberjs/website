@@ -32,7 +32,7 @@ And don't forget to register on the [Hacktoberfest site](https://hacktoberfest.d
 
 ## [Come Play in the Ember CodeSandbox 🏖️🏰](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa)
 
-[CodeSandbox](codesandbox.io) is an online code editor for the Web, and now for Ember as well! [Mike North](https://github.com/mike-north) has done a lot of work to get Ember CLI working inside of CodeSandbox so that we can develop, showcase, share live apps on the web! 
+[CodeSandbox](https://codesandbox.io) is an online code editor for the Web, and now for Ember as well! [Mike North](https://github.com/mike-north) has done a lot of work to get Ember CLI working inside of CodeSandbox so that we can develop, showcase, share live apps on the web! 
 
 What allowed this to happen is that CodeSandbox released server-side evaluated sandboxes which now allows CLI Node apps to run and be served by the site. 
 
@@ -114,4 +114,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Ryan Mark, Amy Lam and the Learning Team
+Ryan Mark, Amy Lam, Alon Bukai and the Learning Team
