@@ -1,8 +1,8 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan
+title: The Ember Times - Issue No. 67
+author: Alon Bukai, Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/10/05-the-ember-times-issue-67.html"
 responsive: true
 ---
 
@@ -27,6 +27,22 @@ Looking for something to work on? Pop into the [#hacktoberfest](https://discorda
 * [kaliber5/ember-bootstrap](https://github.com/kaliber5/ember-bootstrap/labels/Hacktoberfest)
 
 And don't forget to register on the [Hacktoberfest site](https://hacktoberfest.digitalocean.com/). 👻
+
+---
+
+## [Come Play in the Ember CodeSandbox 🏖️🏰](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa)
+
+[CodeSandbox](https://codesandbox.io) is an online code editor for the Web, and now for Ember as well! [@mike-north](https://github.com/mike-north) has done a lot of work to get Ember CLI working inside of CodeSandbox so that we can develop, showcase, and share live apps on the web! 
+
+What allowed this to happen is that CodeSandbox released server-side evaluated sandboxes, which now allows CLI Node apps to run and be served by the site. 
+
+Of course we want to give a shoutout to [@Guarav0](https://github.com/Gaurav0) and the rest of the [Ember Twiddle](https://ember-twiddle.com/) team for their **amazing** work. The way Ember Twiddle works is by [emulating](https://github.com/ember-cli/ember-twiddle/blob/ac116eb20d1e6c2152313f865159c443a9e2bd6f/app/services/ember-cli.js#L261-L295) a node environment. With CodeSandbox, we get **real Ember CLI** out of the box.
+
+There are of course a few issues that Mike is working on fixing, but we believe that this will be stable and usable soon. For example, `ember new app` doesn't work.
+
+To try this out today just use this [starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output) or if you are feeling adventurous try out this [TypeScript start kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/typescript).
+
+To learn more make sure to check out the [blog post](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa) and follow [Mike on Twitter](https://twitter.com/michaellnorth/status/1047231228020023296) to stay updated!
 
 ---
 
@@ -75,7 +91,6 @@ Your favorite tool for **sharing** Ember specific **code examples** with your co
 
 In case you haven't twiddled yet, it's about time to [create your first Twiddle today](https://ember-twiddle.com/)! 📝
 
-
 ---
 
 ## [SECTION TITLE](#section-url)
@@ -116,4 +131,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan and the Learning Team
+Alon Bukai, Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan and the Learning Team
