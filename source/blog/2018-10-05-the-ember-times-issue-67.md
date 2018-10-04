@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Ryan Mark, Amy Lam, Chris Ng
+author: Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -60,7 +60,7 @@ There are plenty of [featured examples](https://storybook.js.org/examples/) that
 
 ---
 
-## [Help Create The Freshest Ember CLI Docs ](https://github.com/ember-learn/cli-guides-source/issues/3)
+## [Help Create the Freshest Ember ClI Docs 🥒](https://github.com/ember-learn/cli-guides-source/issues/3)
 
 Do you ❤️ **Ember CLI**? And would you like to help the community to share this appreciation even further?
 Then be sure, to check out this [**new Quest Issue** for writing the brand-new documentation for Ember CLI](https://github.com/ember-learn/cli-guides-source/issues/3)! 💛
@@ -69,10 +69,9 @@ Then be sure, to check out this [**new Quest Issue** for writing the brand-new d
 
 ---
 
-## [Ember Twiddle To The Next Level 🐹🎢](https://ember-twiddle.com/)
+## [Ember Twiddle to the Next Level 🐹🎢](https://ember-twiddle.com/)
 
-Your favorite tool for **sharing** Ember specific **code examples** with your colleagues and friends is out with a brand-new patch release! [**Ember Twiddle v0.15.1**](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.15.1) comes with **support** for the **latest version of Ember** and **ember-decorators**, improved installation instructions
-and much more.
+Your favorite tool for **sharing** Ember specific **code examples** with your colleagues and friends is out with a brand-new patch release! [**Ember Twiddle v0.15.1**](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.15.1) comes with **support** for the **latest version of Ember** and **ember-decorators**, improved installation instructions and much more.
 
 In case you haven't twiddled yet, it's about time to [create your first Twiddle today](https://ember-twiddle.com/)! 📝
 
@@ -117,4 +116,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Ryan Mark, Amy Lam, Chris Ng, and the Learning Team
+Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan and the Learning Team
