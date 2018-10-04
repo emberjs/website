@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Ryan Mark, Amy Lam
+author: Ryan Mark, Amy Lam, Chris Ng
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -30,8 +30,13 @@ And don't forget to register on the [Hacktoberfest site](https://hacktoberfest.d
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Introducing: Storybook for Ember! 📖](https://github.com/storybooks/storybook/pull/4237)
 
+With the [v4.0.0 alpha release](https://github.com/storybooks/storybook/releases/tag/v4.0.0-alpha.24) of Storybook, [@gabrielcsapo](https://github.com/gabrielcsapo) helped provide an exciting addition to Ember tooling - [adding Storybook support](https://github.com/storybooks/storybook/pull/4237)!
+
+[Storybook](https://github.com/storybooks/storybook) is a separate UI development environment for your UI components. It allows you to explore your component library, work on a single component in isolation, and view the different states of each component. This enables developers to see the functioning UI of the component along with expectations on what to pass as arguments to that component to behave in a certain way.
+
+There are plenty of [featured examples](https://storybook.js.org/examples/) that you can reference to see how Storybook works. We are excited to see the productivity and convenience this tool will bring to Ember!
 
 ---
 
@@ -103,4 +108,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Ryan Mark, Amy Lam and the Learning Team
+Ryan Mark, Amy Lam, Chris Ng, and the Learning Team
