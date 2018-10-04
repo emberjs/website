@@ -60,8 +60,12 @@ There are plenty of [featured examples](https://storybook.js.org/examples/) that
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Create The Freshest Ember CLI Docs ](https://github.com/ember-learn/cli-guides-source/issues/3)
 
+Do you ❤️ **Ember CLI**? And would you like to help the community to share this appreciation even further?
+Then be sure, to check out this [**new Quest Issue** for writing the brand-new documentation for Ember CLI](https://github.com/ember-learn/cli-guides-source/issues/3)! 💛
+
+**Help is needed** for anything ranging from copy-pasta-ing 🍝 to greenfield writing. To sign up and join the crowd, simply [add a comment to the Quest Issue](https://github.com/ember-learn/cli-guides-source/issues/3) and volunteer for a task.
 
 ---
 
@@ -102,7 +106,7 @@ In case you haven't twiddled yet, it's about time to [create your first Twiddle 
 
 ## #embertimes 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
