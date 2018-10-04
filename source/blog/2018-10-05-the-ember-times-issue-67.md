@@ -9,13 +9,13 @@ responsive: true
 Hello, pleased to eat you, Emberistas! -Dracula 🧛‍♂️
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Fall is here and so is Hacktoberfest! We're also sharing... 
+Fall is here and so is Hacktoberfest! We're also sharing...
 
 ---
 
 ## [Hacktoberfest 🎃🍻👨‍💻](https://hacktoberfest.digitalocean.com/)
 
-Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?! 
+Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?!
 
 Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on Discord and ask away with questions! Here are some issues to get you started:
 * [ember-learn/cli-guides-source](https://github.com/ember-learn/cli-guides-source/issues)
@@ -65,7 +65,12 @@ There are plenty of [featured examples](https://storybook.js.org/examples/) that
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember Twiddle To The Next Level 🐹🎢](https://ember-twiddle.com/)
+
+Your favorite tool for **sharing** Ember specific **code examples** with your colleagues and friends is out with a brand-new patch release! [**Ember Twiddle v0.15.1**](https://github.com/ember-cli/ember-twiddle/releases/tag/v0.15.1) comes with **support** for the **latest version of Ember** and **ember-decorators**, improved installation instructions
+and much more.
+
+In case you haven't twiddled yet, it's about time to [create your first Twiddle today](https://ember-twiddle.com/)! 📝
 
 
 ---
