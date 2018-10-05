@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 67
 author: Alon Bukai, Ryan Mark, Amy Lam, Chris Ng, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/05-the-ember-times-issue-67.html"
 responsive: true
 ---
