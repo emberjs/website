@@ -17,6 +17,7 @@ Hello, pleased to eat you, Emberistas! -Dracula 😈
 Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?!
 
 Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on Discord and ask away with questions! Here are some issues to get you started:
+
 * [ember-learn/cli-guides-source](https://github.com/ember-learn/cli-guides-source/issues)
 * [ember-learn/ember-api-docs](https://github.com/ember-learn/ember-api-docs/labels/hacktoberfest)
 * [ember-learn/ember-styleguide](https://github.com/ember-learn/ember-styleguide/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
@@ -24,7 +25,8 @@ Looking for something to work on? Pop into the [#hacktoberfest](https://discorda
 * [emberjs/data](https://github.com/emberjs/data/labels/Hacktoberfest)
 * [emberjs/website](https://github.com/emberjs/website/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
 * [kaliber5/ember-bootstrap](https://github.com/kaliber5/ember-bootstrap/labels/Hacktoberfest)
-* Want to help improve Ember Observer? Have a friend or coworker looking for their first open source pull request? A mere 977 addon repos on [emberobserver.com/lists/invalid-repo-url](https://emberobserver.com/lists/invalid-repo-url) are missing the `repository` key from their `package.json`. For more info, reference the [npm docs](https://docs.npmjs.com/files/package.json#repository), and some sample pull requests [[1](https://github.com/Addepar/addepar-ember-toolbox/pull/29), [2](https://github.com/Duder-onomy/ember-fetch-jsonp/pull/45)]...rinse and repeat for every addon repo. Thanks [@cah-danmonroe](https://github.com/cah-danmonroe) and [@ctpip](https://github.com/ctcpip) for getting this effort started! 💯
+
+Want to help improve Ember Observer? Have a friend or coworker looking for their first open source pull request? A mere 977 addon repos on [emberobserver.com/lists/invalid-repo-url](https://emberobserver.com/lists/invalid-repo-url) are missing the `repository` key from their `package.json`. For more info, reference the [npm docs](https://docs.npmjs.com/files/package.json#repository), and some sample pull requests [[1](https://github.com/Addepar/addepar-ember-toolbox/pull/29), [2](https://github.com/Duder-onomy/ember-fetch-jsonp/pull/45)]...rinse and repeat for every addon repo. Thanks [@cah-danmonroe](https://github.com/cah-danmonroe) and [@ctpip](https://github.com/ctcpip) for getting this effort started! 💯
 
 ...and don't forget to register on the [Hacktoberfest site](https://hacktoberfest.digitalocean.com/). 👻
 
