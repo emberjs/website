@@ -16,7 +16,7 @@ Hello, pleased to eat you, Emberistas! -Dracula 😈
 
 Trick or treat! The fifth annual Hacktoberfest is here! Support open source and earn a limited edition T-shirt by making **five** pull requests this month to any public repos...why not all Ember ones?!
 
-Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on [the Ember Community Discord](https://discordapp.com/invite/zT3asNS) and ask away with questions! Here are some issues to get you started:
+Looking for something to work on? Pop into the [#hacktoberfest](https://discordapp.com/channels/480462759797063690/496453502298750988) channel on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) and ask away with questions! Here are some issues to get you started:
 
 * [ember-learn/cli-guides-source](https://github.com/ember-learn/cli-guides-source/issues)
 * [ember-learn/ember-api-docs](https://github.com/ember-learn/ember-api-docs/labels/hacktoberfest)
@@ -42,7 +42,7 @@ Of course we want to give a shoutout to [@Gaurav0](https://github.com/Gaurav0) a
 
 There are of course a few issues that Mike is working on fixing, but we believe that this will be stable and usable soon. For example, `ember new app` doesn't work.
 
-To try this out today just use this [starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output) or if you are feeling **adventurous** try out this [TypeScript start kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/typescript).
+To try this out today just use this [starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output) or if you are feeling **adventurous** try out this [TypeScript starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/typescript).
 
 To learn more make sure to check out the [blog post](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa) and follow [Mike on Twitter](https://twitter.com/michaellnorth/status/1047231228020023296) to stay updated!
 
