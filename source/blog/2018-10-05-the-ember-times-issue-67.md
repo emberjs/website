@@ -8,8 +8,7 @@ responsive: true
 
 Hello, pleased to eat you, Emberistas! -Dracula 🧛‍♂️
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Fall is here and so is Hacktoberfest! We're also sharing...
+🍂 Fall is here and so is Hacktoberfest for Ember, CodeSandbox for Ember, and Storybook for Ember! We're also advertising **Help Wanted** for the new Ember CLI docs and the latest Ember Twiddle release! Read on in this week's issue...
 
 ---
 
@@ -25,8 +24,9 @@ Looking for something to work on? Pop into the [#hacktoberfest](https://discorda
 * [emberjs/data](https://github.com/emberjs/data/labels/Hacktoberfest)
 * [emberjs/website](https://github.com/emberjs/website/issues?q=is%3Aissue+is%3Aopen+label%3Ahacktoberfest)
 * [kaliber5/ember-bootstrap](https://github.com/kaliber5/ember-bootstrap/labels/Hacktoberfest)
+* Want to help improve Ember Observer? Have a friend or coworker looking for their first open source pull request? A mere 977 addon repos on [emberobserver.com/lists/invalid-repo-url](https://emberobserver.com/lists/invalid-repo-url) are missing the `repository` key from their `package.json`. For more info, reference the [npm docs](https://docs.npmjs.com/files/package.json#repository), and some sample pull requests [[1](https://github.com/Addepar/addepar-ember-toolbox/pull/29), [2](https://github.com/Duder-onomy/ember-fetch-jsonp/pull/45)]...rinse and repeat for every addon repo. Thanks [@cah-danmonroe](https://github.com/cah-danmonroe) and [@ctpip](https://github.com/ctcpip) for getting this effort started! 💯
 
-And don't forget to register on the [Hacktoberfest site](https://hacktoberfest.digitalocean.com/). 👻
+...and don't forget to register on the [Hacktoberfest site](https://hacktoberfest.digitalocean.com/). 👻
 
 ---
 
@@ -56,27 +56,7 @@ There are plenty of [featured examples](https://storybook.js.org/examples/) that
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [Help Create the Freshest Ember ClI Docs 🥒](https://github.com/ember-learn/cli-guides-source/issues/3)
+## [Help Create the Freshest Ember CLI Docs 🥒](https://github.com/ember-learn/cli-guides-source/issues/3)
 
 Do you ❤️ **Ember CLI**? And would you like to help the community to share this appreciation even further?
 Then be sure, to check out this [**new Quest Issue** for writing the brand-new documentation for Ember CLI](https://github.com/ember-learn/cli-guides-source/issues/3)! 💛
@@ -92,12 +72,6 @@ Your favorite tool for **sharing** Ember specific **code examples** with your co
 In case you haven't twiddled yet, it's about time to [create your first Twiddle today](https://ember-twiddle.com/)! 📝
 
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -118,7 +92,7 @@ In case you haven't twiddled yet, it's about time to [create your first Twiddle 
 
 ---
 
-## #embertimes 📰
+## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
 Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
