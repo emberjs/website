@@ -6,7 +6,7 @@ alias : "blog/2018/10/05-the-ember-times-issue-67.html"
 responsive: true
 ---
 
-Hello, pleased to eat you, Emberistas! -Dracula 🧛‍♂️
+Hello, pleased to eat you, Emberistas! -Dracula 😈
 
 🍂 Fall is here and so is Hacktoberfest for Ember, CodeSandbox for Ember, and Storybook for Ember! We're also advertising **Help Wanted** for the new Ember CLI docs and the latest Ember Twiddle release! Read on in this week's issue...
 
@@ -32,11 +32,11 @@ Looking for something to work on? Pop into the [#hacktoberfest](https://discorda
 
 ## [Come Play in the Ember CodeSandbox 🏖️🏰](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa)
 
-[CodeSandbox](https://codesandbox.io) is an online code editor for the Web, and now for Ember as well! [@mike-north](https://github.com/mike-north) has done a lot of work to get Ember CLI working inside of CodeSandbox so that we can develop, showcase, and share live apps on the web! 
+[CodeSandbox](https://codesandbox.io) is an online code editor for the Web, and now for Ember as well! [@mike-north](https://github.com/mike-north) has done a lot of work to get Ember CLI working inside of CodeSandbox so that we can develop, showcase, and share live apps on the web!
 
-What allowed this to happen is that CodeSandbox released server-side evaluated sandboxes, which now allows CLI Node apps to run and be served by the site. 
+What allowed this to happen is that CodeSandbox released server-side evaluated sandboxes, which now allows CLI Node apps to run and be served by the site.
 
-Of course we want to give a shoutout to [@Guarav0](https://github.com/Gaurav0) and the rest of the [Ember Twiddle](https://ember-twiddle.com/) team for their **amazing** work. The way Ember Twiddle works is by [emulating](https://github.com/ember-cli/ember-twiddle/blob/ac116eb20d1e6c2152313f865159c443a9e2bd6f/app/services/ember-cli.js#L261-L295) a node environment. With CodeSandbox, we get **real Ember CLI** out of the box.
+Of course we want to give a shoutout to [@Gaurav0](https://github.com/Gaurav0) and the rest of the [Ember Twiddle](https://ember-twiddle.com/) team for their **amazing** work. The way Ember Twiddle works is by [emulating](https://github.com/ember-cli/ember-twiddle/blob/ac116eb20d1e6c2152313f865159c443a9e2bd6f/app/services/ember-cli.js#L261-L295) a node environment. With CodeSandbox, we get **real Ember CLI** out of the box.
 
 There are of course a few issues that Mike is working on fixing, but we believe that this will be stable and usable soon. For example, `ember new app` doesn't work.
 
