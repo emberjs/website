@@ -23,6 +23,7 @@ You can read more about our general release process here:
 Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.4
+
 The 3.4.0 release is an Ember.js Long-Term Support candidate. In six weeks, the 3.4.x series will become the latest LTS release and six weeks after that the 2.18 LTS branch will no longer receive bugfix patches.
 
 For more information about Ember's LTS policies, see the [announcement blog post](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html) and [builds page](http://emberjs.com/builds/).
@@ -30,7 +31,8 @@ For more information about Ember's LTS policies, see the [announcement blog post
 Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is one (1) new feature, three (3) deprecations, and eight (8) bugfixes in this version.
 
 #### New Features (2)
-Angle Bracket Invocation (1 of 2)
+
+**Angle Bracket Invocation (1 of 2)**
 
 In Ember 3.4 it is now possible to use angle bracket invocation. This means that you're now able to replace the classic invocation syntax:
 
@@ -84,6 +86,7 @@ Closure actions solve those problems and are also more intuitive to use.
 To read more about this deprecation and how to refactor your existing code have a look at [the deprecations page](https://emberjs.com/deprecations/v3.x#toc_ember-component-send-action).
 
 **Ember 2 Legacy (2 of 2)**
+
  Version 3.4 is the last version of Ember that will work with the polyfill addon for features that were deprecated in 2.x. If you have been using [ember-2-legacy](https://github.com/emberjs/ember-2-legacy), it's time to move forward.
 
 ---
@@ -148,15 +151,15 @@ Ember CLI 3.4.0 is also effectively fast-forwarded to 3.4.1 due to an essential 
 
 #### New Features (2)
 
-##### Added Support for Node 10 (1 of 2)
+**Added Support for Node 10 (1 of 2)**
 
 Ember CLI 3.4 now supports Node 10. Simultaneously, Node 4 has been dropped from Ember CLI's support matrix. When upgrading to Ember CLI 3.4, please make sure to use it together with Node 6 and above.
 
-##### Template Linting (2 of 2)
+**Template Linting (2 of 2)**
 
 Ember CLI 3.4 adds automatic template linting to your application via _ember-template-lint_ according to the [recommmended list of rules](https://github.com/ember-template-lint/ember-template-lint/blob/master/lib/config/recommended.js). Ember CLI will generate a `TemplateLint` test file for each of your templates to your test suite automatically to be run via `ember test`.
 
-You can also use the new command `npm run lint:hbs` or `yarn run int:hbs` respectively to run the linter.
+You can also use the new command `npm run lint:hbs` or `yarn run lint:hbs` respectively to run the linter.
 
 
 #### Deprecations (0)
