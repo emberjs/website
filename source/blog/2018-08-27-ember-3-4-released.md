@@ -142,7 +142,11 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 
 ### Changes in Ember CLI 3.4
 
+Disclaimer: Ember CLI 3.4.0 is effectively fast-forwarded to 3.4.1 for an essential patch release. Read more about it in the [changelog](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.1).
+
 #### New Features (X)
+
+
 
 
 #### Deprecations (X)
@@ -150,7 +154,7 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 ---
 
 For more details on the changes in Ember CLI 3.4 and detailed upgrade
-instructions, please review the [Ember CLI  3.4.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.0).
+instructions, please review the [Ember CLI  3.4.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.1).
 
 ## Thank You!
 
