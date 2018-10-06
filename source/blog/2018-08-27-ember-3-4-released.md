@@ -142,15 +142,44 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 
 ### Changes in Ember CLI 3.4
 
-#### New Features (X)
+Ember CLI 3.4 is an [LTS release candidate](https://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html). This means that this release version will receive critical bugfixes for the upcoming 6 release cycles (36 weeks), as well as security patches for the next 10 release cycles (60 weeks).
+
+Ember CLI 3.4.0 is also effectively fast-forwarded to 3.4.1 due to an essential patch release. Read more about it in the [changelog](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.1).
+
+#### New Features (3)
+
+##### Added Support for Node 10 (1 of 3)
+
+Ember CLI 3.4 now supports Node 10. Simultaneously, Node 4 has been dropped from Ember CLI's support matrix. When upgrading to Ember CLI 3.4, please make sure to use it together with Node 6 and above.
+
+##### Support for Custom Paths for In-Repo Addons (2 of 3)
+
+Previously, in-repo addons were always assumed to reside in the `lib/` directory of an application. With Ember CLI 3.4 in-repo addons may also live in other custom directories, defined by the <....configOption?> in <...thisfile?>. Blueprint generators will take this configuration into consideration when creating new files in the in-repo addon.
+
+You can configure an in-repo addon to live in e.g. the custom path `/my/custom/path/in-repo-addon` as follows:
+
+```js
+// ember-cli-build.js?
+
+example...
+
+```
+
+##### Template Linting (3 of 3)
+
+Ember CLI 3.4 adds automatic template linting to your application via _ember-template-lint_ according to the [recommmended list of rules](https://github.com/ember-template-lint/ember-template-lint/blob/master/lib/config/recommended.js). Ember CLI will generate a `TemplateLint` test file for each of your templates to your test suite automatically to be run via `ember test`.
+
+You can also use the new command `npm run lint:hbs` or `yarn run int:hbs` respectively to run the linter.
 
 
-#### Deprecations (X)
+#### Deprecations (0)
+
+No new deprecations introduced in Ember CLI 3.4.
 
 ---
 
 For more details on the changes in Ember CLI 3.4 and detailed upgrade
-instructions, please review the [Ember CLI  3.4.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.0).
+instructions, please review the [Ember CLI  3.4.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.1).
 
 ## Thank You!
 
