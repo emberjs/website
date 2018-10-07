@@ -306,6 +306,11 @@
   date: March 10, 2018
   image: /images/tomsters/a11y-zoey.png
   tags: all zoey other
+- title: Stockholm
+  date: March 13, 2018
+  url: https://www.meetup.com/Ember-js-Stockholm/
+  image: /images/tomsters/stockholm.png
+  tags: all tomster meetup
 
 # - title:
 #   date:
