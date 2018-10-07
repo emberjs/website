@@ -828,6 +828,7 @@
   image: inquicker.png
   alt: "InQuicker"
   use: "We use Ember for our new customer-facing applications."
+  inactive: true
 - url: http://number42.de/
   image: num42.png
   alt: "number42"
@@ -1118,6 +1119,18 @@
   image: vivi.png
   alt: Vivi
   use: "Vivi uses Ember to power our app as well as our box web console"
+- url: "https://smile.io/"
+  image: smileio.png
+  alt: Smile.io
+  use: "Smile's main web application is built with Ember.js"
+- url: "https://adfinis-sygroup.ch"
+  image: adfinis-sygroup.png
+  alt: Adfinis SyGroup
+  use: "Adfinis SyGroup uses Ember.js to build our customer, internal and open source projects."
+- url: "https://www.viavisolutions.com"
+  image: viavi.png
+  alt: VIAVI Solutions
+  use: "VIAVI Solutions uses Ember.js in a variety of our intranet applications"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D

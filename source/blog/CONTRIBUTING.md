@@ -20,6 +20,11 @@ npm install -g alex
 bash scripts/language-check.sh
 ```
 
+If you are consciously overriding the Alex linter you can add an annotation before the paragraph as shown below.
+
+```
+<!--alex ignore THEWORD-->
+```
 
 # Ember Times
 
@@ -28,7 +33,7 @@ It is part of the [Emberjs.com](https://emberjs.com/) website and managed by the
 
 ## Contributing
 
-Anyone can become an Ember times editor. The best way to start is to join #topic-embertimes channel on [Ember Community Slack](https://ember-community-slackin.herokuapp.com/). New blog posts are released every Friday. 
+Anyone can become an Ember times editor. The best way to start is to join [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) channel on [Ember Community Discord](https://discordapp.com/invite/zT3asNS). New blog posts are released every Friday.
 
 The process to publish a new weekly post is as follows:
 
@@ -40,6 +45,15 @@ The process to publish a new weekly post is as follows:
 The Reader's Questions section of the newsletter is usually answered by core team members, but anyone can give a helping hand. 
 The answers are posted on [discuss.emberjs.com](https://discuss.emberjs.com/) and linked back to the weekly blog post.
 
+## Writing Style Guide
+
+* Use Title Case for section headings, when in doubt use https://titlecaseconverter.com/.
+* Please add an emoji at the end of your title, if you're having trouble finding an emoji use a search tool like https://emojipedia.org/.
+* In general, refer to people by their GitHub handle, e.g. `[@your_name_here](https://www.github.com/your_name_here)`. (If the person is mentioned more than one time in the same paragraph, feel free to deviate after one @ mention!]
+* We tend to refer to `Ember`, `Ember Data`, and `Ember CLI` as their name (versus the repo name) because we mention them so often. For most other repos, use the repo name e.g. `[machty/ember-concurrency](https://github.com/machty/ember-concurrency)`.
+* The word `addon` is usually denoted as lowercase and as a single word.
+* Add your name to the author list at the bottom of the Times when submitting a PR for the week.
+
 ### Goodbits
 
 To prepare the newsletter broadcast on Goodbits the following steps are necessary:
@@ -50,11 +64,11 @@ To prepare the newsletter broadcast on Goodbits the following steps are necessar
 - Select 'Prepare to send'
 - Choose the option 'Send later' and schedule it to Friday 9 PM UTC
 
-### What is new in Ember land
+### What Is New in Ember Land
 
 There is a tool available to gather the weekly contributions on Ember repos and to generate the contributors' list, here: [what-is-new-in-emberland](https://github.com/jessica-jordan/whats-new-in-emberland). It's an Ember app 🐹, you can simply download, build it and serve it!
 
-### Pushing your changes to the blog post
+### Pushing Your Changes to the Blog Post
 
 A typical Git forking workflow can be used to contribute:
 
