@@ -235,6 +235,14 @@ No new deprecations introduced in Ember CLI 3.4.
 For more details on the changes in Ember CLI 3.4 and detailed upgrade
 instructions, please review the [Ember CLI  3.4.1 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.1).
 
+## Latest Patch Releases
+
+Several patch versions of Ember.js, Ember Data, and Ember CLI have been published since the release of version 3.4. Please upgrade to the following, latest patch releases to benefit from important bug fixes:
+
+- [Ember 3.4.4](https://github.com/emberjs/ember.js/releases/tag/v3.4.4)
+- [Ember CLI 3.4.3](https://github.com/ember-cli/ember-cli/releases/tag/v3.4.3)
+- [Ember Data 3.4.2](https://github.com/emberjs/data/releases/tag/v3.4.2)
+
 ## Thank You!
 
 As a community-driven open-source project with an ambitious scope, each of these releases serve as a reminder that the Ember project would not have been possible without your continued support. We are extremely grateful to our contributors for their efforts.
