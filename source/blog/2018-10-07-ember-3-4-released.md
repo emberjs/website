@@ -28,7 +28,7 @@ The 3.4.0 release is an Ember.js Long-Term Support candidate. In six weeks, the 
 
 For more information about Ember's LTS policies, see the [announcement blog post](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html) and [builds page](http://emberjs.com/builds/).
 
-Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is one (1) new feature, three (3) deprecations, and eight (8) bugfixes in this version.
+Ember.js 3.4 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There are two (2) new feature, two (2) deprecations, and eight (8) bugfixes in this version.
 
 #### New Features (2)
 
