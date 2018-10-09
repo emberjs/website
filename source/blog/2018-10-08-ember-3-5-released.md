@@ -21,20 +21,18 @@ You can read more about our general release process here:
 Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.5
-Ember.js 3.5 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is COUNT (#) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
+Ember.js 3.5 is an incremental, backwards compatible release of Ember with bugfixes. 
+It is common for minor releases to provide bugfixes that pave the way for
+release of new features in future releases.
+There are zero (0) new features, zero (0) deprecations, and five (5) minor 
+bugfixes in this version.
+Contributors to the Ember.js codebase itself should note that it now uses
+Typescript 3.0 internally.
 
-#### New Features (2)
+#### Bugfixes (5)
 
-First new feature (1 of 2)
+To review the bugfixes made for 3.5, view the [Ember.js CHANGELOG](https://github.com/emberjs/ember.js/blob/master/CHANGELOG.md).
 
-Second new feature (2 of 2)
-
-
-#### Deprecations (0)
-
-Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
-
-Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
 For more details on changes in Ember.js 3.5, please review the [Ember.js 3.5.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.5.0).
 
