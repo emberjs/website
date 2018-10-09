@@ -1,11 +1,11 @@
 ---
-title: Ember VER Released
-author: Melanie Sumner, Kenneth Larsen
-tags: Releases, 2018, 3, VER
+title: Ember 3.5 Released
+author: Melanie Sumner, Jen Weber
+tags: Releases, 2018, 3, 3.5
 responsive: true
 ---
 
-Today the Ember project is releasing version VER of Ember.js, Ember Data, and Ember CLI. This release kicks off the 3.5 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
+Today the Ember project is releasing version 3.5 of Ember.js, Ember Data, and Ember CLI. This release kicks off the 3.5 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
@@ -20,8 +20,8 @@ You can read more about our general release process here:
 
 Ember.js is the core framework for building ambitious web applications.
 
-### Changes in Ember.js VER
-Ember.js VER is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is COUNT (#) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
+### Changes in Ember.js 3.5
+Ember.js 3.5 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is COUNT (#) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
 
 #### New Features (2)
 
@@ -36,7 +36,7 @@ Deprecations are added to Ember.js when an API will be removed at a later date. 
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-For more details on changes in Ember.js VER, please review the [Ember.js VER.0 release page](https://github.com/emberjs/ember.js/releases/tag/vVER.0).
+For more details on changes in Ember.js 3.5, please review the [Ember.js 3.5.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.5.0).
 
 ---
 
@@ -44,19 +44,24 @@ For more details on changes in Ember.js VER, please review the [Ember.js VER.0 r
 
 Ember Data is the official data persistence library for Ember.js applications.
 
-### Changes in Ember Data VER
+### Changes in Ember Data 3.5
+
+Ember Data 3.5 is a re-release of Ember Data 3.4. Re-releases occur when
+a library's feature development does not align with the
+release schedule of the other main libraries (CLI and Ember.js framework), 
+so the last stable release is used.
 
 #### New Features (0)
 
-No new features introduced in Ember Data VER.
+No new features introduced in Ember Data 3.5.
 
 #### Deprecations (0)
 
-No new deprecations introduced in Ember Data VER.
+No new deprecations introduced in Ember Data 3.5.
 
 
-For more details on changes in Ember Data VER, please review the
-[Ember Data VER.0 release page](https://github.com/emberjs/data/releases/tag/vVER.0).
+For more details on Ember Data 3.5, please review the
+[Ember Data 3.5.0 release page](https://github.com/emberjs/data/releases/tag/v3.5.0).
 
 ---
 
@@ -86,17 +91,40 @@ npm install -g ember-cli-update
 
 This utility will help you to update your app or add-on to the latest Ember CLI version. You will probably encounter merge conflicts, in which the default behavior is to let you resolve conflicts on your own.
 
-### Changes in Ember CLI VER
+### Changes in Ember CLI 3.5
 
-#### New Features (X)
+#### New Features (3)
 
+##### Upgraded to Broccoli v2.0.0! (1 of 3)
 
-#### Deprecations (X)
+Broccoli is an asset pipeline used by Ember. For quite a long time, tools in the Ember
+Ecosystem relied on a fork of Broccoli. However, as of this release, Ember CLI now uses
+[Broccoli 2.0](https://github.com/broccolijs/broccoli) directly! 
+See [this Ember.js Times Reader's question](https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384) 
+to learn more about what makes Broccoli awesome and why it is used instead Parcel or Webpack.
+Many thanks to contributors and maintainers of Broccoli who helped with the migration.
+
+##### Build speed improvements up to 32% (2 of 3)
+
+Thanks to migrating to Broccoli 2, Ember devs should see some speed improvements in their
+builds. Broccoli 2 allows Ember CLI to use the default system `temp` directory
+rather than a `./tmp` directory local to a project folder. Depending on computer hardware,
+users may see up to 32% improvements in build time. The system `temp` directory
+on your computer has some optimizations in place that your apps now benefit from.
+
+##### Migration to ember-qunit (3 of 3)
+
+`ember-cli-qunit` was a very thin shim over `ember-qunit`.
+Ember CLI now uses `ember-qunit` directly as a dependency.
+
+#### Deprecations (0)
+
+No new deprecations introduced in Ember CLI 3.5.
 
 ---
 
-For more details on the changes in Ember CLI VER and detailed upgrade
-instructions, please review the [Ember CLI  VER.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/vVER.0).
+For more details on the changes in Ember CLI 3.5 and detailed upgrade
+instructions, please review the [Ember CLI  3.5.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.5.0).
 
 ## Thank You!
 
