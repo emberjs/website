@@ -32,12 +32,12 @@ Ember.js is the core framework for building ambitious web applications.
 Ember.js 3.5 is an incremental, backwards compatible release of Ember with bugfixes. 
 It is common for minor releases to provide bugfixes that pave the way for
 release of new features in future releases.
-There are zero (0) new features, zero (0) deprecations, and five (5) minor 
-bugfixes in this version.
+There are zero (0) new features, zero (0) deprecations, and two (2) minor 
+bugfixes in this version. Three (3) bugfixes were backported to 3.4.
 Contributors to the Ember.js codebase itself should note that it now uses
 Typescript 3.0 internally.
 
-#### Bugfixes (5)
+#### Bugfixes (2)
 
 To review the bugfixes made for 3.5, view the [Ember.js CHANGELOG](https://github.com/emberjs/ember.js/blob/master/CHANGELOG.md).
 
