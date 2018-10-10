@@ -42,7 +42,7 @@ Of course we want to give a shoutout to [@Gaurav0](https://github.com/Gaurav0) a
 
 There are of course a few issues that Mike is working on fixing, but we believe that this will be stable and usable soon. For example, `ember new app` doesn't work.
 
-To try this out today just use this [starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output) or if you are feeling **adventurous** try out this [TypeScript starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/typescript).
+To try this out today just use this [starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/vanilla) or if you are feeling **adventurous** try out this [TypeScript starter kit](https://codesandbox.io/s/github/mike-north/ember-new-output/tree/typescript).
 
 To learn more make sure to check out the [blog post](https://medium.com/@mikenorth/ember-community-meet-codesandbox-10a43076b3fa) and follow [Mike on Twitter](https://twitter.com/michaellnorth/status/1047231228020023296) to stay updated!
 
