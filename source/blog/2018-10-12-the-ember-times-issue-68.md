@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd, @NullVoxPopuli
+author: Preston Sego
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -99,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd, [@NullVoxPopuli](http://github.com/nullvoxPopuli/) and the Learning Team
+Preston Sego and the Learning Team
