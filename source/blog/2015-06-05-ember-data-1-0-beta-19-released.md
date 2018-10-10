@@ -1,7 +1,8 @@
 ---
 title: Ember Data v1.0.0-beta.19 Released
 author: Stanley Stuart
-tags: Ember Data
+tags: Ember Data, 2015, Version 1.x
+responsive: true
 ---
 
 Ember Data 1.0.0-beta.19 contains a lot of bugfixes from the comunity!

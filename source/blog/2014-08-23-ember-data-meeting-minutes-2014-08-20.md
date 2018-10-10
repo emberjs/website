@@ -1,7 +1,8 @@
 ---
 title: Ember Data Meeting Minutes - 2014/08/20
 author: Stanley Stuart
-tags: Core Team Meeting Minutes
+tags: Core Team Meeting Minutes, 2014
+responsive: true
 ---
 
 Every week, the Ember Data team meets to discuss improvements and vision for

@@ -1,7 +1,8 @@
 ---
 title: Internet Explorer 8 Support Will Be Removed in Ember 2.0
 author: Tom Dale
-tags: Compatibility, Recent Posts
+tags: Compatibility, Recent Posts, 2015
+responsive: true
 ---
 
 After reviewing [this thread][rfc-ie8], it seems clear that the vast majority of

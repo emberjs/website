@@ -1,20 +1,78 @@
-<ol id='toc-list' class="blog-sidebar">
-  <% if blog.tags['Recent Posts'] %>
-  <li class='level-1'>
-    <a href="<%= tag_path 'Recent posts'%>">Recent Posts</a>
-    <ol style="display:block">
-      <% blog.tags['Recent Posts'].sort_by(&:date).reverse.take(5).each_with_index do |article, i| %>
-      <li class='level-3'><%= link_to article.title, article %></li>
+  <div class="blog-sidebar">
+  <h3 class="list-group-title" id="recent-posts">Recent Posts</h3>
+  <ul class="list-group" aria-labelledby="recent-posts">
+    <% blog.tags['Recent Posts'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
+      <li class='list-item'><%= link_to article.title, article %></li>
     <% end %>
-    </ol>
-  </li>
-  <% end %>
-  <li class='level-1'>
-    <a href="<%= tag_path 'Releases'%>">Releases</a>
-    <ol style="display:block">
-      <% blog.tags['Releases'].sort_by(&:date).reverse.take(7).each_with_index do |article, i| %>
-      <li class='level-3'><%= link_to article.title, article %></li>
+    <li class="list-item"><a href="<%= tag_path 'Recent posts'%>">More Recent Posts...</a></li>
+  </ul>
+
+  <h3 class="list-group-title" id="releases">Releases</h3>
+  <ul class="list-group" aria-labelledby="releases">
+    <% blog.tags['Releases'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
+      <li class='list-item'><%= link_to article.title, article %></li>
     <% end %>
-    </ol>
-  </li>
-</ol>
+    <li class="list-item"><a href="<%= tag_path 'Releases'%>">More Releases...</a></li>
+  </ul>
+
+  <h3 class="list-group-title" id="newsletter">Ember.js Times</h3>
+  <ul class="list-group" aria-labelledby="newsletter">
+    <% blog.tags['Newsletter'].sort_by(&:date).reverse.take(3).each_with_index do |article, i| %>
+      <li class='list-item'><%= link_to article.title, article %></li>
+    <% end %>
+    <li class="list-item"><a href="<%= tag_path 'Newsletter'%>">More Issues...</a></li>
+  </ul>
+
+
+  <h3 class="list-group-title" id="browse-year">Browse by Year</h3>
+  <ul class="list-group" aria-labelledby="browse-year">
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2012'%>">2012</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2013'%>">2013</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2014'%>">2014</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2015'%>">2015</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2016'%>">2016</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2017'%>">2017</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path '2018'%>">2018</a>
+    </li>
+  </ul>
+
+  <h3 class="list-group-title" id="browse-version">Browse by Major Version</h3>
+  <ul class="list-group" aria-labelledby="browse-version">
+    <li class="list-item list-inline">
+      <a href="<%= tag_path 'version 1.x'%>">1.x</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path 'version 2.x'%>">2.x</a>
+    </li>
+    <li class="list-item list-inline">
+      <a href="<%= tag_path 'version 3.x'%>">3.x</a>
+    </li>
+  </ul>
+
+  <h3 class="list-group-title" id="browse-subject">Browse by Subject</h3>
+  <ul class="list-group" aria-labelledby="browse-subject">
+    <li class="list-item"><a href="<%= tag_path 'Announcement'%>">Announcements</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Ember CLI'%>">Ember CLI</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Ember Data'%>">Ember Data</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Newsletter'%>">Newsletter</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Performance'%>">Performance</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Roadmap'%>">Roadmap</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Security'%>">Security</a></li>
+    <li class="list-item"><a href="<%= tag_path 'Testing'%>">Testing</a></li>
+  </ul>
+</div>
+
+

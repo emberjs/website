@@ -74,7 +74,7 @@
   font-family: 'Source Sans Pro';
   font-size: 3rem;
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.15;
   margin: 0 auto;
   max-width: 100%;
   text-align: center;
@@ -116,14 +116,17 @@ body.index {
   @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio), (min-resolution: $hidpi-min-pixel-ratio) {
     .feature .handlebars {
       background-size: 221px 210px !important;
+      margin: 0 auto;
     }
 
     .feature .structure {
       background-size: 221px 210px !important;
+      margin: 0 auto;
     }
 
     .feature .productivity {
       background-size: 221px 220px !important;
+      margin: 0 auto;
     }
   }
 
@@ -131,18 +134,21 @@ body.index {
     @include hidpi('about/ember-handlebars-sm', 'png');
     width: 221px;
     height: 177px;
+    margin: 7px auto 0 auto;    
   }
 
   .feature .structure {
     @include hidpi('about/ember-structure-sm', 'png');
     width: 193px;
     height: 184px;
+    margin: 0 auto;
   }
 
   .feature .productivity {
     @include hidpi('about/ember-productivity-sm', 'png');
     width: 221px;
     height: 184px;
+    margin: 0 auto;
   }
 
   .getting-started {

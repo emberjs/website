@@ -1,7 +1,8 @@
 ---
 title: Ember 1.0 RC3
 author: Stefan Penner
-tags: Releases
+tags: Releases, Version 1.x, Performance, Testing
+responsive: true
 ---
 
 Today we are announcing the third Release Candidate of Ember 1.0.

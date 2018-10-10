@@ -2,9 +2,14 @@
 <% partial_for :sidebar, 'blog/sidebar' %>
 <% partial_for :foot, 'footer' %>
 <% wrap_layout :layout do %>
-  
+
   <article class="blog-post">
     <div class="blog-post-header">
+      <% if current_page.data.tags.include? 'Newsletter' %>
+        <a class="blog-header" href="<%= tag_path 'Newsletter' %>" aria-label="Read more issues of The Ember Times">
+          <div class="large ember-times-logo"></div>
+        </a>
+      <% end %>
       <h1 class="blog-post-title"><%= current_article.title %></h1>
       <div class="blog-post-meta">
         <% if current_page.data.author %>
@@ -55,8 +60,9 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
   <% end %>
 
   <script type="text/javascript" src="/javascripts/blog.js"></script>
+  <script type="text/javascript" src="/javascripts/toc.js"></script>
 <% end %>
-

@@ -1,25 +1,88 @@
 @import 'base/base';
+// .logos section {
+//   margin: 10px 0;
+//   overflow: hidden;
+// }
+.logos #content section > ul {
+  list-style-type: none;
+  margin: 0;
+  & > li {
+    margin-top: 15px;
+    overflow: hidden;
+  }
+}
+#content .brand-logos {
+  margin: 0 0 5px 0;
+}
 
-.brand-logo,
-.brand-small {
+.brand-logos {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  padding: 0 .5em;
+  @media screen and (min-width: $medium-screen) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 0px;
+  }
+  @media screen and (min-width: $screen-sm-max) {
+    padding: 0;
+  }
+}
+
+.brand-logos > li {
+  min-height: 110px;
+  border: 1px solid rgba($black, .3);
+  background-image: url("/images/brand/brand-bg.png");
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  flex-direction: column;
+  @media screen and (min-width: $medium-screen) {
+    padding: 20px 30px;
+  }
+  @media screen and (min-width: $screen-sm-max) {
+    flex-basis: 25%;
+    padding: 20px 60px;
+  }
+
+  &:nth-child(1) {
+    background: $black;
+  }
+
+  &:nth-child(2) {
+    background: $white;
+  }
+
+  &:nth-child(3) {
+    background-color: rgba($orange-darker, .9);
+  }
 }
 
-.brand-logo > img,
-.brand-small > img {
-  background-image: url('/images/brand/brand-bg.png');
-  border: 1px solid #cccccc;
-  margin-top: 10px;
+#content .brand-logos ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  li {
+    flex-basis: 25%;
+  }
 }
 
-.brand-logo > img {
-  width: 300px;
+.brand-logos img {
+  max-height: 70px;
+  max-width: 100%;
 }
-
-.brand-small > img {
-  width: 150px;
-}
-
-.brand-logo ~ a {
-  text-align: center;
+.logos .code {
+  background-color: #F8E7CF;
+    border-radius: 3px;
+    font-size: .9em;
+    padding: .2em .5em;
+    margin: 0 .1em;
+    font-family: Menlo,"DejaVu Sans Mono","Bitstream Vera Sans Mono",Courier,monospace;
 }

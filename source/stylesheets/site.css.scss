@@ -11,8 +11,9 @@
 @import 'mixins/hidpi';
 @import 'mixins/width-for-columns';
 @import 'vendor/docsearch';
-@import 'fonts'; 
+@import 'fonts';
 @import 'header';
+@import 'footer';
 @import 'survey-reminder';
 @import 'footer';
 
@@ -27,7 +28,6 @@
 @import 'blog';
 @import 'builds';
 @import 'examples';
-@import 'guides';
 @import 'highlight';
 @import 'survey';
 
@@ -37,7 +37,6 @@
 @import 'pages/brand';
 @import 'pages/community';
 @import 'pages/ember-users';
-@import 'pages/guides';
 @import 'pages/learn';
 @import 'pages/mascots';
 @import 'pages/meetup-assets';
@@ -78,7 +77,7 @@ body {
   border-left: 1px solid #d4ccc8;
   border-right: 1px solid #d4ccc8;
   position: relative;
-  
+
   @media (min-width: 48em) {
     float: left;
     width: 22.5%;
@@ -173,7 +172,8 @@ body {
       &.level-1 {
         text-transform: uppercase;
 
-        > a {
+        > a, .level-1-text {
+          font-weight: bold;
           display: block;
           color: #443331;
           border-top: 1px solid #d5ccc8;
@@ -426,7 +426,7 @@ body {
 #content {
   &.has-sidebar {
     margin-bottom: 90px;
-    
+
     @media (min-width: 48em) {
       width: 72.5%;
       float: left;
@@ -477,7 +477,7 @@ body.tomster_faq #content {
     background-color: #dfd7d4;
   }
 
-  #back-to-top {
+  .back-to-top {
     padding-left: 13px;
     text-align: center;
     display: none;
@@ -526,7 +526,6 @@ body.tomster_faq #content {
   }
 }
 
-
 /**
   Core Team Page + Guidelines Page + Meetup Assets Page + Legal
 **/
@@ -541,4 +540,8 @@ body.tomster_faq #content {
   margin-left: -60px;
 }
 
-
+.cta-contribute {
+  font-size: 0.9em;
+  margin: 3em auto 1em auto;
+  text-align: center;
+}

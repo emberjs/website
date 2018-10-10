@@ -1,7 +1,8 @@
 ---
 title: Core Team Meeting Minutes - 2013/12/06
 author: Trek Glowacki
-tags: Core Team Meeting Minutes
+tags: Core Team Meeting Minutes, Roadmap
+responsive: true
 ---
 
 Although most of our collaboration takes place on Github, IRC 

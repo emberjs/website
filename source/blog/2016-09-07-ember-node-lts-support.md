@@ -2,7 +2,7 @@
 title: Ember Node.js LTS Support
 responsive: true
 author: Nathan Hammond
-tags: Recent Posts, Ember CLI
+tags: Recent Posts, Ember CLI, Node, 2016
 ---
 
 Ember is committed to being a good steward of our collective codebases as part of the [Node.js](https://nodejs.org/en/) [ecosystem](https://www.npmjs.com/). In that spirit we will be following the [Node.js Long Term Support Schedule](https://github.com/nodejs/LTS#lts-schedule) to provide clear guarantees of which versions of Node.js we support and how long we will support them. We will test against the same set of releases which the Node.js Long-term Support Working Group says they support: any "Current", "Active LTS", or "Maintenance" releases.

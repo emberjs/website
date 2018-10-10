@@ -1,7 +1,8 @@
 ---
 title: Igor Terzic Joins the Core Team
 author: Tom Dale
-tags: Recent Posts
+tags: Recent Posts, 2014, Annoucement
+responsive: true
 ---
 
 Today I'm happy to announce that Igor Terzic is joining the Ember.js

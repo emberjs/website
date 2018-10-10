@@ -1,7 +1,8 @@
 ---
 title: Ember 1.0 RC
 author: Peter Wagenet
-tags: Releases
+tags: Releases, 2013, Version 1.x, Router, Controller
+responsive: true
 ---
 
 Today at Ember Camp, we announced the release of Ember.js 1.0 RC1.

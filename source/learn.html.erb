@@ -41,13 +41,8 @@ responsive: true
         and tools in place to protect your app from churn while still providing the best new web
         app features. Ember uses a careful deprecation process to roll out changes to the API.
         You can read our <a href="http://emberjs.com/deprecations/">deprecation guides</a>
-        to see past and upcoming deprecations. 
-        <a href="https://github.com/ember-cli/ember-cli/releases">
-          Upgrade your ember-cli version
-        </a> 
-        to see which of them affect your app, when they are scheduled to change, and how to fix
-        them. You can use newer versions of the CLI with older Ember apps. Major changes
-        are often accompanied by codemod tools.
+        to see past and upcoming deprecations. Major changes are often accompanied by codemod tools,
+        which are often announced in release blog posts.
       </p>
    </section>
     <section>
@@ -129,7 +124,7 @@ responsive: true
       <h3 id="faq-future-proof">How do I future-proof my Ember.js application?</h3>
       
       <p>
-        Ember.js has a strong emphasis on developer productivity, which means that framework developers take great care when designing new functionality. Here are some tips, tools, and processes that help you keep your apps easy to update, so you can take advantage of new features without breaking your existing work.
+        You should not try to future proof your application. Ember.js has a strong emphasis on developer productivity, which means that framework developers take great care when designing new functionality and provide migration paths. Here are some ways to keep up to date on future changes:
       </p>
 
       <ul>
@@ -140,7 +135,7 @@ responsive: true
           RFCs: Ember.js follows a community-driven process for its development that incorporates <a href="https://github.com/emberjs/rfcs">RFCs for features and deprecations.</a> An RFC is a Request for Comments. Before changes are made to Ember's API, they are proposed publicly and the community is asked to review and comment. Anyone can create an RFC, not just Core Team members. RFCs undergo many edits to incorporate community feedback. If a proposal has enough support, it is merged, meaning that work may begin to integrate the functionality into the codebase.
         </li>
         <li>
-          Deprecations: The ember-cli informs developers of upcoming changes to the API via deprecation warnings. To see these warnings and <a href="http://emberjs.com/deprecations/">Deprecation Guides instructions</a> about how to resolve them, make sure you have the latest CLI. You can use newer CLI versions with older Ember app versions. It's a good idea to resolve deprecations as they arise, so that when new major versions are released, there is less overhead to upgrade.
+          Deprecations: The <a href="http://emberjs.com/deprecations/">Deprecation Guides</a> contain upcoming deprecations and how to resolve them.
         </li>
         <li>
           Codemods: When it's time for a major version upgrade, and there are syntax edits to make, tools like codemods are provided to help you make changes quickly. 
@@ -153,7 +148,7 @@ responsive: true
         </li>
       </ul>
       <p>
-        In short, the best way to make sure you have a healthy application is to comment on RFCs, use an up-to-date version of the CLI, keep your application clean of deprecations, and when possible, test your application against beta and canary releases of Ember.
+        In short, the best way to make sure you have a healthy application is to comment on RFCs, clean up deprecations when you see them, and when possible, test your application against beta and canary releases of Ember.
       </p>
     </section>
   </article>

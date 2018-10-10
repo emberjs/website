@@ -1,7 +1,8 @@
 ---
 title: Glimmer's In Canary, Test Your Apps!
 author: Yehuda
-tags: Compatibility, Recent Posts
+tags: Compatibility, Recent Posts, 2015
+responsive: true
 ---
 
 After months of work, **Glimmer is landing in Canary today**.

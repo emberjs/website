@@ -1,12 +1,6 @@
-.footer {
-  display: block;
-  clear: both;
-  margin: 0 auto;
-  max-width: 100%;
-}
 .footer > .container {
   max-width: 960px;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .not-responsive .footer > .container {
@@ -20,16 +14,16 @@
   border-bottom: none;
 }
 
-@media screen and (max-width: 53.75rem) {
-  .responsive .footer .container {
-    padding: 2em 1em;
+@media screen and (max-width: $screen-md) {
+  .responsive.footer .container {
+    padding: 2rem 1rem;
 
     .footer-info {
       margin-top: 12px;
       margin-bottom: 12px;
     }
     .footer-statement {
-      margin: 1.1em 0;
+      margin: 1.1rem 0;
     }
     .footer-social {
       line-height: 32px;
@@ -51,7 +45,6 @@
   border-top: 1px solid #f9e7e4;
   border-top: 1px solid #e5dbd6;
   text-align: left;
-  margin-top: 60px;
 
   .footer-statement {
     text-align: center;
@@ -59,7 +52,7 @@
 }
 
 .footer .container {
-  padding: 1.875em 0;
+  padding: 1.875rem 1rem
 }
 
 .footer .container {
@@ -67,8 +60,8 @@
   display: flex
 }
 
-@media screen and (max-width: 53.75rem) {
-  .responsive .footer .container {
+@media screen and (max-width: $screen-lg) {
+  .responsive.footer .container {
     text-align: center;
     display: block;
   }
@@ -86,12 +79,21 @@
 
 .footer .footer-info {
   flex:0 0 18em;
-  text-align: left;
+  text-align: left
 }
 
-@media screen and (max-width: 53.75rem) {
-  .responsive .footer .footer-info {
+@media screen and (max-width: $screen-lg) {
+  .responsive.footer .footer-info {
     text-align: center;
+  }
+
+  .responsive.footer .footer-statement {
+    text-align: center;
+  }
+
+  .responsive.footer .footer-tagline {
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
@@ -117,37 +119,56 @@
 }
 
 .footer .footer-contributions .contributor {
-  flex: 1 0 11em;
+  flex: 1 0 8em;
 }
 
-.footer .footer-contributions .logo-heroku {
-  max-height: 35px;
+.footer .footer-contributions .contributor p {
+  color: #444444;
 }
 
-.footer .footer-contributions .logo-fastly {
+.footer .footer-contributions .heroku-logo,
+.footer .footer-contributions .percy-logo,
+.footer .footer-contributions .dnsimple-logo,
+.footer .footer-contributions .fastly-logo {
   max-height: 45px;
 }
 
-@media screen and (min-width: 53.75rem) {
+@media screen and (min-width: $screen-lg) {
   .footer .footer-contributions {
     display: flex;
     flex:0 0 21em;
     max-width: 100%;
-    flex-flow: row wrap;
+    flex-flow: row wrap
   }
 }
 
 .footer .footer-social a {
-  -webkit-transition: opacity 200ms, color 200ms;
-  -moz-transition: opacity 200ms, color 200ms;
-  transition: opacity 200ms, color 200ms;
-  color: #999;
+  -webkit-transition: opacity 200ms, color 200ms, fill 200ms;
+  -moz-transition: opacity 200ms, color 200ms, fill 200ms;
+  transition: opacity 200ms, color 200ms, fill 200ms;
+  color: transparent;
   font-size: 1.5rem;
   margin-left: 0.75rem;
-  opacity: 0.7
+  opacity: 0.7;
+
+  svg {
+    height: 1.5rem;
+    fill: #999;
+  }
 }
 
+@media screen and (max-width: $screen-lg) {
+  .footer .footer-social a:first-child {
+    margin-left: 0;
+  }
+}
+
+
 .footer .footer-social a:hover {
-  color: #dd6a58;
-  opacity: 1
+  //color: transparent;
+  opacity: 1;
+
+  svg {
+    fill: #dd6a58;
+  }
 }

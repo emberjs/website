@@ -2,7 +2,7 @@
 title: Ember 2.10 and 2.11 Beta Released
 responsive: true
 author: Godfrey Chan, Brendan McLoughlin, Nathan Hammond
-tags: Releases
+tags: Releases, 2016, Version 2.x, 2.10, 2.11
 ---
 
 Today, the Ember project is releasing Ember.js, Ember Data and Ember CLI
