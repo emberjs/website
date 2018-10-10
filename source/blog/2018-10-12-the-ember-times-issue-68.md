@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd, [@NullVoxPopuli](http://github.com/nullvoxPopuli/)
+author: the crowd, @NullVoxPopuli
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
