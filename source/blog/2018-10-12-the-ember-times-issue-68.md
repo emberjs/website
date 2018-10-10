@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: the crowd, [@NullVoxPopuli](http://github.com/nullvoxPopuli/)
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -52,7 +52,7 @@ responsive: true
 
 ---
 
-## [Module Unification is in the Final Stretch!](https://github.com/emberjs/ember.js/issues/16373)
+## [Module Unification is in the Final Stretch!  :motorway:](https://github.com/emberjs/ember.js/issues/16373)
 Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md). 
 
 The initial work on Module Unification is **nearly complete**, as **[there are only a handful of tasks left](https://github.com/emberjs/ember.js/issues/16373)** and some of the tasks just need a good amount of spelunking time.
@@ -99,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+the crowd, [@NullVoxPopuli](http://github.com/nullvoxPopuli/) and the Learning Team
