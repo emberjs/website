@@ -66,7 +66,7 @@ Guides will be updated to reflect the new syntax in the coming weeks.
 
 **Custom Component Manager (2 of 2)**
 
-Ember 3.4 ships with the new Custom Component Manager feature enabled by default. This feature gives addon authors access to a low-level API for creating component bases classes which addon users can re-use and extend components from. Addon authors gain finer-grained control over the semantics of the components exported from their addons by the means of the component manager API.
+Ember 3.4 ships with the new Custom Component Manager feature enabled by default. This feature gives addon authors access to a low-level API for creating component base classes which addon users can re-use and extend components from. Addon authors gain finer-grained control over the semantics of the components exported from their addons by the means of the component manager API.
 
 A component manager can be registered in two different ways - declaratively or imperatively. For an implicit registration you may create a new file in the `app/component-managers` directory:
 
