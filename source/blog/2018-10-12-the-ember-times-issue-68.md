@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Preston Sego
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -52,8 +52,17 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Module Unification is in the Final Stretch!  :motorway:](https://github.com/emberjs/ember.js/issues/16373)
+Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md). 
 
+The initial work on Module Unification is **nearly complete**, as **[there are only a handful of tasks left](https://github.com/emberjs/ember.js/issues/16373)** and some of the tasks just need a good amount of spelunking time.
+If you can donate some of your time to help finish this up, the entire community will forever be in your debt. 💖
+
+Also, if you are a user of namespaced components, [this RFC](https://github.com/emberjs/rfcs/pull/367) is a must read. Please leave your thoughts on the [Module Unification Packages RFC](https://github.com/emberjs/rfcs/pull/367) as nested components affect the majority of Ember projects.
+
+To learn more about Module Unification, feel free to join the [#st-module-unification channel](https://discordapp.com/channels/480462759797063690/484527343331704832) on the [Ember Discord](https://discordapp.com/invite/zT3asNS)!
+
+Curious what a real project looks like with module unifcation? Checkout [emberclear](https://emberclear.io) by [@NullVoxPopuli](http://github.com/nullvoxPopuli/) on [gitlab](https://gitlab.com/NullVoxPopuli/emberclear/tree/master/packages/frontend) or [github](https://github.com/NullVoxPopuli/emberclear/tree/master/packages/frontend)!
 
 ---
 
@@ -90,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Preston Sego and the Learning Team
