@@ -51,7 +51,7 @@ responsive: true
 
 Looking for your next challenge? We’re looking for contributors to help port over and rewrite content from [ember-cli.com](https://ember-cli.com/) as outlined in the [RFC](https://github.com/ember-cli/rfcs/pull/120).
 
-Choose a task, any task – we’ve got you covered! There are plenty of opportunities to contribute from picking a markdown file without any content and simply adding suggested headings to it – to completely working on a greenfield rewrite of the [deployments section](https://ember-cli.com/user-guide/#deployments). The idea is to empower new contributors by having up-to-date and clear documentation with the goal of wrapping up the MVP by the end of 2018.
+_Choose a task, any task – we’ve got you covered!_ There are **plenty of opportunities to contribute** from picking a markdown file without any content and simply adding suggested headings to it – to completely working on a greenfield rewrite of the [deployments section](https://ember-cli.com/user-guide/#deployments). The idea is to empower new contributors by having up-to-date and clear documentation with the goal of wrapping up the **MVP by the end of 2018**.
 
 See the full list on the [cli-guides-source Quest issue](https://github.com/ember-learn/cli-guides-source/issues/3)!
 
