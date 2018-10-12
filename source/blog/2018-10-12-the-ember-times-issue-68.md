@@ -1,6 +1,6 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Preston Sego, Chris Ng
+title: The Ember Times - Issue No. 68
+author: Preston Sego, Chris Ng, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -42,12 +42,17 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [EmberConf 2019 Call for Papers 📝](https://emberconf.com/become-a-speaker.html)
 
+The gathering of the uniquely ambitious is announced! EmberConf 2019 will be held **March 18-20** in Portland, OR! [EmberConf](https://emberconf.com/index.html) is 3 days of activities, sessions, talks and trainings with the Ember Core Team and community members from around the world. 
+
+EmberConf is great because its speakers are great, **and you could be one of them!** The Call for Papers is public, starts out blind, and features a collaborative process to help applicants improve their proposals. Proposals will be accepted and reviewed from now **until November 18, 2018**. 
+
+Don't forget to check out [#ember-conf](https://discordapp.com/channels/480462759797063690/480502413917421570) on [Discord](https://discordapp.com/invite/zT3asNS)!
 
 ---
 
-## [Quest: Write the MVP of new ember-cli-guides ✨](https://github.com/ember-learn/cli-guides-source/issues/3)
+## [Quest: Write the MVP of New ember-cli-guides ✨](https://github.com/ember-learn/cli-guides-source/issues/3)
 
 Looking for your next challenge? We’re looking for contributors to help port over and rewrite content from [ember-cli.com](https://ember-cli.com/) as outlined in the [RFC](https://github.com/ember-cli/rfcs/pull/120).
 
@@ -57,7 +62,7 @@ See the full list on the [cli-guides-source Quest issue](https://github.com/embe
 
 ---
 
-## [Module Unification is in the Final Stretch! 🛣](https://github.com/emberjs/ember.js/issues/16373)
+## [Module Unification Is in the Final Stretch! 🛣](https://github.com/emberjs/ember.js/issues/16373)
 Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md). 
 
 The initial work on Module Unification is **nearly complete**, as **[there are only a handful of tasks left](https://github.com/emberjs/ember.js/issues/16373)** and some of the tasks just need a good amount of spelunking time.
@@ -75,6 +80,8 @@ Curious what a real project looks like with module unifcation? Checkout [embercl
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
 <p>This week we'd like to thank @josemarluedke, @rwjblue, @chadhietala, @btecu, @chrisrng, @CodingItWrong, @NullVoxPopuli, @sivakumar-kailasam, @yohanmishkin, @wifelette, @SergeAstapov, @jessica-jordan, @amyrlam, @jrjohnson, @rwwagner90, @Turbo87, @Gaurav0, @oligriffiths, @stefanpenner, @samselikoff, @SparshithNR, @luxferresum, @chancancode, @toddjordan, @HuggableSquare, @ybakos, @prasannavijayan, @kategengler, @dfreeman, @jenweber, @Parrryy, @ynotdraw, @jtenclay for their contributions to Ember and related repositories! 💖</p>
+
+@, @josemarluedke, @rwjblue, @chadhietala, @btecu, @chrisrng, @CodingItWrong, @NullVoxPopuli, @sivakumar-kailasam, @yohanmishkin, @wifelette, @SergeAstapov, @jessica-jordan, @amyrlam, @jrjohnson, @rwwagner90, @Turbo87, @dependabot[bot], @Gaurav0, @oligriffiths, @stefanpenner, @samselikoff, @SparshithNR, @luxferresum, @chancancode, @toddjordan, @HuggableSquare, @ybakos, @prasannavijayan, @kategengler, @dfreeman, @jenweber, @Parrryy, @ynotdraw, @jtenclay 
 
 ---
 
@@ -104,4 +111,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Preston Sego, Chris Ng, and the Learning Team
+Preston Sego, Chris Ng, Amy Lam and the Learning Team
