@@ -74,7 +74,7 @@ Curious what a real project looks like with module unifcation? Checkout [embercl
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank @josemarluedke, @rwjblue, @chadhietala, @btecu, @chrisrng, @CodingItWrong, @NullVoxPopuli, @sivakumar-kailasam, @yohanmishkin, @wifelette, @SergeAstapov, @jessica-jordan, @amyrlam, @jrjohnson, @rwwagner90, @Turbo87, @Gaurav0, @oligriffiths, @stefanpenner, @samselikoff, @SparshithNR, @luxferresum, @chancancode, @toddjordan, @HuggableSquare, @ybakos, @prasannavijayan, @kategengler, @dfreeman, @jenweber, @Parrryy, @ynotdraw, @jtenclay for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
