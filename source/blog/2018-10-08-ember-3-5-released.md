@@ -11,9 +11,8 @@ Additionally, 3.4 is now promoted to LTS, which stands for Long
 Term Support. An LTS version of Ember continues to receive security updates
 for 9 release cycles (54 weeks)
 and bugfixes for 6 cycles (36 weeks).
-LTS releases typically occur every four minor versions, plus the
-first and last releases of major versions. 
-So far, the LTS releases for 3.x are 3.0 and 3.4.
+LTS releases typically occur every four minor versions. 
+The previous LTS version was 2.18.
 
 You can read more about our general release process here:
 
