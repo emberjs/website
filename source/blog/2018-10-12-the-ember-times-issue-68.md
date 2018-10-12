@@ -27,21 +27,20 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Find Ways to Help Out with the Ember Help Wanted App ✨](https://help-wanted.emberjs.com)
 
+Too much spare time at hand and don't know what to do? Wanna **contribute to open-source**? Then check out the sparkling ✨✨ [new **Ember Help Wanted App**](https://help-wanted.emberjs.com) ✨✨!!
 
----
-
-## [SECTION TITLE](#section-url)
+The Ember Help Wanted App lists all current open issues across Ember repositories, like Ember CLI, Ember Data, the Website and more which could use some support. The website is also a great resource if you're still looking forward to get your contributions in for [**Hacktoberfest**](https://www.emberjs.com/blog/2018/10/05/the-ember-times-issue-67.html#toc_a-href-https-hacktoberfest-digitalocean-com-hacktoberfest-a), so be sure to [check it out](https://help-wanted.emberjs.com).
 
 ---
 
 ## [EmberConf 2019 Call for Papers 📝](https://emberconf.com/become-a-speaker.html)
 
-The gathering of the uniquely ambitious is announced! EmberConf 2019 will be held **March 18-20** in Portland, OR! [EmberConf](https://emberconf.com/index.html) is three days of activities, sessions, talks and trainings with the Ember Core Team and community members from around the world. 
+The gathering of the uniquely ambitious is announced! EmberConf 2019 will be held **March 18-20** in Portland, OR! [EmberConf](https://emberconf.com/index.html) is three days of activities, sessions, talks and trainings with the Ember Core Team and community members from around the world.
 
 <!--alex ignore blind-->
-EmberConf is great because its speakers are great, **and you could be one of them!** The Call for Papers is public, starts out blind, and features a collaborative process to help applicants improve their proposals. Proposals will be accepted and reviewed from now until **November 18, 2018**. 
+EmberConf is great because its speakers are great, **and you could be one of them!** The Call for Papers is public, starts out blind, and features a collaborative process to help applicants improve their proposals. Proposals will be accepted and reviewed from now until **November 18, 2018**.
 
 Don't forget to check out [#ember-conf](https://discordapp.com/channels/480462759797063690/480502413917421570) on the [Ember Discord](https://discordapp.com/invite/zT3asNS)!
 
@@ -58,7 +57,7 @@ See the full list on the [cli-guides-source Quest issue](https://github.com/embe
 ---
 
 ## [Module Unification Is in the Final Stretch! 🛣](https://github.com/emberjs/ember.js/issues/16373)
-Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md). 
+Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md).
 
 The initial work on Module Unification is **nearly complete**, as **[there are only a handful of tasks left](https://github.com/emberjs/ember.js/issues/16373)** and some of the tasks just need a good amount of spelunking time.
 If you can donate some of your time to help finish this up, the entire community will forever be in your debt. 💖
@@ -73,7 +72,7 @@ Curious what a real project looks like with module unifcation? Checkout [embercl
 
 ## [Hacktoberfest Happenings 🎃](https://twitter.com/shipshapecode/status/1048579870689771520)
 
-Want to see ember-cli-addon-docs in the wild? [@rwwagner90](https://github.com/rwwagner90) shipped an update to [shipshapecode/ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr) for Hacktoberfest, converting its docs to [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs)! Check out the new slick docs site [here](https://shipshapecode.github.io/ember-flatpickr/docs). 
+Want to see ember-cli-addon-docs in the wild? [@rwwagner90](https://github.com/rwwagner90) shipped an update to [shipshapecode/ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr) for Hacktoberfest, converting its docs to [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs)! Check out the new slick docs site [here](https://shipshapecode.github.io/ember-flatpickr/docs).
 
 ---
 
@@ -99,7 +98,7 @@ Want to see ember-cli-addon-docs in the wild? [@rwwagner90](https://github.com/r
 
 ## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
