@@ -2,7 +2,7 @@
 title: The Ember Times - Issue No. 68
 author: Preston Sego, Chris Ng, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/10/12-the-ember-times-issue-68.html"
 responsive: true
 ---
 
