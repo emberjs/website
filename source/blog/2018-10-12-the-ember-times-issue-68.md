@@ -34,12 +34,6 @@ responsive: true
 
 ## [SECTION TITLE](#section-url)
 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
 ---
 
 ## [EmberConf 2019 Call for Papers 📝](https://emberconf.com/become-a-speaker.html)
@@ -74,6 +68,12 @@ Also, if you are a user of namespaced components, [this RFC](https://github.com/
 To learn more about Module Unification, feel free to join the [#st-module-unification channel](https://discordapp.com/channels/480462759797063690/484527343331704832) on the [Ember Discord](https://discordapp.com/invite/zT3asNS)!
 
 Curious what a real project looks like with module unifcation? Checkout [emberclear](https://emberclear.io) by [@NullVoxPopuli](http://github.com/nullvoxPopuli/) on [GitLab](https://gitlab.com/NullVoxPopuli/emberclear/tree/master/packages/frontend) or [GitHub](https://github.com/NullVoxPopuli/emberclear/tree/master/packages/frontend)!
+
+---
+
+## [Hacktoberfest Happenings 🎃](https://twitter.com/shipshapecode/status/1048579870689771520)
+
+Want to see ember-cli-addon-docs in the wild? [@rwwagner90](https://github.com/rwwagner90) shipped an update to [shipshapecode/ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr) for Hacktoberfest, converting its docs to [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs)! Check out the new slick docs site [here](https://shipshapecode.github.io/ember-flatpickr/docs). 
 
 ---
 
