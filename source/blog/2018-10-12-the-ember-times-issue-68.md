@@ -81,8 +81,6 @@ Curious what a real project looks like with module unifcation? Checkout [embercl
 
 <p>This week we'd like to thank @josemarluedke, @rwjblue, @chadhietala, @btecu, @chrisrng, @CodingItWrong, @NullVoxPopuli, @sivakumar-kailasam, @yohanmishkin, @wifelette, @SergeAstapov, @jessica-jordan, @amyrlam, @jrjohnson, @rwwagner90, @Turbo87, @Gaurav0, @oligriffiths, @stefanpenner, @samselikoff, @SparshithNR, @luxferresum, @chancancode, @toddjordan, @HuggableSquare, @ybakos, @prasannavijayan, @kategengler, @dfreeman, @jenweber, @Parrryy, @ynotdraw, @jtenclay for their contributions to Ember and related repositories! 💖</p>
 
-@, @josemarluedke, @rwjblue, @chadhietala, @btecu, @chrisrng, @CodingItWrong, @NullVoxPopuli, @sivakumar-kailasam, @yohanmishkin, @wifelette, @SergeAstapov, @jessica-jordan, @amyrlam, @jrjohnson, @rwwagner90, @Turbo87, @dependabot[bot], @Gaurav0, @oligriffiths, @stefanpenner, @samselikoff, @SparshithNR, @luxferresum, @chancancode, @toddjordan, @HuggableSquare, @ybakos, @prasannavijayan, @kategengler, @dfreeman, @jenweber, @Parrryy, @ynotdraw, @jtenclay 
-
 ---
 
 ## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
