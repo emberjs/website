@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 68
-author: Preston Sego, Chris Ng, Amy Lam
+author: Preston Sego, Chris Ng, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -31,7 +31,7 @@ responsive: true
 
 Too much spare time at hand and don't know what to do? Wanna **contribute to open-source**? Then check out the sparkling ✨✨ [new **Ember Help Wanted App**](https://help-wanted.emberjs.com) ✨✨!!
 
-The Ember Help Wanted App lists all current open issues across Ember repositories, like Ember CLI, Ember Data, the Website and more which could use some support. The website is also a great resource if you're still looking forward to get your contributions in for [**Hacktoberfest**](https://www.emberjs.com/blog/2018/10/05/the-ember-times-issue-67.html#toc_a-href-https-hacktoberfest-digitalocean-com-hacktoberfest-a), so be sure to [check it out](https://help-wanted.emberjs.com).
+The Ember Help Wanted App lists all current open issues across Ember repositories, like Ember CLI, Ember Data, the EmberJS Website and more which could use some support. The website is also a great resource if you're still looking forward to get your contributions in for [**Hacktoberfest**](https://www.emberjs.com/blog/2018/10/05/the-ember-times-issue-67.html#toc_a-href-https-hacktoberfest-digitalocean-com-hacktoberfest-a), so be sure to [check it out](https://help-wanted.emberjs.com).
 
 ---
 
@@ -109,4 +109,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Preston Sego, Chris Ng, Amy Lam and the Learning Team
+Preston Sego, Chris Ng, Amy Lam, Jessica Jordan and the Learning Team
