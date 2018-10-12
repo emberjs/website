@@ -57,7 +57,7 @@ See the full list on the [cli-guides-source Quest issue](https://github.com/embe
 
 ---
 
-## [Module Unification is in the Final Stretch!  :motorway:](https://github.com/emberjs/ember.js/issues/16373)
+## [Module Unification is in the Final Stretch! 🛣](https://github.com/emberjs/ember.js/issues/16373)
 Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md). 
 
 The initial work on Module Unification is **nearly complete**, as **[there are only a handful of tasks left](https://github.com/emberjs/ember.js/issues/16373)** and some of the tasks just need a good amount of spelunking time.
@@ -67,7 +67,7 @@ Also, if you are a user of namespaced components, [this RFC](https://github.com/
 
 To learn more about Module Unification, feel free to join the [#st-module-unification channel](https://discordapp.com/channels/480462759797063690/484527343331704832) on the [Ember Discord](https://discordapp.com/invite/zT3asNS)!
 
-Curious what a real project looks like with module unifcation? Checkout [emberclear](https://emberclear.io) by [@NullVoxPopuli](http://github.com/nullvoxPopuli/) on [gitlab](https://gitlab.com/NullVoxPopuli/emberclear/tree/master/packages/frontend) or [github](https://github.com/NullVoxPopuli/emberclear/tree/master/packages/frontend)!
+Curious what a real project looks like with module unifcation? Checkout [emberclear](https://emberclear.io) by [@NullVoxPopuli](http://github.com/nullvoxPopuli/) on [GitLab](https://gitlab.com/NullVoxPopuli/emberclear/tree/master/packages/frontend) or [GitHub](https://github.com/NullVoxPopuli/emberclear/tree/master/packages/frontend)!
 
 ---
 
