@@ -44,11 +44,12 @@ responsive: true
 
 ## [EmberConf 2019 Call for Papers 📝](https://emberconf.com/become-a-speaker.html)
 
-The gathering of the uniquely ambitious is announced! EmberConf 2019 will be held **March 18-20** in Portland, OR! [EmberConf](https://emberconf.com/index.html) is 3 days of activities, sessions, talks and trainings with the Ember Core Team and community members from around the world. 
+The gathering of the uniquely ambitious is announced! EmberConf 2019 will be held **March 18-20** in Portland, OR! [EmberConf](https://emberconf.com/index.html) is three days of activities, sessions, talks and trainings with the Ember Core Team and community members from around the world. 
 
-EmberConf is great because its speakers are great, **and you could be one of them!** The Call for Papers is public, starts out blind, and features a collaborative process to help applicants improve their proposals. Proposals will be accepted and reviewed from now **until November 18, 2018**. 
+<!--alex ignore blind-->
+EmberConf is great because its speakers are great, **and you could be one of them!** The Call for Papers is public, starts out blind, and features a collaborative process to help applicants improve their proposals. Proposals will be accepted and reviewed from now until **November 18, 2018**. 
 
-Don't forget to check out [#ember-conf](https://discordapp.com/channels/480462759797063690/480502413917421570) on [Discord](https://discordapp.com/invite/zT3asNS)!
+Don't forget to check out [#ember-conf](https://discordapp.com/channels/480462759797063690/480502413917421570) on the [Ember Discord](https://discordapp.com/invite/zT3asNS)!
 
 ---
 
