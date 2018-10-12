@@ -1,29 +1,14 @@
 ---
 title: The Ember Times - Issue No. 68
-author: Preston Sego, Chris Ng, Amy Lam, Jessica Jordan
+author: Ryan Mark, Preston Sego, Chris Ng, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Hola Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+EmberConf 2019 is here, is this the year for **you** to submit a talk idea?! 🗣 In this week's issue we're highlighting some ways to **contribute to Ember**: the Ember Help Wanted App 🚧, the new Ember CLI guides 📚, and Module Unification 📝. We're also celebrating **some Hacktoberfest 🕸 wins**. Read on! 
 
 ---
 
@@ -46,7 +31,7 @@ Don't forget to check out [#ember-conf](https://discordapp.com/channels/48046275
 
 ---
 
-## [Quest: Write the MVP of New ember-cli-guides ✨](https://github.com/ember-learn/cli-guides-source/issues/3)
+## [Quest: Write the MVP of the New Ember CLI Guides ✨](https://github.com/ember-learn/cli-guides-source/issues/3)
 
 Looking for your next challenge? We’re looking for contributors to help port over and rewrite content from [ember-cli.com](https://ember-cli.com/) as outlined in the [RFC](https://github.com/ember-cli/rfcs/pull/120).
 
@@ -57,6 +42,7 @@ See the full list on the [cli-guides-source Quest issue](https://github.com/embe
 ---
 
 ## [Module Unification Is in the Final Stretch! 🛣](https://github.com/emberjs/ember.js/issues/16373)
+
 Have you heard of **Ember's future default project layout**? If you haven't, you can read about it the [Module Unification RFC](https://github.com/emberjs/rfcs/blob/master/text/0143-module-unification.md).
 
 The initial work on Module Unification is **nearly complete**, as **[there are only a handful of tasks left](https://github.com/emberjs/ember.js/issues/16373)** and some of the tasks just need a good amount of spelunking time.
@@ -75,7 +61,6 @@ Curious what a real project looks like with module unifcation? Checkout [embercl
 Want to see ember-cli-addon-docs in the wild? [@rwwagner90](https://github.com/rwwagner90) shipped an update to [shipshapecode/ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr) for Hacktoberfest, converting its docs to [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs)! Check out the new slick docs site [here](https://shipshapecode.github.io/ember-flatpickr/docs).
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -109,4 +94,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Preston Sego, Chris Ng, Amy Lam, Jessica Jordan and the Learning Team
+Ryan Mark, Preston Sego, Chris Ng, Amy Lam, Jessica Jordan and the Learning Team
