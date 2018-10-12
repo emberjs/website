@@ -8,7 +8,7 @@ responsive: true
 
 Hola Emberistas! 🐹
 
-EmberConf 2019 is here, is this the year for you to submit a talk idea?! 🗣 In this week's issue we're highlighting some ways to contribute to Ember: the Ember Help Wanted App 🚧, the new Ember CLI guides 📚, and Module Unification 📝. We're also celebrating some Hacktoberfest 🕸 wins. Read on! 
+EmberConf 2019 is here, is this the year for **you** to submit a talk idea?! 🗣 In this week's issue we're highlighting some ways to **contribute to Ember**: the Ember Help Wanted App 🚧, the new Ember CLI guides 📚, and Module Unification 📝. We're also celebrating **some Hacktoberfest 🕸 wins**. Read on! 
 
 ---
 
