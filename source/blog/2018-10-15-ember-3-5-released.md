@@ -6,17 +6,17 @@ responsive: true
 ---
 
 Today the Ember project is releasing version 3.5 of Ember.js, Ember Data, and Ember CLI.
-Notable features include Ember CLI build performance improvements of up to 32%,
-depending on hardware and some new Ember Data powers for addon developers.
+Notable features include Ember CLI build performance improvements of up to 32% and new Ember Data powers for addon developers.
 
-This release kicks off the 3.6 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
-
-Additionally, 3.4 is now promoted to LTS, which stands for Long
+Additionally, versions 3.4 of Ember and Ember Data are now promoted to LTS, which stands for Long
 Term Support. An LTS version of Ember continues to receive security updates
 for 9 release cycles (54 weeks)
 and bugfixes for 6 cycles (36 weeks).
 LTS releases typically occur every four minor versions. 
-The previous LTS version was 2.18.
+The previous LTS version for Ember was 2.18. 3.4 is the first LTS for
+Ember Data.
+
+This release kicks off the 3.6 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
@@ -57,7 +57,7 @@ an LTS release and the `RecordData` feature.
 
 ### LTS
 
-The first milestone is the release of `3.4 LTS`, our very first `LTS` release! From here out, `ember-data` will follow the same LTS cycle and process and `Ember`.
+The first milestone is the release of `3.4 LTS`, our very first `LTS` release! From here out, `ember-data` will follow the same LTS cycle and process as `Ember`.
 
 #### New Features (1)
 
@@ -82,7 +82,6 @@ If you use `ember-data-model-fragments`, helping to refactor it to make use of `
 #### Deprecations (0)
 
 No new deprecations introduced in Ember Data 3.5.
-
 
 For more details on Ember Data 3.5, please review the
 [Ember Data 3.5.0 release page](https://github.com/emberjs/data/releases/tag/v3.5.0).
