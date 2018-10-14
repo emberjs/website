@@ -1,13 +1,13 @@
 ---
 title: Ember 3.5 Released
-author: Melanie Sumner, Jen Weber
+author: Melanie Sumner, Jen Weber, Chris Thoburn
 tags: Releases, 2018, 3, 3.5
 responsive: true
 ---
 
 Today the Ember project is releasing version 3.5 of Ember.js, Ember Data, and Ember CLI.
 Notable features include Ember CLI build performance improvements of up to 32%,
-depending on hardware.
+depending on hardware and some new Ember Data powers for addon developers.
 
 This release kicks off the 3.6 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
@@ -52,14 +52,32 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 ### Changes in Ember Data 3.5
 
-Ember Data 3.5 is a re-release of Ember Data 3.4. Re-releases occur when
-a library's feature development does not align with the
-release schedule of the other main libraries (CLI and Ember.js framework), 
-so the last stable release is used.
+This release cycle marks two major milestones for `ember-data`,
+an LTS release and the `RecordData` feature.
 
-#### New Features (0)
+### LTS
 
-No new features introduced in Ember Data 3.5.
+The first milestone is the release of `3.4 LTS`, our very first `LTS` release! From here out, `ember-data` will follow the same LTS cycle and process and `Ember`.
+
+#### New Features (1)
+
+##### RecordData
+
+The second milestone is the release of `3.5` which marks the first release containing the new [RecordData](https://github.com/emberjs/rfcs/pull/293) feature.
+`RecordData` gives addon developers much-needed API access with more confidence and stability. Many commonly requested features (improved dirty-tracking, fragments, alternative Models) are now possible or easier to implement in addons.
+
+Landing this feature required significant refactoring of the internals of `ember-data`, and is intended to allow us to deprecate and remove use of the private but intimate `InternalModel` API.
+Due to the nature of this change, we expect some applications may encounter regressions. This was the primary motivation for waiting to land this feature until after our first `LTS`. If you encounter issues upgrading from pre `3.5` versions to `3.5` or later, we recommend reporting them and making use of `LTS` until fixes are available.
+
+We are tracking issues introduced by `RecordData` with the label [record-data](https://github.com/emberjs/data/labels/record-data)
+
+We will also continue to target bugfixes for `LTS`, tracked by the label [lts-target](https://github.com/emberjs/data/labels/lts-target).
+
+##### RecordData use with ModelFragments
+
+While most community addons have been found to work with `RecordData` versions of `ember-data`, [ember-data-model-fragments](https://github.com/lytics/ember-data-model-fragments) does not currently. If you use this addon, it is likely you will want to remain on `ember-data` `3.4 LTS` until the community has released a version compatible with `RecordData`.
+
+If you use `ember-data-model-fragments`, helping to refactor it to make use of `RecordData` (or supply bugfixes to `ember-data` if required) would be greatly appreciated.
 
 #### Deprecations (0)
 
