@@ -25,6 +25,15 @@
     <% if current_page.data.no_index.eql? true %>
       <meta name="robots" content="noindex">
     <% end %>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Ember.js">
+    <meta name="apple-mobile-web-app-title" content="Ember.js">
+    <meta name="theme-color" content="#e04e39">
+    <meta name="msapplication-navbutton-color" content="#e04e39">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/">
     <%= yield_content :head %>
   </head>
 
@@ -41,7 +50,7 @@
     <%= yield_content :outside_wrapper %>
 
     <div id="content-wrapper" class="content-wrapper">
-      
+
     <% sidebar = rendered_partial_for(:sidebar) || yield_content(:sidebar) %>
       <div id="content" class="main<% if sidebar %> has-sidebar<% end %>" role="main">
         <%= yield %>
@@ -51,10 +60,7 @@
           <%= sidebar %>
           <div id="back-to-top" class="back-to-top"><a id="back-top-top" href="#">&#11014; Back to Top</a></div>
         </aside>
-        
       <% end %>
-      
-      
     </div>
 
     <div class="cta-contribute">
