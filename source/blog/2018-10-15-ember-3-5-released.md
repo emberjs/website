@@ -53,7 +53,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 ### Changes in Ember Data 3.5
 
 This release cycle marks two major milestones for `ember-data`,
-an LTS release and the `RecordData` feature.
+an LTS release and the `RecordData` interfaces.
 
 ### LTS
 
@@ -63,11 +63,11 @@ The first milestone is the release of `3.4 LTS`, our very first `LTS` release! F
 
 ##### RecordData
 
-The second milestone is the release of `3.5` which marks the first release containing the new [RecordData](https://github.com/emberjs/rfcs/pull/293) feature.
+The second milestone is the release of `3.5` which marks the first release containing the new [RecordData](https://github.com/emberjs/rfcs/pull/293) interfaces.
 `RecordData` gives addon developers much-needed API access with more confidence and stability. Many commonly requested features (improved dirty-tracking, fragments, alternative Models) are now possible or easier to implement in addons.
 
-Landing this feature required significant refactoring of the internals of `ember-data`, and is intended to allow us to deprecate and remove use of the private but intimate `InternalModel` API.
-Due to the nature of this change, we expect some applications may encounter regressions. This was the primary motivation for waiting to land this feature until after our first `LTS`. If you encounter issues upgrading from pre `3.5` versions to `3.5` or later, we recommend reporting them and making use of `LTS` until fixes are available.
+Landing `RecordData` required significant refactoring of the internals of `ember-data`, and is intended to allow us to deprecate and remove use of the private but intimate `InternalModel` API.
+Due to the nature of this change, we expect some applications may encounter regressions. This was the primary motivation for waiting to land this until after our first `LTS`. If you encounter issues upgrading from pre `3.5` versions to `3.5` or later, we recommend reporting them and making use of `LTS` until fixes are available.
 
 We are tracking issues introduced by `RecordData` with the label [record-data](https://github.com/emberjs/data/labels/record-data)
 
