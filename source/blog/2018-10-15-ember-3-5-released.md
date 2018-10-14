@@ -55,7 +55,7 @@ Ember Data is the official data persistence library for Ember.js applications.
 This release cycle marks two major milestones for `ember-data`,
 an LTS release and the `RecordData` interfaces.
 
-### LTS
+#### LTS
 
 The first milestone is the release of `3.4 LTS`, our very first `LTS` release! From here out, `ember-data` will follow the same LTS cycle and process as `Ember`.
 
