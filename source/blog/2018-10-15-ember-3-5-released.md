@@ -75,7 +75,7 @@ We will also continue to target bugfixes for `LTS`, tracked by the label [lts-ta
 
 ##### RecordData use with ModelFragments
 
-While most community addons have been found to work with `RecordData` versions of `ember-data`, [ember-data-model-fragments](https://github.com/lytics/ember-data-model-fragments) does not currently. If you use this addon, it is likely you will want to remain on `ember-data` `3.4 LTS` until the community has released a version compatible with `RecordData`.
+While most community addons have been found to work with `RecordData` versions of `ember-data`, [ember-data-model-fragments](https://github.com/lytics/ember-data-model-fragments) does not currently. If you use this addon, it is likely you will want to stay on `ember-data` `3.4 LTS` until the community has released a version compatible with `RecordData`.
 
 If you use `ember-data-model-fragments`, helping to refactor it to make use of `RecordData` (or supply bugfixes to `ember-data` if required) would be greatly appreciated.
 
