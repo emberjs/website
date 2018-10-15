@@ -61,7 +61,7 @@ The first milestone is the release of `3.4 LTS`, our very first `LTS` release! F
 
 #### New Features (1)
 
-##### RecordData
+**RecordData**
 
 The second milestone is the release of `3.5` which marks the first release containing the new [RecordData](https://github.com/emberjs/rfcs/pull/293) interfaces.
 `RecordData` gives addon developers much-needed API access with more confidence and stability. Many commonly requested features (improved dirty-tracking, fragments, alternative Models) are now possible or easier to implement in addons.
@@ -73,7 +73,7 @@ We are tracking issues introduced by `RecordData` with the label [record-data](h
 
 We will also continue to target bugfixes for `LTS`, tracked by the label [lts-target](https://github.com/emberjs/data/labels/lts-target).
 
-##### RecordData use with ModelFragments
+**RecordData use with ModelFragments**
 
 While most community addons have been found to work with `RecordData` versions of `ember-data`, [ember-data-model-fragments](https://github.com/lytics/ember-data-model-fragments) does not currently. If you use this addon, it is likely you will want to stay on `ember-data` `3.4 LTS` until the community has released a version compatible with `RecordData`.
 
@@ -118,7 +118,7 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 
 #### New Features (3)
 
-##### Upgraded to Broccoli v2.0.0! (1 of 3)
+**Upgraded to Broccoli v2.0.0! (1 of 3)**
 
 Broccoli is an asset pipeline used by Ember. For quite a long time, tools in the Ember
 Ecosystem relied on a fork of Broccoli. However, as of this release, Ember CLI now uses
@@ -127,7 +127,7 @@ See [this Ember.js Times Reader's question](https://discuss.emberjs.com/t/reader
 to learn more about what makes Broccoli awesome and why it is used instead Parcel or Webpack.
 Many thanks to contributors and maintainers of Broccoli who helped with the migration.
 
-##### Build speed improvements up to 32% (2 of 3)
+**Build speed improvements up to 32% (2 of 3)**
 
 Thanks to migrating to Broccoli 2, Ember devs should see some speed improvements in their
 builds. Broccoli 2 allows Ember CLI to use the default system `temp` directory
@@ -135,7 +135,7 @@ rather than a `./tmp` directory local to a project folder. Depending on computer
 users may see up to 32% improvements in build time. The system `temp` directory
 on your computer has some optimizations in place that your apps now benefit from.
 
-##### Migration to ember-qunit (3 of 3)
+**Migration to ember-qunit (3 of 3)**
 
 `ember-cli-qunit` was a very thin shim over `ember-qunit`.
 Ember CLI now uses `ember-qunit` directly as a dependency.
@@ -144,10 +144,10 @@ Ember CLI now uses `ember-qunit` directly as a dependency.
 
 No new deprecations introduced in Ember CLI 3.5.
 
----
-
 For more details on the changes in Ember CLI 3.5 and detailed upgrade
 instructions, please review the [Ember CLI  3.5.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.5.0).
+
+---
 
 ## Thank You!
 
