@@ -1,0 +1,287 @@
+$ember-colors: (
+  accent: #413c58,
+  accent-2: #bc96e6,
+  background-1: #fffdf9, // off-white
+  black-: #212121,
+  grey-: lightgrey,
+  none-more-black: #000,
+  primary: #e04e39, // Ember orange
+  primary-dark: #9b2918,
+  primary-light: #ff8e72,
+  primary-lighter: #ffaf87,
+  primary-lightest: #edcbb1,
+  secondary: #4ce0b3,
+  secondary-dark: #377771,
+  white-: #fdfdfd,
+);
+
+@function ember-color($key: 'primary') {
+  @return map-get($ember-colors, $key);
+}
+
+@function foreground-for($key: 'background-1') {
+
+  @return map-get($ember-colors,
+    map-get(
+      (
+        accent: white-,
+        accent-2: black-,
+        background-1: black-,
+        grey-: black-,
+        primary: none-more-black,
+        primary-dark: white-,
+        primary-light: black-,
+        primary-lighter: black-,
+        primary-lightest: black-,
+        secondary: black-,
+        secondary-dark: white-,
+        white-: black-,
+      ), $key));
+
+}
+
+@function background-for($key: 'foreground-1') {
+  // do this, or find (elegant) way to reverse foreground-for map
+  @return map-get($ember-colors,
+    map-get(
+      (none-more-black: primary,
+  ), $key));
+
+}
+
+// following is for colors.hbs
+
+.color-box {
+  background-color: ember-color('white-');
+  color: ember-color('black-');
+  float: left;
+  font-size: 1.6rem;
+  margin: 1rem;
+  text-align: center;
+  width: 38rem;
+}
+
+.color-box__table {
+  border: solid .1rem ember-color('grey-');
+  height: 100%;
+  width: 100%;
+
+  td {
+
+    border: .1rem solid ember-color('grey-');
+    padding: .5rem;
+    vertical-align: middle;
+
+    code { font-family: Consolas, monospace; }
+
+  }
+
+}
+
+.color-box__example {
+  height: 10rem;
+}
+
+.color-box__accent {
+  background-color: ember-color('accent');
+  color: foreground-for('accent');
+}
+
+.color-box__accent-2 {
+  background-color: ember-color('accent-2');
+  color: foreground-for('accent-2');
+}
+
+.color-box__background-1 {
+  background-color: ember-color('background-1');
+  color: foreground-for('background-1');
+}
+
+.color-box__grey {
+  background-color: ember-color('grey-');
+  color: foreground-for('grey-');
+}
+
+.color-box__primary {
+  background-color: ember-color('primary');
+  color: foreground-for('primary');
+}
+
+.color-box__primary-dark {
+  background-color: ember-color('primary-dark');
+  color: foreground-for('primary-dark');
+}
+
+.color-box__primary-light {
+  background-color: ember-color('primary-light');
+  color: foreground-for('primary-light');
+}
+
+.color-box__primary-lighter {
+  background-color: ember-color('primary-lighter');
+  color: foreground-for('primary-lighter');
+}
+
+.color-box__primary-lightest {
+  background-color: ember-color('primary-lightest');
+  color: foreground-for('primary-lightest');
+}
+
+.color-box__secondary {
+  background-color: ember-color('secondary');
+  color: foreground-for('secondary');
+}
+
+.color-box__secondary-dark {
+  background-color: ember-color('secondary-dark');
+  color: foreground-for('secondary-dark');
+}
+
+.color-box__white {
+  background-color: ember-color('white-');
+  color: foreground-for('white-');
+}
+
+.color-invert-button {
+  font-size: 3.6rem;
+  margin: 1rem;
+}
+
+// colors.hbs
+//
+// <div>
+//   {{!-- this button requires jQuery to work ¯\_(ツ)_/¯ --}}
+//   <button class="color-invert-button" onclick="$('.color-box__example').each(function(){ let fg = $(this).css('color'); let bg = $(this).css('background-color'); $(this).css('background-color', fg).css('color', bg); });">Invert Colors</button>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__accent" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.accent</code></pre></td></tr>
+//     <tr><td><pre><code>#413c58</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.white-</code></pre></td></tr>
+//     <tr><td><pre><code>#fdfdfd</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>10.26</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__accent-2" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.accent-2</code></pre></td></tr>
+//     <tr><td><pre><code>#bc96e6</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>6.63</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__background-1" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.background-1</code></pre></td></tr>
+//     <tr><td><pre><code>#fffdf9</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>15.85</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__grey" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.grey-</code></pre></td></tr>
+//     <tr><td><pre><code>#d3d3d3</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>10.76</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__primary" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.primary</code></pre></td></tr>
+//     <tr><td><pre><code>#e04e39</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.none-more-black</code></pre></td></tr>
+//     <tr><td><pre><code>#000</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>5.32</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__primary-dark" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.primary-dark</code></pre></td></tr>
+//     <tr><td><pre><code>#9b2918</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.white-</code></pre></td></tr>
+//     <tr><td><pre><code>#fdfdfd</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>7.58</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__primary-light" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.primary-light</code></pre></td></tr>
+//     <tr><td><pre><code>#ff8e72</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>7.18</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__primary-lighter" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.primary-lighter</code></pre></td></tr>
+//     <tr><td><pre><code>#ffaf87</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>9</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__primary-lightest" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.primary-lightest</code></pre></td></tr>
+//     <tr><td><pre><code>#edcbb1</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>10.56</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__secondary" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.secondary</code></pre></td></tr>
+//     <tr><td><pre><code>#4ce0b3</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>9.68</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__secondary-dark" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.secondary-dark</code></pre></td></tr>
+//     <tr><td><pre><code>#377771</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.white-</code></pre></td></tr>
+//     <tr><td><pre><code>#fdfdfd</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>9.68</code></pre></td></tr>
+//   </table>
+// </div>
+//
+// <div class="color-box">
+//   <table class="color-box__table">
+//     <td class="color-box__example color-box__white" colspan="2">The quick brown fox jumps over the lazy dog.</td>
+//     <tr><td rowspan="2">bg</td><td><pre><code>$ember-colors.white-</code></pre></td></tr>
+//     <tr><td><pre><code>#fdfdfd</code></pre></td></tr>
+//     <tr><td rowspan="2">fg</td><td><pre><code>$ember-colors.black-</code></pre></td></tr>
+//     <tr><td><pre><code>#212121</code></pre></td></tr>
+//     <tr><td>conrat</td><td><pre><code>15.83</code></pre></td></tr>
+//   </table>
+// </div>
