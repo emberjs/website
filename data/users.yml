@@ -1130,7 +1130,7 @@
 - url: "https://www.hostingadvice.com/"
   image: ha-logo.png
   alt: HostingAdvice.com
-  use: "HostingAdvice uses Ember.js in several of our interal tools and applications"
+  use: "HostingAdvice uses Ember.js in several of our internal tools and applications"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
