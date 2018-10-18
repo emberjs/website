@@ -1127,6 +1127,10 @@
   image: viavi.png
   alt: VIAVI Solutions
   use: "VIAVI Solutions uses Ember.js in a variety of our intranet applications"
+- url: "https://www.hostingadvice.com/"
+  image: ha-logo.png
+  alt: HostingAdvice.com
+  use: "HostingAdvice uses Ember.js in several of our internal tools and applications"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
