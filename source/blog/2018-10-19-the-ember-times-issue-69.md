@@ -48,7 +48,13 @@ This means that when a new release is prepared these tests will most likely catc
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Using Relationships Links or Not? Your Call! 🔗](https://github.com/emberjs/rfcs/pull/387)
+
+Fetching your data from a [JSON:API compliant](https://jsonapi.org/) backend? Not sure how to tell Ember Data **explicitly** to look up an included **relationship** in the payload itself vs. via an additional request using the response's `link` attribute?
+
+Possibly, this will be much easier very soon! [Another new, Ember Data related RFC](https://github.com/emberjs/rfcs/pull/387) proposed the addition of a `shouldFindViaLink` method to the public API of REST **adapters**. According to the proposal, users may overwrite this method - which should return a _Boolean_ to indicate if Ember Data should look up relationship data via links or not - themselves for custom behavior and gain full control of their relational data loading.
+
+You can **read more** about the design of this proposed API [**in the RFC itself**](https://github.com/emberjs/rfcs/pull/387)!
 
 
 ---
