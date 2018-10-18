@@ -17,8 +17,11 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A New Way to Error Handling 🚩](https://github.com/emberjs/rfcs/pull/384)
 
+[A recent **Request for Comments (RFC)**](https://github.com/emberjs/rfcs/pull/384) from the magical **Ember Data** Land takes us on a journey through **error handling** in Ember: It proposes the addition of new error handling methods which do not affect the state of your data records to the [`DS.Errors`](https://www.emberjs.com/api/ember-data/release/classes/DS.Errors) class.
+
+Read more about the new, proposed API and the motivation behind it [in the original proposal and feel free to discuss](https://github.com/emberjs/rfcs/pull/384)!
 
 ---
 
@@ -79,7 +82,7 @@ responsive: true
 
 ## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
