@@ -1,19 +1,27 @@
 ---
 title: The Ember Times - Issue No. 69
-author: the crowd
+author: Alon Bukai, Jessica Jordan, Amy Lam, Ryan Mark, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/19-the-ember-times-issue-69.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Namaste Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Yourselves to Default Template Helpers 🍽️](https://github.com/emberjs/rfcs/pull/388)
+If you find yourself often reaching for the addon [ember-truth-helpers](https://github.com/jmurphyau/ember-truth-helpers) in your templates then this [new RFC by @cibernox](https://github.com/emberjs/rfcs/pull/388) is for you. This **Request for Comments (RFC)** proposes bringing in some of the **template helpers** in `ember-truth-helpers` into **Ember Core**. 
 
+The reasoning behind this is that a few helpers from this addon are so common in Ember apps that it makes sense to add them into Ember Core itself to **reduce the friction** of needing to install an addon to get them.
+
+Another reason that might even be more important is that this could open up **Glimmer VM low level optimizations** as the Glimmer VM itself would know about these helpers.
+
+The proposed helpers to add to core are: `eq`, `not`, `and`, `or`, `gt` and `gte`, `lt` and `lte`.
+
+Learn more about this RFC and [join the discussion](https://github.com/emberjs/rfcs/pull/388). 
 
 ---
 
@@ -107,4 +115,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Alon Bukai, Jessica Jordan, Amy Lam, Ryan Mark, the crowd and the Learning Team
