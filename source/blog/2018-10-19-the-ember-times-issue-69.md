@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 69
-author: Alon Bukai, Kenneth Larsen, Jessica Jordan, Amy Lam, Ryan Mark, the crowd
+author: Chris Ng, Alon Bukai, Kenneth Larsen, Jessica Jordan, Amy Lam, Ryan Mark
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/19-the-ember-times-issue-69.html"
 responsive: true
@@ -60,12 +60,22 @@ You can **read more** about the design of this proposed API [**in the RFC itself
 
 ---
 
+## [New Addon Release: ember-self-focused 👁️](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused)
+
+<!--alex ignore SPA-->
+User interface transitions that happen in a single-page application (SPA) are problematic for **screen reading software** since traditionally they are reliant on reading out the text on page load. Since there are some visual changes on the screen but the page does not reload in an SPA, it makes it difficult for screen reading software users to be aware of UI changes.
+
+To solve this issue, [@sarbbottam](https://github.com/sarbbottam) released a brand new addon to enable screen reading software to speak the content of the new node by **focusing on the HTML node of the dynamic content**. The new addon [ember-self-focused](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused) provides a **component** and a **service** to keep track of the HTML nodes to be focused.
+
+Check out more in [@sarbbottam](https://github.com/sarbbottam)'s [blog post](https://engineering.linkedin.com/blog/2018/10/making-ember-applications--ui-transitions-screen-reader-friendly) or at the [GitHub repo](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused)!
+
+---
+
 ## [EmberConf 2019 CFP Brainstorm 📆](https://emberconf.com/cfp-brainstorm.html)
 
 Interested in submitting a talk idea to **EmberConf**? Join the EmberConf team for an **interactive video brainstorm** on Tuesday, October 30th at 11:00am PT. They'll chat about the CFP, the topics they hope to see, and answer community questions about ideas and proposals. Mark your calendars and go to [the EmberConf website](https://emberconf.com/cfp-brainstorm.html) for more info!
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -99,4 +109,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Alon Bukai, Kenneth Larsen, Ryan Mark, Amy Lam, Jessica Jordan and the Learning Team
+Chris Ng, Alon Bukai, Kenneth Larsen, Ryan Mark, Amy Lam, Jessica Jordan and the Learning Team
