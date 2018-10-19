@@ -59,7 +59,7 @@ You can **read more** about the design of this proposed API [**in the RFC itself
 
 ---
 
-## [New Addon Release: ember-self-focused 👁️](#https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused)
+## [New Addon Release: ember-self-focused 👁️](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused)
 
 User interface transitions that happen in a SPA are problematic for screen reading software since traditionally they are reliant on reading out the text on page load. Since there are some visual changes on the screen but the page does not reload in an SPA, it makes it difficult for screen reading software users to be aware of UI changes.
 
