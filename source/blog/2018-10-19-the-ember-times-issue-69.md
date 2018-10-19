@@ -8,7 +8,7 @@ responsive: true
 
 Namaste Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week we're discussing 4️⃣ fresh RFCs 🥑: bringing truth helpers to Ember core ✍️, new error handling methods 🚨, jQuery-free Ember apps by default 😄, and some improvements to relationship links 🔗. We're also highlighting test coverage for docs when Ember is upgraded 🚧, the new ember-self-focused addon 👁‍🗨, the EmberConf 2019 CFP brainstorm 🧠⛈, and more...read on!
 
 ---
 
