@@ -1,19 +1,27 @@
 ---
 title: The Ember Times - Issue No. 69
-author: Chris Ng, Alon Bukai, Jessica Jordan, Amy Lam, Ryan Mark
+author: Chris Ng, Alon Bukai, Kenneth Larsen, Jessica Jordan, Amy Lam, Ryan Mark
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/19-the-ember-times-issue-69.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Namaste Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Yourselves to Default Template Helpers 🍽️](https://github.com/emberjs/rfcs/pull/388)
+If you find yourself often reaching for the addon [ember-truth-helpers](https://github.com/jmurphyau/ember-truth-helpers) in your templates then this [new RFC by @cibernox](https://github.com/emberjs/rfcs/pull/388) is for you. This **Request for Comments (RFC)** proposes bringing in some of the **template helpers** in `ember-truth-helpers` into **Ember Core**. 
 
+The reasoning behind this is that a few helpers from this addon are so common in Ember apps that it makes sense to add them into Ember Core itself to **reduce the friction** of needing to install an addon to get them.
+
+Another reason that might even be more important is that this could open up **Glimmer VM low level optimizations** as the Glimmer VM itself would know about these helpers.
+
+The proposed helpers to add to core are: `eq`, `not`, `and`, `or`, `gt` and `gte`, `lt` and `lte`.
+
+Learn more about this RFC and [join the discussion](https://github.com/emberjs/rfcs/pull/388). 
 
 ---
 
@@ -40,12 +48,6 @@ You might have noticed that sometimes when a new release of Ember is out some AP
 
 This means that when a new release is prepared these tests will most likely catch any unintentional documentation changes.
 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
 ---
 
 ## [Using Relationships Links or Not? Your Call! 🔗](https://github.com/emberjs/rfcs/pull/387)
@@ -55,7 +57,6 @@ Fetching your data from a [JSON:API compliant](https://jsonapi.org/) backend? No
 Possibly, this will be much easier very soon! [Another new, Ember Data related RFC](https://github.com/emberjs/rfcs/pull/387) proposed the addition of a `shouldFindViaLink` method to the public API of REST **adapters**. According to the proposal, users may overwrite this method - which should return a _Boolean_ to indicate if Ember Data should look up relationship data via links or not - themselves for custom behavior and gain full control of their relational data loading.
 
 You can **read more** about the design of this proposed API [**in the RFC itself**](https://github.com/emberjs/rfcs/pull/387)!
-
 
 ---
 
@@ -69,16 +70,11 @@ Check out more in [@sarbbottam](https://github.com/sarbbottam)'s [blog post](htt
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [EmberConf 2019 CFP Brainstorm 📆](https://emberconf.com/cfp-brainstorm.html)
 
-
----
-
-## [SECTION TITLE](#section-url)
-
+Interested in submitting a talk idea to **EmberConf**? Join the EmberConf team for an **interactive video brainstorm** on Tuesday, October 30th at 11:00am PT. They'll chat about the CFP, the topics they hope to see, and answer community questions about ideas and proposals. Mark your calendars and go to [the EmberConf website](https://emberconf.com/cfp-brainstorm.html) for more info!
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -112,4 +108,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Alon Bukai, Jessica Jordan, Amy Lam, Ryan Mark, and the Learning Team
+Chris Ng, Alon Bukai, Kenneth Larsen, Ryan Mark, Amy Lam, Jessica Jordan and the Learning Team
