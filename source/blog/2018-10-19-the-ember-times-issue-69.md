@@ -49,7 +49,7 @@ You can **read more** about the design of this proposed API [**in the RFC itself
 
 ## [EmberConf 2019 CFP Brainstorm 📆](https://emberconf.com/cfp-brainstorm.html)
 
-Interested in submitting a talk idea to EmberConf? Join the EmberConf team for an interactive video brainstorm on Tuesday, October 30th at 11:00am PT. They'll chat about the CFP, the topics they hope to see, and answer community questions about ideas and proposals. Mark your calendars and go to [the EmberConf website](https://emberconf.com/cfp-brainstorm.html) for more info!
+Interested in submitting a talk idea to **EmberConf**? Join the EmberConf team for an **interactive video brainstorm** on Tuesday, October 30th at 11:00am PT. They'll chat about the CFP, the topics they hope to see, and answer community questions about ideas and proposals. Mark your calendars and go to [the EmberConf website](https://emberconf.com/cfp-brainstorm.html) for more info!
 
 ---
 
