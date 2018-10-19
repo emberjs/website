@@ -61,9 +61,9 @@ You can **read more** about the design of this proposed API [**in the RFC itself
 
 ## [New Addon Release: ember-self-focused 👁️](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused)
 
-User interface transitions that happen in a SPA are problematic for screen reading software since traditionally they are reliant on reading out the text on page load. Since there are some visual changes on the screen but the page does not reload in an SPA, it makes it difficult for screen reading software users to be aware of UI changes.
+User interface transitions that happen in a SPA are problematic for **screen reading software** since traditionally they are reliant on reading out the text on page load. Since there are some visual changes on the screen but the page does not reload in an SPA, it makes it difficult for screen reading software users to be aware of UI changes.
 
-To solve this issue, [@sarbbottam](https://github.com/sarbbottam) released a brand new addon to enable screen reading software to speak the content of the new node by focusing on the HTML node of the dynamic content. The new addon [ember-self-focused](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused) provides a component and a service to keep track of the HTML nodes to be focused.
+To solve this issue, [@sarbbottam](https://github.com/sarbbottam) released a brand new addon to enable screen reading software to speak the content of the new node by **focusing on the HTML node of the dynamic content**. The new addon [ember-self-focused](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused) provides a **component** and a **service** to keep track of the HTML nodes to be focused.
 
 Check out more in [@sarbbottam](https://github.com/sarbbottam)'s [blog post](https://engineering.linkedin.com/blog/2018/10/making-ember-applications--ui-transitions-screen-reader-friendly) or at the [GitHub repo](https://github.com/linkedin/self-focused/tree/master/packages/ember-self-focused)!
 
