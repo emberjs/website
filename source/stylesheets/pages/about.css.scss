@@ -5,13 +5,7 @@
 
 .section {
   overflow: hidden;
-  table.columns {
-    margin: 0 auto;
-    td {
-      vertical-align: top;
-      padding-right: 50px;
-    }
-  }
+  margin: 4rem 0;
 }
 
 .features.section {
@@ -52,166 +46,68 @@
 }
 
 #content .users.section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
   .surround {
-    @include clearfix;
-    background-color: #FFF;
+    background-color: #fff;
     border-radius: 3px;
     border: 1px solid #d1d1d1;
     box-shadow: inset 0 1px 2px rgba(0,0,0,0.1), 0 1px 0 #fff;
-    margin: 0 auto;
-    max-width: 100%;
-    // padding-top: 19px;
-    width: 940px;
+    margin: 0 2rem 2rem 2rem;
+    max-width: 940px;
+    padding: 1rem;
 
     a:hover {
       border: 0;
     }
 
     ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       margin: 0;
-    }
 
-    .bx-wrapper,
-    .bx-window {
-      width: 940px;
-      max-width: 100%;
-    }
-
-    .bx-wrapper {
-
-      .bx-prev,
-      .bx-next {
-        background: no-repeat;
-        @include hidpi('about/carousel_controls', png);
-        float: left;
-        height: 28px;
-        width: 30px;
-      }
-
-      .bx-prev,
-      .bx-next,
-      .pager-link {
-        text-indent: -9999px;
-      }
-
-      .bx-prev {
-        background-position: left;
-        border-right: 1px solid #d1d1d1;
-        float: right;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-
-      .bx-next {
-        background-position: right;
-        border-left: 1px solid #d1d1d1;
-        float: right;
-        position: absolute;
-        bottom: 0;
-        right: 1px;
-      }
-
-      .bx-window {
-        border-bottom: 1px solid #d1d1d1;
-        height: 124px;
-        .user.pager {
-          margin: 11px !important;
-          min-width: 177px;
-        }
-      }
-
-      .bx-pager {
-        @include clearfix;
-        background: bottom repeat-x #f4f4f4;
-        @include hidpi('about/carousel_pager_bg', png);
-        border-left: 1px solid #fafafa;
-        border-right: 1px solid #fafafa;
-        border-top: 1px solid #fefefe;
-        font-size: 0;
-        height: 28px;
-        line-height: 0;
-        margin: 0 29px;
-        padding-top: 9px;
-        text-align: center;
-
-        .pager-link {
-          background: 0 0 no-repeat;
-          @include hidpi('about/carousel_dots', png);
-          height: 11px;
-          width: 10px;
-          margin-left: 10px;
-          display: inline-block;
-
-          &.pager-active,
-          &.pager-active:hover {
-            background-position: -22px 0;
-          }
-
-          &:hover {
-            background-position: -11px 0;
-          }
-
-          &:first-of-type {
-            margin-left: 0;
-          }
-        }
+      @media screen and (min-width: 958px) {
+        justify-content: space-between;
       }
     }
   }
 
-  .user {
-    position: relative;
-    float: left;
-    @media screen and (min-width: 0px) and (max-width:767px) {
-      width: 175px;
-    }
-    @media screen and (min-width:768px) {
-      width: 230px;
-    }
-
-    &.empty {
-      display: block;
-      height: 210px;
-      visibility: hidden; /*Take up space, but be invisible*/
-    }
-
-    a {
-      display: block;
-      height: 103px;
-      margin-left: 20px;
-      width: 210px;
-    }
+  .user a {
+    display: block;
+    height: 103px;
+    width: 210px;
   }
 
-  p {
-    text-align: center;
-  }
-
-  .listed {
-    padding-top: 20px;
-    display:block;
-    margin: 0 auto;
-    width: 100%;
+  @media screen and (max-width: 767px) {
+    .desktop-only {
+      display: none;
+    }
   }
 }
 
 .gears.section {
   display: block;
-  clear: both;
-  max-width: 100%;
   margin: 0 auto;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
   .gear {
-    text-align: center;
-    height: 120px;
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
+
     a {
-      display: inline-block;
-      img {
-        display: block;
-        max-width: 100%;
-        margin: 0 auto;
-      }
+      margin: 0 0.5rem;
     }
   }
 }
@@ -298,17 +194,19 @@ a.toc-anchor {
 }
 
 .about__listing-button-group {
-  width: 100%;
+  align-content: center;
   display: flex;
   justify-content: center;
-  align-content: center;
-  @media screen and (min-width:0) and (max-width: 991px) {
+  width: 100%;
+
+  @media screen and (max-width: 991px) {
     flex-flow: row wrap;
   }
 }
 .about__listing-button {
-  margin: 10px 10px 0 10px;
-  @media screen and (min-width:0) and (max-width: 991px) {
+  margin: 0 10px;
+
+  @media screen and (max-width: 991px) {
     min-width: 100%;
     margin: 10px auto;
   }

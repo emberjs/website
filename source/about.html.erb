@@ -3,21 +3,6 @@ title: "A framework for ambitious web developers"
 responsive: true
 ---
 <% content_for :foot do %>
-  <script type="text/javascript">
-    $(function() {
-      $('#slider').bxSlider({
-        displaySlideQty: 4,
-        moveSlideQty: 4,
-        auto: true,
-        pager: true,
-        speed: 700,
-        pause: 5000
-      });
-
-      // Hack to force proper sizing
-      $('.bx-wrapper, .bx-window').css('width', 940);
-    });
-  </script>
   <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
   </script>
@@ -58,21 +43,25 @@ responsive: true
     <div class="feature">
       <div class="structure feature-img"></div>
       <p>No need to waste time on trivial choices. Ember's abstractions allow developers to focus on what makes your app <i>unique</i>.</p>
-    
     </div>
     <div class="feature">
       <div class="productivity feature-img"></div>
       <p>Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help developers <i>efficiently</i> get the job done.</p>
-    
-
     </div>
   </div>
   <div class="users section">
     <h2 class="text-center">Who's Using Ember.js?</h2>
     <div class="surround">
       <ul id="slider">
-        <% data.users.slice(0,12).each do |user| %>
+        <% data.users.slice(0,4).each do |user| %>
         <li class="user">
+          <a href="<%= user.url %>" rel="nofollow">
+            <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>"/>
+          </a>
+        </li>
+        <% end %>
+        <% data.users.slice(4,4).each do |user| %>
+        <li class="user desktop-only">
           <a href="<%= user.url %>" rel="nofollow">
             <img src="/images/about/<%= user.image %>" width="210" height="103" alt="<%= user.alt %>"/>
           </a>
@@ -80,11 +69,9 @@ responsive: true
         <% end %>
       </ul>
     </div>
-    <div class="about__listing-button">
-      <a class="ember-button ember-button--centered" href="/ember-users">
-        Meet More Users
-      </a>
-    </div>
+    <a class="ember-button ember-button--centered" href="/ember-users">
+      Meet More Users
+    </a>
   </div>
   <div class="gears section">
     <h2 class="text-center">Buy Ember.js Gear and Support Development</h2>
