@@ -187,7 +187,7 @@
   first: Todd
   last: Jordan
   github: https://github.com/toddjordan
-  twitter: https://twitter.com/tddjordan 
+  twitter: https://twitter.com/tddjordan
   image: tjordan.jpg
   teams:
     - learning
@@ -300,3 +300,19 @@
   image: anavasardyan.jpg
   teams:
     - cli
+- name: Amy Lam
+  first: Amy
+  last: Lam
+  github: https://github.com/amyrlam
+  twitter: https://twitter.com/amyrlam
+  image: alam.jpg
+  teams:
+    - learning
+- name: Chris Mason
+  first: Chris
+  last: Mason
+  github: https://github.com/mansona
+  twitter: https://twitter.com/real_ate
+  image: cmason.jpg
+  teams:
+    - learning
