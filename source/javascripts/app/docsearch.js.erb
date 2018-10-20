@@ -1,3 +1,4 @@
+/**
 (function() {
     var script = document.createElement('script');
     script.type = 'text/javascript';
@@ -10,9 +11,9 @@
 var currentRevision = '<%= current_version %>';
 var apiKey = '<%= data.search.api_key %>';
 var inputSelector = '#search-input';
-var indexName = 'emberjs_versions';
+var indexName = 'ember-guides';
 var hitsPerPage = 10;
-var facetFilters = '[["version:' + currentRevision + '"]]';
+# var facetFilters = '[["version:' + currentRevision + '"]]';
 
 $(window).load(function () {
     docsearch({
@@ -21,7 +22,9 @@ $(window).load(function () {
         inputSelector: inputSelector,
         algoliaOptions: {
             hitsPerPage: hitsPerPage,
-            facetFilters: facetFilters
+            # facetFilters: facetFilters
         }
     });
 });
+
+**/
