@@ -124,7 +124,7 @@ Broccoli is an asset pipeline used by Ember. For quite a long time, tools in the
 Ecosystem relied on a fork of Broccoli. However, as of this release, Ember CLI now uses
 [Broccoli 2.0](https://github.com/broccolijs/broccoli) directly! 
 See [this Ember.js Times Reader's question](https://discuss.emberjs.com/t/readers-questions-why-does-ember-use-broccoli-and-how-is-it-different-from-webpack-rollup-parcel/15384) 
-to learn more about what makes Broccoli awesome and why it is used instead Parcel or Webpack.
+to learn more about what makes Broccoli awesome and why it is used instead of Parcel or Webpack.
 Many thanks to contributors and maintainers of Broccoli who helped with the migration.
 
 **Build speed improvements up to 32% (2 of 3)**
