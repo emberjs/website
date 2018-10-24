@@ -12,7 +12,7 @@ responsive: true
 
 ---
 
-## ## [ember-i18n Deprecation and Release of ember-intl 🌐](https://twitter.com/MiguelCamba/status/1054699605865177089)
+## [ember-i18n Deprecation and Release of ember-intl 🌐](https://twitter.com/MiguelCamba/status/1054699605865177089)
 
 [@snewcomer](https://github.com/snewcomer) and [@cibernox](https://github.com/cibernox) [announced](https://twitter.com/MiguelCamba/status/1054699605865177089) a new way to internationalize Ember apps, [ember-i18n](https://github.com/jamesarosen/ember-i18n) is now deprecated in favour of [ember-intl](https://github.com/ember-intl/ember-intl)! This will provide Ember with a standard package for internationalization.
 
