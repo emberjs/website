@@ -21,6 +21,7 @@ There are [many reasons](https://twitter.com/MiguelCamba/status/1054720978478084
 - **Locale-aware** numbers, dates, times, currencies, decimals, and percentages!
 - Uses the [**Native Intl API**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
 - Translations are way more powerful and **can contain logic** (like gender-dependent translations)
+<!--alex ignore THEWORD-->
 - Advanced [**addon support**](https://github.com/ember-intl/ember-intl/blob/master/docs/addon-support.md) to provide translations to the host app
 
 There is even a [codemod](https://github.com/DockYard/ember-i18n-to-intl-migrator) to make the switch from ember-i18n to ember-intl easier! So [check it out](https://github.com/ember-intl/ember-intl) and make the switch today!
