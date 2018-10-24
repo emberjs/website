@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-More convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**,
+More convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**,
 
 ---
 
@@ -28,7 +28,13 @@ Curious? Be sure to give the [proposal a read and let your thoughts known in the
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Original & Artisan ☕️ Deprecations RFC for the setComponentManager API](https://github.com/emberjs/rfcs/pull/392)
+
+The 🔥 brand-new **Custom Component Manager API** 🚒 [has been shipped with Ember 3.4](https://emberjs.com/blog/2018/10/07/ember-3-4-released.html#toc_changes-in-ember-js-3-4) and is now - as a low-level API granting addon authors more freedom to create **components from customized base classes**.
+
+This week a [freshly brewed RFC](https://github.com/emberjs/rfcs/pull/392) with its first, important deprecation rolled in: The proposal suggests to replace the **string-based lookup** method for the `setComponentManager` function for a **factory-based** approach. This small change in the API provides quick wins 🏅 for future undertakings regarding tree shaking of Ember apps, module unification and more.
+
+Read all about the motivation behind this deprecation in the [hand-crafted RFC on Github](https://github.com/emberjs/rfcs/pull/392).
 
 
 ---
