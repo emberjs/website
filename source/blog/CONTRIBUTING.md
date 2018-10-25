@@ -20,10 +20,27 @@ npm install -g alex
 bash scripts/language-check.sh
 ```
 
-If you are consciously overriding the Alex linter you can add an annotation before the paragraph as shown below.
+If you are consciously [overriding the Alex linter](https://github.com/get-alex/alex#control) you can add an annotation before the paragraph as shown below.
 
+From the example error message:
+
+Text:
 ```
-<!--alex ignore THEWORD-->
+A pop up window will occur.
+```
+
+Error Message:
+```
+readme.md
+  1:15-1:18  warning  `pop` may be insensitive, use `parent` instead  dad-mom  retext-equality
+
+⚠ 1 warning
+```
+
+Add the keyword to the ignore
+```
+<!--alex ignore dad-mom-->
+A pop up window will occur.
 ```
 
 # Ember Times
