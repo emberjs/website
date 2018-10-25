@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 70
-author: Jen Weber, Chris Ng, Jessica Jordan
+author: Jen Weber, Chris Ng, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/26-the-ember-times-issue-70.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-An Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, an exciting new Readers' Question 🤔 on the future of controllers
+An Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, an exciting new Readers' Question 🤔 on the future of controllers, using GraphQL in Ember 💥, and more.
 
 ---
 
@@ -50,7 +50,9 @@ Read all about the motivation behind this deprecation in the [hand-crafted RFC o
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [No Graph Theory Required: Ember and GraphQL in Practice ⚡️](https://medium.com/kloeckner-i/ember-and-graphql-8aa15f7a2554)
+
+Following his [EmberFest](https://emberfest.eu/schedule/#rocky-neurock) talk with [@chadian](https://github.com/chadian), [@jneurock](https://github.com/jneurock) blogged about their experience with GraphQL in Ember. If you are struggling with JSON API, or thinking about GraphQL, this article should give you an understanding of how to get started. They even created an [example repo](https://github.com/chadian/ember-graphql-examples) that includes an Ember app demonstrating GraphQL integration with four different clients. Check out the [article](https://medium.com/kloeckner-i/ember-and-graphql-8aa15f7a2554) and the [GraphQL website](https://graphql.org/learn/) to learn more!
 
 
 ---
@@ -114,4 +116,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jen Weber, Chris Ng, Jessica Jordan, and the Learning Team
+Jen Weber, Chris Ng, Amy Lam, Jessica Jordan, and the Learning Team
