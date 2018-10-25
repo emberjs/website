@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 70
-author: Jessica Jordan,
+author: Chris Ng, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/26-the-ember-times-issue-70.html"
 responsive: true
@@ -12,8 +12,19 @@ More convenient **transitions** through your Ember apps with the **new Router He
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [ember-i18n Deprecation and Release of ember-intl 🌐](https://twitter.com/MiguelCamba/status/1054699605865177089)
 
+[@snewcomer](https://github.com/snewcomer) and [@cibernox](https://github.com/cibernox) [announced](https://twitter.com/MiguelCamba/status/1054699605865177089) a new way to internationalize Ember apps, [ember-i18n](https://github.com/jamesarosen/ember-i18n) is now deprecated in favour of [ember-intl](https://github.com/ember-intl/ember-intl)! This will provide Ember with a standard package for internationalization.
+
+There are [many reasons](https://twitter.com/MiguelCamba/status/1054720978478084097) to make the change such as:
+- Using the [**ICU message format**](https://formatjs.io/guides/message-syntax/) which is a standard in the i18n industry
+- **Locale-aware** numbers, dates, times, currencies, decimals, and percentages!
+- Uses the [**Native Intl API**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- Translations are way more powerful and **can contain logic** (like gender-dependent translations)
+<!--alex ignore host-hostess-->
+- Advanced [**addon support**](https://github.com/ember-intl/ember-intl/blob/master/docs/addon-support.md) to provide translations to the host app
+
+There is even a [codemod](https://github.com/DockYard/ember-i18n-to-intl-migrator) to make the switch from ember-i18n to ember-intl easier! So [check it out](https://github.com/ember-intl/ember-intl) and make the switch today!
 
 ---
 
@@ -102,4 +113,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, and the Learning Team
+Chris Ng, Jessica Jordan, and the Learning Team
