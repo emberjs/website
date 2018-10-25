@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 70
-author: Chris Ng, Jessica Jordan
+author: Jen Weber, Chris Ng, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/26-the-ember-times-issue-70.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-More convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**,
+An Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, an exciting new Readers' Question 🤔 on the future of controllers
 
 ---
 
@@ -75,9 +75,9 @@ Read all about the motivation behind this deprecation in the [hand-crafted RFC o
 
 ---
 
-## [Readers' Question: What is the future of Controllers?](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708)
+## [Readers' Question: What is the Future 🚀 of Controllers?](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708)
 
-Ah, the age old question, "What is the future of controllers? When is it a good time to use them in a modern Ember app?" Jen Weber tackles this topic with some help from Framework Core Team member Edward Faulkner. TLDR: do use them, don't lose any sleep over them, and help us decide their future. See this [Ember Discuss post](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708) for the article and conversation!  
+Ah, the age old question: "What is the future of controllers? When is it a good time to use them in a modern Ember app?" [@jenweber](https://github.com/jenweber) tackles this topic with some help from Framework Core Team member [@ef4](https://github.com/ef4). TLDR: do use them, don't lose any sleep over them, and help us decide their future. See this [Ember Discuss post](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708) for the article and conversation!  
 
 ---
 
@@ -114,4 +114,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, and the Learning Team
+Jen Weber, Chris Ng, Jessica Jordan, and the Learning Team
