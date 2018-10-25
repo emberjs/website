@@ -75,8 +75,9 @@ Read all about the motivation behind this deprecation in the [hand-crafted RFC o
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Readers' Question: What is the future of Controllers?](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708)
 
+Ah, the age old question, "What is the future of controllers? When is it a good time to use them in a modern Ember app?" Jen Weber tackles this topic with some help from Framework Core Team member Edward Faulkner. TLDR: do use them, don't lose any sleep over them, and help us decide their future. See this [Ember Discuss post](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708) for the article and conversation!  
 
 ---
 
