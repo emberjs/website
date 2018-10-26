@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 69
 author: Chris Ng, Alon Bukai, Kenneth Larsen, Jessica Jordan, Amy Lam, Ryan Mark
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/19-the-ember-times-issue-69.html"
 responsive: true
 ---
