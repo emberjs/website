@@ -34,14 +34,14 @@ Inspired by the [experimental addon ember-router-helpers](https://github.com/rwj
 
 Several **new template helpers and element modifiers** for routing are proposed: This includes a `transition-to` element modifier for easy route-to-route transitions [surpassing some of the drawbacks](https://github.com/emberjs/rfcs/blob/new-router-helpers/text/0000-router-helpers.md#motivation) of the functionally similar `link-to` helper. But also the design of and the motivation behind new, useful helpers like `root-url`, `is-active` and `is-loading` among others are explained in great detail in the RFC itself.
 
-Curious? Be sure to give the [proposal a read and let your thoughts known in the comments below!](https://github.com/emberjs/rfcs/pull/391)
+Curious? Be sure to give the [proposal a read and make your thoughts known in the comments below!](https://github.com/emberjs/rfcs/pull/391)
 
 
 ---
 
 ## [Original & Artisan ☕️ Deprecations RFC for the setComponentManager API](https://github.com/emberjs/rfcs/pull/392)
 
-The 🔥 brand-new **Custom Component Manager API** 🚒 [has been shipped with Ember 3.4](https://emberjs.com/blog/2018/10/07/ember-3-4-released.html#toc_changes-in-ember-js-3-4) and is now - as a low-level API granting addon authors more freedom to create **components from customized base classes**.
+The 🔥 brand-new **Custom Component Manager API** 🚒 [has been shipped with Ember 3.4](https://emberjs.com/blog/2018/10/07/ember-3-4-released.html#toc_changes-in-ember-js-3-4) and is now available as a low-level API granting addon authors more freedom to create **components from customized base classes**.
 
 This week a [freshly brewed RFC](https://github.com/emberjs/rfcs/pull/392) with its first, important deprecation rolled in: The proposal suggests to replace the **string-based lookup** method for the `setComponentManager` function for a **factory-based** approach. This small change in the API provides quick wins 🏅 for future undertakings regarding tree shaking of Ember apps, module unification and more.
 
@@ -58,7 +58,7 @@ Following his [EmberFest](https://emberfest.eu/schedule/#rocky-neurock) talk wit
 
 ## [Ember 3.5 is Out! 🚀](https://emberjs.com/blog/2018/10/15/ember-3-5-released.html)
 
-Version 3.5 of Ember and it contains some pretty cool things. With this release, Ember Data now has released **their first LTS release ever** with Ember Data 3.4 and will now follow the same LTS cycle as Ember.
+Version 3.5 of Ember and it contains some pretty cool things. With this release, Ember Data has now released **their first LTS release ever** with Ember Data 3.4 and will now follow the same LTS cycle as Ember.
 
 Ember Data 3.4 also released the new `RecordData` interfaces that give addon developers the much-needed API access with **more confidence and stability**.
 
