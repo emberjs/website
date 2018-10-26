@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 70
-author: Jen Weber, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan
+author: Jen Weber, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/26-the-ember-times-issue-70.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 G'day, Emberistas! 🐹
 
-This week we have an Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, an exciting new Readers' Question 🤔 on the future of controllers, using GraphQL in Ember 💥, and more!
+This week we have an Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, a **new version of Ember**, an exciting new Readers' Question 🤔 on the future of controllers, using GraphQL in Ember 💥, and more!
 
 ---
 
@@ -56,6 +56,19 @@ Following his [EmberFest](https://emberfest.eu/schedule/#rocky-neurock) talk wit
 
 ---
 
+## [Ember 3.5 is Out! 🚀](https://emberjs.com/blog/2018/10/15/ember-3-5-released.html)
+
+Version 3.5 of Ember and it contains some pretty cool things. With this release, Ember Data now has released **their first LTS release ever** with Ember Data 3.4 and will now follow the same LTS cycle as Ember.
+
+Ember Data 3.4 also released the new `RecordData` interfaces that give addon developers the much-needed API access with **more confidence and stability**.
+
+With Ember CLI 3.5 you get Broccoli v2.0.0 that no longer uses your local `./tmp` in your project folder but the system `temp` directory instead. This can result in **build time improvements up to 32%**! 🏎
+
+You can read all about all these new cool things and much more in the [release post](https://emberjs.com/blog/2018/10/15/ember-3-5-released.html).
+
+---
+
+
 ## [Readers' Question: What is the Future 🚀 of Controllers?](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708)
 
 Ah, the age old question: "What is the future of controllers? When is it a good time to use them in a modern Ember app?" [@jenweber](https://github.com/jenweber) tackles this topic with some help from Framework Core Team member [@ef4](https://github.com/ef4). TLDR: do use them, don't lose any sleep over them, and help us decide their future. See this [Ember Discuss post](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708) for the article and conversation!  
@@ -95,4 +108,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jen Weber, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan, and the Learning Team
+Jen Weber, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan, Kenneth Larsen and the Learning Team
