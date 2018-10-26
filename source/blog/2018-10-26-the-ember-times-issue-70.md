@@ -65,7 +65,7 @@ Ah, the age old question: "What is the future of controllers? When is it a good 
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+This week we'd like to thank [@rwjblue](https://github.com/rwjblue), [@chadhietala](https://github.com/chadhietala), [@btecu](https://github.com/btecu), [@amyrlam](https://github.com/amyrlam), [@chrisrng](https://github.com/chrisrng), [@jessica-jordan](https://github.com/jessica-jordan), [@ynotdraw](https://github.com/ynotdraw), [@Alonski](https://github.com/Alonski), [@sivakumar-kailasam](https://github.com/sivakumar-kailasam), [@thorsteinsson](https://github.com/thorsteinsson), [@YoranBrondsema](https://github.com/YoranBrondsema), [@runspired](https://github.com/runspired), [@ctcpip](https://github.com/ctcpip), [@wagenet](https://github.com/wagenet), [@rondale-sc](https://github.com/rondale-sc), [@toddjordan](https://github.com/toddjordan), [@esbanarango](https://github.com/esbanarango), [@mansona](https://github.com/mansona), [@HenryVonfire](https://github.com/HenryVonfire), and [@cspanring](https://github.com/cspanring) for their contributions to Ember and related repositories! 💖
 
 ---
 
