@@ -6,9 +6,9 @@ alias : "blog/2018/10/26-the-ember-times-issue-70.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+G'day, Emberistas! 🐹
 
-An Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, an exciting new Readers' Question 🤔 on the future of controllers, using GraphQL in Ember 💥, and more.
+This week we have an Ember standard for i18n 🌍, more convenient **transitions** through your Ember apps with the **new Router Helpers & Element Modifiers RFC**, artisan ☕️ deprecations for **setting** your **component managers**, an exciting new Readers' Question 🤔 on the future of controllers, using GraphQL in Ember 💥, and more!
 
 ---
 
@@ -53,27 +53,6 @@ Read all about the motivation behind this deprecation in the [hand-crafted RFC o
 ## [No Graph Theory Required: Ember and GraphQL in Practice ⚡️](https://medium.com/kloeckner-i/ember-and-graphql-8aa15f7a2554)
 
 Following his [EmberFest](https://emberfest.eu/schedule/#rocky-neurock) talk with [@chadian](https://github.com/chadian), [@jneurock](https://github.com/jneurock) blogged about their experience with GraphQL in Ember. If you are struggling with JSON API, or thinking about GraphQL, this article should give you an understanding of how to get started. They even created an [example repo](https://github.com/chadian/ember-graphql-examples) that includes an Ember app demonstrating GraphQL integration with four different clients. Check out the [article](https://medium.com/kloeckner-i/ember-and-graphql-8aa15f7a2554) and the [GraphQL website](https://graphql.org/learn/) to learn more!
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
