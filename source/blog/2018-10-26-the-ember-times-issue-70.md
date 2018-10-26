@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 70
-author: Jen Weber, Chris Ng, Amy Lam, Jessica Jordan
+author: Jen Weber, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/10/26-the-ember-times-issue-70.html"
 responsive: true
@@ -95,4 +95,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jen Weber, Chris Ng, Amy Lam, Jessica Jordan, and the Learning Team
+Jen Weber, Chris Ng, Ryan Mark, Amy Lam, Jessica Jordan, and the Learning Team
