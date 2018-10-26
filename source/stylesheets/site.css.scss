@@ -55,6 +55,7 @@ $small-max-width: 767px;
 
 body {
   -webkit-font-smoothing: antialiased;
+  background-color: $white;
   color: #444444;
   font-family: $base-font-family;
   font-weight: normal; //for iOS
