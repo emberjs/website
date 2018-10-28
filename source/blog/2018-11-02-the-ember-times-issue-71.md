@@ -1,8 +1,8 @@
 ---
-title: The Ember Times - Issue No. XX
-author: the crowd
+title: The Ember Times - Issue No. 71
+author: Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/xxxx/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2018/11/02-the-ember-times-issue-71.html"
 responsive: true
 ---
 
@@ -79,7 +79,7 @@ responsive: true
 
 ## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
@@ -90,4 +90,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Jessica Jordan, the crowd and the Learning Team
