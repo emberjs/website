@@ -1131,6 +1131,10 @@
   image: ha-logo.png
   alt: HostingAdvice.com
   use: "HostingAdvice uses Ember.js in several of our internal tools and applications"
+- url: "https://pactly.ai/"
+  image: pactly-logo.png
+  alt: Pactly
+  use: "Pactly uses Ember.js in our client application and several internal tools"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
