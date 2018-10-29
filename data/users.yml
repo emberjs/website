@@ -1135,6 +1135,10 @@
   image: pactly-logo.png
   alt: Pactly
   use: "Pactly uses Ember.js in our client application and several internal tools"
+- url: "https://brocnbells.com"
+  image: brocnbells-logo.png
+  alt: Broc & Bells
+  use: "Broc & Bells uses Ember.js to build brocnbells.com"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
