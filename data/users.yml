@@ -1139,6 +1139,10 @@
   image: brocnbells-logo.png
   alt: Broc & Bells
   use: "Broc & Bells uses Ember.js to build brocnbells.com"
+- url: "https://orbcare.com"
+  image: orbcare.png
+  alt: OrbCare
+  use: "OrbCare's healthcare platform is built with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
