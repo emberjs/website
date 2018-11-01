@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 71
-author: Jessica Jordan, the crowd
+author: Chris Ng, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/02-the-ember-times-issue-71.html"
 responsive: true
@@ -47,8 +47,13 @@ If you're feeling up to the task to help tree-shaking land in Ember and you're c
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember for CodeSandbox! 🏖️](https://twitter.com/CompuIves/status/1057681015299366912)
 
+[CodeSandbox](https://codesandbox.io/) is an online code editor that helps you create web applications, **from prototype to deployment**. It supports a variety of web frameworks, and with the latest release, now officially supports Ember. This was made possible thanks to a [pull request](https://github.com/CompuIves/codesandbox-client/pull/1113) by [@mike-north](https://github.com/mike-north).
+
+Try it out today by clicking on **Ember** under _server templates_ when [creating a new sandbox](https://codesandbox.io/s/)!
+
+_Note: Ember is located under “server templates” because [server templates are sandboxes that execute on a server instead of the browser](https://twitter.com/CompuIves/status/1057689363239313408)._
 
 ---
 
@@ -95,4 +100,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, the crowd and the Learning Team
