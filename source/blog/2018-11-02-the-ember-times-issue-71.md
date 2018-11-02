@@ -58,6 +58,14 @@ _Note: Ember is located under “server templates” because [server templates a
 
 ---
 
+## [The #30DaysOfEmber Series 📚](https://twitter.com/PoslinskiNet/status/1054446639719608320)
+
+[@PoslinskiNet](https://github.com/PoslinskiNet) published a great learning series for those starting out with Ember. The #30DaysOfEmber series goes through **30 topics** ranging from [Computed Properties](https://slides.com/poslinski_net/30-days-of-ember#/6) to [Internationalization](https://slides.com/poslinski_net/30-days-of-ember#/36) with the aim of becoming familiar with Ember at the end of it.
+
+If you haven’t yet, check out the [slides for #30DaysOfEmber](https://slides.com/poslinski_net/30-days-of-ember#/) or on [Twitter Moments](https://twitter.com/i/moments/1054409226968281089) today!
+
+---
+
 ## [SECTION TITLE](#section-url)
 
 
