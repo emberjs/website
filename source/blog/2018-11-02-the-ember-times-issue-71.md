@@ -32,8 +32,18 @@ If you're feeling up to the task to help tree-shaking land in Ember and you're c
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [A New and Dynamic RFC](https://github.com/cibernox/rfcs/blob/dynamic-tag-names/text/0000-dynamic-tag-names.md)
+[@cibernox](https://github.com/cibernox) has submitted a new RFC suggesting **dynamic tag names in glimmer templates**. In the transition from using inner-html semantics to using outer-html semantics in components there's one feature that has been lost: Being able to dynamically define the tag name of components. 
 
+To solve this issue the RFC proposes a new `element` helper that takes a tag name and generates a contextual component that, when invoked, renders the selected element. Like this:
+
+```
+{{#let (element "li") as |Tag|}}
+  <Tag ...>...</Tag>
+{{/let}}
+```
+
+You can try out [a working proof of concept on Github](https://github.com/tildeio/ember-element-helper) and you can read all the details about the [RFC in the proposal](https://github.com/cibernox/rfcs/blob/dynamic-tag-names/text/0000-dynamic-tag-names.md).
 
 ---
 
