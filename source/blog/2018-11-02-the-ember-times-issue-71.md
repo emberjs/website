@@ -37,7 +37,7 @@ If you're feeling up to the task to help tree-shaking land in Ember and you're c
 
 To solve this issue the RFC proposes a new `element` helper that takes a tag name and generates a contextual component that, when invoked, renders the selected element. Like this:
 
-```
+```handlebars
 {{#let (element "li") as |Tag|}}
   <Tag ...>...</Tag>
 {{/let}}
