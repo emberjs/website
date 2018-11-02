@@ -1139,6 +1139,10 @@
   image: brocnbells-logo.png
   alt: Broc & Bells
   use: "Broc & Bells uses Ember.js to build brocnbells.com"
+- url: "https://weteachme.com"
+  image: weteachme-logo.png
+  alt: WeTeachMe - Connecting passionate teachers and learners.
+  use: "WeTeachMe's client portal is built with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
