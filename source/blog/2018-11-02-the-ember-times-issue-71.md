@@ -47,6 +47,17 @@ If you're feeling up to the task to help tree-shaking land in Ember and you're c
 
 ---
 
+## [Ember for CodeSandbox! 🏖️](https://twitter.com/CompuIves/status/1057681015299366912)
+
+[CodeSandbox](https://codesandbox.io/) is an online code editor that helps you create web applications, **from prototype to deployment**. It supports a variety of web frameworks, and with the latest release, now officially supports Ember. This was made possible thanks to a [pull request](https://github.com/CompuIves/codesandbox-client/pull/1113) by [@mike-north](https://github.com/mike-north).
+
+Try it out today by clicking on **Ember** under _server templates_ when [creating a new sandbox](https://codesandbox.io/s/)!
+
+<!--alex ignore execute-->
+_Note: Ember is located under “server templates” because [server templates are sandboxes that execute on a server instead of the browser](https://twitter.com/CompuIves/status/1057689363239313408)._
+
+---
+
 ## [The #30DaysOfEmber Series 📚](https://twitter.com/PoslinskiNet/status/1054446639719608320)
 
 [@PoslinskiNet](https://github.com/PoslinskiNet) published a great learning series for those starting out with Ember. The #30DaysOfEmber series goes through **30 topics** ranging from [Computed Properties](https://slides.com/poslinski_net/30-days-of-ember#/6) to [Internationalization](https://slides.com/poslinski_net/30-days-of-ember#/36) with the aim of becoming familiar with Ember at the end of it.
