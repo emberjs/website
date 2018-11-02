@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 71
-author: Chris Ng, Jessica Jordan, Ryan Mark, Kenneth Larsen, Alon Bukai the crowd
+author: Chris Ng, Jessica Jordan, Ryan Mark, Kenneth Larsen, Alon Bukai, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/02-the-ember-times-issue-71.html"
 responsive: true
@@ -8,22 +8,7 @@ responsive: true
 
 Bonjour Emberistas! 🐹
 
-This week your **help is needed** to bring **tree-shaking** 🌳 to Ember apps, an new RFC on dynamic tags is ready for your comments
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [Action! 🎬 Ember Route Actions for All](https://github.com/emberjs/rfcs/pull/394)
-
-Actions in Ember are usually defined in a **controller**. However the addon [ember-route-action-helper](https://github.com/DockYard/ember-route-action-helper) has existed for some time and allows you to easily use actions, defined in the route, inside your templates. Some say that this allows less **dependance** on controllers. A new [RFC (Request for Comments) for Route Actions](https://github.com/emberjs/rfcs/pull/394) has been suggested by [@vasilakisfil](https://github.com/vasilakisfil) that proposes integrating this helper into **Ember core** for use in all apps without the need for the addon. 
-
-It is important to state that the addon has a **warning** about using it and that controllers are still an **integral** part of Ember as explained last week in our [Readers' Question: What is the Future of Controllers](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708).
-
-If you would like to **chime in** and join the discussion be sure to check out this [RFC here](https://github.com/emberjs/rfcs/pull/394).
+This week your **help is needed** to bring **tree-shaking** 🌳 to Ember apps! RFCs on **route actions** and **dynamic tags** are ready for **your comments** 📢. We're also highlighting **Ember for CodeSandbox** ✨, and the awesome **#30DaysOfEmber** 📆 series. Read on!
 
 ---
 
@@ -34,6 +19,16 @@ A promising approach to reduce the size of Ember apps dramatically is known as *
 The [Packager RFC (Request for Comments) for bringing tree-shaking](https://github.com/ember-cli/rfcs/blob/master/active/0051-packaging.md#tree-shaking) to Ember apps [was accepted in April this year](https://github.com/ember-cli/rfcs/commit/567201627bcc6baa2d70103bd5b6f9e23e8ea0d9). Since then, lots of progress has already been made on the Ember & Ember CLI side of things. There is even [the experimental addon ember-cli-tree-shaker](https://github.com/kellyselden/ember-cli-tree-shaker) that has been a tangible product of recent efforts to allow you to try out tree shaking today. But there's still a lot more to do. **Your help is needed**!
 
 If you're feeling up to the task to help tree-shaking land in Ember and you're curious to learn more about Ember CLI internals, be sure to **reach out** to [**@kellyselden** on either Twitter](https://twitter.com/kellyselden/status/1050717338595745792) or the [#topic-tree-shaking Discord channel](https://discordapp.com/channels/480462759797063690/502098552751915008) to get started!
+
+---
+
+## [Action! 🎬 Ember Route Actions for All](https://github.com/emberjs/rfcs/pull/394)
+
+Actions in Ember are usually defined in a **controller**. However the addon [ember-route-action-helper](https://github.com/DockYard/ember-route-action-helper) has existed for some time and allows you to easily use actions, defined in the route, inside your templates. Some say that this allows less **dependance** on controllers. A new [RFC (Request for Comments) for Route Actions](https://github.com/emberjs/rfcs/pull/394) has been suggested by [@vasilakisfil](https://github.com/vasilakisfil) that proposes integrating this helper into **Ember core** for use in all apps without the need for the addon. 
+
+It is important to state that the addon has a **warning** about using it and that controllers are still an **integral** part of Ember as explained last week in our [Readers' Question: What is the Future of Controllers](https://discuss.emberjs.com/t/readers-questions-what-is-the-future-of-controllers-when-is-it-a-good-time-to-use-them-in-a-modern-ember-app/15708).
+
+If you would like to **chime in** and join the discussion be sure to check out this [RFC here](https://github.com/emberjs/rfcs/pull/394).
 
 ---
 
@@ -49,16 +44,6 @@ To solve this issue the RFC proposes a new `element` helper that takes a tag nam
 ```
 
 You can try out [a working proof of concept on Github](https://github.com/tildeio/ember-element-helper) and you can read all the details about the [RFC in the proposal](https://github.com/cibernox/rfcs/blob/dynamic-tag-names/text/0000-dynamic-tag-names.md).
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -80,17 +65,6 @@ _Note: Ember is located under “server templates” because [server templates a
 If you haven’t yet, check out the [slides for #30DaysOfEmber](https://slides.com/poslinski_net/30-days-of-ember#/) or on [Twitter Moments](https://twitter.com/i/moments/1054409226968281089) today!
 
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -119,9 +93,8 @@ Keep on top of what's been going on in Emberland this week by subscribing to our
 
 ---
 
-
 That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Ryan Mark, Kenneth Larsen, Alon Bukai, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Ryan Mark, Kenneth Larsen, Alon Bukai, Amy Lam and the Learning Team
