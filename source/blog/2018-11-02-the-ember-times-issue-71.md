@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 71
-author: Chris Ng, Jessica Jordan, the crowd
+author: Chris Ng, Jessica Jordan, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/02-the-ember-times-issue-71.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-This week your **help is needed** to bring **tree-shaking** 🌳 to Ember apps,
+This week your **help is needed** to bring **tree-shaking** 🌳 to Ember apps, an new RFC on dynamic tags is ready for your comments
 
 ---
 
@@ -119,4 +119,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Kenneth Larsen, the crowd and the Learning Team
