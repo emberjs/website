@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 72
-author: the crowd
+author: Chris Ng, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
 responsive: true
@@ -8,12 +8,21 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [JSConf EU CFP is Now Open! 👐](https://2019.jsconf.eu/call-for-speakers/)
 
+[JSConf EU](https://2019.jsconf.eu/), which will be held from **June 1 – 2 2019 in Berlin**, has officially opened their call for papers for a talk regarding JavaScript, the web, or a clever hack.
+
+<!--alex ignore blind-->
+This is a good opportunity for us, as Ember developers, to **showcase our work to the greater JavaScript community**. Similar to the [EmberConf process](https://www.emberjs.com/blog/2018/10/12/the-ember-times-issue-68.html#toc_a-href-https-emberconf-com-become-a-speaker-html-emberconf-2019-call-for-papers-a), the papers starts out blind and later gets de-anonymized.
+
+The call for speakers this year is **open until December 23rd**. JSConf’s sibling conference, CSSconf, even published a blog on [How to write a great talk proposal for a tech conference](https://blog.cssconf.eu/2014/06/12/how-to-write-a-great-talk-proposal-for-a-tech-conference/).
+
+_”Pick the topic you feel most passionate about. This is your conference.”_  is the JSConf EU saying so [apply to be a speaker](https://2019.jsconf.eu/call-for-speakers/) today!
 
 ---
 
@@ -90,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Ng, the crowd and the Learning Team
