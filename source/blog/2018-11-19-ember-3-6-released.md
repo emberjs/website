@@ -30,11 +30,11 @@ Ember.js VER is an incremental, backwards compatible release of Ember with bugfi
 The [ES Class](https://emberjs.github.io/rfcs/0240-es-classes.html) and [Native Class Constructor Update](https://emberjs.github.io/rfcs/0337-native-class-constructor-update.html) RFCs officially ship in 3.6! This feature means that usage of native classes has stabilized, and they are considered public API whose behavior will not change.
 
 **Great, so I can use `class` syntax now?!**
-<!--alex ignore hook-->
 Hold your horses! It's not _quite_ that simple yet.
 
 The behavior of native classes is stable, but currently Ember does not support or recommend the usage of class fields or decorators, which are both still undergoing the TC39 process. Subsequent RFCs will have to be made to make these officially part of Ember.
 
+<!--alex ignore hook-->
 Without decorators or class fields, the benefits of class syntax are generally not worth the costs. Simple behaviors and features that we rely on day-to-day in Ember, such as service injections, computed properties, and actions, all require decorators. Even if you don't need any of these values, without class fields any class properties must be assigned in the `init` hook instead, and this would make it even _more_ difficult to update later on when class fields and decorators have shipped.
 
 With this in mind, the official Ember recommendation is to continue using the standard `EmberObject.extend()` syntax for defining your factories if you are not risk tolerant. The guides will continue to use this syntax for the time being as well.
