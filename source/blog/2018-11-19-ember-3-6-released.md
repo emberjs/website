@@ -30,7 +30,7 @@ Ember.js VER is an incremental, backwards compatible release of Ember with bugfi
 The [ES Class](https://emberjs.github.io/rfcs/0240-es-classes.html) and [Native Class Constructor Update](https://emberjs.github.io/rfcs/0337-native-class-constructor-update.html) RFCs officially ship in 3.6! This feature means that usage of native classes has stabilized, and they are considered public API whose behavior will not change.
 
 **Great, so I can use `class` syntax now?!**
-
+<!--alex ignore hook-->
 Hold your horses! It's not _quite_ that simple yet.
 
 The behavior of native classes is stable, but currently Ember does not support or recommend the usage of class fields or decorators, which are both still undergoing the TC39 process. Subsequent RFCs will have to be made to make these officially part of Ember.
