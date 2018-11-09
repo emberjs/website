@@ -32,7 +32,7 @@ However, in the process of reading and merging all of these RFCs, the Core Team 
 
 To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
 
-There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md) which I recommend you read through and leave a comment with your thoughts. 
+There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which I recommend you read through and leave a comment with your thoughts. 
 
 ---
 
