@@ -1,15 +1,17 @@
 ---
 title: The Ember Times - Issue No. 72
-author: Chris Ng, Jessica Jordan, the crowd
+author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Kedu Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ Let's take a look into **more informative Routes** 🤓,
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ 
+Let's take a look into **more informative Routes** 🤓,
+Watch a tutorial on how to build a live updating league table in Ember 3.5 📹
 
 ---
 
@@ -41,8 +43,11 @@ And finally, read the full _RouteInfo Metadata_ proposal to learn more and leave
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Premier League Video Tutorial ⚽️](https://twitter.com/gavinjoyce/status/1059533557130059779)
 
+[@GavinJoyce](https://github.com/gavinjoyce) made an awesome [tutorial](https://www.youtube.com/watch?time_continue=4&v=vYakop2d2RI) where he walks through how to build a live updating league table in the **latest Ember 3.5**! Code along with the video and you'll use [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind) for styling, angle bracket components, `shuffle` from [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) (TIL), [ember-math-helpers](https://github.com/shipshapecode/ember-math-helpers) and more.
+
+Check out [ember-league-table.surge.sh](ember-league-table.surge.sh) to run the app and the [repo](https://github.com/GavinJoyce/ember-league-table) for the source code. Our advice? Share the tutorial with a friend, whether they call it football or soccer...
 
 ---
 
@@ -104,4 +109,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
