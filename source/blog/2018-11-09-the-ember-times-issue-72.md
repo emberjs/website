@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 72
-author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
+author: Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
 responsive: true
@@ -11,7 +11,8 @@ Kedu Emberistas! 🐹
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
 We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ 
 Let's take a look into **more informative Routes** 🤓,
-Watch a tutorial on how to build a live updating league table in Ember 3.5 📹
+Watch a tutorial on how to build a live updating league table in Ember 3.5 📹, 
+there's an update to the RFC about RFCs!
 
 ---
 
@@ -28,8 +29,13 @@ _”Pick the topic you feel most passionate about. This is your conference.”_ 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Yo Dawg, I Heard You Like RFCs](https://github.com/emberjs/rfcs/pull/300)
+There has been an update to the RFC about the RFC process itself. The RFCs has been crucial in defining **the future of Ember** and that is still the case.
+However, in the process of reading and merging all of these RFCs, the Core Team has discovered some shortcomings of the current RFC process as well as new requirements.
 
+To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
+
+There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you read through and leave a comment with your thoughts. 
 
 ---
 
@@ -109,4 +115,5 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, the crowd and the Learning Team
+
