@@ -1,11 +1,11 @@
 ---
 title: Ember VER Released
 author: Melanie Sumner, Kenneth Larsen
-tags: Releases, 2018, 3, VER
+tags: Releases, 2018, 3, 3.6
 responsive: true
 ---
 
-Today the Ember project is releasing version VER of Ember.js, Ember Data, and Ember CLI. This release kicks off the 3.6 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
+Today the Ember project is releasing version 3.6 of Ember.js, Ember Data, and Ember CLI. This release kicks off the 3.7 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
@@ -20,8 +20,8 @@ You can read more about our general release process here:
 
 Ember.js is the core framework for building ambitious web applications.
 
-### Changes in Ember.js VER
-Ember.js VER is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is COUNT (#) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
+### Changes in Ember.js 3.6
+Ember.js 3.6 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is COUNT (#) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
 
 #### New Features (2)
 
@@ -65,7 +65,7 @@ A polyfill for this behavior has been built which backports this behavior to bot
 ember install ember-native-class-polyfill
 ```
 
-We would like to add support for prior LTS versions (2.18 and 2.16) as well, if you would like to contribute ping us in the #st-native-classes channel on Discord or in the [Native Class Quest issue](https://github.com/emberjs/ember.js/issues/16927) on Github!
+We would like to add support for prior LTS versions (2.18 and 2.16) as well, if you would like to contribute, ping us in the #st-native-classes channel on Discord or in the [Native Class Quest issue](https://github.com/emberjs/ember.js/issues/16927) on Github!
 
 Second new feature (2 of 2)
 
@@ -76,7 +76,7 @@ Deprecations are added to Ember.js when an API will be removed at a later date. 
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-For more details on changes in Ember.js VER, please review the [Ember.js VER.0 release page](https://github.com/emberjs/ember.js/releases/tag/vVER.0).
+For more details on changes in Ember.js 3.6, please review the [Ember.js VER.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
 
 **new EmberObject (1 of 6)**
 
@@ -146,7 +146,7 @@ npm install -g ember-cli-update
 
 This utility will help you to update your app or add-on to the latest Ember CLI version. You will probably encounter merge conflicts, in which the default behavior is to let you resolve conflicts on your own.
 
-### Changes in Ember CLI VER
+### Changes in Ember CLI 3.6
 
 #### New Features (X)
 
@@ -155,8 +155,8 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 
 ---
 
-For more details on the changes in Ember CLI VER and detailed upgrade
-instructions, please review the [Ember CLI  VER.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/vVER.0).
+For more details on the changes in Ember CLI 3.6 and detailed upgrade
+instructions, please review the [Ember CLI 3.6.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.6.0).
 
 ## Thank You!
 
