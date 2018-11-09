@@ -57,7 +57,19 @@ Check out [ember-league-table.surge.sh](ember-league-table.surge.sh) to run the 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Wanted! We Need Your Testing Expertise 👨🏾‍🏫](https://github.com/ember-learn/ember-help-wanted/issues/22)
+
+So many contributors have been putting great effort into shipping features, improvements and bug fixes for important Ember projects recently, including the [just recently launched Ember Help Wanted App](https://help-wanted.emberjs.com/) and our most be-❤️ [Ember API Docs](https://www.emberjs.com/api/ember/release).
+
+But with lots of new changes, also comes lots of responsibility for **test coverage**. And your help is needed!
+Help these amazing projects to get their test coverage up to par by **writing unit**, **integration** and **acceptance test**:
+
+- [Ember Help Wanted Client](https://github.com/ember-learn/ember-help-wanted)
+- [Ember Help Wanted Backend](https://github.com/ember-learn/ember-help-wanted-server)
+- [Ember API Docs Client](https://github.com/ember-learn/ember-api-docs)
+- [Ember JSON API Docs](https://github.com/ember-learn/ember-jsonapi-docs)
+
+Questions? Looking for some guidance to get started? Pop by the [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) channel on [the Ember Community Chat](https://discordapp.com/invite/zT3asNS) and ask away!
 
 
 ---
