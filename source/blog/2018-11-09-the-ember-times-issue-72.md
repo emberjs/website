@@ -8,9 +8,7 @@ responsive: true
 
 Kedu Emberistas! 🐹
 
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️
-There's an update to the **RFC about RFCs** 📜! Let's take a look into **more informative Routes** 🤓 and
-watch a **tutorial** on how to **build** a live updating **league table** ⚽️ in Ember 3.5 📹 or **help** upgrading the **test coverage** of official Ember projects! ✍️
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ There's an update to the **RFC about RFCs** 📜! You can also read about **more informative Routes** 🤓, watch a **tutorial** on how to **build** a live updating **league table** ⚽️ in Ember 3.5 📹, or **help** upgrade the **test coverage** of official Ember projects! ✍️
 
 ---
 
