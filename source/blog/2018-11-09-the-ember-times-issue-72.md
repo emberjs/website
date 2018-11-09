@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 72
-author: Chris Ng, the crowd
+author: Chris Ng, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️, there's an update to the RFC about RFCs!, 
 
 ---
 
@@ -26,8 +26,13 @@ _”Pick the topic you feel most passionate about. This is your conference.”_ 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Yo Dawg, I Heard You Like RFCs](https://github.com/emberjs/rfcs/pull/300)
+There has been an update to the RFC about the RFC process itself. The RFCs has been crucial in defining **the future of Ember** and that is still the case.
+However, in the process of reading and merging all of these RFCs the Core Team has discovered some shortcomings of the current RFC process as well as new requirements.
 
+To solve some of these issues the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging ember-cli/rfcs into emberjs/rfcs.
+
+There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md) which I recommend you read through and leave a comment with your thoughts. 
 
 ---
 
@@ -99,4 +104,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, the crowd and the Learning Team
+Chris Ng, Kenneth Larsen, the crowd and the Learning Team
