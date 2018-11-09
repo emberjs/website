@@ -1,29 +1,25 @@
 ---
 title: The Ember Times - Issue No. 72
-author: Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, the crowd
+author: Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, Ryan Mark
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
-alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
+alias : "blog/2018/11/09-the-ember-times-issue-72.html"
 responsive: true
 ---
 
 Kedu Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ 
-there's an update to the **RFC about RFCs** 📜!
-Let's take a look into **more informative Routes** 🤓, 
-Watch a tutorial on how to build a live updating league table in Ember 3.5 📹,
-there's an update to the RFC about RFCs!
-add testing expertise
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️
+There's an update to the **RFC about RFCs** 📜! Let's take a look into **more informative Routes** 🤓 and
+watch a **tutorial** on how to **build** a live updating **league table** ⚽️ in Ember 3.5 📹 or **help** upgrading the **test coverage** of official Ember projects! ✍️
 
 ---
 
 ## [JSConf EU CFP is Now Open! 👐](https://2019.jsconf.eu/call-for-speakers/)
 
-[JSConf EU](https://2019.jsconf.eu/), which will be held from **June 1 – 2 2019 in Berlin**, has officially opened their call for papers for a talk regarding JavaScript, the web, or a clever hack.
+[JSConf EU](https://2019.jsconf.eu/), which will be held from **June 1 – 2 2019 in Berlin**, has officially opened their Call for Papers (CfP) for talks regarding JavaScript, the web, or a clever hack.
 
 <!--alex ignore blind-->
-This is a good opportunity for us, as Ember developers, to **showcase our work to the greater JavaScript community**. Similar to the [EmberConf process](https://www.emberjs.com/blog/2018/10/12/the-ember-times-issue-68.html#toc_a-href-https-emberconf-com-become-a-speaker-html-emberconf-2019-call-for-papers-a), the papers starts out blind and later gets de-anonymized.
+This is a good opportunity for us, as Ember developers, to **showcase our work to the greater JavaScript community**. Similar to the [EmberConf process](https://www.emberjs.com/blog/2018/10/12/the-ember-times-issue-68.html#toc_a-href-https-emberconf-com-become-a-speaker-html-emberconf-2019-call-for-papers-a), the CfP starts out blind and later gets de-anonymized.
 
 The call for speakers this year is **open until December 23rd**. JSConf’s sibling conference, CSSconf, even published a blog on [How to write a great talk proposal for a tech conference](https://blog.cssconf.eu/2014/06/12/how-to-write-a-great-talk-proposal-for-a-tech-conference/).
 
@@ -32,11 +28,12 @@ _”Pick the topic you feel most passionate about. This is your conference.”_ 
 ---
 
 ## [Yo Dawg, I Heard You Like RFCs 📜](https://github.com/emberjs/rfcs/pull/300)
-There has been an update to the RFC about the RFC process itself. The RFCs has been crucial in defining **the future of Ember** and that is still the case. However, in the process of reading and merging all of these RFCs, the Core Team has discovered some shortcomings of the current RFC process as well as new requirements.
 
-To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
+There has been an update to the RFC (Request for Comments) about the RFC process itself. The RFC process has been crucial in defining **the future of Ember** and that is still the case. However, in the process of reading and merging all of these RFCs, the Core Team has discovered some shortcomings of the current RFC process as well as new requirements.
 
-There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you read through and leave a comment with your thoughts.
+To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team. It also suggests to merge [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
+
+There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you to read through and to leave a comment with your thoughts.
 
 ---
 
@@ -52,17 +49,17 @@ And finally, read the full _RouteInfo Metadata_ proposal to learn more and leave
 
 ## [Premier League Video Tutorial ⚽️](https://twitter.com/gavinjoyce/status/1059533557130059779)
 
-[@GavinJoyce](https://github.com/gavinjoyce) made an awesome [tutorial](https://www.youtube.com/watch?v=vYakop2d2RI) where he walks through how to build a live updating league table in the **latest Ember 3.5**! Code along with the video and you'll use [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind) for styling, angle bracket invocation, `shuffle` from [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) (TIL), [ember-math-helpers](https://github.com/shipshapecode/ember-math-helpers) and more.
+[@GavinJoyce](https://github.com/gavinjoyce) made an awesome [tutorial](https://www.youtube.com/watch?v=vYakop2d2RI) where he demonstrates how to build a live updating league table in the **latest Ember 3.5**! Code along with the video and you'll use [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind) for styling, angle bracket invocation, `shuffle` from [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) (TIL), [ember-math-helpers](https://github.com/shipshapecode/ember-math-helpers) and more.
 
-Check out [ember-league-table.surge.sh](ember-league-table.surge.sh) to run the app and the [repo](https://github.com/GavinJoyce/ember-league-table) for the source code. Our advice? Share the tutorial with a friend, whether they call it football or soccer...
+Check out [ember-league-table.surge.sh](http://ember-league-table.surge.sh) to run the app and the [repo](https://github.com/GavinJoyce/ember-league-table) for the source code. Our advice? Share the tutorial with a friend, whether they call it football or soccer...
 
 ---
 
 ## [Help Wanted! We Need Your Testing Expertise 👨🏾‍🏫](https://github.com/ember-learn/ember-help-wanted/issues/22)
 
-So many contributors have been putting great effort into shipping features, improvements and bug fixes for important Ember projects recently, including the [just recently launched Ember Help Wanted App](https://help-wanted.emberjs.com/) and our most be-❤️ [Ember API Docs](https://www.emberjs.com/api/ember/release).
+So many contributors have been putting great effort into shipping features, improvements and bug fixes for important Ember projects recently, including the [spick-and-span Ember Help Wanted App](https://help-wanted.emberjs.com/) and our most be-❤️(loved) [Ember API Docs](https://www.emberjs.com/api/ember/release).
 
-But with lots of new changes, also comes lots of responsibility for **test coverage**. And your help is needed!
+But with lots of new changes, also comes lots of responsibility for **test coverage**; and your help is needed!
 Help these amazing projects to get their test coverage up to par by **writing unit**, **integration** and **acceptance test**:
 
 - [Ember Help Wanted Client](https://github.com/ember-learn/ember-help-wanted)
@@ -72,29 +69,7 @@ Help these amazing projects to get their test coverage up to par by **writing un
 
 Questions? Looking for some guidance to get started? Pop by the [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) channel on [the Ember Community Chat](https://discordapp.com/invite/zT3asNS) and ask away!
 
-
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -128,4 +103,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, Ryan Mark and the Learning Team
