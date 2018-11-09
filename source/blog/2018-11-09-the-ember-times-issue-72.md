@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 72
-author: Chris Ng, Kenneth Larsen, the crowd
+author: Chris Ng, Jessica Jordan, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️, there's an update to the RFC about RFCs!, 
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ Let's take a look into **more informative Routes** 🤓, there's an update to the RFC about RFCs!
 
 ---
 
@@ -36,8 +36,13 @@ There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/b
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Personalize Your Route's Metadata with the RouteInfo Metadata RFC 📝](https://github.com/emberjs/rfcs/pull/398)
 
+Have you ever wanted to **track** specific keywords for a particular route in your Ember app, but didn't know how to do so in an elegant fashion? Have you tried to update the `document.title` of a page depending on the specific point of time at which a route was visited, but realized that this couldn't be done without some effort?
+
+Then a brand-new **Request for Comments (RFC)** is just for you! The proposal [_RouteInfo Metadata_](https://github.com/emberjs/rfcs/pull/398) suggests a new way for reading and writing **application-specific metadata** to the corresponding _RouteInfo_ object. For more context on which information routes currently provide, be sure to also check out [the section about the RouteInfo type from the original RouterService RFC](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#routeinfo-type).
+
+And finally, read the full _RouteInfo Metadata_ proposal to learn more and leave your thoughts and questions in the [comments below the proposal](https://github.com/emberjs/rfcs/pull/398).
 
 ---
 
@@ -93,7 +98,7 @@ There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/b
 
 ## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
@@ -104,4 +109,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Kenneth Larsen, the crowd and the Learning Team
