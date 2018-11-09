@@ -1,15 +1,20 @@
 ---
 title: The Ember Times - Issue No. 72
-author: Chris Ng, Jessica Jordan, Kenneth Larsen, the crowd
+author: Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/09-the-ember-times-issue-X72X.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Kedu Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ Let's take a look into **more informative Routes** 🤓, there's an update to the **RFC about RFCs** 📜!
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ 
+there's an update to the **RFC about RFCs** 📜!
+Let's take a look into **more informative Routes** 🤓, 
+Watch a tutorial on how to build a live updating league table in Ember 3.5 📹,
+there's an update to the RFC about RFCs!
+add testing expertise
 
 ---
 
@@ -31,7 +36,7 @@ There has been an update to the RFC about the RFC process itself. The RFCs has b
 
 To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
 
-There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you read through and leave a comment with your thoughts. 
+There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you read through and leave a comment with your thoughts.
 
 ---
 
@@ -45,12 +50,27 @@ And finally, read the full _RouteInfo Metadata_ proposal to learn more and leave
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Premier League Video Tutorial ⚽️](https://twitter.com/gavinjoyce/status/1059533557130059779)
 
+[@GavinJoyce](https://github.com/gavinjoyce) made an awesome [tutorial](https://www.youtube.com/watch?v=vYakop2d2RI) where he walks through how to build a live updating league table in the **latest Ember 3.5**! Code along with the video and you'll use [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind) for styling, angle bracket invocation, `shuffle` from [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) (TIL), [ember-math-helpers](https://github.com/shipshapecode/ember-math-helpers) and more.
+
+Check out [ember-league-table.surge.sh](ember-league-table.surge.sh) to run the app and the [repo](https://github.com/GavinJoyce/ember-league-table) for the source code. Our advice? Share the tutorial with a friend, whether they call it football or soccer...
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Wanted! We Need Your Testing Expertise 👨🏾‍🏫](https://github.com/ember-learn/ember-help-wanted/issues/22)
+
+So many contributors have been putting great effort into shipping features, improvements and bug fixes for important Ember projects recently, including the [just recently launched Ember Help Wanted App](https://help-wanted.emberjs.com/) and our most be-❤️ [Ember API Docs](https://www.emberjs.com/api/ember/release).
+
+But with lots of new changes, also comes lots of responsibility for **test coverage**. And your help is needed!
+Help these amazing projects to get their test coverage up to par by **writing unit**, **integration** and **acceptance test**:
+
+- [Ember Help Wanted Client](https://github.com/ember-learn/ember-help-wanted)
+- [Ember Help Wanted Backend](https://github.com/ember-learn/ember-help-wanted-server)
+- [Ember API Docs Client](https://github.com/ember-learn/ember-api-docs)
+- [Ember JSON API Docs](https://github.com/ember-learn/ember-jsonapi-docs)
+
+Questions? Looking for some guidance to get started? Pop by the [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) channel on [the Ember Community Chat](https://discordapp.com/invite/zT3asNS) and ask away!
 
 
 ---
@@ -78,7 +98,7 @@ And finally, read the full _RouteInfo Metadata_ proposal to learn more and leave
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/dfreeman" target="gh-user">@dfreeman</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/mikrostew" target="gh-user">@mikrostew</a>, <a href="https://github.com/caseywatts" target="gh-user">@caseywatts</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/mattselden12" target="gh-user">@mattselden12</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/rondale-sc" target="gh-user">@rondale-sc</a>, <a href="https://github.com/acorncom" target="gh-user">@acorncom</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/igorT" target="gh-user">@igorT</a>, <a href="https://github.com/spruce" target="gh-user">@spruce</a>, <a href="https://github.com/ahawkins" target="gh-user">@ahawkins</a>, <a href="https://github.com/yaxinr" target="gh-user">@yaxinr</a>, <a href="https://github.com/thorsteinsson" target="gh-user">@thorsteinsson</a>, <a href="https://github.com/mike-north" target="gh-user">@mike-north</a>, <a href="https://github.com/lifeart" target="gh-user">@lifeart</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/chengz" target="gh-user">@chengz</a>, <a href="https://github.com/tylerturdenpants" target="gh-user">@tylerturdenpants</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/dipil-saud" target="gh-user">@dipil-saud</a>, <a href="https://github.com/scalvert" target="gh-user">@scalvert</a>, <a href="https://github.com/step2yeung" target="gh-user">@step2yeung</a>, <a href="https://github.com/gabrielcsapo" target="gh-user">@gabrielcsapo</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/wagenet" target="gh-user">@wagenet</a>, <a href="https://github.com/tomdale" target="gh-user">@tomdale</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -108,4 +128,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Amy Lam, Kenneth Larsen, Jessica Jordan, the crowd and the Learning Team
