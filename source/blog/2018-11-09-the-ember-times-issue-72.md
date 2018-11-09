@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ Let's take a look into **more informative Routes** 🤓, there's an update to the RFC about RFCs!
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ Let's take a look into **more informative Routes** 🤓, there's an update to the **RFC about RFCs** 📜!
 
 ---
 
@@ -26,9 +26,8 @@ _”Pick the topic you feel most passionate about. This is your conference.”_ 
 
 ---
 
-## [Yo Dawg, I Heard You Like RFCs](https://github.com/emberjs/rfcs/pull/300)
-There has been an update to the RFC about the RFC process itself. The RFCs has been crucial in defining **the future of Ember** and that is still the case.
-However, in the process of reading and merging all of these RFCs, the Core Team has discovered some shortcomings of the current RFC process as well as new requirements.
+## [Yo Dawg, I Heard You Like RFCs 📜](https://github.com/emberjs/rfcs/pull/300)
+There has been an update to the RFC about the RFC process itself. The RFCs has been crucial in defining **the future of Ember** and that is still the case. However, in the process of reading and merging all of these RFCs, the Core Team has discovered some shortcomings of the current RFC process as well as new requirements.
 
 To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
 
