@@ -9,9 +9,9 @@ responsive: true
 Kedu Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>.
-We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️ 
+We need **Emberistas at JSConf EU**, so submit a talk to the newly opened CFP! 🗣️
 Let's take a look into **more informative Routes** 🤓,
-Watch a tutorial on how to build a live updating league table in Ember 3.5 📹, 
+Watch a tutorial on how to build a live updating league table in Ember 3.5 📹,
 there's an update to the RFC about RFCs!
 
 ---
@@ -35,7 +35,7 @@ However, in the process of reading and merging all of these RFCs, the Core Team 
 
 To solve some of these issues, the RFC proposes that new RFCs are assigned a **Core Champion** from the Core Team as well as merging [ember-cli/rfcs](https://github.com/ember-cli/rfcs) into [emberjs/rfcs](https://github.com/emberjs/rfcs).
 
-There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you read through and leave a comment with your thoughts. 
+There are more proposed solutions in [the RFC](https://github.com/emberjs/rfcs/blob/rfc-process-update/text/0300-rfc-process-update.md), which we recommend you read through and leave a comment with your thoughts.
 
 ---
 
@@ -51,7 +51,7 @@ And finally, read the full _RouteInfo Metadata_ proposal to learn more and leave
 
 ## [Premier League Video Tutorial ⚽️](https://twitter.com/gavinjoyce/status/1059533557130059779)
 
-[@GavinJoyce](https://github.com/gavinjoyce) made an awesome [tutorial](https://www.youtube.com/watch?time_continue=4&v=vYakop2d2RI) where he walks through how to build a live updating league table in the **latest Ember 3.5**! Code along with the video and you'll use [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind) for styling, angle bracket components, `shuffle` from [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) (TIL), [ember-math-helpers](https://github.com/shipshapecode/ember-math-helpers) and more.
+[@GavinJoyce](https://github.com/gavinjoyce) made an awesome [tutorial](https://www.youtube.com/watch?v=vYakop2d2RI) where he walks through how to build a live updating league table in the **latest Ember 3.5**! Code along with the video and you'll use [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind) for styling, angle bracket invocation, `shuffle` from [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers) (TIL), [ember-math-helpers](https://github.com/shipshapecode/ember-math-helpers) and more.
 
 Check out [ember-league-table.surge.sh](ember-league-table.surge.sh) to run the app and the [repo](https://github.com/GavinJoyce/ember-league-table) for the source code. Our advice? Share the tutorial with a friend, whether they call it football or soccer...
 
