@@ -78,7 +78,7 @@ Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/e
 
 For more details on changes in Ember.js 3.6, please review the [Ember.js VER.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
 
-**new EmberObject (1 of 6)**
+**New EmberObject (1 of 6)**
 
 We are deprecating usage of `new EmberObject()` to construct instances of `EmberObject` and it's subclasses. This affects all classes that extend from `EmberObject` as well, including user defined classes and Ember classes such as:
 
@@ -97,6 +97,40 @@ To read more about this deprecation and how to refactor your existing code have 
 When using both the `removeListener` and `removeObserver` methods, users can omit the final string or method argument to trigger an undocumented codepath that will remove _all_ event listeners/observers for the given key. This functionality will be removed since it is uncommonly used, undocumented, and adds a fair amount of complexity to a critical path.
 
 To read more about this deprecation and how to refactor your existing code have a look at [the deprecations page](https://www.emberjs.com/deprecations/v3.x/#toc_events-remove-all-listeners).
+
+**Deprecate Ember.merge (3 of 6)**
+
+Ever since `Ember.assign` was release `Ember.merge` has been mostly unnecessary. To cut down on duplication, we are now recommending using `Ember.assign` instead of `Ember.merge`.
+
+If you need to support Ember <=2.4 you can use [ember-assign-polyfill](https://github.com/shipshapecode/ember-assign-polyfill) to make `Ember.assign` available to you.
+
+To see a code example of switching from `Ember.merge` to `Ember.assign` please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_ember-polyfills-deprecate-merge).
+
+
+**HandlerInfos Removal (4 of 6)**
+
+Due to the [router service RFC](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md) it is necessary to rename the private API `HandlerInfo` to `RouteInfo`. 
+
+If you need to access information about the routes you are most likely better served by injecting the router service as it exposes a publically supported version of the `RouteInfo`s.
+For help on how to do this please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_remove-handler-infos).
+
+**Deprecate Router Events (5 of 6)**
+
+Currently, application-wide transition monitoring is spread out throughout the `Route` classes. This does not really belong here but in the `Router` service instead.
+
+That is the reason for the existing `willTransition` and `didTransition` hooks/events on the Router. But they are not sufficient to capture all the detail people need.
+
+In addition, they receive handlerInfos in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
+
+For examples on how to transition both the `Route` and `Router` usages if `willTransition` and `didTransition` please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_deprecate-router-events).
+
+**Transition State Removal (6 of 6)**
+
+The `Transition` object is a public interface that actually exposed internal state used by router.js to perform routing.
+
+Accessing `state`, `queryParams` or `params` on the `Transition` has been removed. If you need access to information about the routes, you are probably better served injecting the router service as it exposes a publically supported version of the `RouteInfo`s.
+
+For information on how to do this please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_transition-state).
 
 ---
 
