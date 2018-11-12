@@ -118,7 +118,7 @@ For help on how to do this please refer to the [deprecation app](https://depreca
 
 Currently, application-wide transition monitoring is spread out throughout the `Route` classes. This does not really belong here but in the `Router` service instead.
 
-<!--alex ignore hook-->
+<!--alex ignore hooks-->
 That is the reason for the existing `willTransition` and `didTransition` hooks/events on the Router. But they are not sufficient to capture all the detail people need.
 
 In addition, they receive handlerInfos in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
