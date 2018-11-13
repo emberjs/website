@@ -1,6 +1,6 @@
 ---
 title: Ember VER Released
-author: Melanie Sumner, Kenneth Larsen
+author: Melanie Sumner, Kenneth Larsen, Chris Garrett
 tags: Releases, 2018, 3, 3.6
 responsive: true
 ---
@@ -76,9 +76,9 @@ Deprecations are added to Ember.js when an API will be removed at a later date. 
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-For more details on changes in Ember.js 3.6, please review the [Ember.js VER.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
+For more details on changes in Ember.js 3.6, please review the [Ember.js 3.6 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
 
-**New EmberObject (1 of 6)**
+**new EmberObject (1 of 6)**
 
 We are deprecating usage of `new EmberObject()` to construct instances of `EmberObject` and it's subclasses. This affects all classes that extend from `EmberObject` as well, including user defined classes and Ember classes such as:
 
@@ -139,7 +139,7 @@ For information on how to do this please refer to the [deprecation app](https://
 
 Ember Data is the official data persistence library for Ember.js applications.
 
-### Changes in Ember Data VER
+### Changes in Ember Data 3.6
 
 #### New Features (0)
 
