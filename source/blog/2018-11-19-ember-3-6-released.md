@@ -1,5 +1,5 @@
 ---
-title: Ember VER Released
+title: Ember 3.6 Released
 author: Melanie Sumner, Kenneth Larsen, Chris Garrett
 tags: Releases, 2018, 3, 3.6
 responsive: true
