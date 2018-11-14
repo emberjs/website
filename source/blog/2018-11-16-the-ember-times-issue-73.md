@@ -8,6 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
+<!--alex ignore hooks-->
 Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, ...
 
 ---
