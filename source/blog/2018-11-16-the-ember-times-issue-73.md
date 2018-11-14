@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 73
-author: the crowd
+author: Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
@@ -8,17 +8,38 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, ...
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Your Last Chance to Become a Speaker at EmberConf 2019 🎤](https://emberconf.com/become-a-speaker.html)
+
+Never tried public speaking before, but you're curious to share your thoughts on something interesting you learned recently? Are you already an experienced meetup speaker and looking for the next stage? Have you spoken at conferences before and want to try something new?
+
+No matter what your experience level is, we're looking for you to [**become a speaker at EmberConf 2019**](https://emberconf.com/become-a-speaker.html). The CfP (Call for Proposals) will be open for only another 2 days, so be sure to get your talk proposal in this very weekend **before Sunday, Nov 18, 2018 at 11:59pm MST**.
+
+Out of ideas? Be sure to [check out the Brainstorm CfP](https://emberconf.com/cfp-brainstorm.html) to inspire yourself!
+Not feeling ready yet? Be assured, that **you are ready** to tell us your story - we're convinced that you'll succeed! ✨
+
+<div class="blog-row">
+  <a class="ember-button" href="https://emberconf.com/become-a-speaker.html">Ok, let me check out the CfP</a>
+</div>
+
 
 
 ---
 
-## [SECTION TITLE](#section-url)
+<!--alex ignore hooks-->
+## [Embereact Hooks ⚛️](https://github.com/lifeart/hooked-components)
 
+<!--alex ignore hooks-->
+Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)? Already super excited? Good news: You can now use React Hooks in Ember. **You can now use React Hooks in Ember?**
+
+<!--alex ignore hooks-->
+[The Ember addon hooked-components](https://github.com/lifeart/hooked-components) provides you with a React Hooks inspired API that lets you **experiment** with brand-new 🔥 Component patterns in your Ember app **today**.
+
+<!--alex ignore hooks-->
+[Try out Embereact Hooks](https://github.com/lifeart/hooked-components)!
 
 ---
 
@@ -79,7 +100,7 @@ responsive: true
 
 ## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
@@ -90,4 +111,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Jessica Jordan, the crowd and the Learning Team
