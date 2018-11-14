@@ -8,13 +8,13 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Last call for your **talk submissions** to **EmberConf 2019** 📣!
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, ...
 
 ---
 
 ## [Your Last Chance to Become a Speaker at EmberConf 2019 🎤](https://emberconf.com/become-a-speaker.html)
 
-Have you never tried public speaking before, but you're curious to share your thoughts on something interesting you learned recently? Are you already an experienced meetup speaker and looking for the next stage? Have you spoken at conferences before and want to try something new?
+Never tried public speaking before, but you're curious to share your thoughts on something interesting you learned recently? Are you already an experienced meetup speaker and looking for the next stage? Have you spoken at conferences before and want to try something new?
 
 No matter what your experience level is, we're looking for you to [**become a speaker at EmberConf 2019**](https://emberconf.com/become-a-speaker.html). The CfP (Call for Proposals) will be open for only another 2 days, so be sure to get your talk proposal in this very weekend **before Sunday, Nov 18, 2018 at 11:59pm MST**.
 
@@ -30,7 +30,7 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 ---
 
 <!--alex ignore hooks-->
-## [Embereact Hooks ⚛️ ](https://github.com/lifeart/hooked-components)
+## [Embereact Hooks ⚛️](https://github.com/lifeart/hooked-components)
 
 <!--alex ignore hooks-->
 Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)? Already super excited? Good news: You can now use React Hooks in Ember. **You can now use React Hooks in Ember?**
