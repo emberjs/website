@@ -29,8 +29,17 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 
 ---
 
-## [SECTION TITLE](#section-url)
+<!--alex ignore hooks-->
+## [Embereact Hooks ⚛️ ](https://github.com/lifeart/hooked-components)
 
+<!--alex ignore hooks-->
+Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)? Already super excited? Good news: You can now use React Hooks in Ember. **You can now use React Hooks in Ember?**
+
+<!--alex ignore hooks-->
+[The Ember addon hooked-components](https://github.com/lifeart/hooked-components) provides you with a React Hooks inspired API that lets you **experiment** with brand-new 🔥 Component patterns in your Ember app **today**.
+
+<!--alex ignore hooks-->
+[Try out Embereact Hooks](https://github.com/lifeart/hooked-components)!
 
 ---
 
