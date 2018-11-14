@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 73
-author: Jessica Jordan, the crowd
+author: Chris Ng, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, ...
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, eslint-plugin-ember v6.0.0 is out! 🚓, ...
 
 ---
 
@@ -43,8 +43,13 @@ Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [eslint-plugin-ember v6.0.0 is out! 🚓](https://twitter.com/TobiasBieniek/status/1062700572757946368)
 
+[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember] which is an [ESLint](https://eslint.org/) plugin that provides set of rules for Ember Applications based on commonly known good practices.
+
+This new release includes several **breaking changes** to the `ember/recommended` configuration such as [no-restricted-resolver-tests](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-restricted-resolver-tests.md) and [no-ember-testing-in-module](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-ember-testing-in-module-scope.md). Check the [release notes](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) for the full list of breaking changes and enhancements.
+
+Note: If you still use [ESLint 3](https://github.com/ember-cli/eslint-plugin-ember/pull/267) or [Node.js 4](https://github.com/ember-cli/eslint-plugin-ember/pull/255) **this release will not work** for you as this major version change drops support for both of them.
 
 ---
 
@@ -111,4 +116,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, the crowd and the Learning Team
