@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 73
-author: Jessica Jordan, the crowd
+author: Jessica Jordan, Kenneth Larsen, Niels Rasmussen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <!--alex ignore hooks-->
-Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, ...
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, Watch all the talks from EmberFest! 🎥, ...
 
 ---
 
@@ -44,8 +44,16 @@ Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Videos From EmberFest Are Out!](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
+The videos from EmberFest are **now available** on [YouTube](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9). This means that you can experience all of the great talks even though you weren’t there! (And you know, if you were there you can now re-live it all).
 
+If you don’t know where to start then we highly recommend the [opening keynote by Tom Dale](https://www.youtube.com/watch?v=oRzmDobMZ_Q&t=0s&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=2) and the [closing keynote by Melanie Sumner](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21).
+
+Tom Dale spoke about what will happen next year when you generate a new Ember app. This involves super exciting things like the **module unification app structure**,  **angle bracket invocation**, **JavaScript classes**, **tracked properties** and much more. All of this is of course delivered with the usual Tom Dale dapperness and humor. Definitely worth a watch.
+
+<!-- Waiting for Niels' section about Mel's talk here -->
+
+If you want to browse through all of the great talks from EmberFest, check out the [YouTube playlist](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21).
 
 ---
 
@@ -112,4 +120,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, the crowd and the Learning Team
+Jessica Jordan, Kenneth Larsen, Niels Rasmussen, the crowd and the Learning Team
