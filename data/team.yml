@@ -126,6 +126,7 @@
   image: dgeb.jpg
   teams:
     - corejs
+    - data
 - name: Godfrey Chan
   first: Godfrey
   last: Chan
@@ -149,7 +150,7 @@
   twitter: https://twitter.com/ChristofferP
   image: cpersson.jpg
   teams:
-    - data
+    - alumni
 - name: Clemens Müller
   first: Clemens
   last: Müller
@@ -165,7 +166,7 @@
   twitter: https://twitter.com/fivetanley
   image: fivetanley.jpg
   teams:
-    - data
+    - alumni
 - name: David Baker
   first: David
   last: Baker
