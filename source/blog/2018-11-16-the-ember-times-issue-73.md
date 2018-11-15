@@ -59,7 +59,7 @@ If you don’t know where to start then we highly recommend the [opening keynote
 
 Tom Dale spoke about what will happen next year when you generate a new Ember app. This involves super exciting things like the **module unification app structure**,  **angle bracket invocation**, **JavaScript classes**, **tracked properties** and much more. All of this is of course delivered with the usual Tom Dale dapperness and humor. Definitely worth a watch.
 
-<!-- Waiting for Niels' section about Mel's talk here -->
+Melanie Summer delivered a thoughtful talk about how other people’s views on something you enjoy - especially when you’re a smaller community - can create uncertainty and why it shouldn’t. It delivers a few helpful tools and encourages us to **observe**, **analyse** and **think** before responding to critical claims. The talk is a great reminder to consider how we talk to each other and to enjoy doing what we do, no matter what others may think
 
 If you want to browse through all of the great talks from EmberFest, check out the [YouTube playlist](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21).
 
