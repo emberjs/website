@@ -128,4 +128,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark the crowd and the Learning Team
+Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark the crowd and the Learning Team
