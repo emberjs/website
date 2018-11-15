@@ -65,8 +65,8 @@ If you want to browse through all of the great talks from EmberFest, check out t
 
 ---
 
-## [SECTION TITLE](#section-url)
-
+## [DecEmber is almost here!](#section-url)
+Are you wondering what to do with all your vacation time in December? Never fear, the Learning Team is here! The Core Learning Team is sponsoring DecEmber, a hackathon event specifically targeted at learning team efforts. Look for special issues marked “DecEmber” from December 1st-31st. Of course there will be prizes, too! Stay tuned for more details...
 
 ---
 
