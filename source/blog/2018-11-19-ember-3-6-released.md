@@ -1,6 +1,6 @@
 ---
-title: Ember VER Released
-author: Melanie Sumner, Kenneth Larsen
+title: Ember 3.6 Released
+author: Melanie Sumner, Kenneth Larsen, Chris Garrett
 tags: Releases, 2018, 3, 3.6
 responsive: true
 ---
@@ -82,9 +82,9 @@ Deprecations are added to Ember.js when an API will be removed at a later date. 
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-For more details on changes in Ember.js 3.6, please review the [Ember.js VER.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
+For more details on changes in Ember.js 3.6, please review the [Ember.js 3.6 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
 
-**New EmberObject (1 of 6)**
+**new EmberObject (1 of 6)**
 
 We are deprecating usage of `new EmberObject()` to construct instances of `EmberObject` and it's subclasses. This affects all classes that extend from `EmberObject` as well, including user defined classes and Ember classes such as:
 
@@ -124,6 +124,7 @@ For help on how to do this please refer to the [deprecation app](https://depreca
 
 Currently, application-wide transition monitoring is spread out throughout the `Route` classes. This does not really belong here but in the `Router` service instead.
 
+<!--alex ignore hooks-->
 That is the reason for the existing `willTransition` and `didTransition` hooks/events on the Router. But they are not sufficient to capture all the detail people need.
 
 In addition, they receive handlerInfos in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
@@ -144,7 +145,7 @@ For information on how to do this please refer to the [deprecation app](https://
 
 Ember Data is the official data persistence library for Ember.js applications.
 
-### Changes in Ember Data VER
+### Changes in Ember Data 3.6
 
 #### New Features (0)
 
