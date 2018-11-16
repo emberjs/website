@@ -69,6 +69,7 @@ We would like to add support for prior LTS versions (2.18 and 2.16) as well, if 
 
 **Final stage of the router service RFC (2 of 2)**
 
+<!--alex ignore rejects -->
 Ember 3.6 introduces the final stages of the router service RFC. The includes two new methods: `recognize(url)` that can return a `RouteInfo` based on the URL you pass and `recognizeAndLoad(url)` that takes a string URL and returns a promise that resolves to a `RouteInfoWithAttributes` for the leaf-most route represented by the URL. The promise rejects if the URL is not recognized or an unhandled exception is encountered.
 
 This final stage also introduces the new observable property `currentRoute`. It is guaranteed to change whenever a route transition happens (even when that transition only changes parameters and doesn't change the active route). You should consider its value deeply immutable -- we will replace the whole structure whenever it changes. The value of `currentRoute` is a `RouteInfo` representing the current leaf route.
