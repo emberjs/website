@@ -29,7 +29,7 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 
 ## [eslint-plugin-ember v6.0.0 is Out! 🚓](https://twitter.com/TobiasBieniek/status/1062700572757946368)
 
-[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember), which is an [ESLint](https://eslint.org/) plugin that provides a set of rules for Ember Applications based on commonly known good practices.
+[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember), which is an [ESLint](https://eslint.org/) plugin that provides a set of rules for Ember applications based on commonly known good practices.
 
 This new release includes several **breaking changes** to the `ember/recommended` configuration such as [no-restricted-resolver-tests](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-restricted-resolver-tests.md) and [no-ember-testing-in-module](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-ember-testing-in-module-scope.md). Check the [release notes](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) for the full list of breaking changes and enhancements.
 
@@ -65,7 +65,7 @@ Give [ember-ast-hot-load](https://github.com/lifeart/ember-ast-hot-load) a try t
 
 Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring Dec**Ember**, a hackathon event specifically targeted at learning team efforts. Look for special issues marked “Dec**Ember**” from December 1st-31st. Of course there will be **prizes**, too! Stay tuned for more details...
 
-P.S. You can register for [24 Pull Requests](https://24pullrequests.com/) - giving back little gifts of code for the holidays ❄️ - as well!
+P.S. You can also register for [24 Pull Requests](https://24pullrequests.com/) - giving back little gifts of code for the holidays! ❄️
 
 ---
 
