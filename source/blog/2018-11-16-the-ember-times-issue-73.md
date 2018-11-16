@@ -8,7 +8,7 @@ responsive: true
 
 Suilad Emberistas! 🐹
 
-Last call for your talk submissions to EmberConf 2019! 📣 In this week's issue: eslint-plugin-ember v6.0.0 is out 🚓, watch all the talks from EmberFest 🎥, try out hot reloading in Ember ️🔥, and a sneak peak at DecEmber 😄...
+Last call for your **talk submissions** to **EmberConf 2019**! 📣 In this week's issue: eslint-plugin-ember v6.0.0 is out 🚓, watch all the talks from EmberFest 🎥, try out hot reloading in Ember ️🔥, and a sneak peak at **DecEmber** 😄...
 
 ---
 
@@ -27,9 +27,9 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 
 ---
 
-## [eslint-plugin-ember v6.0.0 is out! 🚓](https://twitter.com/TobiasBieniek/status/1062700572757946368)
+## [eslint-plugin-ember v6.0.0 is Out! 🚓](https://twitter.com/TobiasBieniek/status/1062700572757946368)
 
-[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember) which is an [ESLint](https://eslint.org/) plugin that provides a set of rules for Ember Applications based on commonly known good practices.
+[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember), which is an [ESLint](https://eslint.org/) plugin that provides a set of rules for Ember Applications based on commonly known good practices.
 
 This new release includes several **breaking changes** to the `ember/recommended` configuration such as [no-restricted-resolver-tests](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-restricted-resolver-tests.md) and [no-ember-testing-in-module](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-ember-testing-in-module-scope.md). Check the [release notes](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) for the full list of breaking changes and enhancements.
 
@@ -37,11 +37,11 @@ Note: If you still use [ESLint 3](https://github.com/ember-cli/eslint-plugin-emb
 
 ---
 
-## [Videos From EmberFest Are Out! 🎉](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
+## [Videos from EmberFest Are Out! 🎉](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
 
-The videos from EmberFest are **now available** on [YouTube](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9). This means that you can experience all of the great talks even though you weren’t there! (And you know, if you were there you can now re-live it all).
+The videos from EmberFest are **now available** on [YouTube](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9). This means that you can experience all of the great talks even though you weren’t there! (And you know, if you were there you can now re-live it all.)
 
-If you don’t know where to start then we highly recommend the [opening keynote by Tom Dale](https://www.youtube.com/watch?v=oRzmDobMZ_Q&t=0s&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=2) and the [closing keynote by Melanie Sumner](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21).
+If you don’t know where to start, then we highly recommend the [opening keynote by Tom Dale](https://www.youtube.com/watch?v=oRzmDobMZ_Q&t=0s&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=2) and the [closing keynote by Melanie Sumner](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21).
 
 Tom Dale spoke about what will happen next year when you generate a new Ember app. This involves super exciting things like the **module unification app structure**,  **angle bracket invocation**, **JavaScript classes**, **tracked properties** and much more. All of this is of course delivered with the usual Tom Dale dapperness and humor. Definitely worth a watch.
 
@@ -51,7 +51,7 @@ If you want to browse through all of the great talks from EmberFest, check out t
 
 ---
 
-## [Hot reloading in Ember 🔃](https://github.com/lifeart/ember-ast-hot-loads)
+## [Hot Reloading in Ember 🔃](https://github.com/lifeart/ember-ast-hot-loads)
 
 [ember-ast-hot-load](https://github.com/lifeart/ember-ast-hot-loads) is a new attempt to bring components hot reloading into the Ember ecosystem!
 
@@ -64,9 +64,9 @@ ember-ast-hot-load perform handlebars templates hooking using AST transformation
 
 ---
 
-## [DecEmber is almost here! 📆](https://github.com/ember-learn/guides-source/labels/DecEmber)
+## [DecEmber is Almost Here! 📆](https://github.com/ember-learn/guides-source/labels/DecEmber)
 
-Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring DecEmber, a hackathon event specifically targeted at learning team efforts. Look for special issues marked **“DecEmber”** from December 1st-31st. Of course there will be **prizes**, too! Stay tuned for more details...
+Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring Dec**Ember**, a hackathon event specifically targeted at learning team efforts. Look for special issues marked “Dec**Ember**” from December 1st-31st. Of course there will be **prizes**, too! Stay tuned for more details...
 
 P.S. You can register for [24 Pull Requests](https://24pullrequests.com/) - giving back little gifts of code for the holidays ❄️ - as well!
 
