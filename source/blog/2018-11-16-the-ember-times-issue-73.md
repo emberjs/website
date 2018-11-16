@@ -1,15 +1,15 @@
 ---
 title: The Ember Times - Issue No. 73
-author: Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, the crowd
+author: Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, Alon Bukai, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Suilad Emberistas! 🐹
 
 <!--alex ignore hooks-->
-Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, eslint-plugin-ember v6.0.0 is out! 🚓, Watch all the talks from EmberFest! 🎥, a teaser for Dec**Ember** 😄...
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️! eslint-plugin-ember v6.0.0 is out 🚓! Watch all the talks from EmberFest 🎥! Finally, teaser for Dec**Ember** 😄...
 
 ---
 
@@ -17,13 +17,13 @@ Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out Reac
 
 Never tried public speaking before, but you're curious to share your thoughts on something interesting you learned recently? Are you already an experienced meetup speaker and looking for the next stage? Have you spoken at conferences before and want to try something new?
 
-No matter what your experience level is, we're looking for you to [**become a speaker at EmberConf 2019**](https://emberconf.com/become-a-speaker.html). The CfP (Call for Proposals) will be open for only another 2 days, so be sure to get your talk proposal in this very weekend **before Sunday, Nov 18, 2018 at 11:59pm MST**.
+No matter what your experience level is, we're looking for you to [**become a speaker at EmberConf 2019**](https://emberconf.com/become-a-speaker.html). The CFP (Call for Proposals) will be open for only another 2 days, so be sure to get your talk proposal in this very weekend **before Sunday, Nov 18, 2018 at 11:59pm MST**.
 
-Out of ideas? Be sure to [check out the Brainstorm CfP](https://emberconf.com/cfp-brainstorm.html) to inspire yourself!
+Out of ideas? Be sure to [check out the Brainstorm CFP](https://emberconf.com/cfp-brainstorm.html) to inspire yourself!
 Not feeling ready yet? Be assured, that **you are ready** to tell us your story - we're convinced that you'll succeed! ✨
 
 <div class="blog-row">
-  <a class="ember-button" href="https://emberconf.com/become-a-speaker.html">Ok, let me check out the CfP</a>
+  <a class="ember-button" href="https://emberconf.com/become-a-speaker.html">Ok, let me check out the CFP</a>
 </div>
 
 ---
@@ -35,10 +35,10 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)? Already super excited? Good news: You can now use React Hooks in Ember. **You can now use React Hooks in Ember?**
 
 <!--alex ignore hooks-->
-[The Ember addon hooked-components](https://github.com/lifeart/hooked-components) provides you with a React Hooks inspired API that lets you **experiment** with brand-new 🔥 Component patterns in your Ember app **today**.
+[The Ember addon hooked-components](https://github.com/lifeart/hooked-components), created by [@lifeart](https://github.com/lifeart), provides you with a React Hooks inspired API that lets you **experiment** with brand-new 🔥 Component patterns in your Ember app **today**.
 
 <!--alex ignore hooks-->
-[Try out Embereact Hooks](https://github.com/lifeart/hooked-components)!
+[Try out Embereact Hooks today!](https://github.com/lifeart/hooked-components)!
 
 ---
 
@@ -66,7 +66,7 @@ If you want to browse through all of the great talks from EmberFest, check out t
 ---
 
 ## [DecEmber is almost here! 📆](https://github.com/ember-learn/guides-source/labels/DecEmber)
-Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring DecEmber, a hackathon event specifically targeted at learning team efforts. Look for special issues marked “DecEmber” from December 1st-31st. Of course there will be prizes, too! Stay tuned for more details...
+Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring DecEmber, a hackathon event specifically targeted at learning team efforts. Look for special issues marked **“DecEmber”** from December 1st-31st. Of course there will be **prizes**, too! Stay tuned for more details...
 
 ---
 
@@ -128,4 +128,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark the crowd and the Learning Team
+Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, Alon Bukai, Amy Lam and the Learning Team
