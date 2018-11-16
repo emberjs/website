@@ -67,8 +67,14 @@ ember install ember-native-class-polyfill
 
 We would like to add support for prior LTS versions (2.18 and 2.16) as well, if you would like to contribute, ping us in the #st-native-classes channel on Discord or in the [Native Class Quest issue](https://github.com/emberjs/ember.js/issues/16927) on Github!
 
-Second new feature (2 of 2)
+**Final stage of the router service RFC (2 of 2)**
 
+Ember 3.6 introduces the final stages of the router service RFC. The includes two new methods: `recognize(url)` that can return a `RouteInfo` based on the URL you pass and `recognizeAndLoad(url)` that takes a string URL and returns a promise that resolves to a `RouteInfoWithAttributes` for the leaf-most route represented by the URL. The promise rejects if the URL is not recognized or an unhandled exception is encountered.
+
+This final stage also introduces the new observable property `currentRoute`. It is guaranteed to change whenever a route transition happens (even when that transition only changes parameters and doesn't change the active route). You should consider its value deeply immutable -- we will replace the whole structure whenever it changes. The value of `currentRoute` is a `RouteInfo` representing the current leaf route.
+
+Wrapping up this final stage we introduce two new events to the router service: `routeWillChange` and `routeDidChange`. They both receive a single `transition` argument which has been expanded to now include `to` and `from` properties. This allows you to understand where the transition is and where it is going. To see some examples of this be sure to read the [events section](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-events-routewillchange--routedidchange) of the RFC.
+Be sure to have a look at the [RFC itself](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md) for more info in the router service.
 
 #### Deprecations (6)
 
