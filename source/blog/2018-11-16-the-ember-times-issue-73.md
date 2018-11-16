@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 73
-author: Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, the crowd
+author: Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <!--alex ignore hooks-->
-Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, eslint-plugin-ember v6.0.0 is out! 🚓, Watch all the talks from EmberFest! 🎥, ...
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, eslint-plugin-ember v6.0.0 is out! 🚓, Watch all the talks from EmberFest! 🎥, a teaser for Dec**Ember** 😄...
 
 ---
 
@@ -65,8 +65,8 @@ If you want to browse through all of the great talks from EmberFest, check out t
 
 ---
 
-## [SECTION TITLE](#section-url)
-
+## [DecEmber is almost here! 📆](https://github.com/ember-learn/guides-source/labels/DecEmber)
+Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring DecEmber, a hackathon event specifically targeted at learning team efforts. Look for special issues marked “DecEmber” from December 1st-31st. Of course there will be prizes, too! Stay tuned for more details...
 
 ---
 
@@ -128,4 +128,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark the crowd and the Learning Team
+Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark the crowd and the Learning Team
