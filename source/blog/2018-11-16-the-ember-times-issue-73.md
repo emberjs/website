@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 73
 author: Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, Alon Bukai, Amy Lam
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
 ---
