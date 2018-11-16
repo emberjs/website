@@ -9,7 +9,11 @@ responsive: true
 Suilad Emberistas! 🐹
 
 <!--alex ignore hooks-->
-Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️! eslint-plugin-ember v6.0.0 is out 🚓! Watch all the talks from EmberFest 🎥! Finally, teaser for Dec**Ember** 😄...
+Last call for your **talk submissions** to **EmberConf 2019** 📣! 
+eslint-plugin-ember v6.0.0 is out 🚓! 
+Watch all the talks from EmberFest 🎥! 
+Try out hot reloading in Ember ️🔥! 
+And finally, teaser for Dec**Ember** 😄...
 
 ---
 
@@ -28,20 +32,6 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 
 ---
 
-<!--alex ignore hooks-->
-## [Embereact Hooks ⚛️](https://github.com/lifeart/hooked-components)
-
-<!--alex ignore hooks-->
-Have you heard about [Hooks in React](https://reactjs.org/docs/hooks-intro.html)? Already super excited? Good news: You can now use React Hooks in Ember. **You can now use React Hooks in Ember?**
-
-<!--alex ignore hooks-->
-[The Ember addon hooked-components](https://github.com/lifeart/hooked-components), created by [@lifeart](https://github.com/lifeart), provides you with a React Hooks inspired API that lets you **experiment** with brand-new 🔥 Component patterns in your Ember app **today**.
-
-<!--alex ignore hooks-->
-[Try out Embereact Hooks today!](https://github.com/lifeart/hooked-components)!
-
----
-
 ## [eslint-plugin-ember v6.0.0 is out! 🚓](https://twitter.com/TobiasBieniek/status/1062700572757946368)
 
 [@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember) which is an [ESLint](https://eslint.org/) plugin that provides set of rules for Ember Applications based on commonly known good practices.
@@ -53,6 +43,7 @@ Note: If you still use [ESLint 3](https://github.com/ember-cli/eslint-plugin-emb
 ---
 
 ## [Videos From EmberFest Are Out! 🎉](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
+
 The videos from EmberFest are **now available** on [YouTube](https://www.youtube.com/playlist?list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9). This means that you can experience all of the great talks even though you weren’t there! (And you know, if you were there you can now re-live it all).
 
 If you don’t know where to start then we highly recommend the [opening keynote by Tom Dale](https://www.youtube.com/watch?v=oRzmDobMZ_Q&t=0s&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=2) and the [closing keynote by Melanie Sumner](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21).
@@ -65,36 +56,26 @@ If you want to browse through all of the great talks from EmberFest, check out t
 
 ---
 
+## [Hot reloading in Ember 🔃](https://github.com/lifeart/ember-ast-hot-loads)
+
+[ember-ast-hot-load](https://github.com/lifeart/ember-ast-hot-loads) is a new attempt to bring components hot reloading into the Ember ecosystem!
+
+Hot reloading only refreshes the components that were changed without losing the state of the app. For example, if you are four routes deep into your app and save a change to some component, the updated component would appear on the page without full application reload.
+
+ember-ast-hot-load perform handlebars templates hooking using AST transformations, and replaces components invocations from
+`{{my-component}}`, to `{{component (hot-load 'my-component')}}`. The `hot-load` helper now knows which component rendered and may call the recompute function, to invoke component redraw after its source code has been updated and compiled.
+
+[Try out ember-ast-hot-load today!](https://github.com/lifeart/ember-ast-hot-loads) 
+
+---
+
 ## [DecEmber is almost here! 📆](https://github.com/ember-learn/guides-source/labels/DecEmber)
+
 Are you wondering what to do with all your vacation time in December? We got ya covered! The Core Learning Team is sponsoring DecEmber, a hackathon event specifically targeted at learning team efforts. Look for special issues marked **“DecEmber”** from December 1st-31st. Of course there will be **prizes**, too! Stay tuned for more details...
 
----
-
-## [SECTION TITLE](#section-url)
-
+P.S. You can register for [24 Pull Requests](https://24pullrequests.com/) - giving back little gifts of code for the holidays ❄️ - as well!
 
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -122,7 +103,6 @@ Want to write for the Ember Times? Have a suggestion for next week's issue? Join
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
 ---
-
 
 That's another wrap! ✨
 
