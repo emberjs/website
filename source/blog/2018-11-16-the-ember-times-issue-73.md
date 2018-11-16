@@ -51,16 +51,13 @@ If you want to browse through all of the great talks from EmberFest, check out t
 
 ---
 
-## [Hot Reloading in Ember 🔃](https://github.com/lifeart/ember-ast-hot-loads)
+## [Hot Reloading in Ember 🔃](https://github.com/lifeart/ember-ast-hot-load)
 
-[ember-ast-hot-load](https://github.com/lifeart/ember-ast-hot-loads) is a new attempt to bring components hot reloading into the Ember ecosystem!
+[ember-ast-hot-load](https://github.com/lifeart/ember-ast-hot-load) is a new attempt to bring component hot reloading into the Ember ecosystem!
 
-Hot reloading only refreshes the components that were changed without losing the state of the app. For example, if you are four routes deep into your app and save a change to some component, the updated component would appear on the page without full application reload.
+Hot reloading only refreshes the components that were changed, without losing the state of the app. For example, if you are four routes deep into your app and save a change to a component, the updated component will appear on the page without full application reload.
 
-ember-ast-hot-load perform handlebars templates hooking using AST transformations, and replaces components invocations from
-`{{my-component}}`, to `{{component (hot-load 'my-component')}}`. The `hot-load` helper now knows which component rendered and may call the recompute function, to invoke component redraw after its source code has been updated and compiled.
-
-[Try out ember-ast-hot-load today!](https://github.com/lifeart/ember-ast-hot-loads) 
+Give [ember-ast-hot-load](https://github.com/lifeart/ember-ast-hot-load) a try today!
 
 ---
 
