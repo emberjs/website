@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 73
-author: Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, the crowd
+author: Melanie Sumner, Chris Ng, Jessica Jordan, Kenneth Larsen, Niels Rasmussen, Ryan Mark, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/16-the-ember-times-issue-73.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <!--alex ignore hooks-->
-Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, eslint-plugin-ember v6.0.0 is out! 🚓, Watch all the talks from EmberFest! 🎥, ...
+Last call for your **talk submissions** to **EmberConf 2019** 📣! Try out React Hooks in Ember 👯‍♀️, eslint-plugin-ember v6.0.0 is out! 🚓, Watch all the talks from EmberFest! 🎥, a teaser for Dec**Ember** 😄...
 
 ---
 
