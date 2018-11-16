@@ -8,12 +8,7 @@ responsive: true
 
 Suilad Emberistas! 🐹
 
-<!--alex ignore hooks-->
-Last call for your **talk submissions** to **EmberConf 2019** 📣! 
-eslint-plugin-ember v6.0.0 is out 🚓! 
-Watch all the talks from EmberFest 🎥! 
-Try out hot reloading in Ember ️🔥! 
-And finally, teaser for Dec**Ember** 😄...
+Last call for your talk submissions to EmberConf 2019! 📣 In this week's issue: eslint-plugin-ember v6.0.0 is out 🚓, watch all the talks from EmberFest 🎥, try out hot reloading in Ember ️🔥, and a sneak peak at DecEmber 😄...
 
 ---
 
@@ -34,7 +29,7 @@ Not feeling ready yet? Be assured, that **you are ready** to tell us your story 
 
 ## [eslint-plugin-ember v6.0.0 is out! 🚓](https://twitter.com/TobiasBieniek/status/1062700572757946368)
 
-[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember) which is an [ESLint](https://eslint.org/) plugin that provides set of rules for Ember Applications based on commonly known good practices.
+[@Turbo87](https://github.com/Turbo87) announced the release of [v6.0.0](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) of [eslint-plugin-ember](https://github.com/ember-cli/eslint-plugin-ember) which is an [ESLint](https://eslint.org/) plugin that provides a set of rules for Ember Applications based on commonly known good practices.
 
 This new release includes several **breaking changes** to the `ember/recommended` configuration such as [no-restricted-resolver-tests](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-restricted-resolver-tests.md) and [no-ember-testing-in-module](https://github.com/ember-cli/eslint-plugin-ember/blob/master/docs/rules/no-ember-testing-in-module-scope.md). Check the [release notes](https://github.com/ember-cli/eslint-plugin-ember/releases/tag/v6.0.0) for the full list of breaking changes and enhancements.
 
