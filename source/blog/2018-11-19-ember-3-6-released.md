@@ -128,7 +128,7 @@ Currently, application-wide transition monitoring is spread out throughout the `
 <!--alex ignore hooks-->
 That is the reason for the existing `willTransition` and `didTransition` hooks/events on the Router. But they are not sufficient to capture all the detail people need.
 
-In addition, they receive handlerInfos in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
+In addition, they receive `handlerInfos` in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
 
 For examples on how to transition both the `Route` and `Router` usages if `willTransition` and `didTransition` please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_deprecate-router-events).
 
@@ -150,15 +150,15 @@ Ember Data is the official data persistence library for Ember.js applications.
 
 #### New Features (0)
 
-No new features introduced in Ember Data VER.
+No new features introduced in Ember Data 3.6.
 
 #### Deprecations (0)
 
-No new deprecations introduced in Ember Data VER.
+No new deprecations introduced in Ember Data 3.6.
 
 
 For more details on changes in Ember Data VER, please review the
-[Ember Data VER.0 release page](https://github.com/emberjs/data/releases/tag/vVER.0).
+[Ember Data 3.6 release page](https://github.com/emberjs/data/releases/tag/v3.6).
 
 ---
 
@@ -190,10 +190,12 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 
 ### Changes in Ember CLI 3.6
 
-#### New Features (X)
+#### New Features (1)
+**Prevent double builds in CI (1 of 1)**
+Until version 3.6 the addon author (unless the addon was in an org) would always end up with two CI builds for every PR. One for the branch push and one for the PR update. This is now fixed in Ember CLI 3.6.
 
-
-#### Deprecations (X)
+#### Deprecations (0)
+There's no deprecations in this version.
 
 ---
 
