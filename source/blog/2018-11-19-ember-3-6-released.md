@@ -34,7 +34,7 @@ The [ES Class](https://emberjs.github.io/rfcs/0240-es-classes.html) and [Native 
 **Great, so I can use `class` syntax now?!**
 Hold your horses! It's not _quite_ that simple yet.
 
-The behavior of native classes is stable, but currently Ember does not support or recommend the usage of class fields or decorators, which are both still undergoing the TC39 process. Subsequent RFCs will have to be made to make these officially part of Ember.
+The behavior of native classes is stable, but currently Ember does not support or recommend the usage of class fields or decorators, which are both still undergoing the TC39 process. TC39 (Technical Committee number 39) is a part of ECMA, the institution which standardizes the JavaScript language under the “ECMAScript” specification. Subsequent RFCs will have to be made to make these officially part of Ember.
 
 <!--alex ignore hook-->
 Without decorators or class fields, the benefits of class syntax are generally not worth the costs. Simple behaviors and features that we rely on day-to-day in Ember, such as service injections, computed properties, and actions, all require decorators. Even if you don't need any of these values, without class fields any class properties must be assigned in the `init` hook instead, and this would make it even _more_ difficult to update later on when class fields and decorators have shipped.
@@ -72,7 +72,7 @@ We would like to add support for prior LTS versions (2.18 and 2.16) as well, so 
 **Final stage of the router service RFC (2 of 2)**
 
 <!--alex ignore rejects -->
-Ember 3.6 introduces the final stages of the router service RFC. The includes two new methods: `recognize(url)` that can return a `RouteInfo` based on the URL you pass and `recognizeAndLoad(url)` that takes a string URL and returns a promise that resolves to a `RouteInfoWithAttributes` for the leaf-most route represented by the URL. The promise rejects if the URL is not recognized or an unhandled exception is encountered.
+Ember 3.6 introduces the final stages of the router service RFC. The includes two new methods: [`recognize(url)`](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-method-url-recognition) that can return a `RouteInfo` based on the URL you pass and [`recognizeAndLoad(url)`](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-method-recognize-and-load-models) that takes a string URL and returns a promise that resolves to a `RouteInfoWithAttributes` for the leaf-most route represented by the URL. The promise rejects if the URL is not recognized or an unhandled exception is encountered.
 
 This final stage also introduces the new observable property `currentRoute`. It is guaranteed to change whenever a route transition happens (even when that transition only changes parameters and doesn't change the active route). You should consider its value deeply immutable -- we will replace the whole structure whenever it changes. The value of `currentRoute` is a `RouteInfo` representing the current leaf route.
 
