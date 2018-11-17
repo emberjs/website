@@ -5,7 +5,9 @@ tags: Releases, 2018, 3, 3.6
 responsive: true
 ---
 
-Today the Ember project is releasing version 3.6 of Ember.js, Ember Data, and Ember CLI. This release kicks off the 3.7 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
+Today the Ember project is releasing version 3.6 of Ember.js, Ember Data, and Ember CLI. Highlights include public API support for ES6 classes and two new RouterService methods.
+
+This release kicks off the 3.7 beta cycle for all sub-projects. We encourage our community (especially addon authors) to help test these beta builds and report any bugs before they are published as a final release in six weeks' time. The [ember-try](https://github.com/ember-cli/ember-try) addon is a great way to continuously test your projects against the latest Ember releases.
 
 You can read more about our general release process here:
 
@@ -21,7 +23,7 @@ You can read more about our general release process here:
 Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.6
-Ember.js 3.6 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is 2 new feature, 6 deprecations, and 13 bugfixes in this version.
+Ember.js 3.6 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There are 2 new features, 6 deprecations, and 13 bugfixes in this version.
 
 #### New Features (2)
 
@@ -41,7 +43,7 @@ With this in mind, the official Ember recommendation is to continue using the st
 
 **So what's the point then?**
 
-Stabilizing the behavior of classes gives early adopters a API to build on. For users who are more risk tolerant and want to be early adopters, projects such as [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript) and [ember-decorators](https://github.com/ember-decorators/ember-decorators) are providing the transforms and decorators necessary to use class syntax today, and are dedicated to remaining stable and providing an update path through any changes that occur in TC39 as the proposals are finalized.
+Stabilizing the behavior of classes gives early adopters an API to build on. For users who are more risk tolerant and want to be early adopters, community projects such as [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript) and [ember-decorators](https://github.com/ember-decorators/ember-decorators) are providing the transforms and decorators necessary to use class syntax today, and are dedicated to remaining stable and providing an update path through any changes that occur in TC39 as the proposals are finalized.
 
 Early adopters have been helping tremendously to sort out the details here and make sure that the day the proposals advance, we are ready to land official support for them in Ember directly. Early adoption _does_ come with risks, so if you are considering it, be prepared to have to make changes in the future.
 
@@ -65,7 +67,7 @@ A polyfill for this behavior has been built which backports this behavior to bot
 ember install ember-native-class-polyfill
 ```
 
-We would like to add support for prior LTS versions (2.18 and 2.16) as well, if you would like to contribute, ping us in the #st-native-classes channel on Discord or in the [Native Class Quest issue](https://github.com/emberjs/ember.js/issues/16927) on Github!
+We would like to add support for prior LTS versions (2.18 and 2.16) as well, so if you would like to contribute, ping us in the #st-native-classes channel on Discord or in the [Native Class Quest issue](https://github.com/emberjs/ember.js/issues/16927) on Github!
 
 **Final stage of the router service RFC (2 of 2)**
 
@@ -107,7 +109,7 @@ To read more about this deprecation and how to refactor your existing code have 
 
 **Deprecate Ember.merge (3 of 6)**
 
-Ever since `Ember.assign` was release `Ember.merge` has been mostly unnecessary. To cut down on duplication, we are now recommending using `Ember.assign` instead of `Ember.merge`.
+Ever since `Ember.assign` was released, `Ember.merge` became mostly unnecessary. To cut down on duplication, we are now recommending using `Ember.assign` instead of `Ember.merge`.
 
 If you need to support Ember <=2.4 you can use [ember-assign-polyfill](https://github.com/shipshapecode/ember-assign-polyfill) to make `Ember.assign` available to you.
 
@@ -130,7 +132,7 @@ That is the reason for the existing `willTransition` and `didTransition` hooks/e
 
 In addition, they receive `handlerInfos` in their arguments, which are an undocumented internal implementation detail of router.js that doesn't belong in Ember's public API. Everything you can do with handlerInfos can be done with the `RouteInfo`.
 
-For examples on how to transition both the `Route` and `Router` usages if `willTransition` and `didTransition` please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_deprecate-router-events).
+For examples on how to transition both the `Route` and `Router` usages of `willTransition` and `didTransition`, please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_deprecate-router-events).
 
 **Transition State Removal (6 of 6)**
 
