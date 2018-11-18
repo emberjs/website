@@ -194,7 +194,7 @@ This utility will help you to update your app or add-on to the latest Ember CLI 
 
 #### New Features (1)
 **Prevent double builds in CI (1 of 1)**
-Until version 3.6 the addon author (unless the addon was in an org) would always end up with two CI builds for every PR. One for the branch push and one for the PR update. This is now fixed in Ember CLI 3.6.
+Until version 3.6 the addon author (unless the addon was in an org) would always end up with two CI builds for every PR. One for the branch push and one for the PR update. This is now fixed in Ember CLI 3.6 (for TravisCI users).
 
 #### Deprecations (0)
 There's no deprecations in this version.
