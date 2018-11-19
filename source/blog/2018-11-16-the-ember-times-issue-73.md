@@ -22,7 +22,7 @@ Out of ideas? Be sure to [check out the Brainstorm CFP](https://emberconf.com/cf
 Not feeling ready yet? Be assured, that **you are ready** to tell us your story - we're convinced that you'll succeed! ✨
 
 <div class="blog-row">
-  <a class="ember-button" href="https://emberconf.com/become-a-speaker.html">Ok, let me check out the CFP</a>
+  <a class="ember-button" style="width:260px" href="https://emberconf.com/become-a-speaker.html">Ok, let me check out the CFP</a>
 </div>
 
 ---
