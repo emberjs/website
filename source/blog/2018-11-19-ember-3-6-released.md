@@ -170,25 +170,24 @@ Ember CLI is the command line interface for managing and packaging Ember.js appl
 
 ### Upgrading Ember CLI
 
-You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade your projects using `yarn` run:
+You may upgrade Ember CLI separately from Ember.js and Ember Data! To upgrade your global Ember CLI using `yarn` run:
 
 ```bash
-yarn upgrade ember-cli
+yarn global upgrade ember-cli
 ```
 
-To upgrade your projects using `npm` run:
+To upgrade your global Ember CLI using `npm` run:
 
 ```bash
-npm install --save-dev ember-cli
+npm install -g ember-cli
 ```
 
-After running the upgrade command, make sure to install (if you haven't already) ember-cli-update globally:
+To update your project you need to run the following steps:
 
-```bash
-npm install -g ember-cli-update
-```
-
-This utility will help you to update your app or add-on to the latest Ember CLI version. You will probably encounter merge conflicts, in which the default behavior is to let you resolve conflicts on your own.
+1. `rm -rf node_modules dist tmp` -- Delete temporary development folders.
+2. `npm install -g ember-cli-update` -- Install Ember CLI update tool globally.
+3. Run `ember-cli-update` -- This will update your app or addon to the latest ember-cli release. You will probably encounter merge conflicts that you should resolve in your normal git workflow.
+4. Run `ember-cli-update --run-codemods` -- This will let you pick codemods to run against your project, to ensure you are using the latest patterns and platform features.
 
 ### Changes in Ember CLI 3.6
 
