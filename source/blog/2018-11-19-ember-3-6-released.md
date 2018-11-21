@@ -54,7 +54,7 @@ For users who aren't ready to adopt, that's OK - the EmberObject model will cont
 There are a few notable changes and features for native classes:
 
 * `new` syntax is not currently supported with classes that extend from `EmberObject`. You must continue to use the `create` method when making new instances of classes, even if they are defined using native class syntax. If you want to use `new` syntax, consider creating classes which do _not_ extend from `EmberObject`. Ember features, such as computed properties and decorators, will still work with base-less classes.
-* Instead of using `this._super()`, you should must standard `super` syntax. See the [MDN docs on classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Super_class_calls_with_super) for more details.
+* Instead of using `this._super()`, you must use standard `super` syntax. See the [MDN docs on classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Super_class_calls_with_super) for more details.
 * Native classes support using [constructors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Constructor) to set up newly-created instances. Ember uses these to, among other things, support features that need to retrieve other entities by name, like Service injection and `getOwner`. To ensure your custom instance setup logic takes place after this important work is done, avoid using the `constructor` in favor of `init`.
 * Using native classes, and switching back to the old Ember Object model is fully supported.
 * For early adopters who are used to argument values and values passed to `create` being overriden, this is no longer the case! Class field values will be the default, and any value passed to a class on creation will override that value.
@@ -159,7 +159,7 @@ No new features introduced in Ember Data 3.6.
 No new deprecations introduced in Ember Data 3.6.
 
 
-For more details on changes in Ember Data VER, please review the
+For more details on changes in Ember Data 3.6, please review the
 [Ember Data 3.6 release page](https://github.com/emberjs/data/releases/tag/v3.6).
 
 ---
