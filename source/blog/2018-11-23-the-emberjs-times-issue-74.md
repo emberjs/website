@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Chris Ng, Jessica Jordan, the crowd
+author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/23-the-ember-times-issue-74.html"
 responsive: true
@@ -8,7 +8,10 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Check out these new Ember Data public packages 📦, this week's work by dedicated contributors 💪 to the **Ember Guides**, <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Check out these new Ember Data public packages 📦, 
+this week's work by dedicated contributors 💪 to the **Ember Guides**, 
+chime in on the Ember in VSCode tutorial 💻
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 ---
 ## [RFC for @ember-data packages 📦](https://github.com/emberjs/rfcs/pull/395)
@@ -54,14 +57,11 @@ If you want to help improve the Guides as well, please be sure to check out the 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Use VSCode? Help Wanted 🚧](https://github.com/Microsoft/vscode-docs/issues/1509#issuecomment-440084989)
 
+VSCode recently published [Using Ember in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/emberjs-tutorial) on their docs site! Ember **enthusiasts** are encouraged to [submit PRs](https://github.com/Microsoft/vscode-docs/issues/1509#issuecomment-440084989) to improve the tutorial, particularly to the [client-side debugging story](https://github.com/Microsoft/vscode-docs/blob/master/docs/nodejs/emberjs-tutorial.md#common-questions).
 
----
-
-## [SECTION TITLE](#section-url)
-
-
+Looking for help to get started? Drop by [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) on the [Ember Community Chat](https://discordapp.com/invite/zT3asNS) and ask away!
 ---
 
 
@@ -92,9 +92,8 @@ Keep on top of what's been going on in Emberland this week by subscribing to our
 
 ---
 
-
 That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
