@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Chris Ng, Amy Lam, the crowd
+author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/23-the-ember-times-issue-74.html"
 responsive: true
@@ -9,6 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 Check out these new Ember Data public packages 📦, 
+this week's work by dedicated contributors 💪 to the **Ember Guides**, 
 chime in on the Ember in VSCode tutorial 💻
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
@@ -23,8 +24,11 @@ There are [detailed designs](https://github.com/runspired/rfcs/blob/ember-data-p
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [With Learners in Mind: Improving the Ember Guides 🐹](https://discordapp.com/channels/480462759797063690/480777444203429888)
 
+This week a set of contributions to the [Ember Guides](https://github.com/ember-learn/guides-source/) will make concepts like Ember Components, Ember Data among others much **easier to understand** for learners of the framework. The contributors [@zachgarwood](https://github.com/zachgarwood), [@ppcano](https://github.com/ppcano), [@LalithaRajanala](https://github.com/LalithaRajanala) and [@sduquej](https://github.com/sduquej) made sure that new concepts are introduced sufficiently and that instructions in the [Ember Tutorial](https://guides.emberjs.com/release/tutorial/ember-cli/) are as clear as possible ([1](https://github.com/ember-learn/guides-source/pull/284), [2](https://github.com/ember-learn/guides-source/pull/283), [3](https://github.com/ember-learn/guides-source/pull/282), [4](https://github.com/ember-learn/guides-source/pull/280), [5](https://github.com/ember-learn/guides-source/pull/240), [6](https://github.com/ember-learn/guides-source/pull/222)). **Thank you** so much for **your contributions** to the Guides! ❤️
+
+If you want to help improve the Guides as well, please be sure to check out the [list of issues that need help](https://help-wanted.emberjs.com/learning?query=guides) or drop by the [#dev-ember-learning channel on Discord](https://discordapp.com/channels/480462759797063690/480777444203429888) to get started!
 
 ---
 
@@ -63,7 +67,7 @@ Looking for help to get started? Drop by [#dev-ember-learning](https://discordap
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/bobisjan" target="gh-user">@bobisjan</a>, <a href="https://github.com/SergeAstapov" target="gh-user">@SergeAstapov</a>, <a href="https://github.com/hjdivad" target="gh-user">@hjdivad</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/igorT" target="gh-user">@igorT</a>, <a href="https://github.com/thorsteinsson" target="gh-user">@thorsteinsson</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/NullVoxPopuli" target="gh-user">@NullVoxPopuli</a>, <a href="https://github.com/sduquej" target="gh-user">@sduquej</a>, <a href="https://github.com/zachgarwood" target="gh-user">@zachgarwood</a>, <a href="https://github.com/jaredgalanis" target="gh-user">@jaredgalanis</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/spruce" target="gh-user">@spruce</a> and <a href="https://github.com/LalithaRajanala" target="gh-user">@LalithaRajanala</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -88,9 +92,8 @@ Keep on top of what's been going on in Emberland this week by subscribing to our
 
 ---
 
-
 That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
