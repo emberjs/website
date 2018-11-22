@@ -57,6 +57,7 @@ There are [detailed designs](https://github.com/runspired/rfcs/blob/ember-data-p
 
 VSCode recently published [Using Ember in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/emberjs-tutorial) on their docs site! Ember **enthusiasts** are encouraged to [submit PRs](https://github.com/Microsoft/vscode-docs/issues/1509#issuecomment-440084989) to improve the tutorial, particularly to the [client-side debugging story](https://github.com/Microsoft/vscode-docs/blob/master/docs/nodejs/emberjs-tutorial.md#common-questions).
 
+Looking for help to get started? Drop by [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) on the [Ember Community Chat](https://discordapp.com/invite/zT3asNS) and ask away!
 ---
 
 
