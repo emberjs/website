@@ -6,15 +6,12 @@ alias : "blog/2018/11/23-the-ember-times-issue-74.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+This week we are thankful for our Emberistas! 🐹
 
-Check out these new Ember Data public packages 📦, 
-this week's work by dedicated contributors 💪 to the **Ember Guides**, 
-chime in on the Ember in VSCode tutorial 💻,
-Improvement to the tutorial 🗺️
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Check out the new Ember Data public packages 📦, this week's work by dedicated contributors 💪 to the Ember Guides, an improvement to the guides tutorial 🗺️, and the Ember in VSCode tutorial 💻!
 
 ---
+
 ## [RFC for @ember-data packages 📦](https://github.com/emberjs/rfcs/pull/395)
 
 [@runspired](www.github.com/runspired) dropped a big RFC on [Ember Data](https://github.com/emberjs/data) packages. The RFC proposes **public** import path changes for `ember-data` and moving `ember-data` into the `@ember-data` namespace.
@@ -34,31 +31,12 @@ If you want to help improve the Guides as well, please be sure to check out the 
 ---
 
 ## [New and Improved Tutorial 🗺️](https://guides.emberjs.com/release/tutorial/ember-cli/)
+
 One of the great ways to learn Ember is by building the `super-rentals` app by following the [tutorial in the guides](https://guides.emberjs.com/release/tutorial/ember-cli/). One of the things you’ll learn in that tutorial is how to integrate Google Maps into an Ember application. Sadly, some changes to Google Maps meant that now you would have to provide credit card information to embed it in your app.
 
 Thankfully, **the amazing [@toddjordan](https://github.com/toddjordan)** has provided a great fix for this. He has switched the Google Maps part out of `super-rentals` and replaced it with the free alternative Leaflet Mapbox.
 
-Thanks a lot for all of the hard work on this, [@toddjordan](https://github.com/toddjordan) ❤️
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+Thanks a lot for all of the hard work on this, [@toddjordan](https://github.com/toddjordan)! ❤️
 
 ---
 
@@ -67,6 +45,7 @@ Thanks a lot for all of the hard work on this, [@toddjordan](https://github.com/
 VSCode recently published [Using Ember in Visual Studio Code](https://code.visualstudio.com/docs/nodejs/emberjs-tutorial) on their docs site! Ember **enthusiasts** are encouraged to [submit PRs](https://github.com/Microsoft/vscode-docs/issues/1509#issuecomment-440084989) to improve the tutorial, particularly to the [client-side debugging story](https://github.com/Microsoft/vscode-docs/blob/master/docs/nodejs/emberjs-tutorial.md#common-questions).
 
 Looking for help to get started? Drop by [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) on the [Ember Community Chat](https://discordapp.com/invite/zT3asNS) and ask away!
+
 ---
 
 
