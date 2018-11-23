@@ -34,7 +34,7 @@ If you want to help improve the Guides as well, please be sure to check out the 
 ---
 
 ## [New and Improved Tutorial 🗺️](https://guides.emberjs.com/release/tutorial/ember-cli/)
-One of the great ways to learn Ember is by building the `super-rentals` app by following the [tutorial in the guides](https://guides.emberjs.com/release/tutorial/ember-cli/). One of the things you’ll learn in that tutorial is how to integrate Google Maps into an Ember application. Sadly, some changes to Google Maps ment that now you would have to provide credit card information to embed it in your app.
+One of the great ways to learn Ember is by building the `super-rentals` app by following the [tutorial in the guides](https://guides.emberjs.com/release/tutorial/ember-cli/). One of the things you’ll learn in that tutorial is how to integrate Google Maps into an Ember application. Sadly, some changes to Google Maps meant that now you would have to provide credit card information to embed it in your app.
 
 Thankfully, **the amazing [@toddjordan](https://github.com/toddjordan)** has provided a great fix for this. He has switched the Google Maps part out of `super-rentals` and replaced it with the free alternative Leaflet Mapbox.
 
