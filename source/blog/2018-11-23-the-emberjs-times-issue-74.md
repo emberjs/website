@@ -1,6 +1,6 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Chris Ng, Amy Lam, Jessica Jordan, Kenneth Larsen, the crowd
+title: The Ember Times - Issue No. 74
+author: Chris Ng, Amy Lam, Jessica Jordan, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/23-the-ember-times-issue-74.html"
 responsive: true
@@ -80,4 +80,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, Jessica Jordan, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, Kenneth Larsen, and the Learning Team
