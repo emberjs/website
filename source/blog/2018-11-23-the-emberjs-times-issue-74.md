@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
+author: Chris Ng, Amy Lam, Jessica Jordan, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/23-the-ember-times-issue-74.html"
 responsive: true
@@ -10,7 +10,8 @@ responsive: true
 
 Check out these new Ember Data public packages 📦, 
 this week's work by dedicated contributors 💪 to the **Ember Guides**, 
-chime in on the Ember in VSCode tutorial 💻
+chime in on the Ember in VSCode tutorial 💻,
+Improvement to the tutorial 🗺️
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 ---
@@ -32,8 +33,12 @@ If you want to help improve the Guides as well, please be sure to check out the 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New and Improved Tutorial 🗺️](https://guides.emberjs.com/release/tutorial/ember-cli/)
+One of the great ways to learn Ember is by building the `super-rentals` app by following the [tutorial in the guides](https://guides.emberjs.com/release/tutorial/ember-cli/). One of the things you’ll learn in that tutorial is how to integrate Google Maps into an Ember application. Sadly, some changes to Google Maps meant that now you would have to provide credit card information to embed it in your app.
 
+Thankfully, **the amazing [@toddjordan](https://github.com/toddjordan)** has provided a great fix for this. He has switched the Google Maps part out of `super-rentals` and replaced it with the free alternative Leaflet Mapbox.
+
+Thanks a lot for all of the hard work on this, [@toddjordan](https://github.com/toddjordan) ❤️
 
 ---
 
@@ -96,4 +101,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, Kenneth Larsen, the crowd and the Learning Team
