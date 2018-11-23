@@ -38,7 +38,7 @@ One of the great ways to learn Ember is by building the `super-rentals` app by f
 
 Thankfully, **the amazing [@toddjordan](https://github.com/toddjordan)** has provided a great fix for this. He has switched the Google Maps part out of `super-rentals` and replaced it with the free alternative Leaflet Mapbox.
 
-Thanks a lot of all of the hard work on this, [@toddjordan](https://github.com/toddjordan) ❤️
+Thanks a lot for all of the hard work on this, [@toddjordan](https://github.com/toddjordan) ❤️
 
 ---
 
