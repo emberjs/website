@@ -44,7 +44,7 @@ Time Commitment: If you count everyone who was part of brainstorming, it would b
 
 ### Step 2 - Project assessment
 
-In mid-2018, [Sivakumar Kailasam]() and [Jen Weber]() did a thorough assessmet of the CLI Guides, reading them from start to finish. They kept a tracking doc of everything that they saw that was out of date or missing.
+In mid-2018, [Sivakumar Kailasam](https://github.com/sivakumar-kailasam) and [Jen Weber](https://github.com/jenweber) did a thorough assessmet of the CLI Guides, reading them from start to finish. They kept a tracking doc of everything that they saw that was out of date or missing.
 
 This stage also included a careful look at the separation of concerns. What belonged in the regular Ember.js Guides instead of the CLI Guides? It turned out that a lot of content was duplicated between them.
 
@@ -68,7 +68,7 @@ Time Commitment: 8 hours for the first draft, 3 hours of reviews before publicat
 
 ### Step 4 - Spiking the foundation
 
-At the same time as the RFC, Jen, Chris, and Siva laid the foundation for the new CLI Guides. That included generating the project files to match the table of contents, setting up a staging app so people could see the progress easily, and drafting the "first impressions" written content.
+At the same time as the RFC, Jen, Chris, and Siva set the foundation for the new CLI Guides. That included generating the project files to match the table of contents, setting up a staging app so people could see the progress easily, and drafting the "first impressions" written content.
 
 The start of the project was spiked in order to allow for fast iteration and establish a consistent flow. The goal was to create a structure that other contributors could add too through PRs with small scope and time commitments.
 
@@ -121,10 +121,10 @@ Developers of all experience levels are encouraged to open issues or help draft 
 Finally, a _huge_ thank you to everyone who helped support this project.
 
 - The many, many people who wrote the original CLI Guides!
-- Writers: [cah-danmonroe](https://github.com/cah-danmonroe), [maxwondercorn](https://github.com/maxwondercorn), [BradenLawrence](https://github.com/BradenLawrence), [Gaurav0](https://github.com/Gaurav0), [karlbecker](https://github.com/karlbecker), [sandstrom](https://github.com/sandstrom), [makepanic](https://github.com/makepanic), [MichalBryxi](https://github.com/MichalBryxi)
-- Reviewers: [Gaurav0](https://github.com/Gaurav0),[BradenLawrence](https://github.com/BradenLawrence), [sivakumar-kailasam](https://github.com/sivakumar-kailasam), [kategengler](https://github.com/kategengler), [acorncom](https://github.com/acorncom), [mansona](https://github.com/mansona), [chriskrycho](https://github.com/chriskrycho), [jessica-jordan](https://github.com/jessica-jordan), [sandstrom](https://github.com/sandstrom), [rwjblue](https://github.com/rwjblue), [locks](https://github.com/locks), [kellyselden](https://github.com/kellyselden), [Turbo87](https://github.com/Turbo87), [https://github.com/twokul](twokul), [sbatson5](https://github.com/sbatson5), [chilicoder](https://github.com/chilicoder), [oskarrough](https://github.com/oskarrough), [CodingItWrong](https://github.com/CodingItWrong), [nataliemok](https://github.com/nataliemok), [ef4](https://github.com/ef4)
+- Writers: [cah-danmonroe](https://github.com/cah-danmonroe), [maxwondercorn](https://github.com/maxwondercorn), [BradenLawrence](https://github.com/BradenLawrence), [Gaurav0](https://github.com/Gaurav0), [karlbecker](https://github.com/karlbecker), [sandstrom](https://github.com/sandstrom), [makepanic](https://github.com/makepanic), [MichalBryxi](https://github.com/MichalBryxi), [jenweber](https://github.com/jenweber)
+- Reviewers: [Gaurav0](https://github.com/Gaurav0),[BradenLawrence](https://github.com/BradenLawrence), [sivakumar-kailasam](https://github.com/sivakumar-kailasam), [kategengler](https://github.com/kategengler), [acorncom](https://github.com/acorncom), [mansona](https://github.com/mansona), [chriskrycho](https://github.com/chriskrycho), [jessica-jordan](https://github.com/jessica-jordan), [sandstrom](https://github.com/sandstrom), [rwjblue](https://github.com/rwjblue), [locks](https://github.com/locks), [kellyselden](https://github.com/kellyselden), [Turbo87](https://github.com/Turbo87), [https://github.com/twokul](twokul), [sbatson5](https://github.com/sbatson5), [chilicoder](https://github.com/chilicoder), [oskarrough](https://github.com/oskarrough), [CodingItWrong](https://github.com/CodingItWrong), [nataliemok](https://github.com/nataliemok), [ef4](https://github.com/ef4), [jenweber](https://github.com/jenweber)
 - Application infrastructure: [mansona](https://github.com/mansona)
 - Test suite: [aklkv](https://github.com/aklkv) 
-- RFC commentors: [jrjohnson](https://github.com/jrjohnson), [Gaurav0](https://github.com/Gaurav0), [ynotdraw](https://github.com/ynotdraw), [karlbecker](https://github.com/karlbecker), [sandstrom](https://github.com/sandstrom)
+- RFC commenters: [jrjohnson](https://github.com/jrjohnson), [Gaurav0](https://github.com/Gaurav0), [ynotdraw](https://github.com/ynotdraw), [karlbecker](https://github.com/karlbecker), [sandstrom](https://github.com/sandstrom)
 - The 818 contributors to this project's open source dependencies (spooky, isn't it?)
 
