@@ -43,7 +43,7 @@ With this in mind, the official Ember recommendation is to continue using the st
 
 **So what's the point then?**
 
-Stabilizing the behavior of classes gives early adopters an API to build on. For users who are more risk tolerant and want to be early adopters, community projects such as [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript) and [ember-decorators](https://github.com/ember-decorators/ember-decorators) are providing the transforms and decorators necessary to use class syntax today, and are dedicated to remaining stable and providing an update path through any changes that occur in TC39 as the proposals are finalized.
+Stabilizing the behavior of classes gives early adopters an API to build on. For users who are more risk tolerant and want to be early adopters, community projects such as [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript) and [ember-decorators](https://github.com/ember-decorators/ember-decorators) are providing the transforms and decorators necessary to use class syntax today, and are dedicated to remain stable and provide an update path through any changes that occur in TC39 as the proposals are finalized.
 
 Early adopters have been helping tremendously to sort out the details here and make sure that the day the proposals advance, we are ready to land official support for them in Ember directly. Early adoption _does_ come with risks, so if you are considering it, be prepared to have to make changes in the future.
 
@@ -72,7 +72,7 @@ We would like to add support for prior LTS versions (2.18 and 2.16) as well, so 
 **Final stage of the router service RFC (2 of 2)**
 
 <!--alex ignore rejects -->
-Ember 3.6 introduces the final stages of the router service RFC. The includes two new methods: [`recognize(url)`](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-method-url-recognition) that can return a `RouteInfo` based on the URL you pass and [`recognizeAndLoad(url)`](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-method-recognize-and-load-models) that takes a string URL and returns a promise that resolves to a `RouteInfoWithAttributes` for the leaf-most route represented by the URL. The promise rejects if the URL is not recognized or an unhandled exception is encountered.
+Ember 3.6 introduces the final stages of the router service RFC. The release includes two new methods: [`recognize(url)`](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-method-url-recognition) that can return a `RouteInfo` based on the URL you pass and [`recognizeAndLoad(url)`](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md#new-method-recognize-and-load-models) that takes a string URL and returns a promise that resolves to a `RouteInfoWithAttributes` for the leaf-most route represented by the URL. The promise rejects if the URL is not recognized or an unhandled exception is encountered.
 
 This final stage also introduces the new observable property `currentRoute`. It is guaranteed to change whenever a route transition happens (even when that transition only changes parameters and doesn't change the active route). You should consider its value deeply immutable -- we will replace the whole structure whenever it changes. The value of `currentRoute` is a `RouteInfo` representing the current leaf route.
 
@@ -89,7 +89,7 @@ For more details on changes in Ember.js 3.6, please review the [Ember.js 3.6 rel
 
 **new EmberObject (1 of 6)**
 
-We are deprecating usage of `new EmberObject()` to construct instances of `EmberObject` and it's subclasses. This affects all classes that extend from `EmberObject` as well, including user defined classes and Ember classes such as:
+We are deprecating usage of `new EmberObject()` to construct instances of `EmberObject` and its subclasses. This affects all classes that extend from `EmberObject` as well, including user defined classes and Ember classes such as:
 
 * `Component`
 * `Controller`
@@ -120,7 +120,7 @@ To see a code example of switching from `Ember.merge` to `Ember.assign` please r
 
 Due to the [router service RFC](https://github.com/emberjs/rfcs/blob/master/text/0095-router-service.md) it is necessary to rename the private API `HandlerInfo` to `RouteInfo`. 
 
-If you need to access information about the routes you are most likely better served by injecting the router service as it exposes a publically supported version of the `RouteInfo`s.
+If you need to access information about the routes you are most likely better served by injecting the router service as it exposes a publicly supported version of the `RouteInfo`s.
 For help on how to do this please refer to the [deprecation app](https://deprecations-app-prod.herokuapp.com/deprecations/v3.x/#toc_remove-handler-infos).
 
 **Deprecate Router Events (5 of 6)**
