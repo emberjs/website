@@ -5,7 +5,7 @@ tags: Announcement
 responsive: true
 ---
 
-The Ember Learning Team is excited to announce the launch of the new and improved [Ember CLI Guides](https://cli.emberjs.com)! So excited, in fact, that we want to share a case study of the tech behind the new site and open source project management. This release is main part of the work for ember-cli [RFC #120](https://github.com/ember-cli/rfcs/pull/120).
+The Ember Learning Team is excited to announce the launch of the new and improved [Ember CLI Guides](https://cli.emberjs.com)! So excited, in fact, that we want to share a case study of the tech behind the new site and open source project management. This release is the main part of the work for ember-cli [RFC #120](https://github.com/ember-cli/rfcs/pull/120).
 
 ## What has changed?
 
@@ -13,7 +13,7 @@ What has changed with the launch of the new CLI Guides?
 
 1. There is brand-new content, like a tutorial to help you write your first addon
 2. The CLI Guides are now an Ember app, using the [Guidemaker](https://github.com/empress/guidemaker) addon
-3. The branding is consistent with the rest of the [emberjs.com](https://emberjs.com) site, thanks to use of [ember-styleguide]() components and stylesheets
+3. The branding is consistent with the rest of the [emberjs.com](https://emberjs.com) site, thanks to the use of [ember-styleguide]() components and stylesheets
 4. A _significant_ portion of the past content has been revised or rewritten. Outdated information is gone, and modern best practices are represented better
 
 ## Why was this project needed?
@@ -26,7 +26,7 @@ This CLI Guides project tackled a few additional critical issues, like correctin
 
 With as many apps as the Learning Team manages, it's helpful to have a consistent structure, look, and feel. For the most part, this project could focus on written content rather than regular web app concerns. It was awesome! We did this by using Guidemaker and ember-styleguide.
 
-[Guidemaker](https://github.com/empress/guidemaker) is an Ember Addon originally created by [Chris Manson](https://github.com/mansona). It helps quickly create sites with static content. It also handles versioned documentation, like that found in the [Ember Guides](https://guides.emberjs.com). Guidemaker uses Broccoli's asset compilation pipeline to turn a tree of Markdown files into html that can be served statically. By using Guidemaker, if we need to version the CLI docs in the future, that feature is ready to go overnight. It also means that contributors to one Guide should feel right at home helping with others.
+[Guidemaker](https://github.com/empress/guidemaker) is an Ember Addon originally created by [Chris Manson](https://github.com/mansona). It helps quickly create sites with static content. It also handles versioned documentation, like that found in the [Ember Guides](https://guides.emberjs.com). Guidemaker uses Broccoli's asset compilation pipeline to turn a tree of Markdown files into HTML that can be served statically. By using Guidemaker, if we need to version the CLI docs in the future, that feature is ready to go overnight. It also means that contributors to one Guide should feel right at home helping with others.
 
 [ember-styleguide](https://github.com/ember-learn/ember-styleguide) is a UI library that has components and stylesheets used across the Ember apps. It was created during a massive effort to improve the web accessibility of Ember's websites, led by [Melanie Sumner](https://github.com/MelSumner). Thanks to this project, if changes need to be made to typography, color schemes, styling, etc, they can be made in one place instead of in ten separate apps.
 
@@ -44,7 +44,7 @@ Time Commitment: If you count everyone who was part of brainstorming, it would b
 
 ### Step 2 - Project assessment
 
-In mid-2018, [Sivakumar Kailasam](https://github.com/sivakumar-kailasam) and [Jen Weber](https://github.com/jenweber) did a thorough assessmet of the CLI Guides, reading them from start to finish. They kept a tracking doc of everything that they saw that was out of date or missing.
+In mid-2018, [Sivakumar Kailasam](https://github.com/sivakumar-kailasam) and [Jen Weber](https://github.com/jenweber) did a thorough assessment of the CLI Guides, reading them from start to finish. They kept a tracking doc of everything that they saw that was out of date or missing.
 
 This stage also included a careful look at the separation of concerns. What belonged in the regular Ember.js Guides instead of the CLI Guides? It turned out that a lot of content was duplicated between them.
 
@@ -90,7 +90,7 @@ The final steps were to share the app with others!
 
 On November 25th, 2018, five weeks ahead of the initial "end of year" goal, the new CLI Guides were published to [cli.emberjs.com](https://cli.emberjs.com).
 
-Then, the links throughout the Ember websites were updated to includ the new CLI guides. 
+Then, the links throughout the Ember websites were updated to include the new CLI guides. 
 
 Finally, a map of redirects was created so that the new app could fully replace the old site. It was important to not break links from blog posts of the past.
 
