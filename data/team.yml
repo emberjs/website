@@ -309,11 +309,11 @@
   image: alam.jpg
   teams:
     - learning
-- name: Chris Mason
+- name: Chris Manson
   first: Chris
-  last: Mason
+  last: Manson
   github: https://github.com/mansona
   twitter: https://twitter.com/real_ate
-  image: cmason.jpg
+  image: cmanson.jpg
   teams:
     - learning
