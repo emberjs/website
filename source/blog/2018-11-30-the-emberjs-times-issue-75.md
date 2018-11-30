@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 75
-author: Amy Lam, Alon Bukai, Kenneth Larsen, the crowd
+author: Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 Hallo Emberistas! 🐹
 
-This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Get a sneak peek at the new Ember CLI guides 📖...
+This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Check out how to build your own painting game 🎨, Get a sneak peek at the new Ember CLI guides 📖...
 
 ---
 
@@ -22,6 +22,7 @@ If you find any typos or bugs, then please feel free to report it to the [new re
 ---
 
 ## [The RFC RFCeption 🤔](https://github.com/emberjs/rfcs/pull/300)
+<!--alex ignore period-->
 The RFC (Request For Comments) about the [RFC Process](https://github.com/emberjs/rfcs/pull/300) itself is in its **final comment period**!
 
 The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) Champion for RFCs that are accepted and more. 
@@ -57,8 +58,15 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Video Tutorial on How to Build a Painting Game 🎨](https://twitter.com/gavinjoyce/status/1068208916117577728)
 
+<!--alex ignore kids-->
+[@GavinJoyce](https://github.com/GavinJoyce) published a tutorial on how to build a kids painting game in 20 minutes [on YouTube](https://www.youtube.com/watch?v=N4KrBuO0RRE). 
+
+In his tutorial, he uses 3 Ember CLI addons: [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind), [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers), and [ember-concurrency](https://github.com/machty/ember-concurrency) as well as [Ember 3.5](https://www.emberjs.com/blog/2018/10/15/ember-3-5-released.html).
+
+<!--alex ignore kids-->
+You can check out the full source code for the demo [on GitHub](https://github.com/GavinJoyce/ember-kids-painting-game) or run the [app online](http://kids-painting-game.surge.sh/).
 
 ---
 
@@ -111,4 +119,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Alon Bukai, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, the crowd and the Learning Team
