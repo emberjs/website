@@ -15,7 +15,7 @@ This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Su
 ## [The RFC RFCeption 🤔](https://github.com/emberjs/rfcs/pull/300)
 The RFC (Request For Comments) about the [RFC Process](https://github.com/emberjs/rfcs/pull/300) itself is in its **final comment period**!
 
-The current RFC process is great but has a few quirks, two different process for `emberjs/rfcs` and `ember-cli/rfcs` for example. If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) Champion for RFCs that are accepted and more. 
+The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) Champion for RFCs that are accepted and more. 
 
 Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
 
