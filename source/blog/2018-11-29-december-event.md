@@ -22,7 +22,7 @@ To qualify for any of our random assortment of thank you goodies (that we’ve d
   - That have the `DecEmber` label
 - Writing Issues for repositories in the ember-learn org. We will mark them with the `DecEmber` label if they qualify.
 - Creating Illustrations: Maybe you have an artistic side, and illustrating code concepts is fun for you! If that’s the case, there are always illustrations that would enhance the guides, and those are very welcome for this event!
-- If you have another idea that you think would help support the Learning Core Team- let us know!
+- If you have another idea that you think would help support the Learning Core Team, let us know!
 
 ## Quality Standards
 
