@@ -12,7 +12,7 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New Guides For Ember-CLI](https://cli.emberjs.com/release/)
 There's a **new and improved version of the ember-cli guides out**. [@jenweber](https://github.com/jenweber) has been championing moving the ember-cli guides into the ember domain with enhanced content. 
 
 There will be a more formal launch of the new ember-cli guides on the Ember-blog but since you're **an Ember Times subscriber**, [you get a sneak peek](https://cli.emberjs.com/release/).
