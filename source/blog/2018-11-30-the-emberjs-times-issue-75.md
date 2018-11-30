@@ -8,14 +8,14 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-📖Get a sneak peek on the new ember-cli guides
+📖Get a sneak peek at the new Ember CLI guides
 
 ---
 
 ## [New Guides for Ember CLI 📓](https://cli.emberjs.com/release/)
-There's a **new and improved version of the ember-cli guides out**. [@jenweber](https://github.com/jenweber) has been championing moving the ember-cli guides into the ember domain with enhanced content. 
+There's a **new and improved version of the Ember CLI guides out**. [@jenweber](https://github.com/jenweber) has been championing moving the Ember CLI guides into the Ember domain with enhanced content. 
 
-There will be a more formal launch of the new ember-cli guides on the Ember-blog but since you're **an Ember Times subscriber**, [you get a sneak peek](https://cli.emberjs.com/release/).
+There will be a more formal launch of the new Ember CLI guides on the [Ember blog](https://emberjs.com/blog/) but since you're **an Ember Times subscriber**, [you get a sneak peek](https://cli.emberjs.com/release/).
 
 If you find any typos or bugs, then please feel free to report it to the [new repository](https://github.com/ember-learn/cli-guides).
 
