@@ -13,7 +13,7 @@ This year, the Ember Learning Core Team is sponsoring our first annual DecEmber,
 
 ## Participation Rules
 
-To qualify for any of our random assortment of thank you goodies (that we’ve delightfully dubbed Embercouragement), you must complete at least 5(five) participation activities for repositories in the [ember-learn org](https://github.com/ember-learn) between December 1 and December 28, 2018.
+To qualify for any of our random assortment of thank you goodies (that we’ve delightfully dubbed _Embercouragement_), you must complete at least five participation activities for repositories in the [ember-learn org](https://github.com/ember-learn) between December 1-28, 2018.
 
 ## Participation Activities
 
