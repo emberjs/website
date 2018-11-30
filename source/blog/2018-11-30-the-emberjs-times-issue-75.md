@@ -63,7 +63,7 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 In his tutorial, he uses 3 Ember CLI addons: [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind), [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers), and [ember-concurrency](https://github.com/machty/ember-concurrency) as well as [Ember 3.5](https://www.emberjs.com/blog/2018/10/15/ember-3-5-released.html).
 
-You can check out the full source code for the demo [on GitHub](https://github.com/GavinJoyce/ember-kids-painting-game).
+You can check out the full source code for the demo [on GitHub](https://github.com/GavinJoyce/ember-kids-painting-game) or run the [app online](http://kids-painting-game.surge.sh/).
 
 ---
 
