@@ -5,11 +5,9 @@ tags: Recent Posts, DecEmber, Events, 2018
 responsive: true
 ---
 
-December is a great month to support your friendly Ember.js Learning Team!
+This year, the Ember Learning Core Team is sponsoring our first annual DecEmber, a hackathon event specifically targeted at Learning Team efforts! For an extra bit of awesome, it’s running at the same time as [24 Pull Requests](https://24pullrequests.com/), so contributions to DecEmber will count for both!
 
 Maybe December is a busy month for you, because of the holidays and family obligations—and that’s totally okay—we hope you have a great time! But for some, December is a time of the year with a lot of downtime. Maybe that’s you! Are you wondering what to do with all your vacation time in December? We’ve got ya covered!
-
-This year, the Ember Learning Core Team is sponsoring our first annual DecEmber, a hackathon event specifically targeted at Learning Team efforts. For an extra bit of awesome, it’s running at the same time as [24 Pull Requests](https://24pullrequests.com/), so contributions to DecEmber will count for both!
 
 ## Participation Rules
 
