@@ -18,7 +18,7 @@ To qualify for any of our random assortment of thank you goodies (that we’ve d
 ## Participation Activities
 
 - Submitting PRs for issues
-  - in the [Ember Learn Org](https://github.com/ember-learn)
+  - In the [Ember Learn org](https://github.com/ember-learn)
   - that have the `DecEmber` label
 - Writing Issues for repositories in the ember-learn org. We will mark them with the `DecEmber` label if they qualify.
 - Creating Illustrations: Maybe you have an artistic side, and illustrating code concepts is fun for you! If that’s the case, there are always illustrations that would enhance the guides, and those are very welcome for this event!
