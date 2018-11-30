@@ -58,7 +58,7 @@ If you find any typos or bugs, then please feel free to report it to the [new re
 <!--alex ignore period-->
 The RFC (Request For Comments) about the [RFC Process](https://github.com/emberjs/rfcs/pull/300) itself is in its **final comment period**!
 
-The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) champion for RFCs that are accepted and more. Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
+The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [core team](https://emberjs.com/team/) champion for RFCs that are accepted and more. Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
 
 ---
 
@@ -79,7 +79,7 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 Didn't make it to **Emberfest**, a Europe-based conference around Ember, this year? Then be sure to take a look into the [list of talk recordings here](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)! 👀
 
-From the [the intriguing opening keynote](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=1) by [@tomdale](https://github.com/tomdale) to [@danielleadams'](https://github.com/danielleadams) stellar guide to [mastering forms in Ember](https://www.youtube.com/watch?v=-UZyjqBm59U&index=16&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9) and [the thought-provoking closing keynote](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21) by [@MelSumner](https://github.com/MelSumner) there are many highlights to find in the more than [5-hour long playlist. 🎬 Check it out!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
+From the [the intriguing opening keynote](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=1) by [@tomdale](https://github.com/tomdale), to [@danielleadams'](https://github.com/danielleadams) stellar guide to [mastering forms in Ember](https://www.youtube.com/watch?v=-UZyjqBm59U&index=16&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9), and [the thought-provoking closing keynote](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21) by [@MelSumner](https://github.com/MelSumner), there are many highlights to find in the more than 5-hour long playlist. 🎬 [Check it out!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
 
 ---
 
