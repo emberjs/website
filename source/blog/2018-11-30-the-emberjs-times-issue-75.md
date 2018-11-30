@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 75
-author: Amy Lam, Alon Bukai, the crowd
+author: Amy Lam, Alon Bukai, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
@@ -8,8 +8,16 @@ responsive: true
 
 Hallo Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖...
+This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Get a sneak peek at the new Ember CLI guides 📖...
+
+---
+
+## [New Guides for Ember CLI 📓](https://cli.emberjs.com/release/)
+There's a **new and improved version of the Ember CLI guides out**. [@jenweber](https://github.com/jenweber) has been championing moving the Ember CLI guides into the Ember domain with enhanced content. 
+
+There will be a more formal launch of the new Ember CLI guides on the [Ember blog](https://emberjs.com/blog/) but since you're **an Ember Times subscriber**, [you get a sneak peek](https://cli.emberjs.com/release/).
+
+If you find any typos or bugs, then please feel free to report it to the [new repository](https://github.com/ember-learn/cli-guides).
 
 ---
 
@@ -103,4 +111,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Alon Bukai, the crowd and the Learning Team
+Amy Lam, Alon Bukai, Kenneth Larsen, the crowd and the Learning Team
