@@ -1,14 +1,14 @@
 ---
 title: The Ember Times - Issue No. 75
-author: Kenneth Larsen
+author: Amy Lam, Alon Bukai, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Hallo Emberistas! 🐹
 
-📖Get a sneak peek at the new Ember CLI guides
+This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, 📖Get a sneak peek at the new Ember CLI guides ...
 
 ---
 
@@ -21,8 +21,24 @@ If you find any typos or bugs, then please feel free to report it to the [new re
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [The RFC RFCeption 🤔](https://github.com/emberjs/rfcs/pull/300)
+The RFC (Request For Comments) about the [RFC Process](https://github.com/emberjs/rfcs/pull/300) itself is in its **final comment period**!
 
+The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) Champion for RFCs that are accepted and more. 
+Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
+
+---
+
+## [Have You Read the Ember Subreddit? ⬆️](https://www.reddit.com/r/emberjs/)
+In case you didn't know Ember.js has its own [Reddit subreddit](https://www.reddit.com/r/emberjs/)! It is another media channel where people can participate and share **Ember-related** things! It recently got a facelift and a new Ember brand theme.
+
+The community has decided that we want to revive this subreddit and get it active. We want to get something about Ember on the front page but we need your help!
+
+If you are wondering where to start check out [What Are You Working On (Nov 2018)](https://www.reddit.com/r/emberjs/comments/9yycbi/what_are_you_working_on_nov_2018/) and tell us what Ember things you have been doing in the month of November.
+
+If you have any questions about the subreddit itself or want to help out hit up the new mods [@NullVoxPopuli](https://github.com/NullVoxPopuli) or [@Alon](https://github.com/Alonski) on [Discord](https://discord.gg/zT3asNS).
+
+So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, post some content and upvote 🆙 what you love!
 
 ---
 
@@ -94,4 +110,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen and the Learning Team
+Amy Lam, Alon Bukai, Kenneth Larsen, the crowd and the Learning Team
