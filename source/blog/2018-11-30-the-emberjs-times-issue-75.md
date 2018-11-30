@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 75
-author: Amy Lam, Alon Bukai, Kenneth Larsen, the crowd
+author: Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 Hallo Emberistas! 🐹
 
-This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Get a sneak peek at the new Ember CLI guides 📖...
+This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Check out how to build your own painting game 🎨, Get a sneak peek at the new Ember CLI guides 📖...
 
 ---
 
@@ -57,8 +57,13 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Video Tutorial on How to Build a Painting Game 🎨](https://twitter.com/gavinjoyce/status/1068208916117577728)
 
+[@GavinJoyce](https://github.com/GavinJoyce) published a tutorial on how to build a kids painting game in 20 minutes [on YouTube](https://www.youtube.com/watch?v=N4KrBuO0RRE). 
+
+In his tutorial, he uses 3 Ember CLI addons: [ember-cli-tailwind](https://github.com/embermap/ember-cli-tailwind), [ember-composable-helpers](https://github.com/DockYard/ember-composable-helpers), and [ember-concurrency](https://github.com/machty/ember-concurrency) as well as [Ember 3.5](https://www.emberjs.com/blog/2018/10/15/ember-3-5-released.html).
+
+You can check out the full source code for the demo [on GitHub](https://github.com/GavinJoyce/ember-kids-painting-game).
 
 ---
 
@@ -111,4 +116,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Alon Bukai, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, the crowd and the Learning Team
