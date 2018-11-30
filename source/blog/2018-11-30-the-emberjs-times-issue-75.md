@@ -8,7 +8,7 @@ responsive: true
 
 Hallo Emberistas! 🐹
 
-This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Check out how to build your own painting game 🎨, Get a sneak peek at the new Ember CLI guides 📖...
+This week we have: Final Comments on **RFC RFCeption** 🤔, Upvotes for the **Ember Subreddit** ⬆️, Learn how to start writing components you'll love 💖, Check out how to **build** your own painting **game** 🎨, Get a sneak peek at the **new Ember CLI guides** 📖 and a reminder to watch the first season of **EmberFest 2018** 🍿📽!
 
 ---
 
@@ -43,7 +43,11 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Didn't Make it to EmberFest 🐹🎉 ? Watch This!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
+
+Didn't make it to **Emberfest** - a Europe-based conference around Ember - this year? Then be sure to take a look into the [list of talk recordings here](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)! 👀
+
+From the [the intriguing opening keynote](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=1) by [@tomdale](https://github.com/tomdale) to [@danielleadams'](https://github.com/danielleadams) stellar Guide to [Mastering Forms in Ember](https://www.youtube.com/watch?v=-UZyjqBm59U&index=16&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9) and [the thought-provoking closing keynote](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21) by [@MelSumner](https://github.com/MelSumner) you'll find many other talk highlights among the more than 5 hours of content in the [full playlist. 🎬 Check it out](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)!
 
 
 ---
