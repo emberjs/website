@@ -29,7 +29,7 @@ To qualify for any of our random assortment of thank you goodies (that we’ve d
 We don’t think we need to say these things, but just in case…
 
 - The PR counts once it is merged; the issue counts once we have added the label.
-- the PR must not be disruptive (i.e., taking someone else’s branch/commits and creating a PR)
+- The PR must not be disruptive (i.e., taking someone else’s branch/commits and creating a PR).
 - If you participate by writing an issue, the issue should be of respectable quality and not something that is clearly an intent to +1 your participation count.
 
 ## Support
