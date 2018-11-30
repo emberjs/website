@@ -28,7 +28,7 @@ The community has decided that we want to revive this subreddit and get it activ
 
 If you are wondering where to start check out [What Are You Working On (Nov 2018)](https://www.reddit.com/r/emberjs/comments/9yycbi/what_are_you_working_on_nov_2018/) and tell us what Ember things you have been doing in the month of November.
 
-If you have any questions about the subreddit itself or want to help out hit up the new mods [@NullVoxPopuli](https://github.com/NullVoxPopuli) or [@Alon](https://github.com/Alonski)
+If you have any questions about the subreddit itself or want to help out hit up the new mods [@NullVoxPopuli](https://github.com/NullVoxPopuli) or [@Alon](https://github.com/Alonski).
 
 So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, post some content and upvote 🆙 what you love!
 
