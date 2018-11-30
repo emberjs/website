@@ -22,7 +22,7 @@ Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)
 ---
 
 ## [Have You Read the Ember Subreddit? ⬆️](https://www.reddit.com/r/emberjs/)
-In case you didn't know Emberjs has its own [Reddit Subreddit](https://www.reddit.com/r/emberjs/)! It is another media channel where people can participate and share **Ember related** things! It recently got a facelift and a new Ember brand theme.
+In case you didn't know Ember.js has its own [Reddit Subreddit](https://www.reddit.com/r/emberjs/)! It is another media channel where people can participate and share **Ember-related** things! It recently got a facelift and a new Ember brand theme.
 
 The community has decided that we want to revive this subreddit and get it active. We want to get something about Ember on the front page but we need your help!
 
