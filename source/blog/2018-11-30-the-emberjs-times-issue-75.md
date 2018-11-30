@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 75
-author: the crowd
+author: Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
@@ -8,12 +8,16 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+📖Get a sneak peek on the new ember-cli guides
 
 ---
 
 ## [SECTION TITLE](#section-url)
+There's a **new and improved version of the ember-cli guides out**. [@jenweber](https://github.com/jenweber) has been championing moving the ember-cli guides into the ember domain with enhanced content. 
 
+There will be a more formal launch of the new ember-cli guides on the Ember-blog but since you're **an Ember Times subscriber**, [you get a sneak peek](https://cli.emberjs.com/release/).
+
+If you find any typos or bugs, then please feel free to report it to the [new repository](https://github.com/ember-learn/cli-guides).
 
 ---
 
@@ -90,4 +94,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Kenneth Larsen and the Learning Team
