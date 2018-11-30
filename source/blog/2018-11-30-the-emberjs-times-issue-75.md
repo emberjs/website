@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 75
-author: Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, Jessica Jordan
+author: Melanie Sumner, Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 Hallo Emberistas! 🐹
 
-This week we have: the Learning Team's first annual Dec**Ember** ❄️, a sneak peek at the **new Ember CLI guides** 📖, Final Comments on **RFC RFCeption** 🤔, upvotes for the **Ember Subreddit** ⬆️, a reminder to watch the first season of **EmberFest 2018** 🍿📽, a How-To for **building** your own painting **game** 🎨, and a guide to start writing **components you'll love** 💖!
+This week we have: the Learning Team's first annual Dec**Ember** ❄️, a sneak peek at the **new Ember CLI guides** 📖, final comments on **RFC RFCeption** 🤔, upvotes for the **Ember subreddit** ⬆️, a reminder to watch the first season of **EmberFest 2018** 🍿📽, a how-to for **building** your own painting **game** 🎨, and a guide to start writing **components you'll love** 💖!
 
 ---
 
@@ -58,8 +58,7 @@ If you find any typos or bugs, then please feel free to report it to the [new re
 <!--alex ignore period-->
 The RFC (Request For Comments) about the [RFC Process](https://github.com/emberjs/rfcs/pull/300) itself is in its **final comment period**!
 
-The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) Champion for RFCs that are accepted and more.
-Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
+The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) champion for RFCs that are accepted and more. Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
 
 ---
 
@@ -76,12 +75,11 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 ---
 
-## [Didn't Make It to EmberFest 🐹🎉 ? Watch This!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
+## [Didn't Make It to EmberFest 🐹🎉? Watch This!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
 
-Didn't make it to **Emberfest** - a Europe-based conference around Ember - this year? Then be sure to take a look into the [list of talk recordings here](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)! 👀
+Didn't make it to **Emberfest**, a Europe-based conference around Ember, this year? Then be sure to take a look into the [list of talk recordings here](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)! 👀
 
-From the [the intriguing opening keynote](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=1) by [@tomdale](https://github.com/tomdale) to [@danielleadams'](https://github.com/danielleadams) stellar Guide to [Mastering Forms in Ember](https://www.youtube.com/watch?v=-UZyjqBm59U&index=16&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9) and [the thought-provoking closing keynote](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21) by [@MelSumner](https://github.com/MelSumner) there are many highlights to find in the more than [5-hour long playlist. 🎬 Check it out!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
-
+From the [the intriguing opening keynote](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=1) by [@tomdale](https://github.com/tomdale) to [@danielleadams'](https://github.com/danielleadams) stellar guide to [mastering forms in Ember](https://www.youtube.com/watch?v=-UZyjqBm59U&index=16&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9) and [the thought-provoking closing keynote](https://www.youtube.com/watch?v=xP-kog04lng&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9&index=21) by [@MelSumner](https://github.com/MelSumner) there are many highlights to find in the more than [5-hour long playlist. 🎬 Check it out!](https://www.youtube.com/watch?v=oRzmDobMZ_Q&list=PLN4SpDLOSVkSB9034lDNdP1JoNBGssax9)
 
 ---
 
@@ -135,4 +133,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, Jessica Jordan and the Learning Team
+Melanie Sumner, Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, Jessica Jordan and the Learning Team
