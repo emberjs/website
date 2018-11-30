@@ -8,7 +8,7 @@ responsive: true
 
 Hallo Emberistas! 🐹
 
-This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, 📖Get a sneak peek at the new Ember CLI guides ...
+This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Subreddit ⬆️, Learn how to start writing components you'll love 💖, Get a sneak peek at the new Ember CLI guides 📖...
 
 ---
 
@@ -72,8 +72,9 @@ So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, po
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Start Writing Components You'll Love 💖](https://embermap.com/ember-component-patterns)
 
+Ember Map just launched a [free email course](https://embermap.com/ember-component-patterns) where you'll learn how to build **better Ember components** in six lessons that walk through the fundamentals of UI development. We're excited to learn about declarative rendering, state hoisting, data-loading components and more! Check out [#media](https://discordapp.com/channels/480462759797063690/486955806588403773) on Discord to chat about the course and other external Ember resources! 
 
 ---
 
