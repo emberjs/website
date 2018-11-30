@@ -26,7 +26,7 @@ To qualify for any of our random assortment of thank you goodies (that we’ve d
 
 ## Quality Standards
 
-We don’t think we need to say these things, but just in case….
+We don’t think we need to say these things, but just in case…
 
 - the PR counts once it is merged; the issue counts once we have added the label.
 - the PR must not be disruptive (i.e., taking someone else’s branch/commits and creating a PR)
