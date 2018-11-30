@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 75
-author: the crowd
+author: Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
@@ -9,6 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Learn how to start writing components you'll love 💖
 
 ---
 
@@ -52,8 +53,9 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Start Writing Components You'll Love 💖](https://embermap.com/ember-component-patterns)
 
+Ember Map just launched a [free email course](https://embermap.com/ember-component-patterns) where you'll learn how to build **better Ember components** in six lessons that walk through the fundamentals of UI development. We're excited to learn about declarative rendering, state hoisting, data-loading components and more! Check out [#media](https://discordapp.com/channels/480462759797063690/486955806588403773) on Discord to chat about the course and other external Ember resources! 
 
 ---
 
@@ -90,4 +92,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Amy Lam and the Learning Team
