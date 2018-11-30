@@ -16,19 +16,18 @@ This week we have: Final Comments on **RFC RFCeption** 🤔, Upvote the Ember Su
 The RFC (Request For Comments) about the [RFC Process](https://github.com/emberjs/rfcs/pull/300) itself is in its **final comment period**!
 
 The current RFC process is great but has a few quirks. For example, there are different processes for [emberjs/rfcs](https://github.com/emberjs/rfcs) and [ember-cli/rfcs](https://github.com/ember-cli/rfcs). If you haven't taken a look yet; this RFC proposes joining together all RFC processes, requiring a [Core team](https://emberjs.com/team/) Champion for RFCs that are accepted and more. 
-
 Check it out and join the [discussion](https://github.com/emberjs/rfcs/pull/300)!
 
 ---
 
 ## [Have You Read the Ember Subreddit? ⬆️](https://www.reddit.com/r/emberjs/)
-In case you didn't know Ember.js has its own [Reddit Subreddit](https://www.reddit.com/r/emberjs/)! It is another media channel where people can participate and share **Ember-related** things! It recently got a facelift and a new Ember brand theme.
+In case you didn't know Ember.js has its own [Reddit subreddit](https://www.reddit.com/r/emberjs/)! It is another media channel where people can participate and share **Ember-related** things! It recently got a facelift and a new Ember brand theme.
 
 The community has decided that we want to revive this subreddit and get it active. We want to get something about Ember on the front page but we need your help!
 
 If you are wondering where to start check out [What Are You Working On (Nov 2018)](https://www.reddit.com/r/emberjs/comments/9yycbi/what_are_you_working_on_nov_2018/) and tell us what Ember things you have been doing in the month of November.
 
-If you have any questions about the subreddit itself or want to help out hit up the new mods [@NullVoxPopuli](https://github.com/NullVoxPopuli) or [@Alon](https://github.com/Alonski).
+If you have any questions about the subreddit itself or want to help out hit up the new mods [@NullVoxPopuli](https://github.com/NullVoxPopuli) or [@Alon](https://github.com/Alonski) on [Discord](https://discord.gg/zT3asNS).
 
 So **subscribe** to the [subreddit](https://www.reddit.com/r/emberjs/) today, post some content and upvote 🆙 what you love!
 
