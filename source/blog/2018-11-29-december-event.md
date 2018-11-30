@@ -34,4 +34,4 @@ We don’t think we need to say these things, but just in case…
 
 ## Support
 
-During the month of December, members of the Learning Core Team will be spending extra time in the December text and voice chat channels on our Discord server! It's a great place to ask questions or chat about the event.
+During the month of December, members of the Learning Core Team will be spending extra time in the December [text](https://discordapp.com/channels/480462759797063690/517914929261576212) and [voice chat](https://discordapp.com/channels/480462759797063690/517914929261576212) channels on our [Discord server](https://discordapp.com/invite/zT3asNS)! It's a great place to ask questions or chat about the event.
