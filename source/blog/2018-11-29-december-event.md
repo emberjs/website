@@ -5,29 +5,33 @@ tags: Recent Posts, 2018
 responsive: true
 ---
 
-December is a great month to support your friendly Ember.js learning team! 
+December is a great month to support your friendly Ember.js learning team!
 
-Maybe December is a busy month for you, because of the holidays and family obligations- and that’s totally okay- we hope you have a great time! But for some, December is a time of the year with a lot of downtime. Maybe that’s you! Are you wondering what to do with all your vacation time in December? We’ve got ya covered! 
+Maybe December is a busy month for you, because of the holidays and family obligations- and that’s totally okay- we hope you have a great time! But for some, December is a time of the year with a lot of downtime. Maybe that’s you! Are you wondering what to do with all your vacation time in December? We’ve got ya covered!
 
-This year, the Ember Learning Core Team is sponsoring our first annual DecEmber, a hackathon event specifically targeted at Learning Team efforts. For an extra bit of awesome, it’s running at the same time as 24 Pull Requests, so contributions to DecEmber will count for both!
+This year, the Ember Learning Core Team is sponsoring our first annual DecEmber, a hackathon event specifically targeted at Learning Team efforts. For an extra bit of awesome, it’s running at the same time as [24 Pull Requests](https://24pullrequests.com/), so contributions to DecEmber will count for both!
 
 ## Participation Rules
-To qualify for any of our random assortment of thank you goodies (that we’ve delightfully dubbed Embercouragement), you must complete at least 5(five) participation activities for repositories in the ember-learn org between December 1 and December 31, 2018. The more contributions, the bigger the thank you! 
 
-## Participation Activities: 
+To qualify for any of our random assortment of thank you goodies (that we’ve delightfully dubbed Embercouragement), you must complete at least 5(five) participation activities for repositories in the [ember-learn org](https://github.com/ember-learn) between December 1 and December 28, 2018.
+
+## Participation Activities
+
 - Submitting PRs for issues
-  - in the Ember Learn Org 
-  - that have the  `DecEmber` label 
-- Writing Issues for repositories in the ember-learn org. We will mark them with the `DecEmber` label if they are sensible. 
-- Creating Illustrations: Maybe you have an artistic side, and illustrating code concepts is fun for you! If that’s the case, there are always illustrations that would enhance the guides, and those are very welcome for this event! 
+  - in the [Ember Learn Org](https://github.com/ember-learn)
+  - that have the `DecEmber` label
+- Writing Issues for repositories in the ember-learn org. We will mark them with the `DecEmber` label if they qualify.
+- Creating Illustrations: Maybe you have an artistic side, and illustrating code concepts is fun for you! If that’s the case, there are always illustrations that would enhance the guides, and those are very welcome for this event!
+- If you have another idea that you think would help support the Learning Core Team- let us know!
 
 ## Quality Standards
-We don’t think we need to say these things, but just in case…. 
 
-- the PR counts once it is merged
+We don’t think we need to say these things, but just in case….
+
+- the PR counts once it is merged; the issue counts once we have added the label.
 - the PR must not be disruptive (i.e., taking someone else’s branch/commits and creating a PR)
-- If you participate by writing an issue, the issue should be of respectable quality and not something that is clearly an intent to +1 your participation count. 
+- If you participate by writing an issue, the issue should be of respectable quality and not something that is clearly an intent to +1 your participation count.
 
-## Support 
-During the month of December, members of the Learning Core Team will be spending extra time in the December text and voice chat channels on our Discord server! It's a great place to ask questions or chat about the event. 
+## Support
 
+During the month of December, members of the Learning Core Team will be spending extra time in the December text and voice chat channels on our Discord server! It's a great place to ask questions or chat about the event.
