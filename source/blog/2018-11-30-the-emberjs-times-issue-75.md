@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 75
 author: Melanie Sumner, Chris Ng, Amy Lam, Alon Bukai, Kenneth Larsen, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/11/30-the-ember-times-issue-75.html"
 responsive: true
 ---
