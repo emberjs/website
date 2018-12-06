@@ -8,7 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join with your **contributions** for **December** 🐹🎄,
+Join with your **contributions** for **DecEmber** 🐹🎄,
 
 Read more about using `@tracked` in the new RFC! 👣
 
