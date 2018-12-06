@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 76
-author: the crowd
+author: Chris Ng, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/07-the-ember-times-issue-76.html"
 responsive: true
@@ -10,10 +10,19 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
+Read more about using `@tracked` in the new RFC! 👣
+
 ---
 
-## [SECTION TITLE](#section-url)
+## [Tracked Properties RFC is up for review! 👣](https://github.com/emberjs/rfcs/pull/410)
 
+The [Tracked Properties RFC](https://github.com/tomdale/rfcs/blob/5710d6e6fdc4ae283af7259800beb18aecb95c0d/text/0000-tracked-properties.md) introduces a simpler and more ergonomic system for tracking state change in Ember applications.
+
+Developers can identify if a property or a getter should be _autotracked_  by adding a `@tracked` decorator to it. This allows that value to have its dependencies automatically detected as it is used. 
+
+Because tracked properties are just a very thin layer on top of native JavaScript, setting and accessing tracked properties can be done using **standard JavaScript syntax**. With no special syntax, and leveraging existing JavaScript knowledge.
+
+Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/pull/410).
 
 ---
 
@@ -90,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Ng, the crowd and the Learning Team
