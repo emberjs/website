@@ -29,7 +29,7 @@ Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/
 
 ---
 
-## [Jingle bells 🔔, jingle bells 🔔, ✨ DecEmber 🐹🎄 all the way!](https://www.emberjs.com/blog/2018/11/29/december-event.html)
+## [Jingle Bells 🔔, Jingle Bells 🔔, ✨ DecEmber 🐹🎄 All the Way!](https://www.emberjs.com/blog/2018/11/29/december-event.html)
 
 Find one of the issues 🔍 <br>
 In the [Ember Learn project](https://github.com/ember-learn) <br>
