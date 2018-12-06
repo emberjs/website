@@ -8,9 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join with your **contributions** for **DecEmber** 🐹🎄,
-
-Read more about using `@tracked` in the new RFC! 👣
+Join with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣,
 
 ---
 
@@ -33,13 +31,14 @@ Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/
 
 ## [Jingle bells 🔔, jingle bells 🔔, ✨ DecEmber 🐹🎄 all the way!](https://www.emberjs.com/blog/2018/11/29/december-event.html)
 
-Find one of the issues 🔍
-In the [Ember Learn project](https://github.com/ember-learn)
-With the [December label in use](https://help-wanted.emberjs.com/learning?label=DecEmber),
+Find one of the issues 🔍 <br>
+In the [Ember Learn project](https://github.com/ember-learn) <br>
+With the [December label in use](https://help-wanted.emberjs.com/learning?label=DecEmber) <br>
 Don't leave the [chat unchecked](https://discordapp.com/channels/480462759797063690/517914929261576212).
-Send in a PR
-Make the reviewer smile 🙂
-What fun [24pullrequests](https://24pullrequests.com/) are
+
+Send in a PR ⬅️<br>
+Make the reviewer smile 🙂 <br>
+What fun [24PullRequests](https://24pullrequests.com/) are <br>
 when the contribution is so [worthwhile](https://www.emberjs.com/blog/2018/11/29/december-event.html)! 🐹
 
 Jingle bells, jingle bells, **DecEmber** all the way! 🐹🎄
