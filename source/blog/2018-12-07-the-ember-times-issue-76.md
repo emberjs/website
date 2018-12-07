@@ -8,7 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝, and JSON:API 🇯 is getting an update for the holiday season 🎉🎊🎈!
+Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝, **fill out** the npm JavaScript Ecosystem Survey 📝, JSON:API 🇯 is getting an update for the holiday season 🎉🎊🎈 and Ember's **linting** future needs your input 💬!
 
 ---
 
@@ -42,9 +42,9 @@ Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/
 
 ## [Ten Minutes to Improve JavaScript 📈](https://www.npmjs.com/2018-javascript-ecosystem-survey)
 
-Represent Ember in the [2018 JavaScript Ecosystem Survey](https://www.npmjs.com/2018-javascript-ecosystem-survey)! 
+Represent Ember in the [2018 JavaScript Ecosystem Survey](https://www.npmjs.com/2018-javascript-ecosystem-survey)!
 
-Each winter, [npm, Inc.](https://www.npmjs.com/) circulates a survey of software developers and npm users to solicit your feedback and ideas about how to continue supporting the world’s fastest growing developer community and the world’s most popular development language. (Review last year’s results [here](https://www.npmjs.com/npm/state-of-javascript-frameworks-2017-part-1).) Be sure to fill out the survey [here](https://www.npmjs.com/2018-javascript-ecosystem-survey) in order to share what you've been working on and how you plan to use JavaScript in 2019. And spread the word! 
+Each winter, [npm, Inc.](https://www.npmjs.com/) circulates a survey of software developers and npm users to solicit your feedback and ideas about how to continue supporting the world’s fastest growing developer community and the world’s most popular development language. (Review last year’s results [here](https://www.npmjs.com/npm/state-of-javascript-frameworks-2017-part-1).) Be sure to fill out the survey [here](https://www.npmjs.com/2018-javascript-ecosystem-survey) in order to share what you've been working on and how you plan to use JavaScript in 2019. And spread the word!
 
 ---
 
@@ -59,6 +59,20 @@ One notable feature is the addition of **"profiles"** which allow specifying add
 Another noteworthy change is the official recommendation to use camelCase for resource fields. This standardization will allow composing and parsing **JSON:API** with JavaScript and other languages. Check it out [here](https://jsonapi.org/recommendations/#naming).
 
 To learn more about the rest of the features and changes in **JSON:API 1.1** check out the [Update History](https://jsonapi.org/#update-history).
+
+---
+
+## [Set the Future Direction of Linting Ember Apps 📝](https://github.com/ember-cli/ember-cli/pull/8219)
+
+In this [work-in-progress draft for restructuring the linting workflow in Ember applications](https://github.com/ember-cli/ember-cli/pull/8219) the implementation of
+[Ember CLI RFC (Request for Comments) #121](https://github.com/ember-cli/rfcs/pull/121) has begun -
+and your **guidance** as part of the Ember community **is needed**!
+
+[Based on the RFC's design strategy](https://github.com/sangm/rfcs/blob/master/active/0000-remove-ember-cli-eslint.md#detailed-design) Ember's **linting** story is about to be aligned with best practices used in the general JavaScript ecosystem.
+And there are still decisions to be made: Do you for example expect your linting tests to run
+with `ember build` and `ember serve`? How would you linting integrate best into your CI pipeline?
+
+Let the [your thoughts on how to swap Ember CLI ESLint for ESLint know](https://github.com/ember-cli/ember-cli/pull/8219) to support the delivery of the best linting solution for the community!
 
 ---
 
