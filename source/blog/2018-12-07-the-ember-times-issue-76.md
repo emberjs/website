@@ -72,7 +72,7 @@ and your **guidance** as part of the Ember community **is needed**!
 And there are still decisions to be made: Do you for example expect your linting tests to run
 with `ember build` and `ember serve`? How would you linting integrate best into your CI pipeline?
 
-Let the [your thoughts on how to swap Ember CLI ESLint for ESLint know](https://github.com/ember-cli/ember-cli/pull/8219) to support the delivery of the best linting solution for the community!
+Let [your thoughts on how to swap Ember CLI ESLint for ESLint be known](https://github.com/ember-cli/ember-cli/pull/8219) to support the delivery of the best linting solution for the community!
 
 ---
 
