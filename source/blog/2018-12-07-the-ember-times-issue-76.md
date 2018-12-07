@@ -12,7 +12,23 @@ Join with your **contributions** for **DecEmber** 🐹🎄, read more about usin
 
 ---
 
-## [Tracked Properties RFC is up for review! 👣](https://github.com/emberjs/rfcs/pull/410)
+## [Jingle Bells 🔔, Jingle Bells 🔔, ✨ DecEmber 🐹🎄 All the Way!](https://www.emberjs.com/blog/2018/11/29/december-event.html)
+
+Find one of the issues 🔍 <br>
+In the [Ember Learn project](https://github.com/ember-learn) <br>
+With the [December label in use](https://help-wanted.emberjs.com/learning?label=DecEmber) <br>
+Don't leave the [chat unchecked](https://discordapp.com/channels/480462759797063690/517914929261576212).
+
+Send in a PR ⬅️<br>
+Make the reviewer smile 🙂 <br>
+What fun [24PullRequests](https://24pullrequests.com/) are <br>
+when the contribution is so [worthwhile](https://www.emberjs.com/blog/2018/11/29/december-event.html)! 🐹
+
+Jingle bells, jingle bells, **DecEmber** all the way! 🐹🎄
+
+---
+
+## [Tracked Properties RFC Is Up for Review! 👣](https://github.com/emberjs/rfcs/pull/410)
 
 The [Tracked Properties RFC](https://github.com/tomdale/rfcs/blob/5710d6e6fdc4ae283af7259800beb18aecb95c0d/text/0000-tracked-properties.md) introduces a simpler and more ergonomic system for tracking state change in Ember applications.
 
@@ -29,21 +45,7 @@ Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/
 
 ---
 
-## [Jingle Bells 🔔, Jingle Bells 🔔, ✨ DecEmber 🐹🎄 All the Way!](https://www.emberjs.com/blog/2018/11/29/december-event.html)
 
-Find one of the issues 🔍 <br>
-In the [Ember Learn project](https://github.com/ember-learn) <br>
-With the [December label in use](https://help-wanted.emberjs.com/learning?label=DecEmber) <br>
-Don't leave the [chat unchecked](https://discordapp.com/channels/480462759797063690/517914929261576212).
-
-Send in a PR ⬅️<br>
-Make the reviewer smile 🙂 <br>
-What fun [24PullRequests](https://24pullrequests.com/) are <br>
-when the contribution is so [worthwhile](https://www.emberjs.com/blog/2018/11/29/december-event.html)! 🐹
-
-Jingle bells, jingle bells, **DecEmber** all the way! 🐹🎄
-
----
 
 ## [SECTION TITLE](#section-url)
 
