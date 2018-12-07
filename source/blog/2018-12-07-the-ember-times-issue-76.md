@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 76
-author: Chris Ng, Jessica Jordan, the crowd
+author: Chris Ng, Jessica Jordan, Amy Lam, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/07-the-ember-times-issue-76.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣,
+Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝...
 
 ---
 
@@ -40,8 +40,11 @@ Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ten Minutes to Improve JavaScript 📈](https://www.npmjs.com/2018-javascript-ecosystem-survey)
 
+Represent Ember in the [2018 JavaScript Ecosystem Survey](https://www.npmjs.com/2018-javascript-ecosystem-survey)! 
+
+Each winter, [npm, Inc.](https://www.npmjs.com/) circulates a survey of software developers and npm users to solicit your feedback and ideas about how to continue supporting the world’s fastest growing developer community and the world’s most popular development language. (Review last year’s results [here](https://www.npmjs.com/npm/state-of-javascript-frameworks-2017-part-1).) Be sure to fill out the survey [here](https://www.npmjs.com/2018-javascript-ecosystem-survey) in order to share what you've been working on and how you plan to use JavaScript in 2019. And spread the word! 
 
 ---
 
@@ -110,4 +113,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Amy Lam the crowd and the Learning Team
