@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 76
-author: Chris Ng, Jessica Jordan, Amy Lam, Alon Bukai the crowd
+author: Chris Ng, Jessica Jordan, Amy Lam, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/07-the-ember-times-issue-76.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝 and JSON:API 🇯 is getting an update for the holiday season 🎉🎊🎈!
+Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝, and JSON:API 🇯 is getting an update for the holiday season 🎉🎊🎈!
 
 ---
 
@@ -62,32 +62,6 @@ To learn more about the rest of the features and changes in **JSON:API 1.1** che
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
 <p>This week we'd like to thank <a href="https://github.com/Simran-B" target="gh-user">@Simran-B</a>, <a href="https://github.com/bhullarg" target="gh-user">@bhullarg</a>, <a href="https://github.com/jfdnc" target="gh-user">@jfdnc</a>, <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/esbanarango" target="gh-user">@esbanarango</a>, <a href="https://github.com/igorT" target="gh-user">@igorT</a>, <a href="https://github.com/prasannavijayan" target="gh-user">@prasannavijayan</a>, <a href="https://github.com/efx" target="gh-user">@efx</a>, <a href="https://github.com/zachgarwood" target="gh-user">@zachgarwood</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/thorsteinsson" target="gh-user">@thorsteinsson</a> and <a href="https://github.com/jacobq" target="gh-user">@jacobq</a> for their contributions to Ember and related repositories! 💖</p>
@@ -115,9 +89,8 @@ Keep on top of what's been going on in Emberland this week by subscribing to our
 
 ---
 
-
 That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Amy Lam, Alon Bukai the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Amy Lam, Alon Bukai and the Learning Team
