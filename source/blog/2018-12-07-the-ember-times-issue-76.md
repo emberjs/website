@@ -8,7 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝...
+Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝 and JSON:API 🇯 is getting an update for the holiday season 🎉🎊🎈!
 
 ---
 
