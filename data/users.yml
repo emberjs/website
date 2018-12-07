@@ -1151,6 +1151,10 @@
   image: smartkarma-logo.png
   alt: Smartkarma
   use: "Research Reinvented"
+- url: https://www.anvyl.com
+  image: anvyl.png
+  alt: Anvyl
+  use: "Ember is powering Anvyl's smart supply chain solution to help consumer brands source higher quality, lower cost suppliers, and manage production with more visibility."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
