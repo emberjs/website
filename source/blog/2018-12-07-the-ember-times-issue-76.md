@@ -8,24 +8,7 @@ responsive: true
 
 εte sεn Emberistas? 🐹
 
-Join with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣,
-
----
-
-## [Tracked Properties RFC is up for review! 👣](https://github.com/emberjs/rfcs/pull/410)
-
-The [Tracked Properties RFC](https://github.com/emberjs/rfcs/blob/be351b059f08ac0fe709bc7697860d5064717a7f/text/0000-tracked-properties.md) introduces a simpler and more ergonomic system for tracking state change in Ember applications.
-
-Developers can identify if a property or a getter should be _autotracked_  by adding a `@tracked` decorator to it. This allows that value to have its dependencies automatically detected as it is used.
-
-Because tracked properties are just a very thin layer on top of native JavaScript, setting and accessing tracked properties can be done using **standard JavaScript syntax**. With no special syntax, and leveraging existing JavaScript knowledge.
-
-Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/pull/410).
-
----
-
-## [SECTION TITLE](#section-url)
-
+Join us with your **contributions** for **DecEmber** 🐹🎄, read more about using `@tracked` in the new RFC 👣, **fill out** the npm JavaScript Ecosystem Survey 📝...
 
 ---
 
@@ -44,6 +27,28 @@ when the contribution is so [worthwhile](https://www.emberjs.com/blog/2018/11/29
 Jingle bells, jingle bells, **DecEmber** all the way! 🐹🎄
 
 ---
+
+## [Tracked Properties RFC Is Up for Review! 👣](https://github.com/emberjs/rfcs/pull/410)
+
+The [Tracked Properties RFC](https://github.com/emberjs/rfcs/blob/be351b059f08ac0fe709bc7697860d5064717a7f/text/0000-tracked-properties.md) introduces a simpler and more ergonomic system for tracking state change in Ember applications.
+
+Developers can identify if a property or a getter should be _autotracked_  by adding a `@tracked` decorator to it. This allows that value to have its dependencies automatically detected as it is used.
+
+Because tracked properties are just a very thin layer on top of native JavaScript, setting and accessing tracked properties can be done using **standard JavaScript syntax**. With no special syntax, and leveraging existing JavaScript knowledge.
+
+Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/pull/410).
+
+---
+
+## [Ten Minutes to Improve JavaScript 📈](https://www.npmjs.com/2018-javascript-ecosystem-survey)
+
+Represent Ember in the [2018 JavaScript Ecosystem Survey](https://www.npmjs.com/2018-javascript-ecosystem-survey)! 
+
+Each winter, [npm, Inc.](https://www.npmjs.com/) circulates a survey of software developers and npm users to solicit your feedback and ideas about how to continue supporting the world’s fastest growing developer community and the world’s most popular development language. (Review last year’s results [here](https://www.npmjs.com/npm/state-of-javascript-frameworks-2017-part-1).) Be sure to fill out the survey [here](https://www.npmjs.com/2018-javascript-ecosystem-survey) in order to share what you've been working on and how you plan to use JavaScript in 2019. And spread the word! 
+
+---
+
+
 
 ## [JSON:API Update 1.1 🇯](https://twitter.com/jsonapi/status/1069593631365959680)
 
