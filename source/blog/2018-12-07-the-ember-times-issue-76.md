@@ -56,7 +56,7 @@ Each winter, [npm, Inc.](https://www.npmjs.com/) circulates a survey of software
 
 One notable feature is the addition of **"profiles"** which allow specifying addition semantics on top of the current spec. This could allow specifying things like filtering, pagination and more. Check out [profiles here](https://jsonapi.org/extensions/).
 
-Another noteworthy change is the official recommendation to use camelCase for resource fields. This standardization will help allow composing and parsing **JSON:API** with JavaScript and other languages. Check it out [here](https://jsonapi.org/recommendations/#naming).
+Another noteworthy change is the official recommendation to use camelCase for resource fields. This standardization will allow composing and parsing **JSON:API** with JavaScript and other languages. Check it out [here](https://jsonapi.org/recommendations/#naming).
 
 To learn more about the rest of the features and changes in **JSON:API 1.1** check out the [Update History](https://jsonapi.org/#update-history).
 
