@@ -5,4 +5,4 @@ tags: Recent Posts
 responsive: true
 ---
 
-TBK
+The Learning team is happy to announce our newest documentation efforts a dedicated page for tutorials
