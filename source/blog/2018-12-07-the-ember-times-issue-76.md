@@ -34,6 +34,7 @@ The [Tracked Properties RFC](https://github.com/emberjs/rfcs/blob/be351b059f08ac
 
 Developers can identify if a property or a getter should be _autotracked_  by adding a `@tracked` decorator to it. This allows that value to have its dependencies automatically detected as it is used.
 
+<!--alex ignore special-->
 Because tracked properties are just a very thin layer on top of native JavaScript, setting and accessing tracked properties can be done using **standard JavaScript syntax**. With no special syntax, and leveraging existing JavaScript knowledge.
 
 Comment and read more about the [RFC on GitHub](https://github.com/emberjs/rfcs/pull/410).
