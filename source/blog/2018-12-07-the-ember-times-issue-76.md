@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 76
 author: Chris Ng, Jessica Jordan, Amy Lam, Alon Bukai
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/07-the-ember-times-issue-76.html"
 responsive: true
 ---
