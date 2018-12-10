@@ -275,6 +275,7 @@
   image: jweber.jpg
   teams:
     - learning
+    - corejs
 - name: Jessica Jordan
   first: Jessica
   last: Jordan
