@@ -1,6 +1,6 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Chris Ng, the crowd
+title: The Ember Times - Issue No. 77
+author: Chris Ng, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/14-the-ember-times-issue-77.html"
 responsive: true
@@ -8,11 +8,19 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>, want to learn more about component patterns 📚🧐? 
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>,
+
+This week **boolean component arguments** 0️⃣1️⃣ are in for an **RFC**, want to learn more about component patterns 📚🧐?
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Boolean Dreams Come True 0️⃣💭⃣1️⃣](https://github.com/emberjs/rfcs/pull/407)
+
+Ever wanted to pass **boolean arguments** to your **components** _just_ like you would pass boolean attributes - like checked or readonly - to an HTML element?
+
+This fresh [RFC (Request for Comments) discusses how this could become reality](https://github.com/hakubo/rfcs/blob/component-boolean-arguments/text/0000-component-boolean-arguments.md)!
+
+Leave your thoughts on how boolean arguments could be implemented for Ember components in the comments [below the original proposal](https://github.com/emberjs/rfcs/pull/407).
 
 
 ---
@@ -84,7 +92,7 @@ Read more about it the [blog post](https://medium.com/macsour/components-pattern
 
 ## [#embertimes](https://emberjs.com/blog/tags/newsletter.html) 📰
 
-Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter. 
+Want to write for the Ember Times? Have a suggestion for next week's issue? Join us at [#support-ember-times](https://discordapp.com/channels/480462759797063690/485450546887786506) on the [Ember Community Discord](https://discordapp.com/invite/zT3asNS) or ping us [@embertimes](https://twitter.com/embertimes) on Twitter.
 
 Keep on top of what's been going on in Emberland this week by subscribing to our [e-mail newsletter](https://the-emberjs-times.ongoodbits.com/)! You can also find our posts on the [Ember blog](https://emberjs.com/blog/tags/newsletter.html).
 
@@ -95,4 +103,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, the crowd and the Learning Team
