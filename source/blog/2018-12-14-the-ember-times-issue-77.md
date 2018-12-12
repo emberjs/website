@@ -24,7 +24,7 @@ responsive: true
 
 ## [Components patterns in Ember Blog 📚🧐](https://twitter.com/TheMacsour/status/1072088269742112768)
 
-[@Exelord](https://github.com/Exelord) published a blog post on [component patterns in Ember](https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f). In the article, [@Exelord](https://github.com/Exelord) gathered **component patterns** around the Ember community for readers to better understand what kind of component pattern would best match your particular use case.
+[@Exelord](https://github.com/Exelord) published a blog post on [component patterns in Ember](https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f). The article presents a collection of **component patterns** used in the Ember community for readers to better understand what kind of component pattern would best match their particular use case.
 
 [@Exelord](https://github.com/Exelord) particularly outlines 4 types of components: **presentational, contextual, container, and composable (or higher-order component)** with code samples including references!
 
