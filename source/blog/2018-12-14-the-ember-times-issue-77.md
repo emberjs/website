@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Chris Ng, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/14-the-ember-times-issue-77.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>, want to learn more about component patterns 📚🧐? 
 
 ---
 
@@ -22,8 +22,13 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Components patterns in Ember Blog 📚🧐](https://twitter.com/TheMacsour/status/1072088269742112768)
 
+[@Exelord](https://github.com/Exelord) published a blog post on [component patterns in Ember](https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f). The article presents a collection of **component patterns** used in the Ember community for readers to better understand what kind of component pattern would best match their particular use case.
+
+[@Exelord](https://github.com/Exelord) particularly outlines 4 types of components: **presentational, contextual, container, and composable (or higher-order component)** with code samples including references!
+
+Read more about it the [blog post](https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f)!
 
 ---
 
@@ -90,4 +95,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Ng, the crowd and the Learning Team
