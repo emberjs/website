@@ -42,8 +42,8 @@ Without decorators or class fields, the benefits of class syntax are generally n
 With this in mind, the official Ember recommendation is to continue using the standard `EmberObject.extend()` syntax for defining your factories if you are not risk tolerant. The guides will continue to use this syntax for the time being as well.
 
 **So what's the point then?**
-<!--alex ignore remain-->
-Stabilizing the behavior of classes gives early adopters an API to build on. For users who are more risk tolerant and want to be early adopters, community projects such as [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript) and [ember-decorators](https://github.com/ember-decorators/ember-decorators) are providing the transforms and decorators necessary to use class syntax today, and are dedicated to remain stable and provide an update path through any changes that occur in TC39 as the proposals are finalized.
+
+Stabilizing the behavior of classes gives early adopters an API to build on. For users who are more risk tolerant and want to be early adopters, community projects such as [ember-cli-typescript](https://github.com/typed-ember/ember-cli-typescript) and [ember-decorators](https://github.com/ember-decorators/ember-decorators) are providing the transforms and decorators necessary to use class syntax today, and are dedicated to remaining stable and providing an update path through any changes that occur in TC39 as the proposals are finalized.
 
 Early adopters have been helping tremendously to sort out the details here and make sure that the day the proposals advance, we are ready to land official support for them in Ember directly. Early adoption _does_ come with risks, so if you are considering it, be prepared to have to make changes in the future.
 
