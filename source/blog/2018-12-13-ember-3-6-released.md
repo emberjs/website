@@ -85,7 +85,8 @@ Deprecations are added to Ember.js when an API will be removed at a later date. 
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
-For more details on changes in Ember.js 3.6, please review the [Ember.js 3.6 release page](https://github.com/emberjs/ember.js/releases/tag/v3.6.0).
+For more details on changes in Ember.js 3.6, please review the [Ember.js 3.6 release page](https://github.com/emberjs/ember.js/releases/tag/v
+0).
 
 **new EmberObject (1 of 6)**
 
@@ -160,7 +161,7 @@ No new deprecations introduced in Ember Data 3.6.
 
 
 For more details on changes in Ember Data 3.6, please review the
-[Ember Data 3.6 release page](https://github.com/emberjs/data/releases/tag/v3.6).
+[Ember Data 3.6 release page](https://github.com/emberjs/data/releases/tag/v3.6.0).
 
 ---
 
