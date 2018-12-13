@@ -160,7 +160,7 @@ No new deprecations introduced in Ember Data 3.6.
 
 
 For more details on changes in Ember Data 3.6, please review the
-[Ember Data 3.6 release page](https://github.com/emberjs/data/releases/tag/v3.6).
+[Ember Data 3.6 release page](https://github.com/emberjs/data/releases/tag/v3.6.0).
 
 ---
 
