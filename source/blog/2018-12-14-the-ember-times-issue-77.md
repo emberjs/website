@@ -12,7 +12,7 @@ This week boolean component arguments 0️⃣1️⃣ are in for an RFC, learn mo
 
 ---
 
-## [Boolean Dreams Come True 0️⃣💭⃣1️⃣](https://github.com/emberjs/rfcs/pull/407)
+## [Boolean Dreams Come True 0️⃣☁️1️⃣](https://github.com/emberjs/rfcs/pull/407)
 
 Ever wanted to pass **boolean arguments** to your **components** _just_ like you would pass boolean attributes - like checked or readonly - to an HTML element?
 
@@ -42,7 +42,7 @@ Read more about it the [blog post](https://medium.com/macsour/components-pattern
 
 ## [EmberConf Schedule Announced 📣](https://emberconf.com/schedule.html)
 
-Save the date for **March 18-20** in Portland! The EmberConf lineup has been [announced](https://emberconf.com/schedule.html) and we're super excited for three days of learning and sharing. Congratulations to all the speakers!
+Save the date for **March 18-20** in Portland! The EmberConf lineup has been [announced](https://emberconf.com/schedule.html)! We're excited for three days of learning and sharing such as "Modern Ember with Octane", to "Developing an Ember Test Strategy", to "Dealing with Data in 2019". Congratulations to all the speakers!
 
 ---
 
