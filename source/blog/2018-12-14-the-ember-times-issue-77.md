@@ -1,20 +1,18 @@
 ---
 title: The Ember Times - Issue No. 77
-author: Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen, the crowd
+author: Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/14-the-ember-times-issue-77.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Salut Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>,
-
-This week **boolean component arguments** 0️⃣1️⃣ are in for an **RFC**, want to learn more about component patterns 📚🧐?, Ember 3.6 released 🚀
+This week boolean component arguments 0️⃣1️⃣ are in for an RFC, learn more about component patterns 📚🧐, Ember 3.6 released 🚀, and the EmberConf speakers have been announced! 👏
 
 ---
 
-## [Boolean Dreams Come True 0️⃣💭⃣1️⃣](https://github.com/emberjs/rfcs/pull/407)
+## [Boolean Dreams Come True 0️⃣☁️1️⃣](https://github.com/emberjs/rfcs/pull/407)
 
 Ever wanted to pass **boolean arguments** to your **components** _just_ like you would pass boolean attributes - like checked or readonly - to an HTML element?
 
@@ -25,14 +23,14 @@ Leave your thoughts on how boolean arguments could be implemented for Ember comp
 
 ---
 
-## [Ember 3.6 released 🚀](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html)
+## [Ember 3.6 Released 🚀](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html)
 Ember 3.6 is out and ready to use. This release contains the last step of the **Native Class Constructor Update RFC**.  This introduces native classes in Ember but with some caveats so remember to read the [release post](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html#toc_new-features-2) carefully before refactoring your code base.
 
-Ember 3.6 also contains the final stage of the **router service RFC** which includes some new methods that can improve the way you deal with routing. There’s also new deprecations and some small fixes in Ember CLI so be sure to check out the complete [release post](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html)
+Ember 3.6 also contains the final stage of the **router service RFC** which includes some new methods that can improve the way you deal with routing. There’s also new deprecations and some small fixes in Ember CLI so be sure to check out the complete [release post](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html).
 
 ---
 
-## [Components patterns in Ember Blog 📚🧐](https://twitter.com/TheMacsour/status/1072088269742112768)
+## [Components Patterns in Ember Blog 📚🧐](https://twitter.com/TheMacsour/status/1072088269742112768)
 
 [@Exelord](https://github.com/Exelord) published a blog post on [component patterns in Ember](https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f). The article presents a collection of **component patterns** used in the Ember community for readers to better understand what kind of component pattern would best match their particular use case.
 
@@ -42,33 +40,9 @@ Read more about it the [blog post](https://medium.com/macsour/components-pattern
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [EmberConf Schedule Announced 📣](https://emberconf.com/schedule.html)
 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+Save the date for **March 18-20** in Portland! The EmberConf lineup has been [announced](https://emberconf.com/schedule.html)! We're excited for three days of learning and sharing such as "Modern Ember with Octane", to "Developing an Ember Test Strategy", to "Dealing with Data in 2019". Congratulations to all the speakers!
 
 ---
 
@@ -105,4 +79,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen, and the Learning Team
