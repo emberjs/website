@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 77
-author: Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, the crowd
+author: Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/14-the-ember-times-issue-77.html"
 responsive: true
@@ -10,7 +10,7 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>,
 
-This week **boolean component arguments** 0️⃣1️⃣ are in for an **RFC**, want to learn more about component patterns 📚🧐?
+This week **boolean component arguments** 0️⃣1️⃣ are in for an **RFC**, want to learn more about component patterns 📚🧐?, Ember 3.6 released 🚀
 
 ---
 
@@ -25,8 +25,10 @@ Leave your thoughts on how boolean arguments could be implemented for Ember comp
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember 3.6 released 🚀](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html)
+Ember 3.6 is out and ready to use. This release contains the last step of the **Native Class Constructor Update RFC**.  This introduces native classes in Ember but with some caveats so remember to read the [release post]([Ember.js - Ember 3.6 Released](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html#toc_new-features-2)) carefully before refactoring your code base.
 
+Ember 3.6 also contains the final stage of the **router service RFC** which includes some new methods that can improve the way you deal with routing. There’s also new deprecations and some small fixes in Ember CLI so be sure to check out the complete [release post]([Ember.js - Ember 3.6 Released](https://emberjs.com/blog/2018/12/13/ember-3-6-released.html))
 
 ---
 
@@ -103,4 +105,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen, the crowd and the Learning Team
