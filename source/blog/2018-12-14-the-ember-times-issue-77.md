@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 77
 author: Chris Ng, Jessica Jordan, Ryan Mark, Amy Lam, Kenneth Larsen
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/14-the-ember-times-issue-77.html"
 responsive: true
 ---
