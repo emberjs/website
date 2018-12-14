@@ -8,7 +8,7 @@ responsive: true
 
 Salut Emberistas! 🐹
 
-This week **boolean component arguments** 0️⃣1️⃣ are in for an **RFC**, learn more about component patterns 📚🧐, Ember 3.6 released 🚀...
+This week boolean component arguments 0️⃣1️⃣ are in for an RFC, learn more about component patterns 📚🧐, Ember 3.6 released 🚀, and the EmberConf speakers have been announced! 👏
 
 ---
 
@@ -40,33 +40,9 @@ Read more about it the [blog post](https://medium.com/macsour/components-pattern
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [EmberConf Schedule Announced 📣](https://emberconf.com/schedule.html)
 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+Save the date for **March 18-20** in Portland! The EmberConf lineup has been [announced](https://emberconf.com/schedule.html) and we're super excited for three days of learning and sharing. Congratulations to all the speakers!
 
 ---
 
