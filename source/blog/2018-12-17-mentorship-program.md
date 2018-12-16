@@ -13,11 +13,11 @@ Mentorship is a responsibility shared by our entire community, and we’re excit
 
 ## Established Initiatives
 
-<!--alex ignore gals-men-->
-
 In addition to some fun new plans, the Ember Mentorship Program umbrella captures a bunch of existing efforts. Some are face-to-face events at conferences, and others are remote. They include:
 
 - The Mentorship Workshop and mixer, an annual event at [EmberConf](https://emberconf.com) that matches about 20 mentors with about 20 mentees
+<!--alex disable gals-men-->
+<!--alex disable women-->
 - The Women Helping Women program, which helps support women who want to speak, lead, and contribute within and outside of the Ember community. Participation is open to women and nonbinary people. To join, just ask in [Ember Discord](https://discordapp.com/invite/zT3asNS)'s `#discord-server-admin` channel.
 - New Contributor Mentorship, the (currently informal) process where experienced contributors in the Ember ecosystem pair up with those who are learning and exploring. Join `#discord-server-admin` of Ember Discord to get started.
 - Meetup Support, where organizers of groups around the world support each other and share ideas about the things that are and aren’t working for their groups. 
