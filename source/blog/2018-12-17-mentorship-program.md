@@ -28,9 +28,9 @@ There wasn't a central online listing of or hub for all these initiatives, and u
 
 ## What’s New?
 
-EmberConf 2019 will be an annual opportunity to explore new areas for the program(s) to grow. One of the new areas of focus in 2019, for example, will be the first gathering for People of Color in the Ember Community. This Ember POC initiative will be led by Ashlen Price and Elrick Ryan, who you may have met at past EmberConfs.
+EmberConf 2019 will be an annual opportunity to explore new areas for the program(s) to grow. One of the new areas of focus in 2019, for example, will be the first gathering for People of Color in the Ember Community. This Ember POC Connect initiative will be led by Ashlen Price and Elrick Ryan, who you may have met at past EmberConfs!
 
-More details are coming soon, and when registration for EmberConf opens, folks will be able to sign up for the first [POC Initiative Breakfast](https://emberconf.com/inclusiveness-at-emberconf.html). There's also a new channel is Discord, #poc, so people can get to know each other well before they get to hang out at EmberConf. 
+More details are coming soon, and when registration for EmberConf opens, folks will be able to sign up for the first [POC Connect Breakfast](https://emberconf.com/inclusiveness-at-emberconf.html). There's also a new channel is Discord, #poc-connect, so people can get to know each other well before they get to hang out at EmberConf. 
 
 The Mentorship Program also embraces the idea that opportunities should be available to anyone in the community — not just those who can make it to EmberConf.
 
@@ -39,8 +39,8 @@ Here are some of the ways in the works:
 1. An [event kit](https://github.com/ember-learn/mentorship-workshop) that anyone can use to run mentorship workshops in their local meetups or conferences, with guidance and support from past leaders.
 2. Online events open to all participants around the world, at varying times to accommodate many time zones.
 3. Adding content to the awesome [Help Wanted](https://help-wanted.emberjs.com/) app to give new contributors more specific directions on how to get involved and who to ask for help.
-4. Raising awareness of efforts like the _Women Helping Women_ initiative and _POC Initiative_, so new members can join and benefit from afar as well.
-5. The _Ember Evangelism Effort_, which previously existed under the Women Helping Women program, and is now growing to be a general purpose effort open to all ([with an in-person EmberConf component too](https://emberconf.com/mentorship-program.html#evangelism)!). It will help match speakers who want to improve their skills or practice, with others who can give guidance and feedback.
+4. Raising awareness of efforts like the _Women Helping Women_ initiative and _POC Connect_, so new members can join and benefit from afar as well.
+5. The _Ember Public Speaker Program_, which previously existed under the Women Helping Women program, and is now growing to be a general purpose effort open to all ([with an in-person EmberConf component too](https://emberconf.com/mentorship-program.html#evangelism)!). It will help match speakers who want to improve their skills or practice, with others who can give guidance and feedback.
 
 
 ## Why this focus? When will these things happen?
