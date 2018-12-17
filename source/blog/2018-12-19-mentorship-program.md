@@ -1,5 +1,5 @@
 ---
-title: Introducing the New Ember Mentorship Program
+title: Introducing the new Ember Mentorship Program
 author: Jen Weber, Leah Silber
 tags: Events, 2018, Announcement
 responsive: true
