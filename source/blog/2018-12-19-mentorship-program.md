@@ -49,7 +49,7 @@ The reality of open source communities is that we have to choose where to spend 
 
 If you don’t see your own ideas on these lists, get in touch! Everything we’ve done so far were grew from community volunteers and interest, and our we hope that more of you will come forward to help us build this up even more. 
 
-Mentorship-type efforts are really about the one-on-one connections we’re able to help foster along the way, which means every single participant makes a difference <3
+Mentorship-type efforts are really about the one-on-one connections we’re able to help foster along the way, which means every single participant makes a difference &hearts;
 
 
 ## How to get involved
