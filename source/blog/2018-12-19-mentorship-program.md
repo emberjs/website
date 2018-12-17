@@ -30,7 +30,7 @@ There wasn't a central online listing of or hub for all these initiatives, and u
 
 EmberConf 2019 will be an annual opportunity to explore new areas for the program(s) to grow. One of the new areas of focus in 2019, for example, will be the first gathering for People of Color in the Ember Community. This Ember POC Connect initiative will be led by Ashlen Price and Elrick Ryan, who you may have met at past EmberConfs!
 
-More details are coming soon, and when registration for EmberConf opens, folks will be able to sign up for the first [POC Connect Breakfast](https://emberconf.com/inclusiveness-at-emberconf.html). There's also a new channel is Discord, #poc-connect, so people can get to know each other well before they get to hang out at EmberConf. 
+More details are coming soon, and when registration for EmberConf opens, folks will be able to sign up for the first [POC Connect Breakfast](https://emberconf.com/inclusiveness-at-emberconf.html). There's also a new channel is Discord, `#poc-connect`, so people can get to know each other well before they get to hang out at EmberConf. 
 
 The Mentorship Program also embraces the idea that opportunities should be available to anyone in the community — not just those who can make it to EmberConf.
 
