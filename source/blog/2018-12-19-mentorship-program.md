@@ -54,8 +54,6 @@ Mentorship-type efforts are really about the one-on-one connections we’re able
 
 ## How to get involved
 
-- Do you want to be an EmberConf 2019 mentor or mentee? [Apply here](https://tilde.wufoo.com/forms/k13gtb5o0x2afmw/) to participate in the in-person events.
-- Request to join the `#poc-connect` and/or `#whw` (Women Helping Women) channels on [Ember Discord](https://discordapp.com/invite/zT3asNS), if you are a member of . To get access, ask about it in `#discord-server-admin`. These channels are year-round, not just for conference attendees.
-- For all other projects and events, including online-only opportunities, stay tuned for more announcements in the [EmberJS Twitter](https://twitter.com/emberjs) and the [Ember Times](https://the-emberjs-times.ongoodbits.com/) newsletter
+If you want to help lead, organize, or sponsor these efforts, please get in touch with Jen Weber (@jenweber) via the Ember Community Discord and she will connect you to the organizers of the project you are interested in. 
 
-P.S. If you want to help lead, organize, or sponsor these efforts, please get in touch with Jen Weber (@jenweber) via the Ember Community Discord and she will connect you to the organizers of the project you are interested in. Thanks for your support and interest!
+If you want to participate as a mentor or mentee, stay tuned for more details through the [EmberJS Twitter](https://twitter.com/emberjs) and the [Ember Times](https://the-emberjs-times.ongoodbits.com/) newsletter!
