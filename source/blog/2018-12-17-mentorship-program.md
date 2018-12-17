@@ -20,7 +20,7 @@ Some of the things we've already been doing:
 - The annual Mentorship Workshop and Mixer, an event at [EmberConf](https://emberconf.com) that matches mentors with mentees, giving them time to get to know each other both ahead of and during the conference.
 <!--alex disable gals-men-->
 <!--alex disable women-->
-- The Women Helping Women program, which helps support women who want to speak, lead, and contribute both within and outside of the Ember community. The program specifies an inclusive use of the term women, and is welcoming and respectful of trans women and any others who identify as women in a way that is significant to them, as well as to non-binary folk.
+- The [Women Helping Women](https://emberconf.com/mentorship-program.html#women-helping-women) program, which helps support women who want to speak, lead, and contribute both within and outside of the Ember community. The program specifies an inclusive use of the term women, and is welcoming and respectful of trans women and any others who identify as women in a way that is significant to them, as well as to non-binary folk.
 - New Contributor Mentorship, the (currently informal) process where experienced contributors in the Ember ecosystem pair up with those who are learning and exploring.
 - Meetup Support, where organizers of groups around the world support each other and share ideas about the things that are and aren’t working for their groups. Meetup organizers also get together at EmberConf to share ideas and tips.
 
@@ -55,7 +55,7 @@ Mentorship-type efforts are really about the one-on-one connections we’re able
 ## How to get involved
 
 - Do you want to be an EmberConf 2019 mentor or mentee? [Apply here](https://tilde.wufoo.com/forms/k13gtb5o0x2afmw/) to participate in the in-person events.
-- Request to join the `#poc-connect` and/or `#women-in-ember` (Women Helping Women) channels on [Ember Discord](https://discordapp.com/invite/zT3asNS), if you are a member of . To get access, ask about it in `#discord-server-admin`. These channels are year-round, not just for conference attendees.
+- Request to join the `#poc-connect` and/or `#women-in-ember` (Women Helping Women) channels on [Ember Discord](https://discordapp.com/invite/zT3asNS). To get access, ask about it in `#discord-server-admin`. These channels are year-round, not just for conference attendees.
 - For all other projects and events, including online-only opportunities, stay tuned for more announcements in the [EmberJS Twitter](https://twitter.com/emberjs) and the [Ember Times](https://the-emberjs-times.ongoodbits.com/) newsletter
 
-P.S. If you want to help lead, organize, or sponsor these efforts, please get in touch with Jen Weber (@jenweber) via the Ember Community Discord. Jen is leading the overall program coordination, and will connect you to the right people for the various projects. Thanks for your support and interest! Thanks for your support and interest!
+P.S. If you want to help lead, organize, or sponsor these efforts, please get in touch with Jen Weber (@jenweber) via the Ember Community Discord. Jen is leading the overall program coordination, and will connect you to the right people for the various projects. Thanks for your support and interest!
