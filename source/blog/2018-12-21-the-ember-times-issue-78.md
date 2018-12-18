@@ -12,7 +12,7 @@ responsive: true
 
 ---
 
-## [What's New in Ember Inspector 🐹](#section-url)
+## [What's New in Ember Inspector and Extensible Ember Inspector 🐹](https://github.com/emberjs/rfcs/pull/417)
 
 We've been working hard over the past few months to close out lots of
 super old issues (some from several years ago!), and work on adding new
@@ -31,8 +31,8 @@ work and, as a result of the switch, you can now scroll the table horizontally! 
 
 Finally, we are working hard on the future of Ember Inspector, and have an RFC
 up for making it extensible, which would allow for things like swapping out the
-data tab to use Redux, etc. Please check out the RFC and let us know your
-thoughts! [Link to RFC will go here (we haven't posted it yet)]().
+data tab to use Redux, etc. Please check out [the RFC](https://github.com/emberjs/rfcs/pull/417) and let us know your
+thoughts!
 
 
 ---
