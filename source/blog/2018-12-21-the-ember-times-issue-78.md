@@ -15,7 +15,7 @@ responsive: true
 ## [What's New in Ember Inspector and Extensible Ember Inspector 🐹](https://github.com/emberjs/rfcs/pull/417)
 
 The Ember Inspector team has been working hard over the past few months to close out lots of
-super old issues (some from several years ago!), and work on adding new
+super old issues (some from several years ago!), as well as adding new
 features to Ember Inspector. Thanks to [@nummi](https://github.com/nummi)
 you can now more easily keep up with the changes being made as well! When
 you open a new version of Ember Inspector, you'll now be shown an info tab
