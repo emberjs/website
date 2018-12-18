@@ -1,105 +1,40 @@
 @import "base/variables";
 @import "mixins/hidpi";
 
-.emberconf {
-  text-align: center;
-
-  img {
-    display: block;
-    margin: 0 auto;
-    max-width: 90%;
-    padding-top: 40px;
-  }
-
-  a:hover {
-    border-bottom: none;
-  }
-}
-
 .emberconf-callout {
-  display: block;
-  margin-bottom: 1em;
-  overflow: hidden;
+  text-align: center;
+  margin: 40px auto;
 
-  &:hover {
-    border: none;
-
-    p:after {
-      @media screen and (min-width: $screen-sm-min) {
-        left: 0;
-        width: 100%;
-      }
+  .image {
+    max-width: 500px;
+    margin: 0 auto;
+    img {
+      margin-top: -50px;
     }
-  }
-
-  .callout-body {
-    background-color: #001D36;
-    background-repeat: no-repeat;
-    background-size: auto 95% !important;
-    @include hidpi('about/emberconf-callout-bg', png);
-    margin-top: 1em;
-    overflow: hidden;
-    padding-bottom: 1em;
-    position: relative;
-    text-align: center;
-    @media screen and (min-width: $screen-sm-min) {
-      background-size: cover;
-      overflow: visible;
-      padding-bottom: 0;
-    }
-  }
-
-  .text-wrapper {
-    color: white;
-    display: block;
-    padding: 0 20px;
-    position: relative;
-    @media screen and (min-width: $screen-sm-min) {
-      display: inline-block;
-      padding: 20px 0 20px 120px;
-    }
-
-    &:before {
-      bottom: -103px;
+    &::before {
       content: '';
       display: block;
-      height: 107px;
-      @include hidpi('about/party-tomster', png);
-      position: absolute;
+      width: 100%;
+      height: 0;
+      $image-height: 384;
+      $image-width: 1040;
+      padding-bottom: ($image-height / $image-width) * 100%;
+      background-image: url('../images/about/emberconf-2019-collage.png');
+      background-size: 100%;
       background-repeat: no-repeat;
-      background-size: contain!important;
-      right: 10px;
-      width: 75px;
-      @media screen and (min-width: $screen-sm-min) {
-        bottom: -32px;
-        display: block;
-        height: 142px;
-        left: 0;
-        width: 100px;
-      }
     }
   }
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
 
-  a {
-    background: #00829a;
-    border-radius: 0.25em;
-    color: white;
-    display: inline;
-    font-size: 0.75em;
-    font-weight: bold;
-    margin-left: 1em;
-    padding: 0.5em 1em;
-    position: relative;
-    text-transform: none;
-    top: -.5em;
-    @media screen and (min-width: $screen-sm-min) {
-      top: 0;
-    }
+  p {
+    margin-top: 5px;
+  }
 
-    &:hover {
-      background-color: $orange;
-      border: none;
-      color: #fff;
-    }
+  .ember-button {
+    width: 260px;
+    margin-top: 30px;
   }
 }
