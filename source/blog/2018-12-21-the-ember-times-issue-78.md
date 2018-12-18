@@ -14,7 +14,7 @@ responsive: true
 
 ## [What's New in Ember Inspector and Extensible Ember Inspector 🐹](https://github.com/emberjs/rfcs/pull/417)
 
-We've been working hard over the past few months to close out lots of
+The Ember Inspector team has been working hard over the past few months to close out lots of
 super old issues (some from several years ago!), and work on adding new
 features to Ember Inspector. Thanks to [@nummi](https://github.com/nummi)
 you can now more easily keep up with the changes being made as well! When
@@ -24,8 +24,13 @@ with all the changes since the last version.
 ![](https://imgur.com/BiqsmqV.png) 
 
 We also did a few third party library swaps and updates, 
-most notably switching from ember-pikaday to [ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr)
+most notably switching from [ember-pikaday](https://github.com/adopted-ember-addons/ember-pikaday) to 
+[ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr)
 and using [ember-table](https://github.com/Addepar/ember-table) for the data tab.
+
+[@rwwagner90](https://github.com/rwwagner90) championed the date picker switch, which resolved several issues with
+pikaday, and also removed our dependence on jQuery.
+
 [@thorsteinsson](https://github.com/thorsteinsson) championed the ember-table
 work and, as a result of the switch, you can now scroll the table horizontally! 🎉
 
