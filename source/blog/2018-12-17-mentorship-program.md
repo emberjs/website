@@ -15,10 +15,11 @@ Mentorship is a responsibility shared by our entire community, and we’re excit
 
 In addition to some fun new plans, the Ember Mentorship Program umbrella captures and unifies a bunch of existing efforts. Some are face-to-face events, others are remote, and some combine the two.
 
-Some of the things we've already been doing:
-
 <!--alex disable gals-men-->
 <!--alex disable women-->
+
+Some of the things we've already been doing:
+
 - The annual Mentorship Workshop and Mixer, an event at [EmberConf](https://emberconf.com) that matches mentors with mentees, giving them time to get to know each other both ahead of and during the conference.
 - The [Women Helping Women](https://emberconf.com/mentorship-program.html#women-helping-women) program, which helps support women who want to speak, lead, and contribute both within and outside of the Ember community. The program specifies an inclusive use of the term women, and is welcoming and respectful of trans women and any others who identify as women in a way that is significant to them, as well as to non-binary folk.
 - New Contributor Mentorship, the (currently informal) process where experienced contributors in the Ember ecosystem pair up with those who are learning and exploring.
