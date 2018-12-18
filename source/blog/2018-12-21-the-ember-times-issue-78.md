@@ -12,7 +12,27 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [What's New in Ember Inspector](#section-url)
+
+We've been working hard over the past few months to close out lots of
+super old issues (some from several years ago!), and work on adding new
+features to Ember Inspector. Thanks to [@nummi](https://github.com/nummi)
+you can now more easily keep up with the changes being made as well! When
+you open a new version of Ember Inspector, you'll now be shown an info tab
+with all the changes since the last version.
+
+![](https://imgur.com/BiqsmqV.png) 
+
+We also did a few third party library swaps and updates, 
+most notably switching from ember-pikaday to [ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr)
+and using [ember-table](https://github.com/Addepar/ember-table) for the data tab.
+[@thorsteinsson](https://github.com/thorsteinsson) championed the ember-table
+work and, as a result of the switch, you can now scroll the table horizontally! :tada:
+
+Finally, we are working hard on the future of Ember Inspector, and have an RFC
+up for making it extensible, which would allow for things like swapping out the
+data tab to use Redux, etc. Please check out the RFC and let us know your
+thoughts! [Link to RFC will go here (we haven't posted it yet)]().
 
 
 ---
