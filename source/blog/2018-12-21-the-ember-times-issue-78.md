@@ -12,7 +12,7 @@ responsive: true
 
 ---
 
-## [What's New in Ember Inspector](#section-url)
+## [What's New in Ember Inspector 🐹](#section-url)
 
 We've been working hard over the past few months to close out lots of
 super old issues (some from several years ago!), and work on adding new
@@ -27,7 +27,7 @@ We also did a few third party library swaps and updates,
 most notably switching from ember-pikaday to [ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr)
 and using [ember-table](https://github.com/Addepar/ember-table) for the data tab.
 [@thorsteinsson](https://github.com/thorsteinsson) championed the ember-table
-work and, as a result of the switch, you can now scroll the table horizontally! :tada:
+work and, as a result of the switch, you can now scroll the table horizontally! 🎉
 
 Finally, we are working hard on the future of Ember Inspector, and have an RFC
 up for making it extensible, which would allow for things like swapping out the
