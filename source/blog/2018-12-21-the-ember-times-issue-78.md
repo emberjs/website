@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 78
-author: the crowd
+author: Robert Wagner
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
@@ -115,4 +115,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Robert Wagner and the Learning Team
