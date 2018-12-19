@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 78
-author: the crowd
+author: Robert Wagner
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
@@ -12,7 +12,32 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [What's New in Ember Inspector and Extensible Ember Inspector 🐹](https://github.com/emberjs/rfcs/pull/417)
+
+The Ember Inspector team has been working hard over the past few months to close out lots of
+super old issues (some from several years ago!), as well as adding new
+features to Ember Inspector. Thanks to [@nummi](https://github.com/nummi)
+you can now more easily keep up with the changes being made as well! When
+you open a new version of Ember Inspector, you'll now be shown an info tab
+with all the changes since the last version.
+
+![](https://imgur.com/BiqsmqV.png) 
+
+We also did a few third party library swaps and updates, 
+most notably switching from [ember-pikaday](https://github.com/adopted-ember-addons/ember-pikaday) to 
+[ember-flatpickr](https://github.com/shipshapecode/ember-flatpickr)
+and using [ember-table](https://github.com/Addepar/ember-table) for the data tab.
+
+[@rwwagner90](https://github.com/rwwagner90) championed the date picker switch, which resolved several issues with
+pikaday, and also removed our dependence on jQuery.
+
+[@thorsteinsson](https://github.com/thorsteinsson) championed the ember-table
+work and, as a result of the switch, you can now scroll the table horizontally! 🎉
+
+Finally, we are working hard on the future of Ember Inspector, and have an RFC
+up for making it extensible, which would allow for things like swapping out the
+data tab to use Redux, etc. Please check out [the RFC](https://github.com/emberjs/rfcs/pull/417) and let us know your
+thoughts!
 
 
 ---
@@ -90,4 +115,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Robert Wagner and the Learning Team
