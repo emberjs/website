@@ -54,7 +54,8 @@ Glimmer components aim to eliminate confusion with classic components, by aligni
 
 **Immutable Arguments** for the `this.args` object, as mentioned above, which will normalize the way the data flows through the app. This will also promote the usage of the `{{@arg}}` syntax – which refers directly to the arguments passed into the invocation of the component – when appropriate since it is more predictable in nature.
 
-**Minimal Classes** where Glimmer components won’t have any element/DOM based properties, hooks, event handler functions (which are provided instead by element modifiers) in order to reduce the mental model and enable users to be productive out of the box.
+<!--alex ignore nuts-->
+ **Minimal Classes** where Glimmer components won’t have any element/DOM based properties, hooks, event handler functions (which are provided instead by element modifiers) in order to reduce the mental model and enable users to be productive out of the box.
 
 Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pull/416).
 
