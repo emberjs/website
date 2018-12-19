@@ -44,7 +44,7 @@ thoughts!
 
 ## [RFC: Glimmer Components ✨](https://github.com/emberjs/rfcs/pull/416)
 
-[@pzuraq](https://github.com/pzuraq) put up an RFC for supporting **Glimmer components** – which are simpler, more declarative and ergonomic approach to building components – into Ember’s public API. Glimmer components will be the new default app experience in [Ember Octane](https://github.com/emberjs/rfcs/blob/26c4d83fb66568e1087a05818fb39a307ebf8da8/text/0000-roadmap-2018.md#ember-octane).
+[@pzuraq](https://github.com/pzuraq) put up an RFC (Request for Comments) for supporting **Glimmer components** – which represent a simpler, more declarative and ergonomic approach to building components – into Ember’s public API. Glimmer components will be the new default app experience in [Ember Octane](https://github.com/emberjs/rfcs/blob/26c4d83fb66568e1087a05818fb39a307ebf8da8/text/0000-roadmap-2018.md#ember-octane).
 
 Glimmer components aim to eliminate confusion with classic components, by aligning more closely with modern template syntax and features such as:
 
