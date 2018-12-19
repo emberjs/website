@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 78
-author: Robert Wagner
+author: Chris Ng, Robert Wagner
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 مرحبا Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>, read about the Glimmer Components RFC ✨, find out what's new in Ember Inspector and Extensible Ember Inspector 🐹!
 
 ---
 
@@ -42,8 +42,22 @@ thoughts!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [RFC: Glimmer Components ✨](https://github.com/emberjs/rfcs/pull/416)
 
+[@pzuraq](https://github.com/pzuraq) put up an RFC (Request for Comments) for supporting **Glimmer components** – which represent a simpler, more declarative and ergonomic approach to building components – into Ember’s public API. Glimmer components will be the new default app experience in [Ember Octane](https://github.com/emberjs/rfcs/blob/26c4d83fb66568e1087a05818fb39a307ebf8da8/text/0000-roadmap-2018.md#ember-octane).
+
+Glimmer components aim to eliminate confusion with classic components, by aligning more closely with modern template syntax and features such as:
+
+**Outer HTML Semantics** where there is no wrapping outer element by default and any dynamic values are explicitly stated in the template.
+
+**Namespaced Arguments** by having Glimmer components assign their arguments to the `args` property on their instance, preventing namespace collisions.
+
+**Immutable Arguments** for the `this.args` object, as mentioned above, which will normalize the way the data flows through the app. This will also promote the usage of the `{{@arg}}` syntax – which refers directly to the arguments passed into the invocation of the component – when appropriate since it is more predictable in nature.
+
+<!--alex ignore nuts-->
+ **Minimal Classes** where Glimmer components won’t have any element/DOM based properties, hooks, event handler functions (which are provided instead by element modifiers) in order to reduce the mental model and enable users to be productive out of the box.
+
+Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pull/416).
 
 ---
 
@@ -115,4 +129,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Robert Wagner and the Learning Team
+Chris Ng, Robert Wagner, and the Learning Team
