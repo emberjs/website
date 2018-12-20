@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 78
-author: Chris Ng, Robert Wagner
+author: Chris Ng, Robert Wagner, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 مرحبا Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>, read about the Glimmer Components RFC ✨, find out what's new in Ember Inspector and Extensible Ember Inspector 🐹!
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>Find out what's new in Ember Inspector and Extensible Ember Inspector 👨‍💻, read about the Glimmer Components RFC ✨, register for EmberConf 2019 📆, ...!
 
 ---
 
@@ -39,7 +39,6 @@ up for making it extensible, which would allow for things like swapping out the
 data tab to use Redux, etc. Please check out [the RFC](https://github.com/emberjs/rfcs/pull/417) and let us know your
 thoughts!
 
-
 ---
 
 ## [RFC: Glimmer Components ✨](https://github.com/emberjs/rfcs/pull/416)
@@ -61,8 +60,23 @@ Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pul
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [EmberConf Registration is Open! 💁‍♀️](https://emberconf.com/index.html)
 
+2019 is rapidly approaching, and you've got one more thing to do before EOY: buy your EmberConf ticket! This year's Early-Bird discount is significant ($50), while supplies last or until 12/31. So before anything else, here's that big shiny button! 🆗
+
+<div class="blog-row">
+  <a class="ember-button" style="width:260px" href="https://emberconf.com/register.html">Register Now</a>
+</div>
+
+The program has been announced and is looking really great: so many new faces, and a bunch of familiar old ones! Be sure to check out the [full schedule](https://emberconf.com/schedule.html) for all the details. 
+
+We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.com/inclusiveness-at-emberconf.html) this year. In an industry lacking attendee and speaker diversity, EmberConf strives to be an exception. Highlights of this year's efforts include:
+ 
+ <!--alex ignore gals-men women kids-->
+* [Scholarships for students and those in need](https://tilde.wufoo.com/forms/emberconf-2019-scholarships/)
+* [People of Color (POC) breakfast, registration add-on](https://emberconf.com/register.html)
+* [Women Helping Women luncheon, registration add-on](https://emberconf.com/register.html)
+* [Bring Your Kids to EmberConf](https://tilde.wufoo.com/forms/xjkro7b1nzxczy/)
 
 ---
 
@@ -129,4 +143,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Robert Wagner, and the Learning Team
+Chris Ng, Robert Wagner, Amy Lam, and the Learning Team
