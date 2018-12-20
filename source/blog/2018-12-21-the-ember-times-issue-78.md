@@ -72,8 +72,7 @@ The program has been announced and is looking really great: so many new faces, a
 
 We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.com/inclusiveness-at-emberconf.html) this year. In an industry lacking attendee and speaker diversity, EmberConf strives to be an exception. Highlights of this year's efforts include:
  
- <!--alex ignore gals-men-->
- <!--alex ignore kids-->
+ <!--alex ignore gals-men women kids-->
 * [Scholarships for students and those in need](https://tilde.wufoo.com/forms/emberconf-2019-scholarships/)
 * [People of Color (POC) breakfast, registration add-on](https://emberconf.com/register.html)
 * [Women Helping Women luncheon, registration add-on](https://emberconf.com/register.html)
