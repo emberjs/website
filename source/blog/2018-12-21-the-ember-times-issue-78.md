@@ -70,9 +70,9 @@ Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pul
 
 The program has been announced and is looking really great: so many new faces, and a bunch of familiar old ones! Be sure to check out the [full schedule](https://emberconf.com/schedule.html) for all the details. 
 
+ <!--alex ignore gals-men women kids-->
 We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.com/inclusiveness-at-emberconf.html) this year. In an industry lacking attendee and speaker diversity, EmberConf strives to be an exception. Highlights of this year's efforts include:
  
- <!--alex ignore gals-men women kids-->
 * [Scholarships for students and those in need](https://tilde.wufoo.com/forms/emberconf-2019-scholarships/)
 * [People of Color (POC) breakfast, registration add-on](https://emberconf.com/register.html)
 * [Women Helping Women luncheon, registration add-on](https://emberconf.com/register.html)
@@ -82,7 +82,7 @@ We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.
 
 ## [New RFC: Render Element Modifiers 🔨](https://github.com/emberjs/rfcs/pull/415)
  
- <!--alex ignore hooks-->
+<!--alex ignore hooks-->
 A new [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is out by [@pzuraq](https://github.com/pzuraq) and it’s quite amazing. It proposes adding two new generic element modifiers, `{{did-render}}` and `{{will-destroy}}`, which users can use to run code during the most common phases of any element's lifecycle. If you’ve ever used any of the component hooks such as `didInsertElement` or `didRender`, this will most likely be quite handy for you, since we can focus on the setup and teardown code without worrying about the overall lifecycle.
 
 The [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is very detailed and has a lot of helpful code examples. Remember to leave your thoughts as a comment.
