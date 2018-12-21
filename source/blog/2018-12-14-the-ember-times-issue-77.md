@@ -8,11 +8,11 @@ responsive: true
 
 Salut Emberistas! 🐹
 
-This week boolean component arguments 0️⃣1️⃣ are in for an RFC, learn more about component patterns 📚🧐, Ember 3.6 released 🚀, and the EmberConf speakers have been announced! 👏
+This week boolean component arguments 👻 are in for an RFC, learn more about component patterns 📚🧐, Ember 3.6 released 🚀, and the EmberConf speakers have been announced! 👏
 
 ---
 
-## [Boolean Dreams Come True 0️⃣☁️1️⃣](https://github.com/emberjs/rfcs/pull/407)
+## [Boolean Dreams Come True ☁️](https://github.com/emberjs/rfcs/pull/407)
 
 Ever wanted to pass **boolean arguments** to your **components** _just_ like you would pass boolean attributes - like checked or readonly - to an HTML element?
 
