@@ -54,6 +54,7 @@ Glimmer components aim to eliminate confusion with classic components, by aligni
 **Immutable Arguments** for the `this.args` object, as mentioned above, which will normalize the way the data flows through the app. This will also promote the usage of the `{{@arg}}` syntax – which refers directly to the arguments passed into the invocation of the component – when appropriate since it is more predictable in nature.
 
 <!--alex ignore nuts-->
+<!--alex ignore hooks-->
  **Minimal Classes** where Glimmer components won’t have any element/DOM based properties, hooks, event handler functions (which are provided instead by element modifiers) in order to reduce the mental model and enable users to be productive out of the box.
 
 Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pull/416).
@@ -79,7 +80,7 @@ We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.
 * [Bring Your Kids to EmberConf](https://tilde.wufoo.com/forms/xjkro7b1nzxczy/)
 
 ---
-
+<!--alex ignore hooks-->
 ## [New RFC: Render Element Modifiers 🔨](https://github.com/emberjs/rfcs/pull/415)
 A new [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is out by [pzuraq](https://github.com/pzuraq) and it’s quite amazing. It proposes adding two new generic element modifiers, `{{did-render}}` and `{{will-destroy}}`, which users can use to run code during the most common phases of any element's lifecycle. If you’ve ever used any of the component hooks such as `didInsertElement` or `didRender ` this will most likely be quite handy for you since we can focus on the setup and teardown code without worrying about the overall lifecycle.
 
