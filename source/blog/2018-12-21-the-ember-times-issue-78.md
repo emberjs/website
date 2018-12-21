@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 78
-author: Chris Ng, Robert Wagner, Amy Lam, Kenneth Larsen
+author: Chris Ng, Robert Wagner, Amy Lam, Ryan Mark, Jessica Jordan, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
@@ -79,11 +79,21 @@ We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.
 * [Bring Your Kids to EmberConf](https://tilde.wufoo.com/forms/xjkro7b1nzxczy/)
 
 ---
+
 <!--alex ignore hooks-->
 ## [New RFC: Render Element Modifiers 🔨](https://github.com/emberjs/rfcs/pull/415)
 A new [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is out by [pzuraq](https://github.com/pzuraq) and it’s quite amazing. It proposes adding two new generic element modifiers, `{{did-render}}` and `{{will-destroy}}`, which users can use to run code during the most common phases of any element's lifecycle. If you’ve ever used any of the component hooks such as `didInsertElement` or `didRender ` this will most likely be quite handy for you since we can focus on the setup and teardown code without worrying about the overall lifecycle.
 
 The [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is very detailed and has a lot of helpful code examples. Remember to leave your thoughts as a comment.
+
+---
+
+## [The Ember Mentorship Program 👨‍🎓👩‍🎓](https://www.emberjs.com/blog/2018/12/17/mentorship-program.html)
+
+This week the new **Ember Mentorship Program** [has been officially announced](https://www.emberjs.com/blog/2018/12/17/mentorship-program.html)!
+It aims to guide the next wave of Ember developers of all experience levels into the community. By making developers succeed in [public speaking](https://emberconf.com/mentorship-program.html#evangelism), finding their space [in a supportive peer group](https://emberconf.com/mentorship-program.html#women-helping-women) or [leveling up their engineering skills](https://emberconf.com/mentorship-program.html#general-mentorship) the program is meant **just for you**!
+
+Learn all about [the Ember Mentorship Program and join the community](https://emberconf.com/mentorship-program.html)!
 
 ---
 
@@ -115,7 +125,7 @@ The [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/t
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/kratiahuja" target="gh-user">@kratiahuja</a>, <a href="https://github.com/sdhull" target="gh-user">@sdhull</a>, <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/smfoote" target="gh-user">@smfoote</a>, <a href="https://github.com/sonic1981" target="gh-user">@sonic1981</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/hakilebara" target="gh-user">@hakilebara</a>, <a href="https://github.com/jacobq" target="gh-user">@jacobq</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/jeffdaley" target="gh-user">@jeffdaley</a>, <a href="https://github.com/wifelette" target="gh-user">@wifelette</a>, <a href="https://github.com/Gaurav0" target="gh-user">@Gaurav0</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/scalvert" target="gh-user">@scalvert</a>, <a href="https://github.com/knownasilya" target="gh-user">@knownasilya</a>, <a href="https://github.com/kellyselden" target="gh-user">@kellyselden</a> and <a href="https://github.com/dcyriller" target="gh-user">@dcyriller</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -145,4 +155,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Robert Wagner, Amy Lam, Kenneth Larsen, and the Learning Team
+Chris Ng, Robert Wagner, Amy Lam, Ryan Mark, Jessica Jordan, Kenneth Larsen and the Learning Team
