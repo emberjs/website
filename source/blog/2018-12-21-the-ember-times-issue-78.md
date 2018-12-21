@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 78
-author: Chris Ng, Robert Wagner, Amy Lam
+author: Chris Ng, Robert Wagner, Amy Lam, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 مرحبا Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>Find out what's new in Ember Inspector and Extensible Ember Inspector 👨‍💻, read about the Glimmer Components RFC ✨, register for EmberConf 2019 📆, ...!
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>Find out what's new in Ember Inspector and Extensible Ember Inspector 👨‍💻, read about the Glimmer Components RFC ✨, register for EmberConf 2019 📆, New RFC on Render Element Modifiers 🔨...!
 
 ---
 
@@ -80,8 +80,10 @@ We're particularly excited about [Inclusiveness at EmberConf](https://emberconf.
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New RFC: Render Element Modifiers 🔨](https://github.com/emberjs/rfcs/pull/415)
+A new [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is out by [pzuraq](https://github.com/pzuraq) and it’s quite amazing. It proposes adding two new generic element modifiers, `{{did-render}}` and `{{will-destroy}}`, which users can use to run code during the most common phases of any element's lifecycle. If you’ve ever used any of the component hooks such as `didInsertElement` or `didRender ` this will most likely be quite handy for you since we can focus on the setup and teardown code without worrying about the overall lifecycle.
 
+The [RFC](https://github.com/pzuraq/emberjs-rfcs/blob/render-element-modifiers/text/0000-render-element-modifiers.md) is very detailed and has a lot of helpful code examples. Remember to leave your thoughts as a comment.
 
 ---
 
@@ -143,4 +145,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Robert Wagner, Amy Lam, and the Learning Team
+Chris Ng, Robert Wagner, Amy Lam, Kenneth Larsen, and the Learning Team
