@@ -318,3 +318,11 @@
   image: cmanson.jpg
   teams:
     - learning
+- name: Kenneth Larsen
+  first: Kenneth
+  last: Larsen
+  github: https://github.com/kennethlarsen
+  twitter: https://twitter.com/kennethlarsen
+  image: klarsen.jpg
+  teams:
+    - learning
