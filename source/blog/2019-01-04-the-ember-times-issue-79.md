@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 79
 author: Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/04-the-ember-times-issue-79.html"
 responsive: true
 ---
