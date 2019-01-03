@@ -74,7 +74,7 @@ The plugin [ember-cli-babel](https://github.com/babel/ember-cli-babel) uses [Bab
 
 With the 7.3.0 beta release, the `includeExternalHelpers` option is now available. This option controls deduplicating the default Babel helper functions by putting them in a shared module and lowering the payload size.
 
-To read more on the includeExternalHelpers check out the [docs](https://github.com/babel/ember-cli-babel/#external-helpers)!
+To read more on the `includeExternalHelpers` check out the [docs](https://github.com/babel/ember-cli-babel/#external-helpers)!
 
 ---
 
