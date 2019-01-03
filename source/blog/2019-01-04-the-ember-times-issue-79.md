@@ -55,7 +55,11 @@ A **new RFC** proposes the [deprecation of these abundant properties](https://gi
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [API Search Performance](#api-search-performance)
+
+<img class="float-left small transparent padded" alt="Algolia search improvements" src="/images/blog/emberjstimes/algolia-search-performance-improvements.png" />
+
+Our friends are Algolia have enabled us to improve API docs search performance by as high as 285% for some countries in Europe! The map shows data centers where the API docs are currently stored and (on the right) the performance improvement for the top searching countries.
 
 
 ---
