@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 78
 author: Chris Ng, Robert Wagner, Amy Lam, Ryan Mark, Jessica Jordan, Kenneth Larsen
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
+tags: Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2018/12/21-the-ember-times-issue-78.html"
 responsive: true
 ---
