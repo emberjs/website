@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 79
-author: Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd
+author: Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/04-the-ember-times-issue-79.html"
 responsive: true
@@ -8,12 +8,7 @@ responsive: true
 
 Blein Vie Noa, Emberistas! 🐹🎆🎇
 
-The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com, **performance improvements** 🏎 for the API Docs **search** and a new beta release of **ember-cli-babel**!
-
----
-
-## [SECTION TITLE](#section-url)
-
+The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com, **performance improvements** 🏎 for the API Docs **search**, a new beta release of **ember-cli-babel** and an advanced testing **exam** for you!
 
 ---
 
@@ -79,22 +74,6 @@ Be sure to **read the full proposal** and leave your [thoughts in the comments b
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
 <p>This week we'd like to thank <a href="https://github.com/zeppelin" target="gh-user">@zeppelin</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/jamesgeorge007" target="gh-user">@jamesgeorge007</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/mschinis" target="gh-user">@mschinis</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a> and <a href="https://github.com/mixonic" target="gh-user">@mixonic</a>  for their contributions to Ember and related repositories! 💖</p>
@@ -127,4 +106,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis and the Learning Team
