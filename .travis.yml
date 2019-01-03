@@ -1,7 +1,9 @@
 language: ruby
 cache: bundler
+before_install:
+  - gem update --system
+  - gem install bundler
 script:
 - npm install alex --global
 - bash scripts/language-check.sh
 - bundle exec middleman build
-
