@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 79
-author: Jessica Jordan, the crowd
+author: Jessica Jordan, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2018
 alias : "blog/2019/01/04-the-ember-times-issue-79.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 Blein Vie Noa, Emberistas! 🐹🎆🎇
 
-The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have ...
+The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com...
 
 ---
 
@@ -17,8 +17,12 @@ The new year starts off with loads of **new RFCs**! Read more about **extending*
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Website Redesign 🎨](https://github.com/emberjs/rfcs/pull/425)
+The official Ember website is due for a new look and feel. That is why a [new RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md) proposes a **completely new look** 💅 for emberjs.com. A side effect of not having updated the look and feel of the website for some years is that for people who aren’t involved in the day-to-day of Ember development, it’s **easy to miss just how well the framework has kept up over the years**. 
 
+The redesign aims to **modernize, update and improve all things website** so that the impression given to the general public matches reality.
+
+There’s already a good discussion going on in the [RFC comment section](https://github.com/emberjs/rfcs/pull/425), and we would love to hear your thoughts as well.
 
 ---
 
@@ -114,4 +118,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, the crowd and the Learning Team
+Jessica Jordan, Kenneth Larsen the crowd and the Learning Team
