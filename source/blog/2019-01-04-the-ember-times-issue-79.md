@@ -8,7 +8,7 @@ responsive: true
 
 Blein Vie Noa, Emberistas! 🐹🎆🎇
 
-The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com! And a new beta release of **ember-cli-babel**!
+The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com, **performance improvements** 🏎 for the API Docs **search** and a new beta release of **ember-cli-babel**!
 
 ---
 
@@ -18,21 +18,11 @@ The new year starts off with loads of **new RFCs**! Read more about **extending*
 ---
 
 ## [Website Redesign 🎨](https://github.com/emberjs/rfcs/pull/425)
-The official Ember website is due for a new look and feel. That is why a [new RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md) proposes a **completely new look** 💅 for emberjs.com. A side effect of not having updated the look and feel of the website for some years is that for people who aren’t involved in the day-to-day of Ember development, it’s **easy to miss just how well the framework has kept up over the years**. 
+The official Ember website is due for a new look and feel. That is why a [new RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md) proposes a **completely new look** 💅 for emberjs.com. A side effect of not having updated the look and feel of the website for some years is that for people who aren’t involved in the day-to-day of Ember development, it’s **easy to miss just how well the framework has kept up over the years**.
 
  The redesign aims to **modernize, update and improve all the things on the website** so that the impression given to the general public matches reality.
 
 There’s already a good discussion going on in the [RFC comment section](https://github.com/emberjs/rfcs/pull/425), and we would love to hear your thoughts as well.
-
----
-
-## [Ember Inspector (Extended)](https://github.com/emberjs/rfcs/pull/417)
-
-The [**Ember Inspector**](https://guides.emberjs.com/release/ember-inspector/) is _the_ dev tool for Ember developers debugging their apps. But how much cooler would it be, if Ember addons would have a way to extend the Inspector's feature set with their own tooling?
-A new [RFC (Request for Comments) suggests to make the Ember Inspector extensible](https://github.com/thorsteinsson/rfcs/blob/extensible-inspector/text/0000-extensible-inspector.md) in such a way and could use community feedback!
-
-Leave your thoughts and suggestions about an extensible Ember Inspector [below the original proposal](https://github.com/emberjs/rfcs/pull/417)!
-
 
 ---
 
@@ -61,7 +51,7 @@ A **new RFC** proposes the [deprecation of these abundant properties](https://gi
 
 The integration with our search provider, [Algolia](https://www.algolia.com/) that powers both [Ember Guides](https://github.com/ember-learn/guides-app) and [Ember API Docs](https://github.com/ember-learn/ember-api-docs) has now become even more performant!
 
-Our friends are Algolia have enabled us to improve API docs search performance by as high as 285% for some countries in Europe! The map shows data centers where the API docs are currently stored and (on the right) the performance improvement for the top searching countries.
+The work from our friends at Algolia unlocked a performance boost of the API docs search by as high as 285% for some countries in Europe! The map shows data centers where the API docs are currently stored and (on the right) the performance improvement for the top searching countries.
 
 
 ---
@@ -131,4 +121,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Kenneth Larsen the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd and the Learning Team
