@@ -55,9 +55,11 @@ A **new RFC** proposes the [deprecation of these abundant properties](https://gi
 
 ---
 
-## [API Search Performance](#api-search-performance)
+## [API Search Performance](https://twitter.com/mschinis/status/1080923571109724162)
 
 <img class="float-left small transparent padded" alt="Algolia search improvements" src="/images/blog/emberjstimes/algolia-search-performance-improvements.png" />
+
+The integration with our search provider, [Algolia](https://www.algolia.com/) that powers both [Ember Guides](https://github.com/ember-learn/guides-app) and [Ember API Docs](https://github.com/ember-learn/ember-api-docs) has now become even more performant!
 
 Our friends are Algolia have enabled us to improve API docs search performance by as high as 285% for some countries in Europe! The map shows data centers where the API docs are currently stored and (on the right) the performance improvement for the top searching countries.
 
