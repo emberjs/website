@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 79
-author: Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd
+author: Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/04-the-ember-times-issue-79.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 Blein Vie Noa, Emberistas! 🐹🎆🎇
 
-The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com...
+The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com! And a new beta release of **ember-cli-babel**!
 
 ---
 
@@ -66,8 +66,15 @@ Our friends are Algolia have enabled us to improve API docs search performance b
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New Beta Release for ember-cli-babel 🎉](https://twitter.com/pzuraq/status/1075856318798344192)
 
+[@pzuraq](https://github.com/pzuraq) recently announced the release of [ember-cli-babel@v7.3.0-beta.1](https://github.com/babel/ember-cli-babel/tree/v7.3.0-beta.1)!
+
+The plugin [ember-cli-babel](https://github.com/babel/ember-cli-babel) uses [Babel](https://github.com/babel) and [babel-preset-env](https://github.com/babel/babel-preset-env) to allow us to use ES6 syntax within our Ember CLI project.
+
+With the 7.3.0 beta release, the `includeExternalHelpers` option is now available. This option controls deduplicating the default Babel helper functions by putting them in a shared module and lowering the payload size.
+
+To read more on the `includeExternalHelpers` check out the [docs](https://github.com/babel/ember-cli-babel/#external-helpers)!
 
 ---
 
@@ -124,4 +131,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Kenneth Larsen the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Kenneth Larsen the crowd and the Learning Team
