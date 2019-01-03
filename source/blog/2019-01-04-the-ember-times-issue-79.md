@@ -20,7 +20,7 @@ The new year starts off with loads of **new RFCs**! Read more about **extending*
 ## [Website Redesign 🎨](https://github.com/emberjs/rfcs/pull/425)
 The official Ember website is due for a new look and feel. That is why a [new RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md) proposes a **completely new look** 💅 for emberjs.com. A side effect of not having updated the look and feel of the website for some years is that for people who aren’t involved in the day-to-day of Ember development, it’s **easy to miss just how well the framework has kept up over the years**. 
 
-The redesign aims to **modernize, update and improve all things website** so that the impression given to the general public matches reality.
+ The redesign aims to **modernize, update and improve all the things on the website** so that the impression given to the general public matches reality.
 
 There’s already a good discussion going on in the [RFC comment section](https://github.com/emberjs/rfcs/pull/425), and we would love to hear your thoughts as well.
 
