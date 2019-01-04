@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 79
-author: Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis, the crowd
+author: Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/04-the-ember-times-issue-79.html"
 responsive: true
@@ -8,31 +8,16 @@ responsive: true
 
 Blein Vie Noa, Emberistas! 🐹🎆🎇
 
-The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com! And a new beta release of **ember-cli-babel**!
-
----
-
-## [SECTION TITLE](#section-url)
-
+The new year starts off with loads of **new RFCs**! Read more about suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** 🈸! We also have a new RFC for a **brand new look** of emberjs.com, **performance improvements** 🏎 for the API Docs **search**, a new beta release of **ember-cli-babel** and an advanced testing **exam** for you!
 
 ---
 
 ## [Website Redesign 🎨](https://github.com/emberjs/rfcs/pull/425)
-The official Ember website is due for a new look and feel. That is why a [new RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md) proposes a **completely new look** 💅 for emberjs.com. A side effect of not having updated the look and feel of the website for some years is that for people who aren’t involved in the day-to-day of Ember development, it’s **easy to miss just how well the framework has kept up over the years**. 
+The official Ember website is due for a new look and feel. That is why a [new RFC](https://github.com/wifelette/rfcs/blob/master/text/0425-website-redesign.md) proposes a **completely new look** 💅 for emberjs.com. A side effect of not having updated the look and feel of the website for some years is that for people who aren’t involved in the day-to-day of Ember development, it’s **easy to miss just how well the framework has kept up over the years**.
 
  The redesign aims to **modernize, update and improve all the things on the website** so that the impression given to the general public matches reality.
 
 There’s already a good discussion going on in the [RFC comment section](https://github.com/emberjs/rfcs/pull/425), and we would love to hear your thoughts as well.
-
----
-
-## [Ember Inspector (Extended)](https://github.com/emberjs/rfcs/pull/417)
-
-The [**Ember Inspector**](https://guides.emberjs.com/release/ember-inspector/) is _the_ dev tool for Ember developers debugging their apps. But how much cooler would it be, if Ember addons would have a way to extend the Inspector's feature set with their own tooling?
-A new [RFC (Request for Comments) suggests to make the Ember Inspector extensible](https://github.com/thorsteinsson/rfcs/blob/extensible-inspector/text/0000-extensible-inspector.md) in such a way and could use community feedback!
-
-Leave your thoughts and suggestions about an extensible Ember Inspector [below the original proposal](https://github.com/emberjs/rfcs/pull/417)!
-
 
 ---
 
@@ -55,13 +40,13 @@ A **new RFC** proposes the [deprecation of these abundant properties](https://gi
 
 ---
 
-## [API Search Performance](https://twitter.com/mschinis/status/1080923571109724162)
+## [API Search Performance 🏎](https://twitter.com/mschinis/status/1080923571109724162)
 
 <img class="float-left small transparent padded" alt="Algolia search improvements" src="/images/blog/emberjstimes/algolia-search-performance-improvements.png" />
 
 The integration with our search provider, [Algolia](https://www.algolia.com/) that powers both [Ember Guides](https://github.com/ember-learn/guides-app) and [Ember API Docs](https://github.com/ember-learn/ember-api-docs) has now become even more performant!
 
-Our friends are Algolia have enabled us to improve API docs search performance by as high as 285% for some countries in Europe! The map shows data centers where the API docs are currently stored and (on the right) the performance improvement for the top searching countries.
+The work from our friends at Algolia unlocked a performance boost of the API docs search by as high as 285% for some countries in Europe! The map shows data centers where the API docs are currently stored and (on the right) the performance improvement for the top searching countries.
 
 
 ---
@@ -78,30 +63,20 @@ To read more on the `includeExternalHelpers` check out the [docs](https://github
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Improving Testing One Partition at a Time 🍰](https://github.com/emberjs/rfcs/pull/426)
+
+**Ember's testing story** already makes testing incredibly approachable to developers, but what if it could bring even more to the table right from the start? Imagine being able to speed up your test suite with **parallel testing** or running tests in **randomized order** with a simple `ember test` command in your app.
+
+A new [RFC proposes an update to the testing default in Ember apps and addons](https://github.com/emberjs/rfcs/pull/426) by providing [ember-exam](https://github.com/ember-cli/ember-exam) - an Ember addon developers can already use for advanced testing strategies - built into Ember's testing setup.
+
+Be sure to **read the full proposal** and leave your [thoughts in the comments below](https://github.com/emberjs/rfcs/pull/426)!
 
 
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/zeppelin" target="gh-user">@zeppelin</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/jamesgeorge007" target="gh-user">@jamesgeorge007</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/mschinis" target="gh-user">@mschinis</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a> and <a href="https://github.com/mixonic" target="gh-user">@mixonic</a>  for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -131,4 +106,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Kenneth Larsen the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Kenneth Larsen, Michael Schinis and the Learning Team
