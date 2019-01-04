@@ -8,7 +8,7 @@ responsive: true
 
 Blein Vie Noa, Emberistas! 🐹🎆🎇
 
-The new year starts off with loads of **new RFCs**! Read more about **extending** the **Ember Inspector** 👓🐹, and suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** �! We also have a new RFC for a brand new look of emberjs.com, **performance improvements** 🏎 for the API Docs **search**, a new beta release of **ember-cli-babel** and an advanced testing **exam** for you!
+The new year starts off with loads of **new RFCs**! Read more about suggested **deprecations** of **Route render** methods and selected **ApplicationController properties** 🈸! We also have a new RFC for a **brand new look** of emberjs.com, **performance improvements** 🏎 for the API Docs **search**, a new beta release of **ember-cli-babel** and an advanced testing **exam** for you!
 
 ---
 
@@ -40,7 +40,7 @@ A **new RFC** proposes the [deprecation of these abundant properties](https://gi
 
 ---
 
-## [API Search Performance](https://twitter.com/mschinis/status/1080923571109724162)
+## [API Search Performance 🏎](https://twitter.com/mschinis/status/1080923571109724162)
 
 <img class="float-left small transparent padded" alt="Algolia search improvements" src="/images/blog/emberjstimes/algolia-search-performance-improvements.png" />
 
