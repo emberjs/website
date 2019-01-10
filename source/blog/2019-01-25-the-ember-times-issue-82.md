@@ -1,12 +1,12 @@
 ---
-title: The Ember Times - Issue No. XX
+title: The Ember Times - Issue No. 82
 author: the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
-alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2019/01/25-the-ember-times-issue-82.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+హలో Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
@@ -42,7 +42,16 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## ["I contribute to Ember" with Bek](#link-to-forum)
+
+ <div class="float-right padded portrait-frame"><img alt="Bek" title="Bek - Contributor to Ember" src="/images/blog/emberjstimes/bekzod.png" /></div>
+
+This week we'd like to highlight the work of community member **Bek**, also known as [@bekzod](https://github.com/bekzod).
+In an exclusive interview with the Ember Times they talk about their learnings as a **contributor** to the **Ember.js framework** and why contributions can have an impact on thousands of people.
+
+ You can read the full interview on [the Ember Forum](#link-to-forum).
+
+ <a class="ember-button ember-button--centered" href="#link-to-forum">Read more</a>
 
 
 ---
