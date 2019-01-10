@@ -26,7 +26,16 @@ As always, feel free to read the [RFC](https://github.com/NullVoxPopuli/rfcs/blo
 
 ---
 
-## [SECTION TITLE](#section-url)
+## ["I contribute to Ember" with Frédéric Soumaré](#link-to-forum)
+
+<div class="float-right padded portrait-frame"><img alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/blog/emberjstimes/hakilebara.png" /></div>
+
+This week we'd like to highlight the work of community member **Frédéric Soumaré**, also known as [@hakilebara](https://github.com/hakilebara).
+In an exclusive interview with the Ember Times he talks about his learnings as both an **Ember meetup organizer** and **contributor** to **Ember learning projects** and why showing up is key.
+
+You can read the full interview on [the Ember Forum](#link-to-forum).
+
+<a class="ember-button ember-button--centered" href="#link-to-forum">Read more</a>
 
 
 ---
