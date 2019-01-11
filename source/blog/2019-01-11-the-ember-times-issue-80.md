@@ -28,19 +28,6 @@ As always, feel free to read the [RFC](https://github.com/NullVoxPopuli/rfcs/blo
 
 ---
 
-## ["I contribute to Ember" with Frédéric Soumaré 🧠](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995)
-
-<div class="float-right padded portrait-frame"><img alt="Frédéric Soumaré - Portrait Picture" title="Frédéric Soumaré" src="/images/blog/emberjstimes/hakilebara.png" /></div>
-
-This week we'd like to highlight the work of community member **Frédéric Soumaré**, also known as [@hakilebara](https://github.com/hakilebara).
-In an exclusive interview with the Ember Times he talks about his learnings as both an **Ember meetup organizer** and **contributor** to **Ember learning projects** and why showing up is key.
-
-You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995).
-
-<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995">Read more</a>
-
----
-
 ## [State of Ember Video 📺](https://youtu.be/rPxOhSu-VOk)
 
 [@knownasilya](https://github.com/knownasilya) published a video that summarizes the [State of Ember](https://youtu.be/rPxOhSu-VOk) today. In his video, he highlights key themes that represent where Ember is at today for people who are not following too closely to developments or those who are new to Ember.
@@ -52,6 +39,19 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 [Ember CLI Create](https://github.com/gossi/ember-cli-create) is a tool that - similar to `ember new` - allows to create Ember apps and with an option to create Octane apps, too! However since not everything about Octane has been settled, such as [module unification](https://github.com/emberjs/ember.js/issues/16373), you may need to refactor this code later on.
 
 Check out the full video on [YouTube](https://youtu.be/rPxOhSu-VOk)!
+
+---
+
+## ["I contribute to Ember" with Frédéric Soumaré 🧠](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995)
+
+<div class="float-right padded portrait-frame"><img alt="Frédéric Soumaré - Portrait Picture" title="Frédéric Soumaré" src="/images/blog/emberjstimes/hakilebara.png" /></div>
+
+This week we'd like to highlight the work of community member **Frédéric Soumaré**, also known as [@hakilebara](https://github.com/hakilebara).
+In an exclusive interview with the Ember Times he talks about his learnings as both an **Ember meetup organizer** and **contributor** to **Ember learning projects** and why showing up is key.
+
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995).
+
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995">Read more</a>
 
 ---
 
