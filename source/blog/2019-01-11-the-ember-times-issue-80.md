@@ -16,8 +16,8 @@ This week you can read about the decorators RFC moving into FCP, ...
 
 
 ---
-
 ## [Decorators in FCP 🤓](https://github.com/emberjs/rfcs/pull/408)
+<!-- alex ignore period -->
 The [decorators RFC](https://github.com/NullVoxPopuli/rfcs/blob/decorators/text/0000-decorators.md) has been moved into **Final Comment Period (FCP)**. This means that if you have thoughts about decorators now is your chance to add your comment.
 
 The motivation for the decorators RFC is that native decorators bring a **more natural way of declaring computed properties** to native classes than the current computed macros.
