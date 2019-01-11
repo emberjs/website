@@ -50,7 +50,7 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 
 [Ember Octane](https://github.com/emberjs/rfcs/blob/26c4d83fb66568e1087a05818fb39a307ebf8da8/text/0000-roadmap-2018.md#ember-octane) is a new edition that brings a good amount of features from new layout for projects, glimmer components, angle bracket components, updating the guides to show the new programming model, a new website, a shift to move to decorators and more! Some of these have already landed and can be used today while others are still in progress. Check out what’s coming in the [Octane tracking issue](https://github.com/emberjs/ember.js/issues/17234).
 
-[Ember CLI Create](https://github.com/gossi/ember-cli-create) was also created similar to `ember new` that has options to create a new Octane app how it is now. However since not everything about Octane has been settled, such as [module unification](https://github.com/emberjs/ember.js/issues/16373), you may need to refactor this code later on.
+[Ember CLI Create](https://github.com/gossi/ember-cli-create) is a tool that - similar to `ember new` - allows to create Ember apps and with an option to create a new Octane app, too! However since not everything about Octane has been settled, such as [module unification](https://github.com/emberjs/ember.js/issues/16373), you may need to refactor this code later on.
 
 Check out the full video on [YouTube](https://youtu.be/rPxOhSu-VOk)!
 
