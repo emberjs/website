@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 80
-author: Kenneth Larsen, Jessica Jordan, Alon Bukai, the crowd
+author: Kenneth Larsen, Jessica Jordan, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/11-the-ember-times-issue-80.html"
 responsive: true
@@ -9,6 +9,8 @@ responsive: true
 Grüezi mitenand Emberistas! 🐹
 
 This week you can read about the decorators RFC moving into FCP, ...
+
+...and read our exclusive **interview** with community contributor **@hakilebara**!
 
 ---
 
@@ -28,7 +30,16 @@ As always, feel free to read the [RFC](https://github.com/NullVoxPopuli/rfcs/blo
 
 ---
 
-## [SECTION TITLE](#section-url)
+## ["I contribute to Ember" with Frédéric Soumaré](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995)
+
+<div class="float-right padded portrait-frame"><img alt="Frédéric Soumaré - Portrait Picture" title="Frédéric Soumaré" src="/images/blog/emberjstimes/hakilebara.png" /></div>
+
+This week we'd like to highlight the work of community member **Frédéric Soumaré**, also known as [@hakilebara](https://github.com/hakilebara).
+In an exclusive interview with the Ember Times he talks about his learnings as both an **Ember meetup organizer** and **contributor** to **Ember learning projects** and why showing up is key.
+
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995).
+
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995">Read more</a>
 
 
 ---
@@ -96,4 +107,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen, Jessica Jordan, Alon Bukai, the crowd and the Learning Team
+Kenneth Larsen, Jessica Jordan, Alon Bukai and the Learning Team
