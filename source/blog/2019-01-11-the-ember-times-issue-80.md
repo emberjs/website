@@ -13,7 +13,7 @@ This week you can read about the 🦄 *magical gifts* 🎁  of **DecEmber**❄ a
 ---
 
 ## [DecEmber ❄ is over? Collect your gift! 🎁](https://airtable.com/shrm9o5W89wsAa1Tq)
-[DecEmber](https://www.emberjs.com/blog/2018/11/29/december-event.html) has wrapped up and it seems to have been a big hit! There were many contributions to `ember-learning` repos and it is all thanks to the awesome Ember community!
+[DecEmber](https://www.emberjs.com/blog/2018/11/29/december-event.html) has wrapped up and it seems to have been a big hit! There were many contributions to `ember-learn` repos and it is all thanks to the awesome Ember community!
 
 Did you participate in **DecEmber**? We'd like to send you a thank you gift! Just [fill out the form](https://airtable.com/shrm9o5W89wsAa1Tq) and enjoy!
 
