@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 80
-author: Kenneth Larsen, Jessica Jordan,
+author: Kenneth Larsen, Jessica Jordan, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/11-the-ember-times-issue-80.html"
 responsive: true
@@ -8,14 +8,16 @@ responsive: true
 
 Grüezi mitenand Emberistas! 🐹
 
-This week you can read about the decorators RFC moving into FCP, ...
+This week you can read about the 🦄 *magical gifts* 🎁  of **DecEmber**❄, the decorators RFC moving into FCP 🎉, ...
 
-...and read our exclusive **interview** with community contributor **@hakilebara**!
+...and read our exclusive **interview** with community contributor **@hakilebara** 🧠!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [DecEmber ❄ is over? Collect your gift! 🎁](https://airtable.com/shrm9o5W89wsAa1Tq)
+[DecEmber](https://www.emberjs.com/blog/2018/11/29/december-event.html) has wrapped up and it seems to have been a big hit! There were many contributions to `ember-learning` repos and it is all thanks to the awesome Ember community! 
 
+Did you participate in **DecEmber**? We'd like to send you a thank you gift! Just [fill out the form](https://airtable.com/shrm9o5W89wsAa1Tq) and enjoy!
 
 ---
 ## [Decorators in FCP 🤓](https://github.com/emberjs/rfcs/pull/408)
@@ -28,7 +30,7 @@ As always, feel free to read the [RFC](https://github.com/NullVoxPopuli/rfcs/blo
 
 ---
 
-## ["I contribute to Ember" with Frédéric Soumaré](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995)
+## ["I contribute to Ember" with Frédéric Soumaré 🧠](https://discuss.emberjs.com/t/i-contribute-to-ember-with-frederic-soumare/15995)
 
 <div class="float-right padded portrait-frame"><img alt="Frédéric Soumaré - Portrait Picture" title="Frédéric Soumaré" src="/images/blog/emberjstimes/hakilebara.png" /></div>
 
@@ -105,4 +107,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen, Jessica Jordan, and the Learning Team
+Kenneth Larsen, Jessica Jordan, Alon Bukai and the Learning Team
