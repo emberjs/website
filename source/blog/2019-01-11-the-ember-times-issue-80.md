@@ -17,7 +17,7 @@ This week you can read about the decorators RFC moving into FCP, ...
 ## [DecEmber is over? Collect your gift!](https://airtable.com/shrm9o5W89wsAa1Tq)
 [DecEmber](https://www.emberjs.com/blog/2018/11/29/december-event.html) has wrapped up and it seems to have been a big hit! There were many contributions to `ember-learning` repos and it is all thanks to the awesome Ember community! 
 
-Did you participate in **DecEmber**? You are eligable for a nice gift! Just fill out the form and enjoy!
+Did you participate in **DecEmber**? You are eligible for a nice gift! Just [fill out the form](https://airtable.com/shrm9o5W89wsAa1Tq) and enjoy!
 
 ---
 ## [Decorators in FCP 🤓](https://github.com/emberjs/rfcs/pull/408)
