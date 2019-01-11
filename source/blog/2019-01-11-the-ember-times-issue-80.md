@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 80
-author: the crowd
+author: Jessica Jordan, Alon Bukai, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/11-the-ember-times-issue-80.html"
 responsive: true
@@ -12,8 +12,10 @@ Grüezi mitenand Emberistas! 🐹
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [DecEmber is over? Collect your gift!](https://airtable.com/shrm9o5W89wsAa1Tq)
+[DecEmber](https://www.emberjs.com/blog/2018/11/29/december-event.html) has wrapped up and it seems to have bit a big hit! There were many contributions to `ember-learning` repos and it is all thanks to the awesome Ember community! 
 
+Did you participate in **DecEmber**? You are eligable for a nice gift! Just fill out the form and enjoy!
 
 ---
 
@@ -90,4 +92,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Jessica Jordan, Alon Bukai, the crowd and the Learning Team
