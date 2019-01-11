@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 80
-author: the crowd
+author: Kenneth Larsen,
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/11-the-ember-times-issue-80.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 Grüezi mitenand Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week you can read about the decorators RFC moving into FCP, ...
 
 ---
 
@@ -16,9 +16,13 @@ Grüezi mitenand Emberistas! 🐹
 
 
 ---
+## [Decorators in FCP 🤓](https://github.com/emberjs/rfcs/pull/408)
+<!-- alex ignore period -->
+The [decorators RFC](https://github.com/NullVoxPopuli/rfcs/blob/decorators/text/0000-decorators.md) has been moved into **Final Comment Period (FCP)**. This means that if you have thoughts about decorators now is your chance to add your comment.
 
-## [SECTION TITLE](#section-url)
+The motivation for the decorators RFC is that native decorators bring a **more natural way of declaring computed properties** to native classes than the current computed macros.
 
+As always, feel free to read the [RFC](https://github.com/NullVoxPopuli/rfcs/blob/decorators/text/0000-decorators.md) and share your thoughts as a comment.
 
 ---
 
@@ -90,4 +94,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Kenneth Larsen, and the Learning Team
