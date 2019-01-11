@@ -8,16 +8,16 @@ responsive: true
 
 Grüezi mitenand Emberistas! 🐹
 
-This week you can read about the 🦄*magical gifts*🎁  of **DecEmber**❄, the decorators RFC moving into FCP 🎉, ...
+This week you can read about the 🦄 *magical gifts* 🎁  of **DecEmber**❄, the decorators RFC moving into FCP 🎉, ...
 
 ...and read our exclusive **interview** with community contributor **@hakilebara** 🧠!
 
 ---
 
-## [DecEmber❄ is over? Collect your gift!🎁](https://airtable.com/shrm9o5W89wsAa1Tq)
+## [DecEmber ❄ is over? Collect your gift! 🎁](https://airtable.com/shrm9o5W89wsAa1Tq)
 [DecEmber](https://www.emberjs.com/blog/2018/11/29/december-event.html) has wrapped up and it seems to have been a big hit! There were many contributions to `ember-learning` repos and it is all thanks to the awesome Ember community! 
 
-Did you participate in **DecEmber**? You are eligible for a nice gift! Just [fill out the form](https://airtable.com/shrm9o5W89wsAa1Tq) and enjoy!
+Did you participate in **DecEmber**? We'd like to send you a thank you gift! Just [fill out the form](https://airtable.com/shrm9o5W89wsAa1Tq) and enjoy!
 
 ---
 ## [Decorators in FCP 🤓](https://github.com/emberjs/rfcs/pull/408)
