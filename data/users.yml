@@ -1155,6 +1155,10 @@
   image: anvyl.png
   alt: Anvyl
   use: "Ember is powering Anvyl's smart supply chain solution to help consumer brands source higher quality, lower cost suppliers, and manage production with more visibility."
+- url: https://www.innovu.com
+  image: innovu.png
+  alt: Innovu
+  use: "Innovu's Lens product suite is built with Ember.js."
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
