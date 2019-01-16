@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 81
-author: the crowd
+author: Ryan Mark, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/18-the-ember-times-issue-81.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week we have an exclusive contributor interview with **@serenaf** for you 🎙,
 
 ---
 
@@ -42,16 +42,16 @@ responsive: true
 
 ---
 
-## ["I contribute to Ember" with Serena Fritsch](#link-to-forum)
+## ["I contribute to Ember" with Serena Fritsch](https://discuss.emberjs.com/t/i-contribute-to-ember-with-serena-fritsch/16037)
 
 <div class="float-right padded portrait-frame"><img alt="Serena Fritsch" title="Serena Fritsch - Contributor to Ember" src="/images/blog/emberjstimes/serenaf.jpeg" /></div>
 
 This week we'd like to highlight the work of community member **Serena Fritsch**, also known as [@serenaf](https://github.com/serenaf).
 In an exclusive interview with the Ember Times she talks about her learnings contributing to the **Ember Deprecations App** and why she believes that every contribution counts.
 
-You can read the full interview on [the Ember Forum](#link-to-forum).
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-serena-fritsch/16037).
 
-<a class="ember-button ember-button--centered" href="#link-to-forum">Read more</a>
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-serena-fritsch/16037">Read more</a>
 
 ---
 
@@ -98,4 +98,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Ryan Mark, Jessica Jordan, the crowd and the Learning Team
