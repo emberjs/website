@@ -35,12 +35,12 @@
     </div>
   </article>
 
-  <% if current_article.date > Date.new(2018,4,10) %>
+  <% if current_article.date > Date.new(2019,1,1) %>
     <div id="discourse-comments"></div>
     <script>
       DiscourseEmbed = {
         discourseUrl: 'https://discuss.emberjs.com/',
-        discourseEmbedUrl: 'https://ember-website-staging-pr-3623.herokuapp.com<%= current_page.url %>'
+        discourseEmbedUrl: 'https://emberjs.com<%= current_page.url %>'
       };
       (function() {
         var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
