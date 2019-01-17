@@ -9,12 +9,15 @@ responsive: true
 Salam Emberistas! 🐹
 
 This week we have an exclusive contributor interview with **@serenaf** for you 🎙,
-read and comment on a new RFC on Restructuring the Guides Table of Contents 🔖,
+read and comment on a new RFC on Restructuring the Guides Table of Contents 🔖, news from the latest **3.7 release** of **Ember**,
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember 3.7 is Out! 🎉](https://www.emberjs.com/blog/2019/01/07/ember-3-7.html)
 
+In the past week **version 3.7** of Ember.js, Ember CLI and Ember Data has been released. The new release comes with lots of **important bugfixes** for Ember and new features for Ember CLI, including a new **compatibility table** for addon authors to be used in their projects' READMEs.
+
+Read all about the new release and how you can **upgrade** your app [in the official release blog post](https://www.emberjs.com/blog/2019/01/07/ember-3-7.html).
 
 ---
 
