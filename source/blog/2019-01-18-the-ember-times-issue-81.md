@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 81
-author: Ryan Mark, Jessica Jordan, the crowd
+author: Chris Ng, Ryan Mark, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/18-the-ember-times-issue-81.html"
 responsive: true
@@ -9,6 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 This week we have an exclusive contributor interview with **@serenaf** for you 🎙,
+read and comment on a new RFC on Restructuring the Guides Table of Contents 🔖,
 
 ---
 
@@ -55,8 +56,13 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [RFC: Restructuring the Guides Table of Contents 🔖](https://github.com/emberjs/rfcs/pull/431)
 
+The [Ember.js Guides](https://guides.emberjs.com/release/) is getting a makeover to improve the learning story of Ember and to modernize concepts that were once new, when the Guides was originally written. [@jenweber](https://github.com/jenweber) put up an RFC on [Restructuring the Guides Table of Contents](https://github.com/emberjs/rfcs/pull/431) in order to achieve this goal.
+
+This RFC aims not to write new content but to present existing content in a different way without breaking any existing URLs. It does this by revamping **topic naming** – or changing topic names to general web development concepts rather than Ember-specific jargon – and **logic ordering and grouping** – where it breaks up content between requiring prior knowledge of Ember concepts or not. These changes aims to promote an easier learning curve for new and existing users of the framework by leveraging the user’s existing knowledge.
+
+Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pull/431)!
 
 ---
 
@@ -98,4 +104,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Ryan Mark, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Ryan Mark, Jessica Jordan, the crowd and the Learning Team
