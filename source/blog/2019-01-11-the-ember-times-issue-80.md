@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 80
 author: Chris Ng, Kenneth Larsen, Jessica Jordan, Alon Bukai, Ryan Mark, Amy Lam
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
+tags: Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/11-the-ember-times-issue-80.html"
 responsive: true
 ---
