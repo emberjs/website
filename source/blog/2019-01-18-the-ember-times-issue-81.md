@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 81
-author: Chris Ng, Ryan Mark, Jessica Jordan, the crowd
+author: Chris Ng, Ryan Mark, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/18-the-ember-times-issue-81.html"
 responsive: true
@@ -9,40 +9,15 @@ responsive: true
 Salam Emberistas! 🐹
 
 This week we have an exclusive contributor interview with **@serenaf** for you 🎙,
-read and comment on a new RFC on Restructuring the Guides Table of Contents 🔖, news from the latest **3.7 release** of **Ember**,
+read and comment on a new RFC on **Restructuring** the **Guides** Table of Contents 🔖 and news from the latest **3.7 release** of **Ember**! 🚀
 
 ---
 
 ## [Ember 3.7 is Out! 🎉](https://www.emberjs.com/blog/2019/01/07/ember-3-7.html)
 
-In the past week **version 3.7** of Ember.js, Ember CLI and Ember Data has been released. The new release comes with lots of **important bugfixes** for Ember and new features for Ember CLI, including a new **compatibility table** for addon authors to be used in their projects' READMEs.
+In the past week **version 3.7** of Ember.js, Ember CLI and Ember Data has been released. The new release comes with lots of **important bug fixes** for Ember and new features for Ember CLI, including a new **compatibility table** for addon authors to be used in their projects' READMEs.
 
 Read all about the new release and how you can **upgrade** your app [in the official release blog post](https://www.emberjs.com/blog/2019/01/07/ember-3-7.html).
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -61,19 +36,13 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 
 ## [RFC: Restructuring the Guides Table of Contents 🔖](https://github.com/emberjs/rfcs/pull/431)
 
-The [Ember.js Guides](https://guides.emberjs.com/release/) is getting a makeover to improve the learning story of Ember and to modernize concepts that were once new, when the Guides was originally written. [@jenweber](https://github.com/jenweber) put up an RFC on [Restructuring the Guides Table of Contents](https://github.com/emberjs/rfcs/pull/431) in order to achieve this goal.
+The [Ember.js Guides](https://guides.emberjs.com/release/) are getting a makeover to improve the learning story of Ember and to modernize concepts that were once new, when the Guides were originally written. [@jenweber](https://github.com/jenweber) put up an RFC (Request for Comments) on [Restructuring the Guides Table of Contents](https://github.com/emberjs/rfcs/pull/431) in order to achieve this goal.
 
-This RFC aims not to write new content but to present existing content in a different way without breaking any existing URLs. It does this by revamping **topic naming** – or changing topic names to general web development concepts rather than Ember-specific jargon – and **logic ordering and grouping** – where it breaks up content between requiring prior knowledge of Ember concepts or not. These changes aims to promote an easier learning curve for new and existing users of the framework by leveraging the user’s existing knowledge.
+This RFC aims not to write new content but to present existing content in a different way without breaking any existing URLs. It does this by revamping **topic naming** – or changing topic names to general web development concepts rather than Ember-specific jargon – and **logic ordering and grouping** – where it breaks up content between requiring prior knowledge of Ember concepts or not. These changes aim to promote an easier learning curve for new and existing users of the framework by leveraging the user’s existing knowledge.
 
 Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pull/431)!
 
 ---
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -107,4 +76,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Ryan Mark, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Ryan Mark, Jessica Jordan and the Learning Team
