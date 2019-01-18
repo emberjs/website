@@ -6,15 +6,18 @@ alias : "blog/2019/01/18-the-ember-times-issue-81.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Salam Emberistas! 🐹
 
 This week we have an exclusive contributor interview with **@serenaf** for you 🎙,
-read and comment on a new RFC on Restructuring the Guides Table of Contents 🔖,
+read and comment on a new RFC on Restructuring the Guides Table of Contents 🔖, news from the latest **3.7 release** of **Ember**,
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember 3.7 is Out! 🎉](https://www.emberjs.com/blog/2019/01/07/ember-3-7.html)
 
+In the past week **version 3.7** of Ember.js, Ember CLI and Ember Data has been released. The new release comes with lots of **important bugfixes** for Ember and new features for Ember CLI, including a new **compatibility table** for addon authors to be used in their projects' READMEs.
+
+Read all about the new release and how you can **upgrade** your app [in the official release blog post](https://www.emberjs.com/blog/2019/01/07/ember-3-7.html).
 
 ---
 
@@ -74,7 +77,7 @@ Read and comment on the [full RFC on GitHub](https://github.com/emberjs/rfcs/pul
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/bobisjan" target="gh-user">@bobisjan</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/jessica-jordan" target="gh-user">@jessica-jordan</a>, <a href="https://github.com/Charizard" target="gh-user">@Charizard</a>, <a href="https://github.com/efx" target="gh-user">@efx</a> and <a href="https://github.com/runspired" target="gh-user">@runspired</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
