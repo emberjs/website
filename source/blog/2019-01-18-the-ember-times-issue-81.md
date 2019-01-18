@@ -8,8 +8,8 @@ responsive: true
 
 Salam Emberistas! 🐹
 
-This week we have an exclusive contributor interview with **@serenaf** for you 🎙,
-read and comment on a new RFC on **Restructuring** the **Guides** Table of Contents 🔖 and news from the latest **3.7 release** of **Ember**! 🚀
+This week we have news from the latest **3.7 release** of **Ember** 🚀, an exclusive contributor interview with **@serenaf** 🎙,
+and a new RFC on **Restructuring** the **Guides** Table of Contents 🔖 for you!
 
 ---
 
@@ -34,9 +34,9 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 
 ---
 
-## [RFC: Restructuring the Guides Table of Contents 🔖](https://github.com/emberjs/rfcs/pull/431)
+## [RFC: Restructuring the Guides TOC 🔖](https://github.com/emberjs/rfcs/pull/431)
 
-The [Ember.js Guides](https://guides.emberjs.com/release/) are getting a makeover to improve the learning story of Ember and to modernize concepts that were once new, when the Guides were originally written. [@jenweber](https://github.com/jenweber) put up an RFC (Request for Comments) on [Restructuring the Guides Table of Contents](https://github.com/emberjs/rfcs/pull/431) in order to achieve this goal.
+The [Ember.js Guides](https://guides.emberjs.com/release/) are getting a makeover to improve the learning story of Ember and to modernize concepts that were once new, when the Guides were originally written. [@jenweber](https://github.com/jenweber) put up an RFC (Request for Comments) on [Restructuring the Guides Table of Contents (TOC)](https://github.com/emberjs/rfcs/pull/431) in order to achieve this goal.
 
 This RFC aims not to write new content but to present existing content in a different way without breaking any existing URLs. It does this by revamping **topic naming** – or changing topic names to general web development concepts rather than Ember-specific jargon – and **logic ordering and grouping** – where it breaks up content between requiring prior knowledge of Ember concepts or not. These changes aim to promote an easier learning curve for new and existing users of the framework by leveraging the user’s existing knowledge.
 
