@@ -30,7 +30,7 @@ A [quest issue](https://github.com/ember-learn/guides-source/issues/139) to conv
 Once you install it you will have a fully RFC compliant implementation of Ember Decorators.
 The [Ember Decorators RFC](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) was merged into the RFC repo about two weeks ago. It will take some time until this functionality is in Ember Core.
 If you would like to try this out now and give your feedback then install the addon and test it out!
-Thanks to everyone for pushing this forward and making it a reality 🏆
+Thanks to everyone for pushing this forward and making it a reality. 🏆
 
 [Decorate away!](http://ember-decorators.github.io/ember-decorators/)
 
@@ -61,7 +61,7 @@ Until then, you can always watch the [trailer on YouTube](https://www.youtube.co
 
 The [Contextual Components pattern](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/#toc_sharing-component-data-with-its-wrapped-content) empowered addon authors to create highly reusable UI components as part of popular addons such as [Ember Light Table](https://offirgolan.github.io/ember-light-table/), [Ember Power Calendar](https://ember-power-calendar.com/), [Ember Paper](https://miguelcobain.github.io/ember-paper/) and many more.
 
-In extension of [allowing components to be contextual](https://emberjs.github.io/rfcs/0064-contextual-component-lookup.html), a **new Request for Comments(RFC)**  proposes to [extend the semantics of template helpers in a similar fashion](https://github.com/emberjs/rfcs/blob/contextual-helpers/text/0432-contextual-helpers.md).
+In extension of [allowing components to be contextual](https://emberjs.github.io/rfcs/0064-contextual-component-lookup.html), a **new Request for Comments (RFC)**  proposes to [extend the semantics of template helpers in a similar fashion](https://github.com/emberjs/rfcs/blob/contextual-helpers/text/0432-contextual-helpers.md).
 
 You can read all about the motivation and possible design solutions in the original proposal and [leave your thoughts in the comments below](https://github.com/emberjs/rfcs/pull/432)!
 
