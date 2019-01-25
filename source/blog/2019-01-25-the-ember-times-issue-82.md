@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 82
-author: Kenneth Larsen, the crowd
+author: Kenneth Larsen, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/25-the-ember-times-issue-82.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 హలో Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
- This week you can read all about a new RFC for **accesible routing** 🗺, ...
+ This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a contributor interview with @bekzod and more! 
 
 ---
 
@@ -18,11 +18,11 @@ Currently, routing in Ember is not natively accessible for users with assistive 
 
 Feel free to read the [RFC](https://github.com/MelSumner/rfcs/blob/MelSumner-a11y-routing/text/0000-a11y-routing.md) and leave your thoughts as a comment.
 
-
 ---
 
-## [SECTION TITLE](#section-url)
+## [Coming Soon: Angle Brackets to the Guides 🎉](https://github.com/ember-learn/guides-source/issues/139)
 
+A [quest issue](https://github.com/ember-learn/guides-source/issues/139) to convert the guides to **angle bracket invocation** is gaining traction. This effort will bring [RFC 311](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) to the documentation in the next few weeks, which is nice since this is a feature that has been available in Ember for some time! Many thanks to the contributors involved in this effort. 👏
 
 ---
 
@@ -73,7 +73,7 @@ In an exclusive interview with the Ember Times they talk about their learnings a
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/cibernox" target="gh-user">@cibernox</a>, <a href="https://github.com/Parrryy" target="gh-user">@Parrryy</a>, <a href="https://github.com/cah-danmonroe" target="gh-user">@cah-danmonroe</a>, <a href="https://github.com/MichalBryxi" target="gh-user">@MichalBryxi</a>, <a href="https://github.com/jelhan" target="gh-user">@jelhan</a>, <a href="https://github.com/gitKrystan" target="gh-user">@gitKrystan</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/efx" target="gh-user">@efx</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/wycats" target="gh-user">@wycats</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -103,4 +103,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen, the crowd and the Learning Team
+Kenneth Larsen, Amy Lam, Jessica Jordan and the Learning Team
