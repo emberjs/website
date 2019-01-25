@@ -8,7 +8,7 @@ responsive: true
 
 హలో Emberistas! 🐹
 
-This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators, a contributor interview with @bekzod and more! 
+This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators, a contributor interview with @bekzod, check out the upcomming Ember.js documentary 🎬🍿🎥, and more! 
 
 ---
 
@@ -65,7 +65,7 @@ In an exclusive interview with the Ember Times they talk about their learnings a
 
 ---
 
-## [Ember.js: The Documentary 🍿](https://www.youtube.com/watch?v=V0AC3Z1WIcc)
+## [Ember.js: The Documentary 🎬🍿🎥](https://www.youtube.com/watch?v=V0AC3Z1WIcc)
 
 Ever wondered how and why Ember came to be? Staring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette) and members of the Ember community – the film **"Ember.js: The Documentary"** will be premiering at Pakhuis de Zwijger in Amsterdam on February 8th! Get your tickets while they’re still [available on EventBrite](https://www.eventbrite.ie/e/emberjs-the-documentary-premiere-qa-w-yehuda-katz-special-guests-tickets-53804460590)!
 
