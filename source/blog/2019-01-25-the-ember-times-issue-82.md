@@ -25,7 +25,7 @@ A [quest issue](https://github.com/ember-learn/guides-source/issues/139) to conv
 
 ---
 
-## [Decorate today! The Ember Way! 📍](http://ember-decorators.github.io/ember-decorators/)
+## [Decorate Today! The Ember Way! 📍](http://ember-decorators.github.io/ember-decorators/)
 [Ember Decorators](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) are the future of using Ember along with native Javascript classes. The addon [ember-decorators](https://github.com/ember-decorators/ember-decorators) allows you to use **"The Javascript of the Future, Today!"**
 Once you install it you will have a fully RFC compliant implementation of Ember Decorators.
 The [Ember Decorators RFC](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) was merged into the RFC repo about two weeks ago. It will take some time until this functionality is in Ember Core.
@@ -51,7 +51,7 @@ This week we'd like to highlight the work of community member **Bekzod Khaitbaev
 
 ## [Ember.js: The Documentary 🎬🍿🎥](https://www.youtube.com/watch?v=V0AC3Z1WIcc)
 
-Ever wondered how and why Ember came to be? Staring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette) and members of the Ember community – the film **"Ember.js: The Documentary"** will be premiering at Pakhuis de Zwijger in Amsterdam on February 8th! Get your tickets while they’re still [available on EventBrite](https://www.eventbrite.ie/e/emberjs-the-documentary-premiere-qa-w-yehuda-katz-special-guests-tickets-53804460590)!
+Ever wondered how and why Ember came to be? Starring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette) and members of the Ember community – the film **"Ember.js: The Documentary"** will be premiering at Pakhuis de Zwijger in Amsterdam on February 8th! Get your tickets while they’re still [available on EventBrite](https://www.eventbrite.ie/e/emberjs-the-documentary-premiere-qa-w-yehuda-katz-special-guests-tickets-53804460590)!
 
 Until then, you can always watch the [trailer on YouTube](https://www.youtube.com/watch?v=V0AC3Z1WIcc)!
 
