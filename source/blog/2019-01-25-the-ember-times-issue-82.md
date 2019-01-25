@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 82
-author: Kenneth Larsen, Amy Lam, Jessica Jordan, Alon Bukai
+author: Kenneth Larsen, Amy Lam, Jessica Jordan, Alon Bukai, Chris Ng
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/25-the-ember-times-issue-82.html"
 responsive: true
@@ -65,8 +65,11 @@ In an exclusive interview with the Ember Times they talk about their learnings a
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember.js: The Documentary 🍿](https://www.youtube.com/watch?v=V0AC3Z1WIcc)
 
+Ever wondered how and why Ember came to be? Staring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette) and members of the Ember community – the film **"Ember.js: The Documentary"** will be premiering at Pakhuis de Zwijger in Amsterdam on February 8th! Get your tickets while they’re still [available on EventBrite](https://www.eventbrite.ie/e/emberjs-the-documentary-premiere-qa-w-yehuda-katz-special-guests-tickets-53804460590)!
+
+Until then, you can always watch the [trailer on YouTube](https://www.youtube.com/watch?v=V0AC3Z1WIcc)!
 
 ---
 
@@ -108,4 +111,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen, Amy Lam, Jessica Jordan. Alon Bukai and the Learning Team
+Kenneth Larsen, Amy Lam, Jessica Jordan, Alon Bukai, Chris Ng, and the Learning Team
