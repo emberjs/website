@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 82
-author: Kenneth Larsen, Amy Lam, Jessica Jordan
+author: Kenneth Larsen, Amy Lam, Jessica Jordan, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/25-the-ember-times-issue-82.html"
 responsive: true
@@ -8,8 +8,7 @@ responsive: true
 
 హలో Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
- This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a contributor interview with @bekzod and more! 
+This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators, a contributor interview with @bekzod and more! 
 
 ---
 
@@ -26,8 +25,14 @@ A [quest issue](https://github.com/ember-learn/guides-source/issues/139) to conv
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Decorate today! The Ember Way! 📍](http://ember-decorators.github.io/ember-decorators/)
+[Ember Decorators](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) are the future of using Ember along with native Javascript classes. The addon [ember-decorators](https://github.com/ember-decorators/ember-decorators) allows you to use **"The Javascript of the Future, Today!"** 
+Once you install it you will have a fully RFC compliant implementation of Ember Decorators.
+The [Ember Decorators RFC](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) was merged into the RFC repo about two weeks ago. It will take some time until this functionality is in Ember Core.
+If you would like to try this out now and give your feedback then install the addon and test it out!
+Thanks to everyone for pushing this forward and making it a reality 🏆
 
+[Decorate away!](http://ember-decorators.github.io/ember-decorators/)
 
 ---
 
@@ -103,4 +108,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen, Amy Lam, Jessica Jordan and the Learning Team
+Kenneth Larsen, Amy Lam, Jessica Jordan. Alon Bukai and the Learning Team
