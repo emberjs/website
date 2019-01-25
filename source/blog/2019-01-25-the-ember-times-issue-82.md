@@ -14,11 +14,11 @@ responsive: true
 
 ## [SECTION TITLE](#section-url)
 
-
 ---
 
-## [SECTION TITLE](#section-url)
+## [Bringing Angle Brackets to the Guides 🥳](https://github.com/ember-learn/guides-source/issues/139)
 
+A [quest issue](https://github.com/ember-learn/guides-source/issues/139) to convert the guides to **angle bracket invocation** is gaining traction. This effort will bring [RFC 311](https://github.com/emberjs/rfcs/blob/master/text/0311-angle-bracket-invocation.md) to the documentation in the next few weeks, which is nice since this is a feature that has been available in Ember for some time! Many thanks to the contributors involved in this effort. 👏
 
 ---
 
