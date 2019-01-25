@@ -8,7 +8,7 @@ responsive: true
 
 హలో Emberistas! 🐹
 
-This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators, a contributor interview with @bekzod, check out the upcoming Ember.js documentary 🎬🍿🎥, and more! 
+This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators 🖼, a **contributor interview** with @bekzod 💬, check out the upcoming Ember.js documentary 🎬🍿🎥, a new RFC for **contextual helpers** 🎒 and more!
 
 ---
 
@@ -26,7 +26,7 @@ A [quest issue](https://github.com/ember-learn/guides-source/issues/139) to conv
 ---
 
 ## [Decorate today! The Ember Way! 📍](http://ember-decorators.github.io/ember-decorators/)
-[Ember Decorators](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) are the future of using Ember along with native Javascript classes. The addon [ember-decorators](https://github.com/ember-decorators/ember-decorators) allows you to use **"The Javascript of the Future, Today!"** 
+[Ember Decorators](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) are the future of using Ember along with native Javascript classes. The addon [ember-decorators](https://github.com/ember-decorators/ember-decorators) allows you to use **"The Javascript of the Future, Today!"**
 Once you install it you will have a fully RFC compliant implementation of Ember Decorators.
 The [Ember Decorators RFC](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) was merged into the RFC repo about two weeks ago. It will take some time until this functionality is in Ember Core.
 If you would like to try this out now and give your feedback then install the addon and test it out!
@@ -51,16 +51,15 @@ Thanks to everyone for pushing this forward and making it a reality 🏆
 
 ---
 
-## ["I contribute to Ember" with Bek](#link-to-forum)
+## ["I contribute to Ember" with Bekzod Khaitbaev 💬](https://discuss.emberjs.com/t/i-contribute-to-ember-with-bekzod-khaitbaev/16085)
 
  <div class="float-right padded portrait-frame"><img alt="Bek" title="Bek - Contributor to Ember" src="/images/blog/emberjstimes/bekzod.png" /></div>
 
-This week we'd like to highlight the work of community member **Bek**, also known as [@bekzod](https://github.com/bekzod).
-In an exclusive interview with the Ember Times they talk about their learnings as a **contributor** to the **Ember.js framework** and why contributions can have an impact on thousands of people.
+This week we'd like to highlight the work of community member **Bekzod Khaitbaev**, also known as [@bekzod](https://github.com/bekzod). In an exclusive interview with the Ember Times he talk about his learnings as a **contributor** to the **Ember.js framework** and why contributions can have an impact on thousands of people.
 
- You can read the full interview on [the Ember Forum](#link-to-forum).
+ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-bekzod-khaitbaev/16085).
 
- <a class="ember-button ember-button--centered" href="#link-to-forum">Read more</a>
+ <a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-bekzod-khaitbaev/16085">Read more</a>
 
 
 ---
@@ -73,8 +72,13 @@ Until then, you can always watch the [trailer on YouTube](https://www.youtube.co
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Contextual Helpers 🆕](https://github.com/emberjs/rfcs/pull/432)
 
+The [Contextual Components pattern](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/#toc_sharing-component-data-with-its-wrapped-content) empowered addon authors to create highly reusable UI components as part of popular addons such as [Ember Light Table](https://offirgolan.github.io/ember-light-table/), [Ember Power Calendar](https://ember-power-calendar.com/), [Ember Paper](https://miguelcobain.github.io/ember-paper/) and many more.
+
+In extension of [allowing components to be contextual](https://emberjs.github.io/rfcs/0064-contextual-component-lookup.html), a **new Request for Comments(RFC)**  proposes to [extend the semantics of template helpers in a similar fashion](https://github.com/emberjs/rfcs/blob/contextual-helpers/text/0432-contextual-helpers.md).
+
+You can read all about the motivation and possible design solutions in the original proposal and [leave your thoughts in the comments below](https://github.com/emberjs/rfcs/pull/432)!
 
 ---
 
