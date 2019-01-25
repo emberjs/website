@@ -1,11 +1,11 @@
 ---
-title: Framework Core Team Face-to-Face Meeting Summary, Q4 2018
+title: Framework Face-to-Face Meeting Summary, Q4 2018
 author: Jen Weber, Matthew Beale
 tags: Announcements
 responsive: true
 ---
 
-Last month, members of the Ember.js framework core team met in-person and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. In this article, we’ll share a summary of the discussions and themes of the weekend.
+Last month, members of the [Ember.js framework core team](https://emberjs.com/team/) met in-person and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. In this article, we’ll share a summary of the discussions and themes of the weekend.
 
 ## What happens in a F2F meeting?
 
@@ -41,7 +41,7 @@ There has been major progress in accessibility, consistency, and better marketin
 It’s safe to say that there’s a lot of work to do for the features and documentation that make up the Octane edition! To follow along or help out, see the [Octane Tracking Issue](https://github.com/emberjs/ember.js/issues/17234). The new architecture for the public site is a work in progress app found [here](https://github.com/ember-learn/ember-website).
 
 ## What’s next?
-Before every [EmberConf](https://emberconf.com/), the largest gathering of Ember devs, there’s always a flurry of activity. It seems like the first quarter of 2019 might be the liveliest one yet! There are only three months to go, and some big plans underway. Stay tuned for updates via [The Ember Times](https://the-emberjs-times.ongoodbits.com/), the [Ember.js Twitter](https://twitter.com/emberjs), and “watch” the [ember.js GitHub repository](https://github.com/emberjs/ember.js)…. if you dare. 
+Before every [EmberConf](https://emberconf.com/), the largest gathering of Ember devs, there’s always a flurry of activity. It seems like the first quarter of 2019 might be the liveliest one yet! There are less than three months to go, and some big plans underway. Stay tuned for updates via [The Ember Times](https://the-emberjs-times.ongoodbits.com/), the [Ember.js Twitter](https://twitter.com/emberjs), and “watch” the [ember.js GitHub repository](https://github.com/emberjs/ember.js)…. if you dare. 
 
 Hope to see you in March at EmberConf!
 
