@@ -8,7 +8,7 @@ responsive: true
 
 హలో Emberistas! 🐹
 
-This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators, a **contributor interview** with @bekzod 💬, check out the upcoming Ember.js documentary 🎬🍿🎥, and more!
+This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a new way to decorate with Ember Decorators 🖼, a **contributor interview** with @bekzod 💬, check out the upcoming Ember.js documentary 🎬🍿🎥, a new RFC for **contextual helpers** 🎒 and more!
 
 ---
 
@@ -72,8 +72,13 @@ Until then, you can always watch the [trailer on YouTube](https://www.youtube.co
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Contextual Helpers 🆕](https://github.com/emberjs/rfcs/pull/432)
 
+The [Contextual Components pattern](https://guides.emberjs.com/release/components/wrapping-content-in-a-component/#toc_sharing-component-data-with-its-wrapped-content) empowered addon authors to create highly reusable UI components as part of popular addons such as [Ember Light Table](https://offirgolan.github.io/ember-light-table/), [Ember Power Calendar](https://ember-power-calendar.com/), [Ember Paper](https://miguelcobain.github.io/ember-paper/) and many more.
+
+In extension of [allowing components to be contextual](https://emberjs.github.io/rfcs/0064-contextual-component-lookup.html), a **new Request for Comments(RFC)**  proposes to [extend the semantics of template helpers in a similar fashion](https://github.com/emberjs/rfcs/blob/contextual-helpers/text/0432-contextual-helpers.md).
+
+You can read all about the motivation and possible design solutions in the original proposal and [leave your thoughts in the comments below](https://github.com/emberjs/rfcs/pull/432)!
 
 ---
 
