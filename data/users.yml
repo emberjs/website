@@ -1163,6 +1163,10 @@
   image: visitdays.png
   alt: VisitDays
   use: "VisitDays's student engagement software is built with Ember.js"
+- url: https://beebeeboard.com/
+  image: beebeeboard.png
+  alt: Beebeeboard
+  use: "Beebeeboard's platform is built with Ember.js"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
