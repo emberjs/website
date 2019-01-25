@@ -1,11 +1,11 @@
 ---
-title: Framework Face-to-Face Meeting Summary, Q4 2018
+title: Ember.js Face-to-Face Meeting Summary, Q4 2018
 author: Jen Weber, Matthew Beale
-tags: Announcements
+tags: Announcement, Recent Posts
 responsive: true
 ---
 
-Last month, members of the [Ember.js framework core team](https://emberjs.com/team/) met in-person and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. In this article, we’ll share a summary of the discussions and themes of the weekend.
+Last month, members of the [Ember.js Core Team](https://emberjs.com/team/) met in-person and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. In this article, we’ll share a summary of the discussions and themes of the weekend.
 
 ## What happens in a F2F meeting?
 
