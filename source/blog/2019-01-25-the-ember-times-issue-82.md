@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 82
-author: Amy Lam, Jessica Jordan, Kenneth Larsen
+author: Kenneth Larsen, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/25-the-ember-times-issue-82.html"
 responsive: true
@@ -9,11 +9,14 @@ responsive: true
 హలో Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-This week you can read about angle brackets coming soon to the guides, a contributor interview with @bekzod and more! 
+ This week you can read all about a new RFC for **accesible routing** 🗺, angle brackets coming soon to the guides, a contributor interview with @bekzod and more! 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [New RFC: Accessible Routing in Ember 🗺](https://github.com/emberjs/rfcs/pull/433)
+Currently, routing in Ember is not natively accessible for users with assistive technology. This means that whenever the user navigates to a new route within an Ember application, screen readers do not read out the new content or appropriately move focus. This new RFC by [@MelSumner](https://github.com/MelSumner) proposes a solution to this so **Ember routing can be natively accessible for users with assistive technology**.
+
+Feel free to read the [RFC](https://github.com/MelSumner/rfcs/blob/MelSumner-a11y-routing/text/0000-a11y-routing.md) and leave your thoughts as a comment.
 
 ---
 
@@ -100,4 +103,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Jessica Jordan, Kenneth Larsen and the Learning Team
+Kenneth Larsen, Amy Lam, Jessica Jordan and the Learning Team
