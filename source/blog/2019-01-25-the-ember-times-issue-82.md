@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 82
-author: the crowd
+author: Amy Lam, Jessica Jordan, Kenneth Larsen
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/01/25-the-ember-times-issue-82.html"
 responsive: true
@@ -9,6 +9,7 @@ responsive: true
 హలో Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week you can read about angle brackets coming soon to the guides, a contributor interview with @bekzod and more! 
 
 ---
 
@@ -99,4 +100,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Amy Lam, Jessica Jordan, Kenneth Larsen and the Learning Team
