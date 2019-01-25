@@ -69,7 +69,7 @@ In an exclusive interview with the Ember Times they talk about their learnings a
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/cibernox" target="gh-user">@cibernox</a>, <a href="https://github.com/Parrryy" target="gh-user">@Parrryy</a>, <a href="https://github.com/cah-danmonroe" target="gh-user">@cah-danmonroe</a>, <a href="https://github.com/MichalBryxi" target="gh-user">@MichalBryxi</a>, <a href="https://github.com/jelhan" target="gh-user">@jelhan</a>, <a href="https://github.com/gitKrystan" target="gh-user">@gitKrystan</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/efx" target="gh-user">@efx</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/kategengler" target="gh-user">@kategengler</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/wycats" target="gh-user">@wycats</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
