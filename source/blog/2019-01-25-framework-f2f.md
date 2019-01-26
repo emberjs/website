@@ -11,7 +11,7 @@ Last month, members of the [Ember.js Core Team](https://emberjs.com/team/) met i
 
 "F2F" stands for face-to-face, a meeting where members of a core team get together to work on problems or brainstorm in a way that is difficult to do remotely or in one-hour meetings. Each of the core teams of Ember meets at least once a year, often right after EmberConf.
 
-All core teams make an effort to keeps notes of their meetings, and you can find the agenda and notes (covering day one) for the framework F2F [in the core notes repo](https://github.com/emberjs/core-notes/blob/master/ember.js/2018-12/F2F-Ember-Core-Team-20181215.md**).
+All core teams make an effort to keeps notes of their meetings, and you can find the agenda and notes (covering day one) for the framework F2F [in the core notes repo](https://github.com/emberjs/core-notes/blob/master/ember.js/2018-12/F2F-Ember-Core-Team-20181215.md).
 
 Read on for a summary of what was covered.
 
