@@ -503,7 +503,8 @@ class Person {
   fullName = `${this.firstName} ${this.lastName}`;
 }
 ```
-
+ 
+ <!--alex ignore harder-->
 This is a bad idea because it makes your class harder to refactor. Moving a field around can break your class in unexpected ways, and it might take minute to figure out what's going on. Class fields definitely _read_ declaratively, and the fact that they _do_ have an assignment order is actually rather odd in that sense - intuitively, you might expect them to all exist at once, like assigments on an object literal.
 
  <!--alex ignore hook-->
