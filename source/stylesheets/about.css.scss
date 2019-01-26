@@ -6,7 +6,7 @@
 
 .job-board {
   display: none;
-  @media screen and (max-width: $small-max-width) {
+  @media screen and (max-width: $screen-sm-max) {
     background-color: #1e719b;
     font-size: 1.2em;
     min-width: 100%;
@@ -61,7 +61,7 @@
   &:hover {
     border-bottom: none;
   }
-  @media screen and (max-width: $small-max-width) {
+  @media screen and (max-width: $screen-sm-max) {
     display: none;
   }
 }
