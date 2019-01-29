@@ -324,7 +324,6 @@ class Car extends Vehicle {
 
 This design choice for `super` was really about embracing the nature of Javascript's prototypical inheritance, instead of choosing to mimic other languages like Java that have different inheritance patterns.
 
- <!--alex ignore hooks-->
 Finally, as with classic classes, you should generally pass all arguments through to the super calls for existing lifecycle hooks:
 
 ```js
@@ -359,7 +358,6 @@ export default class PersonComponent extends Component.extend({
 
 This recommendation was made because the future of decorators in Ember was unclear at the time, and the Ember Typescript team wanted to ensure that users could write _safe_ code that wouldn't break at some point in the future. This was entirely reasonable, and really the best decision they could make at the time - this code is rock solid and _will not break_ or need to be updated until Ember v4 at the earliest (yay stability)!
 
- <!--alex ignore harder-->
 However, now that the Decorators RFC has been accepted, and `ember-decorators` has converted to matching the behavior of the RFC, this pattern is no longer ideal. In fact, it will be harder to convert going forward, since the [native class codemod](https://github.com/scalvert/ember-es6-class-codemod) currently does not support this style of syntax - though it would definitely be possible to add, and we would love contributions!
 
 So coming back to the original question - when should you use `.extend()`? There are only two cases where you should:
@@ -504,10 +502,8 @@ class Person {
 }
 ```
  
- <!--alex ignore harder-->
 This is a bad idea because it makes your class harder to refactor. Moving a field around can break your class in unexpected ways, and it might take minute to figure out what's going on. Class fields definitely _read_ declaratively, and the fact that they _do_ have an assignment order is actually rather odd in that sense - intuitively, you might expect them to all exist at once, like assigments on an object literal.
 
- <!--alex ignore hook-->
 Note that this really only applies to class fields - once you're in a "hook" of some kind, like the `constructor` or `init`, it's safe to start using values. This is because moving the constructor around is safe, and functions are pretty easy to reason about locally (usually 😬):
 
 ```js
