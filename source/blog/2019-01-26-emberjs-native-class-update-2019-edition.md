@@ -263,7 +263,7 @@ The reasons why this is problematic include:
 2. `arguments` does not behave the same as a normal method
 3. It's difficult to mock in tests, since you can't change the function on the prototype of the class.
 
-For more details, check out [this rationale](https://github.com/tc39/proposal-decorators/blob/master/bound-decorator-rationale.md) on the official decorators proposal.
+For more details, check out [this rationale](https://github.com/mbrowne/bound-decorator/blob/master/MOTIVATION.md) on the official decorators proposal.
 
 Instead, you can use the `@action` decorator provided by Ember (and Ember Decorators), which binds a the handler lazily:
 
