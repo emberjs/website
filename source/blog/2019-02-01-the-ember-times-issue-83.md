@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Jessica Jordan, the crowd
+author: Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week we have an exclusive **contributor interview** with **@jenweber** for you, as well as....
 
 ---
 
@@ -42,8 +42,17 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## ["I contribute to Ember" with Jen Weber 💬](https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110)
 
+<div class="float-right padded portrait-frame">
+  <img alt="Jen Weber" title="Jen Weber - Contributor to Ember" src="/images/blog/emberjstimes/jenweber.jpeg" />
+</div>
+
+In the 4th edition of the contributor interview series, we'd like to highlight the work of community member **Jen Weber**, also known as [@jenweber](https://github.com/jenweber). In this exclusive interview with the Ember Times she talks about her work on the Ember Guides, what the next edition of Ember means for the framework’s learning story and which of her learnings from working on open-source have turned out to become powerful skills for her own career.
+
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110).
+
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110">Read more</a>
 
 ---
 
@@ -90,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, the crowd and the Learning Team
+Amy Lam, Jessica Jordan, the crowd and the Learning Team
