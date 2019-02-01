@@ -9,7 +9,9 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
- 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, as well as....
+ 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, an upcoming This.JavaScript: State of Frameworks, as well as... 
+ 
+ We also have an exclusive **contributor interview** with **@jenweber** for you 🙌!
 
 ---
 
@@ -40,8 +42,9 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [This.JavaScript: State of Frameworks 🌍](https://www.thisdot.co/events/this-javascript-state-of-frameworks)
 
+[@kennethlarsen](https://github.com/kennethlarsen) is representing Ember at This.JavaScript's State of Frameworks event! Speakers from prominent open source frameworks will discuss upcoming releases, recent milestones, and community initiatives. Be sure to [RSVP](https://www.thisdot.co/events/this-javascript-state-of-frameworks) to tune in online on Feb 12. 
 
 ---
 
