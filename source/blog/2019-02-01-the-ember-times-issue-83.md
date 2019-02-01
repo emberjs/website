@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
- 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, as well as....
+ 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, as well as....
 
 ---
 
@@ -34,8 +34,9 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Native Class Update - 2019 Edition 📝](https://emberjs.com/blog/2019/01/26/emberjs-native-class-update-2019-edition.html)
 
+[@pzuraq](https://github.com/pzuraq) wrote a blog post on native classes in Ember, which officially landed in v3.6. The article focuses on current best practices and changes since the original [how-to article](https://medium.com/build-addepar/es-classes-in-ember-js-63e948e9d78e) was posted. If you're curious about native classes in Ember, be sure to read Chris [detailed and informative writeup](https://emberjs.com/blog/2019/01/26/emberjs-native-class-update-2019-edition.html)!
 
 ---
 
