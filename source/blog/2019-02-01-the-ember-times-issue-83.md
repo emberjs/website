@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Amy Lam, Jessica Jordan, the crowd
+author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -8,7 +8,8 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-This week we have an exclusive **contributor interview** with **@jenweber** for you, as well as....
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+ 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, as well as....
 
 ---
 
@@ -17,8 +18,19 @@ This week we have an exclusive **contributor interview** with **@jenweber** for 
 
 ---
 
-## [SECTION TITLE](#section-url)
+<!--alex ignore period-->
+## [RFCs in Final Comment Period 🖊️⌛](https://github.com/emberjs/rfcs/pulls?q=is%3Aopen+is%3Apr+label%3A%22Final+Comment+Period%22)
 
+<!--alex ignore period-->
+2019 is coming in strong with a staggering amount of RFCs in Final Comment Period (FCP). So come and check out these awesome work!
+
+[Tracked Properties RFC](https://github.com/emberjs/rfcs/pull/410) by [@pzuraq](https://github.com/pzuraq) which introduces a simpler and more ergonomic system for tracking state change in Ember applications.
+
+[Contextual Helpers & Modifiers RFC](https://github.com/emberjs/rfcs/pull/432) by [@chancancode](https://github.com/chancancode) or supporting first-class helpers/modifiers in our templates.
+
+Two deprecation RFCs by [@chadhietala](https://github.com/chadhietala) are now in FCP - [Deprecate Application Controller Router Properties RFC](https://github.com/emberjs/rfcs/pull/421) and [Deprecate Route Render APIs RFC](https://github.com/emberjs/rfcs/pull/418).
+
+Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/emberjs/rfcs/pull/431) by [@jenweber](https://github.com/jenweber) where the [Guides](https://guides.emberjs.com/release/) will be rearranged to provide a natural learning flow for today’s Ember.js developers is also in FCP.
 
 ---
 
@@ -99,4 +111,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
