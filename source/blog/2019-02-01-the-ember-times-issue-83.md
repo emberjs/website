@@ -48,7 +48,7 @@ This week we have an exclusive **contributor interview** with **@jenweber** for 
   <img alt="Jen Weber" title="Jen Weber - Contributor to Ember" src="/images/blog/emberjstimes/jenweber.jpeg" />
 </div>
 
-In the 4th edition of the contributor interview series, we'd like to highlight the work of community member **Jen Weber**, also known as [@jenweber](https://github.com/jenweber). In this exclusive interview with the Ember Times she talks about her work on the Ember Guides, what the next edition of Ember means for the framework’s learning story and which of her learnings from working on open-source have turned out to become powerful skills for her own career.
+In the 4th edition of the contributor interview series, we'd like to highlight the work of community member **Jen Weber**, also known as [@jenweber](https://github.com/jenweber). In this exclusive interview with the Ember Times she talks about her work on the [Ember Guides](https://guides.emberjs.com/), what the next edition of Ember means for the framework’s learning story and which of her learnings from working on open-source have turned out to become powerful skills for her own career.
 
 You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110).
 
