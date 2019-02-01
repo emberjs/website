@@ -10,7 +10,7 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
  2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, 
- Ember.js Core Team Face-to-Face Meeting🐹, as well as....
+ Ember.js Core Team Face-to-Face Meeting 🐹, as well as....
 
 ---
 
