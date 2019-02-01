@@ -17,8 +17,10 @@ responsive: true
 
 ---
 
+<!--alex ignore period-->
 ## [RFCs in Final Comment Period 🖊️⌛](https://github.com/emberjs/rfcs/pulls?q=is%3Aopen+is%3Apr+label%3A%22Final+Comment+Period%22)
 
+<!--alex ignore period-->
 2019 is coming in strong with a staggering amount of RFCs in Final Comment Period (FCP). So come and check out these awesome work!
 
 [Tracked Properties RFC](https://github.com/emberjs/rfcs/pull/410) by [@pzuraq](https://github.com/pzuraq) which introduces a simpler and more ergonomic system for tracking state change in Ember applications.
