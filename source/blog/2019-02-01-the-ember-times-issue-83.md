@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
+author: Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -9,7 +9,8 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
- 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, as well as....
+ 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, 
+ Ember.js Core Team Face-to-Face Meeting 🐹, as well as....
 
 ---
 
@@ -34,8 +35,8 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ---
 
-## [SECTION TITLE](#section-url)
-
+## [Ember.js Core Team Face-to-Face 🐹](https://emberjs.com/blog/2019/01/25/framework-f2f.html)
+In December the **Ember.js Core Tam met in-person** and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. This resulted in [a blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html) summarizing all the cool things that were discussed. This means that you can have a look on the **Octane discussion** as well as a review of **website improvement progress**. If that sounds interesting to you, then you should check out [the blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html). 
 
 ---
 
@@ -111,4 +112,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
+Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
