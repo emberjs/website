@@ -34,8 +34,8 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ---
 
-## [SECTION TITLE](#section-url)
-
+## [Ember.js Core Team Face-to-Face 🐹](https://emberjs.com/blog/2019/01/25/framework-f2f.html)
+In December the **Ember.js Core Tam met in-person** and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. This resulted in [a blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html) summarizing all the cool things that were discussed. This means that you can have a look on the **Octane discussion** as well as a review of **website improvement progress**. If that sounds interesting to you, then you should check out [the blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html). 
 
 ---
 
