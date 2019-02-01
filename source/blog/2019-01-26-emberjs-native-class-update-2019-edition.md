@@ -18,7 +18,7 @@ This post will focus on changes since the original article and current best prac
 * [Class Fields vs. `extend()`](#toc_class-fields-vs-code-extend-code)
 * [Avoid Class Field Arrow Functions](#toc_avoid-class-field-arrow-functions)
 * [`super` vs. `_super()`](#toc_code-super-code-vs-code-_super-code)
-* [When It's Ok to Use `extend()`](#toc_when-its-ok-to-use-code-extend-code)
+* [When It's Ok to Use `extend()`](#toc_when-it-s-ok-to-use-code-extend-code)
 * [Avoiding `reopen` and `reopenClass`](#toc_avoiding-code-reopen-code-and-code-reopenclass-code)
 * [Avoiding `EmberObject`](#toc_avoiding-code-emberobject-code)
 * [Misc. Class Tips](#toc_misc-class-tips)
@@ -469,7 +469,7 @@ This means that any utility classes written using `EmberObject` can be rewritten
 
 This section is for a few remaining tips/best practices that I have developed myself in using native classes. These recommendations are from my own personal experience, so take what you will from them.
 
-### Always give you class a name!
+### Always give your class a name!
 
 Anonymous classes are a thing in JS:
 
