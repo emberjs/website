@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Chris Ng, the crowd
+author: Chris Ng, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -8,7 +8,8 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>, 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛
+<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+ 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, we have an exclusive **contributor interview** with **@jenweber** for you 🙌, as well as....
 
 ---
 
@@ -53,8 +54,17 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## ["I contribute to Ember" with Jen Weber 💬](https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110)
 
+<div class="float-right padded portrait-frame">
+  <img alt="Jen Weber" title="Jen Weber - Contributor to Ember" src="/images/blog/emberjstimes/jenweber.jpeg" />
+</div>
+
+In the 4th edition of the contributor interview series, we'd like to highlight the work of community member **Jen Weber**, also known as [@jenweber](https://github.com/jenweber). In this exclusive interview with the Ember Times she talks about her work on the [Ember Guides](https://guides.emberjs.com/), what the next edition of Ember means for the framework’s learning story and which of her learnings from working on open-source have turned out to become powerful skills for her own career.
+
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110).
+
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110">Read more</a>
 
 ---
 
@@ -71,7 +81,7 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/samcic" target="gh-user">@samcic</a>, <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/ppcano" target="gh-user">@ppcano</a>, <a href="https://github.com/bekzod" target="gh-user">@bekzod</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/Panman8201" target="gh-user">@Panman8201</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/bmac" target="gh-user">@bmac</a>, <a href="https://github.com/mhankus" target="gh-user">@mhankus</a>, <a href="https://github.com/rimian" target="gh-user">@rimian</a>, <a href="https://github.com/BryanCrotaz" target="gh-user">@BryanCrotaz</a>, <a href="https://github.com/rwwagner90" target="gh-user">@rwwagner90</a>, <a href="https://github.com/nlfurniss" target="gh-user">@nlfurniss</a>, <a href="https://github.com/efx" target="gh-user">@efx</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/miguelcobain" target="gh-user">@miguelcobain</a>, <a href="https://github.com/samselikoff" target="gh-user">@samselikoff</a>, <a href="https://github.com/noslouch" target="gh-user">@noslouch</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/dbendaou" target="gh-user">@dbendaou</a>, <a href="https://github.com/MonsieurDart" target="gh-user">@MonsieurDart</a> and <a href="https://github.com/wadie" target="gh-user">@wadie</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
@@ -101,4 +111,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, the crowd and the Learning Team
+Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
