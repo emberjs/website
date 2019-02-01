@@ -8,9 +8,9 @@ responsive: true
 
 გამარჯობა Emberistas! 🐹
 
-2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, Ember.js Core Team Face-to-Face Meeting 🐹, as well as an upcoming This.JavaScript: State of Frameworks! 🎉
+2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, Ember.js Core Team Face-to-Face Meeting 😄, as well as an upcoming This.JavaScript: State of Frameworks! 🎉
 
-We also have an exclusive **contributor interview** with **@jenweber** for you 🙌!
+We also have an exclusive **contributor interview** with **@jenweber** for you! 🙌
 
 ---
 
@@ -32,13 +32,12 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 
 ## [Native Class Update - 2019 Edition 📝](https://emberjs.com/blog/2019/01/26/emberjs-native-class-update-2019-edition.html)
 
-[@pzuraq](https://github.com/pzuraq) wrote a blog post on native classes in Ember, which officially landed in v3.6. The article focuses on current best practices and changes since the original [how-to article](https://medium.com/build-addepar/es-classes-in-ember-js-63e948e9d78e) was posted. If you're curious about native classes in Ember, be sure to read Chris [detailed and informative writeup](https://emberjs.com/blog/2019/01/26/emberjs-native-class-update-2019-edition.html)!
+[@pzuraq](https://github.com/pzuraq) wrote a blog post on native classes in Ember, which officially landed in v3.6. The article focuses on current best practices and changes since the original [how-to article](https://medium.com/build-addepar/es-classes-in-ember-js-63e948e9d78e) was posted. If you're curious about native classes in Ember, be sure to read Chris' [detailed and informative writeup](https://emberjs.com/blog/2019/01/26/emberjs-native-class-update-2019-edition.html)!
 
 ---
 
 ## [Ember.js Core Team Face-to-Face 🐹](https://emberjs.com/blog/2019/01/25/framework-f2f.html)
 In December the **Ember.js Core Tam met in-person** and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. This resulted in [a blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html) summarizing all the cool things that were discussed. This means that you can have a look on the **Octane discussion** as well as a review of **website improvement progress**. If that sounds interesting to you, then you should check out [the blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html).
-
 
 ---
 
