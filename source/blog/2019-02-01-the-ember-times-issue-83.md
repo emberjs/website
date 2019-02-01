@@ -1,22 +1,16 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan, the crowd
+title: The Ember Times - Issue No. 83
+author: Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
-alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2019/02/01-the-ember-times-issue-83.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+გამარჯობა Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
- 2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, Ember.js Core Team Face-to-Face Meeting 🐹, as well as an upcoming This.JavaScript: State of Frameworks!
- 
- We also have an exclusive **contributor interview** with **@jenweber** for you 🙌!
+2019 is coming in strong with a staggering amount of RFCs in FCP ⌛, an update on native classes in Ember 🚀, Ember.js Core Team Face-to-Face Meeting 🐹, as well as an upcoming This.JavaScript: State of Frameworks! 🎉
 
----
-
-## [SECTION TITLE](#section-url)
-
+We also have an exclusive **contributor interview** with **@jenweber** for you 🙌!
 
 ---
 
@@ -43,24 +37,14 @@ Finally the [Restructuring the Guides Table of Contents RFC](https://github.com/
 ---
 
 ## [Ember.js Core Team Face-to-Face 🐹](https://emberjs.com/blog/2019/01/25/framework-f2f.html)
-In December the **Ember.js Core Tam met in-person** and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. This resulted in [a blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html) summarizing all the cool things that were discussed. This means that you can have a look on the **Octane discussion** as well as a review of **website improvement progress**. If that sounds interesting to you, then you should check out [the blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html). 
+In December the **Ember.js Core Tam met in-person** and remotely to review the direction that the framework API is headed, work through some architectural design questions, and figure out next steps. This resulted in [a blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html) summarizing all the cool things that were discussed. This means that you can have a look on the **Octane discussion** as well as a review of **website improvement progress**. If that sounds interesting to you, then you should check out [the blog post](https://emberjs.com/blog/2019/01/25/framework-f2f.html).
 
 
 ---
 
 ## [This.JavaScript: State of Frameworks 🌍](https://www.thisdot.co/events/this-javascript-state-of-frameworks)
 
-[@kennethlarsen](https://github.com/kennethlarsen) is representing Ember at This.JavaScript's State of Frameworks event! Speakers from prominent open source frameworks will discuss upcoming releases, recent milestones, and community initiatives. Be sure to [RSVP](https://www.thisdot.co/events/this-javascript-state-of-frameworks) to tune in online on Feb 12. 
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+[@kennethlarsen](https://github.com/kennethlarsen) is representing Ember at This.JavaScript's State of Frameworks event! Speakers from prominent open source frameworks will discuss upcoming releases, recent milestones, and community initiatives. Be sure to [RSVP](https://www.thisdot.co/events/this-javascript-state-of-frameworks) to tune in online on Feb 12.
 
 ---
 
@@ -70,21 +54,11 @@ In December the **Ember.js Core Tam met in-person** and remotely to review the d
   <img alt="Jen Weber" title="Jen Weber - Contributor to Ember" src="/images/blog/emberjstimes/jenweber.jpeg" />
 </div>
 
-In the 4th edition of the contributor interview series, we'd like to highlight the work of community member **Jen Weber**, also known as [@jenweber](https://github.com/jenweber). In this exclusive interview with the Ember Times she talks about her work on the [Ember Guides](https://guides.emberjs.com/), what the next edition of Ember means for the framework’s learning story and which of her learnings from working on open-source have turned out to become powerful skills for her own career.
+In the 4th edition of the contributor interview series, we'd like to highlight the work of community member **Jen Weber**, also known as [@jenweber](https://github.com/jenweber). In this exclusive interview with the Ember Times she talks about her work on the [Ember Guides](https://guides.emberjs.com/), what the next edition of Ember means for the framework’s learning story and which of her learnings from working on open-source have turned out to become powerful assets for her own career.
 
 You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110).
 
 <a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-jen-weber/16110">Read more</a>
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -121,4 +95,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan, the crowd and the Learning Team
+Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan and the Learning Team
