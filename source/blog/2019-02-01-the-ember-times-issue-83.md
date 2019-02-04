@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 83
 author: Kenneth Larsen, Chris Ng, Amy Lam, Jessica Jordan
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
+tags: Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/01-the-ember-times-issue-83.html"
 responsive: true
 ---
