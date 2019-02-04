@@ -1167,6 +1167,9 @@
   image: beebeeboard.png
   alt: Beebeeboard
   use: "Beebeeboard's platform is built with Ember.js"
+- url: https://www.paycertify.com
+  image: paycertify.png
+  alt: PayCertify
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
