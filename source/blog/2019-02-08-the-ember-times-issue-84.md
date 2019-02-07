@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 84
-author: Jessica Jordan, Amy Lam, the crowd
+author: Jessica Jordan, Amy Lam, Kenneth Larsen the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/08-the-ember-times-issue-84.html"
 responsive: true
@@ -10,7 +10,7 @@ responsive: true
 
 This week we have...
 
-a new 🆕 EmberWeekly.com,
+a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage
 
 ...and an exclusive interview with Ember **contributor @rwwagner90**!
 
@@ -29,8 +29,11 @@ Looking for Ember resources on the web? A great link to share? Browse the [Readi
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [✨ New and Shiny Mirage Docs](http://www.ember-cli-mirage.com/)
 
+As [samselikoff](https://github.com/samselikoff) posted on [Twitter](https://twitter.com/samselikoff/status/1088440182054051840) ember-cli-mirage v0.4.13 is now out and it contains a very cool feature. The old documentation site has been retired and replaced with a [new and shiny site](http://www.ember-cli-mirage.com/) build with [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs).
+
+As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. Help out by trying the latest release and see if you can catch any bugs.
 
 ---
 
@@ -106,4 +109,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Amy Lam, the crowd and the Learning Team
+Jessica Jordan, Amy Lam, Kenneth Larsen, the crowd and the Learning Team
