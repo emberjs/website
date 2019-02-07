@@ -15,7 +15,7 @@ a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage, introdu
 
 ---
 
-[## EmberConf 2019 closing speaker: Sarah Allen 🗣️](https://twitter.com/EmberConf/status/1092880236864188416)
+## [EmberConf 2019 closing speaker: Sarah Allen 🗣️](https://twitter.com/EmberConf/status/1092880236864188416)
 
 It was recently announced that [Sarah Allen](https://twitter.com/ultrasaurus) – [@ultrasaurus](https://github.com/ultrasaurus) – will be the closing [EmberConf 2019](https://emberconf.com/) speaker!
 
