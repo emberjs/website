@@ -31,7 +31,7 @@ Looking for Ember resources on the web? A great link to share? Browse the [Readi
 
 ## [✨ New and Shiny Mirage Docs](http://www.ember-cli-mirage.com/)
 
-As [samselikoff](https://github.com/samselikoff) posted on [Twitter](https://twitter.com/samselikoff/status/1088440182054051840) ember-cli-mirage v0.4.13 is now out and it contains a very cool feature. The old documentation site has been retired and replaced with a [new and shiny site](http://www.ember-cli-mirage.com/) build with [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs).
+As [samselikoff](https://github.com/samselikoff) posted on [Twitter](https://twitter.com/samselikoff/status/1088440182054051840) ember-cli-mirage v0.4.13 is out now and it contains a very cool feature. The old documentation site has been retired and replaced with a [new and shiny site](http://www.ember-cli-mirage.com/) built with [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs).
 
 As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. Help out by trying the latest release and see if you can catch any bugs.
 
