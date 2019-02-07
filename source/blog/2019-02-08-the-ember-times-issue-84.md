@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 84
-author: Jessica Jordan, the crowd
+author: Jessica Jordan, Amy Lam, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/08-the-ember-times-issue-84.html"
 responsive: true
@@ -10,6 +10,7 @@ responsive: true
 
 This week we have...
 
+a new 🆕 EmberWeekly.com,
 
 ...and an exclusive interview with Ember **contributor @rwwagner90**!
 
@@ -20,8 +21,11 @@ This week we have...
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [🆕 EmberWeekly.com](https://www.emberweekly.com/) 💥
 
+Our friends at Ember Weekly launched a new [EmberWeekly.com](https://www.emberweekly.com/). [@ebryn](https://github.com/ebryn) [tweets](https://twitter.com/ebryn/status/1093040993488855040) that the site includes six years of their newsletter's content, fully exposed to the web and now indexable. The site is powered by Ember and Fastboot and will help surface the wondering things happening in the Ember ecosystem! 💛
+
+Looking for Ember resources on the web? A great link to share? Browse the [Reading](https://www.emberweekly.com/?section=Reading) or [Watch & Listen](https://www.emberweekly.com/?section=Watch%2FListen) sections. We think that the site looks pretty slick too. 
 
 ---
 
@@ -102,4 +106,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, the crowd and the Learning Team
+Jessica Jordan, Amy Lam, the crowd and the Learning Team
