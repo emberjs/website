@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 84
-author: Jessica Jordan, Amy Lam, Kenneth Larsen the crowd
+author: Chris Ng, Jessica Jordan, Amy Lam, Kenneth Larsen the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/08-the-ember-times-issue-84.html"
 responsive: true
@@ -10,14 +10,19 @@ responsive: true
 
 This week we have...
 
-a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage
-
+a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage, introducing the EmberConf 2019 closing speaker – Sarah Allen 🗣️,
 ...and an exclusive interview with Ember **contributor @rwwagner90**!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [EmberConf 2019 closing speaker: Sarah Allen 🗣️](https://twitter.com/EmberConf/status/1092880236864188416)
 
+It was recently announced that [Sarah Allen](https://twitter.com/ultrasaurus) – [@ultrasaurus](https://github.com/ultrasaurus) – will be the closing [EmberConf 2019](https://emberconf.com/) speaker!
+
+<!--alex ignore gal-guy-->
+Sarah founded Blazing Cloud, a mobile development firm, and Bridge Foundry, a diversity and inclusion nonprofit. She previously served as Presidential Innovation Fellow in the Obama Administration at the Smithsonian Institution, and was an early engineer on After Effects, Shockwave, and Flash video. She now leads Google Cloud Platform infrastructure teams working on server-side events and security policy.
+
+So be sure to [register](https://emberconf.com/register.html) for EmberConf if you haven’t yet!
 
 ---
 
@@ -109,4 +114,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Amy Lam, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Amy Lam, Kenneth Larsen, the crowd and the Learning Team
