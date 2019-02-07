@@ -19,6 +19,7 @@ a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage, introdu
 
 It was recently announced that [Sarah Allen](https://twitter.com/ultrasaurus) – [@ultrasaurus](https://github.com/ultrasaurus) – will be the closing [EmberConf 2019](https://emberconf.com/) speaker!
 
+<!--alex ignore gal-guy-->
 Sarah founded Blazing Cloud, a mobile development firm, and Bridge Foundry, a diversity and inclusion nonprofit. She previously served as Presidential Innovation Fellow in the Obama Administration at the Smithsonian Institution, and was an early engineer on After Effects, Shockwave, and Flash video. She now leads Google Cloud Platform infrastructure teams working on server-side events and security policy.
 
 So be sure to [register](https://emberconf.com/register.html) for EmberConf if you haven’t yet!
