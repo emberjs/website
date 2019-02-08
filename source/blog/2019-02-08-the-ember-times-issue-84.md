@@ -68,7 +68,7 @@ As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. 
 
 A **new, dark theme** for [Ember Twiddle](https://ember-twiddle.com/) now allows you to create, edit and share Ember code snippets in a stylish way 🖤.
 
-The project [Ember Twiddle Solarized](https://github.com/sukima/ember-twiddle-solarized) is a UserCSS theme that can be installed  in either Firefox, Chrome or Opera in just a few steps.
+The project [Ember Twiddle Solarized](https://github.com/sukima/ember-twiddle-solarized) is a UserCSS theme that can be installed in either Firefox, Chrome or Opera in just a few steps.
 [Check out the installation instructions](https://github.com/sukima/ember-twiddle-solarized#installation-solarized#installation) and start twiddling today!
 
 
