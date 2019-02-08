@@ -8,10 +8,7 @@ responsive: true
 
 ሰላም Emberistas! 🐹
 
-This week we have...
-
-a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage, introducing the EmberConf 2019 closing speaker – Sarah Allen 🗣️,
-...and an exclusive interview with Ember **contributor @rwwagner90**!
+This week we have a new 🆕 EmberWeekly.com, ✨ the new documentation site for Ember Mirage, introducing the EmberConf 2019 closing speaker – Sarah Allen 🗣️, a new theme 🖤 for your **Ember Twiddles**, and an exclusive interview with Ember **contributor @rwwagner90**!
 
 ---
 
@@ -62,7 +59,17 @@ As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Solarize Your Ember Twiddle 🎨](https://github.com/sukima/ember-twiddle-solarized)
+
+
+<div class="blog-row">
+  <img class="float-left transparent" alt="" title="Ember Twiddle Solarized Theme Demo" src="/images/blog/emberjstimes/ember-twiddle-solarized.png" />
+</div>
+
+A **new, dark theme** for [Ember Twiddle](https://ember-twiddle.com/) now allows you to create, edit and share Ember code snippets in a stylish way 🖤.
+
+The project [Ember Twiddle Solarized](https://github.com/sukima/ember-twiddle-solarized) is a UserCSS theme that can be installed  in either Firefox, Chrome or Opera in just a few steps.
+[Check out the installation instructions](https://github.com/sukima/ember-twiddle-solarized#installation-solarized#installation) and start twiddling today!
 
 
 ---
