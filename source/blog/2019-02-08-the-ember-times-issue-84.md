@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 84
-author: Chris Ng, Jessica Jordan, Amy Lam, Kenneth Larsen the crowd
+author: Chris Ng, Jessica Jordan, Amy Lam, Kenneth Larsen, Alon Bukai
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/08-the-ember-times-issue-84.html"
 responsive: true
@@ -39,28 +39,7 @@ As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. 
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Solarize Your Ember Twiddle 🎨](https://github.com/sukima/ember-twiddle-solarized)
-
 
 <div class="blog-row">
   <img class="float-left transparent" alt="" title="Ember Twiddle Solarized Theme Demo" src="/images/blog/emberjstimes/ember-twiddle-solarized.png" />
@@ -70,7 +49,6 @@ A **new, dark theme** for [Ember Twiddle](https://ember-twiddle.com/) now allows
 
 The project [Ember Twiddle Solarized](https://github.com/sukima/ember-twiddle-solarized) is a UserCSS theme that can be installed in either Firefox, Chrome or Opera in just a few steps.
 [Check out the installation instructions](https://github.com/sukima/ember-twiddle-solarized#installation-solarized#installation) and start twiddling today!
-
 
 ---
 
@@ -121,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Amy Lam, Kenneth Larsen, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Amy Lam, Kenneth Larsen, Alon Bukai and the Learning Team
