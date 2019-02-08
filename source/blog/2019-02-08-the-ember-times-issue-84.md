@@ -8,13 +8,13 @@ responsive: true
 
 ሰላም Emberistas! 🐹
 
-This week we have a new 🆕 EmberWeekly.com, ✨ the new documentation site for Ember Mirage, introducing the EmberConf 2019 closing speaker – Sarah Allen 🗣️, a new theme 🖤 for your **Ember Twiddles**, and an exclusive interview with Ember **contributor @rwwagner90**!
+This week we have a new 🆕 EmberWeekly.com, ✨ the new documentation site for Ember Mirage, an introduction to the EmberConf 2019 closing speaker – Sarah Allen 🗣️, a new theme 🖤 for your Ember Twiddles and an exclusive interview with Ember contributor @rwwagner90!
 
 ---
 
 ## [EmberConf 2019 closing speaker: Sarah Allen 🗣️](https://twitter.com/EmberConf/status/1092880236864188416)
 
-It was recently announced that [Sarah Allen](https://twitter.com/ultrasaurus) – [@ultrasaurus](https://github.com/ultrasaurus) – will be the closing [EmberConf 2019](https://emberconf.com/) speaker!
+It was recently announced that [Sarah Allen](https://twitter.com/ultrasaurus) – [@ultrasaurus](https://github.com/ultrasaurus) – will be the **closing** [EmberConf 2019](https://emberconf.com/) **speaker**!
 
 <!--alex ignore gal-guy-->
 Sarah founded Blazing Cloud, a mobile development firm, and Bridge Foundry, a diversity and inclusion nonprofit. She previously served as Presidential Innovation Fellow in the Obama Administration at the Smithsonian Institution, and was an early engineer on After Effects, Shockwave, and Flash video. She now leads Google Cloud Platform infrastructure teams working on server-side events and security policy.
@@ -25,17 +25,17 @@ So be sure to [register](https://emberconf.com/register.html) for EmberConf if y
 
 ## [🆕 EmberWeekly.com](https://www.emberweekly.com/) 💥
 
-Our friends at Ember Weekly launched a new [EmberWeekly.com](https://www.emberweekly.com/). [@ebryn](https://github.com/ebryn) [tweets](https://twitter.com/ebryn/status/1093040993488855040) that the site includes six years of their newsletter's content, fully exposed to the web and now indexable. The site is powered by Ember and Fastboot and will help surface the wondering things happening in the Ember ecosystem! 💛
+Our friends at **Ember Weekly** launched a new [EmberWeekly.com](https://www.emberweekly.com/). [@ebryn](https://github.com/ebryn) [tweets](https://twitter.com/ebryn/status/1093040993488855040) that the site includes six years of their newsletter's content, fully exposed to the web and now indexable. The site is powered by Ember and Fastboot and will help surface the wondering things happening in the Ember ecosystem! 💛
 
-Looking for Ember resources on the web? A great link to share? Browse the [Reading](https://www.emberweekly.com/?section=Reading) or [Watch & Listen](https://www.emberweekly.com/?section=Watch%2FListen) sections. We think that the site looks pretty slick too.
+Looking for Ember resources on the web? A great link to share? Browse the [Reading](https://www.emberweekly.com/?section=Reading) or [Watch & Listen](https://www.emberweekly.com/?section=Watch%2FListen) sections. We think that the site looks pretty slick, too.
 
 ---
 
 ## [✨ New and Shiny Mirage Docs](http://www.ember-cli-mirage.com/)
 
-As [@samselikoff](https://github.com/samselikoff) posted on [Twitter](https://twitter.com/samselikoff/status/1088440182054051840) ember-cli-mirage v0.4.13 is out now and it contains a very cool feature. The old documentation site has been retired and replaced with a [new and shiny site](http://www.ember-cli-mirage.com/) built with [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs).
+As [@samselikoff](https://github.com/samselikoff) posted on [Twitter](https://twitter.com/samselikoff/status/1088440182054051840) ember-cli-mirage v0.4.13 is out now and it contains a very cool feature. The old **documentation site** has been retired and replaced with a [new and shiny site](http://www.ember-cli-mirage.com/) built with [ember-cli-addon-docs](https://github.com/ember-learn/ember-cli-addon-docs).
 
-As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. Help out by trying the latest release and see if you can catch any bugs.
+As if that wasn't enough, ember-cli-mirage currently has **0 reproducible bugs**. Help out by trying the latest release and see if you can catch any bugs.
 
 ---
 
@@ -58,7 +58,7 @@ The project [Ember Twiddle Solarized](https://github.com/sukima/ember-twiddle-so
   <img alt="Robert Wagner" title="Robert Wagner - Contributor to Ember" src="/images/blog/emberjstimes/robertwagner.jpeg" />
 </div>
 
-In our 5th edition of the contributor interview series community member **Robert Wagner**, also known as [@rwwagner90](https://github.com/rwwagner90) talks about his work on the [Ember Inspector](https://guides.emberjs.com/release/ember-inspector/), his motivation to contribute and how to **overcome** the hurdle of sending one's **first pull request** successfully.
+In our 5th edition of the contributor interview series community member **Robert Wagner**, also known as [@rwwagner90](https://github.com/rwwagner90) talks about his work on the [Ember Inspector](https://guides.emberjs.com/release/ember-inspector/), his motivation to contribute and how to **overcome** the hurdle of sending one's **first pull request**.
 
 You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-robert-wagner/16143).
 
