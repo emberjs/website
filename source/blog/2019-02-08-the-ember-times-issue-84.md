@@ -8,10 +8,7 @@ responsive: true
 
 ሰላም Emberistas! 🐹
 
-This week we have...
-
-a new 🆕 EmberWeekly.com, ✨ new documentation site for Ember Mirage, introducing the EmberConf 2019 closing speaker – Sarah Allen 🗣️,
-...and an exclusive interview with Ember **contributor @rwwagner90**!
+This week we have a new 🆕 EmberWeekly.com, ✨ the new documentation site for Ember Mirage, introducing the EmberConf 2019 closing speaker – Sarah Allen 🗣️, a new theme 🖤 for your **Ember Twiddles**, and an exclusive interview with Ember **contributor @rwwagner90**!
 
 ---
 
@@ -30,7 +27,7 @@ So be sure to [register](https://emberconf.com/register.html) for EmberConf if y
 
 Our friends at Ember Weekly launched a new [EmberWeekly.com](https://www.emberweekly.com/). [@ebryn](https://github.com/ebryn) [tweets](https://twitter.com/ebryn/status/1093040993488855040) that the site includes six years of their newsletter's content, fully exposed to the web and now indexable. The site is powered by Ember and Fastboot and will help surface the wondering things happening in the Ember ecosystem! 💛
 
-Looking for Ember resources on the web? A great link to share? Browse the [Reading](https://www.emberweekly.com/?section=Reading) or [Watch & Listen](https://www.emberweekly.com/?section=Watch%2FListen) sections. We think that the site looks pretty slick too. 
+Looking for Ember resources on the web? A great link to share? Browse the [Reading](https://www.emberweekly.com/?section=Reading) or [Watch & Listen](https://www.emberweekly.com/?section=Watch%2FListen) sections. We think that the site looks pretty slick too.
 
 ---
 
@@ -62,12 +59,22 @@ As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Solarize Your Ember Twiddle 🎨](https://github.com/sukima/ember-twiddle-solarized)
+
+
+<div class="blog-row">
+  <img class="float-left transparent" alt="" title="Ember Twiddle Solarized Theme Demo" src="/images/blog/emberjstimes/ember-twiddle-solarized.png" />
+</div>
+
+A **new, dark theme** for [Ember Twiddle](https://ember-twiddle.com/) now allows you to create, edit and share Ember code snippets in a stylish way 🖤.
+
+The project [Ember Twiddle Solarized](https://github.com/sukima/ember-twiddle-solarized) is a UserCSS theme that can be installed in either Firefox, Chrome or Opera in just a few steps.
+[Check out the installation instructions](https://github.com/sukima/ember-twiddle-solarized#installation-solarized#installation) and start twiddling today!
 
 
 ---
 
-## ["I contribute to Ember" with Robert Wagner 💬](#urlplaceholder)
+## ["I contribute to Ember" with Robert Wagner 💬](https://discuss.emberjs.com/t/i-contribute-to-ember-with-robert-wagner/16143)
 
 <div class="float-right padded portrait-frame">
   <img alt="Robert Wagner" title="Robert Wagner - Contributor to Ember" src="/images/blog/emberjstimes/robertwagner.jpeg" />
@@ -75,16 +82,16 @@ As if that wasn't enough, ember-cli-mirage currently has *0 reproducible bugs*. 
 
 In our 5th edition of the contributor interview series community member **Robert Wagner**, also known as [@rwwagner90](https://github.com/rwwagner90) talks about his work on the [Ember Inspector](https://guides.emberjs.com/release/ember-inspector/), his motivation to contribute and how to **overcome** the hurdle of sending one's **first pull request** successfully.
 
-You can read the full interview on [the Ember Forum](#urlplaceholder).
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-robert-wagner/16143).
 
-<a class="ember-button ember-button--centered" href="#urlplaceholder">Read more</a>
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-robert-wagner/16143">Read more</a>
 
 ---
 
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/apps/greenkeeper" target="gh-user">@greenkeeper[bot]</a>, <a href="https://github.com/wondersloth" target="gh-user">@wondersloth</a>, <a href="https://github.com/tomdale" target="gh-user">@tomdale</a>, <a href="https://github.com/SinS3i" target="gh-user">@SinS3i</a>, <a href="https://github.com/givanse" target="gh-user">@givanse</a>, <a href="https://github.com/bhullarg" target="gh-user">@bhullarg</a>, <a href="https://github.com/simonihmig" target="gh-user">@simonihmig</a>, <a href="https://github.com/btecu" target="gh-user">@btecu</a>, <a href="https://github.com/locks" target="gh-user">@locks</a>, <a href="https://github.com/prasannavijayan" target="gh-user">@prasannavijayan</a>, <a href="https://github.com/alexlafroscia" target="gh-user">@alexlafroscia</a>, <a href="https://github.com/mansona" target="gh-user">@mansona</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/dayton-bobbitt" target="gh-user">@dayton-bobbitt</a>, <a href="https://github.com/chrisrng" target="gh-user">@chrisrng</a>, <a href="https://github.com/kennethlarsen" target="gh-user">@kennethlarsen</a>, <a href="https://github.com/amyrlam" target="gh-user">@amyrlam</a>, <a href="https://github.com/villander" target="gh-user">@villander</a>, <a href="https://github.com/makepanic" target="gh-user">@makepanic</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a>, <a href="https://github.com/scalvert" target="gh-user">@scalvert</a>, <a href="https://github.com/efx" target="gh-user">@efx</a>, <a href="https://github.com/chancancode" target="gh-user">@chancancode</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a> and <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
