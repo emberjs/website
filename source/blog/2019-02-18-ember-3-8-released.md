@@ -21,11 +21,15 @@ You can read more about our general release process here:
 Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.8
-Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is COUNT (#) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
+Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is two (2) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
 
 #### New Features (2)
 
-First new feature (1 of 2)
+Element Modifier Manager (1 of 2)
+
+A modifier manager is an object that is responsible for coordinating the lifecycle events that occurs when invoking, installing and updating an element modifier. This new feature is introduced as a  very low-level API. Most likely you will never - as an Ember app developer - need to use this but it might come in handy for some add-on developers. In this way, the Ember app developers will benefit from this feature by subclassing these special modifiers provided by addons.
+
+If you're interested in learning more about how to use this new feature, then please refer to the [RFC](https://github.com/emberjs/rfcs/blob/master/text/0373-Element-Modifier-Managers.md).
 
 Second new feature (2 of 2)
 
