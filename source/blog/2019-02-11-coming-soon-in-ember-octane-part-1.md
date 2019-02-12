@@ -8,6 +8,7 @@ responsive: true
 
 (This post was originally published on [www.pzuraq.com](https://www.pzuraq.com/coming-soon-in-ember-octane-part-1-native-classes/))
 
+<!-- alex ignore nuts-->
 If you've been paying attention in Ember lately you may have heard the term "Octane" floating around here and there recently, and wondered what all the excitement was about. It may seem like a bit of a big deal - and that's because it kind of is! It's Ember's first new _edition_, proposed in the [Ember 2018 Roadmap](https://github.com/emberjs/rfcs/blob/master/text/0364-roadmap-2018.md), and represents a major shift in the mental model behind Ember.js and Ember applications. In this series, I'll be diving into some of the new features that are part of Octane (specifically the ones that are part of the _browser_ side of the framework) and giving a brief overview of how the feature works, and why the feature is being added. The features I'm planning on discussing are:
 
 - Native Classes (+Decorators)
@@ -18,6 +19,7 @@ If you've been paying attention in Ember lately you may have heard the term "Oct
 
 There _are_ more features that are part of Octane, such as Ember's new file system layout (also known as Module Unification), template imports, and other build improvements, but these are a bit out of my scope - I've personally been focused on the story for developers in the browser, writing app and addon code, and how that's going to change.
 
+<!-- alex ignore dives dive-->
 This series is aimed at existing Ember users, but if you're new to Ember or tried Ember a while ago and want to see how things are changing, I'll be providing context on the existing features as we go along. These posts won't be doing deep dives on all the edge cases of the functionality, they are moreso meant as an overview of what's coming. If you can't already tell, I'm very excited about these new features and the future of Ember with them, and can't wait to see them land in master! So, let's dive in!
 
 ### What Are Editions?
@@ -32,6 +34,7 @@ The answer is in the way Ember treats and respects SemVer. We follow SemVer to t
 
 In this model, new features are introduced gradually over the course of a single major version, allowing users to adopt them incrementally. This is amazing for app maintenance - instead of having a new major version be released and having to go update everything all at once, you can do it one piece at a time, as the new things are released.
 
+<!--alex ignore remain-->
 However, because this is done incrementally it can also sometimes mean that the new experience isn't really all that polished. After all, the docs and guides have to continue supporting the existing features, and remain cohesive. Adding every new feature to them immediately could quickly make them overwhelming for new users. Additionally, sometimes features may be ready and complete in isolation, but really be part of a larger picture of new features that are still in the pipeline, and some folks would prefer to wait for all of the "new world" to land before adopting new features.
 
 Editions are Ember's way to message to the community that the framework has synchronized, that all (or most) of the new features have shipped, and that it's time to update and adopt the new features. It's a tool that allows us to continue to use SemVer to signal _compatibility_ changes exclusively, and have a different tool for signaling _major updates and new features_. This allows us to keep our core value of stability without stagnation, and be able to show off cool new things at the same time!
@@ -44,6 +47,7 @@ Native Javascript classes in Ember are near and dear to my heart. I first began 
 
 It turned out that was half-true - native classes did work pretty well with Ember's own classes, but there were some pretty major changes we needed to make to get them to be just as ergonomic and usable as Ember's classic class syntax, which was beginning to look more and more dated by the day. These changes were ultimately _small_, but they were deep in the internals of Ember, and operating on them was an almost surgical process, with little room for error or regression.
 
+<!-- alex ignore remain-->
 Today, native classes are fully supported in Ember, with a rock solid public API and well defined, ergonomic behavior. However, they are one of those features that are part of a larger picture, specifically they require _class fields and decorators_ to be used effectively. Class fields are currently stage 3 in the TC39 process, which is generally supported by Ember for early adoption, but decorators remain at stage 2 after the January 2019 TC39 meeting. As we will discuss, decorators are crucial to using Native Classes effectively because Ember _has been using the decorator pattern all along_!
 
 We have plans to continue working with TC39, along with the other major users of decorators (TypeScript, Angular, Vue, MobX, etc) to standardize and stabilize the syntax enough for us to land them in the framework, and while that may end up being some time after EmberConf, we already have the _behavior_ of decorators spec'd out and implemented behind a feature flag. They will be available to play around with by EmberConf, so you'll be able to try them out with native classes to see how they work. If you're impatient, you can also always use [ember-decorators](https://ember-decorators.github.io/ember-decorators/), which matches the behavior of the proposed decorators exactly.
@@ -243,7 +247,7 @@ def say_whee():
 
 say_whee = my_decorator(say_whee)
 ```
-
+<!-- alex ignore special-->
 The "decorator pattern" more generically is about taking an input of some type - a function, a class method, a field - and transforming it into something of the same (or similar) type, adding some extra functionality along the way. You don't need a special syntax to use the decorator pattern, it just makes it a bit more convenient! If you think about it this way, Ember's `computed()` function is _basically_ a decorator - it adds caching based on dependent keys to a getter function.
 
 Leveraging this similarity, we were able to update that decorator functionality to match JavaScript's newly proposed API, which is how we're able to have it be compatible between both the classic and current syntax. The added side effect is that the _entire_ Ember ecosystem gets this upgrade all at once, with absolutely no extra work required!
@@ -261,6 +265,7 @@ These cover all of the basic functionality provided by the current classic class
 
 ### Putting It All Together
 
+<!-- alex ignore bigger-->
 Alright, with that in mind, let's take on a bigger, more complete example! This is a component from [emberobserver.com](https://emberobserver.com/), one of the larger components I could find in the application ([source here](https://github.com/emberobserver/client/blob/343e7f39b035897e4db0b4be45ca3a1cd238eacc/app/components/addon-source-usages.js)):
 
 ```js
