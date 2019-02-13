@@ -19,7 +19,7 @@ JavaScript was not always the dominant force in the web. Today a lot of SPA feat
 
 Here are some quick snippets from the film:
 
-> “JavaScript frameworks don’t have to be disposable software. Web applications don’t have to be disposable software. You don’t need to tell your manager we need to stop writing any new features for the next 6 months because it’s been 2 years and we need to rewrite – Ember is a symbol of the fact that that is a false dichotomy” - Tom Dale
+> “JavaScript frameworks don’t have to be disposable software. Web applications don’t have to be disposable software. You don’t need to tell your manager we need to stop writing any new features for the next 6 months because it’s been 2 years and we need to rewrite – Ember is a symbol of the fact that that is a false dichotomy.” - Tom Dale
 
 > “I really hope the best of Ember is ahead because I think front end engineering needs it … needs an example of something that is not trying to tell people that when something goes wrong it’s their own fault. So like something that tells you if you’re a beginner like this is for you” - Yehuda Katz
 
