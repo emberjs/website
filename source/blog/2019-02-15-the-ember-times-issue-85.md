@@ -12,7 +12,7 @@ Watch the Ember.js Documentary 🍿, <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-R
 
 ---
 
-[## The Ember.js: The Documentary is now released! 🍿](https://twitter.com/honeypotio/status/1094974913725849606)
+## [Ember.js: The Documentary is Now Released! 🍿](https://twitter.com/honeypotio/status/1094974913725849606)
 
 <!--alex ignore spa-->
 JavaScript was not always the dominant force in the web. Today a lot of SPA features we see around the web was pioneered by Ember. Explore the story of why and how Ember.js came to be in [Ember.js: The Documentary](http://videos.honeypot.io/emberjs-documentary-2019/)!
