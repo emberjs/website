@@ -23,7 +23,7 @@ Here are some quick snippets from the film:
 
 > “I really hope the best of Ember is ahead because I think front end engineering needs it … needs an example of something that is not trying to tell people that when something goes wrong it’s their own fault. So like something that tells you if you’re a beginner like this is for you.” - Yehuda Katz
 
-Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) featuring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette), [@gavinjoyce](https://github.com/GavinJoyce), [@balinterdi](https://github.com/balinterdi), [@melsumner](https://github.com/MelSumner), [@jessica-jordan](https://github.com/jessica-jordan) and other members of the community on [YouTube](https://www.youtube.com/watch?v=Cvz-9ccflKQ)!
+Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) featuring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette), [@GavinJoyce](https://github.com/GavinJoyce), [@balinterdi](https://github.com/balinterdi), [@MelSumner](https://github.com/MelSumner), [@jessica-jordan](https://github.com/jessica-jordan) and other members of the community on [YouTube](https://www.youtube.com/watch?v=Cvz-9ccflKQ)!
 
 ---
 
