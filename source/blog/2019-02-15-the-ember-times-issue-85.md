@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Chris Ng, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -8,12 +8,22 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Watch the Ember.js Documentary 🍿, <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember.js: The Documentary is Now Released! 🍿](https://twitter.com/honeypotio/status/1094974913725849606)
 
+<!--alex ignore spa-->
+JavaScript was not always the dominant force in the web. Today a lot of SPA features we see around the web were pioneered by Ember. Explore the story of why and how Ember.js came to be in [Ember.js: The Documentary](http://videos.honeypot.io/emberjs-documentary-2019/)!
+
+Here are some quick snippets from the film:
+
+> “JavaScript frameworks don’t have to be disposable software. Web applications don’t have to be disposable software. You don’t need to tell your manager we need to stop writing any new features for the next 6 months because it’s been 2 years and we need to rewrite – Ember is a symbol of the fact that that is a false dichotomy.” - Tom Dale
+
+> “I really hope the best of Ember is ahead because I think front end engineering needs it … needs an example of something that is not trying to tell people that when something goes wrong it’s their own fault. So like something that tells you if you’re a beginner like this is for you.” - Yehuda Katz
+
+Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) featuring [@wycats](https://github.com/wycats), [@tomdale](https://github.com/tomdale), [@wifelette](https://github.com/wifelette), [@GavinJoyce](https://github.com/GavinJoyce), [@balinterdi](https://github.com/balinterdi), [@MelSumner](https://github.com/MelSumner), [@jessica-jordan](https://github.com/jessica-jordan) and other members of the community on [YouTube](https://www.youtube.com/watch?v=Cvz-9ccflKQ)!
 
 ---
 
@@ -90,4 +100,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Ng, the crowd and the Learning Team
