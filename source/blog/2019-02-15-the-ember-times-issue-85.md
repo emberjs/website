@@ -27,8 +27,13 @@ Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) fe
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember.js core panel, Boston meetup](https://www.youtube.com/watch?v=Cvz-9ccflKQ)
 
+At the January [Boston Ember.js Meetup](https://www.meetup.com/Boston-Ember-js/) members of the Ember.js core team got together for a panel on the future of JavaScript.
+
+Team members Tom Dale, Robert Jackson, Edward Faulkner, Dan Gebhardt and Jen Weber discussed their picks for the most exciting future developments in JavaScript and their impact on the web and the Ember.js ecosystem, followed by a super interesting Q&A. Topics included web assembly and it's effect on mobile web application performance, web workers, decorators, learning stories and more! ✨
+
+Check out the entire [archived live stream](https://www.youtube.com/watch?v=Jp4jrwz4zV8&feature=youtu.be&t=105) featuring [@tomdale](https://github.com/tomdale), [@rwjblue](https://github.com/rwjblue), [@ef4](https://github.com/ef4), [@dgeb](https://github.com/dgeb) and [@jenweber](https://github.com/jenweber).
 
 ---
 
