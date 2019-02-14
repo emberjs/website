@@ -21,12 +21,15 @@ As per the usual standard, we have planned out this work to be able to complete 
 ### Phases
 
 This is roughly the planned phases of the documentation work: 
-- Reorder the TOC as per the RFC
-- Add in new sub-sections
-- Accept PRs for content in each sub-section
-- Edit & re-arrange before preview launches
-- Add re-direct URLs and remove old content
-- launch! 
+1 Reorder the TOC (as per the RFC)
+1 Add in new sub-sections
+1 Accept PRs for content in each sub-section
+1 Edit & re-arrange before preview launches
+1 Add re-direct URLs and remove old content
+
+Through all of these phases, the guide preview will be used to ensure that the documentation is staying on track with the intended features. 
+
+While new content is being written and older content is being updated, no existing content will be completely deleted. Only after we have reviewed the content and added the re-directs will content be removed. This means that some content may be available if the user has the URL, but it won't be linked from the table of contents. 
 
 ### Challenges
 - converting concepts from classic syntax to new syntax
@@ -34,8 +37,9 @@ This is roughly the planned phases of the documentation work:
 - handling redirects for old content
 
 ## How you can help
-- https://github.com/ember-learn/guides-source/projects/4
-- Coordinate in #dev-ember-learning
+Thanks to our infrastructure upgrades in 2018, we are well-positioned to accept community participation in the documentation effort. Please see the open issues in https://github.com/ember-learn/guides-source/projects/4 and let us know in the #dev-ember-learning channel (on Discord) if you would like to work on an issue. 
+
+All PRs for this should be made against the `octane` branch of the [guides repo](https://github.com/ember-learn/guides-source).
 
 ### Future of Contributing
 - Jessica's [RFC](https://github.com/emberjs/rfcs/pull/446)
