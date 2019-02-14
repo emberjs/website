@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 85
-author: Chris Ng, Jessica Jordan, the crowd
+author: Chris Ng, Jessica Jordan, Jared Galanis the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/15-the-ember-times-issue-85.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Watch the Ember.js Documentary 🍿, an exclusive interview with Ember contributor @eshtadc,
+Watch the Ember.js Documentary 🍿, an exclusive interview with Ember contributor @eshtadc, the Ember.js core team panel
 
 ---
 
@@ -27,8 +27,13 @@ Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) fe
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember.js Core Panel, Boston Meetup](https://www.youtube.com/watch?v=Jp4jrwz4zV8&feature=youtu.be&t=105)
 
+At the January [Boston Ember.js Meetup](https://www.meetup.com/Boston-Ember-js/) members of the Ember.js core team got together for a panel on the future of JavaScript.
+
+Team members Tom Dale, Robert Jackson, Edward Faulkner, Dan Gebhardt and Jen Weber discussed their picks for the most exciting future developments in JavaScript and their impact on the web and the Ember.js ecosystem, followed by a super interesting Q&A. Topics included web assembly and it's effect on mobile web application performance, web workers, decorators, learning stories and more! ✨
+
+Check out the entire [archived live stream](https://www.youtube.com/watch?v=Jp4jrwz4zV8&feature=youtu.be&t=105) featuring [@tomdale](https://github.com/tomdale), [@rwjblue](https://github.com/rwjblue), [@ef4](https://github.com/ef4), [@dgeb](https://github.com/dgeb) and [@jenweber](https://github.com/jenweber).
 
 ---
 
@@ -117,4 +122,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Jared Galanis the crowd and the Learning Team
