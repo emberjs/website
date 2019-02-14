@@ -1,14 +1,14 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Chris Ng, the crowd
+title: The Ember Times - Issue No. 85
+author: Chris Ng, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
-alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2019/02/15-the-ember-times-issue-85.html"
 responsive: true
 ---
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Watch the Ember.js Documentary 🍿, <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Watch the Ember.js Documentary 🍿, an exclusive interview with Ember contributor @eshtadc,
 
 ---
 
@@ -57,12 +57,29 @@ Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) fe
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Farewell, computed().meta()](https://github.com/emberjs/rfcs/pull/441)
+
+Following the **deprecation** of other **modifier functions** of **computed properties** in the past ([1](https://emberjs.github.io/rfcs/0375-deprecate-computed-property-modifier.html), [2](https://emberjs.github.io/rfcs/0370-deprecate-computed-volatile.html)),
+a new Request for Comments (RFC) proposes the [deprecation of the `meta()` modifier](https://github.com/emberjs/rfcs/pull/441).
+
+The once useful function for sharing and looking up meta information through a cp, can now be easily substituted by using `WeakMap`s - making the deprecation of `computed().meta()` possible as proposed in the RFC.
+
+You can read more about the suggested transition path in the [full proposal](https://github.com/emberjs/rfcs/blob/51b57a865a3c58393c44d73f1c4931878c994eef/text/0000-deprecate-computed-meta.md). And as always, don't forget to [comment, too](https://github.com/emberjs/rfcs/pull/441)!
 
 
 ---
 
-## [SECTION TITLE](#section-url)
+## ["I contribute to Ember" with Lisa Backer](https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168)
+
+<div class="float-right padded portrait-frame">
+  <img alt="Lisa Backer" title="Lisa Backer - Contributor to Ember" src="/images/blog/emberjstimes/lisabacker.jpeg" />
+</div>
+
+In our 5th edition of the contributor interview series community member **Lisa Backer**, also known as [@eshtadc](https://github.com/eshtadc) talks about her work on `ember-service-worker`, public speaking, the things that make open-source so valuable and why anyone in the community can be an expert who has important insights to share.
+
+You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168).
+
+<a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168">Read more</a>
 
 
 ---
@@ -100,4 +117,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, the crowd and the Learning Team
+Chris Ng, Jessica Jordan, the crowd and the Learning Team
