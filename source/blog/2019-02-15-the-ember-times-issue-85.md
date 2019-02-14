@@ -27,7 +27,7 @@ Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) fe
 
 ---
 
-## [Ember.js core panel, Boston meetup](https://www.youtube.com/watch?v=Cvz-9ccflKQ)
+## [Ember.js Core Panel, Boston Meetup](https://www.youtube.com/watch?v=Cvz-9ccflKQ)
 
 At the January [Boston Ember.js Meetup](https://www.meetup.com/Boston-Ember-js/) members of the Ember.js core team got together for a panel on the future of JavaScript.
 
