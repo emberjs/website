@@ -5,14 +5,13 @@ tags: Recent Posts, 2019, Octane
 responsive: true
 ---
 
-Octane is coming soon, and with all this work comes a lot of documentation. Since this requires coordination of many moving parts, we want to outline the approach we're taking, and outlining some ways that the community can contribute. 
+The preview of the Octane edition of Ember is coming soon, and with all this work comes a lot of documentation. Since this requires coordination of many moving parts, we want to outline the approach we're taking, and outlining some ways that the community can contribute. 
 
 ## Preparation
 
 In order to prepare for the new edition, the Learning Core Team spent time figuring out how to best transition the existing docs in such a way that was consistent with iterative innovation. 
 
-- Jen's [RFC](https://github.com/emberjs/rfcs/pull/431)
-- Infrastructure support
+One of the goals of improving the guides in general was to identify a better table of contents that improved the learning flow in the guides (see [RFC #431](https://github.com/emberjs/rfcs/pull/431)).
 
 ## Updating the guides
 
@@ -32,7 +31,8 @@ Through all of these phases, the guide preview will be used to ensure that the d
 While new content is being written and older content is being updated, no existing content will be completely deleted. Only after we have reviewed the content and added the re-directs will content be removed. This means that some content may be available if the user has the URL, but it won't be linked from the table of contents. 
 
 ### Challenges
-- converting concepts from classic syntax to new syntax
+
+- converting guides from classic syntax to new syntax
 - what to do about temporarily needed guides
 - handling redirects for old content
 
@@ -42,4 +42,5 @@ Thanks to our infrastructure upgrades in 2018, we are well-positioned to accept 
 All PRs for this should be made against the `octane` branch of the [guides repo](https://github.com/ember-learn/guides-source).
 
 ### Future of Contributing
-- Jessica's [RFC](https://github.com/emberjs/rfcs/pull/446)
+
+The Learning Core Team is working to make it even easier to contribute. We are planning better contributing guides than we've ever had- and you can be part of this process! We're adding a Contributing section to the website- participate in shaping this content by helping review/comment on [RFC #446](https://github.com/emberjs/rfcs/pull/446).
