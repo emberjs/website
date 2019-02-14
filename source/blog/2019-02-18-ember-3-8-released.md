@@ -33,6 +33,13 @@ If you're interested in learning more about how to use this new feature, then pl
 
 Second new feature (2 of 2)
 
+Array helper
+
+Ember 3.8 introduces the `{{array}}` helper to create an array in a template. This helper works in similar fashion to the already existing `{{hash}}` helper.
+
+The helper would be invoked as `{{array arg1 ... argN}}` and return the value `[arg1, ..., argN]`. For example, `{{array 'a' 'b' 'c'}}` would return the value `['a', 'b', 'c']`.
+
+You can read the original RFC [here](https://github.com/emberjs/rfcs/blob/master/text/0318-array-helper.md).
 
 #### Deprecations (0)
 
