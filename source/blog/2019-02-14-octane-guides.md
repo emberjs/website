@@ -11,14 +11,16 @@ Octane is coming soon, and with all this work comes a lot of documentation. Sinc
 
 In order to prepare for the new edition, the Learning Core Team spent time figuring out how to best transition the existing docs in such a way that was consistent with iterative innovation. 
 
-- Jen's RFC
+- Jen's [RFC](https://github.com/emberjs/rfcs/pull/431)
 - Infrastructure support
 
 ## Updating the guides
+
 As per the usual standard, we have planned out this work to be able to complete it in an iterative fashion. This was particularly important because we are updating guides as new features for the Octane release are merged into Ember. 
 
 ### Phases
-These are the phases of the work: 
+
+This is roughly the planned phases of the documentation work: 
 - Reorder the TOC as per the RFC
 - Add in new sub-sections
 - Accept PRs for content in each sub-section
@@ -29,10 +31,11 @@ These are the phases of the work:
 ### Challenges
 - converting concepts from classic syntax to new syntax
 - what to do about temporarily needed guides
+- handling redirects for old content
 
 ## How you can help
 - https://github.com/ember-learn/guides-source/projects/4
 - Coordinate in #dev-ember-learning
 
 ### Future of Contributing
-- Jessica's RFC
+- Jessica's [RFC](https://github.com/emberjs/rfcs/pull/446)
