@@ -1,5 +1,5 @@
 ---
-title: 'Documentation, documentation, documentation'
+title: 'Community Update: Octane Documentation'
 author: Melanie Sumner
 tags: Recent Posts, 2019, Octane
 responsive: true
