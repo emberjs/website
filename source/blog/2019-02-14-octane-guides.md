@@ -23,31 +23,31 @@ This is roughly the planned phases of the documentation work.
 
 Phase 1, Octane Guides, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
 
-- Reorder the table of contents (as per the RFC)
-- Add in placeholders for any new sub-sections
-- Add content in each sub-section (prose, code samples)
-- Edit & re-arrange before preview launches
-- Add re-direct URLs and remove old content
+1. Reorder the table of contents (as per the RFC)
+1. Add in placeholders for any new sub-sections
+1. Add content in each sub-section (prose, code samples)
+1. Review, Edit & re-arrange sub-sections before preview launches
+1. Add re-direct URLs and remove old content
 
 Then the Octane guides will be considered in MVP status and we will move forward to the next phase, which will include all of the sections that were identified in the table of contents RFC but were not included in the MVP. 
 
-Through all of these phases, the guide preview will be used to ensure that the documentation is staying on track with the intended features. 
+Through all of these phases, a preview of the Octane edition guides will be used to ensure that the documentation is staying on track with the intended features. 
 
-While new content is being written and older content is being updated, no existing content will be completely deleted. Only after we have reviewed the content and added the re-directs will content be removed. This means that some content may be available if the user has the URL, but it won't be linked from the table of contents. 
+While new content is being written and older content is being updated, **no existing content will be completely deleted.** Only _after_ we have fully reviewed the content and added the re-directs will outdated content be removed. This means that in the interim, some content may be available if the user has the URL, but it won't be linked from the table of contents. 
 
 ### Challenges
 As with any ambitious undertaking, there are some related challenges. Here are a few we are currently facing: 
 
 - converting guides from classic syntax to new syntax
-- what to do about temporarily needed guides
-- handling redirects for old content
+- the number of sub-sections for each guide section
+- handling redirects for old content in a way that won't break deprecation messages
 
 We expect to work through these challenges and have process in place to handle them, but we should have a shared awareness that our approach may be tweaked as the next month goes on, to address these issues. 
 
 ## How you can help
 We expect that the community will be willing to submit PRs to help make the documentation better- from checking for spelling or grammar errors, to adding code samples, and even more ambitiously, writing some prose. 
 
-Thanks to our infrastructure upgrades in 2018, we are well-positioned to accept community participation in the documentation effort. Please see the open issues in https://github.com/ember-learn/guides-source/projects/4 and let us know in the #dev-ember-learning channel (on Discord) if you would like to work on an issue. 
+Thanks to our infrastructure upgrades in 2018, we are well-positioned to accept community participation in the documentation effort. Please see the open issues in the [guides source repository](https://github.com/ember-learn/guides-source/issues) and let us know in the #dev-ember-learning channel (on Discord) if you would like to work on an issue. 
 
 All PRs for this should be made against the `octane` branch of the [guides repo](https://github.com/ember-learn/guides-source) and should follow the regular standards for pull requests to documentation, the most important being one issue per pull request. 
 
