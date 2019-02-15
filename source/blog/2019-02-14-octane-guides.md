@@ -24,7 +24,7 @@ This is roughly the planned phases of the documentation work.
 Phase 1, Octane Guides, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
 - Reorder the table of contents (as per the RFC)
 - Add in placeholders for any new sub-sections
-- Accept PRs for content in each sub-section
+- Add content in each sub-section (prose, code samples)
 - Edit & re-arrange before preview launches
 - Add re-direct URLs and remove old content
 
@@ -47,7 +47,7 @@ We expect that the community will be willing to submit PRs to help make the docu
 
 Thanks to our infrastructure upgrades in 2018, we are well-positioned to accept community participation in the documentation effort. Please see the open issues in https://github.com/ember-learn/guides-source/projects/4 and let us know in the #dev-ember-learning channel (on Discord) if you would like to work on an issue. 
 
-All PRs for this should be made against the `octane` branch of the [guides repo](https://github.com/ember-learn/guides-source).
+All PRs for this should be made against the `octane` branch of the [guides repo](https://github.com/ember-learn/guides-source) and should follow the regular standards for pull requests to documentation, the most important being one issue per pull request. 
 
 ### Future of Contributing
 
