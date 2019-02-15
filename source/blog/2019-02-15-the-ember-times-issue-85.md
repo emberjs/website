@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 85
-author: Chris Ng, Jessica Jordan, Jared Galanis the crowd
+author: Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/15-the-ember-times-issue-85.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-Watch the Ember.js Documentary 🍿, an exclusive interview with Ember contributor @eshtadc, the Ember.js core team panel
+Watch the Ember.js Documentary 🍿, an exclusive interview with Ember contributor @eshtadc, the Ember.js core team panel, 📐a big update to the guides
 
 ---
 
@@ -37,8 +37,11 @@ Check out the entire [archived live stream](https://www.youtube.com/watch?v=Jp4j
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [📐 Guides From a Different Angle](https://guides.emberjs.com/release/)
 
+A new version of the [Ember guides](https://guides.emberjs.com/release/) has been deployed, and it contains some exciting surprises. First of all, the `guides-source` and `guides-app` repositories have become **one repository**. This makes it so much more convenient to maintain and contribute. It also now uses the [Guidemaker](https://github.com/empress/guidemaker) technology which means that CLI-guides and the Ember guides are using the same tech.
+
+And now for the big surprise: **The newly deployed guides now contains angle bracket invocation syntax**. So, if you're looking to use angle bracket invocation syntax in your Ember application, the guides are the place to look for help.
 
 ---
 
@@ -122,4 +125,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Jared Galanis the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen the crowd and the Learning Team
