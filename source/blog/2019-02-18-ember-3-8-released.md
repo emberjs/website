@@ -1,6 +1,6 @@
 ---
 title: Ember 3.8 Released
-author: Melanie Sumner, Kenneth Larsen
+author: Melanie Sumner, Kenneth Larsen, Anne-Greeth van Herwijnen
 tags: Releases, 2018, 3, 3.8
 responsive: true
 ---
