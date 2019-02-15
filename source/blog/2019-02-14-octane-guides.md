@@ -39,9 +39,9 @@ While new content is being written and older content is being updated, **no exis
 ### Challenges
 As with any ambitious undertaking, there are some related challenges. Here are a few we are currently facing: 
 
-- converting guides from classic syntax to new syntax
+- some of the details around converting guides from classic syntax to new syntax
 - the number of sub-sections for each guide section
-- handling redirects for old content in a way that won't break deprecation messages
+- handling redirects for old content in a way that won't break existing deprecation messages
 
 We expect to work through these challenges and have process in place to handle them, but we should have a shared awareness that our approach may be tweaked as the next month goes on, to address these issues. 
 
