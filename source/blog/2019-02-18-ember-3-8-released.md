@@ -33,7 +33,6 @@ If you're interested in learning more about how to use this new feature, then pl
 
 Array helper (2 of 2)
 
-Array helper
 
 Ember 3.8 introduces the `{{array}}` helper to create an array in a template. This helper works in similar fashion to the already existing `{{hash}}` helper.
 
