@@ -38,7 +38,7 @@ Ember 3.8 introduces the `{{array}}` helper to create an array in a template. Th
 
 The helper would be invoked as `{{array arg1 ... argN}}` and return the value `[arg1, ..., argN]`. For example, `{{array 'a' 'b' 'c'}}` would return the value `['a', 'b', 'c']`.
 
-You can read the original RFC [here](https://github.com/emberjs/rfcs/blob/master/text/0318-array-helper.md).
+Read the [original RFC](https://github.com/emberjs/rfcs/blob/master/text/0318-array-helper.md) for more information.
 
 #### Deprecations (0)
 
