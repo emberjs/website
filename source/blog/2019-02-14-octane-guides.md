@@ -43,7 +43,7 @@ As with any ambitious undertaking, there are some related challenges. Here are a
 - the number of sub-sections for each guide section
 - handling redirects for old content in a way that won't break existing deprecation messages
 
-We expect to work through these challenges and have process in place to handle them, but we should have a shared awareness that our approach may be tweaked as the next month goes on, to address these issues. 
+We expect to work through these challenges and have a process in place to handle them, but we should have a shared awareness that our approach may be tweaked as the next month goes on, to address these issues. 
 
 ## How you can help
 We expect that the community will be willing to submit PRs to help make the documentation better- from checking for spelling or grammar errors, to adding code samples, and even more ambitiously, writing some prose. 
