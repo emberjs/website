@@ -54,6 +54,6 @@ All PRs for this should be made against the `octane` branch of the [guides repo]
 
 ### Future of Contributing
 
-The Learning Core Team is working to make it even easier to contribute. We are planning better contributing guides than we've ever had before- and you can be part of this process! We're adding a Contributing section to the website- participate in shaping this content by helping review/comment on [RFC #446](https://github.com/emberjs/rfcs/pull/446).
+The Learning Core Team is working to make it even easier to contribute. We are planning better contributing guides than we've ever had before, and you can be part of this process! We're adding a Contributing section to the website–participate in shaping this content by helping review/comment on [RFC #446](https://github.com/emberjs/rfcs/pull/446).
 
 
