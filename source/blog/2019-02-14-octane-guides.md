@@ -23,9 +23,10 @@ This is roughly the planned phases of the documentation work.
 
 Phase 1, Octane Guides, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
 
+1. Create octane branch of the guides for this work
 1. Reorder the table of contents (as per the RFC)
 1. Add in placeholders for any new sub-sections
-1. Add content in each sub-section (prose, code samples)
+1. Add or update content in each sub-section (prose, code samples) [https://github.com/ember-learn/guides-source/issues/394](https://github.com/ember-learn/guides-source/issues/394)
 1. Review, Edit & re-arrange sub-sections before preview launches
 1. Add re-direct URLs and remove old content
 
