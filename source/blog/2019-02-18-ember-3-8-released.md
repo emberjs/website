@@ -31,7 +31,7 @@ A modifier manager is an object that is responsible for coordinating the lifecyc
 
 If you're interested in learning more about how to use this new feature, then please refer to the [RFC](https://github.com/emberjs/rfcs/blob/master/text/0373-Element-Modifier-Managers.md).
 
-Second new feature (2 of 2)
+Array helper (2 of 2)
 
 Array helper
 
