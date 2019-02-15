@@ -1170,6 +1170,10 @@
 - url: https://www.paycertify.com
   image: paycertify.png
   alt: PayCertify
+- url: https://zipbooks.com/
+  image: zipbooks.png
+  alt: ZipBooks
+  use: "Used for all our web apps and internal tools"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
