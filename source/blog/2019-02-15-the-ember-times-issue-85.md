@@ -1,14 +1,14 @@
 ---
 title: The Ember Times - Issue No. 85
-author: Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen the crowd
+author: Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/15-the-ember-times-issue-85.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+こんにちは Emberistas! 🐹
 
-Watch the Ember.js Documentary 🍿, an exclusive interview with Ember contributor @eshtadc, the Ember.js core team panel, 📐a big update to the guides
+In this week's issue: watch the Ember.js Documentary 🍿, check out the Ember.js core team panel 📹, there's a big update to the guides 📐, a new RFC to deprecate computed().meta(), and we have an exclusive interview with Ember contributor Lisa Backer.
 
 ---
 
@@ -37,31 +37,11 @@ Check out the entire [archived live stream](https://www.youtube.com/watch?v=Jp4j
 
 ---
 
-## [📐 Guides From a Different Angle](https://guides.emberjs.com/release/)
+## [Guides From a Different Angle 📐](https://guides.emberjs.com/release/)
 
 A new version of the [Ember guides](https://guides.emberjs.com/release/) has been deployed, and it contains some exciting surprises. First of all, the `guides-source` and `guides-app` repositories have become **one repository**. This makes it so much more convenient to maintain and contribute. It also now uses the [Guidemaker](https://github.com/empress/guidemaker) technology which means that CLI-guides and the Ember guides are using the same tech.
 
 And now for the big surprise: **The newly deployed guides now contains angle bracket invocation syntax**. So, if you're looking to use angle bracket invocation syntax in your Ember application, the guides are the place to look for help.
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
 
 ---
 
@@ -73,7 +53,6 @@ a new Request for Comments (RFC) proposes the [deprecation of the `meta()` modif
 The once useful function for sharing and looking up meta information through a cp, can now be easily substituted by using `WeakMap`s - making the deprecation of `computed().meta()` possible as proposed in the RFC.
 
 You can read more about the suggested transition path in the [full proposal](https://github.com/emberjs/rfcs/blob/51b57a865a3c58393c44d73f1c4931878c994eef/text/0000-deprecate-computed-meta.md). And as always, don't forget to [comment, too](https://github.com/emberjs/rfcs/pull/441)!
-
 
 ---
 
@@ -89,9 +68,7 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 
 <a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168">Read more</a>
 
-
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -125,4 +102,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen the crowd and the Learning Team
+Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen, Amy Lam and the Learning Team
