@@ -5,7 +5,7 @@ tags: Recent Posts, 2019, Octane
 responsive: true
 ---
 
-The preview of the Octane edition of Ember is coming soon, and with all this work comes a lot of documentation. Since this requires coordination of many moving parts, we want to outline the approach we're taking, and outlining some ways that the community can contribute. 
+The preview of the Octane edition of Ember is coming soon, and with all these fantastic new features comes a lot of documentation. Since this requires coordination of many moving parts, we want to outline the approach we're taking, and outlining some ways that the community can contribute. 
 
 ## Preparation
 
@@ -19,16 +19,17 @@ As per the usual standard, we have planned out this work to be able to complete 
 
 ### Phases
 
-This is roughly the planned phases of the documentation work.
+This is roughly the planned phases of the documentation work for the Octane edition of the guides.
 
-Phase 1, Octane Guides, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
+Phase 1, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
 
-1. Create octane branch of the guides for this work
-1. Reorder the table of contents (as per the RFC)
+1. Create octane branch of the [guides repo](https://github.com/ember-learn/guides-source/) for this work
+1. Reorder the table of contents (as per [RFC #431](https://github.com/emberjs/rfcs/pull/431))
 1. Add in placeholders for any new sub-sections
-1. Add or update content in each sub-section (prose, code samples) [https://github.com/ember-learn/guides-source/issues/394](https://github.com/ember-learn/guides-source/issues/394)
-1. Review, Edit & re-arrange sub-sections before preview launches
+1. Add or update content in each sub-section (prose, code samples, etc) [https://github.com/ember-learn/guides-source/issues/394](https://github.com/ember-learn/guides-source/issues/394)
+1. Review, edit & re-arrange sub-sections before preview launches
 1. Add re-direct URLs and remove old content
+1. Test/Review to make sure everything works as intended
 
 Then the Octane guides will be considered in MVP status and we will move forward to the next phase, which will include all of the sections that were identified in the table of contents RFC but were not included in the MVP. 
 
