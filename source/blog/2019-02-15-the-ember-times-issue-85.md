@@ -8,7 +8,7 @@ responsive: true
 
 こんにちは Emberistas! 🐹
 
-In this week's issue: watch the Ember.js Documentary 🍿, check out the Ember.js core team panel 📹, there's a big update to the guides 📐, a new RFC to deprecate computed().meta(), and we have an exclusive interview with Ember contributor Lisa Backer.
+In this week's issue: watch the Ember.js Documentary 🍿, check out the Ember.js core team panel 📹, there's a big update to the guides 📐, a new RFC to deprecate computed().meta() 🚀, and we have an exclusive interview with Ember contributor Lisa Backer! 🎉
 
 ---
 
@@ -27,7 +27,7 @@ Check out the [full documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) fe
 
 ---
 
-## [Ember.js Core Panel, Boston Meetup](https://www.youtube.com/watch?v=Jp4jrwz4zV8&feature=youtu.be&t=105)
+## [Ember.js Core Panel, Boston Meetup 📹](https://www.youtube.com/watch?v=Jp4jrwz4zV8&feature=youtu.be&t=105)
 
 At the January [Boston Ember.js Meetup](https://www.meetup.com/Boston-Ember-js/) members of the Ember.js core team got together for a panel on the future of JavaScript.
 
@@ -45,7 +45,7 @@ And now for the big surprise: **The newly deployed guides now contains angle bra
 
 ---
 
-## [Farewell, computed().meta()](https://github.com/emberjs/rfcs/pull/441)
+## [Farewell, computed().meta() 👋](https://github.com/emberjs/rfcs/pull/441)
 
 Following the **deprecation** of other **modifier functions** of **computed properties** in the past ([1](https://emberjs.github.io/rfcs/0375-deprecate-computed-property-modifier.html), [2](https://emberjs.github.io/rfcs/0370-deprecate-computed-volatile.html)),
 a new Request for Comments (RFC) proposes the [deprecation of the `meta()` modifier](https://github.com/emberjs/rfcs/pull/441).
@@ -56,7 +56,7 @@ You can read more about the suggested transition path in the [full proposal](htt
 
 ---
 
-## ["I contribute to Ember" with Lisa Backer](https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168)
+## ["I contribute to Ember" with Lisa Backer ✍️](https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168)
 
 <div class="float-right padded portrait-frame">
   <img alt="Lisa Backer" title="Lisa Backer - Contributor to Ember" src="/images/blog/emberjstimes/lisabacker.jpeg" />
