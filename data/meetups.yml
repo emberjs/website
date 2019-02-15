@@ -367,8 +367,8 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/d/a/c/c/member_91316012.jpeg
   - location: Columbus, OH
     url: http://www.meetup.com/ember-columbus/
-    lat: 39.9678407
-    lng: -82.9961547
+    lat: 40.098794
+    lng: -83.105245
     organizers:
     - organizer: Kevin Pfefferle
       profileImage: https://secure.meetupstatic.com/photos/member/c/3/4/d/member_268429997.jpeg
