@@ -22,6 +22,7 @@ As per the usual standard, we have planned out this work to be able to complete 
 This is roughly the planned phases of the documentation work.
 
 Phase 1, Octane Guides, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
+
 - Reorder the table of contents (as per the RFC)
 - Add in placeholders for any new sub-sections
 - Add content in each sub-section (prose, code samples)
@@ -36,6 +37,7 @@ While new content is being written and older content is being updated, no existi
 
 ### Challenges
 As with any ambitious undertaking, there are some related challenges. Here are a few we are currently facing: 
+
 - converting guides from classic syntax to new syntax
 - what to do about temporarily needed guides
 - handling redirects for old content
