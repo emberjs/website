@@ -35,10 +35,12 @@ Through all of these phases, the guide preview will be used to ensure that the d
 While new content is being written and older content is being updated, no existing content will be completely deleted. Only after we have reviewed the content and added the re-directs will content be removed. This means that some content may be available if the user has the URL, but it won't be linked from the table of contents. 
 
 ### Challenges
-
+As with any ambitious undertaking, there are some related challenges. Here are a few we are currently facing: 
 - converting guides from classic syntax to new syntax
 - what to do about temporarily needed guides
 - handling redirects for old content
+
+We expect to work through these challenges and have process in place to handle them, but we should have a shared awareness that our approach may be tweaked as the next month goes on, to address these issues. 
 
 ## How you can help
 We expect that the community will be willing to submit PRs to help make the documentation better- from checking for spelling or grammar errors, to adding code samples, and even more ambitiously, writing some prose. 
