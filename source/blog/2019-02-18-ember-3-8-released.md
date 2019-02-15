@@ -27,6 +27,7 @@ Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfi
 
 Element Modifier Manager (1 of 2)
 
+<!-- alex ignore special -->
 A modifier manager is an object that is responsible for coordinating the lifecycle events that occurs when invoking, installing and updating an element modifier. This new feature is introduced as a  very low-level API. Most likely you will never - as an Ember app developer - need to use this but it might come in handy for some add-on developers. In this way, the Ember app developers will benefit from this feature by subclassing these special modifiers provided by addons.
 
 If you're interested in learning more about how to use this new feature, then please refer to the [RFC](https://github.com/emberjs/rfcs/blob/master/text/0373-Element-Modifier-Managers.md).
