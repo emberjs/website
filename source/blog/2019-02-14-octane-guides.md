@@ -22,11 +22,11 @@ As per the usual standard, we have planned out this work to be able to complete 
 This is roughly the planned phases of the documentation work.
 
 Phase 1, Octane Guides, MVP: (see [Tracking issue](https://github.com/ember-learn/guides-source/issues/394))
-1 Reorder the table of contents (as per the RFC)
-1 Add in placeholders for any new sub-sections
-1 Accept PRs for content in each sub-section
-1 Edit & re-arrange before preview launches
-1 Add re-direct URLs and remove old content
+- Reorder the table of contents (as per the RFC)
+- Add in placeholders for any new sub-sections
+- Accept PRs for content in each sub-section
+- Edit & re-arrange before preview launches
+- Add re-direct URLs and remove old content
 
 Then the Octane guides will be considered in MVP status and we will move forward to the next phase, which will include all of the sections that were identified in the table of contents RFC but were not included in the MVP. 
 
