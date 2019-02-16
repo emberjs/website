@@ -1,6 +1,6 @@
 ---
-title: Preview Weekend: 2019 Ember Community Survey
-author: Joseph Temple and Matthew Beale
+title: "Preview Weekend: 2019 Ember Community Survey"
+author: Joseph Temple, Matthew Beale
 tags: Recent Posts, 2019
 responsive: true
 ---
