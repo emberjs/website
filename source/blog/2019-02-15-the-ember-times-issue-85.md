@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 85
 author: Chris Ng, Jessica Jordan, Jared Galanis, Kenneth Larsen, Amy Lam
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
+tags: Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/15-the-ember-times-issue-85.html"
 responsive: true
 ---
@@ -62,7 +62,7 @@ You can read more about the suggested transition path in the [full proposal](htt
   <img alt="Lisa Backer" title="Lisa Backer - Contributor to Ember" src="/images/blog/emberjstimes/lisabacker.jpeg" />
 </div>
 
-In our 5th edition of the contributor interview series community member **Lisa Backer**, also known as [@eshtadc](https://github.com/eshtadc) talks about her work on `ember-service-worker`, public speaking, the things that make open-source so valuable and why anyone in the community can be an expert who has important insights to share.
+In our 6th edition of the contributor interview series community member **Lisa Backer**, also known as [@eshtadc](https://github.com/eshtadc) talks about her work on `ember-service-worker`, public speaking, the things that make open-source so valuable and why anyone in the community can be an expert who has important insights to share.
 
 You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-lisa-backer/16168).
 
