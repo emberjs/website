@@ -21,7 +21,7 @@ You can read more about our general release process here:
 Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.8
-Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is two (2) new feature, COUNT (#) deprecations, and COUNT (#) bugfixes in this version.
+Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is two (2) new feature, four (4) deprecations, and COUNT (#) bugfixes in this version.
 
 #### New Features (2)
 
@@ -34,20 +34,43 @@ If you're interested in learning more about how to use this new feature, then pl
 
 Array helper (2 of 2)
 
-
 Ember 3.8 introduces the `{{array}}` helper to create an array in a template. This helper works in similar fashion to the already existing `{{hash}}` helper.
 
 The helper would be invoked as `{{array arg1 ... argN}}` and return the value `[arg1, ..., argN]`. For example, `{{array 'a' 'b' 'c'}}` would return the value `['a', 'b', 'c']`.
 
 Read the [original RFC](https://github.com/emberjs/rfcs/blob/master/text/0318-array-helper.md) for more information.
 
-#### Deprecations (0)
+#### Deprecations (4)
 
 Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
 Consider using the [ember-cli-deprecation-workflow](https://github.com/mixonic/ember-cli-deprecation-workflow) addon if you would like to upgrade your application without immediately addressing deprecations.
 
 For more details on changes in Ember.js 3.8, please review the [Ember.js 3.8.0 release page](https://github.com/emberjs/ember.js/releases/tag/v3.8.0).
+
+Computed Property Overridability (1 of 5)
+
+Ember's computed properties are overridable by default if no setter is defined. This behavior is bug prone and has been deprecated. `readOnly()`, the modifier that prevents this behavior, will be deprecated once overridability has been removed. Please have a look at [the deprecations app](https://emberjs.com/deprecations/v3.x#toc_computed-property-override) for more information on this deprecation.
+
+Computed Property `.property()` Modifier (2 of 5)
+
+`.property()` is a modifier that adds additional property dependencies to an existing computed property. To update, move the dependencies to the main computed property definition and you shouldn't see a deprecation warning any more. For more information please refer to [the deprecations app](https://emberjs.com/deprecations/v3.x#toc_computed-property-property).
+
+
+Computed Property Volatility (3 of 5)
+
+`.volatile()` is a computed property modifier which makes a computed property recalculate every time it is accessed, instead of caching. It also prevents property notifications from ever occuring on the property, which is generally not the behavior that developers are after. Volatile properties are usually used to simulate the behavior of native getters, which means that they would otherwise behave like normal properties.
+
+To update, consider upgrading to native class syntax and using native getters directly instead. There's guide on how to do this in the [deprecations app](https://emberjs.com/deprecations/v3.x#toc_computed-property-volatile).
+
+Deprecate `@ember/object#aliasMethod` (4 of 5)
+
+`@ember/object#aliasMethod` is a little known and rarely used method that allows user's to add aliases to objects defined with EmberObject. The deprecation warning can be removed by refactoring it into having one function call the other directly. To see how to do this, please refer to the [deprecations app](https://emberjs.com/deprecations/v3.x#toc_object-alias-method)
+
+Component Manager Factory Function (5 of 5)
+
+`setComponentManager` no longer takes a string to associate the custom component class and the component manager. Instead you must pass a factory function that produces an instance of the component manager. For more information please refer to the [deprecations app](https://emberjs.com/deprecations/v3.x#toc_component-manager-string-lookup)
+
 
 ---
 
