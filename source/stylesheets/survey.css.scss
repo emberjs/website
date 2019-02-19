@@ -99,13 +99,10 @@
   }
 }
 .survey-credits {
-  width: 135px;
-  margin: auto;
-  font-size: 11px;
-
-  img {
+   img {
+    width: 500px;
     max-width: 100%;
-    border: solid 1px #8E897B;
+    margin: -1em auto;
   }
 }
 
@@ -118,7 +115,7 @@ a.survey-h2:link,
 a.survey-h2:visited {
   position: relative;
   color: #252525;
-  font-family: 'Maven Pro';
+  // font-family: 'Maven Pro';
   font-weight: bold;
   line-height: 1.2;
   font-size: 28px;
