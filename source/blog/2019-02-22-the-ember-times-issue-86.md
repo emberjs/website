@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: the crowd
+author: Chris Ng, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -10,10 +10,7 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
----
-
-## [SECTION TITLE](#section-url)
-
+Check out the two follow up RFCs to make Tracked Properties better  👣
 
 ---
 
@@ -29,6 +26,18 @@ responsive: true
 
 ## [SECTION TITLE](#section-url)
 
+
+---
+
+## RFCs for [Decorator Support](https://github.com/emberjs/rfcs/pull/440) and [Tracked Property Classic Class Descriptor](https://github.com/emberjs/rfcs/pull/442) 👣
+
+[@pzuraq](https://github.com/pzuraq) opened up a pair of RFCs that supplemented the recently merged [Tracked Properties RFC](https://github.com/emberjs/rfcs/pull/410).
+
+The **Decorator Support RFC** is a follow up to the [Decorators RFC](https://github.com/emberjs/rfcs/blob/master/text/0408-decorators.md) since it was premised on decorators moving from stage 2 in the TC39 process to stage 3. However since decorators remained in stage 2, and have not been rejected, and that all parties were in agreement about the *invocation syntax* of decorators – decorators should present a minimal amount of risk to Ember and its users. The changes in the spec will mostly affect library and framework maintainers, but not end users in *most cases*. Ember will begin by supporting the latest version of the decorators transform provided by Babel.
+
+The **Tracked Property Classic Class Descriptor RFC** adds the `descriptor` decorator for classic classes only which allows users to define native getters and setters (and other properties). This provides a clear 1-1 translation between native and classic syntax invocations as a way to add getters and setters to classic classes.
+
+Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/pull/440) or the [Tracked Property Classic Class Descriptor RFC](https://github.com/emberjs/rfcs/pull/442) on GitHub!
 
 ---
 
@@ -99,4 +108,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
+Chris Ng, the crowd and the Learning Team
