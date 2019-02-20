@@ -25,7 +25,7 @@ Submissions will be accepted until March 12th.
 
 Please help us spread the word by sharing the [survey landing page](/ember-community-survey-2019) on your social network feeds, at meetups and around your office and other communities.
 
-We look forward to your participation! If you have any immediate questions, feel free to email the survey team via [survey@emberjscommunity.com](mailto:survey@emberjscommunity.com), or ping us in #dev-ember-learning in Discord chat.
+We look forward to your participation! If you have any immediate questions, feel free to email the survey team via [survey@emberjs.com](mailto:survey@emberjs.com), or ping us in #dev-ember-learning in Discord chat.
 
 Thank you to [Code All Day](http://codeallday.com/) for sponsoring
 [Joseph Temple](https://github.com/JosephDTemple) to work on this year's
