@@ -11,7 +11,7 @@ What an incredible time to be in the Ember Community!
 - Over 3,000 community members have joined the [Ember Discord chat](https://discord.gg/emberjs).
 - An [Ember documentary](https://www.youtube.com/watch?v=Cvz-9ccflKQ) was released, looking at Ember's history...and Ember's bright future.
 
-With 2019 already under way, we would like your help to learn about who is in the Ember community and how they work with the framework. To that end, we're pleased to announce the official 2018 Ember Community Survey.
+With 2019 already under way, we would like your help to learn about who is in the Ember community and how they work with the framework. To that end, we're pleased to announce the official 2019 Ember Community Survey.
 
 <a href="/ember-community-survey-2018" class="survey-button orange button">
 Survey Landing Page <img src="/images/survey/right-arrow.png" alt="" role="presentation" />
