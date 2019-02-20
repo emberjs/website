@@ -21,6 +21,11 @@ You can read more about our general release process here:
 Ember.js is the core framework for building ambitious web applications.
 
 ### Changes in Ember.js 3.8
+
+The 3.8.0 release is an Ember.js Long-Term Support candidate. In six weeks, the 3.8.x series will become the latest LTS release and six weeks after that the 3.4 LTS branch will no longer receive bugfix patches.
+
+For more information about Ember's LTS policies, see the [announcement blog post](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html) and [builds page](http://emberjs.com/builds/).
+
 Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is two (2) new feature, four (4) deprecations, and six (6) bugfixes in this version.
 
 #### New Features (2)
