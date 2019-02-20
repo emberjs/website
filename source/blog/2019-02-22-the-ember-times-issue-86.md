@@ -56,7 +56,24 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## An Ember Community Experience by Gaurav Munjal
+
+I had wanted to make some large breaking changes to
+[ember-simple-tree](https://github.com/btecu/ember-simple-tree)
+in order to enable me to customize it to my liking.
+Given that it would break backward
+compatibility and existing applications,
+I figured my changes would never be accepted.
+So I forked it and released my version as ember-light-tree.
+
+I was surprised when Bujorel Tecu, the author of ember-simple-tree,
+contacted me and wanted to work together to include my changes.
+As a result, my changes are now in the latest version of
+ember-simple-tree.
+It seems it was more important to him that we had a shared solution
+than that there was technical backward compatibility. It seems this
+view is shared by the Ember Community and helps keep it from
+fragmenting around different addons.
 
 
 ---
