@@ -18,6 +18,7 @@ Hello again, and welcome back! This is the second part of the multipart _Coming 
 
 These aren't _all_ of the new features that will be part of Octane, but they're the ones that I'm most familiar with personally, so I can give y'all the low down!
 
+<!-- alex ignore dives -->
 This series is aimed at existing Ember users, but if you're new to Ember or tried Ember a while ago and want to see how things are changing, I'll be providing context on the existing features as we go along. These posts won't be doing deep dives on all the edge cases of the functionality, they are moreso meant as an overview of what's coming. If you're curious about what an _edition_ is exactly, you can check out a quick break down in [the first post in the series](https://emberjs.com/blog/2019/02/11/coming-soon-in-ember-octane-part-1.html).
 
 ## Ember Templates: HTML++
