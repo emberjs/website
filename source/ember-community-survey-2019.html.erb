@@ -48,10 +48,10 @@ no_survey_reminder: true
       <div class="survey-column">
         <img class="survey-image" src="/images/survey/photo2.jpg" alt="Emberconf Crowd" />
         <h4>
-          Open until March 11th
+          Open until March 12th
         </h4>
         <p>
-          Submissions close on March 11th. To ensure the survey
+          Submissions close on March 12th. To ensure the survey
           captures a fair measure of our community, please share this page on your
           social networks and with your local communities!
         </p>
@@ -105,7 +105,7 @@ no_survey_reminder: true
                 var diff = new Date(+d1) - new Date(+d0);
                 return Math.ceil(diff / 8.64e7);
             }
-            var numDays = daysDifference(Date.now(), Date.UTC(2019, 2, 11)); // Month is zero-indexed, 2 = March
+            var numDays = daysDifference(Date.now(), Date.UTC(2019, 2, 12)); // Month is zero-indexed, 2 = March
             if (numDays >= 1) {
                 document.getElementsByClassName('survey-time-left')[0].innerHTML =
                     '' + numDays + (numDays === 1 ? ' day' : ' days');

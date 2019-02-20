@@ -21,7 +21,7 @@ This is our fifth year learning about the community's makeup and interests, and 
 
 Completing the survey should take about 15 minutes. We've added a few new questions this year, while retaining opportunities to share feedback as free-form text. All submissions are completely anonymous, and demographic data about the community is not released in the same raw data files as the free-form text and other answers.
 
-Submissions will be accepted until March 11th.
+Submissions will be accepted until March 12th.
 
 Please help us spread the word by sharing the [survey landing page](/ember-community-survey-2019) on your social network feeds, at meetups and around your office and other communities.
 
