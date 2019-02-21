@@ -10,7 +10,7 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
-Fill out the 2019 Ember Community Survey 📝, check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝...
+Fill out the 2019 Ember Community Survey 📝, check out the two follow up RFCs to make Tracked Properties better  👣, RFCs to rename htmlSafe and deprecate with 🚫, an Ember community experience 🤝...
 
 ...and an exclusive interview with Ember contributor @cibernox 💬 !
 
