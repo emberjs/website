@@ -1,8 +1,8 @@
 ---
-title: The Ember Times - Issue No. XX
-author: Chris Ng, Gaurav Munjal, Amy Lam, the crowd
+title: The Ember Times - Issue No. 86
+author: Chris Ng, Gaurav Munjal, Amy Lam, Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
-alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2019/02/22-the-ember-times-issue-86.html"
 responsive: true
 ---
 
@@ -11,6 +11,8 @@ responsive: true
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
 Check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝...
+
+...and an exclusive interview with Ember contributor @cibernox 💬 !
 
 ---
 
@@ -63,9 +65,9 @@ in order to enable me to customize it to my liking. Given that it would break ba
 
 I was surprised when Bujorel Tecu AKA [@btecu](https://github.com/btecu), the author of ember-simple-tree,
 contacted me and wanted to work together to include my changes. As a result, my changes are now in the latest version of
-ember-simple-tree. 
+ember-simple-tree.
 
-Even though we had to sacrifice technical backward compatibility, it was important to @btecu that we had a shared solution. One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. It's heartening to see this view echoed in the Ember addon community. 
+Even though we had to sacrifice technical backward compatibility, it was important to @btecu that we had a shared solution. One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. It's heartening to see this view echoed in the Ember addon community.
 
 ---
 
@@ -75,7 +77,7 @@ Even though we had to sacrifice technical backward compatibility, it was importa
   <img alt="Miguel Camba" title="Miguel Camba - Contributor to Ember" src="/images/blog/emberjstimes/miguelcamba.jpeg" />
 </div>
 
-In our 7th edition of the contributor interview series, community member **Miguel Camba**, also known as [@cibernox](https://github.com/cibernox) talks about and talk about his work on **powerful** addons, contributing by necessity and why the **silly pull request** is only **a myth**.
+In our 7th edition of the contributor interview series, community member **Miguel Camba**, also known as [@cibernox](https://github.com/cibernox) talks about his work on **powerful** addons, contributing by necessity and why the **silly pull request** is only **a myth**.
 
 You can read the full interview on [the Ember Forum](https://discuss.emberjs.com/t/i-contribute-to-ember-with-miguel-camba/16193).
 
@@ -116,4 +118,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Gaurav Munjal, Amy Lam the crowd and the Learning Team
+Chris Ng, Gaurav Munjal, Amy Lam, Jessica Jordan, the crowd and the Learning Team
