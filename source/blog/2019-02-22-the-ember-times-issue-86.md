@@ -10,14 +10,27 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
-Check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝...
+Fill out the 2019 Ember Community Survey 📝, check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝...
 
 ...and an exclusive interview with Ember contributor @cibernox 💬 !
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [2019 Ember Community Survey 📝](https://emberjs.com/blog/2019/02/19/ember-community-survey.html)
 
+The official 2019 Ember Community Survey is here! We would like your help to learn about who is in the Ember community and how they work with the framework. 
+
+This is the fifth year we're learning about the community's makeup and interests, and we look forward to sharing the results at [EmberConf 2019](http://emberconf.com/) on March 18th. Over 1300 participants took part in the survey in 2018 ([2018 survey results](https://www.emberjs.com/ember-community-survey-2018/)) and we are aiming for even more participation this year!
+
+Completing the survey should take about 15 minutes. We've added a few new questions this year, while retaining opportunities to share feedback as free-form text. All submissions are completely anonymous, and demographic data about the community is not released in the same raw data files as the free-form text and other answers.
+
+Submissions will be accepted until March 12th. More info about the survey can be found [here](https://emberjs.com/blog/2019/02/19/ember-community-survey.html). Why not fill it out now?!
+
+<a class="ember-button ember-button--centered" href="https://emberjs.com/ember-community-survey-2019/">Take the Survey</a>
+
+Please help us spread the word by sharing the [survey landing page](https://emberjs.com/ember-community-survey-2019) on your social network feeds, at meetups and around your office and other communities.
+
+We look forward to your participation! If you have any immediate questions, feel free to email the survey team via [survey@emberjs.com](mailto:survey@emberjs.com), or ping us in [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) in [Discord](https://discordapp.com/invite/zT3asNS) chat.
 
 ---
 
