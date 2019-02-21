@@ -53,7 +53,14 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Less Confused 🤷‍♀️🚫 with htmlSafe and with](https://github.com/emberjs/rfcs/pull/443)
+
+Two new **Requests for Comments (RFC)** propose deprecations to better avoid confusion in Ember apps:
+[One of the proposals](https://github.com/emberjs/rfcs/pull/443) aims to rename the `htmlSafe` template helper and util to `trustedHtml` in an effort to convey the mechanism of the util better.
+
+[The second RFC](https://github.com/emberjs/rfcs/pull/445) proposes the deprecation of the `with` template helper acknowledging the rather recent [`let` helper](https://guides.emberjs.com/release/templates/built-in-helpers/#toc_built-in-block-helpers), that can now be used in templates instead of and with much clearer intent than `with`.
+
+Be sure to check out the original proposals for [the renaming of htmlSafe](https://github.com/emberjs/rfcs/pull/443) and [the deprecation of the with helper](https://github.com/emberjs/rfcs/pull/445) and leave your comments below!
 
 
 ---
