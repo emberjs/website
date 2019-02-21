@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. XX
-author: Chris Ng, the crowd
+author: Chris Ng, Gaurav Munjal, Amy Lam, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
 responsive: true
@@ -10,7 +10,7 @@ responsive: true
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
 
-Check out the two follow up RFCs to make Tracked Properties better  👣
+Check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝...
 
 ---
 
@@ -56,25 +56,16 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 
 ---
 
-## An Ember Community Experience by Gaurav Munjal
+## An Ember Community Experience by Gaurav Munjal 💛
 
-I had wanted to make some large breaking changes to
-[ember-simple-tree](https://github.com/btecu/ember-simple-tree)
-in order to enable me to customize it to my liking.
-Given that it would break backward
-compatibility and existing applications,
-I figured my changes would never be accepted.
-So I forked it and released my version as ember-light-tree.
+I had wanted to make some large breaking changes to [ember-simple-tree](https://github.com/btecu/ember-simple-tree),
+in order to enable me to customize it to my liking. Given that it would break backward compatibility and existing applications, I figured my changes would never be accepted. So I forked it and released my version as ember-light-tree.
 
-I was surprised when Bujorel Tecu, the author of ember-simple-tree,
-contacted me and wanted to work together to include my changes.
-As a result, my changes are now in the latest version of
-ember-simple-tree.
-It seems it was more important to him that we had a shared solution
-than that there was technical backward compatibility. It seems this
-view is shared by the Ember Community and helps keep it from
-fragmenting around different addons.
+I was surprised when Bujorel Tecu AKA [@btecu](https://github.com/btecu), the author of ember-simple-tree,
+contacted me and wanted to work together to include my changes. As a result, my changes are now in the latest version of
+ember-simple-tree. 
 
+Even though we had to sacrifice technical backward compatibility, it was important to @btecu that we had a shared solution. One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. It's heartening to see this view echoed in the Ember addon community. 
 
 ---
 
@@ -125,4 +116,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, the crowd and the Learning Team
+Chris Ng, Gaurav Munjal, Amy Lam the crowd and the Learning Team
