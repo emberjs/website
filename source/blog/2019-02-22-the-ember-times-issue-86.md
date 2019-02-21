@@ -56,7 +56,7 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 
 ---
 
-## An Ember Community Experience by Gaurav Munjal 💛
+## [An Ember Community Experience by Gaurav Munjal 💛](https://twitter.com/gaurav9576/status/1098298137507217408)
 
 I had wanted to make some large breaking changes to [ember-simple-tree](https://github.com/btecu/ember-simple-tree),
 in order to enable me to customize it to my liking. Given that it would break backward compatibility and existing applications, I figured my changes would never be accepted. So I forked it and released my version as ember-light-tree.
