@@ -8,27 +8,27 @@ responsive: true
 
 สวัสดี Emberistas! 🐹
 
-Fill out the 2019 Ember Community Survey 📝 and RFCs galore:
-Check out the two follow up RFCs to make Tracked Properties better  👣,
-the full deprecation of Partials 🥛 and the renaming of htmlSafe and the deprecation of with 🚫!
-We also have a RFC Roundup Redux episode of Ember Weekend 🔈 for you, a wholesome Ember community experience 🤝,
-and last, but not least, an exclusive interview with Ember contributor @cibernox 💬 !
+Fill out the **2019 Ember Community Survey** 📝 and RFCs galore:
+Check out the two follow up RFCs to make **Tracked Properties** better  👣,
+the full deprecation of **Partials** 🥛 and the renaming of `htmlSafe` and the **deprecation of with** 🚫!
+We also have a **RFC Roundup** Redux episode of Ember Weekend 🔈 for you, a wholesome **Ember community experience** 🤝,
+and last, but not least, an exclusive interview with Ember contributor **@cibernox** 💬 !
 
 ---
 
 ## [2019 Ember Community Survey 📝](https://emberjs.com/blog/2019/02/19/ember-community-survey.html)
 
-The official 2019 Ember Community Survey is here! We would like your help to learn about who is in the Ember community and how they work with the framework.
+The **official 2019 Ember Community Survey** is here! We would like your help to learn about who is in the Ember community and how they work with the framework.
 
 This is the fifth year we're learning about the community's makeup and interests, and we look forward to sharing the results at [EmberConf 2019](http://emberconf.com/) on March 18th. Over 1300 participants took part in the survey in 2018 ([2018 survey results](https://www.emberjs.com/ember-community-survey-2018/)) and we are aiming for even more participation this year!
 
-Completing the survey should take about 15 minutes. We've added a few new questions this year, while retaining opportunities to share feedback as free-form text. All submissions are completely anonymous, and demographic data about the community is not released in the same raw data files as the free-form text and other answers.
+Completing the survey should take about **15 minutes**. We've added a few new questions this year, while retaining opportunities to share feedback as free-form text. All submissions are completely anonymous, and demographic data about the community is not released in the same raw data files as the free-form text and other answers.
 
-Submissions will be accepted until March 12th. More info about the survey can be found [here](https://emberjs.com/blog/2019/02/19/ember-community-survey.html). Why not fill it out now?!
+Submissions will be accepted **until March 12th**. More info about the survey can be found [here](https://emberjs.com/blog/2019/02/19/ember-community-survey.html). Why not fill it out now?!
 
 <a class="ember-button ember-button--centered" href="https://emberjs.com/ember-community-survey-2019/">Take the Survey</a>
 
-Please help us spread the word by sharing the [survey landing page](https://emberjs.com/ember-community-survey-2019) on your social network feeds, at meetups and around your office and other communities.
+Please help us **spread the word** by sharing the [survey landing page](https://emberjs.com/ember-community-survey-2019) on your social network feeds, at meetups and around your office and other communities.
 
 We look forward to your participation! If you have any immediate questions, feel free to email the survey team via [survey@emberjs.com](mailto:survey@emberjs.com), or ping us in [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) in [Discord](https://discordapp.com/invite/zT3asNS) chat.
 
@@ -47,7 +47,7 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 ---
 
 ## [Let's Fully Deprecate Partials! 🥛](https://github.com/emberjs/rfcs/pull/449)
-Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449).
+**Partials** in Ember have been around for quite some time. Today however, they are considered bad practice and all of their functionality **can be replaced** with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449).
 
 ---
 
@@ -56,28 +56,28 @@ Partials in Ember have been around for quite some time. Today however they are c
 Two new **Requests for Comments (RFC)** propose deprecations to better avoid confusion in Ember apps:
 [One of the proposals](https://github.com/emberjs/rfcs/pull/443) aims to rename the `htmlSafe` template helper and util to `trustedHtml` in an effort to convey the mechanism of the util better.
 
-[The second RFC](https://github.com/emberjs/rfcs/pull/445) proposes the deprecation of the `with` template helper acknowledging the rather recent [`let` helper](https://guides.emberjs.com/release/templates/built-in-helpers/#toc_built-in-block-helpers), that can now be used in templates instead of and with much clearer intent than `with`.
+[The second RFC](https://github.com/emberjs/rfcs/pull/445) proposes the **deprecation** of the `with` template helper acknowledging the rather recent [`let` helper](https://guides.emberjs.com/release/templates/built-in-helpers/#toc_built-in-block-helpers), that can now be used in templates instead of and with much clearer intent than `with`.
 
-Be sure to check out the original proposals for [the renaming of htmlSafe](https://github.com/emberjs/rfcs/pull/443) and [the deprecation of the with helper](https://github.com/emberjs/rfcs/pull/445) and leave your comments below!
+Be sure to check out the original proposals for [the renaming of *htmlSafe*](https://github.com/emberjs/rfcs/pull/443) and [the deprecation of the with helper](https://github.com/emberjs/rfcs/pull/445) and leave your comments below!
 
 ---
 
 ## [Ember Weekend RFC Roundup Redux Episode 🔈](https://twitter.com/emberweekend/status/1095017680892035072)
 
-Don't miss [@rondale-sc](https://github.com/rondale-sc) and [@code0100fun](https://github.com/code0100fun) interviewing [@rwjblue](https://github.com/rwjblue) on Episode 128 of the Ember Weekend podcast [RFC Roundup Redux](http://emberweekend.com/episodes/rfc-roundup-reduce). They discussed the [auto-published unified RFC's repo](https://emberjs.github.io/rfcs/introduction.html), the [Glimmer Components RFC](https://emberjs.github.io/rfcs/0416-glimmer-components.html) and its implications for hooks, the [Render Element Modifiers RFC](https://emberjs.github.io/rfcs/0415-render-element-modifiers.html), including the official addon it proposes, and more!
+Don't miss [@rondale-sc](https://github.com/rondale-sc) and [@code0100fun](https://github.com/code0100fun) interviewing [@rwjblue](https://github.com/rwjblue) on **Episode 128** of the **Ember Weekend podcast** [RFC Roundup Redux](http://emberweekend.com/episodes/rfc-roundup-reduce). They discussed the [auto-published unified RFC's repo](https://emberjs.github.io/rfcs/introduction.html), the [Glimmer Components RFC](https://emberjs.github.io/rfcs/0416-glimmer-components.html) and its implications for hooks, the [Render Element Modifiers RFC](https://emberjs.github.io/rfcs/0415-render-element-modifiers.html), including the official addon it proposes, and more!
 
 ---
 
 ## [An Ember Community Experience by Gaurav Munjal 💛](https://twitter.com/gaurav9576/status/1098298137507217408)
 
 I had wanted to make some large breaking changes to [ember-simple-tree](https://github.com/btecu/ember-simple-tree),
-in order to enable me to customize it to my liking. Given that it would break backward compatibility and existing applications, I figured my changes would never be accepted. So I forked it and released my version as ember-light-tree.
+in order to enable me to customize it to my liking. Given that it would break backward compatibility and existing applications, I figured my changes would never be accepted. So I forked it and released my version as **ember-light-tree**.
 
-I was surprised when Bujorel Tecu AKA [@btecu](https://github.com/btecu), the author of ember-simple-tree,
+I was surprised when **Bujorel Tecu** AKA [@btecu](https://github.com/btecu), the author of ember-simple-tree,
 contacted me and wanted to work together to include my changes. As a result, my changes are now in the latest version of
 ember-simple-tree.
 
-Even though we had to sacrifice technical backward compatibility, it was important to @btecu that we had a shared solution. One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. It's heartening to see this view echoed in the Ember addon community.
+Even though we had to sacrifice technical backward compatibility, it was important to @btecu that we had **a shared solution**. One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and **improve the ecosystem for everyone**. It's heartening to see this view echoed in the Ember addon community.
 
 ---
 
