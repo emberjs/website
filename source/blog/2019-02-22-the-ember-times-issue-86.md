@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 86
-author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, the crowd
+author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/22-the-ember-times-issue-86.html"
 responsive: true
@@ -9,6 +9,8 @@ responsive: true
 สวัสดี Emberistas! 🐹
 
 Check out the two follow up RFCs to make Tracked Properties better 👣, an Ember community experience 🤝, an RFC to fully deprecate Partials 🥛...
+
+Check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝, a RFC Roundup Redux episode of Ember Weekend 🔈...
 
 ...and an exclusive interview with Ember contributor @cibernox 💬 !
 
@@ -24,8 +26,9 @@ Partials in Ember have been around for quite some time. Today however they are c
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember Weekend RFC Roundup Redux Episode 🔈](https://twitter.com/emberweekend/status/1095017680892035072)
 
+Don't miss [@rondale-sc](https://github.com/rondale-sc) and [@code0100fun](https://github.com/code0100fun) interviewing [@rwjblue](https://github.com/rwjblue) on Episode 128 of the Ember Weekend podcast [RFC Roundup Redux](http://emberweekend.com/episodes/rfc-roundup-reduce). They discussed the [auto-published unified RFC's repo](https://emberjs.github.io/rfcs/introduction.html), the [Glimmer Components RFC](https://emberjs.github.io/rfcs/0416-glimmer-components.html) and its implications for hooks, the [Render Element Modifiers RFC](https://emberjs.github.io/rfcs/0415-render-element-modifiers.html), including the official addon it proposes, and more!
 
 ---
 
@@ -123,4 +126,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis, the crowd and the Learning Team
