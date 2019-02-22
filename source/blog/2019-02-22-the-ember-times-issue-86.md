@@ -8,11 +8,7 @@ responsive: true
 
 สวัสดี Emberistas! 🐹
 
-Fill out the **2019 Ember Community Survey** 📝 and RFCs galore:
-Check out the two follow up RFCs to make **Tracked Properties** better  👣,
-the full deprecation of **Partials** 🥛 and the renaming of `htmlSafe` and the **deprecation of with** 🚫!
-We also have a **RFC Roundup** Redux episode of Ember Weekend 🔈 for you, a wholesome **Ember community experience** 🤝,
-and last, but not least, an exclusive interview with Ember contributor **@cibernox** 💬 !
+Fill out the **2019 Ember Community Survey**! 📝 We have RFCs galore: two follow-up RFCs to make **Tracked Properties** better  👣, the full deprecation of **Partials** 🥛, the renaming of `htmlSafe` and the **deprecation of with** 🚫, and a **RFC Roundup Redux** episode of Ember Weekend 🔈 for you. This week we're also highlighting a wholesome **Ember community experience** 🤝, and last, but not least, an exclusive interview with Ember contributor **@cibernox**! 💬
 
 ---
 
