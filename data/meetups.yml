@@ -367,8 +367,8 @@ locations:
       profileImage: http://photos2.meetupstatic.com/photos/member/d/a/c/c/member_91316012.jpeg
   - location: Columbus, OH
     url: http://www.meetup.com/ember-columbus/
-    lat: 39.9678407
-    lng: -82.9961547
+    lat: 40.098794
+    lng: -83.105245
     organizers:
     - organizer: Kevin Pfefferle
       profileImage: https://secure.meetupstatic.com/photos/member/c/3/4/d/member_268429997.jpeg
@@ -483,14 +483,12 @@ locations:
     lat: 52.52000659999999
     lng: 13.404954
     organizers:
-    - organizer: Matthew Beale
-      profileImage: http://photos4.meetupstatic.com/photos/member/5/8/f/thumb_7501423.jpeg
-    - organizer: Alexandre Sutra
-      profileImage: http://photos1.meetupstatic.com/photos/member/6/2/b/8/thumb_117805272.jpeg
-    - organizer: Robert Barbey
-      profileImage: http://photos2.meetupstatic.com/photos/member/7/5/a/thumb_102061882.jpeg
-    - organizer: Jordane R.
-      profileImage: http://photos4.meetupstatic.com/photos/member/a/f/c/0/thumb_222224992.jpeg
+    - organizer: Joschka Kintscher
+      profileImage: https://secure.meetupstatic.com/photos/member/b/0/3/8/thumb_227685112.jpeg
+    - organizer: Jessica Jordan
+      profileImage: https://secure.meetupstatic.com/photos/member/2/a/1/f/thumb_263890783.jpeg
+    - organizer: Clemens Müller
+      profileImage: https://secure.meetupstatic.com/photos/member/8/3/6/a/thumb_135873642.jpeg
   - location: Munich, Germany
     url: http://www.meetup.com/Ember-js-Munich/
     image: 12munich.png
@@ -547,6 +545,22 @@ locations:
     organizers:
     - organizer: Claudio Romano
       profileImage: http://photos3.meetupstatic.com/photos/member/4/f/9/8/thumb_241760376.jpeg
+  - location: Madrid, Spain
+    url: https://www.meetup.com/es-ES/Ember-js-Madrid/
+    image: 24madrid.png
+    lat: 40.4168
+    lng: -3.7036
+    organizers:
+    - organizer: Sergio del Valle Salvador
+      profileImage: http://photos4.meetupstatic.com/photos/member/5/a/7/f/thumb_253703167.jpeg
+    - organizer: Adrián González Rus
+      profileImage: http://photos4.meetupstatic.com/photos/member/8/7/c/9/thumb_255634761.jpeg
+    - organizer: Juan Antonio Gómez
+      profileImage: http://photos4.meetupstatic.com/photos/member/5/8/3/3/thumb_253282579.jpeg
+    - organizer: Ruben Gómez
+      profileImage: http://photos4.meetupstatic.com/photos/member/7/1/f/d/thumb_253949181.jpeg
+    - organizer: Eduardo Tarancón
+      profileImage: http://photos4.meetupstatic.com/photos/member/2/c/e/9/thumb_254651497.jpeg
   - location: Amsterdam, the Netherlands
     url: http://www.meetup.com/Amsterdam-Ember-js/
     lat: 52.3702157

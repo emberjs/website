@@ -1,6 +1,6 @@
 .content-wrapper {
   margin: 0 auto;
-  max-width: 1120px;
+  max-width: 1200px;
   padding-left: 10px;
   padding-right: 10px;
   width: 100%;
@@ -28,12 +28,5 @@
     display: block;
     clear: both;
     margin: 0 auto;
-  }
-}
-
-
-.container {
-  @media (min-width: 768px) and (max-width:991px) {
-    width: 850px;
   }
 }
