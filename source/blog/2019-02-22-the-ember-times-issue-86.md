@@ -1,16 +1,22 @@
 ---
 title: The Ember Times - Issue No. 86
-author: Chris Ng, Gaurav Munjal, Amy Lam, Jessica Jordan, the crowd
+author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/22-the-ember-times-issue-86.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+สวัสดี Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Fill out the 2019 Ember Community Survey 📝!
 
-Fill out the 2019 Ember Community Survey 📝, check out the two follow up RFCs to make Tracked Properties better  👣, RFCs to rename htmlSafe and deprecate with 🚫, an Ember community experience 🤝...
+RFC's galore...
+check out the two follow up RFCs to make Tracked Properties better  👣, 
+an RFC to fully deprecate Partials 🥛...
+RFCs to rename htmlSafe and deprecate with 🚫, 
+a RFC Roundup Redux episode of Ember Weekend 🔈...
+
+an Ember community experience 🤝, 
 
 ...and an exclusive interview with Ember contributor @cibernox 💬 !
 
@@ -34,16 +40,6 @@ We look forward to your participation! If you have any immediate questions, feel
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## RFCs for [Decorator Support](https://github.com/emberjs/rfcs/pull/440) and [Tracked Property Classic Class Descriptor](https://github.com/emberjs/rfcs/pull/442) 👣
 
 [@pzuraq](https://github.com/pzuraq) opened up a pair of RFCs that supplemented the recently merged [Tracked Properties RFC](https://github.com/emberjs/rfcs/pull/410).
@@ -56,13 +52,8 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+## [Let's Fully Deprecate Partials! 🥛](https://github.com/emberjs/rfcs/pull/449)
+Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449). 
 
 ---
 
@@ -75,6 +66,11 @@ Two new **Requests for Comments (RFC)** propose deprecations to better avoid con
 
 Be sure to check out the original proposals for [the renaming of htmlSafe](https://github.com/emberjs/rfcs/pull/443) and [the deprecation of the with helper](https://github.com/emberjs/rfcs/pull/445) and leave your comments below!
 
+---
+
+## [Ember Weekend RFC Roundup Redux Episode 🔈](https://twitter.com/emberweekend/status/1095017680892035072)
+
+Don't miss [@rondale-sc](https://github.com/rondale-sc) and [@code0100fun](https://github.com/code0100fun) interviewing [@rwjblue](https://github.com/rwjblue) on Episode 128 of the Ember Weekend podcast [RFC Roundup Redux](http://emberweekend.com/episodes/rfc-roundup-reduce). They discussed the [auto-published unified RFC's repo](https://emberjs.github.io/rfcs/introduction.html), the [Glimmer Components RFC](https://emberjs.github.io/rfcs/0416-glimmer-components.html) and its implications for hooks, the [Render Element Modifiers RFC](https://emberjs.github.io/rfcs/0415-render-element-modifiers.html), including the official addon it proposes, and more!
 
 ---
 
@@ -91,6 +87,14 @@ Even though we had to sacrifice technical backward compatibility, it was importa
 
 ---
 
+## [SECTION TITLE](#section-url)
+
+---
+
+## [SECTION TITLE](#section-url)
+
+---
+
 ## ["I contribute to Ember" with Miguel Camba ✍️](https://discuss.emberjs.com/t/i-contribute-to-ember-with-miguel-camba/16193)
 
 <div class="float-right padded portrait-frame">
@@ -104,7 +108,6 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 <a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-miguel-camba/16193">Read more</a>
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -138,4 +141,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Gaurav Munjal, Amy Lam, Jessica Jordan, the crowd and the Learning Team
+Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis, the crowd and the Learning Team
