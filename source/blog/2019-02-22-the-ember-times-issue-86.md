@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 86
-author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis the crowd
+author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/22-the-ember-times-issue-86.html"
 responsive: true
@@ -8,23 +8,17 @@ responsive: true
 
 สวัสดี Emberistas! 🐹
 
-Fill out the 2019 Ember Community Survey 📝!
-
-RFC's galore...
-check out the two follow up RFCs to make Tracked Properties better  👣, 
-an RFC to fully deprecate Partials 🥛...
-RFCs to rename htmlSafe and deprecate with 🚫, 
-a RFC Roundup Redux episode of Ember Weekend 🔈...
-
-an Ember community experience 🤝, 
-
-...and an exclusive interview with Ember contributor @cibernox 💬 !
+Fill out the 2019 Ember Community Survey 📝 and RFCs galore:
+Check out the two follow up RFCs to make Tracked Properties better  👣,
+the full deprecation of Partials 🥛 and the renaming of htmlSafe and the deprecation of with 🚫!
+We also have a RFC Roundup Redux episode of Ember Weekend 🔈 for you, a wholesome Ember community experience 🤝,
+and last, but not least, an exclusive interview with Ember contributor @cibernox 💬 !
 
 ---
 
 ## [2019 Ember Community Survey 📝](https://emberjs.com/blog/2019/02/19/ember-community-survey.html)
 
-The official 2019 Ember Community Survey is here! We would like your help to learn about who is in the Ember community and how they work with the framework. 
+The official 2019 Ember Community Survey is here! We would like your help to learn about who is in the Ember community and how they work with the framework.
 
 This is the fifth year we're learning about the community's makeup and interests, and we look forward to sharing the results at [EmberConf 2019](http://emberconf.com/) on March 18th. Over 1300 participants took part in the survey in 2018 ([2018 survey results](https://www.emberjs.com/ember-community-survey-2018/)) and we are aiming for even more participation this year!
 
@@ -40,7 +34,7 @@ We look forward to your participation! If you have any immediate questions, feel
 
 ---
 
-## RFCs for [Decorator Support](https://github.com/emberjs/rfcs/pull/440) and [Tracked Property Classic Class Descriptor](https://github.com/emberjs/rfcs/pull/442) 👣
+## [RFCs for Decorator Support and Tracked Property Classic Class Descriptor  👣](https://github.com/emberjs/rfcs/pulls?utf8=%E2%9C%93&q=is%3Apr+is%3Aopen+440+442)
 
 [@pzuraq](https://github.com/pzuraq) opened up a pair of RFCs that supplemented the recently merged [Tracked Properties RFC](https://github.com/emberjs/rfcs/pull/410).
 
@@ -53,7 +47,7 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 ---
 
 ## [Let's Fully Deprecate Partials! 🥛](https://github.com/emberjs/rfcs/pull/449)
-Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449). 
+Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449).
 
 ---
 
@@ -84,14 +78,6 @@ contacted me and wanted to work together to include my changes. As a result, my 
 ember-simple-tree.
 
 Even though we had to sacrifice technical backward compatibility, it was important to @btecu that we had a shared solution. One of the main strengths of Ember is how shared conventions enable developers to build on top of each other's work and improve the ecosystem for everyone. It's heartening to see this view echoed in the Ember addon community.
-
----
-
-## [SECTION TITLE](#section-url)
-
----
-
-## [SECTION TITLE](#section-url)
 
 ---
 
@@ -141,4 +127,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis, the crowd and the Learning Team
+Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis and the Learning Team
