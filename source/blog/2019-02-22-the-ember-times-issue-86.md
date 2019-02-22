@@ -1,23 +1,24 @@
 ---
 title: The Ember Times - Issue No. 86
-author: Chris Ng, Gaurav Munjal, Amy Lam, Jessica Jordan, Jared Galanis the crowd
+author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/22-the-ember-times-issue-86.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+สวัสดี Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-
-Check out the two follow up RFCs to make Tracked Properties better  👣, an Ember community experience 🤝, a RFC Roundup Redux episode of Ember Weekend 🔈...
+Check out the two follow up RFCs to make Tracked Properties better 👣, 
+an Ember community experience 🤝, 
+an RFC to fully deprecate Partials 🥛...
+a RFC Roundup Redux episode of Ember Weekend 🔈...
 
 ...and an exclusive interview with Ember contributor @cibernox 💬 !
 
 ---
 
-## [SECTION TITLE](#section-url)
-
+## [Let's Fully Deprecate Partials! 🥛](https://github.com/emberjs/rfcs/pull/449)
+Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449). 
 
 ---
 
@@ -126,4 +127,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Chris Ng, Gaurav Munjal, Amy Lam, Jessica Jordan, Jared Galanis the crowd and the Learning Team
+Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis, the crowd and the Learning Team
