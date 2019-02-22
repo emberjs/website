@@ -8,28 +8,35 @@ responsive: true
 
 สวัสดี Emberistas! 🐹
 
-Check out the two follow up RFCs to make Tracked Properties better 👣, 
-an Ember community experience 🤝, 
+Fill out the 2019 Ember Community Survey 📝!
+
+RFC's galore...
+check out the two follow up RFCs to make Tracked Properties better  👣, 
 an RFC to fully deprecate Partials 🥛...
+RFCs to rename htmlSafe and deprecate with 🚫, 
 a RFC Roundup Redux episode of Ember Weekend 🔈...
+
+an Ember community experience 🤝, 
 
 ...and an exclusive interview with Ember contributor @cibernox 💬 !
 
 ---
 
-## [Let's Fully Deprecate Partials! 🥛](https://github.com/emberjs/rfcs/pull/449)
-Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449). 
+## [2019 Ember Community Survey 📝](https://emberjs.com/blog/2019/02/19/ember-community-survey.html)
 
----
+The official 2019 Ember Community Survey is here! We would like your help to learn about who is in the Ember community and how they work with the framework. 
 
-## [SECTION TITLE](#section-url)
+This is the fifth year we're learning about the community's makeup and interests, and we look forward to sharing the results at [EmberConf 2019](http://emberconf.com/) on March 18th. Over 1300 participants took part in the survey in 2018 ([2018 survey results](https://www.emberjs.com/ember-community-survey-2018/)) and we are aiming for even more participation this year!
 
+Completing the survey should take about 15 minutes. We've added a few new questions this year, while retaining opportunities to share feedback as free-form text. All submissions are completely anonymous, and demographic data about the community is not released in the same raw data files as the free-form text and other answers.
 
----
+Submissions will be accepted until March 12th. More info about the survey can be found [here](https://emberjs.com/blog/2019/02/19/ember-community-survey.html). Why not fill it out now?!
 
-## [Ember Weekend RFC Roundup Redux Episode 🔈](https://twitter.com/emberweekend/status/1095017680892035072)
+<a class="ember-button ember-button--centered" href="https://emberjs.com/ember-community-survey-2019/">Take the Survey</a>
 
-Don't miss [@rondale-sc](https://github.com/rondale-sc) and [@code0100fun](https://github.com/code0100fun) interviewing [@rwjblue](https://github.com/rwjblue) on Episode 128 of the Ember Weekend podcast [RFC Roundup Redux](http://emberweekend.com/episodes/rfc-roundup-reduce). They discussed the [auto-published unified RFC's repo](https://emberjs.github.io/rfcs/introduction.html), the [Glimmer Components RFC](https://emberjs.github.io/rfcs/0416-glimmer-components.html) and its implications for hooks, the [Render Element Modifiers RFC](https://emberjs.github.io/rfcs/0415-render-element-modifiers.html), including the official addon it proposes, and more!
+Please help us spread the word by sharing the [survey landing page](https://emberjs.com/ember-community-survey-2019) on your social network feeds, at meetups and around your office and other communities.
+
+We look forward to your participation! If you have any immediate questions, feel free to email the survey team via [survey@emberjs.com](mailto:survey@emberjs.com), or ping us in [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) in [Discord](https://discordapp.com/invite/zT3asNS) chat.
 
 ---
 
@@ -45,13 +52,8 @@ Read and comment on the [Decorator Support RFC](https://github.com/emberjs/rfcs/
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+## [Let's Fully Deprecate Partials! 🥛](https://github.com/emberjs/rfcs/pull/449)
+Partials in Ember have been around for quite some time. Today however they are considered bad practice and all of their functionality can be replaced with Components. There is an [Ember Template Lint rule](https://github.com/ember-template-lint/ember-template-lint/blob/master/docs/rule/no-partial.md) against their use. There was a [Pre-RFC](https://github.com/emberjs/rfcs/issues/390) created a while ago that recommended deprecating partials. Today we finally have a full RFC to [Deprecate Partials](https://github.com/emberjs/rfcs/pull/449) written up by [@GavinJoyce](https://github.com/GavinJoyce). If you want to learn more about the deprecation or maybe the alternatives to partials [check out the RFC](https://github.com/gavinjoyce/rfcs/blob/gj/deprecate-partials/text/0000-template.md). Also be sure to chime in and voice your concerns or add a 👍🎉 to the [RFC itself](https://github.com/emberjs/rfcs/pull/449). 
 
 ---
 
@@ -64,6 +66,11 @@ Two new **Requests for Comments (RFC)** propose deprecations to better avoid con
 
 Be sure to check out the original proposals for [the renaming of htmlSafe](https://github.com/emberjs/rfcs/pull/443) and [the deprecation of the with helper](https://github.com/emberjs/rfcs/pull/445) and leave your comments below!
 
+---
+
+## [Ember Weekend RFC Roundup Redux Episode 🔈](https://twitter.com/emberweekend/status/1095017680892035072)
+
+Don't miss [@rondale-sc](https://github.com/rondale-sc) and [@code0100fun](https://github.com/code0100fun) interviewing [@rwjblue](https://github.com/rwjblue) on Episode 128 of the Ember Weekend podcast [RFC Roundup Redux](http://emberweekend.com/episodes/rfc-roundup-reduce). They discussed the [auto-published unified RFC's repo](https://emberjs.github.io/rfcs/introduction.html), the [Glimmer Components RFC](https://emberjs.github.io/rfcs/0416-glimmer-components.html) and its implications for hooks, the [Render Element Modifiers RFC](https://emberjs.github.io/rfcs/0415-render-element-modifiers.html), including the official addon it proposes, and more!
 
 ---
 
@@ -80,6 +87,14 @@ Even though we had to sacrifice technical backward compatibility, it was importa
 
 ---
 
+## [SECTION TITLE](#section-url)
+
+---
+
+## [SECTION TITLE](#section-url)
+
+---
+
 ## ["I contribute to Ember" with Miguel Camba ✍️](https://discuss.emberjs.com/t/i-contribute-to-ember-with-miguel-camba/16193)
 
 <div class="float-right padded portrait-frame">
@@ -93,7 +108,6 @@ You can read the full interview on [the Ember Forum](https://discuss.emberjs.com
 <a class="ember-button ember-button--centered" href="https://discuss.emberjs.com/t/i-contribute-to-ember-with-miguel-camba/16193">Read more</a>
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
