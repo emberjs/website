@@ -1174,6 +1174,10 @@
   image: zipbooks.png
   alt: ZipBooks
   use: "Used for all our web apps and internal tools"
+- url: https://linkfire.com
+  image: linkfire.png
+  alt: Linkfire
+  use: "Linkfire uses Ember to build music campaign tools as well as other internal/external projects"
 
 # ---- PLEASE READ ----
 # To have your pull request accepted, you must submit your information on this form: https://airtable.com/shrZSLswT03VpzY1D
