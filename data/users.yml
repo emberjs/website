@@ -1155,7 +1155,7 @@
   image: anvyl.png
   alt: Anvyl
   use: "Ember is powering Anvyl's smart supply chain solution to help consumer brands source higher quality, lower cost suppliers, and manage production with more visibility."
--url: https://linkfire.com
+- url: https://linkfire.com
   image: linkfire.png
   alt: Linkfire
   use: "Linkfire uses Ember to build music campaign tools as well as other internal/external projects"
