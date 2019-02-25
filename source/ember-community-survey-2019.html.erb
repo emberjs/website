@@ -1,0 +1,117 @@
+---
+title: "Ember Community Survey 2019"
+responsive: true
+no_survey_reminder: true
+---
+<% content_for :outside_wrapper do %>
+<div class="survey-reminder-wrapper hidden">
+  <div class="survey-reminder-container">
+    You have <strong class="survey-time-left"></strong> left to submit your response!
+  </div>
+</div>
+
+<div class="survey-wrapper survey-wrapper-header">
+  <div class="survey-header survey-container">
+    <h1 class="survey-h1">
+      <img src="/images/survey/logo2019.png" alt="Ember Community Survey 2019" />
+    </h1>
+
+    <h4 class="survey-tagline">
+      A project to learn who is using Ember, and how.
+    </h4>
+
+    <a href="https://airtable.com/shr3n3zRCg0Evm4TX" class="survey-button orange button">
+      Visit survey <img src="/images/survey/right-arrow.png" alt="Arrow to the right" />
+    </a>
+  </div>
+</div>
+
+<div class="survey-wrapper survey-border-top">
+
+  <div class="survey-body survey-container">
+    <a class="survey-h2 mono">
+      More about the Survey
+    </a>
+
+    <div class="survey-row">
+      <div class="survey-column">
+        <img class="survey-image" src="/images/survey/photo1.jpg" alt="Tomster and Friends" />
+        <h4>
+          Totally Anonymous
+        </h4>
+        <p>
+          No personal identification is attached to survey responses. Last year
+          over 1300 participants shared information about themselves, their businesses,
+          and applications.
+        </p>
+      </div>
+      <div class="survey-column">
+        <img class="survey-image" src="/images/survey/photo2.jpg" alt="Emberconf Crowd" />
+        <h4>
+          Open until March 12th
+        </h4>
+        <p>
+          Submissions close on March 12th. To ensure the survey
+          captures a fair measure of our community, please share this page on your
+          social networks and with your local communities!
+        </p>
+      </div>
+      <div class="survey-column">
+        <img class="survey-image" src="/images/survey/photo3.jpg" alt="Emberconf during talk" />
+        <h4>
+          Results at EmberConf
+        </h4>
+        <p>
+          At EmberConf, the results to the 2019 survey will be shared with
+          comparison to the <a href="/ember-community-survey-2018">2018 results</a>.
+          Detailed aggregate and individual responses will also be made public.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="survey-wrapper survey-border-top">
+    <div class="survey-footer">
+      <h2 class="survey-h2 mono">
+        Help spread the word!
+      </h2>
+      <p>
+        Please share this survey on social media and at work. <br/>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Do you use @emberjs? It&#39;s time for the 2019 survey! " data-url="https://emberjs.com/ember-community-survey-2019" data-hashtags="EmberJS" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </p>
+      <p>
+        Questions? Feedback? Please join us in the #dev-ember-learning channel on the Discord community chat, or
+        email the survey team via <a href="mailto:survey@emberjs.com">survey@emberjs.com</a>.
+      </p>
+      <p>
+        ...and see you at <a href="http://emberconf.com/">EmberConf 2019!</a>!
+      </p>
+    </div>
+    <div class="survey-credits">
+      <p>Sponsored by</p>
+      <a href="http://codeallday.com/">
+        <img src="/images/survey/cad-right.svg" alt="code all day" />
+      </a>
+      <p>&nbsp;</p>
+      <p>Photos by <a href="http://www.octolabs.com/">Jeremy Green</a></p>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<% content_for :foot do %>
+    <script>
+        $(function () {
+            function daysDifference(d0, d1) {
+                var diff = new Date(+d1) - new Date(+d0);
+                return Math.ceil(diff / 8.64e7);
+            }
+            var numDays = daysDifference(Date.now(), Date.UTC(2019, 2, 12)); // Month is zero-indexed, 2 = March
+            if (numDays >= 1) {
+                document.getElementsByClassName('survey-time-left')[0].innerHTML =
+                    '' + numDays + (numDays === 1 ? ' day' : ' days');
+                document.getElementsByClassName('survey-reminder-wrapper')[0].classList.remove('hidden');
+            }
+        });
+    </script>
+<% end %>

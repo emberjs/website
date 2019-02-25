@@ -1155,6 +1155,25 @@
   image: anvyl.png
   alt: Anvyl
   use: "Ember is powering Anvyl's smart supply chain solution to help consumer brands source higher quality, lower cost suppliers, and manage production with more visibility."
+- url: https://www.innovu.com
+  image: innovu.png
+  alt: Innovu
+  use: "Innovu's Lens product suite is built with Ember.js."
+- url: http://visitdays.com
+  image: visitdays.png
+  alt: VisitDays
+  use: "VisitDays's student engagement software is built with Ember.js"
+- url: https://beebeeboard.com/
+  image: beebeeboard.png
+  alt: Beebeeboard
+  use: "Beebeeboard's platform is built with Ember.js"
+- url: https://www.paycertify.com
+  image: paycertify.png
+  alt: PayCertify
+- url: https://zipbooks.com/
+  image: zipbooks.png
+  alt: ZipBooks
+  use: "Used for all our web apps and internal tools"
 - url: https://linkfire.com
   image: linkfire.png
   alt: Linkfire
