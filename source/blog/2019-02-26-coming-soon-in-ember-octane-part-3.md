@@ -16,6 +16,7 @@ Hello again, and welcome back! This is the third entry in the multipart _Coming 
 - Modifiers
 - Glimmer Components
 
+<!-- alex ignore dives -->
 These aren't _all_ of the new features that will be part of Octane, just the ones that I'm most familiar with personally. This series is aimed at existing Ember users, but if you're new to Ember or tried Ember a while ago and want to see how things are changing, I'll be providing context on the existing features as we go along. These posts won't be doing deep dives on all the edge cases of the functionality, they are moreso meant as an overview of what's coming. If you're curious about what an _edition_ is exactly, you can check out a quick break down in [the first post in the series](https://www.pzuraq.com/coming-soon-in-ember-octane-part-1-native-classes/#whatareeditions).
 
 On to tracked properties!
@@ -43,6 +44,7 @@ export default Component.extend({
 });
 ```
 
+<!-- alex ignore dirty -->
 This system means that users don't usually have to _think_ about whether or not a component should update. If any values have updated, they will inform their dependencies, and Ember will know whether or not to rerender the template if something that has been marked as dirty was rendered before. This is similar to to React's new `useMemo` hook, but is used by _default_ for every value in an Ember app.
 
 Better yet, it also means Ember can _minimize_ the amount that is rerendered - each individual value in the template can know whether or not it has been updated, meaning entire sections of the template (and components within those sections) can be skipped:
@@ -500,6 +502,7 @@ export default class FlashMessage extends Component {
 }
 ```
 
+<!-- alex ignore dive -->
 This reads much more clearly than before! We can now read the `FlashObject` class definition and know what properties external consumers, such as the `FlashMessage` component, will be watching and using. When we dive into the `FlashMessage` component, it's much less verbose and easier to read. Properties and getters are much more straightforward, and we can easily distinguish between properties that are used for rendering (`action`, which is tracked) and properties that are not (`#pendingSet` which is a private property used for tracking a runloop task). Additionally, we can still use computed property macros for convenience, and private fields and methods are a nice bonus here in native class syntax.
 
 ## Conclusion
