@@ -248,7 +248,17 @@ body.blog.responsive {
   }
 }
 article.blog-post {
-
+  h4.anchorable-toc { 
+    border-bottom: 1px solid $gray-lighter;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 3em 0 1.75em 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
   li {
     margin: 14px 0;
   }
