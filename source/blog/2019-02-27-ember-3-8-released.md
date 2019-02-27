@@ -61,7 +61,6 @@ Computed Property `.property()` Modifier (2 of 5)
 
 `.property()` is a modifier that adds additional property dependencies to an existing computed property. To update, move the dependencies to the main computed property definition and you shouldn't see a deprecation warning any more. For more information please refer to [the deprecations app](https://emberjs.com/deprecations/v3.x#toc_computed-property-property).
 
-
 Computed Property Volatility (3 of 5)
 
 `.volatile()` is a computed property modifier which makes a computed property recalculate every time it is accessed, instead of caching. It also prevents property notifications from ever occuring on the property, which is generally not the behavior that developers are after. Volatile properties are usually used to simulate the behavior of native getters, which means that they would otherwise behave like normal properties.
