@@ -45,7 +45,7 @@ The helper would be invoked as `{{array arg1 ... argN}}` and return the value `[
 
 Read the [original RFC](https://github.com/emberjs/rfcs/blob/master/text/0318-array-helper.md) for more information.
 
-#### Deprecations (4)
+#### Deprecations (5)
 
 Deprecations are added to Ember.js when an API will be removed at a later date. Each deprecation has an entry in the deprecation guide describing the migration path to a more stable API. Deprecated public APIs are not removed until a major release of the framework.
 
