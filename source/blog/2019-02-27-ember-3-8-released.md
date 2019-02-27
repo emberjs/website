@@ -117,7 +117,7 @@ Here are some of the fixes in ember-cli 3.8 that community members may find usef
 - documentation: more links to the contributing guide were added, so users can more easily find out how to contribute
 - `{{content-for}}` was updated to allow the use of this on the same line if different types are specified (i.e., `{{content-for 'head'}} {{content-for 'head-footer'}}`)
 - gitignore was updated to ignore Yarn .pnp files
-- the `tests` directory will be ignored when tests are disabled
+- the `tests` directory will be ignored when tests are turned off
 
 For more details on each of these, and a full list of the changes in Ember CLI 3.8, as well as detailed upgrade
 instructions, please see the [Ember CLI 3.8.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.8.0).
