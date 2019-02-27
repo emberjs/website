@@ -30,14 +30,14 @@ Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfi
 
 #### New Features (2)
 
-Element Modifier Manager (1 of 2)
+**Element Modifier Manager (1 of 2)**
 
 <!-- alex ignore special -->
 A modifier manager is an object that is responsible for coordinating the lifecycle events that occurs when invoking, installing and updating an element modifier. This new feature is introduced as a  very low-level API. Most likely you will never - as an Ember app developer - need to use this but it might come in handy for some add-on developers. In this way, the Ember app developers will benefit from this feature by subclassing these special modifiers provided by addons.
 
 If you're interested in learning more about how to use this new feature, then please refer to the [RFC](https://github.com/emberjs/rfcs/blob/master/text/0373-Element-Modifier-Managers.md).
 
-Array helper (2 of 2)
+**Array helper (2 of 2)**
 
 Ember 3.8 introduces the `{{array}}` helper to create an array in a template. This helper works in similar fashion to the already existing `{{hash}}` helper.
 
@@ -112,16 +112,16 @@ While it is recommended to keep Ember CLI versions in sync with Ember and Ember 
 
 ### Changes in Ember CLI 3.8
 
-#### New Features (X)
+Here are some of the fixes in ember-cli 3.8 that community members may find useful to know about:
 
+- documentation: more links to the contributing guide were added, so users can more easily find out how to contribute
+- `{{content-for}}` was updated to allow the use of this on the same line if different types are specified (i.e., `{{content-for 'head'}} {{content-for 'head-footer'}}`)
+- gitignore was updated to ignore Yarn .pnp files
+- the `tests` directory will be ignored when tests are disabled
 
-#### Deprecations (X)
+For more details on each of these, and a full list of the changes in Ember CLI 3.8, as well as detailed upgrade
+instructions, please see the [Ember CLI 3.8.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.8.0).
 
----
-
-For more details on the changes in Ember CLI 3.8 and detailed upgrade
-instructions, please review the [Ember CLI  3.8.0 release page](https://github.com/ember-cli/ember-cli/releases/tag/v3.8.0).
-
-## Thank You!
+## Thank You
 
 As a community-driven open-source project with an ambitious scope, each of these releases serve as a reminder that the Ember project would not have been possible without your continued support. We are extremely grateful to our contributors for their efforts.
