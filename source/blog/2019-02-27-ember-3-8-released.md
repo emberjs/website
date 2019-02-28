@@ -26,7 +26,7 @@ The 3.8.0 release is an Ember.js Long-Term Support candidate. In six weeks, the 
 
 For more information about Ember's LTS policies, see the [announcement blog post](http://emberjs.com/blog/2016/02/25/announcing-embers-first-lts.html) and [builds page](http://emberjs.com/builds/).
 
-Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There is two (2) new feature, four (4) deprecations, and six (6) bugfixes in this version.
+Ember.js 3.8 is an incremental, backwards compatible release of Ember with bugfixes, performance improvements, and minor deprecations. There are two (2) new features, four (4) deprecations, and six (6) bugfixes in this version.
 
 #### New Features (2)
 
