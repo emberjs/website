@@ -1,19 +1,24 @@
 ---
-title: The Ember Times - Issue No. XX
-author: the crowd
+title: The Ember Times - Issue No. 87
+author: Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
-alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
 ---
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week: **Take and share** the **2019 Ember Community Survey** 🐹,
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Let Your Voice Be Heard In The 2019 Ember Community Survey 🗣](https://emberjs.com/ember-community-survey-2019/)
 
+With 2019 already under way the Ember Core team would like your help to learn about who is in the Ember community and how they work with the framework. [The 2019 Ember Community Survey](https://emberjs.com/ember-community-survey-2019/) is anonymous and only open until **March 12th**!
+
+Be sure to [take survey today](https://emberjs.com/ember-community-survey-2019/) and **spread the word** among your colleagues and Ember friends!
+
+<a class="ember-button ember-button--centered" href="https://emberjs.com/ember-community-survey-2019/">Take the survey</a>
 
 ---
 
@@ -90,5 +95,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
-
+Jessica Jordan, the crowd and the Learning Team
