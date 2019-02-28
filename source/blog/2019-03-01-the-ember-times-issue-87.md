@@ -1,19 +1,27 @@
 ---
-title: The Ember Times - Issue No. XX
-author: the crowd
+title: The Ember Times - Issue No. 87
+author: Jessica Jordan, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
-alias : "blog/2019/xx/xx-the-ember-times-issue-XX.html"
+alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
 ---
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+This week: **Take and share** the **2019 Ember Community Survey** 🐹,
+
+
+...and a brand-new **Readers' Question** 🤓 for you!
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Let Your Voice Be Heard In The 2019 Ember Community Survey 🗣](https://emberjs.com/ember-community-survey-2019/)
 
+With 2019 already under way the Ember Core team would like your help to learn about who is in the Ember community and how they work with the framework. [The 2019 Ember Community Survey](https://emberjs.com/ember-community-survey-2019/) is anonymous and only open until **March 12th**!
+
+Be sure to [take survey today](https://emberjs.com/ember-community-survey-2019/) and **spread the word** among your colleagues and Ember friends!
+
+<a class="ember-button ember-button--centered" href="https://emberjs.com/ember-community-survey-2019/">Take the survey</a>
 
 ---
 
@@ -60,19 +68,25 @@ responsive: true
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
-<p>This week we'd like to thank our siblings for their contributions to Ember and related repositories! 💖</p>
+<p>This week we'd like to thank <a href="https://github.com/Turbo87" target="gh-user">@Turbo87</a>, <a href="https://github.com/stefanpenner" target="gh-user">@stefanpenner</a>, <a href="https://github.com/jaredgalanis" target="gh-user">@jaredgalanis</a>, <a href="https://github.com/MelSumner" target="gh-user">@MelSumner</a>, <a href="https://github.com/CodingItWrong" target="gh-user">@CodingItWrong</a>, <a href="https://github.com/jenweber" target="gh-user">@jenweber</a>, <a href="https://github.com/enomws" target="gh-user">@enomws</a>, <a href="https://github.com/toddjordan" target="gh-user">@toddjordan</a>, <a href="https://github.com/pzuraq" target="gh-user">@pzuraq</a>, <a href="https://github.com/ondrejsevcik" target="gh-user">@ondrejsevcik</a>, <a href="https://github.com/mike-north" target="gh-user">@mike-north</a>, <a href="https://github.com/tschoartschi" target="gh-user">@tschoartschi</a>, <a href="https://github.com/rwjblue" target="gh-user">@rwjblue</a>, <a href="https://github.com/mixonic" target="gh-user">@mixonic</a>, <a href="https://github.com/jeanduplessis" target="gh-user">@jeanduplessis</a>, <a href="https://github.com/chadhietala" target="gh-user">@chadhietala</a>, <a href="https://github.com/fpauser" target="gh-user">@fpauser</a>, <a href="https://github.com/Alonski" target="gh-user">@Alonski</a>, <a href="https://github.com/BradLeftley" target="gh-user">@BradLeftley</a>, <a href="https://github.com/runspired" target="gh-user">@runspired</a>, <a href="https://github.com/yusufsagdic" target="gh-user">@yusufsagdic</a>, <a href="https://github.com/nummi" target="gh-user">@nummi</a> and <a href="https://github.com/scalvert" target="gh-user">@scalvert</a> for their contributions to Ember and related repositories! 💖</p>
 
 ---
 
-## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: "What are the benefits of using Ember Data over Ajax?" 🤓](#url)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+  <p>In <strong>this week's Readers' Question</strong> we're talking about a popular question asked by many Ember developers who are starting out: What are the benefits of using <strong>Ember Data</strong> over Ajax?
+  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer some of the plethora of advantages that a data management library like Ember Data offers for <strong>building easy-to-maintain</strong> applications that also <strong>scale well</strong>.</p>
+</div>
 
-<p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+<div class="blog-row">
+  <a class="ember-button" href="#url">Read more</a>
+</div>
 
+<div class="blog-row">
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 </div>
 
 ---
@@ -90,5 +104,4 @@ That's another wrap! ✨
 
 Be kind,
 
-the crowd and the Learning Team
-
+Jessica Jordan, the crowd and the Learning Team
