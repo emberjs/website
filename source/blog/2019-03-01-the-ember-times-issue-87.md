@@ -10,6 +10,9 @@ responsive: true
 
 This week: **Take and share** the **2019 Ember Community Survey** 🐹,
 
+
+...and a brand-new **Readers' Question** 🤓 for you!
+
 ---
 
 ## [Let Your Voice Be Heard In The 2019 Ember Community Survey 🗣](https://emberjs.com/ember-community-survey-2019/)
@@ -69,15 +72,21 @@ Be sure to [take survey today](https://emberjs.com/ember-community-survey-2019/)
 
 ---
 
-## [Got a Question? Ask Readers' Questions! 🤓](https://docs.google.com/forms/d/e/1FAIpQLScqu7Lw_9cIkRtAiXKitgkAo4xX_pV1pdCfMJgIr6Py1V-9Og/viewform)
+## [Readers' Questions: "What are the benefits of using Ember Data over Ajax?" 🤓](#url)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
-  <p>Wondering about something related to Ember, Ember Data, Glimmer, or addons in the Ember ecosystem, but don't know where to ask? Readers’ Questions are just for you!</p>
+  <p>In <strong>this week's Readers' Question</strong> we're talking about a popular question asked by many Ember developers who are starting out: What are the benefits of using <strong>Ember Data</strong> over Ajax?
+  Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer some of the plethora of advantages that a data management library like Ember Data offers for <strong>building easy-to-maintain</strong> applications that also <strong>scale well</strong>.</p>
+</div>
 
-<p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
+<div class="blog-row">
+  <a class="ember-button" href="#url">Read more</a>
+</div>
 
+<div class="blog-row">
+  <p><strong>Submit your own</strong> short and sweet <strong>question</strong> under <a href="https://bit.ly/ask-ember-core" target="rq">bit.ly/ask-ember-core</a>. And don’t worry, there are no silly questions, we appreciate them all - promise! 🤞</p>
 </div>
 
 ---
