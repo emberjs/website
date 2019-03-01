@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 86
 author: Chris Ng, Gaurav Munjal, Amy Lam, Alon Bukai, Jessica Jordan, Jared Galanis
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
+tags: Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/02/22-the-ember-times-issue-86.html"
 responsive: true
 ---
