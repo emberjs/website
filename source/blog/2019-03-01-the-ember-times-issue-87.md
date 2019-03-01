@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 87
-author: Jessica Jordan, Kenneth Larsen, Jared Galanis the crowd
+author: Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
@@ -10,6 +10,7 @@ responsive: true
 
 This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀, SFC & Template Import Primitives RFC 🔬
 
+**Contribution Guides RFC** in FCP ✏️
 
 ...and a brand-new **Readers' Question** 🤓 for you!
 
@@ -41,6 +42,17 @@ The **SFC & Template Import Primitives RFC** proposes adding experimental low-le
 Rather than proposing specific formats for single-file components and template imports, the RFC proposes new low-level API's that addons can use to implement experimental 🧪 file formats.
 
 Be sure to checkout and comment on the detailed design of the [SFC & Template Import Primitives RFC](https://github.com/emberjs/rfcs/pull/454) on Github!
+
+---
+
+## [Contribution Guides in FCP! 🖊️](https://github.com/emberjs/rfcs/pull/446)
+
+[@jessica-jordan](https://github.com/jessica-jordan) proposed adding an official **Contribution Guide** which aims to improve the discoverability of Ember-related projects that require help by the community and outlines the general contribution workflow for these projects.
+
+With the intent of making the Contribution Guides as beginner-friendly as possible, it will include a **summary** of the motivation of open-source and its meaning for Ember as an OSS project, a real-world example of **how to contribute code**, a guide on **how to file an issue**, and an **issue finder** inspired by the [What Can I Do for Mozilla landing page](https://whatcanidoformozilla.org/).
+
+<!--alex ignore period-->
+The [Contribution Guides RFC](https://github.com/emberjs/rfcs/pull/446) is in Final Comment Period (FCP) so check it out!
 
 ---
 
@@ -113,4 +125,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Kenneth Larsen, Jared Galanis the crowd and the Learning Team
+Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Amy Lam and the Learning Team
