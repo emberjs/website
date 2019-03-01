@@ -75,17 +75,17 @@ This release also contains 5 deprecations for Ember, so if you plan on upgrading
 
 ---
 
-## [Readers' Questions: "What are the benefits of using Ember Data over Ajax?" 🤓](#url)
+## [Readers' Questions: "What are the benefits of using Ember Data over Ajax?" 🤓](https://discuss.emberjs.com/t/readers-questions-what-are-the-benefits-of-using-ember-data-over-ajax/16254)
 
 <div class="blog-row">
   <img class="float-right small transparent padded" alt="Office Hours Tomster Mascot" title="Readers' Questions" src="/images/tomsters/officehours.png" />
 
   <p>In <strong>this week's Readers' Question</strong> we're talking about a popular question asked by many Ember developers who are starting out: What are the benefits of using <strong>Ember Data</strong> over Ajax?
   Ember Learning team member <a href="https://github.com/jessica-jordan" target="jj">@jessica-jordan</a> highlights in her answer some of the plethora of advantages that a data management library like Ember Data offers for <strong>building easy-to-maintain</strong> applications that also <strong>scale well</strong>.</p>
-</div>
 
-<div class="blog-row">
-  <a class="ember-button" href="#url">Read more</a>
+  <p>
+    <a class="ember-button" href="https://discuss.emberjs.com/t/readers-questions-what-are-the-benefits-of-using-ember-data-over-ajax/16254">Read more</a>
+  </p>
 </div>
 
 <div class="blog-row">
