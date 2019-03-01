@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 87
-author: Jessica Jordan, Kenneth Larsen, Chris Ng, the crowd
+author: Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀
+This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀, SFC & Template Import Primitives RFC 🔬
 
 **Contribution Guides RFC** in FCP ✏️
 
@@ -31,6 +31,17 @@ Be sure to [take survey today](https://emberjs.com/ember-community-survey-2019/)
 New versions of Ember, Ember CLI and Ember Data have been released. Not only does this release contain features like the **Element Modifier Manager and the array helper** - it also marks 3.8 as a new LTS candidate. Both the features and the LTS information can be found in the [release post](https://emberjs.com/blog/2019/02/27/ember-3-8-released.html).
 
 This release also contains 5 deprecations for Ember, so if you plan on upgrading to 3.8 please have a look at the [new deprecations](https://emberjs.com/blog/2019/02/27/ember-3-8-released.html#toc_deprecations-5).
+
+---
+
+## [RFC for Single-File Components & Template Import Primitives](https://github.com/emberjs/rfcs/pull/454) 🔬
+[@tomdale](https://github.com/tomdale) recently opened up an RFC to explore adding single-file components and module imports in component templates!
+
+The **SFC & Template Import Primitives RFC** proposes adding experimental low-level primitives for embedding templates in JavaScript and associating templates with component classes, two highly-requested features. 🎉
+
+Rather than proposing specific formats for single-file components and template imports, the RFC proposes new low-level API's that addons can use to implement experimental 🧪 file formats.
+
+Be sure to checkout and comment on the detailed design of the [SFC & Template Import Primitives RFC](https://github.com/emberjs/rfcs/pull/454) on Github!
 
 ---
 
@@ -114,4 +125,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Kenneth Larsen, Chris Ng, the crowd and the Learning Team
+Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Amy Lam and the Learning Team
