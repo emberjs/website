@@ -9,9 +9,8 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀, SFC & Template Import Primitives RFC 🔬
-
+Dig through the **Classic Class Owner Tunnel RFC** 🕳,
 **Contribution Guides RFC** in FCP ✏️
-
 ...and a brand-new **Readers' Question** 🤓 for you!
 
 ---
@@ -76,8 +75,13 @@ The [Contribution Guides RFC](https://github.com/emberjs/rfcs/pull/446) is in Fi
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Classic Class Owner Tunnel RFC 🕳](https://github.com/emberjs/rfcs/pull/451)
 
+[@pzuraq](https://github.com/pzuraq) opened an RFC around making `getOwner` and explicit injections work in classic class constructors since the [Native Class Constructor Update RFC](https://github.com/emberjs/rfcs/blob/master/text/0337-native-class-constructor-update.md) changed the way that classic classes were constructed.
+
+The Classic Class Owner Tunnel RFC proposes to make _explicit_ injections work for the class’s constructor method. However, _implicit_ injections will still only be available during `init`, because they are passed in and assigned as `args`. The _implicit_ injections will be caught using development-mode assertions which would direct users to add the injection explicitly (ideally), or to use `init`.
+
+Read the full details on the [Classic Class Owner Tunnel RFC](https://github.com/emberjs/rfcs/pull/451) on GitHub!
 
 ---
 
