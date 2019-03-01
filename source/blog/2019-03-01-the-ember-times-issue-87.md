@@ -6,12 +6,9 @@ alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+Happy Friday, Emberistas! 🐹
 
-This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀, SFC & Template Import Primitives RFC 🔬
-Dig through the **Classic Class Owner Tunnel RFC** 🕳,
-**Contribution Guides RFC** in FCP ✏️
-...and a brand-new **Readers' Question** 🤓 for you!
+This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀, SFC & Template Import Primitives RFC 🔬, Contribution Guides RFC in FCP ✏️, dig through the Classic Class Owner Tunnel RFC 🕳, Help Wanted 🚧, and a brand-new **Readers' Question** 🤓 for you!
 
 ---
 
@@ -59,7 +56,7 @@ The [Contribution Guides RFC](https://github.com/emberjs/rfcs/pull/446) is in Fi
 
 [@pzuraq](https://github.com/pzuraq) opened an RFC around making `getOwner` and explicit injections work in classic class constructors since the [Native Class Constructor Update RFC](https://github.com/emberjs/rfcs/blob/master/text/0337-native-class-constructor-update.md) changed the way that classic classes were constructed.
 
-The Classic Class Owner Tunnel RFC proposes to make _explicit_ injections work for the class’s constructor method. However, _implicit_ injections will still only be available during `init`, because they are passed in and assigned as `args`. The _implicit_ injections will be caught using development-mode assertions which would direct users to add the injection explicitly (ideally), or to use `init`.
+The **Classic Class Owner Tunnel RFC** proposes to make _explicit_ injections work for the class’s constructor method. However, _implicit_ injections will still only be available during `init`, because they are passed in and assigned as `args`. The _implicit_ injections will be caught using development-mode assertions which would direct users to add the injection explicitly (ideally), or to use `init`.
 
 Read the full details on the [Classic Class Owner Tunnel RFC](https://github.com/emberjs/rfcs/pull/451) on GitHub!
 
@@ -67,10 +64,9 @@ Read the full details on the [Classic Class Owner Tunnel RFC](https://github.com
 
 ## [Help Wanted 🚧](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22+label%3AOctane)
 
-A large part of the work for Octane is documentation! Would you like to help? Check out [these issues](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22+label%3AOctane)! Drop by the [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) channel on [Discord](https://discordapp.com/invite/zT3asNS) if you want to help out or have any questions. The goal is to make the upcoming edition information clear for both new learners and existing Ember developers, and along the way, do some general refactors of our guides content.
+A large part of the work for **Octane** ⛽️ is documentation! **Would you like to help?** Check out [these issues](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22+label%3AOctane)! Drop by the [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) channel on [Discord](https://discordapp.com/invite/zT3asNS) if you want to help out or have any questions. The goal is to make the upcoming edition information clear for both new learners and existing Ember developers, and along the way, do some general refactors of our guides content.
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
