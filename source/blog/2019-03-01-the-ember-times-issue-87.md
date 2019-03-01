@@ -12,7 +12,7 @@ This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.
 
 ---
 
-## [Let Your Voice Be Heard In The 2019 Ember Community Survey 🗣](https://emberjs.com/ember-community-survey-2019/)
+## [Let Your Voice Be Heard in the 2019 Ember Community Survey 🗣](https://emberjs.com/ember-community-survey-2019/)
 
 With 2019 already under way the Ember Core team would like your help to learn about who is in the Ember community and how they work with the framework. [The 2019 Ember Community Survey](https://emberjs.com/ember-community-survey-2019/) is anonymous and only open until **March 12th**!
 
