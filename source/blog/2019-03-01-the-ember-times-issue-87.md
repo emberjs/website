@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 87
-author: Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Amy Lam
+author: Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Jen Weber, Amy Lam
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
@@ -55,26 +55,6 @@ The [Contribution Guides RFC](https://github.com/emberjs/rfcs/pull/446) is in Fi
 
 ---
 
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Classic Class Owner Tunnel RFC 🕳](https://github.com/emberjs/rfcs/pull/451)
 
 [@pzuraq](https://github.com/pzuraq) opened an RFC around making `getOwner` and explicit injections work in classic class constructors since the [Native Class Constructor Update RFC](https://github.com/emberjs/rfcs/blob/master/text/0337-native-class-constructor-update.md) changed the way that classic classes were constructed.
@@ -85,8 +65,9 @@ Read the full details on the [Classic Class Owner Tunnel RFC](https://github.com
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Help Wanted 🚧](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22+label%3AOctane)
 
+A large part of the work for Octane is documentation! Would you like to help? Check out [these issues](https://github.com/ember-learn/guides-source/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22+label%3AOctane)! Drop by the [#dev-ember-learning](https://discordapp.com/channels/480462759797063690/480777444203429888) channel on [Discord](https://discordapp.com/invite/zT3asNS) if you want to help out or have any questions. The goal is to make the upcoming edition information clear for both new learners and existing Ember developers, and along the way, do some general refactors of our guides content.
 
 ---
 
@@ -129,4 +110,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Amy Lam and the Learning Team
+Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Jen Weber, Amy Lam and the Learning Team
