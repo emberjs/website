@@ -27,7 +27,7 @@ Be sure to [take survey today](https://emberjs.com/ember-community-survey-2019/)
 
 ## [Ember 3.8 Released 🚀](https://emberjs.com/blog/2019/02/27/ember-3-8-released.html)
 
-New versions of Ember, Ember CLI and Ember Data has been released. Not only does this release contain features like the **Element Modifier Manager and the array helper** - it also marks 3.8 as a new LTS candidate. Both the features and the LTS information can be found in the [release post](https://emberjs.com/blog/2019/02/27/ember-3-8-released.html).
+New versions of Ember, Ember CLI and Ember Data have been released. Not only does this release contain features like the **Element Modifier Manager and the array helper** - it also marks 3.8 as a new LTS candidate. Both the features and the LTS information can be found in the [release post](https://emberjs.com/blog/2019/02/27/ember-3-8-released.html).
 
 This release also contains 5 deprecations for Ember, so if you plan on upgrading to 3.8 please have a look at the [new deprecations](https://emberjs.com/blog/2019/02/27/ember-3-8-released.html#toc_deprecations-5).
 
