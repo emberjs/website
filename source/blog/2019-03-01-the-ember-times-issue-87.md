@@ -39,6 +39,7 @@ This release also contains 5 deprecations for Ember, so if you plan on upgrading
 
 With the intent of making the Contribution Guides as beginner-friendly as possible, it will include a **summary** of the motivation of open-source and its meaning for Ember as an OSS project, a real-world example of **how to contribute code**, a guide on **how to file an issue**, and an **issue finder** inspired by the [What Can I Do for Mozilla landing page](https://whatcanidoformozilla.org/).
 
+<!--alex ignore retext-profanities-->
 The [Contribution Guides RFC](https://github.com/emberjs/rfcs/pull/446) is in Final Comment Period (FCP) so check it out!
 
 ---
