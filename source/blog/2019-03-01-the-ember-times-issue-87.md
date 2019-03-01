@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 87
-author: Jessica Jordan, Kenneth Larsen, the crowd
+author: Jessica Jordan, Kenneth Larsen, Jared Galanis the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
@@ -8,7 +8,7 @@ responsive: true
 
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
-This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀
+This week: **Take and share** the **2019 Ember Community Survey** 🐹, Ember 3.8 released 🚀, SFC & Template Import Primitives RFC 🔬
 
 
 ...and a brand-new **Readers' Question** 🤓 for you!
@@ -33,8 +33,14 @@ This release also contains 5 deprecations for Ember, so if you plan on upgrading
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [RFC for Single-File Components & Template Import Primitives](https://github.com/emberjs/rfcs/pull/454) 🔬
+[@tomdale](https://github.com/tomdale) recently opened up an RFC to explore adding single-file components and module imports in component templates!
 
+The **SFC & Template Import Primitives RFC** proposes adding experimental low-level primitives for embedding templates in JavaScript and associating templates with component classes, two highly-requested features. 🎉
+
+Rather than proposing specific formats for single-file components and template imports, the RFC proposes new low-level API's that addons can use to implement experimental 🧪 file formats.
+
+Be sure to checkout and comment on the detailed design of the [SFC & Template Import Primitives RFC](https://github.com/emberjs/rfcs/pull/454) on Github!
 
 ---
 
@@ -107,4 +113,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Jessica Jordan, Kenneth Larsen the crowd and the Learning Team
+Jessica Jordan, Kenneth Larsen, Jared Galanis the crowd and the Learning Team
