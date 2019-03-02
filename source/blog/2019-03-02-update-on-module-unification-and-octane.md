@@ -251,12 +251,11 @@ In practice, though, we ran into a few challenges:
 3. JavaScript files in Ember use native module syntax anyway, which doesn't
    go through the MU system, adding to the confusion. Having one system in
    a component's JavaScript and another in its template is not ideal.
-4. When names are so meaningful, it can be frustrating to figure out how to
-   tell MU ignore something that something _isn't_ meaningful. Tasks that
-   are trivial in other programming environments, such as grouping related
-   components together, can easily turn into a battle where your build starts
-   erroring because you can't figure out the right incantation of the MU
-   rules.
+4. When file names are so meaningful, it can be frustrating to figure out how
+   to tell MU ignore a file that _isn't_ meaningful. Tasks that are trivial
+   in other programming environments, such as grouping related components
+   together, can easily turn into a battle where your build starts erroring
+   because you can't figure out the right incantation of the MU rules.
 
 ### A Personal Anecdote
 
