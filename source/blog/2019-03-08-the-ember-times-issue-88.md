@@ -12,8 +12,10 @@ responsive: true
 
 ---
 
-## [SECTION TITLE](#section-url)
+## Only a few days left to complete the [Ember Community Survey](https://emberjs.com/ember-community-survey-2019/)
 
+The *12th of March* is the deadline to complete the[Ember community survey](https://emberjs.com/ember-community-survey-2019/). Thanks a lot  if you have already answered the survey. Don’t forget to poke a lot of people around you to complete it too. 
+If you have not yet completed it, please do. Your answer will give a better view on the Ember community and how it is used all around the world!
 
 ---
 
