@@ -16,11 +16,13 @@ Hello again, and welcome back! This is the fourth entry in the multipart _Coming
 * Modifiers _← this post_
 * Glimmer Components
 
+<!-- alex ignore dives -->
 These aren't _all_ of the new features that will be part of Octane, just the ones that I'm most familiar with personally. This series is aimed at existing Ember users, but if you're new to Ember or tried Ember a while ago and want to see how things are changing, I'll be providing context on the existing features as we go along. These posts won't be doing deep dives on all the edge cases of the functionality, they are moreso meant as an overview of what's coming. If you're curious about what an _edition_ is exactly, you can check out a quick break down in [the first post in the series](https://www.pzuraq.com/coming-soon-in-ember-octane-part-1-native-classes/#whatareeditions).
 
 Alright, now let's talk about modifiers, Ember's new tool for working with the DOM!
 
 ## What Are "Modifiers"
+
 Modifiers are similar to Handlebars helpers, they are functions or classes that can be used in templates directly using `{{double-curlies}}`. The major difference with modifiers is that they are applied directly to _elements_:
 
 ```handlebars
@@ -34,6 +36,7 @@ Modifiers are used for manipulating or reading from the DOM somehow. For instanc
 Modifiers are not an entirely new concept in Ember. In fact, they've existed in some form or another since some of the earliest days of Ember, in the form of the `{{action}}` modifier, and the `{{bind-attr}}` modifier from the v1 era of the framework. However, it's never been possible before for users to make their _own_ modifiers. Now they're being given first class support to allow users more fidelity in how they interact with the DOM, and to allow DOM code to be more easily shared across components and other templates.
 
 ### The New `didInsertElement`
+
 You may be thinking, don't lifecycle hooks solve the same problem? Can't I put logic like adding event listeners and measuring elements in `didInsertElement` or `didRender` on my component class and call it a day? Why do we need a new concept for this kind of logic?
 
 There are a few reasons modifiers end up being a better solution for DOM manipulation in general:
@@ -153,6 +156,7 @@ Modifiers disconnect the component class definition from DOM manipulation, which
 These benefits are the reasoning behind introducing a new concept. We also aren't the only framework to have noticed the benefits of this pattern, most recently React's new Hooks API is accomplishing a lot of the same goals in a similar manner, especially the `useLayoutEffect` hook which is specifically for running [side-effecting](https://en.wikipedia.org/wiki/Side_effect_(computer_science)) layout code. Ember modifiers fill a similar gap.
 
 ### So What Do They Look Like?
+
 The usage side of modifiers has been defined since Ember v1. A modifier is the same syntax as a helper, but applied directly to an element instead of to an attribute:
 
 ```handlebars
@@ -259,6 +263,7 @@ function darkMode(
 In the end, it's likely that a couple different modifier APIs will be recommended for most use-cases. Custom modifier APIs that are created will also continue to be supported indefinitely, part of the power and flexibility of the manager pattern that Ember is now using for userland APIs.
 
 ### So, What Can I Use Now?
+
 There are several addons that have created modifiers that you can use in your apps today, including:
 
 * [`@ember/render-modifiers`](https://github.com/emberjs/ember-render-modifiers), an official Ember addon that includes:
@@ -275,6 +280,7 @@ These modifiers are meant to be simple primitives that allow you to run code on 
 If you're willing to work at a lower level and experiment with new APIs, you can also check out the [modifier-manager-polyfill](https://github.com/rwjblue/ember-modifier-manager-polyfill), but be warned that it is meant for _low level_ infrastructure, and shouldn't generally be used to write modifiers directly. The Modifier Manager API is still very new, and it'll take some time to solidify the userland APIs, but they'll be available soon!
 
 ### Putting It All Together
+
 As always, we'll end with an example of a component before and after, to see how this new feature impacts real applications. This time we'll use an example from `ember-paper`, the Material UI addon for Ember, specifically [the paper-toast-inner component](https://github.com/miguelcobain/ember-paper/blob/14e3f0ffcaff3c4cfb9b93ff44f989da2a9a64dd/addon/components/paper-toast-inner.js), which uses the [Hammer.js](http://hammerjs.github.io) library for recognizing touch events.
 
 We'll also be using _theoretical_ user APIs this time around, because the details of writing a component manager are definitely _not_ ergonomic.
@@ -523,6 +529,8 @@ export default modifier((element, positional, named) => {
 ```
 
 ## Conclusion
+
+<!-- alex ignore mental -->
 Modifiers are one of the most exciting features landing in Octane to me. They definitely are a shift in the mental model for DOM and lifecycle hooks, but in my experience so far the component's I've refactored with them are much easier to reason about, and much more composable. Nailing down the userland APIs is going to be an exciting and interesting part of the design, and I'm hoping we get some interesting new ideas from the community (and if anyone wants to implement either of the managers I've described, please do! The class based one has even been mostly spec'd out in [Chad Hietala's RFC](https://github.com/emberjs/rfcs/pull/353). Ping me in Discord if you want help!) Overall, I'm looking forward to seeing how they turn out 😄
 
 That's all I have for this week! Next Friday will be the last post in this series - Glimmer components, the next generation of components in Ember.
