@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
+Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
 
 ---
 
