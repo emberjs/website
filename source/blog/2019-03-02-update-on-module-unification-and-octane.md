@@ -63,13 +63,13 @@ While the Ember.js core team has reached consensus that template imports are
 the path forward, please note that the syntax shown in the examples above is
 hypothetical. While I'm personally a fan of the `<template>` tag syntax shown
 here, others are not, and details like this are still being hammered out in
-the RFC process and are highly likely to change.
+the [RFC process](https://github.com/emberjs/rfcs/pull/454) and are highly likely to change.
 
 Speaking for the Ember.js core team, we are trying to get better at updating
 the community when plans have changed but the _new_ plan isn't locked in yet.
 So, consider this one of those situations.
 
-We know that the exact plan for Module Unification, [as laid out in the
+We know that the exact plan for Module Unification (MU), [as laid out in the
 original RFC][mu], will need to change. How it changes is not yet certain,
 but we believe that some of the problems we wanted to solve with MU are
 better solved with template imports.
@@ -424,4 +424,4 @@ decisions.
 I'm so excited about Ember, our roadmap, and the newfound energy in our
 community. In 2019, a thriving Ember is more important for the web than ever.
 Thank you for being a part of our community, and I hope to see you at
-EmberConf in a few weeks. It's gonna be a good one.
+[EmberConf](https://emberconf.com) in a few weeks. It's gonna be a good one.
