@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 88
-author: Amy Lam, the crowd
+author: Amy Lam, Anne-Greeth van Herwijnen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/08-the-ember-times-issue-88.html"
 responsive: true
@@ -92,4 +92,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, the crowd and the Learning Team
+Amy Lam, Anne-Greeth van Herwijnen, the crowd and the Learning Team
