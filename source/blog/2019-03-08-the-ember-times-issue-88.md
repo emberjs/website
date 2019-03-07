@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 88
-author: Amy Lam, Anne-Greeth van Herwijnen, the crowd
+author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/08-the-ember-times-issue-88.html"
 responsive: true
@@ -9,6 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
+Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
 
 ---
 
@@ -34,8 +35,11 @@ If you have not yet completed it, please do. Your answer will give a better view
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Release of ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
 
+[@Turbo87](https://github.com/turbo87/) announced the [release of version 5.0.0](https://twitter.com/TobiasBieniek/status/1103051224180498434) of [ember-ajax](https://github.com/ember-cli/ember-ajax). In this update, we have a **breaking change** for the Error classes since the base class of the custom Error classes was changed to extend native `Error` instead of `EmberError`. 
+
+Furthermore, ember-ajax was also updated to use [ember-cli-babel](https://github.com/babel/ember-cli-babel) v7.x, which requires all apps that uses ember-ajax to use [Ember CLI 2.13 or above](https://github.com/ember-cli/ember-ajax#compatibility).
 
 ---
 
@@ -92,4 +96,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Anne-Greeth van Herwijnen, the crowd and the Learning Team
+Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, the crowd and the Learning Team
