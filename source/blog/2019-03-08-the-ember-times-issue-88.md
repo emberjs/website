@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 88
-author: Amy Lam, Chris Ng, the crowd
+author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/08-the-ember-times-issue-88.html"
 responsive: true
@@ -9,12 +9,14 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
+Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Only a Few Days Left to Complete the Ember Community Survey 🚀](https://emberjs.com/ember-community-survey-2019/)
 
+Tuesday, March 12th is the deadline to complete the [Ember community survey](https://emberjs.com/ember-community-survey-2019/). Thanks a lot if you have already answered the survey! 🎉 Don’t forget to poke a lot of people around you to complete it too!
+If you have not yet completed it, please do. Your answer will give a better view on the Ember community and how it is used all around the world!
 
 ---
 
@@ -94,4 +96,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Chris Ng, the crowd and the Learning Team
+Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, the crowd and the Learning Team
