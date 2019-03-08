@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 88
-author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, the crowd
+author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/08-the-ember-times-issue-88.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
+Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05), Learn to contribute to Ember Times
 
 ---
 
@@ -43,8 +43,11 @@ Furthermore, ember-ajax was also updated to use [ember-cli-babel](https://github
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Learn to Contribute to Ember.js 🏫](https://www.kennethlarsen.org/how-to-contribute-to-the-ember-times/)
 
+[@kennethlarsen](https://github.com/kennethlarsen) has released a new blog series that will **take you through contributing to the Ember.js ecosystem**. The series starts off with contributions that are non-advanced and does not require code and will finish with some more advanced code contributions.
+
+In this first post **ou'll learn how to contribute to The Ember Times**. It takes you through everything from picking a topic to requesting a review on your writing. Check out [the blog post](https://www.kennethlarsen.org/how-to-contribute-to-the-ember-times/) to get started.
 
 ---
 
@@ -96,4 +99,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, the crowd and the Learning Team
+Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, the crowd and the Learning Team
