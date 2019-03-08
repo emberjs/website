@@ -47,7 +47,7 @@ Furthermore, ember-ajax was also updated to use [ember-cli-babel](https://github
 
 [@kennethlarsen](https://github.com/kennethlarsen) has released a new blog series that will **take you through contributing to the Ember.js ecosystem**. The series starts off with contributions that are non-advanced and does not require code and will finish with some more advanced code contributions.
 
-In this first post **ou'll learn how to contribute to The Ember Times**. It takes you through everything from picking a topic to requesting a review on your writing. Check out [the blog post](https://www.kennethlarsen.org/how-to-contribute-to-the-ember-times/) to get started.
+In this first post **you'll learn how to contribute to The Ember Times**. It takes you through everything from picking a topic to requesting a review on your writing. Check out [the blog post](https://www.kennethlarsen.org/how-to-contribute-to-the-ember-times/) to get started.
 
 ---
 
