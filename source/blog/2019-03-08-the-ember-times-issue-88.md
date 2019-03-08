@@ -8,20 +8,20 @@ responsive: true
 
 👋 Emberistas! 🐹
 
-Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, and a new full-stack livestream series 📹.
+Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, and a new full-stack livestream series 📹! Read on...
 
 ---
 
 ## [Only a Few Days Left to Complete the Ember Community Survey 🚀](https://emberjs.com/ember-community-survey-2019/)
 
-Tuesday, March 12th is the deadline to complete the [Ember community survey](https://emberjs.com/ember-community-survey-2019/). Thanks a lot if you have already answered the survey! 🎉 Don’t forget to poke a lot of people around you to complete it too!
+Tuesday, March 12th is the deadline to complete the [Ember community survey](https://emberjs.com/ember-community-survey-2019/). If you have already answered the survey, thank you! 🎉 Don’t forget to poke a lot of people around you to complete it too!
 
 If you have not yet completed it, please do. Your answer will give a better view on the Ember community and how it is used all around the world!
 
 ---
 
 ## [Ember.js Octane Tech Preview  🎥](https://www.youtube.com/watch?v=BV09blWlc64)
-Checkout an awesome new video preview by [@GavinJoyce](https://github.com/GavinJoyce) explaining some of the features and improvements available as part of Ember Octane!
+Check out an awesome new video preview by [@GavinJoyce](https://github.com/GavinJoyce) explaining some of the features and improvements available as part of Ember Octane!
 
 The video briefly covers Module Unification and relevant changes to file structure in Ember Octane. Through examples [@GavinJoyce](https://github.com/GavinJoyce) reviews the difference between classic Ember components and Glimmer components in both angle bracket invocation syntax and classic invocation syntax. Also covered are Octane's use of tracked properties vs computed properties, outer vs inner html semantics (div wrapping), tagName(s), classNames, component arguments, splattributes and more.
 
