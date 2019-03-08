@@ -50,6 +50,7 @@ In this first post **you'll learn how to contribute to The Ember Times**. It tak
 Josh Justice AKA [@CodingItWrong](https://github.com/codingitwrong) has a new livestream series on his [Twitch channel](https://www.twitch.tv/codingitwrong) where he **builds an application from scratch using Ember and Rails**. Why Ember for this series? Productivity and developer happiness! 💯
 
 These videos will appeal to you if...
+
 * You're a backend developer who hasn't worked with extensive JavaScript before. You'll see how Ember allows you to build rich UIs, without needing to learn a lot to get started.
 * You have experience with another frontend framework. You can learn from Ember's approach and gain another perspective.
 * You've used Ember in the past. You'll be excited to see recent happenings that make Ember *easier* to use than before.
