@@ -8,7 +8,7 @@ responsive: true
 
 👋 Emberistas! 🐹
 
-Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, a new full-stack livestream series 📹 and read about angle bracket component invocation syntax for built-in components 📐! Read on...
+Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, a new full-stack livestream series 📹, and read about angle bracket component invocation syntax for built-in components 📐!
 
 
 ## [Only a Few Days Left to Complete the Ember Community Survey 🚀](https://emberjs.com/ember-community-survey-2019/)
