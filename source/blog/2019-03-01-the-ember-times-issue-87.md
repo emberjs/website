@@ -1,7 +1,7 @@
 ---
 title: The Ember Times - Issue No. 87
 author: Jessica Jordan, Kenneth Larsen, Chris Ng, Jared Galanis, Jen Weber, Amy Lam
-tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
+tags: Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/01-the-ember-times-issue-87.html"
 responsive: true
 ---
