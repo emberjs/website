@@ -1,16 +1,15 @@
 ---
 title: The Ember Times - Issue No. 88
-author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, Jared Galanis the crowd
+author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, Jared Galanis, Jessica Jordan
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/08-the-ember-times-issue-88.html"
 responsive: true
 ---
 
-<SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
+👋 Emberistas! 🐹
 
-<SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05), a new full-stack livestream series 📹, a video preview of Ember.js Octane tech 🎥,
-Learn to contribute to Ember Times
+Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, and a new full-stack livestream series 📹.
+
 ---
 
 ## [Only a Few Days Left to Complete the Ember Community Survey 🚀](https://emberjs.com/ember-community-survey-2019/)
@@ -21,18 +20,12 @@ If you have not yet completed it, please do. Your answer will give a better view
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember.js Octane Tech Preview  🎥](https://www.youtube.com/watch?v=BV09blWlc64)
+Checkout an awesome new video preview by [@GavinJoyce](https://github.com/GavinJoyce) explaining some of the features and improvements available as part of Ember Octane!
 
+The video briefly covers Module Unification and relevant changes to file structure in Ember Octane. Through examples [@GavinJoyce](https://github.com/GavinJoyce) reviews the difference between classic Ember components and Glimmer components in both angle bracket invocation syntax and classic invocation syntax. Also covered are Octane's use of tracked properties vs computed properties, outer vs inner html semantics (div wrapping), tagName(s), classNames, component arguments, splattributes and more.
 
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
-## [SECTION TITLE](#section-url)
-
+[@GavinJoyce](https://github.com/GavinJoyce) also calls attention to some nice resources available for learning more details about what's involved in Ember Octane. Watch the [full video, here](https://www.youtube.com/watch?v=BV09blWlc64).
 
 ---
 
@@ -52,20 +45,6 @@ In this first post **you'll learn how to contribute to The Ember Times**. It tak
 
 ---
 
-## [Ember.js Octane Tech Preview](https://www.youtube.com/watch?v=BV09blWlc64) 🎥
-Checkout an awesome new video preview by [@GavinJoyce](https://github.com/GavinJoyce) explaining some of the features and improvements available as part of Ember Octane!
-
-The video briefly covers Module Unification and relevant changes to file structure in Ember Octane. Through examples [@GavinJoyce](https://github.com/GavinJoyce) reviews the difference between classic Ember components and Glimmer components in both angle bracket invocation syntax and classic invocation syntax. Also covered are Octane's use of tracked properties vs computed properties, outer vs inner html semantics (div wrapping), tagName(s), classNames, component arguments, splattributes and more.
-
-[@GavinJoyce](https://github.com/GavinJoyce) also calls attention to some nice resources available for learning more details about what's involved in Ember Octane. Watch the [full video, here](https://www.youtube.com/watch?v=BV09blWlc64).
-
----
-
-## [SECTION TITLE](#section-url)
-
-
----
-
 ## [Full-Stack Development with Ember and Rails Livestream Series 📹](https://www.twitch.tv/codingitwrong)
 
 Josh Justice AKA [@CodingItWrong](https://github.com/codingitwrong) has a new livestream series on his [Twitch channel](https://www.twitch.tv/codingitwrong) where he builds an application from scratch using Ember and Rails. Why Ember for this series? Productivity and developer happiness! 💯
@@ -78,7 +57,6 @@ These videos will appeal to you if...
 Check out the [teaser video](https://www.youtube.com/watch?v=qCjUBVNng4w) for the series, [Part 1: Deployment, CI, and Dependencies](https://www.youtube.com/watch?v=8Sz2AuhWKe0&t=), [Part 2: Models with JSON:API](https://www.youtube.com/watch?v=gxA-dDw1Vqo), and [Part 3: UI Libraries and UX](https://www.youtube.com/watch?v=bqnrUCCPego). More videos will be released on [YouTube](https://www.youtube.com/channel/UCa-4tbLDX_lmq2f40L0paZw) over the next few Fridays. Better yet, tune into the livestream on [Twitch](https://www.twitch.tv/codingitwrong) Fridays at 2pm ET to chat and follow along live!
 
 ---
-
 
 ## [Contributors' Corner 👏](https://guides.emberjs.com/release/contributing/repositories/)
 
@@ -112,4 +90,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, Jared Galanis the crowd and the Learning Team
+Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, Jared Galanis, Jessica Jordan and the Learning Team
