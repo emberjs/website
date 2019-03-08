@@ -57,7 +57,7 @@ Check out the [teaser video](https://www.youtube.com/watch?v=qCjUBVNng4w) for th
 
 ---
 
-## [Anglebrackets For All Components 📐](https://github.com/emberjs/rfcs/pull/459)
+## [Angle Brackets for All Components 📐](https://github.com/emberjs/rfcs/pull/459)
 
 A [new Request for Comments (RFC)](https://github.com/emberjs/rfcs/pull/459) is proposing to make **Angle Bracket Component Invocation Syntax** available for all components in an Ember application - including the **built-in componnents** `link-to`, `input` and `textarea`.
 
