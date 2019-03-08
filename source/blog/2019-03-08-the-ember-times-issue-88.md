@@ -8,9 +8,8 @@ responsive: true
 
 👋 Emberistas! 🐹
 
-Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, and a new full-stack livestream series 📹! Read on...
+Be heard by filling out the Ember Community Survey! 🗣 Check out a video preview of Ember.js Octane tech 🎥, the latest release of ember-ajax 🎉, learn how to contribute to Ember Times 📰, a new full-stack livestream series 📹, and read about angle bracket component invocation syntax for built-in components 📐!
 
----
 
 ## [Only a Few Days Left to Complete the Ember Community Survey 🚀](https://emberjs.com/ember-community-survey-2019/)
 
@@ -31,7 +30,7 @@ The video briefly covers Module Unification and relevant changes to file structu
 
 ## [Release of ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
 
-[@Turbo87](https://github.com/turbo87/) announced the [release of version 5.0.0](https://twitter.com/TobiasBieniek/status/1103051224180498434) of [ember-ajax](https://github.com/ember-cli/ember-ajax). In this update, we have a **breaking change** for the Error classes since the base class of the custom Error classes was changed to extend native `Error` instead of `EmberError`. 
+[@Turbo87](https://github.com/turbo87/) announced the [release of version 5.0.0](https://twitter.com/TobiasBieniek/status/1103051224180498434) of [ember-ajax](https://github.com/ember-cli/ember-ajax). In this update, we have a **breaking change** for the Error classes since the base class of the custom Error classes was changed to extend native `Error` instead of `EmberError`.
 
 Furthermore, ember-ajax was also updated to use [ember-cli-babel](https://github.com/babel/ember-cli-babel) v7.x, which requires all apps that uses ember-ajax to use [Ember CLI 2.13 or above](https://github.com/ember-cli/ember-ajax#compatibility).
 
@@ -55,6 +54,16 @@ These videos will appeal to you if...
 * You've used Ember in the past. You'll be excited to see recent happenings that make Ember *easier* to use than before.
 
 Check out the [teaser video](https://www.youtube.com/watch?v=qCjUBVNng4w) for the series, [Part 1: Deployment, CI, and Dependencies](https://www.youtube.com/watch?v=8Sz2AuhWKe0&t=), [Part 2: Models with JSON:API](https://www.youtube.com/watch?v=gxA-dDw1Vqo), and [Part 3: UI Libraries and UX](https://www.youtube.com/watch?v=bqnrUCCPego). More videos will be released on [YouTube](https://www.youtube.com/channel/UCa-4tbLDX_lmq2f40L0paZw) over the next few Fridays. Better yet, tune into the livestream on [Twitch](https://www.twitch.tv/codingitwrong) Fridays at 2pm ET to chat and follow along live!
+
+---
+
+## [Angle Brackets for All Components 📐](https://github.com/emberjs/rfcs/pull/459)
+
+A [new Request for Comments (RFC)](https://github.com/emberjs/rfcs/pull/459) is proposing to make **Angle Bracket Component Invocation Syntax** available for all components in an Ember application - including the **built-in componnents** `link-to`, `input` and `textarea`.
+
+Currently, those cannot be invoked using the modern invocation syntax from Ember's upcoming edition **Octane**, but this proposal attempts to provide ways to do so and circumvent some of today's limiting APIs.
+
+You can read more about the motivation and the detailed design of this change in [the original RFC](https://github.com/emberjs/rfcs/blob/angle-built-ins/text/0459-angle-bracket-built-in-components.md). Be sure to leave your thoughts!
 
 ---
 
