@@ -9,13 +9,14 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05)
+Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05), a new full-stack livestream series 📹,
 
 ---
 
 ## [Only a Few Days Left to Complete the Ember Community Survey 🚀](https://emberjs.com/ember-community-survey-2019/)
 
 Tuesday, March 12th is the deadline to complete the [Ember community survey](https://emberjs.com/ember-community-survey-2019/). Thanks a lot if you have already answered the survey! 🎉 Don’t forget to poke a lot of people around you to complete it too!
+
 If you have not yet completed it, please do. Your answer will give a better view on the Ember community and how it is used all around the world!
 
 ---
@@ -58,8 +59,16 @@ Furthermore, ember-ajax was also updated to use [ember-cli-babel](https://github
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Full-Stack Development with Ember and Rails Livestream Series 📹](https://www.twitch.tv/codingitwrong)
 
+Josh Justice AKA [@codingitwrong](https://github.com/codingitwrong) has a new livestream series on his [Twitch channel](https://www.twitch.tv/codingitwrong) where he builds an application from scratch using Ember and Rails. Why Ember for this series? Productivity and developer happiness! 💯
+
+These videos will appeal to you if...
+* You're a backend developer who hasn't worked with extensive JavaScript before. You'll see how Ember allows you to build rich UIs, without needing to learn a lot to get started.
+* You have experience with another frontend framework. You can learn from Ember's approach and gain another perspective.
+* You've used Ember in the past. You'll be excited to see recent happenings that make Ember *easier* to use than before.
+
+Check out the [teaser video](https://www.youtube.com/watch?v=qCjUBVNng4w) for the series, [Part 1: Deployment, CI, and Dependencies](https://www.youtube.com/watch?v=8Sz2AuhWKe0&t=), [Part 2: Models with JSON:API](https://www.youtube.com/watch?v=gxA-dDw1Vqo), and [Part 3: UI Libraries and UX](https://www.youtube.com/watch?v=bqnrUCCPego). More videos will be released on [YouTube](https://www.youtube.com/channel/UCa-4tbLDX_lmq2f40L0paZw) over the next few Fridays. Better yet, tune into the livestream on [Twitch](https://www.twitch.tv/codingitwrong) Fridays at 2pm ET to chat and follow along live!
 
 ---
 
