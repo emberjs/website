@@ -1,6 +1,6 @@
 ---
 title: The Ember Times - Issue No. 88
-author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, the crowd
+author: Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, Jared Galanis the crowd
 tags: Recent Posts, Newsletter, Ember.js Times, Ember Times, 2019
 alias : "blog/2019/03/08-the-ember-times-issue-88.html"
 responsive: true
@@ -9,7 +9,7 @@ responsive: true
 <SAYING-HELLO-IN-YOUR-FAVORITE-LANGUAGE> Emberistas! 🐹
 
 <SOME-INTRO-HERE-TO-KEEP-THEM-SUBSCRIBERS-READING>
-Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05), a new full-stack livestream series 📹,
+Be heard by filling out the Ember Community Survey! Check out the release of [ember-ajax v5.0.0 🎉](https://github.com/ember-cli/ember-ajax/blob/master/CHANGELOG.md#500-2019-03-05), a new full-stack livestream series 📹, a video preview of Ember.js Octane tech 🎥,
 Learn to contribute to Ember Times
 ---
 
@@ -52,8 +52,12 @@ In this first post **you'll learn how to contribute to The Ember Times**. It tak
 
 ---
 
-## [SECTION TITLE](#section-url)
+## [Ember.js Octane Tech Preview](https://www.youtube.com/watch?v=BV09blWlc64) 🎥
+Checkout an awesome new video preview by [@GavinJoyce](https://github.com/GavinJoyce) explaining some of the features and improvements available as part of Ember Octane!
 
+The video briefly covers Module Unification and relevant changes to file structure in Ember Octane. Through examples [@GavinJoyce](https://github.com/GavinJoyce) reviews the difference between classic Ember components and Glimmer components in both angle bracket invocation syntax and classic invocation syntax. Also covered are Octane's use of tracked properties vs computed properties, outer vs inner html semantics (div wrapping), tagName(s), classNames, component arguments, splattributes and more.
+
+[@GavinJoyce](https://github.com/GavinJoyce) also calls attention to some nice resources available for learning more details about what's involved in Ember Octane. Watch the [full video, here](https://www.youtube.com/watch?v=BV09blWlc64).
 
 ---
 
@@ -108,4 +112,4 @@ That's another wrap! ✨
 
 Be kind,
 
-Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, the crowd and the Learning Team
+Amy Lam, Chris Ng, Anne-Greeth van Herwijnen, Kenneth Larsen, Jared Galanis the crowd and the Learning Team
