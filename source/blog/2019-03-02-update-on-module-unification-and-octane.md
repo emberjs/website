@@ -1,5 +1,5 @@
 ---
-title: 'Update on Module Unification & Octane'
+title: 'Update on Module Unification'
 author: Tom Dale
 tags: Recent Posts, 2019, Ember Octane
 responsive: true
@@ -12,115 +12,111 @@ developer experience. It's crucial that we get both the technical and
 ergonomic details right. I wanted to provide an update about Module
 Unification and our plans for the file structure in Ember Octane.
 
-In short, we intend to make templates play nicely with JavaScript, so you can
-use the `import` feature you already know and love. By having components and
-helpers be modules you can import, we can simplify Module Unification so it's
-easier to learn and use.
+**In short, we do not plan to ship Module Unification in Octane**. Instead,
+Octane will ship with today's file system layout, with two changes:
 
-Here's an example of what I think template imports could look like:
+* Co-located components and templates
+* Support for nested components in `<AngleBracket />` invocation syntax
 
-```js
-// src/ui/components/blog-post.gbs
+### Co-located Components and Templates
 
-import Component from '@glimmer/component';
-import UserProfile from './user-profile';
-import UserIcon from './icons/user';
+Today, component classes and their associated templates are quite spread out.
+If you have a component in `app/components/user-profile.js`, its template
+lives in `app/templates/components/user-profile.hbs`. This can make
+navigating between the two files time-consuming.
 
-export class BlogPost extends Component {
-  blog = { title: 'Coming soon in Octane', authorId: '1234' }
+In Octane, we will switch to putting a component's JavaScript and template
+file in the same directory.
 
-  <template>
-    <h1>{{this.blog.title}}</h1>
-    <UserIcon />
-    <UserProfile @userId={{this.blog.authorId}} />
-  </template>
-}
+For example, if you generate a new component called `user-profile` with
+`ember generate component user-profile`, the blueprint will produce these
+files:
+
+* `app/components/user-profile/component.js`
+* `app/components/user-profile/template.hbs`
+* `tests/integration/components/user-profile-test.js`
+
+This co-located `component.js` and `template.hbs` layout actually already
+works in Ember apps today, so the only change required is to update the
+default component blueprint.
+
+### Angle Brackets with Nested Components
+
+Because Octane apps will continue with today's file system layout, we also
+wanted to address the largest blocker to `<AngleBracket />` syntax adoption
+today: components nested inside other directories.
+
+For example, if you have a component located at
+`app/components/icons/download-icon.js` (i.e., nested inside an `icons`
+directory), you can invoke it with curly invocation syntax like this:
+
+```handlebars
+{{icons/download-icon}}
 ```
 
-Here, we've imported two components—`UserProfile` and `UserIcon`—like we
-would any other JavaScript module. We've also defined the component's
-template in JavaScript, placing it in in a template tag within the class
-body.
+However, it's not possible to invoke the same nested component with angle
+bracket syntax without resorting to clunky workarounds.
 
-For templates that aren't associated with a component (such as route
-templates), we could allow template tags to be exported from JavaScript as
-well:
+As proposed in the [Nested Invocations in Angle Bracket Syntax
+RFC][nested-angle-brackets], we plan to address this by adding support for
+nested components via the `::` separator.
 
-```js
-// src/ui/routes/application.gbs
+[nested-angle-brackets]: https://github.com/emberjs/rfcs/pull/457
 
-import NavBar from '../components/NavBar';
+With this proposal, the component described above could be invoked with angle
+bracket syntax like this:
 
-export default <template>
-  <NavBar @darkMode={{true}} />
-  <main>
-    {{outlet}}
-  </main>
-</template>;
+```handlebars
+<Icons::DownloadIcon />
 ```
 
-While the Ember.js core team has reached consensus that template imports are
-the path forward, please note that the syntax shown in the examples above is
-hypothetical. While I'm personally a fan of the `<template>` tag syntax shown
-here, others are not, and details like this are still being hammered out in
-the [RFC process](https://github.com/emberjs/rfcs/pull/454) and are highly likely to change.
+Because both of these changes are quite small, they can be implemented
+quickly without requiring us to delay the Ember Octane release.
 
-Speaking for the Ember.js core team, we are trying to get better at updating
-the community when plans have changed but the _new_ plan isn't locked in yet.
-So, consider this one of those situations.
+## Status of Module Unification
 
-We know that the exact plan for Module Unification (MU), [as laid out in the
-original RFC][mu], will need to change. How it changes is not yet certain,
-but we believe that some of the problems we wanted to solve with MU are
-better solved with template imports.
+Given that the Module Unification RFC was merged in late 2016, and we talked
+about shipping Module Unification in the [2018 Roadmap RFC][roadmap-rfc],
+it's fair to ask what happened and why we're making this decision now.
 
-But template imports are not a replacement of MU. They don't help with things
-like better isolation of an addon's services, or a more intuitive file system
-layout. Instead, we hope that template imports will better solve one aspect
-of MU, so its other benefits shine through even more clearly.
+[roadmap-rfc]: https://emberjs.github.io/rfcs/0364-roadmap-2018.html
 
-If you are interested in following along and joining the design process, keep
-an eye on the [RFCs repo][rfcs], where we post new proposals as soon as
-they're ready.
+Heads up: this post gets long and detailed, so if you are only care about the
+plan going forward, you can safely skip the rest.
 
-[mu]: https://emberjs.github.io/rfcs/0143-module-unification.html
-[rfcs]: https://github.com/emberjs/rfcs
+In the spirit of transparency and overcommunication, though, I wanted to
+share a little bit of the history and evolution of MU from my perspective.
 
-All that said, the MU RFC was merged in late 2016. It's fair to ask why
-implementing MU has taken this long, and why it took this long to realize we
-wanted to make changes. In the spirit of transparency and overcommunication,
-I wanted to share a little bit of the history and evolution of MU from my
-perspective.
+Let's call the file system layout that Ember apps use today the "classic"
+layout. While this structure has served us well, it also has several
+shortcomings.
 
-## A Little History
-
-Today, Ember apps use the "classic" file layout by default. While this layout
-has served us well, it also has several shortcomings.
-
-Because files are grouped by type, a component's template resides in one
-directory (`app/templates/components`) while its JavaScript class resides in
-another (`app/components`). Jumping between these two directories as they
-grow can be frustrating, especially given how frequently Ember developers
-need to switch back and forth between component class and template.
+As mentioned above, related files (like a component and its template) being
+separated from each other can be frustrating. While we are planning to
+address this in Octane for components, there are other kinds of files that
+you might want to group together also. For example, you may want an Ember
+Data model and its serializer to be co-located in the same directory.
 
 Early on, Ember CLI implemented an experimental "pods" layout that grouped
-files by name rather than by kind. So, for example, a component's JavaScript
-and template file would be grouped together in `app/component-name/`, as
-`component.js` and `template.hbs` respectively.
+files by name rather than by kind. So, for example, a `User` model and its
+serializer would be grouped together in `app/user/`, as `model.js` and
+`serializer.js` respectively.
 
-User feedback was that pods felt more productive than the classic layout.
-However, pods had several problems that needed to be addressed before it could
-be enabled by default.
+Feedback from the community was that pods felt more productive than the
+classic layout. However, pods had several problems that needed to be
+addressed before it could be enabled by default.
 
 The effort to address the design flaws of pods led to the [Module Unification
 RFC][mu], a ground-up rethink of how the file system should work in Ember
 apps. Importantly, this design grappled with overhauling Ember's resolver and
-dependency injection systems, which was as much or more important than
-deciding the particular file system layout.
+dependency injection systems as well, which was just as important as
+shuffling around where particular files went on disk.
+
+[mu]: https://emberjs.github.io/rfcs/0143-module-unification.html
 
 The MU RFC was merged at the end of 2016, but new Ember apps are still
-generated with the classic layout. So, why is that? Why can't we flip the
-switch on enabling Module Unification-style layout by default today?
+generated with the classic layout. So, why can't we flip the switch on
+enabling Module Unification-style layout by default today?
 
 Remember that MU described not just a new file system but a significant
 overhaul of Ember's resolver. Implementing MU was a **huge** initiative that,
@@ -129,14 +125,20 @@ large scope, and thanks to the incredible amount of time and energy our
 community devoted to the work, MU implementation has made great progress, and
 nearly everything needed to make Module Unification work has landed in Ember.
 
-_Nearly_ everything. There's one last major piece needed to ship, and while
-we were working on implementing MU, shifts in the JavaScript ecosystem took
-place that sent us back to the drawing board.
+**Nearly** everything. When we merged the Roadmap RFC last year, there was one
+last major piece of MU that still needed to be designed: component
+namespacing, or how to refer to components that come from other addons in
+templates.
+
+While we had a plan, a shift in the JavaScript ecosystem sent us back to the
+drawing board. And the harder we worked on solving this last piece, the more
+we realized that fundamental aspects of the overall design needed to be
+rethought.
 
 ### Namespaces and Scoped Packages
 
-Another problem with the classic layout is that everything goes into one
-big global pool of names.
+Besides files being spread out, another problem with the classic layout is
+that everything goes into one big global pool of names.
 
 So, for example, Ember Data defines a service called `store` that you can
 inject into components and services. If you install another addon that also
@@ -149,32 +151,31 @@ tell Ember which one you mean when you type `{{small-button}}` in a template.
 One of the key benefits of the MU design is that names are no longer global,
 but namespaced to the package where they come from. So, for example, if an
 npm package called `ember-ui-library` contains a component called
-`small-button`, I would refer to it in my template as
+`small-button`, the MU RFC proposed referring to it in your template as
 `{{ember-ui-library::small-button}}`.
 
-This worked pretty well, with the downside that it could get quite verbose.
-This was especially true when components were invoked with a block:
+This worked pretty well, with the downside that it could sometimes be
+verbose, particularly when components were invoked with a block:
 
-```hbs
+```handlebars
 {{#ember-ui-library::small-button}}
   ...
 {{/ember-ui-library::small-button}}
 ```
 
-Around the same time we were designing MU, [npm announced support for scoped
-package names][scoped-packages]. Prior to this change, npm package names were
-limited to alphanumeric characters and dashes. With this change, however,
-packages could now start with an `@` and be prefixed with a user or
-organization, like `@glimmer/component`.
+Around the same time we were designing MU, however, [npm announced support
+for scoped package names][scoped-packages]. Prior to this change, npm package
+names were limited to alphanumeric characters and dashes. Now, though,
+packages could start with an `@` and contain a `/`, like
+`@glimmer/component`.
 
 [scoped-packages]: https://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages
 
 While namespaced component invocations pushed the limits of verbosity,
 combining them with scoped packages blew past that limit. We simply could not
-bring ourselves to accept a syntax that commonly produced monstrosities like
-this:
+bring ourselves to accept a syntax that commonly produced code like this:
 
-```hbs
+```handlebars
 {{#@my-company/ember-ui-library::small-button}}
   ...
 {{/@my-company/ember-ui-library::small-button}}
@@ -182,11 +183,13 @@ this:
 
 While Ember had been using it for years, around this time JavaScript module
 syntax (`import Post from './post'`) started gaining significant traction in
-the wider ecosystem. After scoped npm packages scuttled our original plan for
-namespaced components, we went back to the drawing board, and something
-similar to JavaScript's `import` seemed like a promising solution.
+the wider ecosystem, along with tools like webpack that could use these
+modules to perform code splitting.
 
-However, we immediately hit some challenges while exploring this idea.
+After scoped npm packages scuttled our original plan for namespaced
+components, we went back to the drawing board, and something similar to
+JavaScript's `import` seemed like a promising solution. However, we
+immediately hit some challenges while exploring this idea.
 
 The concept of a "component" in Ember isn't a singular thing, but the union
 of a template and a component class. With the component and template in
@@ -206,7 +209,7 @@ into thinking it was literally the same thing.
 We tried to find a balance between these two constraints with a syntax that
 looked like this:
 
-```hbs
+```handlebars
 {{use component-name from 'package-name'}}
 ```
 
@@ -326,8 +329,6 @@ while the Preact app had several inconsistently-followed conventions.)
 But I never forgot how viscerally bad it felt to have my co-workers fight so
 hard to do something that felt like it should be so easy.
 
-### The Path Forward
-
 So this was the status quo last year. We were all incredibly frustrated that
 we couldn't make progress on the scoped package problem, but I was even more
 overwhelmed trying to figure out what, if anything, to do about the negative
@@ -338,18 +339,18 @@ painful, especially in cases like this where the majority of the work was
 already complete, and we thought we were so close to the finish line.
 
 Programming language and API design is really hard. Sometimes I read old RFCs
-and marvel at how obvious the design seems now, after the weeks, months, or
-years we spent teasing it out from the millions of possibilities in front of
-us.
+and marvel at how obvious the solution seems now, in contrast to the weeks,
+months, or years I know it took to tease it out from the millions of possible
+alternatives.
 
 When you're trying to balance so many competing constraints, sometimes a
 small change is all it takes to get you out of a design conundrum you've
 struggled with for months. In this case, that change was angle bracket
 component invocation.
 
-One reason we didn't think we could use JavaScript imports in templates was
-because components had to have a dash in their name. Unfortunately, dashes
-aren't valid in JavaScript identifiers, so something like `import
+One thing making JavaScript imports difficult to use with templates was the
+constraint that components had to have a dash in their name. Unfortunately,
+dashes aren't valid in JavaScript identifiers, so something like `import
 some-component from './some-component'` produces a syntax error.
 
 Angle bracket components, on the other hand, start with a capital letter to
@@ -360,31 +361,105 @@ As the Ember community started using angle bracket syntax, early feedback was
 very positive. All of a sudden, JavaScript import syntax was back on the
 table.
 
-With the renewed interest in exploring JavaScript imports for templates, it
-also gave us a good opportunity to try to address the ergonomic problems
-people had reported when trying MU.
+### The Path Forward: Template Imports
+
+Speaking for the Ember.js core team, we are trying to get better at updating
+the community when plans have changed but the new plan isn't fully locked in
+yet. So, consider this one of those situations.
+
+We know that the exact plan for Module Unification (MU), as described in the
+original RFC, will need to change. How it changes is not yet certain,
+but we believe that some of the problems we wanted to solve with MU are
+better solved with template imports.
+
+With template imports, we intend to make templates play nicely with
+JavaScript, so you can use the `import` feature you already know and love. By
+having components and helpers be modules you can import, we can eliminate the
+most complex parts of Module Unification so it's easier to learn and use.
+
+We recently posted the [SFC & Template Imports RFC][template-imports-rfc],
+which describes some of the low-level APIs needed in Ember to make template
+imports possible.
+
+[template-imports-rfc]: https://github.com/emberjs/rfcs/pull/454
+
+Learning from past mistakes, this RFC focuses on the primitives so we can
+quickly experiment, get feedback, and iterate on template import proposals in
+addons, before stabilizing them in the core framework.
+
+While the Ember.js core team has reached consensus that template imports are
+the intended path forward, please note that the current RFC only covers
+low-level primitives, not the API that would be used by Ember developers to
+author templates.
+
+Here is one example of a **very hypothetical** template imports syntax:
+
+```javascript
+// src/ui/components/blog-post.gbs
+
+import Component from '@glimmer/component';
+
+import UserProfile from './user-profile';
+import UserIcon from './icons/user';
+
+export class BlogPost extends Component {
+  blog = { title: 'Coming soon in Octane', authorId: '1234' }
+
+  <template>
+    <h1>{{this.blog.title}}</h1>
+    <UserIcon />
+    <UserProfile @userId={{this.blog.authorId}} />
+  </template>
+}
+```
+
+Here, we've imported two components—`UserProfile` and `UserIcon`—like we
+would any other JavaScript module. We've also defined the component's
+template in JavaScript, placing it in in a template tag within the class
+body.
+
+The exact syntax is up in the air and will almost certainly be different from
+this example. The benefit of exposing the low-level primitives first is that
+we can try out multiple competing designs relatively easily before comitting.
+And if you don't like what we eventually decide on, you can build an
+alternative that is just as stable as the default implementation.
+
+But note that template imports are not a replacement for MU. They don't help
+with things like better isolation of an addon's services, or a more intuitive
+file system layout. Instead, we hope that template imports will better solve
+one aspect of MU, so the overall design can be simplified and its benefits
+can shine through more clearly.
+
+Template imports also give us a good opportunity to try to address the
+ergonomic problems people reported when trying MU.
 
 Without template imports, we had to rely on MU to resolve component names,
 meaning the files in the `src/ui/components` directory had to follow strict
-rules. But _with_ template imports, users can just tell us which module on
+rules. But **with** template imports, users can just tell us which module on
 disk they want. We can skip resolving components through MU altogether, and
 let Ember users organize their component files however they want.
 
 As frustrating as it was at the time, the inability to make progress on MU
 may have been a blessing in disguise. It gave us time to implement angle
 bracket syntax for components, which allowed template imports to seem
-feasible again—which meant that we now had a solution that seemed to address
-both the scoped package problem and the ergonomics problem.
+feasible again—which means we now have a solution that seems to address both
+the scoped package problem and the ergonomics problem. Even better, template
+imports make things like treeshaking and code-splitting in
+[Embroider][embroider] much easier.
+
+[embroider]: https://github.com/embroider-build/embroider
 
 I believe the dead-end we found ourselves in was a sign from the universe
 that something better was just around the corner. Time will tell, but my
-hunch is that template imports solve some important problems much more elegantly
-than what we had before.
+hunch is that template imports solve these important problems much more
+elegantly than what we had before. This process also pushed us to explore
+single-file components, which I think will be a surprisingly big productivity
+improvement for Ember developers.
 
-This process also pushed us to explore single-file components, which I think
-will be a surprisingly big productivity improvement for Ember developers.
-
-### What's Next
+While we're excited about template imports, we want to keep our promise to
+finish what we started. We are prioritizing Ember Octane and making sure that
+our first edition is a polished, cohesive experience. Only once Octane is out
+the door will we turn our attention to new initiatives like template imports.
 
 Hopefully, this post helps provide some context about the state of MU. Of
 course, what I've written here is my personal, imperfect recollection of
@@ -399,27 +474,21 @@ proposals from the "mega-RFC" era, where we had a tendency to do a ton of
 upfront design and implementation before we had any feedback from real users.
 
 Nowadays, I think we're a lot better about making sure RFCs are relatively
-small and focused on doing one thing and doing it well. We also tend to
-prioritize exposing hooks or other primitives that let us test out new ideas
-in addons. This allows us to improve designs based on early feedback,
-without the strict stability requirements that come with landing something in
-the framework proper.
+small and focused on doing one thing. We also tend to prioritize exposing
+hooks or other primitives that let us test out new ideas in addons. This
+allows us to improve designs based on early feedback, without the strict
+stability requirements that come with landing something in the framework
+proper.
 
-This has worked well for things like `ember-decorators` and
-`@glimmer/component`, where real world feedback and the ability to make
-breaking changes based on that feedback was critical. I'm hopeful that a
-similar strategy for template imports will be just as successful.
+This has worked well for things like `ember-decorators` and Glimmer
+components, where real world feedback and the ability to make breaking
+changes based on that feedback was critical. I'm hopeful that a similar
+strategy for template imports will be just as successful.
 
-I recently posted the [SFC & Template Import Primitives
-RFC](https://github.com/emberjs/rfcs/pull/454), which is the first of several
-RFCs describing changes to MU or new features that complement MU. You should
-see more RFCs related to this topic in the coming weeks.
-
-My sincere thanks to everyone who has worked so hard on MU, template imports,
-and other related efforts. I'm proud to be part of a community that refuses
-to charge ahead with something we know isn't right. Ember's longevity is, at
-least in part, explained by our willingness to make these kinds of hard
-decisions.
+My sincere thanks to everyone who has worked so hard on MU and related
+efforts. I'm proud to be part of a community that refuses to charge ahead
+with something we know isn't right. Ember's longevity is, at least in part,
+explained by our willingness to make these kinds of hard decisions.
 
 I'm so excited about Ember, our roadmap, and the newfound energy in our
 community. In 2019, a thriving Ember is more important for the web than ever.
