@@ -38,7 +38,8 @@ files:
 
 This co-located `component.js` and `template.hbs` layout actually already
 works in Ember apps today, so the only change required is to update the
-default component blueprint.
+default component blueprint. We will also provide a codemod that can
+automatically re-organize your component files to follow this structure.
 
 ### Angle Brackets with Nested Components
 
@@ -151,11 +152,8 @@ tell Ember which one you mean when you type `{{small-button}}` in a template.
 One of the key benefits of the MU design is that names are no longer global,
 but namespaced to the package where they come from. So, for example, if an
 npm package called `ember-ui-library` contains a component called
-`small-button`, the MU RFC proposed referring to it in your template as
-`{{ember-ui-library::small-button}}`.
-
-This worked pretty well, with the downside that it could sometimes be
-verbose, particularly when components were invoked with a block:
+`small-button`, the MU RFC proposed referring to it in your template like
+this:
 
 ```handlebars
 {{#ember-ui-library::small-button}}
@@ -171,15 +169,19 @@ packages could start with an `@` and contain a `/`, like
 
 [scoped-packages]: https://blog.npmjs.org/post/116936804365/solving-npms-hard-problem-naming-packages
 
-While namespaced component invocations pushed the limits of verbosity,
-combining them with scoped packages blew past that limit. We simply could not
-bring ourselves to accept a syntax that commonly produced code like this:
+Component invocations with scoped packages blew past the verbosity limit. We
+simply could not bring ourselves to accept a syntax that commonly produced
+code like this:
 
 ```handlebars
 {{#@my-company/ember-ui-library::small-button}}
   ...
 {{/@my-company/ember-ui-library::small-button}}
 ```
+
+We also had concerns that this was confusing to scan visually, considering
+that `@` already means a component argument and `/` already means a closing
+tag.
 
 While Ember had been using it for years, around this time JavaScript module
 syntax (`import Post from './post'`) started gaining significant traction in
@@ -197,14 +199,11 @@ separate files, it isn't clear which one you're supposed to import. Because
 of this, we wanted something where you would import a component by name
 (`my-component`), not a specific file like in JavaScript.
 
-Additionally, named imports (`import { thing }`) and wildcard imports
-(`import *`) didn't really translate either, given the template/class split.
-Another deviation from JavaScript.
-
-But there were important similarities, too. We wanted to find a syntax that
-would give users who already knew JavaScript an intuition about the
-similarities, while not making it look so similar that people would be misled
-into thinking it was literally the same thing.
+But despite the differences, the overall concept of importing modules was
+similar. We wanted to find a syntax that would give users who already knew
+JavaScript an intuition about the similarities, while not making it look so
+similar that people would be misled into thinking it was literally the same
+thing.
 
 We tried to find a balance between these two constraints with a syntax that
 looked like this:
@@ -394,16 +393,35 @@ author templates.
 
 Here is one example of a **very hypothetical** template imports syntax:
 
-```javascript
+```hbs
+---
+import UserProfile from './user-profile';
+import UserIcon from './icons/user';
+---
+<h1>{{this.blog.title}}</h1>
+<UserIcon />
+<UserProfile @userId={{this.blog.authorId}} />
+```
+
+The syntax is up in the air and will almost certainly be different from this
+example. Regardless, it shows the benefit of template imports clearly: we've
+imported two components—`UserProfile` and `UserIcon`—just like how we would
+refer to any other JavaScript module. This makes it very easy for
+everyone—from developer who are new to Ember, to IDEs, and other tooling in
+the JavaScript ecosystem`—to understand what came from where.
+
+You can even imagine an (again, **very hypothetical**) single-file component
+format that places the template right within the component's class. Here, a
+unified imports solution feels especially natural:
+
+```js
 // src/ui/components/blog-post.gbs
 
 import Component from '@glimmer/component';
-
-import UserProfile from './user-profile';
 import UserIcon from './icons/user';
 
 export class BlogPost extends Component {
-  blog = { title: 'Coming soon in Octane', authorId: '1234' }
+  blog = { title: 'Coming soon in Octane', authorId: '1234' };
 
   <template>
     <h1>{{this.blog.title}}</h1>
@@ -413,16 +431,11 @@ export class BlogPost extends Component {
 }
 ```
 
-Here, we've imported two components—`UserProfile` and `UserIcon`—like we
-would any other JavaScript module. We've also defined the component's
-template in JavaScript, placing it in in a template tag within the class
-body.
-
-The exact syntax is up in the air and will almost certainly be different from
-this example. The benefit of exposing the low-level primitives first is that
-we can try out multiple competing designs relatively easily before comitting.
-And if you don't like what we eventually decide on, you can build an
-alternative that is just as stable as the default implementation.
+Again, the exact syntax is up in the air and will almost certainly be
+different from this example. The benefit of exposing the low-level primitives
+first is that we can try out multiple competing designs relatively easily
+before comitting. And if you don't like what we eventually decide on, you can
+build an alternative that is just as stable as the default implementation.
 
 But note that template imports are not a replacement for MU. They don't help
 with things like better isolation of an addon's services, or a more intuitive
