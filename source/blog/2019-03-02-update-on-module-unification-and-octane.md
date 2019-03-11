@@ -13,39 +13,12 @@ ergonomic details right. I wanted to provide an update about Module
 Unification and our plans for the file structure in Ember Octane.
 
 **In short, we do not plan to ship Module Unification in Octane**. Instead,
-Octane will ship with today's file system layout, with two changes:
+Octane will ship with today's file system layout, with one change: support
+for nested components in `<AngleBracket />` invocation syntax
 
-* Co-located components and templates
-* Support for nested components in `<AngleBracket />` invocation syntax
-
-### Co-located Components and Templates
-
-Today, component classes and their associated templates are quite spread out.
-If you have a component in `app/components/user-profile.js`, its template
-lives in `app/templates/components/user-profile.hbs`. This can make
-navigating between the two files time-consuming.
-
-In Octane, we will switch to putting a component's JavaScript and template
-file in the same directory.
-
-For example, if you generate a new component called `user-profile` with
-`ember generate component user-profile`, the blueprint will produce these
-files:
-
-* `app/components/user-profile/component.js`
-* `app/components/user-profile/template.hbs`
-* `tests/integration/components/user-profile-test.js`
-
-This co-located `component.js` and `template.hbs` layout actually already
-works in Ember apps today, so the only change required is to update the
-default component blueprint. We will also provide a codemod that can
-automatically re-organize your component files to follow this structure.
-
-### Angle Brackets with Nested Components
-
-Because Octane apps will continue with today's file system layout, we also
-wanted to address the largest blocker to `<AngleBracket />` syntax adoption
-today: components nested inside other directories.
+Because Octane apps will continue with today's file system layout, we want to
+address the largest barrier to `<AngleBracket />` adoption today: components
+nested inside other directories.
 
 For example, if you have a component located at
 `app/components/icons/download-icon.js` (i.e., nested inside an `icons`
@@ -71,8 +44,8 @@ bracket syntax like this:
 <Icons::DownloadIcon />
 ```
 
-Because both of these changes are quite small, they can be implemented
-quickly without requiring us to delay the Ember Octane release.
+Because this is a small change, it can be implemented quickly without
+requiring us to delay the Ember Octane release.
 
 ## Status of Module Unification
 
@@ -92,14 +65,16 @@ Let's call the file system layout that Ember apps use today the "classic"
 layout. While this structure has served us well, it also has several
 shortcomings.
 
-As mentioned above, related files (like a component and its template) being
-separated from each other can be frustrating. While we are planning to
-address this in Octane for components, there are other kinds of files that
-you might want to group together also. For example, you may want an Ember
-Data model and its serializer to be co-located in the same directory.
+In the classic layout, files are grouped by type, not by name. Sometimes,
+this means that closely related files (like a component and its template) are
+separated from each other, and navigating between them can be frustrating.
+
+Ideally, related files would be close to each other in the file system. For
+example, you may want an Ember Data model and its associated serializer to be
+co-located in the same directory.
 
 Early on, Ember CLI implemented an experimental "pods" layout that grouped
-files by name rather than by kind. So, for example, a `User` model and its
+files by name rather than by kind. For example, a `User` model and its
 serializer would be grouped together in `app/user/`, as `model.js` and
 `serializer.js` respectively.
 
